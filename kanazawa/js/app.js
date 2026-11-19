@@ -5,6 +5,7 @@
   const UI = {
     title: { en: "My Kanazawa Picks", ja: "金沢のおすすめ" },
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
+    home: { en: "← All maps", ja: "← マップ一覧" }, home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
     subtitle: { en: "Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.", ja: "市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢からの日帰り旅。" },
     nav_city: { en: "Kanazawa city", ja: "金沢市内" }, nav_food: { en: "Seafood", ja: "海鮮" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "meal not to miss", ja: "ぜひ食べてほしい一食" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },

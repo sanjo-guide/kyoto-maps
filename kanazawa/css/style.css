@@ -34,6 +34,10 @@ img { max-width: 100%; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a { font-size: 13.5px; font-weight: 500; color: var(--ink); text-decoration: none; padding: 8px 11px; border-radius: 999px; white-space: nowrap; min-height: 36px; display: inline-flex; align-items: center; }
 .nav a:hover { background: var(--chip); }
+/* マップ一覧（トップページ）へ戻るリンク */
+.home { flex: none; font-size: 13px; font-weight: 700; color: var(--ink); text-decoration: none; white-space: nowrap; padding: 8px 10px; min-height: 36px; display: inline-flex; align-items: center; border: 1px solid var(--rule); border-radius: 999px; background: var(--card); }
+.home:hover { background: var(--chip); }
+.foot-home { display: inline-block; margin-left: 14px; }
 .lang { display: flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; background: var(--card); flex: none; }
 .lang button { font: 500 13px/1 var(--f-body); padding: 9px 12px; border: 0; background: transparent; color: var(--muted); cursor: pointer; min-height: 36px; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }

@@ -86,6 +86,9 @@ button svg, a svg:not(.leaflet-attribution-flag) { width: 20px; height: 20px; fi
   padding: 12px 14px 12px;
 }
 .titlecard p { margin: 0; }
+/* マップ一覧（トップページ）へ戻るリンク */
+.tc-home { display: inline-block; margin: -2px 0 6px; font-size: 12.5px; font-weight: 700; color: var(--muted); text-decoration: none; }
+.tc-home:hover { color: var(--ink); text-decoration: underline; }
 .t-main { font-weight: 700; font-size: 18px; line-height: 1.3; letter-spacing: .03em; }
 .t-alt { font-family: var(--f-display); font-size: 12.5px; line-height: 1.35; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); margin-top: 1px !important; }
 .t-alt:lang(ja) { font-family: var(--f); text-transform: none; letter-spacing: .04em; font-weight: 500; }
@@ -344,12 +347,14 @@ html[lang="ja"] .in-title { font-family: var(--f); font-weight: 700; font-size: 
   :root { --tab-h: 58px; }
   .tabbar {
     position: fixed; z-index: 3500; left: 0; right: 0; bottom: 0;
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    display: grid; grid-template-columns: repeat(4, 1fr);
     height: calc(var(--tab-h) + var(--sab)); padding: 0 var(--sar) var(--sab) var(--sal);
     background: var(--card); border-top: 1px solid var(--rule); box-shadow: 0 -2px 10px rgba(0,0,0,.06);
   }
   .tabbar button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 0; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; line-height: 1.2; }
   .tabbar button svg { width: 24px; height: 24px; }
+  .tabbar .tab-home { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--muted); font-size: 12px; font-weight: 700; line-height: 1.2; text-decoration: none; }
+  .tabbar .tab-home svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   .tabbar button[aria-current="page"] { color: var(--ink); box-shadow: inset 0 3px 0 var(--accent); }
   #btn-list { display: none; }
   .mapbtns { bottom: calc(var(--tab-h) + var(--sab) + 12px); }
