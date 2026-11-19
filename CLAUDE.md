@@ -41,13 +41,12 @@
 ```
 /
 ├── CLAUDE.md
-├── index.html              # トップ（マップ一覧）。見た目は assets/map.css
+├── index.html              # トップ（マップ一覧）。2つの型と同じフォント・色で、CSS/JS は中に直書き
 ├── eizan-line/             # ルート型: index.html, css/, js/app.js, js/i18n.js
 │                           #   データは data/routes/eizan-line.json、写真は images/eizan-line/
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/, tiles/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
 ├── vendor/                 # Leaflet 1.9.4、MapLibre（ルート型の地図）
-├── assets/map.css          # トップページの見た目
 ├── data/routes/            # ルート型のデータ
 ├── images/                 # ルート型の写真
 ├── scripts/                # PointMap+ からの取り込み・写真縮小
@@ -56,7 +55,8 @@
 
 - 金沢の写真: `kanazawa/img/hq-*.jpg` は写真アプリの全候補（6,667枚、Nikon D7000含む）から選んだ高画質版（旧 kyoto-maps の金沢マップ由来）。それ以外は kanazawa-guide 由来で、横552px前後の小さい写真がある。各スポットは高画質版を先に並べ、足りない分だけ kanazawa-guide の写真で補っている（最大10枚）
 - 酒楽（しゅらく）の紹介文は2026-11-20にオーナーが書いたもの。消さないこと
-- 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える
+- 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
+- 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
 - ルート型の地図は OpenFreeMap（ベクター地図、英語/日本語の地名切り替え）。スポット紹介型は地理院タイル（淡色地図）を `tiles/` に保存して使う
 - `scripts/import_pointmap.py` の出力は旧形式。ルート型に使うときは eizan-line.json の形（kind, blurb, sections, gmaps, links, info, notices）に合わせて手直しが必要
 

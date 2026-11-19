@@ -1,49 +1,175 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Piece Hostel Sanjo Maps</title>
-  <meta name="description" content="Piece Hostel Sanjo のスタッフが実際に歩いて選んだ、京都・金沢のおすすめマップ集。">
-  <link rel="stylesheet" href="assets/map.css">
-  <style>
-    .home { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
-    .home h1 { font-size: 22px; line-height: 1.4; margin: 0 0 6px; }
-    .home .lead { color: var(--muted); margin: 0 0 20px; }
-    .cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .cards a { display: flex; gap: 12px; align-items: center; padding: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--text); }
-    .cards img { width: 96px; height: 72px; object-fit: cover; border-radius: 8px; flex: none; background: var(--line); }
-    .cards strong { display: block; line-height: 1.4; }
-    .cards span { font-size: 13px; color: var(--muted); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Piece Hostel Sanjo Maps｜京都・金沢おすすめマップ</title>
+<meta name="description" content="Piece Hostel Sanjo のスタッフが実際に歩いて選んだ、京都・金沢のおすすめマップ集。Kyoto &amp; Kanazawa maps by the staff of Piece Hostel Sanjo.">
+<meta name="theme-color" content="#F2F0EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+  /* 叡山電鉄（ルート型）と金沢（スポット紹介型）の共通部分に合わせた見た目 */
+  :root {
+    --paper: #F2F0EA; --card: #FFFFFF; --ink: #1B1F1D; --muted: #535D57; --rule: #DAD6CD;
+    --route: #AE3A22; --guide: #24406B; --gold: #B8913A;
+    --shadow: 0 1px 2px rgba(27,31,29,.06), 0 6px 18px rgba(27,31,29,.08);
+    --f: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
+    --f-display: 'Marcellus', 'Optima', 'Palatino', serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131518; --card: #1B1E22; --ink: #ECE9E2; --muted: #A7ADB4; --rule: #2E3238;
+      --route: #E2896F; --guide: #8FB0DD; --gold: #D9B562;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.28);
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--f); font-size: 16px; line-height: 1.75; -webkit-text-size-adjust: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  [hidden] { display: none !important; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left, 0px)) 0 max(16px, env(safe-area-inset-right, 0px)); }
+
+  /* 上のバー */
+  .bar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); padding-top: env(safe-area-inset-top, 0px); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; }
+  .brand { display: flex; align-items: baseline; gap: 8px; text-decoration: none; white-space: nowrap; }
+  .brand b { font-size: 16px; letter-spacing: .04em; }
+  .brand span { font-family: var(--f-display); font-size: 13px; letter-spacing: .22em; color: var(--muted); }
+  .lang { display: flex; border: 1px solid var(--ink); background: var(--card); flex: none; }
+  .lang button { font: 500 13px/1 var(--f); padding: 10px 13px; border: 0; background: transparent; color: var(--ink); cursor: pointer; min-height: 38px; }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+  /* 見出し */
+  .hero { padding: 40px 0 8px; }
+  .eyebrow { font-family: var(--f-display); font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }
+  .hero h1 { font-size: clamp(26px, 6.4vw, 40px); line-height: 1.35; letter-spacing: .04em; margin: 0 0 14px; }
+  .hero p.lead { color: var(--muted); margin: 0; max-width: 40em; }
+
+  /* マップの種類ごとの段 */
+  .group { padding: 34px 0 6px; }
+  .group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; border-top: 1px solid var(--ink); padding-top: 12px; margin-bottom: 4px; }
+  .group-head h2 { font-size: 19px; letter-spacing: .03em; margin: 0; }
+  .group-head .en { font-family: var(--f-display); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+  .group.route .en { color: var(--route); }
+  .group.guide .en { color: var(--guide); }
+  .group-note { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+
+  .cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+  @media (min-width: 760px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  .card { display: flex; flex-direction: column; height: 100%; text-decoration: none; background: var(--card); box-shadow: var(--shadow); border: 1px solid var(--rule); transition: transform .15s ease, box-shadow .15s ease; }
+  .card:hover { transform: translateY(-2px); }
+  .card figure { position: relative; margin: 0; aspect-ratio: 16 / 10; overflow: hidden; background: var(--rule); }
+  .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tag { position: absolute; left: 12px; top: 12px; font-size: 12px; font-weight: 700; letter-spacing: .05em; line-height: 1; padding: 7px 9px; color: #fff; }
+  .route .tag { background: var(--route); }
+  .guide .tag { background: var(--guide); }
+  @media (prefers-color-scheme: dark) { .tag { color: #131518; } }
+  .card-body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .card h3 { margin: 0; font-size: 19px; line-height: 1.4; letter-spacing: .02em; }
+  .card .alt { font-family: var(--f-display); font-size: 14px; letter-spacing: .06em; color: var(--muted); line-height: 1.4; }
+  .card p { margin: 4px 0 0; font-size: 14.5px; color: var(--muted); }
+  .meta { margin-top: auto !important; padding-top: 10px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; font-weight: 500; color: var(--ink) !important; }
+  .go { font-family: var(--f-display); letter-spacing: .12em; white-space: nowrap; }
+
+  .foot { margin: 48px 0 0; padding: 22px 0 calc(28px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
+  .foot p { margin: 0 0 6px; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="./">Piece Hostel Sanjo <span>Maps</span></a>
-  </header>
-  <main class="home">
-    <h1>京都・金沢おすすめマップ</h1>
-    <p class="lead">Kyoto &amp; Kanazawa maps by the staff of Piece Hostel Sanjo</p>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="./"><b>Piece Hostel Sanjo</b><span>MAPS</span></a>
+    <div class="lang" role="group" aria-label="Language / 言語">
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="ja" lang="ja">日本語</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Kyoto &amp; Kanazawa</p>
+    <h1 data-ja="京都・金沢 おすすめマップ" data-en="Our favorite places in Kyoto &amp; Kanazawa">京都・金沢 おすすめマップ</h1>
+    <p class="lead" data-ja="Piece Hostel Sanjo のスタッフが実際に歩いて「ここはいい！」と感じた場所だけを集めました。写真と地図、Googleマップのリンクつきなので、スマホひとつで出かけられます。" data-en="Every place here was picked by the staff of Piece Hostel Sanjo after walking it ourselves. Each map has photos and Google Maps links, so your phone is all you need.">Piece Hostel Sanjo のスタッフが実際に歩いて「ここはいい！」と感じた場所だけを集めました。写真と地図、Googleマップのリンクつきなので、スマホひとつで出かけられます。</p>
+  </section>
+
+  <section class="group route" aria-labelledby="h-route">
+    <div class="group-head">
+      <h2 id="h-route" data-ja="順番に回る1日ルート" data-en="One-day routes">順番に回る1日ルート</h2>
+      <span class="en">Route</span>
+    </div>
+    <p class="group-note" data-ja="番号の順にめぐると、1日で効率よく回れます。" data-en="Follow the numbers in order and you can see it all in one day.">番号の順にめぐると、1日で効率よく回れます。</p>
     <ul class="cards">
       <li>
-        <a href="eizan-line/">
-          <img src="images/eizan-line/thumbs/04-1.jpg" alt="">
-          <div>
-            <strong>叡山電鉄沿線 Along Eizan Railway Line</strong>
-            <span>出町柳・一乗寺・貴船・鞍馬・先斗町 / 28 spots</span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="kanazawa/">
-          <img src="kanazawa/img/higashi-1.jpg" alt="">
-          <div>
-            <strong>金沢のおすすめと日帰り旅 Kanazawa &amp; day trips</strong>
-            <span>市内9か所・海鮮・日帰り6エリア</span>
+        <a class="card" href="eizan-line/">
+          <figure><img src="images/eizan-line/18-1.jpg" alt="" width="1080" height="810" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
+          <div class="card-body">
+            <h3 data-ja="叡山電鉄沿線" data-en="Along the Eizan Railway">叡山電鉄沿線</h3>
+            <span class="alt" data-ja="Along Eizan Railway Line" data-en="叡山電鉄沿線">Along Eizan Railway Line</span>
+            <p data-ja="三条から出町柳、一乗寺、貴船、鞍馬へ。夜は先斗町で締めくくる、山と川の京都をめぐるルートです。" data-en="From Sanjo to Demachiyanagi, Ichijoji, Kibune and Kurama, ending the night in Pontocho: Kyoto's rivers and mountains in a day.">三条から出町柳、一乗寺、貴船、鞍馬へ。夜は先斗町で締めくくる、山と川の京都をめぐるルートです。</p>
+            <p class="meta"><span data-ja="28か所" data-en="28 spots">28か所</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
     </ul>
-  </main>
+  </section>
+
+  <section class="group guide" aria-labelledby="h-guide">
+    <div class="group-head">
+      <h2 id="h-guide" data-ja="おすすめスポット紹介" data-en="Spot guides">おすすめスポット紹介</h2>
+      <span class="en">Guide</span>
+    </div>
+    <p class="group-note" data-ja="回る順番は決めていません。気になる場所を選んでください。" data-en="No set order. Pick the places that interest you.">回る順番は決めていません。気になる場所を選んでください。</p>
+    <ul class="cards">
+      <li>
+        <a class="card" href="kanazawa/">
+          <figure><img src="kanazawa/img/hq-kz-01-1.jpg" alt="" width="1280" height="848" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span></figure>
+          <div class="card-body">
+            <h3 data-ja="金沢のおすすめと日帰り旅" data-en="Kanazawa &amp; day trips">金沢のおすすめと日帰り旅</h3>
+            <span class="alt" data-ja="Kanazawa &amp; Day Trips" data-en="金沢のおすすめと日帰り旅">Kanazawa &amp; Day Trips</span>
+            <p data-ja="市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢から日帰りで行ける場所。" data-en="Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.">市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢から日帰りで行ける場所。</p>
+            <p class="meta"><span data-ja="市内9か所・海鮮・日帰り6エリア" data-en="9 city spots · seafood · 6 day-trip areas">市内9か所・海鮮・日帰り6エリア</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p data-ja="掲載情報は確認時点のものです。営業時間・料金は、お出かけ前に公式サイト等でご確認ください。" data-en="Information is as of when we checked it. Please check official websites for the latest hours and fees before you go.">掲載情報は確認時点のものです。営業時間・料金は、お出かけ前に公式サイト等でご確認ください。</p>
+    <p data-ja="© Piece Hostel Sanjo　写真・文章の無断転載はご遠慮ください。" data-en="© Piece Hostel Sanjo. Please do not reuse photos or text without permission.">© Piece Hostel Sanjo　写真・文章の無断転載はご遠慮ください。</p>
+  </footer>
+</main>
+
+<script>
+  /* 言語の切り替え。選んだ言語は各マップにも引き継ぐ（同じサイト内なので保存先を共有できる） */
+  (function () {
+    var KEYS = ['kyoto-maps-lang', 'kanazawa-lang'];
+    function load() {
+      var q = (location.search.match(/[?&]lang=(ja|en)\b/) || [])[1];
+      if (q) return q;
+      try { var s = localStorage.getItem(KEYS[0]); if (s === 'ja' || s === 'en') return s; } catch (e) {}
+      return /^ja\b/i.test((navigator.languages || [navigator.language || ''])[0] || '') ? 'ja' : 'en';
+    }
+    function apply(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) { el.innerHTML = el.getAttribute('data-' + lang); });
+      document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    }
+    document.querySelector('.lang').addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-lang]'); if (!b) return;
+      KEYS.forEach(function (k) { try { localStorage.setItem(k, b.dataset.lang); } catch (err) {} });
+      apply(b.dataset.lang);
+    });
+    apply(load());
+  })();
+</script>
 </body>
 </html>
