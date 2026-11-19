@@ -1,0 +1,7 @@
+# PointMap+ の元データ（公開しない）
+_source/
+# Mac が作るファイル
+.DS_Store
+# Claude Code のローカル設定
+.claude/
+__pycache__/
