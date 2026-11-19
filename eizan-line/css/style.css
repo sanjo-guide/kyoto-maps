@@ -1,6 +1,6 @@
 /* 叡山電鉄沿線 三条 Sanjo MAP
    Look follows the momiji site (sanjo-guide.github.io/kyoto-momiji): paper ground, square corners,
-   Japanese name with the English name in Marcellus, Piece-mark number badges, ink buttons.
+   Japanese name with the English name in Marcellus, curved-square number badges, ink buttons.
    Layout: full-screen map. Phones get a bottom sheet; wide screens a fixed side panel. */
 :root {
   --paper: #F2F0EA;
@@ -42,7 +42,7 @@ button svg, a svg:not(.leaflet-attribution-flag) { width: 20px; height: 20px; fi
 .nm i:lang(ja) { font-family: var(--f); font-weight: 500; }
 .nm i:empty { display: none; }
 
-/* number badge in the Piece mark shape */
+/* number badge: a square with inward-curved sides */
 .badge { position: relative; width: 32px; height: 32px; display: grid; place-items: center; color: #fff; font: 400 15px/1 var(--f-display); flex: none; }
 .badge svg { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; overflow: visible; }
 .badge svg path { fill: var(--accent); stroke: #fff; stroke-width: 2.4; }

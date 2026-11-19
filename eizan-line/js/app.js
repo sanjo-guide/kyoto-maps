@@ -53,7 +53,7 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { el.hidden = true; }, 4000);
   }
-  // Number badge in the Piece mark shape (a square with inward-curved sides), as on the momiji site
+  // Number badge: a square with inward-curved sides, as on the momiji site
   var MARK = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M2,2 Q20,7.5 38,2 Q32.5,20 38,38 Q20,32.5 2,38 Q7.5,20 2,2 Z"/></svg>';
   function badge(no, extra) {
     return '<span class="badge' + (no === 1 ? ' start' : '') + (extra ? ' ' + extra : '') + '">' + MARK + '<span>' + no + '</span></span>';
@@ -256,7 +256,7 @@
   function showRoute() {
     if (location.hash === '#about') { showIntro(); return; }
     hideIntro();
-    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（ホステル・三条駅を含む）なので 2 を引いて開く
+    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（スタート前の2か所を含む）なので 2 を引いて開く
     var m = location.hash.match(/^#spot-(\d+)$/), old = location.hash.match(/^#(\d+)$/);
     var no = m ? Number(m[1]) : old ? Number(old[1]) - 2 : 0;
     if (no && byNo[no]) {

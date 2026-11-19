@@ -1,6 +1,6 @@
 {
   "id": "eizan-line",
-  "_note": "叡山電鉄沿線マップのデータ（eizan-line/ のページ専用の形式）。元は sanjo-guide/eizan-map の preview/data/spots.json。info.checked は事実情報の確認日。 2026-11-20: Toshi 個人のサイトにするため、旧1（Piece Hostel Sanjo）・旧2（京阪 三条駅）を外し、出町柳駅をスタート（1番）にした。旧番号から2を引くと新番号。",
+  "_note": "叡山電鉄沿線マップのデータ（eizan-line/ のページ専用の形式）。元は sanjo-guide/eizan-map の preview/data/spots.json。info.checked は事実情報の確認日。 2026-11-20: Toshi 個人のサイトにするため、旧1・旧2（出町柳より前の2か所）を外し、出町柳駅をスタート（1番）にした。旧番号から2を引くと新番号。",
   "sections": [
     {
       "first": 1,

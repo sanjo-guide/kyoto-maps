@@ -1,5 +1,5 @@
 /* Page texts in Japanese and English.
-   Toshi 個人のマップ（Piece Hostel Sanjo の名前・ロゴは使わない）。スタートは出町柳駅。
+   Toshi 個人のマップ。スタートは出町柳駅。
    Photos are [spot number, photo index] from data/spots.json. */
 window.EIZAN_I18N = {
   ja: {
