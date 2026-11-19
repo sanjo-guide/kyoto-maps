@@ -11,7 +11,10 @@
       less: "閉じる",
       mapLabel: "ルートの地図",
       loadError: "データを読み込めませんでした。",
-      rights: "© Piece Hostel Sanjo　写真・文章の無断転載はご遠慮ください。",
+      rights: "© Piece Hostel Sanjo　写真・文章の無断転載はご遠慮ください（クレジット表記のある写真は各ライセンスに従います）。",
+      access: "アクセス",
+      photo: "写真",
+      base: "起点",
     },
     en: {
       mapsBtn: "Open in Google Maps",
@@ -22,7 +25,10 @@
       less: "Show less",
       mapLabel: "Route map",
       loadError: "Could not load the map data.",
-      rights: "© Piece Hostel Sanjo. Please do not reuse photos or text without permission.",
+      rights: "© Piece Hostel Sanjo. Please do not reuse photos or text without permission (credited photos follow their own licenses).",
+      access: "Access",
+      photo: "Photo",
+      base: "Base",
     },
   };
 
@@ -93,7 +99,20 @@
     }).addTo(map);
 
     const latlngs = route.spots.map((s) => [s.lat, s.lng]);
-    L.polyline(latlngs, { color: "#2f6b3a", weight: 3, opacity: 0.55, dashArray: "6 8" }).addTo(map);
+    // おすすめ集のように順番に巡らないページは "line": false で線を引かない
+    if (route.line !== false) {
+      L.polyline(latlngs, { color: "#2f6b3a", weight: 3, opacity: 0.55, dashArray: "6 8" }).addTo(map);
+    }
+    // 起点（例: 金沢駅）。番号なしの印で表示する
+    if (route.base) {
+      const b = route.base;
+      const bm = L.marker([b.lat, b.lng], {
+        icon: L.divIcon({ className: "pin base", html: '<span class="num">🚉</span>', iconSize: [30, 30], iconAnchor: [15, 15] }),
+        title: t(b.name),
+      }).addTo(map);
+      bm.bindPopup(() => `${UI[lang].base}: ${t(b.name)}`);
+      latlngs.push([b.lat, b.lng]);
+    }
 
     route.spots.forEach((spot, i) => {
       const icon = L.divIcon({
@@ -142,9 +161,28 @@
       intro.after(btn);
     }
 
+    // 関連ページ（例: 金沢市内 ⇔ 金沢から日帰り）へのリンク
+    const oldRel = document.querySelector(".related");
+    if (oldRel) oldRel.remove();
+    if (route.related && route.related.length) {
+      const rel = el("div", { class: "related" }, route.related.map((r) =>
+        el("a", { href: root + r.href, text: "➜ " + t(r.label) })
+      ));
+      (document.querySelector(".more-btn") || intro).after(rel);
+    }
+
     // route.source.note は管理用メモなので表示しない。ゲスト向けの注意書きは route.notice
     document.getElementById("source-note").textContent = t(route.notice);
     document.getElementById("rights").textContent = UI[lang].rights;
+    // 作成者はページ下部に小さく出すだけにする（route.author があるページのみ）
+    let author = document.getElementById("author");
+    if (route.author) {
+      if (!author) {
+        author = el("p", { id: "author" });
+        document.getElementById("rights").before(author);
+      }
+      author.textContent = t(route.author);
+    } else if (author) author.remove();
   }
 
   function renderList() {
@@ -181,14 +219,33 @@
 
     if (spot.photos.length) {
       box.append(
-        el("div", { class: "photos" }, spot.photos.map((p, k) =>
-          el("img", { src: asset(p.src), alt: p.alt || `${t(spot.name)} ${k + 1}`, loading: "lazy", decoding: "async" })
-        ))
+        el("div", { class: "photos" }, spot.photos.map((p, k) => {
+          // caption（{ja, en}）があれば写真の下に小さく出す（例: 「志摩の離れの茶室」）
+          const cap = p.caption ? t(p.caption) : "";
+          return el("figure", {}, [
+            el("img", { src: asset(p.src), alt: cap || p.alt || `${t(spot.name)} ${k + 1}`, loading: "lazy", decoding: "async" }),
+            cap ? el("figcaption", { text: cap }) : null,
+          ]);
+        }))
       );
       if (spot.photos.length > 1) box.append(el("p", { class: "photo-count", text: UI[lang].photos(spot.photos.length) }));
+      // 他の人が撮った写真（CC ライセンス等）はクレジットを必ず表示する
+      const credited = spot.photos.map((p, k) => [p, k]).filter(([p]) => p.credit);
+      if (credited.length) {
+        box.append(el("ul", { class: "photo-credits" }, credited.map(([p, k]) => {
+          const c = p.credit;
+          return el("li", {}, [
+            document.createTextNode(`${UI[lang].photo} ${k + 1}: `),
+            c.url ? el("a", { href: c.url, target: "_blank", rel: "noopener", text: c.author || c.url }) : document.createTextNode(c.author || ""),
+            c.license ? document.createTextNode(" / ") : null,
+            c.license && c.license_url ? el("a", { href: c.license_url, target: "_blank", rel: "noopener", text: c.license }) : (c.license ? document.createTextNode(c.license) : null),
+          ]);
+        })));
+      }
     }
 
     const facts = [];
+    if (t(spot.access)) facts.push([UI[lang].access, t(spot.access)]);
     if (t(spot.time)) facts.push([UI[lang].time, t(spot.time)]);
     if (t(spot.hours)) facts.push([UI[lang].hours, t(spot.hours)]);
     if (facts.length) {
@@ -196,8 +253,22 @@
     }
 
     // 見出し（例「一乗寺駅から鞍馬方面へ」）は日本語のみなので、日本語表示のときだけ出す
-    if (lang === "ja" && spot.heading) box.append(el("h3", { class: "spot-heading", text: spot.heading }));
+    // 見出しが {ja, en} のときは両言語で出す
+    const heading = spot.heading && typeof spot.heading === "object" ? t(spot.heading) : (lang === "ja" ? spot.heading : null);
+    if (heading) box.append(el("h3", { class: "spot-heading", text: heading }));
     box.append(el("div", { class: "desc" }, paragraphs(t(spot.description))));
+
+    // スポットの中の「立ち寄り先」（例: ひがし茶屋街の中の 志摩）
+    if (spot.subs && spot.subs.length) {
+      box.append(el("div", { class: "subs" }, spot.subs.map((sub) =>
+        el("section", { class: "sub" }, [
+          el("h3", { text: t(sub.name) }),
+          other(sub.name) ? el("p", { class: "sub-alt", text: other(sub.name) }) : null,
+          ...paragraphs(t(sub.text)),
+          sub.url ? el("a", { class: "sub-link", href: sub.url, target: "_blank", rel: "noopener", text: "📍 " + UI[lang].mapsBtn }) : null,
+        ])
+      )));
+    }
 
     if (spot.links.length) {
       box.append(
