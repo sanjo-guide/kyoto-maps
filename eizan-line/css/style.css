@@ -385,3 +385,7 @@ html[lang="ja"] .in-title { font-family: var(--f); font-weight: 700; font-size: 
   .view-list { padding-top: 14px; }
   .detail-head { padding-top: 8px; }
 }
+
+/* 「TOSHI'S MAPS」の文字ロゴ（使い方の画面の上と下） */
+.in-brand { height: auto !important; max-width: none; font-family: var(--f-display); font-size: 17px; letter-spacing: .22em; line-height: 1; white-space: nowrap; }
+.in-foot .in-brand { font-size: 19px; }

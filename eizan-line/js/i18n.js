@@ -1,10 +1,10 @@
 /* Page texts in Japanese and English.
-   Intro texts follow the A3 sign (v4) and the PointMap spot 01 description.
+   Toshi 個人のマップ（Piece Hostel Sanjo の名前・ロゴは使わない）。スタートは出町柳駅。
    Photos are [spot number, photo index] from data/spots.json. */
 window.EIZAN_I18N = {
   ja: {
     htmlLang: 'ja',
-    docTitle: '叡山電鉄沿線｜三条 Sanjo MAP',
+    docTitle: '叡山電鉄沿線｜出町柳 Demachiyanagi MAP',
     titleMain: '叡山電鉄沿線',
     titleSub: 'Along Eizan Railway Line',
     howto: '使い方',
@@ -28,7 +28,7 @@ window.EIZAN_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
-    credit: '写真・文章：Toshi（Piece Hostel Sanjo）<br>地図：© OpenStreetMap contributors',
+    credit: '写真・文章：Toshi<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
     fee: '料金',
@@ -49,29 +49,29 @@ window.EIZAN_I18N = {
     reset: 'リセット',
     resetAsk: 'もう一度押すと、行った印をすべて消します',
     intro: {
-      kicker: 'スタッフ手作りの穴場ルート',
+      kicker: 'Toshiが歩いて作った穴場ルート',
       h1: '定番スポットの混雑に疲れたら、京都の静かな一面へ。',
-      lead: '伏見稲荷、清水寺、金閣寺、嵐山の竹林はもう行きましたか？ 次の1日は、小さなローカル線に乗って、スタッフが実際に歩いて作った叡山電鉄沿線の穴場ルートへ。',
-      favLabel: 'スタッフのお気に入り',
+      lead: '伏見稲荷、清水寺、金閣寺、嵐山の竹林はもう行きましたか？ 次の1日は、小さなローカル線に乗って、実際に歩いて作った叡山電鉄沿線の穴場ルートへ。',
+      favLabel: 'Toshiのお気に入り',
       favName: '圓光寺',
       favText: '苔の庭、もみじと竹林を、畳の上から静かに眺められます。',
-      favPhoto: [10, 0],
+      favPhoto: [8, 0],
       whoHead: 'こんな人におすすめ',
       who: [
         '定番スポットを回ったあとの、2日目以降に',
         '混雑に疲れた人に。静かなお寺、森、川辺をめぐります',
-        'ホステルからスタート地点まで約15分',
+        'スタートは出町柳駅（京阪・叡山電車）',
         'どの季節に行っても楽しめます',
         '約1時間の山道ハイキングあり。歩きやすい靴で'
       ],
       dayHead: '1日の流れ（目安）',
       from: '',
       day: [
-        { time: '9:00', area: '出町柳', title: '京都の日常にふれる', text: 'のんびりした川辺、下鴨神社、地元の人が通う商店街。', photo: [4, 0] },
-        { time: '11:00', area: '一乗寺', title: '禅の庭とラーメン街', text: '静かな圓光寺と詩仙堂のあとは、人気店が並ぶラーメン激戦区へ。', photo: [12, 0] },
-        { time: '14:00', area: '貴船', title: '山あいの神社', text: '灯籠が並ぶ石段、水占い、川の上でひと休み。', photo: [18, 1] },
-        { time: '16:00', area: '貴船 → 鞍馬', title: '森のハイキングと温泉', text: '鞍馬寺まで森の中を約1時間歩き、そのあと温泉へ。歩きやすい靴で！', note: 'ハイキング入口（西門）は16:15閉門', badge: 'タトゥーOKの温泉', photo: [24, 0] },
-        { time: '20:00', area: '京都の街中へ', title: '夜の京都', text: '灯りのともる先斗町と、地元の人に愛される隠れ酒場。', photo: [27, 6] }
+        { time: '9:00', area: '出町柳', title: '京都の日常にふれる', text: 'のんびりした川辺、下鴨神社、地元の人が通う商店街。', photo: [2, 0] },
+        { time: '11:00', area: '一乗寺', title: '禅の庭とラーメン街', text: '静かな圓光寺と詩仙堂のあとは、人気店が並ぶラーメン激戦区へ。', photo: [10, 0] },
+        { time: '14:00', area: '貴船', title: '山あいの神社', text: '灯籠が並ぶ石段、水占い、川の上でひと休み。', photo: [16, 1] },
+        { time: '16:00', area: '貴船 → 鞍馬', title: '森のハイキングと温泉', text: '鞍馬寺まで森の中を約1時間歩き、そのあと温泉へ。歩きやすい靴で！', note: 'ハイキング入口（西門）は16:15閉門', badge: 'タトゥーOKの温泉', photo: [22, 0] },
+        { time: '20:00', area: '京都の街中へ', title: '夜の京都', text: '灯りのともる先斗町と、地元の人に愛される隠れ酒場。', photo: [25, 6] }
       ],
       timeSuffix: '〜',
       dealsHead: 'お得なきっぷ',
@@ -84,18 +84,18 @@ window.EIZAN_I18N = {
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
       how: [
-        { title: '番号の順にめぐる', text: '2〜28の番号は、順番にめぐると1日で効率よく全部回れるように並んでいます。' },
+        { title: '番号の順にめぐる', text: '1〜26の番号は、順番にめぐると1日で効率よく全部回れるように並んでいます。' },
         { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・おすすめの時間が見られます。' },
         { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。時刻表や公式サイトへのリンクもあります。' },
         { title: '時間は目安', text: '時間が足りなければスキップ、気に入った場所では長めに。自分のペースで調整してください。' }
       ],
       cta: '地図を見る',
-      footer1: 'Piece Hostel SanjoのスタッフToshiが、実際に歩いて作ったオリジナルマップです。'
+      footer1: 'Toshiが実際に歩いて作った、オリジナルマップです。'
     }
   },
   en: {
     htmlLang: 'en',
-    docTitle: 'Along Eizan Railway Line | Sanjo MAP',
+    docTitle: 'Along Eizan Railway Line | Demachiyanagi MAP',
     titleMain: 'Along Eizan Railway Line',
     titleSub: '叡山電鉄沿線',
     howto: 'How to use',
@@ -119,7 +119,7 @@ window.EIZAN_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
-    credit: 'Photos &amp; text: Toshi (Piece Hostel Sanjo)<br>Map: © OpenStreetMap contributors',
+    credit: 'Photos &amp; text: Toshi<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
     fee: 'Fee',
@@ -140,29 +140,29 @@ window.EIZAN_I18N = {
     reset: 'Reset',
     resetAsk: 'Tap again to clear all visited marks',
     intro: {
-      kicker: 'A staff-made day trip',
+      kicker: 'A day trip, hand-walked by Toshi',
       h1: 'Kyoto, minus the crowds.',
-      lead: 'Seen Fushimi Inari, Kiyomizu-dera, Kinkaku-ji and the bamboo grove? Spend your next day here — on a little local train, hand-walked by our staff.',
-      favLabel: 'Staff favorite',
+      lead: 'Seen Fushimi Inari, Kiyomizu-dera, Kinkaku-ji and the bamboo grove? Spend your next day here, on a little local train, along a route I walked myself.',
+      favLabel: 'Toshi’s favorite',
       favName: 'Enkoji Temple',
       favText: 'Moss garden, maples & bamboo, enjoyed quietly from the tatami.',
-      favPhoto: [10, 0],
+      favPhoto: [8, 0],
       whoHead: 'Who it’s for',
       who: [
         'Best on day 2+, after the famous sights',
         'Tired of the crowds? Quiet temples, forest and river',
-        'Starts 15 min from the hostel',
+        'Starts at Demachiyanagi Station (Keihan / Eizan lines)',
         'Lovely in every season',
         'Includes an hour’s forest hike — wear comfy shoes'
       ],
       dayHead: 'One day, roughly like this',
       from: 'From',
       day: [
-        { time: '9:00', area: 'Demachiyanagi', title: 'Kyoto’s everyday side', text: 'A laid-back riverside, Shimogamo Shrine and a true locals’ arcade.', photo: [4, 0] },
-        { time: '11:00', area: 'Ichijoji', title: 'Zen gardens & ramen street', text: 'Calm Enkoji & Shisendo, then a street packed with top ramen shops.', photo: [12, 0] },
-        { time: '14:00', area: 'Kibune', title: 'A shrine in the mountains', text: 'Lantern-lined shrine steps, a water fortune and riverside tea.', photo: [18, 1] },
-        { time: '16:00', area: 'Kibune → Kurama', title: 'Forest hike & hot spring', text: 'An hour’s forest hike to Kurama Temple, then an onsen. Comfy shoes!', note: 'Hike entrance gate closes 16:15', badge: 'Tattoo-friendly onsen', photo: [24, 0] },
-        { time: '20:00', area: 'Back downtown', title: 'Kyoto after dark', text: 'Lantern-lit Pontocho and a hidden izakaya that locals love.', photo: [27, 6] }
+        { time: '9:00', area: 'Demachiyanagi', title: 'Kyoto’s everyday side', text: 'A laid-back riverside, Shimogamo Shrine and a true locals’ arcade.', photo: [2, 0] },
+        { time: '11:00', area: 'Ichijoji', title: 'Zen gardens & ramen street', text: 'Calm Enkoji & Shisendo, then a street packed with top ramen shops.', photo: [10, 0] },
+        { time: '14:00', area: 'Kibune', title: 'A shrine in the mountains', text: 'Lantern-lined shrine steps, a water fortune and riverside tea.', photo: [16, 1] },
+        { time: '16:00', area: 'Kibune → Kurama', title: 'Forest hike & hot spring', text: 'An hour’s forest hike to Kurama Temple, then an onsen. Comfy shoes!', note: 'Hike entrance gate closes 16:15', badge: 'Tattoo-friendly onsen', photo: [22, 0] },
+        { time: '20:00', area: 'Back downtown', title: 'Kyoto after dark', text: 'Lantern-lit Pontocho and a hidden izakaya that locals love.', photo: [25, 6] }
       ],
       timeSuffix: '',
       dealsHead: 'Money-saving tickets',
@@ -175,13 +175,13 @@ window.EIZAN_I18N = {
       dealsMore: 'See official site',
       howHead: 'How to use this map',
       how: [
-        { title: 'Follow the numbers', text: 'Spots 2–28 are in order. Follow them and you can see everything in one day.' },
+        { title: 'Follow the numbers', text: 'Spots 1–26 are in order. Follow them and you can see everything in one day.' },
         { title: 'Tap a number', text: 'Tap a number on the map, or open the list, to see photos, tips and suggested times.' },
         { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions. Some spots also link to timetables and official websites.' },
         { title: 'Times are rough guides', text: 'Short on time? Skip a spot. Love a place? Stay longer. Go at your own pace.' }
       ],
       cta: 'Open the map',
-      footer1: 'Original map, hand-walked by Toshi, one of our staff.'
+      footer1: 'An original map, hand-walked by Toshi.'
     }
   }
 };

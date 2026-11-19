@@ -20,7 +20,8 @@
   var PHOTO_ZOOM = 14;          // show photo cards at this zoom and closer
   var WIDE = window.matchMedia('(min-width: 900px)');
   var I18N = window.EIZAN_I18N;
-  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-eizan-intro-seen', KEY_VISITED = 'kyoto-maps-eizan-visited';
+  // 2026-11-20 に番号を振り直した（出町柳スタート）ので、「行った」印は新しいキーで保存し直す
+  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-eizan-intro-seen', KEY_VISITED = 'kyoto-maps-eizan-visited-v2';
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
@@ -255,10 +256,11 @@
   function showRoute() {
     if (location.hash === '#about') { showIntro(); return; }
     hideIntro();
-    // #spot-18 のほか、以前の形式 #18 でも開けるようにしておく
-    var m = location.hash.match(/^#(?:spot-)?(\d+)$/);
-    if (m && byNo[Number(m[1])]) {
-      showDetail(Number(m[1]));
+    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（ホステル・三条駅を含む）なので 2 を引いて開く
+    var m = location.hash.match(/^#spot-(\d+)$/), old = location.hash.match(/^#(\d+)$/);
+    var no = m ? Number(m[1]) : old ? Number(old[1]) - 2 : 0;
+    if (no && byNo[no]) {
+      showDetail(no);
       return;
     }
     viewDetail.hidden = true;
@@ -271,8 +273,9 @@
 
   /* ---------- intro ---------- */
   function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
-    return '<svg class="' + cls + '" viewBox="0 0 834 138" role="img" aria-label="PIECE HOSTEL SANJO"><use href="#phs-logo"></use></svg>';
+    return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
   }
   var CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
@@ -684,7 +687,7 @@
     route();
   }
 
-  fetch('../data/routes/eizan-line.json?v=11')
+  fetch('../data/routes/eizan-line.json?v=12')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

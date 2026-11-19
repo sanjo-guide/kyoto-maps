@@ -1,43 +1,30 @@
 {
   "id": "eizan-line",
-  "_note": "叡山電鉄沿線マップのデータ（eizan-line/ のページ専用の形式）。元は sanjo-guide/eizan-map の preview/data/spots.json。info.checked は事実情報の確認日。",
+  "_note": "叡山電鉄沿線マップのデータ（eizan-line/ のページ専用の形式）。元は sanjo-guide/eizan-map の preview/data/spots.json。info.checked は事実情報の確認日。 2026-11-20: Toshi 個人のサイトにするため、旧1（Piece Hostel Sanjo）・旧2（京阪 三条駅）を外し、出町柳駅をスタート（1番）にした。旧番号から2を引くと新番号。",
   "sections": [
     {
       "first": 1,
-      "last": 3,
-      "time": "8:45",
-      "area": {
-        "ja": "三条 → 出町柳",
-        "en": "Sanjo → Demachiyanagi"
-      },
-      "title": {
-        "ja": "出発",
-        "en": "Getting started"
-      }
-    },
-    {
-      "first": 4,
-      "last": 8,
+      "last": 6,
       "day": 0
     },
     {
-      "first": 9,
-      "last": 13,
+      "first": 7,
+      "last": 11,
       "day": 1
     },
     {
-      "first": 14,
-      "last": 20,
+      "first": 12,
+      "last": 18,
       "day": 2
     },
     {
-      "first": 21,
-      "last": 25,
+      "first": 19,
+      "last": 23,
       "day": 3
     },
     {
-      "first": 26,
-      "last": 28,
+      "first": 24,
+      "last": 26,
       "day": 4
     }
   ],
@@ -46,118 +33,16 @@
     {
       "no": 1,
       "name": {
-        "ja": "Piece Hostel Sanjo",
-        "en": "Piece Hostel Sanjo"
+        "ja": "出町柳駅（京阪電鉄）",
+        "en": "Demachiyanagi Station (Keihan Line)"
       },
       "kind": {
         "ja": "スタート地点",
         "en": "Start"
       },
       "blurb": {
-        "ja": "このマップのスタート地点です。スタッフが実際に歩いて「ここはいい！」と感じたスポットだけを集めました。2〜28の番号を順番に巡ると、1日で効率よく全部まわれるように作っています。時間が足りなければスキップしたり、気に入った場所で長く過ごしたり、自由に調整してください。",
-        "en": "The starting point of this map. It only includes spots our staff walked to and truly loved. Follow the numbers 2–28 in order and you can see everything in one day. Short on time? Skip a place. Love a spot? Stay longer. It’s up to you."
-      },
-      "lat": 35.0080656,
-      "lng": 135.7650619,
-      "photos": [
-        "01-1.jpg",
-        "01-2.jpg",
-        "01-3.jpg",
-        "01-4.jpg",
-        "01-5.jpg",
-        "01-6.jpg",
-        "01-7.jpg",
-        "01-8.jpg"
-      ],
-      "text": {
-        "ja": "PIECE HOSTEL SANJOは、ホテルよりもゲストとの距離が近く、旅の情報交換もできるフレンドリーなホステルです。そんなスタッフが実際に歩いて「ここはいい！」と感じたスポットだけをまとめたのが、このオリジナルマップです。\n\n2〜28の番号は、順番に巡ると1日で効率よく全て周れるように設計されています。時間に余裕がある方はぜひフルコースに挑戦してみてください。\n\nこのマップに記載している「おすすめ訪問時間」は、すべての場所を訪れる場合の目安として設定しています。実際の旅では、時間が足りなければスキップしたり、逆に気に入った場所があれば長めに滞在したりと、自由に調整してください。あくまで旅の流れをつかむための参考にしていただければと思います。\n\nさらに、各スポットにはGoogle Mapsのリンクを貼っているので、そのままルート検索が可能。時刻表やお店の公式サイトなど、必要な情報ページにもリンクしているので、スマホさえあれば準備なしでOKです。\n\n自分のペースに合わせて、このマップを活用しながら京都を満喫してください！",
-        "en": "PIECE HOSTEL SANJO is a friendly hostel where travelers can connect and share tips—very different from a typical hotel. This Original Map was created by our staff, who personally walked around Kyoto and picked out the spots they truly recommend.\n\nThe numbers 2–28 are arranged so that if you follow them in order, you can see everything efficiently in a single day. If you’ve got the time, we encourage you to try the full course!\n\nThe “Recommended visit times” shown on this map are simply guidelines based on visiting all the spots in one day. In reality, you can skip a place if you’re short on time, or spend longer at a spot you really enjoy—just adjust the rest of your route accordingly. Think of them as a reference to help you balance your day.\n\nEach location comes with a Google Maps link for easy navigation, plus links to timetables and official websites. With just your smartphone, you’ll have everything you need at your fingertips.\n\nEnjoy Kyoto at your own pace, and make the most of your journey starting from PIECE HOSTEL SANJO!"
-      },
-      "gmaps": [
-        {
-          "label": {
-            "ja": "PIECE HOSTEL SANJO",
-            "en": "PIECE HOSTEL SANJO"
-          },
-          "lat": 35.0080656,
-          "lng": 135.7650619,
-          "url": "https://maps.app.goo.gl/sreDouy93Vmzm5Sm7"
-        }
-      ],
-      "links": [],
-      "info": null,
-      "notices": []
-    },
-    {
-      "no": 2,
-      "name": {
-        "ja": "京阪 三条駅",
-        "en": "Sanjo Station (Keihan Line)"
-      },
-      "kind": {
-        "ja": "駅",
-        "en": "Station"
-      },
-      "blurb": {
-        "ja": "スタートから三条大橋を渡って、歩いて約9分（約750m）の京阪の駅です。朝の鴨川を渡る散歩は気持ちよく、一日の始まりにぴったり。ここから京阪電車に乗れば出町柳まで約4〜5分で、すぐに鴨川デルタや下鴨神社の散策を始められます。",
-        "en": "Keihan Sanjo Station, about a 9-minute walk (750 m) from the start over Sanjo Ohashi. Crossing the Kamo River in the morning is a refreshing way to begin the day. From here it’s just 4–5 minutes by Keihan to Demachiyanagi, so you can start exploring the Kamogawa Delta and Shimogamo Shrine right away."
-      },
-      "lat": 35.0094432,
-      "lng": 135.7723025,
-      "photos": [
-        "02-1.jpg",
-        "02-2.jpg",
-        "02-3.jpg",
-        "02-4.jpg",
-        "02-5.jpg",
-        "02-6.jpg",
-        "02-7.jpg",
-        "02-8.jpg"
-      ],
-      "text": {
-        "ja": "三条駅 (Sanjo Station)\n\nピースホステル三条から京阪「三条駅」までは徒歩約9分（約750m）。三条大橋を渡って向かう朝の散歩は気持ちよく、一日の始まりにぴったりです。ここから京阪電車に乗れば出町柳駅まで約4〜5分。スムーズに鴨川デルタや下鴨神社の散策を始められます。\n\nおすすめ出発時間：8:45 ホステル出発 → 9:00 出町柳駅到着（徒歩9分＋電車約4〜5分を想定）",
-        "en": "From Piece Hostel Sanjo, it’s about a 9-minute walk (~750 m) to Keihan Sanjo Station. Crossing Sanjo Ohashi over the Kamo River makes for a refreshing start to the day. From Sanjo, it’s about 4–5 minutes by Keihan to Demachiyanagi, so you can begin exploring the Kamogawa Delta and Shimogamo Shrine right away.\n\nRecommended departure time: Leave around 8:45 → Arrive at Demachiyanagi around 9:00."
-      },
-      "gmaps": [
-        {
-          "label": {
-            "ja": "三条駅",
-            "en": "三条駅"
-          },
-          "lat": 35.0094432,
-          "lng": 135.7723025,
-          "url": "https://maps.app.goo.gl/cUxkVWcZVD1RFtDp9"
-        }
-      ],
-      "links": [
-        {
-          "kind": "timetable",
-          "label": {
-            "ja": "京阪 三条駅の時刻表",
-            "en": "Keihan Sanjo Station timetable (Japanese)"
-          },
-          "url": {
-            "ja": "https://www.keihan.co.jp/traffic/station/170/info.html#anc-01",
-            "en": "https://www.keihan.co.jp/traffic/station/170/info.html#anc-01"
-          }
-        }
-      ],
-      "info": null,
-      "notices": []
-    },
-    {
-      "no": 3,
-      "name": {
-        "ja": "出町柳駅（京阪電鉄）",
-        "en": "Demachiyanagi Station (Keihan Line)"
-      },
-      "kind": {
-        "ja": "駅",
-        "en": "Station"
-      },
-      "blurb": {
-        "ja": "京阪電車で到着する駅です。出町柳のまわりには、鴨川デルタの公園、出町桝形商店街、下鴨神社など、地元の方が訪れる静かで美しい場所がたくさんあります。ぜひ駅の周辺を散歩してみてください。",
-        "en": "You arrive here by Keihan. Around Demachiyanagi are many quiet, beautiful places that locals love: the Kamo River Delta park, Demachi Masugata Shopping Street and Shimogamo Shrine. Be sure to take a walk around the station!"
+        "ja": "このマップのスタート地点、京阪電車の出町柳駅です。1〜26の番号を順番に巡ると、1日で効率よく全部まわれるように作っています。時間が足りなければスキップしたり、気に入った場所で長く過ごしたり、自由に調整してください。駅のまわりには、鴨川デルタ、下鴨神社、出町桝形商店街など、地元の人が訪れる静かで美しい場所がたくさんあります。",
+        "en": "The starting point of this map: Demachiyanagi Station on the Keihan Line. Follow the numbers 1–26 in order and you can see everything in one day. Short on time? Skip a place. Love a spot? Stay longer. Around the station are many quiet, beautiful places that locals love: the Kamo River Delta, Shimogamo Shrine and Demachi Masugata Shopping Street."
       },
       "lat": 35.0304996,
       "lng": 135.7732283,
@@ -203,7 +88,7 @@
       "notices": []
     },
     {
-      "no": 4,
+      "no": 2,
       "name": {
         "ja": "鴨川デルタ",
         "en": "Kamogawa Delta"
@@ -248,7 +133,7 @@
       "notices": []
     },
     {
-      "no": 5,
+      "no": 3,
       "name": {
         "ja": "糺の森",
         "en": "Tadasu no Mori"
@@ -305,7 +190,7 @@
       "notices": []
     },
     {
-      "no": 6,
+      "no": 4,
       "name": {
         "ja": "下鴨神社",
         "en": "Shimogamo Shrine"
@@ -377,7 +262,7 @@
       "notices": []
     },
     {
-      "no": 7,
+      "no": 5,
       "name": {
         "ja": "出町桝形商店街",
         "en": "Demachi Masugata Shopping Street"
@@ -481,7 +366,7 @@
       "notices": []
     },
     {
-      "no": 8,
+      "no": 6,
       "name": {
         "ja": "出町柳駅（叡山電鉄）",
         "en": "Demachiyanagi Station (Eizan Line)"
@@ -557,7 +442,7 @@
       "notices": []
     },
     {
-      "no": 9,
+      "no": 7,
       "name": {
         "ja": "一乗寺駅",
         "en": "Ichijoji Station"
@@ -614,7 +499,7 @@
       "notices": []
     },
     {
-      "no": 10,
+      "no": 8,
       "name": {
         "ja": "圓光寺",
         "en": "Enkoji Temple"
@@ -696,7 +581,7 @@
       ]
     },
     {
-      "no": 11,
+      "no": 9,
       "name": {
         "ja": "詩仙堂",
         "en": "Shisendo"
@@ -777,7 +662,7 @@
       "notices": []
     },
     {
-      "no": 12,
+      "no": 10,
       "name": {
         "ja": "びし屋",
         "en": "Bishiya"
@@ -831,7 +716,7 @@
       "notices": []
     },
     {
-      "no": 13,
+      "no": 11,
       "name": {
         "ja": "一乗寺駅",
         "en": "Ichijoji Station"
@@ -884,7 +769,7 @@
       "notices": []
     },
     {
-      "no": 14,
+      "no": 12,
       "name": {
         "ja": "貴船口駅",
         "en": "Kibuneguchi Station (Eizan Line)"
@@ -941,7 +826,7 @@
       "notices": []
     },
     {
-      "no": 15,
+      "no": 13,
       "name": {
         "ja": "貴船口（バス停）",
         "en": "Kibuneguchi Bus Stop"
@@ -1007,7 +892,7 @@
       ]
     },
     {
-      "no": 16,
+      "no": 14,
       "name": {
         "ja": "古今 藤や",
         "en": "Kokon Fujiya"
@@ -1063,7 +948,7 @@
       "notices": []
     },
     {
-      "no": 17,
+      "no": 15,
       "name": {
         "ja": "貴船（バス停）",
         "en": "Kibune Bus Stop"
@@ -1125,7 +1010,7 @@
       ]
     },
     {
-      "no": 18,
+      "no": 16,
       "name": {
         "ja": "貴船神社",
         "en": "Kifune Shrine"
@@ -1216,7 +1101,7 @@
       ]
     },
     {
-      "no": 19,
+      "no": 17,
       "name": {
         "ja": "貴船神社（奥宮）",
         "en": "Kifune Shrine (Rear Shrine)"
@@ -1269,7 +1154,7 @@
       "notices": []
     },
     {
-      "no": 20,
+      "no": 18,
       "name": {
         "ja": "左源太",
         "en": "Sagenta (Cafe)"
@@ -1324,7 +1209,7 @@
       "notices": []
     },
     {
-      "no": 21,
+      "no": 19,
       "name": {
         "ja": "鞍馬寺 西門",
         "en": "Kurama Temple West Gate"
@@ -1416,7 +1301,7 @@
       "notices": []
     },
     {
-      "no": 22,
+      "no": 20,
       "name": {
         "ja": "鞍馬寺",
         "en": "Kurama Temple"
@@ -1516,7 +1401,7 @@
       ]
     },
     {
-      "no": 23,
+      "no": 21,
       "name": {
         "ja": "鞍馬",
         "en": "Kurama"
@@ -1559,7 +1444,7 @@
       "notices": []
     },
     {
-      "no": 24,
+      "no": 22,
       "name": {
         "ja": "鞍馬温泉",
         "en": "Kurama Onsen"
@@ -1634,7 +1519,7 @@
       "notices": []
     },
     {
-      "no": 25,
+      "no": 23,
       "name": {
         "ja": "鞍馬駅",
         "en": "Kurama Station"
@@ -1712,7 +1597,7 @@
       "notices": []
     },
     {
-      "no": 26,
+      "no": 24,
       "name": {
         "ja": "祇園四条駅",
         "en": "Gion Shijo Station"
@@ -1778,7 +1663,7 @@
       "notices": []
     },
     {
-      "no": 27,
+      "no": 25,
       "name": {
         "ja": "（隠れ酒場）ともしび3rd",
         "en": "(Hidden Bar) Tomoshibi 3rd"
@@ -1835,7 +1720,7 @@
       "notices": []
     },
     {
-      "no": 28,
+      "no": 26,
       "name": {
         "ja": "先斗町",
         "en": "Pontocho Street"
