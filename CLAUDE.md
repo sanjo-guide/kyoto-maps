@@ -13,7 +13,7 @@
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、金沢: …/kanazawa/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、金沢: …/kanazawa/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
 - 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
@@ -37,7 +37,7 @@
 
 | 種類 | 使う場面 | 元にしたもの | 例 |
 |---|---|---|---|
-| ルート型 | 番号の順に回る1日ルート | sanjo-guide/eizan-map の preview 版 | `eizan-line/` |
+| ルート型 | 番号の順に回る1日ルート | sanjo-guide/eizan-map の preview 版 | `eizan-line/`, `minoh/` |
 | スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/` |
 
 ```
@@ -46,6 +46,8 @@
 ├── index.html              # トップ（マップ一覧）。2つの型と同じフォント・色で、CSS/JS は中に直書き
 ├── eizan-line/             # ルート型: index.html, css/, js/app.js, js/i18n.js
 │                           #   データは data/routes/eizan-line.json、写真は images/eizan-line/
+├── minoh/                  # ルート型（大阪・箕面）。eizan-line/ の複製で、i18n.js だけ箕面専用
+│                           #   データは data/routes/minoh.json、写真は images/minoh/
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
 ├── assets/basemap.js       # 全マップ共通の地図スタイル
@@ -58,6 +60,8 @@
 
 - 金沢の写真: `kanazawa/img/hq-*.jpg` は写真アプリの全候補（6,667枚、Nikon D7000含む）から選んだ高画質版（旧 kyoto-maps の金沢マップ由来）。それ以外は kanazawa-guide 由来で、横552px前後の小さい写真がある。各スポットは高画質版を先に並べ、足りない分だけ kanazawa-guide の写真で補っている（最大10枚）
 - 酒楽（しゅらく）の紹介文は2026-11-20にオーナーが書いたもの。消さないこと
+- 箕面の写真: 写真アプリから GPS（Nikon D7000 は撮影時刻）で各スポットの候補（約2,000枚）を集め、全部見て1か所10枚以内に絞ったもの。元は iCloud にあり、`osxphotos export … --download-missing` で書き出して長辺1600px・位置情報なしに縮小した
+- minoh/ は eizan-line/ の index.html・css・app.js をそのまま写して、データのパス・保存キー（kyoto-maps-minoh-…）・タイトルだけ変えている。ルート型のテンプレートを直したら minoh/ にも同じ変更を入れる
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
 - 地図の見た目は全マップ共通で `assets/basemap.js`（Googleマップ / Appleマップに近い配色。町名・お店の名前は出さず、市町村・駅・川・大きな道だけ）。データは OpenFreeMap（OpenStreetMap）。オーナーの希望（2026-11-20）なので、新しいマップでも必ずこれを使う
