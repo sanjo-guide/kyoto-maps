@@ -389,3 +389,28 @@ html[lang="ja"] .in-title { font-family: var(--f); font-weight: 700; font-size: 
 /* 「TOSHI'S MAPS」の文字ロゴ（使い方の画面の上と下） */
 .in-brand { height: auto !important; max-width: none; font-family: var(--f-display); font-size: 17px; letter-spacing: .22em; line-height: 1; white-space: nowrap; }
 .in-foot .in-brand { font-size: 19px; }
+
+/* ---------- 選んで回る ---------- */
+.modesw { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); background: var(--card); margin: 4px 0 10px; }
+.modesw button { min-height: 44px; border: 0; background: transparent; font-size: 14px; font-weight: 700; color: var(--ink); }
+.modesw button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.pick-box { margin: 0 0 12px; padding: 10px 12px; background: var(--green-soft); }
+.pick-note { margin: 0 0 6px; font-size: 13px; line-height: 1.6; color: var(--ink); }
+.pick-count { margin: 0; font-size: 13px; font-weight: 700; color: var(--green); }
+.pick-tools { display: flex; gap: 14px; margin-top: 6px; }
+.l-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.kind.auto { border-color: var(--green); color: var(--green); }
+.l-caution { display: flex; align-items: flex-start; gap: 6px; font-size: 12.5px; font-weight: 700; line-height: 1.5; color: var(--warn); }
+.l-caution svg { width: 16px; height: 16px; flex: none; margin-top: 2px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.l-pickrow { padding: 0 14px 14px; }
+.l-pick { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; border: 1px solid var(--ink); background: var(--card); color: var(--ink); font-size: 15px; font-weight: 700; }
+.l-pick svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.l-pick[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fff; }
+.spot.is-off .l-ph, .spot.is-off .l-main { opacity: .5; }
+.pickbtn svg { color: var(--ink); fill: none; stroke: currentColor; stroke-width: 2.4; }
+.pickbtn[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fff; }
+.pickbtn[aria-pressed="true"] svg { color: #fff; }
+.mk.is-off { opacity: .38; filter: grayscale(1); }
+.mk.is-off.is-active { opacity: 1; filter: none; }
+.notice.hint { background: var(--green-soft); color: var(--green); }
+.notice.hint p { color: var(--ink); }

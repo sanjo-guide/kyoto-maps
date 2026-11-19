@@ -27,6 +27,9 @@
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
   var data, spots = [], byNo = {}, map, markers = {}, photoMode = null, activeNo = null, lang = 'en';
   var visited = {}, resetArmed = false, locLayer = null, toastTimer = null;
+  // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
+  var KEY_MODE = 'kyoto-maps-eizan-mode', KEY_PICKS = 'kyoto-maps-eizan-picks';
+  var mode = 'all', picks = {}, routeLine = null;
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -47,6 +50,39 @@
     try { (JSON.parse(load(KEY_VISITED) || '[]') || []).forEach(function (n) { visited[n] = true; }); } catch (e) {}
   }
   function saveVisited() { store(KEY_VISITED, JSON.stringify(Object.keys(visited).map(Number))); }
+
+  /* ---------- 選んで回る ---------- */
+  // 自分で選ぶ場所（picks）と、選んだ場所に合わせて自動で入る駅・バス停（auto）は data.plan に書いてある
+  function loadPlan() {
+    mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';
+    try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}
+  }
+  function savePlan() { store(KEY_MODE, mode); store(KEY_PICKS, JSON.stringify(Object.keys(picks).map(Number))); }
+  function isPick(no) { return !!(data.plan && data.plan.picks.indexOf(no) >= 0); }
+  function anyPicked(list) { return (list || []).some(function (n) { return picks[n]; }); }
+  function ruleOk(r) {
+    if (!r || r.always) return true;
+    if (!anyPicked(r.any)) return false;
+    if (r.andAny && !anyPicked(r.andAny)) return false;
+    if (r.none && anyPicked(r.none)) return false;
+    return true;
+  }
+  function included(no) {
+    if (mode !== 'pick' || !data.plan) return true;
+    if (isPick(no)) return !!picks[no];
+    return ruleOk(data.plan.auto[no]);
+  }
+  // 選んだ組み合わせによって行き方が変わるところの一言（例：古今 藤やを選んだらバスに乗らず歩く）
+  function hintsFor(no) {
+    if (mode !== 'pick' || !data.plan || !data.plan.hints) return [];
+    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule); });
+  }
+  function routeSpots() { return spots.filter(function (s) { return included(s.no); }); }
+  function neighbor(no, dir) {       // 前後の「ルートに入っている」スポット
+    for (var n = no + dir; byNo[n]; n += dir) if (included(n)) return byNo[n];
+    return null;
+  }
+  function pickCount() { return Object.keys(picks).length; }
   function toast(msg) {
     var el = $('toast');
     el.textContent = msg; el.hidden = false;
@@ -132,7 +168,15 @@
   }
 
   function renderProgress() {
-    var n = Object.keys(visited).length, t = spots.length || 28;
+    var r = routeSpots();
+    var n = r.filter(function (s) { return visited[s.no]; }).length, t = r.length || spots.length;
+    [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+    });
+    // 「選んで回る」の設定（data.plan）がないマップでは、切り替えボタンごと出さない
+    document.querySelector('.modesw').hidden = !(data && data.plan);
+    $('pick-box').hidden = mode !== 'pick';
+    $('pick-count').textContent = pickCount() ? fill(T().pickCount, { n: pickCount(), t: r.length }) : T().pickEmpty;
     $('progress-label').textContent = fill(T().progress, { n: n, t: t });
     $('progress-fill').style.width = (t ? Math.round(n / t * 100) : 0) + '%';
     $('btn-reset').hidden = n === 0;
@@ -189,7 +233,7 @@
   function iconFor(s, withPhoto, active) {
     var start = s.no === 1 ? ' start' : '';
     var num = badge(s.no);
-    var cls = 'mk' + (active ? ' is-active' : '') + (visited[s.no] ? ' visited' : '');
+    var cls = 'mk' + (active ? ' is-active' : '') + (visited[s.no] ? ' visited' : '') + (included(s.no) ? '' : ' is-off');
     var dx = s._dup * 34;     // spots that share one location are drawn side by side
     if (!withPhoto) {
       return L.divIcon({ className: cls, html: num, iconSize: [32, 32], iconAnchor: [16 - dx, 16] });
@@ -364,11 +408,15 @@
   }
 
   function renderList() {
+    var lastSec = null;
     $('list').innerHTML = spots.map(function (s) {
-      var sec = (data.sections || []).filter(function (x) { return x.first === s.no; })[0];
+      var inc = included(s.no), pickable = mode === 'pick' && isPick(s.no), auto = mode === 'pick' && !isPick(s.no);
+      if (auto && !inc) return '';          // 選んだ場所に関係ない駅・バス停は出さない
+      var sec = sectionOf(s.no), head = '';
+      if (sec && sec !== lastSec) { head = sectionHtml(sec); lastSec = sec; }
       var v = !!visited[s.no];
       var n = s.photos.length;
-      return (sec ? sectionHtml(sec) : '') + '<li class="spot' + (v ? ' is-visited' : '') + '">' +
+      return head + '<li class="spot' + (v ? ' is-visited' : '') + (inc ? '' : ' is-off') + '">' +
         // large photos you can swipe through, so the place is easy to picture from the list alone
         '<div class="l-ph"><div class="l-slides" data-open="' + s.no + '">' +
         s.photos.map(function (f, i) {
@@ -381,10 +429,43 @@
         '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></button></div>' +
         '<button type="button" class="l-main" data-no="' + s.no + '" aria-current="' + (s.no === activeNo) + '">' +
         '<span class="l-txt">' + nameHtml(s, 'span') +
-        '<span class="kind">' + esc(s.kind[lang]) + '</span>' +
+        '<span class="l-tags"><span class="kind">' + esc(s.kind[lang]) + '</span>' +
+        (auto ? '<span class="kind auto">' + esc(T().autoTag) + '</span>' : '') + '</span>' +
+        (s.caution ? '<span class="l-caution">' + ICON.warn + esc(s.caution[lang]) + '</span>' : '') +
         '<span class="l-blurb">' + esc(s.blurb[lang]) + '</span>' +
-        '<span class="l-more">' + esc(T().seeDetails) + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></span></button></li>';
+        '<span class="l-more">' + esc(T().seeDetails) + '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span></span></button>' +
+        (pickable ? '<div class="l-pickrow"><button type="button" class="l-pick" data-pick="' + s.no + '" aria-pressed="' + inc + '">' +
+          (inc ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>') +
+          '<span>' + esc(inc ? T().pickOn : T().pickOff) + '</span></button></div>' : '') +
+        '</li>';
     }).join('');
+  }
+
+  // 選んだ場所が変わったら、地図の点線・番号・一覧・進み具合をまとめて更新する
+  function updateRoute() {
+    if (routeLine) routeLine.setLatLngs(routeSpots().map(function (s) { return [s.lat, s.lng]; }));
+    refreshIcons(true);
+    renderList();
+    renderProgress();
+    if (activeNo && !viewDetail.hidden) renderDetail(byNo[activeNo]);
+  }
+  function keepInView(no, fn) {      // 一覧を描き直しても、押したカードが画面の同じ位置にあるようにする
+    var el = document.querySelector('#list [data-pick="' + no + '"]');
+    var y0 = el ? el.getBoundingClientRect().top : null;
+    fn();
+    var el2 = document.querySelector('#list [data-pick="' + no + '"]');
+    if (y0 !== null && el2) viewList.scrollTop += el2.getBoundingClientRect().top - y0;
+  }
+  function togglePick(no) {
+    if (picks[no]) delete picks[no]; else picks[no] = true;
+    savePlan();
+    keepInView(no, updateRoute);
+  }
+  function setMode(m) {
+    if (m === mode) return;
+    mode = m;
+    savePlan();
+    updateRoute();
   }
 
   // Update one spot in the list in place, so its photos and the scroll position stay where they are
@@ -419,11 +500,14 @@
 
     $('btn-howto-3').hidden = s.no !== 1;
     renderVisitBtn(s);
+    renderPickBtn(s);
 
     var notices = (s.notices || []).filter(function (n) { return inRange(n.from, n.to); });
     $('d-notices').innerHTML = notices.map(function (n) {
-      return '<div class="notice">' + ICON.warn + '<div><b>' + esc(t.noticeHead) + '</b><p>' + esc(n.text[lang]) + '</p>' +
+      return '<div class="notice">' + ICON.warn + '<div><b>' + esc(n.head ? n.head[lang] : t.noticeHead) + '</b><p>' + esc(n.text[lang]) + '</p>' +
         (n.url ? '<a href="' + esc(n.url) + '" target="_blank" rel="noopener noreferrer">' + esc(t.more) + '</a>' : '') + '</div></div>';
+    }).join('') + hintsFor(s.no).map(function (h) {
+      return '<div class="notice hint">' + ICON.route + '<div><b>' + esc(t.hintHead) + '</b><p>' + esc(h.text[lang]) + '</p></div></div>';
     }).join('');
 
     $('d-actions').innerHTML = s.gmaps.map(function (g) {
@@ -442,7 +526,7 @@
     $('d-info').innerHTML = infoHtml(s);
     $('share-label').textContent = t.copy;
 
-    var prev = byNo[s.no - 1], next = byNo[s.no + 1];
+    var prev = neighbor(s.no, -1), next = neighbor(s.no, 1);   // 選んで回るときは、ルートに入っている前後へ
     $('btn-prev').disabled = !prev;
     $('btn-next').disabled = !next;
     $('prev-label').textContent = prev ? pad(prev.no) + ' ' + prev.name[lang] : '';
@@ -452,6 +536,15 @@
     });
   }
 
+  function renderPickBtn(s) {
+    var show = mode === 'pick' && isPick(s.no), on = !!picks[s.no];
+    $('btn-pick').hidden = !show;
+    if (!show) return;
+    $('btn-pick').setAttribute('aria-pressed', String(on));
+    $('btn-pick').querySelector('svg').innerHTML = on ? '<path d="M5 12.5l4.5 4.5L19 7.5"/>' : '<path d="M12 5v14M5 12h14"/>';
+    $('pick-label').textContent = on ? T().pickOn : T().pickOff;
+  }
+
   function renderVisitBtn(s) {
     var v = !!visited[s.no];
     $('btn-visit').setAttribute('aria-pressed', String(v));
@@ -459,7 +552,7 @@
   }
 
   function nextRouteHtml(s) {
-    var n = byNo[s.no + 1];
+    var n = neighbor(s.no, 1);
     if (!n) return '';
     var url = 'https://www.google.com/maps/dir/?api=1&origin=' + s.lat + ',' + s.lng + '&destination=' + n.lat + ',' + n.lng + '&travelmode=transit';
     return '<a class="btn ghost next" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + ICON.route +
@@ -546,7 +639,8 @@
 
   /* ---------- init ---------- */
   function fitAll() {
-    var b = L.latLngBounds(spots.map(function (s) { return [s.lat, s.lng]; }));
+    var r = routeSpots();
+    var b = L.latLngBounds((r.length >= 2 ? r : spots).map(function (s) { return [s.lat, s.lng]; }));
     map.fitBounds(b, WIDE.matches ? { padding: [40, 40] } : { paddingTopLeft: [20, 150], paddingBottomRight: [20, 80] });
   }
 
@@ -563,13 +657,14 @@
 
     lang = pickLang();
     loadVisited();
+    loadPlan();
     applyTexts();
 
     map = L.map('map', { zoomControl: false, attributionControl: false, maxZoom: 19 });
     L.control.zoom({ position: 'bottomright' }).addTo(map);
     L.control.attribution({ position: WIDE.matches ? 'bottomright' : 'topright' }).addTo(map);
 
-    L.polyline(spots.map(function (s) { return [s.lat, s.lng]; }), {
+    routeLine = L.polyline(routeSpots().map(function (s) { return [s.lat, s.lng]; }), {
       color: '#AE3A22', weight: 2.5, opacity: 0.75, dashArray: '2 8', lineCap: 'round', interactive: false
     }).addTo(map);
 
@@ -596,6 +691,8 @@
     $('list').addEventListener('click', function (e) {
       var c = e.target.closest('button[data-check]');
       if (c) { toggleVisited(Number(c.dataset.check)); return; }
+      var pk = e.target.closest('button[data-pick]');
+      if (pk) { togglePick(Number(pk.dataset.pick)); return; }
       var st = e.target.closest('button[data-step]');
       if (st) {
         var sl = st.parentNode.querySelector('.l-slides');
@@ -621,6 +718,18 @@
       });
     }, true);
     $('btn-visit').addEventListener('click', function () { if (activeNo) toggleVisited(activeNo); });
+    $('btn-pick').addEventListener('click', function () {
+      if (!activeNo) return;
+      if (picks[activeNo]) delete picks[activeNo]; else picks[activeNo] = true;
+      savePlan(); updateRoute();
+    });
+    [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
+      b.addEventListener('click', function () { setMode(b.dataset.mode); });
+    });
+    $('btn-pick-all').addEventListener('click', function () {
+      data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
+    });
+    $('btn-pick-none').addEventListener('click', function () { picks = {}; savePlan(); updateRoute(); });
     $('btn-reset').addEventListener('click', function () {
       if (!resetArmed) { resetArmed = true; renderProgress(); return; }
       visited = {}; saveVisited(); resetArmed = false;
@@ -668,8 +777,8 @@
     $('btn-list-close').addEventListener('click', function () { setHash(''); });
     $('btn-back').addEventListener('click', function () { setHash('list'); });
     $('btn-detail-close').addEventListener('click', function () { setHash(''); });
-    $('btn-prev').addEventListener('click', function () { if (activeNo > 1) setHash('spot-' + (activeNo - 1)); });
-    $('btn-next').addEventListener('click', function () { if (byNo[activeNo + 1]) setHash('spot-' + (activeNo + 1)); });
+    $('btn-prev').addEventListener('click', function () { var p = neighbor(activeNo, -1); if (p) setHash('spot-' + p.no); });
+    $('btn-next').addEventListener('click', function () { var n = neighbor(activeNo, 1); if (n) setHash('spot-' + n.no); });
     $('btn-share').addEventListener('click', share);
     $('slides').addEventListener('scroll', function () { window.requestAnimationFrame(updateCounter); }, { passive: true });
     $('slide-prev').addEventListener('click', function () { $('slides').scrollBy({ left: -$('slides').clientWidth, behavior: 'smooth' }); });
@@ -687,7 +796,7 @@
     route();
   }
 
-  fetch('../data/routes/eizan-line.json?v=12')
+  fetch('../data/routes/eizan-line.json?v=13')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

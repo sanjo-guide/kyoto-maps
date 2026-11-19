@@ -945,7 +945,26 @@
         }
       ],
       "info": null,
-      "notices": []
+      "notices": [
+        {
+          "season": true,
+          "from": null,
+          "to": null,
+          "url": null,
+          "head": {
+            "ja": "季節営業の可能性",
+            "en": "Possibly seasonal"
+          },
+          "text": {
+            "ja": "夏の期間（川床の季節など）しか営業していない可能性があります。行く前に、営業日をGoogleマップなどで確認してください。",
+            "en": "This place may be open only in summer (for example, during the riverside-terrace season). Please check its opening days, for example on Google Maps, before you go."
+          }
+        }
+      ],
+      "caution": {
+        "ja": "夏の期間しか営業していない可能性があります",
+        "en": "May be open only in summer"
+      }
     },
     {
       "no": 15,
@@ -1206,7 +1225,26 @@
         }
       ],
       "info": null,
-      "notices": []
+      "notices": [
+        {
+          "season": true,
+          "from": null,
+          "to": null,
+          "url": null,
+          "head": {
+            "ja": "季節営業の可能性",
+            "en": "Possibly seasonal"
+          },
+          "text": {
+            "ja": "夏の期間（川床の季節など）しか営業していない可能性があります。行く前に、営業日をGoogleマップなどで確認してください。",
+            "en": "This place may be open only in summer (for example, during the riverside-terrace season). Please check its opening days, for example on Google Maps, before you go."
+          }
+        }
+      ],
+      "caution": {
+        "ja": "夏の期間しか営業していない可能性があります",
+        "en": "May be open only in summer"
+      }
     },
     {
       "no": 19,
@@ -1763,5 +1801,154 @@
       "info": null,
       "notices": []
     }
-  ]
+  ],
+  "plan": {
+    "_note": "「選んで回る」の設定。picks は自分で選ぶ場所。auto は駅・バス停などで、選んだ場所に合わせて自動で入る（any のどれかを選んだら入る。andAny があればそのどれかも必要。none のどれかを選んでいたら入らない）。",
+    "picks": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      10,
+      14,
+      16,
+      17,
+      18,
+      20,
+      22,
+      25,
+      26
+    ],
+    "auto": {
+      "1": {
+        "always": true
+      },
+      "6": {
+        "any": [
+          8,
+          9,
+          10,
+          14,
+          16,
+          17,
+          18,
+          20,
+          22
+        ]
+      },
+      "7": {
+        "any": [
+          8,
+          9,
+          10
+        ]
+      },
+      "11": {
+        "any": [
+          8,
+          9,
+          10
+        ],
+        "andAny": [
+          14,
+          16,
+          17,
+          18,
+          20,
+          22
+        ]
+      },
+      "12": {
+        "any": [
+          14,
+          16,
+          17,
+          18
+        ]
+      },
+      "13": {
+        "any": [
+          16,
+          17,
+          18
+        ],
+        "none": [
+          14
+        ]
+      },
+      "15": {
+        "any": [
+          16,
+          17,
+          18
+        ],
+        "none": [
+          14
+        ]
+      },
+      "19": {
+        "any": [
+          14,
+          16,
+          17,
+          18
+        ],
+        "andAny": [
+          20
+        ]
+      },
+      "21": {
+        "any": [
+          20,
+          22
+        ]
+      },
+      "23": {
+        "any": [
+          20,
+          22
+        ]
+      },
+      "24": {
+        "any": [
+          25,
+          26
+        ]
+      }
+    },
+    "hints": [
+      {
+        "spot": 12,
+        "rule": {
+          "any": [
+            14
+          ]
+        },
+        "text": {
+          "ja": "古今 藤やに寄るので、貴船口駅からはバスに乗らず、川沿いの道を歩いて貴船へ向かいます（約30〜40分）。",
+          "en": "Because you’re stopping at Kokon Fujiya, walk from Kibuneguchi Station along the river to Kibune instead of taking the bus (about 30–40 min)."
+        }
+      },
+      {
+        "spot": 20,
+        "rule": {
+          "any": [
+            20
+          ],
+          "none": [
+            14,
+            16,
+            17,
+            18
+          ]
+        },
+        "text": {
+          "ja": "貴船には寄らないので、西門からのハイキングはせず、鞍馬駅から近い山門（正面）側から鞍馬寺に入ります。",
+          "en": "You’re not going via Kibune, so skip the hike from the West Gate and enter Kurama Temple from the main gate near Kurama Station."
+        }
+      }
+    ]
+  }
 }
