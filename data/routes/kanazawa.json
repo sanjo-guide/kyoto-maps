@@ -267,6 +267,15 @@
           "src": "images/kanazawa/02-9.jpg",
           "thumb": "images/kanazawa/thumbs/02-9.jpg",
           "alt": ""
+        },
+        {
+          "src": "images/kanazawa/02-10.jpg",
+          "thumb": "images/kanazawa/thumbs/02-10.jpg",
+          "alt": "",
+          "caption": {
+            "ja": "秋の夜の主計町",
+            "en": "Kazuemachi on an autumn night"
+          }
         }
       ]
     },
@@ -331,6 +340,26 @@
         {
           "src": "images/kanazawa/03-6.jpg",
           "thumb": "images/kanazawa/thumbs/03-6.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/03-7.jpg",
+          "thumb": "images/kanazawa/thumbs/03-7.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/03-8.jpg",
+          "thumb": "images/kanazawa/thumbs/03-8.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/03-9.jpg",
+          "thumb": "images/kanazawa/thumbs/03-9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/03-10.jpg",
+          "thumb": "images/kanazawa/thumbs/03-10.jpg",
           "alt": ""
         }
       ]
@@ -527,6 +556,21 @@
           "src": "images/kanazawa/05-3.jpg",
           "thumb": "images/kanazawa/thumbs/05-3.jpg",
           "alt": ""
+        },
+        {
+          "src": "images/kanazawa/05-4.jpg",
+          "thumb": "images/kanazawa/thumbs/05-4.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/05-5.jpg",
+          "thumb": "images/kanazawa/thumbs/05-5.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/05-6.jpg",
+          "thumb": "images/kanazawa/thumbs/05-6.jpg",
+          "alt": ""
         }
       ]
     },
@@ -600,6 +644,29 @@
           "caption": {
             "ja": "緑の小径の先にある広場",
             "en": "Along the Green Path"
+          }
+        },
+        {
+          "src": "images/kanazawa/06-8.jpg",
+          "thumb": "images/kanazawa/thumbs/06-8.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/06-9.jpg",
+          "thumb": "images/kanazawa/thumbs/06-9.jpg",
+          "alt": "",
+          "caption": {
+            "ja": "鈴木大拙館の中",
+            "en": "Inside the D.T. Suzuki Museum"
+          }
+        },
+        {
+          "src": "images/kanazawa/06-10.jpg",
+          "thumb": "images/kanazawa/thumbs/06-10.jpg",
+          "alt": "",
+          "caption": {
+            "ja": "緑の小径",
+            "en": "The Green Path"
           }
         }
       ]
@@ -714,6 +781,11 @@
             "ja": "諸江屋の抹茶かき氷",
             "en": "Matcha shaved ice at Moroe-ya"
           }
+        },
+        {
+          "src": "images/kanazawa/07-10.jpg",
+          "thumb": "images/kanazawa/thumbs/07-10.jpg",
+          "alt": ""
         }
       ]
     },
@@ -778,6 +850,26 @@
         {
           "src": "images/kanazawa/08-6.jpg",
           "thumb": "images/kanazawa/thumbs/08-6.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/08-7.jpg",
+          "thumb": "images/kanazawa/thumbs/08-7.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/08-8.jpg",
+          "thumb": "images/kanazawa/thumbs/08-8.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/08-9.jpg",
+          "thumb": "images/kanazawa/thumbs/08-9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/08-10.jpg",
+          "thumb": "images/kanazawa/thumbs/08-10.jpg",
           "alt": ""
         }
       ]
@@ -880,6 +972,11 @@
             "ja": "HUM&Go",
             "en": "HUM&Go"
           }
+        },
+        {
+          "src": "images/kanazawa/09-10.jpg",
+          "thumb": "images/kanazawa/thumbs/09-10.jpg",
+          "alt": ""
         }
       ]
     },
@@ -948,6 +1045,26 @@
             "ja": "順番待ちの受付機",
             "en": "The queue-ticket machine"
           }
+        },
+        {
+          "src": "images/kanazawa/10-7.jpg",
+          "thumb": "images/kanazawa/thumbs/10-7.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/10-8.jpg",
+          "thumb": "images/kanazawa/thumbs/10-8.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/10-9.jpg",
+          "thumb": "images/kanazawa/thumbs/10-9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/10-10.jpg",
+          "thumb": "images/kanazawa/thumbs/10-10.jpg",
+          "alt": ""
         }
       ]
     },
@@ -1009,6 +1126,26 @@
           "src": "images/kanazawa/11-6.jpg",
           "thumb": "images/kanazawa/thumbs/11-6.jpg",
           "alt": ""
+        },
+        {
+          "src": "images/kanazawa/11-7.jpg",
+          "thumb": "images/kanazawa/thumbs/11-7.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/11-8.jpg",
+          "thumb": "images/kanazawa/thumbs/11-8.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/11-9.jpg",
+          "thumb": "images/kanazawa/thumbs/11-9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/11-10.jpg",
+          "thumb": "images/kanazawa/thumbs/11-10.jpg",
+          "alt": ""
         }
       ],
       "access": {
@@ -1035,8 +1172,8 @@
         "en": null
       },
       "description": {
-        "ja": "（紹介文は準備中です）",
-        "en": "(Description coming soon.)"
+        "ja": "石川県立図書館の近くにある、地元の人たちが集うお店です。\nとても新鮮でおいしいお魚が、驚くほど手頃な値段で、量もたっぷり。コストパフォーマンスは最高です！\n\n注文は、自分で紙に手書きして渡すスタイルです。お店では基本的に日本語のみで、お支払いは現金のみなのでご注意ください。\n地元の人が知る名店で、金沢に来たからこそ味わえる、本当に素晴らしいお店です。",
+        "en": "This is a local favorite near the Ishikawa Prefectural Library, where people from the neighborhood gather.\nThe fish is incredibly fresh and delicious, the prices are very reasonable, and the portions are generous. The value for money is outstanding!\n\nYou order by writing it down by hand yourself. Please note that it's cash only, and the staff generally speak only Japanese.\nIt's a place locals know and love, and a wonderful experience you can only have by coming to Kanazawa."
       },
       "links": [
         {
@@ -1058,6 +1195,45 @@
         {
           "src": "images/kanazawa/12-3.jpg",
           "thumb": "images/kanazawa/thumbs/12-3.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/12-4.jpg",
+          "thumb": "images/kanazawa/thumbs/12-4.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/12-5.jpg",
+          "thumb": "images/kanazawa/thumbs/12-5.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/12-6.jpg",
+          "thumb": "images/kanazawa/thumbs/12-6.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/12-7.jpg",
+          "thumb": "images/kanazawa/thumbs/12-7.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/12-8.jpg",
+          "thumb": "images/kanazawa/thumbs/12-8.jpg",
+          "alt": "",
+          "caption": {
+            "ja": "注文は自分で紙に手書きします",
+            "en": "You write your order by hand"
+          }
+        },
+        {
+          "src": "images/kanazawa/12-9.jpg",
+          "thumb": "images/kanazawa/thumbs/12-9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa/12-10.jpg",
+          "thumb": "images/kanazawa/thumbs/12-10.jpg",
           "alt": ""
         }
       ]

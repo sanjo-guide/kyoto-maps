@@ -11,6 +11,7 @@
       less: "閉じる",
       mapLabel: "ルートの地図",
       loadError: "データを読み込めませんでした。",
+      showMap: "地図",
       rights: "© Piece Hostel Sanjo　写真・文章の無断転載はご遠慮ください（クレジット表記のある写真は各ライセンスに従います）。",
       access: "アクセス",
       photo: "写真",
@@ -25,6 +26,7 @@
       less: "Show less",
       mapLabel: "Route map",
       loadError: "Could not load the map data.",
+      showMap: "Map",
       rights: "© Piece Hostel Sanjo. Please do not reuse photos or text without permission (credited photos follow their own licenses).",
       access: "Access",
       photo: "Photo",
@@ -127,6 +129,7 @@
     });
 
     map.fitBounds(L.latLngBounds(latlngs), { padding: [24, 24] });
+    setupMapButton();
   }
 
   function setActiveMarker(i) {
@@ -137,11 +140,32 @@
     });
   }
 
+  // スマホでは地図を固定しないので、地図が画面から消えたら右下に「地図」ボタンを出す
+  function setupMapButton() {
+    const wrap = document.querySelector(".map-wrap");
+    const btn = el("button", { type: "button", class: "map-fab", hidden: true });
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => map.invalidateSize(), 400);
+    });
+    document.body.append(btn);
+    labelMapButton();
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([e]) => { btn.hidden = e.isIntersecting; }, { threshold: 0.15 }).observe(wrap);
+    }
+  }
+
+  function labelMapButton() {
+    const btn = document.querySelector(".map-fab");
+    if (btn) btn.textContent = "🗺 " + UI[lang].showMap;
+  }
+
   // ---------- 一覧 ----------
   function renderHeader() {
     document.documentElement.lang = lang;
     document.getElementById("route-title").textContent = t(route.title);
     document.getElementById("map").setAttribute("aria-label", UI[lang].mapLabel);
+    labelMapButton();
     document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
 
     // 1番（ホステル）の説明を、ルート全体の紹介として上に出す
@@ -319,7 +343,7 @@
 
   document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
-  fetch(`${root}data/routes/${routeId}.json`)
+  fetch(`${root}data/routes/${routeId}.json`, { cache: "no-cache" }) // 更新した文章がすぐ反映されるように毎回確認する
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then((data) => {
       route = data;

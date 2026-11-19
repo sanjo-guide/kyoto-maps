@@ -33,9 +33,9 @@ a { color: var(--accent); }
 }
 .lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 
-/* 地図（スマホでは上に固定） */
+/* 地図（スマホでは一番上に置き、固定しない。読むときは画面いっぱいに一覧を出す） */
 .map-wrap {
-  position: sticky; top: var(--header-h); z-index: 500;
+  position: relative; isolation: isolate; z-index: 0;
   height: var(--map-h);
   border-bottom: 1px solid var(--line);
 }
@@ -49,7 +49,7 @@ a { color: var(--accent); }
 
 /* スポット一覧 */
 .spots { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.spot { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; scroll-margin-top: calc(var(--header-h) + var(--map-h) + 8px); }
+.spot { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; scroll-margin-top: calc(var(--header-h) + 8px); }
 .spot.active { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent); }
 .spot-toggle {
   width: 100%; display: flex; gap: 12px; align-items: center;
@@ -119,6 +119,19 @@ a { color: var(--accent); }
 
 .credit { margin-top: 24px; font-size: 12px; color: var(--muted); }
 
+/* スマホ: 地図が見えないときに右下に出す「地図」ボタン */
+.map-fab {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 1100;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 12px 18px; border: 0; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink);
+  font: inherit; font-size: 15px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+.map-fab[hidden] { display: none; }
+/* 右下のボタンで一番下の文章やボタンが隠れないように余白をとる */
+@media (max-width: 899px) { .panel { padding-bottom: 96px; } }
+
 /* PC: 左に一覧、右に地図 */
 @media (min-width: 900px) {
   :root { --map-h: calc(100vh - var(--header-h)); }
@@ -126,6 +139,7 @@ a { color: var(--accent); }
   .panel { order: 1; height: calc(100vh - var(--header-h)); overflow-y: auto; }
   .map-wrap { order: 2; border-bottom: 0; border-left: 1px solid var(--line); }
   .spot { scroll-margin-top: 8px; }
+  .map-fab { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

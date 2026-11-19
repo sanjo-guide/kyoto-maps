@@ -324,8 +324,8 @@
           "thumb": "images/kanazawa-daytrips/thumbs/02-7.jpg",
           "alt": "",
           "caption": {
-            "ja": "合掌造りの屋根裏",
-            "en": "Inside a gassho-zukuri roof"
+            "ja": "五箇山 菅沼（すがぬま）",
+            "en": "Suganuma, Gokayama"
           }
         },
         {
@@ -333,8 +333,8 @@
           "thumb": "images/kanazawa-daytrips/thumbs/02-8.jpg",
           "alt": "",
           "caption": {
-            "ja": "五箇山 菅沼（すがぬま）",
-            "en": "Suganuma, Gokayama"
+            "ja": "冬の白川郷",
+            "en": "Shirakawa-go in winter"
           }
         },
         {
@@ -342,31 +342,13 @@
           "thumb": "images/kanazawa-daytrips/thumbs/02-9.jpg",
           "alt": "",
           "caption": {
-            "ja": "冬の菅沼",
-            "en": "Suganuma in winter"
-          }
-        },
-        {
-          "src": "images/kanazawa-daytrips/02-10.jpg",
-          "thumb": "images/kanazawa-daytrips/thumbs/02-10.jpg",
-          "alt": "",
-          "caption": {
-            "ja": "冬の白川郷",
-            "en": "Shirakawa-go in winter"
-          }
-        },
-        {
-          "src": "images/kanazawa-daytrips/02-11.jpg",
-          "thumb": "images/kanazawa-daytrips/thumbs/02-11.jpg",
-          "alt": "",
-          "caption": {
             "ja": "秋の白川郷",
             "en": "Shirakawa-go in autumn"
           }
         },
         {
-          "src": "images/kanazawa-daytrips/02-12.jpg",
-          "thumb": "images/kanazawa-daytrips/thumbs/02-12.jpg",
+          "src": "images/kanazawa-daytrips/02-10.jpg",
+          "thumb": "images/kanazawa-daytrips/thumbs/02-10.jpg",
           "alt": "",
           "caption": {
             "ja": "白川郷の合掌造り",
@@ -459,6 +441,16 @@
             "ja": "工場見学で見られる製品",
             "en": "Products seen on the factory tour"
           }
+        },
+        {
+          "src": "images/kanazawa-daytrips/03-9.jpg",
+          "thumb": "images/kanazawa-daytrips/thumbs/03-9.jpg",
+          "alt": ""
+        },
+        {
+          "src": "images/kanazawa-daytrips/03-10.jpg",
+          "thumb": "images/kanazawa-daytrips/thumbs/03-10.jpg",
+          "alt": ""
         }
       ]
     },
@@ -565,6 +557,21 @@
           "thumb": "images/kanazawa-daytrips/thumbs/04-3.jpg",
           "alt": "",
           "caption": {
+            "ja": "雨晴海岸",
+            "en": "Amaharashi Coast"
+          },
+          "credit": {
+            "author": "Smiley.toerist (Wikimedia Commons)",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "url": "https://commons.wikimedia.org/wiki/File:Amaharashi_coast_2024_4.jpg"
+          }
+        },
+        {
+          "src": "images/kanazawa-daytrips/04-4.jpg",
+          "thumb": "images/kanazawa-daytrips/thumbs/04-4.jpg",
+          "alt": "",
+          "caption": {
             "ja": "氷見漁港の魚市場",
             "en": "Himi fish market"
           },
@@ -576,8 +583,8 @@
           }
         },
         {
-          "src": "images/kanazawa-daytrips/04-4.jpg",
-          "thumb": "images/kanazawa-daytrips/thumbs/04-4.jpg",
+          "src": "images/kanazawa-daytrips/04-5.jpg",
+          "thumb": "images/kanazawa-daytrips/thumbs/04-5.jpg",
           "alt": "",
           "caption": {
             "ja": "氷見漁港",
@@ -915,8 +922,8 @@
           "thumb": "images/kanazawa-daytrips/thumbs/06-6.jpg",
           "alt": "",
           "caption": {
-            "ja": "永平寺（えいへいじ）",
-            "en": "Eiheiji"
+            "ja": "丸岡城の中の急な階段",
+            "en": "The steep stairs inside Maruoka Castle"
           }
         },
         {
@@ -924,7 +931,7 @@
           "thumb": "images/kanazawa-daytrips/thumbs/06-7.jpg",
           "alt": "",
           "caption": {
-            "ja": "永平寺",
+            "ja": "永平寺（えいへいじ）",
             "en": "Eiheiji"
           }
         },
@@ -933,13 +940,22 @@
           "thumb": "images/kanazawa-daytrips/thumbs/06-8.jpg",
           "alt": "",
           "caption": {
-            "ja": "永平寺の回廊",
-            "en": "A corridor at Eiheiji"
+            "ja": "永平寺",
+            "en": "Eiheiji"
           }
         },
         {
           "src": "images/kanazawa-daytrips/06-9.jpg",
           "thumb": "images/kanazawa-daytrips/thumbs/06-9.jpg",
+          "alt": "",
+          "caption": {
+            "ja": "永平寺の回廊",
+            "en": "A corridor at Eiheiji"
+          }
+        },
+        {
+          "src": "images/kanazawa-daytrips/06-10.jpg",
+          "thumb": "images/kanazawa-daytrips/thumbs/06-10.jpg",
           "alt": "",
           "caption": {
             "ja": "越前大仏（えちぜんだいぶつ）の大仏殿",
