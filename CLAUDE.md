@@ -44,9 +44,10 @@
 ├── index.html              # トップ（マップ一覧）。2つの型と同じフォント・色で、CSS/JS は中に直書き
 ├── eizan-line/             # ルート型: index.html, css/, js/app.js, js/i18n.js
 │                           #   データは data/routes/eizan-line.json、写真は images/eizan-line/
-├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/, tiles/
+├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
-├── vendor/                 # Leaflet 1.9.4、MapLibre（ルート型の地図）
+├── assets/basemap.js       # 全マップ共通の地図スタイル
+├── vendor/                 # Leaflet 1.9.4、MapLibre
 ├── data/routes/            # ルート型のデータ
 ├── images/                 # ルート型の写真
 ├── scripts/                # PointMap+ からの取り込み・写真縮小
@@ -57,7 +58,8 @@
 - 酒楽（しゅらく）の紹介文は2026-11-20にオーナーが書いたもの。消さないこと
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
-- ルート型の地図は OpenFreeMap（ベクター地図、英語/日本語の地名切り替え）。スポット紹介型は地理院タイル（淡色地図）を `tiles/` に保存して使う
+- 地図の見た目は全マップ共通で `assets/basemap.js`（Googleマップ / Appleマップに近い配色。町名・お店の名前は出さず、市町村・駅・川・大きな道だけ）。データは OpenFreeMap（OpenStreetMap）。オーナーの希望（2026-11-20）なので、新しいマップでも必ずこれを使う
+- 金沢のページは「金沢市内」「日帰り」をタブで切り替える。日帰りはエリア見出し（加賀温泉・五箇山・氷見・富山・福井）の下に場所ごとのカードを並べる形（オーナーの希望）
 - `scripts/import_pointmap.py` の出力は旧形式。ルート型に使うときは eizan-line.json の形（kind, blurb, sections, gmaps, links, info, notices）に合わせて手直しが必要
 
 ## ルートデータの方針

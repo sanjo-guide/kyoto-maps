@@ -192,3 +192,12 @@ html[lang="ja"] .hero h1 { font-family: var(--f-body); font-weight: 700; font-si
 html[lang="ja"] .madeby { font-family: var(--f-body); letter-spacing: .04em; }
 .noscript { padding: 20px; text-align: center; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card { transition: none; } }
+
+/* 「金沢市内」「日帰り」タブ: 選んでいない方の一覧は隠す */
+main[data-view="city"] #trips { display: none; }
+main[data-view="trips"] #city, main[data-view="trips"] #food { display: none; }
+.nav a[aria-current="true"] { background: var(--ink); color: var(--paper); }
+.nav a[aria-current="true"]:hover { background: var(--ink); }
+/* 地図（ベクター地図）の土台の色 */
+.lmap { background: #F4F3F0; }
+@media (prefers-color-scheme: dark) { .lmap { background: #1F2124; } }

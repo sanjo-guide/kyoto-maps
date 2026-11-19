@@ -1796,37 +1796,14 @@ window.GUIDE = {
    ]
   },
   {
-   "id": "himi",
-   "no": 7,
-   "en": "Himi (Amaharashi Coast / hot springs / yellowtail / fish market restaurant)",
-   "ja": "氷見（雨晴海岸・温泉・ブリ・魚市場食堂）",
-   "short": {
-    "en": "Himi",
-    "ja": "氷見"
-   },
+   "kind": "group",
+   "id": "g-himi",
+   "en": "Himi (Amaharashi Coast / hot spring / fish market cafeteria)",
+   "ja": "氷見（雨晴海岸・温泉・魚市場食堂）",
    "time": {
     "en": "Approx. 1 hour by train or bus from Kanazawa",
     "ja": "金沢から電車かバスで約1時間"
    },
-   "pins": [
-    {
-     "lat": 36.86441,
-     "lon": 136.987015,
-     "en": "Himi",
-     "ja": "氷見",
-     "dx": -14,
-     "dy": 4,
-     "anchor": "end"
-    },
-    {
-     "lat": 36.816132,
-     "lon": 137.03953,
-     "en": "Amaharashi",
-     "ja": "雨晴海岸",
-     "dx": 14,
-     "dy": 6
-    }
-   ],
    "body": {
     "en": [
      "This is a very satisfying day trip where you can enjoy ocean scenery, seafood, and hot springs all in one day."
@@ -1834,44 +1811,35 @@ window.GUIDE = {
     "ja": [
      "海の景色、海鮮、温泉を1日でまとめて楽しめる、満足度の高い日帰り旅です。"
     ]
+   }
+  },
+  {
+   "id": "amaharashi",
+   "no": 7,
+   "en": "Amaharashi Coast",
+   "ja": "雨晴海岸（あまはらしかいがん）",
+   "short": {
+    "en": "Amaharashi",
+    "ja": "雨晴海岸"
    },
-   "subs": [
+   "pins": [
     {
-     "en": "Amaharashi Coast",
+     "lat": 36.816132,
+     "lon": 137.03953,
+     "en": "Amaharashi",
      "ja": "雨晴海岸",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8",
-     "t": {
-      "en": "The scenery here is truly beautiful, especially on a clear day.",
-      "ja": "特に晴れた日は、本当に美しい景色です。"
-     }
-    },
-    {
-     "en": "Himi Onsenkyo Sōyu",
-     "ja": "氷見温泉郷 総湯",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E8%A6%8B%E6%B8%A9%E6%B3%89%E9%83%B7%20%E7%B7%8F%E6%B9%AF%20%E3%81%B2%E3%81%BF%E7%95%AA%E5%B1%8B%E8%A1%97",
-     "t": {
-      "en": "This is an easy hot spring stop for day visitors and works very well as part of a day trip.",
-      "ja": "日帰りでも気軽に立ち寄れる温泉で、日帰り旅の途中に寄るのにぴったりです。"
-     }
-    },
-    {
-     "en": "Yellowtail",
-     "ja": "ブリ",
-     "t": {
-      "en": "Himi is famous for its yellowtail, and it’s absolutely delicious. If you like seafood, this is a very strong recommendation.",
-      "ja": "氷見はブリで有名で、本当においしいです。海鮮好きなら、ぜひ食べてほしいです。"
-     }
-    },
-    {
-     "en": "Himi Fish Market Cafeteria",
-     "ja": "氷見漁港 魚市場食堂",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E8%A6%8B%E6%BC%81%E6%B8%AF%20%E9%AD%9A%E5%B8%82%E5%A0%B4%E9%A3%9F%E5%A0%82",
-     "t": {
-      "en": "Good value, and a great place to enjoy a solid seafood meal.",
-      "ja": "コスパがよく、しっかり海鮮を食べたいときにぴったりです。"
-     }
+     "ldir": "right"
     }
    ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8",
+   "body": {
+    "en": [
+     "The scenery here is truly beautiful, especially on a clear day."
+    ],
+    "ja": [
+     "特に晴れた日は、本当に美しい景色です。"
+    ]
+   },
    "photos": [
     {
      "f": "hq-dt-04-1.jpg",
@@ -1916,6 +1884,96 @@ window.GUIDE = {
      }
     },
     {
+     "f": "web-amaharashi.jpg",
+     "cap": {
+      "en": "Amaharashi Coast",
+      "ja": "雨晴海岸"
+     },
+     "w": 1280,
+     "h": 854,
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8%EF%BC%88%E5%A5%B3%E5%B2%A9%E3%83%BB%E7%AB%8B%E5%B1%B1%E9%80%A3%E5%B3%B0%EF%BC%8920250215-IMG_2835.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "himi-onsen",
+   "no": 8,
+   "en": "Himi Onsenkyo Sōyu (Himi Banya-gai)",
+   "ja": "氷見温泉郷 総湯（ひみ番屋街）",
+   "short": {
+    "en": "Himi Sōyu",
+    "ja": "氷見 総湯"
+   },
+   "pins": [
+    {
+     "lat": 36.86405,
+     "lon": 136.98706,
+     "en": "Himi Sōyu",
+     "ja": "氷見 総湯",
+     "ldir": "left"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E8%A6%8B%E6%B8%A9%E6%B3%89%E9%83%B7%20%E7%B7%8F%E6%B9%AF%20%E3%81%B2%E3%81%BF%E7%95%AA%E5%B1%8B%E8%A1%97",
+   "body": {
+    "en": [
+     "This is an easy hot spring stop for day visitors and works very well as part of a day trip."
+    ],
+    "ja": [
+     "日帰りでも気軽に立ち寄れる温泉で、日帰り旅の途中に寄るのにぴったりです。"
+    ]
+   },
+   "photos": [
+    {
+     "f": "web-himi-banya.jpg",
+     "cap": {
+      "en": "Himi Banya-gai (Sōyu is here)",
+      "ja": "ひみ番屋街（総湯があります）"
+     },
+     "w": 1280,
+     "h": 854,
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E3%81%B2%E3%81%BF%E7%95%AA%E5%B1%8B%E8%A1%97%EF%BC%88%E9%81%93%E3%81%AE%E9%A7%85%E6%B0%B7%E8%A6%8B%EF%BC%8920260221-IMG_5506.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "himi-gyoko",
+   "no": 9,
+   "en": "Himi Fish Market Cafeteria (yellowtail)",
+   "ja": "氷見漁港 魚市場食堂（ブリ）",
+   "short": {
+    "en": "Fish Market Cafeteria",
+    "ja": "魚市場食堂"
+   },
+   "pins": [
+    {
+     "lat": 36.858501,
+     "lon": 136.990903,
+     "en": "Fish Market Cafeteria",
+     "ja": "魚市場食堂",
+     "ldir": "bottom"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E8%A6%8B%E6%BC%81%E6%B8%AF%20%E9%AD%9A%E5%B8%82%E5%A0%B4%E9%A3%9F%E5%A0%82",
+   "body": {
+    "en": [
+     "Himi is famous for its yellowtail, and it’s absolutely delicious. If you like seafood, this is a very strong recommendation.",
+     "Good value, and a great place to enjoy a solid seafood meal."
+    ],
+    "ja": [
+     "氷見はブリで有名で、本当においしいです。海鮮好きなら、ぜひ食べてほしいです。",
+     "コスパがよく、しっかり海鮮を食べたいときにぴったりです。"
+    ]
+   },
+   "photos": [
+    {
      "f": "hq-dt-04-4.jpg",
      "w": 1280,
      "h": 854,
@@ -1941,20 +1999,6 @@ window.GUIDE = {
       "author": "Jura Tone",
       "license": "CC BY 2.0",
       "page": "https://commons.wikimedia.org/wiki/File:Himi_port.jpg"
-     }
-    },
-    {
-     "f": "web-amaharashi.jpg",
-     "cap": {
-      "en": "Amaharashi Coast",
-      "ja": "雨晴海岸"
-     },
-     "w": 1280,
-     "h": 854,
-     "credit": {
-      "author": "くろふね",
-      "license": "CC BY 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8%EF%BC%88%E5%A5%B3%E5%B2%A9%E3%83%BB%E7%AB%8B%E5%B1%B1%E9%80%A3%E5%B3%B0%EF%BC%8920250215-IMG_2835.jpg"
      }
     },
     {
@@ -1984,57 +2028,18 @@ window.GUIDE = {
       "license": "CC BY 4.0",
       "page": "https://commons.wikimedia.org/wiki/File:%E6%B0%B7%E8%A6%8B%E6%BC%81%E6%B8%AF%E9%AD%9A%E5%B8%82%E5%A0%B4%E9%A3%9F%E5%A0%8220230802-P1029378.jpg"
      }
-    },
-    {
-     "f": "web-himi-banya.jpg",
-     "cap": {
-      "en": "Himi Banya-gai (Sōyu is here)",
-      "ja": "ひみ番屋街（総湯があります）"
-     },
-     "w": 1280,
-     "h": 854,
-     "credit": {
-      "author": "くろふね",
-      "license": "CC BY 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:%E3%81%B2%E3%81%BF%E7%95%AA%E5%B1%8B%E8%A1%97%EF%BC%88%E9%81%93%E3%81%AE%E9%A7%85%E6%B0%B7%E8%A6%8B%EF%BC%8920260221-IMG_5506.jpg"
-     }
     }
    ]
   },
   {
-   "id": "toyama",
-   "no": 8,
+   "kind": "group",
+   "id": "g-toyama",
    "en": "Toyama City (Glass Art Museum / Iwase / sushi)",
    "ja": "富山市（ガラス美術館・岩瀬・寿司）",
-   "short": {
-    "en": "Toyama",
-    "ja": "富山"
-   },
    "time": {
     "en": "Approx. 20 mins by Shinkansen from Kanazawa",
     "ja": "金沢から新幹線で約20分"
    },
-   "pins": [
-    {
-     "lat": 36.688583,
-     "lon": 137.21475,
-     "en": "Glass Art Museum",
-     "ja": "ガラス美術館",
-     "dx": -8,
-     "dy": 28,
-     "anchor": "middle",
-     "ldir": "bottom"
-    },
-    {
-     "lat": 36.75822,
-     "lon": 137.22842,
-     "en": "Iwase",
-     "ja": "岩瀬",
-     "dx": -14,
-     "dy": 4,
-     "anchor": "end"
-    }
-   ],
    "body": {
     "en": [
      "Toyama has a different appeal from Kanazawa. It combines a slightly more urban feel with the charm of a port town and a very strong food scene."
@@ -2042,35 +2047,129 @@ window.GUIDE = {
     "ja": [
      "富山には金沢とはまた違った魅力があります。少し都会的な雰囲気と港町の魅力、そして充実した食が合わさった街です。"
     ]
+   }
+  },
+  {
+   "id": "toyama-glass",
+   "no": 10,
+   "en": "Toyama Glass Art Museum",
+   "ja": "富山市ガラス美術館",
+   "short": {
+    "en": "Glass Art Museum",
+    "ja": "ガラス美術館"
    },
-   "subs": [
+   "pins": [
     {
+     "lat": 36.688583,
+     "lon": 137.21475,
      "en": "Glass Art Museum",
-     "ja": "富山市ガラス美術館",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%B1%B1%E5%B8%82%E3%82%AC%E3%83%A9%E3%82%B9%E7%BE%8E%E8%A1%93%E9%A4%A8",
-     "t": {
-      "en": "The building itself is beautiful, and the exhibitions are well worth seeing.",
-      "ja": "建物自体が美しく、展示も見ごたえがあります。"
-     }
-    },
-    {
-     "en": "Iwase",
-     "ja": "岩瀬",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A9%E7%80%AC%20%E5%AF%8C%E5%B1%B1%E5%B8%82%20%E5%A4%A7%E7%94%BA",
-     "t": {
-      "en": "This is a lovely area for a walk, with old streets where you can stop for sake tastings or visit craft beer spots.",
-      "ja": "散歩にぴったりのエリアで、古い町並みで日本酒の試飲をしたり、クラフトビールのお店に立ち寄ったりできます。"
-     }
-    },
-    {
-     "en": "Sushi",
-     "ja": "寿司",
-     "t": {
-      "en": "Toyama is famous for its sushi, and the reputation is deserved. Even around the station, there are many places with a high level of quality.",
-      "ja": "富山は寿司で有名で、その評判どおりです。駅の周辺だけでも、レベルの高いお店がたくさんあります。"
-     }
+     "ja": "ガラス美術館",
+     "ldir": "bottom"
     }
    ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%B1%B1%E5%B8%82%E3%82%AC%E3%83%A9%E3%82%B9%E7%BE%8E%E8%A1%93%E9%A4%A8",
+   "body": {
+    "en": [
+     "The building itself is beautiful, and the exhibitions are well worth seeing."
+    ],
+    "ja": [
+     "建物自体が美しく、展示も見ごたえがあります。"
+    ]
+   },
+   "photos": [
+    {
+     "f": "hq-dt-05-9.jpg",
+     "w": 1280,
+     "h": 851,
+     "cap": {
+      "ja": "富山市ガラス美術館",
+      "en": "Toyama Glass Art Museum"
+     },
+     "credit": {
+      "author": "Asturio Cantabrio",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:TOYAMA_KIRARI_exterior_in_the_morning_ac_(3).jpg"
+     }
+    },
+    {
+     "f": "hq-dt-05-10.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "富山市ガラス美術館",
+      "en": "Toyama Glass Art Museum"
+     },
+     "credit": {
+      "author": "極地狐",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Toyama_Glass_Art_Museum_-_Dec_11,_2015_(1).jpg"
+     }
+    },
+    {
+     "f": "toyama-1.jpg",
+     "cap": {
+      "en": "Glass Art Museum (TOYAMA Kirari)",
+      "ja": "富山市ガラス美術館（TOYAMAキラリ）"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "toyama-2.jpg",
+     "cap": {
+      "en": "Glass Art Museum (TOYAMA Kirari)",
+      "ja": "富山市ガラス美術館（TOYAMAキラリ）"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "toyama-3.jpg",
+     "cap": {
+      "en": "Glass Art Museum (TOYAMA Kirari)",
+      "ja": "富山市ガラス美術館（TOYAMAキラリ）"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "toyama-4.jpg",
+     "cap": {
+      "en": "Glass Art Museum (TOYAMA Kirari)",
+      "ja": "富山市ガラス美術館（TOYAMAキラリ）"
+     },
+     "w": 552,
+     "h": 310
+    }
+   ]
+  },
+  {
+   "id": "iwase",
+   "no": 11,
+   "en": "Iwase",
+   "ja": "岩瀬（いわせ）",
+   "short": {
+    "en": "Iwase",
+    "ja": "岩瀬"
+   },
+   "pins": [
+    {
+     "lat": 36.75822,
+     "lon": 137.22842,
+     "en": "Iwase",
+     "ja": "岩瀬",
+     "ldir": "left"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A9%E7%80%AC%20%E5%AF%8C%E5%B1%B1%E5%B8%82%20%E5%A4%A7%E7%94%BA",
+   "body": {
+    "en": [
+     "This is a lovely area for a walk, with old streets where you can stop for sake tastings or visit craft beer spots."
+    ],
+    "ja": [
+     "散歩にぴったりのエリアで、古い町並みで日本酒の試飲をしたり、クラフトビールのお店に立ち寄ったりできます。"
+    ]
+   },
    "photos": [
     {
      "f": "hq-dt-05-1.jpg",
@@ -2127,6 +2226,54 @@ window.GUIDE = {
      }
     },
     {
+     "f": "toyama-8.jpg",
+     "cap": {
+      "en": "Iwase",
+      "ja": "岩瀬"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "toyama-9.jpg",
+     "cap": {
+      "en": "Iwase",
+      "ja": "岩瀬"
+     },
+     "w": 1182,
+     "h": 666
+    }
+   ]
+  },
+  {
+   "id": "toyama-sushi",
+   "no": 12,
+   "en": "Sushi around Toyama Station",
+   "ja": "富山駅周辺の寿司",
+   "short": {
+    "en": "Sushi",
+    "ja": "寿司"
+   },
+   "pins": [
+    {
+     "lat": 36.701922,
+     "lon": 137.213067,
+     "en": "Sushi",
+     "ja": "寿司",
+     "ldir": "top"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E5%B1%B1%E9%A7%85%20%E5%AF%BF%E5%8F%B8",
+   "body": {
+    "en": [
+     "Toyama is famous for its sushi, and the reputation is deserved. Even around the station, there are many places with a high level of quality."
+    ],
+    "ja": [
+     "富山は寿司で有名で、その評判どおりです。駅の周辺だけでも、レベルの高いお店がたくさんあります。"
+    ]
+   },
+   "photos": [
+    {
      "f": "hq-dt-05-7.jpg",
      "w": 1280,
      "h": 720,
@@ -2145,94 +2292,30 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-dt-05-9.jpg",
-     "w": 1280,
-     "h": 851,
+     "f": "web-toyama-sushi.jpg",
      "cap": {
-      "ja": "富山市ガラス美術館",
-      "en": "Toyama Glass Art Museum"
+      "en": "Sushi with Toyama white shrimp",
+      "ja": "白えびなどの寿司"
      },
-     "credit": {
-      "author": "Asturio Cantabrio",
-      "license": "CC BY-SA 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:TOYAMA_KIRARI_exterior_in_the_morning_ac_(3).jpg"
-     }
-    },
-    {
-     "f": "hq-dt-05-10.jpg",
      "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "富山市ガラス美術館",
-      "en": "Toyama Glass Art Museum"
-     },
+     "h": 960,
      "credit": {
-      "author": "極地狐",
-      "license": "CC BY 2.0",
-      "page": "https://commons.wikimedia.org/wiki/File:Toyama_Glass_Art_Museum_-_Dec_11,_2015_(1).jpg"
+      "author": "7'o'7",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Siroebi_amaebi_gasuebi.jpg"
      }
     }
    ]
   },
   {
-   "id": "fukui",
-   "no": 9,
+   "kind": "group",
+   "id": "g-fukui",
    "en": "Fukui (Tojinbo / Awara Onsen / Maruoka Castle / Eiheiji / Echizen Daibutsu)",
    "ja": "福井（東尋坊・あわら温泉・丸岡城・永平寺・越前大仏）",
-   "short": {
-    "en": "Fukui",
-    "ja": "福井"
-   },
    "time": {
     "en": "Approx. 25 mins by Shinkansen from Kanazawa",
     "ja": "金沢から新幹線で約25分"
    },
-   "pins": [
-    {
-     "lat": 36.237684,
-     "lon": 136.125281,
-     "en": "Tojinbo",
-     "ja": "東尋坊",
-     "dx": 0,
-     "dy": -16,
-     "anchor": "middle"
-    },
-    {
-     "lat": 36.22382,
-     "lon": 136.19078,
-     "en": "Awara Onsen",
-     "ja": "あわら温泉",
-     "dx": 0,
-     "dy": 28,
-     "anchor": "middle",
-     "ldir": "bottom"
-    },
-    {
-     "lat": 36.15235,
-     "lon": 136.2721,
-     "en": "Maruoka Castle",
-     "ja": "丸岡城",
-     "dx": 14,
-     "dy": 4
-    },
-    {
-     "lat": 36.05531,
-     "lon": 136.35587,
-     "en": "Eiheiji",
-     "ja": "永平寺",
-     "dx": -14,
-     "dy": 16,
-     "anchor": "end"
-    },
-    {
-     "lat": 36.054414,
-     "lon": 136.517067,
-     "en": "Echizen Daibutsu",
-     "ja": "越前大仏",
-     "dx": 14,
-     "dy": 4
-    }
-   ],
    "body": {
     "en": [
      "If you have enough time, I also highly recommend a day trip to Fukui.",
@@ -2242,64 +2325,36 @@ window.GUIDE = {
      "時間に余裕があれば、福井への日帰りもとてもおすすめです。",
      "迫力のある海岸の景色、静かなお寺、温泉、歴史あるお城と、金沢とはまったく違う体験ができます。1日に全部を詰め込むより、気になる場所をいくつか選んで組み合わせるのがいいと思います。"
     ]
+   }
+  },
+  {
+   "id": "tojinbo",
+   "no": 13,
+   "en": "Tojinbo",
+   "ja": "東尋坊（とうじんぼう）",
+   "short": {
+    "en": "Tojinbo",
+    "ja": "東尋坊"
    },
-   "subs": [
+   "pins": [
     {
+     "lat": 36.237684,
+     "lon": 136.125281,
      "en": "Tojinbo",
      "ja": "東尋坊",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E5%B0%8B%E5%9D%8A",
-     "t": {
-      "en": "This is one of Fukui’s most famous scenic spots. The dramatic cliffs are impressive, and in person they feel much more powerful and larger in scale than in photos. Just walking along the coast feels great. It’s a classic destination, but absolutely worth visiting.",
-      "ja": "福井を代表する景勝地のひとつです。断崖絶壁は迫力満点で、実際に見ると写真よりずっと力強く、スケールも大きく感じます。海岸沿いを歩くだけでも気持ちがいいです。定番ですが、行く価値は十分あります。"
-     }
-    },
-    {
-     "en": "Awara Onsen",
-     "ja": "あわら温泉",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%82%8F%E3%82%89%E6%B8%A9%E6%B3%89",
-     "t": {
-      "en": "This is perfect if you get a little tired after a lot of walking and want to soak in a hot spring. It’s easy to visit for the day, and it pairs especially well with Tojinbo for a very satisfying combination of ocean views and relaxation.",
-      "ja": "たくさん歩いて少し疲れたときに、温泉につかるのにぴったりです。日帰りでも気軽に行けて、特に東尋坊と組み合わせると、海の景色と温泉の癒やしで満足度の高い1日になります。"
-     }
-    },
-    {
-     "en": "Maruoka Castle",
-     "ja": "丸岡城",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E5%B2%A1%E5%9F%8E",
-     "t": {
-      "en": "This is one of Japan’s remaining original castle keeps. It’s compact and easy to visit, so it’s a good option even if you’re not especially knowledgeable about castles but want to see a traditional Japanese one. It isn’t overly flashy, but it has a solid, understated charm. It’s also easy to combine with other destinations.",
-      "ja": "日本に現存する天守のひとつです。コンパクトで見学しやすいので、お城に詳しくなくても、日本の伝統的なお城を見てみたい人にちょうどいいです。派手さはありませんが、どっしりとした控えめな魅力があります。ほかの場所とも組み合わせやすいです。"
-     }
-    },
-    {
-     "en": "Eiheiji",
-     "ja": "永平寺",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%9C%AC%E5%B1%B1%E6%B0%B8%E5%B9%B3%E5%AF%BA",
-     "t": {
-      "en": "If you want to visit a calm and serious temple, this is one of the best choices. The air feels almost sharp and disciplined, and it feels more like a true temple than a sightseeing attraction. The buildings are beautiful, and just walking through the grounds feels calming. It offers a very different kind of quiet time compared with walking around Kanazawa.",
-      "ja": "静かで本格的なお寺に行きたいなら、いちばんのおすすめのひとつです。空気がぴんと張りつめていて、観光地というより本物のお寺という感じがします。建物が美しく、境内を歩くだけで心が落ち着きます。金沢を歩くのとはまったく違う、静かな時間を過ごせます。"
-     }
-    },
-    {
-     "en": "Echizen Daibutsu",
-     "ja": "越前大仏",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E8%B6%8A%E5%89%8D%E5%A4%A7%E4%BB%8F%20%E5%A4%A7%E5%B8%AB%E5%B1%B1%E6%B8%85%E5%A4%A7%E5%AF%BA",
-     "t": {
-      "en": "This is a slightly unexpected but very interesting place. The Great Buddha is massive, and the building itself is also impressive, so it has much more impact than you might expect. Since it’s not right in the center of the most famous tourist areas, it’s often easier to explore at a relaxed pace. It also combines well with Eiheiji if you want a day focused on temples and Buddhist sites.",
-      "ja": "少し意外な、でもとてもおもしろい場所です。大仏はとても大きく、建物も立派なので、想像以上のインパクトがあります。有名な観光地の中心から外れているので、ゆっくり見て回りやすいことが多いです。お寺や仏教の名所をめぐる日にするなら、永平寺との組み合わせもおすすめです。"
-     }
+     "ldir": "top"
     }
    ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E5%B0%8B%E5%9D%8A",
+   "body": {
+    "en": [
+     "This is one of Fukui’s most famous scenic spots. The dramatic cliffs are impressive, and in person they feel much more powerful and larger in scale than in photos. Just walking along the coast feels great. It’s a classic destination, but absolutely worth visiting."
+    ],
+    "ja": [
+     "福井を代表する景勝地のひとつです。断崖絶壁は迫力満点で、実際に見ると写真よりずっと力強く、スケールも大きく感じます。海岸沿いを歩くだけでも気持ちがいいです。定番ですが、行く価値は十分あります。"
+    ]
+   },
    "photos": [
-    {
-     "f": "hq-dt-06-1.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "丸岡城（まるおかじょう）",
-      "en": "Maruoka Castle"
-     }
-    },
     {
      "f": "hq-dt-06-2.jpg",
      "w": 1280,
@@ -2327,7 +2382,37 @@ window.GUIDE = {
       "license": "CC BY 2.5",
       "page": "https://commons.wikimedia.org/wiki/File:Japan_Tojinbo02n4592.jpg"
      }
-    },
+    }
+   ]
+  },
+  {
+   "id": "awara",
+   "no": 14,
+   "en": "Awara Onsen",
+   "ja": "あわら温泉",
+   "short": {
+    "en": "Awara Onsen",
+    "ja": "あわら温泉"
+   },
+   "pins": [
+    {
+     "lat": 36.22382,
+     "lon": 136.19078,
+     "en": "Awara Onsen",
+     "ja": "あわら温泉",
+     "ldir": "bottom"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%82%8F%E3%82%89%E6%B8%A9%E6%B3%89",
+   "body": {
+    "en": [
+     "This is perfect if you get a little tired after a lot of walking and want to soak in a hot spring. It’s easy to visit for the day, and it pairs especially well with Tojinbo for a very satisfying combination of ocean views and relaxation."
+    ],
+    "ja": [
+     "たくさん歩いて少し疲れたときに、温泉につかるのにぴったりです。日帰りでも気軽に行けて、特に東尋坊と組み合わせると、海の景色と温泉の癒やしで満足度の高い1日になります。"
+    ]
+   },
+   "photos": [
     {
      "f": "hq-dt-06-4.jpg",
      "w": 1280,
@@ -2335,6 +2420,63 @@ window.GUIDE = {
      "cap": {
       "ja": "あわら温泉の足湯",
       "en": "Foot bath at Awara Onsen"
+     }
+    },
+    {
+     "f": "fukui-1.jpg",
+     "cap": {
+      "en": "Awara Onsen",
+      "ja": "あわら温泉"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "fukui-2.jpg",
+     "cap": {
+      "en": "Awara Onsen",
+      "ja": "あわら温泉"
+     },
+     "w": 552,
+     "h": 310
+    }
+   ]
+  },
+  {
+   "id": "maruoka",
+   "no": 15,
+   "en": "Maruoka Castle",
+   "ja": "丸岡城（まるおかじょう）",
+   "short": {
+    "en": "Maruoka Castle",
+    "ja": "丸岡城"
+   },
+   "pins": [
+    {
+     "lat": 36.15235,
+     "lon": 136.2721,
+     "en": "Maruoka Castle",
+     "ja": "丸岡城",
+     "ldir": "right"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E5%B2%A1%E5%9F%8E",
+   "body": {
+    "en": [
+     "This is one of Japan’s remaining original castle keeps. It’s compact and easy to visit, so it’s a good option even if you’re not especially knowledgeable about castles but want to see a traditional Japanese one. It isn’t overly flashy, but it has a solid, understated charm. It’s also easy to combine with other destinations."
+    ],
+    "ja": [
+     "日本に現存する天守のひとつです。コンパクトで見学しやすいので、お城に詳しくなくても、日本の伝統的なお城を見てみたい人にちょうどいいです。派手さはありませんが、どっしりとした控えめな魅力があります。ほかの場所とも組み合わせやすいです。"
+    ]
+   },
+   "photos": [
+    {
+     "f": "hq-dt-06-1.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "丸岡城（まるおかじょう）",
+      "en": "Maruoka Castle"
      }
     },
     {
@@ -2355,6 +2497,45 @@ window.GUIDE = {
       "en": "The steep stairs inside Maruoka Castle"
      }
     },
+    {
+     "f": "fukui-3.jpg",
+     "cap": {
+      "en": "Maruoka Castle",
+      "ja": "丸岡城"
+     },
+     "w": 552,
+     "h": 310
+    }
+   ]
+  },
+  {
+   "id": "eiheiji",
+   "no": 16,
+   "en": "Eiheiji Temple",
+   "ja": "永平寺（えいへいじ）",
+   "short": {
+    "en": "Eiheiji",
+    "ja": "永平寺"
+   },
+   "pins": [
+    {
+     "lat": 36.05531,
+     "lon": 136.35587,
+     "en": "Eiheiji",
+     "ja": "永平寺",
+     "ldir": "left"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%9C%AC%E5%B1%B1%E6%B0%B8%E5%B9%B3%E5%AF%BA",
+   "body": {
+    "en": [
+     "If you want to visit a calm and serious temple, this is one of the best choices. The air feels almost sharp and disciplined, and it feels more like a true temple than a sightseeing attraction. The buildings are beautiful, and just walking through the grounds feels calming. It offers a very different kind of quiet time compared with walking around Kanazawa."
+    ],
+    "ja": [
+     "静かで本格的なお寺に行きたいなら、いちばんのおすすめのひとつです。空気がぴんと張りつめていて、観光地というより本物のお寺という感じがします。建物が美しく、境内を歩くだけで心が落ち着きます。金沢を歩くのとはまったく違う、静かな時間を過ごせます。"
+    ]
+   },
+   "photos": [
     {
      "f": "hq-dt-06-7.jpg",
      "w": 720,
@@ -2383,6 +2564,63 @@ window.GUIDE = {
      }
     },
     {
+     "f": "fukui-5.jpg",
+     "cap": {
+      "en": "Eiheiji",
+      "ja": "永平寺"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "fukui-6.jpg",
+     "cap": {
+      "en": "Eiheiji",
+      "ja": "永平寺"
+     },
+     "w": 552,
+     "h": 310
+    },
+    {
+     "f": "fukui-7.jpg",
+     "cap": {
+      "en": "Eiheiji",
+      "ja": "永平寺"
+     },
+     "w": 552,
+     "h": 310
+    }
+   ]
+  },
+  {
+   "id": "daibutsu",
+   "no": 17,
+   "en": "Echizen Daibutsu",
+   "ja": "越前大仏（えちぜんだいぶつ）",
+   "short": {
+    "en": "Echizen Daibutsu",
+    "ja": "越前大仏"
+   },
+   "pins": [
+    {
+     "lat": 36.054414,
+     "lon": 136.517067,
+     "en": "Echizen Daibutsu",
+     "ja": "越前大仏",
+     "ldir": "right"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E8%B6%8A%E5%89%8D%E5%A4%A7%E4%BB%8F%20%E5%A4%A7%E5%B8%AB%E5%B1%B1%E6%B8%85%E5%A4%A7%E5%AF%BA",
+   "body": {
+    "en": [
+     "This is a slightly unexpected but very interesting place. The Great Buddha is massive, and the building itself is also impressive, so it has much more impact than you might expect. Since it’s not right in the center of the most famous tourist areas, it’s often easier to explore at a relaxed pace. It also combines well with Eiheiji if you want a day focused on temples and Buddhist sites."
+    ],
+    "ja": [
+     "少し意外な、でもとてもおもしろい場所です。大仏はとても大きく、建物も立派なので、想像以上のインパクトがあります。有名な観光地の中心から外れているので、ゆっくり見て回りやすいことが多いです。お寺や仏教の名所をめぐる日にするなら、永平寺との組み合わせもおすすめです。"
+    ]
+   },
+   "photos": [
+    {
      "f": "hq-dt-06-10.jpg",
      "w": 1280,
      "h": 720,
@@ -2394,6 +2632,20 @@ window.GUIDE = {
       "author": "掬茶",
       "license": "CC BY-SA 4.0",
       "page": "https://commons.wikimedia.org/wiki/File:Main_hall_of_Seidai-ji.jpg"
+     }
+    },
+    {
+     "f": "web-daibutsu-pagoda.jpg",
+     "cap": {
+      "en": "Echizen Daibutsu (Seidaiji)",
+      "ja": "越前大仏（大師山清大寺）"
+     },
+     "w": 1280,
+     "h": 720,
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Five-storied_tower_and_Kuryuden_of_Seidai-ji.jpg"
      }
     }
    ]
@@ -2467,83 +2719,5 @@ window.GUIDE = {
     "d": "M847.1,0.6L839.4,-6.5L847.1,-7.2L847.1,0.6Z"
    }
   ]
- },
- "tiles": {
-  "city": {
-   "minZoom": 13,
-   "maxNativeZoom": 15,
-   "maxZoom": 15,
-   "ranges": {
-    "13": [
-     7202,
-     7209,
-     3199,
-     3202
-    ],
-    "14": [
-     14407,
-     14414,
-     6400,
-     6403
-    ],
-    "15": [
-     28819,
-     28826,
-     12800,
-     12806
-    ]
-   },
-   "bounds": [
-    [
-     36.5428,
-     136.6255
-    ],
-    [
-     36.5925,
-     136.6883
-    ]
-   ]
-  },
-  "trips": {
-   "minZoom": 8,
-   "maxNativeZoom": 11,
-   "maxZoom": 11,
-   "ranges": {
-    "8": [
-     221,
-     228,
-     98,
-     101
-    ],
-    "9": [
-     446,
-     453,
-     198,
-     201
-    ],
-    "10": [
-     897,
-     904,
-     398,
-     402
-    ],
-    "11": [
-     1797,
-     1805,
-     797,
-     804
-    ]
-   },
-   "bounds": [
-    [
-     35.974,
-     136.025
-    ],
-    [
-     36.944,
-     137.328
-    ]
-   ]
-  }
  }
 };

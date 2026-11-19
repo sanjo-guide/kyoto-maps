@@ -172,27 +172,16 @@
 
   function applyMapLang() {
     if (!gl || !glReady) return;
-    gl.getStyle().layers.forEach(function (ly) {
-      var tf = ly.layout && ly.layout['text-field'];
-      if (ly.type !== 'symbol' || !tf || JSON.stringify(tf).indexOf('name') < 0) return;  // keep road numbers
-      gl.setLayoutProperty(ly.id, 'text-field', labelExpr(lang));
-    });
+    window.PHS_BASEMAP.setLang(gl, lang);   // 地図の文字を EN / 日本語 に合わせる
   }
 
+  // 地図の見た目は全マップ共通の assets/basemap.js（Googleマップに近いスタイル）
   function addBaseMap() {
-    if (!window.maplibregl || !L.maplibreGL) return;
-    maplibregl.setWorkerUrl(BASEMAP.worker);
-    var layer = L.maplibreGL({
-      style: BASEMAP.style,
-      maxZoom: BASEMAP.maxZoom,
-      attributionControl: { customAttribution: BASEMAP.attribution }
-    }).addTo(map);
+    if (!window.PHS_BASEMAP) return;
+    var layer = window.PHS_BASEMAP.addTo(map, { lang: lang, worker: BASEMAP.worker, maxZoom: BASEMAP.maxZoom });
+    if (!layer) return;
     gl = layer.getMaplibreMap();
-    gl.on('style.load', function () {
-      glReady = true;
-      BASEMAP.hide.forEach(function (id) { if (gl.getLayer(id)) gl.setLayoutProperty(id, 'visibility', 'none'); });
-      applyMapLang();
-    });
+    gl.on('style.load', function () { glReady = true; applyMapLang(); });
   }
 
   /* ---------- markers ---------- */

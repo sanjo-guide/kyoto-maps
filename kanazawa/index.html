@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>My Kanazawa Picks｜金沢と日帰り旅のおすすめ</title>
 <meta name="description" content="Picks for two days in Kanazawa, a seafood meal not to miss, and day trips from Kanazawa. 金沢市内と、金沢から日帰りで行けるおすすめ。">
@@ -13,7 +13,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
+<link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -21,10 +22,8 @@
   <div class="bar-in">
     <a class="brand" href="#top"><span class="b-jp">金沢</span><span class="b-en">KANAZAWA</span></a>
     <nav class="nav" aria-label="Sections">
-      <a href="#city" data-t="nav_city">City</a>
-      <a href="#food" data-t="nav_food">Seafood</a>
-      <a href="#trips" data-t="nav_trips">Day trips</a>
-      <a href="#map" data-t="nav_map">Map</a>
+      <a href="#city" data-view-tab="city" data-t="nav_city">Kanazawa city</a>
+      <a href="#trips" data-view-tab="trips" data-t="nav_trips">Day trips</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -43,13 +42,13 @@
   </div>
 </section>
 
-<main class="wrap">
+<main class="wrap" data-view="city">
   <section class="intro" aria-label="Introduction">
     <div class="intro-text" id="intro"></div>
     <ul class="jump">
-      <li><a href="#city"><b>9</b><span data-t="jump_city">places in the city</span></a></li>
-      <li><a href="#food"><b>1</b><span data-t="jump_food">meal not to miss</span></a></li>
-      <li><a href="#trips"><b>6</b><span data-t="jump_trips">day-trip areas</span></a></li>
+      <li><a href="#city" data-view-tab="city"><b>9</b><span data-t="jump_city">places in the city</span></a></li>
+      <li><a href="#food" data-view-tab="city"><b>1</b><span data-t="jump_food">meal not to miss</span></a></li>
+      <li><a href="#trips" data-view-tab="trips"><b>6</b><span data-t="jump_trips">day-trip areas</span></a></li>
     </ul>
   </section>
 
@@ -114,7 +113,10 @@
 
 <noscript><p class="noscript">Please enable JavaScript to see this guide. このページを見るにはJavaScriptを有効にしてください。</p></noscript>
 <script src="../vendor/leaflet/leaflet.js"></script>
-<script src="js/data.js?v=1"></script>
-<script src="js/app.js?v=1"></script>
+<script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
+<script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
+<script src="../assets/basemap.js?v=2"></script>
+<script src="js/data.js?v=2"></script>
+<script src="js/app.js?v=3"></script>
 </body>
 </html>

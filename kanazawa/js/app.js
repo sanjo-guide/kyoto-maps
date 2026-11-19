@@ -6,7 +6,7 @@
     title: { en: "My Kanazawa Picks", ja: "金沢のおすすめ" },
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
     subtitle: { en: "Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.", ja: "市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢からの日帰り旅。" },
-    nav_city: { en: "City", ja: "市内" }, nav_food: { en: "Seafood", ja: "海鮮" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
+    nav_city: { en: "Kanazawa city", ja: "金沢市内" }, nav_food: { en: "Seafood", ja: "海鮮" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "meal not to miss", ja: "ぜひ食べてほしい一食" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },
     map_h: { en: "Where everything is", ja: "おすすめの場所の地図" },
@@ -20,7 +20,7 @@
     trips_sub: { en: "If you have extra time, definitely consider them.", ja: "時間に余裕があれば、ぜひ検討してみてください。" },
     cr_h: { en: "Photo credits", ja: "写真のクレジット" },
     cr_toshi: { en: "Photos without a credit were taken by Toshi.", ja: "クレジットのない写真は、Toshiが撮影したものです。" },
-    cr_map: { en: "Map: GSI Tiles (pale map), Geospatial Information Authority of Japan. Outlines in the simple map (shown only if the map images cannot load): Global Map Japan (GSI), via dataofjapan/land.", ja: "地図：地理院タイル（淡色地図・国土地理院）。簡易地図（地図の画像を読み込めないときだけ表示）の輪郭：地球地図日本（国土地理院）をもとに作成（dataofjapan/land）。" },
+    cr_map: { en: "Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors. Outlines in the simple map (shown only if the map images cannot load): Global Map Japan (GSI), via dataofjapan/land.", ja: "地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors。簡易地図（地図の画像を読み込めないときだけ表示）の輪郭：地球地図日本（国土地理院）をもとに作成（dataofjapan/land）。" },
     disclaimer: { en: "Opening hours, prices and booking rules can change. Please check the official information before you go.", ja: "営業時間・料金・予約方法は変わることがあります。お出かけ前に公式の情報をご確認ください。" },
     to_top: { en: "Back to top ↑", ja: "ページの先頭へ ↑" },
     gmap: { en: "Google Maps", ja: "Googleマップ" },
@@ -209,35 +209,20 @@
   }
 
 
-  /* ---------- real map (Leaflet + GSI Tiles saved in tiles/) ---------- */
-  // The map images (GSI Tiles, pale map) are stored inside this site, so the map also shows
-  // where outside images are blocked. Which tiles exist for each map is listed in G.tiles.
-  const TILE_URL = "tiles/{z}/{x}/{y}.png";
-  const TILE_ATTR = '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル（国土地理院）/ GSI Tiles</a>';
+  /* ---------- real map (Leaflet + 全マップ共通の地図スタイル ../assets/basemap.js) ---------- */
+  // 地図は Googleマップに近い見た目（町名やお店の名前は出さず、紹介する場所が目立つ）。
+  // 読み込めないとき（WebGL が使えない端末など）は簡易な図（SVG）に切り替える。
   const DIR = { start: "right", end: "left", middle: "top" };
   const LBL_MIN = { city: 13, trips: 9 };   // hide name labels when zoomed out further than this
   const LF = window.L;
-  let lmap = null, layer = null, tl = null, tlView = null, tileOk = false, tileErr = 0, mapFailed = !LF || !G.tiles;
-  const LocalTiles = LF ? LF.TileLayer.extend({
-    createTile: function (coords, done) {
-      const r = this.options.ranges[coords.z];
-      if (!r || coords.x < r[0] || coords.x > r[1] || coords.y < r[2] || coords.y > r[3]) {
-        const d = document.createElement("div"); setTimeout(() => done(null, d), 0); return d;   // outside the saved area
-      }
-      return LF.TileLayer.prototype.createTile.call(this, coords, done);
-    },
-  }) : null;
+  let lmap = null, layer = null, base = null, gl = null, tlView = null, mapFailed = !LF || !window.PHS_BASEMAP || !window.maplibregl;
+  const VIEW = { city: { minZoom: 11, maxZoom: 18 }, trips: { minZoom: 7, maxZoom: 16 } };
   function useTiles(which) {
-    const v = G.tiles[which];
-    if (tl) lmap.removeLayer(tl);
+    const v = VIEW[which];
     // set the zoom limits directly (setMinZoom/setMaxZoom start an animation that would undo the fit below)
     lmap.options.minZoom = v.minZoom; lmap.options.maxZoom = v.maxZoom; lmap.fire("zoomlevelschange");
     tlView = which;
     fitCurrent();
-    tl = new LocalTiles(TILE_URL, { minZoom: v.minZoom, maxNativeZoom: v.maxNativeZoom, maxZoom: v.maxZoom, ranges: v.ranges, attribution: TILE_ATTR });
-    tl.on("tileload", () => { tileOk = true; });
-    tl.on("tileerror", () => { tileErr += 1; if (!tileOk && tileErr >= 3) useFallback(); });
-    tl.addTo(lmap);
   }
   const allBounds = {};
   function mkIcon(text, cls, size) {
@@ -276,9 +261,7 @@
   }
   function fitCurrent() {
     if (!lmap || !allBounds[state.map]) return;
-    lmap.setMaxBounds(null);
     lmap.fitBounds(allBounds[state.map], { padding: [26, 26], maxZoom: state.map === "city" ? 15 : 10, animate: false });
-    lmap.setMaxBounds(G.tiles[state.map].bounds);   // keep the view inside the saved map area
   }
   let fbShown = false;
   function useFallback() {
@@ -299,6 +282,14 @@
       LF.DomEvent.disableClickPropagation(b); b.addEventListener("click", fitCurrent); return b; } });
     lmap.addControl(new Fit());
     lmap.on("zoomend", labelsByZoom);
+    try {
+      lmap.setView([36.5613, 136.6562], 13, { animate: false });   // 地図を重ねる前に仮の位置が必要（あとで全体表示に合わせる）
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      base = window.PHS_BASEMAP.addTo(lmap, { lang: L(), dark: dark, worker: "../vendor/maplibre/maplibre-gl-csp-worker.js" });
+      if (!base) throw new Error("basemap");
+      gl = base.getMaplibreMap();
+      gl.on("style.load", () => window.PHS_BASEMAP.setLang(gl, L()));
+    } catch (err) { useFallback(); }
   }
 
   /* ---------- page ---------- */
@@ -314,6 +305,7 @@
     document.getElementById("grid-trips").innerHTML = G.trips.map((s) => card(s, "trip")).join("");
     wireCarousels(document);
     renderMap();
+    if (gl) window.PHS_BASEMAP.setLang(gl, L());   // 地図の文字も EN / 日本語 に合わせる
     const cr = [];
     [G.city, G.food, G.trips].forEach((grp) => grp.forEach((s) => (s.photos || []).forEach((p) => {
       if (p.credit) cr.push(`<li>${esc(tr(p.cap) || tr(s))}: <a href="${esc(p.credit.page)}" target="_blank" rel="noopener">${esc(p.credit.author)}</a>, <a href="${licUrl(p.credit.license)}" target="_blank" rel="noopener">${esc(p.credit.license)}</a>, ${esc(t("via"))}${L() === "ja" ? "（縮小）" : " (resized)"}</li>`);
@@ -331,7 +323,25 @@
   });
   document.querySelector(".tabs").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-map]"); if (!b) return;
-    state.map = b.dataset.map; renderMap(true);
+    setView(b.dataset.map);
+  });
+  // 「金沢市内」「日帰り」を別のタブにする（上のバー・数字のタイル・地図の上のタブ、どれからでも切り替え）
+  const TRIP_IDS = new Set(G.trips.map((s) => s.id).concat(["trips"]));
+  function viewOf(hash) { return TRIP_IDS.has((hash || "").replace(/^#/, "")) ? "trips" : "city"; }
+  function setView(v, scrollTo) {
+    state.view = v; state.map = v;
+    document.querySelector("main").dataset.view = v;
+    document.querySelectorAll("[data-view-tab]").forEach((a) => {
+      if (a.dataset.viewTab === v) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+    renderMap(true);
+    history.replaceState(null, "", "#" + (v === "trips" ? "trips" : "city"));
+    if (scrollTo) document.getElementById(scrollTo).scrollIntoView({ block: "start" });
+  }
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-view-tab]"); if (!a) return;
+    e.preventDefault();
+    setView(a.dataset.viewTab, "map");
   });
   const svgBox = document.getElementById("svgmap");
   svgBox.addEventListener("click", (e) => { const g = e.target.closest("[data-go]"); if (g) goTo(g.dataset.go); });
@@ -339,6 +349,13 @@
 
   initMap();
   render();
-  fitCurrent();
+  const startHash = location.hash;
+  setView(viewOf(startHash));
   labelsByZoom();
+  // 直接リンク（例 #yamanaka）のときは、そのカードまで移動する
+  const target = startHash && document.getElementById(startHash.slice(1));
+  if (target && !["city", "trips", "map", "top"].includes(startHash.slice(1))) {
+    history.replaceState(null, "", startHash);
+    setTimeout(() => target.scrollIntoView({ block: "start" }), 50);
+  }
 })();
