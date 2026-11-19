@@ -62,7 +62,7 @@
 - 金沢の写真: `kanazawa/img/hq-*.jpg` は写真アプリの全候補（6,667枚、Nikon D7000含む）から選んだ高画質版（旧 kyoto-maps の金沢マップ由来）。それ以外は kanazawa-guide 由来で、横552px前後の小さい写真がある。各スポットは高画質版を先に並べ、足りない分だけ kanazawa-guide の写真で補っている（最大10枚）
 - 酒楽（しゅらく）の紹介文は2026-11-20にオーナーが書いたもの。消さないこと
 - 箕面の写真: 写真アプリから GPS（Nikon D7000 は撮影時刻）で各スポットの候補（約2,000枚）を集め、全部見て1か所10枚以内に絞ったもの。元は iCloud にあり、`osxphotos export … --download-missing` で書き出して長辺1600px・位置情報なしに縮小した
-- minoh/ は eizan-line/ の index.html・css・app.js をそのまま写して、データのパス・保存キー（kyoto-maps-minoh-…）・タイトルだけ変えている。ルート型のテンプレートを直したら minoh/ にも同じ変更を入れる
+- minoh/ は eizan-line/ の index.html・css・app.js をそのまま写して、データのパス・保存キー（kyoto-maps-minoh-…）・タイトルだけ変えている。ルート型のテンプレートを直したら `python3 scripts/sync_minoh.py` で minoh/ に写し直す（新しい文言キーは minoh/js/i18n.js に手で足す）
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
 - 地図の見た目は全マップ共通で `assets/basemap.js`（Googleマップ / Appleマップに近い配色。町名・お店の名前は出さず、市町村・駅・川・大きな道だけ）。データは OpenFreeMap（OpenStreetMap）。オーナーの希望（2026-11-20）なので、新しいマップでも必ずこれを使う

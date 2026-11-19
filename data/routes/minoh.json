@@ -445,19 +445,12 @@
     }
    ],
    "info": {
-    "rows": [
-     {
-      "kind": "hours",
-      "text": {
-       "ja": "要確認（休みは不定期）",
-       "en": "Not confirmed (closed on irregular days)"
-      },
-      "until": null,
-      "from": null
-     }
-    ],
+    "rows": [],
     "cash": false,
-    "tip": null,
+    "tip": {
+     "ja": "営業時間は要確認です。休みは不定期（箕面市観光協会の案内より）。",
+     "en": "Opening hours not confirmed; closes on irregular days (per the Minoh Tourism Association)."
+    },
     "checked": "2026-11-20"
    },
    "notices": []
@@ -760,19 +753,12 @@
    ],
    "links": [],
    "info": {
-    "rows": [
-     {
-      "kind": "hours",
-      "text": {
-       "ja": "要確認（公式サイトがありません）",
-       "en": "Not confirmed (no official website)"
-      },
-      "until": null,
-      "from": null
-     }
-    ],
+    "rows": [],
     "cash": false,
-    "tip": null,
+    "tip": {
+     "ja": "営業時間は要確認です（公式サイトがありません）。",
+     "en": "Opening hours not confirmed (there’s no official website)."
+    },
     "checked": "2026-11-20"
    },
    "notices": []
