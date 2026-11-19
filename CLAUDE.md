@@ -12,7 +12,12 @@
 
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（unpkg から読み込み）+ OpenStreetMap タイル
-- ホスティング: GitHub Pages（予定。kyoto-momiji と同じ sanjo-guide アカウント）
+- ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/kyoto-maps/eizan-line/）
+  - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
+  - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
+- 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
+- 別の実験版 `sanjo-guide/eizan-map`（2026-11-20 作成、写真は PointMap+ 直読み）が存在する。本番はこちらの kyoto-maps
 - 経緯: 有料サービス PointMap+ で作っていたマップを自前サイトへ移行中
 
 ## コマンド
