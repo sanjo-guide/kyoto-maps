@@ -1,28 +1,47 @@
 {
   "id": "eizan-line",
-  "title": {
-    "ja": "叡山電鉄沿線 Along Eizan Railway Line 三条 Sanjo",
-    "en": "叡山電鉄沿線 Along Eizan Railway Line 三条 Sanjo"
-  },
-  "summary": {
-    "ja": "",
-    "en": ""
-  },
-  "area": "",
-  "tags": [],
-  "center": [
-    35.008037088,
-    135.765015965
+  "_note": "叡山電鉄沿線マップのデータ（eizan-line/ のページ専用の形式）。元は sanjo-guide/eizan-map の preview/data/spots.json。info.checked は事実情報の確認日。",
+  "sections": [
+    {
+      "first": 1,
+      "last": 3,
+      "time": "8:45",
+      "area": {
+        "ja": "三条 → 出町柳",
+        "en": "Sanjo → Demachiyanagi"
+      },
+      "title": {
+        "ja": "出発",
+        "en": "Getting started"
+      }
+    },
+    {
+      "first": 4,
+      "last": 8,
+      "day": 0
+    },
+    {
+      "first": 9,
+      "last": 13,
+      "day": 1
+    },
+    {
+      "first": 14,
+      "last": 20,
+      "day": 2
+    },
+    {
+      "first": 21,
+      "last": 25,
+      "day": 3
+    },
+    {
+      "first": 26,
+      "last": 28,
+      "day": 4
+    }
   ],
-  "notice": {
-    "ja": "掲載情報は2025年8月時点のものです。営業時間・料金・時刻表は、お出かけ前に公式サイト等でご確認ください。",
-    "en": "Information as of August 2025. Opening hours, fees and timetables may change, so please check the official websites before you go."
-  },
-  "source": {
-    "imported_from": "PointMap+ https://ihistory.site/pointmap/maps/Eizan-Line-PHS",
-    "imported_on": "2026-11-20",
-    "note": "料金・営業時間などの事実情報は PointMap+ 掲載時（2025年8月作成）の原稿のまま。公開前に要確認。"
-  },
+  "photoBase": "../images/eizan-line/",
   "spots": [
     {
       "no": 1,
@@ -30,78 +49,44 @@
         "ja": "Piece Hostel Sanjo",
         "en": "Piece Hostel Sanjo"
       },
-      "heading": null,
-      "lat": 35.008037,
-      "lng": 135.765016,
-      "color": "#2B8DD8",
-      "time": {
-        "ja": null,
-        "en": null
+      "kind": {
+        "ja": "スタート地点",
+        "en": "Start"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "このマップのスタート地点です。スタッフが実際に歩いて「ここはいい！」と感じたスポットだけを集めました。2〜28の番号を順番に巡ると、1日で効率よく全部まわれるように作っています。時間が足りなければスキップしたり、気に入った場所で長く過ごしたり、自由に調整してください。",
+        "en": "The starting point of this map. It only includes spots our staff walked to and truly loved. Follow the numbers 2–28 in order and you can see everything in one day. Short on time? Skip a place. Love a spot? Stay longer. It’s up to you."
       },
-      "description": {
+      "lat": 35.0080656,
+      "lng": 135.7650619,
+      "photos": [
+        "01-1.jpg",
+        "01-2.jpg",
+        "01-3.jpg",
+        "01-4.jpg",
+        "01-5.jpg",
+        "01-6.jpg",
+        "01-7.jpg",
+        "01-8.jpg"
+      ],
+      "text": {
         "ja": "PIECE HOSTEL SANJOは、ホテルよりもゲストとの距離が近く、旅の情報交換もできるフレンドリーなホステルです。そんなスタッフが実際に歩いて「ここはいい！」と感じたスポットだけをまとめたのが、このオリジナルマップです。\n\n2〜28の番号は、順番に巡ると1日で効率よく全て周れるように設計されています。時間に余裕がある方はぜひフルコースに挑戦してみてください。\n\nこのマップに記載している「おすすめ訪問時間」は、すべての場所を訪れる場合の目安として設定しています。実際の旅では、時間が足りなければスキップしたり、逆に気に入った場所があれば長めに滞在したりと、自由に調整してください。あくまで旅の流れをつかむための参考にしていただければと思います。\n\nさらに、各スポットにはGoogle Mapsのリンクを貼っているので、そのままルート検索が可能。時刻表やお店の公式サイトなど、必要な情報ページにもリンクしているので、スマホさえあれば準備なしでOKです。\n\n自分のペースに合わせて、このマップを活用しながら京都を満喫してください！",
         "en": "PIECE HOSTEL SANJO is a friendly hostel where travelers can connect and share tips—very different from a typical hotel. This Original Map was created by our staff, who personally walked around Kyoto and picked out the spots they truly recommend.\n\nThe numbers 2–28 are arranged so that if you follow them in order, you can see everything efficiently in a single day. If you’ve got the time, we encourage you to try the full course!\n\nThe “Recommended visit times” shown on this map are simply guidelines based on visiting all the spots in one day. In reality, you can skip a place if you’re short on time, or spend longer at a spot you really enjoy—just adjust the rest of your route accordingly. Think of them as a reference to help you balance your day.\n\nEach location comes with a Google Maps link for easy navigation, plus links to timetables and official websites. With just your smartphone, you’ll have everything you need at your fingertips.\n\nEnjoy Kyoto at your own pace, and make the most of your journey starting from PIECE HOSTEL SANJO!"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "PIECE HOSTEL SANJO",
+            "en": "PIECE HOSTEL SANJO"
+          },
+          "lat": 35.0080656,
+          "lng": 135.7650619,
           "url": "https://maps.app.goo.gl/sreDouy93Vmzm5Sm7"
         }
       ],
-      "photos": [
-        {
-          "src": "images/eizan-line/01-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/BsLbDL5nthugE9HAfdFREezVW0OUjte920250827143957.jpg",
-          "thumb": "images/eizan-line/thumbs/01-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PV5WDTCm0vMQggceKlO77zPdGUq7Q5Rd20250827142534.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/pnJSAcC6ZjmP1B5pIHO78HYHJxQbSP1q20250827142535.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/4ouIiYwjmZOX9dczMcJkFP9hnddFiFcA20250827142535.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/xGvbEPNDIcQhbXbZPuxNO1JL8XworDW120250827142535.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/2Cw4cSilTu9CvB90KIrh3t5Flr2lQbkD20250827142535.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/67k3h6kb7ZMzGQV84xPFEmpo18Yy3gDG20250827142535.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/01-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/MD5b2MQ12Yk7z2BoBFLhWO3FoS5aKFNu20250827142536.jpeg",
-          "thumb": "images/eizan-line/thumbs/01-8.jpg"
-        }
-      ]
+      "links": [],
+      "info": null,
+      "notices": []
     },
     {
       "no": 2,
@@ -109,157 +94,113 @@
         "ja": "京阪 三条駅",
         "en": "Sanjo Station (Keihan Line)"
       },
-      "heading": null,
-      "lat": 35.00915,
-      "lng": 135.772127,
-      "color": "#A0D985",
-      "time": {
-        "ja": "8:45 ホステル出発 → 9:00 出町柳駅到着（徒歩9分＋電車約4〜5分を想定）",
-        "en": "Leave around 8:45 → Arrive at Demachiyanagi around 9:00."
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "スタートから三条大橋を渡って、歩いて約9分（約750m）の京阪の駅です。朝の鴨川を渡る散歩は気持ちよく、一日の始まりにぴったり。ここから京阪電車に乗れば出町柳まで約4〜5分で、すぐに鴨川デルタや下鴨神社の散策を始められます。",
+        "en": "Keihan Sanjo Station, about a 9-minute walk (750 m) from the start over Sanjo Ohashi. Crossing the Kamo River in the morning is a refreshing way to begin the day. From here it’s just 4–5 minutes by Keihan to Demachiyanagi, so you can start exploring the Kamogawa Delta and Shimogamo Shrine right away."
       },
-      "description": {
-        "ja": "ピースホステル三条から京阪「三条駅」までは徒歩約9分（約750m）。三条大橋を渡って向かう朝の散歩は気持ちよく、一日の始まりにぴったりです。ここから京阪電車に乗れば出町柳駅まで約4〜5分。スムーズに鴨川デルタや下鴨神社の散策を始められます。",
-        "en": "From Piece Hostel Sanjo, it’s about a 9-minute walk (~750 m) to Keihan Sanjo Station. Crossing Sanjo Ohashi over the Kamo River makes for a refreshing start to the day. From Sanjo, it’s about 4–5 minutes by Keihan to Demachiyanagi, so you can begin exploring the Kamogawa Delta and Shimogamo Shrine right away."
+      "lat": 35.0094432,
+      "lng": 135.7723025,
+      "photos": [
+        "02-1.jpg",
+        "02-2.jpg",
+        "02-3.jpg",
+        "02-4.jpg",
+        "02-5.jpg",
+        "02-6.jpg",
+        "02-7.jpg",
+        "02-8.jpg"
+      ],
+      "text": {
+        "ja": "三条駅 (Sanjo Station)\n\nピースホステル三条から京阪「三条駅」までは徒歩約9分（約750m）。三条大橋を渡って向かう朝の散歩は気持ちよく、一日の始まりにぴったりです。ここから京阪電車に乗れば出町柳駅まで約4〜5分。スムーズに鴨川デルタや下鴨神社の散策を始められます。\n\nおすすめ出発時間：8:45 ホステル出発 → 9:00 出町柳駅到着（徒歩9分＋電車約4〜5分を想定）",
+        "en": "From Piece Hostel Sanjo, it’s about a 9-minute walk (~750 m) to Keihan Sanjo Station. Crossing Sanjo Ohashi over the Kamo River makes for a refreshing start to the day. From Sanjo, it’s about 4–5 minutes by Keihan to Demachiyanagi, so you can begin exploring the Kamogawa Delta and Shimogamo Shrine right away.\n\nRecommended departure time: Leave around 8:45 → Arrive at Demachiyanagi around 9:00."
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "三条駅",
+            "en": "三条駅"
+          },
+          "lat": 35.0094432,
+          "lng": 135.7723025,
           "url": "https://maps.app.goo.gl/cUxkVWcZVD1RFtDp9"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/02-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/iH9oGPIdsg5oPdpXrOgYDX92jOYF0UP520250827142536.jpeg",
-          "thumb": "images/eizan-line/thumbs/02-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/lrpQg9qDxPKAkkUelmNYntvTSfLCZXAw20250827142536.jpeg",
-          "thumb": "images/eizan-line/thumbs/02-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/1PlYYwaxvjgzLiIYJDKp6Jb1lhzZOq9T20250827144156.jpg",
-          "thumb": "images/eizan-line/thumbs/02-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/QlE0nwdmsIWDTXU5pW5FmVqC1bOogh6A20250827144157.jpg",
-          "thumb": "images/eizan-line/thumbs/02-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/eyaD1DsMmeQDnWTpCzZvOjgRmbNxtmEC20250827144202.jpg",
-          "thumb": "images/eizan-line/thumbs/02-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/vCz8bhmoOhdHNTujsYFjEQJYjxwMoESO20250827144201.jpg",
-          "thumb": "images/eizan-line/thumbs/02-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/aTqaJJAXN3I3x43TtPJgpzXn0cyqSZZp20250827144201.jpg",
-          "thumb": "images/eizan-line/thumbs/02-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/02-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/J7DZgAb2QOFTNAHLzHpfX72U3F8YQDxN20250827144201.jpg",
-          "thumb": "images/eizan-line/thumbs/02-8.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "京阪 三条駅の時刻表",
+            "en": "Keihan Sanjo Station timetable (Japanese)"
+          },
+          "url": {
+            "ja": "https://www.keihan.co.jp/traffic/station/170/info.html#anc-01",
+            "en": "https://www.keihan.co.jp/traffic/station/170/info.html#anc-01"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 3,
       "name": {
-        "ja": "出町柳駅(京阪電鉄)",
-        "en": "Demachiyanagi Station(Keihan Line)"
+        "ja": "出町柳駅（京阪電鉄）",
+        "en": "Demachiyanagi Station (Keihan Line)"
       },
-      "heading": null,
-      "lat": 35.029624,
-      "lng": 135.772458,
-      "color": "#A0D985",
-      "time": {
-        "ja": null,
-        "en": null
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "京阪電車で到着する駅です。出町柳のまわりには、鴨川デルタの公園、出町桝形商店街、下鴨神社など、地元の方が訪れる静かで美しい場所がたくさんあります。ぜひ駅の周辺を散歩してみてください。",
+        "en": "You arrive here by Keihan. Around Demachiyanagi are many quiet, beautiful places that locals love: the Kamo River Delta park, Demachi Masugata Shopping Street and Shimogamo Shrine. Be sure to take a walk around the station!"
       },
-      "description": {
+      "lat": 35.0304996,
+      "lng": 135.7732283,
+      "photos": [
+        "03-1.jpg",
+        "03-2.jpg",
+        "03-3.jpg",
+        "03-4.jpg",
+        "03-5.jpg",
+        "03-6.jpg",
+        "03-7.jpg",
+        "03-8.jpg"
+      ],
+      "text": {
         "ja": "出町柳の周りには、鴨川デルタの公園、出町枡形商店街、下鴨神社など、地元の方が訪れる静かで美しい場所がたくさんあります。ぜひ駅の周辺を散歩してみてください！",
         "en": "Around Demachiyanagi, there are many quiet and beautiful places that locals love to visit, such as the Kamo River Delta Park, Demachi Masugata Shopping Street, and Shimogamo Shrine. Be sure to take a walk around the station area!"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "出町柳駅",
+            "en": "出町柳駅"
+          },
+          "lat": 35.0304996,
+          "lng": 135.7732283,
           "url": "https://maps.app.goo.gl/fifFxbd5cQqYsjJR7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/03-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/VLN5CCXI4zz6Duu8E1pendf6MTdBl0mE20250827142536.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/fyBHyYrhb8Xq4cGK2pKAWH0Hkw2Qgfa020250827142537.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/anyGGiOWYW6vbLDWN7DCbXR3FbZAM9hQ20250827142537.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/KocXk13I4dPpulceN7uONFcLrlBGUL7z20250827142537.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/UznzCxz2BO17jEfGCYxJph1XCF54MWOu20250827142538.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Moy5kytlhYPswQkPwFYTDcHa5NVQrd6y20250827142538.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/yLIfBz6UatgPgcs99pFbf0Wo2hgzvr7e20250827142538.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/03-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/S7iKqacv4P0rbyKrS4rWTeptsw6viN8w20250827142538.jpeg",
-          "thumb": "images/eizan-line/thumbs/03-8.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "京阪 出町柳駅の時刻表",
+            "en": "Keihan Demachiyanagi Station timetable (Japanese)"
+          },
+          "url": {
+            "ja": "https://www.keihan.co.jp/traffic/station/180/info.html#anc-01",
+            "en": "https://www.keihan.co.jp/traffic/station/180/info.html#anc-01"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 4,
@@ -267,78 +208,44 @@
         "ja": "鴨川デルタ",
         "en": "Kamogawa Delta"
       },
-      "heading": null,
-      "lat": 35.030157,
-      "lng": 135.771742,
-      "color": "#E96B70",
-      "time": {
-        "ja": "9:00〜9:10（＋夕方に再訪もおすすめ！）",
-        "en": "9:00–9:10 (also great for a revisit at sunset!)"
+      "kind": {
+        "ja": "川辺",
+        "en": "Riverside"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "川がY字に分かれる三角地帯。芝生に寝転んだり、飛び石を渡ったり、ピクニックしたり、地元の人が思い思いに過ごす京都の日常そのものの場所です。観光地のきらびやかさとは違うけれど、だからこそリアルな京都を感じられます。朝の爽やかな空気もいいし、鞍馬から帰ってきた夕方、空がオレンジ色に染まるころにもう一度来るのもおすすめ。",
+        "en": "Where the river splits into a Y, forming a triangle of open space. People stretch out on the grass, hop across the stepping stones and have picnics: this is everyday Kyoto, laid-back and real. Enjoy the fresh morning air, and come back at sunset after Kurama, when the sky turns orange and the sound of the river helps you relax."
       },
-      "description": {
-        "ja": "川がY字に分かれる三角地帯。芝生に寝転んだり、飛び石を渡ったり、ピクニックしている人たちを眺めたり…。地元の人が思い思いに過ごす姿が見られる、京都の日常そのものの場所です。観光地のきらびやかさとは違うけど、だからこそリアルな京都を感じられる特別なスポット。朝に立ち寄って爽やかな空気を味わうのもいいですが、鞍馬から帰ってきた後に夕方に再訪するのもおすすめ！空がオレンジ色に染まっていく景色と川の音が合わさって、本当に心がほどける瞬間が訪れますよ。",
-        "en": "The Kamogawa Delta is where the river splits into a Y-shape, forming a triangle of open space. People stretch out on the grass, hop across the stepping stones, or picnic with friends. It’s pure everyday Kyoto—laid-back, unpolished, and real. Stop by in the morning to enjoy the fresh atmosphere, but coming back again at sunset after your Kurama hike is also amazing! The glowing orange sky and the sound of the river create the perfect moment of peace. It’s Kyoto at its most authentic."
+      "lat": 35.0298585,
+      "lng": 135.7717641,
+      "photos": [
+        "04-1.jpg",
+        "04-2.jpg",
+        "04-3.jpg",
+        "04-4.jpg",
+        "04-5.jpg",
+        "04-6.jpg",
+        "04-7.jpg",
+        "04-8.jpg"
+      ],
+      "text": {
+        "ja": "鴨川デルタ\n\n川がY字に分かれる三角地帯。芝生に寝転んだり、飛び石を渡ったり、ピクニックしている人たちを眺めたり…。地元の人が思い思いに過ごす姿が見られる、京都の日常そのものの場所です。観光地のきらびやかさとは違うけど、だからこそリアルな京都を感じられる特別なスポット。朝に立ち寄って爽やかな空気を味わうのもいいですが、鞍馬から帰ってきた後に夕方に再訪するのもおすすめ！空がオレンジ色に染まっていく景色と川の音が合わさって、本当に心がほどける瞬間が訪れますよ。\n\nおすすめ訪問時間：9:00〜9:10（＋夕方に再訪もおすすめ！）",
+        "en": "The Kamogawa Delta is where the river splits into a Y-shape, forming a triangle of open space. People stretch out on the grass, hop across the stepping stones, or picnic with friends. It’s pure everyday Kyoto—laid-back, unpolished, and real. Stop by in the morning to enjoy the fresh atmosphere, but coming back again at sunset after your Kurama hike is also amazing! The glowing orange sky and the sound of the river create the perfect moment of peace. It’s Kyoto at its most authentic.\n\nRecommended visit time: 9:00–9:10 (also great for a revisit at sunset!)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "鴨川デルタ",
+            "en": "鴨川デルタ"
+          },
+          "lat": 35.0298585,
+          "lng": 135.7717641,
           "url": "https://maps.app.goo.gl/tM8MvuybQXKBTkhw7"
         }
       ],
-      "photos": [
-        {
-          "src": "images/eizan-line/04-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/knIoMU8O2xMmoCSnkALlX6AHChWeGbFE20250827142539.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/rLFu9TikBhd4gQgtWWD0TxE9xOKOTvQu20250827142539.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/VOFRg12HZU8y9aBJHZZUEDXS3IfYuEQe20250827142539.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/cjnhINDP12VUCJHb0hromgVFnJBHiXWh20250827142540.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ldjPw7LEFbUeMDJRXnA0bU410eyLcGjC20250827142540.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/l6DCTKxloNztuwqBHz5T2ayiV1pYk5Gd20250827142540.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/RRhWTsTRCt5VBwYTlMzcPfmmO9zIeF7X20250827142540.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/04-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PLNJDladpyZUz9CSk2ihqhLnbmNip58U20250827142540.jpeg",
-          "thumb": "images/eizan-line/thumbs/04-8.jpg"
-        }
-      ]
+      "links": [],
+      "info": null,
+      "notices": []
     },
     {
       "no": 5,
@@ -346,78 +253,56 @@
         "ja": "糺の森",
         "en": "Tadasu no Mori"
       },
-      "heading": null,
-      "lat": 35.03414,
-      "lng": 135.77253,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "9:10〜9:30",
-        "en": "9:10–9:30"
+      "kind": {
+        "ja": "森",
+        "en": "Forest"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "下鴨神社へ続く参道に広がる森。京都の真ん中とは思えないほど自然がたっぷり残っていて、木々の間を歩くだけで空気がひんやり気持ちよく、都会の喧騒から抜け出したような気分になります。夏は木陰で涼めて、秋は紅葉がきれい。森の中には“ラグビーの神様”として有名な「雑太社」もあり、鳥居にはラグビーボールの飾りがついています。",
+        "en": "A forest along the path to Shimogamo Shrine, with lots of nature right in the middle of Kyoto. Under the trees the air feels cool and fresh, like you’ve escaped the city. Shady in summer, colorful in autumn. Inside the forest is Sawata-sha, the “Rugby Shrine,” with rugby balls on its torii gate."
       },
-      "description": {
-        "ja": "糺の森（ただすのもり）は、下鴨神社へ続く参道に広がる森で、京都の真ん中とは思えないほど自然がたっぷり残っています！木々の間を歩くだけで空気がひんやりして気持ちよく、まるで都会の喧騒から抜け出したみたい。夏は木陰で涼めるし、秋は色とりどりの紅葉が本当にきれい！どの季節に行ってもそれぞれの良さがあって、散歩するだけでも癒されます。観光の合間にリフレッシュするのに最高の場所ですよ。\n\nさらに森の中には「雑太社（さわたしゃ）」という小さな神社があります。ここは“ラグビーの神様”として有名で、全国からラグビーファンや選手が参拝に訪れるスポット。鳥居にはラグビーボールをかたどった飾りがついていて、とてもユニーク！ラグビー好きの方はぜひ立ち寄ってみてください。",
-        "en": "Tadasu no Mori is a forest along the approach to Shimogamo Shrine, and it’s amazing that such lush nature still exists in the heart of Kyoto! Walking under the trees feels so refreshing, like you’ve escaped the city noise into another world. In summer, the shade is cool and relaxing, and in autumn, the colorful leaves are absolutely stunning! Every season has its own charm, and just strolling around is so soothing. It’s the perfect spot to take a break and recharge during your Kyoto adventures.\n\nWithin the forest, you’ll also find Sawata-sha Shrine, famously known as the “Rugby Shrine.” Fans and players from all over Japan come to pray here, and you’ll notice its unique torii gate decorated with rugby ball motifs. If you’re into rugby—or just want to see something fun and unusual—it’s definitely worth a quick visit!"
+      "lat": 35.036467,
+      "lng": 135.7724128,
+      "photos": [
+        "05-1.jpg",
+        "05-2.jpg",
+        "05-3.jpg",
+        "05-4.jpg",
+        "05-5.jpg",
+        "05-6.jpg",
+        "05-7.jpg",
+        "05-8.jpg"
+      ],
+      "text": {
+        "ja": "糺の森\n\n糺の森（ただすのもり）は、下鴨神社へ続く参道に広がる森で、京都の真ん中とは思えないほど自然がたっぷり残っています！木々の間を歩くだけで空気がひんやりして気持ちよく、まるで都会の喧騒から抜け出したみたい。夏は木陰で涼めるし、秋は色とりどりの紅葉が本当にきれい！どの季節に行ってもそれぞれの良さがあって、散歩するだけでも癒されます。観光の合間にリフレッシュするのに最高の場所ですよ。\n\nさらに森の中には「雑太社（さわたしゃ）」という小さな神社があります。ここは“ラグビーの神様”として有名で、全国からラグビーファンや選手が参拝に訪れるスポット。鳥居にはラグビーボールをかたどった飾りがついていて、とてもユニーク！ラグビー好きの方はぜひ立ち寄ってみてください。\n\nおすすめ訪問時間：9:10〜9:30",
+        "en": "Tadasu no Mori is a forest along the approach to Shimogamo Shrine, and it’s amazing that such lush nature still exists in the heart of Kyoto! Walking under the trees feels so refreshing, like you’ve escaped the city noise into another world. In summer, the shade is cool and relaxing, and in autumn, the colorful leaves are absolutely stunning! Every season has its own charm, and just strolling around is so soothing. It’s the perfect spot to take a break and recharge during your Kyoto adventures.\n\nWithin the forest, you’ll also find Sawata-sha Shrine, famously known as the “Rugby Shrine.” Fans and players from all over Japan come to pray here, and you’ll notice its unique torii gate decorated with rugby ball motifs. If you’re into rugby—or just want to see something fun and unusual—it’s definitely worth a quick visit!\n\nRecommended visit time: 9:10–9:30"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "糺の森",
+            "en": "糺の森"
+          },
+          "lat": 35.036467,
+          "lng": 135.7724128,
           "url": "https://maps.app.goo.gl/o2SREhCfxjbD7Ziq8"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/05-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/YOta0jB7qnnrZ7KZygoELgwqA8Wc4DOC20250827142541.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/tXLUrrhO9uT3MHhDal56hG9Id605FYNY20250827142541.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/F3Q52yrgNYRogRsqe2qNEaNiXFZ7SZhM20250827142541.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/tVJha2FCcG6ra8Jxh5M9Q1sFJGSnDpdo20250827142542.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/vhk08Y1D9AK5W1WSAE1Edfs8Wu36QcXi20250827142542.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/FHQk4xUTEVGKrpushxpqOREvq7ZHht4a20250827142542.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/EfGlU27RjS6MIMY9phhNenrTtj2BpXMK20250827142542.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/05-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/KNI0jNHA4VmYqDfSaLuSWK3GUdyxiOVD20250827142542.jpeg",
-          "thumb": "images/eizan-line/thumbs/05-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "下鴨神社 公式サイト",
+            "en": "Shimogamo Shrine (official site)"
+          },
+          "url": {
+            "ja": "https://www.shimogamo-jinja.or.jp/",
+            "en": "https://www.shimogamo-jinja.or.jp/english"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 6,
@@ -425,78 +310,71 @@
         "ja": "下鴨神社",
         "en": "Shimogamo Shrine"
       },
-      "heading": null,
-      "lat": 35.037778,
-      "lng": 135.772771,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "9:30〜9:50",
-        "en": "9:30–9:50"
+      "kind": {
+        "ja": "神社",
+        "en": "Shrine"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "世界遺産に登録されている、京都最古級の神社のひとつ。縁結びや厄除けで有名です。糺の森を抜けて参道を歩くだけで神聖な空気を感じられ、広くて静かな境内では、凛とした雰囲気に背筋が伸びるよう。華やかな観光地とは違い、「京都の時間」がゆっくり流れていて心が落ち着きます。",
+        "en": "One of Kyoto’s oldest shrines and a UNESCO World Heritage site, famous for blessings for love and protection. The walk through Tadasu no Mori already feels sacred, and the wide, quiet grounds have a calm, dignified feel. It’s not flashy; it’s a place to slow down and feel Kyoto’s timeless side."
       },
-      "description": {
-        "ja": "世界遺産に登録されている京都最古級の神社のひとつ。縁結びや厄除けで有名で、糺の森を抜けて参道を歩くだけで神聖な空気を感じられます。境内は広くて静かで、凛とした雰囲気に背筋が伸びるような気分に。華やかな観光地とは違い、ここでは「京都の時間」がゆっくりと流れていて、心が落ち着きます。",
-        "en": "Shimogamo Shrine is one of Kyoto’s oldest and most sacred shrines, recognized as a UNESCO World Heritage site. Famous for love and protection blessings, it’s a place where the atmosphere feels pure and calming. Walking through Tadasu no Mori to reach the shrine already feels spiritual, and once you step inside, the stillness and dignity of the grounds leave a lasting impression. It’s not about flashiness here—it’s about slowing down and truly feeling the timeless side of Kyoto."
+      "lat": 35.0389778,
+      "lng": 135.7730068,
+      "photos": [
+        "06-1.jpg",
+        "06-2.jpg",
+        "06-3.jpg",
+        "06-4.jpg",
+        "06-5.jpg",
+        "06-6.jpg",
+        "06-7.jpg",
+        "06-8.jpg"
+      ],
+      "text": {
+        "ja": "下鴨神社\n\n世界遺産に登録されている京都最古級の神社のひとつ。縁結びや厄除けで有名で、糺の森を抜けて参道を歩くだけで神聖な空気を感じられます。境内は広くて静かで、凛とした雰囲気に背筋が伸びるような気分に。華やかな観光地とは違い、ここでは「京都の時間」がゆっくりと流れていて、心が落ち着きます。\n\nおすすめ訪問時間：9:30〜9:50",
+        "en": "Shimogamo Shrine is one of Kyoto’s oldest and most sacred shrines, recognized as a UNESCO World Heritage site. Famous for love and protection blessings, it’s a place where the atmosphere feels pure and calming. Walking through Tadasu no Mori to reach the shrine already feels spiritual, and once you step inside, the stillness and dignity of the grounds leave a lasting impression. It’s not about flashiness here—it’s about slowing down and truly feeling the timeless side of Kyoto.\n\nRecommended visit time: 9:30–9:50"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "賀茂御祖神社（下鴨神社）",
+            "en": "賀茂御祖神社（下鴨神社）"
+          },
+          "lat": 35.0389778,
+          "lng": 135.7730068,
           "url": "https://maps.app.goo.gl/D4BEJHYo36soMwEWA"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/06-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/1BNEYL77Xf77Tg4nUKwQSPwFcU3ThRzD20250827142543.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/0a5feEUB1Aqr8GfeCEs2XW3ymwUppCbg20250827142543.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/jRe4sUBntgmF7xsoEVYnnF1TStsDbpQC20250827142543.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Kq31MYtokEJV9UbGEaKg4bu2SYB9CC3x20250827142543.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/qMq8M2AMeYXY5WzmN4iyxqjqgSmHAE1G20250827142544.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/TXV9mhFlLt6Rfhk3wekNzgOikaKzXNCY20250827142544.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Y1YupvzDj9oCGILNIZiZiQ6lHKZ8ubW420250827142544.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/06-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/XMZfeJyGNUqOV90EvhgssiNk9kf8MHGv20250827142544.jpeg",
-          "thumb": "images/eizan-line/thumbs/06-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "下鴨神社 公式サイト",
+            "en": "Shimogamo Shrine (official site)"
+          },
+          "url": {
+            "ja": "https://www.shimogamo-jinja.or.jp/",
+            "en": "https://www.shimogamo-jinja.or.jp/english"
+          }
         }
-      ]
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "楼門内 6:30〜17:00（河合社は6:30〜16:30）。神事などで変わることがあります",
+              "en": "Inner gate area 6:30–17:00 (Kawai Shrine 6:30–16:30). May change for ceremonies"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
+      "notices": []
     },
     {
       "no": 7,
@@ -504,173 +382,179 @@
         "ja": "出町桝形商店街",
         "en": "Demachi Masugata Shopping Street"
       },
-      "heading": null,
-      "lat": 35.030287,
-      "lng": 135.769672,
-      "color": "#E96B70",
-      "time": {
-        "ja": "9:55〜10:15",
-        "en": "9:55–10:15"
+      "kind": {
+        "ja": "商店街",
+        "en": "Shopping street"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "地元の人が利用する小さな商店街で、京都の商店街の雰囲気が味わえます。若鶏の唐揚げがおいしい「鳥扇」、京都名物の阿闍梨餅が1つから買える「マツヤ食料品店」、揚げたてコロッケの「岡田商会」と、食べ歩きが楽しいお店がそろっています。1階がカフェになっている小さな映画館「出町座」も。",
+        "en": "A small shopping street used by locals, with the real feel of a Kyoto arcade. Grab fried chicken at Tori-sen, Kyoto’s famous Ajari-mochi (sold one at a time) at Matsuya, and fresh croquettes at Okada Shokai. There’s also Demachi-za, a small cinema with a café on the first floor."
       },
-      "description": {
-        "ja": "地元の人が利用する、比較的小さな商店街です。京都の商店街の雰囲気が味わえるのでとってもオススメです！\n\nおすすめのお店\n鳥扇(とりせん)  (10:00~18:00)\n鶏肉のお店です。若鶏の唐揚げがとっても美味しいです！ぜひ食べ歩きをしてみてください！\n\nマツヤ食料品店 (9:15~19:00)\n京都の名物、阿闍梨餅(あじゃりもち)が１つから購入できます。タイミングが良ければ、出来立ての阿闍梨餅をいただくことができます。ぜひお試しください！\n\n岡田商会 (9:00~18:00)\nお肉屋さんですが、揚げ物を販売しています。その中でもコロッケが有名です。コロッケだけでなく、ハムカツ、串カツなど様々な種類があるので、揚げたてをお店の前で食べてみてください！\n\n出町座 (9:30~19:00)\n小さな映画館で、1階部分がカフェスペースになっています。映画を見る時間がなくても、カフェスペースが利用できるので、ぜひ覗いてみてください！",
-        "en": "This is a relatively small shopping street frequented by locals. It’s a great place to experience the atmosphere of Kyoto’s traditional shopping arcades, so I highly recommend it!\n\nRecommended Shops\nTori-sen (10:00~18:00)\nA specialty chicken shop. Their fried young chicken is incredibly delicious! Perfect for enjoying while strolling around.\n\nMatsuya Grocery Store (9:15~19:00)\nHere, you can buy Kyoto’s famous Ajari-mochi individually. If you’re lucky, you might even get a freshly made one—definitely worth a try!\n\nOkada Shokai (9:00~18:00)\nA butcher shop that also sells fried foods. Their croquettes are especially famous, but they also have ham cutlets, skewered cutlets, and many other varieties. Try them freshly fried right in front of the shop!\n\nDemachi-za (9:30~19:00)\nA small cinema with a café space on the first floor. Even if you don’t have time to watch a movie, you can still enjoy the café—stop by and take a look!"
+      "lat": 35.0303692,
+      "lng": 135.7689241,
+      "photos": [
+        "07-1.jpg",
+        "07-2.jpg",
+        "07-3.jpg",
+        "07-4.jpg",
+        "07-5.jpg",
+        "07-6.jpg",
+        "07-7.jpg",
+        "07-8.jpg"
+      ],
+      "text": {
+        "ja": "地元の人が利用する、比較的小さな商店街です。京都の商店街の雰囲気が味わえるのでとってもオススメです！\n\nおすすめのお店\n鳥扇(とりせん) (10:00~18:00)\n鶏肉のお店です。若鶏の唐揚げがとっても美味しいです！ぜひ食べ歩きをしてみてください！\n\nマツヤ食料品店 (9:15~19:00)\n京都の名物、阿闍梨餅(あじゃりもち)が１つから購入できます。タイミングが良ければ、出来立ての阿闍梨餅をいただくことができます。ぜひお試しください！\n\n岡田商会 (9:00~18:00)\nお肉屋さんですが、揚げ物を販売しています。その中でもコロッケが有名です。コロッケだけでなく、ハムカツ、串カツなど様々な種類があるので、揚げたてをお店の前で食べてみてください！\n\n出町座 (9:30~19:00)\n小さな映画館で、1階部分がカフェスペースになっています。映画を見る時間がなくても、カフェスペースが利用できるので、ぜひ覗いてみてください！\n\nおすすめ訪問時間：9:55〜10:15",
+        "en": "This is a relatively small shopping street frequented by locals. It’s a great place to experience the atmosphere of Kyoto’s traditional shopping arcades, so I highly recommend it!\n\nRecommended Shops\nTori-sen (10:00~18:00)\nA specialty chicken shop. Their fried young chicken is incredibly delicious! Perfect for enjoying while strolling around.\n\nMatsuya Grocery Store (9:15~19:00)\nHere, you can buy Kyoto’s famous Ajari-mochi individually. If you’re lucky, you might even get a freshly made one—definitely worth a try!\n\nOkada Shokai (9:00~18:00)\nA butcher shop that also sells fried foods. Their croquettes are especially famous, but they also have ham cutlets, skewered cutlets, and many other varieties. Try them freshly fried right in front of the shop!\n\nDemachi-za (9:30~19:00)\nA small cinema with a café space on the first floor. Even if you don’t have time to watch a movie, you can still enjoy the café—stop by and take a look!\n\nRecommended visit time: 9:55–10:15"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps (Demachi-Masugata)",
+          "label": {
+            "ja": "出町桝形商店街",
+            "en": "Demachi Masugata Shopping Street"
+          },
+          "lat": 35.0303692,
+          "lng": 135.7689241,
           "url": "https://maps.app.goo.gl/FvhZCUrcyS2Zbi2W9"
         },
         {
-          "label": "鳥扇(とりせん) Torisen",
+          "label": {
+            "ja": "鳥扇",
+            "en": "Tori-sen"
+          },
+          "lat": 35.0302551,
+          "lng": 135.7681857,
           "url": "https://maps.app.goo.gl/7ecQ5p3x1JixqBro8"
         },
         {
-          "label": "マツヤ食料品店 Matsuya",
+          "label": {
+            "ja": "マツヤ食料品店",
+            "en": "Matsuya Grocery Store"
+          },
+          "lat": 35.0302421,
+          "lng": 135.7685602,
           "url": "https://maps.app.goo.gl/q8tACgrCgXDi6E9w5"
         },
         {
-          "label": "岡田商会 Okada Meat",
+          "label": {
+            "ja": "岡田商会",
+            "en": "Okada Shokai"
+          },
+          "lat": 35.0299804,
+          "lng": 135.7695677,
           "url": "https://maps.app.goo.gl/ypEtHuABcM75eNk97"
         },
         {
-          "label": "出町座 Demachiza",
+          "label": {
+            "ja": "出町座",
+            "en": "Demachi-za"
+          },
+          "lat": 35.0302152,
+          "lng": 135.7690268,
           "url": "https://maps.app.goo.gl/TnMBPEBy9ZJcdXny7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/07-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/eewUQyr0QB1cCIeQqzVehLdNt5ydaePp20250827142545.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-1.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "出町桝形商店街 公式サイト",
+            "en": "Demachi Masugata Shopping Street (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://masugata.demachi.jp/",
+            "en": "https://masugata.demachi.jp/"
+          }
         },
         {
-          "src": "images/eizan-line/07-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/MC5djotZEAcEBY4Kvwg5ChcvCDntbYyz20250827142545.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/07-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/lcR7EAVDtOCBvis0dvj9FIPVc9Ma4Fk420250827142545.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/07-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/6rYofgQkyqj1wcc44CN5edchFgg53mNC20250827142545.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/07-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/zwCy5LkClqiJps8mvaUBvoPOqkZFX1gJ20250827142545.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/07-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/JXAJZuXa6xJN4RLuRBSxVak7i58Aoj2G20250827142546.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/07-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/OhkAut6VdTf2BWsc0oQpR2bCwtA8Iu2k20250827142546.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/07-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/W5WXHxBnTYS3zcSUQ9xfsWRXyWXKffty20250827142546.jpeg",
-          "thumb": "images/eizan-line/thumbs/07-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "出町座 公式サイト",
+            "en": "Demachi-za (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://demachiza.com/",
+            "en": "https://demachiza.com/"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 8,
       "name": {
-        "ja": "出町柳駅(叡山電鉄)",
-        "en": "Demachiyanagi Station(Eizan Line)"
+        "ja": "出町柳駅（叡山電鉄）",
+        "en": "Demachiyanagi Station (Eizan Line)"
       },
-      "heading": null,
-      "lat": 35.030473,
-      "lng": 135.77327,
-      "color": "#A0D985",
-      "time": {
-        "ja": "10:20 出発",
-        "en": "Depart around 10:20"
+      "kind": {
+        "ja": "駅（乗り換え）",
+        "en": "Station (transfer)"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "ここから叡山電鉄に乗り換えです。一乗寺へは「鞍馬行き」「八瀬比叡山口行き」のどちらに乗ってもOKで、約5分。電車は2両編成のかわいいローカル線で、窓の外が住宅地からだんだん緑豊かな景色に変わっていきます。街から山へ冒険に出るワクワク感が一気に高まりますよ。",
+        "en": "Change to the Eizan Railway here. For Ichijoji, take either the Kurama or the Yase-Hieizanguchi train: about 5 minutes. The trains are cute two-car locals, and as the view slowly changes from houses to green hills, it really starts to feel like an adventure."
       },
-      "description": {
-        "ja": "ここからはいよいよ叡山電鉄に乗り換えです！🚃\n叡山電鉄には 「鞍馬行き」と「八瀬比叡山口行き」 の2路線があります。\n\n一乗寺に行くなら → どちらに乗ってもOK！ 出町柳から一乗寺まではわずか約5分。電車は 10〜15分間隔 で運行しているので、ほとんど待つことなく乗れます。\n\n一乗寺をスキップして、貴船や鞍馬へ直行するなら → 「鞍馬行き」に乗車しましょう！そのまま終点の鞍馬まで直通で、所要時間は約30分。\n\n電車は2両編成のかわいいローカル線で、窓からはだんだんと住宅地から緑豊かな風景へと移り変わる様子が見られます。街から山へ冒険に出るワクワク感が一気に高まりますよ！",
-        "en": "From here, you’ll transfer to the Eizan Railway! 🚃\nThere are two lines from Demachiyanagi: one bound for Kurama, and the other for Yase-Hieizan-guchi.\n\nIf you’re going to Ichijoji, you can take either train—both stop there, and it only takes about 5 minutes from Demachiyanagi. Trains run every 10–15 minutes, so you’ll never wait long.\n\nIf you want to skip Ichijoji and head straight to Kibune or Kurama, hop on the Kurama-bound train. It’s a direct ride to the mountains, taking about 30 minutes to reach Kurama.\n\nThe trains are small two-car locals, and watching the scenery shift from city streets to lush greenery makes the ride feel like the beginning of a real adventure!"
+      "lat": 35.0304996,
+      "lng": 135.7732283,
+      "photos": [
+        "08-1.jpg",
+        "08-2.jpg",
+        "08-3.jpg",
+        "08-4.jpg",
+        "08-5.jpg",
+        "08-6.jpg",
+        "08-7.jpg",
+        "08-8.jpg"
+      ],
+      "text": {
+        "ja": "出町柳駅 (叡山電鉄)\n\nここからはいよいよ叡山電鉄に乗り換えです！🚃\n叡山電鉄には 「鞍馬行き」と「八瀬比叡山口行き」 の2路線があります。\n\n一乗寺に行くなら → どちらに乗ってもOK！ 出町柳から一乗寺まではわずか約5分。電車は 10〜15分間隔 で運行しているので、ほとんど待つことなく乗れます。\n\n一乗寺をスキップして、貴船や鞍馬へ直行するなら → 「鞍馬行き」に乗車しましょう！そのまま終点の鞍馬まで直通で、所要時間は約30分。\n\n電車は2両編成のかわいいローカル線で、窓からはだんだんと住宅地から緑豊かな風景へと移り変わる様子が見られます。街から山へ冒険に出るワクワク感が一気に高まりますよ！\n\nおすすめ訪問時間：10:20 出発",
+        "en": "From here, you’ll transfer to the Eizan Railway! 🚃\nThere are two lines from Demachiyanagi: one bound for Kurama, and the other for Yase-Hieizan-guchi.\n\nIf you’re going to Ichijoji, you can take either train—both stop there, and it only takes about 5 minutes from Demachiyanagi. Trains run every 10–15 minutes, so you’ll never wait long.\n\nIf you want to skip Ichijoji and head straight to Kibune or Kurama, hop on the Kurama-bound train. It’s a direct ride to the mountains, taking about 30 minutes to reach Kurama.\n\nThe trains are small two-car locals, and watching the scenery shift from city streets to lush greenery makes the ride feel like the beginning of a real adventure!\n\nRecommended visit time: Depart around 10:20"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "出町柳駅",
+            "en": "出町柳駅"
+          },
+          "lat": 35.0304996,
+          "lng": 135.7732283,
           "url": "https://maps.app.goo.gl/fifFxbd5cQqYsjJR7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/08-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/YA8SXEd9iB5Xkf1FAL8AV6P9HiPVRoOj20250827142546.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-1.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "叡山電車 時刻表",
+            "en": "Eizan Railway timetable"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/guide/#timetable",
+            "en": "https://eizandensha.co.jp/guide/#alltimetable"
+          }
         },
         {
-          "src": "images/eizan-line/08-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/00pJ3omDYQ80aFrOwuNoaakOc9GetjM220250827142547.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/08-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/FUFcf9WiORqcaIjhHe941LJaTDPBd1ju20250827142547.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/08-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/BlPephAJ7nabAp6ZybcdxZ95tkgls0dB20250827142548.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/08-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/SAd2m6o6VaGZfTog2nN7Aki2ZevzH0vR20250827142548.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/08-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/8kzJCeID34B5kxX6mwVAwTvAbRPfnNAs20250827142548.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/08-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ieADw4LyDYB6HMyLu6B2Lj3GFaM3C0eM20250827142548.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/08-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/HdoC7fK4DYp3d4vbny36d5rlEPQ3DQ1Y20250827142548.jpeg",
-          "thumb": "images/eizan-line/thumbs/08-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "叡山電車 公式サイト",
+            "en": "Eizan Railway (official site, English)"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/",
+            "en": "https://eizandensha.co.jp/en/"
+          }
         }
-      ]
+      ],
+      "info": {
+        "rows": [],
+        "cash": false,
+        "tip": {
+          "ja": "叡山電車のお得なきっぷ（「えぇきっぷ」1,200円、「えいでんと、温泉きっぷ」2,200円）は、この出町柳駅で買えます。くわしくは「使い方」の画面の「お得なきっぷ」へ。",
+          "en": "Good-value Eizan tickets (\"Ee-kippu\" ¥1,200, \"Eiden & Onsen\" ¥2,200) are sold here at Demachiyanagi Station. See \"Money-saving tickets\" in How to use."
+        },
+        "checked": "2026-11-20"
+      },
+      "notices": []
     },
     {
       "no": 9,
@@ -678,78 +562,56 @@
         "ja": "一乗寺駅",
         "en": "Ichijoji Station"
       },
-      "heading": null,
-      "lat": 35.044072,
-      "lng": 135.787292,
-      "color": "#A0D985",
-      "time": {
-        "ja": "10:35 到着",
-        "en": "Arrive around 10:35"
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "お寺とラーメンの二大名物エリアへのスタート地点。改札を出て山側へ歩けば圓光寺まで15〜20分、そこから詩仙堂へ5〜10分。坂道で少し息が上がるけれど、着いたときの景色と静けさは特別です。駅のまわりは知る人ぞ知るラーメン激戦区で、人気店がずらり。観光と食を一度に楽しめる駅です。",
+        "en": "The gateway to temples and ramen. Walk toward the mountains to reach Enkoji in 15–20 minutes, then Shisendo 5–10 minutes later. The uphill walk is a bit of a workout, but the views and quiet are worth it. Around the station is a famous ramen area full of popular shops: culture and comfort food in one place."
       },
-      "description": {
-        "ja": "一乗寺駅は、お寺とラーメンの二大名物エリアへのスタート地点！駅自体はこじんまりしていますが、観光には欠かせない拠点です。改札を出て山側へ歩くと、圓光寺まで徒歩15〜20分、さらに詩仙堂へはそこから5〜10分。坂道を登る道のりは少し息が上がるけれど、その分、到着したときの景色や静けさは特別です。\n\n一方で駅周辺は、知る人ぞ知るラーメン激戦区！🍜 数多くの人気店が並び、行列必至のお店もあります。ランチタイムに合わせて行くのもいいし、観光を終えたあとにガッツリ締めの一杯を楽しむのも最高です。観光と食が一度に味わえる贅沢な駅、それが一乗寺です！",
-        "en": "Ichijoji Station is the gateway to temples and ramen heaven! The station is small, but it’s an essential hub for exploring. Head toward the mountains and you’ll reach Enkoji Temple in about 15–20 minutes on foot, then Shisendo in another 5–10 minutes. The uphill walk can be a bit of a workout, but the peaceful views and atmosphere when you arrive are totally worth it.\n\nOn the flip side, the area right around the station is a ramen paradise 🍜 with famous shops lined up—some with long lines, especially at lunchtime. You can plan to slurp noodles before your temple stroll, or save it as the perfect reward afterward. Either way, Ichijoji offers the best of both worlds: culture and comfort food!"
+      "lat": 35.0441224,
+      "lng": 135.7874374,
+      "photos": [
+        "09-1.jpg",
+        "09-2.jpg",
+        "09-3.jpg",
+        "09-4.jpg",
+        "09-5.jpg",
+        "09-6.jpg",
+        "09-7.jpg",
+        "09-8.jpg"
+      ],
+      "text": {
+        "ja": "一乗寺駅は、お寺とラーメンの二大名物エリアへのスタート地点！駅自体はこじんまりしていますが、観光には欠かせない拠点です。改札を出て山側へ歩くと、圓光寺まで徒歩15〜20分、さらに詩仙堂へはそこから5〜10分。坂道を登る道のりは少し息が上がるけれど、その分、到着したときの景色や静けさは特別です。\n\n一方で駅周辺は、知る人ぞ知るラーメン激戦区！🍜 数多くの人気店が並び、行列必至のお店もあります。ランチタイムに合わせて行くのもいいし、観光を終えたあとにガッツリ締めの一杯を楽しむのも最高です。観光と食が一度に味わえる贅沢な駅、それが一乗寺です！\n\nおすすめ訪問時間：10:35 到着",
+        "en": "Ichijoji Station is the gateway to temples and ramen heaven! The station is small, but it’s an essential hub for exploring. Head toward the mountains and you’ll reach Enkoji Temple in about 15–20 minutes on foot, then Shisendo in another 5–10 minutes. The uphill walk can be a bit of a workout, but the peaceful views and atmosphere when you arrive are totally worth it.\n\nOn the flip side, the area right around the station is a ramen paradise 🍜 with famous shops lined up—some with long lines, especially at lunchtime. You can plan to slurp noodles before your temple stroll, or save it as the perfect reward afterward. Either way, Ichijoji offers the best of both worlds: culture and comfort food!\n\nRecommended visit time: Arrive around 10:35"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "一乗寺駅",
+            "en": "一乗寺駅"
+          },
+          "lat": 35.0441224,
+          "lng": 135.7874374,
           "url": "https://maps.app.goo.gl/BFGiFFgSpry2cQoj9"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/09-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/1tI378WDsef1xKKYjyAyIGPWcR3fO7iR20250827142549.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/EfUrKG2tWuRQBan6KmNgdjcgGoYzAhRB20250827142549.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/zlfsWhxkmwPvEWGmefqUPZJqdBOuiIaI20250827142549.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/SDBRHZlAUE07yICl7lTLITVtvkByCdyA20250827142550.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/8ydtbQO19nxWNEbTmKM5r2l5KIczT8gj20250827142550.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/VV2gf7JnvjqzkYw1i1PaWmT4qViCxcMO20250827142550.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/JJsaOUuI8Di0DzJGtj5P0MUZo9bo4Dy920250827142551.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/09-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/EGcTuiAUgAOiCdoqKfUrsozL4Ly9Njf920250827142551.jpeg",
-          "thumb": "images/eizan-line/thumbs/09-8.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "叡山電車 時刻表",
+            "en": "Eizan Railway timetable"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/guide/#timetable",
+            "en": "https://eizandensha.co.jp/guide/#alltimetable"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 10,
@@ -757,76 +619,79 @@
         "ja": "圓光寺",
         "en": "Enkoji Temple"
       },
-      "heading": null,
-      "lat": 35.045082,
-      "lng": 135.796101,
-      "color": "#E96B70",
-      "time": {
-        "ja": "10:50〜11:15",
-        "en": "10:50–11:15"
+      "kind": {
+        "ja": "お寺",
+        "en": "Temple"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "庭がすごくきれいな、京都のちょっとした穴場のお寺です。紅葉の木がたくさんあって、春〜夏は青々とした“青もみじ”、秋は鮮やかな紅葉。禅の心を映すお庭や竹林、しっとりと苔むした景色も見どころで、苔は雨の日でも輝くように美しく、訪れるたびに違う表情を見せてくれます。紅葉の時期以外は人が少なく、ほぼ貸し切り気分でゆっくりできます。",
+        "en": "A bit of a hidden gem with an exceptionally beautiful garden. There are lots of maple trees: fresh green leaves in spring and summer, brilliant red in autumn. There’s also a Zen garden, a bamboo grove and soft moss that shines even on rainy days, so every visit looks different. Outside the autumn peak it’s quiet, often almost all to yourself."
       },
-      "description": {
-        "ja": "京都のちょっとした穴場で、庭がすごくきれいなお寺です。紅葉の木がたくさんあって、春〜夏は青々とした“青もみじ”、秋には鮮やかな紅葉が楽しめます。さらに、禅の心を映す美しいお庭や、境内に広がる竹林、そしてしっとりと苔むした景色も見どころ。苔は雨の日でも輝くように美しく、訪れるたびに違った表情を見せてくれます。\n\n紅葉シーズンは少し混みますが、それ以外は人が少なく、ほぼ貸し切り気分でゆっくりできます。混雑した観光地に疲れた時にぴったりのスポットです。\nそして、もし圓光寺が気に入ったなら、次の「詩仙堂」を飛ばして、この場所でゆっくりとした時間を過ごすのもおすすめです！",
-        "en": "This is a bit of a hidden gem in Kyoto—a temple with an exceptionally beautiful garden. It’s filled with maple trees, offering lush green ao-momiji leaves in spring and summer, and brilliant red foliage in autumn. In addition, Enkoji features a serene Zen garden, a peaceful bamboo grove, and lush moss that looks especially enchanting on rainy days. Each visit offers a different perspective of its natural beauty.\n\nIt’s usually quiet except during the peak autumn season, so you can often enjoy it almost all to yourself. If you fall in love with Enkoji, we recommend skipping the next stop, Shisendo, and spending more time here to fully relax and soak in the atmosphere."
+      "lat": 35.045091,
+      "lng": 135.797065,
+      "photos": [
+        "10-1.jpg",
+        "10-2.jpg",
+        "10-3.jpg",
+        "10-4.jpg",
+        "10-5.jpg",
+        "10-6.jpg",
+        "10-7.jpg",
+        "10-8.jpg"
+      ],
+      "text": {
+        "ja": "圓光寺 (Enkoji Temple)\n\n京都のちょっとした穴場で、庭がすごくきれいなお寺です。紅葉の木がたくさんあって、春〜夏は青々とした“青もみじ”、秋には鮮やかな紅葉が楽しめます。さらに、禅の心を映す美しいお庭や、境内に広がる竹林、そしてしっとりと苔むした景色も見どころ。苔は雨の日でも輝くように美しく、訪れるたびに違った表情を見せてくれます。\n\n紅葉シーズンは少し混みますが、それ以外は人が少なく、ほぼ貸し切り気分でゆっくりできます。混雑した観光地に疲れた時にぴったりのスポットです。\nそして、もし圓光寺が気に入ったなら、次の「詩仙堂」を飛ばして、この場所でゆっくりとした時間を過ごすのもおすすめです！\n\nおすすめ訪問時間：10:50〜11:15",
+        "en": "This is a bit of a hidden gem in Kyoto—a temple with an exceptionally beautiful garden. It’s filled with maple trees, offering lush green ao-momiji leaves in spring and summer, and brilliant red foliage in autumn. In addition, Enkoji features a serene Zen garden, a peaceful bamboo grove, and lush moss that looks especially enchanting on rainy days. Each visit offers a different perspective of its natural beauty.\n\nIt’s usually quiet except during the peak autumn season, so you can often enjoy it almost all to yourself. If you fall in love with Enkoji, we recommend skipping the next stop, Shisendo, and spending more time here to fully relax and soak in the atmosphere.\n\nRecommended visit time: 10:50–11:15"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "瑞厳山 圓光寺",
+            "en": "瑞厳山 圓光寺"
+          },
+          "lat": 35.045091,
+          "lng": 135.797065,
           "url": "https://maps.app.goo.gl/cJhaBBxoqqC7r2oa7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/10-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/LaAZ5grmt7M78gJPYrpe9pGig7v4ueSS20250827142551.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-1.jpg"
-        },
+          "kind": "official",
+          "label": {
+            "ja": "圓光寺 公式サイト",
+            "en": "Enkoji Temple (official site)"
+          },
+          "url": {
+            "ja": "https://www.enkouji.jp/",
+            "en": "https://www.enkouji.jp/en/"
+          }
+        }
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "9:00〜17:00",
+              "en": "9:00–17:00"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
+      "notices": [
         {
-          "src": "images/eizan-line/10-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/2YbVJOjPsQa4EHvqLO82ep5eYc9v7fVE20250827142552.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/10-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/HAzo6dLYTcieREzcPzygWnpB0x7OQWOh20250827142552.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/10-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/OUWeqxGnmMG0WJqBCNhceMUJuKHMimEA20250827142552.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/10-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/j7Zz0Y6m4debCPazM3Slj024Av6JCMqa20250827142552.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/10-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PH8ndvmNRuGaCHkn0QBeBGjYANFV4p6g20250827142552.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/10-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Zh19CT7H6QJRyKQJ1LDJg4jYlXwDaiq920250827142553.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/10-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/DlLNqbEc5Bswva8SLLVow8KlAiZR7eLi20250827142553.jpeg",
-          "thumb": "images/eizan-line/thumbs/10-8.jpg"
+          "from": "2026-10-20",
+          "to": "2026-12-10",
+          "url": "https://www.enkouji.jp/news/",
+          "text": {
+            "ja": "紅葉特別拝観（2026年11/10〜12/10）は日時指定の予約制です。大人1,500円・高中小学生800円。公式サイトから予約してください。",
+            "en": "Autumn special viewing (Nov 10 – Dec 10, 2026) needs a timed booking. Adults ¥1,500, students ¥800. Book on the official website."
+          }
         }
       ]
     },
@@ -836,78 +701,80 @@
         "ja": "詩仙堂",
         "en": "Shisendo"
       },
-      "heading": null,
-      "lat": 35.044111,
-      "lng": 135.796217,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "11:20〜11:45",
-        "en": "11:20–11:45"
+      "kind": {
+        "ja": "お寺",
+        "en": "Temple"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "山の麓にある、こじんまりとしたお寺。静けさと美しい庭が魅力で、苔と季節ごとの草花の調和がすばらしいです。縁側に座ってぼーっと庭を眺めていると、時間がゆっくり流れていくような感覚に。京都の喧騒を離れて「日本のわびさび」を体感できる場所です。圓光寺とセットで行くと、雰囲気の違いも楽しめます。",
+        "en": "A small temple at the foot of the mountains, loved for its quiet and its beautiful garden of moss and seasonal flowers. Sit on the veranda, gaze at the garden, and feel time slow down. A peaceful escape from busy Kyoto, and a great place to feel Japanese wabi-sabi. Visit it with Enkoji to enjoy the contrast."
       },
-      "description": {
-        "ja": "こじんまりとした山の麓にあるお寺で、静けさと美しい庭が魅力です。特に庭の苔と季節ごとの草花の調和がすばらしく、縁側に座ってぼーっと庭を眺めていると、時間がゆっくり流れていくような感覚になります。京都の喧騒を離れて、「日本のわびさび」を体感できる落ち着いたスポット。圓光寺とセットで訪れると、雰囲気の違いも楽しめます！",
-        "en": "This small temple at the foot of the mountains is all about tranquility and a stunning garden. The moss, seasonal flowers, and carefully designed landscape blend beautifully, creating a picture-perfect scene. Sitting on the veranda and gazing out at the garden, you’ll feel like time slows down. It’s a peaceful escape from the bustle of Kyoto, and a wonderful place to experience the spirit of Japanese wabi-sabi. Visiting it together with Enkoji makes for a great contrast in atmosphere!"
+      "lat": 35.0437385,
+      "lng": 135.7961984,
+      "photos": [
+        "11-1.jpg",
+        "11-2.jpg",
+        "11-3.jpg",
+        "11-4.jpg",
+        "11-5.jpg",
+        "11-6.jpg",
+        "11-7.jpg",
+        "11-8.jpg"
+      ],
+      "text": {
+        "ja": "詩仙堂 (Shisendo)\n\nこじんまりとした山の麓にあるお寺で、静けさと美しい庭が魅力です。特に庭の苔と季節ごとの草花の調和がすばらしく、縁側に座ってぼーっと庭を眺めていると、時間がゆっくり流れていくような感覚になります。京都の喧騒を離れて、「日本のわびさび」を体感できる落ち着いたスポット。圓光寺とセットで訪れると、雰囲気の違いも楽しめます！\n\nおすすめ訪問時間：11:20〜11:45",
+        "en": "This small temple at the foot of the mountains is all about tranquility and a stunning garden. The moss, seasonal flowers, and carefully designed landscape blend beautifully, creating a picture-perfect scene. Sitting on the veranda and gazing out at the garden, you’ll feel like time slows down. It’s a peaceful escape from the bustle of Kyoto, and a wonderful place to experience the spirit of Japanese wabi-sabi. Visiting it together with Enkoji makes for a great contrast in atmosphere!\n\nRecommended visit time: 11:20–11:45"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "詩仙堂丈山寺",
+            "en": "詩仙堂丈山寺"
+          },
+          "lat": 35.0437385,
+          "lng": 135.7961984,
           "url": "https://maps.app.goo.gl/9RA3x27zFU9TTrFN8"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/11-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/LUmFLMzV8l5aq8nQJWDK0S6lRxn1SvPf20250827142553.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/DjyguhoLqVeMYuT7s7LtQ1eMIkKgWc5m20250827142553.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/29Ih8LkLox7U8x6pEZAptklobH1etFBM20250827142554.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/FTwVikT8JzcFHALMk3mUdVjehHNqqmi320250827142554.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/dKG4W1k43PGhIIV5bTCnv1HSEXg6nTK320250827142554.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/OWVz24NcqHDtjNmnnXSS9qeg7moZ1kek20250827142554.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ZNM0ffmVgTNHRyTnkVIUeGWiFZ2ku8Ir20250827142555.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/11-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Q7jGWRhiLhhTiyKcitex3Fo2nB6TOT5720250827142555.jpeg",
-          "thumb": "images/eizan-line/thumbs/11-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "詩仙堂 公式サイト",
+            "en": "Shisendo (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://kyoto-shisendo.net/",
+            "en": "https://kyoto-shisendo.net/"
+          }
         }
-      ]
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "9:00〜17:00（受付は16:45まで）。5月23日は拝観休止",
+              "en": "9:00–17:00 (last entry 16:45). Closed May 23"
+            },
+            "until": null,
+            "from": null
+          },
+          {
+            "kind": "fee",
+            "text": {
+              "ja": "大人700円・高校生500円・小中学生300円",
+              "en": "Adults ¥700, high school ¥500, elementary/junior high ¥300"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
+      "notices": []
     },
     {
       "no": 12,
@@ -915,60 +782,53 @@
         "ja": "びし屋",
         "en": "Bishiya"
       },
-      "heading": null,
-      "lat": 35.046169,
-      "lng": 135.78646,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "11:55〜12:35（昼食）",
-        "en": "11:55–12:35 (lunch)"
+      "kind": {
+        "ja": "ラーメン",
+        "en": "Ramen"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "ラーメン激戦区・一乗寺で、地元の人からも旅行者からも人気のラーメン店。濃厚だけど後味すっきりのスープに、もちもちの麺がよく絡んで最高です。行列ができることもありますが、並んででも食べる価値あり。観光の合間に、熱々のラーメンでエネルギーチャージしましょう。",
+        "en": "A ramen shop loved by locals and travelers in Ichijoji, Kyoto’s “ramen battleground.” The broth is rich but clean on the finish, and the chewy noodles hold all the flavor. Try the tsukemen: thick noodles you dip into a strong, tasty soup. There’s often a line, but it’s worth the wait."
       },
-      "description": {
-        "ja": "一乗寺といえばラーメンの激戦区！その中でも「びし屋」は地元の人からも旅行者からも人気のお店です。濃厚だけど後味がすっきりしたスープに、もちもちの麺がよく絡んで最高！行列ができることもありますが、並んででも食べる価値ありです。観光の合間に、熱々のラーメンでエネルギーチャージしましょう！",
-        "en": "Ichijoji is famous as Kyoto’s “ramen battleground,” and Bishiya is one of the local favorites. The broth is rich yet surprisingly clean on the finish, and the chewy noodles soak up all the flavor perfectly. There’s often a line, but trust us—it’s worth the wait! One of the highlights here is their tsukemen (dipping noodles): thick, springy noodles served separately from the broth. You dip each bite into the concentrated, flavorful soup, which makes for a fun and delicious experience that’s a bit different from regular ramen. Stopping here for a steaming bowl of noodles is the perfect way to recharge before heading out for more sightseeing."
+      "lat": 35.046255,
+      "lng": 135.786476,
+      "photos": [
+        "12-1.jpg",
+        "12-2.jpg",
+        "12-3.jpg",
+        "12-4.jpg",
+        "12-5.jpg"
+      ],
+      "text": {
+        "ja": "びし屋 (Bishiya Ramen)\n\n一乗寺といえばラーメンの激戦区！その中でも「びし屋」は地元の人からも旅行者からも人気のお店です。濃厚だけど後味がすっきりしたスープに、もちもちの麺がよく絡んで最高！行列ができることもありますが、並んででも食べる価値ありです。観光の合間に、熱々のラーメンでエネルギーチャージしましょう！\n\nおすすめ訪問時間：11:55〜12:35（昼食）",
+        "en": "Ichijoji is famous as Kyoto’s “ramen battleground,” and Bishiya is one of the local favorites. The broth is rich yet surprisingly clean on the finish, and the chewy noodles soak up all the flavor perfectly. There’s often a line, but trust us—it’s worth the wait! One of the highlights here is their tsukemen (dipping noodles): thick, springy noodles served separately from the broth. You dip each bite into the concentrated, flavorful soup, which makes for a fun and delicious experience that’s a bit different from regular ramen. Stopping here for a steaming bowl of noodles is the perfect way to recharge before heading out for more sightseeing.\n\nRecommended visit time: 11:55–12:35 (lunch)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "びし屋",
+            "en": "びし屋"
+          },
+          "lat": 35.046255,
+          "lng": 135.786476,
           "url": "https://maps.app.goo.gl/HfaUfsm9F3bXUkMD9"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/12-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/OtUbQBGmkTA70rmibsdL4ENQScNkFEOO20250827142555.jpeg",
-          "thumb": "images/eizan-line/thumbs/12-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/12-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/gDQse4vAPD6MGk8w0eKCcv6c8NvGmZQM20250827142555.jpeg",
-          "thumb": "images/eizan-line/thumbs/12-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/12-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/1mfhvBXddONUhemb9I2wpJW74QRHm0ZK20250827142555.jpeg",
-          "thumb": "images/eizan-line/thumbs/12-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/12-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/dLRvbn7FAtqLSw2aiPwSBsUKGkLMVq3w20250827142556.jpeg",
-          "thumb": "images/eizan-line/thumbs/12-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/12-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/CkaJnB2CKo6LGyLsJHvaCMyGyEOGg7cX20250827142556.jpeg",
-          "thumb": "images/eizan-line/thumbs/12-5.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "びし屋 公式サイト",
+            "en": "Bishiya (official site)"
+          },
+          "url": {
+            "ja": "http://bishiya.com/",
+            "en": "http://bishiya.com/"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 13,
@@ -976,54 +836,52 @@
         "ja": "一乗寺駅",
         "en": "Ichijoji Station"
       },
-      "heading": "一乗寺駅から鞍馬方面へ",
-      "lat": 35.044245,
-      "lng": 135.787376,
-      "color": "#A0D985",
-      "time": {
-        "ja": "12:50出発",
-        "en": "Depart 12:50"
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "ここから叡山電鉄で鞍馬方面へ。乗り換えなしで、約23分で貴船口駅に着きます。途中のハイライトは、市原〜二ノ瀬の間の「もみじのトンネル」。線路の両側から木々がせり出して、電車が赤や黄色のトンネルをくぐり抜けるよう。春や夏は青もみじ、秋は車内から歓声があがるほどの紅葉です。窓際の席に座って景色を楽しんで。",
+        "en": "Take the Eizan Railway toward Kurama: no change, about 23 minutes to Kibuneguchi. The highlight is the “Maple Tunnel” between Ichihara and Ninose, where maple trees grow so close to the track that the train seems to dive into a tunnel of leaves: fresh green in spring and summer, fiery red in autumn. Grab a window seat!"
       },
-      "description": {
-        "ja": "観光やランチを終えたら、一乗寺駅から叡山電鉄に乗って鞍馬方面へ向かいましょう。乗り換えは不要で、そのまま乗っているだけで約23分後には「貴船口駅」に到着します。\n\n途中のハイライトは、市原駅〜二ノ瀬駅の間にある「もみじのトンネル」！線路の両側から紅葉の木々がせり出し、電車がまるで赤や黄色のトンネルをくぐり抜けるような体験ができます。春や夏は青もみじがさわやかに揺れ、秋には車内から歓声があがるほどの圧巻の紅葉が楽しめます。窓際の席に座って、ゆっくり景色を堪能してくださいね。",
-        "en": "After finishing your sightseeing and lunch, board the Eizan Railway bound for Kurama at Ichijoji Station. There’s no need to transfer—just stay on the train, and in about 23 minutes you’ll arrive at Kibuneguchi Station.\n\nThe highlight of this ride is the “Maple Tunnel” between Ichihara Station and Ninose Station. Maple trees grow so close on both sides of the tracks that the train feels like it’s diving straight into a tunnel of glowing leaves. In spring and summer, you’ll see a refreshing canopy of fresh green maples, while in autumn, the fiery red and golden colors are so spectacular that passengers often gasp in amazement. For the best view, grab a window seat and enjoy the ride!"
+      "lat": 35.0441224,
+      "lng": 135.7874374,
+      "photos": [
+        "13-1.jpg",
+        "13-2.jpg",
+        "13-3.jpg",
+        "13-4.jpg"
+      ],
+      "text": {
+        "ja": "一乗寺駅から鞍馬方面へ\n\n観光やランチを終えたら、一乗寺駅から叡山電鉄に乗って鞍馬方面へ向かいましょう。乗り換えは不要で、そのまま乗っているだけで約23分後には「貴船口駅」に到着します。\n\n途中のハイライトは、市原駅〜二ノ瀬駅の間にある「もみじのトンネル」！線路の両側から紅葉の木々がせり出し、電車がまるで赤や黄色のトンネルをくぐり抜けるような体験ができます。春や夏は青もみじがさわやかに揺れ、秋には車内から歓声があがるほどの圧巻の紅葉が楽しめます。窓際の席に座って、ゆっくり景色を堪能してくださいね。\n\nおすすめ移動時間：12:50出発",
+        "en": "After finishing your sightseeing and lunch, board the Eizan Railway bound for Kurama at Ichijoji Station. There’s no need to transfer—just stay on the train, and in about 23 minutes you’ll arrive at Kibuneguchi Station.\n\nThe highlight of this ride is the “Maple Tunnel” between Ichihara Station and Ninose Station. Maple trees grow so close on both sides of the tracks that the train feels like it’s diving straight into a tunnel of glowing leaves. In spring and summer, you’ll see a refreshing canopy of fresh green maples, while in autumn, the fiery red and golden colors are so spectacular that passengers often gasp in amazement. For the best view, grab a window seat and enjoy the ride!\n\nRecommended travel time: Depart 12:50"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "一乗寺駅",
+            "en": "一乗寺駅"
+          },
+          "lat": 35.0441224,
+          "lng": 135.7874374,
           "url": "https://maps.app.goo.gl/BFGiFFgSpry2cQoj9"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/13-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/jmKLQICdTAwNmvujkIs9NALEDjzxPoBv20250827142556.jpeg",
-          "thumb": "images/eizan-line/thumbs/13-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/13-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PEPE3SemLf8qZMNjG5UU1Mvs9w4H4rBb20250827142557.jpeg",
-          "thumb": "images/eizan-line/thumbs/13-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/13-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/u9gpQuE87jlED3bFvD2leDH5GWGqMwBz20250827142557.jpeg",
-          "thumb": "images/eizan-line/thumbs/13-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/13-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/kFLv7UxsYQShAaDY4slZPhS4BnuowEHr20250827142557.jpeg",
-          "thumb": "images/eizan-line/thumbs/13-4.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "叡山電車 時刻表",
+            "en": "Eizan Railway timetable"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/guide/#timetable",
+            "en": "https://eizandensha.co.jp/guide/#alltimetable"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 14,
@@ -1031,149 +889,120 @@
         "ja": "貴船口駅",
         "en": "Kibuneguchi Station (Eizan Line)"
       },
-      "heading": "貴船口駅から貴船神社方面へ",
-      "lat": 35.106037,
-      "lng": 135.763777,
-      "color": "#A0D985",
-      "time": {
-        "ja": "13:15〜13:55（徒歩の場合）／ 13:15〜13:25（バスの場合）",
-        "en": "13:15–13:55 (on foot) / 13:15–13:25 (by bus)"
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "いよいよ貴船エリアへ。駅前からバスに乗れば約5分で「貴船」バス停、そこから歩いてすぐ貴船神社です。時間と体力に余裕があれば、川沿いの道を30〜40分、ハイキング気分で歩くのも最高。途中で和スイーツのカフェ「古今 藤や」に寄れるのは歩きの特権です。どちらでも、ゴールは清流と森に包まれた貴船神社。",
+        "en": "Welcome to the Kibune area. Take the bus right outside the station (about 5 minutes) to the Kibune stop, a short walk from Kifune Shrine. Or, if you have the time and energy, walk 30–40 minutes along the river in the fresh mountain air, with a stop at Kokon Fujiya café. Either way, you end up at the shrine, surrounded by forest and clear water."
       },
-      "description": {
-        "ja": "ここからいよいよ貴船エリアへ！駅を出るとすぐに、バス停と山あいの道が広がります。\n\n① バスで行く場合\n駅前から出ている京都バスに乗れば、約5分で「貴船」バス停に到着。そこから歩いてすぐに貴船神社の入口に着きます。短時間でラクに行きたい方におすすめ！\n\n② 歩いて行く場合\n体力と時間に余裕があれば、駅から川沿いの道をのんびり歩いて行くのも最高です。大体30〜40分ほどのハイキング感覚で、自然の空気を味わいながら進めます。途中で人気のカフェ「古今 藤や」に立ち寄れるのも歩きの特権！和スイーツや季節限定メニューが楽しめて、散歩の小休憩にぴったりです。\n\nいずれのルートでも、ゴールは清流と森に包まれた神秘的な貴船神社。自分のスタイルに合わせて選んでみてください！",
-        "en": "From here, you’ll head into the Kibune area! Right outside the station, you’ll find both the bus stop and a scenic mountain road.\n\n① By Bus\nCatch the Kyoto Bus that departs right in front of the station—it only takes about 5 minutes to reach the “Kibune” bus stop, and from there it’s just a short walk to the entrance of Kifune Shrine. This is the easiest and quickest way if you want to save your energy!\n\n② On Foot\nIf you’ve got the time and energy, walking from the station is a fantastic option. It’s about a 30–40 minute stroll along the river, with fresh mountain air and a peaceful vibe all the way. The best part? You can stop by Kokon Fujiya, a cozy café along the route. They serve Japanese-style sweets and seasonal treats, making it the perfect break before reaching the shrine.\n\nWhichever way you choose, the destination is the same—the mystical Kifune Shrine, surrounded by flowing water and deep forest. Pick the route that fits your mood best!"
+      "lat": 35.1059533,
+      "lng": 135.7636609,
+      "photos": [
+        "14-1.jpg",
+        "14-2.jpg",
+        "14-3.jpg",
+        "14-4.jpg",
+        "14-5.jpg",
+        "14-6.jpg",
+        "14-7.jpg",
+        "14-8.jpg"
+      ],
+      "text": {
+        "ja": "貴船口駅から貴船神社方面へ\n\nここからいよいよ貴船エリアへ！駅を出るとすぐに、バス停と山あいの道が広がります。\n\n① バスで行く場合\n駅前から出ている京都バスに乗れば、約5分で「貴船」バス停に到着。そこから歩いてすぐに貴船神社の入口に着きます。短時間でラクに行きたい方におすすめ！\n\n② 歩いて行く場合\n体力と時間に余裕があれば、駅から川沿いの道をのんびり歩いて行くのも最高です。大体30〜40分ほどのハイキング感覚で、自然の空気を味わいながら進めます。途中で人気のカフェ「古今 藤や」に立ち寄れるのも歩きの特権！和スイーツや季節限定メニューが楽しめて、散歩の小休憩にぴったりです。\n\nいずれのルートでも、ゴールは清流と森に包まれた神秘的な貴船神社。自分のスタイルに合わせて選んでみてください！\n\nおすすめ移動時間：13:15〜13:55（徒歩の場合）／ 13:15〜13:25（バスの場合）",
+        "en": "From here, you’ll head into the Kibune area! Right outside the station, you’ll find both the bus stop and a scenic mountain road.\n\n① By Bus\nCatch the Kyoto Bus that departs right in front of the station—it only takes about 5 minutes to reach the “Kibune” bus stop, and from there it’s just a short walk to the entrance of Kifune Shrine. This is the easiest and quickest way if you want to save your energy!\n\n② On Foot\nIf you’ve got the time and energy, walking from the station is a fantastic option. It’s about a 30–40 minute stroll along the river, with fresh mountain air and a peaceful vibe all the way. The best part? You can stop by Kokon Fujiya, a cozy café along the route. They serve Japanese-style sweets and seasonal treats, making it the perfect break before reaching the shrine.\n\nWhichever way you choose, the destination is the same—the mystical Kifune Shrine, surrounded by flowing water and deep forest. Pick the route that fits your mood best!\n\nRecommended travel time: 13:15–13:55 (on foot) / 13:15–13:25 (by bus)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "貴船口駅",
+            "en": "貴船口駅"
+          },
+          "lat": 35.1059533,
+          "lng": 135.7636609,
           "url": "https://maps.app.goo.gl/sECfTQ5dZMshR3vy7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/14-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/C08ge17UrpcvX5hwcGbeIwPpmxTuCQI220250827142557.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/U8SUFlaWEfPV77t3WHUknvt2FM7k3ntZ20250827142558.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/pzdkQ9EgEC4My4kbjVtDIGMaDGC1IIK520250827142558.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/bE5hW2tVq2btTvhtvUbgcWcYOwbfZLeo20250827142558.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/oUL2VGpqobDmx4DA55gCm26TH5N17CZW20250827142558.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/5WvmGwECDE0b6huPVpxu99w9ZMD4w91A20250827142559.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/EylXfBG3g84Dt6plBhYBaZvJpP7GWepv20250827142559.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/14-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/I12mkEs0glkh4WKgD7bxXhY6eVdEeRDX20250827142559.jpeg",
-          "thumb": "images/eizan-line/thumbs/14-8.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "叡山電車 時刻表",
+            "en": "Eizan Railway timetable"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/guide/#timetable",
+            "en": "https://eizandensha.co.jp/guide/#alltimetable"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 15,
       "name": {
-        "ja": "貴船口(バス停)",
+        "ja": "貴船口（バス停）",
         "en": "Kibuneguchi Bus Stop"
       },
-      "heading": "貴船口駅からバス乗車",
-      "lat": 35.10596,
-      "lng": 135.763367,
-      "color": "#5CC2D4",
-      "time": {
-        "ja": "13:15〜13:20頃（貴船口駅到着 → バス乗車）",
-        "en": "Around 13:15–13:20 (arrive at Kibuneguchi Station → take the bus)"
+      "kind": {
+        "ja": "バス停",
+        "en": "Bus stop"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "貴船神社へ向かうバスの乗り場です。乗車は約5分。歩くと30分近くかかるので、バスを使えば時間と体力をかなりセーブできます。午後に鞍馬までハイキングする予定なら、ここでバスに乗るのがおすすめです。",
+        "en": "The bus stop for Kifune Shrine; the ride takes about 5 minutes. Walking takes nearly 30, so the bus saves you a lot of time and energy. If you plan to hike to Kurama in the afternoon, taking the bus here makes the day much easier."
       },
-      "description": {
-        "ja": "叡山電鉄「貴船口駅」から貴船神社へは、ここでバスに乗るのがおすすめです。バスはおおよそ20分に1本の間隔で運行していて、乗車時間は約5分。歩くと30分近くかかるので、バスを使えばかなりの時間と体力をセーブできます。特に午後から鞍馬寺のハイキングを予定している人は、ここでバスに乗るのが安心ですよ。",
-        "en": "From Kibuneguchi Station, the easiest way to reach Kifune Shrine is by bus. The bus runs roughly every 20 minutes, and the ride takes only about 5 minutes. Walking would take close to 30 minutes, so by taking the bus you save a lot of time and energy. This is especially helpful if you’re planning to hike over to Kurama Temple later in the afternoon—taking the bus here makes the whole day much smoother."
+      "lat": 35.1059022,
+      "lng": 135.7634852,
+      "photos": [
+        "15-1.jpg",
+        "15-2.jpg",
+        "15-3.jpg",
+        "15-4.jpg",
+        "15-5.jpg",
+        "15-6.jpg",
+        "15-7.jpg"
+      ],
+      "text": {
+        "ja": "貴船口駅からバス乗車\n\n叡山電鉄「貴船口駅」から貴船神社へは、ここでバスに乗るのがおすすめです。バスはおおよそ20分に1本の間隔で運行していて、乗車時間は約5分。歩くと30分近くかかるので、バスを使えばかなりの時間と体力をセーブできます。特に午後から鞍馬寺のハイキングを予定している人は、ここでバスに乗るのが安心ですよ。\n\nおすすめ訪問時間：13:15〜13:20頃（貴船口駅到着 → バス乗車）",
+        "en": "From Kibuneguchi Station, the easiest way to reach Kifune Shrine is by bus. The bus runs roughly every 20 minutes, and the ride takes only about 5 minutes. Walking would take close to 30 minutes, so by taking the bus you save a lot of time and energy. This is especially helpful if you’re planning to hike over to Kurama Temple later in the afternoon—taking the bus here makes the whole day much smoother.\n\nRecommended visit time: Around 13:15–13:20 (arrive at Kibuneguchi Station → take the bus)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "叡電貴船口駅前",
+            "en": "叡電貴船口駅前"
+          },
+          "lat": 35.1059022,
+          "lng": 135.7634852,
           "url": "https://maps.app.goo.gl/vgEzMhWzhtzLWnMY7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/15-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/MUzX8lD5KptBjftHhGAnOeAPru3iEJDG20250827142559.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-1.jpg"
-        },
+          "kind": "timetable",
+          "label": {
+            "ja": "京都バス 時刻表（叡電貴船口駅前）",
+            "en": "Kyoto Bus timetable: Kibuneguchi Sta. stop (Japanese)"
+          },
+          "url": {
+            "ja": "https://www.kyotobus.jp/route/timetable/stop.html?stop_id=6293_1",
+            "en": "https://www.kyotobus.jp/route/timetable/stop.html?stop_id=6293_1"
+          }
+        }
+      ],
+      "info": null,
+      "notices": [
         {
-          "src": "images/eizan-line/15-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/AY6hDKRjrHgl0HO0SFC5ryQeqyEU76Cb20250827142600.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/15-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/LRohvUhi0mQunIA90UtLSNyJ3h31O4SS20250827142600.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/15-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/MbM0w1JAPE6T7VOQPb67oySj1TjRgXxO20250827142600.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/15-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/C1eHKjx9g0tcx0g0NlzFFgPYKV3rbCnD20250827142600.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/15-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/AwE4h4dRxbaezABppuz3JpJGP0dr8B1H20250827142600.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/15-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/gWb1oYtJ0vKeJLB6IdEdxXXED00zN3ho20250827142601.jpeg",
-          "thumb": "images/eizan-line/thumbs/15-7.jpg"
+          "from": "2026-11-01",
+          "to": "2026-11-24",
+          "url": "https://www.kyotobus.jp/news/2026/11/kibune2026a.html",
+          "text": {
+            "ja": "11/7〜11/24は京都バス33系統が増発・夜間延長運行。始発〜16:23は、貴船のバス停が「貴船（臨時停留所）」に変わります。",
+            "en": "Nov 7–24: Kyoto Bus route 33 runs extra and later buses. Until 16:23, buses stop at the temporary Kibune stop instead of the usual one."
+          }
         }
       ]
     },
@@ -1183,119 +1012,115 @@
         "ja": "古今 藤や",
         "en": "Kokon Fujiya"
       },
-      "heading": null,
-      "lat": 35.113495,
-      "lng": 135.760287,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "13:35〜14:05（徒歩で移動する場合の休憩）",
-        "en": "13:35–14:05 (if walking to Kifune Shrine)"
+      "kind": {
+        "ja": "カフェ",
+        "en": "Café"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "貴船口駅から歩いて貴船神社へ向かうなら、ぜひ立ち寄ってほしいカフェ。川沿いにあって、水の音を聞きながら一息つける最高のロケーションです。昔ながらの和スイーツや季節限定のメニューが楽しめます。ちょうど道の真ん中あたりにあるので、散歩の休憩にぴったり。歩いて行くからこそ見つけられるご褒美スポットです。",
+        "en": "If you walk from Kibuneguchi Station to Kifune Shrine, stop at this café. It sits by the river, so you can rest to the sound of the water. Enjoy traditional Japanese sweets and seasonal treats. It’s about halfway along the walk, the perfect break, and a little reward you only find on foot."
       },
-      "description": {
-        "ja": "貴船口駅から歩いて貴船神社へ向かうなら、ぜひ立ち寄ってほしいカフェが「古今 藤や」です！川沿いにあって、水の音を聞きながら一息つける最高のロケーション。昔ながらの和スイーツや、季節ごとに変わる限定メニューが楽しめます。歩きで行くからこそ見つけられる隠れたご褒美スポット。ちょうど道の真ん中あたりにあり、散歩の中間休憩にぴったりです。川のせせらぎと甘いスイーツでリフレッシュしてから、貴船神社へ向かうのがオススメです！",
-        "en": "If you’re walking from Kibuneguchi Station to Kifune Shrine, you should definitely stop by Kokon Fujiya! It’s a cozy café set along the riverside, where you can take a break while listening to the soothing sound of flowing water. They serve traditional Japanese sweets as well as seasonal treats, making it the perfect little indulgence along the way. Conveniently located about halfway between the station and the shrine, it’s the ideal spot for a mid-walk rest. Take about 30 minutes here to recharge with sweets and the sound of the stream, then continue on to the mystical Kifune Shrine."
+      "lat": 35.1135047,
+      "lng": 135.7603215,
+      "photos": [
+        "16-1.jpg",
+        "16-2.jpg",
+        "16-3.jpg",
+        "16-4.jpg",
+        "16-5.jpg",
+        "16-6.jpg",
+        "16-7.jpg"
+      ],
+      "text": {
+        "ja": "貴船口駅から歩いて貴船神社へ向かうなら、ぜひ立ち寄ってほしいカフェが「古今 藤や」です！川沿いにあって、水の音を聞きながら一息つける最高のロケーション。昔ながらの和スイーツや、季節ごとに変わる限定メニューが楽しめます。歩きで行くからこそ見つけられる隠れたご褒美スポット。ちょうど道の真ん中あたりにあり、散歩の中間休憩にぴったりです。川のせせらぎと甘いスイーツでリフレッシュしてから、貴船神社へ向かうのがオススメです！\n\nおすすめ訪問時間：13:35〜14:05（徒歩で移動する場合の休憩）",
+        "en": "If you’re walking from Kibuneguchi Station to Kifune Shrine, you should definitely stop by Kokon Fujiya! It’s a cozy café set along the riverside, where you can take a break while listening to the soothing sound of flowing water. They serve traditional Japanese sweets as well as seasonal treats, making it the perfect little indulgence along the way. Conveniently located about halfway between the station and the shrine, it’s the ideal spot for a mid-walk rest. Take about 30 minutes here to recharge with sweets and the sound of the stream, then continue on to the mystical Kifune Shrine.\n\nRecommended visit time: 13:35–14:05 (if walking to Kifune Shrine)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "古今藤や",
+            "en": "古今藤や"
+          },
+          "lat": 35.1135047,
+          "lng": 135.7603215,
           "url": "https://maps.app.goo.gl/5kWHb4Bgyu6PSEyY9"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/16-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/uxufiTo5OtPIYg59P9wz2sLqqpWyUmtF20250827142601.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/16-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/6QeiZ2gfushOkgFFudfyYMQTwJK9eAZB20250827142601.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/16-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/1rXLIBugcHVvWF0j8ZcstpaEymcr9HwX20250827142601.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/16-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/cA0ajTrSE9zZ5aW41tVmB7ZGRGBYm0pV20250827142602.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/16-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PmAlHMINj5bQkIO7FCqoRYSWJFgpAqRg20250827142602.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/16-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/0FEhvI4h6gwMBL4jSNaS56P4rHrR75Fl20250827142602.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/16-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/TMsw5x9H9u4Q3fDVsQNFzvZoZfUdycp420250827142602.jpeg",
-          "thumb": "images/eizan-line/thumbs/16-7.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "古今藤や 公式サイト",
+            "en": "Kokon Fujiya (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://kokon-fujiya.jp/",
+            "en": "https://kokon-fujiya.jp/"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 17,
       "name": {
-        "ja": "貴船(バス停)",
+        "ja": "貴船（バス停）",
         "en": "Kibune Bus Stop"
       },
-      "heading": null,
-      "lat": 35.11879,
-      "lng": 135.762359,
-      "color": "#5CC2D4",
-      "time": {
-        "ja": "13:20〜13:30頃（バス利用の場合）",
-        "en": "Around 13:20–13:30 (if taking the bus)"
+      "kind": {
+        "ja": "バス停",
+        "en": "Bus stop"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "バスで来たらここで下車。貴船神社の鳥居までは、川沿いの細い道を歩いて5〜10分です。山の空気と水の音を感じながら歩くので、気分が高まります。道沿いには旅館や川床のお店が並び、歩くだけでちょっとした観光気分。鳥居が見えてきたら、いよいよ参道のスタートです。",
+        "en": "Get off the bus here. It’s a 5–10 minute walk along a narrow riverside path to the torii of Kifune Shrine, with fresh mountain air and the sound of water. Traditional inns and kawadoko restaurants line the way, so it already feels like sightseeing. When you see the torii, the shrine walk begins!"
       },
-      "description": {
-        "ja": "バスで来た場合は、「貴船」バス停で下車します。ここから貴船神社の鳥居までは徒歩でだいたい5〜10分ほど。川沿いの細い道を歩いていくので、すでに山の空気と水の音を感じながら気分が高まります！道沿いには旅館や川床のお店も並んでいて、歩くだけでちょっとした観光気分。鳥居が見えてきたら、いよいよ貴船神社の参道のスタートです！",
-        "en": "If you take the bus, get off at Kibune Bus Stop. From there, it’s about a 5–10 minute walk to the red torii gate of Kifune Shrine. The path follows the river, so you’ll already feel the refreshing mountain air and hear the sound of flowing water as you walk. Along the way, you’ll pass traditional inns and riverside restaurants with kawadoko platforms—it feels like sightseeing even before you arrive. Once the torii gate comes into view, you’ll know your journey to Kifune Shrine is about to begin!"
+      "lat": 35.1188566,
+      "lng": 135.7624413,
+      "photos": [
+        "17-1.jpg",
+        "17-2.jpg",
+        "17-3.jpg"
+      ],
+      "text": {
+        "ja": "貴船（バス停）Kibune Bus Stop\n\nバスで来た場合は、「貴船」バス停で下車します。ここから貴船神社の鳥居までは徒歩でだいたい5〜10分ほど。川沿いの細い道を歩いていくので、すでに山の空気と水の音を感じながら気分が高まります！道沿いには旅館や川床のお店も並んでいて、歩くだけでちょっとした観光気分。鳥居が見えてきたら、いよいよ貴船神社の参道のスタートです！\n\nおすすめ訪問時間：13:20〜13:30頃（バス利用の場合）",
+        "en": "If you take the bus, get off at Kibune Bus Stop. From there, it’s about a 5–10 minute walk to the red torii gate of Kifune Shrine. The path follows the river, so you’ll already feel the refreshing mountain air and hear the sound of flowing water as you walk. Along the way, you’ll pass traditional inns and riverside restaurants with kawadoko platforms—it feels like sightseeing even before you arrive. Once the torii gate comes into view, you’ll know your journey to Kifune Shrine is about to begin!\n\nRecommended visit time: Around 13:20–13:30 (if taking the bus)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "貴船",
+            "en": "貴船"
+          },
+          "lat": 35.1188566,
+          "lng": 135.7624413,
           "url": "https://maps.app.goo.gl/1QVXRkiapjsjen6u9"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/17-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/xTYELAEjRYT8Ikfx8jYOz2sYafg47RLk20250827142603.jpeg",
-          "thumb": "images/eizan-line/thumbs/17-1.jpg"
-        },
+          "kind": "timetable",
+          "label": {
+            "ja": "京都バス 時刻表（貴船）",
+            "en": "Kyoto Bus timetable: Kibune stop (Japanese)"
+          },
+          "url": {
+            "ja": "https://www.kyotobus.jp/route/timetable/stop.html?stop_id=6292_1",
+            "en": "https://www.kyotobus.jp/route/timetable/stop.html?stop_id=6292_1"
+          }
+        }
+      ],
+      "info": null,
+      "notices": [
         {
-          "src": "images/eizan-line/17-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Z81DyIDamL6nUyhHbk8cpiImxTSRLArN20250827142603.jpeg",
-          "thumb": "images/eizan-line/thumbs/17-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/17-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/hGdf1tcbqKmALN76CfjCxivjequVIuqR20250827142603.jpeg",
-          "thumb": "images/eizan-line/thumbs/17-3.jpg"
+          "from": "2026-11-01",
+          "to": "2026-11-24",
+          "url": "https://www.kyotobus.jp/news/2026/11/kibune2026a.html",
+          "text": {
+            "ja": "11/7〜11/24の始発〜16:23は、貴船のバス停が「貴船（臨時停留所）」に変わります。",
+            "en": "Nov 7–24, until 16:23: buses use the temporary Kibune stop instead of the usual one."
+          }
         }
       ]
     },
@@ -1305,137 +1130,143 @@
         "ja": "貴船神社",
         "en": "Kifune Shrine"
       },
-      "heading": null,
-      "lat": 35.121607,
-      "lng": 135.763064,
-      "color": "#E96B70",
-      "time": {
-        "ja": "13:30〜14:00",
-        "en": "13:30–14:00"
+      "kind": {
+        "ja": "神社",
+        "en": "Shrine"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "川のせせらぎに包まれた、貴船エリアのハイライト。真っ赤な灯籠が並ぶ石段は、まさに京都らしいフォトスポットです。水の神さまを祀る神社で、縁結びのご利益でも有名。境内の「水占い」は、紙を水に浮かべると文字が浮き出てくるので、ぜひ試してみて。夏は川の涼しさ、秋は紅葉、冬は雪化粧と、いつ訪れても特別です。",
+        "en": "The highlight of Kibune, wrapped in the sound of the river. The stone steps lined with bright red lanterns are one of Kyoto’s most iconic photo spots. The shrine honors the god of water and is also known for love blessings. Try mizu-uranai, the water fortune: your fortune appears when the paper floats. Cool in summer, red in autumn, snowy in winter."
       },
-      "description": {
-        "ja": "川のせせらぎに包まれた、貴船エリアのハイライト！真っ赤な灯籠が並ぶ石段は、まさに京都らしいフォトスポットです。水の神さまを祀る神社で、縁結びや恋愛成就のご利益でも有名。境内の「水占い」では、水に紙を浮かべると文字が浮き出てきて運勢を占えるので、ぜひ試してみてください！\n四季折々の景色も素晴らしく、夏は川の涼しさ、秋は紅葉、冬は雪化粧と、いつ訪れても特別な時間を過ごせます。",
-        "en": "Kifune Shrine is the highlight of the Kibune area, surrounded by the soothing sound of the river. The stone steps lined with bright red lanterns are one of Kyoto’s most iconic sights! Dedicated to the god of water, the shrine is also famous for blessings in love and relationships. Don’t miss the unique mizu-uranai (water fortune-telling), where your fortune appears as the paper floats on water.\nEach season brings a new charm—cool riverside breezes in summer, fiery autumn leaves, and even a magical snowy landscape in winter. No matter when you visit, it’s bound to feel unforgettable!"
+      "lat": 35.1220909,
+      "lng": 135.7629101,
+      "photos": [
+        "18-1.jpg",
+        "18-2.jpg",
+        "18-3.jpg",
+        "18-4.jpg",
+        "18-5.jpg",
+        "18-6.jpg",
+        "18-7.jpg",
+        "18-8.jpg"
+      ],
+      "text": {
+        "ja": "貴船神社 (Kifune Shrine)\n\n川のせせらぎに包まれた、貴船エリアのハイライト！真っ赤な灯籠が並ぶ石段は、まさに京都らしいフォトスポットです。水の神さまを祀る神社で、縁結びや恋愛成就のご利益でも有名。境内の「水占い」では、水に紙を浮かべると文字が浮き出てきて運勢を占えるので、ぜひ試してみてください！\n四季折々の景色も素晴らしく、夏は川の涼しさ、秋は紅葉、冬は雪化粧と、いつ訪れても特別な時間を過ごせます。\n\nおすすめ訪問時間：13:30〜14:00",
+        "en": "Kifune Shrine is the highlight of the Kibune area, surrounded by the soothing sound of the river. The stone steps lined with bright red lanterns are one of Kyoto’s most iconic sights! Dedicated to the god of water, the shrine is also famous for blessings in love and relationships. Don’t miss the unique mizu-uranai (water fortune-telling), where your fortune appears as the paper floats on water.\nEach season brings a new charm—cool riverside breezes in summer, fiery autumn leaves, and even a magical snowy landscape in winter. No matter when you visit, it’s bound to feel unforgettable!\n\nRecommended visit time: 13:30–14:00"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "貴船神社",
+            "en": "貴船神社"
+          },
+          "lat": 35.1220909,
+          "lng": 135.7629101,
           "url": "https://maps.app.goo.gl/nGvG4PXymKoLgpgH7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/18-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/tJwHYqPIDFydykTSQuS7P7B1VYkf0Gqq20250827142604.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-1.jpg"
-        },
+          "kind": "official",
+          "label": {
+            "ja": "貴船神社 公式サイト",
+            "en": "Kifune Shrine (official site)"
+          },
+          "url": {
+            "ja": "https://kifunejinja.jp/",
+            "en": "https://kifunejinja.jp/en/"
+          }
+        }
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "本宮 6:00〜20:00（5/1〜11/30）・参拝無料",
+              "en": "Main shrine 6:00–20:00 (May 1 – Nov 30). Free entry"
+            },
+            "until": "2026-11-30",
+            "from": null
+          },
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "12月以降の参拝時間は公式サイトで確認してください",
+              "en": "From December, please check the hours on the official website"
+            },
+            "until": null,
+            "from": "2026-12-01"
+          }
+        ],
+        "cash": false,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
+      "notices": [
         {
-          "src": "images/eizan-line/18-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/jnrDaiDXCcckSqGKx3YY3tkL9p28JjXw20250827142604.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/18-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/IORn6sDyszBJJVJZaUqPOwUZYgwsFIrL20250827142604.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/18-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/bMIBkCBDo5Ne9I9fJJVkU0K9rAyAhnwu20250827142604.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/18-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/KplWqGe0RBgOLDugL35XxnJGBool6Ek420250827142605.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/18-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/KH1h38LUEqqcDLYqME2rmO2RoCA5OiJa20250827142605.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/18-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/NRFNLG5XaHxIwHuGdv5chChxA9emBkvb20250827142605.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/18-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/HvSOqP1RFIz9GpFHp60ixWpmsTHMrgUf20250827142605.jpeg",
-          "thumb": "images/eizan-line/thumbs/18-8.jpg"
+          "from": "2026-11-01",
+          "to": "2026-11-24",
+          "url": "https://kifunejinja.jp/",
+          "text": {
+            "ja": "紅葉ライトアップ：11/7〜11/24、日の入りから20:30まで。",
+            "en": "Autumn light-up: Nov 7–24, from sunset to 20:30."
+          }
         }
       ]
     },
     {
       "no": 19,
       "name": {
-        "ja": "貴船神社(奥宮)",
+        "ja": "貴船神社（奥宮）",
         "en": "Kifune Shrine (Rear Shrine)"
       },
-      "heading": null,
-      "lat": 35.128586,
-      "lng": 135.765116,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "14:05〜14:25",
-        "en": "14:05–14:25"
+      "kind": {
+        "ja": "神社",
+        "en": "Shrine"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "貴船神社の本宮からさらに歩いた先にある「奥宮」。本宮に比べて訪れる人が少なく、森の中に静かに佇む落ち着いた雰囲気が魅力です。川のせせらぎと木々に囲まれて散策するだけで、心がすっと落ち着きます。本宮とは違う静けさを、ゆっくり歩きながら楽しんでください。",
+        "en": "Walk on past the main shrine to reach the Okumiya, the Rear Shrine. Fewer people come here, and it feels quietly tucked away in the forest. Surrounded by trees and the sound of the river, just walking here calms you down. Enjoy a different kind of quiet from the main shrine."
       },
-      "description": {
-        "ja": "貴船神社の本宮からさらに歩いていくとたどり着くのが「奥宮」。本宮に比べると訪れる人が少なく、森の中に静かに佇む落ち着いた雰囲気が魅力です。川のせせらぎや木々に囲まれて、自然の中を散策するだけでも心がすっと落ち着きます。ゆっくりと歩きながら、本宮とは違う静けさを楽しんでみてください。",
-        "en": "A short walk beyond the main Kifune Shrine leads you to the Rear Shrine (Okumiya). Compared to the busy main grounds, it’s much quieter and feels tucked away in the forest. Surrounded by trees and the sound of flowing water, it’s a calm place where you can simply enjoy a peaceful stroll. Taking your time here offers a different kind of atmosphere from the main shrine—serene, quiet, and close to nature."
+      "lat": 35.1287635,
+      "lng": 135.7652435,
+      "photos": [
+        "19-1.jpg",
+        "19-2.jpg",
+        "19-3.jpg",
+        "19-4.jpg"
+      ],
+      "text": {
+        "ja": "貴船神社 奥宮 (Kifune Shrine Rear Shrine / Okumiya)\n\n貴船神社の本宮からさらに歩いていくとたどり着くのが「奥宮」。本宮に比べると訪れる人が少なく、森の中に静かに佇む落ち着いた雰囲気が魅力です。川のせせらぎや木々に囲まれて、自然の中を散策するだけでも心がすっと落ち着きます。ゆっくりと歩きながら、本宮とは違う静けさを楽しんでみてください。\n\nおすすめ訪問時間：14:05〜14:25",
+        "en": "A short walk beyond the main Kifune Shrine leads you to the Rear Shrine (Okumiya). Compared to the busy main grounds, it’s much quieter and feels tucked away in the forest. Surrounded by trees and the sound of flowing water, it’s a calm place where you can simply enjoy a peaceful stroll. Taking your time here offers a different kind of atmosphere from the main shrine—serene, quiet, and close to nature.\n\nRecommended visit time: 14:05–14:25"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "貴船神社 奥宮",
+            "en": "貴船神社 奥宮"
+          },
+          "lat": 35.1287635,
+          "lng": 135.7652435,
           "url": "https://maps.app.goo.gl/F3znpQU4ejaygYSp6"
-        },
-        {
-          "label": "About Kifune Shrine",
-          "url": "https://kifunejinja.jp/en/"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/19-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/2CMWtC5thO46TGoflg5WYMQv957LTRZ820250827142606.jpeg",
-          "thumb": "images/eizan-line/thumbs/19-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/19-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/GUN7zM8yLUshCu8NYV6v4DTLWfwzal6T20250827142606.jpeg",
-          "thumb": "images/eizan-line/thumbs/19-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/19-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/n6DEL7yYFcqDWGgSHubg4sXRsBf8fc8t20250827142606.jpeg",
-          "thumb": "images/eizan-line/thumbs/19-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/19-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/qx0MpXvdC4hcOKRSdZPt7zhMLd0HvYX320250827142607.jpeg",
-          "thumb": "images/eizan-line/thumbs/19-4.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "貴船神社 公式サイト",
+            "en": "About Kifune Shrine"
+          },
+          "url": {
+            "ja": "https://kifunejinja.jp/",
+            "en": "https://kifunejinja.jp/en/"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 20,
@@ -1443,66 +1274,54 @@
         "ja": "左源太",
         "en": "Sagenta (Cafe)"
       },
-      "heading": null,
-      "lat": 35.126479,
-      "lng": 135.764648,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "14:30〜15:30（混雑時の待ち時間も含めて1時間確保）",
-        "en": "14:30–15:30 (including waiting time)"
+      "kind": {
+        "ja": "川床カフェ",
+        "en": "Riverside café"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "貴船といえば川床。その中でも人気のカフェで、川のすぐ上に張り出した川床席でお茶やスイーツが楽しめます。川のせせらぎと涼しい風に包まれる時間は、京都ならではの特別な体験。他の川床料理のお店に比べて手頃なのもうれしいところです。夏は避暑にも最高。歩き疲れた体を休めながら、のんびり一休みしてください。",
+        "en": "Kibune is famous for kawadoko, seats built right over the river, and this is one of its most popular cafés. Sip tea or enjoy sweets on a platform above the flowing water, in the cool mountain breeze. It’s much cheaper than the high-end kawadoko restaurants nearby. Perfect for cooling down in summer and resting your legs."
       },
-      "description": {
-        "ja": "貴船といえばやっぱり「川床」！その中でも人気のカフェが「左源太」です。川のすぐ上に張り出した川床席で、お茶やスイーツを楽しめる贅沢な空間。川のせせらぎと涼しい風に包まれて過ごす時間は、まさに京都ならではの特別体験です。しかも、他の川床料理店に比べてリーズナブルに楽しめるのも魅力のひとつ。夏は避暑地として最高で、歩き疲れた体を癒すのにもぴったり。非日常感を味わいながら、のんびり一休みしてみてください！",
-        "en": "When you think of Kibune, you think of kawadoko dining over the river—and Sagenta Café is one of the most popular spots. Here, you can sip tea or enjoy sweets while sitting on platforms built directly above the flowing river. The sound of the water and the cool mountain breeze create a refreshing, unforgettable experience unique to Kyoto. What’s even better—it’s much more affordable compared to the high-end kawadoko restaurants nearby, making it an easy stop for everyone. Especially in summer, it’s the perfect way to cool down and recharge after exploring the shrine area. Take your time, relax, and enjoy—just plan for about an hour here, since it’s often busy and you might need to wait for a seat."
+      "lat": 35.1262682,
+      "lng": 135.7647223,
+      "photos": [
+        "20-1.jpg",
+        "20-2.jpg",
+        "20-3.jpg",
+        "20-4.jpg",
+        "20-5.jpg",
+        "20-6.jpg"
+      ],
+      "text": {
+        "ja": "左源太 (Sagenta Café)\n\n貴船といえばやっぱり「川床」！その中でも人気のカフェが「左源太」です。川のすぐ上に張り出した川床席で、お茶やスイーツを楽しめる贅沢な空間。川のせせらぎと涼しい風に包まれて過ごす時間は、まさに京都ならではの特別体験です。しかも、他の川床料理店に比べてリーズナブルに楽しめるのも魅力のひとつ。夏は避暑地として最高で、歩き疲れた体を癒すのにもぴったり。非日常感を味わいながら、のんびり一休みしてみてください！\n\nおすすめ訪問時間：14:30〜15:30（混雑時の待ち時間も含めて1時間確保）",
+        "en": "When you think of Kibune, you think of kawadoko dining over the river—and Sagenta Café is one of the most popular spots. Here, you can sip tea or enjoy sweets while sitting on platforms built directly above the flowing river. The sound of the water and the cool mountain breeze create a refreshing, unforgettable experience unique to Kyoto. What’s even better—it’s much more affordable compared to the high-end kawadoko restaurants nearby, making it an easy stop for everyone. Especially in summer, it’s the perfect way to cool down and recharge after exploring the shrine area. Take your time, relax, and enjoy—just plan for about an hour here, since it’s often busy and you might need to wait for a seat.\n\nRecommended visit time: 14:30–15:30 (including waiting time)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "左源太（貴船川床最上流Cafe）",
+            "en": "左源太（貴船川床最上流Cafe）"
+          },
+          "lat": 35.1262682,
+          "lng": 135.7647223,
           "url": "https://maps.app.goo.gl/CKW6ttsYxZHtwLLf7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/20-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/oEhAesP7i7n6nRcRUJuamrhpjGbFSiLM20250827142607.jpeg",
-          "thumb": "images/eizan-line/thumbs/20-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/20-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/fi96x7tELpnM5nHGm6XECYxJmFHKhPYk20250827142607.jpeg",
-          "thumb": "images/eizan-line/thumbs/20-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/20-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ArwZA0cr4voONl7cxdzJmw9IXoVUycgA20250827142607.jpeg",
-          "thumb": "images/eizan-line/thumbs/20-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/20-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/FvVw4f5BjbQ5dvjyEZHMGvDYVB3XVzFM20250827142608.jpeg",
-          "thumb": "images/eizan-line/thumbs/20-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/20-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/oJ0PFvPtuvN3lNmLhbxq5DUhZMboa8Wc20250827142608.jpeg",
-          "thumb": "images/eizan-line/thumbs/20-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/20-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/OsEUVDYkB2QiR88DQtQBleDF1cZiBxm420250827142608.jpeg",
-          "thumb": "images/eizan-line/thumbs/20-6.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "左源太 公式サイト",
+            "en": "Sagenta (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://ugenta.co.jp/sagenta",
+            "en": "https://ugenta.co.jp/sagenta"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 21,
@@ -1510,86 +1329,91 @@
         "ja": "鞍馬寺 西門",
         "en": "Kurama Temple West Gate"
       },
-      "heading": null,
-      "lat": 35.120802,
-      "lng": 135.762883,
-      "color": "#E96B70",
-      "time": {
-        "ja": "15:55〜16:00 出発（西門は16:15閉門）",
-        "en": "Start hike around 15:55–16:00 (West Gate closes at 16:15)"
+      "kind": {
+        "ja": "ハイキング入口",
+        "en": "Trailhead"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "鞍馬へのハイキングコースの入口です。ここから鞍馬駅まで約1時間。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュします。ゴールの鞍馬には温泉があり、露天風呂から山の景色を眺めながら疲れた体を癒やせます。「ハイキング＋温泉」のセットが断然おすすめ。入山料は現金のみで、閉門の時間は詳細で確認できます。",
+        "en": "The entrance to the hiking trail to Kurama. From here it’s about an hour to Kurama Station on a well-kept trail through the forest, a refreshing walk. At the end is Kurama Onsen, where you can soak in an outdoor bath with mountain views: hike + hot spring is the best combo. The entry fee is cash only; see the details for the gate’s closing time."
       },
-      "description": {
-        "ja": "鞍馬へのハイキングコースの入り口です。\n入山料として500円の現金での支払いが必要です。西門は16:15に閉門するため、遅くとも16:00までにここからハイキングをスタートしましょう。\n\nこの入り口から鞍馬駅まで、約1時間のハイキングを楽しめます。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュ！ゴールの鞍馬には 鞍馬温泉 があり、歩いた後に入る温泉は格別です。露天風呂からは山の景色も眺められ、疲れた体を癒してくれる最高のご褒美。「ハイキング＋温泉」でセットにするのが断然おすすめです！",
-        "en": "This is the entrance to the hiking trail to Kurama.\nAn entrance fee of 500 yen must be paid in cash. The West Gate closes at 4:15 p.m., so be sure to start your hike by 4:00 p.m. at the latest.\n\nFrom here, you can enjoy about a one-hour hike to Kurama Station. The trail is well maintained and surrounded by beautiful forest, making the walk refreshing and invigorating. And the best part comes at the end—Kurama Onsen. After an hour-long hike, soaking in the open-air hot spring with mountain views is the ultimate way to relax and reward yourself. We strongly recommend pairing the hike with a visit to the onsen—it’s the perfect finale to your Kurama adventure!"
+      "lat": 35.1207213,
+      "lng": 135.7632843,
+      "photos": [
+        "21-1.jpg",
+        "21-2.jpg",
+        "21-3.jpg",
+        "21-4.jpg",
+        "21-5.jpg",
+        "21-6.jpg",
+        "21-7.jpg",
+        "21-8.jpg"
+      ],
+      "text": {
+        "ja": "鞍馬寺 西門 (Kurama Temple West Gate)\n\n鞍馬へのハイキングコースの入り口です。\n入山料として500円の現金での支払いが必要です。西門は16:15に閉門するため、遅くとも16:00までにここからハイキングをスタートしましょう。\n\nこの入り口から鞍馬駅まで、約1時間のハイキングを楽しめます。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュ！ゴールの鞍馬には 鞍馬温泉 があり、歩いた後に入る温泉は格別です。露天風呂からは山の景色も眺められ、疲れた体を癒してくれる最高のご褒美。「ハイキング＋温泉」でセットにするのが断然おすすめです！\n\nおすすめ訪問時間：15:55〜16:00 出発（西門は16:15閉門）",
+        "en": "This is the entrance to the hiking trail to Kurama.\nAn entrance fee of 500 yen must be paid in cash. The West Gate closes at 4:15 p.m., so be sure to start your hike by 4:00 p.m. at the latest.\n\nFrom here, you can enjoy about a one-hour hike to Kurama Station. The trail is well maintained and surrounded by beautiful forest, making the walk refreshing and invigorating. And the best part comes at the end—Kurama Onsen. After an hour-long hike, soaking in the open-air hot spring with mountain views is the ultimate way to relax and reward yourself. We strongly recommend pairing the hike with a visit to the onsen—it’s the perfect finale to your Kurama adventure!\n\nRecommended visit time: Start hike around 15:55–16:00 (West Gate closes at 16:15)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "鞍馬寺 西門",
+            "en": "Kurama Temple West Gate"
+          },
+          "lat": 35.1207213,
+          "lng": 135.7632843,
           "url": "https://maps.app.goo.gl/1W5tVXsGYcBRQobm7"
         },
         {
-          "label": "Google My Maps(Hiking Course)",
+          "label": {
+            "ja": "木の根道",
+            "en": "Kinone-michi (tree-root path)"
+          },
+          "lat": 35.1188848,
+          "lng": 135.7679627,
           "url": "https://maps.app.goo.gl/Yjr7PpAYZxJWm9qE9"
-        },
-        {
-          "label": "鞍馬寺　入山料に関して",
-          "url": "https://www.kuramadera.or.jp/nyuzan.html"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/21-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/IljljZmC5BCj0oTXN3Mp0JzwVJWYm0i720250827142608.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-1.jpg"
+          "kind": "info",
+          "label": {
+            "ja": "鞍馬寺　入山料に関して",
+            "en": "Kurama Temple: entrance fee (Japanese)"
+          },
+          "url": {
+            "ja": "https://www.kuramadera.or.jp/nyuzan.html",
+            "en": "https://www.kuramadera.or.jp/nyuzan.html"
+          }
         },
         {
-          "src": "images/eizan-line/21-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/JpqkC6alGzooBsS7z841XPibm9hMzqPc20250827142609.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/21-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PUg5SC6im1Tkaqc5PYMq1FH15xcPz6gf20250827142609.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/21-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/PoeJ48n8B1j4mOHCjmF64KemqDT3gh6F20250827142609.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/21-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/18ofYjEGelG0IYcOP2G0pAz7CXHzNWbA20250827142609.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/21-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/0jbIAnGwS4ogcI9N5JLAXhoLWZxJyE4t20250827142610.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/21-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/NjNpJy2JlaBJCHaGwKyaOhzUlOh5s3qr20250827142610.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/21-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/sYluKDJFH8n7XhhEAJ9IpU9hXmIDAt0d20250827142610.jpeg",
-          "thumb": "images/eizan-line/thumbs/21-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "鞍馬寺 公式サイト",
+            "en": "Kurama Temple (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://www.kuramadera.or.jp/",
+            "en": "https://www.kuramadera.or.jp/"
+          }
         }
-      ]
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "fee",
+            "text": {
+              "ja": "愛山費（入山料）500円",
+              "en": "Entrance fee ¥500"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": true,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
+      "notices": []
     },
     {
       "no": 22,
@@ -1597,76 +1421,97 @@
         "ja": "鞍馬寺",
         "en": "Kurama Temple"
       },
-      "heading": null,
-      "lat": 35.118103,
-      "lng": 135.770741,
-      "color": "#E96B70",
-      "time": {
-        "ja": "16:55〜17:10（本殿）／ 17:15〜17:25（由岐神社、下山途中）",
-        "en": "16:55–17:10 (Kurama Temple main hall) / 17:15–17:25 (Yuki Shrine on the way down)"
+      "kind": {
+        "ja": "お寺",
+        "en": "Temple"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "山の中にある、雰囲気たっぷりのお寺。西門から山道を約60分登ると本殿前に広いスペースがあり、山並みを見渡せます。源義経（牛若丸）が修行した場所としても知られ、歴史好きにはたまらないスポット。下山の途中には、朱色の大きな鳥居と長い石段が印象的な由岐神社も。京都の街中とは違う時間の流れを感じられます。",
+        "en": "A mountain temple with a unique atmosphere. After about an hour’s climb from the West Gate, you reach the main hall, with a wide space looking out over the mountains. It’s known as the place where Yoshitsune (Ushiwakamaru) trained. On the way down you pass Yuki Shrine, with its big red torii and long stone steps."
       },
-      "description": {
-        "ja": "鞍馬寺は、山の中にある雰囲気たっぷりのお寺です。西門から山道を約60分登っていくと、本殿前に広いスペースがあり、山並みを見渡せる景色が広がります。ここは源義経（幼名・牛若丸）が修行した場所としても知られていて、歴史好きにはたまらないスポット。山深い空気の中で、京都の街中とはまた違う時間の流れを感じられます。\n\nそして、本殿から山門へと下山する途中に立ち寄れるのが 由岐神社。朱色の大きな鳥居と長い石段が印象的で、毎年10月に行われる「鞍馬の火祭り」で有名な神社です。参道を歩きながら現れる鳥居は迫力があり、自然の景観と調和した美しさを感じられます。ハイキングの締めくくりに立ち寄るのにぴったりのスポットです。",
-        "en": "Kurama Temple is a mountainside temple with a truly unique atmosphere. After hiking up from the west gate for about an hour, you’ll reach the main hall, which opens into a spacious plaza overlooking the surrounding mountains. It’s also historically significant as the training ground of Yoshitsune (Ushiwakamaru), one of Japan’s legendary warriors. The fresh mountain air and the quiet setting give a refreshing contrast to the bustle of central Kyoto.\n\nOn the way down toward the main gate, you’ll come across Yuki Shrine, recognizable by its vivid red torii gate and long stone steps. This shrine is well known for the annual Kurama Fire Festival in October, and its striking presence along the tree-lined path makes it a memorable stop before leaving the temple grounds. It’s a perfect place to pause and reflect as you finish your hike."
+      "lat": 35.1181404,
+      "lng": 135.7708892,
+      "photos": [
+        "22-1.jpg",
+        "22-2.jpg",
+        "22-3.jpg",
+        "22-4.jpg",
+        "22-5.jpg",
+        "22-6.jpg",
+        "22-7.jpg",
+        "22-8.jpg"
+      ],
+      "text": {
+        "ja": "鞍馬寺 (Kurama Temple)\n\n鞍馬寺は、山の中にある雰囲気たっぷりのお寺です。西門から山道を約60分登っていくと、本殿前に広いスペースがあり、山並みを見渡せる景色が広がります。ここは源義経（幼名・牛若丸）が修行した場所としても知られていて、歴史好きにはたまらないスポット。山深い空気の中で、京都の街中とはまた違う時間の流れを感じられます。\n\nそして、本殿から山門へと下山する途中に立ち寄れるのが 由岐神社。朱色の大きな鳥居と長い石段が印象的で、毎年10月に行われる「鞍馬の火祭り」で有名な神社です。参道を歩きながら現れる鳥居は迫力があり、自然の景観と調和した美しさを感じられます。ハイキングの締めくくりに立ち寄るのにぴったりのスポットです。\n\nおすすめ訪問時間：16:55〜17:10（本殿）／ 17:15〜17:25（由岐神社、下山途中）",
+        "en": "Kurama Temple is a mountainside temple with a truly unique atmosphere. After hiking up from the west gate for about an hour, you’ll reach the main hall, which opens into a spacious plaza overlooking the surrounding mountains. It’s also historically significant as the training ground of Yoshitsune (Ushiwakamaru), one of Japan’s legendary warriors. The fresh mountain air and the quiet setting give a refreshing contrast to the bustle of central Kyoto.\n\nOn the way down toward the main gate, you’ll come across Yuki Shrine, recognizable by its vivid red torii gate and long stone steps. This shrine is well known for the annual Kurama Fire Festival in October, and its striking presence along the tree-lined path makes it a memorable stop before leaving the temple grounds. It’s a perfect place to pause and reflect as you finish your hike.\n\nRecommended visit time: 16:55–17:10 (Kurama Temple main hall) / 17:15–17:25 (Yuki Shrine on the way down)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "鞍馬寺",
+            "en": "鞍馬寺"
+          },
+          "lat": 35.1181404,
+          "lng": 135.7708892,
           "url": "https://maps.app.goo.gl/trBCWzNdPynH25Jn7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/22-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/JM28wttHZ1W9jn7wTl3RN1CIsuBlDh5320250827142610.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-1.jpg"
-        },
+          "kind": "official",
+          "label": {
+            "ja": "鞍馬寺 公式サイト",
+            "en": "Kurama Temple (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://www.kuramadera.or.jp/",
+            "en": "https://www.kuramadera.or.jp/"
+          }
+        }
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "本殿 9:00〜16:15",
+              "en": "Main hall 9:00–16:15"
+            },
+            "until": null,
+            "from": null
+          },
+          {
+            "kind": "fee",
+            "text": {
+              "ja": "愛山費（入山料）500円",
+              "en": "Entrance fee ¥500"
+            },
+            "until": null,
+            "from": null
+          },
+          {
+            "kind": "cable",
+            "text": {
+              "ja": "上り始発8:40・下り最終16:25（大人片道200円）",
+              "en": "First up 8:40, last down 16:25 (adults ¥200 one way)"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": true,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
+      "notices": [
         {
-          "src": "images/eizan-line/22-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/kQJUneonK43pL5kHTmBlp2TaNN415trs20250827142611.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/22-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Xw1Xfn1U9ym9gmzAjRy0vszin7gfVZYN20250827142611.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/22-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/WUpkm1JjCuP7D7AwiIvD6EAKQey12hyI20250827142611.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/22-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Fo1PV1BVCjmnLsNU2dTYAh7F451M2Lqj20250827142611.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/22-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/LtR0QqJYGFEFWyL0b4ImvUApOelkdhkf20250827142612.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/22-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/LI0FhyQZXCvhdLk4OWhGf2Ht3SOBA7Iv20250827142612.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/22-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Rm1JiWhb60WWPUJv2ZlnMvtVPcr1x2ZE20250827142612.jpeg",
-          "thumb": "images/eizan-line/thumbs/22-8.jpg"
+          "from": "2026-11-20",
+          "to": "2026-11-27",
+          "url": "https://www.kuramadera.or.jp/",
+          "text": {
+            "ja": "11/27の午前中はケーブルが運休します（定期点検）。",
+            "en": "The cable car does not run on the morning of Nov 27 (inspection)."
+          }
         }
       ]
     },
@@ -1676,66 +1521,42 @@
         "ja": "鞍馬",
         "en": "Kurama"
       },
-      "heading": null,
-      "lat": 35.113722,
-      "lng": 135.773268,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "17:40〜18:40（ハイキング後の休憩）",
-        "en": "17:40–18:40 (after the hike, before heading back)"
+      "kind": {
+        "ja": "ハイキングのゴール",
+        "en": "End of hike"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "鞍馬駅に着いたら、ハイキングはゴールです。駅のまわりには小さなお店や飲食店があり、山歩きの余韻を感じながら一息つけます。歩いて数分の鞍馬温泉では、露天風呂から山々を眺めながら温泉に浸かれます。歩き疲れた体への最高のご褒美です。",
+        "en": "Reaching Kurama Station means the hike is done. There are a few small shops and places to eat around the station where you can rest and enjoy the mountain air. Kurama Onsen is a few minutes’ walk away: soaking in its outdoor bath with mountain views is the perfect reward."
       },
-      "description": {
-        "ja": "鞍馬駅に到着すると、ハイキングはここでゴールです。駅周辺には小さな商店や飲食店もあり、山歩きの余韻を感じながら一息つけます。\nそして、ここから徒歩数分の場所にあるのが 鞍馬温泉。露天風呂から山々を眺めながら浸かる温泉は、歩き疲れた体を癒す最高のご褒美です。ハイキングとセットで立ち寄るのがおすすめです！",
-        "en": "Kurama marks the end of your hike. Once you reach Kurama Station, you’ll find a few small shops and eateries where you can relax and take in the mountain atmosphere.\nJust a short walk from the station is Kurama Onsen, a hot spring that offers outdoor baths with views of the surrounding mountains. Soaking here after your hike is the perfect way to unwind and reward yourself for the effort. It’s highly recommended as the final touch to your Kurama adventure."
+      "lat": 35.1137991,
+      "lng": 135.7732802,
+      "photos": [
+        "23-1.jpg",
+        "23-2.jpg",
+        "23-3.jpg",
+        "23-4.jpg",
+        "23-5.jpg",
+        "23-6.jpg"
+      ],
+      "text": {
+        "ja": "鞍馬 (Kurama)\n\n鞍馬駅に到着すると、ハイキングはここでゴールです。駅周辺には小さな商店や飲食店もあり、山歩きの余韻を感じながら一息つけます。\nそして、ここから徒歩数分の場所にあるのが 鞍馬温泉。露天風呂から山々を眺めながら浸かる温泉は、歩き疲れた体を癒す最高のご褒美です。ハイキングとセットで立ち寄るのがおすすめです！\n\nおすすめ訪問時間：17:40〜18:40（ハイキング後の休憩）",
+        "en": "Kurama marks the end of your hike. Once you reach Kurama Station, you’ll find a few small shops and eateries where you can relax and take in the mountain atmosphere.\nJust a short walk from the station is Kurama Onsen, a hot spring that offers outdoor baths with views of the surrounding mountains. Soaking here after your hike is the perfect way to unwind and reward yourself for the effort. It’s highly recommended as the final touch to your Kurama adventure.\n\nRecommended visit time: 17:40–18:40 (after the hike, before heading back)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "鞍馬寺石碑",
+            "en": "鞍馬寺石碑"
+          },
+          "lat": 35.1137991,
+          "lng": 135.7732802,
           "url": "https://maps.app.goo.gl/HNd11NNpjtb6FmZC7"
         }
       ],
-      "photos": [
-        {
-          "src": "images/eizan-line/23-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ctfuOgTTGPc1LWfDqzWQs3eAwehHeAFJ20250827142612.jpeg",
-          "thumb": "images/eizan-line/thumbs/23-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/23-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/HHe6tmdFtnjKSnHhTbLPdF16pMWQomtV20250827142613.jpeg",
-          "thumb": "images/eizan-line/thumbs/23-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/23-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ZqbUFCSDfg2uKXF2KnfPh07pvuxNKKUa20250827142613.jpeg",
-          "thumb": "images/eizan-line/thumbs/23-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/23-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Rsq4wg6dhzIX1HGMsGSONqkufcYNHwTQ20250827142613.jpeg",
-          "thumb": "images/eizan-line/thumbs/23-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/23-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/sEDj73KLBYOKABBdbDK7Et1zZTzsUksF20250827142613.jpeg",
-          "thumb": "images/eizan-line/thumbs/23-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/23-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/xNAuGfH8ggRnmiaApxmA6BdN3X5GoXnB20250827142614.jpeg",
-          "thumb": "images/eizan-line/thumbs/23-6.jpg"
-        }
-      ]
+      "links": [],
+      "info": null,
+      "notices": []
     },
     {
       "no": 24,
@@ -1743,82 +1564,74 @@
         "ja": "鞍馬温泉",
         "en": "Kurama Onsen"
       },
-      "heading": null,
-      "lat": 35.11886,
-      "lng": 135.776414,
-      "color": "#E96B70",
-      "time": {
-        "ja": "17:40〜18:40（ハイキング後の休憩）",
-        "en": "17:40–18:40 (after the hike, before heading back)"
+      "kind": {
+        "ja": "温泉",
+        "en": "Hot spring"
       },
-      "hours": {
-        "ja": "10:00〜21:00",
-        "en": "10:00–21:00"
+      "blurb": {
+        "ja": "ハイキングの締めくくりにぴったりの温泉。山歩きで疲れた体を、温泉でじっくり癒やせます。露天風呂から山の景色を眺めながらゆったりしていると、「京都の自然を満喫したな〜」としみじみ感じられるはず。観光とセットで温泉に入れるのは特別な体験なので、時間があればぜひ。",
+        "en": "The perfect way to finish your hike. Let the hot spring warm up your tired legs. Relaxing in the outdoor bath with mountain views gives you that feeling of “I really enjoyed Kyoto’s nature.” Sightseeing plus a hot spring is a rare treat, so stop by if you have time."
       },
-      "description": {
-        "ja": "ハイキングの締めくくりにぴったりなのが、この鞍馬温泉です！山歩きで疲れた体を温泉でじっくり癒せるなんて最高ですよね。露天風呂からは山の景色を眺めながらゆったりできて、「あぁ、京都の自然を満喫したな〜」としみじみ感じられます。観光とセットで温泉に入れるのはかなり特別な体験なので、時間に余裕があればぜひ立ち寄ってほしいスポットです。",
-        "en": "鞍馬温泉 (Kurama Onsen) 10:00〜21:00\n\nKurama Onsen is the perfect way to wrap up your hike! After trekking through the mountains, soaking in a hot spring is the ultimate reward. The outdoor bath lets you relax while gazing at the mountain scenery, giving you that satisfying “I’ve really experienced Kyoto’s nature” kind of feeling. Combining sightseeing with a hot spring visit is a rare treat, so if you have the time, it’s absolutely worth it!"
+      "lat": 35.119211,
+      "lng": 135.7765613,
+      "photos": [
+        "24-1.jpg",
+        "24-2.jpg",
+        "24-3.jpg",
+        "24-4.jpg",
+        "24-5.jpg",
+        "24-6.jpg",
+        "24-7.jpg",
+        "24-8.jpg"
+      ],
+      "text": {
+        "ja": "鞍馬温泉 (Kurama Onsen) 10:00〜21:00\n\nハイキングの締めくくりにぴったりなのが、この鞍馬温泉です！山歩きで疲れた体を温泉でじっくり癒せるなんて最高ですよね。露天風呂からは山の景色を眺めながらゆったりできて、「あぁ、京都の自然を満喫したな〜」としみじみ感じられます。観光とセットで温泉に入れるのはかなり特別な体験なので、時間に余裕があればぜひ立ち寄ってほしいスポットです。\n\n営業時間：10:00〜21:00\nおすすめ訪問時間：17:40〜18:40（ハイキング後の休憩）",
+        "en": "Kurama Onsen is the perfect way to wrap up your hike! After trekking through the mountains, soaking in a hot spring is the ultimate reward. The outdoor bath lets you relax while gazing at the mountain scenery, giving you that satisfying “I’ve really experienced Kyoto’s nature” kind of feeling. Combining sightseeing with a hot spring visit is a rare treat, so if you have the time, it’s absolutely worth it!\n\nOpening hours: 10:00–21:00\nRecommended visit time: 17:40–18:40 (after the hike, before heading back)"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "くらま温泉",
+            "en": "くらま温泉"
+          },
+          "lat": 35.119211,
+          "lng": 135.7765613,
           "url": "https://maps.app.goo.gl/kVx6PfWVbWBH1dmM7"
-        },
-        {
-          "label": "鞍馬温泉 Kurama Onsen",
-          "url": "https://kurama-spa.com/spa/"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/24-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/pkjO6IfouixhkrstAswYzUBiVinYWxBw20250827142614.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/XjlfKZTAD0elrrrkEDuUdkQKeWICdvVQ20250827142614.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/4xUmzUOT0TddRB7Mz8w8MLvGi9XrXLB420250827142614.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/BZLJ6qFMLDKPsK4aoQBIUdnvr7sEF7bD20250827142614.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/VHezXrjZ33BAcLEYS45rysvknAv0nDJf20250827142615.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/IPt5TguKnDsXo5QG2oT5Z34A35LodHh020250827142615.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/hTDjSsVWxRaHG8e9yyS3rXweDbD3xOc020250827142615.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/24-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/22vqAQC2WDxHvZbaOuKrZoXc8kc6AMVi20250827142615.jpeg",
-          "thumb": "images/eizan-line/thumbs/24-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "鞍馬温泉 公式サイト",
+            "en": "Kurama Onsen (official site, Japanese)"
+          },
+          "url": {
+            "ja": "https://kurama-spa.com/spa/",
+            "en": "https://kurama-spa.com/spa/"
+          }
         }
-      ]
+      ],
+      "info": {
+        "rows": [
+          {
+            "kind": "fee",
+            "text": {
+              "ja": "露天風呂：大人 平日1,500円・土日祝1,600円（子ども700円）／露天風呂＋内風呂：大人 平日2,600円・土日祝2,700円（子ども1,300円）",
+              "en": "Outdoor bath: adults ¥1,500 weekdays / ¥1,600 weekends & holidays (children ¥700). Outdoor + indoor baths: adults ¥2,600 / ¥2,700 (children ¥1,300)"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": {
+          "ja": "「えいでんと、温泉きっぷ」（2,200円）なら、叡山電車1日乗り放題と露天風呂がセットでお得です。出町柳駅で発売。",
+          "en": "The \"Eiden & Onsen\" ticket (¥2,200) covers a 1-day Eizan Railway pass plus the outdoor bath, which saves money. Sold at Demachiyanagi Station."
+        },
+        "checked": "2026-11-20"
+      },
+      "notices": []
     },
     {
       "no": 25,
@@ -1826,76 +1639,77 @@
         "ja": "鞍馬駅",
         "en": "Kurama Station"
       },
-      "heading": "叡山電鉄「きらら」 (Eizan Railway “Kirara” Train)",
-      "lat": 35.112985,
-      "lng": 135.772537,
-      "color": "#A0D985",
-      "time": {
-        "ja": null,
-        "en": null
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "帰りは叡山電鉄の観光列車「きらら」がおすすめ。一部の席が窓に向かって並んでいて、景色に向かって座る特等席のよう。新緑や紅葉の季節は、まさに“走る展望台”です。行きは観光客で混みますが、帰りは多くの人が貴船口から乗るので、鞍馬から乗るとすんなり座れることが多いです。時刻表は詳細のリンクから。",
+        "en": "Ride the Eizan Railway’s “Kirara” sightseeing train back. Some seats face the windows, like front-row seats to the scenery: a “moving observatory” in the green and autumn seasons. Going up it’s crowded, but on the way back most people board at Kibuneguchi, so starting at Kurama you can usually get a seat. The timetable link is in the details."
       },
-      "description": {
-        "ja": "叡山電鉄の「きらら」は、ちょっと特別な観光列車！車内の一部の席が窓に向かって並んでいて、まるで景色に向かって座る特等席みたいなんです。春の新緑や秋の紅葉シーズンは特に最高で、まさに“走る展望台”。さらに、期間限定で「もみじのトンネル」がライトアップされる夜は、電車に揺られながら幻想的な世界を体験できます。\n\n出町柳から鞍馬方面に行くときは観光客でかなり混むんですが、帰りはほとんどの人が貴船口駅から乗るので、鞍馬から乗るとすんなり座れることが多いです。帰りに「きらら」に乗って、ゆったり景色を楽しみながら京都市内へ戻るのがおすすめですよ！\n\n※下に時刻表のリンクを貼っているので、乗車前にぜひチェックしてください。",
+      "lat": 35.112925,
+      "lng": 135.772521,
+      "photos": [
+        "25-1.jpg",
+        "25-2.jpg",
+        "25-3.jpg",
+        "25-4.jpg",
+        "25-5.jpg",
+        "25-6.jpg",
+        "25-7.jpg"
+      ],
+      "text": {
+        "ja": "叡山電鉄「きらら」 (Eizan Railway “Kirara” Train)\n\n叡山電鉄の「きらら」は、ちょっと特別な観光列車！車内の一部の席が窓に向かって並んでいて、まるで景色に向かって座る特等席みたいなんです。春の新緑や秋の紅葉シーズンは特に最高で、まさに“走る展望台”。さらに、期間限定で「もみじのトンネル」がライトアップされる夜は、電車に揺られながら幻想的な世界を体験できます。\n\n出町柳から鞍馬方面に行くときは観光客でかなり混むんですが、帰りはほとんどの人が貴船口駅から乗るので、鞍馬から乗るとすんなり座れることが多いです。帰りに「きらら」に乗って、ゆったり景色を楽しみながら京都市内へ戻るのがおすすめですよ！\n\n※下に時刻表のリンクを貼っているので、乗車前にぜひチェックしてください。",
         "en": "The Eizan Railway’s “Kirara” train is a special sightseeing train designed for enjoying the view. Some of the seats face directly toward the windows, making it feel like you’ve got a front-row seat to the scenery. It’s especially stunning during spring with fresh green leaves or autumn when the maple leaves turn brilliant red—it really feels like a “moving observatory.”\n\nIn the evenings during certain periods, there’s even a limited-time illumination of the “Maple Tunnel,” where the train passes through glowing red leaves lit up at night—an unforgettable experience.\n\nOn the way from Demachiyanagi toward Kurama, the train tends to get crowded with tourists heading to Kifune Shrine. But on the way back, most passengers board at Kibuneguchi Station, so if you get on at Kurama, you’ll likely find a good seat. That’s why we highly recommend riding the “Kirara” train on your return trip, relaxing and enjoying the scenery as you head back into the city.\n\nDon’t forget to check the timetable from the link below before you ride!"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "Panorama Train \"Kirara\"",
-          "url": "https://eizandensha.co.jp/about/kirara/"
-        },
-        {
-          "label": "Google My Maps",
+          "label": {
+            "ja": "鞍馬駅",
+            "en": "鞍馬駅"
+          },
+          "lat": 35.112925,
+          "lng": 135.772521,
           "url": "https://maps.app.goo.gl/yRizQ4FAVMCM9vAF7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/25-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/HThIcxtt3HIH4lE8UuvWcB8zAEkVyK2y20250827142616.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-1.jpg"
+          "kind": "info",
+          "label": {
+            "ja": "叡山電鉄「きらら」",
+            "en": "Panorama Train \"Kirara\""
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/about/kirara/",
+            "en": "https://eizandensha.co.jp/about/kirara/"
+          }
         },
         {
-          "src": "images/eizan-line/25-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/kmp7Qq6S2dtob07l5ZaZh8RJ5NTzORAv20250827142616.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-2.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "「きらら」時刻表",
+            "en": "\"Kirara\" timetable"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/guide/#kiraratimetable",
+            "en": "https://eizandensha.co.jp/guide/#kiraratimetable"
+          }
         },
         {
-          "src": "images/eizan-line/25-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/atoIu8Ou1zkm7rV9tDGbX3QWj0bLO9AC20250827142616.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/25-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/5V51JmVe9Y5H6CptahXqI0IBt8GLZkhD20250827142616.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/25-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/9tpXaOr5hE0YtT9uDjE6FY104gTSyOwU20250827142616.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/25-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/x9w9vBcFr4VQG03tYMf9R6KsZ7ZCwMOg20250827142617.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/25-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/0sTP1C3LasZHYNTqFa62a4am3QYFCbK620250827142617.jpeg",
-          "thumb": "images/eizan-line/thumbs/25-7.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "叡山電車 時刻表",
+            "en": "Eizan Railway timetable"
+          },
+          "url": {
+            "ja": "https://eizandensha.co.jp/guide/#timetable",
+            "en": "https://eizandensha.co.jp/guide/#alltimetable"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 26,
@@ -1903,165 +1717,122 @@
         "ja": "祇園四条駅",
         "en": "Gion Shijo Station"
       },
-      "heading": null,
-      "lat": 35.003872,
-      "lng": 135.771983,
-      "color": "#A0D985",
-      "time": {
-        "ja": "19:00〜",
-        "en": "From 19:00 onward"
+      "kind": {
+        "ja": "駅",
+        "en": "Station"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "京都の夜を楽しむなら、まずはここで下車。駅のすぐ近くにはレストランや居酒屋がたくさんあって、ディナーにぴったりです。京都らしい雰囲気を感じたいなら、そのまま鴨川を渡って先斗町へ。細い路地にお店がずらっと並び、歩くだけでもワクワクします。",
+        "en": "Get off here to enjoy Kyoto at night. There are plenty of restaurants and izakayas right by the station, perfect for dinner. For a real Kyoto feel, cross the Kamo River to Pontocho, a narrow alley lined with restaurants and bars. Just walking through it is exciting."
       },
-      "description": {
-        "ja": "京都の夜を楽しむなら、まずはここで下車！駅のすぐ近くにはレストランや居酒屋がたくさんあって、ディナーにもぴったりです。京都らしい雰囲気を感じたいなら、そのまま鴨川を渡って「先斗町」へ。細い路地にずらっと並ぶお店はもちろん、歩くだけでもワクワクするはず。夜の京都の空気をしっかり感じられるスポットです！",
-        "en": "If you want to experience Kyoto at night, hop off here! Just outside the station, you’ll find plenty of restaurants and izakayas, perfect for dinner. For a true Kyoto vibe, cross the Kamogawa River and wander through Pontocho, a narrow alley lined with traditional restaurants and bars. Even if you don’t stop in, just strolling down the lantern-lit street is magical. It’s one of the best ways to soak in the atmosphere of Kyoto after dark!"
+      "lat": 35.0033014,
+      "lng": 135.7719122,
+      "photos": [
+        "26-1.jpg",
+        "26-2.jpg",
+        "26-3.jpg",
+        "26-4.jpg",
+        "26-5.jpg",
+        "26-6.jpg",
+        "26-7.jpg",
+        "26-8.jpg"
+      ],
+      "text": {
+        "ja": "京都の夜を楽しむなら、まずはここで下車！駅のすぐ近くにはレストランや居酒屋がたくさんあって、ディナーにもぴったりです。京都らしい雰囲気を感じたいなら、そのまま鴨川を渡って「先斗町」へ。細い路地にずらっと並ぶお店はもちろん、歩くだけでもワクワクするはず。夜の京都の空気をしっかり感じられるスポットです！\n\nおすすめ訪問時間：19:00〜",
+        "en": "If you want to experience Kyoto at night, hop off here! Just outside the station, you’ll find plenty of restaurants and izakayas, perfect for dinner. For a true Kyoto vibe, cross the Kamogawa River and wander through Pontocho, a narrow alley lined with traditional restaurants and bars. Even if you don’t stop in, just strolling down the lantern-lit street is magical. It’s one of the best ways to soak in the atmosphere of Kyoto after dark!\n\nRecommended visit time: From 19:00 onward"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "祇園四条駅",
+            "en": "Gion Shijo Station"
+          },
+          "lat": 35.0033014,
+          "lng": 135.7719122,
           "url": "https://maps.app.goo.gl/oCcMYh4gTJKDBtTT9"
         },
         {
-          "label": "In the moon(Google Maps)",
+          "label": {
+            "ja": "in the Moon",
+            "en": "in the Moon"
+          },
+          "lat": 35.0041038,
+          "lng": 135.772783,
           "url": "https://maps.app.goo.gl/A3jLQD4gjMaKFV3x7"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/26-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/IExvpOF64S3Aw1gC0qk8UnG25XZHloDB20250827142617.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/UXcVCsFZEjliUysEq6SbWIlwy0flpjnd20250827142618.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/VJKkTBlp6XyMDGOxJl25tVXrOVK0qaVm20250827142618.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/l8LMAJSb5TAw6mrMkuA1jQfG7Vy2BNCJ20250827142618.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Q7hEXxmXRq5ABQ76BtqVNyGHayQ3ErRx20250827142619.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/16fyAZR83D49okjcZBWs5yxedYoAUKDe20250827142619.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/foZugIPJRdqPgPwLUGnuWMSgJWN2KLXL20250827142619.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/26-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/nPPc1lMfKebPsAJvrRFlKIt4NrHjGfxI20250827142619.jpeg",
-          "thumb": "images/eizan-line/thumbs/26-8.jpg"
+          "kind": "timetable",
+          "label": {
+            "ja": "京阪 祇園四条駅の時刻表",
+            "en": "Keihan Gion-Shijo Station timetable (Japanese)"
+          },
+          "url": {
+            "ja": "https://www.keihan.co.jp/traffic/station/162/info.html#anc-01",
+            "en": "https://www.keihan.co.jp/traffic/station/162/info.html#anc-01"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 27,
       "name": {
-        "ja": "(隠れ酒場)ともしび3rd",
-        "en": "(Hidden Bar)Tomoshibi 3rd"
+        "ja": "（隠れ酒場）ともしび3rd",
+        "en": "(Hidden Bar) Tomoshibi 3rd"
       },
-      "heading": null,
-      "lat": 35.003171,
-      "lng": 135.770589,
-      "color": "#E97E2E",
-      "time": {
-        "ja": "20:00〜21:30",
-        "en": "20:00–21:30"
+      "kind": {
+        "ja": "居酒屋",
+        "en": "Izakaya"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "京都の夜をちょっとディープに楽しみたいなら、この隠れ酒場へ。新鮮なお刺身、ジューシーな焼き鳥、牛肉のたたきなど、本格的な日本料理がずらりとそろっています。それでいて値段はとても良心的。観光地価格とは違う、地元の人にも愛される居酒屋で、お腹も心も満たされます。",
+        "en": "For a deeper taste of Kyoto at night, try this hidden izakaya. Fresh sashimi, juicy yakitori, beef tataki and much more: real Japanese food at surprisingly fair prices. It’s loved by locals, not just tourists, so you get an authentic Kyoto dinner without spending a lot."
       },
-      "description": {
-        "ja": "ちょっとディープに京都の夜を楽しみたいなら、この隠れ酒場がおすすめ！新鮮なお刺身やジューシーな焼き鳥、牛肉のたたきなど、本格的な日本料理がずらりとそろっています。それでいて値段はとっても良心的！観光地価格とは違う、地元の人にも愛される居酒屋です。お腹も心も満たされること間違いなし！",
-        "en": "If you want to dive deeper into Kyoto’s nightlife, this hidden izakaya is a must! They serve a wide variety of delicious Japanese dishes—fresh sashimi, juicy yakitori (grilled chicken skewers), and tender beef tataki, just to name a few. The best part? The prices are surprisingly affordable for the quality. It’s a place loved by locals, not just tourists, so you’ll get an authentic taste of Kyoto dining without breaking the bank."
+      "lat": 35.0031817,
+      "lng": 135.7706816,
+      "photos": [
+        "27-1.jpg",
+        "27-2.jpg",
+        "27-3.jpg",
+        "27-4.jpg",
+        "27-5.jpg",
+        "27-6.jpg",
+        "27-7.jpg",
+        "27-8.jpg"
+      ],
+      "text": {
+        "ja": "ちょっとディープに京都の夜を楽しみたいなら、この隠れ酒場がおすすめ！新鮮なお刺身やジューシーな焼き鳥、牛肉のたたきなど、本格的な日本料理がずらりとそろっています。それでいて値段はとっても良心的！観光地価格とは違う、地元の人にも愛される居酒屋です。お腹も心も満たされること間違いなし！\n\nおすすめ訪問時間：20:00〜21:30",
+        "en": "If you want to dive deeper into Kyoto’s nightlife, this hidden izakaya is a must! They serve a wide variety of delicious Japanese dishes—fresh sashimi, juicy yakitori (grilled chicken skewers), and tender beef tataki, just to name a few. The best part? The prices are surprisingly affordable for the quality. It’s a place loved by locals, not just tourists, so you’ll get an authentic taste of Kyoto dining without breaking the bank.\n\nRecommended visit time: 20:00–21:30"
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "隠れ酒場ともしび3rd~海鮮と炭火鶏焼~",
+            "en": "隠れ酒場ともしび3rd~海鮮と炭火鶏焼~"
+          },
+          "lat": 35.0031817,
+          "lng": 135.7706816,
           "url": "https://maps.app.goo.gl/DSUQ392eqyrFfCp46"
-        },
-        {
-          "label": "隠れ酒場 ともしび",
-          "url": "https://vic-kyoto.com/shop#tomoshibi3"
         }
       ],
-      "photos": [
+      "links": [
         {
-          "src": "images/eizan-line/27-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/VuEC9ifZC14gxmNTUbLInaGjGfXN2DOb20250827142620.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/lPuYasaRdTdcUCzpFu1qfae4RBJV4SlE20250827142620.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/7r8JH5bNhhKOFCN4DgiSCc1dKlbVGsTI20250827142620.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/5VOVo6FEoweWbeLLEvJ2xEAHZ9cEEn5z20250827142620.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/W6w6cCteG1ccoF1BCZ7RnXXAvrrw8XD820250827142621.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/qu79TrV36tkEO2IkZCQSmc7RWhX767gC20250827142621.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/HdWk85T3ZiWTotqpWo14tfzyZOVBAiN920250827142621.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-7.jpg"
-        },
-        {
-          "src": "images/eizan-line/27-8.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/c2eXfWnd4sm5IyKFnZjXw5ADLMxpfuoz20250827142621.jpeg",
-          "thumb": "images/eizan-line/thumbs/27-8.jpg"
+          "kind": "official",
+          "label": {
+            "ja": "隠れ酒場 ともしび",
+            "en": "Hidden Bar Tomoshibi"
+          },
+          "url": {
+            "ja": "https://vic-kyoto.com/shop#tomoshibi3",
+            "en": "https://vic-kyoto.com/shop#tomoshibi3"
+          }
         }
-      ]
+      ],
+      "info": null,
+      "notices": []
     },
     {
       "no": 28,
@@ -2069,72 +1840,43 @@
         "ja": "先斗町",
         "en": "Pontocho Street"
       },
-      "heading": null,
-      "lat": 35.004725,
-      "lng": 135.771092,
-      "color": "#E97E2E",
-      "time": {
-        "ja": null,
-        "en": null
+      "kind": {
+        "ja": "夜の路地",
+        "en": "Night stroll"
       },
-      "hours": {
-        "ja": null,
-        "en": null
+      "blurb": {
+        "ja": "京都の夜といえばここ。鴨川沿いに伸びる細い石畳の路地で、両側には小さな居酒屋や割烹、バーがずらり。昔ながらの京町家が並ぶ雰囲気は、歩くだけでも特別です。夏には納涼床が並び、川風を感じながら食事やお酒を楽しむ人でいっぱいに。明かりが灯る夜の街並みは、散歩するだけでも十分価値があります。",
+        "en": "The place for Kyoto at night. A narrow stone-paved alley along the Kamo River, lined with small izakayas, restaurants and bars, and old wooden machiya townhouses. In summer, river terraces open for dining in the cool breeze. At night, when the lights come on, it’s worth a walk even if you don’t stop in."
       },
-      "description": {
+      "lat": 35.006067,
+      "lng": 135.7710907,
+      "photos": [
+        "28-1.jpg",
+        "28-2.jpg",
+        "28-3.jpg",
+        "28-4.jpg",
+        "28-5.jpg",
+        "28-6.jpg",
+        "28-7.jpg"
+      ],
+      "text": {
         "ja": "京都の夜といえばここ！鴨川沿いに伸びる細い石畳の路地で、両側には小さな居酒屋、割烹、バーがずらりと並んでいます。昔ながらの京町家が立ち並ぶ雰囲気は歩くだけでも特別。夏には納涼床が並び、川風を感じながら食事やお酒を楽しむ人でいっぱいになります。夜のライトアップされた街並みは、散歩するだけでも十分価値あり！",
         "en": "When it comes to Kyoto nightlife, Pontocho is the place to be! This narrow stone-paved alley runs along the Kamogawa River, lined with cozy izakayas, upscale kaiseki restaurants, and stylish bars. The traditional wooden machiya townhouses create a one-of-a-kind atmosphere, making it worth visiting even if you’re just strolling through. In summer, open-air river terraces line the street, filled with people dining and drinking in the cool evening breeze. At night, the lanterns and warm lights make the whole area glow—perfect for an evening walk after dinner."
       },
-      "links": [
+      "gmaps": [
         {
-          "label": "GoogleMaps",
+          "label": {
+            "ja": "京都府京都市中京区 先斗町通",
+            "en": "京都府京都市中京区 先斗町通"
+          },
+          "lat": 35.006067,
+          "lng": 135.7710907,
           "url": "https://maps.app.goo.gl/8oqmaBrDjkexxv3M7"
         }
       ],
-      "photos": [
-        {
-          "src": "images/eizan-line/28-1.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/NP2M2MS4R21jcNEib4b84IyOxav0jr3U20250827142622.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-1.jpg"
-        },
-        {
-          "src": "images/eizan-line/28-2.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/WLna3RxEDa51RiP6XfydCo8o3Jh9lcN120250827142622.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-2.jpg"
-        },
-        {
-          "src": "images/eizan-line/28-3.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/rxZdN3dcTB8VYhgO4s3ozaqwC87kIBW120250827142623.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-3.jpg"
-        },
-        {
-          "src": "images/eizan-line/28-4.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/Oq5HwVDZb2drBMmHJAACoCwJh5OWo5iv20250827142623.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-4.jpg"
-        },
-        {
-          "src": "images/eizan-line/28-5.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/BfVl8cGCoiHpDefNn1HmWEsGEhSZZkLM20250827142623.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-5.jpg"
-        },
-        {
-          "src": "images/eizan-line/28-6.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/zIdF2DWXrTwShdLeEdqGnnjeglCGAxzT20250827142623.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-6.jpg"
-        },
-        {
-          "src": "images/eizan-line/28-7.jpg",
-          "alt": "",
-          "original": "https://prod-creative-map.s3.ap-northeast-1.amazonaws.com/feature_images/ql1Jyjvhd2Ol5nO3xVoNkBiDKChWsrZK20250827142624.jpeg",
-          "thumb": "images/eizan-line/thumbs/28-7.jpg"
-        }
-      ]
+      "links": [],
+      "info": null,
+      "notices": []
     }
   ]
 }

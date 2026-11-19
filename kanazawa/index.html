@@ -1,44 +1,120 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>金沢おすすめマップ | Piece Hostel Sanjo</title>
-  <meta name="description" content="金沢市内のおすすめスポットを、地図と写真で紹介。2日でゆったり巡れる場所を日本語・英語で。">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <!-- CSS/JS を更新したら ?v= の数字を上げる（スマホに古いファイルが残らないように） -->
-  <link rel="stylesheet" href="../assets/map.css?v=7">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>My Kanazawa Picks｜金沢と日帰り旅のおすすめ</title>
+<meta name="description" content="Picks for two days in Kanazawa, a seafood meal not to miss, and day trips from Kanazawa. 金沢市内と、金沢から日帰りで行けるおすすめ。">
+<meta name="theme-color" content="#F3F0E9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2324406B%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2234%22 text-anchor=%22middle%22 fill=%22%23E9D7A6%22 font-family=%22serif%22%3E%E9%87%91%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="css/style.css?v=1">
 </head>
-<body data-route="kanazawa" data-root="../">
-  <header class="site-header">
-    <a class="brand" href="../">Piece Hostel Sanjo <span>Maps</span></a>
+<body>
+
+<header class="bar" id="top">
+  <div class="bar-in">
+    <a class="brand" href="#top"><span class="b-jp">金沢</span><span class="b-en">KANAZAWA</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#city" data-t="nav_city">City</a>
+      <a href="#food" data-t="nav_food">Seafood</a>
+      <a href="#trips" data-t="nav_trips">Day trips</a>
+      <a href="#map" data-t="nav_map">Map</a>
+    </nav>
     <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="ja">日本語</button>
-      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="layout">
-    <div class="map-wrap">
-      <div id="map" role="region" aria-label="ルートの地図"></div>
+<section class="hero" aria-labelledby="h1">
+  <img class="hero-img" src="img/higashi-1.jpg" alt="" width="1088" height="721">
+  <div class="hero-shade"></div>
+  <div class="hero-in">
+    <p class="kicker"><span>金沢</span> KANAZAWA &amp; HOKURIKU</p>
+    <h1 id="h1" data-t="title">My Kanazawa Picks</h1>
+    <p class="hero-sub" data-t="subtitle">Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="intro" aria-label="Introduction">
+    <div class="intro-text" id="intro"></div>
+    <ul class="jump">
+      <li><a href="#city"><b>9</b><span data-t="jump_city">places in the city</span></a></li>
+      <li><a href="#food"><b>1</b><span data-t="jump_food">meal not to miss</span></a></li>
+      <li><a href="#trips"><b>6</b><span data-t="jump_trips">day-trip areas</span></a></li>
+    </ul>
+  </section>
+
+  <section class="mapbox" id="map" aria-labelledby="map-h">
+    <div class="sec-head">
+      <p class="sec-kick">MAP</p>
+      <h2 id="map-h" data-t="map_h">Where everything is</h2>
     </div>
+    <div class="tabs" role="tablist" aria-label="Map">
+      <button type="button" role="tab" id="tab-city" data-map="city" aria-selected="true" data-t="tab_city">In the city</button>
+      <button type="button" role="tab" id="tab-trips" data-map="trips" aria-selected="false" data-t="tab_trips">Day trips</button>
+    </div>
+    <div class="lmap" id="lmap" role="tabpanel" aria-labelledby="tab-city"></div>
+    <div class="svgmap" id="svgmap" hidden></div>
+    <p class="map-fb" id="map-fb" data-t="map_fb" hidden></p>
+    <p class="map-note" data-t="map_note">A simple map to show where places are. Tap a number to jump to it, and use each “Google Maps” button for directions.</p>
+  </section>
 
-    <section class="panel">
-      <div class="route-head">
-        <h1 id="route-title">読み込み中…</h1>
-        <p id="route-intro" class="intro"></p>
-      </div>
-      <ol id="spots" class="spots"></ol>
-      <footer class="credit">
-        <p id="source-note"></p>
-        <p id="rights"></p>
-      </footer>
-    </section>
-  </main>
+  <section class="sec" id="city" aria-labelledby="city-h">
+    <div class="sec-head">
+      <p class="sec-kick">01 · KANAZAWA CITY</p>
+      <h2 id="city-h" data-t="city_h">Places you can cover in 2 days</h2>
+      <p class="sec-sub" data-t="city_sub">Within Kanazawa City</p>
+    </div>
+    <div class="grid" id="grid-city"></div>
+  </section>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="../assets/map.js?v=7"></script>
+  <section class="sec" id="food" aria-labelledby="food-h">
+    <div class="sec-head">
+      <p class="sec-kick">02 · SEAFOOD</p>
+      <h2 id="food-h" data-t="food_h">A meal you really should not miss</h2>
+    </div>
+    <div class="grid" id="grid-food"></div>
+  </section>
+
+  <section class="sec" id="trips" aria-labelledby="trips-h">
+    <div class="sec-head">
+      <p class="sec-kick">03 · DAY TRIPS</p>
+      <h2 id="trips-h" data-t="trips_h">Places you can visit on a day trip from Kanazawa</h2>
+      <p class="sec-sub" data-t="trips_sub">If you have extra time, definitely consider them.</p>
+    </div>
+    <div class="grid" id="grid-trips"></div>
+  </section>
+
+  <section class="outro" aria-label="Closing">
+    <div id="outro"></div>
+  </section>
+
+  <section class="credits" aria-labelledby="cr-h">
+    <h2 id="cr-h" data-t="cr_h">Photo credits</h2>
+    <p data-t="cr_toshi">Photos without a credit were taken by Toshi.</p>
+    <ul id="credits"></ul>
+    <p data-t="cr_map">Map: GSI Tiles (pale map), Geospatial Information Authority of Japan.</p>
+    <p class="muted" data-t="disclaimer">Opening hours, prices and booking rules can change. Please check the official information before you go.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="madeby" data-t="madeby">Made by Toshi</p>
+  <a href="#top" data-t="to_top">Back to top ↑</a>
+</footer>
+
+<noscript><p class="noscript">Please enable JavaScript to see this guide. このページを見るにはJavaScriptを有効にしてください。</p></noscript>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="js/data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
 </body>
 </html>

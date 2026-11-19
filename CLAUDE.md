@@ -11,9 +11,9 @@
 ## 技術スタック
 
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
-- 地図: Leaflet 1.9.4（unpkg から読み込み）+ OpenStreetMap タイル
+- 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/kyoto-maps/eizan-line/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、金沢: …/kanazawa/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
 - 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
@@ -31,16 +31,34 @@
 
 ## ディレクトリ構成
 
+マップは2種類のデザインを使い分ける（2026-11-20 に統一）。
+
+| 種類 | 使う場面 | 元にしたもの | 例 |
+|---|---|---|---|
+| ルート型 | 番号の順に回る1日ルート | sanjo-guide/eizan-map の preview 版 | `eizan-line/` |
+| スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/` |
+
 ```
 /
 ├── CLAUDE.md
-├── index.html            # トップ（マップ一覧）
-├── <ルートID>/index.html  # ルートごとのページ（body の data-route でデータを指定）
-├── assets/map.js, map.css # 全ルート共通の地図ページ
-├── data/routes/          # ルートデータ（1ルート = 1ファイル）
-├── scripts/              # 取り込み・変換スクリプト
-└── _source/              # PointMap+ の元データ（公開しない）
+├── index.html              # トップ（マップ一覧）。見た目は assets/map.css
+├── eizan-line/             # ルート型: index.html, css/, js/app.js, js/i18n.js
+│                           #   データは data/routes/eizan-line.json、写真は images/eizan-line/
+├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/, tiles/
+├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
+├── vendor/                 # Leaflet 1.9.4、MapLibre（ルート型の地図）
+├── assets/map.css          # トップページの見た目
+├── data/routes/            # ルート型のデータ
+├── images/                 # ルート型の写真
+├── scripts/                # PointMap+ からの取り込み・写真縮小
+└── _source/                # PointMap+ の元データ（公開しない）
 ```
+
+- 金沢の写真: `kanazawa/img/hq-*.jpg` は写真アプリの全候補（6,667枚、Nikon D7000含む）から選んだ高画質版（旧 kyoto-maps の金沢マップ由来）。それ以外は kanazawa-guide 由来で、横552px前後の小さい写真がある。各スポットは高画質版を先に並べ、足りない分だけ kanazawa-guide の写真で補っている（最大10枚）
+- 酒楽（しゅらく）の紹介文は2026-11-20にオーナーが書いたもの。消さないこと
+- 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える
+- ルート型の地図は OpenFreeMap（ベクター地図、英語/日本語の地名切り替え）。スポット紹介型は地理院タイル（淡色地図）を `tiles/` に保存して使う
+- `scripts/import_pointmap.py` の出力は旧形式。ルート型に使うときは eizan-line.json の形（kind, blurb, sections, gmaps, links, info, notices）に合わせて手直しが必要
 
 ## ルートデータの方針
 
