@@ -13,7 +13,7 @@
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、金沢: …/kanazawa/、福岡: …/fukuoka/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、金沢: …/kanazawa/、福岡: …/fukuoka/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
 - 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
@@ -38,7 +38,7 @@
 
 | 種類 | 使う場面 | 元にしたもの | 例 |
 |---|---|---|---|
-| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/` |
+| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/` |
 | スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/`, `fukuoka/` |
 
 ```
@@ -53,6 +53,8 @@
 │                           #   データは data/routes/omihachiman.json、写真は images/omihachiman/
 ├── arashiyama/             # ルート型（京都・嵐山と嵯峨野）。eizan-line/ の複製＋写真クレジット表示など
 │                           #   データは data/routes/arashiyama.json、写真は images/arashiyama/
+├── amanohashidate/         # ルート型（京都から日帰り 天橋立・伊根）。arashiyama/ と同じ差分（クレジット表示など）
+│                           #   データは data/routes/amanohashidate.json、写真は images/amanohashidate/
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
 ├── fukuoka/                # スポット紹介型（福岡・唐津と日帰り）。kanazawa/ の複製。データは js/data.js、写真は img/
@@ -71,6 +73,7 @@
 - 福岡（2026-11-20 作成）: 「食べる」はオーナーが実際に行った店だけ（写真アプリの食事写真から特定）。行った回数はページに書かない（オーナーの希望）。日帰りは行っていない場所も含む（太宰府・柳川・糸島の名所・南蔵院はネットの CC 写真で、クレジットはページ下に自動表示）。写真は写真アプリから書き出して長辺1280px・位置情報なしに縮小したもの。行き方の目安の出典と確認日は js/data.js の `sources`。言語は `kyoto-maps-lang` に保存（トップページと共通）。「福岡大仏」は市内の東長寺（市内のおすすめ）として載せ、日帰りには篠栗の南蔵院（涅槃像）を載せた
 - 嵐山（2026-11-20 作成）: 京都河原町→桂→阪急嵐山→京都バスで愛宕念仏寺→坂を下って化野念仏寺までの1〜7と、帰りの18（先斗町）は全員共通。8〜17（祇王寺〜モンキーパーク）はゲストが「選んで回る」で選ぶ（オーナーの希望）。写真は写真アプリから GPS と撮影時刻（Nikon D7000）で集めて全部見て選び、長辺1600px・位置情報なしにしたもの。写真は横向きだけ（オーナーの希望）。手持ちが少ないモンキーパークだけ Wikimedia Commons の写真を足し、data の photos の要素を `{"file", "credit"}` にして写真の上に撮影者とライセンスを表示している。化野念仏寺の「西院の河原」の中は撮影禁止なので、その中の写真は使っていない。公式サイトで確認できなかった料金・時間（祇王寺・大河内山荘・嵯峨野湯・モンキーパーク）は `info.verified: false` で「要確認」と出る。愛宕念仏寺は水・土が休み（拝観料1,000円）。arashiyama/ は `python3 scripts/sync_arashiyama.py` でテンプレート（eizan-line/）から写し直せる
 - 近江八幡（2026-11-20 作成）: 京都駅スタート、近江八幡を回って京都へ帰る。延長で彦根城・玄宮園。場所が多いので、オーナーの希望で最初から「選んで回る」で開く（data の `plan.defaultMode: "pick"`）。駅（1・2・14）は必ず入り、ロープウェー（4）は山頂か瑞龍寺を、彦根駅（15）は彦根城か玄宮園を選ぶと自動で入る。最初の地図は `data.home`（2〜14番＝近江八幡の町）に合わせる。omihachiman/ は `python3 scripts/sync_omihachiman.py` でテンプレート（eizan-line/）から写し直せる（文言は omihachiman/js/i18n.js に手で足す）。写真は写真アプリから GPS と撮影時刻（Nikon D7000）で約3,900枚と京都駅の約800枚を集めて全部見て選び、Nikon の横写真はもう一度全部見直したもの。横向きだけ（オーナーの希望）、長辺1600px・位置情報なし。TWO RABBITS BEER HOUSE の営業時間は資料ごとに違うので、オーナーが撮った店頭の案内（2026年4月）を tip に書いた。ティファニーの値段もオーナーが撮った店頭のメニュー（2024年11月・2026年3月）から
+- 天橋立・伊根（2026-11-20 作成）: 京都駅8:38の特急はしだて1号で天橋立へ→天橋立駅の観光案内所で「海の京都 天橋立・伊根フリーパス 1day」（3,550円）を買う→智恩寺→観光船か自転車で府中へ→傘松公園・籠神社と伊根（遊覧船・向井酒造・舟屋）を回る→一の宮桟橋から観光船か自転車で戻る→（智恵の湯）→18:09のはしだて8号で京都へ（オーナーの指示 2026-11-20）。傘松公園と伊根のどちらを先に回るかは選べる：一覧の上の切り替えボタン（テンプレートの「全部回る／選んで回る」を流用）で、data/routes/amanohashidate.json（傘松公園が先）と amanohashidate-ine.json（伊根が先）を読み分ける。2つのデータは `python3 scripts/build_amanohashidate_data.py` で同時に作る（文章・料金・時刻はこのスクリプトの中。データを直接直さない）。写真のファイル名はスポットの id（kono-1.jpg など）。紹介ページの写真は [id, 番号] で指定。写真は写真アプリの天橋立・伊根の6回分（2023-07〜2026-01、約4,100枚、Nikon D7000 約2,700枚）を全部見て選び、長辺1600px・位置情報なし、横向きだけ。フリーパスの写真はオーナーが2024年8月に使った実物。向井酒造は手持ちが1枚なので Wikimedia Commons の写真3枚を足した（クレジット表示）。籠神社は神門の外で撮った写真だけ使っている。特急の運賃は乗換案内、それ以外は公式サイトで確認。舞鶴（赤れんがパーク・吉原入江）とビューランドの写真もあるが、ルートには入れていない。amanohashidate/ は `python3 scripts/sync_amanohashidate.py` でテンプレート（eizan-line/）から写し直せる（文言は amanohashidate/js/i18n.js に手で足す）
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
 - 地図の見た目は全マップ共通で `assets/basemap.js`（Googleマップ / Appleマップに近い配色。町名・お店の名前は出さず、市町村・駅・川・大きな道だけ）。データは OpenFreeMap（OpenStreetMap）。オーナーの希望（2026-11-20）なので、新しいマップでも必ずこれを使う

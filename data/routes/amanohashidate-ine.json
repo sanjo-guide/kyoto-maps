@@ -1,0 +1,1148 @@
+{
+ "id": "amanohashidate-ine",
+ "_note": "天橋立・伊根マップのデータ（amanohashidate/ のページ専用。形は eizan-line.json と同じ）。回る順番が2通りあり、このファイルは「伊根が先」の順番（もう一方は amanohashidate.json。どちらも scripts/build_amanohashidate_data.py で作る）。京都駅から特急はしだてで天橋立へ、天橋立駅の観光案内所で「海の京都 天橋立・伊根フリーパス 1day」を買い、観光船か自転車で府中へ渡り、傘松公園・籠神社と伊根（遊覧船・向井酒造・舟屋）を回って、一の宮桟橋から観光船か自転車で戻り、18:09の特急で京都へ（オーナーの希望 2026-11-20）。写真は Toshi の写真ライブラリから選んだもの（2023〜2026年の6回分、約4,100枚を全部見て、1か所10枚以内・横の写真だけ・Nikon D7000 を含む。長辺1600px・位置情報なし）。ファイル名はスポットの id。向井酒造の一部の写真は Wikimedia Commons（photos の要素が {file, credit}）。籠神社は神門の外で撮った写真だけを使っている。info.checked は事実情報を確認した日（各社・各施設の公式サイト。特急の時刻はJR西日本の時刻表、特急の運賃は乗換案内、バス・観光船の時刻と運賃は丹後海陸交通の時刻表と運賃表）。notices は from〜to の間だけ表示される。focus は地図を開いたときに映す範囲（京都駅は離れているので入れない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "day": 0
+  },
+  {
+   "first": 2,
+   "last": 3,
+   "day": 1
+  },
+  {
+   "first": 4,
+   "last": 4,
+   "day": 2
+  },
+  {
+   "first": 5,
+   "last": 7,
+   "day": 4
+  },
+  {
+   "first": 8,
+   "last": 9,
+   "day": 3
+  },
+  {
+   "first": 10,
+   "last": 10,
+   "day": 5
+  },
+  {
+   "first": 11,
+   "last": 12,
+   "day": 6
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 12
+ },
+ "photoBase": "../images/amanohashidate/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "kyoto",
+   "name": {
+    "ja": "京都駅",
+    "en": "Kyoto Station"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "特急はしだてで、乗り換えなしで天橋立へ。約2時間の電車の旅から1日が始まります。",
+    "en": "Take the Hashidate limited express straight to Amanohashidate: about 2 hours, no change of trains."
+   },
+   "lat": 34.98535,
+   "lng": 135.758766,
+   "text": {
+    "ja": "京都駅（きょうとえき）\n\n8:38発の特急はしだて1号に乗ると、乗り換えなしで10:39に天橋立に着きます。山陰線（嵯峨野線）のホームから出る、京都丹後鉄道に乗り入れる特急です。\n\n指定席は、帰りの18:09発の特急はしだて8号の分も一緒に買っておくと安心です。片道は大人4,800円（指定席・通常期。時期によって少し変わります）。\n\n写真は京都丹後鉄道の観光列車「丹後の海」。はしだてにこの車両が使われる日もあります。\n\nおすすめ出発時間：8:38",
+    "en": "Kyoto Station\n\nTake the 8:38 Hashidate No. 1 limited express and you’ll reach Amanohashidate at 10:39 without changing trains. It leaves from the San’in (Sagano) Line platforms and runs through onto the Kyoto Tango Railway.\n\nBuy reserved seats in advance, including the 18:09 Hashidate No. 8 for the way back. One way costs ¥4,800 per adult (reserved seat, regular season; it varies a little by season).\n\nThe blue train in the photos is the Kyoto Tango Railway’s “Tango no Umi”, which is used for some Hashidate services.\n\nRecommended departure time: 8:38"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR京都駅",
+      "en": "JR Kyoto Station"
+     },
+     "lat": 34.98535,
+     "lng": 135.758766,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%BA%AC%E9%83%BD%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻表）",
+      "en": "JR West timetables (Japanese)"
+     },
+     "url": {
+      "ja": "https://timetable.jr-odekake.net/",
+      "en": "https://timetable.jr-odekake.net/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "特急はしだて1号 京都8:38発→天橋立10:39着（毎日運転）",
+       "en": "Hashidate No. 1: Kyoto 8:38 → Amanohashidate 10:39 (daily)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "片道 大人4,800円（乗車券2,320円＋指定席特急料金2,480円・通常期。時期によって少し変わります）",
+       "en": "One way ¥4,800 per adult (fare ¥2,320 + reserved-seat express charge ¥2,480, regular season; varies a little by season)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻はJR西日本の時刻表、運賃は乗換案内で確認しました。",
+     "en": "Times checked on JR West’s timetable; fares on a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kyoto-1.jpg",
+    "kyoto-2.jpg",
+    "kyoto-3.jpg",
+    "kyoto-4.jpg",
+    "kyoto-5.jpg",
+    "kyoto-6.jpg",
+    "kyoto-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "station",
+   "name": {
+    "ja": "天橋立駅（フリーパスを買う）",
+    "en": "Amanohashidate Station (get the day pass)"
+   },
+   "kind": {
+    "ja": "駅・観光案内所",
+    "en": "Station & tourist info"
+   },
+   "blurb": {
+    "ja": "駅の観光案内所で「天橋立・伊根フリーパス 1day」を。船もケーブルカーもバスも、これ1枚で乗り放題です。",
+    "en": "Buy the Amanohashidate & Ine 1-Day Free Pass at the station’s tourist office: boats, cable car and buses all in one."
+   },
+   "lat": 35.557585,
+   "lng": 135.182426,
+   "text": {
+    "ja": "天橋立駅（あまのはしだてえき）\n\n着いたら、駅の観光案内所で「海の京都 天橋立・伊根フリーパス 1day」（大人3,550円）を買いましょう。この1枚で、天橋立の観光船、傘松公園のケーブルカー・リフト、伊根へのバス、伊根湾めぐり遊覧船に1日乗り放題です。京都丹後鉄道の電車（特急は自由席）にも乗れます。\n\n観光船で行き帰りするこのルートなら、別々に買うより450円お得。自転車で渡る場合は、紹介ページの「交通費のめやす」も見てください。\n\n駅の横には日帰り温泉「智恵の湯」（11番）もあります。\n\nおすすめ訪問時間：10:39〜10:45",
+    "en": "Amanohashidate Station\n\nWhen you arrive, buy the “Kyoto by the Sea Amanohashidate & Ine Free Pass 1day” (¥3,550 per adult) at the station’s tourist office. It covers the Amanohashidate sightseeing boat, the Kasamatsu Park cable car and chairlift, the bus to Ine and the Ine Bay boat for the whole day, plus Kyoto Tango Railway trains (non-reserved seats on limited expresses).\n\nOn this route, crossing Amanohashidate by boat both ways, it saves ¥450 compared with buying each ticket. If you plan to cross by bike, see “Getting around: fares” on the intro page.\n\nNext to the station is Chie-no-Yu, a hot spring (stop 11).\n\nRecommended visit time: 10:39–10:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天橋立駅",
+      "en": "Amanohashidate Station"
+     },
+     "lat": 35.557585,
+     "lng": 135.182426,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "お得なチケット（丹後海陸交通）",
+      "en": "Value tickets (Tankai, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/tourist_tickets/",
+      "en": "https://www.tankai.jp/tourist_tickets/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "天橋立観光協会",
+      "en": "Amanohashidate Tourist Association"
+     },
+     "url": {
+      "ja": "https://www.amanohashidate.jp/",
+      "en": "https://www.amanohashidate.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "pass",
+      "text": {
+       "ja": "海の京都 天橋立・伊根フリーパス 1day：大人3,550円・小児1,780円（買った日1日有効）",
+       "en": "Amanohashidate & Ine Free Pass 1day: ¥3,550 adults, ¥1,780 children (valid on the day)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "pass",
+      "text": {
+       "ja": "乗れるもの：天橋立観光船（宮津桟橋〜天橋立桟橋〜一の宮桟橋）、ケーブルカー・リフト（往復）、丹海バス（宮津駅〜天橋立駅前〜天橋立ケーブル下〜伊根湾めぐり・日出〜伊根）、伊根湾めぐり遊覧船、京都丹後鉄道（特急は普通車自由席）",
+       "en": "Covers: Amanohashidate sightseeing boat (Miyazu–Amanohashidate–Ichinomiya piers), cable car & chairlift (round trip), Tankai bus (Miyazu Sta.–Amanohashidate Sta.–Cable-shita–Ine-wan Meguri Hide–Ine), Ine Bay boat, Kyoto Tango Railway (non-reserved seats on expresses)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "京都からの特急はしだての料金は含まれません。天橋立桟橋（観光船乗り場）でも買えます。",
+     "en": "The Hashidate express from Kyoto isn’t covered. The pass is also sold at the Amanohashidate boat pier."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "station-1.jpg",
+    "station-2.jpg",
+    "station-3.jpg",
+    "station-4.jpg",
+    "station-5.jpg",
+    "station-6.jpg",
+    "station-7.jpg",
+    "station-8.jpg",
+    "station-9.jpg",
+    "station-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "chionji",
+   "name": {
+    "ja": "智恩寺（文殊堂）",
+    "en": "Chion-ji Temple (Monju-do)"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "「三人寄れば文殊の知恵」の文殊さま。松の枝に結ばれた白い扇子のおみくじが、花が咲いたようです。",
+    "en": "Home of Monju, the bodhisattva of wisdom. Fan-shaped fortunes tied to the pine branches look like white flowers."
+   },
+   "lat": 35.557877,
+   "lng": 135.184531,
+   "text": {
+    "ja": "智恩寺（ちおんじ）\n\n「三人寄れば文殊の知恵」の文殊菩薩をまつる、日本三文殊のひとつ。天橋立の入り口に立つ2階建ての山門は、丹後でも最大級の木造の門です。観光船の乗り場はこのお寺のすぐ横です。\n\n境内の松には、扇の形をした「すえひろ扇子おみくじ」がたくさん結ばれています。参道の茶屋の名物「智恵の餅」も一緒にどうぞ。\n\nおすすめ訪問時間：10:45〜10:55",
+    "en": "Chion-ji Temple\n\nOne of Japan’s three great temples of Monju, the bodhisattva of wisdom (as in the saying “three heads are better than one”). Its two-story wooden gate at the entrance to Amanohashidate is one of the largest in the Tango region. The sightseeing boat pier is right next to the temple.\n\nThe pine trees in the grounds are covered with “suehiro” fan-shaped fortunes. Try “chie no mochi”, the rice-cake sweet sold at the tea houses on the approach.\n\nRecommended visit time: 10:45–10:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "智恩寺",
+      "en": "Chion-ji"
+     },
+     "lat": 35.557877,
+     "lng": 135.184531,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%99%BA%E6%81%A9%E5%AF%BA%20%E5%AE%AE%E6%B4%A5"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "天橋山 智恩寺 公式サイト",
+      "en": "Chion-ji official site (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.monjudo-chionji.jp/",
+      "en": "https://www.monjudo-chionji.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "本堂の授与所（お守り・おみくじ）8:00〜17:00",
+       "en": "Main hall counter (charms, fortunes): 8:00–17:00"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "chionji-1.jpg",
+    "chionji-2.jpg",
+    "chionji-3.jpg",
+    "chionji-4.jpg",
+    "chionji-5.jpg",
+    "chionji-6.jpg",
+    "chionji-7.jpg",
+    "chionji-8.jpg",
+    "chionji-9.jpg",
+    "chionji-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "crossing",
+   "name": {
+    "ja": "天橋立を渡る（観光船か自転車で）",
+    "en": "Crossing Amanohashidate (boat or bike)"
+   },
+   "kind": {
+    "ja": "観光船・レンタサイクル",
+    "en": "Boat or rental bike"
+   },
+   "blurb": {
+    "ja": "智恩寺の横の桟橋から、カモメと一緒に観光船で12分。自転車なら松並木の中を15〜20分で対岸の府中へ。",
+    "en": "From the pier by Chion-ji, 12 minutes by boat with the seagulls, or 15–20 minutes by bike through the pines, to Fuchu on the far side."
+   },
+   "lat": 35.558543,
+   "lng": 135.184739,
+   "text": {
+    "ja": "天橋立（あまのはしだて）を渡る\n\n宮島・松島と並ぶ日本三景のひとつ、天橋立。宮津湾と阿蘇海（あそかい）を分ける長さ3.6kmの砂の道を、観光船か自転車で対岸の府中（ふちゅう）へ渡ります。\n\n観光船（フリーパスで乗れます）は、智恩寺のすぐ横の天橋立桟橋から毎時0分・30分に出て、約12分で一の宮桟橋へ。出てすぐに、廻旋橋（かいせんきょう）がぐるっと回って船を通してくれます。カモメが船と並んで飛ぶので、エサやりも楽しめます。\n\n自転車なら、天橋立桟橋で借りて、松並木の中を15〜20分。片側は白い砂浜、もう片側は静かな内海です。対岸の一の宮桟橋で返せます（2時間500円。フリーパスには含まれません）。\n\n一の宮桟橋に着いたら、200mほど先の「天橋立ケーブル下」バス停から伊根行きのバスへ。平日は11:24発に間に合います（伊根湾めぐり・日出11:53着）。土日祝は船が遠回りのコースになって11:22に着くので、12:08発のバスで（12:37着）。\n\nおすすめ移動時間：11:00（観光船）",
+    "en": "Crossing Amanohashidate\n\nAmanohashidate is one of Japan’s Three Scenic Views, along with Miyajima and Matsushima: a 3.6 km sandbar between Miyazu Bay and the Aso Sea. Cross it by boat or by bike to Fuchu on the far side.\n\nThe sightseeing boat (covered by the free pass) leaves Amanohashidate pier, right next to Chion-ji, on the hour and half hour and reaches Ichinomiya pier in about 12 minutes. Just after leaving, the Kaisenkyo bridge swings around to let the boat through, and seagulls fly right alongside: feeding them is part of the fun.\n\nBy bike, rent one at Amanohashidate pier and ride 15–20 minutes through the pines, with white sand on one side and a calm inland sea on the other. You can drop it off at Ichinomiya pier (¥500 for 2 hours; not covered by the free pass).\n\nFrom Ichinomiya pier, walk about 200 m to the “Amanohashidate Cable-shita” stop and take the bus to Ine. On weekdays you can catch the 11:24 bus (arrives at Ine-wan Meguri Hide at 11:53). On weekends and holidays the 11:00 boat takes a longer route and arrives at 11:22, so take the 12:08 bus (arr. 12:37).\n\nRecommended travel time: 11:00 (boat)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天橋立桟橋（観光船・レンタサイクル）",
+      "en": "Amanohashidate pier (boat & bikes)"
+     },
+     "lat": 35.558543,
+     "lng": 135.184739,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E8%A6%B3%E5%85%89%E8%88%B9%20%E5%A4%A9%E6%A9%8B%E7%AB%8B%E6%A1%9F%E6%A9%8B"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "天橋立観光船（時刻表・料金）",
+      "en": "Sightseeing boat: times & fares (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/trip/amaboat/",
+      "en": "https://www.tankai.jp/trip/amaboat/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "レンタサイクル（丹後海陸交通）",
+      "en": "Rental bikes (Tankai, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/trip/bicycle/",
+      "en": "https://www.tankai.jp/trip/bicycle/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "観光船 天橋立桟橋発 9:00〜16:00の毎時0分・30分（3〜10月は17:00、4〜9月は17:30も）。土日祝の11:00〜15:00の0分発は、廻旋橋と運河をめぐる22分のコース",
+       "en": "Boats from Amanohashidate pier: on the hour and half hour, 9:00–16:00 (also 17:00 Mar–Oct, 17:30 Apr–Sep). On weekends and holidays, the on-the-hour boats 11:00–15:00 take a 22-minute route via the turning bridge and canal"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "観光船 片道800円（フリーパスで乗れます）。レンタサイクル2時間500円（延長は1時間ごとに300円）",
+       "en": "Boat ¥800 one way (covered by the free pass). Rental bike ¥500 for 2 hours (¥300 per extra hour)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "天橋立ケーブル下→伊根湾めぐり・日出：11:24→11:53、12:08→12:37（毎日）。フリーパスで乗れます（なければ200円）",
+       "en": "Amanohashidate Cable-shita → Ine-wan Meguri Hide: 11:24→11:53, 12:08→12:37 (daily). Covered by the free pass (otherwise ¥200)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "crossing-1.jpg",
+    "crossing-2.jpg",
+    "crossing-3.jpg",
+    "crossing-4.jpg",
+    "crossing-5.jpg",
+    "crossing-6.jpg",
+    "crossing-7.jpg",
+    "crossing-8.jpg",
+    "crossing-9.jpg",
+    "crossing-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "ineboat",
+   "name": {
+    "ja": "伊根湾めぐり遊覧船",
+    "en": "Ine Bay Sightseeing Boat"
+   },
+   "kind": {
+    "ja": "遊覧船",
+    "en": "Boat ride"
+   },
+   "blurb": {
+    "ja": "海の上から舟屋の並ぶ町を眺める25分の船旅。船のまわりをカモメがいっしょに飛びます。",
+    "en": "A 25-minute cruise past Ine’s boathouses, with seagulls flying right alongside."
+   },
+   "lat": 35.6704,
+   "lng": 135.2772,
+   "text": {
+    "ja": "伊根湾めぐり遊覧船\n\nバスを「伊根湾めぐり・日出（ひで）」で降りると、目の前が遊覧船乗り場です（フリーパスで乗れます）。30分ごとに出る船で、約25分かけて伊根湾をぐるっと一周。1階が船のガレージになった舟屋（ふなや）が、海のすぐ上に並ぶ景色を海側から見られます。\n\n船が出るとカモメが集まってきて、船と並んで飛びます。乗り場と船内でカモメのエサも売っています。\n\n伊根に先に来た日は、お昼ごはんも伊根で。\n\nおすすめ訪問時間：13:00〜13:30",
+    "en": "Ine Bay Sightseeing Boat\n\nGet off the bus at “Ine-wan Meguri Hide” and the pier is right in front of you (covered by the free pass). Boats leave every 30 minutes and loop around Ine Bay in about 25 minutes, giving you the view of the funaya — houses with a boat garage on the ground floor — lined up right on the water.\n\nOnce the boat leaves, seagulls gather and fly alongside. Gull food is sold at the pier and on board.\n\nIf you come to Ine first, have lunch in Ine too.\n\nRecommended visit time: 13:00–13:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "伊根湾めぐり遊覧船 日出乗り場",
+      "en": "Ine Bay boat pier (Hide)"
+     },
+     "lat": 35.6704,
+     "lng": 135.2772,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E6%A0%B9%E6%B9%BE%E3%82%81%E3%81%90%E3%82%8A%E9%81%8A%E8%A6%A7%E8%88%B9"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "伊根湾めぐり遊覧船（丹後海陸交通）",
+      "en": "Ine Bay Sightseeing Boat (Tankai, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/trip/ineboat/",
+      "en": "https://www.tankai.jp/trip/ineboat/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00、毎時0分・30分に出航（約25分）",
+       "en": "9:00–16:00, departing on the hour and half hour (about 25 min)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年中無休（天気が悪いと欠航することがあります）",
+       "en": "Open every day (may be cancelled in bad weather)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,200円（中学生以上）・小学生600円（フリーパスで乗れます）",
+       "en": "¥1,200 (junior high and up), ¥600 (elementary); covered by the free pass"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "ineboat-1.jpg",
+    "ineboat-2.jpg",
+    "ineboat-3.jpg",
+    "ineboat-4.jpg",
+    "ineboat-5.jpg",
+    "ineboat-6.jpg",
+    "ineboat-7.jpg",
+    "ineboat-8.jpg",
+    "ineboat-9.jpg",
+    "ineboat-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 6,
+   "id": "mukai",
+   "name": {
+    "ja": "向井酒造",
+    "en": "Mukai Sake Brewery"
+   },
+   "kind": {
+    "ja": "酒蔵",
+    "en": "Sake brewery"
+   },
+   "blurb": {
+    "ja": "「海に一番近い酒蔵」。古代米で造る赤いお酒「伊根満開」で知られる、舟屋の町の酒蔵です。",
+    "en": "“The sake brewery closest to the sea”, known for Ine Mankai, a red sake made with ancient rice."
+   },
+   "lat": 35.674754,
+   "lng": 135.286395,
+   "text": {
+    "ja": "向井酒造（むかいしゅぞう）\n\n遊覧船乗り場から湾ぞいの道を15分ほど歩いたところ、舟屋の町・平田（ひらた）の入り口にある酒蔵です。お酒はすべて純米酒。いちばん有名なのは、伊根で育てた古代米（紫黒米）を使った赤いお酒「伊根満開（いねまんかい）」で、甘酸っぱくて飲みやすい味です。\n\n直売所でお酒を買えるので、おみやげにどうぞ。お昼休み（12:00〜13:00）と木曜日はお休みです。\n\nおすすめ訪問時間：13:40〜14:00",
+    "en": "Mukai Sake Brewery\n\nAbout 15 minutes on foot along the bay from the boat pier, at the edge of Hirata, the boathouse village. Everything they brew is junmai (pure rice) sake. Their best-known sake is Ine Mankai, a red sake made with an ancient purple rice grown in Ine: sweet and tart, and easy to drink.\n\nYou can buy sake at their shop, a nice souvenir. The shop closes for lunch (12:00–13:00) and on Thursdays.\n\nRecommended visit time: 13:40–14:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "向井酒造",
+      "en": "Mukai Shuzo"
+     },
+     "lat": 35.674754,
+     "lng": 135.286395,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%90%91%E4%BA%95%E9%85%92%E9%80%A0%20%E4%BC%8A%E6%A0%B9"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "向井酒造 直売所のご案内",
+      "en": "Mukai Shuzo shop info (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kuramoto-mukai.jp/%e7%9b%b4%e5%a3%b2%e6%89%80%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/",
+      "en": "https://www.kuramoto-mukai.jp/%e7%9b%b4%e5%a3%b2%e6%89%80%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜12:00 / 13:00〜17:00",
+       "en": "9:00–12:00 / 13:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "木曜日・年末年始",
+       "en": "Thursdays and New Year holidays"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "caution": {
+    "ja": "木曜はお休み",
+    "en": "Closed on Thursdays"
+   },
+   "photos": [
+    "mukai-1.jpg",
+    {
+     "file": "mukai-2.jpg",
+     "credit": {
+      "author": "漱石の猫",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%90%91%E4%BA%95%E9%85%92%E9%80%A0.jpg"
+     }
+    },
+    {
+     "file": "mukai-3.jpg",
+     "credit": {
+      "author": "Asturio Cantabrio",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Ine_Mukai_Brewery_2021-04_ac_(1).jpg"
+     }
+    },
+    {
+     "file": "mukai-4.jpg",
+     "credit": {
+      "author": "Asturio Cantabrio",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Ine_Mukai_Brewery_2021-04_ac_(2).jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "funaya",
+   "name": {
+    "ja": "伊根の舟屋（伊根浦）",
+    "en": "Ine’s Funaya Boathouses"
+   },
+   "kind": {
+    "ja": "町並み",
+    "en": "Historic district"
+   },
+   "blurb": {
+    "ja": "海の上に建つ約230軒の舟屋。湖のように静かな湾ぞいを、のんびり歩きます。",
+    "en": "About 230 boathouses built right on the water. Stroll along a bay as calm as a lake."
+   },
+   "lat": 35.675733,
+   "lng": 135.287658,
+   "text": {
+    "ja": "伊根の舟屋（ふなや）\n\n1階が海に開いた船のガレージ、2階が住まいになった舟屋が、伊根湾にそって約230軒並びます。国の重要伝統的建造物群保存地区にも選ばれた、ほかでは見られない漁師町です。\n\n遊覧船乗り場から、向井酒造の前を通って、伊根浦公園と観光案内所のある町の中心まで、湾ぞいの道を20分ほど歩きます。乗り場のそばの日出（ひで）の入り江は、水が透き通っていてきれいです。\n\n舟屋の多くは今も人が暮らす家なので、静かに歩いて、勝手に入らないようにしてください。\n\n町の食事どころで、海を見ながらお昼ごはんもどうぞ。\n\nそのあとは「伊根」バス停から15:08発のバスで「天橋立ケーブル下」へ（15:41着）。傘松公園に向かいます。\n\nおすすめ訪問時間：14:00〜15:05",
+    "en": "Ine’s Funaya\n\nAbout 230 funaya line Ine Bay: the ground floor is a garage that opens onto the sea for a boat, and people live upstairs. It’s a fishing village like nowhere else, protected as a national Preservation District for Groups of Traditional Buildings.\n\nFrom the boat pier, walk about 20 minutes along the bay road, past Mukai Sake Brewery, to the center of the village with Ine-ura Park and the tourist information center. The cove at Hide, next to the pier, has beautifully clear water.\n\nMost funaya are still people’s homes, so please keep your voice down and don’t go inside without permission.\n\nHave lunch with a sea view at one of the village’s restaurants.\n\nThen take the 15:08 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 15:41) for Kasamatsu Park.\n\nRecommended visit time: 14:00–15:05"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "伊根浦公園",
+      "en": "Ine-ura Park"
+     },
+     "lat": 35.675733,
+     "lng": 135.287658,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E6%A0%B9%E6%B5%A6%E5%85%AC%E5%9C%92"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "伊根町観光協会",
+      "en": "Ine Tourist Association"
+     },
+     "url": {
+      "ja": "https://www.ine-kankou.jp/",
+      "en": "https://www.ine-kankou.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "丹海バス 時刻表（伊根・蒲入線）",
+      "en": "Tankai bus timetable (Ine line, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/routebus/timetable/",
+      "en": "https://www.tankai.jp/routebus/timetable/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "伊根→天橋立ケーブル下：15:08→15:41、16:00→16:33（毎日）。フリーパスで乗れます（なければ200円）",
+       "en": "Ine → Amanohashidate Cable-shita: 15:08→15:41, 16:00→16:33 (daily). Covered by the free pass (otherwise ¥200)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "バスはタッチ決済・QRコード決済も使えますが、交通系ICカード（ICOCAなど）は使えません。",
+     "en": "The bus takes contactless credit cards and QR payments, but not transit IC cards like ICOCA."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "funaya-1.jpg",
+    "funaya-2.jpg",
+    "funaya-3.jpg",
+    "funaya-4.jpg",
+    "funaya-5.jpg",
+    "funaya-6.jpg",
+    "funaya-7.jpg",
+    "funaya-8.jpg",
+    "funaya-9.jpg",
+    "funaya-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 8,
+   "id": "kasamatsu",
+   "name": {
+    "ja": "天橋立傘松公園",
+    "en": "Amanohashidate Kasamatsu Park"
+   },
+   "kind": {
+    "ja": "展望台",
+    "en": "Viewpoint"
+   },
+   "blurb": {
+    "ja": "ケーブルカーかリフトで山の上へ。天に昇る龍のような「昇龍観」と、股のぞき発祥の地です。",
+    "en": "Up by cable car or chairlift to the “rising dragon” view, the place where looking between your legs started."
+   },
+   "lat": 35.586553,
+   "lng": 135.195928,
+   "text": {
+    "ja": "天橋立傘松公園（かさまつこうえん）\n\n籠神社のすぐ横の府中駅から、ケーブルカー（約4分）かリフト（6〜8分ほど）で上ります（フリーパスで乗れます）。こちらからの天橋立は、龍が天に昇っていくように見えることから「昇龍観（しょうりゅうかん）」。「股のぞき発祥の地」で、股のぞき台もあります。股の間から逆さまにのぞくと、海と空が入れ替わって、橋が空に架かっているように見えます。\n\n伊根からのバス（伊根15:08発）を「天橋立ケーブル下」で降りたら、すぐ近くの府中駅へ。ケーブルカーの最終は季節で変わるので（12〜1月は17:00、11月・2月は17:30）、先に上りましょう。山の上には展望レストラン「AmaTerrace（アマテラス）」もあります。\n\nおすすめ訪問時間：15:45〜16:20",
+    "en": "Amanohashidate Kasamatsu Park\n\nFrom Fuchu Station, right next to Kono Shrine, ride the cable car (about 4 min) or chairlift (6–8 min) up the hill (covered by the free pass). From here Amanohashidate looks like a dragon rising into the sky, the “Shoryukan” view. This is said to be where the upside-down “matanozoki” view began: bend over and look back between your legs, and the sandbar seems to float in the sky.\n\nGet off the bus from Ine (Ine 15:08) at “Amanohashidate Cable-shita” and walk to Fuchu Station. The last cable car depends on the season (17:00 in Dec–Jan, 17:30 in Nov and Feb), so go up first. There’s also a viewing restaurant at the top, AmaTerrace.\n\nRecommended visit time: 15:45–16:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "府中駅（ケーブルカー乗り場）",
+      "en": "Fuchu Station (cable car)"
+     },
+     "lat": 35.58323,
+     "lng": 135.1953,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%82%AB%E3%83%BC%20%E5%BA%9C%E4%B8%AD%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "天橋立ケーブルカー・リフト（運行時間・運賃）",
+      "en": "Cable car & lift: times and fares (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/trip/cable/",
+      "en": "https://www.tankai.jp/trip/cable/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "丹海バス 時刻表（伊根・蒲入線）",
+      "en": "Tankai bus timetable (Ine line, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/routebus/timetable/",
+      "en": "https://www.tankai.jp/routebus/timetable/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ケーブルカー 9:00〜（最終は3〜10月18:00、11月・2月17:30、12〜1月17:00）、15分ごと。リフト 9:00〜16:00（12月1日〜1月5日は10:00から、1月6日〜2月末は土日祝だけ）",
+       "en": "Cable car from 9:00, every 15 min (last car 18:00 Mar–Oct, 17:30 Nov & Feb, 17:00 Dec–Jan). Chairlift 9:00–16:00 (from 10:00 Dec 1–Jan 5; weekends and holidays only Jan 6–end of Feb)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ケーブルカー・リフト共通 往復 大人800円・小児400円（フリーパスで乗れます）。公園は無料",
+       "en": "Cable car / lift round trip ¥800 (children ¥400), covered by the free pass. The park itself is free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "山の上の傘松駅では現金しか使えません。切符は下の府中駅で買うと、カードや電子マネーも使えます。",
+     "en": "Kasamatsu Station at the top takes cash only. Buy tickets at Fuchu Station at the bottom, where cards and e-money work."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-18",
+     "url": "https://www.tankai.jp/trip/kasamatsu/",
+     "text": {
+      "ja": "2026年12月18日は天橋立傘松公園が休業です。",
+      "en": "Kasamatsu Park is closed on Dec 18, 2026."
+     }
+    }
+   ],
+   "photos": [
+    "kasamatsu-1.jpg",
+    "kasamatsu-2.jpg",
+    "kasamatsu-3.jpg",
+    "kasamatsu-4.jpg",
+    "kasamatsu-5.jpg",
+    "kasamatsu-6.jpg",
+    "kasamatsu-7.jpg",
+    "kasamatsu-8.jpg",
+    "kasamatsu-9.jpg",
+    "kasamatsu-10.jpg"
+   ]
+  },
+  {
+   "no": 9,
+   "id": "kono",
+   "name": {
+    "ja": "元伊勢 籠神社",
+    "en": "Motoise Kono Shrine"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "伊勢神宮の神さまが、伊勢へ移る前にまつられていたと伝わる「元伊勢」。丹後でいちばん格式の高い神社です。",
+    "en": "Known as “Moto-Ise”: the gods of Ise Grand Shrine are said to have been worshipped here before moving to Ise."
+   },
+   "lat": 35.582586,
+   "lng": 135.196863,
+   "text": {
+    "ja": "元伊勢 籠神社（このじんじゃ）\n\n天橋立を渡りきった府中にある、丹後国の一宮（いちのみや）。今は伊勢神宮にまつられている天照大御神（あまてらすおおみかみ）と豊受大御神（とようけのおおみかみ）が、昔この地にまつられていたと伝わることから「元伊勢」と呼ばれます。\n\nまっすぐな参道には、伊勢神宮と同じ形の鳥居。その先の神門をくぐって、静かな境内でゆっくりお参りしてください。\n\n傘松公園から下りてきたら、閉門（17:00）の前にお参りを。神社のすぐ先が、帰りの観光船の一の宮桟橋です。\n\nおすすめ訪問時間：16:25〜16:40",
+    "en": "Motoise Kono Shrine\n\nThe most important shrine of old Tango Province, in Fuchu at the far end of Amanohashidate. Amaterasu and Toyouke, the deities now enshrined at Ise Grand Shrine, are said to have been worshipped here first, which is why it’s called “Moto-Ise” (the original Ise).\n\nThe straight approach has a torii in the same style as Ise’s. Go through the gate beyond it and take your time in the quiet grounds.\n\nVisit after coming down from Kasamatsu Park, before the gates close at 17:00. Ichinomiya pier, for the boat back, is just beyond the shrine.\n\nRecommended visit time: 16:25–16:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "元伊勢 籠神社",
+      "en": "Motoise Kono Shrine"
+     },
+     "lat": 35.582586,
+     "lng": 135.196863,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E4%BC%8A%E5%8B%A2%E7%B1%A0%E7%A5%9E%E7%A4%BE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "元伊勢 籠神社 公式サイト",
+      "en": "Kono Shrine official site (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.motoise.jp/",
+      "en": "https://www.motoise.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "開門 8:00〜17:00（季節や土日祝などで延びることがあります）",
+       "en": "Gates open 8:00–17:00 (sometimes longer on weekends, holidays and in some seasons)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kono-1.jpg",
+    "kono-2.jpg",
+    "kono-3.jpg",
+    "kono-4.jpg",
+    "kono-5.jpg",
+    "kono-6.jpg",
+    "kono-7.jpg",
+    "kono-8.jpg",
+    "kono-9.jpg",
+    "kono-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 10,
+   "id": "return",
+   "name": {
+    "ja": "天橋立を渡って戻る（観光船か自転車で）",
+    "en": "Back across Amanohashidate (boat or bike)"
+   },
+   "kind": {
+    "ja": "観光船・レンタサイクル",
+    "en": "Boat or rental bike"
+   },
+   "blurb": {
+    "ja": "一の宮桟橋から、16:45の観光船で天橋立駅側へ。自転車なら、夕方の松並木を走って戻ります。",
+    "en": "From Ichinomiya pier, the 16:45 boat back to the station side, or ride a bike back through the evening pines."
+   },
+   "lat": 35.580862,
+   "lng": 135.196014,
+   "text": {
+    "ja": "天橋立を渡って戻る\n\n籠神社のお参りを終えたら、すぐ先の一の宮桟橋へ。16:45発の観光船に乗ると、16:57に天橋立桟橋に着きます（フリーパスで乗れます。3〜10月は17:15発、4〜9月は17:45発もあります）。天橋立桟橋から天橋立駅までは歩いて5分ほどです。\n\n自転車で戻るなら、一の宮桟橋で借りて、行きとは違う夕方の松並木を走って天橋立桟橋で返します（2時間500円）。砂浜に寄り道するのも気持ちいいです。自転車は窓口が開いているうちに返せるよう、早めに出発しましょう。\n\nおすすめ移動時間：16:45（観光船）",
+    "en": "Back across Amanohashidate\n\nAfter Kono Shrine, walk to Ichinomiya pier just beyond it. The 16:45 boat reaches Amanohashidate pier at 16:57 (covered by the free pass; there are also boats at 17:15 in Mar–Oct and 17:45 in Apr–Sep). The station is about 5 minutes on foot from the pier.\n\nTo ride back, rent a bike at Ichinomiya pier and return it at Amanohashidate pier (¥500 for 2 hours), riding the pine forest in the evening light; stop at the beach on the way. Leave early enough to return the bike while the counter is open.\n\nRecommended travel time: 16:45 (boat)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "一の宮桟橋（観光船・レンタサイクル）",
+      "en": "Ichinomiya pier (boat & bikes)"
+     },
+     "lat": 35.580862,
+     "lng": 135.196014,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E8%A6%B3%E5%85%89%E8%88%B9%20%E4%B8%80%E3%81%AE%E5%AE%AE%E6%A1%9F%E6%A9%8B"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "天橋立観光船（時刻表・料金）",
+      "en": "Sightseeing boat: times & fares (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/trip/amaboat/",
+      "en": "https://www.tankai.jp/trip/amaboat/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "レンタサイクル（丹後海陸交通）",
+      "en": "Rental bikes (Tankai, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tankai.jp/trip/bicycle/",
+      "en": "https://www.tankai.jp/trip/bicycle/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "観光船 一の宮桟橋発 9:15〜16:45の毎時15分・45分（3〜10月は17:15、4〜9月は17:45も）。天橋立桟橋まで約12分",
+       "en": "Boats from Ichinomiya pier at :15 and :45 past the hour, 9:15–16:45 (also 17:15 Mar–Oct, 17:45 Apr–Sep); about 12 min to Amanohashidate pier"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "観光船 片道800円（フリーパスで乗れます）。レンタサイクル2時間500円",
+       "en": "Boat ¥800 one way (covered by the free pass). Rental bike ¥500 for 2 hours"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "return-1.jpg",
+    "return-2.jpg",
+    "return-3.jpg",
+    "return-4.jpg",
+    "return-5.jpg",
+    "return-6.jpg",
+    "return-7.jpg",
+    "return-8.jpg",
+    "return-9.jpg",
+    "return-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 11,
+   "id": "chienoyu",
+   "name": {
+    "ja": "天橋立温泉 智恵の湯",
+    "en": "Chie-no-Yu Hot Spring"
+   },
+   "kind": {
+    "ja": "日帰り温泉（時間があれば）",
+    "en": "Hot spring (if you have time)"
+   },
+   "blurb": {
+    "ja": "天橋立駅のすぐ横の日帰り温泉。特急の時間まで、歩き疲れた足を休めて。",
+    "en": "A day-use hot spring right next to the station. Soak your tired legs before the train."
+   },
+   "lat": 35.557418,
+   "lng": 135.183084,
+   "text": {
+    "ja": "天橋立温泉 智恵の湯（ちえのゆ）\n\n天橋立駅の横にある日帰り温泉です。露天風呂やつぼ湯もあり、1日歩いたあとにぴったり。\n\n16:57に観光船で戻ってくると、18:09の特急まで1時間ほどあります。温泉でひと休みしてから帰りましょう。もっとゆっくりしたいときは、19:05の特急はしだて10号（京都着21:20）もあります。\n\n入館は18:30まで。火・水・木曜日はお休みです。\n\nおすすめ訪問時間：17:05〜18:00",
+    "en": "Chie-no-Yu Hot Spring\n\nA day-use hot spring next to Amanohashidate Station, with an outdoor bath and tub baths: just right after a day of walking.\n\nBack on the 16:57 boat, you have about an hour before the 18:09 express. Relax here first. For more time, there’s also the 19:05 Hashidate No. 10 (Kyoto 21:20).\n\nLast entry 18:30. Closed Tuesdays, Wednesdays and Thursdays.\n\nRecommended visit time: 17:05–18:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天橋立温泉 智恵の湯",
+      "en": "Chie-no-Yu"
+     },
+     "lat": 35.557418,
+     "lng": 135.183084,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E6%B8%A9%E6%B3%89%20%E6%99%BA%E6%81%B5%E3%81%AE%E6%B9%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "天橋立温泉 智恵の湯",
+      "en": "Chie-no-Yu (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.viewland.jp/chienoyu",
+      "en": "https://www.viewland.jp/chienoyu"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "12:00〜20:00（入館は18:30まで）",
+       "en": "12:00–20:00 (last entry 18:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "火曜日・水曜日・木曜日",
+       "en": "Tuesdays, Wednesdays and Thursdays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人800円（中学生以上）・小学生400円",
+       "en": "¥800 (junior high and up), ¥400 (elementary)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "入れ墨・タトゥーのある方は入れません。キャリーケースの持ち込み・預かりもできません。",
+     "en": "No entry with tattoos. Suitcases can’t be brought in or left here."
+    },
+    "checked": "2026-11-20"
+   },
+   "caution": {
+    "ja": "火・水・木曜はお休み",
+    "en": "Closed Tue, Wed and Thu"
+   },
+   "photos": [
+    "chienoyu-1.jpg",
+    "chienoyu-2.jpg",
+    "chienoyu-3.jpg",
+    "chienoyu-4.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 12,
+   "id": "station2",
+   "name": {
+    "ja": "天橋立駅（京都へ帰る）",
+    "en": "Amanohashidate Station (back to Kyoto)"
+   },
+   "kind": {
+    "ja": "駅（ゴール）",
+    "en": "Station (finish)"
+   },
+   "blurb": {
+    "ja": "18:09の特急はしだて8号で京都へ。20:21に京都駅に着きます。",
+    "en": "The 18:09 Hashidate No. 8 back to Kyoto, arriving at 20:21."
+   },
+   "lat": 35.557585,
+   "lng": 135.182426,
+   "text": {
+    "ja": "天橋立駅（京都へ帰る）\n\n18:09発の特急はしだて8号に乗ると、20:21に京都駅に着きます。温泉でゆっくりした日は、19:05発のはしだて10号（京都着21:20）で。\n\nおすすめ出発時間：18:09",
+    "en": "Amanohashidate Station (back to Kyoto)\n\nThe 18:09 Hashidate No. 8 gets you to Kyoto at 20:21. If you lingered at the hot spring, take the 19:05 Hashidate No. 10 (Kyoto 21:20).\n\nRecommended departure time: 18:09"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天橋立駅",
+      "en": "Amanohashidate Station"
+     },
+     "lat": 35.557585,
+     "lng": 135.182426,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%A9%8B%E7%AB%8B%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻表）",
+      "en": "JR West timetables (Japanese)"
+     },
+     "url": {
+      "ja": "https://timetable.jr-odekake.net/",
+      "en": "https://timetable.jr-odekake.net/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "特急はしだて8号 天橋立18:09発→京都20:21着、はしだて10号 19:05発→21:20着（毎日運転）",
+       "en": "Hashidate No. 8: Amanohashidate 18:09 → Kyoto 20:21; No. 10: 19:05 → 21:20 (daily)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "片道 大人4,800円（指定席・通常期）",
+       "en": "One way ¥4,800 per adult (reserved seat, regular season)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "station2-1.jpg",
+    "station2-2.jpg",
+    "station2-3.jpg",
+    "station2-4.jpg",
+    "station2-5.jpg",
+    "station2-6.jpg",
+    "station2-7.jpg",
+    "station2-8.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}
