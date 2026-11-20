@@ -748,8 +748,8 @@ window.GUIDE = {
     {
      "f": "hokutotei-1.jpg",
      "cap": {
-      "ja": "豚骨ラーメン（黒い器）/ Tonkotsu ramen in the shop's black bowl (Nikon D7000)",
-      "en": ""
+      "ja": "豚骨ラーメン",
+      "en": "Tonkotsu ramen"
      },
      "w": 1280,
      "h": 848
@@ -757,8 +757,8 @@ window.GUIDE = {
     {
      "f": "hokutotei-2.jpg",
      "cap": {
-      "ja": "店構え（黄色い看板と赤いのれん）/ Shopfront with yellow sign and red noren",
-      "en": ""
+      "ja": "黄色い看板と赤いのれんの店構え",
+      "en": "The shopfront with its yellow sign and red noren"
      },
      "w": 1280,
      "h": 720
@@ -767,7 +767,7 @@ window.GUIDE = {
      "f": "hokutotei-3.jpg",
      "cap": {
       "ja": "焼き餃子",
-      "en": "Pan-fried gyoza (Nikon D7000)"
+      "en": "Pan-fried gyoza"
      },
      "w": 1280,
      "h": 848
@@ -776,7 +776,7 @@ window.GUIDE = {
      "f": "hokutotei-4.jpg",
      "cap": {
       "ja": "道路沿いの大きな看板と西鉄バス",
-      "en": "Big roadside sign with a Nishitetsu bus (Nikon D7000)"
+      "en": "The big roadside sign, with a Nishitetsu bus"
      },
      "w": 1280,
      "h": 848
@@ -785,7 +785,7 @@ window.GUIDE = {
      "f": "hokutotei-5.jpg",
      "cap": {
       "ja": "赤いのれんと提灯",
-      "en": "Red noren and lantern up close (Nikon D7000)"
+      "en": "Red noren and lantern"
      },
      "w": 1280,
      "h": 942
@@ -820,8 +820,8 @@ window.GUIDE = {
     {
      "f": "hokutotei-9.jpg",
      "cap": {
-      "ja": "海苔がのった一杯（2023年）/ Another bowl, topped with nori (2023 visit)",
-      "en": ""
+      "ja": "海苔がのった一杯",
+      "en": "A bowl topped with nori"
      },
      "w": 1280,
      "h": 720
@@ -884,8 +884,8 @@ window.GUIDE = {
     {
      "f": "hirao-1.jpg",
      "cap": {
-      "ja": "揚げたての天ぷら（海老ほか）/ Freshly fried tempura incl. prawn, on the metal tray (Tenjin ACROS)",
-      "en": ""
+      "ja": "揚げたての天ぷら",
+      "en": "Freshly fried tempura"
      },
      "w": 1280,
      "h": 720
@@ -902,8 +902,8 @@ window.GUIDE = {
     {
      "f": "hirao-3.jpg",
      "cap": {
-      "ja": "天ぷら定食（ご飯・味噌汁・天つゆ）/ Tempura set: rice, miso soup and dipping sauce",
-      "en": ""
+      "ja": "天ぷら定食（ご飯・味噌汁・天つゆ）",
+      "en": "Tempura set: rice, miso soup and dipping sauce"
      },
      "w": 1280,
      "h": 720
@@ -921,7 +921,7 @@ window.GUIDE = {
      "f": "hirao-5.jpg",
      "cap": {
       "ja": "二つのトレーに並ぶ天ぷら",
-      "en": "Tempura arriving on two trays (main shop near the airport) — newly added"
+      "en": "Tempura served on two trays"
      },
      "w": 1280,
      "h": 720
@@ -948,7 +948,7 @@ window.GUIDE = {
      "f": "hirao-8.jpg",
      "cap": {
       "ja": "早良店の道路沿いの看板",
-      "en": "Sawara branch roadside sign and parking — newly added"
+      "en": "The roadside sign of the Sawara branch"
      },
      "w": 1280,
      "h": 720
@@ -1000,7 +1000,7 @@ window.GUIDE = {
      "f": "issou-3.jpg",
      "cap": {
       "ja": "細麺を持ち上げて",
-      "en": "Thin noodles lifted from the bowl — newly added"
+      "en": "Lifting the thin noodles"
      },
      "w": 1280,
      "h": 720
@@ -1069,8 +1069,8 @@ window.GUIDE = {
     {
      "f": "akanoren-3.jpg",
      "cap": {
-      "ja": "皿盛りの替え玉（ねぎのせ）/ A plate of extra noodles topped with green onion — newly added",
-      "en": ""
+      "ja": "皿で出てくる替え玉",
+      "en": "Extra noodles (kaedama) served on a plate"
      },
      "w": 1280,
      "h": 720
@@ -1146,8 +1146,8 @@ window.GUIDE = {
     {
      "f": "hakata-eki-food-1.jpg",
      "cap": {
-      "ja": "量り売りのチョコのミニクロワッサン（ミニョン）/ Chocolate mini croissants sold by weight at Mignon (staff's gloved hand only)",
-      "en": ""
+      "ja": "量り売りのチョコのミニクロワッサン（ミニヨン）",
+      "en": "Chocolate mini croissants sold by weight at Mignon"
      },
      "w": 1280,
      "h": 720
@@ -1164,8 +1164,8 @@ window.GUIDE = {
     {
      "f": "hakata-eki-food-3.jpg",
      "cap": {
-      "ja": "名代ラーメン亭の朝ラーメン（煮卵入り）/ Morning ramen with seasoned egg at Nadai Ramen-tei. Trim the top few % to drop the edge of a \"780円\" table card.",
-      "en": ""
+      "ja": "名代ラーメン亭の朝ラーメン",
+      "en": "Morning ramen at Nadai Ramen-tei"
      },
      "w": 1280,
      "h": 677
@@ -1174,7 +1174,7 @@ window.GUIDE = {
      "f": "hakata-eki-food-4.jpg",
      "cap": {
       "ja": "名代ラーメン亭の看板とのれん",
-      "en": "Nadai Ramen-tei sign and noren — newly added"
+      "en": "Nadai Ramen-tei sign and noren"
      },
      "w": 1280,
      "h": 540
@@ -1542,8 +1542,8 @@ window.GUIDE = {
     {
      "f": "karatsu-jinja-6.jpg",
      "cap": {
-      "ja": "唐津焼の店「一番館」/ Ichibankan, a Karatsu-ware pottery shop",
-      "en": ""
+      "ja": "唐津焼の店「一番館」",
+      "en": "Ichibankan, a Karatsu-ware pottery shop"
      },
      "w": 1280,
      "h": 720
@@ -1672,14 +1672,23 @@ window.GUIDE = {
     {
      "f": "takeya-1.jpg",
      "cap": {
-      "ja": "木造3階建ての竹屋の外観（青空）/ Takeya's old three-storey wooden building under a blue sky",
-      "en": ""
+      "ja": "木造3階建ての竹屋",
+      "en": "Takeya's three-storey wooden building"
      },
      "w": 1280,
      "h": 720
     },
     {
      "f": "takeya-2.jpg",
+     "cap": {
+      "ja": "うな丼と香の物",
+      "en": "Eel rice bowl with pickles"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "takeya-3.jpg",
      "cap": {
       "ja": "竹屋のうな丼",
       "en": "Takeya's eel rice bowl"
@@ -1688,7 +1697,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "takeya-3.jpg",
+     "f": "takeya-4.jpg",
      "cap": {
       "ja": "焼き場の煙が上がる店先",
       "en": "Grill smoke drifting from the shopfront"
@@ -1697,7 +1706,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "takeya-4.jpg",
+     "f": "takeya-5.jpg",
      "cap": {
       "ja": "香ばしく焼けたうなぎのどんぶり",
       "en": "A deeply grilled eel bowl"
@@ -1706,7 +1715,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "takeya-5.jpg",
+     "f": "takeya-6.jpg",
      "cap": {
       "ja": "古い座敷のテーブルに並ぶうな丼の膳",
       "en": "An eel-bowl tray on a table in the old dining room"
@@ -1715,7 +1724,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "takeya-6.jpg",
+     "f": "takeya-7.jpg",
      "cap": {
       "ja": "格子戸と板戸の店内",
       "en": "The interior, with lattice and wooden sliding doors"
@@ -1724,19 +1733,10 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "takeya-7.jpg",
+     "f": "takeya-8.jpg",
      "cap": {
       "ja": "朱塗りのふた付きどんぶりと香の物",
       "en": "The red lacquered lidded bowl with pickles, before opening"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "takeya-8.jpg",
-     "cap": {
-      "ja": "急須とお茶、箸袋",
-      "en": "A teapot, green tea and chopsticks on the table"
      },
      "w": 1280,
      "h": 720
@@ -1941,14 +1941,50 @@ window.GUIDE = {
     {
      "f": "kawataro-1.jpg",
      "cap": {
-      "ja": "いかの天ぷら、つけだれ付き",
-      "en": "Squid tempura with dipping sauce"
+      "ja": "いかの活き造り",
+      "en": "Live squid sashimi (ika no ikizukuri)"
      },
      "w": 1280,
      "h": 720
     },
     {
      "f": "kawataro-2.jpg",
+     "cap": {
+      "ja": "透き通ったイカ",
+      "en": "The translucent squid up close"
+     },
+     "w": 1280,
+     "h": 960
+    },
+    {
+     "f": "kawataro-3.jpg",
+     "cap": {
+      "ja": "刺身の盛り合わせ",
+      "en": "Assorted sashimi"
+     },
+     "w": 1280,
+     "h": 960
+    },
+    {
+     "f": "kawataro-4.jpg",
+     "cap": {
+      "ja": "ごはんと刺身の定食",
+      "en": "A set meal with rice and sashimi"
+     },
+     "w": 1280,
+     "h": 960
+    },
+    {
+     "f": "kawataro-5.jpg",
+     "cap": {
+      "ja": "食べ終わったあとは天ぷらに",
+      "en": "The rest of the squid comes back as tempura"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "kawataro-6.jpg",
      "cap": {
       "ja": "店の窓から見える呼子港と呼子大橋",
       "en": "Yobuko harbour and bridge from the restaurant window"
@@ -1957,28 +1993,28 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "kawataro-3.jpg",
+     "f": "kawataro-7.jpg",
      "cap": {
       "ja": "河太郎 呼子店の外観",
-      "en": "Kawataro exterior (people small)"
+      "en": "Kawataro Yobuko from outside"
      },
      "w": 1280,
      "h": 720
     },
     {
-     "f": "kawataro-4.jpg",
+     "f": "kawataro-8.jpg",
      "cap": {
-      "ja": "呼子大橋が見える座敷（奥の人はかがんでいて顔は見えない）",
-      "en": "Tatami room with a view of Yobuko Bridge (person in back bent over, face hidden)"
+      "ja": "呼子大橋が見える座敷",
+      "en": "A tatami room looking out to Yobuko Bridge"
      },
      "w": 1280,
      "h": 720
     },
     {
-     "f": "kawataro-5.jpg",
+     "f": "kawataro-9.jpg",
      "cap": {
-      "ja": "いかや魚が泳ぐ大きないけす（左上に人の口元が少し入るので、上を切る）",
-      "en": "The big tank of live squid and fish (crop the top-left edge)"
+      "ja": "イカや魚が泳ぐ大きないけす",
+      "en": "The big tank of live squid and fish"
      },
      "w": 1280,
      "h": 720
@@ -2032,8 +2068,8 @@ window.GUIDE = {
     {
      "f": "kabeshima-3.jpg",
      "cap": {
-      "ja": "広角で撮った空と呼子大橋（新しく追加）",
-      "en": "Wide-angle view of the sky and bridge"
+      "ja": "空と呼子大橋",
+      "en": "The sky and Yobuko Bridge"
      },
      "w": 1280,
      "h": 720
@@ -2307,7 +2343,7 @@ window.GUIDE = {
     {
      "f": "itoshima-coast-4.jpg",
      "cap": {
-      "ja": "雲の下の砂浜と沖の島々（新しく追加）",
+      "ja": "雲の下の砂浜と沖の島々",
       "en": "The beach and offshore islands under clouds"
      },
      "w": 1280,
@@ -2352,7 +2388,7 @@ window.GUIDE = {
     {
      "f": "itoshima-coast-9.jpg",
      "cap": {
-      "ja": "海と山にはさまれた国道202号（新しく追加）",
+      "ja": "海と山にはさまれた国道202号",
       "en": "Route 202 between the sea and the hills"
      },
      "w": 1280,
@@ -2361,7 +2397,7 @@ window.GUIDE = {
     {
      "f": "itoshima-coast-10.jpg",
      "cap": {
-      "ja": "海沿いの糸島市観光協会の休憩所（自販機あり）（新しく追加）",
+      "ja": "海沿いの糸島市観光協会の休憩所",
       "en": "Itoshima Tourism Association rest stop by the sea"
      },
      "w": 1280,
@@ -2798,8 +2834,8 @@ window.GUIDE = {
     {
      "f": "mojiko-5.jpg",
      "cap": {
-      "ja": "斜めから見た門司港駅（人物は後ろ姿）",
-      "en": "The station from an angle (people from behind)"
+      "ja": "斜めから見た門司港駅",
+      "en": "Mojiko Station from an angle"
      },
      "w": 1280,
      "h": 720
@@ -2807,8 +2843,8 @@ window.GUIDE = {
     {
      "f": "mojiko-6.jpg",
      "cap": {
-      "ja": "シャンデリアのある駅のコンコースと改札（人物は後ろ姿）",
-      "en": "Station concourse with chandelier and gates (person from behind)"
+      "ja": "シャンデリアのある駅のコンコースと改札",
+      "en": "The station concourse with its chandelier and ticket gates"
      },
      "w": 1280,
      "h": 720
@@ -2826,7 +2862,7 @@ window.GUIDE = {
      "f": "mojiko-8.jpg",
      "cap": {
       "ja": "夕方の光が差す門司港の船だまり",
-      "en": "Late-afternoon sun over the Mojiko harbour basin (people small)"
+      "en": "Late-afternoon sun over the Mojiko harbour basin"
      },
      "w": 1280,
      "h": 720
@@ -2843,8 +2879,8 @@ window.GUIDE = {
     {
      "f": "mojiko-10.jpg",
      "cap": {
-      "ja": "夕方のホームと駅名標「もじこう」（右端に人の肩が入るので切る）",
-      "en": "Platform at dusk with the \"Mojiko\" sign (crop the shoulder at the right edge)"
+      "ja": "夕方のホームと駅名標「もじこう」",
+      "en": "The platform at dusk with the “Mojiko” station sign"
      },
      "w": 1280,
      "h": 800
@@ -2899,7 +2935,7 @@ window.GUIDE = {
     {
      "f": "mekari-3.jpg",
      "cap": {
-      "ja": "「和布刈神社」の社号標と石灯籠、海峡（新しく追加）",
+      "ja": "「和布刈神社」の社号標と石灯籠、海峡",
       "en": "The Mekari Shrine stone marker and lantern by the strait"
      },
      "w": 1280,
@@ -2908,8 +2944,8 @@ window.GUIDE = {
     {
      "f": "mekari-4.jpg",
      "cap": {
-      "ja": "トロッコ列車「潮風号」の車内（乗客は後ろ姿）",
-      "en": "Inside the Shiokaze trolley (passengers from behind)"
+      "ja": "トロッコ列車「潮風号」の車内",
+      "en": "Inside the Shiokaze trolley train"
      },
      "w": 1280,
      "h": 720
@@ -2917,7 +2953,7 @@ window.GUIDE = {
     {
      "f": "mekari-5.jpg",
      "cap": {
-      "ja": "潮風号の車窓から見た門司港の海辺（新しく追加）",
+      "ja": "潮風号の車窓から見た門司港の海辺",
       "en": "The Mojiko waterfront from the trolley"
      },
      "w": 1280,
@@ -2935,7 +2971,7 @@ window.GUIDE = {
     {
      "f": "mekari-7.jpg",
      "cap": {
-      "ja": "電気機関車 EF30 とカフェの入口（新しく追加）",
+      "ja": "電気機関車 EF30 とカフェの入口",
       "en": "EF30 locomotive beside the café entrance"
      },
      "w": 1280,
@@ -2953,7 +2989,7 @@ window.GUIDE = {
     {
      "f": "mekari-9.jpg",
      "cap": {
-      "ja": "潮風号の青い機関車 DB102（新しく追加）",
+      "ja": "潮風号の青い機関車 DB102",
       "en": "The blue DB102 locomotive of the Shiokaze trolley"
      },
      "w": 1280,
@@ -2962,7 +2998,7 @@ window.GUIDE = {
     {
      "f": "mekari-10.jpg",
      "cap": {
-      "ja": "和布刈神社の社務所（新しく追加）",
+      "ja": "和布刈神社の社務所",
       "en": "Mekari Shrine's office building"
      },
      "w": 1280,
@@ -3027,7 +3063,7 @@ window.GUIDE = {
     {
      "f": "karato-4.jpg",
      "cap": {
-      "ja": "市場で買ったふく刺し（新しく追加）",
+      "ja": "市場で買ったふく刺し",
       "en": "Fugu sashimi bought at the market"
      },
      "w": 1280,
@@ -3036,7 +3072,7 @@ window.GUIDE = {
     {
      "f": "karato-5.jpg",
      "cap": {
-      "ja": "「活きいき唐戸市場」の正面（新しく追加）",
+      "ja": "「活きいき唐戸市場」の正面",
       "en": "The front of Karato Market"
      },
      "w": 1280,
@@ -3054,8 +3090,8 @@ window.GUIDE = {
     {
      "f": "karato-7.jpg",
      "cap": {
-      "ja": "関門汽船の船尾から下関を振り返る（2人は後ろ姿）（新しく追加）",
-      "en": "Looking back at Shimonoseki from the ferry stern (two people from behind)"
+      "ja": "関門汽船の船尾から下関を振り返る",
+      "en": "Looking back at Shimonoseki from the ferry"
      },
      "w": 1280,
      "h": 720
@@ -3063,7 +3099,7 @@ window.GUIDE = {
     {
      "f": "karato-8.jpg",
      "cap": {
-      "ja": "唐戸の桟橋と関門汽船の船（新しく追加）",
+      "ja": "唐戸の桟橋と関門汽船の船",
       "en": "Karato pier and a Kanmon ferry boat"
      },
      "w": 1280,
@@ -3081,7 +3117,7 @@ window.GUIDE = {
     {
      "f": "karato-10.jpg",
      "cap": {
-      "ja": "赤い灯台と唐戸の海辺（新しく追加）",
+      "ja": "赤い灯台と唐戸の海辺",
       "en": "Red lighthouse and the Karato waterfront"
      },
      "w": 1280,
