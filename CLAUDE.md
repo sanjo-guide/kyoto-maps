@@ -13,7 +13,7 @@
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、金沢: …/kanazawa/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、金沢: …/kanazawa/、福岡: …/fukuoka/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
 - 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
@@ -39,7 +39,7 @@
 | 種類 | 使う場面 | 元にしたもの | 例 |
 |---|---|---|---|
 | ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `arashiyama/` |
-| スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/` |
+| スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/`, `fukuoka/` |
 
 ```
 /
@@ -53,6 +53,7 @@
 │                           #   データは data/routes/arashiyama.json、写真は images/arashiyama/
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
+├── fukuoka/                # スポット紹介型（福岡・唐津と日帰り）。kanazawa/ の複製。データは js/data.js、写真は img/
 ├── assets/basemap.js       # 全マップ共通の地図スタイル
 ├── vendor/                 # Leaflet 1.9.4、MapLibre
 ├── data/routes/            # ルート型のデータ
@@ -65,6 +66,7 @@
 - 酒楽（しゅらく）の紹介文は2026-11-20にオーナーが書いたもの。消さないこと
 - 箕面の写真: 写真アプリから GPS（Nikon D7000 は撮影時刻）で各スポットの候補（約2,000枚）を集め、全部見て1か所10枚以内に絞ったもの。元は iCloud にあり、`osxphotos export … --download-missing` で書き出して長辺1600px・位置情報なしに縮小した
 - minoh/ は eizan-line/ の index.html・css・app.js をそのまま写して、データのパス・保存キー（kyoto-maps-minoh-…）・タイトルだけ変えている。ルート型のテンプレートを直したら `python3 scripts/sync_minoh.py` で minoh/ に写し直す（新しい文言キーは minoh/js/i18n.js に手で足す）
+- 福岡（2026-11-20 作成）: 「食べる」はオーナーが実際に行った店だけ（写真アプリの食事写真から特定。回数も写真の記録から数えた）。日帰りは行っていない場所も含む（太宰府・柳川・糸島の名所・南蔵院はネットの CC 写真で、クレジットはページ下に自動表示）。写真は写真アプリから書き出して長辺1280px・位置情報なしに縮小したもの。行き方の目安の出典と確認日は js/data.js の `sources`。言語は `kyoto-maps-lang` に保存（トップページと共通）。「福岡大仏」は市内の東長寺（市内のおすすめ）として載せ、日帰りには篠栗の南蔵院（涅槃像）を載せた
 - 嵐山（2026-11-20 作成）: 京都河原町→桂→阪急嵐山→京都バスで愛宕念仏寺→坂を下って化野念仏寺までの1〜7と、帰りの18（先斗町）は全員共通。8〜17（祇王寺〜モンキーパーク）はゲストが「選んで回る」で選ぶ（オーナーの希望）。写真は写真アプリから GPS と撮影時刻（Nikon D7000）で集めて全部見て選び、長辺1600px・位置情報なしにしたもの。写真は横向きだけ（オーナーの希望）。手持ちが少ないモンキーパークだけ Wikimedia Commons の写真を足し、data の photos の要素を `{"file", "credit"}` にして写真の上に撮影者とライセンスを表示している。化野念仏寺の「西院の河原」の中は撮影禁止なので、その中の写真は使っていない。公式サイトで確認できなかった料金・時間（祇王寺・大河内山荘・嵯峨野湯・モンキーパーク）は `info.verified: false` で「要確認」と出る。愛宕念仏寺は水・土が休み（拝観料1,000円）。arashiyama/ は `python3 scripts/sync_arashiyama.py` でテンプレート（eizan-line/）から写し直せる
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
