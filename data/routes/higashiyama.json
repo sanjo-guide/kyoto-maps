@@ -1,6 +1,6 @@
 {
  "id": "higashiyama",
- "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。JR稲荷駅から伏見稲荷・東福寺・泉涌寺・清水寺・産寧坂・八坂の塔・高台寺・八坂神社・南禅寺・永観堂・金戒光明寺へ、南から北へ歩く。見どころが多いので「選んで回る」で開く（plan.defaultMode）。写真は Toshi の写真ライブラリから選んだもの（東山の約3,300枚の横写真をスポットごとに全部見て、1か所10枚以内・Nikon D7000 を含む。長辺1600px・位置情報なし）。夜の写真の多くは春・秋のライトアップの時期のもの。info.checked は事実情報を確認した日（各寺社の公式サイト。JRの運賃は乗換案内）。info.verified=false は公式サイトで確認できなかった情報（要確認）。このファイルは scripts/build_higashiyama_data.py で作る。",
+ "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。2026-11-21 に三十三間堂と「哲学の道と銀閣寺」を追加（Toshi はまだ行っていない場所。写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ。もとの12か所の時間には入っていない寄り道）。JR稲荷駅から伏見稲荷・東福寺・泉涌寺・清水寺・産寧坂・八坂の塔・高台寺・八坂神社・南禅寺・永観堂・金戒光明寺へ、南から北へ歩く。見どころが多いので「選んで回る」で開く（plan.defaultMode）。写真は Toshi の写真ライブラリから選んだもの（東山の約3,300枚の横写真をスポットごとに全部見て、1か所10枚以内・Nikon D7000 を含む。長辺1600px・位置情報なし）。夜の写真の多くは春・秋のライトアップの時期のもの。info.checked は事実情報を確認した日（各寺社の公式サイト。JRの運賃は乗換案内）。info.verified=false は公式サイトで確認できなかった情報（要確認）。このファイルは scripts/build_higashiyama_data.py で作る。",
  "sections": [
   {
    "first": 1,
@@ -9,27 +9,27 @@
   },
   {
    "first": 3,
-   "last": 4,
+   "last": 5,
    "day": 1
   },
   {
-   "first": 5,
-   "last": 7,
+   "first": 6,
+   "last": 8,
    "day": 2
   },
   {
-   "first": 8,
-   "last": 9,
+   "first": 9,
+   "last": 10,
    "day": 3
   },
   {
-   "first": 10,
-   "last": 12,
+   "first": 11,
+   "last": 14,
    "day": 4
   }
  ],
  "plan": {
-  "_note": "「選んで回る」の設定。駅（1）はいつも入る。2〜12 は行きたい場所を選ぶ。",
+  "_note": "「選んで回る」の設定。駅（1）はいつも入る。2〜14 は行きたい場所を選ぶ。三十三間堂と銀閣寺はもとの時間に入っていない寄り道（hints に回り方）。",
   "defaultMode": "pick",
   "picks": [
    2,
@@ -42,14 +42,80 @@
    9,
    10,
    11,
-   12
+   12,
+   13,
+   14
   ],
   "auto": {
    "1": {
     "always": true
    }
   },
-  "hints": []
+  "hints": [
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      3,
+      4
+     ]
+    },
+    "text": {
+     "ja": "東福寺・泉涌寺に寄らない日は、伏見稲荷から京阪電車で七条駅へ（伏見稲荷駅から約5分・180円）。駅から歩いて約7分です。",
+     "en": "Skipping Tofuku-ji and Sennyu-ji? Take the Keihan line from Fushimi-Inari to Shichijo (about 5 min, ¥180), then walk about 7 minutes."
+    }
+   },
+   {
+    "spot": 11,
+    "rule": {
+     "any": [
+      12
+     ],
+     "andAny": [
+      11
+     ]
+    },
+    "text": {
+     "ja": "銀閣寺は17:00まで（12月〜2月は16:30）。南禅寺を15:25ごろに出られるように、手前の場所をいくつか外してください。南禅寺から銀閣寺までは、哲学の道を歩いて約40分です。",
+     "en": "Ginkaku-ji closes at 17:00 (16:30 from December to February). Drop a few earlier places so that you can leave Nanzen-ji at about 15:25; it’s about 40 minutes’ walk to Ginkaku-ji along the Philosopher’s Path."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ],
+     "andAny": [
+      13,
+      14
+     ]
+    },
+    "text": {
+     "ja": "秋のライトアップ（永観堂・金戒光明寺は17:30から）へ行く日は、銀閣寺を先に。16:40ごろに出て哲学の道を戻れば、永観堂に17:10ごろ着きます。秋以外の時期は、永観堂は16:00で受付が終わるので、哲学の道を歩く前に寄ってください。",
+     "en": "On an autumn light-up evening (Eikan-do and Konkai Komyo-ji open from 17:30), see Ginkaku-ji first: leave at about 16:40 and walk back down the path to reach Eikan-do at about 17:10. Outside autumn, Eikan-do stops admitting at 16:00, so visit it before you walk the path."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ],
+     "none": [
+      13,
+      14
+     ]
+    },
+    "text": {
+     "ja": "銀閣寺がゴールの日は、参道を下りた「銀閣寺道」のバス停から、市バスで四条河原町・京都駅へ（230円）。",
+     "en": "Finishing at Ginkaku-ji? Walk down the approach to the “Ginkakuji-michi” stop and take a city bus to Shijo-Kawaramachi or Kyoto Station (¥230)."
+    }
+   }
+  ]
  },
  "photoBase": "../images/higashiyama/",
  "spots": [
@@ -183,7 +249,6 @@
     "inari-3.jpg",
     "inari-4.jpg",
     "inari-5.jpg",
-    "inari-6.jpg",
     "inari-7.jpg",
     "inari-8.jpg",
     "inari-9.jpg",
@@ -231,18 +296,36 @@
       "en": "Tofuku-ji (official, Japanese)"
      },
      "url": {
-      "ja": "https://tofukuji.jp/",
-      "en": "https://tofukuji.jp/"
+      "ja": "https://tofukuji.jp/guide/",
+      "en": "https://tofukuji.jp/guide/"
      }
     }
    ],
    "info": {
     "rows": [
      {
+      "kind": "hours",
+      "text": {
+       "ja": "4月1日〜12月6日 受付9:00〜16:00（16:30閉門。11月14日〜12月6日の通天橋は8:30から）、12月7日〜3月31日 受付9:00〜15:30（16:00閉門）",
+       "en": "1 Apr – 6 Dec: entry 9:00–16:00 (gates close 16:30; Tsutenkyo from 8:30 on 14 Nov – 6 Dec). 7 Dec – 31 Mar: entry 9:00–15:30 (close 16:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "fee",
       "text": {
-       "ja": "秋（2026年11月14日〜12月6日）は通天橋 大人1,000円・本坊庭園 大人600円",
-       "en": "Autumn (14 Nov – 6 Dec 2026): Tsutenkyo ¥1,000, Hojo garden ¥600 per adult"
+       "ja": "秋（2026年11月14日〜12月6日）は通天橋 大人1,000円・本坊庭園 大人600円（共通券なし）",
+       "en": "Autumn (14 Nov – 6 Dec 2026): Tsutenkyo ¥1,000, Hojo garden ¥600 per adult (no combined ticket)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "秋以外は通天橋・開山堂 大人600円、本坊庭園 大人600円、共通券 大人1,000円",
+       "en": "Outside autumn: Tsutenkyo & Kaisando ¥600, Hojo garden ¥600, combined ticket ¥1,000 per adult"
       },
       "until": null,
       "from": null
@@ -250,20 +333,15 @@
     ],
     "cash": false,
     "tip": null,
-    "checked": "2026-11-20",
-    "verified": false
+    "checked": "2026-11-20"
    },
    "photos": [
     "tofukuji-1.jpg",
-    "tofukuji-2.jpg",
     "tofukuji-3.jpg",
     "tofukuji-4.jpg",
-    "tofukuji-5.jpg",
     "tofukuji-6.jpg",
     "tofukuji-7.jpg",
-    "tofukuji-8.jpg",
-    "tofukuji-9.jpg",
-    "tofukuji-10.jpg"
+    "tofukuji-8.jpg"
    ],
    "notices": []
   },
@@ -285,8 +363,8 @@
    "lat": 34.9781,
    "lng": 135.7801,
    "text": {
-    "ja": "泉涌寺（せんにゅうじ）と雲龍院（うんりゅういん）\n\n東福寺から歩いて約15分。歴代の天皇のお墓がある、皇室の菩提寺です。木々に囲まれた静かな境内で、混み合う東山の中では、ゆっくりできる場所です。\n\n奥にある別院の雲龍院では、「悟りの窓」と呼ばれる丸い窓や、障子の四角い窓から庭を眺められます。雲龍院は別に拝観料が必要です（料金・お休みは公式サイトで確認してください）。\n\nここから清水寺までは、歩いて約30分。疲れたら、泉涌寺道のバス停から市バスで五条坂へ。\n\nおすすめ訪問時間：11:30〜12:30",
-    "en": "Sennyu-ji and Unryu-in\n\nAbout 15 minutes on foot from Tofuku-ji. This is the family temple of the imperial household, where generations of emperors are buried. Its quiet, wooded grounds are a place to slow down in busy Higashiyama.\n\nAt Unryu-in, a sub-temple further in, you can look at the garden through the round “Window of Enlightenment” and square paper windows. Unryu-in has its own admission (check its website for fees and closing days).\n\nFrom here it’s about 30 minutes on foot to Kiyomizu-dera. If you’re tired, take a city bus from the Sennyuji-michi stop to Gojozaka.\n\nRecommended visit time: 11:30–12:30"
+    "ja": "泉涌寺（せんにゅうじ）と雲龍院（うんりゅういん）\n\n東福寺から歩いて約15分。歴代の天皇のお墓がある、皇室の菩提寺です。木々に囲まれた静かな境内で、混み合う東山の中では、ゆっくりできる場所です。\n\n奥にある別院の雲龍院では、「悟りの窓」と呼ばれる丸い窓や、障子の四角い窓から庭を眺められます。雲龍院は泉涌寺とは別に拝観料が必要で、水曜はお休みです（11月は水曜も開いています）。\n\n参道の途中から少し入ったところには、朱色の橋の先に、泉涌寺の山内寺院の今熊野観音寺（いまくまのかんのんじ）もあります。\n\nここから清水寺までは、歩いて約30分。疲れたら、泉涌寺道のバス停から市バスで五条坂へ。\n\nおすすめ訪問時間：11:30〜12:30",
+    "en": "Sennyu-ji and Unryu-in\n\nAbout 15 minutes on foot from Tofuku-ji. This is the family temple of the imperial household, where generations of emperors are buried. Its quiet, wooded grounds are a place to slow down in busy Higashiyama.\n\nAt Unryu-in, a sub-temple further in, you can look at the garden through the round “Window of Enlightenment” and square paper windows. Unryu-in has its own admission and is closed on Wednesdays (except in November).\n\nJust off the approach, across a vermilion bridge, is Imakumano Kannon-ji, another of Sennyu-ji’s temples.\n\nFrom here it’s about 30 minutes on foot to Kiyomizu-dera. If you’re tired, take a city bus from the Sennyuji-michi stop to Gojozaka.\n\nRecommended visit time: 11:30–12:30"
    },
    "gmaps": [
     {
@@ -351,6 +429,24 @@
       },
       "until": null,
       "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "雲龍院 9:00〜17:00（受付16:30まで）。水曜休み（11月を除く）。ほかに行事で休む日あり",
+       "en": "Unryu-in: 9:00–17:00 (last entry 16:30). Closed Wednesdays (except November) and on some event days"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "雲龍院 400円（泉涌寺とは別）",
+       "en": "Unryu-in: ¥400 (separate from Sennyu-ji)"
+      },
+      "until": null,
+      "from": null
      }
     ],
     "cash": false,
@@ -366,13 +462,114 @@
     "sennyuji-6.jpg",
     "sennyuji-7.jpg",
     "sennyuji-8.jpg",
-    "sennyuji-9.jpg",
-    "sennyuji-10.jpg"
+    "sennyuji-9.jpg"
    ],
    "notices": []
   },
   {
    "no": 5,
+   "id": "sanjusangendo",
+   "name": {
+    "ja": "三十三間堂",
+    "en": "Sanjusangen-do"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "長さ約120mのお堂に、1,001体の千手観音がずらりと並びます。泉涌寺と清水寺の間の寄り道に。",
+    "en": "A hall about 120 m long, holding 1,001 statues of the thousand-armed Kannon. A detour between Sennyu-ji and Kiyomizu-dera."
+   },
+   "lat": 34.98817,
+   "lng": 135.77178,
+   "text": {
+    "ja": "三十三間堂（さんじゅうさんげんどう）\n\n正式な名前は蓮華王院（れんげおういん）。南北に約120mある本堂（国宝）の中に、千手観音の立像が1,001体、段になって並んでいます。柱と柱の間が33あるので「三十三間堂」。観音像の前には風神・雷神と二十八部衆の像も立ち、すべて国宝です（公式サイトより）。\n\n堂内は撮影できません。靴を脱いで上がるので、脱ぎやすい靴が楽です。11月16日〜3月31日は受付が15:30までと早く閉まります。\n\n泉涌寺から歩いて約25分。ここから清水寺までは上り坂を歩いて約30分で、すぐ前の「博物館三十三間堂前」から東山通を北へ行く市バスに乗れば「五条坂」まで行けます。\n\nこのマップの時間には入っていない寄り道です。寄る日は、清水寺に着くのが1時間ほど遅くなるので、ほかの場所を1〜2か所減らしてください。\n\nおすすめ訪問時間：12:55〜13:35",
+    "en": "Sanjusangen-do\n\nOfficially Rengeo-in. Inside the main hall, a National Treasure about 120 m long from north to south, 1,001 standing statues of the thousand-armed Kannon are lined up in tiers. The name means “hall of 33 bays”, the spaces between its pillars. Statues of the Wind and Thunder Gods and 28 guardian deities stand in front, all National Treasures (from the official website).\n\nNo photos inside. You take your shoes off, so wear ones that slip on and off. From 16 November to 31 March, last entry is as early as 15:30.\n\nAbout 25 minutes on foot from Sennyu-ji. Kiyomizu-dera is about 30 minutes’ walk uphill from here, or take a northbound city bus on Higashiyama-dori from the “Hakubutsukan-Sanjusangendo-mae” stop right outside to “Gojozaka”.\n\nThis is a detour not counted in this map’s times. If you stop here you’ll reach Kiyomizu-dera about an hour later, so drop one or two other places.\n\nRecommended visit time: 12:55–13:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三十三間堂",
+      "en": "Sanjusangen-do"
+     },
+     "lat": 34.98817,
+     "lng": 135.77178,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%8D%81%E4%B8%89%E9%96%93%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三十三間堂 公式サイト（拝観）",
+      "en": "Sanjusangen-do (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.sanjusangendo.jp/visit/",
+      "en": "https://www.sanjusangendo.jp/visit/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "4月1日〜11月15日 8:30〜17:00、11月16日〜3月31日 9:00〜16:00（受付は30分前まで）。年中無休",
+       "en": "1 Apr – 15 Nov 8:30–17:00; 16 Nov – 31 Mar 9:00–16:00 (last entry 30 min before). Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "一般600円、中高生400円、小学生300円",
+       "en": "¥600 adults, ¥400 junior/senior high, ¥300 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市バス「博物館三十三間堂前」すぐ（京都駅から約10分）。京阪 七条駅から歩いて約7分",
+       "en": "City bus stop “Hakubutsukan-Sanjusangendo-mae” (about 10 min from Kyoto Station). 7 min on foot from Keihan Shichijo Station"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "checked": "2026-11-21",
+    "tip": {
+     "ja": "2026年11月21日に三十三間堂の公式サイトで確認しました。歩く時間は地図で測った目安です。",
+     "en": "Checked on the official Sanjusangen-do website on 21 November 2026. Walking times are estimates measured on a map."
+    }
+   },
+   "photos": [
+    {
+     "file": "sanjusangendo-1.jpg",
+     "credit": {
+      "author": "TKdows 2026",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AJP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E4%B8%83%E6%A2%9D%E9%80%9A_Shichijo_Dori_Street_tourism_%E4%B8%89%E5%8D%81%E4%B8%89%E9%96%93%E5%A0%82_Sanj%C5%ABsangen-d%C5%8D_Temples_June_2026_N13P_07.jpg"
+     }
+    },
+    {
+     "file": "sanjusangendo-2.jpg",
+     "credit": {
+      "author": "TKdows 2026",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AJP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E4%B8%83%E6%A2%9D%E9%80%9A_Shichijo_Dori_Street_tourism_%E4%B8%89%E5%8D%81%E4%B8%89%E9%96%93%E5%A0%82_Sanj%C5%ABsangen-d%C5%8D_Temples_June_2026_N13P_40.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 6,
    "id": "kiyomizu",
    "name": {
     "ja": "清水寺",
@@ -436,7 +633,6 @@
     "checked": "2026-11-20"
    },
    "photos": [
-    "kiyomizu-1.jpg",
     "kiyomizu-2.jpg",
     "kiyomizu-3.jpg",
     "kiyomizu-4.jpg",
@@ -445,12 +641,13 @@
     "kiyomizu-7.jpg",
     "kiyomizu-8.jpg",
     "kiyomizu-9.jpg",
-    "kiyomizu-10.jpg"
+    "kiyomizu-10.jpg",
+    "kiyomizu-11.jpg"
    ],
    "notices": []
   },
   {
-   "no": 6,
+   "no": 7,
    "id": "sanneizaka",
    "name": {
     "ja": "産寧坂（三年坂）と二年坂",
@@ -490,13 +687,12 @@
    },
    "photos": [
     "sanneizaka-1.jpg",
-    "sanneizaka-3.jpg",
-    "sanneizaka-5.jpg"
+    "sanneizaka-3.jpg"
    ],
    "notices": []
   },
   {
-   "no": 7,
+   "no": 8,
    "id": "yasakatower",
    "name": {
     "ja": "八坂の塔（法観寺）",
@@ -537,14 +733,13 @@
    "photos": [
     "yasakatower-1.jpg",
     "yasakatower-2.jpg",
-    "yasakatower-3.jpg",
     "yasakatower-4.jpg",
     "yasakatower-5.jpg"
    ],
    "notices": []
   },
   {
-   "no": 8,
+   "no": 9,
    "id": "kodaiji",
    "name": {
     "ja": "高台寺と圓徳院",
@@ -624,7 +819,6 @@
    },
    "photos": [
     "kodaiji-1.jpg",
-    "kodaiji-2.jpg",
     "kodaiji-3.jpg",
     "kodaiji-4.jpg",
     "kodaiji-5.jpg",
@@ -637,7 +831,7 @@
    "notices": []
   },
   {
-   "no": 9,
+   "no": 10,
    "id": "yasaka",
    "name": {
     "ja": "八坂神社と円山公園",
@@ -654,8 +848,8 @@
    "lat": 35.00366,
    "lng": 135.77856,
    "text": {
-    "ja": "八坂神社（やさかじんじゃ）と円山公園（まるやまこうえん）\n\n祇園の東の端にある、京都の人に「八坂さん」と親しまれる神社です。四条通の突き当たりに立つ朱色の西楼門が目印。祇園祭はこの神社のお祭りです。\n\n境内を抜けた先の円山公園には、大きな「祇園しだれ桜」があり、春の夜のライトアップは本当にきれいです。近くの知恩院も、春には三門がライトアップされます。\n\n境内は自由に参拝できます。\n\nおすすめ訪問時間：16:00〜16:30",
-    "en": "Yasaka Shrine and Maruyama Park\n\nAt the eastern end of Gion, this shrine is affectionately called “Yasaka-san” by locals. Its vermilion west gate at the end of Shijo-dori is the landmark, and the Gion Matsuri is this shrine’s festival.\n\nThrough the grounds, Maruyama Park has a huge weeping cherry tree; lit up on spring nights, it’s truly beautiful. Nearby Chion-in also lights up its great gate in spring.\n\nThe shrine grounds are open to visit freely.\n\nRecommended visit time: 16:00–16:30"
+    "ja": "八坂神社（やさかじんじゃ）と円山公園（まるやまこうえん）\n\n祇園の東の端にある、京都の人に「八坂さん」と親しまれる神社です。四条通の突き当たりに立つ朱色の西楼門が目印。祇園祭はこの神社のお祭りです。\n\n境内を抜けた先の円山公園には、大きな「祇園しだれ桜」があり、春の夜のライトアップは本当にきれいです。円山公園の北には知恩院（ちおんいん）があり、南禅寺へ歩く途中で国宝の大きな三門の前を通ります。\n\n境内は自由に参拝できます。\n\nおすすめ訪問時間：16:00〜16:30",
+    "en": "Yasaka Shrine and Maruyama Park\n\nAt the eastern end of Gion, this shrine is affectionately called “Yasaka-san” by locals. Its vermilion west gate at the end of Shijo-dori is the landmark, and the Gion Matsuri is this shrine’s festival.\n\nThrough the grounds, Maruyama Park has a huge weeping cherry tree; lit up on spring nights, it’s truly beautiful. Just north of the park is Chion-in: on the walk to Nanzen-ji you pass its huge Sanmon gate, a National Treasure.\n\nThe shrine grounds are open to visit freely.\n\nRecommended visit time: 16:00–16:30"
    },
    "gmaps": [
     {
@@ -703,14 +897,12 @@
     "yasaka-4.jpg",
     "yasaka-5.jpg",
     "yasaka-6.jpg",
-    "yasaka-7.jpg",
-    "yasaka-8.jpg",
-    "yasaka-9.jpg"
+    "yasaka-7.jpg"
    ],
    "notices": []
   },
   {
-   "no": 10,
+   "no": 11,
    "id": "nanzenji",
    "name": {
     "ja": "南禅寺",
@@ -801,7 +993,143 @@
    "notices": []
   },
   {
-   "no": 11,
+   "no": 12,
+   "id": "ginkakuji",
+   "name": {
+    "ja": "哲学の道と銀閣寺",
+    "en": "Philosopher’s Path and Ginkaku-ji"
+   },
+   "kind": {
+    "ja": "散歩道・お寺",
+    "en": "Walk & temple"
+   },
+   "blurb": {
+    "ja": "疏水沿いの散歩道を北へ歩いて、銀閣寺へ。白い砂の庭と、こけら葺きの観音殿（銀閣）を見ます。17:00に閉まるので、夜の永観堂より先に。",
+    "en": "Walk north along the canal path to Ginkaku-ji, with its white sand garden and shingle-roofed Silver Pavilion. It closes at 17:00, so come before the evening at Eikan-do."
+   },
+   "lat": 35.0269,
+   "lng": 135.79837,
+   "text": {
+    "ja": "哲学の道（てつがくのみち）と銀閣寺（ぎんかくじ）\n\n哲学の道は、永観堂の少し北の若王子橋（にゃくおうじばし）から銀閣寺橋まで、琵琶湖疏水に沿って続く約1.5kmの散歩道です。春は桜、秋は紅葉の並木になります。南禅寺から銀閣寺までは、この道を通って歩いて約40分。\n\n銀閣寺の正式な名前は慈照寺（じしょうじ）。室町幕府の8代将軍・足利義政の山荘がもとになったお寺です。入ってすぐ、白砂を段に盛った銀沙灘（ぎんしゃだん）と円すい形の向月台（こうげつだい）、その奥に観音殿（銀閣・国宝）。順路は山の上の展望所まで続き、境内と京都の町を見下ろせます。中を回るのに約30分です（公式サイトより）。\n\n閉まるのは17:00（12月〜2月は16:30）。このマップの時間どおりに八坂神社まで回ると間に合わないので、銀閣寺へ行く日は手前の場所をいくつか外して、南禅寺を15:25ごろに出てください。\n\n秋の夜に永観堂や金戒光明寺のライトアップへ行く日も、銀閣寺が先です。見終わったら哲学の道を戻って（約25分）、17:30からの永観堂へ。ここで終わる日は、「銀閣寺道」のバス停から市バスで四条河原町や京都駅へ帰れます。\n\nおすすめ訪問時間：16:05〜16:40（17:00に閉まります。12月〜2月は16:30）",
+    "en": "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn. From Nanzen-ji to Ginkaku-ji along the path is about 40 minutes on foot.\n\nGinkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\nIt closes at 17:00 (16:30 from December to February). If you follow this map’s times as far as Yasaka Shrine you won’t make it, so on a Ginkaku-ji day drop a few earlier places and leave Nanzen-ji at about 15:25.\n\nGinkaku-ji also comes first on autumn evenings when you’re going to the light-ups at Eikan-do or Konkai Komyo-ji. Afterwards walk back down the path (about 25 minutes) for Eikan-do from 17:30. If you finish here, city buses from the “Ginkakuji-michi” stop go to Shijo-Kawaramachi and Kyoto Station.\n\nRecommended visit time: 16:05–16:40 (closes at 17:00; 16:30 from December to February)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "銀閣寺",
+      "en": "Ginkaku-ji"
+     },
+     "lat": 35.0269,
+     "lng": 135.79837,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E9%96%A3%E5%AF%BA%20%E6%85%88%E7%85%A7%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "哲学の道（若王子橋）",
+      "en": "Philosopher’s Path (south end)"
+     },
+     "lat": 35.01539,
+     "lng": 135.7958,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%93%B2%E5%AD%A6%E3%81%AE%E9%81%93%20%E8%8B%A5%E7%8E%8B%E5%AD%90%E6%A9%8B"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "銀閣寺 公式サイト（アクセス・拝観）",
+      "en": "Ginkaku-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.shokoku-ji.jp/ginkakuji/access/",
+      "en": "https://www.shokoku-ji.jp/ginkakuji/access/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "3月1日〜11月30日 8:30〜17:00、12月1日〜2月末 9:00〜16:30。年中無休",
+       "en": "1 Mar – 30 Nov 8:30–17:00; 1 Dec – end of Feb 9:00–16:30. Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人（高校生以上）1,000円、小・中学生500円（2026年4月から）",
+       "en": "¥1,000 adults (high school and up), ¥500 elementary/junior high (from April 2026)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の特別拝観（東求堂など、2026年11月1日〜12月5日）：10:00・11:00・12:00・13:30・14:30・15:30から約30分、各回約20名。当日、本堂前の申込表に名前を書きます。2,000円（拝観料は別）",
+       "en": "Autumn special viewing (Togudo and more, 1 Nov – 5 Dec 2026): about 30 min from 10:00, 11:00, 12:00, 13:30, 14:30 and 15:30, about 20 people each. Sign up on the day at the main hall. ¥2,000 on top of admission; guided in Japanese"
+      },
+      "until": "2026-12-05",
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市バス「銀閣寺道」（5・7・32・203・204系統など）",
+       "en": "City bus stop “Ginkakuji-michi” (routes 5, 7, 32, 203, 204 and others)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "checked": "2026-11-21",
+    "tip": {
+     "ja": "2026年11月21日に銀閣寺（相国寺）の公式サイトで確認しました。哲学の道の長さと歩く時間は地図で測った目安です。",
+     "en": "Checked on the official Ginkaku-ji (Shokoku-ji) website on 21 November 2026. The length of the path and walking times are estimates measured on a map."
+    }
+   },
+   "photos": [
+    {
+     "file": "ginkakuji-1.jpg",
+     "credit": {
+      "author": "Jmhullot",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AGinkakuji_Fall1.jpg"
+     }
+    },
+    {
+     "file": "ginkakuji-2.jpg",
+     "credit": {
+      "author": "Jmhullot",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AGinkakuji_Sand_Garden.jpg"
+     }
+    },
+    {
+     "file": "ginkakuji-3.jpg",
+     "credit": {
+      "author": "Stephan Ridgway",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3APhilosophers_Walk%2C_Kyoto_%2849073313687%29.jpg"
+     }
+    },
+    {
+     "file": "ginkakuji-4.jpg",
+     "credit": {
+      "author": "Yiannis Theologos Michellis",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AJapan_Spring_Down_the_Philosopher%27s_Path_%2814164491752%29.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 13,
    "id": "eikando",
    "name": {
     "ja": "永観堂（禅林寺）",
@@ -818,8 +1146,8 @@
    "lat": 35.01445,
    "lng": 135.79452,
    "text": {
-    "ja": "永観堂（えいかんどう）\n\n南禅寺から歩いて約5分。古くから「もみじの永観堂」と呼ばれる紅葉の名所です。秋の寺宝展の期間は夜のライトアップがあり、放生池（ほうじょういけ）に映る紅葉と多宝塔の景色は息をのむ美しさです。\n\n昼の寺宝展と夜のライトアップは入れ替え制で、券も別です。秋の夜はとても混むので、時間に余裕をもって行きましょう。\n\nおすすめ訪問時間：17:30〜18:30（秋のライトアップ）",
-    "en": "Eikan-do (Zenrin-ji)\n\nAbout 5 minutes on foot from Nanzen-ji. Long known as “Eikan-do of the maples”. During the autumn treasure exhibition there are evening light-ups, and the maples and pagoda reflected in the pond are breathtaking.\n\nThe daytime exhibition and the evening light-up are separate, with separate tickets. Autumn evenings are very busy, so allow plenty of time.\n\nRecommended visit time: 17:30–18:30 (autumn light-up)"
+    "ja": "永観堂（えいかんどう）\n\n南禅寺から歩いて約5分。古くから「もみじの永観堂」と呼ばれる紅葉の名所です。秋の寺宝展の期間は夜のライトアップがあり、放生池（ほうじょういけ）の水面に、紅葉と山の上の多宝塔が映ります。\n\n昼の寺宝展と夜のライトアップは入れ替え制で、券も別です。秋の夜はとても混むので、時間に余裕をもって行きましょう。\n\nおすすめ訪問時間：17:30〜18:30（秋のライトアップ）",
+    "en": "Eikan-do (Zenrin-ji)\n\nAbout 5 minutes on foot from Nanzen-ji. Long known as “Eikan-do of the maples”. During the autumn treasure exhibition there are evening light-ups, with the maples and the hilltop pagoda reflected in the pond.\n\nThe daytime exhibition and the evening light-up are separate, with separate tickets. Autumn evenings are very busy, so allow plenty of time.\n\nRecommended visit time: 17:30–18:30 (autumn light-up)"
    },
    "gmaps": [
     {
@@ -850,10 +1178,10 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "秋の寺宝展 9:00〜16:00（17:00閉門）、ライトアップ 17:30〜20:30（21:00閉門）。入れ替え制",
-       "en": "Autumn exhibition 9:00–16:00 (gates close 17:00); light-up 17:30–20:30 (close 21:00). Separate sessions"
+       "ja": "秋の寺宝展（2026年11月11日〜12月6日）受付9:00〜16:00（17:00閉門）。ライトアップ（11月20日〜12月6日）受付17:30〜20:30（21:00閉門）。昼と夜は入れ替え制",
+       "en": "Autumn exhibition (11 Nov – 6 Dec 2026): entry 9:00–16:00 (gates close 17:00). Light-up (20 Nov – 6 Dec): entry 17:30–20:30 (close 21:00). Day and night are separate sessions"
       },
-      "until": null,
+      "until": "2026-12-06",
       "from": null
      },
      {
@@ -862,20 +1190,49 @@
        "ja": "秋の寺宝展 一般1,500円、ライトアップ 中高生以上1,000円",
        "en": "Autumn exhibition ¥1,500; light-up ¥1,000 (junior high and up)"
       },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の寺宝展以外 受付9:00〜16:00（17:00閉門）、年中無休",
+       "en": "Outside the autumn exhibition: entry 9:00–16:00 (gates close 17:00), open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "秋の寺宝展以外 一般1,000円",
+       "en": "Outside the autumn exhibition: ¥1,000 (adults)"
+      },
       "until": null,
       "from": null
      }
     ],
     "cash": false,
-    "tip": {
-     "ja": "ほかの時期の拝観料・時間は公式サイトで確認してください。",
-     "en": "Check the website for fees and hours at other times of year."
-    },
+    "tip": null,
     "checked": "2026-11-20"
    },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "夜の拝観は秋だけ",
+      "en": "Evening visits: autumn only"
+     },
+     "text": {
+      "ja": "このルートでは17時すぎに着きますが、夜に開くのは秋のライトアップの期間だけです。ほかの時期は16:00で受付が終わるので、行きたい日は南禅寺より前に回ってください。",
+      "en": "On this route you arrive after 17:00, but the temple only opens in the evening during the autumn light-up. At other times reception closes at 16:00, so if you want to go in, visit it before Nanzen-ji."
+     }
+    }
+   ],
    "photos": [
     "eikando-1.jpg",
-    "eikando-2.jpg",
     "eikando-3.jpg",
     "eikando-4.jpg",
     "eikando-5.jpg",
@@ -884,11 +1241,10 @@
     "eikando-8.jpg",
     "eikando-9.jpg",
     "eikando-10.jpg"
-   ],
-   "notices": []
+   ]
   },
   {
-   "no": 12,
+   "no": 14,
    "id": "kurodani",
    "name": {
     "ja": "金戒光明寺（くろ谷さん）",
@@ -905,8 +1261,8 @@
    "lat": 35.01975,
    "lng": 135.78838,
    "text": {
-    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n永観堂から歩いて約15分。浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上にそびえる山門は迫力があります。\n\n境内は自由に歩けます。秋などには庭園の特別公開やライトアップがあり、竹林や池のまわりの紅葉が照らされます（日程・料金は公式サイトで確認してください）。\n\n帰りは岡崎道のバス停から市バス、または地下鉄の東山駅まで歩いて約20分です。\n\nおすすめ訪問時間：18:45〜19:20",
-    "en": "Konkai Komyo-ji\n\nAbout 15 minutes on foot from Eikan-do. A large Pure Land temple, it served as the headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The great gate at the top of the stone steps is impressive.\n\nThe grounds are free to walk around. In autumn and other seasons there are special garden openings and light-ups, with the bamboo grove and maples around the pond lit up (check the website for dates and fees).\n\nTo go back, take a city bus from Okazaki-michi, or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: 18:45–19:20"
+    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n永観堂から歩いて約15分。浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上にそびえる山門は迫力があります。\n\n境内は自由に歩けます。秋などには庭園の特別公開やライトアップがあり、竹林や池のまわりの紅葉が照らされます（2026年秋の夜間特別拝観は11月13日〜12月6日。予約はいりません）。\n\n帰りは岡崎道のバス停から市バス、または地下鉄の東山駅まで歩いて約20分です。\n\nおすすめ訪問時間：18:45〜19:20",
+    "en": "Konkai Komyo-ji\n\nAbout 15 minutes on foot from Eikan-do. A large Pure Land temple, it served as the headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The great gate at the top of the stone steps is impressive.\n\nThe grounds are free to walk around. In autumn and other seasons there are special garden openings and light-ups, with the bamboo grove and maples around the pond lit up (the 2026 autumn evening opening runs 13 Nov – 6 Dec, no booking needed).\n\nTo go back, take a city bus from Okazaki-michi, or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: 18:45–19:20"
    },
    "gmaps": [
     {
@@ -930,14 +1286,68 @@
       "ja": "https://www.kurodani.jp/",
       "en": "https://www.kurodani.jp/"
      }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "金戒光明寺 特別夜間拝観",
+      "en": "Konkai Komyo-ji evening opening"
+     },
+     "url": {
+      "ja": "https://www.kurodani.jp/lightup/",
+      "en": "https://www.kurodani.jp/lightup/"
+     }
     }
    ],
    "info": {
-    "rows": [],
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夜間特別拝観（2026年11月13日〜12月6日）17:30〜20:30（最終入場20:00）",
+       "en": "Evening opening (13 Nov – 6 Dec 2026): 17:30–20:30 (last entry 20:00)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "夜間特別拝観 御影堂・大方丈・紫雲の庭 大人1,000円、栄摂院 大人800円、セット券 大人1,600円",
+       "en": "Evening opening: Main hall, Hojo & garden ¥1,000; Eisho-in ¥800; set ticket ¥1,600 (adults)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ふだんの受付 9:00〜16:00（境内は自由に歩けます）",
+       "en": "Usual reception hours 9:00–16:00 (grounds free to walk)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
     "cash": false,
     "tip": null,
     "checked": "2026-11-20"
    },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "夜の拝観は秋だけ",
+      "en": "Evening visits: autumn only"
+     },
+     "text": {
+      "ja": "このルートでは17時すぎに着きますが、夜に開くのは秋のライトアップの期間だけです。ほかの時期は16:00で受付が終わるので、行きたい日は南禅寺より前に回ってください。",
+      "en": "On this route you arrive after 17:00, but the temple only opens in the evening during the autumn light-up. At other times reception closes at 16:00, so if you want to go in, visit it before Nanzen-ji."
+     }
+    }
+   ],
    "photos": [
     "kurodani-1.jpg",
     "kurodani-2.jpg",
@@ -947,8 +1357,7 @@
     "kurodani-6.jpg",
     "kurodani-7.jpg",
     "kurodani-8.jpg"
-   ],
-   "notices": []
+   ]
   }
  ]
 }

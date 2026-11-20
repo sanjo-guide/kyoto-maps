@@ -30,9 +30,9 @@ s = s.replace(s.split('(function () {')[0], """/* 京都 東山（伏見稲荷�
 """, 1)
 assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.HIGASHIYAMA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-higashiyama-")
-s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 12;", s)
+s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 14;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/higashiyama.json?v=2')")
+s = s.replace(m.group(0), "fetch('../data/routes/higashiyama.json?v=5')")
 
 # 最初から「選んで回る」
 rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
@@ -111,7 +111,9 @@ a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100}', h)
+# このマップだけ更新したときは EXTRA の数字を上げる（2026-11-20：i18n.js とデータを直したので i18n・app を +1）
+EXTRA = {'css/style.css': 0, 'js/i18n.js': 2, 'js/app.js': 2}
+h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 /* 東山: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */

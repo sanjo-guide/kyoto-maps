@@ -847,7 +847,7 @@
     route();
   }
 
-  fetch('../data/routes/higashiyama.json?v=2')
+  fetch('../data/routes/higashiyama.json?v=5')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {
