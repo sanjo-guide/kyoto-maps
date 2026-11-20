@@ -76,7 +76,7 @@ window.EIZAN_I18N = {
         '混雑に疲れた人に。静かなお寺、森、川辺をめぐります',
         'スタートは出町柳駅（京阪・叡山電車）',
         'どの季節に行っても楽しめます',
-        '約1時間の山道ハイキングあり。歩きやすい靴で'
+        '約1時間半の山道ハイキングあり。歩きやすい靴で'
       ],
       dayHead: '1日の流れ（目安）',
       from: '',
@@ -84,7 +84,7 @@ window.EIZAN_I18N = {
         { time: '9:00', area: '出町柳', title: '京都の日常にふれる', text: 'のんびりした川辺、下鴨神社、地元の人が通う商店街。', photo: [2, 0] },
         { time: '11:00', area: '一乗寺', title: '禅の庭とラーメン街', text: '静かな圓光寺と詩仙堂のあとは、人気店が並ぶラーメン激戦区へ。', photo: [10, 0] },
         { time: '14:00', area: '貴船', title: '山あいの神社', text: '灯籠が並ぶ石段、水占い、川の上でひと休み。', photo: [16, 0] },
-        { time: '16:00', area: '貴船 → 鞍馬', title: '森のハイキングと温泉', text: '鞍馬寺まで森の中を約1時間歩き、そのあと温泉へ。歩きやすい靴で！', note: 'ハイキング入口（西門）は16:15閉門', badge: 'タトゥーOKの温泉', photo: [22, 0] },
+        { time: '15:15', area: '貴船 → 鞍馬', title: '森のハイキングと温泉', text: '鞍馬寺まで森の中を約1時間歩き、そのあと温泉へ。歩きやすい靴で！', note: 'ハイキング入口（西門）は16:15閉門', badge: 'タトゥーOKの温泉', photo: [22, 0] },
         { time: '20:00', area: '京都の街中へ', title: '夜の京都', text: '灯りのともる先斗町と、地元の人に愛される隠れ酒場。', photo: [26, 0] }
       ],
       timeSuffix: '〜',
@@ -182,7 +182,7 @@ window.EIZAN_I18N = {
         'Tired of the crowds? Quiet temples, forest and river',
         'Starts at Demachiyanagi Station (Keihan / Eizan lines)',
         'Lovely in every season',
-        'Includes an hour’s forest hike — wear comfy shoes'
+        'Includes a 1.5-hour forest hike — wear comfy shoes'
       ],
       dayHead: 'One day, roughly like this',
       from: 'From',
@@ -190,7 +190,7 @@ window.EIZAN_I18N = {
         { time: '9:00', area: 'Demachiyanagi', title: 'Kyoto’s everyday side', text: 'A laid-back riverside, Shimogamo Shrine and a true locals’ arcade.', photo: [2, 0] },
         { time: '11:00', area: 'Ichijoji', title: 'Zen gardens & ramen street', text: 'Calm Enkoji & Shisendo, then a street packed with top ramen shops.', photo: [10, 0] },
         { time: '14:00', area: 'Kibune', title: 'A shrine in the mountains', text: 'Lantern-lined shrine steps, a water fortune and riverside tea.', photo: [16, 0] },
-        { time: '16:00', area: 'Kibune → Kurama', title: 'Forest hike & hot spring', text: 'An hour’s forest hike to Kurama Temple, then an onsen. Comfy shoes!', note: 'Hike entrance gate closes 16:15', badge: 'Tattoo-friendly onsen', photo: [22, 0] },
+        { time: '15:15', area: 'Kibune → Kurama', title: 'Forest hike & hot spring', text: 'An hour’s forest hike to Kurama Temple, then an onsen. Comfy shoes!', note: 'Hike entrance gate closes 16:15', badge: 'Tattoo-friendly onsen', photo: [22, 0] },
         { time: '20:00', area: 'Back downtown', title: 'Kyoto after dark', text: 'Lantern-lit Pontocho and a hidden izakaya that locals love.', photo: [26, 0] }
       ],
       timeSuffix: '',

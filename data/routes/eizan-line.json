@@ -53,8 +53,7 @@
         "p01-62532800.jpg",
         "p01-879a3a57.jpg",
         "p01-dfde0bab.jpg",
-        "03-1.jpg",
-        "03-4.jpg"
+        "03-1.jpg"
       ],
       "text": {
         "ja": "出町柳の周りには、鴨川デルタの公園、出町桝形商店街、下鴨神社など、地元の方が訪れる静かで美しい場所がたくさんあります。ぜひ駅の周辺を散歩してみてください！",
@@ -215,13 +214,11 @@
         "p04-6be5c4a1.jpg",
         "06-3.jpg",
         "06-4.jpg",
-        "06-5.jpg",
-        "06-7.jpg",
-        "06-8.jpg"
+        "06-5.jpg"
       ],
       "text": {
-        "ja": "下鴨神社\n\n世界遺産に登録されている京都最古級の神社のひとつ。縁結びや厄除けで有名で、糺の森を抜けて参道を歩くだけで神聖な空気を感じられます。境内は広くて静かで、凛とした雰囲気に背筋が伸びるような気分に。華やかな観光地とは違い、ここでは「京都の時間」がゆっくりと流れていて、心が落ち着きます。\n\nおすすめ訪問時間：9:30〜9:50",
-        "en": "Shimogamo Shrine is one of Kyoto’s oldest and most sacred shrines, recognized as a UNESCO World Heritage site. Famous for love and protection blessings, it’s a place where the atmosphere feels pure and calming. Walking through Tadasu no Mori to reach the shrine already feels spiritual, and once you step inside, the stillness and dignity of the grounds leave a lasting impression. It’s not about flashiness here—it’s about slowing down and truly feeling the timeless side of Kyoto.\n\nRecommended visit time: 9:30–9:50"
+        "ja": "下鴨神社\n\n世界遺産に登録されている京都最古級の神社のひとつ。縁結びや厄除けで有名で、糺の森を抜けて参道を歩くだけで神聖な空気を感じられます。境内は広くて静かで、凛とした雰囲気に背筋が伸びるような気分に。華やかな観光地とは違い、ここでは「京都の時間」がゆっくりと流れていて、心が落ち着きます。\n\n下鴨神社の茶店「さるや」では、かき氷や名物の「申餅（さるもち）」でひと休みできます。\n\nおすすめ訪問時間：9:30〜9:45",
+        "en": "Shimogamo Shrine is one of Kyoto’s oldest and most sacred shrines, recognized as a UNESCO World Heritage site. Famous for love and protection blessings, it’s a place where the atmosphere feels pure and calming. Walking through Tadasu no Mori to reach the shrine already feels spiritual, and once you step inside, the stillness and dignity of the grounds leave a lasting impression. It’s not about flashiness here—it’s about slowing down and truly feeling the timeless side of Kyoto.\n\nAt Saruya, the shrine’s teahouse, you can take a break with shaved ice or the local “saru-mochi” rice cake.\n\nRecommended visit time: 9:30–9:45"
       },
       "gmaps": [
         {
@@ -294,8 +291,8 @@
         "p05-bf4f50ad.jpg"
       ],
       "text": {
-        "ja": "地元の人が利用する、比較的小さな商店街です。京都の商店街の雰囲気が味わえるのでとってもオススメです！\n\nおすすめのお店\n鳥扇(とりせん) (10:00~18:00)\n鶏肉のお店です。若鶏の唐揚げがとっても美味しいです！ぜひ食べ歩きをしてみてください！\n\nマツヤ食料品店 (9:15~19:00)\n京都の名物、阿闍梨餅(あじゃりもち)が１つから購入できます。タイミングが良ければ、出来立ての阿闍梨餅をいただくことができます。ぜひお試しください！\n\n岡田商会 (9:00~18:00)\nお肉屋さんですが、揚げ物を販売しています。その中でもコロッケが有名です。コロッケだけでなく、ハムカツ、串カツなど様々な種類があるので、揚げたてをお店の前で食べてみてください！\n\n出町座 (9:30~19:00)\n小さな映画館で、1階部分がカフェスペースになっています。映画を見る時間がなくても、カフェスペースが利用できるので、ぜひ覗いてみてください！\n\nおすすめ訪問時間：9:55〜10:15",
-        "en": "This is a relatively small shopping street frequented by locals. It’s a great place to experience the atmosphere of Kyoto’s traditional shopping arcades, so I highly recommend it!\n\nRecommended Shops\nTori-sen (10:00~18:00)\nA specialty chicken shop. Their fried young chicken is incredibly delicious! Perfect for enjoying while strolling around.\n\nMatsuya Grocery Store (9:15~19:00)\nHere, you can buy Kyoto’s famous Ajari-mochi individually. If you’re lucky, you might even get a freshly made one—definitely worth a try!\n\nOkada Shokai (9:00~18:00)\nA butcher shop that also sells fried foods. Their croquettes are especially famous, but they also have ham cutlets, skewered cutlets, and many other varieties. Try them freshly fried right in front of the shop!\n\nDemachi-za (9:30~19:00)\nA small cinema with a café space on the first floor. Even if you don’t have time to watch a movie, you can still enjoy the café—stop by and take a look!\n\nRecommended visit time: 9:55–10:15"
+        "ja": "地元の人が利用する、比較的小さな商店街です。京都の商店街の雰囲気が味わえるのでとってもオススメです！\n\nおすすめのお店\n鳥扇(とりせん) (10:00~18:00)\n鶏肉のお店です。若鶏の唐揚げがとっても美味しいです！ぜひ食べ歩きをしてみてください！\n\nマツヤ食料品店 (9:15~19:00)\n京都の名物、阿闍梨餅(あじゃりもち)が１つから購入できます。タイミングが良ければ、出来立ての阿闍梨餅をいただくことができます。ぜひお試しください！\n\n岡田商会 (9:00~18:00)\nお肉屋さんですが、揚げ物を販売しています。その中でもコロッケが有名です。コロッケだけでなく、ハムカツ、串カツなど様々な種類があるので、揚げたてをお店の前で食べてみてください！\n\n出町座 (9:30~19:00)\n小さな映画館で、1階部分がカフェスペースになっています。映画を見る時間がなくても、カフェスペースが利用できるので、ぜひ覗いてみてください！\n\nおすすめ訪問時間：10:00〜10:15",
+        "en": "This is a relatively small shopping street frequented by locals. It’s a great place to experience the atmosphere of Kyoto’s traditional shopping arcades, so I highly recommend it!\n\nRecommended Shops\nTori-sen (10:00~18:00)\nA specialty chicken shop. Their fried young chicken is incredibly delicious! Perfect for enjoying while strolling around.\n\nMatsuya Grocery Store (9:15~19:00)\nHere, you can buy Kyoto’s famous Ajari-mochi individually. If you’re lucky, you might even get a freshly made one—definitely worth a try!\n\nOkada Shokai (9:00~18:00)\nA butcher shop that also sells fried foods. Their croquettes are especially famous, but they also have ham cutlets, skewered cutlets, and many other varieties. Try them freshly fried right in front of the shop!\n\nDemachi-za (9:30~19:00)\nA small cinema with a café space on the first floor. Even if you don’t have time to watch a movie, you can still enjoy the café—stop by and take a look!\n\nRecommended visit time: 10:00–10:15"
       },
       "gmaps": [
         {
@@ -396,8 +393,7 @@
         "p06-f56aed1e.jpg",
         "08-3.jpg",
         "08-5.jpg",
-        "p06-b9ec82fe.jpg",
-        "08-8.jpg"
+        "p06-b9ec82fe.jpg"
       ],
       "text": {
         "ja": "出町柳駅 (叡山電鉄)\n\nここからはいよいよ叡山電鉄に乗り換えです！🚃\n叡山電鉄には 「鞍馬行き」と「八瀬比叡山口行き」 の2路線があります。\n\n一乗寺に行くなら → どちらに乗ってもOK！ 出町柳から一乗寺まではわずか約5分。電車は 10〜15分間隔 で運行しているので、ほとんど待つことなく乗れます。\n\n一乗寺をスキップして、貴船や鞍馬へ直行するなら → 「鞍馬行き」に乗車しましょう！そのまま終点の鞍馬まで直通で、所要時間は約30分。\n\n電車は2両編成のかわいいローカル線で、窓からはだんだんと住宅地から緑豊かな風景へと移り変わる様子が見られます。街から山へ冒険に出るワクワク感が一気に高まりますよ！\n\nおすすめ訪問時間：10:20 出発",
@@ -609,7 +605,6 @@
         "11-3.jpg",
         "11-2.jpg",
         "p09-f86f768c.jpg",
-        "11-5.jpg",
         "p09-3b9089c4.jpg",
         "11-4.jpg",
         "11-7.jpg",
@@ -722,7 +717,25 @@
           }
         }
       ],
-      "info": null,
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "11:30〜15:00、18:00〜24:00（不定休。休みはお店のサイトでお知らせ）",
+              "en": "11:30–15:00, 18:00–24:00 (closed on irregular days, announced on the shop’s website)"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": {
+          "ja": "予約はできません。お水はセルフサービスです。",
+          "en": "No reservations. Water is self-service."
+        },
+        "checked": "2026-11-20"
+      },
       "notices": []
     },
     {
@@ -743,13 +756,13 @@
       "lng": 135.7874374,
       "photos": [
         "p11-1634553c.jpg",
+        "13-8.jpg",
         "13-1.jpg",
         "p11-9f42f7ea.jpg",
         "p11-22d554b1.jpg",
         "p11-ec1bdb41.jpg",
         "13-2.jpg",
         "13-3.jpg",
-        "13-4.jpg",
         "p11-1c2fc467.jpg"
       ],
       "text": {
@@ -862,12 +875,10 @@
         "p13-11213d40.jpg",
         "15-7.jpg",
         "p13-57a22d39.jpg",
-        "p13-34e95ff0.jpg",
         "p13-f6164634.jpg",
         "p13-6ce5bb22.jpg",
         "p13-85381f0c.jpg",
-        "15-6.jpg",
-        "15-3.jpg"
+        "15-6.jpg"
       ],
       "text": {
         "ja": "貴船口駅からバス乗車\n\n叡山電鉄「貴船口駅」から貴船神社へは、ここでバスに乗るのがおすすめです。バスはおおよそ20分に1本の間隔で運行していて、乗車時間は約5分。歩くと30分近くかかるので、バスを使えばかなりの時間と体力をセーブできます。特に午後から鞍馬寺のハイキングを予定している人は、ここでバスに乗るのが安心ですよ。\n\nおすすめ訪問時間：13:15〜13:20頃（貴船口駅到着 → バス乗車）",
@@ -964,26 +975,44 @@
           }
         }
       ],
-      "info": null,
+      "info": {
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "11:00〜18:00（不定休）",
+              "en": "11:00–18:00 (closed on irregular days)"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": {
+          "ja": "お店の前に京都バス33系統の「三本杉」バス停があります。",
+          "en": "The Kyoto Bus route 33 stop “Sambonsugi” is right in front of the café."
+        },
+        "checked": "2026-11-20"
+      },
       "notices": [
         {
           "season": true,
           "from": null,
           "to": null,
-          "url": null,
+          "url": "https://kokon-fujiya.jp/",
           "head": {
-            "ja": "季節営業の可能性",
-            "en": "Possibly seasonal"
+            "ja": "川床は夏だけ",
+            "en": "River deck in summer only"
           },
           "text": {
-            "ja": "夏の期間（川床の季節など）しか営業していない可能性があります。行く前に、営業日をGoogleマップなどで確認してください。",
-            "en": "This place may be open only in summer (for example, during the riverside-terrace season). Please check its opening days, for example on Google Maps, before you go."
+            "ja": "カフェは11:00〜18:00（不定休）。川床の席は5/1〜9/30だけです（公式サイトより）。",
+            "en": "The café is open 11:00–18:00 (closed on irregular days). The river-deck seats are open May 1 – Sep 30 only (official website)."
           }
         }
       ],
       "caution": {
-        "ja": "夏の期間しか営業していない可能性があります",
-        "en": "May be open only in summer"
+        "ja": "川床の席は5/1〜9/30だけ",
+        "en": "River-deck seats May 1 – Sep 30 only"
       }
     },
     {
@@ -1005,7 +1034,6 @@
       "photos": [
         "17-1.jpg",
         "17-3.jpg",
-        "17-2.jpg",
         "p15-15095c2a.jpg"
       ],
       "text": {
@@ -1222,12 +1250,11 @@
         "p18-cb60642b.jpg",
         "p18-00c917d7.jpg",
         "p18-1043b658.jpg",
-        "p18-5db24ded.jpg",
-        "20-5.jpg"
+        "p18-5db24ded.jpg"
       ],
       "text": {
-        "ja": "左源太 (Sagenta Café)\n\n貴船といえばやっぱり「川床」！その中でも人気のカフェが「左源太」です。川のすぐ上に張り出した川床席で、お茶やスイーツを楽しめる贅沢な空間。川のせせらぎと涼しい風に包まれて過ごす時間は、まさに京都ならではの特別体験です。しかも、他の川床料理店に比べてリーズナブルに楽しめるのも魅力のひとつ。夏は避暑地として最高で、歩き疲れた体を癒すのにもぴったり。非日常感を味わいながら、のんびり一休みしてみてください！\n\nおすすめ訪問時間：14:30〜15:30（混雑時の待ち時間も含めて1時間確保）",
-        "en": "When you think of Kibune, you think of kawadoko dining over the river—and Sagenta Café is one of the most popular spots. Here, you can sip tea or enjoy sweets while sitting on platforms built directly above the flowing river. The sound of the water and the cool mountain breeze create a refreshing, unforgettable experience unique to Kyoto. What’s even better—it’s much more affordable compared to the high-end kawadoko restaurants nearby, making it an easy stop for everyone. Especially in summer, it’s the perfect way to cool down and recharge after exploring the shrine area. Take your time, relax, and enjoy—just plan for about an hour here, since it’s often busy and you might need to wait for a seat.\n\nRecommended visit time: 14:30–15:30 (including waiting time)"
+        "ja": "左源太 (Sagenta Café)\n\n貴船といえばやっぱり「川床」！その中でも人気のカフェが「左源太」です。川のすぐ上に張り出した川床席で、お茶やスイーツを楽しめる贅沢な空間。川のせせらぎと涼しい風に包まれて過ごす時間は、まさに京都ならではの特別体験です。しかも、他の川床料理店に比べてリーズナブルに楽しめるのも魅力のひとつ。夏は避暑地として最高で、歩き疲れた体を癒すのにもぴったり。非日常感を味わいながら、のんびり一休みしてみてください！\n\nおすすめ訪問時間：14:30〜15:00（混んでいたら短めに）",
+        "en": "When you think of Kibune, you think of kawadoko dining over the river—and Sagenta Café is one of the most popular spots. Here, you can sip tea or enjoy sweets while sitting on platforms built directly above the flowing river. The sound of the water and the cool mountain breeze create a refreshing, unforgettable experience unique to Kyoto. What’s even better—it’s much more affordable compared to the high-end kawadoko restaurants nearby, making it an easy stop for everyone. Especially in summer, it’s the perfect way to cool down and recharge after exploring the shrine area. It’s often busy, so if there’s a wait, keep the stop short so you can reach the West Gate in time.\n\nRecommended visit time: 14:30–15:00 (shorter if busy)"
       },
       "gmaps": [
         {
@@ -1253,7 +1280,22 @@
           }
         }
       ],
-      "info": null,
+      "info": {
+        "rows": [
+          {
+            "kind": "fee",
+            "text": {
+              "ja": "席料1人700円（いちばん上流の3席は1,500円）。セルフサービスで、予約はいりません",
+              "en": "Seat charge ¥700 per person (¥1,500 for the 3 seats furthest upstream). Self-service, no booking needed"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
+        "cash": false,
+        "tip": null,
+        "checked": "2026-11-20"
+      },
       "notices": [
         {
           "season": true,
@@ -1286,8 +1328,8 @@
         "en": "Trailhead"
       },
       "blurb": {
-        "ja": "鞍馬へのハイキングコースの入口です。ここから鞍馬駅まで約1時間。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュします。ゴールの鞍馬には温泉があり、露天風呂から山の景色を眺めながら疲れた体を癒やせます。「ハイキング＋温泉」のセットが断然おすすめ。入山料は現金のみで、閉門の時間は詳細で確認できます。",
-        "en": "The entrance to the hiking trail to Kurama. From here it’s about an hour to Kurama Station on a well-kept trail through the forest, a refreshing walk. At the end is Kurama Onsen, where you can soak in an outdoor bath with mountain views: hike + hot spring is the best combo. The entry fee is cash only; see the details for the gate’s closing time."
+        "ja": "鞍馬へのハイキングコースの入口です。ここから鞍馬駅まで約1時間半。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュします。ゴールの鞍馬には温泉があり、露天風呂から山の景色を眺めながら疲れた体を癒やせます。「ハイキング＋温泉」のセットが断然おすすめ。入山料は現金のみで、閉門の時間は詳細で確認できます。",
+        "en": "The entrance to the hiking trail to Kurama. From here it’s about an hour and a half to Kurama Station on a well-kept trail through the forest, a refreshing walk. At the end is Kurama Onsen, where you can soak in an outdoor bath with mountain views: hike + hot spring is the best combo. The entry fee is cash only; see the details for the gate’s closing time."
       },
       "lat": 35.1207213,
       "lng": 135.7632843,
@@ -1304,8 +1346,8 @@
         "21-8.jpg"
       ],
       "text": {
-        "ja": "鞍馬寺 西門 (Kurama Temple West Gate)\n\n鞍馬へのハイキングコースの入り口です。\n入山料として500円の現金での支払いが必要です。西門は16:15に閉門するため、遅くとも16:00までにここからハイキングをスタートしましょう。\n\nこの入り口から本殿を通って鞍馬駅まで、約1時間半のハイキングを楽しめます。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュ！ゴールの鞍馬には 鞍馬温泉 があり、歩いた後に入る温泉は格別です。露天風呂からは山の景色も眺められ、疲れた体を癒してくれる最高のご褒美。「ハイキング＋温泉」でセットにするのが断然おすすめです！\n\nおすすめ訪問時間：15:55〜16:00 出発（西門は16:15閉門）",
-        "en": "This is the entrance to the hiking trail to Kurama.\nAn entrance fee of 500 yen must be paid in cash. The West Gate closes at 4:15 p.m., so be sure to start your hike by 4:00 p.m. at the latest.\n\nFrom here, you can enjoy a hike of about an hour and a half, past the main hall, down to Kurama Station. The trail is well maintained and surrounded by beautiful forest, making the walk refreshing and invigorating. And the best part comes at the end—Kurama Onsen. After an hour-long hike, soaking in the open-air hot spring with mountain views is the ultimate way to relax and reward yourself. We strongly recommend pairing the hike with a visit to the onsen—it’s the perfect finale to your Kurama adventure!\n\nRecommended visit time: Start hike around 15:55–16:00 (West Gate closes at 16:15)"
+        "ja": "鞍馬寺 西門 (Kurama Temple West Gate)\n\n鞍馬へのハイキングコースの入り口です。\n入山料として500円の現金での支払いが必要です。西門は16:15に閉門するため、遅くとも16:00までにここからハイキングをスタートしましょう。\n\nこの入り口から本殿を通って鞍馬駅まで、約1時間半のハイキングを楽しめます。道は整備されていて歩きやすく、木々に囲まれた山道を歩くだけで気分がリフレッシュ！ゴールの鞍馬には 鞍馬温泉 があり、歩いた後に入る温泉は格別です。露天風呂からは山の景色も眺められ、疲れた体を癒してくれる最高のご褒美。「ハイキング＋温泉」でセットにするのが断然おすすめです！\n\nおすすめ訪問時間：15:15ごろ出発（遅くとも16:00。西門は16:15閉門）",
+        "en": "This is the entrance to the hiking trail to Kurama.\nAn entrance fee of 500 yen must be paid in cash. The West Gate closes at 4:15 p.m., so be sure to start your hike by 4:00 p.m. at the latest.\n\nFrom here, you can enjoy a hike of about an hour and a half, past the main hall, down to Kurama Station. The trail is well maintained and surrounded by beautiful forest, making the walk refreshing and invigorating. And the best part comes at the end—Kurama Onsen. After the hike, soaking in the open-air hot spring with mountain views is the ultimate way to relax and reward yourself. We strongly recommend pairing the hike with a visit to the onsen—it’s the perfect finale to your Kurama adventure!\n\nRecommended visit time: Start the hike around 15:15 (16:00 at the latest; the West Gate closes at 16:15)"
       },
       "gmaps": [
         {
@@ -1398,8 +1440,8 @@
         "22-8.jpg"
       ],
       "text": {
-        "ja": "鞍馬寺 (Kurama Temple)\n\n鞍馬寺は、山の中にある雰囲気たっぷりのお寺です。西門から山道を約60分登っていくと、本殿前に広いスペースがあり、山並みを見渡せる景色が広がります。ここは源義経（幼名・牛若丸）が修行した場所としても知られていて、歴史好きにはたまらないスポット。山深い空気の中で、京都の街中とはまた違う時間の流れを感じられます。\n\nそして、本殿から山門へと下山する途中に立ち寄れるのが 由岐神社。朱色の大きな鳥居と長い石段が印象的で、毎年10月に行われる「鞍馬の火祭り」で有名な神社です。参道を歩きながら現れる鳥居は迫力があり、自然の景観と調和した美しさを感じられます。ハイキングの締めくくりに立ち寄るのにぴったりのスポットです。\n\n本殿の拝観は16:15まで。16:00に西門を出ると、本殿に着くのは閉まったあとです。本殿でお参りしたい日は、貴船を早めに切り上げて15:00ごろまでに西門を入りましょう。\n\nおすすめ訪問時間：16:55〜17:10（本殿）／ 17:15〜17:25（由岐神社、下山途中）",
-        "en": "Kurama Temple is a mountainside temple with a truly unique atmosphere. After hiking up from the west gate for about an hour, you’ll reach the main hall, which opens into a spacious plaza overlooking the surrounding mountains. It’s also historically significant as the training ground of Yoshitsune (Ushiwakamaru), one of Japan’s legendary warriors. The fresh mountain air and the quiet setting give a refreshing contrast to the bustle of central Kyoto.\n\nOn the way down toward the main gate, you’ll come across Yuki Shrine, recognizable by its vivid red torii gate and long stone steps. This shrine is well known for the annual Kurama Fire Festival in October, and its striking presence along the tree-lined path makes it a memorable stop before leaving the temple grounds. It’s a perfect place to pause and reflect as you finish your hike.\n\nThe main hall is open until 16:15. Leave the west gate at 16:00 and it will be closed when you get there; to pray at the hall, cut Kibune short and enter the west gate by about 15:00.\n\nRecommended visit time: 16:55–17:10 (Kurama Temple main hall) / 17:15–17:25 (Yuki Shrine on the way down)"
+        "ja": "鞍馬寺 (Kurama Temple)\n\n鞍馬寺は、山の中にある雰囲気たっぷりのお寺です。西門から山道を約60分登っていくと、本殿前に広いスペースがあり、山並みを見渡せる景色が広がります。ここは源義経（幼名・牛若丸）が修行した場所としても知られていて、歴史好きにはたまらないスポット。山深い空気の中で、京都の街中とはまた違う時間の流れを感じられます。\n\nそして、本殿から山門へと下山する途中に立ち寄れるのが 由岐神社。朱色の大きな鳥居と長い石段が印象的で、毎年10月に行われる「鞍馬の火祭り」で有名な神社です。参道を歩きながら現れる鳥居は迫力があり、自然の景観と調和した美しさを感じられます。ハイキングの締めくくりに立ち寄るのにぴったりのスポットです。\n\n本殿の拝観は16:15まで。西門から本殿までは登り道で約1時間なので、本殿でお参りしたい日は15:15ごろまでに西門を入りましょう。16:00に西門を出ると、本殿に着くのは閉まったあとです。冬は17時ごろに日が沈み、山道は暗くなるので、明るいうちに下山してください。\n\nおすすめ訪問時間：16:10ごろ（本殿）／ 16:30ごろ（由岐神社、下山途中）",
+        "en": "Kurama Temple is a mountainside temple with a truly unique atmosphere. After hiking up from the west gate for about an hour, you’ll reach the main hall, which opens into a spacious plaza overlooking the surrounding mountains. It’s also historically significant as the training ground of Yoshitsune (Ushiwakamaru), one of Japan’s legendary warriors. The fresh mountain air and the quiet setting give a refreshing contrast to the bustle of central Kyoto.\n\nOn the way down toward the main gate, you’ll come across Yuki Shrine, recognizable by its vivid red torii gate and long stone steps. This shrine is well known for the annual Kurama Fire Festival in October, and its striking presence along the tree-lined path makes it a memorable stop before leaving the temple grounds. It’s a perfect place to pause and reflect as you finish your hike.\n\nThe main hall is open until 16:15. It’s about an hour uphill from the West Gate, so to pray at the hall, enter the West Gate by about 15:15; leave at 16:00 and it will be closed when you get there. In winter the sun sets around 17:00 and the mountain path gets dark, so come down while it’s still light.\n\nRecommended visit time: around 16:10 (Kurama Temple main hall) / around 16:30 (Yuki Shrine on the way down)"
       },
       "gmaps": [
         {
@@ -1468,6 +1510,15 @@
             "ja": "11/27の午前中はケーブルが運休します（定期点検）。",
             "en": "The cable car does not run on the morning of Nov 27 (inspection)."
           }
+        },
+        {
+          "from": "2026-11-20",
+          "to": "2026-12-25",
+          "url": "https://www.kuramadera.or.jp/",
+          "text": {
+            "ja": "12/15〜12/17は本殿の大掃除です。12/21〜12/25はケーブルが運休します（冬季点検）。",
+            "en": "Dec 15–17: year-end cleaning of the main hall. Dec 21–25: the cable car does not run (winter inspection)."
+          }
         }
       ]
     },
@@ -1482,8 +1533,8 @@
         "en": "End of hike"
       },
       "blurb": {
-        "ja": "鞍馬駅に着いたら、ハイキングはゴールです。駅のまわりには小さなお店や飲食店があり、山歩きの余韻を感じながら一息つけます。歩いて数分の鞍馬温泉では、露天風呂から山々を眺めながら温泉に浸かれます。歩き疲れた体への最高のご褒美です。",
-        "en": "Reaching Kurama Station means the hike is done. There are a few small shops and places to eat around the station where you can rest and enjoy the mountain air. Kurama Onsen is a few minutes’ walk away: soaking in its outdoor bath with mountain views is the perfect reward."
+        "ja": "鞍馬駅に着いたら、ハイキングはゴールです。駅のまわりには小さなお店や飲食店があり、山歩きの余韻を感じながら一息つけます。歩いて約10分（無料の送迎バスもあります）の鞍馬温泉では、露天風呂から山々を眺めながら温泉に浸かれます。歩き疲れた体への最高のご褒美です。",
+        "en": "Reaching Kurama Station means the hike is done. There are a few small shops and places to eat around the station where you can rest and enjoy the mountain air. Kurama Onsen is about a 10-minute walk away (there’s also a free shuttle bus): soaking in its outdoor bath with mountain views is the perfect reward."
       },
       "lat": 35.1137991,
       "lng": 135.7732802,
@@ -1500,8 +1551,8 @@
         "23-6.jpg"
       ],
       "text": {
-        "ja": "鞍馬 (Kurama)\n\n鞍馬駅に到着すると、ハイキングはここでゴールです。駅周辺には小さな商店や飲食店もあり、山歩きの余韻を感じながら一息つけます。\nそして、ここから徒歩数分の場所にあるのが 鞍馬温泉。露天風呂から山々を眺めながら浸かる温泉は、歩き疲れた体を癒す最高のご褒美です。ハイキングとセットで立ち寄るのがおすすめです！\n\nおすすめ訪問時間：17:40〜18:40（ハイキング後の休憩）",
-        "en": "Kurama marks the end of your hike. Once you reach Kurama Station, you’ll find a few small shops and eateries where you can relax and take in the mountain atmosphere.\nJust a short walk from the station is Kurama Onsen, a hot spring that offers outdoor baths with views of the surrounding mountains. Soaking here after your hike is the perfect way to unwind and reward yourself for the effort. It’s highly recommended as the final touch to your Kurama adventure.\n\nRecommended visit time: 17:40–18:40 (after the hike, before heading back)"
+        "ja": "鞍馬 (Kurama)\n\n鞍馬駅に到着すると、ハイキングはここでゴールです。駅周辺には小さな商店や飲食店もあり、山歩きの余韻を感じながら一息つけます。\nそして、ここから歩いて約10分（無料の送迎バスもあります）の場所にあるのが 鞍馬温泉。露天風呂から山々を眺めながら浸かる温泉は、歩き疲れた体を癒す最高のご褒美です。ハイキングとセットで立ち寄るのがおすすめです！\n\nおすすめ訪問時間：17:00〜18:00（ハイキング後の休憩）",
+        "en": "Kurama marks the end of your hike. Once you reach Kurama Station, you’ll find a few small shops and eateries where you can relax and take in the mountain atmosphere.\nAbout a 10-minute walk from the station (there’s also a free shuttle bus) is Kurama Onsen, a hot spring that offers outdoor baths with views of the surrounding mountains. Soaking here after your hike is the perfect way to unwind and reward yourself for the effort. It’s highly recommended as the final touch to your Kurama adventure.\n\nRecommended visit time: 17:00–18:00 (after the hike, before heading back)"
       },
       "gmaps": [
         {
@@ -1547,8 +1598,8 @@
         "24-8.jpg"
       ],
       "text": {
-        "ja": "鞍馬温泉 (Kurama Onsen) 10:00〜21:00\n\nハイキングの締めくくりにぴったりなのが、この鞍馬温泉です！山歩きで疲れた体を温泉でじっくり癒せるなんて最高ですよね。露天風呂からは山の景色を眺めながらゆったりできて、「あぁ、京都の自然を満喫したな〜」としみじみ感じられます。観光とセットで温泉に入れるのはかなり特別な体験なので、時間に余裕があればぜひ立ち寄ってほしいスポットです。\n\n営業時間：10:00〜21:00\nおすすめ訪問時間：17:40〜18:40（ハイキング後の休憩）",
-        "en": "Kurama Onsen is the perfect way to wrap up your hike! After trekking through the mountains, soaking in a hot spring is the ultimate reward. The outdoor bath lets you relax while gazing at the mountain scenery, giving you that satisfying “I’ve really experienced Kyoto’s nature” kind of feeling. Combining sightseeing with a hot spring visit is a rare treat, so if you have the time, it’s absolutely worth it!\n\nOpening hours: 10:00–21:00\nRecommended visit time: 17:40–18:40 (after the hike, before heading back)"
+        "ja": "鞍馬温泉 (Kurama Onsen) 10:00〜21:00\n\nハイキングの締めくくりにぴったりなのが、この鞍馬温泉です！山歩きで疲れた体を温泉でじっくり癒せるなんて最高ですよね。露天風呂からは山の景色を眺めながらゆったりできて、「あぁ、京都の自然を満喫したな〜」としみじみ感じられます。観光とセットで温泉に入れるのはかなり特別な体験なので、時間に余裕があればぜひ立ち寄ってほしいスポットです。\n\n鞍馬駅から歩いて約10分。無料のシャトルバスも毎日出ています。\n\n営業時間：10:00〜21:00\nおすすめ訪問時間：17:00〜18:00（ハイキング後の休憩）",
+        "en": "Kurama Onsen is the perfect way to wrap up your hike! After trekking through the mountains, soaking in a hot spring is the ultimate reward. The outdoor bath lets you relax while gazing at the mountain scenery, giving you that satisfying “I’ve really experienced Kyoto’s nature” kind of feeling. Combining sightseeing with a hot spring visit is a rare treat, so if you have the time, it’s absolutely worth it!\n\nIt’s about 10 minutes on foot from Kurama Station, and a free shuttle bus runs every day.\n\nOpening hours: 10:00–21:00\nRecommended visit time: 17:00–18:00 (after the hike, before heading back)"
       },
       "gmaps": [
         {
@@ -1643,7 +1694,6 @@
         "25-2.jpg",
         "25-6.jpg",
         "25-4.jpg",
-        "25-5.jpg",
         "p23-965f1d44.jpg",
         "25-3.jpg",
         "25-7.jpg",
@@ -1651,8 +1701,8 @@
         "p23-c79e50cf.jpg"
       ],
       "text": {
-        "ja": "叡山電鉄「きらら」 (Eizan Railway “Kirara” Train)\n\n叡山電鉄の「きらら」は、ちょっと特別な観光列車！車内の一部の席が窓に向かって並んでいて、まるで景色に向かって座る特等席みたいなんです。春の新緑や秋の紅葉シーズンは特に最高で、まさに“走る展望台”。さらに、期間限定で「もみじのトンネル」がライトアップされる夜は、電車に揺られながら幻想的な世界を体験できます。\n\n出町柳から鞍馬方面に行くときは観光客でかなり混むんですが、帰りはほとんどの人が貴船口駅から乗るので、鞍馬から乗るとすんなり座れることが多いです。帰りに「きらら」に乗って、ゆったり景色を楽しみながら京都市内へ戻るのがおすすめですよ！\n\n※下に時刻表のリンクを貼っているので、乗車前にぜひチェックしてください。",
-        "en": "The Eizan Railway’s “Kirara” train is a special sightseeing train designed for enjoying the view. Some of the seats face directly toward the windows, making it feel like you’ve got a front-row seat to the scenery. It’s especially stunning during spring with fresh green leaves or autumn when the maple leaves turn brilliant red—it really feels like a “moving observatory.”\n\nIn the evenings during certain periods, there’s even a limited-time illumination of the “Maple Tunnel,” where the train passes through glowing red leaves lit up at night—an unforgettable experience.\n\nOn the way from Demachiyanagi toward Kurama, the train tends to get crowded with tourists heading to Kifune Shrine. But on the way back, most passengers board at Kibuneguchi Station, so if you get on at Kurama, you’ll likely find a good seat. That’s why we highly recommend riding the “Kirara” train on your return trip, relaxing and enjoying the scenery as you head back into the city.\n\nDon’t forget to check the timetable from the link below before you ride!"
+        "ja": "叡山電鉄「きらら」 (Eizan Railway “Kirara” Train)\n\n叡山電鉄の「きらら」は、ちょっと特別な観光列車！車内の一部の席が窓に向かって並んでいて、まるで景色に向かって座る特等席みたいなんです。春の新緑や秋の紅葉シーズンは特に最高で、まさに“走る展望台”。さらに、期間限定で「もみじのトンネル」がライトアップされる夜は、電車に揺られながら幻想的な世界を体験できます。\n\n出町柳から鞍馬方面に行くときは観光客でかなり混むんですが、帰りはほとんどの人が貴船口駅から乗るので、鞍馬から乗るとすんなり座れることが多いです。帰りに「きらら」に乗って、ゆったり景色を楽しみながら京都市内へ戻るのがおすすめですよ！\n\n※下に時刻表のリンクを貼っているので、乗車前にぜひチェックしてください。\n\nおすすめ出発時間：18:10〜18:20ごろ",
+        "en": "The Eizan Railway’s “Kirara” train is a special sightseeing train designed for enjoying the view. Some of the seats face directly toward the windows, making it feel like you’ve got a front-row seat to the scenery. It’s especially stunning during spring with fresh green leaves or autumn when the maple leaves turn brilliant red—it really feels like a “moving observatory.”\n\nIn the evenings during certain periods, there’s even a limited-time illumination of the “Maple Tunnel,” where the train passes through glowing red leaves lit up at night—an unforgettable experience.\n\nOn the way from Demachiyanagi toward Kurama, the train tends to get crowded with tourists heading to Kifune Shrine. But on the way back, most passengers board at Kibuneguchi Station, so if you get on at Kurama, you’ll likely find a good seat. That’s why we highly recommend riding the “Kirara” train on your return trip, relaxing and enjoying the scenery as you head back into the city.\n\nDon’t forget to check the timetable from the link below before you ride!\n\nRecommended departure time: around 18:10–18:20"
       },
       "gmaps": [
         {
@@ -1722,9 +1772,7 @@
       "photos": [
         "26-1.jpg",
         "26-4.jpg",
-        "26-5.jpg",
-        "26-8.jpg",
-        "26-7.jpg"
+        "26-5.jpg"
       ],
       "text": {
         "ja": "京都の夜を楽しむなら、まずはここで下車！駅のすぐ近くにはレストランや居酒屋がたくさんあって、ディナーにもぴったりです。京都らしい雰囲気を感じたいなら、そのまま鴨川を渡って「先斗町」へ。細い路地にずらっと並ぶお店はもちろん、歩くだけでもワクワクするはず。夜の京都の空気をしっかり感じられるスポットです！\n\nおすすめ訪問時間：19:00〜",
@@ -1739,15 +1787,6 @@
           "lat": 35.0033014,
           "lng": 135.7719122,
           "url": "https://maps.app.goo.gl/oCcMYh4gTJKDBtTT9"
-        },
-        {
-          "label": {
-            "ja": "in the Moon",
-            "en": "in the Moon"
-          },
-          "lat": 35.0041038,
-          "lng": 135.772783,
-          "url": "https://maps.app.goo.gl/A3jLQD4gjMaKFV3x7"
         }
       ],
       "links": [
@@ -1790,9 +1829,7 @@
         "p25-6546d4cc.jpg",
         "27-8.jpg",
         "27-5.jpg",
-        "27-2.jpg",
-        "27-3.jpg",
-        "27-4.jpg"
+        "27-3.jpg"
       ],
       "text": {
         "ja": "ちょっとディープに京都の夜を楽しみたいなら、この隠れ酒場がおすすめ！新鮮なお刺身やジューシーな焼き鳥、牛肉のたたきなど、本格的な日本料理がずらりとそろっています。それでいて値段はとっても良心的！観光地価格とは違う、地元の人にも愛される居酒屋です。お腹も心も満たされること間違いなし！\n\nおすすめ訪問時間：20:00〜21:30",
@@ -1822,7 +1859,15 @@
           }
         }
       ],
-      "info": null,
+      "info": {
+        "rows": [],
+        "cash": false,
+        "tip": {
+          "ja": "営業時間・休みの日は要確認です。行く前にお店に確認してください。",
+          "en": "Opening hours and closing days are unconfirmed. Please check with the restaurant before you go."
+        },
+        "checked": "2026-11-20"
+      },
       "notices": []
     },
     {
@@ -2017,6 +2062,18 @@
         "text": {
           "ja": "貴船には寄らないので、西門からのハイキングはせず、鞍馬駅から近い山門（正面）側から鞍馬寺に入ります。",
           "en": "You’re not going via Kibune, so skip the hike from the West Gate and enter Kurama Temple from the main gate near Kurama Station."
+        }
+      },
+      {
+        "spot": 14,
+        "rule": {
+          "any": [
+            14
+          ]
+        },
+        "text": {
+          "ja": "藤やに寄ると、貴船神社に着くのは14:20ごろになります。鞍馬寺の本殿（16:15まで）に間に合わせるなら、左源太は省いて15:15ごろまでに西門へ。",
+          "en": "Stopping at Fujiya means you reach Kifune Shrine around 14:20. To make the Kurama Temple main hall (open until 16:15), skip Sagenta and get to the West Gate by about 15:15."
         }
       }
     ]
