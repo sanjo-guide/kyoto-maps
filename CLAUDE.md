@@ -13,7 +13,7 @@
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、東山: …/higashiyama/、城崎温泉: …/kinosaki/、金沢: …/kanazawa/、福岡: …/fukuoka/、広島: …/hiroshima/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、東山: …/higashiyama/、城崎温泉: …/kinosaki/、金閣寺〜北野: …/kinkakuji/、金沢: …/kanazawa/、福岡: …/fukuoka/、広島: …/hiroshima/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
 - 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
@@ -38,7 +38,7 @@
 
 | 種類 | 使う場面 | 元にしたもの | 例 |
 |---|---|---|---|
-| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/`, `higashiyama/`, `kinosaki/` |
+| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/`, `higashiyama/`, `kinosaki/`, `kinkakuji/` |
 | スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/`, `fukuoka/`, `hiroshima/` |
 
 ```
@@ -59,6 +59,8 @@
 │                           #   データは data/routes/higashiyama.json（scripts/build_higashiyama_data.py で作る）、写真は images/higashiyama/
 ├── kinosaki/               # ルート型（京都から日帰り 城崎温泉＋竹田城跡）。higashiyama/ と同じ差分＋最初から「選んで回る」
 │                           #   データは data/routes/kinosaki.json（scripts/build_kinosaki_data.py で作る）、写真は images/kinosaki/
+├── kinkakuji/              # ルート型（京都・大徳寺〜金閣寺〜龍安寺〜仁和寺〜平野神社〜北野天満宮）。higashiyama/ と同じ差分（「全部回る」で開く）
+│                           #   データは data/routes/kinkakuji.json（scripts/build_kinkakuji_data.py で作る）、写真は images/kinkakuji/
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
 ├── fukuoka/                # スポット紹介型（福岡・唐津と日帰り）。kanazawa/ の複製。データは js/data.js、写真は img/
@@ -82,6 +84,7 @@
 - 広島（2026-11-20 作成）: 京都から日帰りでない都市なのでスポット紹介型（オーナーの指示）。市内（原爆ドーム・平和記念公園・路面電車・本通）、食べる（実際に行ったお好み焼き3軒：駅前ひろばの「ひこ」・袋町「がんすけ」・中町「次郎吉」。写真の撮影位置と店頭写真から特定）、日帰り（宮島・尾道・西条・呉）。尾道ラーメンは千両（2022）・しょうや飯店と朱鳶（2026）。写真は写真アプリの広島県の全写真（2022〜2026年、約4,000枚の横写真）を全部見て選び、長辺1280px・位置情報なし、横向きだけ。簡易地図の輪郭は dataofjapan/land から作った（js/data.js の region）。料金・時間は公式サイト・広島市の情報・乗換案内で確認（js/data.js の sources）
 - 東山（2026-11-20 作成）: JR稲荷駅スタート、伏見稲荷→東福寺→泉涌寺・雲龍院→清水寺→産寧坂・二年坂→八坂の塔→高台寺・圓徳院→八坂神社・円山公園→南禅寺→永観堂→金戒光明寺を南から北へ。見どころが多いので最初から「選んで回る」（駅だけ全員共通）。写真は写真アプリの東山の写真（2015〜2026年、横写真約3,300枚）をスポットごとに全部見て選んだもの。夜の写真の多くは紅葉・桜のライトアップの時期。東福寺の料金と清水寺の拝観料は公式サイトで確認できなかったので「要確認」または書いていない。文章・料金は scripts/build_higashiyama_data.py の中（データを直接直さない）。higashiyama/ は `python3 scripts/sync_higashiyama.py` でテンプレートから写し直せる
 - 城崎温泉（2026-11-20 作成）: 京都7:32の特急きのさき1号で出発。竹田城跡を選んだ人は和田山で播但線に乗り換えて竹田へ（竹田駅と寺町通りは自動で入る）、13:34の電車で城崎温泉へ。城崎では外湯（地蔵湯・柳湯・一の湯・御所の湯・まんだら湯・鴻の湯。さとの湯は2024年4月から改修で休館）と大谿川の柳並木・夜の温泉街を選んで回り、18:53の特急（福知山で乗り換え）か16:31の特急で京都へ。外湯の時間・休み・1日券（ゆめぱ 1,500円）は城崎温泉観光協会、竹田城跡の時間・料金と登山道の閉鎖（クマ対策、2026年10月）は朝来市の公式ホームページ、電車は乗換案内で確認。天空バスの時刻・運賃は未確認（全但バスで確認するよう書いてある）。写真は写真アプリの城崎・竹田の写真（2023〜2026年、横写真約1,300枚、Nikon D7000 含む）を全部見て選んだもの。外湯は建物の外の写真だけ。京都駅のスポットの写真は城崎温泉駅で撮った特急。文章・料金は scripts/build_kinosaki_data.py の中（データを直接直さない）。kinosaki/ は `python3 scripts/sync_kinosaki.py` でテンプレートから写し直せる
+- 金閣寺〜北野（2026-11-20 作成）: 大徳寺→金閣寺→（きぬかけの路）龍安寺→仁和寺→（嵐電）平野神社→北野天満宮の6か所。どれも選んで外せるが、最初は「全部回る」。写真は写真アプリの各スポットの写真（2024〜2026年）を全部見て選んだもの。金閣寺の雪は2026-02-08、仁和寺の御室桜は2025-04-17、平野神社の夜桜は2025-04-05（Nikon の時刻合わせで北野天満宮の近くに出ていたが、写真の桜苑の看板と朱の鳥居から平野神社と判断）、北野天満宮のもみじ苑ライトアップは2024-12-12と2025-11-30。金閣寺・龍安寺・仁和寺・北野天満宮の料金と時間は公式サイトで確認。大徳寺の塔頭と平野神社の桜苑の料金は確認できず、文章で要確認と書いている。北野天満宮のもみじ苑の行は2026-12-06を過ぎると自動で消える（until）。kinkakuji/ は `python3 scripts/sync_kinkakuji.py` でテンプレートから写し直せる
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
 - 地図の見た目は全マップ共通で `assets/basemap.js`（Googleマップ / Appleマップに近い配色。町名・お店の名前は出さず、市町村・駅・川・大きな道だけ）。データは OpenFreeMap（OpenStreetMap）。オーナーの希望（2026-11-20）なので、新しいマップでも必ずこれを使う
