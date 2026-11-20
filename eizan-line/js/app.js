@@ -796,7 +796,7 @@
     route();
   }
 
-  fetch('../data/routes/eizan-line.json?v=13')
+  fetch('../data/routes/eizan-line.json?v=14')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {
