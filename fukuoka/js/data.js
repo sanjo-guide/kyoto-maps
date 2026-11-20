@@ -1708,8 +1708,8 @@ window.GUIDE = {
     {
      "f": "takeya-5.jpg",
      "cap": {
-      "ja": "香ばしく焼けたうなぎのどんぶり",
-      "en": "A deeply grilled eel bowl"
+      "ja": "上から見たうな丼",
+      "en": "The eel bowl from above"
      },
      "w": 1280,
      "h": 720
@@ -1950,29 +1950,29 @@ window.GUIDE = {
     {
      "f": "kawataro-2.jpg",
      "cap": {
-      "ja": "透き通ったイカ",
-      "en": "The translucent squid up close"
-     },
-     "w": 1280,
-     "h": 960
-    },
-    {
-     "f": "kawataro-3.jpg",
-     "cap": {
       "ja": "刺身の盛り合わせ",
       "en": "Assorted sashimi"
      },
      "w": 1280,
-     "h": 960
+     "h": 720
     },
     {
-     "f": "kawataro-4.jpg",
+     "f": "kawataro-3.jpg",
      "cap": {
       "ja": "ごはんと刺身の定食",
       "en": "A set meal with rice and sashimi"
      },
      "w": 1280,
-     "h": 960
+     "h": 720
+    },
+    {
+     "f": "kawataro-4.jpg",
+     "cap": {
+      "ja": "茶碗蒸し",
+      "en": "Chawanmushi (savoury egg custard)"
+     },
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "kawataro-5.jpg",
