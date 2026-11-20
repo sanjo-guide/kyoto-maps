@@ -62,8 +62,8 @@
     "en": "Station (start)"
    },
    "blurb": {
-    "ja": "このルートのスタート。JR琵琶湖線（びわこせん）の新快速（しんかいそく）に乗れば、乗り換えなしで近江八幡まで約35分です。駅の案内で「琵琶湖線 大津・草津・米原方面」ののりばを探してください。",
-    "en": "The start of this route. Take a JR Biwako Line Special Rapid (Shinkaisoku) and you’re in Omihachiman in about 35 minutes, no change. Follow the signs for the “Biwako Line, for Ōtsu, Kusatsu, Maibara” platforms."
+    "ja": "スタート。JR琵琶湖線の新快速（しんかいそく）で、乗り換えなしで近江八幡まで約35分。",
+    "en": "The start. A JR Biwako Line Special Rapid (Shinkaisoku) gets you to Omihachiman in about 35 minutes, no change."
    },
    "lat": 34.98535,
    "lng": 135.758766,
@@ -77,8 +77,8 @@
     "01-7.jpg"
    ],
    "text": {
-    "ja": "京都駅（きょうとえき）\n\n新快速なら近江八幡駅まで約35分、普通電車だと約40分。運賃は680円で、ICOCAなどの交通系ICカードでも、きっぷでも同じです。\n\n乗るのは「米原（まいばら）」「長浜」行きなど、琵琶湖線を通る電車です。「野洲（やす）」行きは近江八幡の2つ手前が終点、「湖西線経由」の電車は別の線を通るので、近江八幡には行きません。\n\nおすすめ出発時間：9:00",
-    "en": "Kyoto Station\n\nThe Special Rapid takes about 35 minutes to Omi-Hachiman Station; local trains take about 40. The fare is ¥680, the same with an IC card (ICOCA, Suica, etc.) or a paper ticket.\n\nBoard a train on the Biwako Line, for example one bound for Maibara or Nagahama. Trains for Yasu terminate two stops before Omihachiman, and trains “via Kosei Line” take a different line and don’t go there at all.\n\nRecommended departure time: 9:00"
+    "ja": "京都駅（きょうとえき）\n\n新快速なら近江八幡駅まで約35分、普通電車だと約40分。運賃は680円で、ICOCAなどの交通系ICカードでも、きっぷでも同じです。\n\nのりばは、駅の案内の「琵琶湖線 大津・草津・米原方面」です。乗るのは「米原（まいばら）」「長浜」行きなど、琵琶湖線を通る電車です。「野洲（やす）」行きは近江八幡の2つ手前が終点、「湖西線経由」の電車は別の線を通るので、近江八幡には行きません。\n\nおすすめ出発時間：9:00",
+    "en": "Kyoto Station\n\nThe Special Rapid takes about 35 minutes to Omi-Hachiman Station; local trains take about 40. The fare is ¥680, the same with an IC card (ICOCA, Suica, etc.) or a paper ticket.\n\nFollow the signs for “Biwako Line, for Ōtsu, Kusatsu, Maibara”. Board a train on the Biwako Line, for example one bound for Maibara or Nagahama. Trains for Yasu terminate two stops before Omihachiman, and trains “via Kosei Line” take a different line and don’t go there at all.\n\nRecommended departure time: 9:00"
    },
    "gmaps": [
     {
@@ -105,7 +105,10 @@
      }
     ],
     "cash": false,
-    "tip": null,
+    "tip": {
+     "ja": "火曜日は、まるたけ近江西川・TWO RABBITS BEER HOUSE・ティファニーがお休みです。火曜のランチは久ぼ多屋（木曜休み）へ。",
+     "en": "On Tuesdays, Marutake Ohmi Nishikawa, Two Rabbits Beer House and Tiffany are closed. For lunch on a Tuesday, go to Kubotaya (closed Thursdays)."
+    },
     "checked": "2026-11-20"
    },
    "notices": []
@@ -204,8 +207,8 @@
     "en": "Canal"
    },
    "blurb": {
-    "ja": "八幡山に城を築いた豊臣秀次（とよとみひでつぐ）が造らせた堀。石垣と白壁の蔵のあいだを舟がゆっくり進む、近江八幡でいちばんの景色です。春の桜、秋の紅葉、雪の日と、季節ごとに違う顔を見せてくれます。",
-    "en": "The canal dug when Toyotomi Hidetsugu built his castle on Mt. Hachiman. Boats glide between stone walls and white-walled storehouses: Omihachiman’s signature view. Cherry blossom in spring, red maples in autumn, and pure magic in the snow."
+    "ja": "石垣と白壁の蔵のあいだを舟が進む、近江八幡でいちばんの景色。春の桜、秋の紅葉、雪の日も。",
+    "en": "Boats between stone walls and white storehouses: the view Omihachiman is known for. Cherry blossom in spring, red maples in autumn, snow in winter."
    },
    "lat": 35.139829,
    "lng": 136.090589,
@@ -222,8 +225,8 @@
     "03-10.jpg"
    ],
    "text": {
-    "ja": "八幡堀（はちまんぼり）\n\nバス停から歩いてすぐ。白雲橋（はくうんばし）のあたりから堀ぞいの石畳の道に下りると、時代劇のような景色が広がります。散策は無料です。\n\n舟で回る「八幡堀めぐり」は10:00〜16:00、大人1,500円、約30分。2人以上なら予約なしで乗れます（待つこともあります）。\n\n午後にもう一度ゆっくり歩くなら、11番「新町通り」も見てください。夜は白雲橋から新町浜までがライトアップされます。\n\nおすすめ訪問時間：9:50〜10:10",
-    "en": "Hachimanbori Canal\n\nA short walk from the bus stop. Go down to the stone path along the water near Hakuun Bridge and you’re in a period drama. Walking here is free.\n\nThe Hachimanbori boat tour runs 10:00–16:00: ¥1,500 per adult, about 30 minutes. Two or more people can just turn up (you may have to wait).\n\nWant a slower stroll later? See stop 11, Shinmachi Street. At night the stretch from Hakuun Bridge to Shinmachi-hama is lit up.\n\nRecommended visit time: 9:50–10:10"
+    "ja": "八幡堀（はちまんぼり）\n\n八幡山に城を築いた豊臣秀次（とよとみひでつぐ）が造らせた堀です。バス停から歩いてすぐ。白雲橋（はくうんばし）のあたりから堀ぞいの石畳の道に下りると、時代劇に出てくるような景色です。散策は無料です。\n\n舟で回る「八幡堀めぐり」は10:00〜16:00、大人1,500円、約30分。2人以上なら予約なしで乗れます（待つこともあります）。\n\n午後にもう一度ゆっくり歩くなら、11番「新町通り」も見てください。夜は白雲橋から新町浜までがライトアップされます。\n\nおすすめ訪問時間：9:50〜10:10",
+    "en": "Hachimanbori Canal\n\nThe canal was dug when Toyotomi Hidetsugu built his castle on Mt. Hachiman. A short walk from the bus stop. Go down to the stone path along the water near Hakuun Bridge and you’re in a period drama. Walking here is free.\n\nThe Hachimanbori boat tour runs 10:00–16:00: ¥1,500 per adult, about 30 minutes. Two or more people can just turn up (you may have to wait).\n\nWant a slower stroll later? See stop 11, Shinmachi Street. At night the stretch from Hakuun Bridge to Shinmachi-hama is lit up.\n\nRecommended visit time: 9:50–10:10"
    },
    "gmaps": [
     {
@@ -388,8 +391,8 @@
     "en": "Viewpoint"
    },
    "blurb": {
-    "ja": "秀次の城があった山の上。西の丸跡のあたりからは琵琶湖と対岸の山々、反対側からは近江八幡の町や田んぼ、西の湖（にしのこ）まで見渡せます。このルートでいちばんの絶景です。",
-    "en": "The hilltop where Hidetsugu’s castle once stood. From the West Bailey ruins you look out over Lake Biwa to the mountains beyond; from the other side, over the town, the rice fields and Lake Nishinoko. The best view of the day."
+    "ja": "秀次の城があった山の上。片側に琵琶湖、反対側に近江八幡の町と田んぼが見渡せます。",
+    "en": "The hilltop where Hidetsugu’s castle stood. Lake Biwa on one side; the town and its rice fields on the other."
    },
    "lat": 35.144337,
    "lng": 136.081639,
@@ -406,8 +409,8 @@
     "05-10.jpg"
    ],
    "text": {
-    "ja": "八幡山城跡（はちまんやまじょうあと）\n\n山頂の駅から西の丸跡まで歩いて約3分。山の上をぐるっと回る遊歩道は1周約30分です。瑞龍寺にも寄るなら、山の上で1時間ほどみておくと安心です。\n\n山頂の展望館にはいすとテーブルがあり、ひと休みできます。\n\nおすすめ訪問時間：10:20〜10:50",
-    "en": "Hachimanyama Castle ruins\n\nThe West Bailey ruins are about 3 minutes’ walk from the top station. The path around the summit takes about 30 minutes; with Zuiryuji Temple as well, allow about an hour up here.\n\nThe observation building at the top has tables and chairs if you need a break.\n\nRecommended visit time: 10:20–10:50"
+    "ja": "八幡山城跡（はちまんやまじょうあと）\n\n山頂の駅から西の丸跡まで歩いて約3分。琵琶湖と対岸の山々が見えるのは、この西の丸跡のあたりです。反対側からは、近江八幡の町や田んぼ、西の湖（にしのこ）まで見えます。山の上をぐるっと回る遊歩道は1周約30分です。瑞龍寺にも寄るなら、山の上で1時間ほどみておくと安心です。\n\n山頂の展望館にはいすとテーブルがあり、ひと休みできます。\n\nおすすめ訪問時間：10:20〜10:50",
+    "en": "Hachimanyama Castle ruins\n\nThe West Bailey ruins are about 3 minutes’ walk from the top station; this is where you look out over Lake Biwa to the mountains beyond. The other side looks over the town, the rice fields and Lake Nishinoko. The path around the summit takes about 30 minutes; with Zuiryuji Temple as well, allow about an hour up here.\n\nThe observation building at the top has tables and chairs if you need a break.\n\nRecommended visit time: 10:20–10:50"
    },
    "gmaps": [
     {
@@ -455,8 +458,8 @@
     "en": "Temple"
    },
    "blurb": {
-    "ja": "山頂にある、日蓮宗でただひとつの門跡寺院（皇族ゆかりのお寺）。秀次の母・日秀（にっしゅう）が、秀次をとむらうために京都に建てたお寺で、のちにこの山の上に移されました。秋の紅葉は見事です。",
-    "en": "The only monzeki temple (a temple with imperial ties) of the Nichiren school, on the summit. Hidetsugu’s mother founded it in Kyoto to pray for her son; it was later moved up here. Stunning in autumn colour."
+    "ja": "山頂にある、皇族ゆかりのお寺。秀次の母が、秀次をとむらうために建てました。秋は紅葉。",
+    "en": "A temple with imperial ties on the summit, founded by Hidetsugu’s mother to pray for her son. Red maples in autumn."
    },
    "lat": 35.144278,
    "lng": 136.082489,
@@ -473,8 +476,8 @@
     "06-10.jpg"
    ],
    "text": {
-    "ja": "村雲御所 瑞龍寺門跡（むらくもごしょ ずいりゅうじもんぜき）\n\n山頂の駅から歩いてすぐ。石段を上がった先に山門があり、静かな境内からも近江の景色が見えます。\n\n境内では黒ねこに会えることも。\n\nおすすめ訪問時間：10:50〜11:10",
-    "en": "Murakumo Gosho Zuiryuji Monzeki\n\nA short walk from the top station. Climb the stone steps to the gate; the quiet grounds have views over the Omi plain too.\n\nYou might meet the temple’s black cat.\n\nRecommended visit time: 10:50–11:10"
+    "ja": "村雲御所 瑞龍寺門跡（むらくもごしょ ずいりゅうじもんぜき）\n\n日蓮宗でただひとつの門跡寺院（もんぜきじいん＝皇族ゆかりのお寺）です。秀次の母・日秀（にっしゅう）が京都に建て、のちにこの山の上に移されました。\n\n山頂の駅から歩いてすぐ。石段を上がった先に山門があり、静かな境内からも近江の景色が見えます。\n\n境内では黒ねこに会えることも。\n\nおすすめ訪問時間：10:50〜11:10",
+    "en": "Murakumo Gosho Zuiryuji Monzeki\n\nThe only monzeki temple (a temple with imperial ties) of the Nichiren school. Hidetsugu’s mother founded it in Kyoto, and it was later moved up here.\n\nA short walk from the top station. Climb the stone steps to the gate; the quiet grounds have views over the Omi plain too.\n\nYou might meet the temple’s black cat.\n\nRecommended visit time: 10:50–11:10"
    },
    "gmaps": [
     {
@@ -552,8 +555,8 @@
     "en": "Shrine & sweets"
    },
    "blurb": {
-    "ja": "近江商人があつく信仰してきた神社。大きな鳥居と楼門（ろうもん）をくぐってお参りしたら、となりの「たねや 日牟禮乃舍（ひむれのや）」で和菓子とお茶をどうぞ。",
-    "en": "The shrine the Omi merchants have prayed at for centuries. Walk through the great torii and the two-storey gate, then have tea and Japanese sweets next door at Taneya Himure-no-ya."
+    "ja": "近江商人が信仰してきた神社。お参りのあとは、となりの「たねや」で和菓子とお茶を。",
+    "en": "The shrine of the Omi merchants. After your visit, have tea and Japanese sweets next door at Taneya."
    },
    "lat": 35.140951,
    "lng": 136.089723,
@@ -570,8 +573,8 @@
     "07-10.jpg"
    ],
    "text": {
-    "ja": "日牟禮八幡宮（ひむれはちまんぐう）\n\nロープウェーの乗り場から歩いてすぐ。境内はいつでもお参りできます（無料）。\n\n鳥居の横の「たねや 日牟禮乃舍」は、ラ コリーナと同じ近江八幡の和菓子屋さん「たねや」のお店。茶屋では、いろりのある部屋で和菓子とお茶がいただけます。近くの「クラブハリエ 日牟禮館」では洋菓子が買えます（カフェは改修のため休業中）。\n\nおすすめ訪問時間：11:15〜11:45",
-    "en": "Himure Hachimangu Shrine\n\nA short walk from the ropeway. The grounds are open at all times and free.\n\nTaneya Himure-no-ya, by the torii, belongs to Taneya, the Omihachiman sweet maker behind La Collina. In its tea room you can have Japanese sweets and tea by a big sunken hearth. Club Harie Himure-kan nearby sells Western cakes (its café is closed for renovation).\n\nRecommended visit time: 11:15–11:45"
+    "ja": "日牟禮八幡宮（ひむれはちまんぐう）\n\nロープウェーの乗り場から歩いてすぐ。大きな鳥居と楼門（ろうもん）をくぐってお参りします。境内はいつでもお参りできます（無料）。\n\n鳥居の横の「たねや 日牟禮乃舍」は、ラ コリーナと同じ近江八幡の和菓子屋さん「たねや」のお店。茶屋では、いろりのある部屋で和菓子とお茶がいただけます。近くの「クラブハリエ 日牟禮館」では洋菓子が買えます（カフェは改修のため休業中）。\n\nおすすめ訪問時間：11:15〜11:45",
+    "en": "Himure Hachimangu Shrine\n\nA short walk from the ropeway. You go in through the great torii and a two-storey gate. The grounds are open at all times and free.\n\nTaneya Himure-no-ya, by the torii, belongs to Taneya, the Omihachiman sweet maker behind La Collina. In its tea room you can have Japanese sweets and tea by a big sunken hearth. Club Harie Himure-kan nearby sells Western cakes (its café is closed for renovation).\n\nRecommended visit time: 11:15–11:45"
    },
    "gmaps": [
     {
@@ -668,8 +671,8 @@
     "en": "Lunch (Omi beef)"
    },
    "blurb": {
-    "ja": "八幡堀のすぐそば、赤い丸い塔が目印の近江牛のお店。焼肉丼からステーキの御膳まで。近江八幡名物の赤こんにゃくなどの小鉢も付いてきます。",
-    "en": "Omi-beef restaurant by the canal; look for the round red tower. From beef rice bowls to steak sets, served with little side dishes such as Omihachiman’s famous red konnyaku."
+    "ja": "八幡堀のそば、赤い丸い塔が目印の近江牛のお店。焼肉丼からステーキの御膳まで。",
+    "en": "Omi beef by the canal; look for the round red tower. From beef rice bowls to steak sets."
    },
    "lat": 35.138966,
    "lng": 136.092224,
@@ -770,8 +773,8 @@
     "en": "Lunch (Omi beef)"
    },
    "blurb": {
-    "ja": "日野町の「まるたけ牧場」の近江牛を出す、お肉屋さんのレストラン。すきやき丼から、すきやき・しゃぶしゃぶの御膳、ステーキまで。1階のお肉屋さんでは、近江牛のカツサンドなども買えます。",
-    "en": "A butcher’s restaurant serving Omi beef from its own Marutake farm in Hino. Sukiyaki rice bowls, sukiyaki and shabu-shabu sets, steaks. The butcher counter downstairs sells takeaways such as Omi-beef katsu sandwiches."
+    "ja": "お肉屋さんがやっている近江牛のレストラン。すきやき丼は1,540円。1階でカツサンドも買えます。",
+    "en": "A butcher’s own Omi-beef restaurant. Sukiyaki rice bowl ¥1,540; katsu sandwiches to take away downstairs."
    },
    "lat": 35.13892,
    "lng": 136.091977,
@@ -787,8 +790,8 @@
     "09-9.jpg"
    ],
    "text": {
-    "ja": "まるたけ近江西川（まるたけおうみにしかわ）\n\nすきやき丼（1,540円）や、すきやき・しゃぶしゃぶ・鉄板焼の御膳（4,180円）など。大きな窓の席からは、古い町並みが見えます。\n\n2階の座敷と団体は予約が必要です。すぐ近くの「久ぼ多屋」（8番）とあわせて、ランチはどちらか1軒を選んでください。\n\nおすすめ訪問時間：11:45〜12:45",
-    "en": "Marutake Ohmi Nishikawa\n\nSukiyaki rice bowl ¥1,540; sukiyaki, shabu-shabu or teppanyaki sets ¥4,180, and more. Window seats look out on the old town.\n\nBook ahead for the upstairs tatami room or for groups. Kubotaya (stop 8) is just next door, so pick one of the two for lunch.\n\nRecommended visit time: 11:45–12:45"
+    "ja": "まるたけ近江西川（まるたけおうみにしかわ）\n\n日野町の自社牧場「まるたけ牧場」の近江牛を出すお店です。すきやき丼（1,540円）や、すきやき・しゃぶしゃぶ・鉄板焼の御膳（4,180円）など。大きな窓の席からは、古い町並みが見えます。\n\n2階の座敷と団体は予約が必要です。すぐ近くの「久ぼ多屋」（8番）とあわせて、ランチはどちらか1軒を選んでください。\n\nおすすめ訪問時間：11:45〜12:45",
+    "en": "Marutake Ohmi Nishikawa\n\nThe beef comes from the shop’s own Marutake farm in Hino. Sukiyaki rice bowl ¥1,540; sukiyaki, shabu-shabu or teppanyaki sets ¥4,180, and more. Window seats look out on the old town.\n\nBook ahead for the upstairs tatami room or for groups. Kubotaya (stop 8) is just next door, so pick one of the two for lunch.\n\nRecommended visit time: 11:45–12:45"
    },
    "gmaps": [
     {
@@ -864,8 +867,8 @@
     "en": "Craft beer"
    },
    "blurb": {
-    "ja": "近江八幡のクラフトビール醸造所「TWO RABBITS BREWING（二兎醸造）」のビアハウス。八幡堀のそばの白壁の蔵で、できたてのビールをタップから。缶ビールのお持ち帰りもできます。",
-    "en": "The taproom of Two Rabbits Brewing, Omihachiman’s own craft brewery, in a white-walled storehouse by the canal. Fresh beer on tap, and cans to take away."
+    "ja": "八幡堀のそば、白壁の蔵で飲める近江八幡のクラフトビール。缶の持ち帰りもできます。",
+    "en": "Omihachiman’s own craft beer, on tap in a white-walled storehouse by the canal. Cans to take away too."
    },
    "lat": 35.13947,
    "lng": 136.089,
@@ -882,8 +885,8 @@
     "10-10.jpg"
    ],
    "text": {
-    "ja": "TWO RABBITS BEER HOUSE（トゥー ラビッツ ビアハウス）\n\nランチのあとに1杯。蔵の中に、タップがずらりと並んだカウンターがあります。缶ビールも買えるので、帰りの電車用やおみやげにも。\n\n営業日や時間が変わることがあるので、行く前に公式インスタグラムを見てください（2026年1月22日は缶の販売だけの日でした）。\n\nおすすめ訪問時間：13:00〜13:45",
-    "en": "Two Rabbits Beer House\n\nA beer after lunch. Inside the storehouse there’s a bar with a long row of taps, and cans to buy for the train home or as a souvenir.\n\nOpening days and hours change at times, so check their Instagram before you go (on Jan 22, 2026, it was selling cans only).\n\nRecommended visit time: 13:00–13:45"
+    "ja": "TWO RABBITS BEER HOUSE（トゥー ラビッツ ビアハウス）\n\n近江八幡の醸造所「TWO RABBITS BREWING（二兎醸造）」のお店です。ランチのあとに1杯。蔵の中に、タップがずらりと並んだカウンターがあります。缶ビールも買えるので、帰りの電車用やおみやげにも。\n\n営業日や時間が変わることがあるので、行く前に公式インスタグラムを見てください（2026年1月22日は缶の販売だけの日でした）。\n\nおすすめ訪問時間：13:00〜13:45",
+    "en": "Two Rabbits Beer House\n\nThe taproom of Two Rabbits Brewing, the town’s own brewery. A beer after lunch. Inside the storehouse there’s a bar with a long row of taps, and cans to buy for the train home or as a souvenir.\n\nOpening days and hours change at times, so check their Instagram before you go (on Jan 22, 2026, it was selling cans only).\n\nRecommended visit time: 13:00–13:45"
    },
    "gmaps": [
     {
@@ -931,8 +934,8 @@
     "en": "Old town walk"
    },
    "blurb": {
-    "ja": "ビールのあとは、近江商人の大きなお屋敷が並ぶ新町通りや、八幡堀ぞいの石畳の道をのんびり散歩。白壁の洋館「白雲館（はくうんかん）」は、明治時代に建てられた学校で、今は観光案内所です。",
-    "en": "After the beer, wander Shinmachi Street, lined with the grand houses of the Omi merchants, and the stone paths along the canal. The white Western-style Hakuunkan was built as a school in the Meiji era and is now the tourist information centre."
+    "ja": "近江商人のお屋敷が並ぶ通りと、八幡堀ぞいの石畳を、のんびり散歩。",
+    "en": "A slow walk down a street of Omi merchants’ houses and along the stone paths by the canal."
    },
    "lat": 35.1379,
    "lng": 136.0894,
@@ -942,15 +945,13 @@
     "11-3.jpg",
     "11-4.jpg",
     "11-5.jpg",
-    "11-6.jpg",
-    "11-7.jpg",
     "11-8.jpg",
     "11-9.jpg",
     "11-10.jpg"
    ],
    "text": {
-    "ja": "新町通り（しんまちどおり）\n\n八幡堀から南へ少し歩くと、黒い板塀と格子の家が並ぶ新町通りに出ます。このあたりの町並みは、国の重要伝統的建造物群保存地区に選ばれています。\n\nラ コリーナ（12番）までは、北へ歩いて約20〜25分。途中、静かな水路ぞいの道も通ります。\n\nおすすめ訪問時間：13:45〜14:30",
-    "en": "Shinmachi Street\n\nA few minutes south of the canal, Shinmachi Street is lined with dark board fences and lattice-fronted houses. The old town here is a nationally protected historic district.\n\nLa Collina (stop 12) is a 20–25 minute walk north, partly along a quiet waterway.\n\nRecommended visit time: 13:45–14:30"
+    "ja": "新町通り（しんまちどおり）\n\n八幡堀から南へ少し歩くと、黒い板塀と格子の家が並ぶ新町通りに出ます。このあたりの町並みは、国の重要伝統的建造物群保存地区に選ばれています。\n\n白壁の洋館「白雲館（はくうんかん）」は明治時代に建てられた学校で、今は観光案内所です。\n\nラ コリーナ（12番）までは、北へ歩いて約20〜25分。途中、静かな水路ぞいの道も通ります。\n\nおすすめ訪問時間：13:45〜14:20",
+    "en": "Shinmachi Street\n\nA few minutes south of the canal, Shinmachi Street is lined with dark board fences and lattice-fronted houses. The old town here is a nationally protected historic district.\n\nThe white Western-style Hakuunkan was built as a school in the Meiji era and is now the tourist information centre.\n\nLa Collina (stop 12) is a 20–25 minute walk north, partly along a quiet waterway.\n\nRecommended visit time: 13:45–14:20"
    },
    "gmaps": [
     {
@@ -995,8 +996,8 @@
     "en": "Sweets & café"
    },
    "blurb": {
-    "ja": "和菓子の「たねや」と洋菓子の「クラブハリエ」のお店が集まった場所。建築家・藤森照信（ふじもりてるのぶ）さんが設計した草の屋根のメインショップと、焼きたてのバームクーヘンが名物です。",
-    "en": "Home of Taneya (Japanese sweets) and Club Harie (Western cakes). Famous for the grass-roofed main shop by architect Terunobu Fujimori and for freshly baked baumkuchen."
+    "ja": "草屋根の建物と、焼きたてのバームクーヘン。「たねや」と「クラブハリエ」のお店が集まっています。",
+    "en": "A grass-roofed building and freshly baked baumkuchen, at the home of Taneya and Club Harie."
    },
    "lat": 35.148748,
    "lng": 136.091607,
@@ -1013,8 +1014,8 @@
     "12-10.jpg"
    ],
    "text": {
-    "ja": "ラ コリーナ近江八幡（ら こりーな おうみはちまん）\n\n八幡堀・日牟禮八幡宮から北へ歩いて約20分（約1.4km）。バスなら八幡堀のバス停から3分、280円です。\n\n焼きたてのバームクーヘンは、メインショップのクラブハリエやバームファクトリーで。田んぼの中を歩く道や、木の回廊もすてきです。\n\n帰りは「北之庄 ラ コリーナ前」のバス停から近江八幡駅まで約18分、410円。駅へ向かうバス停は道路の向かい側なので、横断歩道を渡ってください。連休はとても混むので、バスで来るのがおすすめです。\n\nおすすめ訪問時間：14:45〜16:15",
-    "en": "La Collina Omihachiman\n\nAbout 20 minutes’ walk north of the canal and the shrine (about 1.4 km), or 3 minutes by bus from the canal stop (¥280).\n\nGet freshly baked baumkuchen at Club Harie in the main shop or at the Baum Factory. The paths through the rice field and the timber colonnade are lovely too.\n\nBack to Omi-Hachiman Station: about 18 minutes by bus from “Kitanosho La Collina-mae”, ¥410. The stop for the station is across the road, so use the crossing. It gets very busy on long weekends; come by bus.\n\nRecommended visit time: 14:45–16:15"
+    "ja": "ラ コリーナ近江八幡（ら こりーな おうみはちまん）\n\n八幡堀・日牟禮八幡宮から北へ歩いて約20分（約1.4km）。バスなら八幡堀のバス停から3分、280円です。\n\n焼きたてのバームクーヘンは、メインショップのクラブハリエやバームファクトリーで。草屋根のメインショップは、建築家・藤森照信（ふじもりてるのぶ）さんの設計。買い物をしなくても、田んぼのまわりの道や木の回廊を歩けます。\n\n帰りは「北之庄 ラ コリーナ前」のバス停から近江八幡駅まで約18分、410円。駅へ向かうバス停は道路の向かい側なので、横断歩道を渡ってください。連休はとても混むので、バスで来るのがおすすめです。\n\nおすすめ訪問時間：14:45〜16:15",
+    "en": "La Collina Omihachiman\n\nAbout 20 minutes’ walk north of the canal and the shrine (about 1.4 km), or 3 minutes by bus from the canal stop (¥280).\n\nGet freshly baked baumkuchen at Club Harie in the main shop or at the Baum Factory. The grass-roofed main shop is by architect Terunobu Fujimori. Even without shopping, you can walk the paths round the rice field and the timber colonnade.\n\nBack to Omi-Hachiman Station: about 18 minutes by bus from “Kitanosho La Collina-mae”, ¥410. The stop for the station is across the road, so use the crossing. It gets very busy on long weekends; come by bus.\n\nRecommended visit time: 14:45–16:15"
    },
    "gmaps": [
     {
@@ -1111,8 +1112,8 @@
     "en": "Dinner (Omi beef)"
    },
    "blurb": {
-    "ja": "駅の北口から歩いて約3分。近江牛のお肉屋さん「カネ吉山本」の建物にあるレストランで、近江牛のコース料理が食べられます。ランチの時間に行くのもあり。",
-    "en": "Three minutes from the North Exit, in the building of the Omi-beef butcher Kanekichi Yamamoto. Omi-beef courses for dinner, or go at lunchtime instead."
+    "ja": "駅の北口から歩いて3分、お肉屋さん「カネ吉山本」の近江牛レストラン。ランチで行くのもあり。",
+    "en": "Three minutes from the North Exit: the Omi-beef restaurant of butcher Kanekichi Yamamoto. Lunch works too."
    },
    "lat": 35.123885,
    "lng": 136.100791,
@@ -1200,8 +1201,8 @@
    "lat": 35.122804,
    "lng": 136.102912,
    "photos": [
-    "14-1.jpg",
     "14-2.jpg",
+    "14-1.jpg",
     "14-3.jpg",
     "14-4.jpg",
     "14-5.jpg",
@@ -1322,8 +1323,8 @@
     "en": "Castle"
    },
    "blurb": {
-    "ja": "江戸時代からの天守が残り、国宝になっている全国5つのお城のひとつ。石段を上った先の天守からは、琵琶湖が見えます。春は堀ぞいの桜もみごとです。",
-    "en": "One of only five castles in Japan whose original keep is a National Treasure. Climb the stone steps to the keep for a view of Lake Biwa. In spring, cherry trees line the moats."
+    "ja": "江戸時代の天守が残る、国宝のお城。天守から琵琶湖が見えます。春は堀ぞいの桜も。",
+    "en": "A National Treasure castle with its original Edo-period keep and a view of Lake Biwa. Cherry trees along the moats in spring."
    },
    "lat": 35.276482,
    "lng": 136.251925,
@@ -1340,8 +1341,8 @@
     "16-10.jpg"
    ],
    "text": {
-    "ja": "彦根城（ひこねじょう）\n\n天守までは石段を約140段。城の券（1,000円）で、となりの玄宮園（17番）にも入れます。\n\nひこにゃんは、晴れの日はふだん13:30〜14:00に天守前、15:00〜15:30に博物館の冠木門（かぶきもん）の前に登場します（日によって変わります）。\n\n夜の写真は、春の桜のライトアップ（2025年4月）と、秋のライトアップ（2025年11月）のときです。\n\nおすすめ訪問時間：15:00〜16:00",
-    "en": "Hikone Castle\n\nAbout 140 stone steps up to the keep. The castle ticket (¥1,000) also gets you into Genkyuen Garden (stop 17).\n\nHikonyan, the castle’s cat mascot, usually appears on fine days 13:30–14:00 in front of the keep and 15:00–15:30 at the museum gate (times vary).\n\nThe night photos are from the spring cherry illumination (April 2025) and the autumn light-up (November 2025).\n\nRecommended visit time: 15:00–16:00"
+    "ja": "彦根城（ひこねじょう）\n\n江戸時代からの天守が残り、国宝になっている全国5つのお城のひとつです。天守までは石段を約140段。城の券（1,000円）で、となりの玄宮園（17番）にも入れます。\n\nひこにゃんは、晴れの日はふだん13:30〜14:00に天守前、15:00〜15:30に博物館の冠木門（かぶきもん）の前に登場します（日によって変わります）。\n\n夜の写真は、春の桜のライトアップ（2025年4月）と、秋のライトアップ（2025年11月）のときです。\n\nおすすめ訪問時間：15:00〜16:00",
+    "en": "Hikone Castle\n\nOne of only five castles in Japan whose original keep is a National Treasure. About 140 stone steps up to the keep. The castle ticket (¥1,000) also gets you into Genkyuen Garden (stop 17).\n\nHikonyan, the castle’s cat mascot, usually appears on fine days 13:30–14:00 in front of the keep and 15:00–15:30 at the museum gate (times vary).\n\nThe night photos are from the spring cherry illumination (April 2025) and the autumn light-up (November 2025).\n\nRecommended visit time: 15:00–16:00"
    },
    "gmaps": [
     {
@@ -1414,11 +1415,11 @@
    "lat": 35.278232,
    "lng": 136.254065,
    "photos": [
+    "17-5.jpg",
     "17-1.jpg",
     "17-2.jpg",
     "17-3.jpg",
     "17-4.jpg",
-    "17-5.jpg",
     "17-6.jpg",
     "17-7.jpg",
     "17-8.jpg",

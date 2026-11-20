@@ -73,7 +73,7 @@ window.ARASHIYAMA_I18N = {
       favLabel: 'いちばんの見どころ',
       favName: '愛宕念仏寺',
       favText: '1200体の、表情ゆたかな石の羅漢さん。',
-      favPhoto: [5, 2],
+      favPhoto: [5, 0],
       whoHead: 'こんな人におすすめ',
       who: [
         '嵐山の定番スポットも、静かな奥嵯峨も、両方楽しみたい人に',
@@ -88,7 +88,7 @@ window.ARASHIYAMA_I18N = {
       day: [
         { time: '9:00', area: '京都河原町 → 嵐山', title: '阪急電車で嵐山へ', text: '京都河原町から約30分。桂で嵐山線に乗り換えます。', photo: [3, 0] },
         { time: '9:44', area: '愛宕念仏寺 → 化野', title: 'バスで山の上へ、あとは坂を下るだけ', text: 'バスで愛宕念仏寺へ。羅漢さんに会ったら、鳥居本の町並みを歩いて化野念仏寺まで下ります。', note: 'バスは1時間に1本', badge: 'ここまでは全員同じルート', photo: [5, 1] },
-        { time: '12:30', area: '奥嵯峨', title: '苔と紅葉のお寺を選んで', text: '祇王寺、二尊院、常寂光寺、大河内山荘。全部は回れないので、気になるところを選んで。', badge: '好きな場所を選ぶ', photo: [8, 0] },
+        { time: '12:30', area: '奥嵯峨', title: '苔と紅葉のお寺を選んで', text: '祇王寺、二尊院、常寂光寺、大河内山荘。気になるところを選んで。', note: 'このあたりは食事の店が少なめ', badge: '好きな場所を選ぶ', photo: [8, 0] },
         { time: '15:00', area: '竹林 → 天龍寺', title: '竹林の小径と天龍寺の庭', text: '竹林を歩いて野宮神社へ。天龍寺には北門から入って、池の庭を眺めます。', note: '天龍寺の庭園は16:50受付終了', photo: [12, 0] },
         { time: '16:20', area: '嵐山の中心', title: '銭湯カフェと渡月橋', text: '元銭湯のカフェでひと休みしたら、渡月橋へ。おさるの山に行くなら早めに。', note: 'モンキーパークは16:00ごろまで', photo: [16, 0] },
         { time: '17:30', area: '京都の街なかへ', title: '夜は先斗町へ', text: '阪急電車で京都河原町へ戻って、灯りのともる先斗町へ。', photo: [18, 0] }
@@ -183,7 +183,7 @@ window.ARASHIYAMA_I18N = {
       favLabel: 'Don’t miss',
       favName: 'Otagi Nenbutsu-ji',
       favText: '1,200 stone rakan, each with its own face.',
-      favPhoto: [5, 2],
+      favPhoto: [5, 0],
       whoHead: 'Who it’s for',
       who: [
         'For both the famous sights of Arashiyama and quiet, hidden Sagano',
@@ -198,7 +198,7 @@ window.ARASHIYAMA_I18N = {
       day: [
         { time: '9:00', area: 'Kawaramachi → Arashiyama', title: 'Hankyu train to Arashiyama', text: 'About 30 minutes from Kyoto-kawaramachi, changing at Katsura.', photo: [3, 0] },
         { time: '9:44', area: 'Otagi → Adashino', title: 'Bus up the hill, then walk down', text: 'Bus to Otagi Nenbutsu-ji and its stone rakan, then walk down the old Toriimoto street to Adashino Nenbutsu-ji.', note: 'Only about one bus an hour', badge: 'Everyone does this part', photo: [5, 1] },
-        { time: '12:30', area: 'Oku-Saga', title: 'Moss temples: take your pick', text: 'Gio-ji, Nison-in, Jojakko-ji, Okochi Sanso. You can’t see them all, so choose a favorite or two.', badge: 'Pick what you like', photo: [8, 0] },
+        { time: '12:30', area: 'Oku-Saga', title: 'Moss temples: take your pick', text: 'Gio-ji, Nison-in, Jojakko-ji, Okochi Sanso. Choose the ones you like.', note: 'Few places to eat around here', badge: 'Pick what you like', photo: [8, 0] },
         { time: '15:00', area: 'Bamboo → Tenryu-ji', title: 'Bamboo grove & Zen garden', text: 'Walk the bamboo path to Nonomiya Shrine, then enter Tenryu-ji by the north gate for its pond garden.', note: 'Tenryu-ji garden: last entry 16:50', photo: [12, 0] },
         { time: '16:20', area: 'Central Arashiyama', title: 'Bathhouse café & Togetsukyo', text: 'Rest in a café in an old public bath, then on to the bridge. For the monkeys, go earlier.', note: 'Monkey Park closes around 16:00', photo: [16, 0] },
         { time: '17:30', area: 'Back downtown', title: 'Pontocho at night', text: 'Hankyu train back to Kyoto-kawaramachi, then the lantern-lit lane of Pontocho.', photo: [18, 0] }

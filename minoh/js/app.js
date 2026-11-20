@@ -826,7 +826,7 @@
     route();
   }
 
-  fetch('../data/routes/minoh.json?v=3')
+  fetch('../data/routes/minoh.json?v=5')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

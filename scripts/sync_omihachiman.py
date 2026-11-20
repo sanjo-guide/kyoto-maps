@@ -32,7 +32,7 @@ s = s.replace("window.EIZAN_I18N", "window.OMI_I18N").replace("'kyoto-maps-eizan
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 17;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s)
 assert m
-s = s.replace(m.group(0), "fetch('../data/routes/omihachiman.json?v=1')")
+s = s.replace(m.group(0), "fetch('../data/routes/omihachiman.json?v=3')")
 # 「お得なきっぷ」欄を省略できるように（sync_minoh.py と同じ置き換え）
 s2 = re.sub(r"""(        )'<section class="in-sec"><h2 class="in-h2">' \+ esc\(x\.dealsHead\) \+ (.*?)'</div><p class="in-deals-note">' \+ esc\(x\.dealsNote\) \+ '</p></section>' \+""",
             lambda m: m.group(1) + """(x.deals && x.deals.length ? '<section class="in-sec"><h2 class="in-h2">' + esc(x.dealsHead) + """ + m.group(2).replace(

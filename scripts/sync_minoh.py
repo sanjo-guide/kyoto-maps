@@ -18,7 +18,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s=s.replace("window.EIZAN_I18N","window.MINOH_I18N").replace("'kyoto-maps-eizan-","'kyoto-maps-minoh-")
 s=re.sub(r"t = spots\.length \|\| \d+;","t = spots.length || 11;",s)
 m=re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)",s); assert m
-s=s.replace(m.group(0),"fetch('../data/routes/minoh.json?v=3')")
+s=s.replace(m.group(0),"fetch('../data/routes/minoh.json?v=5')")
 s2=re.sub(r"""(        )'<section class="in-sec"><h2 class="in-h2">' \+ esc\(x\.dealsHead\) \+ (.*?)'</div><p class="in-deals-note">' \+ esc\(x\.dealsNote\) \+ '</p></section>' \+""",
   lambda m: m.group(1)+"""(x.deals && x.deals.length ? '<section class="in-sec"><h2 class="in-h2">' + esc(x.dealsHead) + """+m.group(2).replace("""'<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a></div>';""","""(d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a>' : '') + '</div>';""")+"""'</div>' + (x.dealsNote ? '<p class="in-deals-note">' + esc(x.dealsNote) + '</p>' : '') + '</section>' : '') +""", s, flags=re.S)
 assert s2!=s, 'deals block not found'; s=s2

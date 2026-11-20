@@ -835,7 +835,7 @@
     route();
   }
 
-  fetch('../data/routes/omihachiman.json?v=1')
+  fetch('../data/routes/omihachiman.json?v=3')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

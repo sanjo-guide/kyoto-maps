@@ -847,7 +847,7 @@
     route();
   }
 
-  fetch('../data/routes/arashiyama.json?v=5')
+  fetch('../data/routes/arashiyama.json?v=7')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {
