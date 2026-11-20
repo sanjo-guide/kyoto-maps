@@ -80,8 +80,8 @@ window.GUIDE = {
       "en": "Day 1"
      },
      "text": {
-      "ja": "日帰りプランと同じように天橋立・伊根を回り、夕方の京都丹後鉄道で豊岡へ（天橋立17:21発→豊岡18:47着・1,200円）。Hostel Actに泊まります。",
-      "en": "See Amanohashidate and Ine as in the day trip, then take the evening Kyoto Tango Railway to Toyooka (Amanohashidate 17:21 → Toyooka 18:47, ¥1,200). Stay at Hostel Act."
+      "ja": "日帰りプランと同じように天橋立・伊根を回り、夕方の京都丹後鉄道で豊岡へ（天橋立17:21発→豊岡18:47着。フリーパスを持っていればそのまま乗れます。なければ1,200円）。Hostel Actに泊まります。",
+      "en": "See Amanohashidate and Ine as in the day trip, then take the evening Kyoto Tango Railway to Toyooka (Amanohashidate 17:21 → Toyooka 18:47; covered by the free pass, otherwise ¥1,200). Stay at Hostel Act."
      }
     },
     {
@@ -325,11 +325,11 @@ window.GUIDE = {
    },
    "body": {
     "ja": [
-     "柳並木の大谿川（おおたにがわ）に沿って、7つの外湯（共同浴場）が並ぶ温泉町です。浴衣と下駄で、外湯をめぐりながら歩くのが城崎の楽しみ方です。",
+     "柳並木の大谿川（おおたにがわ）に沿って、外湯（共同浴場）が並ぶ温泉町です。外湯は7つありますが、駅前のさとの湯は2024年4月から改修で休館しています。浴衣と下駄で、外湯をめぐりながら歩くのが城崎の楽しみ方です。",
      "外湯めぐりの1日券「ゆめぱ」（1,500円）は、どの外湯でも買えます。夜は川沿いに灯りがともり、冬は雪景色になります。外湯の時間や休みの日は、ルートマップにまとめています。"
     ],
     "en": [
-     "A hot-spring town where seven public bathhouses line the willow-fringed Otani River. The thing to do is wander between them in a yukata and geta.",
+     "A hot-spring town whose public bathhouses line the willow-fringed Otani River. There are seven, but Sato-no-yu by the station has been closed for renovation since April 2024. The thing to do is wander between them in a yukata and geta.",
      "The “Yumepa” day pass (¥1,500) is sold at every bathhouse. At night the river is lit up, and in winter it’s a snow scene. Bathhouse hours and closing days are in the route map."
     ]
    },
@@ -621,15 +621,6 @@ window.GUIDE = {
     {
      "f": "hostelact-4.jpg",
      "cap": {
-      "ja": "布団の敷かれた和室",
-      "en": "A Japanese-style room with futon"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hostelact-5.jpg",
-     "cap": {
       "ja": "洗面所",
       "en": "The washroom"
      },
@@ -637,7 +628,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hostelact-6.jpg",
+     "f": "hostelact-5.jpg",
      "cap": {
       "ja": "洗面所とトイレの入り口",
       "en": "Washroom and toilet doors"
@@ -646,7 +637,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hostelact-7.jpg",
+     "f": "hostelact-6.jpg",
      "cap": {
       "ja": "1階のもりめ食堂の夜の定食（2023年）",
       "en": "An evening set meal at Morime Shokudo downstairs (2023)"

@@ -3,8 +3,8 @@
    - 色: 地面は明るいグレー、公園・森は薄い緑、水は水色、道は白、高速道路は黄色
    - 文字: 市町村・駅・川・公園・大きな道の名前だけ。町名やお店の名前は出さない（紹介したい場所を目立たせるため）
    使い方:
-     var layer = PHS_BASEMAP.addTo(leafletMap, { lang: 'ja', dark: false, worker: '../vendor/maplibre/maplibre-gl-csp-worker.js' });
-     PHS_BASEMAP.setLang(layer.getMaplibreMap(), 'en');
+     var layer = KM_BASEMAP.addTo(leafletMap, { lang: 'ja', dark: false, worker: '../vendor/maplibre/maplibre-gl-csp-worker.js' });
+     KM_BASEMAP.setLang(layer.getMaplibreMap(), 'en');
 */
 (function () {
   'use strict';
@@ -154,5 +154,5 @@
     }).addTo(map);
   }
 
-  window.PHS_BASEMAP = { style: style, setLang: setLang, addTo: addTo, attribution: ATTR };
+  window.KM_BASEMAP = { style: style, setLang: setLang, addTo: addTo, attribution: ATTR };
 })();

@@ -11,7 +11,7 @@ window.KINOSAKI_I18N = {
     titleSub: 'Kinosaki Onsen',
     howto: '使い方',
     allMaps: '← マップ一覧',
-    home: 'ホーム',
+    home: 'マップ一覧',
     tabMap: '地図',
     menu: 'メニュー',
     list: '一覧',
@@ -73,7 +73,7 @@ window.KINOSAKI_I18N = {
       lead: '朝の特急で京都を出て、石垣だけが山の上に残る竹田城跡へ。そのあとは城崎温泉で、浴衣と下駄で外湯をめぐり、灯りがともる大谿川沿いを歩いて、夜の特急で京都へ帰ります。竹田城跡に寄らず、城崎で1日ゆっくりするのもおすすめです。',
       favLabel: 'いちばんの見どころ',
       favName: '外湯めぐり',
-      favText: '柳並木の川沿いに、7つの外湯。1日券でいくつでも入れます。',
+      favText: '柳並木の川沿いに外湯が並び、1日券でいくつでも入れます。',
       favPhoto: [6, 0],
       whoHead: 'こんな人におすすめ',
       who: [
@@ -88,7 +88,7 @@ window.KINOSAKI_I18N = {
       from: '',
       day: [
         { time: '7:32', area: '京都駅', title: '朝の特急で出発', text: '特急きのさき1号に乗ります。竹田城跡に寄る日は和田山で播但線に乗り換えて竹田へ。', photo: [1, 0] },
-        { time: '9:40', area: '竹田城跡', title: '天空の城の石垣を歩く', text: '天空バスかタクシーで山の中腹へ。石垣の上から但馬の山々を見渡したら、寺町通りを歩いてお昼に。', badge: '行きたい人だけ', photo: [3, 0] },
+        { time: '9:40', area: '竹田城跡', title: '天空の城の石垣を歩く', text: '天空バスかタクシーで山の中腹へ。石垣の上から但馬の山々を見渡したら、寺町通りを歩いてお昼に。', badge: '行きたい人だけ', photo: [2, 0] },
         { time: '14:35', area: '城崎温泉駅 → 大谿川', title: '柳並木の温泉街へ', text: '駅前の足湯から、駅に近い地蔵湯へ。柳並木と石の太鼓橋が続く大谿川沿いを歩きます。', photo: [6, 0] },
         { time: '15:30', area: '柳湯 → 御所の湯', title: '外湯めぐり', text: '柳湯、洞窟風呂の一の湯、池の上に建つような御所の湯へ。行きたい外湯を選んで回ります。', badge: '好きな外湯を選ぶ', photo: [8, 0] },
         { time: '17:25', area: 'まんだら湯 → 鴻の湯', title: '温泉街の奥の外湯', text: '緑の屋根のまんだら湯と、いちばん奥の鴻の湯。駅までは歩いて15分ほどです。', photo: [10, 0] },
@@ -98,7 +98,7 @@ window.KINOSAKI_I18N = {
       dealsHead: '交通費・料金のめやす',
       dealsLead: '電車は京都から城崎温泉まで片道5,370円。竹田城跡に寄る日の行きは、京都→竹田4,700円と竹田→城崎温泉860円です。',
       deals: [
-        { name: '特急（京都↔城崎温泉）', price: '片道5,370円', text: '乗車券2,640円＋特急料金2,730円。行きは7:32発のきのさき1号、帰りは18:53発（福知山で乗り換え）か16:31発（乗り換えなし）。', url: 'https://timetable.jr-odekake.net/' },
+        { name: '特急（京都↔城崎温泉）', price: '片道5,370円', text: '乗車券2,640円＋特急料金2,730円。行きは7:32発のきのさき1号、帰りは18:53発（福知山で乗り換え）か16:31発（乗り換えなし）。', url: 'https://www.jr-odekake.net/' },
         { name: '外湯めぐり1日券「ゆめぱ」', price: '1,500円', text: 'どの外湯でも買えて、その日は外湯にいくつでも入れます。城崎の宿に泊まる人は宿でもらえることが多いです。', url: 'https://kinosaki-spa.gr.jp/' },
         { name: '竹田城跡', price: '500円', text: '高校生以上。中学生以下は無料。1月4日〜2月末は冬の閉山で入れません。', url: 'https://www.city.asago.hyogo.jp/site/takeda/' }
       ],
@@ -122,7 +122,7 @@ window.KINOSAKI_I18N = {
     titleSub: '城崎温泉',
     howto: 'How to use',
     allMaps: '← All maps',
-    home: 'Home',
+    home: 'All maps',
     tabMap: 'Map',
     menu: 'Menu',
     list: 'Spots',
@@ -184,7 +184,7 @@ window.KINOSAKI_I18N = {
       lead: 'Leave Kyoto on a morning express for Takeda Castle, whose stone walls still crown a mountaintop. Then on to Kinosaki Onsen: hop between the public bathhouses in a yukata and geta, stroll the lantern-lit Otani River, and catch an evening express back to Kyoto. Skipping the castle and spending the whole day in Kinosaki is lovely too.',
       favLabel: 'Don’t miss',
       favName: 'Bathhouse hopping',
-      favText: 'Seven public baths along a willow-lined river. One day pass gets you into as many as you like.',
+      favText: 'Public baths along a willow-lined river. One day pass gets you into as many as you like.',
       favPhoto: [6, 0],
       whoHead: 'Who it’s for',
       who: [
@@ -199,7 +199,7 @@ window.KINOSAKI_I18N = {
       from: 'From',
       day: [
         { time: '7:32', area: 'Kyoto Station', title: 'Off on the morning express', text: 'Board the Kinosaki No. 1. For Takeda Castle, change at Wadayama to the Bantan Line.', photo: [1, 0] },
-        { time: '9:40', area: 'Takeda Castle', title: 'Walls of the castle in the sky', text: 'Take the Tenku Bus or a taxi halfway up. After the view over the Tajima mountains, stroll Teramachi-dori and have lunch.', badge: 'Optional', photo: [3, 0] },
+        { time: '9:40', area: 'Takeda Castle', title: 'Walls of the castle in the sky', text: 'Take the Tenku Bus or a taxi halfway up. After the view over the Tajima mountains, stroll Teramachi-dori and have lunch.', badge: 'Optional', photo: [2, 0] },
         { time: '14:35', area: 'Kinosaki Station → Otani River', title: 'Into the willow-lined town', text: 'From the foot bath outside the station to nearby Jizo-yu, then along the Otani River with its willows and arched stone bridges.', photo: [6, 0] },
         { time: '15:30', area: 'Yanagi-yu → Gosho-no-yu', title: 'Bathhouse hopping', text: 'Yanagi-yu, Ichi-no-yu with its cave bath, and Gosho-no-yu over its pond. Choose the baths you like.', badge: 'Pick your baths', photo: [8, 0] },
         { time: '17:25', area: 'Mandara-yu → Kou-no-yu', title: 'The baths at the far end', text: 'Green-roofed Mandara-yu and Kou-no-yu at the very end of town, about 15 min on foot from the station.', photo: [10, 0] },
@@ -209,7 +209,7 @@ window.KINOSAKI_I18N = {
       dealsHead: 'Fares and fees',
       dealsLead: 'The train from Kyoto to Kinosaki Onsen is ¥5,370 each way. Via Takeda Castle, the way out is ¥4,700 (Kyoto → Takeda) plus ¥860 (Takeda → Kinosaki Onsen).',
       deals: [
-        { name: 'Limited express (Kyoto ↔ Kinosaki Onsen)', price: '¥5,370 one way', text: 'Fare ¥2,640 + express charge ¥2,730. Out on the 7:32 Kinosaki No. 1; back on the 18:53 (change at Fukuchiyama) or the 16:31 (direct).', url: 'https://timetable.jr-odekake.net/' },
+        { name: 'Limited express (Kyoto ↔ Kinosaki Onsen)', price: '¥5,370 one way', text: 'Fare ¥2,640 + express charge ¥2,730. Out on the 7:32 Kinosaki No. 1; back on the 18:53 (change at Fukuchiyama) or the 16:31 (direct).', url: 'https://www.jr-odekake.net/' },
         { name: '“Yumepa” onsen day pass', price: '¥1,500', text: 'Sold at every bathhouse; use as many baths as you like that day. Guests at Kinosaki inns usually get one at check-in.', url: 'https://visitkinosaki.com/about-kinosaki/the-7-mystic-onsen/' },
         { name: 'Takeda Castle Ruins', price: '¥500', text: 'High school and up; junior high and under free. Closed for winter 4 Jan – end of Feb.', url: 'https://www.city.asago.hyogo.jp/site/takeda/' }
       ],

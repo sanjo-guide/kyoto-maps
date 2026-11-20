@@ -1,0 +1,554 @@
+{
+ "id": "nishiyama",
+ "_note": "京都 西山のルート（nishiyama/ のページ専用。形は eizan-line.json と同じ）。阪急で松尾大社→鈴虫寺→苔乃茶屋でお昼→地蔵院（竹の寺）→浄住寺→上桂駅。写真は Toshi の写真ライブラリから選んだもの（2025年10月30日と2026年1月13日の Nikon D7000。地蔵院のハートの窓は iPhone の位置情報で地蔵院と確認。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（各寺社の公式サイト・京都観光Navi、電車は乗換案内）。このファイルは scripts/build_nishiyama_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "day": 0
+  },
+  {
+   "first": 2,
+   "last": 3,
+   "day": 1
+  },
+  {
+   "first": 4,
+   "last": 5,
+   "day": 2
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。全部選べる。",
+  "picks": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "auto": {},
+  "hints": [
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      1
+     ]
+    },
+    "text": {
+     "ja": "松尾大社に寄らない日は、京都駅から京都バス73系統、三条京阪から63系統で終点の「苔寺・すず虫寺」へ（約1時間・230円）。",
+     "en": "Skipping Matsunoo? Kyoto Bus 73 from Kyoto Station or 63 from Sanjo Keihan runs to the last stop “Kokedera-Suzumushidera” (about an hour, ¥230)."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "帰りは阪急の上桂駅まで歩いて約12分。または「苔寺・すず虫寺」から京都バスで、三条京阪（63系統）・京都駅（73系統）へ。",
+     "en": "Go home from Hankyu Kami-Katsura (about 12 min on foot), or by Kyoto Bus from “Kokedera-Suzumushidera” to Sanjo Keihan (63) or Kyoto Station (73)."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/nishiyama/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "matsuo",
+   "name": {
+    "ja": "松尾大社",
+    "en": "Matsunoo Taisha"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "お酒の神様として知られる、京都でもとくに古い神社。朱の大鳥居をくぐると、奉納された酒樽がずらりと並びます。",
+    "en": "One of Kyoto’s oldest shrines, revered as the god of sake: through the vermilion torii, rows of donated sake barrels."
+   },
+   "lat": 35.00019,
+   "lng": 135.6853,
+   "text": {
+    "ja": "松尾大社（まつのおたいしゃ）\n\n京都河原町から阪急で桂へ、嵐山線に乗り換えて松尾大社駅へ（約30分・240円）。駅を出ると、すぐ大鳥居が見えます。平安京より前からある古い神社で、お酒の神様として全国の酒造りの人たちが信仰しています。境内には、奉納された酒樽が壁のように積まれています。\n\n昭和の作庭家・重森三玲の庭「松風苑」と神像館は共通券（500円）で見られます。\n\nおすすめ訪問時間：9:40〜10:15",
+    "en": "Matsunoo Taisha\n\nFrom Kyoto-Kawaramachi take the Hankyu line to Katsura and change to the Arashiyama line for Matsuo-taisha (about 30 min, ¥240). The great torii is right outside the station. Older than the capital of Heian-kyo, the shrine is revered by sake brewers across Japan as the god of sake; donated barrels are stacked like a wall in the grounds.\n\nThe Shofu-en gardens by the Showa garden designer Shigemori Mirei and the statue hall share a ticket (¥500).\n\nRecommended visit time: 9:40–10:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "松尾大社",
+      "en": "Matsunoo Taisha"
+     },
+     "lat": 35.00019,
+     "lng": 135.6853,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "松尾大社 公式サイト",
+      "en": "Matsunoo Taisha (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.matsunoo.or.jp/",
+      "en": "https://www.matsunoo.or.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都河原町9:04発（阪急）→ 桂で乗り換え → 松尾大社9:34着・240円",
+       "en": "Kyoto-Kawaramachi 9:04 (Hankyu) → change at Katsura → Matsuo-taisha 9:34, ¥240"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "境内 5:00〜18:00。庭園「松風苑」と神像館 9:00〜16:00（日曜・祝日は16:30まで）",
+       "en": "Grounds 5:00–18:00. Shofu-en gardens & statue hall 9:00–16:00 (16:30 on Sundays and holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "庭園と神像館の共通券 大人500円",
+       "en": "Gardens & statue hall ¥500 adults"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と料金は松尾大社の公式サイトと京都観光Navi、電車は乗換案内で確認しました。",
+     "en": "Checked on the shrine website, Kyoto Kanko Navi and a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "matsuo-1.jpg",
+    "matsuo-2.jpg",
+    "matsuo-3.jpg",
+    "matsuo-4.jpg",
+    "matsuo-5.jpg",
+    "matsuo-6.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "suzumushi",
+   "name": {
+    "ja": "鈴虫寺（華厳寺）",
+    "en": "Suzumushi-dera (Kegon-ji)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "一年中、鈴虫の声が聞こえるお寺。お茶とお菓子をいただきながら聞く説法と、高台の庭から見る京都の町。",
+    "en": "A temple where bell crickets sing all year round: a talk over tea and sweets, and a hillside garden looking over Kyoto."
+   },
+   "lat": 34.99368,
+   "lng": 135.68519,
+   "text": {
+    "ja": "鈴虫寺（すずむしでら）・華厳寺（けごんじ）\n\n松尾大社から南へ歩いて約15分。石段を上ると、一年中鈴虫が鳴く書院で、お茶とお菓子をいただきながら住職の説法（約30分）を聞きます。門の前の「幸福地蔵」は、わらじをはいて願いをかなえに来てくれるお地蔵さまです。\n\n高台にある庭からは京都の町が見渡せ、秋はもみじがきれいです。説法はだいたい50分ごとに始まり、混む日は待つこともあります。\n\nおすすめ訪問時間：10:35〜11:25",
+    "en": "Suzumushi-dera (Kegon-ji)\n\nAbout 15 minutes’ walk south of Matsunoo Taisha. Climb the steps to a hall where bell crickets sing all year, and listen to the priest’s talk (about 30 min) over tea and sweets. The “Kofuku Jizo” at the gate wears straw sandals so he can walk to you and grant your wish.\n\nThe hillside garden looks out over Kyoto, lovely with autumn maples. Talks start roughly every 50 minutes; on busy days you may have to wait.\n\nRecommended visit time: 10:35–11:25"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "鈴虫寺",
+      "en": "Suzumushi-dera"
+     },
+     "lat": 34.99368,
+     "lng": 135.68519,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E8%99%AB%E5%AF%BA%20%E8%8F%AF%E5%8E%B3%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "鈴虫寺 公式サイト",
+      "en": "Suzumushi-dera (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://suzutera.or.jp/",
+      "en": "https://suzutera.or.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（入門は16:30まで）。説法の始まりは9:00・9:50・10:40・11:30・12:20…のめやす",
+       "en": "9:00–17:00 (last entry 16:30). Talks start around 9:00, 9:50, 10:40, 11:30, 12:20…"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年中無休",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、子ども（4歳〜中学生）300円（お茶とお菓子つき）",
+       "en": "¥500 adults, ¥300 children aged 4 to junior high (tea and sweets included)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "鈴虫寺の公式サイトで確認しました。",
+     "en": "Checked on the temple website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "suzumushi-1.jpg",
+    "suzumushi-2.jpg",
+    "suzumushi-3.jpg",
+    "suzumushi-4.jpg",
+    "suzumushi-5.jpg",
+    "suzumushi-6.jpg",
+    "suzumushi-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "kokenochaya",
+   "name": {
+    "ja": "苔乃茶屋（お昼）",
+    "en": "Koke-no-chaya (lunch)"
+   },
+   "kind": {
+    "ja": "ランチ",
+    "en": "Lunch"
+   },
+   "blurb": {
+    "ja": "苔寺の門前の古い茶屋。とろろとにしんのおそばで、お昼にします。",
+    "en": "An old teahouse by the Moss Temple gate: soba with grated yam or herring for lunch."
+   },
+   "lat": 34.99221,
+   "lng": 135.68567,
+   "text": {
+    "ja": "苔乃茶屋（こけのちゃや）\n\n鈴虫寺から苔寺（西芳寺）の方へ下りた所にある、門前の茶屋です。のれんに「門前とろいそば」。写真はにしんそばです。\n\nとなりの西芳寺（苔寺）は、事前の申し込みが必要です（オンラインは2か月前から前日まで、冥加料4,000円から。13歳以上）。行きたい人は早めに申し込みましょう。\n\nおすすめ訪問時間：11:30〜12:15",
+    "en": "Koke-no-chaya\n\nA teahouse by the gate of Saihoji (the Moss Temple), just downhill from Suzumushi-dera. The curtain advertises tororo soba; the photo shows nishin (herring) soba.\n\nSaihoji next door needs advance application (online from two months to the day before, from ¥4,000; age 13 and over). Apply early if you want to go.\n\nRecommended visit time: 11:30–12:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "苔乃茶屋",
+      "en": "Koke-no-chaya"
+     },
+     "lat": 34.99221,
+     "lng": 135.68567,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8B%94%E4%B9%83%E8%8C%B6%E5%B1%8B%20%E4%BA%AC%E9%83%BD%20%E8%A5%BF%E8%8A%B3%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "西芳寺（苔寺）の参拝申し込み",
+      "en": "Saihoji visit application (official)"
+     },
+     "url": {
+      "ja": "https://intosaihoji.com/nichinichi/",
+      "en": "https://intosaihoji.com/nichinichi/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "営業時間と休みの日は、公式の情報が見つかりませんでした（要確認）",
+       "en": "Opening hours and closed days: no official information found (please check)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20",
+    "verified": false
+   },
+   "photos": [
+    "kokenochaya-1.jpg",
+    "kokenochaya-2.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "jizoin",
+   "name": {
+    "ja": "地蔵院（竹の寺）",
+    "en": "Jizoin (the Bamboo Temple)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "竹林の参道の先に、苔の庭と、ハートの形の窓。静かな「竹の寺」です。",
+    "en": "Past a bamboo-lined approach: a moss garden and a heart-shaped window. The quiet “Bamboo Temple”."
+   },
+   "lat": 34.99069,
+   "lng": 135.68636,
+   "text": {
+    "ja": "地蔵院（じぞういん）・竹の寺\n\n苔乃茶屋から歩いて数分。山門をくぐると、竹林の中を参道がまっすぐ続きます。方丈の前には苔の庭が広がり、ハートの形の窓から竹林がのぞけます。観光客が少なく、静かに過ごせるのも魅力です。\n\nふだんは木曜・金曜が休みですが、11月21日〜12月10日は毎日開いています。秋の寺宝特別拝観（2026年は10月31日〜12月13日）の間は、拝観料が大人1,000円になります。\n\nおすすめ訪問時間：12:30〜13:15",
+    "en": "Jizoin (the Bamboo Temple)\n\nA few minutes’ walk from Koke-no-chaya. Through the gate, a path runs straight through bamboo. In front of the abbot’s hall lies a moss garden, and a heart-shaped window frames the bamboo. Few tourists make it a calm place to sit.\n\nIt usually closes on Thursdays and Fridays, but is open every day from 21 November to 10 December. During the autumn treasure display (31 Oct – 13 Dec 2026) admission is ¥1,000 for adults.\n\nRecommended visit time: 12:30–13:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "地蔵院（竹の寺）",
+      "en": "Jizoin"
+     },
+     "lat": 34.99069,
+     "lng": 135.68636,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E8%94%B5%E9%99%A2%20%E7%AB%B9%E3%81%AE%E5%AF%BA%20%E8%A5%BF%E4%BA%AC%E5%8C%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "地蔵院 公式サイト",
+      "en": "Jizoin (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.takenotera-jizoin.jp/",
+      "en": "https://www.takenotera-jizoin.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00（最終受付15:40）",
+       "en": "9:00–16:00 (last entry 15:40)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "木曜・金曜（11月21日〜12月10日、ゴールデンウィークなどは無休）。1月4日〜2月10日の平日なども休み。臨時休みあり",
+       "en": "Thursdays and Fridays (open daily 21 Nov – 10 Dec and in Golden Week); also weekdays 4 Jan – 10 Feb; occasional closures"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "日本に住んでいる人は大人500円・小中高生300円（特別拝観の期間は大人1,000円）",
+       "en": "Residents of Japan ¥500 adults, ¥300 school pupils (¥1,000 adults during special displays)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "地蔵院の公式サイトで確認しました。",
+     "en": "Checked on the temple website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "jizoin-1.jpg",
+    "jizoin-2.jpg",
+    "jizoin-3.jpg",
+    "jizoin-4.jpg",
+    "jizoin-5.jpg",
+    "jizoin-6.jpg",
+    "jizoin-7.jpg",
+    "jizoin-8.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "jojuji",
+   "name": {
+    "ja": "浄住寺",
+    "en": "Jojuji"
+   },
+   "kind": {
+    "ja": "寺（特別公開）",
+    "en": "Temple (special opening)"
+   },
+   "blurb": {
+    "ja": "ふだんは非公開の、竹林と苔の古いお寺。秋と春の特別公開のときだけ、中に入れます。",
+    "en": "An old temple of bamboo and moss, usually closed; you can go in only during its autumn and spring openings."
+   },
+   "lat": 34.98916,
+   "lng": 135.6868,
+   "text": {
+    "ja": "浄住寺（じょうじゅうじ）\n\n地蔵院から歩いて約4分。石の門柱の先の石段を上ると、竹林と苔の庭が広がる黄檗宗のお寺です。亀の甲羅のような節の「龍甲竹（りゅうこうちく）」も見られます。\n\nふだんは非公開で、2026年の秋の特別拝観は11月21日〜12月13日です。写真は2026年1月のもの。\n\n帰りは阪急の上桂駅まで歩いて約10分。桂で乗り換えて京都河原町へ（200円）。\n\nおすすめ訪問時間：13:25〜14:10",
+    "en": "Jojuji\n\nAbout 4 minutes’ walk from Jizoin. Up the steps past the stone gateposts is an Obaku Zen temple of bamboo groves and moss gardens, with “ryukochiku” bamboo whose joints look like a tortoise shell.\n\nIt is usually closed; the autumn 2026 special opening runs from 21 November to 13 December. The photos are from January 2026.\n\nThen walk about 10 minutes to Hankyu Kami-Katsura Station and change at Katsura for Kyoto-Kawaramachi (¥200).\n\nRecommended visit time: 13:25–14:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "浄住寺",
+      "en": "Jojuji"
+     },
+     "lat": 34.98916,
+     "lng": 135.6868,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%84%E4%BD%8F%E5%AF%BA%20%E8%A5%BF%E4%BA%AC%E5%8C%BA"
+    },
+    {
+     "label": {
+      "ja": "阪急 上桂駅",
+      "en": "Hankyu Kami-Katsura Station"
+     },
+     "lat": 34.9903,
+     "lng": 135.69593,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E4%B8%8A%E6%A1%82%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "浄住寺 公式サイト（拝観案内）",
+      "en": "Jojuji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://jojuji.org/admission.html",
+      "en": "https://jojuji.org/admission.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "caution": {
+    "ja": "ふだんは非公開",
+    "en": "Usually closed"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://jojuji.org/admission.html",
+     "head": {
+      "ja": "特別公開のときだけ",
+      "en": "Special openings only"
+     },
+     "text": {
+      "ja": "ふだんは非公開です。2026年の秋の特別拝観は11月21日〜12月13日、9:30〜16:30（最終受付16:00）。",
+      "en": "Usually closed. Autumn 2026 special opening: 21 Nov – 13 Dec, 9:30–16:30 (last entry 16:00)."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋の特別拝観：11月21日〜12月13日 9:30〜16:30（最終受付16:00）",
+       "en": "Autumn 2026 opening: 21 Nov – 13 Dec, 9:30–16:30 (last entry 16:00)"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "1,000円、子ども500円（土日祝は抹茶とお菓子1,000円も）",
+       "en": "¥1,000, children ¥500 (matcha and sweets ¥1,000 at weekends and holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "上桂（阪急）→ 桂で乗り換え → 京都河原町・200円",
+       "en": "Kami-Katsura (Hankyu) → change at Katsura → Kyoto-Kawaramachi, ¥200"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "浄住寺の公式サイトと京都観光Navi、電車は乗換案内で確認しました。",
+     "en": "Checked on the temple website, Kyoto Kanko Navi and a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "jojuji-1.jpg",
+    "jojuji-2.jpg",
+    "jojuji-3.jpg",
+    "jojuji-4.jpg",
+    "jojuji-5.jpg"
+   ]
+  }
+ ]
+}

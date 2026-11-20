@@ -84,6 +84,22 @@
     return null;
   }
   function pickCount() { return Object.keys(picks).length; }
+
+  /* ---------- 写真提供の表示（例：鞍馬温泉の写真に「写真提供：くらま温泉」） ---------- */
+  // data のスポットに photoCredit: {files: [...], text: {ja, en}} があれば、その写真を表示している間だけ出す
+  function pcText(s, i) {
+    var c = s && s.photoCredit, f = s && s.photos[i];
+    if (!c || f == null) return '';
+    var file = typeof f === 'string' ? f : f.file;
+    return c.files.indexOf(file) >= 0 ? c.text[lang] : '';
+  }
+  function setPc(el, s, i) {
+    if (!el) return;
+    var t = pcText(s, i);
+    el.textContent = t;
+    el.hidden = !t;
+  }
+  function slideIndex(el) { return Math.round(el.scrollLeft / Math.max(1, el.clientWidth)); }
   function toast(msg) {
     var el = $('toast');
     el.textContent = msg; el.hidden = false;
@@ -127,9 +143,9 @@
     return /^ja\b/i.test(langs[0] || '') ? 'ja' : 'en';
   }
 
-  var TIME_RE = /^(おすすめ(?:訪問|出発|移動)時間|営業時間|Recommended [A-Za-z ]*time|Opening hours)\s*[：:]/;
+  var TIME_RE = /^(おすすめ(?:訪問|出発|移動|到着|乗船)時間|営業時間|Recommended [A-Za-z ]*(?:time|arrival|departure|boat)|Opening hours)\s*[：:]/;
   function recTime(s) {
-    var re = lang === 'ja' ? /^おすすめ(?:訪問|出発|移動)時間\s*[：:]\s*(.+)$/ : /^Recommended [A-Za-z ]*time\s*:\s*(.+)$/;
+    var re = lang === 'ja' ? /^おすすめ(?:訪問|出発|移動|到着|乗船)時間\s*[：:]\s*(.+)$/ : /^Recommended [A-Za-z ]*(?:time|arrival|departure|boat)\s*:\s*(.+)$/;
     var lines = s.text[lang].split('\n');
     for (var i = 0; i < lines.length; i++) {
       var m = lines[i].match(re);
@@ -218,13 +234,13 @@
 
   function applyMapLang() {
     if (!gl || !glReady) return;
-    window.PHS_BASEMAP.setLang(gl, lang);   // 地図の文字を EN / 日本語 に合わせる
+    window.KM_BASEMAP.setLang(gl, lang);   // 地図の文字を EN / 日本語 に合わせる
   }
 
   // 地図の見た目は全マップ共通の assets/basemap.js（Googleマップに近いスタイル）
   function addBaseMap() {
-    if (!window.PHS_BASEMAP) return;
-    var layer = window.PHS_BASEMAP.addTo(map, { lang: lang, worker: BASEMAP.worker, maxZoom: BASEMAP.maxZoom });
+    if (!window.KM_BASEMAP) return;
+    var layer = window.KM_BASEMAP.addTo(map, { lang: lang, worker: BASEMAP.worker, maxZoom: BASEMAP.maxZoom });
     if (!layer) return;
     gl = layer.getMaplibreMap();
     gl.on('style.load', function () { glReady = true; applyMapLang(); });
@@ -331,9 +347,15 @@
       '<button type="button" data-lang="ja" lang="ja" aria-pressed="' + (lang === 'ja') + '">日本語</button></div>';
     $('intro-card').innerHTML =
       '<div class="in-top">' + logo('in-logo') +
-        '<div class="in-top-r">' + lsw +
+        '<div class="in-top-r"><a class="in-home" href="../">' + esc(t.allMaps) + '</a>' + lsw +
         '<button type="button" class="iconbtn in-x" data-act="close" aria-label="' + esc(t.close) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div></div>' +
       '<div class="in-scroll">' +
+        // how to use the map comes first
+        '<section class="in-sec"><h2 class="in-h2">' + esc(x.howHead) + '</h2><ol class="in-how">' +
+          x.how.map(function (h, i) {
+            return '<li><span class="in-num">' + (i + 1) + '</span><div><b>' + esc(h.title) + '</b><p>' + esc(h.text) + '</p></div></li>';
+          }).join('') +
+        '</ol></section>' +
         '<section class="in-hero">' +
           '<div class="in-hero-txt">' +
             '<p class="in-kicker">' + esc(x.kicker) + '</p>' +
@@ -370,11 +392,6 @@
               (d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a>' : '') + '</div>';
           }).join('') +
         '</div>' + (x.dealsNote ? '<p class="in-deals-note">' + esc(x.dealsNote) + '</p>' : '') + '</section>' : '') +
-        '<section class="in-sec"><h2 class="in-h2">' + esc(x.howHead) + '</h2><ol class="in-how">' +
-          x.how.map(function (h, i) {
-            return '<li><span class="in-num">' + (i + 1) + '</span><div><b>' + esc(h.title) + '</b><p>' + esc(h.text) + '</p></div></li>';
-          }).join('') +
-        '</ol></section>' +
         '<footer class="in-foot">' + logo('in-logo') +
           '<p>' + esc(x.footer1) + '</p></footer>' +
       '</div>' +
@@ -427,7 +444,8 @@
           '<button type="button" class="l-arrow prev" data-step="-1" aria-label="' + esc(T().prevPhoto) + '" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>' +
           '<button type="button" class="l-arrow next" data-step="1" aria-label="' + esc(T().nextPhoto) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>' : '') +
         '<button type="button" class="l-check" data-check="' + s.no + '" aria-pressed="' + v + '" aria-label="' + esc(pad(s.no) + ' ' + s.name[lang] + ': ' + (v ? T().visitOn : T().visitOff)) + '">' +
-        '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></button></div>' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></button>' +
+        (s.photoCredit ? '<span class="l-pc"' + (pcText(s, 0) ? '' : ' hidden') + '>' + esc(pcText(s, 0)) + '</span>' : '') + '</div>' +
         '<button type="button" class="l-main" data-no="' + s.no + '" aria-current="' + (s.no === activeNo) + '">' +
         '<span class="l-txt">' + nameHtml(s, 'span') +
         '<span class="l-tags"><span class="kind">' + esc(s.kind[lang]) + '</span>' +
@@ -491,6 +509,7 @@
   function renderDetail(s) {
     var t = T(), other = lang === 'ja' ? 'en' : 'ja';
     $('ph-no').innerHTML = badge(s.no, 'on-photo');
+    setPc($('ph-pc'), s, slideIndex($('slides')));
     var sec = sectionOf(s.no);
     $('ph-area').innerHTML = esc(areaOf(sec, 'en')) + '<span lang="ja">' + esc(areaOf(sec, 'ja')) + '</span>';
     $('d-name').textContent = s.name[lang];
@@ -719,6 +738,16 @@
       });
     }, true);
     $('btn-visit').addEventListener('click', function () { if (activeNo) toggleVisited(activeNo); });
+    // 写真提供の表示を、めくった写真に合わせる（一覧と詳細）
+    $('list').addEventListener('scroll', function (e) {
+      var sl = e.target;
+      if (!sl.classList || !sl.classList.contains('l-slides')) return;
+      var sp = byNo[Number(sl.dataset.open)];
+      if (sp && sp.photoCredit) setPc(sl.parentNode.querySelector('.l-pc'), sp, slideIndex(sl));
+    }, true);
+    $('slides').addEventListener('scroll', function () {
+      if (activeNo && byNo[activeNo]) setPc($('ph-pc'), byNo[activeNo], slideIndex($('slides')));
+    }, { passive: true });
     $('btn-pick').addEventListener('click', function () {
       if (!activeNo) return;
       if (picks[activeNo]) delete picks[activeNo]; else picks[activeNo] = true;
@@ -792,8 +821,8 @@
     window.addEventListener('hashchange', route);
     if (WIDE.addEventListener) WIDE.addEventListener('change', function () { map.invalidateSize(); route(); });
 
-    // First visit with no spot in the address: show how to use the map first
-    if (!location.hash && !load(KEY_SEEN)) history.replaceState(null, '', location.pathname + location.search + '#about');
+    // Opening the map with no spot in the address: always show how to use it first
+    if (!location.hash) history.replaceState(null, '', location.pathname + location.search + '#about');
     route();
   }
 

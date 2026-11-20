@@ -105,8 +105,8 @@
     "01-5.jpg"
    ],
    "text": {
-    "ja": "京都河原町駅（きょうとかわらまちえき）\n\n阪急電車の大阪梅田行きに乗り、「桂（かつら）」で嵐山線に乗り換えます。特急なら桂まで約7分、桂から嵐山までは約8分です。\n\n嵐山行きのバス（次の4番）は1時間に1本なので、9:44発に乗れるように、9時ごろに出発するのがおすすめです。\n\nおすすめ出発時間：9:00",
-    "en": "Kyoto-kawaramachi Station\n\nTake a Hankyu train bound for Osaka-umeda and change at Katsura for the Arashiyama Line. A limited express takes about 7 minutes to Katsura, then it’s about 8 minutes to Arashiyama.\n\nThe bus in stop 4 runs only once an hour, so leave around 9:00 to catch the 9:44 bus.\n\nRecommended departure time: 9:00"
+    "ja": "京都河原町駅（きょうとかわらまちえき）\n\n阪急電車の大阪梅田行きに乗り、「桂（かつら）」で嵐山線に乗り換えます。特急なら桂まで約7分、桂から嵐山までは約8分です。\n\n愛宕寺前へのバス（次の4番）は平日と土曜は1時間に1本なので、9:44発に乗れるように、9時ごろに出発するのがおすすめです。\n\nおすすめ出発時間：9:00",
+    "en": "Kyoto-kawaramachi Station\n\nTake a Hankyu train bound for Osaka-umeda and change at Katsura for the Arashiyama Line. A limited express takes about 7 minutes to Katsura, then it’s about 8 minutes to Arashiyama.\n\nThe bus in stop 4 runs only once an hour on weekdays and Saturdays, so leave around 9:00 to catch the 9:44 bus.\n\nRecommended departure time: 9:00"
    },
    "gmaps": [
     {
@@ -237,7 +237,6 @@
    "lng": 135.681915,
    "photos": [
     "03-1.jpg",
-    "03-2.jpg",
     "03-3.jpg",
     "03-4.jpg",
     "03-5.jpg",
@@ -313,8 +312,8 @@
     "04-5.jpg"
    ],
    "text": {
-    "ja": "京都バス「阪急嵐山駅前」→「愛宕寺前（おたぎでらまえ）」\n\n清滝（きよたき）行きの62・92・94系統に乗ります。午前中の発車は平日・土曜が9:44と10:44、日曜・祝日は9:14・9:44・10:14・10:44（2026年9月28日からの時刻表）。乗り遅れると次は1時間後なので、少し早めにのりばへ。\n\n愛宕寺前で降りたら、目の前が愛宕念仏寺です。ここから先は、嵐山の中心まで坂道を下りながら歩いて帰ります。\n\n水曜・土曜は愛宕念仏寺がお休みです。その日もこのバスに乗って、坂を下るルートはそのまま歩けます。\n\nおすすめ出発時間：9:44（次は10:44）",
-    "en": "Kyoto Bus: Hankyu Arashiyama-ekimae → Otagidera-mae\n\nTake route 62, 92 or 94 bound for Kiyotaki. Morning departures are 9:44 and 10:44 on weekdays and Saturdays, and 9:14, 9:44, 10:14 and 10:44 on Sundays and holidays (timetable from Sep 28, 2026). Miss one and the next is an hour later, so get to the stop a little early.\n\nGet off at Otagidera-mae: the temple is right in front of you. From here you walk back down the hill all the way to central Arashiyama.\n\nOtagi Nenbutsu-ji is closed on Wednesdays and Saturdays, but you can still take this bus and walk down the same way.\n\nRecommended departure time: 9:44 (next bus 10:44)"
+    "ja": "京都バス「阪急嵐山駅前」→「愛宕寺前（おたぎでらまえ）」\n\n清滝（きよたき）行きの62・92・94系統に乗ります。午前中の発車は平日・土曜が9:44と10:44、日曜・祝日は9:14・9:44・10:14・10:44（2026年9月28日からの時刻表）。平日と土曜は乗り遅れると次は1時間後なので、少し早めにのりばへ。\n\n愛宕寺前で降りたら、目の前が愛宕念仏寺です。ここから先は、嵐山の中心まで坂道を下りながら歩いて帰ります。\n\n水曜・土曜は愛宕念仏寺がお休みです。その日もこのバスに乗って、坂を下るルートはそのまま歩けます。\n\nおすすめ出発時間：9:44（次は10:44）",
+    "en": "Kyoto Bus: Hankyu Arashiyama-ekimae → Otagidera-mae\n\nTake route 62, 92 or 94 bound for Kiyotaki. Morning departures are 9:44 and 10:44 on weekdays and Saturdays, and 9:14, 9:44, 10:14 and 10:44 on Sundays and holidays (timetable from Sep 28, 2026). On weekdays and Saturdays, miss one and the next is an hour later, so get to the stop a little early.\n\nGet off at Otagidera-mae: the temple is right in front of you. From here you walk back down the hill all the way to central Arashiyama.\n\nOtagi Nenbutsu-ji is closed on Wednesdays and Saturdays, but you can still take this bus and walk down the same way.\n\nRecommended departure time: 9:44 (next bus 10:44)"
    },
    "gmaps": [
     {

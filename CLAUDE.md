@@ -13,9 +13,10 @@
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、東山: …/higashiyama/、城崎温泉: …/kinosaki/、金閣寺〜北野: …/kinkakuji/、友ヶ島: …/tomogashima/、南紀: …/nanki/、四国: …/shikoku/、丹後・但馬: …/tango-tajima/、金沢: …/kanazawa/、福岡: …/fukuoka/、広島: …/hiroshima/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、東山: …/higashiyama/、城崎温泉: …/kinosaki/、金閣寺〜北野: …/kinkakuji/、友ヶ島: …/tomogashima/、南紀: …/nanki/、四国: …/shikoku/、丹後・但馬: …/tango-tajima/、金沢: …/kanazawa/、福岡: …/fukuoka/、広島: …/hiroshima/、湖東: …/higashiomi/、神戸: …/kobe/、姫路・明石・須磨: …/himeji/、海津大崎と長浜: …/kohoku/、京都 西山: …/nishiyama/、淀・八幡: …/yawata/、鷹峯: …/takagamine/、高雄: …/takao/、醍醐寺: …/daigo/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
+- git の記録フォルダは `.git.nosync`（iCloud が同期・退避しない名前）で、`.git` はそこを指すファイル（`gitdir: .git.nosync`）。2026-11-20、Macの空きが少なく iCloud が git のファイルをクラウドへ退避して git が止まったため。`.git.nosync/` は .gitignore 済み
 - 注意: このフォルダは iCloud の「書類」同期の中にある。ファイルを短時間に上書きすると「◯◯ 2.jpg」のような重複ができることがあるので、コミット前に `git status` で確認する
 - 古い試作版 `sanjo-guide/eizan-map` はホステル表記が残っていたため、2026-11-20 に非公開化（GitHub Pages 停止＋リポジトリ private）。本番はこちらの kyoto-maps
 - 経緯: 有料サービス PointMap+ で作っていたマップを自前サイトへ移行中
@@ -38,7 +39,7 @@
 
 | 種類 | 使う場面 | 元にしたもの | 例 |
 |---|---|---|---|
-| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/`, `higashiyama/`, `kinosaki/`, `kinkakuji/`, `tomogashima/` |
+| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/`, `higashiyama/`, `kinosaki/`, `kinkakuji/`, `tomogashima/`, `higashiomi/`, `kobe/`, `himeji/`, `kohoku/`, `nishiyama/`, `yawata/`, `takagamine/`, `takao/`, `daigo/` |
 | スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/`, `fukuoka/`, `hiroshima/`, `nanki/`, `shikoku/`, `tango-tajima/` |
 
 ```
@@ -63,6 +64,8 @@
 │                           #   データは data/routes/kinkakuji.json（scripts/build_kinkakuji_data.py で作る）、写真は images/kinkakuji/
 ├── tomogashima/            # ルート型（京都から日帰り 友ヶ島・加太）。higashiyama/ と同じ差分（「全部回る」で開く）
 │                           #   データは data/routes/tomogashima.json（scripts/build_tomogashima_data.py で作る）、写真は images/tomogashima/
+├── higashiomi/ kobe/ himeji/ kohoku/          # ルート型（2026-11-20 追加）。tomogashima/ と同じ作り（scripts/sync_<id>.py・build_<id>_data.py）
+├── nishiyama/ yawata/ takagamine/ takao/ daigo/ # ルート型・京都市内（2026-11-20 追加）。同じ作り
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
 ├── fukuoka/                # スポット紹介型（福岡・唐津と日帰り）。kanazawa/ の複製。データは js/data.js、写真は img/
@@ -95,6 +98,18 @@
 - 四国（2026-11-20 作成）: スポット紹介型。「市内」＝松山・道後（松山城・道後温泉本館・道後温泉駅とハイカラ通り・伊予鉄の路面電車）、「食べる」＝松山で実際に行った丸水（宇和島鯛めし）と10 FACTORY（みかんジュース）、「日帰り」のタブ＝高知・高松（高知市：ひろめ市場・明神丸 本店／久礼大正町市場／いの町紙の博物館と仁淀川／高松の栗林公園）。お店は店頭の写真と撮影位置から特定。料金・時間は各公式サイト（松山城・道後温泉・ひろめ市場・中土佐町・紙の博物館・栗林公園）と乗換案内で確認。紙の博物館は2026-11-16〜2027-03-31 臨時休館（予定）と書いた。写真は写真アプリの四国の写真（2025-04 栗林公園、2025-09 松山・高知、2026-02 松山）を場所ごとに全部見て選び、長辺1280px・位置情報なし。久礼の写真の中に混ざっていた広告の画像や、松山の写真に混ざっていた水着の写真は使っていない。宇和島・丸亀・徳島の写真もあるが、今回は入れていない。data.js は scratchpad の shi_build.py で作った（直すときは data.js を直接直してよい）
 - 2026-11-20 追加: 金沢の日帰りに「黒部峡谷・宇奈月温泉」（トロッコ電車・新山彦橋と宇奈月温泉）と「立山（室堂）」（みくりが池）、福岡の日帰りに「熊本」（熊本城・水前寺成趣園）と「南阿蘇・高森」（上色見熊野座神社）を足した。写真は写真アプリから（宇奈月 2025-05・2025-11・2026-11、室堂 2025-06-19、熊本・阿蘇 2025-03-17〜18）、ファイル名は kanazawa/img/kurobe-*・tateyama-*、fukuoka/img/kumamotojo-*・suizenji-*・kamishikimi-*。黒部峡谷鉄道の運行区間・運賃は公式サイトがメンテナンス中で確認できず「要確認」（2025年11月は猫又まで、2026年11月は欅平まで乗れた、と実際に行ったときのことを書いた）。熊本城の入園料も未確認。簡易地図（region）は新しい場所が入るように範囲を広げて作り直した
 - 丹後・但馬（2026-11-20 作成、オーナーの希望）: 天橋立・伊根と、舞鶴・豊岡・城崎温泉・竹野を1つにまとめたページ。京都から日帰りなら天橋立・伊根（amanohashidate/ のルートマップへリンク）、1泊以上なら豊岡の「Hostel Act」を拠点にする（オーナーの大好きなゲストハウス。何度も行っていることは書かない）。モデルプラン（日帰り・1泊2日・2泊3日・3泊4日）は data の `plans` で、app.js の「モデルプラン」の段に出る。「食べる」の段を「拠点にするならここ」（泊まる）に使っている。Hostel Act の料金・チェックイン・もりめ食堂（2026年末まで臨時休業）は公式サイト（hostelact.com）で確認。オーナーご夫婦の名前は書いていない。写真：Hostel Act とふれあい公設市場（2023〜2026）、竹野浜（2024-06-26）、吉原入江・赤れんがパーク（2024-08-06・08-18）は写真アプリから。天橋立・伊根・城崎・竹田は images/amanohashidate・images/kinosaki から縮小して使っている。名前は「京丹後」ではなく「丹後・但馬」にした（京丹後市は宮津・伊根・舞鶴・豊岡を含まないため）。amanohashidate/ と kinosaki/ のルートマップはそのまま残している
+- 2026-11-20 追加のルート型（どれも tomogashima/ と同じ作り。文章・料金・時刻は scripts/build_<id>_data.py、画面の文言は <id>/js/i18n.js、写真は images/<id>/。テンプレートを直したら scripts/sync_<id>.py で写し直す）:
+  - 湖東の紅葉 higashiomi/：近江八幡→（近江鉄道）太郎坊宮→（バス）永源寺→（タクシー）百済寺→（バス・JR）安土→（タクシー）教林坊の夜のライトアップ。最初から「選んで回る」。近江八幡駅の写真は omihachiman の流用。百済寺の写真は2025年8月の新緑
+  - 神戸 kobe/：三宮→布引の滝→北野天満神社→北野異人館→かつ丼 七兵衛（三宮）→メリケンパーク・ポートタワー（冬はルミナリエ）。北野道は2027年3月末まで通行止め
+  - 姫路・明石・須磨 himeji/：姫路城（市外の大人2,500円、2026年3月から）→好古園→明石 魚の棚・たこ磯→須磨浦山上遊園（火曜休み、12/2〜2/5は土日祝のみ）→舞子公園の夕日。最初から「選んで回る」
+  - 海津大崎の桜と長浜 kohoku/：マキノ→知内浜→海津の石積み→桜並木→大崎寺→（歩いて約2時間）大浦→永原駅→長浜（長浜城・慶雲館・鉄道スクエア・黒壁）。春のマップ。長浜の写真は2025年1月（慶雲館は盆梅展）
+  - 京都 西山 nishiyama/：松尾大社→鈴虫寺→苔乃茶屋→地蔵院→浄住寺→上桂。地蔵院のハートの窓は iPhone の位置情報で地蔵院と確認（浄住寺ではない）
+  - 淀・八幡の桜 yawata/：淀水路の河津桜（3月）→石清水八幡宮→背割堤（4月）→さくらであい館。時期が違うので最初から「選んで回る」
+  - 今宮神社と鷹峯 takagamine/：今宮神社・あぶり餅→光悦寺→源光庵→常照寺。光悦寺の人物の写真は使っていない
+  - 高雄の紅葉 takao/：高雄橋・清滝川→神護寺→西明寺（実際は西明寺→神護寺の順に歩いたが、神護寺の受付が16:00までなので入れ替えた）
+  - 醍醐寺の夜の紅葉 daigo/：秋期夜間拝観（2026年は11/20〜12/6）。写真は2024年11月24日の夜
+- ルート型は、マップを開くと毎回まず「このマップの使い方」が出る（eizan-line/js/app.js。使い方の段がいちばん上）。下のタブの1つ目は「マップ一覧」、左上と使い方の画面にも「← マップ一覧」。スポット紹介型は上に「このページの使い方」の箱
+- 2026-11-20 の点検で、知らない人の顔がはっきり写った写真・Hostel Act の客室の荷物の写真・使っていない eizan-line/thumbs/ を外した。新しく写真を選ぶときも、人が主役の写真は使わない
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
 - 言語の選択は localStorage の `kyoto-maps-lang`（ルート型）と `kanazawa-lang`（金沢）に保存。トップページで選ぶと両方に書き込む
 - 地図の見た目は全マップ共通で `assets/basemap.js`（Googleマップ / Appleマップに近い配色。町名・お店の名前は出さず、市町村・駅・川・大きな道だけ）。データは OpenFreeMap（OpenStreetMap）。オーナーの希望（2026-11-20）なので、新しいマップでも必ずこれを使う

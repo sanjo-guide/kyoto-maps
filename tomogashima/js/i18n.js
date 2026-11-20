@@ -10,7 +10,7 @@ window.TOMOGASHIMA_I18N = {
     titleSub: 'Tomogashima & Kada',
     howto: '使い方',
     allMaps: '← マップ一覧',
-    home: 'ホーム',
+    home: 'マップ一覧',
     tabMap: '地図',
     menu: 'メニュー',
     list: '一覧',
@@ -89,7 +89,7 @@ window.TOMOGASHIMA_I18N = {
         { time: '10:19', area: '加太', title: 'めでたいでんしゃで港町へ', text: '加太駅から歩いて加太港へ。友ヶ島汽船の整理券をもらって、11:00の船に乗ります。', photo: [1, 0] },
         { time: '11:20', area: '友ヶ島 → 第3砲台跡', title: 'レンガの砲台跡へ', text: '野奈浦桟橋から山道を登って第3砲台跡へ。暗いトンネルの先に、レンガのアーチが並びます。', photo: [4, 0] },
         { time: '13:10', area: '孝助松 → 灯台 → 第2砲台跡', title: '島の西の海岸を歩く', text: '展望台から海岸へ下りて、白い友ヶ島灯台と、海に崩れ落ちた第2砲台跡へ。', photo: [8, 0] },
-        { time: '16:30', area: '加太 → 京都', title: '船で戻って、淡嶋神社へ', text: '16:30の船で加太港へ戻り、淡嶋神社にお参りしてから、17:27の電車で京都へ。', note: '京都着は19:59', photo: [9, 0] }
+        { time: '16:30', area: '加太 → 京都', title: '船で戻って、淡嶋神社へ', text: '16:30の船で加太港へ戻り、淡嶋神社にお参りしてから、17:46の電車で京都へ。', note: '京都着は20:29', photo: [9, 0] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
@@ -118,7 +118,7 @@ window.TOMOGASHIMA_I18N = {
     titleSub: '友ヶ島・加太',
     howto: 'How to use',
     allMaps: '← All maps',
-    home: 'Home',
+    home: 'All maps',
     tabMap: 'Map',
     menu: 'Menu',
     list: 'Spots',
@@ -186,7 +186,7 @@ window.TOMOGASHIMA_I18N = {
       who: [
         'For a small adventure: a boat to an island and hill trails',
         'Kyoto to Kada is about 2 h 45 min by train (¥1,830)',
-        'Only a few boats a day; none on Wednesdays (Mar–Dec), weekends only in Jan–Feb',
+        'Only a few boats a day; none on Wednesdays (Mar–Dec), weekends and holidays only in Jan–Feb',
         'Boats are cancelled in strong wind. Check the notice that morning',
         'The island trails are hilly. Wear good shoes and bring drinks',
         'Allow two and a half to three hours on the island'
@@ -197,7 +197,7 @@ window.TOMOGASHIMA_I18N = {
         { time: '10:19', area: 'Kada', title: 'To the port on the Medetai train', text: 'Walk from Kada Station to the port, get your numbered ticket and board the 11:00 boat.', photo: [1, 0] },
         { time: '11:20', area: 'Tomogashima → No. 3 Battery', title: 'To the brick batteries', text: 'Climb from Nonaura pier to the No. 3 Battery, where brick arches line up beyond a dark tunnel.', photo: [4, 0] },
         { time: '13:10', area: 'Kosukematsu → lighthouse → No. 2 Battery', title: 'The west coast of the island', text: 'Head down from the lookout to the shore, the white lighthouse and the No. 2 Battery collapsing into the sea.', photo: [8, 0] },
-        { time: '16:30', area: 'Kada → Kyoto', title: 'Back by boat, then Awashima Shrine', text: 'Take the 16:30 boat back, visit Awashima Shrine, and catch the 17:27 train to Kyoto.', note: 'Arrive Kyoto 19:59', photo: [9, 0] }
+        { time: '16:30', area: 'Kada → Kyoto', title: 'Back by boat, then Awashima Shrine', text: 'Take the 16:30 boat back, visit Awashima Shrine, and catch the 17:46 train to Kyoto.', note: 'Arrive Kyoto 20:29', photo: [9, 0] }
       ],
       timeSuffix: '',
       dealsHead: 'Fares',

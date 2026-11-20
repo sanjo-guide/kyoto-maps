@@ -1,0 +1,729 @@
+{
+ "id": "himeji",
+ "_note": "京都から日帰り 姫路・明石・須磨のルート（himeji/ のページ専用。形は eizan-line.json と同じ）。京都から新快速で姫路へ、姫路城と好古園→新快速で明石（魚の棚・たこ磯の明石焼）→山陽電車で須磨浦公園（ロープウェー・カーレーター）→舞子公園で明石海峡大橋の夕日→JR舞子駅から京都へ。写真は Toshi の写真ライブラリから選んだもの（須磨浦公園と明石は2023年6月16日の Nikon D7000、姫路城は2023年6月と2024年8・9月、好古園は2024年9月の夜、舞子は2023年7月。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（各施設・商店街の公式サイト、電車は乗換案内）。このファイルは scripts/build_himeji_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "day": 0
+  },
+  {
+   "first": 4,
+   "last": 4,
+   "day": 1
+  },
+  {
+   "first": 5,
+   "last": 5,
+   "day": 2
+  },
+  {
+   "first": 6,
+   "last": 6,
+   "day": 3
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。姫路駅は姫路城か好古園を選ぶと入る。defaultMode: pick で最初から「選んで回る」。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "auto": {
+   "1": {
+    "any": [
+     2,
+     3
+    ]
+   }
+  },
+  "hints": [
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      2,
+      3
+     ]
+    },
+    "text": {
+     "ja": "姫路に寄らない日は、京都から新快速で明石へ直接行けます（乗り換えなし）。",
+     "en": "Skipping Himeji? The Special Rapid from Kyoto stops at Akashi (no change)."
+    }
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "舞子に寄らない日は、須磨浦公園駅から山陽電車・阪急で京都河原町へ（約1時間45分・1,050円）。JR京都駅へは山陽電車と阪急で三宮へ出て新快速に乗り換え（1,510円）。",
+     "en": "Not going to Maiko? From Sumaura-koen take the Sanyo and Hankyu lines to Kyoto-Kawaramachi (about 1 h 45 min, ¥1,050), or go to Sannomiya and change to the JR Special Rapid for Kyoto Station (¥1,510)."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/himeji/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "himejieki",
+   "name": {
+    "ja": "JR姫路駅",
+    "en": "JR Himeji Station"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "京都から新快速で1時間36分、乗り換えなし。駅の北口を出ると、大通りの先に白い天守が見えます。",
+    "en": "1 h 36 min from Kyoto by Special Rapid, no change. Out of the north exit, the white keep stands at the end of the main street."
+   },
+   "lat": 34.828,
+   "lng": 134.69006,
+   "text": {
+    "ja": "JR姫路駅（ひめじえき）\n\n京都からJRの新快速で乗り換えなし。京都8:14発に乗ると、姫路に9:50に着きます（2,210円）。急ぐなら新幹線で約50分（自由席4,740円）。\n\n北口を出ると、まっすぐ延びる大手前通りの先に姫路城が見えます。お城の入口までは歩いて約20分。神姫バスで「大手門前」まで行き、歩いて5分という行き方もあります。\n\nおすすめ到着時間：9:50",
+    "en": "JR Himeji Station\n\nDirect from Kyoto on the JR Special Rapid: leave at 8:14 and arrive at 9:50 (¥2,210). In a hurry, the Shinkansen takes about 50 minutes (¥4,740 unreserved).\n\nFrom the north exit, the castle stands at the end of the straight Otemae-dori. It’s about 20 minutes on foot to the entrance, or take a Shinki bus to “Otemon-mae” and walk 5 minutes.\n\nRecommended arrival: 9:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR姫路駅",
+      "en": "JR Himeji Station"
+     },
+     "lat": 34.828,
+     "lng": 134.69006,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%A7%AB%E8%B7%AF%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都8:14発（JR新快速）→ 姫路9:50着（乗り換えなし）",
+       "en": "Kyoto 8:14 (JR Special Rapid) → Himeji 9:50 (direct)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都→姫路 2,210円（新幹線の自由席なら4,740円）",
+       "en": "Kyoto → Himeji ¥2,210 (¥4,740 by Shinkansen, unreserved)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年11月の土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
+     "en": "Times and fares checked on a route planner (Saturday timetable, November 2026). Please check again before you travel."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "himejieki-1.jpg",
+    "himejieki-2.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "himejijo",
+   "name": {
+    "ja": "姫路城",
+    "en": "Himeji Castle"
+   },
+   "kind": {
+    "ja": "城（世界遺産）",
+    "en": "Castle (World Heritage)"
+   },
+   "blurb": {
+    "ja": "白鷺城とも呼ばれる、真っ白な天守。木造の大天守の中を、急な階段で最上階まで上ります。",
+    "en": "The brilliant white keep, nicknamed the White Heron. Climb steep wooden stairs inside the great keep to the top floor."
+   },
+   "lat": 34.83933,
+   "lng": 134.69402,
+   "text": {
+    "ja": "姫路城（ひめじじょう）\n\n江戸時代のはじめに建てられた天守が今も残る、世界遺産のお城です。白い漆喰の壁から「白鷺城（しらさぎじょう）」とも呼ばれます。菱の門から曲がりくねった坂と門をいくつも抜けて、大天守へ。中は木の柱と床がそのまま残り、急な階段で6階の最上階まで上れます。最上階の窓からは、姫路の町がまっすぐ駅まで見通せます。\n\n建物の中は靴を脱いで上がります（靴を入れる袋をもらえます）。西の丸の長い廊下「百間廊下」も見ておきたい所です。\n\n入城料は、2026年3月から姫路市外の大人が2,500円になりました。お城と好古園の共通券（2,600円）もあります。\n\nおすすめ訪問時間：10:10〜12:20",
+    "en": "Himeji Castle\n\nA World Heritage castle whose early-Edo keep still stands. Its white plaster walls earned it the name “White Heron Castle”. From the Hishi gate, wind up through slopes and gates to the great keep. Inside, the original wooden pillars and floors remain, and steep stairs lead to the sixth, top floor, with a view straight down the city to the station.\n\nShoes come off inside (you’re given a bag for them). Don’t miss the long corridor of the West Bailey, the Hyakken Roka.\n\nSince March 2026, admission for adults who don’t live in Himeji is ¥2,500. A combined ticket with Kokoen garden is ¥2,600.\n\nRecommended visit time: 10:10–12:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "姫路城",
+      "en": "Himeji Castle"
+     },
+     "lat": 34.83933,
+     "lng": 134.69402,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A7%AB%E8%B7%AF%E5%9F%8E"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "姫路城 公式サイト",
+      "en": "Himeji Castle (official)"
+     },
+     "url": {
+      "ja": "https://www.himejicastle.jp/",
+      "en": "https://www.himejicastle.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（入城は16:00まで）",
+       "en": "9:00–17:00 (last entry 16:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29日・30日",
+       "en": "29–30 December"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "18歳以上 2,500円（姫路市民は1,000円）、18歳未満は無料。好古園との共通券 2,600円",
+       "en": "Ages 18+ ¥2,500 (¥1,000 for Himeji residents); under 18 free. Combined ticket with Kokoen ¥2,600"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と料金は姫路城の公式サイトで確認しました。",
+     "en": "Hours and fees checked on the official Himeji Castle website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "himejijo-1.jpg",
+    "himejijo-2.jpg",
+    "himejijo-3.jpg",
+    "himejijo-4.jpg",
+    "himejijo-5.jpg",
+    "himejijo-6.jpg",
+    "himejijo-7.jpg",
+    "himejijo-8.jpg",
+    "himejijo-9.jpg",
+    "himejijo-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "kokoen",
+   "name": {
+    "ja": "好古園",
+    "en": "Kokoen Garden"
+   },
+   "kind": {
+    "ja": "日本庭園",
+    "en": "Japanese garden"
+   },
+   "blurb": {
+    "ja": "お城の西の、9つの庭がつながる日本庭園。池の向こうに、天守が顔をのぞかせます。",
+    "en": "Nine linked gardens just west of the castle, with the keep peeking over the pond."
+   },
+   "lat": 34.83797,
+   "lng": 134.68961,
+   "text": {
+    "ja": "好古園（こうこえん）\n\n姫路城の西の御屋敷跡に造られた、9つの庭からなる日本庭園です。池泉回遊式の「御屋敷の庭」では、池の向こうに天守が見えます。入口はお城の有料区域とは別です。\n\n写真は2024年9月の夜に撮ったもの。2026年秋は11月17日〜12月6日に夜間開園があり、20:00まで紅葉のライトアップが楽しめます。\n\n見終わったら駅へ戻り、新快速で明石へ（姫路12:57発→明石13:20着・660円）。\n\nおすすめ訪問時間：12:25〜12:45",
+    "en": "Kokoen Garden\n\nNine gardens laid out on the site of the lords’ residences west of Himeji Castle. In the pond garden of the main residence, the keep rises beyond the water. The entrance is separate from the castle’s paid area.\n\nThe photos were taken on an evening in September 2024. In autumn 2026 the garden opens in the evening from 17 November to 6 December, with the autumn leaves lit up until 20:00.\n\nThen head back to the station and take the Special Rapid to Akashi (Himeji 12:57 → Akashi 13:20, ¥660).\n\nRecommended visit time: 12:25–12:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "好古園",
+      "en": "Kokoen"
+     },
+     "lat": 34.83797,
+     "lng": 134.68961,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A5%BD%E5%8F%A4%E5%9C%92%20%E5%A7%AB%E8%B7%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "好古園 公式サイト",
+      "en": "Kokoen (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://himeji-machishin.jp/ryokka/kokoen/",
+      "en": "https://himeji-machishin.jp/ryokka/kokoen/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（入園は16:30まで）",
+       "en": "9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋の夜間開園：11月17日〜12月6日、20:00まで（入園19:30まで）",
+       "en": "Autumn 2026 evening opening: 17 Nov – 6 Dec, until 20:00 (last entry 19:30)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29日・30日",
+       "en": "29–30 December"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人400円、18歳未満は無料（姫路城との共通券 2,600円）",
+       "en": "¥400 adults, under 18 free (combined ticket with the castle ¥2,600)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "姫路12:57発（新快速）→ 明石13:20着・660円",
+       "en": "Himeji 12:57 (Special Rapid) → Akashi 13:20, ¥660"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と料金は好古園の公式サイト、電車は乗換案内で確認しました。",
+     "en": "Hours and fees checked on the Kokoen website; trains on a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kokoen-1.jpg",
+    "kokoen-2.jpg",
+    "kokoen-3.jpg",
+    "kokoen-4.jpg",
+    "kokoen-5.jpg",
+    "kokoen-6.jpg",
+    "kokoen-7.jpg",
+    "kokoen-8.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "akashi",
+   "name": {
+    "ja": "明石 魚の棚と「たこ磯」の明石焼",
+    "en": "Akashi: Uonotana market & Takoiso akashiyaki"
+   },
+   "kind": {
+    "ja": "市場・ランチ",
+    "en": "Market & lunch"
+   },
+   "blurb": {
+    "ja": "明石駅のすぐ南の、明石だこと魚の商店街。お昼はたこ磯で、だし汁につけて食べる明石焼（玉子焼）を。",
+    "en": "The fish-and-octopus arcade just south of Akashi Station. Lunch is akashiyaki (tamagoyaki) at Takoiso, dipped in dashi."
+   },
+   "lat": 34.64701,
+   "lng": 134.99213,
+   "text": {
+    "ja": "魚の棚（うおんたな）商店街と、たこ磯（たこいそ）\n\n明石駅から南へ歩いて3分。明石の海でとれた魚やたこ、干物やかまぼこの店が並ぶアーケードの商店街です。お昼ごろからは、その日の昼にとれた魚「昼網」も並びます。\n\nお昼は、商店街の中ほど、弁天さまの隣にある「たこ磯」へ。白いのれんに赤い字で「玉子焼」。明石では明石焼のことを玉子焼と呼びます。ふわふわの玉子焼を、温かいだし汁につけて食べます。\n\n木曜日は競りがないので、休む店が多くなります。\n\n食べたら山陽電車の山陽明石駅から須磨浦公園へ（14:40発→14:55着・390円）。\n\nおすすめ訪問時間：13:25〜14:35",
+    "en": "Uonotana market and Takoiso\n\nThree minutes’ walk south of Akashi Station: an arcade of shops selling fish and octopus from the Akashi sea, dried fish and fish cakes. From around midday the day’s midday catch, “hiruami”, is on sale too.\n\nFor lunch, go to Takoiso, halfway along next to the little Benten shrine: white curtain, red letters, 玉子焼. In Akashi, akashiyaki is called tamagoyaki. Dip the fluffy dumplings in warm dashi.\n\nMany shops close on Thursdays, when there is no fish auction.\n\nAfterwards take the Sanyo Railway from Sanyo-Akashi to Sumaura-koen (14:40 → 14:55, ¥390).\n\nRecommended visit time: 13:25–14:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "魚の棚商店街",
+      "en": "Uonotana"
+     },
+     "lat": 34.64701,
+     "lng": 134.99213,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AD%9A%E3%81%AE%E6%A3%9A%E5%95%86%E5%BA%97%E8%A1%97%20%E6%98%8E%E7%9F%B3"
+    },
+    {
+     "label": {
+      "ja": "たこ磯",
+      "en": "Takoiso"
+     },
+     "lat": 34.64696,
+     "lng": 134.99289,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%9F%E3%81%93%E7%A3%AF%20%E6%98%8E%E7%9F%B3%20%E6%9C%AC%E7%94%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "魚の棚商店街 公式サイト",
+      "en": "Uonotana shopping street (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.uonotana.or.jp/",
+      "en": "https://www.uonotana.or.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "たこ磯（魚の棚商店街のお店のページ）",
+      "en": "Takoiso (shop page on the Uonotana site, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.uonotana.or.jp/shop-057.html",
+      "en": "https://www.uonotana.or.jp/shop-057.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "たこ磯（本店）10:00〜19:00、定休日なし。魚の棚の営業時間は店ごとに違います",
+       "en": "Takoiso (main shop) 10:00–19:00, open daily. Uonotana shop hours vary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "魚の棚は木曜に休む店が多い",
+       "en": "Many Uonotana shops close on Thursdays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "山陽明石14:40発 → 須磨浦公園14:55着・390円（途中で1回乗り換え）",
+       "en": "Sanyo-Akashi 14:40 → Sumaura-koen 14:55, ¥390 (one change)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "魚の棚商店街の公式サイトで確認しました。たこ磯の値段は資料によって違うので、書いていません。",
+     "en": "Checked on the Uonotana website. Takoiso’s prices differ between sources, so they are not given here."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "akashi-1.jpg",
+    "akashi-2.jpg",
+    "akashi-3.jpg",
+    "akashi-4.jpg",
+    "akashi-5.jpg",
+    "akashi-6.jpg",
+    "akashi-7.jpg",
+    "akashi-8.jpg",
+    "akashi-9.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "suma",
+   "name": {
+    "ja": "須磨浦公園（須磨浦山上遊園）",
+    "en": "Sumaura Park (Sumaura Sanjo Yuen)"
+   },
+   "kind": {
+    "ja": "ロープウェー・展望台",
+    "en": "Ropeway & lookout"
+   },
+   "blurb": {
+    "ja": "ロープウェーと、乗り心地がびっくりなカーレーターで山の上へ。回る喫茶店から、須磨の海と明石海峡大橋が見えます。",
+    "en": "Up by ropeway and the bumpy “Car-rator” to a hilltop. From the revolving café, look over the Suma sea and the Akashi Kaikyo Bridge."
+   },
+   "lat": 34.63784,
+   "lng": 135.10022,
+   "text": {
+    "ja": "須磨浦公園（すまうらこうえん）と須磨浦山上遊園\n\n山陽電車の須磨浦公園駅を出てすぐ、ロープウェーで鉢伏山へ上ります。窓の外には須磨の海岸と神戸の街。山上駅からは、ベルトコンベアの上の小さなカゴに乗って進む「カーレーター」で、さらに上の回転展望閣へ。ガタガタ揺れる乗り心地は、ここでしか味わえません。\n\n回転展望閣の3階の喫茶コスモスは、床がゆっくり回ります（約55分で1回転）。晴れた日は、明石海峡大橋や関西空港まで見えます。\n\n最終入場は16:30。火曜日が休みです。帰りは須磨浦公園16:26発の山陽電車で舞子公園へ（16:41着・250円）。\n\nおすすめ訪問時間：15:00〜16:25",
+    "en": "Sumaura Park and Sumaura Sanjo Yuen\n\nRight outside Sanyo Railway’s Sumaura-koen Station, a ropeway climbs Mt. Hachibuse, with the Suma beach and Kobe below. From the top station, the “Car-rator”, little baskets riding on a conveyor belt, carries you up to the revolving observatory. Its rattling ride is like nothing else.\n\nCafé Cosmos on the third floor of the observatory slowly revolves (about 55 minutes a turn). On clear days you can see the Akashi Kaikyo Bridge and even Kansai Airport.\n\nLast entry is 16:30; closed on Tuesdays. Then take the 16:26 Sanyo train to Maiko-koen (arr. 16:41, ¥250).\n\nRecommended visit time: 15:00–16:25"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "須磨浦公園駅",
+      "en": "Sumaura-koen Station"
+     },
+     "lat": 34.63784,
+     "lng": 135.10022,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E7%A3%A8%E6%B5%A6%E5%85%AC%E5%9C%92%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "須磨浦山上遊園",
+      "en": "Sumaura Sanjo Yuen"
+     },
+     "lat": 34.6419,
+     "lng": 135.09421,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%A0%88%E7%A3%A8%E6%B5%A6%E5%B1%B1%E4%B8%8A%E9%81%8A%E5%9C%92"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "須磨浦山上遊園 公式サイト",
+      "en": "Sumaura Sanjo Yuen (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.sumaura-yuen.jp/",
+      "en": "https://www.sumaura-yuen.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-02-05",
+     "url": "https://www.sumaura-yuen.jp/event/entry-709.html",
+     "text": {
+      "ja": "2026年12月2日〜2027年2月5日は土日祝だけの営業です（正月三が日は営業。12/12・13・19・20、1/16・17は休園）。",
+      "en": "From 2 December 2026 to 5 February 2027 it opens on weekends and holidays only (open over New Year; closed 12, 13, 19, 20 Dec and 16, 17 Jan)."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10:00〜17:00（最終入場16:30）。ロープウェーは毎時0・15・30・45分発",
+       "en": "10:00–17:00 (last entry 16:30). Ropeway every 15 minutes"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "火曜日（祝日は営業）",
+       "en": "Tuesdays (open on holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ロープウェー 往復920円、カーレーター 往復550円、喫茶コスモスの入場200円。回遊券 Bコース1,500円・Aコース（リフトも）2,100円",
+       "en": "Ropeway ¥920 return, Car-rator ¥550 return, Café Cosmos entry ¥200. Round tickets: B course ¥1,500, A course (with chairlift) ¥2,100"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "須磨浦公園16:26発（山陽電車）→ 舞子公園16:41着・250円",
+       "en": "Sumaura-koen 16:26 (Sanyo) → Maiko-koen 16:41, ¥250"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と料金は須磨浦山上遊園の公式サイトで確認しました。",
+     "en": "Hours and fees checked on the official website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "suma-1.jpg",
+    "suma-2.jpg",
+    "suma-3.jpg",
+    "suma-4.jpg",
+    "suma-5.jpg",
+    "suma-6.jpg",
+    "suma-7.jpg",
+    "suma-8.jpg",
+    "suma-9.jpg",
+    "suma-10.jpg"
+   ]
+  },
+  {
+   "no": 6,
+   "id": "maiko",
+   "name": {
+    "ja": "舞子公園・明石海峡大橋",
+    "en": "Maiko Park & Akashi Kaikyo Bridge"
+   },
+   "kind": {
+    "ja": "公園・夕日",
+    "en": "Park & sunset"
+   },
+   "blurb": {
+    "ja": "世界最大級のつり橋のたもとで、海に沈む夕日を。駅から歩いてすぐです。",
+    "en": "Watch the sun go down by one of the world’s longest suspension bridges, a few minutes from the station."
+   },
+   "lat": 34.63275,
+   "lng": 135.033,
+   "text": {
+    "ja": "舞子公園（まいここうえん）と明石海峡大橋\n\nJR舞子駅・山陽電車の舞子公園駅から南へ歩いて約5分。淡路島へ渡る明石海峡大橋の真下の海辺の公園です。橋の向こうに淡路島、西の海に夕日が沈んでいく景色は、この旅の締めくくりにぴったり。橋の桁の中に入れる「舞子海上プロムナード」もあります。\n\n帰りはJR舞子駅から京都へ。17:38発に乗ると、途中で新快速に乗り換えて京都に18:59に着きます（1,640円）。\n\nおすすめ訪問時間：16:45〜17:30",
+    "en": "Maiko Park and the Akashi Kaikyo Bridge\n\nAbout 5 minutes south of JR Maiko and Sanyo Maiko-koen stations: a seaside park right under the Akashi Kaikyo Bridge to Awaji Island. With Awaji beyond the bridge and the sun sinking into the western sea, it’s the perfect end to the day. You can also walk inside the bridge girders on the Maiko Marine Promenade.\n\nGo home from JR Maiko: the 17:38, changing to the Special Rapid on the way, reaches Kyoto at 18:59 (¥1,640).\n\nRecommended visit time: 16:45–17:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "舞子公園",
+      "en": "Maiko Park"
+     },
+     "lat": 34.63275,
+     "lng": 135.033,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%88%9E%E5%AD%90%E5%85%AC%E5%9C%92"
+    },
+    {
+     "label": {
+      "ja": "JR舞子駅",
+      "en": "JR Maiko Station"
+     },
+     "lat": 34.63351,
+     "lng": 135.03382,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E8%88%9E%E5%AD%90%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "舞子公園 公式サイト",
+      "en": "Maiko Park (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://hyogo-maikopark.jp/",
+      "en": "https://hyogo-maikopark.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "舞子海上プロムナード 9:00〜18:00（最終入館は30分前）",
+       "en": "Maiko Marine Promenade 9:00–18:00 (last entry 30 min before)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "プロムナード：10〜3月は第2月曜（祝日なら翌日）、12月29日〜31日",
+       "en": "Promenade: 2nd Monday Oct–Mar (next day if a holiday), 29–31 Dec"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "プロムナード 大人 平日250円・土日祝300円（高校生以下は無料）",
+       "en": "Promenade ¥250 weekdays, ¥300 weekends and holidays (free for high school and under)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：舞子17:38発 → 京都18:59着・1,640円（途中で新快速に乗り換え）",
+       "en": "Return: Maiko 17:38 → Kyoto 18:59, ¥1,640 (change to the Special Rapid on the way)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "舞子公園の公式サイトと乗換案内で確認しました。",
+     "en": "Checked on the Maiko Park website and a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "maiko-1.jpg",
+    "maiko-2.jpg",
+    "maiko-3.jpg",
+    "maiko-4.jpg",
+    "maiko-5.jpg",
+    "maiko-6.jpg",
+    "maiko-7.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

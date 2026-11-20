@@ -210,3 +210,8 @@ main[data-view="trips"] #city, main[data-view="trips"] #food { display: none; }
 .time.visits { color: var(--food); background: color-mix(in srgb, var(--food) 10%, transparent); margin-top: 6px; }
 .card .time + .time { margin-top: 6px; }
 .lmap.nominor .ltip.minor { display: none; }
+
+/* how to use this page (shown first, above the introduction) */
+.howto-box { border: 1px solid var(--rule); background: var(--card); padding: 14px 18px 12px; }
+.howto-h { margin: 0 0 6px; font-weight: 700; font-size: 15px; }
+.howto-box ol { margin: 0; padding-left: 1.3em; display: grid; gap: 4px; font-size: 14px; line-height: 1.65; color: var(--muted); }

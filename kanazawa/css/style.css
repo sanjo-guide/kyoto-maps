@@ -205,3 +205,8 @@ main[data-view="trips"] #city, main[data-view="trips"] #food { display: none; }
 /* 地図（ベクター地図）の土台の色 */
 .lmap { background: #F4F3F0; }
 @media (prefers-color-scheme: dark) { .lmap { background: #1F2124; } }
+
+/* how to use this page (shown first, above the introduction) */
+.howto-box { border: 1px solid var(--rule); background: var(--card); padding: 14px 18px 12px; }
+.howto-h { margin: 0 0 6px; font-weight: 700; font-size: 15px; }
+.howto-box ol { margin: 0; padding-left: 1.3em; display: grid; gap: 4px; font-size: 14px; line-height: 1.65; color: var(--muted); }

@@ -45,7 +45,7 @@ def photos(pid):
     return [f"{pid}-{i}.jpg" for i in sorted(PICKS[pid])]
 
 
-JR = link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://timetable.jr-odekake.net/")
+JR = link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://www.jr-odekake.net/")
 SPA = link("official", "城崎温泉観光協会（外湯の案内）", "Visit Kinosaki: the seven onsen", "https://kinosaki-spa.gr.jp/",
            "https://visitkinosaki.com/about-kinosaki/the-7-mystic-onsen/")
 TRAIN_TIP = T("時刻と運賃は乗換案内（2026年11月の平日のダイヤ）で確認しました。季節や曜日で変わるので、乗る前に確かめてください。",
@@ -73,7 +73,7 @@ S = [
                 "Kyoto Station\n\nTake the 7:32 Kinosaki No. 1 limited express from the San’in (Sagano) Line platforms.\n\n"
                 "If you’re stopping at Takeda Castle, get off at Wadayama and change to the JR Bantan Line, arriving in Takeda at 9:36. "
                 "If you’re going only to Kinosaki, stay on: no change, arriving at Kinosaki Onsen at 9:52.\n\n"
-                "The trains in the photos were taken at Kinosaki Onsen Station.\n\nRecommended departure time: 7:32"),
+                "The photos of the trains were taken at Kinosaki Onsen Station.\n\nRecommended departure time: 7:32"),
          gmaps=[gm("JR京都駅", "JR Kyoto Station", 34.98535, 135.758766, "JR京都駅")],
          links=[JR],
          info=info([row("train", "特急きのさき1号 京都7:32発 → 城崎温泉9:52着（乗り換えなし）", "Kinosaki No. 1: Kyoto 7:32 → Kinosaki Onsen 9:52 (direct)"),
@@ -81,6 +81,32 @@ S = [
                     row("fee", "京都→城崎温泉 5,370円（乗車券2,640円＋特急料金2,730円）、京都→竹田 4,700円（乗車券2,310円＋特急料金2,390円）",
                         "Kyoto → Kinosaki Onsen ¥5,370 (fare ¥2,640 + express charge ¥2,730); Kyoto → Takeda ¥4,700 (fare ¥2,310 + express charge ¥2,390)")],
                    tip=TRAIN_TIP)),
+    dict(id="takeda", name=T("竹田城跡", "Takeda Castle Ruins"), kind=T("城跡", "Castle ruins"),
+         blurb=T("山のてっぺんに石垣だけが残る「天空の城」。秋の早朝は雲海に浮かびます。",
+                 "The “castle in the sky”: only stone walls remain on the mountaintop. On autumn mornings it floats above a sea of clouds."),
+         lat=35.30029, lng=134.82937,
+         text=T("竹田城跡（たけだじょうあと）\n\n標高約350mの山の上に、石垣がほぼそのまま残る山城の跡です。建物は残っていませんが、"
+                "石垣の上からは360度、但馬（たじま）の山と町が見渡せます。秋の早朝には雲海に浮かぶ姿が見られることがあり、「天空の城」と呼ばれています。\n\n"
+                "竹田駅からは、天空バスかタクシーで山の中腹の「竹田城跡」バス停・タクシー乗降場まで約20分。そこから入り口まで歩いて約20分です。"
+                "駅の裏から歩いて登る駅裏登山道は、クマの出没に備えて閉鎖が続いています（2026年10月の公式サイトの案内）。\n\n"
+                "城跡の中は30分〜1時間ほど。石垣の上は柵のない所もあるので、足元に気をつけてください。\n\nおすすめ訪問時間：9:40〜12:00",
+                "Takeda Castle Ruins\n\nThe stone walls of a mountaintop castle, about 350 m up, survive almost intact. No buildings are left, "
+                "but from the top of the walls you get a 360° view over the mountains and towns of Tajima. On some autumn mornings the ruins seem to float above a sea of clouds, hence “castle in the sky”.\n\n"
+                "From Takeda Station, take the Tenku Bus or a taxi to the “Takeda-jo-ato” stop halfway up (about 20 min), then walk about 20 min to the entrance. "
+                "The trail from behind the station is still closed as a precaution against bears (official notice, October 2026).\n\n"
+                "Allow 30 minutes to an hour inside. Parts of the walls have no railings, so watch your step.\n\nRecommended visit time: 9:40–12:00"),
+         gmaps=[gm("竹田城跡", "Takeda Castle Ruins", 35.30029, 134.82937, "竹田城跡"),
+                gm("竹田城跡バス停・タクシー乗降場", "Takeda-jo-ato bus stop", 35.29916, 134.82498, "竹田城跡 バス停 タクシー乗降場")],
+         links=[link("official", "竹田城跡 公式ホームページ", "Takeda Castle Ruins (official, Japanese)", "https://www.city.asago.hyogo.jp/site/takeda/"),
+                link("timetable", "全但バス（天空バスの時刻表）", "Zentan Bus (Tenku Bus timetable, Japanese)", "https://www.zentanbus.co.jp/")],
+         info=info([row("hours", "3月〜5月 8:00〜17:00、6月〜12月はじめ 5:00〜17:00、12月はじめ〜1月3日 10:00〜15:00（最後に登れるのは30分前、南登山道は1時間前）",
+                        "Mar–May 8:00–17:00; Jun–early Dec 5:00–17:00; early Dec–3 Jan 10:00–15:00 (last entry 30 min before, 1 hour before on the south trail)"),
+                    row("closed", "1月4日〜2月末は冬の閉山。大雨・台風・積雪などの日は入れないことがあります", "Closed for winter 4 Jan – end of Feb; may close in heavy rain, typhoons or snow"),
+                    row("fee", "大人（高校生以上）500円、中学生以下は無料。現金とキャッシュレス決済が使えます", "Adults (high school and up) ¥500; junior high and under free. Cash or cashless")],
+                   tip=T("天空バスの時刻と運賃は、全但バスのサイトで確かめてください。", "Check the Tenku Bus times and fares on the Zentan Bus website.")),
+         notices=[{"from": None, "to": None, "url": "https://www.city.asago.hyogo.jp/site/takeda/27510.html",
+                   "text": T("駅裏登山道と表米神社登山道は閉鎖中です（クマの出没に備えて）。天空バスかタクシーで、西登山道・南登山道を使ってください。",
+                             "The trails from behind the station and from Hyomai Shrine are closed (bear precautions). Use the Tenku Bus or a taxi and the west or south trail.")}]),
     dict(id="takedatown", name=T("竹田駅と寺町通り", "Takeda Station and Teramachi-dori"), kind=T("駅・町並み", "Station & old town"),
          blurb=T("竹田城跡のふもとの城下町。お寺と石の橋が並ぶ水路沿いの道を歩きます。",
                  "The castle town at the foot of Takeda Castle. Walk the canal lined with temples and stone bridges."),
@@ -98,32 +124,6 @@ S = [
          links=[JR],
          info=info([row("train", "竹田13:34発 → 和田山で乗り換え → 城崎温泉14:35着・860円", "Takeda 13:34 → change at Wadayama → Kinosaki Onsen 14:35, ¥860")],
                    tip=TRAIN_TIP)),
-    dict(id="takeda", name=T("竹田城跡", "Takeda Castle Ruins"), kind=T("城跡", "Castle ruins"),
-         blurb=T("山のてっぺんに石垣だけが残る「天空の城」。秋の早朝は雲海に浮かびます。",
-                 "The “castle in the sky”: only stone walls remain on the mountaintop. On autumn mornings it floats above a sea of clouds."),
-         lat=35.30029, lng=134.82937,
-         text=T("竹田城跡（たけだじょうあと）\n\n標高約350mの山の上に、石垣がほぼそのまま残る山城の跡です。建物は残っていませんが、"
-                "石垣の上からは360度、但馬（たじま）の山と町が見渡せます。秋の早朝には雲海に浮かぶ姿が見られることがあり、「天空の城」と呼ばれています。\n\n"
-                "竹田駅からは、天空バスかタクシーで山の中腹の「竹田城跡」バス停・タクシー乗降場まで約20分。そこから入り口まで歩いて約20分です。"
-                "駅の裏から歩いて登る駅裏登山道は、クマの出没に備えて閉鎖が続いています（2026年10月の公式サイトの案内）。\n\n"
-                "城跡の中は30分〜1時間ほど。石垣の上は柵のない所もあるので、足元に気をつけてください。\n\nおすすめ訪問時間：9:50〜12:00",
-                "Takeda Castle Ruins\n\nThe stone walls of a mountaintop castle, about 350 m up, survive almost intact. No buildings are left, "
-                "but from the top of the walls you get a 360° view over the mountains and towns of Tajima. On some autumn mornings the ruins seem to float above a sea of clouds, hence “castle in the sky”.\n\n"
-                "From Takeda Station, take the Tenku Bus or a taxi to the “Takeda-jo-ato” stop halfway up (about 20 min), then walk about 20 min to the entrance. "
-                "The trail from behind the station is still closed as a precaution against bears (official notice, October 2026).\n\n"
-                "Allow 30 minutes to an hour inside. Parts of the walls have no railings, so watch your step.\n\nRecommended visit time: 9:50–12:00"),
-         gmaps=[gm("竹田城跡", "Takeda Castle Ruins", 35.30029, 134.82937, "竹田城跡"),
-                gm("竹田城跡バス停・タクシー乗降場", "Takeda-jo-ato bus stop", 35.29916, 134.82498, "竹田城跡 バス停 タクシー乗降場")],
-         links=[link("official", "竹田城跡 公式ホームページ", "Takeda Castle Ruins (official, Japanese)", "https://www.city.asago.hyogo.jp/site/takeda/"),
-                link("timetable", "全但バス（天空バスの時刻表）", "Zentan Bus (Tenku Bus timetable, Japanese)", "https://www.zentanbus.co.jp/")],
-         info=info([row("hours", "3月〜5月 8:00〜17:00、6月〜12月はじめ 5:00〜17:00、12月はじめ〜1月3日 10:00〜15:00（最後に登れるのは30分前、南登山道は1時間前）",
-                        "Mar–May 8:00–17:00; Jun–early Dec 5:00–17:00; early Dec–3 Jan 10:00–15:00 (last entry 30 min before, 1 hour before on the south trail)"),
-                    row("closed", "1月4日〜2月末は冬の閉山。大雨・台風・積雪などの日は入れないことがあります", "Closed for winter 4 Jan – end of Feb; may close in heavy rain, typhoons or snow"),
-                    row("fee", "大人（高校生以上）500円、中学生以下は無料。現金とキャッシュレス決済が使えます", "Adults (high school and up) ¥500; junior high and under free. Cash or cashless")],
-                   tip=T("天空バスの時刻と運賃は、全但バスのサイトで確かめてください。", "Check the Tenku Bus times and fares on the Zentan Bus website.")),
-         notices=[{"from": None, "to": None, "url": "https://www.city.asago.hyogo.jp/site/takeda/27510.html",
-                   "text": T("駅裏登山道と表米神社登山道は閉鎖中です（クマの出没に備えて）。天空バスかタクシーで、西登山道・南登山道を使ってください。",
-                             "The trails from behind the station and from Omotame Shrine are closed (bear precautions). Use the Tenku Bus or a taxi and the west or south trail.")}]),
     dict(id="station", name=T("城崎温泉駅", "Kinosaki Onsen Station"), kind=T("駅・足湯", "Station & foot bath"),
          blurb=T("駅を出たら温泉街。駅前には足湯もあります。外湯めぐりの1日券はどの外湯でも買えます。",
                  "Step out of the station into the onsen town. There’s a foot bath out front, and the day pass is sold at every bathhouse."),

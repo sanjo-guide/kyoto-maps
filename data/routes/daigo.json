@@ -1,0 +1,300 @@
+{
+ "id": "daigo",
+ "_note": "京都 醍醐寺の紅葉ライトアップ（秋期夜間拝観）のルート（daigo/ のページ専用。形は eizan-line.json と同じ）。総門・仁王門→五重塔・金堂→弁天堂。写真は Toshi の写真ライブラリから選んだもの（2024年11月24日の夜間拝観、Nikon D7000 と iPhone。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（醍醐寺の公式サイト、電車は乗換案内）。このファイルは scripts/build_daigo_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "day": 0
+  }
+ ],
+ "photoBase": "../images/daigo/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "niomon",
+   "name": {
+    "ja": "総門・仁王門",
+    "en": "Somon & Niomon gates"
+   },
+   "kind": {
+    "ja": "門",
+    "en": "Gates"
+   },
+   "blurb": {
+    "ja": "夜の拝観は、三宝院の受付から。ライトアップされた参道の先に、大きな仁王門が浮かびます。",
+    "en": "The evening visit starts at the Sanboin reception; the great Nio gate glows at the end of the lit avenue."
+   },
+   "lat": 34.9515,
+   "lng": 135.82002,
+   "text": {
+    "ja": "総門（そうもん）・仁王門（におうもん）\n\n地下鉄東西線の醍醐駅から歩いて約10分（京都駅からJRと地下鉄で約25分・440円）。総門を入り、三宝院の受付で夜間拝観の券を買って、桜の馬場の参道を仁王門へ進みます。\n\n2026年の秋期夜間拝観は11月20日〜12月6日の18:00〜20:50（受付は20:10まで）。昼の拝観とは入れ替えなので、昼から続けては入れません。写真は2024年11月24日の夜間拝観です。\n\nおすすめ訪問時間：18:00〜18:20",
+    "en": "Somon & Niomon gates\n\nAbout 10 minutes on foot from Daigo Station on the Tozai subway line (about 25 min from Kyoto Station by JR and subway, ¥440). Enter the Somon gate, buy an evening ticket at the Sanboin reception, and follow the approach to the Nio gate.\n\nThe autumn 2026 evening opening runs from 20 November to 6 December, 18:00–20:50 (last entry 20:10). It’s separate from the daytime visit, so you can’t stay on from the day. Photos from the evening opening on 24 November 2024.\n\nRecommended visit time: 18:00–18:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "醍醐寺 仁王門",
+      "en": "Daigoji Niomon"
+     },
+     "lat": 34.9515,
+     "lng": 135.82002,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%86%8D%E9%86%90%E5%AF%BA%20%E4%BB%81%E7%8E%8B%E9%96%80"
+    },
+    {
+     "label": {
+      "ja": "地下鉄 醍醐駅",
+      "en": "Daigo Station"
+     },
+     "lat": 34.95049,
+     "lng": 135.81066,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E4%B8%8B%E9%89%84%20%E9%86%8D%E9%86%90%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "醍醐寺 秋期夜間拝観（公式）",
+      "en": "Daigoji autumn evening opening (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.daigoji.or.jp/event/detail7.html",
+      "en": "https://www.daigoji.or.jp/event/detail7.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋期夜間拝観：11月20日〜12月6日 18:00〜20:50（受付20:10まで）。昼とは入れ替え制",
+       "en": "Autumn 2026 evening opening: 20 Nov – 6 Dec, 18:00–20:50 (last entry 20:10); separate from the daytime"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "夜間拝観 1,500円（中学生以上）",
+       "en": "Evening opening ¥1,500 (junior high and up)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都駅 → 山科（地下鉄東西線に乗り換え）→ 醍醐 約25分・440円",
+       "en": "Kyoto → Yamashina (change to Tozai line) → Daigo, about 25 min, ¥440"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "醍醐寺の公式サイトと乗換案内で確認しました。",
+     "en": "Checked on the temple website and a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "niomon-1.jpg",
+    "niomon-2.jpg",
+    "niomon-3.jpg",
+    "niomon-4.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "goju",
+   "name": {
+    "ja": "五重塔と金堂",
+    "en": "Five-storey pagoda & main hall"
+   },
+   "kind": {
+    "ja": "国宝",
+    "en": "National Treasures"
+   },
+   "blurb": {
+    "ja": "京都でいちばん古い木造建築の五重塔が、暗い空に白く浮かびます。まわりのもみじも照らされて。",
+    "en": "Kyoto’s oldest wooden building, the five-storey pagoda, glows against the night sky among lit maples."
+   },
+   "lat": 34.95093,
+   "lng": 135.82281,
+   "text": {
+    "ja": "五重塔（ごじゅうのとう）と金堂（こんどう）\n\n仁王門をくぐると、国宝の金堂と五重塔。五重塔は平安時代（951年）に建てられ、京都府で最も古い木造建築です。夜は塔ともみじが照らされ、昼とはまったく違う姿に。\n\n日によっては金堂で声明（しょうみょう）の公演もあります（2026年は11月21・22・23日、12月5・6日）。\n\nおすすめ訪問時間：18:20〜18:50",
+    "en": "Five-storey pagoda & main hall\n\nThrough the Nio gate stand the National Treasure main hall and five-storey pagoda. Built in 951 in the Heian period, the pagoda is the oldest wooden building in Kyoto Prefecture. Lit at night with the maples around it, it looks nothing like it does by day.\n\nOn some evenings there are shomyo (Buddhist chant) performances in the main hall (2026: 21, 22, 23 Nov and 5, 6 Dec).\n\nRecommended visit time: 18:20–18:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "醍醐寺 五重塔",
+      "en": "Daigoji pagoda"
+     },
+     "lat": 34.95093,
+     "lng": 135.82281,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%86%8D%E9%86%90%E5%AF%BA%20%E4%BA%94%E9%87%8D%E5%A1%94"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "醍醐寺 秋期夜間拝観（公式）",
+      "en": "Daigoji autumn evening opening (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.daigoji.or.jp/event/detail7.html",
+      "en": "https://www.daigoji.or.jp/event/detail7.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋期夜間拝観：11月20日〜12月6日 18:00〜20:50（受付20:10まで）。昼とは入れ替え制",
+       "en": "Autumn 2026 evening opening: 20 Nov – 6 Dec, 18:00–20:50 (last entry 20:10); separate from the daytime"
+      },
+      "until": "2026-12-06",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "醍醐寺の公式サイトで確認しました。",
+     "en": "Checked on the temple website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "goju-1.jpg",
+    "goju-2.jpg",
+    "goju-3.jpg",
+    "goju-4.jpg",
+    "goju-5.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "benten",
+   "name": {
+    "ja": "弁天堂と弁天池",
+    "en": "Bentendo & its pond"
+   },
+   "kind": {
+    "ja": "池・お堂",
+    "en": "Pond & hall"
+   },
+   "blurb": {
+    "ja": "夜間拝観のいちばんの見どころ。朱の弁天堂と橋、照らされたもみじが、池の水面に鏡のように映ります。",
+    "en": "The evening’s highlight: the vermilion Benten hall and bridge and the lit maples, mirrored in the pond."
+   },
+   "lat": 34.95088,
+   "lng": 135.82432,
+   "text": {
+    "ja": "弁天堂（べんてんどう）と弁天池\n\n伽藍のいちばん奥、池のほとりに建つ朱色の弁天堂。ライトアップされたもみじと朱の橋が、風のない夜は池に鏡のように映ります。混み合うので、池のまわりではゆっくり進みましょう。\n\n昼に来るなら、三宝院の庭園・霊宝館・伽藍の3か所共通券（1,500円）があります。山の上の上醍醐は、がけ崩れの危険のため当面入山できません。\n\nおすすめ訪問時間：18:50〜19:40",
+    "en": "Bentendo and its pond\n\nAt the far end of the precinct, the vermilion Benten hall stands by a pond. On a still night, the lit maples and the red bridge are mirrored in the water. It gets crowded, so move slowly around the pond.\n\nBy day, a combined ticket for the Sanboin garden, the Reihokan museum and the main precinct costs ¥1,500. Kami-Daigo on the mountain is closed for now because of landslide risk.\n\nRecommended visit time: 18:50–19:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "醍醐寺 弁天堂",
+      "en": "Daigoji Bentendo"
+     },
+     "lat": 34.95088,
+     "lng": 135.82432,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%86%8D%E9%86%90%E5%AF%BA%20%E5%BC%81%E5%A4%A9%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "醍醐寺 秋期夜間拝観（公式）",
+      "en": "Daigoji autumn evening opening (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.daigoji.or.jp/event/detail7.html",
+      "en": "https://www.daigoji.or.jp/event/detail7.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "醍醐寺 拝観案内",
+      "en": "Daigoji visiting info (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.daigoji.or.jp/guide/time.html",
+      "en": "https://www.daigoji.or.jp/guide/time.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋期夜間拝観：11月20日〜12月6日 18:00〜20:50（受付20:10まで）。昼とは入れ替え制",
+       "en": "Autumn 2026 evening opening: 20 Nov – 6 Dec, 18:00–20:50 (last entry 20:10); separate from the daytime"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "昼の拝観 9:00〜17:00（12月第1日曜の翌日から2月末は16:30まで、受付は30分前まで）",
+       "en": "Daytime 9:00–17:00 (16:30 from the day after the first Sunday of December to the end of February; last entry 30 min before)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "昼：3か所共通券 大人1,500円、2か所 1,000円、1か所 600円",
+       "en": "Daytime: 3-site ticket ¥1,500, 2 sites ¥1,000, 1 site ¥600"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "醍醐寺の公式サイトで確認しました。",
+     "en": "Checked on the temple website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "benten-1.jpg",
+    "benten-2.jpg",
+    "benten-3.jpg",
+    "benten-4.jpg",
+    "benten-5.jpg",
+    "benten-6.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

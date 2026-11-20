@@ -41,7 +41,7 @@
   "_note": "「選んで回る」の設定。京都駅・城崎温泉駅（行きと帰り）はいつも入る。竹田駅と寺町通りは竹田城跡を選ぶと入る。",
   "defaultMode": "pick",
   "picks": [
-   3,
+   2,
    5,
    6,
    7,
@@ -55,9 +55,9 @@
    "1": {
     "always": true
    },
-   "2": {
+   "3": {
     "any": [
-     3
+     2
     ]
    },
    "4": {
@@ -72,7 +72,7 @@
     "spot": 1,
     "rule": {
      "any": [
-      3
+      2
      ]
     },
     "text": {
@@ -94,7 +94,7 @@
       12
      ],
      "none": [
-      3
+      2
      ]
     },
     "text": {
@@ -116,7 +116,7 @@
       12
      ],
      "none": [
-      3
+      2
      ]
     },
     "text": {
@@ -147,7 +147,7 @@
    "lng": 135.758766,
    "text": {
     "ja": "京都駅（きょうとえき）\n\n山陰線（嵯峨野線）のホームから出る特急きのさき1号（7:32発）に乗ります。\n\n竹田城跡に寄る日は、和田山（わだやま）で降りてJR播但線（ばんたんせん）に乗り換え、竹田に9:36着。城崎温泉だけの日は、乗り換えなしで城崎温泉に9:52に着きます。\n\n写真は城崎温泉駅で撮った特急の車両です。\n\nおすすめ出発時間：7:32",
-    "en": "Kyoto Station\n\nTake the 7:32 Kinosaki No. 1 limited express from the San’in (Sagano) Line platforms.\n\nIf you’re stopping at Takeda Castle, get off at Wadayama and change to the JR Bantan Line, arriving in Takeda at 9:36. If you’re going only to Kinosaki, stay on: no change, arriving at Kinosaki Onsen at 9:52.\n\nThe trains in the photos were taken at Kinosaki Onsen Station.\n\nRecommended departure time: 7:32"
+    "en": "Kyoto Station\n\nTake the 7:32 Kinosaki No. 1 limited express from the San’in (Sagano) Line platforms.\n\nIf you’re stopping at Takeda Castle, get off at Wadayama and change to the JR Bantan Line, arriving in Takeda at 9:36. If you’re going only to Kinosaki, stay on: no change, arriving at Kinosaki Onsen at 9:52.\n\nThe photos of the trains were taken at Kinosaki Onsen Station.\n\nRecommended departure time: 7:32"
    },
    "gmaps": [
     {
@@ -168,8 +168,8 @@
       "en": "JR West timetables (Japanese)"
      },
      "url": {
-      "ja": "https://timetable.jr-odekake.net/",
-      "en": "https://timetable.jr-odekake.net/"
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.jr-odekake.net/"
      }
     }
    ],
@@ -221,93 +221,6 @@
   },
   {
    "no": 2,
-   "id": "takedatown",
-   "name": {
-    "ja": "竹田駅と寺町通り",
-    "en": "Takeda Station and Teramachi-dori"
-   },
-   "kind": {
-    "ja": "駅・町並み",
-    "en": "Station & old town"
-   },
-   "blurb": {
-    "ja": "竹田城跡のふもとの城下町。お寺と石の橋が並ぶ水路沿いの道を歩きます。",
-    "en": "The castle town at the foot of Takeda Castle. Walk the canal lined with temples and stone bridges."
-   },
-   "lat": 35.2987,
-   "lng": 134.8353,
-   "text": {
-    "ja": "竹田駅と寺町通り（たけだえき・てらまちどおり）\n\n竹田城跡のふもとにある、小さな城下町です。駅の裏の山の上が竹田城跡。駅の西側には、水路に沿ってお寺が並ぶ寺町通りがあり、石の橋や白壁の古い家が残っています。\n\n城跡から戻ったら、町を歩いてお昼ごはんに。駅の近くには食事処やカフェもあります。\n\n城崎温泉へは、竹田13:34発の播但線で和田山へ行き、山陰本線に乗り換えて14:35着（860円）。\n\nおすすめ訪問時間：12:10〜13:30",
-    "en": "Takeda Station and Teramachi-dori\n\nA small castle town at the foot of Takeda Castle; the ruins sit on the hill right behind the station. West of the station, Teramachi-dori runs along a canal lined with temples, with stone bridges and old white-walled houses.\n\nBack from the castle, stroll the town and have lunch. There are places to eat and cafés near the station.\n\nTo Kinosaki: take the 13:34 Bantan Line train to Wadayama and change to the San’in Line, arriving at 14:35 (¥860).\n\nRecommended visit time: 12:10–13:30"
-   },
-   "gmaps": [
-    {
-     "label": {
-      "ja": "JR竹田駅",
-      "en": "JR Takeda Station"
-     },
-     "lat": 35.2991,
-     "lng": 134.8359,
-     "url": "https://www.google.com/maps/search/?api=1&query=JR%E7%AB%B9%E7%94%B0%E9%A7%85%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%9C%9D%E6%9D%A5%E5%B8%82"
-    },
-    {
-     "label": {
-      "ja": "竹田寺町通り",
-      "en": "Teramachi-dori"
-     },
-     "lat": 35.29814,
-     "lng": 134.83473,
-     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E7%94%B0%E5%AF%BA%E7%94%BA%E9%80%9A%E3%82%8A%20%E6%9C%9D%E6%9D%A5%E5%B8%82"
-    }
-   ],
-   "links": [
-    {
-     "kind": "timetable",
-     "label": {
-      "ja": "JRおでかけネット（時刻表）",
-      "en": "JR West timetables (Japanese)"
-     },
-     "url": {
-      "ja": "https://timetable.jr-odekake.net/",
-      "en": "https://timetable.jr-odekake.net/"
-     }
-    }
-   ],
-   "info": {
-    "rows": [
-     {
-      "kind": "train",
-      "text": {
-       "ja": "竹田13:34発 → 和田山で乗り換え → 城崎温泉14:35着・860円",
-       "en": "Takeda 13:34 → change at Wadayama → Kinosaki Onsen 14:35, ¥860"
-      },
-      "until": null,
-      "from": null
-     }
-    ],
-    "cash": false,
-    "tip": {
-     "ja": "時刻と運賃は乗換案内（2026年11月の平日のダイヤ）で確認しました。季節や曜日で変わるので、乗る前に確かめてください。",
-     "en": "Times and fares checked on a route planner (weekday timetable, November 2026). They change by season and day, so check before you travel."
-    },
-    "checked": "2026-11-20"
-   },
-   "photos": [
-    "takedatown-1.jpg",
-    "takedatown-2.jpg",
-    "takedatown-3.jpg",
-    "takedatown-4.jpg",
-    "takedatown-5.jpg",
-    "takedatown-6.jpg",
-    "takedatown-7.jpg",
-    "takedatown-8.jpg",
-    "takedatown-9.jpg",
-    "takedatown-10.jpg"
-   ],
-   "notices": []
-  },
-  {
-   "no": 3,
    "id": "takeda",
    "name": {
     "ja": "竹田城跡",
@@ -324,8 +237,8 @@
    "lat": 35.30029,
    "lng": 134.82937,
    "text": {
-    "ja": "竹田城跡（たけだじょうあと）\n\n標高約350mの山の上に、石垣がほぼそのまま残る山城の跡です。建物は残っていませんが、石垣の上からは360度、但馬（たじま）の山と町が見渡せます。秋の早朝には雲海に浮かぶ姿が見られることがあり、「天空の城」と呼ばれています。\n\n竹田駅からは、天空バスかタクシーで山の中腹の「竹田城跡」バス停・タクシー乗降場まで約20分。そこから入り口まで歩いて約20分です。駅の裏から歩いて登る駅裏登山道は、クマの出没に備えて閉鎖が続いています（2026年10月の公式サイトの案内）。\n\n城跡の中は30分〜1時間ほど。石垣の上は柵のない所もあるので、足元に気をつけてください。\n\nおすすめ訪問時間：9:50〜12:00",
-    "en": "Takeda Castle Ruins\n\nThe stone walls of a mountaintop castle, about 350 m up, survive almost intact. No buildings are left, but from the top of the walls you get a 360° view over the mountains and towns of Tajima. On some autumn mornings the ruins seem to float above a sea of clouds, hence “castle in the sky”.\n\nFrom Takeda Station, take the Tenku Bus or a taxi to the “Takeda-jo-ato” stop halfway up (about 20 min), then walk about 20 min to the entrance. The trail from behind the station is still closed as a precaution against bears (official notice, October 2026).\n\nAllow 30 minutes to an hour inside. Parts of the walls have no railings, so watch your step.\n\nRecommended visit time: 9:50–12:00"
+    "ja": "竹田城跡（たけだじょうあと）\n\n標高約350mの山の上に、石垣がほぼそのまま残る山城の跡です。建物は残っていませんが、石垣の上からは360度、但馬（たじま）の山と町が見渡せます。秋の早朝には雲海に浮かぶ姿が見られることがあり、「天空の城」と呼ばれています。\n\n竹田駅からは、天空バスかタクシーで山の中腹の「竹田城跡」バス停・タクシー乗降場まで約20分。そこから入り口まで歩いて約20分です。駅の裏から歩いて登る駅裏登山道は、クマの出没に備えて閉鎖が続いています（2026年10月の公式サイトの案内）。\n\n城跡の中は30分〜1時間ほど。石垣の上は柵のない所もあるので、足元に気をつけてください。\n\nおすすめ訪問時間：9:40〜12:00",
+    "en": "Takeda Castle Ruins\n\nThe stone walls of a mountaintop castle, about 350 m up, survive almost intact. No buildings are left, but from the top of the walls you get a 360° view over the mountains and towns of Tajima. On some autumn mornings the ruins seem to float above a sea of clouds, hence “castle in the sky”.\n\nFrom Takeda Station, take the Tenku Bus or a taxi to the “Takeda-jo-ato” stop halfway up (about 20 min), then walk about 20 min to the entrance. The trail from behind the station is still closed as a precaution against bears (official notice, October 2026).\n\nAllow 30 minutes to an hour inside. Parts of the walls have no railings, so watch your step.\n\nRecommended visit time: 9:40–12:00"
    },
    "gmaps": [
     {
@@ -415,7 +328,7 @@
      "url": "https://www.city.asago.hyogo.jp/site/takeda/27510.html",
      "text": {
       "ja": "駅裏登山道と表米神社登山道は閉鎖中です（クマの出没に備えて）。天空バスかタクシーで、西登山道・南登山道を使ってください。",
-      "en": "The trails from behind the station and from Omotame Shrine are closed (bear precautions). Use the Tenku Bus or a taxi and the west or south trail."
+      "en": "The trails from behind the station and from Hyomai Shrine are closed (bear precautions). Use the Tenku Bus or a taxi and the west or south trail."
      }
     }
    ],
@@ -431,6 +344,93 @@
     "takeda-9.jpg",
     "takeda-10.jpg"
    ]
+  },
+  {
+   "no": 3,
+   "id": "takedatown",
+   "name": {
+    "ja": "竹田駅と寺町通り",
+    "en": "Takeda Station and Teramachi-dori"
+   },
+   "kind": {
+    "ja": "駅・町並み",
+    "en": "Station & old town"
+   },
+   "blurb": {
+    "ja": "竹田城跡のふもとの城下町。お寺と石の橋が並ぶ水路沿いの道を歩きます。",
+    "en": "The castle town at the foot of Takeda Castle. Walk the canal lined with temples and stone bridges."
+   },
+   "lat": 35.2987,
+   "lng": 134.8353,
+   "text": {
+    "ja": "竹田駅と寺町通り（たけだえき・てらまちどおり）\n\n竹田城跡のふもとにある、小さな城下町です。駅の裏の山の上が竹田城跡。駅の西側には、水路に沿ってお寺が並ぶ寺町通りがあり、石の橋や白壁の古い家が残っています。\n\n城跡から戻ったら、町を歩いてお昼ごはんに。駅の近くには食事処やカフェもあります。\n\n城崎温泉へは、竹田13:34発の播但線で和田山へ行き、山陰本線に乗り換えて14:35着（860円）。\n\nおすすめ訪問時間：12:10〜13:30",
+    "en": "Takeda Station and Teramachi-dori\n\nA small castle town at the foot of Takeda Castle; the ruins sit on the hill right behind the station. West of the station, Teramachi-dori runs along a canal lined with temples, with stone bridges and old white-walled houses.\n\nBack from the castle, stroll the town and have lunch. There are places to eat and cafés near the station.\n\nTo Kinosaki: take the 13:34 Bantan Line train to Wadayama and change to the San’in Line, arriving at 14:35 (¥860).\n\nRecommended visit time: 12:10–13:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR竹田駅",
+      "en": "JR Takeda Station"
+     },
+     "lat": 35.2991,
+     "lng": 134.8359,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E7%AB%B9%E7%94%B0%E9%A7%85%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%9C%9D%E6%9D%A5%E5%B8%82"
+    },
+    {
+     "label": {
+      "ja": "竹田寺町通り",
+      "en": "Teramachi-dori"
+     },
+     "lat": 35.29814,
+     "lng": 134.83473,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E7%94%B0%E5%AF%BA%E7%94%BA%E9%80%9A%E3%82%8A%20%E6%9C%9D%E6%9D%A5%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻表）",
+      "en": "JR West timetables (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.jr-odekake.net/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "竹田13:34発 → 和田山で乗り換え → 城崎温泉14:35着・860円",
+       "en": "Takeda 13:34 → change at Wadayama → Kinosaki Onsen 14:35, ¥860"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年11月の平日のダイヤ）で確認しました。季節や曜日で変わるので、乗る前に確かめてください。",
+     "en": "Times and fares checked on a route planner (weekday timetable, November 2026). They change by season and day, so check before you travel."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "takedatown-1.jpg",
+    "takedatown-2.jpg",
+    "takedatown-3.jpg",
+    "takedatown-4.jpg",
+    "takedatown-5.jpg",
+    "takedatown-6.jpg",
+    "takedatown-7.jpg",
+    "takedatown-8.jpg",
+    "takedatown-9.jpg",
+    "takedatown-10.jpg"
+   ],
+   "notices": []
   },
   {
    "no": 4,
@@ -483,8 +483,8 @@
       "en": "JR West timetables (Japanese)"
      },
      "url": {
-      "ja": "https://timetable.jr-odekake.net/",
-      "en": "https://timetable.jr-odekake.net/"
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.jr-odekake.net/"
      }
     }
    ],
@@ -1124,8 +1124,7 @@
     "checked": "2026-11-20"
    },
    "photos": [
-    "kou-1.jpg",
-    "kou-2.jpg"
+    "kou-1.jpg"
    ],
    "notices": []
   },
@@ -1233,8 +1232,8 @@
       "en": "JR West timetables (Japanese)"
      },
      "url": {
-      "ja": "https://timetable.jr-odekake.net/",
-      "en": "https://timetable.jr-odekake.net/"
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.jr-odekake.net/"
      }
     }
    ],
@@ -1278,7 +1277,6 @@
    "photos": [
     "station2-1.jpg",
     "station2-2.jpg",
-    "station2-3.jpg",
     "station2-4.jpg"
    ],
    "notices": []

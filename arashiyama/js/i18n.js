@@ -11,7 +11,7 @@ window.ARASHIYAMA_I18N = {
     titleSub: 'Arashiyama & Sagano, Kyoto',
     howto: '使い方',
     allMaps: '← マップ一覧',
-    home: 'ホーム',
+    home: 'マップ一覧',
     tabMap: '地図',
     menu: 'メニュー',
     list: '一覧',
@@ -98,7 +98,7 @@ window.ARASHIYAMA_I18N = {
       dealsLead: '京都河原町から出発して京都河原町へ戻ると、電車とバスで大人1人710円です（拝観料は別）。',
       deals: [
         { name: '阪急電車（京都河原町→嵐山）', price: '240円', text: '桂で嵐山線に乗り換えます。交通系ICカードも使えます。', url: 'https://www.hankyu.co.jp/station/kawaramachi.html' },
-        { name: '京都バス 62・92・94系統（阪急嵐山駅前→愛宕寺前）', price: '230円', text: '清滝行き。1時間に1本ほどなので、時刻表を確認してから。ICカードは降りるときにタッチ。', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
+        { name: '京都バス 62・92・94系統（阪急嵐山駅前→愛宕寺前）', price: '230円', text: '清滝行き。平日と土曜は1時間に1本ほど（日曜・祝日は30分おき）なので、時刻表を確認してから。ICカードは降りるときにタッチ。', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
         { name: '阪急電車（嵐山→京都河原町）', price: '240円', text: '帰りも桂で乗り換えです。', url: 'https://www.hankyu.co.jp/station/arashiyama.html' }
       ],
       dealsNote: '大人の普通運賃です。2026年11月20日に阪急電鉄・京都バスの公式サイトで確認しました。「地下鉄・バス1日券」は阪急電車に使えないので、このルートではお得になりません。',
@@ -121,7 +121,7 @@ window.ARASHIYAMA_I18N = {
     titleSub: '京都 嵐山・嵯峨野',
     howto: 'How to use',
     allMaps: '← All maps',
-    home: 'Home',
+    home: 'All maps',
     tabMap: 'Map',
     menu: 'Menu',
     list: 'Spots',
@@ -208,7 +208,7 @@ window.ARASHIYAMA_I18N = {
       dealsLead: 'From Kyoto-kawaramachi and back, trains and the bus cost ¥710 per adult (temple admission not included).',
       deals: [
         { name: 'Hankyu train (Kyoto-kawaramachi → Arashiyama)', price: '¥240', text: 'Change at Katsura for the Arashiyama Line. IC cards accepted.', url: 'https://www.hankyu.co.jp/station/kawaramachi.html' },
-        { name: 'Kyoto Bus 62 / 92 / 94 (Hankyu Arashiyama-ekimae → Otagidera-mae)', price: '¥230', text: 'Bound for Kiyotaki. Only about one bus an hour, so check the timetable. With an IC card, tap when you get off.', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
+        { name: 'Kyoto Bus 62 / 92 / 94 (Hankyu Arashiyama-ekimae → Otagidera-mae)', price: '¥230', text: 'Bound for Kiyotaki. About one bus an hour on weekdays and Saturdays (every 30 min on Sundays and holidays), so check the timetable. With an IC card, tap when you get off.', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
         { name: 'Hankyu train (Arashiyama → Kyoto-kawaramachi)', price: '¥240', text: 'Change at Katsura again on the way back.', url: 'https://www.hankyu.co.jp/station/arashiyama.html' }
       ],
       dealsNote: 'Adult single fares, checked on the Hankyu and Kyoto Bus official websites on Nov 20, 2026. The Subway & Bus One-day Pass doesn’t cover Hankyu trains, so it doesn’t save money on this route.',

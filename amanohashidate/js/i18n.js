@@ -11,7 +11,7 @@ window.AMANOHASHIDATE_I18N = {
     titleSub: 'Amanohashidate & Ine',
     howto: '使い方',
     allMaps: '← マップ一覧',
-    home: 'ホーム',
+    home: 'マップ一覧',
     tabMap: '地図',
     menu: 'メニュー',
     list: '一覧',
@@ -101,7 +101,7 @@ window.AMANOHASHIDATE_I18N = {
       dealsHead: '交通費のめやす',
       dealsLead: '京都駅から天橋立・伊根を回って京都へ帰ると、特急の往復9,600円とフリーパス3,550円で、大人1人 13,150円です（観光船で行き帰りする場合。温泉代は別）。',
       deals: [
-        { name: '特急はしだて（京都⇔天橋立）往復', price: '9,600円', text: '片道4,800円（乗車券＋指定席特急料金・通常期）。時期によって少し変わります。', url: 'https://timetable.jr-odekake.net/' },
+        { name: '特急はしだて（京都⇔天橋立）往復', price: '9,600円', text: '片道4,800円（乗車券＋指定席特急料金・通常期）。時期によって少し変わります。', url: 'https://www.jr-odekake.net/' },
         { name: '海の京都 天橋立・伊根フリーパス 1day', price: '3,550円', text: '天橋立駅の観光案内所で。観光船（行き帰り1,600円）、ケーブルカー・リフト往復（800円）、伊根へのバス（行き帰り400円）、遊覧船（1,200円）が全部乗れて、別々に買うより450円お得。小児1,780円。', url: 'https://www.tankai.jp/tourist_tickets/' },
         { name: '自転車で渡る人は：レンタサイクル傘松まるごとチケット', price: '2,000円', text: '行きは自転車（2時間）、帰りは観光船、ケーブルカー・リフト往復がセット。伊根へのバス（400円）と遊覧船（1,200円）は別に払って、合計3,600円です。フリーパスには自転車は含まれません。', url: 'https://www.tankai.jp/tourist_tickets/' }
       ],
@@ -125,7 +125,7 @@ window.AMANOHASHIDATE_I18N = {
     titleSub: '天橋立・伊根',
     howto: 'How to use',
     allMaps: '← All maps',
-    home: 'Home',
+    home: 'All maps',
     tabMap: 'Map',
     menu: 'Menu',
     list: 'Spots',
@@ -215,7 +215,7 @@ window.AMANOHASHIDATE_I18N = {
       dealsHead: 'Getting around: fares',
       dealsLead: 'From Kyoto Station to Amanohashidate and Ine and back: ¥9,600 for the express round trip plus ¥3,550 for the free pass, ¥13,150 per adult (crossing by boat both ways; hot spring not included).',
       deals: [
-        { name: 'Hashidate limited express (Kyoto ⇔ Amanohashidate), round trip', price: '¥9,600', text: '¥4,800 each way (fare + reserved-seat express charge, regular season). Varies a little by season.', url: 'https://timetable.jr-odekake.net/' },
+        { name: 'Hashidate limited express (Kyoto ⇔ Amanohashidate), round trip', price: '¥9,600', text: '¥4,800 each way (fare + reserved-seat express charge, regular season). Varies a little by season.', url: 'https://www.jr-odekake.net/' },
         { name: 'Kyoto by the Sea Amanohashidate & Ine Free Pass 1day', price: '¥3,550', text: 'At the station’s tourist office. Covers the boat both ways (¥1,600), the cable car round trip (¥800), the bus to Ine and back (¥400) and the Ine Bay boat (¥1,200): ¥450 cheaper than separate tickets. Children ¥1,780.', url: 'https://www.tankai.jp/tourist_tickets/' },
         { name: 'Going by bike? Rental Bike & Kasamatsu ticket', price: '¥2,000', text: 'Bike there (2 hours), boat back, and the cable car round trip. Pay the bus (¥400) and the Ine boat (¥1,200) separately: ¥3,600 in all. Bikes aren’t covered by the free pass.', url: 'https://www.tankai.jp/tourist_tickets/' }
       ],

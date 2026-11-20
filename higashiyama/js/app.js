@@ -156,9 +156,9 @@
     return /^ja\b/i.test(langs[0] || '') ? 'ja' : 'en';
   }
 
-  var TIME_RE = /^(おすすめ(?:訪問|出発|移動)時間|営業時間|Recommended [A-Za-z ]*time|Opening hours)\s*[：:]/;
+  var TIME_RE = /^(おすすめ(?:訪問|出発|移動|到着|乗船)時間|営業時間|Recommended [A-Za-z ]*(?:time|arrival|departure|boat)|Opening hours)\s*[：:]/;
   function recTime(s) {
-    var re = lang === 'ja' ? /^おすすめ(?:訪問|出発|移動)時間\s*[：:]\s*(.+)$/ : /^Recommended [A-Za-z ]*time\s*:\s*(.+)$/;
+    var re = lang === 'ja' ? /^おすすめ(?:訪問|出発|移動|到着|乗船)時間\s*[：:]\s*(.+)$/ : /^Recommended [A-Za-z ]*(?:time|arrival|departure|boat)\s*:\s*(.+)$/;
     var lines = s.text[lang].split('\n');
     for (var i = 0; i < lines.length; i++) {
       var m = lines[i].match(re);
@@ -247,13 +247,13 @@
 
   function applyMapLang() {
     if (!gl || !glReady) return;
-    window.PHS_BASEMAP.setLang(gl, lang);   // 地図の文字を EN / 日本語 に合わせる
+    window.KM_BASEMAP.setLang(gl, lang);   // 地図の文字を EN / 日本語 に合わせる
   }
 
   // 地図の見た目は全マップ共通の assets/basemap.js（Googleマップに近いスタイル）
   function addBaseMap() {
-    if (!window.PHS_BASEMAP) return;
-    var layer = window.PHS_BASEMAP.addTo(map, { lang: lang, worker: BASEMAP.worker, maxZoom: BASEMAP.maxZoom });
+    if (!window.KM_BASEMAP) return;
+    var layer = window.KM_BASEMAP.addTo(map, { lang: lang, worker: BASEMAP.worker, maxZoom: BASEMAP.maxZoom });
     if (!layer) return;
     gl = layer.getMaplibreMap();
     gl.on('style.load', function () { glReady = true; applyMapLang(); });
@@ -360,9 +360,15 @@
       '<button type="button" data-lang="ja" lang="ja" aria-pressed="' + (lang === 'ja') + '">日本語</button></div>';
     $('intro-card').innerHTML =
       '<div class="in-top">' + logo('in-logo') +
-        '<div class="in-top-r">' + lsw +
+        '<div class="in-top-r"><a class="in-home" href="../">' + esc(t.allMaps) + '</a>' + lsw +
         '<button type="button" class="iconbtn in-x" data-act="close" aria-label="' + esc(t.close) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div></div>' +
       '<div class="in-scroll">' +
+        // how to use the map comes first
+        '<section class="in-sec"><h2 class="in-h2">' + esc(x.howHead) + '</h2><ol class="in-how">' +
+          x.how.map(function (h, i) {
+            return '<li><span class="in-num">' + (i + 1) + '</span><div><b>' + esc(h.title) + '</b><p>' + esc(h.text) + '</p></div></li>';
+          }).join('') +
+        '</ol></section>' +
         '<section class="in-hero">' +
           '<div class="in-hero-txt">' +
             '<p class="in-kicker">' + esc(x.kicker) + '</p>' +
@@ -399,11 +405,6 @@
               '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a></div>';
           }).join('') +
         '</div><p class="in-deals-note">' + esc(x.dealsNote) + '</p></section>' +
-        '<section class="in-sec"><h2 class="in-h2">' + esc(x.howHead) + '</h2><ol class="in-how">' +
-          x.how.map(function (h, i) {
-            return '<li><span class="in-num">' + (i + 1) + '</span><div><b>' + esc(h.title) + '</b><p>' + esc(h.text) + '</p></div></li>';
-          }).join('') +
-        '</ol></section>' +
         '<footer class="in-foot">' + logo('in-logo') +
           '<p>' + esc(x.footer1) + '</p></footer>' +
       '</div>' +
@@ -841,12 +842,12 @@
     window.addEventListener('hashchange', route);
     if (WIDE.addEventListener) WIDE.addEventListener('change', function () { map.invalidateSize(); route(); });
 
-    // First visit with no spot in the address: show how to use the map first
-    if (!location.hash && !load(KEY_SEEN)) history.replaceState(null, '', location.pathname + location.search + '#about');
+    // Opening the map with no spot in the address: always show how to use it first
+    if (!location.hash) history.replaceState(null, '', location.pathname + location.search + '#about');
     route();
   }
 
-  fetch('../data/routes/higashiyama.json?v=1')
+  fetch('../data/routes/higashiyama.json?v=2')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

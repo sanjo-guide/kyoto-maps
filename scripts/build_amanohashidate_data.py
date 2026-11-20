@@ -62,7 +62,7 @@ def build(course):
             "京都駅（きょうとえき）\n\n8:38発の特急はしだて1号に乗ると、乗り換えなしで10:39に天橋立に着きます。山陰線（嵯峨野線）のホームから出る、京都丹後鉄道に乗り入れる特急です。\n\n指定席は、帰りの18:09発の特急はしだて8号の分も一緒に買っておくと安心です。片道は大人4,800円（指定席・通常期。時期によって少し変わります）。\n\n写真は京都丹後鉄道の観光列車「丹後の海」。はしだてにこの車両が使われる日もあります。\n\nおすすめ出発時間：8:38",
             "Kyoto Station\n\nTake the 8:38 Hashidate No. 1 limited express and you’ll reach Amanohashidate at 10:39 without changing trains. It leaves from the San’in (Sagano) Line platforms and runs through onto the Kyoto Tango Railway.\n\nBuy reserved seats in advance, including the 18:09 Hashidate No. 8 for the way back. One way costs ¥4,800 per adult (reserved seat, regular season; it varies a little by season).\n\nThe blue train in the photos is the Kyoto Tango Railway’s “Tango no Umi”, which is used for some Hashidate services.\n\nRecommended departure time: 8:38"),
         "gmaps": [gm("JR京都駅", "JR Kyoto Station", 34.98535, 135.758766, "JR京都駅")],
-        "links": [link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://timetable.jr-odekake.net/")],
+        "links": [link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://www.jr-odekake.net/")],
         "info": info([
             row("train", "特急はしだて1号 京都8:38発→天橋立10:39着（毎日運転）", "Hashidate No. 1: Kyoto 8:38 → Amanohashidate 10:39 (daily)"),
             row("fee", "片道 大人4,800円（乗車券2,320円＋指定席特急料金2,480円・通常期。時期によって少し変わります）",
@@ -309,7 +309,7 @@ def build(course):
             "天橋立駅（京都へ帰る）\n\n18:09発の特急はしだて8号に乗ると、20:21に京都駅に着きます。温泉でゆっくりした日は、19:05発のはしだて10号（京都着21:20）で。\n\nおすすめ出発時間：18:09",
             "Amanohashidate Station (back to Kyoto)\n\nThe 18:09 Hashidate No. 8 gets you to Kyoto at 20:21. If you lingered at the hot spring, take the 19:05 Hashidate No. 10 (Kyoto 21:20).\n\nRecommended departure time: 18:09"),
         "gmaps": [gm("天橋立駅", "Amanohashidate Station", 35.557585, 135.182426, "天橋立駅")],
-        "links": [link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://timetable.jr-odekake.net/")],
+        "links": [link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://www.jr-odekake.net/")],
         "info": info([
             row("train", "特急はしだて8号 天橋立18:09発→京都20:21着、はしだて10号 19:05発→21:20着（毎日運転）",
                 "Hashidate No. 8: Amanohashidate 18:09 → Kyoto 20:21; No. 10: 19:05 → 21:20 (daily)"),

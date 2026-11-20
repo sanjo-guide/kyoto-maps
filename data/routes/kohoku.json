@@ -1,0 +1,1077 @@
+{
+ "id": "kohoku",
+ "_note": "京都から日帰り 海津大崎の桜と長浜のルート（kohoku/ のページ専用。形は eizan-line.json と同じ）。京都から湖西線でマキノへ、知内浜→海津の石積み→海津大崎の桜並木→大崎寺→（歩いて）大浦の湖岸→永原駅→長浜（長浜城・豊公園→慶雲館→長浜鉄道スクエア→黒壁スクエア）→京都。写真は Toshi の写真ライブラリから選んだもの（海津大崎は2025年4月12日と2026年4月3日、Nikon D7000 を含む。長浜は2025年1月13〜14日で、慶雲館は盆梅展。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。距離は OpenStreetMap の徒歩ルート（OSRM）で測った目安。info.checked は事実情報を確認した日（びわ湖高島観光協会・長浜の各施設の公式サイト、電車は乗換案内）。このファイルは scripts/build_kohoku_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 4,
+   "day": 1
+  },
+  {
+   "first": 5,
+   "last": 6,
+   "day": 2
+  },
+  {
+   "first": 7,
+   "last": 10,
+   "day": 3
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。マキノ駅（とサニービーチ）は海津の場所を選ぶと入る。長浜駅は長浜の場所を選ぶと入る。defaultMode: pick。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   7,
+   8,
+   9,
+   10
+  ],
+  "auto": {
+   "1": {
+    "any": [
+     2,
+     3,
+     4
+    ]
+   },
+   "6": {
+    "any": [
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  },
+  "hints": [
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "andAny": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "none": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "大浦に行かない日は、大崎寺から海津1区のバス停まで歩いて約30分、コミュニティバスでマキノ駅へ。マキノから毎時51分発の電車で、近江塩津で乗り換えて長浜へ（36分・680円）。",
+     "en": "Skipping Oura? Walk about 30 min from Osakiji to the Kaizu 1-ku stop and take the community bus to Makino. Trains leave Makino at :51 each hour; change at Omi-Shiotsu for Nagahama (36 min, ¥680)."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      5,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    "text": {
+     "ja": "帰りはマキノ駅から京都へ。新快速で乗り換えなし、約1時間10分です。",
+     "en": "Go home from Makino Station: the Special Rapid runs direct to Kyoto in about 1 h 10 min."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "none": [
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "text": {
+     "ja": "京都から長浜へは新快速で乗り換えなし、約1時間15分（1,340円）です。",
+     "en": "From Kyoto, the Special Rapid runs direct to Nagahama in about 1 h 15 min (¥1,340)."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/kohoku/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "makino",
+   "name": {
+    "ja": "マキノ駅・マキノサニービーチ（知内浜）",
+    "en": "Makino Station & Makino Sunny Beach"
+   },
+   "kind": {
+    "ja": "駅・浜辺",
+    "en": "Station & beach"
+   },
+   "blurb": {
+    "ja": "湖西線のマキノ駅から湖へ。白い砂浜と松並木の浜辺に、桜が咲きます。",
+    "en": "From Makino Station on the Kosei Line down to the lake: a white-sand beach lined with pines, and cherries in bloom."
+   },
+   "lat": 35.45351,
+   "lng": 136.06021,
+   "text": {
+    "ja": "マキノ駅とマキノサニービーチ（知内浜・ちないはま）\n\n京都からJR湖西線で、近江今津で乗り換えてマキノへ。京都7:00発に乗ると、マキノに8:12に着きます（1,170円）。新快速なら乗り換えなしで約1時間15分です。\n\n駅から湖の方へ歩いて約20分で、白砂青松百選のマキノサニービーチ。浜辺の桜の向こうに、これから歩く海津大崎の山並みが見えます。\n\n駅の観光案内所ではレンタサイクルも借りられます（1日1,000円〜、台数に限りあり）。海津大崎の桜並木まで、自転車なら30分ほどです。\n\nおすすめ訪問時間：8:30〜9:00",
+    "en": "Makino Station and Makino Sunny Beach (Chinai beach)\n\nFrom Kyoto take the JR Kosei Line, changing at Omi-Imazu: leave at 7:00 and reach Makino at 8:12 (¥1,170). A direct Special Rapid takes about 1 h 15 min.\n\nWalk about 20 minutes towards the lake to Makino Sunny Beach, one of Japan’s 100 best white-sand-and-pine shores. Beyond the cherries on the beach rise the hills of Kaizu-Osaki, where you’re heading.\n\nThe tourist information office in the station rents bicycles (from ¥1,000 a day, limited numbers). It’s about 30 minutes by bike to the cherry avenue.\n\nRecommended visit time: 8:30–9:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "マキノサニービーチ",
+      "en": "Makino Sunny Beach"
+     },
+     "lat": 35.45351,
+     "lng": 136.06021,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%82%AD%E3%83%8E%E3%82%B5%E3%83%8B%E3%83%BC%E3%83%93%E3%83%BC%E3%83%81"
+    },
+    {
+     "label": {
+      "ja": "JRマキノ駅",
+      "en": "JR Makino Station"
+     },
+     "lat": 35.46121,
+     "lng": 136.06009,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E3%83%9E%E3%82%AD%E3%83%8E%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "海津大崎の桜（びわ湖高島観光協会）",
+      "en": "Kaizu-Osaki cherry blossoms (Takashima tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/",
+      "en": "https://takashima-kanko.jp/sakura/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "びわ湖高島レンタサイクル",
+      "en": "Takashima rental bicycles (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/guide/rentalcycle.html",
+      "en": "https://takashima-kanko.jp/guide/rentalcycle.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://takashima-kanko.jp/sakura/",
+     "head": {
+      "ja": "桜の見ごろは4月上旬〜中旬",
+      "en": "Cherry blossoms: early to mid April"
+     },
+     "text": {
+      "ja": "海津大崎の桜は、例年4月はじめに咲きはじめ、5〜6日で満開になります（京都市内より1週間ほど遅め）。見ごろの土日は、湖岸の道で交通規制があります。",
+      "en": "The Kaizu-Osaki cherries usually open in early April and are in full bloom 5–6 days later, about a week after Kyoto city. On peak weekends the lakeside road has traffic restrictions."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都7:00発 → 近江今津で乗り換え → マキノ8:12着（新快速なら京都8:15発→マキノ9:30着、乗り換えなし）",
+       "en": "Kyoto 7:00 → change at Omi-Imazu → Makino 8:12 (or Special Rapid Kyoto 8:15 → Makino 9:30, direct)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都→マキノ 1,170円。レンタサイクル 1日1,000円（電動は2,000円）",
+       "en": "Kyoto → Makino ¥1,170. Rental bike ¥1,000 a day (e-bike ¥2,000)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年11月の土曜のダイヤ）で確認しました。春はダイヤが変わっていることがあるので、行く前に確かめてください。",
+     "en": "Times and fares checked on a route planner (Saturday timetable, November 2026). Timetables may change by spring, so check before you go."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "makino-1.jpg",
+    "makino-2.jpg",
+    "makino-3.jpg",
+    "makino-4.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "kaizu",
+   "name": {
+    "ja": "海津の石積み",
+    "en": "Kaizu stone embankment"
+   },
+   "kind": {
+    "ja": "町並み",
+    "en": "Old lakeside village"
+   },
+   "blurb": {
+    "ja": "湖の波から家を守るために積まれた、江戸時代の石垣が続く湖岸の集落。",
+    "en": "A lakeside village behind an Edo-period stone wall built to keep the waves off the houses."
+   },
+   "lat": 35.464,
+   "lng": 136.0789,
+   "text": {
+    "ja": "海津（かいづ）の石積み\n\n湖北から敦賀へ向かう道の港町として栄えた海津には、江戸時代に波から家を守るために積まれた石垣が、湖岸に約1.2km残っています。「海津・西浜・知内の水辺景観」として、国の重要文化的景観に選ばれています。\n\n古いお寺や町家が並ぶ通りを歩いて、桜並木の入口へ向かいましょう。\n\nおすすめ訪問時間：9:15〜9:45",
+    "en": "Kaizu stone embankment\n\nKaizu prospered as a lake port on the road north to Tsuruga. About 1.2 km of the stone wall built in the Edo period to protect the houses from the waves still lines the shore. The waterside landscape of Kaizu, Nishihama and Chinai is a nationally designated Important Cultural Landscape.\n\nStroll the street of old temples and townhouses towards the start of the cherry avenue.\n\nRecommended visit time: 9:15–9:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "海津の石積み",
+      "en": "Kaizu stone embankment"
+     },
+     "lat": 35.464,
+     "lng": 136.0789,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E6%B4%A5%E3%81%AE%E7%9F%B3%E7%A9%8D%E3%81%BF%20%E9%AB%98%E5%B3%B6%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "海津の石積み（びわ湖高島観光協会）",
+      "en": "Kaizu stone embankment (Takashima tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/spot/2018/06/post_170.html",
+      "en": "https://takashima-kanko.jp/spot/2018/06/post_170.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "マキノ駅から歩いて約20分",
+       "en": "About 20 min on foot from Makino Station"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "びわ湖高島観光協会のサイトで確認しました。",
+     "en": "Checked on the Takashima tourism association website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kaizu-1.jpg",
+    "kaizu-2.jpg",
+    "kaizu-3.jpg",
+    "kaizu-4.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "sakura",
+   "name": {
+    "ja": "海津大崎の桜並木",
+    "en": "Kaizu-Osaki cherry avenue"
+   },
+   "kind": {
+    "ja": "桜並木",
+    "en": "Cherry avenue"
+   },
+   "blurb": {
+    "ja": "湖岸の道に約4km、ソメイヨシノが約800本。湖に枝を伸ばす桜のトンネルを歩きます。",
+    "en": "About 800 cherry trees along 4 km of lakeshore road, branches reaching out over the water."
+   },
+   "lat": 35.45414,
+   "lng": 136.08334,
+   "text": {
+    "ja": "海津大崎（かいづおおさき）の桜並木\n\n日本さくら名所100選のひとつ。湖岸に沿って約4km、ソメイヨシノ約800本が続きます。湖に張り出すように咲く桜と、その向こうの竹生島や湖北の山並みは、ここだけの景色です。\n\n並木口から大崎寺までは約2km、歩いて約30分。写真を撮りながらだと1時間はみておきましょう。見ごろの土日は交通規制があり、道は歩く人でにぎわいます。\n\nおすすめ訪問時間：9:50〜10:50",
+    "en": "Kaizu-Osaki cherry avenue\n\nOne of Japan’s 100 best cherry-blossom spots: about 800 Somei-Yoshino trees along some 4 km of the lakeshore. Cherries leaning out over the water, with Chikubu Island and the northern hills beyond, make a view found nowhere else.\n\nFrom the avenue’s entrance to Osakiji temple is about 2 km, around 30 minutes on foot; allow an hour with photo stops. On peak weekends there are traffic restrictions and the road is busy with walkers.\n\nRecommended visit time: 9:50–10:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "海津大崎",
+      "en": "Kaizu-Osaki"
+     },
+     "lat": 35.45414,
+     "lng": 136.08334,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E6%B4%A5%E5%A4%A7%E5%B4%8E%20%E6%A1%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "海津大崎の桜（びわ湖高島観光協会）",
+      "en": "Kaizu-Osaki cherry blossoms (Takashima tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/",
+      "en": "https://takashima-kanko.jp/sakura/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "交通規制の案内（2026年）",
+      "en": "Traffic restrictions (2026, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/regulation.html",
+      "en": "https://takashima-kanko.jp/sakura/regulation.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://takashima-kanko.jp/sakura/",
+     "head": {
+      "ja": "桜の見ごろは4月上旬〜中旬",
+      "en": "Cherry blossoms: early to mid April"
+     },
+     "text": {
+      "ja": "海津大崎の桜は、例年4月はじめに咲きはじめ、5〜6日で満開になります（京都市内より1週間ほど遅め）。見ごろの土日は、湖岸の道で交通規制があります。",
+      "en": "The Kaizu-Osaki cherries usually open in early April and are in full bloom 5–6 days later, about a week after Kyoto city. On peak weekends the lakeside road has traffic restrictions."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "並木口から大崎寺まで約2km・歩いて約30分（マキノ駅からは約4km・約60分）",
+       "en": "About 2 km / 30 min on foot from the avenue entrance to Osakiji (about 4 km / 60 min from Makino Station)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "びわ湖高島観光協会のサイトで確認しました。",
+     "en": "Checked on the Takashima tourism association website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "sakura-1.jpg",
+    "sakura-2.jpg",
+    "sakura-3.jpg",
+    "sakura-4.jpg",
+    "sakura-5.jpg",
+    "sakura-6.jpg",
+    "sakura-7.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "osakiji",
+   "name": {
+    "ja": "大崎寺・海津大崎港",
+    "en": "Osakiji Temple & Kaizu-Osaki pier"
+   },
+   "kind": {
+    "ja": "寺・船着き場",
+    "en": "Temple & pier"
+   },
+   "blurb": {
+    "ja": "桜並木の先の、湖に突き出た岬のお寺。桜の時期は、長浜や今津からの桜クルーズの船が着きます。",
+    "en": "A temple on the headland at the end of the avenue. In season, cherry cruises from Nagahama and Imazu call at the pier."
+   },
+   "lat": 35.45021,
+   "lng": 136.08711,
+   "text": {
+    "ja": "大崎寺（おおさきじ）と海津大崎港\n\n「大崎観音」と呼ばれる、奈良時代に開かれたと伝わるお寺です。県道の第一トンネルの手前の石段を上ると、本堂の前の展望台から琵琶湖が見渡せます。\n\n桜の時期には、琵琶湖汽船（長浜港・今津港発着）などの「桜クルーズ」の船がここに寄ります。2026年は4月15日まで運航しました。次の春の運航は、各社の発表を確かめてください。\n\n帰りは、海津1区のバス停まで歩いて約30分、コミュニティバスでマキノ駅へ（約6分・220円）。\n\nおすすめ訪問時間：10:50〜11:10",
+    "en": "Osakiji Temple and Kaizu-Osaki pier\n\nKnown as “Osaki Kannon”, said to have been founded in the Nara period. Climb the steps just before the first road tunnel; from the terrace in front of the main hall you look out over Lake Biwa.\n\nIn cherry season, Biwako Kisen and other “cherry cruises” (from Nagahama and Imazu ports) call here; in 2026 they ran until 15 April. Check the operators’ announcements for next spring.\n\nTo go back, walk about 30 minutes to the Kaizu 1-ku bus stop and take the community bus to Makino Station (about 6 min, ¥220).\n\nRecommended visit time: 10:50–11:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大崎寺",
+      "en": "Osakiji"
+     },
+     "lat": 35.45021,
+     "lng": 136.08711,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%B4%8E%E5%AF%BA%20%E9%AB%98%E5%B3%B6%E5%B8%82%E3%83%9E%E3%82%AD%E3%83%8E%E7%94%BA%E6%B5%B7%E6%B4%A5"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "大崎寺（びわ湖高島観光協会）",
+      "en": "Osakiji (Takashima tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/spot/2018/06/post_71.html",
+      "en": "https://takashima-kanko.jp/spot/2018/06/post_71.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "琵琶湖汽船 海津大崎桜クルーズ",
+      "en": "Biwako Kisen cherry cruise (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biwakokisen.co.jp/season_event/5972/",
+      "en": "https://www.biwakokisen.co.jp/season_event/5972/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "海津1区 → マキノ駅 コミュニティバス（国境線）約6分・220円（大崎寺から海津1区まで歩いて約30分）",
+       "en": "Kaizu 1-ku → Makino Station, community bus (Kokkyo line) about 6 min, ¥220 (30 min walk from Osakiji to the stop)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "拝観料は公式の案内に書かれていません（要確認）。",
+     "en": "Admission isn’t given in the official information (please check)."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "osakiji-1.jpg",
+    "osakiji-2.jpg",
+    "osakiji-3.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "oura",
+   "name": {
+    "ja": "大浦の湖岸（奥びわ湖）",
+    "en": "Oura lakeshore (Oku-Biwako)"
+   },
+   "kind": {
+    "ja": "湖岸の桜",
+    "en": "Lakeside cherries"
+   },
+   "blurb": {
+    "ja": "大崎の先、湖岸の道をさらに東へ。人の少ない入り江に桜が咲く、奥びわ湖の静かな景色。",
+    "en": "Further east along the lakeshore road beyond Osaki: quiet coves of cherries at the far north of Lake Biwa."
+   },
+   "lat": 35.48641,
+   "lng": 136.11764,
+   "text": {
+    "ja": "大浦（おおうら）の湖岸\n\n大崎寺から湖岸の道をさらに東へ、歩いて約1時間半（約6km）。トンネルを抜けると、入り江に沿って桜が続く大浦の集落に出ます。海津大崎よりも人が少なく、静かに桜を見られます。\n\n大浦から永原駅までは歩いて約30分（約2km）。永原13:56発の電車で、近江塩津で乗り換えて長浜に14:27に着きます（510円）。\n\n長い道のりなので、歩くのに自信がない日は、大崎寺からマキノ駅に戻りましょう。\n\nおすすめ訪問時間：12:40〜13:10",
+    "en": "Oura lakeshore\n\nFrom Osakiji, continue east along the lakeshore road: about 1 h 30 min on foot (about 6 km). Through the tunnels you reach the village of Oura, with cherries along its coves, quieter than Kaizu-Osaki.\n\nFrom Oura it’s about 30 minutes’ walk (2 km) to Nagahara Station. The 13:56 train, changing at Omi-Shiotsu, reaches Nagahama at 14:27 (¥510).\n\nIt’s a long walk, so if you’re not up to it, go back from Osakiji to Makino Station instead.\n\nRecommended visit time: 12:40–13:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大浦",
+      "en": "Oura"
+     },
+     "lat": 35.48641,
+     "lng": 136.11764,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E6%B5%9C%E5%B8%82%E8%A5%BF%E6%B5%85%E4%BA%95%E7%94%BA%E5%A4%A7%E6%B5%A6"
+    },
+    {
+     "label": {
+      "ja": "JR永原駅",
+      "en": "JR Nagahara Station"
+     },
+     "lat": 35.499,
+     "lng": 136.12267,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%B0%B8%E5%8E%9F%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://takashima-kanko.jp/sakura/",
+     "head": {
+      "ja": "桜の見ごろは4月上旬〜中旬",
+      "en": "Cherry blossoms: early to mid April"
+     },
+     "text": {
+      "ja": "海津大崎の桜は、例年4月はじめに咲きはじめ、5〜6日で満開になります（京都市内より1週間ほど遅め）。見ごろの土日は、湖岸の道で交通規制があります。",
+      "en": "The Kaizu-Osaki cherries usually open in early April and are in full bloom 5–6 days later, about a week after Kyoto city. On peak weekends the lakeside road has traffic restrictions."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "永原13:56発 → 近江塩津で乗り換え → 長浜14:27着・510円（毎時56分発）",
+       "en": "Nagahara 13:56 → change at Omi-Shiotsu → Nagahama 14:27, ¥510 (hourly at :56)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "大崎寺から大浦まで歩いて約1時間半、大浦から永原駅まで約30分",
+       "en": "About 1 h 30 min on foot from Osakiji to Oura, then about 30 min to Nagahara Station"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年11月の土曜のダイヤ）で確認しました。春はダイヤが変わっていることがあるので、行く前に確かめてください。",
+     "en": "Times and fares checked on a route planner (Saturday timetable, November 2026). Timetables may change by spring, so check before you go."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "oura-1.jpg",
+    "oura-2.jpg",
+    "oura-3.jpg",
+    "oura-4.jpg",
+    "oura-5.jpg",
+    "oura-6.jpg"
+   ]
+  },
+  {
+   "no": 6,
+   "id": "nagahamaeki",
+   "name": {
+    "ja": "JR長浜駅",
+    "en": "JR Nagahama Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "秀吉が開いた城下町・長浜へ。駅のまわりに、お城も庭園も古い町並みも歩いて回れる範囲にあります。",
+    "en": "Nagahama, the castle town founded by Hideyoshi: the castle, a garden and the old streets are all within walking distance of the station."
+   },
+   "lat": 35.37845,
+   "lng": 136.26532,
+   "text": {
+    "ja": "JR長浜駅（ながはまえき）\n\n豊臣秀吉が初めて城を持った城下町・長浜の玄関口です。西口を出ると長浜城（豊公園）、慶雲館、長浜鉄道スクエア、東口の先には黒壁スクエアの古い町並みが、どれも歩いて数分の所にあります。\n\n京都からは新快速で乗り換えなし（約1時間15分・1,340円）。\n\nおすすめ到着時間：14:27",
+    "en": "JR Nagahama Station\n\nGateway to Nagahama, the castle town where Toyotomi Hideyoshi first held a castle. West of the station are Nagahama Castle (Hoko Park), Keiunkan and the Railway Square; beyond the east side, the old streets of Kurokabe Square: all a few minutes’ walk.\n\nFrom Kyoto it’s direct by Special Rapid (about 1 h 15 min, ¥1,340).\n\nRecommended arrival: 14:27"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR長浜駅",
+      "en": "JR Nagahama Station"
+     },
+     "lat": 35.37845,
+     "lng": 136.26532,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E9%95%B7%E6%B5%9C%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都→長浜 1,340円（新快速で乗り換えなし）",
+       "en": "Kyoto → Nagahama ¥1,340 (Special Rapid, direct)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年11月の土曜のダイヤ）で確認しました。春はダイヤが変わっていることがあるので、行く前に確かめてください。",
+     "en": "Times and fares checked on a route planner (Saturday timetable, November 2026). Timetables may change by spring, so check before you go."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "nagahamaeki-1.jpg",
+    "nagahamaeki-2.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "nagahamajo",
+   "name": {
+    "ja": "長浜城・豊公園",
+    "en": "Nagahama Castle & Hoko Park"
+   },
+   "kind": {
+    "ja": "城・公園",
+    "en": "Castle & park"
+   },
+   "blurb": {
+    "ja": "湖のほとりに建つ長浜城と、約600本の桜の豊公園。天守からは琵琶湖が見渡せます。",
+    "en": "Nagahama Castle on the lakeshore, and Hoko Park with some 600 cherry trees. The keep looks out over Lake Biwa."
+   },
+   "lat": 35.37766,
+   "lng": 136.26128,
+   "text": {
+    "ja": "長浜城（ながはまじょう）と豊公園（ほうこうえん）\n\n秀吉が築いた長浜城の跡に、昭和58年に再建された天守が建ち、中は長浜城歴史博物館になっています。最上階の展望台からは、琵琶湖と竹生島が見渡せます。\n\nまわりの豊公園は、約600本の桜が咲く日本さくら名所100選のひとつ。例年4月上旬〜中旬が見ごろで、海津大崎より少し早めです。\n\nおすすめ訪問時間：14:35〜15:25",
+    "en": "Nagahama Castle and Hoko Park\n\nOn the site of the castle Hideyoshi built stands a keep rebuilt in 1983, now the Nagahama Castle History Museum. From the top-floor lookout you see Lake Biwa and Chikubu Island.\n\nHoko Park around it, with about 600 cherry trees, is one of Japan’s 100 best cherry spots; blossoms usually peak in early to mid April, a little earlier than Kaizu-Osaki.\n\nRecommended visit time: 14:35–15:25"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "長浜城歴史博物館",
+      "en": "Nagahama Castle History Museum"
+     },
+     "lat": 35.37766,
+     "lng": 136.26128,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E6%B5%9C%E5%9F%8E%E6%AD%B4%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "長浜城歴史博物館 公式サイト",
+      "en": "Nagahama Castle History Museum (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://nagahama-rekihaku.jp/",
+      "en": "https://nagahama-rekihaku.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（受付は16:30まで）",
+       "en": "9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "月曜（祝日・休日なら次の平日）、12月27日〜1月2日",
+       "en": "Mondays (next weekday if a holiday), 27 Dec – 2 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、小中学生200円（豊公園は無料）",
+       "en": "¥500 adults, ¥200 children (Hoko Park free)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "長浜城歴史博物館と長浜市の公式サイトで確認しました。",
+     "en": "Checked on the museum and Nagahama City websites."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "nagahamajo-1.jpg",
+    "nagahamajo-2.jpg",
+    "nagahamajo-3.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 8,
+   "id": "keiunkan",
+   "name": {
+    "ja": "慶雲館",
+    "en": "Keiunkan"
+   },
+   "kind": {
+    "ja": "庭園・迎賓館",
+    "en": "Garden & guesthouse"
+   },
+   "blurb": {
+    "ja": "明治天皇を迎えるために建てられた迎賓館と庭園。冬は大きな梅の盆栽が並ぶ「盆梅展」の会場になります。",
+    "en": "A guesthouse and garden built to receive Emperor Meiji. In winter it hosts the Bonbai-ten, an exhibition of huge plum bonsai."
+   },
+   "lat": 35.37581,
+   "lng": 136.26634,
+   "text": {
+    "ja": "慶雲館（けいうんかん）\n\n明治20年に明治天皇の休憩所として建てられた迎賓館です。広い日本庭園は、近代日本庭園の先駆けといわれる7代目小川治兵衛（植治）の作。\n\n1月中旬〜3月はじめは「長浜盆梅展」の会場になり、樹齢数百年の梅の盆栽が座敷いっぱいに並びます。写真は2025年1月の盆梅展のもの。2027年は1月10日〜3月10日の予定です。\n\n春の桜の時期は、ふだんの公開（庭園と建物）です。\n\nおすすめ訪問時間：15:35〜16:05",
+    "en": "Keiunkan\n\nBuilt in 1887 as a resting place for Emperor Meiji. The large Japanese garden is by Ogawa Jihei VII (Ueji), a pioneer of modern Japanese gardens.\n\nFrom mid January to early March it hosts the Nagahama Bonbai-ten: plum bonsai, some centuries old, filling the rooms. The photos are from the January 2025 show; in 2027 it runs from 10 January to 10 March.\n\nIn cherry season it’s the regular opening (garden and buildings).\n\nRecommended visit time: 15:35–16:05"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "慶雲館",
+      "en": "Keiunkan"
+     },
+     "lat": 35.37581,
+     "lng": 136.26634,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%85%B6%E9%9B%B2%E9%A4%A8%20%E9%95%B7%E6%B5%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "慶雲館（長浜観光協会）",
+      "en": "Keiunkan (Nagahama tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://kitabiwako.jp/keiunkan/guidance.html",
+      "en": "https://kitabiwako.jp/keiunkan/guidance.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "長浜盆梅展 公式サイト",
+      "en": "Nagahama Bonbai-ten (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://bonbai.jp/",
+      "en": "https://bonbai.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-01-09",
+     "url": "https://kitabiwako.jp/spot/spot_1703",
+     "text": {
+      "ja": "2026年12月1日〜2027年1月9日は、盆梅展の準備のため休館です。",
+      "en": "Closed 1 Dec 2026 – 9 Jan 2027 to prepare for the bonsai exhibition."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:30〜17:00（入館は16:30まで）",
+       "en": "9:30–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人300円、小中学生150円",
+       "en": "¥300 adults, ¥150 children"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "長浜盆梅展 2027：1月10日〜3月10日 9:00〜17:00（入館16:30まで）、大人1,000円",
+       "en": "Bonbai-ten 2027: 10 Jan – 10 Mar, 9:00–17:00 (last entry 16:30), ¥1,000 adults"
+      },
+      "until": "2027-03-10",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "盆梅展の前（12月1日ごろ〜1月9日）と後（3月11日〜下旬）は休館",
+       "en": "Closed before (about 1 Dec – 9 Jan) and after (11 Mar to late March) the bonsai exhibition"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "長浜観光協会と長浜盆梅展の公式サイトで確認しました。",
+     "en": "Checked on the Nagahama tourism and Bonbai-ten websites."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "keiunkan-1.jpg",
+    "keiunkan-2.jpg",
+    "keiunkan-3.jpg",
+    "keiunkan-4.jpg",
+    "keiunkan-5.jpg",
+    "keiunkan-6.jpg",
+    "keiunkan-7.jpg",
+    "keiunkan-8.jpg"
+   ]
+  },
+  {
+   "no": 9,
+   "id": "tetsudo",
+   "name": {
+    "ja": "長浜鉄道スクエア",
+    "en": "Nagahama Railway Square"
+   },
+   "kind": {
+    "ja": "鉄道の博物館",
+    "en": "Railway museum"
+   },
+   "blurb": {
+    "ja": "現存する日本最古の駅舎「旧長浜駅舎」と、蒸気機関車・電気機関車の展示。",
+    "en": "Japan’s oldest surviving station building, plus steam and electric locomotives."
+   },
+   "lat": 35.3767,
+   "lng": 136.266,
+   "text": {
+    "ja": "長浜鉄道スクエア\n\n明治15年に建てられた旧長浜駅舎は、現存する日本で最も古い駅舎です。となりの展示館には、D51形蒸気機関車やED70形電気機関車が並んでいます。\n\n長浜駅の西口から歩いて3分。入館は16:30までなので、時間に気をつけて。\n\nおすすめ訪問時間：16:10〜16:30",
+    "en": "Nagahama Railway Square\n\nThe old Nagahama Station building of 1882 is the oldest surviving station building in Japan. Next door, the exhibition hall shows a D51 steam locomotive and an ED70 electric locomotive.\n\nThree minutes from the west exit of Nagahama Station. Last entry is 16:30, so watch the time.\n\nRecommended visit time: 16:10–16:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "長浜鉄道スクエア",
+      "en": "Nagahama Railway Square"
+     },
+     "lat": 35.3767,
+     "lng": 136.266,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E6%B5%9C%E9%89%84%E9%81%93%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "長浜鉄道スクエア（長浜観光協会）",
+      "en": "Nagahama Railway Square (Japanese)"
+     },
+     "url": {
+      "ja": "https://kitabiwako.jp/tetsudou/guidance.html",
+      "en": "https://kitabiwako.jp/tetsudou/guidance.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:30〜17:00（入館は16:30まで）",
+       "en": "9:30–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29日〜1月3日",
+       "en": "29 Dec – 3 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、小中学生200円",
+       "en": "¥500 adults, ¥200 children"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "長浜観光協会の公式サイトで確認しました。",
+     "en": "Checked on the Nagahama tourism website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "tetsudo-1.jpg",
+    "tetsudo-2.jpg",
+    "tetsudo-3.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 10,
+   "id": "kurokabe",
+   "name": {
+    "ja": "黒壁スクエア",
+    "en": "Kurokabe Square"
+   },
+   "kind": {
+    "ja": "古い町並み・ガラス",
+    "en": "Old streets & glass"
+   },
+   "blurb": {
+    "ja": "黒い漆喰壁の明治の銀行を生かしたガラス館を中心に、古い町家のお店やギャラリーが並ぶ町並み。",
+    "en": "Old merchant houses turned into shops and galleries, centred on a black-walled Meiji bank that is now a glass house."
+   },
+   "lat": 35.38068,
+   "lng": 136.26708,
+   "text": {
+    "ja": "黒壁（くろかべ）スクエア\n\n明治33年に建てられた銀行の建物「黒壁一號館（黒壁ガラス館）」を中心に、江戸から明治の町家を生かしたガラスのお店、ギャラリー、カフェが並びます。北国街道沿いの古い通りや、大通寺の表参道、町の中を流れる米川も歩いてみましょう。\n\n長浜駅から歩いて約5分。帰りは長浜17:57発の新快速で、京都に19:12に着きます（1,340円）。\n\nおすすめ訪問時間：16:45〜17:45",
+    "en": "Kurokabe Square\n\nCentred on Kurokabe No. 1, a bank built in 1900 and now the Kurokabe Glass House, the old Edo- and Meiji-era townhouses hold glass shops, galleries and cafés. Wander the old Hokkoku-kaido street, the approach to Daitsuji temple and the little Yone river running through town.\n\nAbout 5 minutes from Nagahama Station. Head home on the 17:57 Special Rapid, arriving in Kyoto at 19:12 (¥1,340).\n\nRecommended visit time: 16:45–17:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "黒壁ガラス館",
+      "en": "Kurokabe Glass House"
+     },
+     "lat": 35.38068,
+     "lng": 136.26708,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E5%A3%81%E3%82%AC%E3%83%A9%E3%82%B9%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "黒壁スクエア 公式サイト",
+      "en": "Kurokabe (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kurokabe.co.jp/",
+      "en": "https://www.kurokabe.co.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "黒壁スクエアのお店 10:00〜18:00（冬は17:00まで）。黒壁ガラス館 10:00〜17:00",
+       "en": "Kurokabe shops 10:00–18:00 (17:00 in winter). Kurokabe Glass House 10:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：長浜17:57発（新快速）→ 京都19:12着・1,340円",
+       "en": "Return: Nagahama 17:57 (Special Rapid) → Kyoto 19:12, ¥1,340"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "黒壁と長浜米原観光協会の公式サイト、電車は乗換案内で確認しました。",
+     "en": "Checked on the Kurokabe and Nagahama-Maibara tourism websites; trains on a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kurokabe-1.jpg",
+    "kurokabe-2.jpg",
+    "kurokabe-3.jpg",
+    "kurokabe-4.jpg",
+    "kurokabe-5.jpg",
+    "kurokabe-6.jpg",
+    "kurokabe-7.jpg",
+    "kurokabe-8.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

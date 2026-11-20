@@ -32,7 +32,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.KINOSAKI_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-kinosaki-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 13;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/kinosaki.json?v=1')")
+s = s.replace(m.group(0), "fetch('../data/routes/kinosaki.json?v=2')")
 
 # 最初から「選んで回る」
 rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",

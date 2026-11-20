@@ -794,7 +794,7 @@ window.GUIDE = {
      "f": "hokutotei-6.jpg",
      "cap": {
       "ja": "カウンター席",
-      "en": "Counter seats (no customers)"
+      "en": "Counter seats"
      },
      "w": 1280,
      "h": 720
@@ -803,7 +803,7 @@ window.GUIDE = {
      "f": "hokutotei-7.jpg",
      "cap": {
       "ja": "「麺の固さ選べます」の貼り紙",
-      "en": "Hand-written chart of noodle firmness options (no prices)"
+      "en": "Hand-written chart of noodle firmness options"
      },
      "w": 1280,
      "h": 720
@@ -1155,7 +1155,7 @@ window.GUIDE = {
     {
      "f": "hakata-eki-food-2.jpg",
      "cap": {
-      "ja": "ミニョンの看板と店頭",
+      "ja": "ミニヨンの看板と店頭",
       "en": "Mignon's sign and counter"
      },
      "w": 1280,
@@ -1182,7 +1182,7 @@ window.GUIDE = {
     {
      "f": "hakata-eki-food-5.jpg",
      "cap": {
-      "ja": "ミニョンのショーケース",
+      "ja": "ミニヨンのショーケース",
       "en": "Mignon display case with each flavour"
      },
      "w": 1280,
@@ -1394,7 +1394,7 @@ window.GUIDE = {
     {
      "ja": "活魚・すし さかもと（東唐津）",
      "en": "Sakamoto (fish and sushi, Higashi-Karatsu)",
-     "map": "https://www.google.com/maps/search/?api=1&query=%E5%91%B3%E5%87%A6%E3%81%95%E3%81%8B%E3%82%82%E3%81%A8%20%E5%94%90%E6%B4%A5%E5%B8%82%E6%9D%B1%E5%94%90%E6%B4%A5",
+     "map": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%8B%E3%82%82%E3%81%A8%20%E5%94%90%E6%B4%A5%E5%B8%82%E6%9D%B1%E5%94%90%E6%B4%A5",
      "t": {
       "ja": "虹の松原の近く、東唐津でお昼を食べたお店です。麺とお寿司のセットをいただきました。",
       "en": "Where I had lunch in Higashi-Karatsu, near the pine forest: a set of noodles and sushi."
@@ -2002,15 +2002,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "kawataro-8.jpg",
-     "cap": {
-      "ja": "呼子大橋が見える座敷",
-      "en": "A tatami room looking out to Yobuko Bridge"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "kawataro-9.jpg",
      "cap": {
       "ja": "イカや魚が泳ぐ大きないけす",
@@ -2084,19 +2075,10 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "kabeshima-5.jpg",
-     "cap": {
-      "ja": "雲を大きく入れた呼子大橋（Y065 と似ているので、減らすならこれから）",
-      "en": "The bridge under big clouds (similar to Y065; cut this first if needed)"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "kabeshima-6.jpg",
      "cap": {
       "ja": "呼子大橋のパノラマ",
-      "en": "Panorama of the bridge (only an 800×360 copy)"
+      "en": "Panorama of the bridge"
      },
      "w": 1280,
      "h": 576
@@ -2317,7 +2299,7 @@ window.GUIDE = {
      "f": "itoshima-coast-1.jpg",
      "cap": {
       "ja": "砂浜と岬、広い空",
-      "en": "Sandy beach, headland and big sky (swimmers tiny offshore)"
+      "en": "Sandy beach, headland and big sky"
      },
      "w": 1280,
      "h": 720
@@ -2379,8 +2361,8 @@ window.GUIDE = {
     {
      "f": "itoshima-coast-8.jpg",
      "cap": {
-      "ja": "砂浜のパノラマ（1004×360）",
-      "en": "Beach panorama (1004×360)"
+      "ja": "砂浜のパノラマ",
+      "en": "Beach panorama"
      },
      "w": 1280,
      "h": 459
@@ -2894,8 +2876,8 @@ window.GUIDE = {
    "en": "The Kanmon Strait and sunset at Mekari Shrine",
    "pins": [
     {
-     "lat": 33.9582,
-     "lon": 130.9682,
+     "lat": 33.96066,
+     "lon": 130.96229,
      "ja": "和布刈神社",
      "en": "Mekari Shrine",
      "anchor": "start",
@@ -3082,7 +3064,7 @@ window.GUIDE = {
      "f": "karato-6.jpg",
      "cap": {
       "ja": "ずらりと並ぶ鮮魚店",
-      "en": "Rows of fish stalls (higher-res version of M063; a small \"¥400\" stall sign shows)"
+      "en": "Rows of fish stalls"
      },
      "w": 1280,
      "h": 720
@@ -3615,7 +3597,10 @@ window.GUIDE = {
    "https://www.ohorikouen.jp/access/",
    "https://www.crossroadfukuoka.jp/spot/12579",
    "https://www.city.fukuoka.lg.jp/kowan/kyakusen/hakata-port/hyo.html",
-   "https://online.bunka.go.jp/heritages/detail/366964"
+   "https://online.bunka.go.jp/heritages/detail/366964",
+   "https://transit.yahoo.co.jp/",
+   "https://www.suizenji.or.jp/",
+   "https://kumamoto-guide.jp/kumamoto-castle/"
   ]
  }
 };

@@ -330,15 +330,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "dogost-7.jpg",
-     "cap": {
-      "ja": "おみやげ屋さんが並ぶ通り",
-      "en": "Souvenir shops along the street"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "dogost-8.jpg",
      "cap": {
       "ja": "駅に展示されていた坊っちゃん列車（2025年9月）",
@@ -381,15 +372,6 @@ window.GUIDE = {
      "cap": {
       "ja": "道後温泉駅の新しい電車",
       "en": "A new streetcar at Dogo Onsen"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "tram-2.jpg",
-     "cap": {
-      "ja": "ホームに止まる電車",
-      "en": "A streetcar at the platform"
      },
      "w": 1280,
      "h": 848
@@ -840,15 +822,6 @@ window.GUIDE = {
      },
      "w": 1280,
      "h": 848
-    },
-    {
-     "f": "kure-4.jpg",
-     "cap": {
-      "ja": "田中鮮魚店の看板",
-      "en": "The Tanaka fish shop sign"
-     },
-     "w": 1280,
-     "h": 720
     },
     {
      "f": "kure-5.jpg",

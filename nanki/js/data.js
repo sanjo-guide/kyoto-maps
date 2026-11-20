@@ -3,14 +3,14 @@ window.GUIDE = {
  "intro": {
   "ja": [
    "和歌山県の南、紀伊半島の南の海沿い「南紀（なんき）」のおすすめをまとめました。",
-   "白浜は京都から特急くろしおで約3時間（新大阪で乗り換え）。白い砂浜の白良浜、夕日の円月島、千畳敷や三段壁の海の景色が、駅からバスで回れる範囲に集まっています。",
+   "白浜は京都から約3時間15分（新大阪で特急くろしおに乗り換え）。白い砂浜の白良浜、夕日の円月島、千畳敷や三段壁の海の景色が、駅からバスで回れる範囲に集まっています。",
    "さらに東へ進むと、那智の滝と熊野那智大社のある那智山、まぐろの港町・勝浦、世界遺産の温泉・湯の峰のつぼ湯、本州最南端の潮岬があります。電車とバスの本数が少ないので、泊まりがけでゆっくり回るのがおすすめです。",
    "お店は、私が実際に行ったところだけを載せています。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Nanki, the southern coast of the Kii Peninsula in Wakayama.",
-   "Shirahama is about 3 hours from Kyoto (changing to the Kuroshio limited express at Shin-Osaka). The white sand of Shirarahama beach, sunset at Engetsu Island, and the sea views at Senjojiki and Sandanbeki are all within a bus ride of the station.",
+   "Shirahama is about 3 h 15 min from Kyoto (changing to the Kuroshio limited express at Shin-Osaka). The white sand of Shirarahama beach, sunset at Engetsu Island, and the sea views at Senjojiki and Sandanbeki are all within a bus ride of the station.",
    "Further east are Mt. Nachi with Nachi Falls and Kumano Nachi Taisha, the tuna port of Katsuura, Tsuboyu at Yunomine, a World Heritage hot spring, and Shionomisaki, the southern tip of Honshu. Trains and buses are infrequent, so stay a night or two and take your time.",
    "I only list restaurants I have actually been to myself.",
    "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."

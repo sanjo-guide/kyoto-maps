@@ -1,0 +1,323 @@
+{
+ "id": "takao",
+ "_note": "京都 高雄の紅葉ルート（takao/ のページ専用。形は eizan-line.json と同じ）。JRバスで高雄へ、高雄橋・清滝川→神護寺→（清滝川沿い）西明寺→槇ノ尾からJRバス。写真は Toshi の写真ライブラリから選んだもの（2024年11月19日の Nikon D7000 と iPhone。実際は西明寺→神護寺の順に歩いたが、神護寺の受付が16:00までなので神護寺を先にした。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（各寺の公式サイト、JRバス、乗換案内）。このファイルは scripts/build_takao_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 3,
+   "day": 1
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。全部選べる。",
+  "picks": [
+   1,
+   2,
+   3
+  ],
+  "auto": {},
+  "hints": []
+ },
+ "photoBase": "../images/takao/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "kiyotaki",
+   "name": {
+    "ja": "高雄橋と清滝川",
+    "en": "Takao bridge & Kiyotaki river"
+   },
+   "kind": {
+    "ja": "渓谷",
+    "en": "Gorge"
+   },
+   "blurb": {
+    "ja": "バスを降りて谷へ下りると、朱の高雄橋と清滝川。川沿いの茶屋を過ぎて、神護寺への石段へ。",
+    "en": "Down from the bus stop into the valley: the vermilion Takao bridge over the Kiyotaki, teahouses by the river, and the steps up to Jingoji."
+   },
+   "lat": 35.05542,
+   "lng": 135.67303,
+   "text": {
+    "ja": "高雄橋（たかおばし）と清滝川（きよたきがわ）\n\n京都駅前からJRバス高雄・京北線で「高雄」へ（約55分・230円）。8:30発に乗ると9:24に着きます。四条烏丸からは市バス8系統（約50分・230円、1時間に1本）。\n\nバス停から坂道を谷へ下りると、清滝川にかかる朱色の高雄橋。紅葉の時期は、谷じゅうがもみじに染まります。橋を渡ると、川沿いの茶屋の先から神護寺への長い石段が始まります。\n\n神護寺は受付が16:00までなので、先に神護寺へ上りましょう。\n\nおすすめ訪問時間：9:30〜9:50",
+    "en": "Takao bridge and the Kiyotaki river\n\nFrom Kyoto Station take the JR Bus Takao–Keihoku line to “Takao” (about 55 min, ¥230); the 8:30 arrives at 9:24. From Shijo-Karasuma, city bus 8 takes about 50 minutes (¥230, hourly).\n\nWalk down from the stop into the valley to the vermilion Takao bridge over the Kiyotaki. In autumn the whole gorge glows with maples. Across the bridge, past the riverside teahouses, the long stone stairway to Jingoji begins.\n\nJingoji’s last entry is 16:00, so go up there first.\n\nRecommended visit time: 9:30–9:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "高雄橋",
+      "en": "Takao bridge"
+     },
+     "lat": 35.05542,
+     "lng": 135.67303,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E6%A9%8B%20%E4%BA%AC%E9%83%BD%20%E5%8F%B3%E4%BA%AC%E5%8C%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRバス 高雄・京北線",
+      "en": "JR Bus Takao–Keihoku line (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.nishinihonjrbus.co.jp/route/kyoto/",
+      "en": "https://www.nishinihonjrbus.co.jp/route/kyoto/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都駅前8:30発（JRバス）→ 高雄9:24着・230円（土曜はほぼ30分おき）",
+       "en": "Kyoto Station 8:30 (JR Bus) → Takao 9:24, ¥230 (about every 30 min on Saturdays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "高雄バス停から神護寺まで、遊歩道と石段で約30分",
+       "en": "About 30 min from the Takao stop to Jingoji by the path and stone stairs"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "JRバスの公式サイトと乗換案内で確認しました。紅葉の時期の週末は臨時便が出ることがあります。",
+     "en": "Checked on the JR Bus website and a route planner; extra buses may run at autumn weekends."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kiyotaki-1.jpg",
+    "kiyotaki-2.jpg",
+    "kiyotaki-3.jpg",
+    "kiyotaki-4.jpg",
+    "kiyotaki-5.jpg",
+    "kiyotaki-6.jpg",
+    "kiyotaki-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "jingoji",
+   "name": {
+    "ja": "神護寺",
+    "en": "Jingoji"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "長い石段を上った山の上のお寺。楼門をくぐると、広い境内一面がもみじに包まれます。",
+    "en": "A mountaintop temple at the top of a long stone stairway; through the gate, the wide precinct is wrapped in maples."
+   },
+   "lat": 35.05467,
+   "lng": 135.67131,
+   "text": {
+    "ja": "神護寺（じんごじ）\n\n平安時代のはじめに開かれ、空海（弘法大師）もいたことのある、高雄山の中腹のお寺です。もみじに囲まれた長い石段を上りきると、楼門の先に広い境内が開けます。石段の上の金堂、毘沙門堂、五大堂のまわりは、紅葉の時期は一面の赤。\n\n境内の西の端からは、谷に向かって素焼きのお皿を投げる「かわらけ投げ」ができます。\n\nおすすめ訪問時間：9:55〜11:15",
+    "en": "Jingoji\n\nFounded in the early Heian period, and once home to Kukai (Kobo Daishi), this temple sits high on Mt. Takao. Climb the long, maple-lined stairs, and beyond the gate the broad precinct opens out. Around the main hall at the top of the steps, the Bishamon hall and the Godai hall, everything turns red in autumn.\n\nAt the western edge of the grounds you can throw little clay discs into the valley (“kawarake-nage”).\n\nRecommended visit time: 9:55–11:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "神護寺",
+      "en": "Jingoji"
+     },
+     "lat": 35.05467,
+     "lng": 135.67131,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E8%AD%B7%E5%AF%BA%20%E9%AB%98%E9%9B%84"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "神護寺 公式サイト",
+      "en": "Jingoji (official, Japanese)"
+     },
+     "url": {
+      "ja": "http://jingoji.or.jp/",
+      "en": "http://jingoji.or.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00",
+       "en": "9:00–16:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年中無休",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "中学生以上1,000円、小学生500円（2024年7月から）",
+       "en": "¥1,000 (junior high and up), ¥500 elementary (from July 2024)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "神護寺の公式サイトで確認しました。",
+     "en": "Checked on the temple website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "jingoji-1.jpg",
+    "jingoji-2.jpg",
+    "jingoji-3.jpg",
+    "jingoji-4.jpg",
+    "jingoji-5.jpg",
+    "jingoji-6.jpg",
+    "jingoji-7.jpg",
+    "jingoji-8.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "saimyoji",
+   "name": {
+    "ja": "西明寺（槇尾）",
+    "en": "Saimyoji (Makinoo)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "清滝川にかかる朱の指月橋を渡って、小さな山寺へ。本堂と客殿のまわりのもみじが見事です。",
+    "en": "Cross the vermilion Shigetsu bridge over the Kiyotaki to a small mountain temple, its halls framed by maples."
+   },
+   "lat": 35.05632,
+   "lng": 135.67505,
+   "text": {
+    "ja": "西明寺（さいみょうじ）\n\n神護寺の山門から、清滝川沿いの遊歩道を歩いて約20分。朱色の指月橋（しげつきょう）を渡ると、表門の先に本堂と客殿があり、庭のもみじがとくにきれいです。\n\n帰りは、近くの「槇ノ尾」バス停からJRバスで京都駅へ（約55分・230円）。さらに20分ほど歩けば、鳥獣戯画で知られる栂尾（とがのお）の高山寺にも行けます（入山料500円、石水院は別料金）。\n\nおすすめ訪問時間：11:35〜12:20",
+    "en": "Saimyoji\n\nAbout 20 minutes along the riverside path from Jingoji’s gate. Cross the vermilion Shigetsu bridge; beyond the front gate are the main hall and guest hall, with especially fine maples in the garden.\n\nGo home by JR Bus from the nearby “Makinoo” stop to Kyoto Station (about 55 min, ¥230). Or walk about 20 minutes more to Kosanji at Toganoo, famous for the Choju-giga scrolls (¥500 entry in autumn; Sekisuiin extra).\n\nRecommended visit time: 11:35–12:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "西明寺",
+      "en": "Saimyoji"
+     },
+     "lat": 35.05632,
+     "lng": 135.67505,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E6%98%8E%E5%AF%BA%20%E6%A7%87%E5%B0%BE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "西明寺 公式サイト",
+      "en": "Saimyoji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.saimyoji.or.jp/",
+      "en": "https://www.saimyoji.or.jp/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "高山寺 公式サイト",
+      "en": "Kosanji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://kosanji.com/",
+      "en": "https://kosanji.com/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRバス 高雄・京北線",
+      "en": "JR Bus Takao–Keihoku line (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.nishinihonjrbus.co.jp/route/kyoto/",
+      "en": "https://www.nishinihonjrbus.co.jp/route/kyoto/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（受付は16:30まで）",
+       "en": "9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "拝観料は公式サイトに書かれていません（要確認）",
+       "en": "Admission isn’t given on the official website (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "槇ノ尾・栂ノ尾 → 京都駅前 JRバス 約55分・230円（日中ほぼ20分おき）",
+       "en": "Makinoo / Toganoo → Kyoto Station, JR Bus about 55 min, ¥230 (about every 20 min by day)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "西明寺・高山寺・JRバスの公式サイトで確認しました。",
+     "en": "Checked on the Saimyoji, Kosanji and JR Bus websites."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "saimyoji-1.jpg",
+    "saimyoji-2.jpg",
+    "saimyoji-3.jpg",
+    "saimyoji-4.jpg",
+    "saimyoji-5.jpg",
+    "saimyoji-6.jpg",
+    "saimyoji-7.jpg",
+    "saimyoji-8.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

@@ -91,8 +91,8 @@ plans = [
      "sub": T("天橋立・伊根と城崎温泉", "Amanohashidate, Ine and Kinosaki"),
      "days": [
          {"label": T("1日目", "Day 1"),
-          "text": T("日帰りプランと同じように天橋立・伊根を回り、夕方の京都丹後鉄道で豊岡へ（天橋立17:21発→豊岡18:47着・1,200円）。Hostel Actに泊まります。",
-                    "See Amanohashidate and Ine as in the day trip, then take the evening Kyoto Tango Railway to Toyooka (Amanohashidate 17:21 → Toyooka 18:47, ¥1,200). Stay at Hostel Act.")},
+          "text": T("日帰りプランと同じように天橋立・伊根を回り、夕方の京都丹後鉄道で豊岡へ（天橋立17:21発→豊岡18:47着。フリーパスを持っていればそのまま乗れます。なければ1,200円）。Hostel Actに泊まります。",
+                    "See Amanohashidate and Ine as in the day trip, then take the evening Kyoto Tango Railway to Toyooka (Amanohashidate 17:21 → Toyooka 18:47; covered by the free pass, otherwise ¥1,200). Stay at Hostel Act.")},
          {"label": T("2日目", "Day 2"),
           "text": T("豊岡から電車で12分の城崎温泉へ。柳並木の温泉街で外湯めぐりをして、城崎温泉から特急で京都へ。",
                     "Ride 12 minutes from Toyooka to Kinosaki Onsen. Hop between the public baths in the willow-lined town, then take a limited express from Kinosaki back to Kyoto.")}],
@@ -147,10 +147,10 @@ city = [
      "short": T("城崎温泉", "Kinosaki Onsen"), "map": gmap("城崎温泉"),
      "time": T("豊岡から電車で約12分（200円）", "About 12 min by train from Toyooka (¥200)"),
      "body": T([
-         "柳並木の大谿川（おおたにがわ）に沿って、7つの外湯（共同浴場）が並ぶ温泉町です。浴衣と下駄で、外湯をめぐりながら歩くのが城崎の楽しみ方です。",
+         "柳並木の大谿川（おおたにがわ）に沿って、外湯（共同浴場）が並ぶ温泉町です。外湯は7つありますが、駅前のさとの湯は2024年4月から改修で休館しています。浴衣と下駄で、外湯をめぐりながら歩くのが城崎の楽しみ方です。",
          "外湯めぐりの1日券「ゆめぱ」（1,500円）は、どの外湯でも買えます。夜は川沿いに灯りがともり、冬は雪景色になります。外湯の時間や休みの日は、ルートマップにまとめています。",
      ], [
-         "A hot-spring town where seven public bathhouses line the willow-fringed Otani River. The thing to do is wander between them in a yukata and geta.",
+         "A hot-spring town whose public bathhouses line the willow-fringed Otani River. There are seven, but Sato-no-yu by the station has been closed for renovation since April 2024. The thing to do is wander between them in a yukata and geta.",
          "The “Yumepa” day pass (¥1,500) is sold at every bathhouse. At night the river is lit up, and in winter it’s a snow scene. Bathhouse hours and closing days are in the route map.",
      ]),
      "links": [ROUTE_KINO],
@@ -189,7 +189,7 @@ food = [
      "links": [link("Hostel Act 公式サイト", "Hostel Act (official site)", "https://hostelact.com/"),
                link("予約のページ", "Booking page", "https://hostelact.com/booking/")],
      "caps": [("Hostel Actの看板", "The Hostel Act sign"), ("市場の通りに面した入り口", "The entrance on the market lane"), ("畳の個室", "A tatami private room"),
-              ("布団の敷かれた和室", "A Japanese-style room with futon"), ("洗面所", "The washroom"), ("洗面所とトイレの入り口", "Washroom and toilet doors"),
+              ("洗面所", "The washroom"), ("洗面所とトイレの入り口", "Washroom and toilet doors"),
               ("1階のもりめ食堂の夜の定食（2023年）", "An evening set meal at Morime Shokudo downstairs (2023)")]},
 ]
 

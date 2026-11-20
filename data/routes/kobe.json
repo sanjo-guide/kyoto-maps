@@ -1,0 +1,657 @@
+{
+ "id": "kobe",
+ "_note": "京都から日帰り 神戸のルート（kobe/ のページ専用。形は eizan-line.json と同じ）。京都からJRで三ノ宮へ、地下鉄で新神戸、布引の滝→北野天満神社→北野異人館街→三宮でかつ丼→メリケンパーク・ポートタワー→元町駅から京都へ。写真は Toshi の写真ライブラリから選んだもの（布引の滝と北野は2023年6月19日の Nikon D7000、メリケンパークは2024年2月・8月と2025年1月のルミナリエ、七兵衛は2024年2月。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（各施設・神戸市・神戸観光局の公式サイト、電車は乗換案内）。このファイルは scripts/build_kobe_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 4,
+   "day": 1
+  },
+  {
+   "first": 5,
+   "last": 5,
+   "day": 2
+  },
+  {
+   "first": 6,
+   "last": 6,
+   "day": 3
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。三宮はいつも入る。",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 3,
+    "rule": {
+     "any": [
+      3
+     ],
+     "none": [
+      2
+     ]
+    },
+    "text": {
+     "ja": "布引の滝に行かない日は、三宮から北野坂を上って歩いて約20分です。",
+     "en": "Skipping the falls? Walk up Kitano-zaka from Sannomiya, about 20 minutes."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      2,
+      3
+     ]
+    },
+    "text": {
+     "ja": "三宮から北野坂を上って、歩いて15分ほどです。",
+     "en": "Walk up Kitano-zaka from Sannomiya, about 15 minutes."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/kobe/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "sannomiya",
+   "name": {
+    "ja": "三宮（JR三ノ宮駅・阪急神戸三宮駅）",
+    "en": "Sannomiya Station"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "京都からJRの新快速で51分。神戸の真ん中の三宮から歩きはじめます。",
+    "en": "51 minutes from Kyoto by JR Special Rapid. Start walking from Sannomiya, the heart of Kobe."
+   },
+   "lat": 34.69486,
+   "lng": 135.19509,
+   "text": {
+    "ja": "三宮（さんのみや）\n\n京都からJR琵琶湖線・神戸線の新快速で乗り換えなし。京都9:00発に乗ると、三ノ宮に9:51に着きます（1,110円）。阪急なら、京都河原町から十三で乗り換えて神戸三宮まで約1時間15分（640円）。時間はかかりますが安く行けます。\n\n三宮から新神戸駅へは、地下鉄西神・山手線で1駅（2分・210円）。歩いても行けます。写真は雨の日の阪急神戸三宮駅です。\n\nおすすめ到着時間：9:51",
+    "en": "Sannomiya\n\nNo change needed from Kyoto: the JR Special Rapid leaving Kyoto at 9:00 reaches Sannomiya at 9:51 (¥1,110). By Hankyu, from Kyoto-Kawaramachi with a change at Juso, it takes about 1 h 15 min to Kobe-Sannomiya (¥640): slower but cheaper.\n\nFrom Sannomiya to Shin-Kobe Station is one stop on the Seishin-Yamate subway line (2 min, ¥210), or you can walk. The photo is Hankyu Kobe-Sannomiya Station on a rainy day.\n\nRecommended arrival: 9:51"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR三ノ宮駅",
+      "en": "JR Sannomiya Station"
+     },
+     "lat": 34.69486,
+     "lng": 135.19509,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%B8%89%E3%83%8E%E5%AE%AE%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都9:00発（JR新快速）→ 三ノ宮9:51着（乗り換えなし）",
+       "en": "Kyoto 9:00 (JR Special Rapid) → Sannomiya 9:51 (direct)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都→三ノ宮 1,110円（阪急なら京都河原町→神戸三宮 640円）／三宮→新神戸（地下鉄）210円",
+       "en": "Kyoto → Sannomiya ¥1,110 (Hankyu Kyoto-Kawaramachi → Kobe-Sannomiya ¥640) / Sannomiya → Shin-Kobe (subway) ¥210"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年11月の土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
+     "en": "Times and fares checked on a route planner (Saturday timetable, November 2026). Please check again before you travel."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "sannomiya-1.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "nunobiki",
+   "name": {
+    "ja": "布引の滝",
+    "en": "Nunobiki Falls"
+   },
+   "kind": {
+    "ja": "滝・展望台",
+    "en": "Waterfall & viewpoint"
+   },
+   "blurb": {
+    "ja": "新幹線の駅のすぐ裏に、日本の名瀑。雄滝の先のみはらし展望台からは、神戸の街と港が見渡せます。",
+    "en": "A famous waterfall right behind a bullet-train station. From the lookout above it, the city and port of Kobe spread out below."
+   },
+   "lat": 34.70983,
+   "lng": 135.19385,
+   "text": {
+    "ja": "布引の滝（ぬのびきのたき）\n\n新神戸駅の1階から歩いてすぐ山道に入り、雌滝（めんたき）、鼓ヶ滝（つづみがだき）、夫婦滝（めおとだき）、そしていちばん大きな雄滝（おんたき・落差43m）と、4つの滝が続きます。雌滝までは駅から約5分、雄滝までは約15分。階段が続くので、歩きやすい靴で。\n\n雄滝からさらに数分登ると、みはらし展望台。ベンチがあり、神戸の街と港、晴れた日には大阪湾の向こうまで見えます。\n\n入場料はいりません。新神戸駅の裏から布引ハーブ園の山麓駅の北へ抜ける「北野道」は、2027年3月末まで工事で通れないので、帰りは来た道を新神戸駅へ戻りましょう。\n\nおすすめ訪問時間：10:05〜11:15",
+    "en": "Nunobiki Falls\n\nA trail starts right from the ground floor of Shin-Kobe Station and passes four falls: Mentaki, Tsuzumigadaki, Meotodaki and the biggest, Ontaki (43 m). Mentaki is about 5 minutes from the station and Ontaki about 15. There are lots of steps, so wear good shoes.\n\nA few minutes’ climb beyond Ontaki is the Miharashi lookout, with benches and a view over the city and port, and on clear days across Osaka Bay.\n\nIt’s free. The “Kitano-michi” path from behind Shin-Kobe Station towards the Nunobiki Herb Garden lower station is closed for works until the end of March 2027, so come back down the same way to Shin-Kobe Station.\n\nRecommended visit time: 10:05–11:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "布引の滝（雄滝）",
+      "en": "Nunobiki Falls (Ontaki)"
+     },
+     "lat": 34.70983,
+     "lng": 135.19385,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B8%83%E5%BC%95%E3%81%AE%E6%BB%9D%20%E9%9B%84%E6%BB%9D"
+    },
+    {
+     "label": {
+      "ja": "新神戸駅",
+      "en": "Shin-Kobe Station"
+     },
+     "lat": 34.70722,
+     "lng": 135.19692,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A5%9E%E6%88%B8%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "布引の滝（Feel KOBE 神戸公式観光サイト）",
+      "en": "Nunobiki Falls (Feel KOBE, official)"
+     },
+     "url": {
+      "ja": "https://www.feel-kobe.jp/facilities/0000000093/",
+      "en": "https://www.feel-kobe.jp/facilities/0000000093/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-03-31",
+     "url": "https://www.city.kobe.lg.jp/a17526/kanko/leisure/mountain/index.html",
+     "text": {
+      "ja": "北野道（新神戸駅の裏〜ハーブ園山麓駅の北側）は、のり面の工事で2027年3月末まで通行止めです（神戸市）。",
+      "en": "The Kitano-michi path (behind Shin-Kobe Station to north of the Herb Garden lower station) is closed for slope works until the end of March 2027 (Kobe City)."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "新神戸駅から雌滝まで約5分、雄滝まで約15分（往復で約40分）",
+       "en": "From Shin-Kobe Station: about 5 min to Mentaki, 15 min to Ontaki (about 40 min there and back)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "神戸市と神戸観光局（Feel KOBE）のサイトで確認しました。",
+     "en": "Checked on the Kobe City and Feel KOBE websites."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "nunobiki-1.jpg",
+    "nunobiki-2.jpg",
+    "nunobiki-3.jpg",
+    "nunobiki-4.jpg",
+    "nunobiki-5.jpg",
+    "nunobiki-6.jpg",
+    "nunobiki-7.jpg",
+    "nunobiki-8.jpg",
+    "nunobiki-9.jpg",
+    "nunobiki-10.jpg"
+   ]
+  },
+  {
+   "no": 3,
+   "id": "tenman",
+   "name": {
+    "ja": "北野天満神社",
+    "en": "Kitano Tenman Shrine"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "異人館街のいちばん上にある学問の神様。境内から、風見鶏の館の塔と神戸の街並みが見下ろせます。",
+    "en": "A shrine to the god of learning at the top of the foreign-residence district, looking down on the Weathercock House tower and the city."
+   },
+   "lat": 34.70189,
+   "lng": 135.18956,
+   "text": {
+    "ja": "北野天満神社（きたのてんまんじんじゃ）\n\n新神戸駅から歩いて約15分。異人館街のいちばん上、石段を上った所にある、菅原道真をまつる神社です。境内からは、すぐ下に風見鶏の館のとがった塔、その向こうに神戸の街と海が見えます。ここから坂を下りながら異人館を回るのがおすすめです。\n\n門が開いているのは朝7時半ごろから夕方5時ごろまでです。\n\nおすすめ訪問時間：11:30〜11:50",
+    "en": "Kitano Tenman Shrine\n\nAbout 15 minutes on foot from Shin-Kobe Station. At the very top of the foreign-residence district, up a flight of stone steps, this shrine honours Sugawara no Michizane. From the grounds you look down on the pointed tower of the Weathercock House, with the city and sea beyond. Visit here first, then wander down the slopes past the residences.\n\nThe gates are open from about 7:30 to about 17:00.\n\nRecommended visit time: 11:30–11:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "北野天満神社",
+      "en": "Kitano Tenman Shrine"
+     },
+     "lat": 34.70189,
+     "lng": 135.18956,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E9%87%8E%E5%A4%A9%E6%BA%80%E7%A5%9E%E7%A4%BE%20%E7%A5%9E%E6%88%B8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "北野天満神社 公式サイト",
+      "en": "Kitano Tenman Shrine (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kobe-kitano.net/",
+      "en": "https://www.kobe-kitano.net/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "7:30ごろ〜17:00ごろ",
+       "en": "About 7:30 to about 17:00"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "公式サイトで確認しました。",
+     "en": "Checked on the official website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "tenman-1.jpg",
+    "tenman-2.jpg",
+    "tenman-3.jpg",
+    "tenman-4.jpg",
+    "tenman-5.jpg",
+    "tenman-6.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "ijinkan",
+   "name": {
+    "ja": "北野異人館街",
+    "en": "Kitano foreign residences"
+   },
+   "kind": {
+    "ja": "町並み・洋館",
+    "en": "Historic houses"
+   },
+   "blurb": {
+    "ja": "明治・大正の外国人の住まいが残る坂の町。赤レンガの風見鶏の館、緑の萌黄の館をはじめ、洋館をのぞきながら歩きます。",
+    "en": "Hillside lanes of Meiji- and Taisho-era foreigners’ homes: the red-brick Weathercock House, the green Moegi House and more."
+   },
+   "lat": 34.70139,
+   "lng": 135.18951,
+   "text": {
+    "ja": "北野異人館街（きたのいじんかんがい）\n\n神戸港が開かれたあと、外国人が住んだ洋館が今も残る坂の町です。屋根に風見鶏がのる赤レンガの「風見鶏の館」と、隣の淡い緑の「萌黄（もえぎ）の館」は、どちらも国の重要文化財。北野町広場のまわりには、英国館や洋館長屋、山手八番館、うろこの家など、中に入れる館がたくさんあります。\n\n全部入るとかなりの料金になるので、気になる館を2〜3館選ぶのがおすすめ。風見鶏の館と萌黄の館は共通券（800円）があります。館はどこも17:00ごろに閉まります。\n\n見終わったら北野坂を下って三宮へ。歩いて15分ほどです。\n\nおすすめ訪問時間：11:50〜13:20",
+    "en": "Kitano foreign residences\n\nAfter the port of Kobe opened, foreign residents built homes on these slopes, and many survive. The red-brick Weathercock House with its weathervane and the pale-green Moegi House next door are both Important Cultural Properties. Around Kitano-cho Square there are many more you can enter: the English House, the Western-style row houses, Yamate Hachibankan, the Scale House and others.\n\nEntering them all adds up, so pick two or three. The Weathercock and Moegi houses share a combined ticket (¥800). Most houses close around 17:00.\n\nAfterwards, walk down Kitano-zaka to Sannomiya, about 15 minutes.\n\nRecommended visit time: 11:50–13:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "風見鶏の館",
+      "en": "Weathercock House"
+     },
+     "lat": 34.70139,
+     "lng": 135.18951,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "萌黄の館",
+      "en": "Moegi House"
+     },
+     "lat": 34.701,
+     "lng": 135.18925,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%90%8C%E9%BB%84%E3%81%AE%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "風見鶏の館 公式サイト",
+      "en": "Weathercock House (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://kobe-kazamidori.com/guide/",
+      "en": "https://kobe-kazamidori.com/guide/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "うろこグループの館（料金）",
+      "en": "Uroko group houses (fees, Japanese)"
+     },
+     "url": {
+      "ja": "https://kobe-ijinkan.net/ticket/tankan/",
+      "en": "https://kobe-ijinkan.net/ticket/tankan/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "風見鶏の館・萌黄の館 9:00〜17:00（入館16:45まで）。うろこグループの館 10:00〜17:00",
+       "en": "Weathercock House & Moegi House 9:00–17:00 (last entry 16:45). Uroko group houses 10:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "風見鶏の館は毎月第3火曜（祝日なら翌日）。萌黄の館は2月の第3水曜とその翌日",
+       "en": "Weathercock House: 3rd Tuesday of each month (next day if a holiday). Moegi House: 3rd Wednesday of February and the day after"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "風見鶏の館・萌黄の館 各500円、2館共通券800円（高校生以下は無料）。英国館880円、洋館長屋550円、山手八番館550円、うろこの家・展望ギャラリー1,100円",
+       "en": "Weathercock House and Moegi House ¥500 each, combined ¥800 (free for high school and under). English House ¥880, row houses ¥550, Yamate Hachibankan ¥550, Scale House & gallery ¥1,100"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "神戸市・神戸観光局と各館の公式サイトで確認しました。",
+     "en": "Checked on the Kobe City, Feel KOBE and house websites."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "ijinkan-1.jpg",
+    "ijinkan-2.jpg",
+    "ijinkan-3.jpg",
+    "ijinkan-4.jpg",
+    "ijinkan-5.jpg",
+    "ijinkan-6.jpg",
+    "ijinkan-7.jpg",
+    "ijinkan-8.jpg",
+    "ijinkan-9.jpg",
+    "ijinkan-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "katsudon",
+   "name": {
+    "ja": "かつ丼 七兵衛（三宮）",
+    "en": "Katsudon Hichibei (Sannomiya)"
+   },
+   "kind": {
+    "ja": "ランチ",
+    "en": "Lunch"
+   },
+   "blurb": {
+    "ja": "阪急三宮駅のすぐ横、高架下の小さなかつ丼の店。厚いとんかつを玉子でとじた、ボリュームのあるかつ丼です。",
+    "en": "A small katsudon counter under the tracks right by Hankyu Sannomiya: thick pork cutlets simmered with egg over rice."
+   },
+   "lat": 34.69228,
+   "lng": 135.1918,
+   "text": {
+    "ja": "かつ丼 七兵衛（ひちべい）\n\n阪急の神戸三宮駅の西口を出てすぐ、JRの高架下にある小さなお店です。看板は「かつ丼 七兵衛」（運営会社のページでは「とんかつ七兵衛 神戸本店」）。入口の券売機で食券を買い、カウンターで食べます。分厚いかつを玉子でとじたかつ丼は、ボリュームたっぷりです。\n\nお店は11:30から。とんかつが売り切れると早めに閉まります。\n\nおすすめ訪問時間：13:40〜14:20",
+    "en": "Katsudon Hichibei\n\nA tiny shop under the JR tracks, right outside the west exit of Hankyu Kobe-Sannomiya Station. The sign reads “Katsudon Hichibei” (the operator calls it “Tonkatsu Hichibei, Kobe main shop”). Buy a ticket from the machine at the door and eat at the counter. The katsudon, thick cutlets simmered with egg, is a hearty bowl.\n\nIt opens at 11:30 and closes early once the cutlets sell out.\n\nRecommended visit time: 13:40–14:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "とんかつ七兵衛",
+      "en": "Tonkatsu Hichibei"
+     },
+     "lat": 34.69228,
+     "lng": 135.1918,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E4%B8%83%E5%85%B5%E8%A1%9B%20%E4%B8%89%E5%AE%AE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "とんかつ七兵衛（運営会社のページ）",
+      "en": "Tonkatsu Hichibei (operator page, Japanese)"
+     },
+     "url": {
+      "ja": "http://www.rb-syuhari.com/hichibe.html",
+      "en": "http://www.rb-syuhari.com/hichibe.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:30〜（とんかつが売り切れたら閉店）。閉店時刻と定休日は公式のページに書かれていません（要確認）",
+       "en": "From 11:30 (closes when the cutlets sell out). Closing time and closed days are not given on the official page (please check)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "店名と開店時間は運営会社のページで確認しました。",
+     "en": "Name and opening time checked on the operator’s page."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "katsudon-1.jpg",
+    "katsudon-2.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 6,
+   "id": "meriken",
+   "name": {
+    "ja": "メリケンパーク・神戸ポートタワー",
+    "en": "Meriken Park & Kobe Port Tower"
+   },
+   "kind": {
+    "ja": "公園・展望タワー",
+    "en": "Park & tower"
+   },
+   "blurb": {
+    "ja": "赤い鼓の形のポートタワーと、白い帆の海洋博物館。夕方から夜は、港のあかりがきれいです。",
+    "en": "The red, drum-shaped Port Tower and the white sails of the Maritime Museum. Lovely as the harbour lights come on."
+   },
+   "lat": 34.68263,
+   "lng": 135.18672,
+   "text": {
+    "ja": "メリケンパーク・神戸ポートタワー\n\nJR元町駅の西口から歩いて約15分（三宮からも旧居留地を抜けて歩けます）。海に面した公園に、赤い鼓のような形のポートタワーと、白い帆を重ねたような神戸海洋博物館が並びます。ポートタワーは2024年にリニューアルし、展望フロアと屋上デッキから、港と六甲の山並みが見渡せます（日時指定のチケット制）。\n\n冬には「神戸ルミナリエ」の会場にもなります。写真は2025年1月のもの。次は2027年1月29日〜2月7日の予定で、メリケンパークの一部は有料エリアです。\n\n帰りはJR元町駅から（元町17:01発→三ノ宮で新快速に乗り換え→京都17:59着・1,110円）。\n\nおすすめ訪問時間：14:45〜16:40",
+    "en": "Meriken Park & Kobe Port Tower\n\nAbout 15 minutes on foot from the west exit of JR Motomachi Station (you can also walk from Sannomiya through the old foreign settlement). On the waterfront stand the red, drum-shaped Port Tower and the white, sail-like Kobe Maritime Museum. The tower reopened after renovation in 2024; from its observation floor and rooftop deck you see the port and the Rokko mountains (timed tickets).\n\nIn winter the park is a venue for the Kobe Luminarie; the photos are from January 2025. The next one is planned for 29 January – 7 February 2027, with a paid area in part of Meriken Park.\n\nGo home from JR Motomachi (17:01, change to the Special Rapid at Sannomiya, Kyoto 17:59, ¥1,110).\n\nRecommended visit time: 14:45–16:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "神戸ポートタワー",
+      "en": "Kobe Port Tower"
+     },
+     "lat": 34.68263,
+     "lng": 135.18672,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%88%B8%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC"
+    },
+    {
+     "label": {
+      "ja": "JR元町駅",
+      "en": "JR Motomachi Station"
+     },
+     "lat": 34.68957,
+     "lng": 135.18715,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%85%83%E7%94%BA%E9%A7%85%20%E7%A5%9E%E6%88%B8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "神戸ポートタワー 公式サイト",
+      "en": "Kobe Port Tower (official)"
+     },
+     "url": {
+      "ja": "https://www.kobe-port-tower.com/",
+      "en": "https://www.kobe-port-tower.com/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "神戸ルミナリエ 公式サイト",
+      "en": "Kobe Luminarie (official)"
+     },
+     "url": {
+      "ja": "https://www.kobe-luminarie.jp/",
+      "en": "https://www.kobe-luminarie.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ポートタワー 9:00〜23:00（入場22:30まで）、日時指定のチケット制。年中無休（メンテナンス休業日をのぞく）",
+       "en": "Port Tower 9:00–23:00 (last entry 22:30), timed tickets. Open daily except maintenance days"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ポートタワー 展望フロア＋屋上デッキ 大人1,200円、展望フロアのみ1,000円",
+       "en": "Port Tower: observation floor + rooftop ¥1,200 adults, observation floor only ¥1,000"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "神戸ルミナリエ：2027年1月29日〜2月7日、点灯は夕方〜21:30",
+       "en": "Kobe Luminarie: 29 Jan – 7 Feb 2027, lit from dusk to 21:30"
+      },
+      "until": "2027-02-07",
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：元町17:01発 → 三ノ宮（新快速に乗り換え）→ 京都17:59着・1,110円",
+       "en": "Return: Motomachi 17:01 → Sannomiya (change to Special Rapid) → Kyoto 17:59, ¥1,110"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ポートタワーとルミナリエは公式サイト、電車は乗換案内で確認しました。",
+     "en": "Port Tower and Luminarie checked on their websites; trains on a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "meriken-1.jpg",
+    "meriken-2.jpg",
+    "meriken-3.jpg",
+    "meriken-4.jpg",
+    "meriken-5.jpg",
+    "meriken-6.jpg",
+    "meriken-7.jpg",
+    "meriken-8.jpg",
+    "meriken-9.jpg",
+    "meriken-10.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

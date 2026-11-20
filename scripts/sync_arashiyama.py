@@ -31,7 +31,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.ARASHIYAMA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-arashiyama-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 18;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/arashiyama.json?v=4')")
+s = s.replace(m.group(0), "fetch('../data/routes/arashiyama.json?v=5')")
 
 # 写真カードに切り替わるズーム
 s, k = re.subn(r"var PHOTO_ZOOM = 14;[^\n]*", "var PHOTO_ZOOM = 16;          // show photo cards at this zoom and closer（嵐山はスポットが近いので16から）", s); assert k == 1

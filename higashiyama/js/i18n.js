@@ -11,7 +11,7 @@ window.HIGASHIYAMA_I18N = {
     titleSub: 'Higashiyama, Kyoto',
     howto: '使い方',
     allMaps: '← マップ一覧',
-    home: 'ホーム',
+    home: 'マップ一覧',
     tabMap: '地図',
     menu: 'メニュー',
     list: '一覧',
@@ -91,13 +91,13 @@ window.HIGASHIYAMA_I18N = {
         { time: '10:20', area: '東福寺・泉涌寺', title: '紅葉の通天橋と静かな御寺', text: '東福寺の通天橋から谷のもみじを見下ろし、泉涌寺と雲龍院で丸い窓から庭を眺めます。', badge: '好きな場所を選ぶ', photo: [3, 0] },
         { time: '13:00', area: '清水寺 → 八坂の塔', title: '清水の舞台と石畳の坂道', text: '清水寺の舞台から京都を一望。産寧坂・二年坂を下って、八坂の塔へ。', note: 'いちばん混む場所。お昼どきは特に', photo: [5, 1] },
         { time: '15:00', area: '高台寺 → 八坂神社', title: 'ねねの寺と祇園の八坂さん', text: '高台寺と圓徳院の庭を歩いて、八坂神社と円山公園へ。', photo: [8, 0] },
-        { time: '17:00', area: '南禅寺 → 黒谷', title: '水路閣と、もみじの永観堂', text: '南禅寺の三門と水路閣は明るいうちに。秋は永観堂の夜のライトアップへ。', note: '永観堂の夜間拝観は秋だけ', photo: [11, 0] }
+        { time: '17:00', area: '南禅寺 → 黒谷', title: '水路閣と、もみじの永観堂', text: '南禅寺の境内と水路閣を歩いて（三門は17:00まで）、秋は永観堂の夜のライトアップへ。', note: '永観堂の夜間拝観は秋だけ', photo: [11, 0] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
       dealsLead: '京都駅から稲荷まで電車で150円。あとは歩いて回り、帰りは市バスや地下鉄で京都の中心へ戻ります（拝観料は別）。',
       deals: [
-        { name: 'JR奈良線（京都→稲荷）', price: '150円', text: '各駅停車で約6分。ICカードも使えます。', url: 'https://timetable.jr-odekake.net/' },
+        { name: 'JR奈良線（京都→稲荷）', price: '150円', text: '各駅停車で約6分。ICカードも使えます。', url: 'https://www.jr-odekake.net/' },
         { name: '帰り：市バス', price: '230円', text: '岡崎道などのバス停から、京都駅や四条河原町方面へ。地下鉄なら東山駅まで歩いて約20分です。', url: 'https://www.city.kyoto.lg.jp/kotsu/' }
       ],
       dealsNote: '大人の運賃です。2026年11月20日に確認しました（JRは乗換案内、市バスは京都市交通局）。泉涌寺から清水寺の間などで疲れたら、市バスを使うと楽です。',
@@ -120,7 +120,7 @@ window.HIGASHIYAMA_I18N = {
     titleSub: '京都 東山',
     howto: 'How to use',
     allMaps: '← All maps',
-    home: 'Home',
+    home: 'All maps',
     tabMap: 'Map',
     menu: 'Menu',
     list: 'Spots',
@@ -200,13 +200,13 @@ window.HIGASHIYAMA_I18N = {
         { time: '10:20', area: 'Tofuku-ji & Sennyu-ji', title: 'Maple valley and a quiet imperial temple', text: 'Look down on the maples from Tofuku-ji’s Tsutenkyo bridge, then view the garden through the round window at Unryu-in.', badge: 'Pick what you like', photo: [3, 0] },
         { time: '13:00', area: 'Kiyomizu → Yasaka Pagoda', title: 'The Kiyomizu stage and stone-paved lanes', text: 'Take in the view from Kiyomizu-dera, then walk down Sannenzaka and Ninenzaka to Yasaka Pagoda.', note: 'The busiest area, especially at midday', photo: [5, 1] },
         { time: '15:00', area: 'Kodai-ji → Yasaka Shrine', title: 'Nene’s temple and Gion’s shrine', text: 'Stroll the gardens of Kodai-ji and Entoku-in, then on to Yasaka Shrine and Maruyama Park.', photo: [8, 0] },
-        { time: '17:00', area: 'Nanzen-ji → Kurodani', title: 'The aqueduct and Eikan-do’s maples', text: 'See Nanzen-ji’s gate and aqueduct while it’s light; in autumn, end with Eikan-do’s evening light-up.', note: 'Eikan-do’s evening opening is autumn only', photo: [11, 0] }
+        { time: '17:00', area: 'Nanzen-ji → Kurodani', title: 'The aqueduct and Eikan-do’s maples', text: 'Walk Nanzen-ji’s grounds and aqueduct (the gate closes at 17:00); in autumn, end with Eikan-do’s evening light-up.', note: 'Eikan-do’s evening opening is autumn only', photo: [11, 0] }
       ],
       timeSuffix: '',
       dealsHead: 'Getting around: fares',
       dealsLead: '¥150 by train from Kyoto Station to Inari; the rest is on foot, and you return downtown by city bus or subway (temple fees not included).',
       deals: [
-        { name: 'JR Nara Line (Kyoto → Inari)', price: '¥150', text: 'About 6 min on a local train. IC cards accepted.', url: 'https://timetable.jr-odekake.net/' },
+        { name: 'JR Nara Line (Kyoto → Inari)', price: '¥150', text: 'About 6 min on a local train. IC cards accepted.', url: 'https://www.jr-odekake.net/' },
         { name: 'Way back: Kyoto city bus', price: '¥230', text: 'From stops such as Okazaki-michi toward Kyoto Station or Shijo-Kawaramachi. Or walk about 20 min to Higashiyama subway station.', url: 'https://www.city.kyoto.lg.jp/kotsu/' }
       ],
       dealsNote: 'Adult fares, checked on Nov 20, 2026 (JR on a route planner, city bus with the Kyoto City Transportation Bureau). If you get tired, e.g. between Sennyu-ji and Kiyomizu-dera, the city bus makes it easier.',

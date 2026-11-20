@@ -5,10 +5,15 @@
   const UI = {
     title: { en: "My Kanazawa Picks", ja: "金沢のおすすめ" },
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
-    home: { en: "← All maps", ja: "← マップ一覧" }, home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
+    home: { en: "← All maps", ja: "← マップ一覧" },
+   howto_h: { en: "How to use this page", ja: "このページの使い方" },
+    howto_1: { en: "Use the buttons at the top to switch between the city and the day trips.", ja: "上のボタンで、町の中のおすすめと、日帰りで行ける場所を切り替えられます。" },
+    howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
+    howto_3: { en: "Tap “Map” next to a place to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "「地図」を押すとGoogleマップで場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
+    home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
     subtitle: { en: "Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.", ja: "市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢からの日帰り旅。" },
     nav_city: { en: "Kanazawa city", ja: "金沢市内" }, nav_food: { en: "Seafood", ja: "海鮮" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
-    jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "meal not to miss", ja: "ぜひ食べてほしい一食" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
+    jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "places to eat", ja: "ぜひ食べてほしいお店" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },
     map_h: { en: "Where everything is", ja: "おすすめの場所の地図" },
     tab_city: { en: "In the city", ja: "金沢市内" }, tab_trips: { en: "Day trips", ja: "日帰り" },
@@ -216,7 +221,7 @@
   const DIR = { start: "right", end: "left", middle: "top" };
   const LBL_MIN = { city: 13, trips: 9 };   // hide name labels when zoomed out further than this
   const LF = window.L;
-  let lmap = null, layer = null, base = null, gl = null, tlView = null, mapFailed = !LF || !window.PHS_BASEMAP || !window.maplibregl;
+  let lmap = null, layer = null, base = null, gl = null, tlView = null, mapFailed = !LF || !window.KM_BASEMAP || !window.maplibregl;
   const VIEW = { city: { minZoom: 11, maxZoom: 18 }, trips: { minZoom: 7, maxZoom: 16 } };
   function useTiles(which) {
     const v = VIEW[which];
@@ -286,10 +291,10 @@
     try {
       lmap.setView([36.5613, 136.6562], 13, { animate: false });   // 地図を重ねる前に仮の位置が必要（あとで全体表示に合わせる）
       const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      base = window.PHS_BASEMAP.addTo(lmap, { lang: L(), dark: dark, worker: "../vendor/maplibre/maplibre-gl-csp-worker.js" });
+      base = window.KM_BASEMAP.addTo(lmap, { lang: L(), dark: dark, worker: "../vendor/maplibre/maplibre-gl-csp-worker.js" });
       if (!base) throw new Error("basemap");
       gl = base.getMaplibreMap();
-      gl.on("style.load", () => window.PHS_BASEMAP.setLang(gl, L()));
+      gl.on("style.load", () => window.KM_BASEMAP.setLang(gl, L()));
     } catch (err) { useFallback(); }
   }
 
@@ -306,7 +311,7 @@
     document.getElementById("grid-trips").innerHTML = G.trips.map((s) => card(s, "trip")).join("");
     wireCarousels(document);
     renderMap();
-    if (gl) window.PHS_BASEMAP.setLang(gl, L());   // 地図の文字も EN / 日本語 に合わせる
+    if (gl) window.KM_BASEMAP.setLang(gl, L());   // 地図の文字も EN / 日本語 に合わせる
     const cr = [];
     [G.city, G.food, G.trips].forEach((grp) => grp.forEach((s) => (s.photos || []).forEach((p) => {
       if (p.credit) cr.push(`<li>${esc(tr(p.cap) || tr(s))}: <a href="${esc(p.credit.page)}" target="_blank" rel="noopener">${esc(p.credit.author)}</a>, <a href="${licUrl(p.credit.license)}" target="_blank" rel="noopener">${esc(p.credit.license)}</a>, ${esc(t("via"))}${L() === "ja" ? "（縮小）" : " (resized)"}</li>`);

@@ -93,8 +93,8 @@
       "en": "JR West timetables (Japanese)"
      },
      "url": {
-      "ja": "https://timetable.jr-odekake.net/",
-      "en": "https://timetable.jr-odekake.net/"
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.jr-odekake.net/"
      }
     }
    ],
@@ -383,14 +383,14 @@
     "en": "Temple"
    },
    "blurb": {
-    "ja": "「清水の舞台」から京都の町を一望。春と秋の夜には、ライトアップも。",
-    "en": "Look out over Kyoto from the famous wooden stage. In spring and autumn there are evening light-ups too."
+    "ja": "「清水の舞台」から京都の町を一望。春・夏・秋の夜間特別拝観では、ライトアップも。",
+    "en": "Look out over Kyoto from the famous wooden stage. Evening openings in spring, summer and autumn are lit up too."
    },
    "lat": 34.99485,
    "lng": 135.78505,
    "text": {
-    "ja": "清水寺（きよみずでら）\n\n音羽山（おとわやま）の中腹に建つお寺。崖の上にせり出した本堂の「清水の舞台」からは、京都の町が見渡せます。少し離れた奥の院のあたりから振り返ると、木々の上に浮かぶ舞台の全景が見えます。\n\n朱色の仁王門と三重塔もきれいです。春・夏・秋の夜間特別拝観の時期は、21時ごろまで開いていて、ライトアップされた舞台と京都の夜景を楽しめます。\n\nおすすめ訪問時間：13:00〜14:00",
-    "en": "Kiyomizu-dera\n\nA temple on the slopes of Mt. Otowa. From the “Kiyomizu stage” of the main hall, jutting out over the cliff, you can see across the city. Look back from near the Okunoin hall for the whole stage floating above the trees.\n\nThe vermilion Nio Gate and three-storied pagoda are beautiful too. During the special evening openings in spring, summer and autumn, the temple stays open until about 21:00, with the lit-up stage and the city lights below.\n\nRecommended visit time: 13:00–14:00"
+    "ja": "清水寺（きよみずでら）\n\n音羽山（おとわやま）の中腹に建つお寺。崖の上にせり出した本堂の「清水の舞台」からは、京都の町が見渡せます。少し離れた奥の院のあたりから振り返ると、木々の上に浮かぶ舞台の全景が見えます。\n\n朱色の仁王門と三重塔もきれいです。春・夏・秋の夜間特別拝観の時期は、21:30まで（受付は21:00まで）開いていて、ライトアップされた舞台と京都の夜景を楽しめます。\n\nおすすめ訪問時間：13:00〜14:00",
+    "en": "Kiyomizu-dera\n\nA temple on the slopes of Mt. Otowa. From the “Kiyomizu stage” of the main hall, jutting out over the cliff, you can see across the city. Look back from near the Okunoin hall for the whole stage floating above the trees.\n\nThe vermilion Nio Gate and three-storied pagoda are beautiful too. During the special evening openings in spring, summer and autumn, the temple stays open until 21:30 (last entry 21:00), with the lit-up stage and the city lights below.\n\nRecommended visit time: 13:00–14:00"
    },
    "gmaps": [
     {
@@ -490,9 +490,7 @@
    },
    "photos": [
     "sanneizaka-1.jpg",
-    "sanneizaka-2.jpg",
     "sanneizaka-3.jpg",
-    "sanneizaka-4.jpg",
     "sanneizaka-5.jpg"
    ],
    "notices": []
@@ -729,8 +727,8 @@
    "lat": 35.01136,
    "lng": 135.79348,
    "text": {
-    "ja": "南禅寺（なんぜんじ）\n\n八坂神社から歩いて約25分（地下鉄なら蹴上駅から歩いて約10分）。歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、上に登って東山の景色を眺められます。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣があり、今も水が流れています。小堀遠州作と伝わる方丈庭園もおすすめです。境内は自由に歩けます。\n\nおすすめ訪問時間：17:00〜17:40（明るいうちに）",
-    "en": "Nanzen-ji Temple\n\nAbout 25 minutes on foot from Yasaka Shrine (or about 10 minutes from Keage subway station). You can climb the huge Sanmon gate, made famous in kabuki, for a view over Higashiyama.\n\nDeeper in the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto, and water still flows over it. The Hojo garden, said to be by Kobori Enshu, is lovely too. The grounds are free to walk around.\n\nRecommended visit time: 17:00–17:40 (while it’s light)"
+    "ja": "南禅寺（なんぜんじ）\n\n八坂神社から歩いて約25分（地下鉄なら蹴上駅から歩いて約10分）。歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、上に登って東山の景色を眺められます（三門と方丈庭園は17:00まで。上りたい日は、ほかの場所を減らして16:40までに着くように）。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣があり、今も水が流れています。小堀遠州作と伝わる方丈庭園もおすすめです。境内は自由に歩けます。\n\nおすすめ訪問時間：17:00〜17:25（境内と水路閣。三門と方丈庭園は17:00で閉まります）",
+    "en": "Nanzen-ji Temple\n\nAbout 25 minutes on foot from Yasaka Shrine (or about 10 minutes from Keage subway station). You can climb the huge Sanmon gate, made famous in kabuki, for a view over Higashiyama. (The gate and Hojo garden close at 17:00; to go up, drop a stop or two and arrive by 16:40.)\n\nDeeper in the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto, and water still flows over it. The Hojo garden, said to be by Kobori Enshu, is lovely too. The grounds are free to walk around.\n\nRecommended visit time: 17:00–17:25 (the grounds and aqueduct; the gate and Hojo garden close at 17:00)"
    },
    "gmaps": [
     {
@@ -907,8 +905,8 @@
    "lat": 35.01975,
    "lng": 135.78838,
    "text": {
-    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n永観堂から歩いて約15分。浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上にそびえる山門は迫力があります。\n\n境内は自由に歩けます。秋などには庭園の特別公開やライトアップがあり、竹林や池のまわりの紅葉が照らされます（日程・料金は公式サイトで確認してください）。\n\n帰りは岡崎道のバス停から市バス、または地下鉄の東山駅まで歩いて約20分です。\n\nおすすめ訪問時間：18:40〜19:20",
-    "en": "Konkai Komyo-ji\n\nAbout 15 minutes on foot from Eikan-do. A large Pure Land temple, it served as the headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The great gate at the top of the stone steps is impressive.\n\nThe grounds are free to walk around. In autumn and other seasons there are special garden openings and light-ups, with the bamboo grove and maples around the pond lit up (check the website for dates and fees).\n\nTo go back, take a city bus from Okazaki-michi, or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: 18:40–19:20"
+    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n永観堂から歩いて約15分。浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上にそびえる山門は迫力があります。\n\n境内は自由に歩けます。秋などには庭園の特別公開やライトアップがあり、竹林や池のまわりの紅葉が照らされます（日程・料金は公式サイトで確認してください）。\n\n帰りは岡崎道のバス停から市バス、または地下鉄の東山駅まで歩いて約20分です。\n\nおすすめ訪問時間：18:45〜19:20",
+    "en": "Konkai Komyo-ji\n\nAbout 15 minutes on foot from Eikan-do. A large Pure Land temple, it served as the headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The great gate at the top of the stone steps is impressive.\n\nThe grounds are free to walk around. In autumn and other seasons there are special garden openings and light-ups, with the bamboo grove and maples around the pond lit up (check the website for dates and fees).\n\nTo go back, take a city bus from Okazaki-michi, or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: 18:45–19:20"
    },
    "gmaps": [
     {

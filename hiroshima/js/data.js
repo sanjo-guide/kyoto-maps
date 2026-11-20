@@ -359,15 +359,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "tram-7.jpg",
-     "cap": {
-      "ja": "広島駅2階の電停と最新の低床車",
-      "en": "The station’s second-floor stop and a new low-floor tram"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "tram-8.jpg",
      "cap": {
       "ja": "広島駅2階の電停",
@@ -628,15 +619,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "gansuke-3.jpg",
-     "cap": {
-      "ja": "鉄板の前で焼いてくれます",
-      "en": "Cooking at the griddle"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "gansuke-4.jpg",
      "cap": {
       "ja": "カウンターと鉄板",
@@ -697,15 +679,6 @@ window.GUIDE = {
      "cap": {
       "ja": "鉄板の上で",
       "en": "On the griddle"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "jirokichi-3.jpg",
-     "cap": {
-      "ja": "カウンターと店内",
-      "en": "The counter and kitchen"
      },
      "w": 1280,
      "h": 720

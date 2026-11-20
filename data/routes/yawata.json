@@ -1,0 +1,502 @@
+{
+ "id": "yawata",
+ "_note": "京都 淀・八幡の桜のルート（yawata/ のページ専用。形は eizan-line.json と同じ）。京阪で淀へ、淀水路の河津桜→石清水八幡宮（参道ケーブル）→背割堤の桜→さくらであい館→京阪で京都へ。河津桜は3月上〜中旬、背割堤は4月上旬で時期が違うので、最初から「選んで回る」。写真は Toshi の写真ライブラリから選んだもの（淀水路と石清水八幡宮は2026年3月23日、背割堤は2026年4月8日、Nikon D7000 を含む。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（京都市観光協会・石清水八幡宮・京阪・淀川河川公園の公式サイト、電車は乗換案内）。このファイルは scripts/build_yawata_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "day": 0
+  },
+  {
+   "first": 2,
+   "last": 2,
+   "day": 1
+  },
+  {
+   "first": 3,
+   "last": 4,
+   "day": 2
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。defaultMode: pick。",
+  "defaultMode": "pick",
+  "picks": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "auto": {},
+  "hints": [
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      1
+     ]
+    },
+    "text": {
+     "ja": "淀に寄らない日は、祇園四条から京阪で石清水八幡宮駅へ（約25分・360円）。",
+     "en": "Skipping Yodo? Take the Keihan line from Gion-Shijo straight to Iwashimizu-hachimangu (about 25 min, ¥360)."
+    }
+   },
+   {
+    "spot": 3,
+    "rule": {
+     "any": [
+      3
+     ],
+     "andAny": [
+      1
+     ]
+    },
+    "text": {
+     "ja": "淀水路の河津桜（3月上旬〜中旬）と背割堤の桜（4月上旬）は咲く時期が違います。同じ日に見られるのは、河津桜が遅い年だけです。",
+     "en": "The Yodo Kawazu cherries (early to mid March) and the Sewaritei cherries (early April) bloom at different times; you’ll only see both on one day in a late year."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/yawata/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "yodo",
+   "name": {
+    "ja": "淀水路の河津桜",
+    "en": "Kawazu cherries along the Yodo canal"
+   },
+   "kind": {
+    "ja": "桜（3月）",
+    "en": "Cherries (March)"
+   },
+   "blurb": {
+    "ja": "京阪淀駅の近く、水路に沿って約1.3km、ピンクの河津桜が続きます。ソメイヨシノより1か月ほど早い、春いちばんの桜。",
+    "en": "Near Keihan Yodo Station, pink Kawazu cherries line a canal for about 1.3 km: the year’s first blossoms, a month before the Somei-Yoshino."
+   },
+   "lat": 34.9025,
+   "lng": 135.717,
+   "text": {
+    "ja": "淀水路（よどすいろ）の河津桜\n\n祇園四条から京阪で淀へ（丹波橋で乗り換え、約20分・360円）。駅の中央改札口から歩いて約10分で、水路沿いの桜並木に出ます。河津桜が約300本、約1.3km続き、例年3月上旬〜中旬が見ごろ（2月上旬から咲きはじめます）。ゆっくり歩いて30分ほどです。\n\nトイレは天神橋の近くに1か所だけで、淀駅の改札の外にはありません。写真は2026年3月23日。\n\nおすすめ訪問時間：9:35〜10:30",
+    "en": "Kawazu cherries along the Yodo canal\n\nFrom Gion-Shijo take the Keihan line to Yodo (change at Tambabashi, about 20 min, ¥360). About 10 minutes from the central exit, you reach the canal. Some 300 Kawazu cherries line it for about 1.3 km, usually best in early to mid March (they start in early February). A slow stroll takes about 30 minutes.\n\nThe only toilet is near Tenjin-bashi; there is none outside the ticket gates at Yodo. Photos from 23 March 2026.\n\nRecommended visit time: 9:35–10:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "淀水路 河津桜",
+      "en": "Yodo canal Kawazu cherries"
+     },
+     "lat": 34.9025,
+     "lng": 135.717,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B7%80%E6%B0%B4%E8%B7%AF%20%E6%B2%B3%E6%B4%A5%E6%A1%9C"
+    },
+    {
+     "label": {
+      "ja": "京阪 淀駅",
+      "en": "Keihan Yodo Station"
+     },
+     "lat": 34.90636,
+     "lng": 135.72097,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%98%AA%20%E6%B7%80%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "淀の河津桜（京都市観光協会）",
+      "en": "Yodo Kawazu cherries (Kyoto City tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://totteoki.kyoto.travel/28467/",
+      "en": "https://totteoki.kyoto.travel/28467/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://totteoki.kyoto.travel/28467/",
+     "head": {
+      "ja": "見ごろは3月上旬〜中旬",
+      "en": "Best in early to mid March"
+     },
+     "text": {
+      "ja": "河津桜は背割堤のソメイヨシノ（4月上旬）より1か月ほど早く咲きます。両方を同じ日に見られるのは、河津桜が遅い年だけです。",
+      "en": "The Kawazu cherries bloom about a month before the Somei-Yoshino at Sewaritei (early April); you can only see both on one day in a late year."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "祇園四条 → 丹波橋で乗り換え → 淀 約20分・360円",
+       "en": "Gion-Shijo → change at Tambabashi → Yodo, about 20 min, ¥360"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "京都市観光協会のサイトと乗換案内で確認しました。",
+     "en": "Checked on the Kyoto City tourism website and a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "yodo-1.jpg",
+    "yodo-2.jpg",
+    "yodo-3.jpg",
+    "yodo-4.jpg",
+    "yodo-5.jpg",
+    "yodo-6.jpg",
+    "yodo-7.jpg",
+    "yodo-8.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "iwashimizu",
+   "name": {
+    "ja": "石清水八幡宮",
+    "en": "Iwashimizu Hachimangu"
+   },
+   "kind": {
+    "ja": "神社（国宝）",
+    "en": "Shrine (National Treasure)"
+   },
+   "blurb": {
+    "ja": "男山の上に建つ、朱と金の国宝の本殿。ケーブルカーで上がると、京都と大阪の間の平野が見渡せます。",
+    "en": "A vermilion-and-gold National Treasure shrine on Mt. Otokoyama. Ride the cable car up for views across the plain between Kyoto and Osaka."
+   },
+   "lat": 34.87973,
+   "lng": 135.70005,
+   "text": {
+    "ja": "石清水八幡宮（いわしみずはちまんぐう）\n\n淀から京阪で1駅、石清水八幡宮駅へ（3分・240円）。駅の隣から参道ケーブルで男山の上へ（約3分・片道300円）、山上駅から歩いて約5分です。\n\n朱塗りの南総門をくぐると、極彩色の彫刻で飾られた国宝の本殿。山上の展望台からは、京都の南の平野と三つの川が合流するあたりが見渡せます。竹林の道は、エジソンが電球に男山の竹を使ったことにちなむ場所としても知られています。\n\nおすすめ訪問時間：10:50〜12:10",
+    "en": "Iwashimizu Hachimangu\n\nOne stop from Yodo to Iwashimizu-hachimangu Station (3 min, ¥240). The Sando cable car next to the station climbs Mt. Otokoyama (about 3 min, ¥300 one way), and the shrine is 5 minutes from the top station.\n\nThrough the vermilion south gate stands the National Treasure main hall with its brightly painted carvings. From the lookout you see the plain south of Kyoto where three rivers meet. The bamboo groves are also known for Edison, who used Otokoyama bamboo for his light-bulb filaments.\n\nRecommended visit time: 10:50–12:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "石清水八幡宮",
+      "en": "Iwashimizu Hachimangu"
+     },
+     "lat": 34.87973,
+     "lng": 135.70005,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE"
+    },
+    {
+     "label": {
+      "ja": "ケーブル八幡宮口駅",
+      "en": "Cable Hachimangu-guchi"
+     },
+     "lat": 34.88449,
+     "lng": 135.69947,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E5%85%AB%E5%B9%A1%E5%AE%AE%E5%8F%A3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "石清水八幡宮 公式サイト",
+      "en": "Iwashimizu Hachimangu (official)"
+     },
+     "url": {
+      "ja": "https://iwashimizu.or.jp/",
+      "en": "https://iwashimizu.or.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "石清水八幡宮参道ケーブル（京阪）",
+      "en": "Sando cable car (Keihan, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html",
+      "en": "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "南総門 6:00〜18:00。お守りの授与所 9:00〜16:00",
+       "en": "South gate 6:00–18:00. Amulet office 9:00–16:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "参道ケーブル 8:10〜18:15、15分おき・約3分",
+       "en": "Cable car 8:10–18:15, every 15 min, about 3 min"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ケーブル 片道300円・往復600円（境内の見学は自由）",
+       "en": "Cable car ¥300 one way, ¥600 return (grounds free to visit)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "石清水八幡宮と京阪の公式サイト、京都府観光連盟で確認しました。",
+     "en": "Checked on the shrine and Keihan websites and the Kyoto Prefecture tourism federation."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "iwashimizu-1.jpg",
+    "iwashimizu-2.jpg",
+    "iwashimizu-3.jpg",
+    "iwashimizu-4.jpg",
+    "iwashimizu-5.jpg",
+    "iwashimizu-6.jpg",
+    "iwashimizu-7.jpg",
+    "iwashimizu-8.jpg",
+    "iwashimizu-9.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "sewaritei",
+   "name": {
+    "ja": "背割堤の桜並木",
+    "en": "Sewaritei cherry avenue"
+   },
+   "kind": {
+    "ja": "桜（4月）",
+    "en": "Cherries (April)"
+   },
+   "blurb": {
+    "ja": "木津川と宇治川にはさまれた堤防に、約1.4km、約220本のソメイヨシノ。桜のトンネルの下でお花見を。",
+    "en": "On the levee between the Kizu and Uji rivers, about 220 Somei-Yoshino stretch for 1.4 km: picnic under a tunnel of blossoms."
+   },
+   "lat": 34.89,
+   "lng": 135.693,
+   "text": {
+    "ja": "背割堤（せわりてい）の桜並木\n\nケーブルで下りて、石清水八幡宮駅から歩いて約10分。御幸橋を渡ると、宇治川と木津川にはさまれた細長い堤防に、約1.4km、約220本の桜がトンネルのように続きます。\n\n見ごろは4月上旬（2026年のさくらまつりは3月28日〜4月5日）。堤防の下の芝生でお花見ができます。まつりの期間は運営協力金（1人100円以上）を集めています。写真は2026年4月8日。\n\nおすすめ訪問時間：12:40〜14:00",
+    "en": "Sewaritei cherry avenue\n\nDown by cable car and about 10 minutes’ walk from Iwashimizu-hachimangu Station. Cross the Miyuki bridge: on the long, narrow levee between the Uji and Kizu rivers, about 220 cherries form a tunnel for some 1.4 km.\n\nBlossoms peak in early April (the 2026 festival ran 28 March – 5 April). You can picnic on the grass below the levee; during the festival a contribution of ¥100 or more is collected. Photos from 8 April 2026.\n\nRecommended visit time: 12:40–14:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "背割堤",
+      "en": "Sewaritei"
+     },
+     "lat": 34.89,
+     "lng": 135.693,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%83%8C%E5%89%B2%E5%A0%A4%20%E6%A1%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "淀川河川公園 背割堤地区",
+      "en": "Yodogawa River Park, Sewaritei (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.yodogawa-park.jp/sansen/",
+      "en": "https://www.yodogawa-park.jp/sansen/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.yodogawa-park.jp/sansen/",
+     "head": {
+      "ja": "見ごろは4月上旬",
+      "en": "Best in early April"
+     },
+     "text": {
+      "ja": "背割堤の桜（ソメイヨシノ）は例年4月上旬。淀水路の河津桜（3月上旬〜中旬）とは時期が違います。",
+      "en": "The Sewaritei cherries usually peak in early April, a month after the Kawazu cherries along the Yodo canal."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "石清水八幡宮駅から歩いて約10分。約1.4km・約220本",
+       "en": "About 10 min on foot from Iwashimizu-hachimangu Station; 1.4 km, about 220 trees"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料（さくらまつりの期間は運営協力金 1人100円以上）",
+       "en": "Free (¥100+ contribution during the festival)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "淀川河川公園の公式サイトで確認しました。",
+     "en": "Checked on the Yodogawa River Park website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "sewaritei-1.jpg",
+    "sewaritei-2.jpg",
+    "sewaritei-3.jpg",
+    "sewaritei-4.jpg",
+    "sewaritei-5.jpg",
+    "sewaritei-6.jpg",
+    "sewaritei-7.jpg",
+    "sewaritei-8.jpg",
+    "sewaritei-9.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "deaikan",
+   "name": {
+    "ja": "さくらであい館（展望塔）",
+    "en": "Sakura Deaikan (observation tower)"
+   },
+   "kind": {
+    "ja": "展望塔",
+    "en": "Lookout tower"
+   },
+   "blurb": {
+    "ja": "高さ約25mの展望塔から、3つの川の合流点と、まっすぐ延びる桜並木を見下ろせます。",
+    "en": "From the 25 m tower, look down on the meeting of three rivers and the straight line of cherries."
+   },
+   "lat": 34.89042,
+   "lng": 135.70148,
+   "text": {
+    "ja": "さくらであい館\n\n背割堤の入口にある休憩所で、地上約25mの展望塔に上れます。上から見ると、宇治川・木津川・桂川が合流して淀川になるところと、まっすぐ延びる桜並木がよくわかります。\n\n展望塔はふだんは無料ですが、桜の時期など混む時期は有料になることがあります（料金は要確認）。帰りは石清水八幡宮駅から京阪で祇園四条へ（約25分・360円）。\n\nおすすめ訪問時間：14:00〜14:30",
+    "en": "Sakura Deaikan\n\nA rest house at the entrance to Sewaritei with an observation tower about 25 m high. From the top you can see the Uji, Kizu and Katsura rivers meeting to become the Yodo, and the cherry avenue running straight away.\n\nThe tower is normally free but may charge at busy times such as cherry season (fee to be confirmed). Head home from Iwashimizu-hachimangu Station to Gion-Shijo (about 25 min, ¥360).\n\nRecommended visit time: 14:00–14:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "さくらであい館",
+      "en": "Sakura Deaikan"
+     },
+     "lat": 34.89042,
+     "lng": 135.70148,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%8F%E3%82%89%E3%81%A7%E3%81%82%E3%81%84%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "さくらであい館",
+      "en": "Sakura Deaikan (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.yodogawa-park.jp/service_center/sewariteisc/",
+      "en": "https://www.yodogawa-park.jp/service_center/sewariteisc/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00。展望塔 9:00〜16:30（最終受付16:20）",
+       "en": "9:00–17:00. Tower 9:00–16:30 (last entry 16:20)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29日〜1月3日",
+       "en": "29 Dec – 3 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：石清水八幡宮 → 祇園四条 約25分・360円",
+       "en": "Return: Iwashimizu-hachimangu → Gion-Shijo, about 25 min, ¥360"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "淀川河川公園の公式サイトと乗換案内で確認しました。展望塔の混む時期の料金は確認できていません。",
+     "en": "Checked on the park website and a route planner; the tower’s peak-season fee is unconfirmed."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "deaikan-1.jpg",
+    "deaikan-2.jpg",
+    "deaikan-3.jpg",
+    "deaikan-4.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

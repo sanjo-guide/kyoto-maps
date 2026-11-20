@@ -5,3 +5,4 @@ _source/
 # Claude Code のローカル設定
 .claude/
 __pycache__/
+.git.nosync/

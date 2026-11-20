@@ -166,24 +166,24 @@ S = [
          lat=34.27360, lng=135.06671,
          text=T("淡嶋神社（あわしまじんじゃ）\n\n加太港のすぐ近く、海に向かって朱色の鳥居が立つ神社です。人形供養で知られ、境内には全国から納められたたくさんの人形が並んでいます。"
                 "毎年3月3日には、ひな人形を小舟にのせて海へ流す「雛流し」が行われます。\n\n"
-                "友ヶ島から16:30の船で戻ったら、ここにお参りしてから駅へ向かいましょう。\n\nおすすめ訪問時間：16:55〜17:10",
+                "友ヶ島から16:30の船で戻ったら、ここにお参りしてから駅へ向かいましょう。\n\nおすすめ訪問時間：16:55〜17:20",
                 "Awashima Shrine\n\nRight by Kada Port, with a vermilion torii facing the sea. It’s known for memorial services for dolls, and countless dolls sent from all over Japan line the grounds. "
                 "Every 3 March, in the “Hina-nagashi”, Girls’ Day dolls are set adrift on the sea in little boats.\n\n"
-                "Back from the island on the 16:30 boat, pay a visit here on your way to the station.\n\nRecommended visit time: 16:55–17:10"),
+                "Back from the island on the 16:30 boat, pay a visit here on your way to the station.\n\nRecommended visit time: 16:55–17:20"),
          gmaps=[gm("淡嶋神社", "Awashima Shrine", 34.27360, 135.06671, "淡嶋神社 和歌山市加太")],
          links=[],
          info=NONE),
     dict(id="kadaeki2", name=T("南海 加太駅（帰り）", "Nankai Kada Station (return)"), kind=T("駅（ゴール）", "Station (finish)"),
-         blurb=T("17:27発の電車で京都へ。19:59着です。",
-                 "Take the 17:27 train back, arriving in Kyoto at 19:59."),
+         blurb=T("17:46発の電車で京都へ。20:29着です（淡嶋神社に寄らなければ17:27発にも間に合います）。",
+                 "Take the 17:46 train back, arriving in Kyoto at 20:29 (skip Awashima Shrine and you can make the 17:27)."),
          lat=34.27507, lng=135.08070,
-         text=T("南海 加太駅（帰り）\n\n17:27発の加太線で和歌山市へ、南海線でなんば、地下鉄御堂筋線で梅田（大阪）、JRの新快速で京都へ。京都には19:59に着きます（1,830円）。\n\n"
-                "淡嶋神社から駅までは歩いて20分ほどです。\n\nおすすめ出発時間：17:27",
-                "Nankai Kada Station (return)\n\nTake the 17:27 Kada Line to Wakayamashi, the Nankai Line to Namba, the Midosuji subway to Umeda (Osaka) and a JR Special Rapid to Kyoto, arriving at 19:59 (¥1,830).\n\n"
-                "The station is about 20 minutes’ walk from Awashima Shrine.\n\nRecommended departure time: 17:27"),
+         text=T("南海 加太駅（帰り）\n\n17:46発の加太線で和歌山市へ、南海線でなんば、地下鉄御堂筋線で梅田（大阪）、JRで京都へ。京都には20:29に着きます（1,830円）。\n\n"
+                "淡嶋神社から駅までは歩いて20分ほどです。淡嶋神社に寄らずに港からまっすぐ駅へ向かえば、1本前の17:27発（京都19:59着）にも間に合います。\n\nおすすめ出発時間：17:46",
+                "Nankai Kada Station (return)\n\nTake the 17:46 Kada Line to Wakayamashi, the Nankai Line to Namba, the Midosuji subway to Umeda (Osaka) and JR to Kyoto, arriving at 20:29 (¥1,830).\n\n"
+                "The station is about 20 minutes’ walk from Awashima Shrine. Skip the shrine and walk straight from the port, and you can make the earlier 17:27 (Kyoto 19:59).\n\nRecommended departure time: 17:46"),
          gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
          links=[JR],
-         info=info([row("train", "加太17:27発 → 和歌山市 → なんば → 梅田（大阪）→ 京都19:59着", "Kada 17:27 → Wakayamashi → Namba → Umeda (Osaka) → Kyoto 19:59"),
+         info=info([row("train", "加太17:46発 → 和歌山市 → なんば → 梅田（大阪）→ 京都20:29着（1本前は17:27発 → 京都19:59着）", "Kada 17:46 → Wakayamashi → Namba → Umeda (Osaka) → Kyoto 20:29 (the one before: 17:27 → Kyoto 19:59)"),
                     row("fee", "加太→京都 1,830円", "Kada → Kyoto ¥1,830")],
                    tip=TRAIN_TIP)),
 ]

@@ -35,7 +35,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.AMANOHASHIDATE_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-amanohashidate-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 14;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/amanohashidate.json?v=1')")
+s = s.replace(m.group(0), "fetch('../data/routes/amanohashidate.json?v=2')")
 
 
 # 番号だけのリンク
