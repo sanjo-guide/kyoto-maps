@@ -73,22 +73,32 @@ window.GUIDE = {
    ],
    "photos": [
     {
-     "f": "hq-kz-01-1.jpg",
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "hq-kz-01-2.jpg",
      "w": 1280,
      "h": 848
     },
     {
-     "f": "hq-kz-01-3.jpg",
-     "w": 848,
-     "h": 1280,
+     "f": "p2-higashi-2.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "hq-kz-01-1.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-higashi-4.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "hq-kz-01-5.jpg",
+     "w": 1280,
+     "h": 848,
      "cap": {
-      "ja": "裏通りの路地",
-      "en": "A quiet backstreet"
+      "ja": "夜の柳",
+      "en": "The willow at night"
      }
     },
     {
@@ -101,25 +111,16 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-01-5.jpg",
+     "f": "hq-kz-01-7.jpg",
      "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "夜の柳",
-      "en": "The willow at night"
-     }
-    },
-    {
-     "f": "hq-kz-01-6.jpg",
-     "w": 720,
-     "h": 1280,
+     "h": 720,
      "cap": {
       "ja": "志摩（しま）",
       "en": "Shima"
      }
     },
     {
-     "f": "hq-kz-01-7.jpg",
+     "f": "p2-higashi-8.jpg",
      "w": 1280,
      "h": 720,
      "cap": {
@@ -134,15 +135,6 @@ window.GUIDE = {
      "cap": {
       "ja": "志摩の離れの茶室",
       "en": "Shima's separate tea room"
-     }
-    },
-    {
-     "f": "hq-kz-01-9.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "志摩の抹茶",
-      "en": "Matcha at Shima"
      }
     },
     {
@@ -185,6 +177,11 @@ window.GUIDE = {
      "h": 848
     },
     {
+     "f": "hq-kz-02-3.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
      "f": "hq-kz-02-2.jpg",
      "w": 1280,
      "h": 848,
@@ -194,18 +191,9 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-02-3.jpg",
+     "f": "p2-kazue-4.jpg",
      "w": 1280,
      "h": 848
-    },
-    {
-     "f": "hq-kz-02-4.jpg",
-     "w": 848,
-     "h": 1280,
-     "cap": {
-      "ja": "迷路のような路地",
-      "en": "Maze-like side streets"
-     }
     },
     {
      "f": "hq-kz-02-5.jpg",
@@ -218,6 +206,20 @@ window.GUIDE = {
     },
     {
      "f": "hq-kz-02-6.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "hq-kz-02-10.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "秋の夜の主計町",
+      "en": "Kazuemachi on an autumn night"
+     }
+    },
+    {
+     "f": "hq-kz-02-9.jpg",
      "w": 1280,
      "h": 848
     },
@@ -237,20 +239,6 @@ window.GUIDE = {
      "cap": {
       "ja": "夕暮れの浅野川",
       "en": "The Asano River at dusk"
-     }
-    },
-    {
-     "f": "hq-kz-02-9.jpg",
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "hq-kz-02-10.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "秋の夜の主計町",
-      "en": "Kazuemachi on an autumn night"
      }
     }
    ]
@@ -289,16 +277,12 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-03-3.jpg",
+     "f": "p2-omicho-3.jpg",
      "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "海鮮丼がずらり",
-      "en": "Rows of seafood bowls"
-     }
+     "h": 720
     },
     {
-     "f": "hq-kz-03-4.jpg",
+     "f": "hq-kz-03-8.jpg",
      "w": 1280,
      "h": 720
     },
@@ -308,17 +292,12 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-03-6.jpg",
+     "f": "hq-kz-03-10.jpg",
      "w": 1280,
      "h": 720
     },
     {
-     "f": "hq-kz-03-7.jpg",
-     "w": 720,
-     "h": 1280
-    },
-    {
-     "f": "hq-kz-03-8.jpg",
+     "f": "hq-kz-03-4.jpg",
      "w": 1280,
      "h": 720
     },
@@ -328,7 +307,16 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-03-10.jpg",
+     "f": "hq-kz-03-3.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "海鮮丼がずらり",
+      "en": "Rows of seafood bowls"
+     }
+    },
+    {
+     "f": "hq-kz-03-6.jpg",
      "w": 1280,
      "h": 720
     }
@@ -383,23 +371,19 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "hq-kz-04-2.jpg",
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "hq-kz-04-3.jpg",
      "w": 1280,
      "h": 848
     },
     {
-     "f": "hq-kz-04-4.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "秋の長町",
-      "en": "Nagamachi in autumn"
-     }
+     "f": "hq-kz-04-2.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-nagamachi-4.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-kz-04-5.jpg",
@@ -429,13 +413,9 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-04-8.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "野村家",
-      "en": "Nomura-ke"
-     }
+     "f": "p2-nagamachi-8.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-kz-04-9.jpg",
@@ -507,11 +487,6 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-05-2.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "hq-kz-05-3.jpg",
      "w": 1280,
      "h": 720
@@ -523,6 +498,11 @@ window.GUIDE = {
     },
     {
      "f": "hq-kz-05-5.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "hq-kz-05-2.jpg",
      "w": 1280,
      "h": 720
     },
@@ -577,37 +557,9 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-06-3.jpg",
-     "w": 720,
-     "h": 1280
-    },
-    {
-     "f": "hq-kz-06-4.jpg",
+     "f": "p2-suzuki-3.jpg",
      "w": 1280,
      "h": 720
-    },
-    {
-     "f": "hq-kz-06-5.jpg",
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "hq-kz-06-6.jpg",
-     "w": 848,
-     "h": 1280,
-     "cap": {
-      "ja": "緑の小径（こみち）",
-      "en": "The Green Path"
-     }
-    },
-    {
-     "f": "hq-kz-06-7.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "緑の小径の先にある広場",
-      "en": "Along the Green Path"
-     }
     },
     {
      "f": "hq-kz-06-8.jpg",
@@ -624,6 +576,25 @@ window.GUIDE = {
      }
     },
     {
+     "f": "hq-kz-06-4.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "hq-kz-06-5.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "hq-kz-06-7.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "緑の小径の先にある広場",
+      "en": "Along the Green Path"
+     }
+    },
+    {
      "f": "hq-kz-06-10.jpg",
      "w": 1280,
      "h": 720,
@@ -631,6 +602,11 @@ window.GUIDE = {
       "ja": "緑の小径",
       "en": "The Green Path"
      }
+    },
+    {
+     "f": "p2-suzuki-10.jpg",
+     "w": 1280,
+     "h": 720
     }
    ]
   },
@@ -669,12 +645,26 @@ window.GUIDE = {
    ],
    "photos": [
     {
+     "f": "hq-kz-07-2.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
      "f": "hq-kz-07-1.jpg",
      "w": 1280,
      "h": 720
     },
     {
-     "f": "hq-kz-07-2.jpg",
+     "f": "hq-kz-07-6.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "落雁 諸江屋（もろえや）",
+      "en": "Rakugan Moroe-ya"
+     }
+    },
+    {
+     "f": "hq-kz-07-10.jpg",
      "w": 1280,
      "h": 720
     },
@@ -702,15 +692,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-07-6.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "落雁 諸江屋（もろえや）",
-      "en": "Rakugan Moroe-ya"
-     }
-    },
-    {
      "f": "hq-kz-07-7.jpg",
      "w": 1280,
      "h": 720,
@@ -729,18 +710,13 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-07-9.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "諸江屋の抹茶かき氷",
-      "en": "Matcha shaved ice at Moroe-ya"
-     }
-    },
-    {
-     "f": "hq-kz-07-10.jpg",
+     "f": "p2-nishi-10.jpg",
      "w": 1280,
-     "h": 720
+     "h": 720,
+     "cap": {
+      "ja": "落雁 諸江屋のかき氷",
+      "en": "Shaved ice at Moroe-ya"
+     }
     }
    ]
   },
@@ -791,29 +767,19 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "hq-kz-08-4.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hq-kz-08-5.jpg",
-     "w": 848,
-     "h": 1280
-    },
-    {
-     "f": "hq-kz-08-6.jpg",
-     "w": 848,
-     "h": 1280
-    },
-    {
      "f": "hq-kz-08-7.jpg",
      "w": 1280,
      "h": 720
     },
     {
-     "f": "hq-kz-08-8.jpg",
-     "w": 848,
-     "h": 1280
+     "f": "p2-myoryuji-5.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "hq-kz-08-4.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-kz-08-9.jpg",
@@ -821,9 +787,19 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-08-10.jpg",
-     "w": 720,
-     "h": 1280
+     "f": "p2-myoryuji-8.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-myoryuji-9.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-myoryuji-10.jpg",
+     "w": 1280,
+     "h": 848
     }
    ]
   },
@@ -883,12 +859,12 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "hq-kz-09-4.jpg",
+     "f": "hq-kz-09-5.jpg",
      "w": 1280,
      "h": 848
     },
     {
-     "f": "hq-kz-09-5.jpg",
+     "f": "hq-kz-09-4.jpg",
      "w": 1280,
      "h": 848
     },
@@ -902,18 +878,14 @@ window.GUIDE = {
      }
     },
     {
+     "f": "hq-kz-09-10.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
      "f": "hq-kz-09-7.jpg",
      "w": 1280,
      "h": 720
-    },
-    {
-     "f": "hq-kz-09-8.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "HUM&Goのコーヒーと能登ミルクのアイス",
-      "en": "Coffee and Noto-milk ice cream at HUM&Go"
-     }
     },
     {
      "f": "hq-kz-09-9.jpg",
@@ -925,9 +897,9 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-09-10.jpg",
+     "f": "p2-library-10.jpg",
      "w": 1280,
-     "h": 848
+     "h": 720
     }
    ]
   }
@@ -997,27 +969,18 @@ window.GUIDE = {
    ],
    "photos": [
     {
-     "f": "hq-kz-10-1.jpg",
+     "f": "hq-kz-11-1.jpg",
      "w": 1280,
-     "h": 848,
+     "h": 720,
      "cap": {
-      "ja": "Rinto店（金沢駅）",
-      "en": "Rinto branch (Kanazawa Station)"
+      "ja": "中央市場店",
+      "en": "Central Market branch"
      }
     },
     {
      "f": "hq-kz-10-2.jpg",
      "w": 1280,
      "h": 720,
-     "cap": {
-      "ja": "Rinto店（金沢駅）",
-      "en": "Rinto branch (Kanazawa Station)"
-     }
-    },
-    {
-     "f": "hq-kz-10-3.jpg",
-     "w": 1280,
-     "h": 848,
      "cap": {
       "ja": "Rinto店（金沢駅）",
       "en": "Rinto branch (Kanazawa Station)"
@@ -1033,21 +996,21 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-10-5.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "Rinto店（金沢駅）",
-      "en": "Rinto branch (Kanazawa Station)"
-     }
-    },
-    {
-     "f": "hq-kz-11-1.jpg",
+     "f": "hq-kz-11-4.jpg",
      "w": 1280,
      "h": 720,
      "cap": {
       "ja": "中央市場店",
       "en": "Central Market branch"
+     }
+    },
+    {
+     "f": "hq-kz-10-3.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "Rinto店（金沢駅）",
+      "en": "Rinto branch (Kanazawa Station)"
      }
     },
     {
@@ -1060,16 +1023,25 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-11-3.jpg",
+     "f": "hq-kz-10-1.jpg",
      "w": 1280,
-     "h": 720,
+     "h": 848,
      "cap": {
-      "ja": "中央市場店",
-      "en": "Central Market branch"
+      "ja": "Rinto店（金沢駅）",
+      "en": "Rinto branch (Kanazawa Station)"
      }
     },
     {
-     "f": "hq-kz-11-4.jpg",
+     "f": "hq-kz-10-5.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "Rinto店（金沢駅）",
+      "en": "Rinto branch (Kanazawa Station)"
+     }
+    },
+    {
+     "f": "hq-kz-11-3.jpg",
      "w": 1280,
      "h": 720,
      "cap": {
@@ -1121,7 +1093,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-12-2.jpg",
+     "f": "hq-kz-12-4.jpg",
      "w": 1280,
      "h": 720
     },
@@ -1131,33 +1103,19 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-12-4.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "hq-kz-12-5.jpg",
      "w": 1280,
      "h": 720
     },
     {
-     "f": "hq-kz-12-6.jpg",
-     "w": 720,
-     "h": 1280
+     "f": "hq-kz-12-2.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "hq-kz-12-7.jpg",
-     "w": 720,
-     "h": 1280
-    },
-    {
-     "f": "hq-kz-12-8.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "注文は自分で紙に手書きします",
-      "en": "You write your order by hand"
-     }
+     "f": "hq-kz-12-10.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-kz-12-9.jpg",
@@ -1165,7 +1123,7 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-12-10.jpg",
+     "f": "p2-syuraku-8.jpg",
      "w": 1280,
      "h": 720
     }
@@ -1272,12 +1230,35 @@ window.GUIDE = {
      }
     },
     {
+     "f": "p2-yamanaka-6.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "山中温泉 菊の湯",
+      "en": "Kikunoyu, Yamanaka Onsen"
+     }
+    },
+    {
      "f": "hq-dt-01-6.jpg",
      "w": 1280,
      "h": 720,
      "cap": {
       "ja": "雪のあやとりはし",
       "en": "Ayatori Bridge in the snow"
+     }
+    },
+    {
+     "f": "p2-yamanaka-8.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-yamanaka-9.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "いづみや精肉店",
+      "en": "Izumiya Seinikuten"
      }
     },
     {
@@ -1288,21 +1269,6 @@ window.GUIDE = {
       "ja": "いづみや精肉店のメンチカツ",
       "en": "Minced meat cutlet from Izumiya Seinikuten"
      }
-    },
-    {
-     "f": "yamanaka-1.jpg",
-     "w": 552,
-     "h": 310
-    },
-    {
-     "f": "yamanaka-2.jpg",
-     "w": 552,
-     "h": 310
-    },
-    {
-     "f": "yamanaka-3.jpg",
-     "w": 552,
-     "h": 310
     }
    ]
   },
@@ -1353,6 +1319,11 @@ window.GUIDE = {
      }
     },
     {
+     "f": "p2-yamashiro-3.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
      "f": "hq-dt-01-10.jpg",
      "w": 1280,
      "h": 720,
@@ -1362,55 +1333,34 @@ window.GUIDE = {
      }
     },
     {
-     "f": "yamashiro-1.jpg",
-     "cap": {
-      "en": "Kosoyu",
-      "ja": "古総湯"
-     },
-     "w": 1600,
-     "h": 900
+     "f": "p2-yamashiro-5.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "yamashiro-2.jpg",
-     "cap": {
-      "en": "Kosoyu",
-      "ja": "古総湯"
-     },
-     "w": 553,
-     "h": 311
+     "f": "p2-yamashiro-6.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "yamashiro-4.jpg",
-     "cap": {
-      "en": "Kosoyu",
-      "ja": "古総湯"
-     },
-     "w": 553,
-     "h": 311
+     "f": "p2-yamashiro-7.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "yamashiro-5.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-yamashiro-8.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "yamashiro-6.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-yamashiro-9.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "yamashiro-7.jpg",
-     "cap": {
-      "en": "Inside Kosoyu",
-      "ja": "古総湯の中"
-     },
-     "w": 552,
-     "h": 310
-    },
-    {
-     "f": "yamashiro-8.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-yamashiro-10.jpg",
+     "w": 1280,
+     "h": 720
     }
    ]
   },
@@ -1461,6 +1411,11 @@ window.GUIDE = {
    },
    "photos": [
     {
+     "f": "p2-ainokura-1.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
      "f": "hq-dt-02-1.jpg",
      "w": 1280,
      "h": 848,
@@ -1470,12 +1425,12 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-dt-02-2.jpg",
+     "f": "hq-dt-02-4.jpg",
      "w": 1280,
      "h": 848,
      "cap": {
-      "ja": "相倉の合掌造り",
-      "en": "A gassho-zukuri house in Ainokura"
+      "ja": "相倉の田んぼと合掌造り",
+      "en": "Rice paddies and houses in Ainokura"
      }
     },
     {
@@ -1485,15 +1440,6 @@ window.GUIDE = {
      "cap": {
       "ja": "初夏の相倉",
       "en": "Ainokura in early summer"
-     }
-    },
-    {
-     "f": "hq-dt-02-4.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "相倉の田んぼと合掌造り",
-      "en": "Rice paddies and houses in Ainokura"
      }
     },
     {
@@ -1515,24 +1461,24 @@ window.GUIDE = {
      }
     },
     {
-     "f": "ainokura-2.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-ainokura-7.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
-     "f": "ainokura-3.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-ainokura-8.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
-     "f": "ainokura-4.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-ainokura-9.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
-     "f": "ainokura-5.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-ainokura-10.jpg",
+     "w": 1280,
+     "h": 848
     }
    ]
   },
@@ -1574,29 +1520,56 @@ window.GUIDE = {
      }
     },
     {
-     "f": "suganuma-2.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-suganuma-2.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
-     "f": "suganuma-3.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-suganuma-3.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "suganuma-4.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-suganuma-4.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "suganuma-5.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-suganuma-5.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "suganuma-6.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-suganuma-6.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-suganuma-7.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "合掌造りの家の中",
+      "en": "Inside a gassho-zukuri house"
+     }
+    },
+    {
+     "f": "p2-suganuma-8.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "合掌造りの家の中",
+      "en": "Inside a gassho-zukuri house"
+     }
+    },
+    {
+     "f": "p2-suganuma-9.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "合掌造りの家の中",
+      "en": "Inside a gassho-zukuri house"
+     }
     }
    ]
   },
@@ -1634,6 +1607,26 @@ window.GUIDE = {
      }
     },
     {
+     "f": "p2-shirakawa-2.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-shirakawa-3.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-shirakawa-4.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "p2-shirakawa-5.jpg",
+     "w": 1280,
+     "h": 848
+    },
+    {
      "f": "hq-dt-02-9.jpg",
      "w": 1280,
      "h": 848,
@@ -1641,6 +1634,11 @@ window.GUIDE = {
       "ja": "秋の白川郷",
       "en": "Shirakawa-go in autumn"
      }
+    },
+    {
+     "f": "p2-shirakawa-7.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
      "f": "hq-dt-02-10.jpg",
@@ -1652,39 +1650,14 @@ window.GUIDE = {
      }
     },
     {
-     "f": "shirakawa-1.jpg",
-     "w": 542,
-     "h": 360
+     "f": "p2-shirakawa-9.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
-     "f": "shirakawa-2.jpg",
-     "w": 542,
-     "h": 360
-    },
-    {
-     "f": "shirakawa-3.jpg",
-     "w": 542,
-     "h": 360
-    },
-    {
-     "f": "shirakawa-4.jpg",
-     "w": 1600,
-     "h": 1060
-    },
-    {
-     "f": "shirakawa-5.jpg",
-     "w": 542,
-     "h": 360
-    },
-    {
-     "f": "shirakawa-6.jpg",
-     "w": 552,
-     "h": 310
-    },
-    {
-     "f": "shirakawa-7.jpg",
-     "w": 552,
-     "h": 310
+     "f": "p2-shirakawa-10.jpg",
+     "w": 1280,
+     "h": 848
     }
    ]
   },
@@ -1742,7 +1715,7 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "hq-dt-03-3.jpg",
+     "f": "hq-dt-03-9.jpg",
      "w": 1280,
      "h": 848
     },
@@ -1752,9 +1725,9 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "hq-dt-03-5.jpg",
-     "w": 848,
-     "h": 1280
+     "f": "hq-dt-03-3.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
      "f": "hq-dt-03-6.jpg",
@@ -1766,13 +1739,18 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-dt-03-7.jpg",
-     "w": 720,
-     "h": 1280,
+     "f": "p2-nousaku-7.jpg",
+     "w": 1280,
+     "h": 720,
      "cap": {
       "ja": "体験で作った器",
       "en": "A piece made in the workshop"
      }
+    },
+    {
+     "f": "p2-nousaku-8.jpg",
+     "w": 1280,
+     "h": 848
     },
     {
      "f": "hq-dt-03-8.jpg",
@@ -1782,11 +1760,6 @@ window.GUIDE = {
       "ja": "工場見学で見られる製品",
       "en": "Products seen on the factory tour"
      }
-    },
-    {
-     "f": "hq-dt-03-9.jpg",
-     "w": 1280,
-     "h": 848
     },
     {
      "f": "hq-dt-03-10.jpg",
@@ -2199,6 +2172,16 @@ window.GUIDE = {
      }
     },
     {
+     "f": "p2-iwase-4.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-iwase-5.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
      "f": "hq-dt-05-4.jpg",
      "w": 1280,
      "h": 720,
@@ -2206,6 +2189,11 @@ window.GUIDE = {
       "ja": "岩瀬の町家",
       "en": "A traditional house in Iwase"
      }
+    },
+    {
+     "f": "p2-iwase-7.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-dt-05-5.jpg",
@@ -2217,31 +2205,14 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-dt-05-6.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "クラフトビールの飲み比べ",
-      "en": "A craft beer tasting set"
-     }
+     "f": "p2-iwase-9.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "toyama-8.jpg",
-     "cap": {
-      "en": "Iwase",
-      "ja": "岩瀬"
-     },
-     "w": 552,
-     "h": 310
-    },
-    {
-     "f": "toyama-9.jpg",
-     "cap": {
-      "en": "Iwase",
-      "ja": "岩瀬"
-     },
-     "w": 1182,
-     "h": 666
+     "f": "p2-iwase-10.jpg",
+     "w": 1280,
+     "h": 720
     }
    ]
   },
@@ -2277,15 +2248,6 @@ window.GUIDE = {
      "f": "hq-dt-05-7.jpg",
      "w": 1280,
      "h": 720,
-     "cap": {
-      "ja": "富山のお寿司",
-      "en": "Toyama sushi"
-     }
-    },
-    {
-     "f": "hq-dt-05-8.jpg",
-     "w": 720,
-     "h": 1280,
      "cap": {
       "ja": "富山のお寿司",
       "en": "Toyama sushi"
@@ -2423,22 +2385,34 @@ window.GUIDE = {
      }
     },
     {
-     "f": "fukui-1.jpg",
-     "cap": {
-      "en": "Awara Onsen",
-      "ja": "あわら温泉"
-     },
-     "w": 552,
-     "h": 310
+     "f": "p2-awara-2.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "fukui-2.jpg",
-     "cap": {
-      "en": "Awara Onsen",
-      "ja": "あわら温泉"
-     },
-     "w": 552,
-     "h": 310
+     "f": "p2-awara-3.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-awara-4.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-awara-5.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-awara-6.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-awara-7.jpg",
+     "w": 1280,
+     "h": 720
     }
    ]
   },
@@ -2480,6 +2454,16 @@ window.GUIDE = {
      }
     },
     {
+     "f": "p2-maruoka-2.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-maruoka-3.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
      "f": "hq-dt-06-5.jpg",
      "w": 1280,
      "h": 720,
@@ -2487,6 +2471,11 @@ window.GUIDE = {
       "ja": "丸岡城からの眺め",
       "en": "View from Maruoka Castle"
      }
+    },
+    {
+     "f": "p2-maruoka-5.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-dt-06-6.jpg",
@@ -2498,13 +2487,24 @@ window.GUIDE = {
      }
     },
     {
-     "f": "fukui-3.jpg",
-     "cap": {
-      "en": "Maruoka Castle",
-      "ja": "丸岡城"
-     },
-     "w": 552,
-     "h": 310
+     "f": "p2-maruoka-7.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-maruoka-8.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-maruoka-9.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-maruoka-10.jpg",
+     "w": 1280,
+     "h": 720
     }
    ]
   },
@@ -2537,15 +2537,6 @@ window.GUIDE = {
    },
    "photos": [
     {
-     "f": "hq-dt-06-7.jpg",
-     "w": 720,
-     "h": 1280,
-     "cap": {
-      "ja": "永平寺（えいへいじ）",
-      "en": "Eiheiji"
-     }
-    },
-    {
      "f": "hq-dt-06-8.jpg",
      "w": 1280,
      "h": 720,
@@ -2553,6 +2544,26 @@ window.GUIDE = {
       "ja": "永平寺",
       "en": "Eiheiji"
      }
+    },
+    {
+     "f": "p2-eiheiji-2.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-eiheiji-3.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-eiheiji-4.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-eiheiji-5.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
      "f": "hq-dt-06-9.jpg",
@@ -2564,31 +2575,24 @@ window.GUIDE = {
      }
     },
     {
-     "f": "fukui-5.jpg",
-     "cap": {
-      "en": "Eiheiji",
-      "ja": "永平寺"
-     },
-     "w": 552,
-     "h": 310
+     "f": "p2-eiheiji-7.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "fukui-6.jpg",
-     "cap": {
-      "en": "Eiheiji",
-      "ja": "永平寺"
-     },
-     "w": 552,
-     "h": 310
+     "f": "p2-eiheiji-8.jpg",
+     "w": 1280,
+     "h": 720
     },
     {
-     "f": "fukui-7.jpg",
-     "cap": {
-      "en": "Eiheiji",
-      "ja": "永平寺"
-     },
-     "w": 552,
-     "h": 310
+     "f": "p2-eiheiji-9.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "p2-eiheiji-10.jpg",
+     "w": 1280,
+     "h": 720
     }
    ]
   },
