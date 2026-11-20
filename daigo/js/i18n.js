@@ -130,8 +130,8 @@ window.DAIGO_I18N = {
           "text": "地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。"
         },
         {
-          "title": "行かない場所は外せます",
-          "text": "「選んで回る」に切り替えると、行きたい場所だけを選べます。"
+          "title": "受付は20:10まで",
+          "text": "夜間拝観は18:00から。受付は20:10で終わります。昼の拝観とは入れ替え制です。"
         },
         {
           "title": "Googleマップでルート検索",
@@ -269,8 +269,8 @@ window.DAIGO_I18N = {
           "text": "Tap a number on the map, or open the list, to see photos, tips, fees and suggested times."
         },
         {
-          "title": "Skip what you like",
-          "text": "Switch to “Choose stops” to pick only the places you want."
+          "title": "Last entry 20:10",
+          "text": "The evening opening starts at 18:00; last entry is 20:10. It is separate from the daytime visit."
         },
         {
           "title": "Get directions",

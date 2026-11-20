@@ -1,0 +1,482 @@
+{
+ "id": "miidera",
+ "_note": "大津 三井寺と琵琶湖疏水の夜桜のルート（miidera/ のページ専用。形は eizan-line.json と同じ）。京阪三井寺駅→琵琶湖疏水→大門→金堂・三井の晩鐘→唐院・三重塔→観音堂。春のライトアップの期間だけのルート。写真は Toshi の写真ライブラリから選んだもの（2025年4月11日と2026年4月2日の夜、Nikon D7000 と iPhone。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし。人の顔が近くに写る写真は使っていない）。info.checked は事実情報を確認した日（三井寺・大津市・びわ湖大津観光協会の公式サイト、電車は乗換案内）。このファイルは scripts/build_miidera_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "day": 0
+  },
+  {
+   "first": 2,
+   "last": 5,
+   "day": 1
+  }
+ ],
+ "photoBase": "../images/miidera/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "sosui",
+   "name": {
+    "ja": "琵琶湖疏水の夜桜",
+    "en": "Cherries on the Lake Biwa Canal at night"
+   },
+   "kind": {
+    "ja": "桜並木（無料）",
+    "en": "Cherry avenue (free)"
+   },
+   "blurb": {
+    "ja": "京阪三井寺駅のすぐそば。明治の琵琶湖疏水の両岸に桜が続き、春の夜は水面に映る光の帯になります。",
+    "en": "Right by Keihan Miidera Station: cherries line both banks of the Meiji-era Lake Biwa Canal, a ribbon of light on the water on spring nights."
+   },
+   "lat": 35.01212,
+   "lng": 135.85744,
+   "text": {
+    "ja": "琵琶湖疏水（びわこそすい）の夜桜\n\n三条京阪から地下鉄・京阪京津線で、びわ湖浜大津で石山坂本線に乗り換えて三井寺駅へ（約30分・520円）。京都駅からならJR湖西線で大津京、京阪に乗り換えて約26分（440円）。\n\n駅を出てすぐ、明治時代に琵琶湖の水を京都へ引いた琵琶湖疏水の取り入れ口です。大津閘門から第一トンネルまでの両岸に約100本の桜が並び、春の夜はライトアップされた桜が水面に映ります（観覧は無料）。第一トンネル（第一隧道）は2025年に国宝、大津閘門は重要文化財になりました。写真は2026年4月2日の夜。\n\nおすすめ訪問時間：18:05〜18:25",
+    "en": "Cherries on the Lake Biwa Canal at night\n\nFrom Sanjo Keihan take the subway / Keihan Keishin line, change at Biwako-Hamaotsu to the Ishiyama-Sakamoto line for Miidera Station (about 30 min, ¥520). From Kyoto Station, take the JR Kosei line to Otsukyo and change to Keihan (about 26 min, ¥440).\n\nRight outside the station is the intake of the Lake Biwa Canal, built in the Meiji era to carry lake water to Kyoto. About 100 cherry trees line both banks from the Otsu lock to the first tunnel, and on spring nights the lit blossoms are reflected in the water (free to view). The first tunnel became a National Treasure in 2025, and the Otsu lock an Important Cultural Property. Photos from the night of 2 April 2026.\n\nRecommended visit time: 18:05–18:25"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "琵琶湖疏水 大津閘門",
+      "en": "Lake Biwa Canal, Otsu lock"
+     },
+     "lat": 35.01212,
+     "lng": 135.85744,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%90%B5%E7%90%B6%E6%B9%96%E7%96%8F%E6%B0%B4%20%E5%A4%A7%E6%B4%A5%E9%96%98%E9%96%80"
+    },
+    {
+     "label": {
+      "ja": "京阪 三井寺駅",
+      "en": "Keihan Miidera Station"
+     },
+     "lat": 35.0125,
+     "lng": 135.8593,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%98%AA%20%E4%B8%89%E4%BA%95%E5%AF%BA%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "桜の琵琶湖疏水（びわ湖大津観光協会）",
+      "en": "Lake Biwa Canal cherries (Otsu tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://otsu.or.jp/tripideas/otsu-sakura/",
+      "en": "https://otsu.or.jp/tripideas/otsu-sakura/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://miidera1200.jp/2026lightup-spring/",
+     "head": {
+      "ja": "夜桜は3月下旬〜4月中旬だけ",
+      "en": "Night cherries: late March to mid April only"
+     },
+     "text": {
+      "ja": "三井寺と琵琶湖疏水の桜のライトアップは、春の約3週間だけです（2026年は3月25日〜4月12日）。毎年の日程は三井寺と大津市の発表を確かめてください。",
+      "en": "The Miidera and canal cherry illuminations run for only about three weeks in spring (25 Mar – 12 Apr in 2026). Check each year’s dates with Miidera and Otsu City."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年のライトアップ：3月25日〜4月12日 18:00〜21:30。観覧無料",
+       "en": "2026 illumination: 25 Mar – 12 Apr, 18:00–21:30. Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "三条京阪17:31発 → びわ湖浜大津で乗り換え → 三井寺18:01着・520円（京都駅からは大津京で乗り換え、440円）",
+       "en": "Sanjo Keihan 17:31 → change at Biwako-Hamaotsu → Miidera 18:01, ¥520 (from Kyoto Station via Otsukyo, ¥440)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "大津市・びわ湖大津観光協会の案内と乗換案内（2026年11月の土曜のダイヤ）で確認しました。春はダイヤが変わっていることがあります。",
+     "en": "Checked with Otsu City, the Otsu tourism association and a route planner (Saturday timetable, Nov 2026); spring timetables may differ."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "sosui-1.jpg",
+    "sosui-3.jpg",
+    "sosui-4.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "daimon",
+   "name": {
+    "ja": "三井寺 大門（仁王門）",
+    "en": "Miidera Daimon (Nio gate)"
+   },
+   "kind": {
+    "ja": "門・受付",
+    "en": "Gate & entrance"
+   },
+   "blurb": {
+    "ja": "夜の拝観はここから。照らされた大門のまわりに、しだれ桜とソメイヨシノが咲きます。",
+    "en": "The evening visit starts here: the lit great gate framed by weeping and Somei-Yoshino cherries."
+   },
+   "lat": 35.01345,
+   "lng": 135.85455,
+   "text": {
+    "ja": "三井寺（みいでら）・園城寺（おんじょうじ）の大門\n\n疏水から歩いて約10分。三井寺は天台寺門宗の総本山で、境内には千本を超える桜があります。春のライトアップの期間は、大門で夜の拝観の受付をします（昼の拝観とは別の料金）。\n\n昼の拝観は9:00〜16:30（受付16:00まで）、入山料は大人800円（2026年3月から）。\n\nおすすめ訪問時間：18:30〜18:35",
+    "en": "Miidera (Onjoji): the Daimon gate\n\nAbout 10 minutes’ walk from the canal. Miidera, head temple of the Tendai Jimon school, has more than a thousand cherry trees. During the spring illumination, the evening entrance is at the Daimon gate (separate fee from the daytime).\n\nBy day it opens 9:00–16:30 (last entry 16:00), ¥800 for adults (from March 2026).\n\nRecommended visit time: 18:30–18:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三井寺 大門",
+      "en": "Miidera Daimon"
+     },
+     "lat": 35.01345,
+     "lng": 135.85455,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E4%BA%95%E5%AF%BA%20%E5%A4%A7%E9%96%80%20%E4%BB%81%E7%8E%8B%E9%96%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三井寺 春のライトアップ2026（公式）",
+      "en": "Miidera spring illumination 2026 (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://miidera1200.jp/2026lightup-spring/",
+      "en": "https://miidera1200.jp/2026lightup-spring/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三井寺 拝観案内",
+      "en": "Miidera visiting info (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://miidera1200.jp/information",
+      "en": "https://miidera1200.jp/information"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://miidera1200.jp/2026lightup-spring/",
+     "head": {
+      "ja": "夜桜は3月下旬〜4月中旬だけ",
+      "en": "Night cherries: late March to mid April only"
+     },
+     "text": {
+      "ja": "三井寺と琵琶湖疏水の桜のライトアップは、春の約3週間だけです（2026年は3月25日〜4月12日）。毎年の日程は三井寺と大津市の発表を確かめてください。",
+      "en": "The Miidera and canal cherry illuminations run for only about three weeks in spring (25 Mar – 12 Apr in 2026). Check each year’s dates with Miidera and Otsu City."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年の春のライトアップ：3月25日〜4月12日 18:00〜21:30（受付21:00まで）。2027年は未発表",
+       "en": "Spring 2026 illumination: 25 Mar – 12 Apr, 18:00–21:30 (last entry 21:00). 2027 dates not yet announced"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "夜：大人1,500円、小中高生700円（2026年）。昼：入山料 大人800円・中高生500円・小学生300円",
+       "en": "Night: ¥1,500 adults, ¥700 school pupils (2026). Day: ¥800 adults, ¥500 junior/senior high, ¥300 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "昼の拝観 9:00〜16:30（受付16:00まで）、年中無休",
+       "en": "Daytime 9:00–16:30 (last entry 16:00), open daily"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "三井寺の公式サイトで確認しました。",
+     "en": "Checked on the Miidera website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "daimon-1.jpg",
+    "daimon-2.jpg",
+    "daimon-3.jpg"
+   ]
+  },
+  {
+   "no": 3,
+   "id": "kondo",
+   "name": {
+    "ja": "金堂と三井の晩鐘",
+    "en": "Main hall & the Evening Bell of Mii"
+   },
+   "kind": {
+    "ja": "国宝・桜",
+    "en": "National Treasure & cherries"
+   },
+   "blurb": {
+    "ja": "国宝の金堂のまわりは、照らされた桜の海。近江八景「三井の晩鐘」の鐘楼や、弁慶の引摺り鐘も。",
+    "en": "A sea of lit cherries around the National Treasure main hall, with the belfry of the “Evening Bell of Mii” and Benkei’s dragged bell."
+   },
+   "lat": 35.01339,
+   "lng": 135.85286,
+   "text": {
+    "ja": "金堂（こんどう）と三井の晩鐘（みいのばんしょう）\n\n大門から参道を進むと、桃山時代に建てられた国宝の金堂。まわりの桜がピンクや紫の光に照らされ、昼とはまったく違う景色です。金堂の南東の鐘楼は、近江八景のひとつ「三井の晩鐘」。金堂の西の霊鐘堂には、弁慶が比叡山へ引きずり上げたという伝説の「弁慶の引摺り鐘」が置かれています。\n\nおすすめ訪問時間：18:35〜19:05",
+    "en": "Main hall & the Evening Bell of Mii\n\nFollow the approach from the Daimon to the National Treasure main hall, built in the Momoyama period. The cherries around it are lit in pink and violet, nothing like the daytime view. The belfry south-east of the hall holds the “Evening Bell of Mii”, one of the Eight Views of Omi, and west of the hall stands the bell Benkei is said to have dragged up Mt. Hiei.\n\nRecommended visit time: 18:35–19:05"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三井寺 金堂",
+      "en": "Miidera main hall"
+     },
+     "lat": 35.01339,
+     "lng": 135.85286,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E4%BA%95%E5%AF%BA%20%E9%87%91%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三井寺 春のライトアップ2026（公式）",
+      "en": "Miidera spring illumination 2026 (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://miidera1200.jp/2026lightup-spring/",
+      "en": "https://miidera1200.jp/2026lightup-spring/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年の春のライトアップ：3月25日〜4月12日 18:00〜21:30（受付21:00まで）。2027年は未発表",
+       "en": "Spring 2026 illumination: 25 Mar – 12 Apr, 18:00–21:30 (last entry 21:00). 2027 dates not yet announced"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "三井寺の公式サイトで確認しました。",
+     "en": "Checked on the Miidera website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kondo-1.jpg",
+    "kondo-5.jpg",
+    "kondo-6.jpg",
+    "kondo-7.jpg",
+    "kondo-8.jpg",
+    "kondo-9.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "sanju",
+   "name": {
+    "ja": "唐院・三重塔",
+    "en": "Toin & three-storey pagoda"
+   },
+   "kind": {
+    "ja": "塔",
+    "en": "Pagoda"
+   },
+   "blurb": {
+    "ja": "夜空に黒く立つ三重塔と、そのまわりの桜。",
+    "en": "The three-storey pagoda dark against the night sky, among the cherries."
+   },
+   "lat": 35.01257,
+   "lng": 135.85221,
+   "text": {
+    "ja": "唐院（とういん）・三重塔\n\n金堂の南西、三井寺を開いた円珍（智証大師）をまつる唐院に、重要文化財の三重塔が建っています。夜は塔のまわりの桜が照らされ、塔の影が夜空に浮かびます。\n\nおすすめ訪問時間：19:05〜19:20",
+    "en": "Toin & three-storey pagoda\n\nSouth-west of the main hall, in the Toin precinct dedicated to Enchin, who revived Miidera, stands the three-storey pagoda (Important Cultural Property). At night the cherries around it are lit and the pagoda’s silhouette rises against the sky.\n\nRecommended visit time: 19:05–19:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三井寺 三重塔",
+      "en": "Miidera pagoda"
+     },
+     "lat": 35.01257,
+     "lng": 135.85221,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E4%BA%95%E5%AF%BA%20%E4%B8%89%E9%87%8D%E5%A1%94"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三井寺 春のライトアップ2026（公式）",
+      "en": "Miidera spring illumination 2026 (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://miidera1200.jp/2026lightup-spring/",
+      "en": "https://miidera1200.jp/2026lightup-spring/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年の春のライトアップ：3月25日〜4月12日 18:00〜21:30（受付21:00まで）。2027年は未発表",
+       "en": "Spring 2026 illumination: 25 Mar – 12 Apr, 18:00–21:30 (last entry 21:00). 2027 dates not yet announced"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "三井寺の公式サイトで確認しました。",
+     "en": "Checked on the Miidera website."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "sanju-1.jpg",
+    "sanju-3.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "kannondo",
+   "name": {
+    "ja": "観音堂と大津の夜景",
+    "en": "Kannon hall & the lights of Otsu"
+   },
+   "kind": {
+    "ja": "お堂・展望",
+    "en": "Hall & view"
+   },
+   "blurb": {
+    "ja": "境内の南の高台。観音堂のまわりから、大津の町と琵琶湖の夜景が見下ろせます。",
+    "en": "On the high ground at the south of the precinct: from around the Kannon hall, look down on the lights of Otsu and Lake Biwa."
+   },
+   "lat": 35.01038,
+   "lng": 135.85493,
+   "text": {
+    "ja": "観音堂（かんのんどう）と大津の夜景\n\n三重塔から南東へ歩いて石段を上ると、西国三十三所の第14番札所の観音堂。高台にあり、大津の町と琵琶湖が見下ろせます。写真はライトアップの夜に撮ったもの。\n\n帰りは三井寺駅まで歩いて15分ほど。三井寺20:11発で三条京阪20:47着（520円）、または京阪膳所でJRに乗り換えて京都20:41着（440円）。もっとゆっくり見るなら、夜の受付は21:00まで、拝観は21:30までです。\n\nおすすめ訪問時間：19:20〜19:50",
+    "en": "Kannon hall & the lights of Otsu\n\nWalk south-east from the pagoda and climb the steps to the Kannon hall, No. 14 of the Saigoku 33-temple pilgrimage. From this high ground you look down over Otsu and Lake Biwa. The photos were taken on illumination nights.\n\nMiidera Station is about 15 minutes’ walk. The 20:11 train reaches Sanjo Keihan at 20:47 (¥520), or change to JR at Keihan-Zeze for Kyoto at 20:41 (¥440). To stay longer: last entry is 21:00 and the grounds close at 21:30.\n\nRecommended visit time: 19:20–19:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三井寺 観音堂",
+      "en": "Miidera Kannon hall"
+     },
+     "lat": 35.01038,
+     "lng": 135.85493,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E4%BA%95%E5%AF%BA%20%E8%A6%B3%E9%9F%B3%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三井寺 春のライトアップ2026（公式）",
+      "en": "Miidera spring illumination 2026 (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://miidera1200.jp/2026lightup-spring/",
+      "en": "https://miidera1200.jp/2026lightup-spring/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年の春のライトアップ：3月25日〜4月12日 18:00〜21:30（受付21:00まで）。2027年は未発表",
+       "en": "Spring 2026 illumination: 25 Mar – 12 Apr, 18:00–21:30 (last entry 21:00). 2027 dates not yet announced"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：三井寺20:11発 → 三条京阪20:47着・520円／京阪膳所でJRに乗り換え → 京都20:41着・440円",
+       "en": "Return: Miidera 20:11 → Sanjo Keihan 20:47, ¥520 / change to JR at Keihan-Zeze → Kyoto 20:41, ¥440"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "三井寺の公式サイトと乗換案内で確認しました。",
+     "en": "Checked on the Miidera website and a route planner."
+    },
+    "checked": "2026-11-20"
+   },
+   "photos": [
+    "kannondo-1.jpg",
+    "kannondo-2.jpg",
+    "kannondo-4.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

@@ -13,7 +13,7 @@
 - フレームワーク: なし（静的 HTML / CSS / JS。ビルド不要）
 - 地図: Leaflet 1.9.4（vendor/ に同梱）。地図の種類は下の「ディレクトリ構成」を参照
 - ホスティング: GitHub Pages — リポジトリ `sanjo-guide/kyoto-maps`（main ブランチのルートを公開）
-  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、東山: …/higashiyama/、城崎温泉: …/kinosaki/、金閣寺〜北野: …/kinkakuji/、友ヶ島: …/tomogashima/、南紀: …/nanki/、四国: …/shikoku/、丹後・但馬: …/tango-tajima/、金沢: …/kanazawa/、福岡: …/fukuoka/、広島: …/hiroshima/、湖東: …/higashiomi/、神戸: …/kobe/、姫路・明石・須磨: …/himeji/、海津大崎と長浜: …/kohoku/、京都 西山: …/nishiyama/、淀・八幡: …/yawata/、鷹峯: …/takagamine/、高雄: …/takao/、醍醐寺: …/daigo/）
+  - 公開URL: https://sanjo-guide.github.io/kyoto-maps/ （叡山電鉄: …/eizan-line/、箕面: …/minoh/、近江八幡: …/omihachiman/、天橋立・伊根: …/amanohashidate/、東山: …/higashiyama/、城崎温泉: …/kinosaki/、金閣寺〜北野: …/kinkakuji/、友ヶ島: …/tomogashima/、南紀: …/nanki/、四国: …/shikoku/、丹後・但馬: …/tango-tajima/、金沢: …/kanazawa/、福岡: …/fukuoka/、広島: …/hiroshima/、湖東: …/higashiomi/、神戸: …/kobe/、姫路・明石・須磨: …/himeji/、海津大崎と長浜: …/kohoku/、京都 西山: …/nishiyama/、淀・八幡: …/yawata/、鷹峯: …/takagamine/、高雄: …/takao/、醍醐寺: …/daigo/、三井寺: …/miidera/）
   - 更新は `git push` するだけで1〜2分後に反映。CSS/JS を変えたら各ページの `?v=` の数字を上げる
   - このMacの GitHub ログインは GitHub CLI（gh）。ログインし直すときは `gh auth login --web`
 - git の記録フォルダは `.git.nosync`（iCloud が同期・退避しない名前）で、`.git` はそこを指すファイル（`gitdir: .git.nosync`）。2026-11-20、Macの空きが少なく iCloud が git のファイルをクラウドへ退避して git が止まったため。`.git.nosync/` は .gitignore 済み
@@ -39,7 +39,7 @@
 
 | 種類 | 使う場面 | 元にしたもの | 例 |
 |---|---|---|---|
-| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/`, `higashiyama/`, `kinosaki/`, `kinkakuji/`, `tomogashima/`, `higashiomi/`, `kobe/`, `himeji/`, `kohoku/`, `nishiyama/`, `yawata/`, `takagamine/`, `takao/`, `daigo/` |
+| ルート型 | 番号の順に回る1日ルート | 旧 eizan-map（非公開）の preview 版 | `eizan-line/`, `minoh/`, `omihachiman/`, `arashiyama/`, `amanohashidate/`, `higashiyama/`, `kinosaki/`, `kinkakuji/`, `tomogashima/`, `higashiomi/`, `kobe/`, `himeji/`, `kohoku/`, `nishiyama/`, `yawata/`, `takagamine/`, `takao/`, `daigo/`, `miidera/` |
 | スポット紹介型 | 順番を決めずにおすすめを紹介 | sanjo-guide/kanazawa-guide | `kanazawa/`, `fukuoka/`, `hiroshima/`, `nanki/`, `shikoku/`, `tango-tajima/` |
 
 ```
@@ -66,6 +66,7 @@
 │                           #   データは data/routes/tomogashima.json（scripts/build_tomogashima_data.py で作る）、写真は images/tomogashima/
 ├── higashiomi/ kobe/ himeji/ kohoku/          # ルート型（2026-11-20 追加）。tomogashima/ と同じ作り（scripts/sync_<id>.py・build_<id>_data.py）
 ├── nishiyama/ yawata/ takagamine/ takao/ daigo/ # ルート型・京都市内（2026-11-20 追加）。同じ作り
+├── miidera/                # ルート型（大津 三井寺の夜桜、2026-11-20 追加）。同じ作り
 ├── kanazawa/               # スポット紹介型: index.html, css/, js/app.js, js/data.js, img/
 ├── kanazawa-daytrips/      # 旧URL。kanazawa/#trips へ転送するだけ
 ├── fukuoka/                # スポット紹介型（福岡・唐津と日帰り）。kanazawa/ の複製。データは js/data.js、写真は img/
@@ -108,6 +109,7 @@
   - 今宮神社と鷹峯 takagamine/：今宮神社・あぶり餅→光悦寺→源光庵→常照寺。光悦寺の人物の写真は使っていない
   - 高雄の紅葉 takao/：高雄橋・清滝川→神護寺→西明寺（実際は西明寺→神護寺の順に歩いたが、神護寺の受付が16:00までなので入れ替えた）
   - 醍醐寺の夜の紅葉 daigo/：秋期夜間拝観（2026年は11/20〜12/6）。写真は2024年11月24日の夜
+  - 三井寺の夜桜 miidera/：京阪三井寺駅→琵琶湖疏水の夜桜→大門→金堂・三井の晩鐘→唐院・三重塔→観音堂。春のライトアップ（2026年は3/25〜4/12、夜1,500円）。写真は2025-04-11 と 2026-04-02 の夜。写真アプリが応答しなかったため、金堂・三重塔・観音堂の Nikon 写真5枚（scratchpad の picks の miidera:135・137・140・145・165）はまだ入っていない。位置は OSM の建物の位置（金堂・三重塔・観音堂）。plan がないので、使い方の3つ目は「夜の受付」の注意にしてある（daigo/ も同じ）
 - ルート型は、マップを開くと毎回まず「このマップの使い方」が出る（eizan-line/js/app.js。使い方の段がいちばん上）。下のタブの1つ目は「マップ一覧」、左上と使い方の画面にも「← マップ一覧」。スポット紹介型は上に「このページの使い方」の箱
 - 2026-11-20 の点検で、知らない人の顔がはっきり写った写真・Hostel Act の客室の荷物の写真・使っていない eizan-line/thumbs/ を外した。新しく写真を選ぶときも、人が主役の写真は使わない
 - 新しいマップを作るときは、どちらの型かを決めて既存のフォルダを複製し、データと文言だけ差し替える。トップページ（index.html）の該当する段にカードを足す
