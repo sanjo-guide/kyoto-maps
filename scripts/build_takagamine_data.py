@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """京都 今宮神社と鷹峯（光悦寺・源光庵・常照寺）のデータ（data/routes/takagamine.json）を書き出す。
 
-使い方: python3 scripts/build_higashiomi_data.py
+使い方: python3 scripts/build_takagamine_data.py
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
 - 写真は images/takagamine/<スポットのid>-<番号>.jpg を番号の順に全部使う
 """
@@ -56,16 +56,19 @@ S = [
          text=T("今宮神社（いまみやじんじゃ）とあぶり餅\n\n四条河原町から市バス46系統で「今宮神社前」へ（約35分・230円）。地下鉄の北大路駅からなら、北大路バスターミナルから204・205系統で「船岡山」へ、歩いて7分です。\n\n"
                 "朱色の楼門をくぐると、広い境内に本殿が建ちます。東門を出た参道では、「一和（一文字屋和輔）」と「かざりや」の2軒が向かい合っています。"
                 "竹ぐしに刺した小さなお餅を炭火であぶり、白みそのたれをからめた「あぶり餅」は、一和が平安時代（長保2年）から続く名物です。\n\n"
-                "お店の営業時間・休み・値段は、公式の情報が見つかりませんでした（行く前に確かめてください）。写真は2026年5月。\n\nおすすめ訪問時間：10:00〜10:45",
+                "2軒とも水曜休み（1日・15日・祝日が水曜日のときは翌日）で、12月16日〜31日もお休み。1人前600円（京都府観光連盟の案内）。写真は2026年5月。\n\nおすすめ訪問時間：10:00〜10:45",
                 "Imamiya Shrine and aburi-mochi\n\nFrom Shijo-Kawaramachi take city bus 46 to “Imamiya-jinja-mae” (about 35 min, ¥230). From Kitaoji subway station, take bus 204 or 205 from the bus terminal to “Funaokayama” and walk 7 minutes.\n\n"
                 "Through the vermilion gate is a broad precinct and the main hall. On the lane outside the east gate, two teahouses face each other: Ichiwa (Ichimonjiya Wasuke) and Kazariya. "
                 "Small bamboo-skewered rice cakes toasted over charcoal and coated in sweet white-miso sauce: Ichiwa has served aburi-mochi since the Heian period (the year 1000).\n\n"
-                "No official opening hours, closed days or prices could be found for the shops; check before you go. Photos from May 2026.\n\nRecommended visit time: 10:00–10:45"),
+                "Both shops close on Wednesdays (on Thursday instead when the 1st, the 15th or a holiday falls on a Wednesday) and from 16 to 31 December. ¥600 a portion (Kyoto Prefecture tourism guide). Photos from May 2026.\n\nRecommended visit time: 10:00–10:45"),
          gmaps=[gm("今宮神社", "Imamiya Shrine", 35.04560, 135.74213, "今宮神社"), gm("あぶり餅 かざりや", "Kazariya", 35.04521, 135.74279, "あぶり餅 かざりや")],
-         links=[link("official", "今宮神社 公式サイト", "Imamiya Shrine (official, Japanese)", "http://www.imamiyajinja.org/")],
+         links=[link("official", "今宮神社 公式サイト", "Imamiya Shrine (official, Japanese)", "http://www.imamiyajinja.org/"),
+                link("info", "あぶり餅 一和（京都府観光連盟）", "Ichiwa aburi-mochi (Kyoto Prefecture tourism, Japanese)", "https://www.kyoto-kankou.or.jp/info_search/680"),
+                link("info", "あぶり餅 かざりや（京都府観光連盟）", "Kazariya aburi-mochi (Kyoto Prefecture tourism, Japanese)", "https://www.kyoto-kankou.or.jp/info_search/681")],
          info=info([row("hours", "参拝自由。社務所 9:00〜17:00", "Open to visit; shrine office 9:00–17:00"),
-                    row("fee", "あぶり餅のお店の時間と値段は要確認", "Aburi-mochi shop hours and prices: please check")],
-                   tip=T("今宮神社と京都観光Naviで確認しました。", "Checked on the shrine website and Kyoto Kanko Navi."))),
+                    row("fee", "あぶり餅 1人前600円（かざりやは10:00〜17:00、一和の時間は要確認）", "Aburi-mochi ¥600 a portion (Kazariya 10:00–17:00; Ichiwa’s hours: please check)"),
+                    row("closed", "あぶり餅の2軒：水曜（1日・15日・祝日なら翌日）、12月16日〜31日", "Both aburi-mochi shops: Wednesdays (Thursday if the 1st, 15th or a holiday), and 16–31 December")],
+                   tip=T("今宮神社の公式サイトと、京都府観光連盟の案内（あぶり餅のお店）で確認しました。", "Checked on the shrine website and the Kyoto Prefecture tourism guide (aburi-mochi shops)."))),
     dict(id="koetsuji", name=T("光悦寺", "Koetsuji"), kind=T("寺", "Temple"),
          blurb=T("江戸時代の芸術家・本阿弥光悦が開いた芸術村の跡。もみじのトンネルの参道と、竹を組んだ「光悦垣」。",
                  "The site of the artists’ village founded by Hon’ami Koetsu: a tunnel of maples and the woven bamboo “Koetsu fence”."),
@@ -73,11 +76,11 @@ S = [
          text=T("光悦寺（こうえつじ）\n\n今宮神社から歩いて6分の「佛教大学前」から、市バス北1・6系統で「鷹峯源光庵前」へ（4分・230円）。バス停から歩いて約3分です。\n\n"
                 "江戸時代のはじめ、書や陶芸で知られる本阿弥光悦が徳川家康からこの地をもらい、職人たちと芸術村を開いた所です。"
                 "石畳の参道はもみじのトンネルになり、境内には竹を斜めに組んだ「光悦垣」や茶室が点在します。鷹ヶ峰・鷲ヶ峰の山並みが目の前です。\n\n"
-                "毎年11月10日〜13日は拝観できません。\n\nおすすめ訪問時間：11:15〜11:55",
+                "紅葉の見ごろは例年11月中旬〜下旬です（京都観光Naviの紅葉だよりの、となりの源光庵の目安）。毎年11月10日〜13日は拝観できません。\n\nおすすめ訪問時間：11:15〜11:55",
                 "Koetsuji\n\nFrom “Bukkyo-daigaku-mae”, 6 minutes’ walk from Imamiya Shrine, take city bus Kita-1 or 6 to “Takagamine-Genkoan-mae” (4 min, ¥230), then walk about 3 minutes.\n\n"
                 "In the early Edo period, Hon’ami Koetsu, famous for calligraphy and pottery, was given this land by Tokugawa Ieyasu and founded an artists’ village with craftsmen. "
                 "The stone-paved approach becomes a tunnel of maples; the grounds hold teahouses and the “Koetsu-gaki”, a fence of diagonally woven bamboo, with Takagamine’s hills right in front.\n\n"
-                "Closed to visitors every year from 10 to 13 November.\n\nRecommended visit time: 11:15–11:55"),
+                "The maples usually peak in mid to late November (Kyoto City’s autumn-leaf report, figure for Genkoan next door). Closed to visitors every year from 10 to 13 November.\n\nRecommended visit time: 11:15–11:55"),
          gmaps=[gm("光悦寺", "Koetsuji", 35.05352, 135.73019, "光悦寺 鷹峯")],
          links=[link("info", "光悦寺（京都観光Navi）", "Koetsuji (Kyoto Kanko Navi, Japanese)", "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=279")],
          info=info([row("hours", "8:00〜17:00（紅葉の時期は8:30から）", "8:00–17:00 (from 8:30 in autumn-leaf season)"),
@@ -90,10 +93,10 @@ S = [
          lat=35.05484, lng=135.73182,
          text=T("源光庵（げんこうあん）\n\n光悦寺から歩いて約3分。丸い窓のある山門をくぐると、本堂の縁側から苔と植え込みの庭が眺められます。"
                 "本堂の四角い「迷いの窓」と丸い「悟りの窓」は、人の一生と悟りの心を表すといわれ、紅葉の時期は窓の外が赤く染まります。\n\n"
-                "お寺の行事があるときは拝観を中止することがあります。11月14日〜12月6日は駐車場が使えません。\n\nおすすめ訪問時間：12:00〜12:40",
+                "本堂の天井は、伏見城の遺構の「血天井」です。\n\n本堂に上がるので、脱いだ靴を入れる袋を持っていきましょう（お寺のお願い）。お寺の行事があるときは拝観を中止することがあります。11月14日〜12月6日は駐車場が使えません。\n\nおすすめ訪問時間：12:00〜12:40",
                 "Genkoan\n\nAbout 3 minutes’ walk from Koetsuji. Through a gate with a round window, look out from the main hall’s veranda over a garden of moss and clipped shrubs. "
                 "The hall’s square “Window of Confusion” and round “Window of Enlightenment” are said to stand for human life and an enlightened mind; in autumn the view through them turns red.\n\n"
-                "Visits are suspended during temple events. The car park is closed from 14 November to 6 December.\n\nRecommended visit time: 12:00–12:40"),
+                "The hall’s ceiling is the “blood ceiling”, a remnant of Fushimi Castle.\n\nYou take your shoes off for the hall, so bring a bag for them (the temple asks visitors to). Visits are suspended during temple events. The car park is closed from 14 November to 6 December.\n\nRecommended visit time: 12:00–12:40"),
          gmaps=[gm("源光庵", "Genkoan", 35.05484, 135.73182, "源光庵 鷹峯")],
          links=[link("official", "源光庵 公式サイト", "Genkoan (official, Japanese)", "https://genkouan.or.jp/")],
          info=info([row("hours", "9:00〜17:00（受付は16:30まで）。行事の日は拝観中止のことあり", "9:00–17:00 (last entry 16:30); closed during temple events"),
@@ -105,10 +108,10 @@ S = [
          lat=35.05525, lng=135.73283,
          text=T("常照寺（じょうしょうじ）\n\n源光庵から歩いて2分。参道の先の朱色の山門は、江戸時代の名妓・吉野太夫が寄進したと伝わる「吉野門」です。"
                 "境内には丸い窓の茶室や、池のある庭があり、春は桜、秋はもみじがきれいです。\n\n"
-                "帰りは「鷹峯源光庵前」から市バス北1系統で北大路バスターミナルへ（18分・230円、20分おき）。6系統なら四条大宮・京都駅の方へ行けます。\n\nおすすめ訪問時間：12:45〜13:25",
+                "帰りは「鷹峯源光庵前」から市バス北1系統で北大路バスターミナルへ（18分・230円、20分おき）。6系統なら四条大宮・京都駅の方へ行けます。お昼は、バスで北大路に出てから駅のまわりで。今宮神社であぶり餅を食べておくと、13時半ごろまでもちます。\n\nおすすめ訪問時間：12:45〜13:25",
                 "Joshoji\n\nTwo minutes’ walk from Genkoan. The vermilion gate at the end of the approach is the “Yoshino-mon”, said to have been donated by Yoshino Tayu, a celebrated courtesan of the Edo period. "
                 "The grounds hold a teahouse with a round window and a pond garden: cherries in spring, maples in autumn.\n\n"
-                "Head home on city bus Kita-1 from “Takagamine-Genkoan-mae” to Kitaoji bus terminal (18 min, ¥230, every 20 min), or bus 6 towards Shijo-Omiya and Kyoto Station.\n\nRecommended visit time: 12:45–13:25"),
+                "Head home on city bus Kita-1 from “Takagamine-Genkoan-mae” to Kitaoji bus terminal (18 min, ¥230, every 20 min), or bus 6 towards Shijo-Omiya and Kyoto Station. Have lunch around Kitaoji after the bus; the aburi-mochi at Imamiya will keep you going until about 13:30.\n\nRecommended visit time: 12:45–13:25"),
          gmaps=[gm("常照寺", "Joshoji", 35.05525, 135.73283, "常照寺 鷹峯")],
          links=[link("official", "常照寺（お寺のサイト）", "Joshoji (temple site, Japanese)", "http://tsakae.justhpbs.jp/joshoji/toppage.html"), JR],
          info=info([row("hours", "8:30〜17:00", "8:30–17:00"),

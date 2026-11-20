@@ -69,7 +69,7 @@ window.TAKAGAMINE_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
       "h1": "千年続くあぶり餅と、芸術村の跡のもみじ。",
-      "lead": "京都の北、今宮神社の門前で平安時代から続くあぶり餅を食べたら、市バスで鷹峯へ。本阿弥光悦の芸術村の跡の光悦寺、丸窓の山門の源光庵、吉野太夫の赤門の常照寺と、歩いて数分ずつのお寺をもみじの中で回ります。",
+      "lead": "秋の紅葉のマップです（見ごろは例年11月中旬〜下旬。京都観光Naviの紅葉だより）。京都の北、今宮神社の門前で平安時代から続くあぶり餅を食べたら、市バスで鷹峯へ。本阿弥光悦の芸術村の跡の光悦寺、丸窓の山門の源光庵、吉野太夫の赤門の常照寺と、歩いて数分ずつのお寺を回ります。",
       "favLabel": "いちばんの見どころ",
       "favName": "光悦寺",
       "favText": "もみじのトンネルの参道。",
@@ -83,7 +83,8 @@ window.TAKAGAMINE_I18N = {
         "四条河原町から市バス46系統で今宮神社前へ約35分",
         "光悦寺は毎年11月10日〜13日は拝観できません",
         "鷹峯の3つのお寺は歩いて2〜3分ずつ",
-        "あぶり餅のお店の時間と値段は要確認"
+        "あぶり餅の2軒は水曜休み（1日・15日・祝日なら翌日）",
+        "源光庵は靴を入れる袋を持って。お昼はバスで北大路に出てから"
       ],
       "dayHead": "1日の流れ（目安）",
       "from": "",
@@ -105,7 +106,7 @@ window.TAKAGAMINE_I18N = {
           "text": "市バスで鷹峯へ。もみじの参道の光悦寺、丸窓の山門の源光庵、赤い吉野門の常照寺。",
           "note": "北大路へバスで18分",
           "photo": [
-            2,
+            3,
             0
           ]
         }
@@ -224,7 +225,7 @@ window.TAKAGAMINE_I18N = {
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
       "h1": "A thousand-year-old snack and maples at an artists’ village.",
-      "lead": "In the north of Kyoto, eat aburi-mochi outside Imamiya Shrine, a treat sold here since the Heian period, then take the city bus to Takagamine: Koetsuji on the site of Hon’ami Koetsu’s artists’ village, Genkoan with its round-windowed gate, and Joshoji with Yoshino Tayu’s red gate, a few minutes apart among the maples.",
+      "lead": "An autumn-leaf map (usual peak: mid to late November, per Kyoto City’s autumn-leaf report). In the north of Kyoto, eat aburi-mochi outside Imamiya Shrine, a treat sold here since the Heian period, then take the city bus to Takagamine: Koetsuji on the site of Hon’ami Koetsu’s artists’ village, Genkoan with its round-windowed gate, and Joshoji with Yoshino Tayu’s red gate, a few minutes apart.",
       "favLabel": "Highlight",
       "favName": "Koetsuji",
       "favText": "A tunnel of maples along the approach.",
@@ -238,7 +239,8 @@ window.TAKAGAMINE_I18N = {
         "About 35 min by city bus 46 from Shijo-Kawaramachi to Imamiya",
         "Koetsuji is closed 10–13 November every year",
         "The three Takagamine temples are 2–3 min apart on foot",
-        "Aburi-mochi shop hours and prices: please check"
+        "Both aburi-mochi shops close on Wednesdays (Thursday if the 1st, 15th or a holiday)",
+        "Bring a shoe bag for Genkoan; lunch around Kitaoji after the bus"
       ],
       "dayHead": "One day, roughly like this",
       "from": "From",
@@ -260,7 +262,7 @@ window.TAKAGAMINE_I18N = {
           "text": "By bus to Takagamine: Koetsuji’s maple approach, Genkoan’s round-windowed gate and Joshoji’s red Yoshino gate.",
           "note": "18 min by bus to Kitaoji",
           "photo": [
-            2,
+            3,
             0
           ]
         }

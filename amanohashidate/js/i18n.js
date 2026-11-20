@@ -93,7 +93,7 @@ window.AMANOHASHIDATE_I18N = {
         { time: '10:39', area: '天橋立駅（文珠）', title: 'フリーパスを買って、智恩寺へ', text: '駅の観光案内所で「天橋立・伊根フリーパス 1day」（3,550円）を。観光船乗り場の横の智恩寺にお参りします。', photo: ['station', 0] },
         { time: '11:00', area: '天橋立を渡る', title: '観光船か自転車で府中へ', text: '船ならカモメと一緒に12分。自転車なら松並木の中を15〜20分で、対岸の一の宮桟橋へ。', photo: ['crossing', 2] },
         { time: '11:15', area: '府中（傘松公園・籠神社）', title: '「昇龍観」と元伊勢 籠神社', text: '籠神社にお参りして、ケーブルカーで傘松公園へ。股のぞきで天橋立を逆さまに。展望レストランでお昼ごはん。', note: '伊根が先なら15:45ごろから', badge: '順番を選べます', photo: ['kasamatsu', 0] },
-        { time: '13:58', area: '伊根', title: '遊覧船と舟屋の町', text: 'バスで伊根へ。カモメといっしょに伊根湾を一周して、向井酒造に寄り、舟屋の町を歩きます。', note: '伊根が先なら12:37ごろから', badge: 'このマップのハイライト', photo: ['ineboat', 1] },
+        { time: '13:58', area: '伊根', title: '遊覧船と舟屋の町', text: 'バスで伊根へ。カモメといっしょに伊根湾を一周して、向井酒造に寄り、舟屋の町を歩きます。', note: '伊根が先なら11:53（土日祝は12:37）ごろから', badge: 'このマップのハイライト', photo: ['ineboat', 1] },
         { time: '16:45', area: '天橋立を渡って戻る', title: '観光船か自転車で天橋立駅側へ', text: '一の宮桟橋から16:45の観光船で戻ります（16:57着）。自転車なら夕方の松並木を走って。', photo: ['return', 0] },
         { time: '17:05', area: '天橋立駅 → 京都', title: '温泉でひと休みして、18:09の特急へ', text: '駅横の智恵の湯で足を休めたら、特急はしだて8号で京都へ（20:21着）。', note: '智恵の湯は火・水・木曜休み', photo: ['station2', 1] }
       ],
@@ -207,7 +207,7 @@ window.AMANOHASHIDATE_I18N = {
         { time: '10:39', area: 'Amanohashidate Station (Monju)', title: 'Get the day pass, visit Chion-ji', text: 'Buy the Amanohashidate & Ine Free Pass 1day (¥3,550) at the station’s tourist office, then visit Chion-ji next to the boat pier.', photo: ['station', 0] },
         { time: '11:00', area: 'Across the sandbar', title: 'Boat or bike to Fuchu', text: '12 minutes by boat with the seagulls, or 15–20 minutes by bike through the pines, to Ichinomiya pier.', photo: ['crossing', 2] },
         { time: '11:15', area: 'Fuchu (Kasamatsu Park & Kono Shrine)', title: '“Rising dragon” view & Kono Shrine', text: 'Visit Kono Shrine, then take the cable car up to Kasamatsu Park and look at Amanohashidate upside down. Lunch at the viewing restaurant.', note: 'From about 15:45 if you do Ine first', badge: 'You choose the order', photo: ['kasamatsu', 0] },
-        { time: '13:58', area: 'Ine', title: 'Boat ride & the boathouse village', text: 'Bus to Ine, loop around Ine Bay with the seagulls, stop at Mukai Sake Brewery and stroll among the funaya.', note: 'From about 12:37 if you do Ine first', badge: 'The highlight of this map', photo: ['ineboat', 1] },
+        { time: '13:58', area: 'Ine', title: 'Boat ride & the boathouse village', text: 'Bus to Ine, loop around Ine Bay with the seagulls, stop at Mukai Sake Brewery and stroll among the funaya.', note: 'Ine first: from 11:53 (weekends and holidays 12:37)', badge: 'The highlight of this map', photo: ['ineboat', 1] },
         { time: '16:45', area: 'Back across the sandbar', title: 'Boat or bike back to the station side', text: 'The 16:45 boat from Ichinomiya pier (arr. 16:57), or ride back through the evening pines.', photo: ['return', 0] },
         { time: '17:05', area: 'Amanohashidate → Kyoto', title: 'Hot spring, then the 18:09 express', text: 'Rest your legs at Chie-no-Yu next to the station, then the Hashidate No. 8 to Kyoto (arr. 20:21).', note: 'Hot spring closed Tue–Thu', photo: ['station2', 1] }
       ],

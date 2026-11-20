@@ -69,7 +69,7 @@ window.NISHIYAMA_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
       "h1": "お酒の神様と鈴虫の声、竹林の静かなお寺へ。",
-      "lead": "嵐山の南の山すそを歩く半日のルート。酒樽が並ぶ松尾大社から、鈴虫が鳴く鈴虫寺で説法を聞き、苔寺の門前でおそば。竹林と苔の地蔵院、秋の特別公開の浄住寺へ。観光客が少なく、静かに紅葉を楽しめます。",
+      "lead": "嵐山の南の山すそを歩く半日のルート。酒樽が並ぶ松尾大社から、鈴虫が鳴く鈴虫寺で説法を聞き、苔寺の門前でおそば。竹林と苔の地蔵院、秋の特別公開の浄住寺へ。紅葉は例年、浄住寺が11月下旬、地蔵院が11月下旬〜12月上旬です（京都観光Naviの紅葉だより）。",
       "favLabel": "いちばんの見どころ",
       "favName": "地蔵院（竹の寺）",
       "favText": "竹林の参道と、ハートの形の窓。",
@@ -80,8 +80,8 @@ window.NISHIYAMA_I18N = {
       "whoHead": "こんな人におすすめ",
       "who": [
         "京都の人ごみを離れて、静かなお寺を歩きたい人に",
-        "京都河原町から阪急で約30分（240円）",
-        "地蔵院は木曜・金曜が休み（11/21〜12/10は無休）",
+        "京都河原町から阪急で約20分（240円）",
+        "地蔵院は木曜・金曜が休み（寺宝特別拝観の10/31〜12/13は無休。その間、ハートの窓は見られません）",
         "浄住寺はふだん非公開。2026年秋は11/21〜12/13",
         "苔寺（西芳寺）は事前申し込みが必要"
       ],
@@ -115,19 +115,19 @@ window.NISHIYAMA_I18N = {
           "text": "竹の寺・地蔵院の参道と庭、特別公開の浄住寺を歩いて、上桂駅へ。",
           "note": "京都河原町へ約20分",
           "photo": [
-            4,
+            5,
             0
           ]
         }
       ],
       "timeSuffix": "〜",
       "dealsHead": "交通費のめやす",
-      "dealsLead": "電車は京都河原町→松尾大社が240円、上桂→京都河原町が200円。拝観料（鈴虫寺500円・地蔵院500円〜・浄住寺1,000円など）は別です。",
+      "dealsLead": "電車は京都河原町→松尾大社が240円、上桂→京都河原町が200円。拝観料（鈴虫寺500円・地蔵院500〜1,000円・浄住寺1,000円など）は別です。",
       "deals": [
         {
           "name": "阪急（京都河原町→松尾大社）",
           "price": "240円",
-          "text": "桂で嵐山線に乗り換え、約30分。帰りは上桂→京都河原町 200円。",
+          "text": "桂で嵐山線に乗り換え、約20分。帰りは上桂→京都河原町 200円。",
           "url": "https://transit.yahoo.co.jp/"
         },
         {
@@ -234,7 +234,7 @@ window.NISHIYAMA_I18N = {
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
       "h1": "The god of sake, singing crickets and quiet bamboo temples.",
-      "lead": "A half-day walk along the hills south of Arashiyama: Matsunoo Taisha with its wall of sake barrels, a talk among singing crickets at Suzumushi-dera, soba by the Moss Temple gate, the bamboo and moss of Jizoin, and Jojuji’s autumn opening. Few tourists, quiet autumn colours.",
+      "lead": "A half-day walk along the hills south of Arashiyama: Matsunoo Taisha with its wall of sake barrels, a talk among singing crickets at Suzumushi-dera, soba by the Moss Temple gate, the bamboo and moss of Jizoin, and Jojuji’s autumn opening. The maples usually peak in late November at Jojuji and from late November to early December at Jizoin (Kyoto City’s autumn-leaf report).",
       "favLabel": "Highlight",
       "favName": "Jizoin (the Bamboo Temple)",
       "favText": "A bamboo-lined approach and a heart-shaped window.",
@@ -245,8 +245,8 @@ window.NISHIYAMA_I18N = {
       "whoHead": "Who it’s for",
       "who": [
         "For quiet temples away from Kyoto’s crowds",
-        "About 30 min from Kyoto-Kawaramachi by Hankyu (¥240)",
-        "Jizoin closes Thursdays and Fridays (open daily 21 Nov – 10 Dec)",
+        "About 20 min from Kyoto-Kawaramachi by Hankyu (¥240)",
+        "Jizoin closes Thursdays and Fridays (open daily during the treasure display, 31 Oct – 13 Dec, when the heart window can’t be seen)",
         "Jojuji is usually closed; autumn 2026 opening 21 Nov – 13 Dec",
         "Saihoji (the Moss Temple) needs advance application"
       ],
@@ -280,19 +280,19 @@ window.NISHIYAMA_I18N = {
           "text": "Jizoin’s bamboo approach and garden, Jojuji’s special opening, then Kami-Katsura Station.",
           "note": "About 20 min to Kyoto-Kawaramachi",
           "photo": [
-            4,
+            5,
             0
           ]
         }
       ],
       "timeSuffix": "",
       "dealsHead": "Fares",
-      "dealsLead": "Trains: Kyoto-Kawaramachi → Matsuo-taisha ¥240, Kami-Katsura → Kyoto-Kawaramachi ¥200. Admission (Suzumushi-dera ¥500, Jizoin from ¥500, Jojuji ¥1,000, etc.) is extra.",
+      "dealsLead": "Trains: Kyoto-Kawaramachi → Matsuo-taisha ¥240, Kami-Katsura → Kyoto-Kawaramachi ¥200. Admission (Suzumushi-dera ¥500, Jizoin ¥500–1,000, Jojuji ¥1,000, etc.) is extra.",
       "deals": [
         {
           "name": "Hankyu (Kyoto-Kawaramachi → Matsuo-taisha)",
           "price": "¥240",
-          "text": "Change to the Arashiyama line at Katsura, about 30 min. Back: Kami-Katsura → Kyoto-Kawaramachi ¥200.",
+          "text": "Change to the Arashiyama line at Katsura, about 20 min. Back: Kami-Katsura → Kyoto-Kawaramachi ¥200.",
           "url": "https://transit.yahoo.co.jp/"
         },
         {

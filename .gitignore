@@ -6,3 +6,7 @@ _source/
 .claude/
 __pycache__/
 .git.nosync/
+# 作業メモ（公開しない。このMacの中だけに置く）
+CLAUDE.md
+# 作業用の道具（公開しない）
+_tools/

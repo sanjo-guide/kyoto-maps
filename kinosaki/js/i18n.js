@@ -16,7 +16,7 @@ window.KINOSAKI_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '外湯は6か所（駅前のさとの湯は休館中）。1日で回るなら3〜4か所がちょうどいいので、「選んで回る」で竹田城跡と行きたい外湯を選んでください。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '外湯は6か所（駅前のさとの湯は休館中）。1日で回るなら3〜4か所がちょうどいいので、「選んで回る」で竹田城跡と行きたい外湯を選んでください。12番のロープウェイは上りの最終が16:50です。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -30,12 +30,13 @@ window.KINOSAKI_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
-    credit: '写真・文章：Toshi<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
+    credit: '写真・文章：Toshi（温泉寺とロープウェイの写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     photoBy: '写真：',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
     fee: '料金',
     train: '電車',
+    bus: 'バス',
     closed: '休み',
     cash: '現金を用意してください',
     checked: '{d}に公式サイトなどで確認しました。変わることがあるので、行く前に公式サイトも見てください。',
@@ -82,17 +83,18 @@ window.KINOSAKI_I18N = {
         '外湯は1日券「ゆめぱ」（1,500円）でいくつでも',
         '外湯はどこもタトゥーOK',
         '竹田城跡は1月4日〜2月末は閉山。冬は雪の城崎も',
+        '町を上から見るなら、いちばん奥のロープウェイで大師山へ（上りの最終16:50、第2・第4木曜休み）',
         '帰りは18:53発で京都21:20着（早めなら16:31発→19:07着）'
       ],
       dayHead: '1日の流れ（目安）',
       from: '',
       day: [
         { time: '7:32', area: '京都駅', title: '朝の特急で出発', text: '特急きのさき1号に乗ります。竹田城跡に寄る日は和田山で播但線に乗り換えて竹田へ。', photo: [1, 0] },
-        { time: '9:40', area: '竹田城跡', title: '天空の城の石垣を歩く', text: '天空バスかタクシーで山の中腹へ。石垣の上から但馬の山々を見渡したら、寺町通りを歩いてお昼に。', badge: '行きたい人だけ', photo: [2, 0] },
-        { time: '14:35', area: '城崎温泉駅 → 大谿川', title: '柳並木の温泉街へ', text: '駅前の足湯から、駅に近い地蔵湯へ。柳並木と石の太鼓橋が続く大谿川沿いを歩きます。', photo: [6, 0] },
+        { time: '10:05', area: '竹田城跡', title: '天空の城の石垣を歩く', text: '竹田駅10:05発の天空バスかタクシーで山の中腹へ。石垣の上から但馬の山々を見渡したら、寺町通りを歩いてお昼に。', badge: '行きたい人だけ', photo: [2, 0] },
+        { time: '14:35', area: '城崎温泉駅 → 大谿川', title: '柳並木の温泉街へ', text: '駅を出て、駅に近い地蔵湯へ。柳並木と石の太鼓橋が続く大谿川沿いを歩きます。', photo: [6, 1] },
         { time: '15:30', area: '柳湯 → 御所の湯', title: '外湯めぐり', text: '柳湯、洞窟風呂の一の湯、池の上に建つような御所の湯へ。行きたい外湯を選んで回ります。', badge: '好きな外湯を選ぶ', photo: [8, 0] },
         { time: '17:25', area: 'まんだら湯 → 鴻の湯', title: '温泉街の奥の外湯', text: '緑の屋根のまんだら湯と、いちばん奥の鴻の湯。駅までは歩いて15分ほどです。', photo: [10, 0] },
-        { time: '18:10', area: '夜の温泉街 → 京都へ', title: '灯りの川沿いを歩いて帰る', text: '湯上がりに灯りのともる川沿いを散歩して、18:53発の特急で京都へ。', note: '夏は花火の日も（日程は要確認）', photo: [12, 0] }
+        { time: '18:10', area: '夜の温泉街 → 京都へ', title: '灯りの川沿いを歩いて帰る', text: '湯上がりに灯りのともる川沿いを散歩して、18:53発の特急で京都へ。', note: '夏は花火の日も（日程は要確認）', photo: [13, 0] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費・料金のめやす',
@@ -100,9 +102,10 @@ window.KINOSAKI_I18N = {
       deals: [
         { name: '特急（京都↔城崎温泉）', price: '片道5,370円', text: '乗車券2,640円＋特急料金2,730円。行きは7:32発のきのさき1号、帰りは18:53発（福知山で乗り換え）か16:31発（乗り換えなし）。', url: 'https://www.jr-odekake.net/' },
         { name: '外湯めぐり1日券「ゆめぱ」', price: '1,500円', text: 'どの外湯でも買えて、その日は外湯にいくつでも入れます。城崎の宿に泊まる人は宿でもらえることが多いです。', url: 'https://kinosaki-spa.gr.jp/' },
-        { name: '竹田城跡', price: '500円', text: '高校生以上。中学生以下は無料。1月4日〜2月末は冬の閉山で入れません。', url: 'https://www.city.asago.hyogo.jp/site/takeda/' }
+        { name: '竹田城跡', price: '500円', text: '高校生以上。中学生以下は無料。1月4日〜2月末は冬の閉山で入れません。', url: 'https://www.city.asago.hyogo.jp/site/takeda/' },
+        { name: '天空バス（竹田駅↔竹田城跡）', price: '片道300円', text: '1日フリー乗車券は500円。現金だけです。9〜11月は竹田駅10:05発、帰りは竹田城跡12:15発か12:50発。12月以降の時刻は全但バスのサイトで確かめてください。', url: 'https://www.zentanbus.co.jp/local_bus/tenkubus/' }
       ],
-      dealsNote: '大人の運賃・料金です。2026年11月20日に確認しました（電車は乗換案内、外湯は城崎温泉観光協会、竹田城跡は朝来市の公式ホームページ）。天空バスの時刻と運賃は全但バスのサイトで確かめてください。',
+      dealsNote: '大人の運賃・料金です。2026年11月20日に確認しました（電車は乗換案内、外湯は城崎温泉観光協会、竹田城跡は朝来市の公式ホームページ、天空バスは全但バス）。',
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
       how: [
@@ -127,7 +130,7 @@ window.KINOSAKI_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'There are six bathhouses open (Sato-no-yu by the station is closed). Three or four in a day is about right, so use “Choose stops” to pick Takeda Castle and the baths you like. The dotted line shows the order, not the actual path.',
+    listNote: 'There are six bathhouses open (Sato-no-yu by the station is closed). Three or four in a day is about right, so use “Choose stops” to pick Takeda Castle and the baths you like. The last ropeway up (No. 12) is at 16:50. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -141,12 +144,13 @@ window.KINOSAKI_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
-    credit: 'Photos &amp; text: Toshi<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
+    credit: 'Photos &amp; text: Toshi (the Onsen-ji and ropeway photos are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     photoBy: 'Photo: ',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
     fee: 'Fee',
     train: 'Train',
+    bus: 'Bus',
     closed: 'Closed',
     cash: 'Bring cash',
     checked: 'Checked on official websites and similar sources on {d}. Details can change, so please check before you go.',
@@ -193,17 +197,18 @@ window.KINOSAKI_I18N = {
         'The “Yumepa” day pass (¥1,500) covers as many baths as you like',
         'Every bathhouse is tattoo-friendly',
         'Takeda Castle is closed 4 Jan – end of Feb; winter brings snowy Kinosaki',
+        'For a view over the town, take the ropeway at the far end up Mt. Daishi (last car up 16:50; closed 2nd and 4th Thursdays)',
         'Back on the 18:53, arriving Kyoto 21:20 (or the 16:31, arriving 19:07)'
       ],
       dayHead: 'One day, roughly like this',
       from: 'From',
       day: [
         { time: '7:32', area: 'Kyoto Station', title: 'Off on the morning express', text: 'Board the Kinosaki No. 1. For Takeda Castle, change at Wadayama to the Bantan Line.', photo: [1, 0] },
-        { time: '9:40', area: 'Takeda Castle', title: 'Walls of the castle in the sky', text: 'Take the Tenku Bus or a taxi halfway up. After the view over the Tajima mountains, stroll Teramachi-dori and have lunch.', badge: 'Optional', photo: [2, 0] },
-        { time: '14:35', area: 'Kinosaki Station → Otani River', title: 'Into the willow-lined town', text: 'From the foot bath outside the station to nearby Jizo-yu, then along the Otani River with its willows and arched stone bridges.', photo: [6, 0] },
+        { time: '10:05', area: 'Takeda Castle', title: 'Walls of the castle in the sky', text: 'Take the 10:05 Tenku Bus or a taxi halfway up. After the view over the Tajima mountains, stroll Teramachi-dori and have lunch.', badge: 'Optional', photo: [2, 0] },
+        { time: '14:35', area: 'Kinosaki Station → Otani River', title: 'Into the willow-lined town', text: 'From the station to nearby Jizo-yu, then along the Otani River with its willows and arched stone bridges.', photo: [6, 1] },
         { time: '15:30', area: 'Yanagi-yu → Gosho-no-yu', title: 'Bathhouse hopping', text: 'Yanagi-yu, Ichi-no-yu with its cave bath, and Gosho-no-yu over its pond. Choose the baths you like.', badge: 'Pick your baths', photo: [8, 0] },
         { time: '17:25', area: 'Mandara-yu → Kou-no-yu', title: 'The baths at the far end', text: 'Green-roofed Mandara-yu and Kou-no-yu at the very end of town, about 15 min on foot from the station.', photo: [10, 0] },
-        { time: '18:10', area: 'Evening → back to Kyoto', title: 'A lantern-lit walk to the station', text: 'Stroll the lit-up river after your bath, then take the 18:53 express back to Kyoto.', note: 'Fireworks on some summer nights (check dates)', photo: [12, 0] }
+        { time: '18:10', area: 'Evening → back to Kyoto', title: 'A lantern-lit walk to the station', text: 'Stroll the lit-up river after your bath, then take the 18:53 express back to Kyoto.', note: 'Fireworks on some summer nights (check dates)', photo: [13, 0] }
       ],
       timeSuffix: '',
       dealsHead: 'Fares and fees',
@@ -211,9 +216,10 @@ window.KINOSAKI_I18N = {
       deals: [
         { name: 'Limited express (Kyoto ↔ Kinosaki Onsen)', price: '¥5,370 one way', text: 'Fare ¥2,640 + express charge ¥2,730. Out on the 7:32 Kinosaki No. 1; back on the 18:53 (change at Fukuchiyama) or the 16:31 (direct).', url: 'https://www.jr-odekake.net/' },
         { name: '“Yumepa” onsen day pass', price: '¥1,500', text: 'Sold at every bathhouse; use as many baths as you like that day. Guests at Kinosaki inns usually get one at check-in.', url: 'https://visitkinosaki.com/about-kinosaki/the-7-mystic-onsen/' },
-        { name: 'Takeda Castle Ruins', price: '¥500', text: 'High school and up; junior high and under free. Closed for winter 4 Jan – end of Feb.', url: 'https://www.city.asago.hyogo.jp/site/takeda/' }
+        { name: 'Takeda Castle Ruins', price: '¥500', text: 'High school and up; junior high and under free. Closed for winter 4 Jan – end of Feb.', url: 'https://www.city.asago.hyogo.jp/site/takeda/' },
+        { name: 'Tenku Bus (Takeda Station ↔ castle)', price: '¥300 one way', text: '1-day pass ¥500. Cash only. Sep–Nov: leaves Takeda Station at 10:05; back from the castle stop at 12:15 or 12:50. From December, check the times on the Zentan Bus website.', url: 'https://www.zentanbus.co.jp/local_bus/tenkubus/' }
       ],
-      dealsNote: 'Adult prices, checked on Nov 20, 2026 (trains on a route planner, baths with the Kinosaki Onsen Tourism Association, the castle on Asago City’s official site). Check Tenku Bus times and fares on the Zentan Bus website.',
+      dealsNote: 'Adult prices, checked on Nov 20, 2026 (trains on a route planner, baths with the Kinosaki Onsen Tourism Association, the castle on Asago City’s official site, the Tenku Bus with Zentan Bus).',
       dealsMore: 'See official site',
       howHead: 'How to use this map',
       how: [

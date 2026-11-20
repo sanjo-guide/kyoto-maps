@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """大津 三井寺と琵琶湖疏水の夜桜のデータ（data/routes/miidera.json）を書き出す。
 
-使い方: python3 scripts/build_higashiomi_data.py
+使い方: python3 scripts/build_miidera_data.py
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
 - 写真は images/miidera/<スポットのid>-<番号>.jpg を番号の順に全部使う
 """
@@ -55,8 +55,8 @@ SEASON = {"from": None, "to": None, "url": "https://miidera1200.jp/2026lightup-s
                     "The Miidera and canal cherry illuminations run for only about three weeks in spring (25 Mar – 12 Apr in 2026). Check each year’s dates with Miidera and Otsu City.")}
 S = [
     dict(id="sosui", name=T("琵琶湖疏水の夜桜", "Cherries on the Lake Biwa Canal at night"), kind=T("桜並木（無料）", "Cherry avenue (free)"),
-         blurb=T("京阪三井寺駅のすぐそば。明治の琵琶湖疏水の両岸に桜が続き、春の夜は水面に映る光の帯になります。",
-                 "Right by Keihan Miidera Station: cherries line both banks of the Meiji-era Lake Biwa Canal, a ribbon of light on the water on spring nights."),
+         blurb=T("京阪三井寺駅のすぐそば。疏水の両岸の桜がライトアップされて、水面に映ります（無料）。",
+                 "Right by Keihan Miidera Station: the cherries on both banks of the canal are lit up and reflected in the water. Free."),
          lat=35.01212, lng=135.85744,
          text=T("琵琶湖疏水（びわこそすい）の夜桜\n\n三条京阪から地下鉄・京阪京津線で、びわ湖浜大津で石山坂本線に乗り換えて三井寺駅へ（約30分・520円）。京都駅からならJR湖西線で大津京、京阪に乗り換えて約26分（440円）。\n\n"
                 "駅を出てすぐ、明治時代に琵琶湖の水を京都へ引いた琵琶湖疏水の取り入れ口です。大津閘門から第一トンネルまでの両岸に約100本の桜が並び、春の夜はライトアップされた桜が水面に映ります（観覧は無料）。"
@@ -85,8 +85,8 @@ S = [
                     row("hours", "昼の拝観 9:00〜16:30（受付16:00まで）、年中無休", "Daytime 9:00–16:30 (last entry 16:00), open daily")],
                    tip=T("三井寺の公式サイトで確認しました。", "Checked on the Miidera website."))),
     dict(id="kondo", name=T("金堂と三井の晩鐘", "Main hall & the Evening Bell of Mii"), kind=T("国宝・桜", "National Treasure & cherries"),
-         blurb=T("国宝の金堂のまわりは、照らされた桜の海。近江八景「三井の晩鐘」の鐘楼や、弁慶の引摺り鐘も。",
-                 "A sea of lit cherries around the National Treasure main hall, with the belfry of the “Evening Bell of Mii” and Benkei’s dragged bell."),
+         blurb=T("国宝の金堂のまわりの桜が、ピンクや紫の光に照らされます。「三井の晩鐘」の鐘楼もここ。",
+                 "The cherries around the National Treasure main hall are lit in pink and violet. The belfry of the “Evening Bell of Mii” is here too."),
          lat=35.01339, lng=135.85286,
          text=T("金堂（こんどう）と三井の晩鐘（みいのばんしょう）\n\n大門から参道を進むと、桃山時代に建てられた国宝の金堂。まわりの桜がピンクや紫の光に照らされ、昼とはまったく違う景色です。"
                 "金堂の南東の鐘楼は、近江八景のひとつ「三井の晩鐘」。金堂の西の霊鐘堂には、弁慶が比叡山へ引きずり上げたという伝説の「弁慶の引摺り鐘」が置かれています。\n\nおすすめ訪問時間：18:35〜19:05",
@@ -107,9 +107,9 @@ S = [
          blurb=T("境内の南の高台。観音堂のまわりから、大津の町と琵琶湖の夜景が見下ろせます。",
                  "On the high ground at the south of the precinct: from around the Kannon hall, look down on the lights of Otsu and Lake Biwa."),
          lat=35.01038, lng=135.85493,
-         text=T("観音堂（かんのんどう）と大津の夜景\n\n三重塔から南東へ歩いて石段を上ると、西国三十三所の第14番札所の観音堂。高台にあり、大津の町と琵琶湖が見下ろせます。写真はライトアップの夜に撮ったもの。\n\n"
+         text=T("観音堂（かんのんどう）と大津の夜景\n\n三重塔から南東へ歩いて石段を上ると、西国三十三所の第14番札所の観音堂。高台にあり、大津の町と琵琶湖が見下ろせます。1枚目の写真は、観音堂の広場より一段高いところから撮ったもの。お堂の屋根ごしに町のあかりが見えます。\n\n"
                 "帰りは三井寺駅まで歩いて15分ほど。三井寺20:11発で三条京阪20:47着（520円）、または京阪膳所でJRに乗り換えて京都20:41着（440円）。もっとゆっくり見るなら、夜の受付は21:00まで、拝観は21:30までです。\n\nおすすめ訪問時間：19:20〜19:50",
-                "Kannon hall & the lights of Otsu\n\nWalk south-east from the pagoda and climb the steps to the Kannon hall, No. 14 of the Saigoku 33-temple pilgrimage. From this high ground you look down over Otsu and Lake Biwa. The photos were taken on illumination nights.\n\n"
+                "Kannon hall & the lights of Otsu\n\nWalk south-east from the pagoda and climb the steps to the Kannon hall, No. 14 of the Saigoku 33-temple pilgrimage. From this high ground you look down over Otsu and Lake Biwa. The first photo was taken from a level above the hall’s forecourt, looking over its roofs to the city lights.\n\n"
                 "Miidera Station is about 15 minutes’ walk. The 20:11 train reaches Sanjo Keihan at 20:47 (¥520), or change to JR at Keihan-Zeze for Kyoto at 20:41 (¥440). To stay longer: last entry is 21:00 and the grounds close at 21:30.\n\nRecommended visit time: 19:20–19:50"),
          gmaps=[gm("三井寺 観音堂", "Miidera Kannon hall", 35.01038, 135.85493, "三井寺 観音堂")],
          links=[LIGHT, JR],

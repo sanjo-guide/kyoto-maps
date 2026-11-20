@@ -72,7 +72,7 @@ window.KINKAKUJI_I18N = {
       lead: '大徳寺の石畳の道から歩きはじめて、池に映る金閣寺、白砂に石を置いた龍安寺の石庭、五重塔と御室桜の仁和寺へ。嵐電に乗って、夜桜の平野神社と天神さんの北野天満宮まで。季節ごとに見どころが変わるルートです。',
       favLabel: 'いちばんの見どころ',
       favName: '金閣寺',
-      favText: '池に映る金色の舎利殿。雪の日は特別な景色に。',
+      favText: '池に映る金色の舎利殿。写真は雪の朝（2026年2月）。',
       favPhoto: [2, 0],
       whoHead: 'こんな人におすすめ',
       who: [
@@ -88,8 +88,8 @@ window.KINKAKUJI_I18N = {
       day: [
         { time: '9:00', area: '大徳寺', title: '朝の禅寺を歩く', text: '土塀と松の石畳の道に、塔頭が並ぶ大徳寺。朱色の三門も見ておきましょう。', badge: '時間があれば', photo: [1, 0] },
         { time: '10:10', area: '金閣寺', title: '池に映る金閣', text: '鏡湖池のほとりから金閣を眺めて、裏山の庭をぐるっと一周。', photo: [2, 1] },
-        { time: '11:20', area: '龍安寺 → 仁和寺', title: '石庭と、五重塔の御室', text: 'きぬかけの路を歩いて龍安寺の石庭へ。仁和寺では二王門をくぐって五重塔へ。', note: '御室桜は4月中ごろ', photo: [3, 0] },
-        { time: '14:00', area: '平野神社 → 北野天満宮', title: '桜の神社と天神さん', text: '嵐電で北野白梅町へ。桜の平野神社から、梅ともみじの北野天満宮へ。', note: '秋はもみじ苑のライトアップも', photo: [6, 4] }
+        { time: '11:20', area: '龍安寺 → 仁和寺', title: '石庭と、五重塔の御室', text: 'きぬかけの路を歩いて龍安寺の石庭へ。仁和寺では二王門をくぐって五重塔へ。お昼ごはんは、このあたりで。', note: '御室桜は4月中ごろ', photo: [3, 0] },
+        { time: '14:00', area: '平野神社 → 北野天満宮', title: '桜の神社と天神さん', text: '嵐電で北野白梅町へ。桜の平野神社から、梅ともみじの北野天満宮へ。', note: '秋はもみじ苑のライトアップも', photo: [6, 5] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費・拝観料のめやす',
@@ -181,7 +181,7 @@ window.KINKAKUJI_I18N = {
       lead: 'Start on the stone paths of Daitoku-ji, then on to Kinkaku-ji mirrored in its pond, the rock garden of Ryoan-ji, and the pagoda and Omuro cherries of Ninna-ji. Ride the Randen tram to Hirano Shrine, famous for night cherries, and Kitano Tenmangu. The highlights change with every season.',
       favLabel: 'Don’t miss',
       favName: 'Kinkaku-ji',
-      favText: 'The golden pavilion reflected in its pond, magical on a snowy day.',
+      favText: 'The golden pavilion reflected in its pond, here on a snowy morning (February 2026).',
       favPhoto: [2, 0],
       whoHead: 'Who it’s for',
       who: [
@@ -197,8 +197,8 @@ window.KINKAKUJI_I18N = {
       day: [
         { time: '9:00', area: 'Daitoku-ji', title: 'A Zen temple in the morning', text: 'Walk the pine-shaded stone paths between walled sub-temples, and see the vermilion Sanmon gate.', badge: 'If you have time', photo: [1, 0] },
         { time: '10:10', area: 'Kinkaku-ji', title: 'The golden pavilion on its pond', text: 'View the pavilion from the Kyoko-chi pond, then loop through the hillside garden.', photo: [2, 1] },
-        { time: '11:20', area: 'Ryoan-ji → Ninna-ji', title: 'The rock garden and the Omuro pagoda', text: 'Walk the Kinukake-no-michi to Ryoan-ji’s rock garden, then through Ninna-ji’s great gate to its pagoda.', note: 'Omuro cherries peak in mid-April', photo: [3, 0] },
-        { time: '14:00', area: 'Hirano → Kitano Tenmangu', title: 'A cherry shrine and Tenjin-san', text: 'Take the Randen tram to Kitano-Hakubaicho, then from Hirano Shrine’s cherries to Kitano Tenmangu’s plums and maples.', note: 'Maple light-ups in autumn', photo: [6, 4] }
+        { time: '11:20', area: 'Ryoan-ji → Ninna-ji', title: 'The rock garden and the Omuro pagoda', text: 'Walk the Kinukake-no-michi to Ryoan-ji’s rock garden, then through Ninna-ji’s great gate to its pagoda. Have lunch somewhere along the way.', note: 'Omuro cherries peak in mid-April', photo: [3, 0] },
+        { time: '14:00', area: 'Hirano → Kitano Tenmangu', title: 'A cherry shrine and Tenjin-san', text: 'Take the Randen tram to Kitano-Hakubaicho, then from Hirano Shrine’s cherries to Kitano Tenmangu’s plums and maples.', note: 'Maple light-ups in autumn', photo: [6, 5] }
       ],
       timeSuffix: '',
       dealsHead: 'Fares and fees',

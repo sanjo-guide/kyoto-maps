@@ -95,7 +95,7 @@ window.KOBE_I18N = {
           "text": "地下鉄で新神戸へ。雌滝・鼓ヶ滝・夫婦滝・雄滝と上って、みはらし展望台から神戸の街を一望。",
           "photo": [
             2,
-            0
+            1
           ]
         },
         {
@@ -115,7 +115,7 @@ window.KOBE_I18N = {
           "text": "北野坂を下って三宮へ。阪急三宮駅のすぐ横の七兵衛で、ボリュームたっぷりのかつ丼を。",
           "photo": [
             5,
-            1
+            0
           ]
         },
         {
@@ -270,7 +270,7 @@ window.KOBE_I18N = {
           "text": "Subway to Shin-Kobe, then up past four falls to the Miharashi lookout over the city.",
           "photo": [
             2,
-            0
+            1
           ]
         },
         {
@@ -290,7 +290,7 @@ window.KOBE_I18N = {
           "text": "Down Kitano-zaka to Sannomiya for a hearty katsudon at Hichibei by Hankyu Sannomiya.",
           "photo": [
             5,
-            1
+            0
           ]
         },
         {

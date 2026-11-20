@@ -1,6 +1,6 @@
 {
  "id": "kinosaki",
- "_note": "京都から日帰り 城崎温泉（＋竹田城跡）のルート（kinosaki/ のページ専用。形は eizan-line.json と同じ）。京都7:32の特急きのさき1号で出発し、竹田城跡に寄る日は和田山で播但線に乗り換えて竹田へ、城跡と寺町通りを歩いてから城崎温泉へ。城崎では外湯（地蔵湯・柳湯・一の湯・御所の湯・まんだら湯・鴻の湯）と大谿川の柳並木を回り、18:53の特急で京都へ帰る。外湯と竹田城跡は行きたい所を選ぶので「選んで回る」で開く（plan.defaultMode）。写真は Toshi の写真ライブラリから選んだもの（城崎・竹田の2023〜2026年の写真、横写真約1,300枚を全部見て、1か所10枚以内・Nikon D7000 を含む。長辺1600px・位置情報なし）。京都駅の写真は城崎温泉駅で撮った特急の車両。外湯は建物の外の写真だけ。info.checked は事実情報を確認した日（外湯は城崎温泉観光協会、竹田城跡は朝来市の公式ホームページ、電車の時刻と運賃は乗換案内）。focus は地図を開いたときに映す範囲（京都と竹田は離れているので入れない）。このファイルは scripts/build_kinosaki_data.py で作る。",
+ "_note": "京都から日帰り 城崎温泉（＋竹田城跡）のルート（kinosaki/ のページ専用。形は eizan-line.json と同じ）。京都7:32の特急きのさき1号で出発し、竹田城跡に寄る日は和田山で播但線に乗り換えて竹田へ、城跡と寺町通りを歩いてから城崎温泉へ。城崎では外湯（地蔵湯・柳湯・一の湯・御所の湯・まんだら湯・鴻の湯）と大谿川の柳並木を回り、18:53の特急で京都へ帰る。外湯と竹田城跡は行きたい所を選ぶので「選んで回る」で開く（plan.defaultMode）。写真は Toshi の写真ライブラリから選んだもの（城崎・竹田の2023〜2026年の写真、横写真約1,300枚を全部見て、1か所10枚以内・Nikon D7000 を含む。長辺1600px・位置情報なし）。京都駅の写真は城崎温泉駅で撮った特急の車両。外湯は建物の外の写真だけ。温泉寺とロープウェイ（2026-11-21 追加）は Toshi がまだ行っていない場所で、写真は Wikimedia Commons（photos の要素が {file, credit}）、文章は公式サイトの情報だけ。info.checked は事実情報を確認した日（外湯は城崎温泉観光協会、竹田城跡は朝来市の公式ホームページ、天空バスは全但バスのサイト（2026年9〜11月のダイヤ）、電車の時刻と運賃は乗換案内）。focus は地図を開いたときに映す範囲（京都と竹田は離れているので入れない）。このファイルは scripts/build_kinosaki_data.py で作る。",
  "sections": [
   {
    "first": 1,
@@ -29,13 +29,25 @@
   },
   {
    "first": 12,
-   "last": 13,
+   "last": 12,
+   "area": {
+    "ja": "温泉寺・大師山",
+    "en": "Onsen-ji & Mt. Daishi"
+   },
+   "title": {
+    "ja": "ロープウェイで温泉街の上へ",
+    "en": "Up the ropeway above the town"
+   }
+  },
+  {
+   "first": 13,
+   "last": 14,
    "day": 5
   }
  ],
  "focus": {
   "first": 4,
-  "last": 13
+  "last": 14
  },
  "plan": {
   "_note": "「選んで回る」の設定。京都駅・城崎温泉駅（行きと帰り）はいつも入る。竹田駅と寺町通りは竹田城跡を選ぶと入る。",
@@ -49,7 +61,8 @@
    9,
    10,
    11,
-   12
+   12,
+   13
   ],
   "auto": {
    "1": {
@@ -63,7 +76,7 @@
    "4": {
     "always": true
    },
-   "13": {
+   "14": {
     "always": true
    }
   },
@@ -76,8 +89,8 @@
      ]
     },
     "text": {
-     "ja": "竹田城跡に寄るので、特急きのさき1号を和田山で降りて、播但線に乗り換えて竹田へ（9:36着）。",
-     "en": "You’re stopping at Takeda Castle: get off the Kinosaki No. 1 at Wadayama and change to the Bantan Line for Takeda (arr. 9:36)."
+     "ja": "竹田城跡に寄るので、特急きのさき1号を和田山で降りて、播但線に乗り換えて竹田へ（9:36着）。9〜11月は竹田駅10:05発の天空バスで城跡へ。",
+     "en": "You’re stopping at Takeda Castle: get off the Kinosaki No. 1 at Wadayama and change to the Bantan Line for Takeda (arr. 9:36). From September to November, take the 10:05 Tenku Bus up to the castle."
     }
    },
    {
@@ -91,7 +104,8 @@
       9,
       10,
       11,
-      12
+      12,
+      13
      ],
      "none": [
       2
@@ -113,7 +127,8 @@
       9,
       10,
       11,
-      12
+      12,
+      13
      ],
      "none": [
       2
@@ -122,6 +137,36 @@
     "text": {
      "ja": "9:52に着くので、時間はたっぷり。柳湯とまんだら湯は15時からなので、午前中はほかの外湯や温泉街の散歩を。早く帰るなら16:31発のきのさき20号も。",
      "en": "You arrive at 9:52, so there’s plenty of time. Yanagi-yu and Mandara-yu open at 15:00, so start with the other baths and a stroll. For an early return, there’s the 16:31 Kinosaki No. 20."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ],
+     "andAny": [
+      2
+     ]
+    },
+    "text": {
+     "ja": "竹田城跡に寄る日は、城崎温泉に着くのが14:35。ロープウェイの上りは16:50が最終なので、外湯より先にロープウェイ乗り場へ向かいます（駅から歩いて約15〜20分）。15:10か15:30の便に乗れば、山頂と温泉寺を見て17:10までに下りられます。外湯は、そのあと奥の鴻の湯から駅の方へ戻りながら。",
+     "en": "With Takeda Castle you reach Kinosaki at 14:35. The last ropeway up is at 16:50, so walk straight to the ropeway first (15–20 minutes from the station). Take the 15:10 or 15:30 car and you can see the summit and the temple and be down by 17:10. Do the baths afterwards, starting at Kou-no-yu and working back towards the station."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ],
+     "none": [
+      2
+     ]
+    },
+    "text": {
+     "ja": "城崎だけの日は、柳湯とまんだら湯が開く15時より前の時間に行くのがちょうどいいです。",
+     "en": "On a Kinosaki-only day, go before 15:00, while Yanagi-yu and Mandara-yu are still closed."
     }
    }
   ]
@@ -212,7 +257,6 @@
    },
    "photos": [
     "kyoto-1.jpg",
-    "kyoto-2.jpg",
     "kyoto-3.jpg",
     "kyoto-4.jpg",
     "kyoto-5.jpg"
@@ -237,8 +281,8 @@
    "lat": 35.30029,
    "lng": 134.82937,
    "text": {
-    "ja": "竹田城跡（たけだじょうあと）\n\n標高約350mの山の上に、石垣がほぼそのまま残る山城の跡です。建物は残っていませんが、石垣の上からは360度、但馬（たじま）の山と町が見渡せます。秋の早朝には雲海に浮かぶ姿が見られることがあり、「天空の城」と呼ばれています。\n\n竹田駅からは、天空バスかタクシーで山の中腹の「竹田城跡」バス停・タクシー乗降場まで約20分。そこから入り口まで歩いて約20分です。駅の裏から歩いて登る駅裏登山道は、クマの出没に備えて閉鎖が続いています（2026年10月の公式サイトの案内）。\n\n城跡の中は30分〜1時間ほど。石垣の上は柵のない所もあるので、足元に気をつけてください。\n\nおすすめ訪問時間：9:40〜12:00",
-    "en": "Takeda Castle Ruins\n\nThe stone walls of a mountaintop castle, about 350 m up, survive almost intact. No buildings are left, but from the top of the walls you get a 360° view over the mountains and towns of Tajima. On some autumn mornings the ruins seem to float above a sea of clouds, hence “castle in the sky”.\n\nFrom Takeda Station, take the Tenku Bus or a taxi to the “Takeda-jo-ato” stop halfway up (about 20 min), then walk about 20 min to the entrance. The trail from behind the station is still closed as a precaution against bears (official notice, October 2026).\n\nAllow 30 minutes to an hour inside. Parts of the walls have no railings, so watch your step.\n\nRecommended visit time: 9:40–12:00"
+    "ja": "竹田城跡（たけだじょうあと）\n\n標高約350mの山の上に、石垣がほぼそのまま残る山城の跡です。建物は残っていませんが、石垣の上からは360度、但馬（たじま）の山と町が見渡せます。秋の早朝には雲海に浮かぶ姿が見られることがあり、「天空の城」と呼ばれています。\n\n竹田駅からは、天空バスかタクシーで山の中腹の「竹田城跡」バス停・タクシー乗降場まで約20分。そこから入り口まで歩いて約20分です。駅の裏から歩いて登る駅裏登山道は、クマの出没に備えて閉鎖が続いています（2026年10月の公式サイトの案内）。\n\n天空バスは、9〜11月のダイヤでは竹田駅10:05発（竹田城跡10:25着）。帰りは竹田城跡12:15発（竹田駅12:30着）か、12:50発（竹田駅13:05着）です。運賃は片道300円、1日フリー乗車券は500円で、現金だけ（ICカードは使えません）。12月以降の時刻は全但バスのサイトで確かめてください。\n\n城跡の中は30分〜1時間ほど。石垣の上は柵のない所もあるので、足元に気をつけてください。\n\nおすすめ訪問時間：10:05〜12:30（天空バスで往復）",
+    "en": "Takeda Castle Ruins\n\nThe stone walls of a mountaintop castle, about 350 m up, survive almost intact. No buildings are left, but from the top of the walls you get a 360° view over the mountains and towns of Tajima. On some autumn mornings the ruins seem to float above a sea of clouds, hence “castle in the sky”.\n\nFrom Takeda Station, take the Tenku Bus or a taxi to the “Takeda-jo-ato” stop halfway up (about 20 min), then walk about 20 min to the entrance. The trail from behind the station is still closed as a precaution against bears (official notice, October 2026).\n\nOn the September–November timetable, the Tenku Bus leaves Takeda Station at 10:05 (arriving at the castle stop at 10:25). Coming back, it leaves the castle stop at 12:15 (Takeda Station 12:30) or 12:50 (13:05). The fare is ¥300 each way or ¥500 for a 1-day pass, cash only (no IC cards). From December, check the times on the Zentan Bus website.\n\nAllow 30 minutes to an hour inside. Parts of the walls have no railings, so watch your step.\n\nRecommended visit time: 10:05–12:30 (Tenku Bus both ways)"
    },
    "gmaps": [
     {
@@ -279,8 +323,8 @@
       "en": "Zentan Bus (Tenku Bus timetable, Japanese)"
      },
      "url": {
-      "ja": "https://www.zentanbus.co.jp/",
-      "en": "https://www.zentanbus.co.jp/"
+      "ja": "https://www.zentanbus.co.jp/local_bus/tenkubus/",
+      "en": "https://www.zentanbus.co.jp/local_bus/tenkubus/"
      }
     }
    ],
@@ -289,8 +333,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "3月〜5月 8:00〜17:00、6月〜12月はじめ 5:00〜17:00、12月はじめ〜1月3日 10:00〜15:00（最後に登れるのは30分前、南登山道は1時間前）",
-       "en": "Mar–May 8:00–17:00; Jun–early Dec 5:00–17:00; early Dec–3 Jan 10:00–15:00 (last entry 30 min before, 1 hour before on the south trail)"
+       "ja": "3月〜5月 8:00〜17:00、6月〜12月はじめ（2026年は12月6日まで）5:00〜17:00、12月はじめ（2026年は12月7日から）〜1月3日 10:00〜15:00（最後に登れるのは30分前、南登山道は1時間前）",
+       "en": "Mar–May 8:00–17:00; Jun–early Dec (until 6 Dec in 2026) 5:00–17:00; early Dec (from 7 Dec in 2026) – 3 Jan 10:00–15:00 (last entry 30 min before, 1 hour before on the south trail)"
       },
       "until": null,
       "from": null
@@ -312,12 +356,30 @@
       },
       "until": null,
       "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "天空バス（9〜11月）：竹田駅10:05発 → 竹田城跡10:25着。帰りは竹田城跡12:15発 → 竹田駅12:30着（次は12:50発 → 13:05着）",
+       "en": "Tenku Bus (Sep–Nov): Takeda Station 10:05 → castle stop 10:25. Back: castle stop 12:15 → Takeda Station 12:30 (next 12:50 → 13:05)"
+      },
+      "until": "2026-11-30",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "天空バス 片道300円、1日フリー乗車券500円（現金だけ）",
+       "en": "Tenku Bus ¥300 each way, 1-day pass ¥500 (cash only)"
+      },
+      "until": null,
+      "from": null
      }
     ],
     "cash": false,
     "tip": {
-     "ja": "天空バスの時刻と運賃は、全但バスのサイトで確かめてください。",
-     "en": "Check the Tenku Bus times and fares on the Zentan Bus website."
+     "ja": "天空バスの時刻と運賃は全但バスのサイト（2026年9〜11月のダイヤ）で確認しました。12月以降の時刻は全但バスのサイトで確かめてください。",
+     "en": "Tenku Bus times and fares checked on the Zentan Bus website (September–November 2026 timetable). From December, check the times there."
     },
     "checked": "2026-11-20"
    },
@@ -363,8 +425,8 @@
    "lat": 35.2987,
    "lng": 134.8353,
    "text": {
-    "ja": "竹田駅と寺町通り（たけだえき・てらまちどおり）\n\n竹田城跡のふもとにある、小さな城下町です。駅の裏の山の上が竹田城跡。駅の西側には、水路に沿ってお寺が並ぶ寺町通りがあり、石の橋や白壁の古い家が残っています。\n\n城跡から戻ったら、町を歩いてお昼ごはんに。駅の近くには食事処やカフェもあります。\n\n城崎温泉へは、竹田13:34発の播但線で和田山へ行き、山陰本線に乗り換えて14:35着（860円）。\n\nおすすめ訪問時間：12:10〜13:30",
-    "en": "Takeda Station and Teramachi-dori\n\nA small castle town at the foot of Takeda Castle; the ruins sit on the hill right behind the station. West of the station, Teramachi-dori runs along a canal lined with temples, with stone bridges and old white-walled houses.\n\nBack from the castle, stroll the town and have lunch. There are places to eat and cafés near the station.\n\nTo Kinosaki: take the 13:34 Bantan Line train to Wadayama and change to the San’in Line, arriving at 14:35 (¥860).\n\nRecommended visit time: 12:10–13:30"
+    "ja": "竹田駅と寺町通り（たけだえき・てらまちどおり）\n\n竹田城跡のふもとにある、小さな城下町です。駅の裏の山の上が竹田城跡。駅の西側には、水路に沿ってお寺が並ぶ寺町通りがあり、石の橋や白壁の古い家が残っています。\n\n城跡から戻ったら、町を歩いてお昼ごはんに。駅の近くには食事処やカフェもあります。\n\n城崎温泉へは、竹田13:34発の播但線で和田山へ行き、山陰本線に乗り換えて14:35着（860円）。\n\nおすすめ訪問時間：12:30〜13:30",
+    "en": "Takeda Station and Teramachi-dori\n\nA small castle town at the foot of Takeda Castle; the ruins sit on the hill right behind the station. West of the station, Teramachi-dori runs along a canal lined with temples, with stone bridges and old white-walled houses.\n\nBack from the castle, stroll the town and have lunch. There are places to eat and cafés near the station.\n\nTo Kinosaki: take the 13:34 Bantan Line train to Wadayama and change to the San’in Line, arriving at 14:35 (¥860).\n\nRecommended visit time: 12:30–13:30"
    },
    "gmaps": [
     {
@@ -440,18 +502,18 @@
     "en": "Kinosaki Onsen Station"
    },
    "kind": {
-    "ja": "駅・足湯",
-    "en": "Station & foot bath"
+    "ja": "駅",
+    "en": "Station"
    },
    "blurb": {
-    "ja": "駅を出たら温泉街。駅前には足湯もあります。外湯めぐりの1日券はどの外湯でも買えます。",
-    "en": "Step out of the station into the onsen town. There’s a foot bath out front, and the day pass is sold at every bathhouse."
+    "ja": "駅を出たら温泉街。外湯めぐりの1日券「ゆめぱ」は、どの外湯でも買えます。",
+    "en": "Step out of the station into the onsen town. The “Yumepa” day pass is sold at every bathhouse."
    },
    "lat": 35.62398,
    "lng": 134.81331,
    "text": {
-    "ja": "城崎温泉駅（きのさきおんせんえき）\n\n駅を出るとすぐ温泉街。大谿川（おおたにがわ）沿いに柳並木が続き、浴衣と下駄で外湯（共同浴場）をめぐるのが城崎の楽しみ方です。駅前には足湯があり、電車を待つあいだにも温泉に浸かれます。\n\n外湯めぐりの1日券「ゆめぱ」（1,500円）は、どの外湯でも買えます。外湯は全部で7つありますが、駅前のさとの湯は2024年4月から改修のため休館しています。1日で回るなら3〜4か所がちょうどいいくらいです。\n\n竹田城跡に寄る日は14:35着。城崎温泉だけの日は9:52に着くので、朝からゆっくり回れます。\n\nおすすめ到着時間：14:35",
-    "en": "Kinosaki Onsen Station\n\nThe onsen town starts right outside. Willows line the Otani River, and the thing to do is wander between the public bathhouses in a yukata and wooden geta. There’s a foot bath in front of the station, so you can soak while you wait for a train.\n\nThe “Yumepa” day pass (¥1,500) is sold at every bathhouse. There are seven bathhouses, but Sato-no-yu by the station has been closed for renovation since April 2024. Three or four in a day is about right.\n\nYou’ll arrive at 14:35 if you went to Takeda Castle first, or at 9:52 if you came straight, with the whole day to enjoy.\n\nRecommended arrival: 14:35"
+    "ja": "城崎温泉駅（きのさきおんせんえき）\n\n駅を出るとすぐ温泉街。大谿川（おおたにがわ）沿いに柳並木が続き、浴衣と下駄で外湯（共同浴場）をめぐるのが城崎の楽しみ方です。\n\n外湯めぐりの1日券「ゆめぱ」（1,500円）は、どの外湯でも買えます。外湯は全部で7つありますが、駅前のさとの湯は建て替え工事のため休業しています（2024年4月から）。1日で回るなら3〜4か所がちょうどいいくらいです。\n\n竹田城跡に寄る日は14:35着。城崎温泉だけの日は9:52に着くので、朝からゆっくり回れます。\n\nおすすめ到着時間：14:35",
+    "en": "Kinosaki Onsen Station\n\nThe onsen town starts right outside. Willows line the Otani River, and the thing to do is wander between the public bathhouses in a yukata and wooden geta.\n\nThe “Yumepa” day pass (¥1,500) is sold at every bathhouse. There are seven bathhouses, but Sato-no-yu by the station has been closed for rebuilding since April 2024. Three or four in a day is about right.\n\nYou’ll arrive at 14:35 if you went to Takeda Castle first, or at 9:52 if you came straight, with the whole day to enjoy.\n\nRecommended arrival: 14:35"
    },
    "gmaps": [
     {
@@ -493,8 +555,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -502,8 +564,8 @@
      {
       "kind": "closed",
       "text": {
-       "ja": "さとの湯は2024年4月1日から改修のため休館中",
-       "en": "Sato-no-yu has been closed for renovation since 1 Apr 2024"
+       "ja": "さとの湯は建て替え工事のため休業中（2024年4月1日から）",
+       "en": "Sato-no-yu has been closed for rebuilding since 1 Apr 2024"
       },
       "until": null,
       "from": null
@@ -521,10 +583,7 @@
     "station-2.jpg",
     "station-3.jpg",
     "station-4.jpg",
-    "station-5.jpg",
-    "station-6.jpg",
-    "station-7.jpg",
-    "station-8.jpg"
+    "station-7.jpg"
    ],
    "notices": []
   },
@@ -596,8 +655,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -748,8 +807,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -837,8 +896,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -929,8 +988,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -945,7 +1004,6 @@
    },
    "photos": [
     "gosho-1.jpg",
-    "gosho-2.jpg",
     "gosho-3.jpg",
     "gosho-4.jpg",
     "gosho-5.jpg",
@@ -1021,8 +1079,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -1059,8 +1117,8 @@
    "lat": 35.62628,
    "lng": 134.80451,
    "text": {
-    "ja": "鴻の湯（こうのゆ）\n\n温泉街のいちばん奥、山のふもとにある外湯です。コウノトリが傷をいやしているのを見て温泉が見つかった、という言い伝えがあり、城崎でいちばん古い外湯といわれています。\n\n2026年5月11日〜10月30日は改修工事のため休館していました。駅からは歩いて15分ほどなので、帰りの時間に気をつけてください。\n\nおすすめ訪問時間：17:50〜18:10",
-    "en": "Kou-no-yu\n\nAt the far end of town, at the foot of the hill. Legend says the spring was found when someone saw a stork healing its wound in it, and it’s said to be Kinosaki’s oldest bathhouse.\n\nIt was closed for renovation from 11 May to 30 Oct 2026. It’s about 15 minutes’ walk from the station, so keep an eye on the time for your train.\n\nRecommended visit time: 17:50–18:10"
+    "ja": "鴻の湯（こうのゆ）\n\n温泉街のいちばん奥、山のふもとにある外湯です。コウノトリが傷をいやしているのを見て温泉が見つかった、という言い伝えがあり、城崎でいちばん古い外湯といわれています。\n\n駅からは歩いて15分ほどなので、帰りの時間に気をつけてください。\n\nおすすめ訪問時間：17:50〜18:10",
+    "en": "Kou-no-yu\n\nAt the far end of town, at the foot of the hill. Legend says the spring was found when someone saw a stork healing its wound in it, and it’s said to be Kinosaki’s oldest bathhouse.\n\nIt’s about 15 minutes’ walk from the station, so keep an eye on the time for your train.\n\nRecommended visit time: 17:50–18:10"
    },
    "gmaps": [
     {
@@ -1109,8 +1167,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）",
-       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in)"
+       "ja": "外湯めぐりの1日券「ゆめぱ」1,500円（どの外湯でも買えます。城崎の宿に泊まる人は宿でもらえることが多い）。1か所だけなら大人800円",
+       "en": "“Yumepa” onsen day pass ¥1,500, sold at every bathhouse (guests at Kinosaki inns usually get one at check-in). A single bath is ¥800 for adults"
       },
       "until": null,
       "from": null
@@ -1130,6 +1188,162 @@
   },
   {
    "no": 12,
+   "id": "onsenji",
+   "name": {
+    "ja": "温泉寺と城崎温泉ロープウェイ",
+    "en": "Onsen-ji Temple & Kinosaki Ropeway"
+   },
+   "kind": {
+    "ja": "お寺・ロープウェイ",
+    "en": "Temple & ropeway"
+   },
+   "blurb": {
+    "ja": "温泉街のいちばん奥から、ロープウェイで大師山の上へ。城崎の町と円山川を見下ろせます。途中の駅には、城崎温泉を開いた上人のお寺。",
+    "en": "From the far end of town, a ropeway climbs Mt. Daishi for a view over Kinosaki and the Maruyama River. Halfway up is the temple of the monk who founded the hot spring."
+   },
+   "lat": 35.62524,
+   "lng": 134.80382,
+   "text": {
+    "ja": "温泉寺（おんせんじ）と城崎温泉ロープウェイ\n\n鴻の湯のすぐとなり、薬師公園にロープウェイの乗り場があります。山頂駅まで約7分。展望台からは、温泉街の屋根と円山川、その先の海まで見えます。山頂にはカフェもあります。\n\n途中の温泉寺駅の前が、温泉寺の本堂です。約1300年前に城崎温泉を開いた道智上人（どうちしょうにん）のお寺で、昔は城崎に着いたらまずここにお参りして、湯の入り方を教わってから外湯に入ったそうです（温泉寺の公式サイトより）。本堂の裏には多宝塔があります。\n\nふもとの山門から本堂までは、石段を約500段、歩いて20分ほど。ロープウェイは上りの最終が16:50、下りの最終が17:10なので、夕方の外湯めぐりより先に行きましょう。ふもとの薬師堂は無料で、石段を上らなくてもお参りできます。\n\n山頂駅から温泉寺駅までの遊歩道は山道です。下駄やヒールでは歩きにくいので、歩く人は靴で。\n\nおすすめ訪問時間：9:10〜16:50の間に（山頂と温泉寺で1時間〜1時間半）",
+    "en": "Onsen-ji Temple and the Kinosaki Ropeway\n\nThe ropeway station is in Yakushi Park, right next to Kou-no-yu. It takes about 7 minutes to the top, where the lookout shows the roofs of the town, the Maruyama River and the sea beyond. There is a café at the top too.\n\nThe middle station, Onsenji, is in front of the temple’s main hall. Onsen-ji is the temple of Dochi Shonin, the monk who founded Kinosaki Onsen about 1,300 years ago. In the old days visitors came here first to pray and learn how to bathe before going to the bathhouses (from the temple’s website). A two-storied pagoda stands behind the hall.\n\nOn foot, it’s about 500 stone steps and 20 minutes from the gate at the bottom to the main hall. The last ropeway up is at 16:50 and the last one down at 17:10, so come here before your evening baths. The Yakushi-do hall at the foot is free and needs no climbing.\n\nThe path between the top station and Onsenji station is a mountain trail: fine in shoes, awkward in geta or heels.\n\nRecommended visit time: any time between 9:10 and 16:50 (allow 1–1.5 hours for the summit and temple)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "城崎温泉ロープウェイ 山麓駅",
+      "en": "Kinosaki Ropeway (bottom station)"
+     },
+     "lat": 35.62524,
+     "lng": 134.80382,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9F%8E%E5%B4%8E%E6%B8%A9%E6%B3%89%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4"
+    },
+    {
+     "label": {
+      "ja": "温泉寺 本堂",
+      "en": "Onsen-ji main hall"
+     },
+     "lat": 35.62424,
+     "lng": 134.80051,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B8%A9%E6%B3%89%E5%AF%BA%20%E5%9F%8E%E5%B4%8E%20%E6%9C%AC%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "城崎温泉ロープウェイ 公式サイト",
+      "en": "Kinosaki Ropeway (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kinosaki-ropeway.jp/ropeway",
+      "en": "https://www.kinosaki-ropeway.jp/ropeway"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "温泉寺 公式サイト（拝観案内）",
+      "en": "Onsen-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "http://www.kinosaki-onsenji.jp/visit/seeing.html",
+      "en": "http://www.kinosaki-onsenji.jp/visit/seeing.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ロープウェイ 9:10〜17:10。毎時10・30・50分発（12:30発は日曜・祝日だけ）。上りの最終16:50、下りの最終17:10。山頂駅まで約7分",
+       "en": "Ropeway 9:10–17:10, leaving at :10, :30 and :50 (the 12:30 runs on Sundays and holidays only). Last car up 16:50, last down 17:10. About 7 min to the top"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "ロープウェイは第2・第4木曜（祝日は営業）。雷や強風で止まる日もあります",
+       "en": "Ropeway: 2nd and 4th Thursdays (open on holidays). It also stops for thunder or strong wind"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ロープウェイ往復 山頂駅まで大人1,200円・小人600円、温泉寺駅まで大人750円・小人370円（片道は山頂620円・温泉寺380円）",
+       "en": "Ropeway return: to the top ¥1,200 adults, ¥600 children; to Onsenji station ¥750 / ¥370 (one way ¥620 to the top, ¥380 to Onsenji)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "温泉寺 本堂の拝観 9:00〜17:00（ロープウェイが休みの日は閉まることがあります）。ふもとの薬師堂は夏8:30〜17:00、冬9:00〜16:30",
+       "en": "Onsen-ji main hall 9:00–17:00 (may close when the ropeway is not running). Yakushi-do at the foot: 8:30–17:00 in summer, 9:00–16:30 in winter"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "温泉寺 本堂 300円（城崎美術館との共通券400円）。薬師堂は無料",
+       "en": "Onsen-ji main hall ¥300 (¥400 with the Kinosaki Art Museum). Yakushi-do is free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "checked": "2026-11-21",
+    "tip": {
+     "ja": "2026年11月21日に確認しました。ロープウェイの時刻・料金・休みは城崎温泉ロープウェイの公式サイトから。温泉寺の時間と拝観料は温泉寺の公式サイトからですが、案内が古いので変わっているかもしれません（要確認）。",
+     "en": "Checked on 21 November 2026. Ropeway times, fares and closed days are from the official ropeway website. Onsen-ji’s hours and fee are from the temple’s website, which is old, so they may have changed (please check)."
+    }
+   },
+   "photos": [
+    {
+     "file": "onsenji-1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AKinosaki_ropeway01n2610.jpg"
+     }
+    },
+    {
+     "file": "onsenji-2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3A241230_Kinosaki_Ropeway_Toyooka_Hyogo_pref_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "onsenji-3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File%3AOnsenji02_1920.jpg"
+     }
+    },
+    {
+     "file": "onsenji-4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File%3AOnsenji04_2816.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 13,
    "id": "night",
    "name": {
     "ja": "夜の温泉街",
@@ -1181,7 +1395,6 @@
    },
    "photos": [
     "night-1.jpg",
-    "night-2.jpg",
     "night-3.jpg",
     "night-4.jpg",
     "night-5.jpg",
@@ -1193,7 +1406,7 @@
    "notices": []
   },
   {
-   "no": 13,
+   "no": 14,
    "id": "station2",
    "name": {
     "ja": "城崎温泉駅（帰り）",
@@ -1276,7 +1489,6 @@
    },
    "photos": [
     "station2-1.jpg",
-    "station2-2.jpg",
     "station2-4.jpg"
    ],
    "notices": []

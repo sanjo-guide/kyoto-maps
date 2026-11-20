@@ -69,13 +69,13 @@ window.DAIGO_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
       "h1": "照らされた五重塔と、池に映るもみじ。",
-      "lead": "秋の夜だけ公開される、醍醐寺の伽藍。地下鉄の醍醐駅から歩いて、ライトアップされた仁王門をくぐり、京都でいちばん古い木造建築の五重塔、池に映る朱の弁天堂へ。2026年の秋期夜間拝観は11月20日〜12月6日です。",
+      "lead": "秋の夜だけの拝観です。2026年は11月20日〜12月6日（紅葉の見ごろは例年11月中旬〜下旬）。地下鉄の醍醐駅から歩いて、ライトアップされた仁王門をくぐり、京都でいちばん古い木造建築の五重塔、池に映る朱の弁天堂へ。",
       "favLabel": "いちばんの見どころ",
       "favName": "弁天堂と弁天池",
       "favText": "朱の橋とお堂ともみじが、池に鏡のように映ります。",
       "favPhoto": [
         3,
-        0
+        1
       ],
       "whoHead": "こんな人におすすめ",
       "who": [
@@ -208,13 +208,13 @@ window.DAIGO_I18N = {
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
       "h1": "A lit pagoda and maples mirrored in a pond.",
-      "lead": "Daigoji’s main precinct opens on autumn evenings only. Walk from Daigo subway station through the lit Nio gate to the five-storey pagoda, Kyoto’s oldest wooden building, and on to the vermilion Benten hall reflected in its pond. The 2026 evening opening runs from 20 November to 6 December.",
+      "lead": "An autumn-evenings-only visit: in 2026, from 20 November to 6 December (the leaves usually peak in mid to late November). Walk from Daigo subway station through the lit Nio gate to the five-storey pagoda, Kyoto’s oldest wooden building, and on to the vermilion Benten hall reflected in its pond.",
       "favLabel": "Highlight",
       "favName": "Bentendo and its pond",
       "favText": "The red bridge, hall and maples mirrored in the water.",
       "favPhoto": [
         3,
-        0
+        1
       ],
       "whoHead": "Who it’s for",
       "who": [

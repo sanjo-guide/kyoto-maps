@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """京都 淀・八幡の桜（淀水路の河津桜・石清水八幡宮・背割堤）のデータ（data/routes/yawata.json）を書き出す。
 
-使い方: python3 scripts/build_higashiomi_data.py
+使い方: python3 scripts/build_yawata_data.py
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
 - 写真は images/yawata/<スポットのid>-<番号>.jpg を番号の順に全部使う
 """
@@ -54,10 +54,10 @@ S = [
                  "Near Keihan Yodo Station, pink Kawazu cherries line a canal for about 1.3 km: the year’s first blossoms, a month before the Somei-Yoshino."),
          lat=34.90250, lng=135.71700,
          text=T("淀水路（よどすいろ）の河津桜\n\n祇園四条から京阪で淀へ（丹波橋で乗り換え、約20分・360円）。駅の中央改札口から歩いて約10分で、水路沿いの桜並木に出ます。"
-                "河津桜が約300本、約1.3km続き、例年3月上旬〜中旬が見ごろ（2月上旬から咲きはじめます）。ゆっくり歩いて30分ほどです。\n\n"
+                "河津桜が約300本、約1.3km続き、2月はじめから咲きはじめ、見ごろは3月上旬〜中旬（2026年の満開は3月7日ごろ。京都市観光協会）。ゆっくり歩いて30分ほどです。\n\n"
                 "トイレは天神橋の近くに1か所だけで、淀駅の改札の外にはありません。写真は2026年3月23日。\n\nおすすめ訪問時間：9:35〜10:30",
                 "Kawazu cherries along the Yodo canal\n\nFrom Gion-Shijo take the Keihan line to Yodo (change at Tambabashi, about 20 min, ¥360). About 10 minutes from the central exit, you reach the canal. "
-                "Some 300 Kawazu cherries line it for about 1.3 km, usually best in early to mid March (they start in early February). A slow stroll takes about 30 minutes.\n\n"
+                "Some 300 Kawazu cherries line it for about 1.3 km, starting in early February and best in early to mid March (full bloom in 2026 was around 7 March, according to the Kyoto City tourism association). A slow stroll takes about 30 minutes.\n\n"
                 "The only toilet is near Tenjin-bashi; there is none outside the ticket gates at Yodo. Photos from 23 March 2026.\n\nRecommended visit time: 9:35–10:30"),
          gmaps=[gm("淀水路 河津桜", "Yodo canal Kawazu cherries", 34.90250, 135.71700, "淀水路 河津桜"), gm("京阪 淀駅", "Keihan Yodo Station", 34.90636, 135.72097, "京阪 淀駅")],
          links=[link("official", "淀の河津桜（京都市観光協会）", "Yodo Kawazu cherries (Kyoto City tourism, Japanese)", "https://totteoki.kyoto.travel/28467/"), JR],
@@ -73,10 +73,10 @@ S = [
          lat=34.87973, lng=135.70005,
          text=T("石清水八幡宮（いわしみずはちまんぐう）\n\n淀から京阪で1駅、石清水八幡宮駅へ（3分・240円）。駅の隣から参道ケーブルで男山の上へ（約3分・片道300円）、山上駅から歩いて約5分です。\n\n"
                 "朱塗りの南総門をくぐると、極彩色の彫刻で飾られた国宝の本殿。山上の展望台からは、京都の南の平野と三つの川が合流するあたりが見渡せます。"
-                "竹林の道は、エジソンが電球に男山の竹を使ったことにちなむ場所としても知られています。\n\nおすすめ訪問時間：10:50〜12:10",
+                "竹林の道は、エジソンが電球に男山の竹を使ったことにちなむ場所としても知られています。\n\n淀水路を10:30ごろに出ると、淀駅10:48発の電車とケーブルで、本殿に着くのは11時すぎです。\n\nおすすめ訪問時間：11:05〜12:10",
                 "Iwashimizu Hachimangu\n\nOne stop from Yodo to Iwashimizu-hachimangu Station (3 min, ¥240). The Sando cable car next to the station climbs Mt. Otokoyama (about 3 min, ¥300 one way), and the shrine is 5 minutes from the top station.\n\n"
                 "Through the vermilion south gate stands the National Treasure main hall with its brightly painted carvings. From the lookout you see the plain south of Kyoto where three rivers meet. "
-                "The bamboo groves are also known for Edison, who used Otokoyama bamboo for his light-bulb filaments.\n\nRecommended visit time: 10:50–12:10"),
+                "The bamboo groves are also known for Edison, who used Otokoyama bamboo for his light-bulb filaments.\n\nLeaving the Yodo canal around 10:30, the 10:48 train from Yodo and the cable car get you to the main hall just after 11:00.\n\nRecommended visit time: 11:05–12:10"),
          gmaps=[gm("石清水八幡宮", "Iwashimizu Hachimangu", 34.87973, 135.70005, "石清水八幡宮"), gm("ケーブル八幡宮口駅", "Cable Hachimangu-guchi", 34.88449, 135.69947, "ケーブル八幡宮口")],
          links=[link("official", "石清水八幡宮 公式サイト", "Iwashimizu Hachimangu (official)", "https://iwashimizu.or.jp/"),
                 link("timetable", "石清水八幡宮参道ケーブル（京阪）", "Sando cable car (Keihan, Japanese)", "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html")],
@@ -89,9 +89,9 @@ S = [
                  "On the levee between the Kizu and Uji rivers, about 220 Somei-Yoshino stretch for 1.4 km: picnic under a tunnel of blossoms."),
          lat=34.89000, lng=135.69300,
          text=T("背割堤（せわりてい）の桜並木\n\nケーブルで下りて、石清水八幡宮駅から歩いて約10分。御幸橋を渡ると、宇治川と木津川にはさまれた細長い堤防に、約1.4km、約220本の桜がトンネルのように続きます。\n\n"
-                "見ごろは4月上旬（2026年のさくらまつりは3月28日〜4月5日）。堤防の下の芝生でお花見ができます。まつりの期間は運営協力金（1人100円以上）を集めています。写真は2026年4月8日。\n\nおすすめ訪問時間：12:40〜14:00",
+                "見ごろは例年3月下旬〜4月上旬（2026年のさくらまつりは3月28日〜4月5日）。堤防の下の芝生でお花見ができます。お昼はお弁当を用意して堤防でお花見をしましょう（さくらであい館にあるのは物販コーナーと自販機です）。桜のトンネルは堤防の上の道、川と桜を広く撮るなら堤防の下の芝生から（写真2・5枚目）。まつりの期間は運営協力金（1人100円以上）を集めています。写真は2026年4月8日。\n\nおすすめ訪問時間：12:40〜14:00",
                 "Sewaritei cherry avenue\n\nDown by cable car and about 10 minutes’ walk from Iwashimizu-hachimangu Station. Cross the Miyuki bridge: on the long, narrow levee between the Uji and Kizu rivers, about 220 cherries form a tunnel for some 1.4 km.\n\n"
-                "Blossoms peak in early April (the 2026 festival ran 28 March – 5 April). You can picnic on the grass below the levee; during the festival a contribution of ¥100 or more is collected. Photos from 8 April 2026.\n\nRecommended visit time: 12:40–14:00"),
+                "Blossoms usually peak from late March to early April (the 2026 festival ran 28 March – 5 April). You can picnic on the grass below the levee. Bring a packed lunch (Sakura Deaikan has only a small shop and vending machines). Walk the top of the levee for the tunnel of blossoms, and go down to the grass for wide shots of the river and trees (photos 2 and 5); during the festival a contribution of ¥100 or more is collected. Photos from 8 April 2026.\n\nRecommended visit time: 12:40–14:00"),
          gmaps=[gm("背割堤", "Sewaritei", 34.89000, 135.69300, "背割堤 桜")],
          links=[link("official", "淀川河川公園 背割堤地区", "Yodogawa River Park, Sewaritei (Japanese)", "https://www.yodogawa-park.jp/sansen/")],
          notices=[{"from": None, "to": None, "url": "https://www.yodogawa-park.jp/sansen/", "head": T("見ごろは4月上旬", "Best in early April"),
@@ -140,6 +140,12 @@ data = {
         H("sewaritei", {"any": [NO["sewaritei"]], "andAny": [NO["yodo"]]},
           "淀水路の河津桜（3月上旬〜中旬）と背割堤の桜（4月上旬）は咲く時期が違います。同じ日に見られるのは、河津桜が遅い年だけです。",
           "The Yodo Kawazu cherries (early to mid March) and the Sewaritei cherries (early April) bloom at different times; you’ll only see both on one day in a late year."),
+        H("sewaritei", {"any": [NO["sewaritei"]], "none": [NO["yodo"], NO["iwashimizu"]]},
+          "淀と石清水八幡宮に寄らない日は、祇園四条から京阪で石清水八幡宮駅へ（約25分・360円）。駅から御幸橋を渡って歩いて約10分です。",
+          "Skipping Yodo and the shrine? Take the Keihan line from Gion-Shijo to Iwashimizu-hachimangu (about 25 min, ¥360), then walk about 10 minutes across the Miyuki bridge."),
+        H("deaikan", {"any": [NO["deaikan"]], "none": [NO["yodo"], NO["iwashimizu"], NO["sewaritei"]]},
+          "さくらであい館だけに寄る日は、祇園四条から京阪で石清水八幡宮駅へ（約25分・360円）。駅から御幸橋を渡って歩いて約10分です。",
+          "Going to Sakura Deaikan only? Take the Keihan line from Gion-Shijo to Iwashimizu-hachimangu (about 25 min, ¥360), then walk about 10 minutes across the Miyuki bridge."),
     ]},
     "photoBase": "../images/yawata/",
     "spots": spots,

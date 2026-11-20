@@ -1,9 +1,17 @@
 /* 写真の保存よけ（全ページ共通）。
    右クリック・長押しの「画像を保存」と、ドラッグでの持ち出しを止めて、短いお知らせを出す。
+   ほかのサイトの枠の中への埋め込みも止める。
    ブラウザの仕組み上、完全には防げない（画面の撮影や開発者ツールなど）。気軽な保存を止めるためのもの。
    読み込み: 各ページの <head> に <script src="../assets/protect.js?v=1" defer></script>（トップは assets/…） */
 (function () {
   "use strict";
+  // ほかのサイトの枠（iframe）の中に埋め込まれたら、枠から出る（出られないときは何も表示しない）
+  try {
+    if (window.top !== window.self) window.top.location = window.self.location.href;
+  } catch (e) {
+    document.documentElement.style.display = "none";
+  }
+
   var css = "img{-webkit-touch-callout:none;-webkit-user-drag:none;user-drag:none;-webkit-user-select:none;user-select:none}";
   var st = document.createElement("style");
   st.textContent = css;

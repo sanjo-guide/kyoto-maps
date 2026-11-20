@@ -253,8 +253,7 @@
     "nunobiki-6.jpg",
     "nunobiki-7.jpg",
     "nunobiki-8.jpg",
-    "nunobiki-9.jpg",
-    "nunobiki-10.jpg"
+    "nunobiki-9.jpg"
    ]
   },
   {
@@ -275,8 +274,8 @@
    "lat": 34.70189,
    "lng": 135.18956,
    "text": {
-    "ja": "北野天満神社（きたのてんまんじんじゃ）\n\n新神戸駅から歩いて約15分。異人館街のいちばん上、石段を上った所にある、菅原道真をまつる神社です。境内からは、すぐ下に風見鶏の館のとがった塔、その向こうに神戸の街と海が見えます。ここから坂を下りながら異人館を回るのがおすすめです。\n\n門が開いているのは朝7時半ごろから夕方5時ごろまでです。\n\nおすすめ訪問時間：11:30〜11:50",
-    "en": "Kitano Tenman Shrine\n\nAbout 15 minutes on foot from Shin-Kobe Station. At the very top of the foreign-residence district, up a flight of stone steps, this shrine honours Sugawara no Michizane. From the grounds you look down on the pointed tower of the Weathercock House, with the city and sea beyond. Visit here first, then wander down the slopes past the residences.\n\nThe gates are open from about 7:30 to about 17:00.\n\nRecommended visit time: 11:30–11:50"
+    "ja": "北野天満神社（きたのてんまんじんじゃ）\n\n新神戸駅から歩いて約15分。異人館街のいちばん上、石段を上った所にある、菅原道真をまつる神社です。境内からは、すぐ下に風見鶏の館のとがった塔、その向こうに神戸の街と海が見えます。ここから坂を下りながら異人館を回るのがおすすめです。\n\n門が開いているのは7:30から17:00までです。\n\nおすすめ訪問時間：11:30〜11:50",
+    "en": "Kitano Tenman Shrine\n\nAbout 15 minutes on foot from Shin-Kobe Station. At the very top of the foreign-residence district, up a flight of stone steps, this shrine honours Sugawara no Michizane. From the grounds you look down on the pointed tower of the Weathercock House, with the city and sea beyond. Visit here first, then wander down the slopes past the residences.\n\nThe gates are open from 7:30 to 17:00.\n\nRecommended visit time: 11:30–11:50"
    },
    "gmaps": [
     {
@@ -307,8 +306,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "7:30ごろ〜17:00ごろ",
-       "en": "About 7:30 to about 17:00"
+       "ja": "7:30〜17:00（開門・閉門）",
+       "en": "7:30–17:00 (gates open and close)"
       },
       "until": null,
       "from": null
@@ -326,8 +325,7 @@
     "tenman-2.jpg",
     "tenman-3.jpg",
     "tenman-4.jpg",
-    "tenman-5.jpg",
-    "tenman-6.jpg"
+    "tenman-5.jpg"
    ],
    "notices": []
   },
@@ -343,8 +341,8 @@
     "en": "Historic houses"
    },
    "blurb": {
-    "ja": "明治・大正の外国人の住まいが残る坂の町。赤レンガの風見鶏の館、緑の萌黄の館をはじめ、洋館をのぞきながら歩きます。",
-    "en": "Hillside lanes of Meiji- and Taisho-era foreigners’ homes: the red-brick Weathercock House, the green Moegi House and more."
+    "ja": "明治・大正の外国人の住まいが残る坂の町。中に入るのは2〜3館にしぼるのがおすすめです。",
+    "en": "Hillside lanes of Meiji- and Taisho-era foreigners’ homes. Pick two or three to go inside."
    },
    "lat": 34.70139,
    "lng": 135.18951,
@@ -459,14 +457,14 @@
     "en": "Lunch"
    },
    "blurb": {
-    "ja": "阪急三宮駅のすぐ横、高架下の小さなかつ丼の店。厚いとんかつを玉子でとじた、ボリュームのあるかつ丼です。",
+    "ja": "阪急三宮駅のすぐ横、高架下の小さな店。厚いとんかつを玉子でとじたかつ丼です。",
     "en": "A small katsudon counter under the tracks right by Hankyu Sannomiya: thick pork cutlets simmered with egg over rice."
    },
    "lat": 34.69228,
    "lng": 135.1918,
    "text": {
-    "ja": "かつ丼 七兵衛（ひちべい）\n\n阪急の神戸三宮駅の西口を出てすぐ、JRの高架下にある小さなお店です。看板は「かつ丼 七兵衛」（運営会社のページでは「とんかつ七兵衛 神戸本店」）。入口の券売機で食券を買い、カウンターで食べます。分厚いかつを玉子でとじたかつ丼は、ボリュームたっぷりです。\n\nお店は11:30から。とんかつが売り切れると早めに閉まります。\n\nおすすめ訪問時間：13:40〜14:20",
-    "en": "Katsudon Hichibei\n\nA tiny shop under the JR tracks, right outside the west exit of Hankyu Kobe-Sannomiya Station. The sign reads “Katsudon Hichibei” (the operator calls it “Tonkatsu Hichibei, Kobe main shop”). Buy a ticket from the machine at the door and eat at the counter. The katsudon, thick cutlets simmered with egg, is a hearty bowl.\n\nIt opens at 11:30 and closes early once the cutlets sell out.\n\nRecommended visit time: 13:40–14:20"
+    "ja": "かつ丼 七兵衛（ひちべい）\n\n阪急の神戸三宮駅の西口を出てすぐ、JRの高架下にある小さなお店です。看板は「かつ丼 七兵衛」（運営会社のページでは「とんかつ七兵衛 神戸本店」）。入口の券売機で食券を買い、カウンターで食べます。店の前に写真つきのメニューが出ています（2枚目の写真）。分厚いかつを玉子でとじたかつ丼は、ボリュームたっぷりです。\n\nお店は11:30から。とんかつが売り切れると早めに閉まります。このルートでは13時半すぎに着くので、売り切れていることもあります。そのときのために、三宮駅のまわりでほかのお店も考えておくと安心です。\n\nおすすめ訪問時間：13:40〜14:20",
+    "en": "Katsudon Hichibei\n\nA tiny shop under the JR tracks, right outside the west exit of Hankyu Kobe-Sannomiya Station. The sign reads “Katsudon Hichibei” (the operator calls it “Tonkatsu Hichibei, Kobe main shop”). Buy a ticket from the machine at the door and eat at the counter. There’s a picture menu out front (second photo). The katsudon, thick cutlets simmered with egg, is a hearty bowl.\n\nIt opens at 11:30 and closes early once the cutlets sell out. This route gets you there after 13:30, so it may already be sold out; have a back-up place around Sannomiya Station in mind.\n\nRecommended visit time: 13:40–14:20"
    },
    "gmaps": [
     {
@@ -506,8 +504,8 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "店名と開店時間は運営会社のページで確認しました。",
-     "en": "Name and opening time checked on the operator’s page."
+     "ja": "店名と開店時間は運営会社のページで確認しました。2024年2月に撮った店頭の案内には「11:10〜22:00、15:00〜17:00も開いてます」とありました。今は変わっているかもしれません。",
+     "en": "Name and opening time checked on the operator’s page. A sign at the door in February 2024 said 11:10–22:00, “open 15:00–17:00 too”; that may have changed."
     },
     "checked": "2026-11-20"
    },
@@ -530,13 +528,13 @@
    },
    "blurb": {
     "ja": "赤い鼓の形のポートタワーと、白い帆の海洋博物館。夕方から夜は、港のあかりがきれいです。",
-    "en": "The red, drum-shaped Port Tower and the white sails of the Maritime Museum. Lovely as the harbour lights come on."
+    "en": "The red, drum-shaped Port Tower and the white sails of the Maritime Museum. Best from late afternoon, as the harbour lights come on."
    },
    "lat": 34.68263,
    "lng": 135.18672,
    "text": {
-    "ja": "メリケンパーク・神戸ポートタワー\n\nJR元町駅の西口から歩いて約15分（三宮からも旧居留地を抜けて歩けます）。海に面した公園に、赤い鼓のような形のポートタワーと、白い帆を重ねたような神戸海洋博物館が並びます。ポートタワーは2024年にリニューアルし、展望フロアと屋上デッキから、港と六甲の山並みが見渡せます（日時指定のチケット制）。\n\n冬には「神戸ルミナリエ」の会場にもなります。写真は2025年1月のもの。次は2027年1月29日〜2月7日の予定で、メリケンパークの一部は有料エリアです。\n\n帰りはJR元町駅から（元町17:01発→三ノ宮で新快速に乗り換え→京都17:59着・1,110円）。\n\nおすすめ訪問時間：14:45〜16:40",
-    "en": "Meriken Park & Kobe Port Tower\n\nAbout 15 minutes on foot from the west exit of JR Motomachi Station (you can also walk from Sannomiya through the old foreign settlement). On the waterfront stand the red, drum-shaped Port Tower and the white, sail-like Kobe Maritime Museum. The tower reopened after renovation in 2024; from its observation floor and rooftop deck you see the port and the Rokko mountains (timed tickets).\n\nIn winter the park is a venue for the Kobe Luminarie; the photos are from January 2025. The next one is planned for 29 January – 7 February 2027, with a paid area in part of Meriken Park.\n\nGo home from JR Motomachi (17:01, change to the Special Rapid at Sannomiya, Kyoto 17:59, ¥1,110).\n\nRecommended visit time: 14:45–16:40"
+    "ja": "メリケンパーク・神戸ポートタワー\n\nJR元町駅の西口から歩いて約15分（三宮からも旧居留地を抜けて歩けます）。海に面した公園に、赤い鼓のような形のポートタワーと、白い帆を重ねたような神戸海洋博物館が並びます。ポートタワーは2024年にリニューアルし、展望フロアと屋上デッキから、港と六甲の山並みが見渡せます（日時指定のチケット制）。\n\n冬には「神戸ルミナリエ」の会場にもなります。写真は2025年1月のもの。次は2027年1月29日〜2月7日の予定で、メリケンパークの一部は有料エリアです。\n\n帰りはJR元町駅から（元町17:01発→三ノ宮で新快速に乗り換え→京都17:59着・1,110円）。元町駅へ戻る途中に、南京町（なんきんまち、中華街）があります。港のあかりを見たいときは、日が暮れてから帰るのもおすすめです。\n\nおすすめ訪問時間：14:45〜16:40",
+    "en": "Meriken Park & Kobe Port Tower\n\nAbout 15 minutes on foot from the west exit of JR Motomachi Station (you can also walk from Sannomiya through the old foreign settlement). On the waterfront stand the red, drum-shaped Port Tower and the white, sail-like Kobe Maritime Museum. The tower reopened after renovation in 2024; from its observation floor and rooftop deck you see the port and the Rokko mountains (timed tickets).\n\nIn winter the park is a venue for the Kobe Luminarie; the photos are from January 2025. The next one is planned for 29 January – 7 February 2027, with a paid area in part of Meriken Park.\n\nGo home from JR Motomachi (17:01, change to the Special Rapid at Sannomiya, Kyoto 17:59, ¥1,110). On the way back to Motomachi you pass Nankinmachi, Kobe’s Chinatown. If you’d like to see the harbour lights, stay on until after dark.\n\nRecommended visit time: 14:45–16:40"
    },
    "gmaps": [
     {
@@ -646,10 +644,7 @@
     "meriken-4.jpg",
     "meriken-5.jpg",
     "meriken-6.jpg",
-    "meriken-7.jpg",
-    "meriken-8.jpg",
-    "meriken-9.jpg",
-    "meriken-10.jpg"
+    "meriken-7.jpg"
    ],
    "notices": []
   }

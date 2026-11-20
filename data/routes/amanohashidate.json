@@ -56,8 +56,8 @@
     "en": "Station (start)"
    },
    "blurb": {
-    "ja": "特急はしだてで、乗り換えなしで天橋立へ。約2時間の電車の旅から1日が始まります。",
-    "en": "Take the Hashidate limited express straight to Amanohashidate: about 2 hours, no change of trains."
+    "ja": "8:38の特急はしだて1号で、乗り換えなしで天橋立へ。約2時間です。",
+    "en": "The 8:38 Hashidate limited express goes straight to Amanohashidate: about 2 hours, no change."
    },
    "lat": 34.98535,
    "lng": 135.758766,
@@ -140,7 +140,7 @@
     "en": "Station & tourist info"
    },
    "blurb": {
-    "ja": "駅の観光案内所で「天橋立・伊根フリーパス 1day」を。船もケーブルカーもバスも、これ1枚で乗り放題です。",
+    "ja": "まず駅の観光案内所で「天橋立・伊根フリーパス 1day」を。船もケーブルカーもバスも、これ1枚。",
     "en": "Buy the Amanohashidate & Ine 1-Day Free Pass at the station’s tourist office: boats, cable car and buses all in one."
    },
    "lat": 35.557585,
@@ -313,14 +313,14 @@
     "en": "Boat or rental bike"
    },
    "blurb": {
-    "ja": "智恩寺の横の桟橋から、カモメと一緒に観光船で12分。自転車なら松並木の中を15〜20分で対岸の府中へ。",
-    "en": "From the pier by Chion-ji, 12 minutes by boat with the seagulls, or 15–20 minutes by bike through the pines, to Fuchu on the far side."
+    "ja": "智恩寺の横から観光船で12分。自転車なら松並木の中を15〜20分で、対岸の府中へ。",
+    "en": "From the pier by Chion-ji: 12 minutes by boat, or 15–20 minutes by bike through the pines, to Fuchu on the far side."
    },
    "lat": 35.558543,
    "lng": 135.184739,
    "text": {
-    "ja": "天橋立（あまのはしだて）を渡る\n\n宮島・松島と並ぶ日本三景のひとつ、天橋立。宮津湾と阿蘇海（あそかい）を分ける長さ3.6kmの砂の道を、観光船か自転車で対岸の府中（ふちゅう）へ渡ります。\n\n観光船（フリーパスで乗れます）は、智恩寺のすぐ横の天橋立桟橋から毎時0分・30分に出て、約12分で一の宮桟橋へ。出てすぐに、廻旋橋（かいせんきょう）がぐるっと回って船を通してくれます。カモメが船と並んで飛ぶので、エサやりも楽しめます。\n\n自転車なら、天橋立桟橋で借りて、松並木の中を15〜20分。片側は白い砂浜、もう片側は静かな内海です。対岸の一の宮桟橋で返せます（2時間500円。フリーパスには含まれません）。\n\n一の宮桟橋に着いたら、すぐ近くの籠神社（5番）へ。\n\nおすすめ移動時間：11:00（観光船）",
-    "en": "Crossing Amanohashidate\n\nAmanohashidate is one of Japan’s Three Scenic Views, along with Miyajima and Matsushima: a 3.6 km sandbar between Miyazu Bay and the Aso Sea. Cross it by boat or by bike to Fuchu on the far side.\n\nThe sightseeing boat (covered by the free pass) leaves Amanohashidate pier, right next to Chion-ji, on the hour and half hour and reaches Ichinomiya pier in about 12 minutes. Just after leaving, the Kaisenkyo bridge swings around to let the boat through, and seagulls fly right alongside: feeding them is part of the fun.\n\nBy bike, rent one at Amanohashidate pier and ride 15–20 minutes through the pines, with white sand on one side and a calm inland sea on the other. You can drop it off at Ichinomiya pier (¥500 for 2 hours; not covered by the free pass).\n\nFrom Ichinomiya pier, Kono Shrine (stop 5) is just a short walk away.\n\nRecommended travel time: 11:00 (boat)"
+    "ja": "天橋立（あまのはしだて）を渡る\n\n宮島・松島と並ぶ日本三景のひとつ、天橋立。宮津湾と阿蘇海（あそかい）を分ける長さ3.6kmの砂の道を、観光船か自転車で対岸の府中（ふちゅう）へ渡ります。\n\n観光船（フリーパスで乗れます）は、智恩寺のすぐ横の天橋立桟橋から毎時0分・30分に出て、約12分で一の宮桟橋へ。出てすぐに、廻旋橋（かいせんきょう）がぐるっと回って船を通してくれます。カモメが船と並んで飛ぶので、エサやりも楽しめます。\n\n自転車なら、天橋立桟橋で借りて、松並木の中を15〜20分。片側は白い砂浜、もう片側は静かな内海です。対岸の一の宮桟橋で返せます（2時間500円。フリーパスには含まれません）。\n\n一の宮桟橋に着いたら、すぐ近くの籠神社（5番）へ。土日祝の11:00の船は、廻旋橋と運河をめぐる22分のコースなので、一の宮桟橋には11:22に着きます。\n\nおすすめ移動時間：11:00（観光船）",
+    "en": "Crossing Amanohashidate\n\nAmanohashidate is one of Japan’s Three Scenic Views, along with Miyajima and Matsushima: a 3.6 km sandbar between Miyazu Bay and the Aso Sea. Cross it by boat or by bike to Fuchu on the far side.\n\nThe sightseeing boat (covered by the free pass) leaves Amanohashidate pier, right next to Chion-ji, on the hour and half hour and reaches Ichinomiya pier in about 12 minutes. Just after leaving, the Kaisenkyo bridge swings around to let the boat through, and seagulls fly right alongside: feeding them is part of the fun.\n\nBy bike, rent one at Amanohashidate pier and ride 15–20 minutes through the pines, with white sand on one side and a calm inland sea on the other. You can drop it off at Ichinomiya pier (¥500 for 2 hours; not covered by the free pass).\n\nFrom Ichinomiya pier, Kono Shrine (stop 5) is just a short walk away. On weekends and holidays the 11:00 boat takes the 22-minute route via the turning bridge and canal, arriving at 11:22.\n\nRecommended travel time: 11:00 (boat)"
    },
    "gmaps": [
     {
@@ -408,7 +408,7 @@
     "en": "Shrine"
    },
    "blurb": {
-    "ja": "伊勢神宮の神さまが、伊勢へ移る前にまつられていたと伝わる「元伊勢」。丹後でいちばん格式の高い神社です。",
+    "ja": "伊勢神宮の神さまが、伊勢へ移る前にまつられていたと伝わる「元伊勢」。",
     "en": "Known as “Moto-Ise”: the gods of Ise Grand Shrine are said to have been worshipped here before moving to Ise."
    },
    "lat": 35.582586,
@@ -484,13 +484,13 @@
    },
    "blurb": {
     "ja": "ケーブルカーかリフトで山の上へ。天に昇る龍のような「昇龍観」と、股のぞき発祥の地です。",
-    "en": "Up by cable car or chairlift to the “rising dragon” view, the place where looking between your legs started."
+    "en": "Up by cable car or chairlift for the “rising dragon” view. Bend over and look at it upside down between your legs: the custom started here."
    },
    "lat": 35.586553,
    "lng": 135.195928,
    "text": {
-    "ja": "天橋立傘松公園（かさまつこうえん）\n\n籠神社のすぐ横の府中駅から、ケーブルカー（約4分）かリフト（6〜8分ほど）で上ります（フリーパスで乗れます）。こちらからの天橋立は、龍が天に昇っていくように見えることから「昇龍観（しょうりゅうかん）」。「股のぞき発祥の地」で、股のぞき台もあります。股の間から逆さまにのぞくと、海と空が入れ替わって、橋が空に架かっているように見えます。\n\n山の上の展望レストラン「AmaTerrace（アマテラス）」で、天橋立を見ながらお昼ごはんにするのがおすすめです。\n\n下りたら、府中駅の近くの「天橋立ケーブル下」バス停から13:29発のバスで伊根へ（伊根湾めぐり・日出に13:58着）。\n\nおすすめ訪問時間：11:40〜13:15",
-    "en": "Amanohashidate Kasamatsu Park\n\nFrom Fuchu Station, right next to Kono Shrine, ride the cable car (about 4 min) or chairlift (6–8 min) up the hill (covered by the free pass). From here Amanohashidate looks like a dragon rising into the sky, the “Shoryukan” view. This is said to be where the upside-down “matanozoki” view began: bend over and look back between your legs, and the sandbar seems to float in the sky.\n\nHave lunch with the view at AmaTerrace, the viewing restaurant at the top.\n\nBack at the bottom, take the 13:29 bus to Ine from the “Amanohashidate Cable-shita” stop near Fuchu Station (arrives at Ine-wan Meguri Hide at 13:58).\n\nRecommended visit time: 11:40–13:15"
+    "ja": "天橋立傘松公園（かさまつこうえん）\n\n籠神社のすぐ横の府中駅から、ケーブルカー（約4分）かリフト（6〜8分ほど）で上ります（フリーパスで乗れます）。こちらからの天橋立は、龍が天に昇っていくように見えることから「昇龍観（しょうりゅうかん）」。「股のぞき発祥の地」で、股のぞき台もあります。股の間から逆さまにのぞくと、海と空が入れ替わって、橋が空に架かっているように見えます。\n\n切符はケーブルカーとリフトの共通です。上りはケーブルカー、下りはリフトにすると、天橋立を正面に見ながら下りられます。\n\n山の上の展望レストラン「AmaTerrace（アマテラス）」で、天橋立を見ながらお昼ごはんにするのがおすすめです。\n\n下りたら、府中駅の近くの「天橋立ケーブル下」バス停から13:29発のバスで伊根へ（伊根湾めぐり・日出に13:58着）。\n\nおすすめ訪問時間：11:40〜13:15",
+    "en": "Amanohashidate Kasamatsu Park\n\nFrom Fuchu Station, right next to Kono Shrine, ride the cable car (about 4 min) or chairlift (6–8 min) up the hill (covered by the free pass). From here Amanohashidate looks like a dragon rising into the sky, the “Shoryukan” view. This is said to be where the upside-down “matanozoki” view began: bend over and look back between your legs, and the sandbar seems to float in the sky.\n\nThe ticket works on both the cable car and the chairlift. Go up by cable car and come down by chairlift, and you face Amanohashidate all the way down.\n\nHave lunch with the view at AmaTerrace, the viewing restaurant at the top.\n\nBack at the bottom, take the 13:29 bus to Ine from the “Amanohashidate Cable-shita” stop near Fuchu Station (arrives at Ine-wan Meguri Hide at 13:58).\n\nRecommended visit time: 11:40–13:15"
    },
    "gmaps": [
     {
@@ -507,7 +507,7 @@
     {
      "kind": "official",
      "label": {
-      "ja": "天橋立ケーブルカー・リフト（運行時間・運賃）",
+      "ja": "天橋立ケーブルカー・リフト（運行時間・運賃・乗り方）",
       "en": "Cable car & lift: times and fares (Japanese)"
      },
      "url": {
@@ -579,8 +579,6 @@
     "kasamatsu-1.jpg",
     "kasamatsu-2.jpg",
     "kasamatsu-3.jpg",
-    "kasamatsu-4.jpg",
-    "kasamatsu-5.jpg",
     "kasamatsu-6.jpg",
     "kasamatsu-7.jpg",
     "kasamatsu-8.jpg",
@@ -606,8 +604,8 @@
    "lat": 35.6704,
    "lng": 135.2772,
    "text": {
-    "ja": "伊根湾めぐり遊覧船\n\nバスを「伊根湾めぐり・日出（ひで）」で降りると、目の前が遊覧船乗り場です（フリーパスで乗れます）。30分ごとに出る船で、約25分かけて伊根湾をぐるっと一周。1階が船のガレージになった舟屋（ふなや）が、海のすぐ上に並ぶ景色を海側から見られます。\n\n船が出るとカモメが集まってきて、船と並んで飛びます。乗り場と船内でカモメのエサも売っています。\n\nおすすめ訪問時間：14:00〜14:30",
-    "en": "Ine Bay Sightseeing Boat\n\nGet off the bus at “Ine-wan Meguri Hide” and the pier is right in front of you (covered by the free pass). Boats leave every 30 minutes and loop around Ine Bay in about 25 minutes, giving you the view of the funaya — houses with a boat garage on the ground floor — lined up right on the water.\n\nOnce the boat leaves, seagulls gather and fly alongside. Gull food is sold at the pier and on board.\n\nRecommended visit time: 14:00–14:30"
+    "ja": "伊根湾めぐり遊覧船\n\nバスを「伊根湾めぐり・日出（ひで）」で降りると、目の前が遊覧船乗り場です（フリーパスで乗れます）。30分ごとに出る船で、約25分かけて伊根湾をぐるっと一周。1階が船のガレージになった舟屋（ふなや）が、海のすぐ上に並ぶ景色を海側から見られます。\n\n船が出るとカモメが集まってきて、船と並んで飛びます。乗り場と船内でカモメのエサも売っています。\n\nバスが遅れて14:00の船に間に合わなければ、14:30の船に（そのあと16:00のバスに乗れるように、向井酒造と舟屋は少し短めに）。\n\nおすすめ訪問時間：14:00〜14:30",
+    "en": "Ine Bay Sightseeing Boat\n\nGet off the bus at “Ine-wan Meguri Hide” and the pier is right in front of you (covered by the free pass). Boats leave every 30 minutes and loop around Ine Bay in about 25 minutes, giving you the view of the funaya — houses with a boat garage on the ground floor — lined up right on the water.\n\nOnce the boat leaves, seagulls gather and fly alongside. Gull food is sold at the pier and on board.\n\nIf the bus is late and you miss the 14:00 boat, take the 14:30 one (then keep Mukai and the funaya a little shorter so you can catch the 16:00 bus).\n\nRecommended visit time: 14:00–14:30"
    },
    "gmaps": [
     {
@@ -802,8 +800,8 @@
    "lat": 35.675733,
    "lng": 135.287658,
    "text": {
-    "ja": "伊根の舟屋（ふなや）\n\n1階が海に開いた船のガレージ、2階が住まいになった舟屋が、伊根湾にそって約230軒並びます。国の重要伝統的建造物群保存地区にも選ばれた、ほかでは見られない漁師町です。\n\n遊覧船乗り場から、向井酒造の前を通って、伊根浦公園と観光案内所のある町の中心まで、湾ぞいの道を20分ほど歩きます。乗り場のそばの日出（ひで）の入り江は、水が透き通っていてきれいです。\n\n舟屋の多くは今も人が暮らす家なので、静かに歩いて、勝手に入らないようにしてください。\n\n帰りは「伊根」バス停から16:00発のバスで「天橋立ケーブル下」へ（16:33着）。そこから一の宮桟橋まで歩いてすぐです。\n\nおすすめ訪問時間：15:05〜15:55",
-    "en": "Ine’s Funaya\n\nAbout 230 funaya line Ine Bay: the ground floor is a garage that opens onto the sea for a boat, and people live upstairs. It’s a fishing village like nowhere else, protected as a national Preservation District for Groups of Traditional Buildings.\n\nFrom the boat pier, walk about 20 minutes along the bay road, past Mukai Sake Brewery, to the center of the village with Ine-ura Park and the tourist information center. The cove at Hide, next to the pier, has beautifully clear water.\n\nMost funaya are still people’s homes, so please keep your voice down and don’t go inside without permission.\n\nFor the way back, take the 16:00 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 16:33). Ichinomiya pier is a short walk from there.\n\nRecommended visit time: 15:05–15:55"
+    "ja": "伊根の舟屋（ふなや）\n\n1階が海に開いた船のガレージ、2階が住まいになった舟屋が、伊根湾にそって約230軒並びます。町並みは、国の重要伝統的建造物群保存地区に選ばれています。\n\n遊覧船乗り場から、向井酒造の前を通って、伊根浦公園と観光案内所のある町の中心まで、湾ぞいの道を20分ほど歩きます。乗り場のそばの日出（ひで）の入り江は、水が透き通っていてきれいです。\n\n舟屋の多くは今も人が暮らす家なので、静かに歩いて、勝手に入らないようにしてください。\n\n帰りは「伊根」バス停から16:00発のバスで「天橋立ケーブル下」へ（16:33着）。そこから一の宮桟橋まで歩いてすぐです。バスが遅れて16:45の船（11〜2月は最終便）に間に合わないときは、そのままバスに乗って「天橋立駅前」で降りれば駅に戻れます（フリーパスで乗れます）。\n\nおすすめ訪問時間：15:05〜15:55",
+    "en": "Ine’s Funaya\n\nAbout 230 funaya line Ine Bay: the ground floor is a garage that opens onto the sea for a boat, and people live upstairs. The village is protected as a national Preservation District for Groups of Traditional Buildings.\n\nFrom the boat pier, walk about 20 minutes along the bay road, past Mukai Sake Brewery, to the center of the village with Ine-ura Park and the tourist information center. The cove at Hide, next to the pier, has beautifully clear water.\n\nMost funaya are still people’s homes, so please keep your voice down and don’t go inside without permission.\n\nFor the way back, take the 16:00 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 16:33). Ichinomiya pier is a short walk from there. If the bus is late and you miss the 16:45 boat (the last one in Nov–Feb), stay on the bus to “Amanohashidate-ekimae” to get back to the station (covered by the free pass).\n\nRecommended visit time: 15:05–15:55"
    },
    "gmaps": [
     {
@@ -891,8 +889,8 @@
    "lat": 35.580862,
    "lng": 135.196014,
    "text": {
-    "ja": "天橋立を渡って戻る\n\n伊根からのバスを「天橋立ケーブル下」で降りたら、歩いてすぐの一の宮桟橋へ。16:45発の観光船に乗ると、16:57に天橋立桟橋に着きます（フリーパスで乗れます。3〜10月は17:15発、4〜9月は17:45発もあります）。天橋立桟橋から天橋立駅までは歩いて5分ほどです。\n\n自転車で戻るなら、一の宮桟橋で借りて、行きとは違う夕方の松並木を走って天橋立桟橋で返します（2時間500円）。砂浜に寄り道するのも気持ちいいです。自転車は窓口が開いているうちに返せるよう、早めに出発しましょう。\n\nおすすめ移動時間：16:45（観光船）",
-    "en": "Back across Amanohashidate\n\nGet off the bus from Ine at “Amanohashidate Cable-shita” and walk to Ichinomiya pier. The 16:45 boat reaches Amanohashidate pier at 16:57 (covered by the free pass; there are also boats at 17:15 in Mar–Oct and 17:45 in Apr–Sep). The station is about 5 minutes on foot from the pier.\n\nTo ride back, rent a bike at Ichinomiya pier and return it at Amanohashidate pier (¥500 for 2 hours), riding the pine forest in the evening light; stop at the beach on the way. Leave early enough to return the bike while the counter is open.\n\nRecommended travel time: 16:45 (boat)"
+    "ja": "天橋立を渡って戻る\n\n伊根からのバスを「天橋立ケーブル下」で降りたら、歩いてすぐの一の宮桟橋へ（バスが遅れて16:45の船に間に合わないときは、降りずに「天橋立駅前」まで乗れば駅に戻れます）。16:45発の観光船に乗ると、16:57に天橋立桟橋に着きます（フリーパスで乗れます。3〜10月は17:15発、4〜9月は17:45発もあります）。天橋立桟橋から天橋立駅までは歩いて5分ほどです。\n\n自転車で戻るなら、一の宮桟橋で借りて、行きとは違う夕方の松並木を走って天橋立桟橋で返します（2時間500円）。砂浜に寄り道するのも気持ちいいです。自転車は窓口が開いているうちに返せるよう、早めに出発しましょう。\n\nおすすめ移動時間：16:45（観光船）",
+    "en": "Back across Amanohashidate\n\nGet off the bus from Ine at “Amanohashidate Cable-shita” and walk to Ichinomiya pier (if the bus is late and you’d miss the 16:45 boat, stay on to “Amanohashidate-ekimae” for the station). The 16:45 boat reaches Amanohashidate pier at 16:57 (covered by the free pass; there are also boats at 17:15 in Mar–Oct and 17:45 in Apr–Sep). The station is about 5 minutes on foot from the pier.\n\nTo ride back, rent a bike at Ichinomiya pier and return it at Amanohashidate pier (¥500 for 2 hours), riding the pine forest in the evening light; stop at the beach on the way. Leave early enough to return the bike while the counter is open.\n\nRecommended travel time: 16:45 (boat)"
    },
    "gmaps": [
     {
@@ -958,8 +956,6 @@
     "return-1.jpg",
     "return-2.jpg",
     "return-3.jpg",
-    "return-4.jpg",
-    "return-5.jpg",
     "return-6.jpg",
     "return-7.jpg",
     "return-8.jpg",

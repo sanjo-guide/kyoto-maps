@@ -15,7 +15,7 @@ window.HIMEJI_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '姫路から海沿いを東へ、京都の方へ戻りながら回る順番です。行かない場所は「選んで回る」で外せます。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '姫路から明石、須磨へと東へ進み、最後は夕日を見るために舞子まで少し戻ります。4番の書写山は半日かかる寄り道で、須磨・舞子とは同じ日に回れません。行かない場所は「選んで回る」で外せます。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -29,7 +29,7 @@ window.HIMEJI_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
-    credit: '写真・文章：Toshi<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
+    credit: '写真・文章：Toshi（書写山 圓教寺の写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     photoBy: '写真：',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
@@ -55,7 +55,7 @@ window.HIMEJI_I18N = {
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。姫路駅は姫路城か好古園を選ぶと入ります。時間は全部回る場合の目安です。',
+    pickNote: '行きたい場所の「行きたい」を押してください。姫路駅は姫路城・好古園・書写山のどれかを選ぶと入ります。時間は、書写山を除く5か所を回る場合の目安です。',
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（全員共通の場所を含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から、行きたい場所を選んでください。',
     pickAll: 'すべて選ぶ',
@@ -83,6 +83,7 @@ window.HIMEJI_I18N = {
         "京都から姫路まで新快速で1時間36分（2,210円）",
         "姫路城の中は急な木の階段。靴を脱いで上がります",
         "須磨浦山上遊園は火曜休み・16:30最終入場。冬（12/2〜2/5）は土日祝だけ",
+        "姫路でもう1か所なら、ロープウェイで上る書写山 圓教寺（半日。須磨・舞子の代わりに）",
         "魚の棚は木曜に休む店が多い"
       ],
       "dayHead": "1日の流れ（目安）",
@@ -104,7 +105,7 @@ window.HIMEJI_I18N = {
           "title": "魚の棚で明石焼のお昼",
           "text": "新快速で明石へ。魚の棚商店街のたこ磯で、だしにつけて食べる玉子焼を。",
           "photo": [
-            4,
+            5,
             2
           ]
         },
@@ -114,7 +115,7 @@ window.HIMEJI_I18N = {
           "title": "ロープウェーとカーレーター",
           "text": "山陽電車で須磨浦公園へ。ロープウェーとカーレーターで山の上の回転展望閣へ。",
           "photo": [
-            5,
+            6,
             1
           ]
         },
@@ -125,7 +126,7 @@ window.HIMEJI_I18N = {
           "text": "舞子公園で橋と淡路島の夕景を見てから、JR舞子駅から京都へ。",
           "note": "京都着は18:59",
           "photo": [
-            6,
+            7,
             0
           ]
         }
@@ -159,11 +160,11 @@ window.HIMEJI_I18N = {
       "how": [
         {
           "title": "最初は「選んで回る」",
-          "text": "行きたい場所だけを選ぶと、駅とルートが自動で決まります。全部回るなら「すべて選ぶ」を。"
+          "text": "行きたい場所だけを選ぶと、駅とルートが自動で決まります。書写山は半日かかるので、須磨・舞子と一緒には選べません。"
         },
         {
-          "title": "西から東へ",
-          "text": "姫路から明石、須磨、舞子と、京都の方へ戻りながら回ります。"
+          "title": "西から東へ、最後に夕日",
+          "text": "姫路から明石、須磨へと東へ進み、最後は夕日を見るために舞子まで少し戻ります。"
         },
         {
           "title": "番号をタップ",
@@ -190,7 +191,7 @@ window.HIMEJI_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'From Himeji east along the coast, heading back towards Kyoto. Use “Choose stops” to drop places you’ll skip. The dotted line shows the order, not the actual path.',
+    listNote: 'From Himeji east to Akashi and Suma, then a short way back west to Maiko for the sunset. No. 4, Mt. Shosha, is a half-day side trip that doesn’t fit with Suma and Maiko. Use “Choose stops” to drop places you’ll skip. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -204,7 +205,7 @@ window.HIMEJI_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
-    credit: 'Photos &amp; text: Toshi<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
+    credit: 'Photos &amp; text: Toshi (the Mt. Shosha Engyo-ji photos are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     photoBy: 'Photo: ',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
@@ -230,7 +231,7 @@ window.HIMEJI_I18N = {
     modeAria: 'How to go',
     modeAll: 'Full route',
     modePick: 'Choose stops',
-    pickNote: 'Tap “Want to go” on the places you like. Himeji Station joins your route if you pick the castle or Kokoen. Times are for the full route.',
+    pickNote: 'Tap “Want to go” on the places you like. Himeji Station joins your route if you pick the castle, Kokoen or Mt. Shosha. Times are for the five stops without Mt. Shosha.',
     pickCount: '{n} places chosen · {t} stops in your route (incl. the shared ones)',
     pickEmpty: 'Nothing chosen yet. Pick the places you want from the list below.',
     pickAll: 'Choose all',
@@ -258,6 +259,7 @@ window.HIMEJI_I18N = {
         "Kyoto to Himeji is 1 h 36 min by Special Rapid (¥2,210)",
         "Inside the castle: steep wooden stairs, shoes off",
         "Sumaura Sanjo Yuen: closed Tuesdays, last entry 16:30; weekends only 2 Dec – 5 Feb",
+        "One more in Himeji: Mt. Shosha Engyo-ji by ropeway (half a day, instead of Suma and Maiko)",
         "Many Uonotana shops close on Thursdays"
       ],
       "dayHead": "One day, roughly like this",
@@ -279,7 +281,7 @@ window.HIMEJI_I18N = {
           "title": "Akashiyaki lunch at Uonotana",
           "text": "Special Rapid to Akashi; tamagoyaki dipped in dashi at Takoiso in the Uonotana arcade.",
           "photo": [
-            4,
+            5,
             2
           ]
         },
@@ -289,7 +291,7 @@ window.HIMEJI_I18N = {
           "title": "Ropeway and Car-rator",
           "text": "Sanyo Railway to Sumaura-koen, then up by ropeway and Car-rator to the revolving observatory.",
           "photo": [
-            5,
+            6,
             1
           ]
         },
@@ -300,7 +302,7 @@ window.HIMEJI_I18N = {
           "text": "Watch the sun set behind the bridge and Awaji Island at Maiko Park, then head home from JR Maiko.",
           "note": "Arrive Kyoto 18:59",
           "photo": [
-            6,
+            7,
             0
           ]
         }
@@ -334,11 +336,11 @@ window.HIMEJI_I18N = {
       "how": [
         {
           "title": "Starts in “Choose stops”",
-          "text": "Pick only the places you want; stations and the route follow automatically. To see everything, tap “Choose all”."
+          "text": "Pick only the places you want; stations and the route follow automatically. Mt. Shosha takes half a day, so it can’t be combined with Suma and Maiko."
         },
         {
-          "title": "West to east",
-          "text": "From Himeji to Akashi, Suma and Maiko, heading back towards Kyoto."
+          "title": "West to east, then the sunset",
+          "text": "From Himeji east to Akashi and Suma, then a short way back west to Maiko for the sunset."
         },
         {
           "title": "Tap a number",

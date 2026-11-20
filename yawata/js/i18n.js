@@ -69,7 +69,7 @@ window.YAWATA_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
       "h1": "3月の河津桜と、4月の桜のトンネル。",
-      "lead": "京阪で京都の南へ。3月は淀水路に沿ってピンクの河津桜が咲き、4月は木津川と宇治川にはさまれた背割堤に約1.4kmの桜のトンネル。ケーブルで男山の上の石清水八幡宮にもお参りを。2つの桜は咲く時期が違うので、季節に合わせて選んでください。",
+      "lead": "春の桜のマップです。淀水路の河津桜は3月上旬〜中旬（2026年の満開は3月7日ごろ）、背割堤の桜は例年3月下旬〜4月上旬。咲く時期が違うので、季節に合わせて選んでください。京阪で京都の南へ。淀水路に沿ってピンクの河津桜、木津川と宇治川にはさまれた背割堤に約1.4kmの桜のトンネル。ケーブルで男山の上の石清水八幡宮にもお参りを。",
       "favLabel": "いちばんの見どころ",
       "favName": "背割堤の桜並木",
       "favText": "約220本、約1.4kmの桜のトンネル。",
@@ -81,9 +81,9 @@ window.YAWATA_I18N = {
       "who": [
         "京都市内とはひと味ちがう、のびのびした桜を見たい人に",
         "祇園四条から京阪で約20〜25分",
-        "淀水路の河津桜は3月上旬〜中旬、背割堤は4月上旬",
+        "淀水路の河津桜は3月上旬〜中旬、背割堤は3月下旬〜4月上旬",
         "石清水八幡宮へはケーブルで約3分（片道300円）",
-        "背割堤の芝生でお花見ができます"
+        "お昼はお弁当を用意して、背割堤の芝生でお花見を"
       ],
       "dayHead": "1日の流れ（目安）",
       "from": "",
@@ -99,7 +99,7 @@ window.YAWATA_I18N = {
           ]
         },
         {
-          "time": "10:50",
+          "time": "11:05",
           "area": "男山",
           "title": "石清水八幡宮へケーブルで",
           "text": "石清水八幡宮駅からケーブルで男山の上へ。国宝の本殿と展望台。",
@@ -115,7 +115,7 @@ window.YAWATA_I18N = {
           "text": "約1.4kmの桜並木を歩き、さくらであい館の展望塔から3つの川の合流点を見下ろします（4月）。",
           "note": "祇園四条へ約25分",
           "photo": [
-            3,
+            4,
             0
           ]
         }
@@ -234,7 +234,7 @@ window.YAWATA_I18N = {
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
       "h1": "Kawazu cherries in March, a tunnel of blossoms in April.",
-      "lead": "South of Kyoto on the Keihan line. In March, pink Kawazu cherries line the Yodo canal; in April, a 1.4 km tunnel of cherries covers the Sewaritei levee between the Kizu and Uji rivers. Ride the cable car up Mt. Otokoyama to Iwashimizu Hachimangu too. The two cherries bloom a month apart, so choose for your season.",
+      "lead": "A spring cherry-blossom map. The Kawazu cherries on the Yodo canal are best in early to mid March (full bloom around 7 March in 2026); the Sewaritei cherries usually peak from late March to early April. They bloom at different times, so choose by season. Ride the Keihan line south of Kyoto: pink Kawazu cherries along the canal, a 1.4 km tunnel of blossoms on the levee between the Kizu and Uji rivers, and a cable car up to Iwashimizu Hachimangu on Mt. Otokoyama.",
       "favLabel": "Highlight",
       "favName": "Sewaritei cherry avenue",
       "favText": "About 220 trees forming a 1.4 km tunnel.",
@@ -246,9 +246,9 @@ window.YAWATA_I18N = {
       "who": [
         "For roomy, open-air cherry viewing unlike central Kyoto",
         "20–25 min from Gion-Shijo by Keihan",
-        "Yodo’s Kawazu cherries: early to mid March; Sewaritei: early April",
+        "Yodo’s Kawazu cherries: early to mid March. Sewaritei: late March to early April",
         "Cable car to Iwashimizu Hachimangu: about 3 min (¥300 one way)",
-        "Picnic on the grass at Sewaritei"
+        "Bring a packed lunch and picnic on the grass at Sewaritei"
       ],
       "dayHead": "One day, roughly like this",
       "from": "From",
@@ -264,7 +264,7 @@ window.YAWATA_I18N = {
           ]
         },
         {
-          "time": "10:50",
+          "time": "11:05",
           "area": "Mt. Otokoyama",
           "title": "Up to Iwashimizu Hachimangu",
           "text": "Cable car up from Iwashimizu-hachimangu Station to the National Treasure main hall and lookout.",
@@ -280,7 +280,7 @@ window.YAWATA_I18N = {
           "text": "Walk the 1.4 km avenue and look down on three rivers meeting from the Sakura Deaikan tower (April).",
           "note": "About 25 min to Gion-Shijo",
           "photo": [
-            3,
+            4,
             0
           ]
         }

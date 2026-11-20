@@ -54,25 +54,25 @@ S = [
          lat=35.04279, lng=135.74655,
          text=T("大徳寺（だいとくじ）\n\n臨済宗大徳寺派の大本山。広い境内に、土塀に囲まれた塔頭（小さなお寺）が並び、松と石畳の道を歩くだけでも気持ちのいい場所です。"
                 "朱色の三門（金毛閣）は、千利休ゆかりの門として知られています。\n\n"
-                "塔頭の中には庭を公開しているところもありますが、公開日や拝観料はそれぞれちがうので、行く前に確かめてください。\n\n"
+                "塔頭の中には庭を公開しているところもありますが、公開日や拝観料はそれぞれちがうので、行く前に確かめてください。最後の写真は、塔頭のひとつ黄梅院（おうばいいん）の門。門の中に青もみじと苔の庭が見えます。\n\n"
                 "京都駅からは市バスで「大徳寺前」下車すぐ。金閣寺へは市バスか、歩いて約25分です。\n\nおすすめ訪問時間：9:00〜9:50",
                 "Daitoku-ji Temple\n\nHead temple of the Daitoku-ji school of Rinzai Zen. Its grounds are lined with walled sub-temples, and simply walking the pine-shaded stone paths is a pleasure. "
                 "The vermilion Sanmon gate (Kinmokaku) is famous for its links to the tea master Sen no Rikyu.\n\n"
-                "Some sub-temples open their gardens to visitors, but days and fees vary, so check before you go.\n\n"
+                "Some sub-temples open their gardens to visitors, but days and fees vary, so check before you go. The last photo is the gate of Obai-in, one of them, with green maples and moss inside.\n\n"
                 "From Kyoto Station, take a city bus to “Daitokuji-mae”. To Kinkaku-ji, take a bus or walk about 25 minutes.\n\nRecommended visit time: 9:00–9:50"),
          gmaps=[gm("大徳寺", "Daitoku-ji", 35.04279, 135.74655, "大徳寺 京都市北区")],
          links=[link("info", "臨黄ネット（大徳寺の案内）", "Rinzai-Obaku Zen (Daitoku-ji, Japanese)", "https://www.rinnou.net/cont_03/07daitoku/")],
          info=NONE),
     dict(id="kinkakuji", name=T("金閣寺（鹿苑寺）", "Kinkaku-ji (Rokuon-ji)"), kind=T("お寺", "Temple"),
-         blurb=T("池に映る金色の舎利殿。雪の日の金閣は、一度は見てみたい景色です。",
-                 "The golden pavilion mirrored in its pond. Kinkaku-ji under snow is a sight worth seeing once in your life."),
+         blurb=T("池に映る金色の舎利殿。写真は雪が積もった朝（2026年2月）のものです。",
+                 "The golden pavilion mirrored in its pond. The photos are from a snowy morning in February 2026."),
          lat=35.03937, lng=135.72924,
          text=T("金閣寺（きんかくじ）\n\n正式には鹿苑寺（ろくおんじ）。室町幕府の将軍・足利義満の山荘がはじまりで、金箔をはった舎利殿「金閣」が鏡湖池（きょうこち）に映る姿は、京都を代表する景色です。\n\n"
                 "順路は一方通行で、池のほとりから金閣を眺めたあと、裏山の庭をぐるっと回って出口へ。見学は30分〜1時間ほどです。\n\n"
-                "雪が積もった朝の金閣はとくに美しく、そのぶんとても混みます（写真は2026年2月8日）。晴れた日は、池に映る「逆さ金閣」もきれいです。\n\nおすすめ訪問時間：10:10〜11:00",
+                "雪が積もった朝は、屋根も松も白くなります。そのぶんとても混みます（写真は2026年2月8日）。雪は昼までにとけてしまうことが多いので、雪の日は大徳寺を後にして、9:00の開門に合わせて金閣寺へ行くのがおすすめです。晴れた日は、池に映る「逆さ金閣」もきれいです。\n\nおすすめ訪問時間：10:10〜11:00",
                 "Kinkaku-ji (Rokuon-ji)\n\nOfficially Rokuon-ji. It began as the villa of the shogun Ashikaga Yoshimitsu, and its gold-leafed pavilion reflected in the Kyoko-chi pond is one of Kyoto’s defining views.\n\n"
                 "The route is one-way: admire the pavilion from the pond, then loop through the hillside garden to the exit. Allow 30 minutes to an hour.\n\n"
-                "On a snowy morning it is especially beautiful, and very crowded (photos: 8 Feb 2026). On clear days, look for the pavilion’s reflection in the pond.\n\nRecommended visit time: 10:10–11:00"),
+                "On a snowy morning the roofs and pines turn white, and it gets very crowded (photos: 8 Feb 2026). The snow often melts by midday, so on a snowy day leave Daitoku-ji for later and be at Kinkaku-ji when it opens at 9:00. On clear days, look for the pavilion’s reflection in the pond.\n\nRecommended visit time: 10:10–11:00"),
          gmaps=[gm("金閣寺", "Kinkaku-ji", 35.03937, 135.72924, "金閣寺 鹿苑寺")],
          links=[link("official", "金閣寺 公式サイト（アクセス・参拝料金）", "Kinkaku-ji (official)", "https://www.shokoku-ji.jp/kinkakuji/access/", "https://www.shokoku-ji.jp/en/kinkakuji/")],
          info=info([row("hours", "9:00〜17:00（年中無休）", "9:00–17:00, open every day"),
@@ -91,8 +91,8 @@ S = [
          info=info([row("hours", "3月1日〜11月30日 8:00〜17:00、12月1日〜2月末 8:30〜16:30", "1 Mar – 30 Nov 8:00–17:00; 1 Dec – end of Feb 8:30–16:30"),
                     row("fee", "大人600円、高校生500円、小・中学生300円", "Adults ¥600, high school ¥500, elementary and junior high ¥300")])),
     dict(id="ninnaji", name=T("仁和寺", "Ninna-ji Temple"), kind=T("お寺", "Temple"),
-         blurb=T("五重塔と、背の低い遅咲きの「御室桜（おむろざくら）」。京都の桜の最後をかざるお寺です。",
-                 "A five-storey pagoda and the low, late-blooming Omuro cherries, the last great cherry show in Kyoto."),
+         blurb=T("五重塔と、背の低い遅咲きの「御室桜（おむろざくら）」。見ごろは4月中ごろです。",
+                 "A five-storey pagoda and the low, late-blooming Omuro cherries, at their best around mid-April."),
          lat=35.02981, lng=135.71415,
          text=T("仁和寺（にんなじ）\n\n龍安寺から歩いて約15分。大きな二王門をくぐると、広い境内の奥に五重塔が建っています。\n\n"
                 "中門の内側の御室桜は、背が低く、花が目の高さで咲く遅咲きの桜。京都の桜の中では遅めの、4月中ごろが見ごろです（写真は2025年4月17日）。"
@@ -105,13 +105,14 @@ S = [
          gmaps=[gm("仁和寺", "Ninna-ji", 35.02981, 135.71415, "仁和寺"),
                 gm("嵐電 御室仁和寺駅", "Randen Omuro-Ninnaji Station", 35.02645, 135.71396, "嵐電 御室仁和寺駅")],
          links=[link("official", "仁和寺 公式サイト（拝観・交通案内）", "Ninna-ji (official, Japanese)", "https://ninnaji.jp/visit/")],
-         info=info([row("fee", "御所庭園 大人800円、霊宝館（期間限定）大人500円、御室花まつりの特別入山料 大人800円（高校生以下は無料）",
+         info=info([row("hours", "御所庭園 3〜11月 9:00〜17:00（受付16:30まで）、12〜2月 9:00〜16:30", "Palace garden: Mar–Nov 9:00–17:00 (last entry 16:30); Dec–Feb 9:00–16:30"),
+                    row("fee", "御所庭園 大人800円、霊宝館（期間限定）大人500円、御室花まつりの特別入山料 大人800円（高校生以下は無料）",
                         "Palace garden ¥800, treasure hall (limited periods) ¥500, Omuro Flower Festival special entry ¥800 per adult (high school and under free)"),
                     row("train", "嵐電 御室仁和寺→北野白梅町 約5分・250円", "Randen tram Omuro-Ninnaji → Kitano-Hakubaicho, about 5 min, ¥250")],
                    tip=T("拝観料は仁和寺の公式サイト、嵐電の運賃は乗換案内で確認しました。", "Fees checked on Ninna-ji’s website; tram fare on a route planner."))),
     dict(id="hirano", name=T("平野神社", "Hirano Shrine"), kind=T("神社", "Shrine"),
-         blurb=T("約60種・400本の桜が咲く、京都の夜桜の名所。春はぜひ夕暮れに。",
-                 "About 400 cherry trees of some 60 kinds: a classic spot for cherry blossoms at night. Come at dusk in spring."),
+         blurb=T("約60種・400本の桜がある、夜桜の名所。桜の時期は夕暮れからがおすすめです。",
+                 "About 400 cherry trees of some 60 kinds, known for blossoms at night. In cherry season, come at dusk."),
          lat=35.03238, lng=135.73248,
          text=T("平野神社（ひらのじんじゃ）\n\n嵐電の北野白梅町駅から北へ歩いて約7分。平安時代から桜が植えられてきた神社で、今は約60種・400本の桜があります。江戸時代から「平野の夜桜」として知られる花見の名所です。\n\n"
                 "3月中ごろの早咲きの桜から4月下旬の八重桜まで、長い期間いろいろな桜が楽しめます。写真は2025年4月5日の夕方〜夜。桜の時期は境内の桜苑が有料になることがあります（料金・時間は要確認）。\n\n"
@@ -127,10 +128,10 @@ S = [
                  "“Tenjin-san”, the shrine of Sugawara no Michizane, god of learning. Autumn brings evening light-ups in the maple garden."),
          lat=35.03048, lng=135.73492,
          text=T("北野天満宮（きたのてんまんぐう）\n\n学問の神さまとして知られる菅原道真（すがわらのみちざね）をまつる神社で、京都の人には「天神さん」と呼ばれています。受験の合格をお願いする人も多く、境内には道真が好んだ梅の木がたくさんあります。\n\n"
-                "境内の西側の「もみじ苑」は、秋だけ公開される紅葉の名所。紙屋川（かみやがわ）に架かる朱色の橋と紅葉の景色がみごとで、夜のライトアップもあります。春には梅苑が公開されます（どちらも有料）。\n\n"
+                "境内の西側の「もみじ苑」は、秋だけ公開される紅葉の名所。紙屋川（かみやがわ）に架かる朱色の橋のまわりが紅葉で埋まり、夜はライトアップされます（写真）。春には梅苑が公開されます（どちらも有料）。\n\n"
                 "帰りは「北野天満宮前」から市バスで京都駅や四条方面へ（230円）。\n\nおすすめ訪問時間：14:40〜15:40（秋はライトアップの時間も）",
                 "Kitano Tenmangu Shrine\n\nThe shrine of Sugawara no Michizane, revered as the god of learning, known locally as “Tenjin-san”. Many come to pray for exam success, and the grounds are full of the plum trees Michizane loved.\n\n"
-                "On the west side, the Momiji-en maple garden opens only in autumn: the vermilion bridge over the Kamiya river framed by red leaves is superb, and there are evening light-ups. In spring the plum garden opens (both charge entry).\n\n"
+                "On the west side, the Momiji-en maple garden opens only in autumn: red maples crowd round the vermilion bridge over the Kamiya river, and they are lit up in the evening (the photos). In spring the plum garden opens (both charge entry).\n\n"
                 "To go back, take a city bus from “Kitano Tenmangu-mae” toward Kyoto Station or Shijo (¥230).\n\nRecommended visit time: 14:40–15:40 (plus the light-up hours in autumn)"),
          gmaps=[gm("北野天満宮", "Kitano Tenmangu", 35.03048, 135.73492, "北野天満宮")],
          links=[link("official", "北野天満宮 公式サイト", "Kitano Tenmangu (official, Japanese)", "https://kitanotenmangu.or.jp/")],

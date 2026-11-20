@@ -55,8 +55,8 @@ def build(course):
     S["kyoto"] = {
         "name": T("京都駅", "Kyoto Station"),
         "kind": T("駅（スタート）", "Station (start)"),
-        "blurb": T("特急はしだてで、乗り換えなしで天橋立へ。約2時間の電車の旅から1日が始まります。",
-                   "Take the Hashidate limited express straight to Amanohashidate: about 2 hours, no change of trains."),
+        "blurb": T("8:38の特急はしだて1号で、乗り換えなしで天橋立へ。約2時間です。",
+                   "The 8:38 Hashidate limited express goes straight to Amanohashidate: about 2 hours, no change."),
         "lat": 34.98535, "lng": 135.758766,
         "text": T(
             "京都駅（きょうとえき）\n\n8:38発の特急はしだて1号に乗ると、乗り換えなしで10:39に天橋立に着きます。山陰線（嵯峨野線）のホームから出る、京都丹後鉄道に乗り入れる特急です。\n\n指定席は、帰りの18:09発の特急はしだて8号の分も一緒に買っておくと安心です。片道は大人4,800円（指定席・通常期。時期によって少し変わります）。\n\n写真は京都丹後鉄道の観光列車「丹後の海」。はしだてにこの車両が使われる日もあります。\n\nおすすめ出発時間：8:38",
@@ -73,7 +73,7 @@ def build(course):
     S["station"] = {
         "name": T("天橋立駅（フリーパスを買う）", "Amanohashidate Station (get the day pass)"),
         "kind": T("駅・観光案内所", "Station & tourist info"),
-        "blurb": T("駅の観光案内所で「天橋立・伊根フリーパス 1day」を。船もケーブルカーもバスも、これ1枚で乗り放題です。",
+        "blurb": T("まず駅の観光案内所で「天橋立・伊根フリーパス 1day」を。船もケーブルカーもバスも、これ1枚。",
                    "Buy the Amanohashidate & Ine 1-Day Free Pass at the station’s tourist office: boats, cable car and buses all in one."),
         "lat": 35.557585, "lng": 135.182426,
         "text": T(
@@ -107,15 +107,15 @@ def build(course):
         "info": info([row("hours", "本堂の授与所（お守り・おみくじ）8:00〜17:00", "Main hall counter (charms, fortunes): 8:00–17:00")]),
     }
 
-    after_cross_ja = ("一の宮桟橋に着いたら、すぐ近くの籠神社（5番）へ。" if A else
+    after_cross_ja = ("一の宮桟橋に着いたら、すぐ近くの籠神社（5番）へ。土日祝の11:00の船は、廻旋橋と運河をめぐる22分のコースなので、一の宮桟橋には11:22に着きます。" if A else
                       "一の宮桟橋に着いたら、200mほど先の「天橋立ケーブル下」バス停から伊根行きのバスへ。平日は11:24発に間に合います（伊根湾めぐり・日出11:53着）。土日祝は船が遠回りのコースになって11:22に着くので、12:08発のバスで（12:37着）。")
-    after_cross_en = ("From Ichinomiya pier, Kono Shrine (stop 5) is just a short walk away." if A else
+    after_cross_en = ("From Ichinomiya pier, Kono Shrine (stop 5) is just a short walk away. On weekends and holidays the 11:00 boat takes the 22-minute route via the turning bridge and canal, arriving at 11:22." if A else
                       "From Ichinomiya pier, walk about 200 m to the “Amanohashidate Cable-shita” stop and take the bus to Ine. On weekdays you can catch the 11:24 bus (arrives at Ine-wan Meguri Hide at 11:53). On weekends and holidays the 11:00 boat takes a longer route and arrives at 11:22, so take the 12:08 bus (arr. 12:37).")
     S["crossing"] = {
         "name": T("天橋立を渡る（観光船か自転車で）", "Crossing Amanohashidate (boat or bike)"),
         "kind": T("観光船・レンタサイクル", "Boat or rental bike"),
-        "blurb": T("智恩寺の横の桟橋から、カモメと一緒に観光船で12分。自転車なら松並木の中を15〜20分で対岸の府中へ。",
-                   "From the pier by Chion-ji, 12 minutes by boat with the seagulls, or 15–20 minutes by bike through the pines, to Fuchu on the far side."),
+        "blurb": T("智恩寺の横から観光船で12分。自転車なら松並木の中を15〜20分で、対岸の府中へ。",
+                   "From the pier by Chion-ji: 12 minutes by boat, or 15–20 minutes by bike through the pines, to Fuchu on the far side."),
         "lat": 35.558543, "lng": 135.184739,
         "text": T(
             "天橋立（あまのはしだて）を渡る\n\n宮島・松島と並ぶ日本三景のひとつ、天橋立。宮津湾と阿蘇海（あそかい）を分ける長さ3.6kmの砂の道を、観光船か自転車で対岸の府中（ふちゅう）へ渡ります。\n\n観光船（フリーパスで乗れます）は、智恩寺のすぐ横の天橋立桟橋から毎時0分・30分に出て、約12分で一の宮桟橋へ。出てすぐに、廻旋橋（かいせんきょう）がぐるっと回って船を通してくれます。カモメが船と並んで飛ぶので、エサやりも楽しめます。\n\n自転車なら、天橋立桟橋で借りて、松並木の中を15〜20分。片側は白い砂浜、もう片側は静かな内海です。対岸の一の宮桟橋で返せます（2時間500円。フリーパスには含まれません）。\n\n" + after_cross_ja + "\n\nおすすめ移動時間：11:00（観光船）",
@@ -137,7 +137,7 @@ def build(course):
     S["kono"] = {
         "name": T("元伊勢 籠神社", "Motoise Kono Shrine"),
         "kind": T("神社", "Shrine"),
-        "blurb": T("伊勢神宮の神さまが、伊勢へ移る前にまつられていたと伝わる「元伊勢」。丹後でいちばん格式の高い神社です。",
+        "blurb": T("伊勢神宮の神さまが、伊勢へ移る前にまつられていたと伝わる「元伊勢」。",
                    "Known as “Moto-Ise”: the gods of Ise Grand Shrine are said to have been worshipped here before moving to Ise."),
         "lat": 35.582586, "lng": 135.196863,
         "text": T(
@@ -156,18 +156,18 @@ def build(course):
         "name": T("天橋立傘松公園", "Amanohashidate Kasamatsu Park"),
         "kind": T("展望台", "Viewpoint"),
         "blurb": T("ケーブルカーかリフトで山の上へ。天に昇る龍のような「昇龍観」と、股のぞき発祥の地です。",
-                   "Up by cable car or chairlift to the “rising dragon” view, the place where looking between your legs started."),
+                   "Up by cable car or chairlift for the “rising dragon” view. Bend over and look at it upside down between your legs: the custom started here."),
         "lat": 35.586553, "lng": 135.195928,
         "text": T(
             "天橋立傘松公園（かさまつこうえん）\n\n籠神社のすぐ横の府中駅から、ケーブルカー（約4分）かリフト（6〜8分ほど）で上ります（フリーパスで乗れます）。こちらからの天橋立は、龍が天に昇っていくように見えることから「昇龍観（しょうりゅうかん）」。「股のぞき発祥の地」で、股のぞき台もあります。股の間から逆さまにのぞくと、海と空が入れ替わって、橋が空に架かっているように見えます。\n\n" +
-            ("山の上の展望レストラン「AmaTerrace（アマテラス）」で、天橋立を見ながらお昼ごはんにするのがおすすめです。\n\n下りたら、府中駅の近くの「天橋立ケーブル下」バス停から13:29発のバスで伊根へ（伊根湾めぐり・日出に13:58着）。\n\nおすすめ訪問時間：11:40〜13:15" if A else
-             "伊根からのバス（伊根15:08発）を「天橋立ケーブル下」で降りたら、すぐ近くの府中駅へ。ケーブルカーの最終は季節で変わるので（12〜1月は17:00、11月・2月は17:30）、先に上りましょう。山の上には展望レストラン「AmaTerrace（アマテラス）」もあります。\n\nおすすめ訪問時間：15:45〜16:20"),
+            ("切符はケーブルカーとリフトの共通です。上りはケーブルカー、下りはリフトにすると、天橋立を正面に見ながら下りられます。\n\n山の上の展望レストラン「AmaTerrace（アマテラス）」で、天橋立を見ながらお昼ごはんにするのがおすすめです。\n\n下りたら、府中駅の近くの「天橋立ケーブル下」バス停から13:29発のバスで伊根へ（伊根湾めぐり・日出に13:58着）。\n\nおすすめ訪問時間：11:40〜13:15" if A else
+             "伊根からのバス（伊根15:08発）を「天橋立ケーブル下」で降りたら、すぐ近くの府中駅へ。ケーブルカーの最終は季節で変わるので（12〜1月は17:00、11月・2月は17:30）、先に上りましょう。リフトは16:00までなので、この時間は上りも下りもケーブルカーです。山の上には展望レストラン「AmaTerrace（アマテラス）」もあります。\n\nおすすめ訪問時間：15:45〜16:20"),
             "Amanohashidate Kasamatsu Park\n\nFrom Fuchu Station, right next to Kono Shrine, ride the cable car (about 4 min) or chairlift (6–8 min) up the hill (covered by the free pass). From here Amanohashidate looks like a dragon rising into the sky, the “Shoryukan” view. This is said to be where the upside-down “matanozoki” view began: bend over and look back between your legs, and the sandbar seems to float in the sky.\n\n" +
-            ("Have lunch with the view at AmaTerrace, the viewing restaurant at the top.\n\nBack at the bottom, take the 13:29 bus to Ine from the “Amanohashidate Cable-shita” stop near Fuchu Station (arrives at Ine-wan Meguri Hide at 13:58).\n\nRecommended visit time: 11:40–13:15" if A else
-             "Get off the bus from Ine (Ine 15:08) at “Amanohashidate Cable-shita” and walk to Fuchu Station. The last cable car depends on the season (17:00 in Dec–Jan, 17:30 in Nov and Feb), so go up first. There’s also a viewing restaurant at the top, AmaTerrace.\n\nRecommended visit time: 15:45–16:20")),
+            ("The ticket works on both the cable car and the chairlift. Go up by cable car and come down by chairlift, and you face Amanohashidate all the way down.\n\nHave lunch with the view at AmaTerrace, the viewing restaurant at the top.\n\nBack at the bottom, take the 13:29 bus to Ine from the “Amanohashidate Cable-shita” stop near Fuchu Station (arrives at Ine-wan Meguri Hide at 13:58).\n\nRecommended visit time: 11:40–13:15" if A else
+             "Get off the bus from Ine (Ine 15:08) at “Amanohashidate Cable-shita” and walk to Fuchu Station. The last cable car depends on the season (17:00 in Dec–Jan, 17:30 in Nov and Feb), so go up first. The chairlift stops at 16:00, so at this hour it’s the cable car both ways. There’s also a viewing restaurant at the top, AmaTerrace.\n\nRecommended visit time: 15:45–16:20")),
         "gmaps": [gm("府中駅（ケーブルカー乗り場）", "Fuchu Station (cable car)", 35.58323, 135.1953, "天橋立ケーブルカー 府中駅")],
         "links": [
-            link("official", "天橋立ケーブルカー・リフト（運行時間・運賃）", "Cable car & lift: times and fares (Japanese)", "https://www.tankai.jp/trip/cable/"),
+            link("official", "天橋立ケーブルカー・リフト（運行時間・運賃・乗り方）", "Cable car & lift: times and fares (Japanese)", "https://www.tankai.jp/trip/cable/"),
             link("timetable", "丹海バス 時刻表（伊根・蒲入線）", "Tankai bus timetable (Ine line, Japanese)", "https://www.tankai.jp/routebus/timetable/"),
         ],
         "info": info([
@@ -191,9 +191,11 @@ def build(course):
         "lat": 35.6704, "lng": 135.2772,
         "text": T(
             "伊根湾めぐり遊覧船\n\nバスを「伊根湾めぐり・日出（ひで）」で降りると、目の前が遊覧船乗り場です（フリーパスで乗れます）。30分ごとに出る船で、約25分かけて伊根湾をぐるっと一周。1階が船のガレージになった舟屋（ふなや）が、海のすぐ上に並ぶ景色を海側から見られます。\n\n船が出るとカモメが集まってきて、船と並んで飛びます。乗り場と船内でカモメのエサも売っています。\n\n" +
-            ("おすすめ訪問時間：14:00〜14:30" if A else "伊根に先に来た日は、お昼ごはんも伊根で。\n\nおすすめ訪問時間：13:00〜13:30"),
+            ("バスが遅れて14:00の船に間に合わなければ、14:30の船に（そのあと16:00のバスに乗れるように、向井酒造と舟屋は少し短めに）。\n\nおすすめ訪問時間：14:00〜14:30" if A else
+             "伊根に先に来た日のお昼ごはん：平日（11:53着）は12:00か12:30の船に乗り、そのあと伊根浦まで歩いてお昼ごはんに（向井酒造は12:00〜13:00がお昼休み）。土日祝（12:37着）は13:00の船に乗り、お昼ごはんは舟屋の町で。\n\nおすすめ訪問時間：13:00〜13:30（平日は12:00〜12:30でも）"),
             "Ine Bay Sightseeing Boat\n\nGet off the bus at “Ine-wan Meguri Hide” and the pier is right in front of you (covered by the free pass). Boats leave every 30 minutes and loop around Ine Bay in about 25 minutes, giving you the view of the funaya — houses with a boat garage on the ground floor — lined up right on the water.\n\nOnce the boat leaves, seagulls gather and fly alongside. Gull food is sold at the pier and on board.\n\n" +
-            ("Recommended visit time: 14:00–14:30" if A else "If you come to Ine first, have lunch in Ine too.\n\nRecommended visit time: 13:00–13:30")),
+            ("If the bus is late and you miss the 14:00 boat, take the 14:30 one (then keep Mukai and the funaya a little shorter so you can catch the 16:00 bus).\n\nRecommended visit time: 14:00–14:30" if A else
+             "Lunch when you come to Ine first: on weekdays (arr. 11:53) take the 12:00 or 12:30 boat, then walk to Ine-ura for lunch (Mukai Sake Brewery closes for lunch 12:00–13:00). On weekends and holidays (arr. 12:37) take the 13:00 boat and have lunch in the funaya village afterwards.\n\nRecommended visit time: 13:00–13:30 (12:00–12:30 also works on weekdays)")),
         "gmaps": [gm("伊根湾めぐり遊覧船 日出乗り場", "Ine Bay boat pier (Hide)", 35.6704, 135.2772, "伊根湾めぐり遊覧船")],
         "links": [link("official", "伊根湾めぐり遊覧船（丹後海陸交通）", "Ine Bay Sightseeing Boat (Tankai, Japanese)", "https://www.tankai.jp/trip/ineboat/")],
         "info": info([
@@ -235,12 +237,12 @@ def build(course):
                    "About 230 boathouses built right on the water. Stroll along a bay as calm as a lake."),
         "lat": 35.675733, "lng": 135.287658,
         "text": T(
-            "伊根の舟屋（ふなや）\n\n1階が海に開いた船のガレージ、2階が住まいになった舟屋が、伊根湾にそって約230軒並びます。国の重要伝統的建造物群保存地区にも選ばれた、ほかでは見られない漁師町です。\n\n遊覧船乗り場から、向井酒造の前を通って、伊根浦公園と観光案内所のある町の中心まで、湾ぞいの道を20分ほど歩きます。乗り場のそばの日出（ひで）の入り江は、水が透き通っていてきれいです。\n\n舟屋の多くは今も人が暮らす家なので、静かに歩いて、勝手に入らないようにしてください。\n\n" +
-            ("帰りは「伊根」バス停から16:00発のバスで「天橋立ケーブル下」へ（16:33着）。そこから一の宮桟橋まで歩いてすぐです。\n\nおすすめ訪問時間：15:05〜15:55" if A else
-             "町の食事どころで、海を見ながらお昼ごはんもどうぞ。\n\nそのあとは「伊根」バス停から15:08発のバスで「天橋立ケーブル下」へ（15:41着）。傘松公園に向かいます。\n\nおすすめ訪問時間：14:00〜15:05"),
-            "Ine’s Funaya\n\nAbout 230 funaya line Ine Bay: the ground floor is a garage that opens onto the sea for a boat, and people live upstairs. It’s a fishing village like nowhere else, protected as a national Preservation District for Groups of Traditional Buildings.\n\nFrom the boat pier, walk about 20 minutes along the bay road, past Mukai Sake Brewery, to the center of the village with Ine-ura Park and the tourist information center. The cove at Hide, next to the pier, has beautifully clear water.\n\nMost funaya are still people’s homes, so please keep your voice down and don’t go inside without permission.\n\n" +
-            ("For the way back, take the 16:00 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 16:33). Ichinomiya pier is a short walk from there.\n\nRecommended visit time: 15:05–15:55" if A else
-             "Have lunch with a sea view at one of the village’s restaurants.\n\nThen take the 15:08 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 15:41) for Kasamatsu Park.\n\nRecommended visit time: 14:00–15:05")),
+            "伊根の舟屋（ふなや）\n\n1階が海に開いた船のガレージ、2階が住まいになった舟屋が、伊根湾にそって約230軒並びます。町並みは、国の重要伝統的建造物群保存地区に選ばれています。\n\n遊覧船乗り場から、向井酒造の前を通って、伊根浦公園と観光案内所のある町の中心まで、湾ぞいの道を20分ほど歩きます。乗り場のそばの日出（ひで）の入り江は、水が透き通っていてきれいです。\n\n舟屋の多くは今も人が暮らす家なので、静かに歩いて、勝手に入らないようにしてください。\n\n" +
+            ("帰りは「伊根」バス停から16:00発のバスで「天橋立ケーブル下」へ（16:33着）。そこから一の宮桟橋まで歩いてすぐです。バスが遅れて16:45の船（11〜2月は最終便）に間に合わないときは、そのままバスに乗って「天橋立駅前」で降りれば駅に戻れます（フリーパスで乗れます）。\n\nおすすめ訪問時間：15:05〜15:55" if A else
+             "土日祝に来た日は、町の食事どころで海を見ながらお昼ごはんを。\n\nそのあとは「伊根」バス停から15:08発のバスで「天橋立ケーブル下」へ（15:41着）。傘松公園に向かいます。\n\nおすすめ訪問時間：14:00〜15:05"),
+            "Ine’s Funaya\n\nAbout 230 funaya line Ine Bay: the ground floor is a garage that opens onto the sea for a boat, and people live upstairs. The village is protected as a national Preservation District for Groups of Traditional Buildings.\n\nFrom the boat pier, walk about 20 minutes along the bay road, past Mukai Sake Brewery, to the center of the village with Ine-ura Park and the tourist information center. The cove at Hide, next to the pier, has beautifully clear water.\n\nMost funaya are still people’s homes, so please keep your voice down and don’t go inside without permission.\n\n" +
+            ("For the way back, take the 16:00 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 16:33). Ichinomiya pier is a short walk from there. If the bus is late and you miss the 16:45 boat (the last one in Nov–Feb), stay on the bus to “Amanohashidate-ekimae” to get back to the station (covered by the free pass).\n\nRecommended visit time: 15:05–15:55" if A else
+             "On weekends and holidays, have lunch with a sea view at one of the village’s restaurants.\n\nThen take the 15:08 bus from the “Ine” stop to “Amanohashidate Cable-shita” (arr. 15:41) for Kasamatsu Park.\n\nRecommended visit time: 14:00–15:05")),
         "gmaps": [gm("伊根浦公園", "Ine-ura Park", 35.675733, 135.287658, "伊根浦公園")],
         "links": [
             link("info", "伊根町観光協会", "Ine Tourist Association", "https://www.ine-kankou.jp/"),
@@ -261,10 +263,10 @@ def build(course):
         "lat": 35.580862, "lng": 135.196014,
         "text": T(
             "天橋立を渡って戻る\n\n" +
-            ("伊根からのバスを「天橋立ケーブル下」で降りたら、歩いてすぐの一の宮桟橋へ。" if A else "籠神社のお参りを終えたら、すぐ先の一の宮桟橋へ。") +
+            ("伊根からのバスを「天橋立ケーブル下」で降りたら、歩いてすぐの一の宮桟橋へ（バスが遅れて16:45の船に間に合わないときは、降りずに「天橋立駅前」まで乗れば駅に戻れます）。" if A else "籠神社のお参りを終えたら、すぐ先の一の宮桟橋へ。") +
             "16:45発の観光船に乗ると、16:57に天橋立桟橋に着きます（フリーパスで乗れます。3〜10月は17:15発、4〜9月は17:45発もあります）。天橋立桟橋から天橋立駅までは歩いて5分ほどです。\n\n自転車で戻るなら、一の宮桟橋で借りて、行きとは違う夕方の松並木を走って天橋立桟橋で返します（2時間500円）。砂浜に寄り道するのも気持ちいいです。自転車は窓口が開いているうちに返せるよう、早めに出発しましょう。\n\nおすすめ移動時間：16:45（観光船）",
             "Back across Amanohashidate\n\n" +
-            ("Get off the bus from Ine at “Amanohashidate Cable-shita” and walk to Ichinomiya pier. " if A else "After Kono Shrine, walk to Ichinomiya pier just beyond it. ") +
+            ("Get off the bus from Ine at “Amanohashidate Cable-shita” and walk to Ichinomiya pier (if the bus is late and you’d miss the 16:45 boat, stay on to “Amanohashidate-ekimae” for the station). " if A else "After Kono Shrine, walk to Ichinomiya pier just beyond it. ") +
             "The 16:45 boat reaches Amanohashidate pier at 16:57 (covered by the free pass; there are also boats at 17:15 in Mar–Oct and 17:45 in Apr–Sep). The station is about 5 minutes on foot from the pier.\n\nTo ride back, rent a bike at Ichinomiya pier and return it at Amanohashidate pier (¥500 for 2 hours), riding the pine forest in the evening light; stop at the beach on the way. Leave early enough to return the bike while the counter is open.\n\nRecommended travel time: 16:45 (boat)"),
         "gmaps": [gm("一の宮桟橋（観光船・レンタサイクル）", "Ichinomiya pier (boat & bikes)", 35.580862, 135.196014, "天橋立観光船 一の宮桟橋")],
         "links": [

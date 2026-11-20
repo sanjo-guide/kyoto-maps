@@ -1,6 +1,7 @@
 /* Page texts in Japanese and English.
    Toshi 個人のマップ。京都からJRと近江鉄道で湖東へ、太郎坊宮・永源寺・百済寺・教林坊の紅葉をめぐる日帰りルート。
    Photos are [spot number, photo index] from data/routes/higashiomi.json.
+   5・6番の西明寺と金剛輪寺は2026年11月21日に追加（Toshi はまだ行っていない。写真は Wikimedia Commons、情報は公式サイトと湖東三山のチラシ）。
    時刻・料金は2026年11月20日に確認（各寺社の公式サイト・東近江市観光協会、電車とバスは乗換案内）。 */
 window.HIGASHIOMI_I18N = {
   ja: {
@@ -15,7 +16,7 @@ window.HIGASHIOMI_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '4つの寺社は、西から東へ回ってから安土に戻る順番です。行かない場所は「選んで回る」で外せます。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '太郎坊宮・永源寺・百済寺・教林坊は、西から東へ回ってから安土に戻る順番です。5・6番の西明寺と金剛輪寺は彦根から入る別の回り方で、6か所全部は1日で回れません。「選んで回る」で行く場所を選んでください。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -29,7 +30,7 @@ window.HIGASHIOMI_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
-    credit: '写真・文章：Toshi<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
+    credit: '写真・文章：Toshi（西明寺と金剛輪寺の写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     photoBy: '写真：',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
@@ -55,7 +56,7 @@ window.HIGASHIOMI_I18N = {
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。近江八幡駅はいつもルートに入ります。時間は全部回る場合の目安です。',
+    pickNote: '行きたい場所の「行きたい」を押してください。近江八幡駅はいつもルートに入ります。6か所全部は1日で回れないので、時間は目安です。',
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（全員共通の場所を含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から、行きたいお寺や神社を選んでください。',
     pickAll: 'すべて選ぶ',
@@ -67,12 +68,12 @@ window.HIGASHIOMI_I18N = {
     seasonHead: '季節営業の可能性',
     hintHead: 'あなたのルートでは',
     intro: {
-      "kicker": "Toshiが歩いて作った日帰りルート",
+      "kicker": "秋のマップ｜紅葉の見ごろは例年11月中旬〜下旬",
       "h1": "742段の石段の先の紅葉から、竹林のライトアップまで。",
-      "lead": "京都からJRと近江鉄道で、湖東（ことう）の山あいへ。とがった山の中腹にある太郎坊宮、愛知川の渓谷の永源寺、苔むした参道の百済寺を回り、最後は春と秋だけ公開される教林坊の夜の庭へ。紅葉は11月中旬から下旬が見ごろです。",
+      "lead": "紅葉の見ごろは例年11月中旬から下旬です（湖東三山観光振興協議会と各寺の案内より）。京都からJRと近江鉄道で、湖東（ことう）の山あいへ。とがった山の中腹にある太郎坊宮、愛知川の渓谷の永源寺、苔むした参道の百済寺を回り、最後は春と秋だけ公開される教林坊の夜の庭へ。湖東三山の残りの2つ、西明寺と金剛輪寺へは、彦根駅からのシャトルバス（2026年は11月19日〜29日）で行けます。",
       "favLabel": "いちばんの見どころ",
       "favName": "永源寺",
-      "favText": "夕暮れの山門と、一面のもみじ。",
+      "favText": "山門と方丈を包む一面のもみじ。夕方からはライトアップも。",
       "favPhoto": [
         4,
         2
@@ -83,7 +84,8 @@ window.HIGASHIOMI_I18N = {
         "京都から近江八幡まで新快速で約35分（680円）",
         "太郎坊宮は742段の石段。歩きやすい靴で",
         "バスは本数が少なく、永源寺→百済寺と教林坊の行き帰りはタクシーがおすすめ",
-        "教林坊は春と秋だけの公開。ライトアップは2026年は12月6日まで"
+        "教林坊は春と秋だけの公開。ライトアップは2026年は12月6日まで",
+        "湖東三山を3つとも回るなら、彦根駅10:00発のシャトルバスで西明寺→金剛輪寺→百済寺の順に（太郎坊宮・永源寺とは別の日に）"
       ],
       "dayHead": "1日の流れ（目安）",
       "from": "",
@@ -95,7 +97,7 @@ window.HIGASHIOMI_I18N = {
           "text": "近江鉄道で太郎坊宮前へ。742段の石段と夫婦岩を通って本殿へ。近江の平野が見渡せます。",
           "photo": [
             3,
-            6
+            5
           ]
         },
         {
@@ -105,7 +107,7 @@ window.HIGASHIOMI_I18N = {
           "text": "八日市からバスで永源寺へ。山門と方丈のもみじを見て、門前でお昼を。",
           "photo": [
             4,
-            3
+            0
           ]
         },
         {
@@ -114,7 +116,7 @@ window.HIGASHIOMI_I18N = {
           "title": "苔むした参道を上る",
           "text": "タクシーで百済寺へ。石垣の参道と仁王門、本坊の庭と遠望台からの眺め。",
           "photo": [
-            5,
+            7,
             0
           ]
         },
@@ -125,7 +127,7 @@ window.HIGASHIOMI_I18N = {
           "text": "バスとJRで安土へ、タクシーで教林坊へ。夜の庭を見てから、安土19:55発で京都へ。",
           "note": "京都着は20:41",
           "photo": [
-            6,
+            8,
             0
           ]
         }
@@ -147,9 +149,15 @@ window.HIGASHIOMI_I18N = {
           "url": "https://www.ohmitetudo.co.jp/bus/access/eigenji/"
         },
         {
+          "name": "湖東三山シャトルバス（2026年11月19日〜29日）",
+          "price": "1回200〜1,000円",
+          "text": "彦根駅西口から西明寺・金剛輪寺・百済寺へ。彦根駅→西明寺700円、西明寺→金剛輪寺200円、金剛輪寺→百済寺300円、百済寺→彦根駅1,000円。1日乗り放題の「もみじきっぷ」は2,500円（当日、彦根駅西口かバスの中で現金で）。",
+          "url": "https://www.ohmitetudo.co.jp/bus/icoico/event/kotosanzanshuttlebus2026/"
+        },
+        {
           "name": "タクシー",
           "price": "",
-          "text": "永源寺→百済寺、安土駅↔教林坊（約10分・約2,500円）。永源寺タクシー 0748-27-1151、近江タクシー 0748-37-0106。",
+          "text": "永源寺→百済寺、安土駅↔教林坊（約10分）。料金は要確認。前もって予約し、教林坊からの帰りの迎えも頼んでおくと安心です。永源寺タクシー 0748-27-1151、近江タクシー 0748-37-0106、滋賀第一交通 近江八幡営業所 0748-37-4000。",
           "url": "https://www.higashiomi.net/guide/access.html"
         }
       ],
@@ -159,7 +167,7 @@ window.HIGASHIOMI_I18N = {
       "how": [
         {
           "title": "最初は「選んで回る」",
-          "text": "行きたいお寺や神社だけを選ぶと、駅とルートが自動で決まります。4か所すべて回るなら「すべて選ぶ」を。"
+          "text": "行きたいお寺や神社だけを選ぶと、駅とルートが自動で決まります。1日で回れるのは「太郎坊宮・永源寺・百済寺・教林坊」か「西明寺・金剛輪寺・百済寺（・教林坊）」の組み合わせです。"
         },
         {
           "title": "番号をタップ",
@@ -190,7 +198,7 @@ window.HIGASHIOMI_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'The four temples and shrine run west to east, then back to Azuchi. Use “Choose stops” to drop places you’ll skip. The dotted line shows the order, not the actual path.',
+    listNote: 'Taroubou-gu, Eigenji, Hyakusaiji and Kyorinbo run west to east, then back to Azuchi. Nos. 5 and 6, Saimyoji and Kongorinji, are reached from Hikone instead, and all six won’t fit in one day. Use “Choose stops” to pick your places. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -204,7 +212,7 @@ window.HIGASHIOMI_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
-    credit: 'Photos &amp; text: Toshi<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
+    credit: 'Photos &amp; text: Toshi (the Saimyoji and Kongorinji photos are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     photoBy: 'Photo: ',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
@@ -230,7 +238,7 @@ window.HIGASHIOMI_I18N = {
     modeAria: 'How to go',
     modeAll: 'Full route',
     modePick: 'Choose stops',
-    pickNote: 'Tap “Want to go” on the places you like. Omi-Hachiman Station is always on your route. Times are for the full route.',
+    pickNote: 'Tap “Want to go” on the places you like. Omi-Hachiman Station is always on your route. All six places won’t fit in one day, so treat the times as a guide.',
     pickCount: '{n} places chosen · {t} stops in your route (incl. the shared ones)',
     pickEmpty: 'Nothing chosen yet. Pick the temples and shrine you want from the list below.',
     pickAll: 'Choose all',
@@ -242,12 +250,12 @@ window.HIGASHIOMI_I18N = {
     seasonHead: 'Possibly seasonal',
     hintHead: 'On your route',
     intro: {
-      "kicker": "A day route hand-walked by Toshi",
+      "kicker": "Autumn map | Leaves usually peak mid to late November",
       "h1": "From maples above 742 stone steps to a lantern-lit bamboo grove.",
-      "lead": "By JR and the Ohmi Railway from Kyoto into the hills east of Lake Biwa. Visit Taroubou-gu halfway up a pointed peak, Eigenji in the Echigawa valley and Hyakusaiji with its mossy approach, then end at the night garden of Kyorinbo, open only in spring and autumn. The leaves are best in mid to late November.",
+      "lead": "The leaves usually peak from mid to late November (according to the Koto Sanzan tourism council and the temples). By JR and the Ohmi Railway from Kyoto into the hills east of Lake Biwa. Visit Taroubou-gu halfway up a pointed peak, Eigenji in the Echigawa valley and Hyakusaiji with its mossy approach, then end at the night garden of Kyorinbo, open only in spring and autumn. The other two Koto Sanzan temples, Saimyoji and Kongorinji, are reached by shuttle bus from Hikone Station (19–29 November in 2026).",
       "favLabel": "Highlight",
       "favName": "Eigenji",
-      "favText": "The great gate at dusk, wrapped in maples.",
+      "favText": "The great gate and abbot’s hall wrapped in maples, lit up from dusk.",
       "favPhoto": [
         4,
         2
@@ -258,7 +266,8 @@ window.HIGASHIOMI_I18N = {
         "Kyoto to Omi-Hachiman is about 35 min by Special Rapid (¥680)",
         "Taroubou-gu means 742 stone steps; wear good shoes",
         "Buses are sparse: taxis are easiest from Eigenji to Hyakusaiji and to and from Kyorinbo",
-        "Kyorinbo opens only in spring and autumn; the 2026 illumination runs until 6 December"
+        "Kyorinbo opens only in spring and autumn; the 2026 illumination runs until 6 December",
+        "For all three Koto Sanzan temples, take the 10:00 shuttle bus from Hikone: Saimyoji, Kongorinji, then Hyakusaiji (on a different day from Taroubou-gu and Eigenji)"
       ],
       "dayHead": "One day, roughly like this",
       "from": "From",
@@ -270,7 +279,7 @@ window.HIGASHIOMI_I18N = {
           "text": "Ohmi Railway to Taroubougu-mae, then 742 steps and the Meoto-iwa rocks to the main hall, with views over the Omi plain.",
           "photo": [
             3,
-            6
+            5
           ]
         },
         {
@@ -280,7 +289,7 @@ window.HIGASHIOMI_I18N = {
           "text": "Bus from Yokaichi to Eigenji. See the gate and abbot’s hall in red, and have lunch on the approach.",
           "photo": [
             4,
-            3
+            0
           ]
         },
         {
@@ -289,7 +298,7 @@ window.HIGASHIOMI_I18N = {
           "title": "Up the mossy approach",
           "text": "Taxi to Hyakusaiji: stone-walled approach, the Nio gate, the garden and the lookout.",
           "photo": [
-            5,
+            7,
             0
           ]
         },
@@ -300,7 +309,7 @@ window.HIGASHIOMI_I18N = {
           "text": "Bus and JR to Azuchi, taxi to Kyorinbo. See the night garden, then the 19:55 train from Azuchi.",
           "note": "Arrive Kyoto 20:41",
           "photo": [
-            6,
+            8,
             0
           ]
         }
@@ -322,9 +331,15 @@ window.HIGASHIOMI_I18N = {
           "url": "https://www.ohmitetudo.co.jp/bus/access/eigenji/"
         },
         {
+          "name": "Koto Sanzan shuttle bus (19–29 Nov 2026)",
+          "price": "¥200–1,000 a ride",
+          "text": "From Hikone Station west exit to Saimyoji, Kongorinji and Hyakusaiji. Hikone → Saimyoji ¥700, Saimyoji → Kongorinji ¥200, Kongorinji → Hyakusaiji ¥300, Hyakusaiji → Hikone ¥1,000. The “Momiji Kippu” day pass is ¥2,500 (cash on the day, at Hikone Station west exit or on the bus).",
+          "url": "https://www.ohmitetudo.co.jp/bus/icoico/event/kotosanzanshuttlebus2026/"
+        },
+        {
           "name": "Taxis",
           "price": "",
-          "text": "Eigenji → Hyakusaiji, and Azuchi Station ↔ Kyorinbo (about 10 min, around ¥2,500). Eigenji Taxi 0748-27-1151, Ohmi Taxi 0748-37-0106.",
+          "text": "Eigenji → Hyakusaiji, and Azuchi Station ↔ Kyorinbo (about 10 min). Fares not confirmed. Book ahead, including the pick-up back from Kyorinbo. Eigenji Taxi 0748-27-1151, Ohmi Taxi 0748-37-0106, Shiga Daiichi Kotsu (Omi-Hachiman) 0748-37-4000.",
           "url": "https://www.higashiomi.net/guide/access.html"
         }
       ],
@@ -334,7 +349,7 @@ window.HIGASHIOMI_I18N = {
       "how": [
         {
           "title": "Starts in “Choose stops”",
-          "text": "Pick only the temples and shrine you want; stations and the route follow automatically. To see all four, tap “Choose all”."
+          "text": "Pick only the temples and shrine you want; stations and the route follow automatically. A day fits either Taroubou-gu, Eigenji, Hyakusaiji and Kyorinbo, or Saimyoji, Kongorinji and Hyakusaiji (plus Kyorinbo)."
         },
         {
           "title": "Tap a number",

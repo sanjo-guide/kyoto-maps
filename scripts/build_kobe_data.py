@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """京都から日帰り 神戸（布引の滝・北野異人館・メリケンパーク）のデータ（data/routes/kobe.json）を書き出す。
 
-使い方: python3 scripts/build_higashiomi_data.py
+使い方: python3 scripts/build_kobe_data.py
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
 - 写真は images/kobe/<スポットのid>-<番号>.jpg を番号の順に全部使う
 """
@@ -96,17 +96,17 @@ S = [
          lat=34.70189, lng=135.18956,
          text=T("北野天満神社（きたのてんまんじんじゃ）\n\n新神戸駅から歩いて約15分。異人館街のいちばん上、石段を上った所にある、菅原道真をまつる神社です。"
                 "境内からは、すぐ下に風見鶏の館のとがった塔、その向こうに神戸の街と海が見えます。ここから坂を下りながら異人館を回るのがおすすめです。\n\n"
-                "門が開いているのは朝7時半ごろから夕方5時ごろまでです。\n\nおすすめ訪問時間：11:30〜11:50",
+                "門が開いているのは7:30から17:00までです。\n\nおすすめ訪問時間：11:30〜11:50",
                 "Kitano Tenman Shrine\n\nAbout 15 minutes on foot from Shin-Kobe Station. At the very top of the foreign-residence district, up a flight of stone steps, this shrine honours Sugawara no Michizane. "
                 "From the grounds you look down on the pointed tower of the Weathercock House, with the city and sea beyond. Visit here first, then wander down the slopes past the residences.\n\n"
-                "The gates are open from about 7:30 to about 17:00.\n\nRecommended visit time: 11:30–11:50"),
+                "The gates are open from 7:30 to 17:00.\n\nRecommended visit time: 11:30–11:50"),
          gmaps=[gm("北野天満神社", "Kitano Tenman Shrine", 34.70189, 135.18956, "北野天満神社 神戸")],
          links=[link("official", "北野天満神社 公式サイト", "Kitano Tenman Shrine (official, Japanese)", "https://www.kobe-kitano.net/")],
-         info=info([row("hours", "7:30ごろ〜17:00ごろ", "About 7:30 to about 17:00")],
+         info=info([row("hours", "7:30〜17:00（開門・閉門）", "7:30–17:00 (gates open and close)")],
                    tip=T("公式サイトで確認しました。", "Checked on the official website."))),
     dict(id="ijinkan", name=T("北野異人館街", "Kitano foreign residences"), kind=T("町並み・洋館", "Historic houses"),
-         blurb=T("明治・大正の外国人の住まいが残る坂の町。赤レンガの風見鶏の館、緑の萌黄の館をはじめ、洋館をのぞきながら歩きます。",
-                 "Hillside lanes of Meiji- and Taisho-era foreigners’ homes: the red-brick Weathercock House, the green Moegi House and more."),
+         blurb=T("明治・大正の外国人の住まいが残る坂の町。中に入るのは2〜3館にしぼるのがおすすめです。",
+                 "Hillside lanes of Meiji- and Taisho-era foreigners’ homes. Pick two or three to go inside."),
          lat=34.70139, lng=135.18951,
          text=T("北野異人館街（きたのいじんかんがい）\n\n神戸港が開かれたあと、外国人が住んだ洋館が今も残る坂の町です。"
                 "屋根に風見鶏がのる赤レンガの「風見鶏の館」と、隣の淡い緑の「萌黄（もえぎ）の館」は、どちらも国の重要文化財。北野町広場のまわりには、英国館や洋館長屋、山手八番館、うろこの家など、中に入れる館がたくさんあります。\n\n"
@@ -127,32 +127,32 @@ S = [
                         "Weathercock House and Moegi House ¥500 each, combined ¥800 (free for high school and under). English House ¥880, row houses ¥550, Yamate Hachibankan ¥550, Scale House & gallery ¥1,100")],
                    tip=T("神戸市・神戸観光局と各館の公式サイトで確認しました。", "Checked on the Kobe City, Feel KOBE and house websites."))),
     dict(id="katsudon", name=T("かつ丼 七兵衛（三宮）", "Katsudon Hichibei (Sannomiya)"), kind=T("ランチ", "Lunch"),
-         blurb=T("阪急三宮駅のすぐ横、高架下の小さなかつ丼の店。厚いとんかつを玉子でとじた、ボリュームのあるかつ丼です。",
+         blurb=T("阪急三宮駅のすぐ横、高架下の小さな店。厚いとんかつを玉子でとじたかつ丼です。",
                  "A small katsudon counter under the tracks right by Hankyu Sannomiya: thick pork cutlets simmered with egg over rice."),
          lat=34.69228, lng=135.19180,
          text=T("かつ丼 七兵衛（ひちべい）\n\n阪急の神戸三宮駅の西口を出てすぐ、JRの高架下にある小さなお店です。看板は「かつ丼 七兵衛」（運営会社のページでは「とんかつ七兵衛 神戸本店」）。"
-                "入口の券売機で食券を買い、カウンターで食べます。分厚いかつを玉子でとじたかつ丼は、ボリュームたっぷりです。\n\n"
-                "お店は11:30から。とんかつが売り切れると早めに閉まります。\n\nおすすめ訪問時間：13:40〜14:20",
+                "入口の券売機で食券を買い、カウンターで食べます。店の前に写真つきのメニューが出ています（2枚目の写真）。分厚いかつを玉子でとじたかつ丼は、ボリュームたっぷりです。\n\n"
+                "お店は11:30から。とんかつが売り切れると早めに閉まります。このルートでは13時半すぎに着くので、売り切れていることもあります。そのときのために、三宮駅のまわりでほかのお店も考えておくと安心です。\n\nおすすめ訪問時間：13:40〜14:20",
                 "Katsudon Hichibei\n\nA tiny shop under the JR tracks, right outside the west exit of Hankyu Kobe-Sannomiya Station. The sign reads “Katsudon Hichibei” (the operator calls it “Tonkatsu Hichibei, Kobe main shop”). "
-                "Buy a ticket from the machine at the door and eat at the counter. The katsudon, thick cutlets simmered with egg, is a hearty bowl.\n\n"
-                "It opens at 11:30 and closes early once the cutlets sell out.\n\nRecommended visit time: 13:40–14:20"),
+                "Buy a ticket from the machine at the door and eat at the counter. There’s a picture menu out front (second photo). The katsudon, thick cutlets simmered with egg, is a hearty bowl.\n\n"
+                "It opens at 11:30 and closes early once the cutlets sell out. This route gets you there after 13:30, so it may already be sold out; have a back-up place around Sannomiya Station in mind.\n\nRecommended visit time: 13:40–14:20"),
          gmaps=[gm("とんかつ七兵衛", "Tonkatsu Hichibei", 34.69228, 135.19180, "とんかつ七兵衛 三宮")],
          links=[link("official", "とんかつ七兵衛（運営会社のページ）", "Tonkatsu Hichibei (operator page, Japanese)", "http://www.rb-syuhari.com/hichibe.html")],
          info=info([row("hours", "11:30〜（とんかつが売り切れたら閉店）。閉店時刻と定休日は公式のページに書かれていません（要確認）",
                         "From 11:30 (closes when the cutlets sell out). Closing time and closed days are not given on the official page (please check)")],
-                   tip=T("店名と開店時間は運営会社のページで確認しました。", "Name and opening time checked on the operator’s page."))),
+                   tip=T("店名と開店時間は運営会社のページで確認しました。2024年2月に撮った店頭の案内には「11:10〜22:00、15:00〜17:00も開いてます」とありました。今は変わっているかもしれません。", "Name and opening time checked on the operator’s page. A sign at the door in February 2024 said 11:10–22:00, “open 15:00–17:00 too”; that may have changed."))),
     dict(id="meriken", name=T("メリケンパーク・神戸ポートタワー", "Meriken Park & Kobe Port Tower"), kind=T("公園・展望タワー", "Park & tower"),
          blurb=T("赤い鼓の形のポートタワーと、白い帆の海洋博物館。夕方から夜は、港のあかりがきれいです。",
-                 "The red, drum-shaped Port Tower and the white sails of the Maritime Museum. Lovely as the harbour lights come on."),
+                 "The red, drum-shaped Port Tower and the white sails of the Maritime Museum. Best from late afternoon, as the harbour lights come on."),
          lat=34.68263, lng=135.18672,
          text=T("メリケンパーク・神戸ポートタワー\n\nJR元町駅の西口から歩いて約15分（三宮からも旧居留地を抜けて歩けます）。海に面した公園に、赤い鼓のような形のポートタワーと、白い帆を重ねたような神戸海洋博物館が並びます。"
                 "ポートタワーは2024年にリニューアルし、展望フロアと屋上デッキから、港と六甲の山並みが見渡せます（日時指定のチケット制）。\n\n"
                 "冬には「神戸ルミナリエ」の会場にもなります。写真は2025年1月のもの。次は2027年1月29日〜2月7日の予定で、メリケンパークの一部は有料エリアです。\n\n"
-                "帰りはJR元町駅から（元町17:01発→三ノ宮で新快速に乗り換え→京都17:59着・1,110円）。\n\nおすすめ訪問時間：14:45〜16:40",
+                "帰りはJR元町駅から（元町17:01発→三ノ宮で新快速に乗り換え→京都17:59着・1,110円）。元町駅へ戻る途中に、南京町（なんきんまち、中華街）があります。港のあかりを見たいときは、日が暮れてから帰るのもおすすめです。\n\nおすすめ訪問時間：14:45〜16:40",
                 "Meriken Park & Kobe Port Tower\n\nAbout 15 minutes on foot from the west exit of JR Motomachi Station (you can also walk from Sannomiya through the old foreign settlement). On the waterfront stand the red, drum-shaped Port Tower and the white, sail-like Kobe Maritime Museum. "
                 "The tower reopened after renovation in 2024; from its observation floor and rooftop deck you see the port and the Rokko mountains (timed tickets).\n\n"
                 "In winter the park is a venue for the Kobe Luminarie; the photos are from January 2025. The next one is planned for 29 January – 7 February 2027, with a paid area in part of Meriken Park.\n\n"
-                "Go home from JR Motomachi (17:01, change to the Special Rapid at Sannomiya, Kyoto 17:59, ¥1,110).\n\nRecommended visit time: 14:45–16:40"),
+                "Go home from JR Motomachi (17:01, change to the Special Rapid at Sannomiya, Kyoto 17:59, ¥1,110). On the way back to Motomachi you pass Nankinmachi, Kobe’s Chinatown. If you’d like to see the harbour lights, stay on until after dark.\n\nRecommended visit time: 14:45–16:40"),
          gmaps=[gm("神戸ポートタワー", "Kobe Port Tower", 34.68263, 135.18672, "神戸ポートタワー"), gm("JR元町駅", "JR Motomachi Station", 34.68957, 135.18715, "JR元町駅 神戸")],
          links=[link("official", "神戸ポートタワー 公式サイト", "Kobe Port Tower (official)", "https://www.kobe-port-tower.com/"),
                 link("official", "神戸ルミナリエ 公式サイト", "Kobe Luminarie (official)", "https://www.kobe-luminarie.jp/"), JR],

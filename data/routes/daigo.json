@@ -28,8 +28,8 @@
    "lat": 34.9515,
    "lng": 135.82002,
    "text": {
-    "ja": "総門（そうもん）・仁王門（におうもん）\n\n地下鉄東西線の醍醐駅から歩いて約10分（京都駅からJRと地下鉄で約25分・440円）。総門を入り、三宝院の受付で夜間拝観の券を買って、桜の馬場の参道を仁王門へ進みます。\n\n2026年の秋期夜間拝観は11月20日〜12月6日の18:00〜20:50（受付は20:10まで）。昼の拝観とは入れ替えなので、昼から続けては入れません。写真は2024年11月24日の夜間拝観です。\n\nおすすめ訪問時間：18:00〜18:20",
-    "en": "Somon & Niomon gates\n\nAbout 10 minutes on foot from Daigo Station on the Tozai subway line (about 25 min from Kyoto Station by JR and subway, ¥440). Enter the Somon gate, buy an evening ticket at the Sanboin reception, and follow the approach to the Nio gate.\n\nThe autumn 2026 evening opening runs from 20 November to 6 December, 18:00–20:50 (last entry 20:10). It’s separate from the daytime visit, so you can’t stay on from the day. Photos from the evening opening on 24 November 2024.\n\nRecommended visit time: 18:00–18:20"
+    "ja": "総門（そうもん）・仁王門（におうもん）\n\n地下鉄東西線の醍醐駅から歩いて約10分（京都駅からJRと地下鉄で約25分・440円）。総門を入り、三宝院の受付で夜間拝観の券を買って、桜の馬場の参道を仁王門へ進みます。\n\n2026年の秋期夜間拝観は11月20日〜12月6日の18:00〜20:50（受付は20:10まで）。昼の拝観とは入れ替えなので、昼から続けては入れません。券は醍醐寺の公式サイトから先に買うこともできます。紅葉の見ごろは例年11月中旬〜下旬です（京都観光Naviの紅葉だより）。写真は2024年11月24日の夜間拝観です。\n\nおすすめ訪問時間：18:00〜18:20",
+    "en": "Somon & Niomon gates\n\nAbout 10 minutes on foot from Daigo Station on the Tozai subway line (about 25 min from Kyoto Station by JR and subway, ¥440). Enter the Somon gate, buy an evening ticket at the Sanboin reception, and follow the approach to the Nio gate.\n\nThe autumn 2026 evening opening runs from 20 November to 6 December, 18:00–20:50 (last entry 20:10). It’s separate from the daytime visit, so you can’t stay on from the day. Tickets can also be bought in advance through the temple website. The leaves usually peak in mid to late November (Kyoto City’s autumn-leaf report). Photos from the evening opening on 24 November 2024.\n\nRecommended visit time: 18:00–18:20"
    },
    "gmaps": [
     {
@@ -92,7 +92,7 @@
        "ja": "夜間拝観 1,500円（中学生以上）",
        "en": "Evening opening ¥1,500 (junior high and up)"
       },
-      "until": null,
+      "until": "2026-12-06",
       "from": null
      },
      {
@@ -118,7 +118,21 @@
     "niomon-3.jpg",
     "niomon-4.jpg"
    ],
-   "notices": []
+   "notices": [
+    {
+     "from": "2026-12-07",
+     "to": null,
+     "url": "https://www.daigoji.or.jp/event/detail7.html",
+     "head": {
+      "ja": "2026年の夜間拝観は終わりました",
+      "en": "The 2026 evening opening has ended"
+     },
+     "text": {
+      "ja": "2026年の秋期夜間拝観は12月6日で終わりました。次の秋の日程は醍醐寺の公式サイトで確かめてください。昼の拝観は9:00から（12月第1日曜の翌日〜2月末は16:30まで、受付は30分前まで）。",
+      "en": "The autumn 2026 evening opening ended on 6 December. Check the Daigoji website for next autumn’s dates. Daytime visits start at 9:00 (until 16:30 from the day after the first Sunday of December to the end of February; last entry 30 min before closing)."
+     }
+    }
+   ]
   },
   {
    "no": 2,
@@ -138,8 +152,8 @@
    "lat": 34.95093,
    "lng": 135.82281,
    "text": {
-    "ja": "五重塔（ごじゅうのとう）と金堂（こんどう）\n\n仁王門をくぐると、国宝の金堂と五重塔。五重塔は平安時代（951年）に建てられ、京都府で最も古い木造建築です。夜は塔ともみじが照らされ、昼とはまったく違う姿に。\n\n日によっては金堂で声明（しょうみょう）の公演もあります（2026年は11月21・22・23日、12月5・6日）。\n\nおすすめ訪問時間：18:20〜18:50",
-    "en": "Five-storey pagoda & main hall\n\nThrough the Nio gate stand the National Treasure main hall and five-storey pagoda. Built in 951 in the Heian period, the pagoda is the oldest wooden building in Kyoto Prefecture. Lit at night with the maples around it, it looks nothing like it does by day.\n\nOn some evenings there are shomyo (Buddhist chant) performances in the main hall (2026: 21, 22, 23 Nov and 5, 6 Dec).\n\nRecommended visit time: 18:20–18:50"
+    "ja": "五重塔（ごじゅうのとう）と金堂（こんどう）\n\n仁王門をくぐると、国宝の金堂と五重塔。五重塔は平安時代（951年）に建てられ、京都府で最も古い木造建築です。夜は塔ともみじが照らされ、昼とはまったく違う姿に。\n\n日によっては金堂で声明（しょうみょう）の公演もあります（2026年は11月21・22・23日、12月5・6日。声明は18:30〜18:50と20:00〜20:20、不動堂前の護摩は19:15〜19:30。公式サイトには「午後7時より」とも書かれているので、当日の案内で確かめてください）。夜間拝観に入った人は、だれでも金堂に入って聞けます。\n\nおすすめ訪問時間：18:20〜18:50",
+    "en": "Five-storey pagoda & main hall\n\nThrough the Nio gate stand the National Treasure main hall and five-storey pagoda. Built in 951 in the Heian period, the pagoda is the oldest wooden building in Kyoto Prefecture. Lit at night with the maples around it, it looks nothing like it does by day.\n\nOn some evenings there are shomyo (Buddhist chant) performances in the main hall (2026: 21, 22, 23 Nov and 5, 6 Dec; chanting 18:30–18:50 and 20:00–20:20, and a fire ritual in front of the Fudo hall 19:15–19:30; the website also says “from 7 pm”, so check the notice on the day). Anyone with an evening ticket can go into the hall and listen.\n\nRecommended visit time: 18:20–18:50"
    },
    "gmaps": [
     {
@@ -187,11 +201,24 @@
    "photos": [
     "goju-1.jpg",
     "goju-2.jpg",
-    "goju-3.jpg",
     "goju-4.jpg",
     "goju-5.jpg"
    ],
-   "notices": []
+   "notices": [
+    {
+     "from": "2026-12-07",
+     "to": null,
+     "url": "https://www.daigoji.or.jp/event/detail7.html",
+     "head": {
+      "ja": "2026年の夜間拝観は終わりました",
+      "en": "The 2026 evening opening has ended"
+     },
+     "text": {
+      "ja": "2026年の秋期夜間拝観は12月6日で終わりました。次の秋の日程は醍醐寺の公式サイトで確かめてください。昼の拝観は9:00から（12月第1日曜の翌日〜2月末は16:30まで、受付は30分前まで）。",
+      "en": "The autumn 2026 evening opening ended on 6 December. Check the Daigoji website for next autumn’s dates. Daytime visits start at 9:00 (until 16:30 from the day after the first Sunday of December to the end of February; last entry 30 min before closing)."
+     }
+    }
+   ]
   },
   {
    "no": 3,
@@ -211,8 +238,8 @@
    "lat": 34.95088,
    "lng": 135.82432,
    "text": {
-    "ja": "弁天堂（べんてんどう）と弁天池\n\n伽藍のいちばん奥、池のほとりに建つ朱色の弁天堂。ライトアップされたもみじと朱の橋が、風のない夜は池に鏡のように映ります。混み合うので、池のまわりではゆっくり進みましょう。\n\n昼に来るなら、三宝院の庭園・霊宝館・伽藍の3か所共通券（1,500円）があります。山の上の上醍醐は、がけ崩れの危険のため当面入山できません。\n\nおすすめ訪問時間：18:50〜19:40",
-    "en": "Bentendo and its pond\n\nAt the far end of the precinct, the vermilion Benten hall stands by a pond. On a still night, the lit maples and the red bridge are mirrored in the water. It gets crowded, so move slowly around the pond.\n\nBy day, a combined ticket for the Sanboin garden, the Reihokan museum and the main precinct costs ¥1,500. Kami-Daigo on the mountain is closed for now because of landslide risk.\n\nRecommended visit time: 18:50–19:40"
+    "ja": "弁天堂（べんてんどう）と弁天池\n\n伽藍のいちばん奥、池のほとりに建つ朱色の弁天堂。ライトアップされたもみじと朱の橋が、風のない夜は池に鏡のように映ります。池の正面、橋とお堂が両方入る場所がいちばん混みます（写真2・3枚目）。夜は冷えるので上着を。\n\n昼に来るなら、三宝院の庭園・霊宝館・伽藍の3か所共通券（1,500円）があります。山の上の上醍醐は、がけ崩れの危険のため当面入山できません。\n\nおすすめ訪問時間：18:50〜19:40",
+    "en": "Bentendo and its pond\n\nAt the far end of the precinct, the vermilion Benten hall stands by a pond. On a still night, the lit maples and the red bridge are mirrored in the water. The busiest spot is straight across the pond, where the bridge and hall both fit in the frame (photos 2 and 3). Evenings are cold, so bring a jacket.\n\nBy day, a combined ticket for the Sanboin garden, the Reihokan museum and the main precinct costs ¥1,500. Kami-Daigo on the mountain is closed for now because of landslide risk.\n\nRecommended visit time: 18:50–19:40"
    },
    "gmaps": [
     {
@@ -272,8 +299,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "昼：3か所共通券 大人1,500円、2か所 1,000円、1か所 600円",
-       "en": "Daytime: 3-site ticket ¥1,500, 2 sites ¥1,000, 1 site ¥600"
+       "ja": "昼：3か所共通券 大人1,500円、2か所 1,000円、1か所 600円（春期の3月20日〜4月第3日曜は3か所1,800円、1か所800円）",
+       "en": "Daytime: 3-site ticket ¥1,500, 2 sites ¥1,000, 1 site ¥600 (in spring, 20 Mar to the 3rd Sunday of April: 3 sites ¥1,800, 1 site ¥800)"
       },
       "until": null,
       "from": null
@@ -294,7 +321,21 @@
     "benten-5.jpg",
     "benten-6.jpg"
    ],
-   "notices": []
+   "notices": [
+    {
+     "from": "2026-12-07",
+     "to": null,
+     "url": "https://www.daigoji.or.jp/event/detail7.html",
+     "head": {
+      "ja": "2026年の夜間拝観は終わりました",
+      "en": "The 2026 evening opening has ended"
+     },
+     "text": {
+      "ja": "2026年の秋期夜間拝観は12月6日で終わりました。次の秋の日程は醍醐寺の公式サイトで確かめてください。昼の拝観は9:00から（12月第1日曜の翌日〜2月末は16:30まで、受付は30分前まで）。",
+      "en": "The autumn 2026 evening opening ended on 6 December. Check the Daigoji website for next autumn’s dates. Daytime visits start at 9:00 (until 16:30 from the day after the first Sunday of December to the end of February; last entry 30 min before closing)."
+     }
+    }
+   ]
   }
  ]
 }
