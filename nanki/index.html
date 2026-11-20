@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>My Nanki Picks｜白浜・那智勝浦・熊野・串本のおすすめ</title>
+<meta name="description" content="Shirahama’s white beach, Engetsu Island and Sandanbeki, Nachi Falls and Kumano Nachi Taisha, tuna in Katsuura, Tsuboyu at Yunomine and Shionomisaki. 白浜の白良浜・円月島・三段壁、那智の滝と熊野那智大社、勝浦のまぐろ、湯の峰のつぼ湯、本州最南端の潮岬。">
+<meta name="theme-color" content="#F3F0E9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2324406B%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2234%22 text-anchor=%22middle%22 fill=%22%23E9D7A6%22 font-family=%22serif%22%3E%E7%B4%80%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+<header class="bar" id="top">
+  <div class="bar-in">
+    <a class="home" href="../" data-t="home">← マップ一覧</a>
+    <a class="brand" href="#top"><span class="b-jp">南紀</span><span class="b-en">NANKI</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#city" data-view-tab="city" data-t="nav_city">Shirahama</a>
+      <a href="#trips" data-view-tab="trips" data-t="nav_trips">Nachi, Kumano &amp; more</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="h1">
+  <img class="hero-img" src="img/seigantoji-1.jpg" alt="" width="1280" height="848">
+  <div class="hero-shade"></div>
+  <div class="hero-in">
+    <p class="kicker"><span>南紀</span> SHIRAHAMA, NACHI, KUMANO &amp; KUSHIMOTO</p>
+    <h1 id="h1" data-t="title">My Nanki Picks</h1>
+    <p class="hero-sub" data-t="subtitle">The white beach and sea cliffs of Shirahama, Nachi Falls, Katsuura tuna and the hot springs of Kumano.</p>
+  </div>
+</section>
+
+<main class="wrap" data-view="city">
+  <section class="intro" aria-label="Introduction">
+    <div class="intro-text" id="intro"></div>
+    <ul class="jump">
+      <li><a href="#city" data-view-tab="city"><b id="n-city">0</b><span data-t="jump_city">places in Shirahama</span></a></li>
+      <li hidden><a href="#food" data-view-tab="city"><b id="n-food">0</b><span data-t="jump_food">places I've eaten</span></a></li>
+      <li><a href="#trips" data-view-tab="trips"><b id="n-trips">0</b><span data-t="jump_trips">areas further east</span></a></li>
+    </ul>
+  </section>
+
+  <section class="mapbox" id="map" aria-labelledby="map-h">
+    <div class="sec-head">
+      <p class="sec-kick">MAP</p>
+      <h2 id="map-h" data-t="map_h">Where everything is</h2>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Map">
+      <button type="button" role="tab" id="tab-city" data-map="city" aria-selected="true" data-t="tab_city">Shirahama</button>
+      <button type="button" role="tab" id="tab-trips" data-map="trips" aria-selected="false" data-t="tab_trips">Nachi, Kumano &amp; more</button>
+    </div>
+    <div class="lmap" id="lmap" role="tabpanel" aria-labelledby="tab-city"></div>
+    <div class="svgmap" id="svgmap" hidden></div>
+    <p class="map-fb" id="map-fb" data-t="map_fb" hidden></p>
+    <p class="map-note" data-t="map_note">Tap a number to jump to that place. For directions, use each place’s “Google Maps” button.</p>
+  </section>
+
+  <section class="sec" id="city" aria-labelledby="city-h">
+    <div class="sec-head">
+      <p class="sec-kick">01 · SHIRAHAMA</p>
+      <h2 id="city-h" data-t="city_h">Places to see in Shirahama</h2>
+      <p class="sec-sub" data-t="city_sub">The beach, Engetsu Island and the sea cliffs</p>
+    </div>
+    <div class="grid" id="grid-city"></div>
+  </section>
+
+  <section class="sec" id="food" aria-labelledby="food-h" hidden>
+    <div class="sec-head">
+      <p class="sec-kick">02 · FOOD</p>
+      <h2 id="food-h" data-t="food_h">Okonomiyaki I’ve eaten</h2>
+      <p class="sec-sub" data-t="food_sub">Only places I have actually been to.</p>
+    </div>
+    <div class="grid" id="grid-food"></div>
+  </section>
+
+  <section class="sec" id="trips" aria-labelledby="trips-h">
+    <div class="sec-head">
+      <p class="sec-kick">02 · NACHI, KUMANO &amp; MORE</p>
+      <h2 id="trips-h" data-t="trips_h">Nachi, Katsuura, Kumano and Kushimoto</h2>
+      <p class="sec-sub" data-t="trips_sub">Further east along the coast and into the mountains.</p>
+    </div>
+    <div class="grid" id="grid-trips"></div>
+  </section>
+
+  <section class="outro" aria-label="Closing">
+    <div id="outro"></div>
+  </section>
+
+  <section class="credits" aria-labelledby="cr-h">
+    <h2 id="cr-h" data-t="cr_h">Photo credits</h2>
+    <p data-t="cr_toshi">Photos without a credit were taken by Toshi.</p>
+    <ul id="credits"></ul>
+    <p data-t="cr_map">Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors.</p>
+    <p class="muted" data-t="disclaimer">Opening hours, prices and booking rules can change. Please check the official information before you go.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="madeby" data-t="madeby">Made by Toshi</p>
+  <a href="#top" data-t="to_top">Back to top ↑</a>
+  <a class="foot-home" href="../" data-t="home_full">マップ一覧へ戻る</a>
+</footer>
+
+<noscript><p class="noscript">Please enable JavaScript to see this guide. このページを見るにはJavaScriptを有効にしてください。</p></noscript>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
+<script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
+<script src="../assets/basemap.js?v=2"></script>
+<script src="js/data.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
