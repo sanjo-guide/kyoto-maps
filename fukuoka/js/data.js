@@ -4,7 +4,7 @@ window.GUIDE = {
   "ja": [
    "福岡と唐津のおすすめをまとめました。",
    "福岡は、空港から博多・天神の中心部まで地下鉄ですぐ。街がコンパクトで歩きやすく、ごはんがとにかくおいしい街です。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。何度も通っているお店ばかりです。",
+   "「食べる」のお店は、私が実際に行ったところだけを載せています。何度も通っているお店がほとんどです。",
    "福岡を拠点にすれば、唐津・呼子、糸島、太宰府、柳川、門司港などへも日帰りで行けます。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
@@ -730,10 +730,6 @@ window.GUIDE = {
     "en": "Hokutotei"
    },
    "map": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%BB%E3%81%8F%E3%81%A8%E4%BA%AD%20%E6%97%A9%E8%89%AF%E5%8C%BA%E6%9D%B1%E5%85%A5%E9%83%A8",
-   "visits": {
-    "ja": "これまでに5回行きました",
-    "en": "I’ve been here 5 times"
-   },
    "body": {
     "ja": [
      "福岡に来るたびに寄ってしまう、豚骨ラーメンのお店です。",
@@ -872,10 +868,6 @@ window.GUIDE = {
      "map": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E9%BA%A9%E7%BE%85%E5%87%A6%E3%81%B2%E3%82%89%E3%81%8A%20%E6%9C%AC%E5%BA%97"
     }
    ],
-   "visits": {
-    "ja": "これまでに4回行きました（3つのお店で）",
-    "en": "I’ve been 4 times (at 3 different branches)"
-   },
    "body": {
     "ja": [
      "揚げたての天ぷらを、1品ずつ目の前のお皿に出してくれる天ぷら定食のお店です。食券を買ってカウンターに座るスタイルで、気軽に入れます。",
@@ -975,10 +967,6 @@ window.GUIDE = {
     "en": "Hakata Issou"
    },
    "map": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E4%B8%80%E5%8F%8C%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E6%9D%B1%E6%9C%AC%E5%BA%97",
-   "visits": {
-    "ja": "これまでに3回行きました",
-    "en": "I’ve been here 3 times"
-   },
    "body": {
     "ja": [
      "博多一双（はかたいっそう）は、泡立つような、とろっと濃厚な豚骨スープで人気のラーメン屋さんです。博多駅から歩いて行けます。",
@@ -1049,10 +1037,6 @@ window.GUIDE = {
     "en": "Akanoren"
    },
    "map": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E7%A5%96%E8%B5%A4%E3%81%AE%E3%82%8C%E3%82%93%20%E7%AF%80%E3%81%A1%E3%82%83%E3%82%93%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E5%A4%A9%E7%A5%9E%E6%9C%AC%E5%BA%97",
-   "visits": {
-    "ja": "1回行きました",
-    "en": "I’ve been here once"
-   },
    "body": {
     "ja": [
      "天神にある、昭和21年創業の老舗ラーメン店です。赤いのれんとちょうちんが目印。",
@@ -1144,8 +1128,8 @@ window.GUIDE = {
      "en": "il FORNO del MIGNON",
      "map": "https://www.google.com/maps/search/?api=1&query=il%20FORNO%20del%20MIGNON%20%E5%8D%9A%E5%A4%9A%E9%A7%85",
      "t": {
-      "ja": "焼きたてのミニクロワッサンを量り売りしているお店です。駅の中にいい香りが広がっていて、つい行列に並んでしまいます（3回買いました）。プレーンのほか、チョコやさつまいもも。移動中のおやつやおみやげに。",
-      "en": "A stand selling freshly baked mini croissants by weight. The smell fills the station and I always end up joining the queue (I’ve bought them 3 times). Besides plain, there are chocolate and sweet potato. Great as a snack on the train or as a gift."
+      "ja": "焼きたてのミニクロワッサンを量り売りしているお店です。駅の中にいい香りが広がっていて、つい行列に並んでしまいます。プレーンのほか、チョコやさつまいもも。移動中のおやつやおみやげに。",
+      "en": "A stand selling freshly baked mini croissants by weight. The smell fills the station and I always end up joining the queue. Besides plain, there are chocolate and sweet potato. Great as a snack on the train or as a gift."
      }
     },
     {
@@ -1218,10 +1202,6 @@ window.GUIDE = {
     "en": "Ramen Runway"
    },
    "map": "https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E7%A9%BA%E6%B8%AF%20%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E6%BB%91%E8%B5%B0%E8%B7%AF",
-   "visits": {
-    "ja": "幸ちゃんラーメンに行きました",
-    "en": "I ate at Kouchan Ramen"
-   },
    "body": {
     "ja": [
      "福岡空港の国内線ターミナルには、ラーメン屋さんが集まった「ラーメン滑走路」があります。",
@@ -1678,10 +1658,6 @@ window.GUIDE = {
     }
    ],
    "map": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E5%B1%8B%20%E3%81%86%E3%81%AA%E3%81%8E%20%E5%94%90%E6%B4%A5",
-   "visits": {
-    "ja": "これまでに3回行きました",
-    "en": "I’ve been here 3 times"
-   },
    "body": {
     "ja": [
      "唐津に行ったら必ず寄りたい、うなぎのお店です。趣のある木造3階建ての建物で、うな丼をいただきます。",
@@ -1801,10 +1777,6 @@ window.GUIDE = {
     }
    ],
    "map": "https://www.google.com/maps/search/?api=1&query=KARAE%20TABLE%20%E5%94%90%E6%B4%A5",
-   "visits": {
-    "ja": "これまでに4回行きました",
-    "en": "I’ve been here 4 times"
-   },
    "body": {
     "ja": [
      "唐津の中心にある「KARAE（からえ）」という建物の1階のカフェです。唐津に行くと毎回寄っています。",
@@ -1953,10 +1925,6 @@ window.GUIDE = {
     }
    ],
    "map": "https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%A4%AA%E9%83%8E%20%E5%91%BC%E5%AD%90%E5%BA%97",
-   "visits": {
-    "ja": "1回行きました",
-    "en": "I’ve been here once"
-   },
    "body": {
     "ja": [
      "呼子名物の「いかの活き造り」が食べられるお店です。透き通ったイカは、甘くてコリコリ。",
