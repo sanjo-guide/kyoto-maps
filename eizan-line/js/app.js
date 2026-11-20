@@ -83,6 +83,22 @@
     return null;
   }
   function pickCount() { return Object.keys(picks).length; }
+
+  /* ---------- 写真提供の表示（例：鞍馬温泉の写真に「写真提供：くらま温泉」） ---------- */
+  // data のスポットに photoCredit: {files: [...], text: {ja, en}} があれば、その写真を表示している間だけ出す
+  function pcText(s, i) {
+    var c = s && s.photoCredit, f = s && s.photos[i];
+    if (!c || f == null) return '';
+    var file = typeof f === 'string' ? f : f.file;
+    return c.files.indexOf(file) >= 0 ? c.text[lang] : '';
+  }
+  function setPc(el, s, i) {
+    if (!el) return;
+    var t = pcText(s, i);
+    el.textContent = t;
+    el.hidden = !t;
+  }
+  function slideIndex(el) { return Math.round(el.scrollLeft / Math.max(1, el.clientWidth)); }
   function toast(msg) {
     var el = $('toast');
     el.textContent = msg; el.hidden = false;
@@ -426,7 +442,8 @@
           '<button type="button" class="l-arrow prev" data-step="-1" aria-label="' + esc(T().prevPhoto) + '" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>' +
           '<button type="button" class="l-arrow next" data-step="1" aria-label="' + esc(T().nextPhoto) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>' : '') +
         '<button type="button" class="l-check" data-check="' + s.no + '" aria-pressed="' + v + '" aria-label="' + esc(pad(s.no) + ' ' + s.name[lang] + ': ' + (v ? T().visitOn : T().visitOff)) + '">' +
-        '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></button></div>' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg></button>' +
+        (s.photoCredit ? '<span class="l-pc"' + (pcText(s, 0) ? '' : ' hidden') + '>' + esc(pcText(s, 0)) + '</span>' : '') + '</div>' +
         '<button type="button" class="l-main" data-no="' + s.no + '" aria-current="' + (s.no === activeNo) + '">' +
         '<span class="l-txt">' + nameHtml(s, 'span') +
         '<span class="l-tags"><span class="kind">' + esc(s.kind[lang]) + '</span>' +
@@ -490,6 +507,7 @@
   function renderDetail(s) {
     var t = T(), other = lang === 'ja' ? 'en' : 'ja';
     $('ph-no').innerHTML = badge(s.no, 'on-photo');
+    setPc($('ph-pc'), s, slideIndex($('slides')));
     var sec = sectionOf(s.no);
     $('ph-area').innerHTML = esc(areaOf(sec, 'en')) + '<span lang="ja">' + esc(areaOf(sec, 'ja')) + '</span>';
     $('d-name').textContent = s.name[lang];
@@ -718,6 +736,16 @@
       });
     }, true);
     $('btn-visit').addEventListener('click', function () { if (activeNo) toggleVisited(activeNo); });
+    // 写真提供の表示を、めくった写真に合わせる（一覧と詳細）
+    $('list').addEventListener('scroll', function (e) {
+      var sl = e.target;
+      if (!sl.classList || !sl.classList.contains('l-slides')) return;
+      var sp = byNo[Number(sl.dataset.open)];
+      if (sp && sp.photoCredit) setPc(sl.parentNode.querySelector('.l-pc'), sp, slideIndex(sl));
+    }, true);
+    $('slides').addEventListener('scroll', function () {
+      if (activeNo && byNo[activeNo]) setPc($('ph-pc'), byNo[activeNo], slideIndex($('slides')));
+    }, { passive: true });
     $('btn-pick').addEventListener('click', function () {
       if (!activeNo) return;
       if (picks[activeNo]) delete picks[activeNo]; else picks[activeNo] = true;
@@ -796,7 +824,7 @@
     route();
   }
 
-  fetch('../data/routes/eizan-line.json?v=14')
+  fetch('../data/routes/eizan-line.json?v=15')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

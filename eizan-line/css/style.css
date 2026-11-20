@@ -414,3 +414,9 @@ html[lang="ja"] .in-title { font-family: var(--f); font-weight: 700; font-size: 
 .mk.is-off.is-active { opacity: 1; filter: none; }
 .notice.hint { background: var(--green-soft); color: var(--green); }
 .notice.hint p { color: var(--ink); }
+
+/* 写真提供の表示（photoCredit。例：鞍馬温泉の写真） */
+.l-pc, .ph-pc { position: absolute; z-index: 1; max-width: calc(100% - 120px); font-size: 11px; line-height: 1.35; color: #fff; background: rgba(18,22,20,.62); padding: 3px 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
+.l-pc { left: 10px; bottom: 10px; }
+.ph-pc { right: 10px; top: 10px; }
+.l-pc[hidden], .ph-pc[hidden] { display: none; }
