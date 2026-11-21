@@ -22,15 +22,31 @@
   var WIDE = window.matchMedia('(min-width: 900px)');
   var I18N = window.KINKAKUJI_I18N;
   // 2026-11-20 に番号を振り直した（出町柳スタート）ので、「行った」印は新しいキーで保存し直す
-  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-kinkakuji-intro-seen', KEY_VISITED = 'kyoto-maps-kinkakuji-visited-v2';
+  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-kinkakuji-intro-seen', KEY_VISITED = 'kyoto-maps-kinkakuji-visited-v3';
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
   var data, spots = [], byNo = {}, map, markers = {}, photoMode = null, activeNo = null, lang = 'en';
   var visited = {}, resetArmed = false, locLayer = null, toastTimer = null;
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
-  var KEY_MODE = 'kyoto-maps-kinkakuji-mode', KEY_PICKS = 'kyoto-maps-kinkakuji-picks';
+  var KEY_MODE = 'kyoto-maps-kinkakuji-mode', KEY_PICKS = 'kyoto-maps-kinkakuji-picks-v2';
   var mode = 'all', picks = {}, routeLine = null;
+  // 金閣寺〜北野: コースは early（早朝。龍安寺と金閣寺に開門で入る）か late（9〜10時に出発）。コースごとにデータファイルが別。
+  // 一覧の上のボタン（.coursesw）で切り替える。?course=late でも開ける
+  var KEY_COURSE = 'kyoto-maps-kinkakuji-course';
+  var course = { id: ((location.search.match(/[?&]course=([a-z]+)/) || [])[1] || load(KEY_COURSE)) === 'late' ? 'late' : 'early' };
+  course.file = course.id === 'late' ? 'kinkakuji-late.json' : 'kinkakuji.json';
+  // 「行った」印と選んだ場所はコースごとに別（番号がちがうため）
+  if (course.id !== 'early') { KEY_VISITED += '-' + course.id; KEY_PICKS += '-' + course.id; }
+  // i18n.js の courseFor[コース] に書いてある項目で、文言を上書きする（intro の中は項目ごとに）
+  Object.keys(I18N).forEach(function (l) {
+    var o = I18N[l].courseFor && I18N[l].courseFor[course.id];
+    if (!o) return;
+    Object.keys(o).forEach(function (k) {
+      if (k === 'intro') Object.keys(o.intro).forEach(function (j) { I18N[l].intro[j] = o.intro[j]; });
+      else I18N[l][k] = o[k];
+    });
+  });
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -314,9 +330,16 @@
     $('btn-list').setAttribute('aria-expanded', 'false');
   }
 
+  function listTop() {
+    if (location.hash !== '#list') return;
+    viewList.scrollTop = 0;
+    setTimeout(function () { if (location.hash === '#list') viewList.scrollTop = 0; }, 80);
+  }
+  window.addEventListener('load', listTop);
   function route() {
     showRoute();
     updateTabs();
+    listTop();
   }
 
   // Phones: highlight the tab for what is on screen (the spot details count as part of the list)
@@ -346,7 +369,11 @@
   }
 
   /* ---------- intro ---------- */
-  function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // [スポットの番号 or id, 写真の番号]（コースで番号が変わるので id で指定する）
+  function introPhoto(p) {
+    var s = typeof p[0] === 'string' ? spots.filter(function (x) { return x.id === p[0]; })[0] : byNo[p[0]];
+    return photoUrl(s.photos[p[1]]);
+  }
   // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
     return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
@@ -777,6 +804,16 @@
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
       b.addEventListener('click', function () { setMode(b.dataset.mode); });
     });
+    // コースを切り替えたら、そのコースのデータで読み直す（一覧を開いた状態で）
+    [].forEach.call(document.querySelectorAll('.coursesw button'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.course === course.id));
+      b.addEventListener('click', function () {
+        if (b.dataset.course === course.id) return;
+        store(KEY_COURSE, b.dataset.course);
+        history.replaceState(null, '', location.pathname + '#list');
+        location.reload();
+      });
+    });
     $('btn-pick-all').addEventListener('click', function () {
       data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
     });
@@ -847,7 +884,7 @@
     route();
   }
 
-  fetch('../data/routes/kinkakuji.json?v=3')
+  fetch('../data/routes/' + course.file + '?v=4')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

@@ -431,3 +431,10 @@ html[lang="ja"] .in-title { font-family: var(--f); font-weight: 700; font-size: 
 .l-cr { left: 10px; bottom: 10px; }
 .ph-credit { right: 10px; top: 10px; }
 .l-cr[hidden], .ph-credit[hidden] { display: none; }
+/* 金閣寺〜北野: コースの切り替えボタンの段（早朝コース／9〜10時に出発）と、段ごとの見出し */
+.sw-label { margin: 8px 0 0; font-size: 12.5px; font-weight: 700; line-height: 1.5; color: var(--ink); }
+.sw-label + .coursesw, .sw-label + .modesw { margin-top: 4px; }
+.coursesw { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink); background: var(--card); margin: 4px 0 10px; }
+.coursesw button { min-height: 44px; border: 0; background: transparent; font-size: 14px; font-weight: 700; color: var(--ink); white-space: pre-line; line-height: 1.35; padding: 6px 4px; }
+.coursesw button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.coursesw button + button { border-left: 1px solid var(--ink); }
