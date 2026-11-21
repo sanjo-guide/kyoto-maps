@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
-"""京都・東山ルートのデータ（data/routes/higashiyama.json）を書き出す。
+"""京都・東山（清水寺から北、銀閣寺まで）のデータを、2つのコース分まとめて書き出す。
 
 使い方: python3 scripts/build_higashiyama_data.py
+- 作るもの（COURSES）:
+  - data/routes/higashiyama.json … 「9〜10時に出発」
+  - data/routes/higashiyama-early.json … 「早朝に出発」（5時すぎに出て、6:00の開門に清水寺へ）
+  どちらも直接直さない（実行のたびに作り直す）
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す
+  - BASE … スポットごとの、コースで変わらない内容（説明・料金・注意・リンク）
+  - COURSES … コースごとの並び順、めやすの時間、そのコースでの行き方の一言、「選んで回る」の設定
+- スポットの番号はコースで変わるので、紹介ページ（higashiyama/js/i18n.js）の写真は id で指定している
 - 写真は images/higashiyama/<スポットのid>-<番号>.jpg を番号の順に全部使う
+- 2026-11-22 の見直し（オーナーの基準）: 出発は京都の中心・三条のあたり。伏見稲荷・東福寺・泉涌寺・三十三間堂は
+  別のマップ（fushimi-inari/、scripts/build_fushimi_inari_data.py）に分けた。時刻と運賃は乗換案内で確認
 """
-import json, os, re, urllib.parse
+import copy, json, os, re, urllib.parse
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-IMG = f"{R}/images/higashiyama"
-OUT = f"{R}/data/routes/higashiyama.json"
-CHECKED = "2026-11-20"
+MAP_ID = "higashiyama"
+IMG = f"{R}/images/{MAP_ID}"
+CHECKED = "2026-11-22"
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -30,19 +39,21 @@ def link(kind, ja, en, url):
     return {"kind": kind, "label": T(ja, en), "url": {"ja": url, "en": url}}
 
 
-def row(kind, ja, en, until=None):
-    return {"kind": kind, "text": T(ja, en), "until": until, "from": None}
+def row(kind, ja, en, until=None, frm=None):
+    return {"kind": kind, "text": T(ja, en), "until": until, "from": frm}
 
 
-AUTUMN_END = "2026-12-06"  # 2026年秋のライトアップ・特別期間の最終日。この日を過ぎると秋だけの行と注意書きは自動で消える
-NIGHT_AUTUMN_ONLY = {"from": None, "to": None, "url": None,
-                     "head": T("夜の拝観は秋だけ", "Evening visits: autumn only"),
-                     "text": T("このルートでは17時すぎに着きますが、夜に開くのは秋のライトアップの期間だけです。ほかの時期は16:00で受付が終わるので、行きたい日は南禅寺より前に回ってください。",
-                               "On this route you arrive after 17:00, but the temple only opens in the evening during the autumn light-up. At other times reception closes at 16:00, so if you want to go in, visit it before Nanzen-ji.")}
+def notice(head_ja, head_en, ja, en, url=None, frm=None, to=None):
+    return {"from": frm, "to": to, "url": url, "head": T(head_ja, head_en), "text": T(ja, en)}
 
 
-def info(rows, tip=None, verified=True):
-    d = {"rows": rows, "cash": False, "tip": tip, "checked": CHECKED}
+AUTUMN_END = "2026-12-06"   # 永観堂・金戒光明寺の、2026年秋の特別期間の最終日。過ぎると秋だけの行と注意書きは自動で消える
+KODAIJI_NIGHT_END = "2026-12-13"
+KIYOMIZU_NIGHT_END = "2026-11-30"
+
+
+def info(rows, source, tip=None, verified=True, checked=CHECKED):
+    d = {"rows": rows, "cash": False, "tip": tip, "checked": checked, "source": source}
     if not verified:
         d["verified"] = False
     return d
@@ -59,220 +70,312 @@ def cc(file, author, license, title):
     return {"file": file, "credit": {"author": author, "license": license, "page": "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"))}}
 
 
-S = [
-    dict(id="station", name=T("JR稲荷駅", "JR Inari Station"), kind=T("駅（スタート）", "Station (start)"),
-         blurb=T("京都駅からJR奈良線で2駅、約6分。改札を出た目の前が伏見稲荷大社の大鳥居です。",
-                 "Two stops (about 6 min) from Kyoto Station on the JR Nara Line. Fushimi Inari’s great torii is right outside the gate."),
-         lat=34.96717, lng=135.76926,
-         text=T("JR稲荷駅（いなりえき）\n\n京都駅のJR奈良線のホームから、各駅停車で2駅、約6分。朱色に塗られた小さな駅で、駅を出るとすぐ伏見稲荷大社の大鳥居が見えます。\n\n千本鳥居は朝のうちが空いていて歩きやすいので、早めの出発がおすすめです。\n\nおすすめ出発時間：8:30",
-                "JR Inari Station\n\nFrom the JR Nara Line platforms at Kyoto Station, it’s two stops on a local train, about 6 minutes. The little station is painted vermilion, and Fushimi Inari’s great torii is right in front of you as you come out.\n\nThe Thousand Torii are quietest in the morning, so set off early.\n\nRecommended departure time: 8:30"),
-         gmaps=[gm("JR稲荷駅", "JR Inari Station", 34.96717, 135.76926, "JR稲荷駅")],
-         links=[link("timetable", "JRおでかけネット（時刻表）", "JR West timetables (Japanese)", "https://www.jr-odekake.net/")],
-         info=info([row("train", "京都→稲荷 JR奈良線で約6分・150円（ICカードも使えます）", "Kyoto → Inari: about 6 min on the JR Nara Line, ¥150 (IC cards accepted)")],
-                   tip=T("運賃は乗換案内で確認しました。", "Fare checked on a route planner."))),
-    dict(id="inari", name=T("伏見稲荷大社", "Fushimi Inari Taisha"), kind=T("神社", "Shrine"),
-         blurb=T("どこまでも続く朱色の「千本鳥居」。全国の稲荷神社の総本宮です。",
-                 "The endless vermilion tunnels of the Thousand Torii, at the head shrine of all Inari shrines in Japan."),
-         lat=34.96714, lng=135.77267,
-         text=T("伏見稲荷大社（ふしみいなりたいしゃ）\n\n商売繁盛の神さま「お稲荷さん」の総本宮。楼門と本殿にお参りしたら、奥へ進んで千本鳥居をくぐりましょう。奉納された鳥居がすき間なく並び、朱色のトンネルが続きます。\n\nあちこちに神さまのお使いのキツネの像があり、口に鍵や玉をくわえています。稲荷山の山頂まで登ると往復2時間ほどかかるので、時間が限られる日は、四ツ辻（よつつじ）あたりで引き返すのがおすすめです。\n\n境内は自由に参拝できます。\n\nおすすめ訪問時間：8:40〜10:00",
-                "Fushimi Inari Taisha\n\nThe head shrine of Inari, the god of business and good harvests. After praying at the gate and main hall, head to the back and walk through the Thousand Torii, where donated gates stand so close together that they form vermilion tunnels.\n\nFox statues, the god’s messengers, stand everywhere with keys or jewels in their mouths. Climbing to the top of Mt. Inari and back takes about two hours, so on a busy day turn back around Yotsutsuji.\n\nThe shrine grounds are open to visit freely.\n\nRecommended visit time: 8:40–10:00"),
-         gmaps=[gm("伏見稲荷大社", "Fushimi Inari Taisha", 34.96714, 135.77267, "伏見稲荷大社")],
-         links=[link("official", "伏見稲荷大社 公式サイト", "Fushimi Inari Taisha (official)", "https://inari.jp/")],
-         info={"rows": [], "cash": False, "tip": None, "checked": CHECKED}),
-    dict(id="tofukuji", name=T("東福寺", "Tofuku-ji Temple"), kind=T("お寺", "Temple"),
-         blurb=T("谷を埋めつくすもみじを、木の橋「通天橋」から見下ろす。京都でも指折りの紅葉の名所です。",
-                 "Look down from the wooden Tsutenkyo bridge onto a valley full of maples, one of Kyoto’s great autumn sights."),
-         lat=34.97677, lng=135.77371,
-         text=T("東福寺（とうふくじ）\n\n伏見稲荷から歩いて約20分（JRなら東福寺駅まで1駅）。大きな禅寺で、渓谷にかかる通天橋（つうてんきょう）から見る紅葉は、まるで赤い雲海のようです。新緑の季節もきれいです。\n\n秋の見ごろ（11月中ごろ〜12月はじめ）はとても混むので、朝早めに行くのがおすすめです。\n\nおすすめ訪問時間：10:20〜11:10",
-                "Tofuku-ji Temple\n\nAbout 20 minutes on foot from Fushimi Inari (or one stop on the JR to Tofukuji Station). From the Tsutenkyo bridge over the ravine at this large Zen temple, the autumn leaves look like a sea of red clouds. The fresh green of spring is lovely too.\n\nIt gets very crowded at the autumn peak (mid-November to early December), so go early.\n\nRecommended visit time: 10:20–11:10"),
-         gmaps=[gm("東福寺", "Tofuku-ji", 34.97677, 135.77371, "東福寺 通天橋")],
-         links=[link("official", "東福寺 公式サイト（拝観案内）", "Tofuku-ji (official, Japanese)", "https://tofukuji.jp/guide/")],
-         info=info([row("hours", "4月1日〜12月6日 受付9:00〜16:00（16:30閉門。11月14日〜12月6日の通天橋は8:30から）、12月7日〜3月31日 受付9:00〜15:30（16:00閉門）",
-                        "1 Apr – 6 Dec: entry 9:00–16:00 (gates close 16:30; Tsutenkyo from 8:30 on 14 Nov – 6 Dec). 7 Dec – 31 Mar: entry 9:00–15:30 (close 16:00)"),
-                    row("fee", "秋（2026年11月14日〜12月6日）は通天橋 大人1,000円・本坊庭園 大人600円（共通券なし）", "Autumn (14 Nov – 6 Dec 2026): Tsutenkyo ¥1,000, Hojo garden ¥600 per adult (no combined ticket)", until=AUTUMN_END),
-                    row("fee", "秋以外は通天橋・開山堂 大人600円、本坊庭園 大人600円、共通券 大人1,000円", "Outside autumn: Tsutenkyo & Kaisando ¥600, Hojo garden ¥600, combined ticket ¥1,000 per adult")])),
-    dict(id="sennyuji", name=T("泉涌寺と雲龍院", "Sennyu-ji and Unryu-in"), kind=T("お寺", "Temple"),
-         blurb=T("皇室とゆかりの深い「御寺（みてら）」。別院の雲龍院では、丸い窓から庭を眺めます。",
-                 "The “Mitera”, a temple with deep ties to the imperial family. At its sub-temple Unryu-in, look at the garden through a round window."),
-         lat=34.97810, lng=135.78010,
-         text=T("泉涌寺（せんにゅうじ）と雲龍院（うんりゅういん）\n\n東福寺から歩いて約15分。歴代の天皇のお墓がある、皇室の菩提寺です。木々に囲まれた静かな境内で、混み合う東山の中では、ゆっくりできる場所です。\n\n奥にある別院の雲龍院では、「悟りの窓」と呼ばれる丸い窓や、障子の四角い窓から庭を眺められます。雲龍院は泉涌寺とは別に拝観料が必要で、水曜はお休みです（11月は水曜も開いています）。\n\n参道の途中から少し入ったところには、朱色の橋の先に、泉涌寺の山内寺院の今熊野観音寺（いまくまのかんのんじ）もあります。\n\nここから清水寺までは、歩いて約30分。疲れたら、泉涌寺道のバス停から市バスで五条坂へ。\n\nおすすめ訪問時間：11:30〜12:30",
-                "Sennyu-ji and Unryu-in\n\nAbout 15 minutes on foot from Tofuku-ji. This is the family temple of the imperial household, where generations of emperors are buried. Its quiet, wooded grounds are a place to slow down in busy Higashiyama.\n\nAt Unryu-in, a sub-temple further in, you can look at the garden through the round “Window of Enlightenment” and square paper windows. Unryu-in has its own admission and is closed on Wednesdays (except in November).\n\nJust off the approach, across a vermilion bridge, is Imakumano Kannon-ji, another of Sennyu-ji’s temples.\n\nFrom here it’s about 30 minutes on foot to Kiyomizu-dera. If you’re tired, take a city bus from the Sennyuji-michi stop to Gojozaka.\n\nRecommended visit time: 11:30–12:30"),
-         gmaps=[gm("泉涌寺", "Sennyu-ji", 34.97810, 135.78010, "泉涌寺"), gm("雲龍院", "Unryu-in", 34.97727, 135.78040, "泉涌寺 雲龍院")],
-         links=[link("official", "御寺 泉涌寺（拝観のご案内）", "Sennyu-ji (official, Japanese)", "https://www.mitera.org/guide/"),
-                link("official", "泉涌寺別院 雲龍院", "Unryu-in (official, Japanese)", "https://www.unryuin.jp/")],
-         info=info([row("hours", "泉涌寺 9:00〜16:30（17:00閉門）、12〜2月は16:00まで（16:30閉門）", "Sennyu-ji: 9:00–16:30 (gates close 17:00); until 16:00 in Dec–Feb (close 16:30)"),
-                    row("fee", "泉涌寺 伽藍拝観 大人500円・小中学生300円", "Sennyu-ji: ¥500 adults, ¥300 elementary/junior high"),
-                    row("hours", "雲龍院 9:00〜17:00（受付16:30まで）。水曜休み（11月を除く）。ほかに行事で休む日あり", "Unryu-in: 9:00–17:00 (last entry 16:30). Closed Wednesdays (except November) and on some event days"),
-                    row("fee", "雲龍院 400円（泉涌寺とは別）", "Unryu-in: ¥400 (separate from Sennyu-ji)")])),
-    # 三十三間堂と銀閣寺は Toshi がまだ行っていない場所。文章は公式サイトの情報だけで書き、写真は Wikimedia Commons（_extra）。2026-11-21 追加
-    # 三十三間堂は寺が画像の利用に許可を求めているので、公道（七条通）から撮った外観の写真だけ（CC0）
-    dict(id="sanjusangendo", name=T("三十三間堂", "Sanjusangen-do"), kind=T("お寺", "Temple"),
-         blurb=T("長さ約120mのお堂に、1,001体の千手観音がずらりと並びます。泉涌寺と清水寺の間の寄り道に。",
-                 "A hall about 120 m long, holding 1,001 statues of the thousand-armed Kannon. A detour between Sennyu-ji and Kiyomizu-dera."),
-         lat=34.98817, lng=135.77178,
-         text=T("三十三間堂（さんじゅうさんげんどう）\n\n正式な名前は蓮華王院（れんげおういん）。南北に約120mある本堂（国宝）の中に、千手観音の立像が1,001体、段になって並んでいます。柱と柱の間が33あるので「三十三間堂」。観音像の前には風神・雷神と二十八部衆の像も立ち、すべて国宝です（公式サイトより）。\n\n"
-                "堂内は撮影できません。靴を脱いで上がるので、脱ぎやすい靴が楽です。11月16日〜3月31日は受付が15:30までと早く閉まります。\n\n"
-                "泉涌寺から歩いて約25分。ここから清水寺までは上り坂を歩いて約30分で、すぐ前の「博物館三十三間堂前」から東山通を北へ行く市バスに乗れば「五条坂」まで行けます。\n\n"
-                "このマップの時間には入っていない寄り道です。寄る日は、清水寺に着くのが1時間ほど遅くなるので、ほかの場所を1〜2か所減らしてください。\n\nおすすめ訪問時間：12:55〜13:35",
-                "Sanjusangen-do\n\nOfficially Rengeo-in. Inside the main hall, a National Treasure about 120 m long from north to south, 1,001 standing statues of the thousand-armed Kannon are lined up in tiers. The name means “hall of 33 bays”, the spaces between its pillars. Statues of the Wind and Thunder Gods and 28 guardian deities stand in front, all National Treasures (from the official website).\n\n"
-                "No photos inside. You take your shoes off, so wear ones that slip on and off. From 16 November to 31 March, last entry is as early as 15:30.\n\n"
-                "About 25 minutes on foot from Sennyu-ji. Kiyomizu-dera is about 30 minutes’ walk uphill from here, or take a northbound city bus on Higashiyama-dori from the “Hakubutsukan-Sanjusangendo-mae” stop right outside to “Gojozaka”.\n\n"
-                "This is a detour not counted in this map’s times. If you stop here you’ll reach Kiyomizu-dera about an hour later, so drop one or two other places.\n\nRecommended visit time: 12:55–13:35"),
-         gmaps=[gm("三十三間堂", "Sanjusangen-do", 34.98817, 135.77178, "三十三間堂")],
-         links=[link("official", "三十三間堂 公式サイト（拝観）", "Sanjusangen-do (official, Japanese)", "https://www.sanjusangendo.jp/visit/")],
-         info={"rows": [row("hours", "4月1日〜11月15日 8:30〜17:00、11月16日〜3月31日 9:00〜16:00（受付は30分前まで）。年中無休", "1 Apr – 15 Nov 8:30–17:00; 16 Nov – 31 Mar 9:00–16:00 (last entry 30 min before). Open every day"),
-                        row("fee", "一般600円、中高生400円、小学生300円", "¥600 adults, ¥400 junior/senior high, ¥300 elementary"),
-                        row("train", "市バス「博物館三十三間堂前」すぐ（京都駅から約10分）。京阪 七条駅から歩いて約7分", "City bus stop “Hakubutsukan-Sanjusangendo-mae” (about 10 min from Kyoto Station). 7 min on foot from Keihan Shichijo Station")],
-               "cash": False, "checked": "2026-11-21",
-               "tip": T("2026年11月21日に三十三間堂の公式サイトで確認しました。歩く時間は地図で測った目安です。", "Checked on the official Sanjusangen-do website on 21 November 2026. Walking times are estimates measured on a map.")},
-         _extra=[cc("sanjusangendo-1.jpg", "TKdows 2026", "CC0", "File:JP 日本 Japan 京都 Kyoto 七條通 Shichijo Dori Street tourism 三十三間堂 Sanjūsangen-dō Temples June 2026 N13P 07.jpg"),
-                 cc("sanjusangendo-2.jpg", "TKdows 2026", "CC0", "File:JP 日本 Japan 京都 Kyoto 七條通 Shichijo Dori Street tourism 三十三間堂 Sanjūsangen-dō Temples June 2026 N13P 40.jpg")]),
-    dict(id="kiyomizu", name=T("清水寺", "Kiyomizu-dera"), kind=T("お寺", "Temple"),
-         blurb=T("「清水の舞台」から京都の町を一望。春・夏・秋の夜間特別拝観では、ライトアップも。",
-                 "Look out over Kyoto from the famous wooden stage. Evening openings in spring, summer and autumn are lit up too."),
-         lat=34.99485, lng=135.78505,
-         text=T("清水寺（きよみずでら）\n\n音羽山（おとわやま）の中腹に建つお寺。崖の上にせり出した本堂の「清水の舞台」からは、京都の町が見渡せます。少し離れた奥の院のあたりから振り返ると、木々の上に浮かぶ舞台の全景が見えます。\n\n朱色の仁王門と三重塔もきれいです。春・夏・秋の夜間特別拝観の時期は、21:30まで（受付は21:00まで）開いていて、ライトアップされた舞台と京都の夜景を楽しめます。\n\nおすすめ訪問時間：13:00〜14:00",
-                "Kiyomizu-dera\n\nA temple on the slopes of Mt. Otowa. From the “Kiyomizu stage” of the main hall, jutting out over the cliff, you can see across the city. Look back from near the Okunoin hall for the whole stage floating above the trees.\n\nThe vermilion Nio Gate and three-storied pagoda are beautiful too. During the special evening openings in spring, summer and autumn, the temple stays open until 21:30 (last entry 21:00), with the lit-up stage and the city lights below.\n\nRecommended visit time: 13:00–14:00"),
-         gmaps=[gm("清水寺", "Kiyomizu-dera", 34.99485, 135.78505, "清水寺")],
-         links=[link("official", "清水寺 公式サイト（拝観時間・アクセス）", "Kiyomizu-dera (official)", "https://www.kiyomizudera.or.jp/access.php")],
-         info=info([row("hours", "6:00〜18:00（7・8月は18:30まで）。夜間特別拝観の期間は21:30まで（受付21:00）", "6:00–18:00 (18:30 in July–August). Until 21:30 during special evening openings (last entry 21:00)")],
-                   tip=T("拝観料は公式サイトで確認してください。", "Check the admission fee on the official website."))),
-    dict(id="sanneizaka", name=T("産寧坂（三年坂）と二年坂", "Sannenzaka and Ninenzaka"), kind=T("町並み", "Historic street"),
-         blurb=T("石畳と古い町家が続く坂道。清水寺から下りながら、お店をのぞいて歩きます。",
-                 "Stone-paved slopes lined with old townhouses. Walk down from Kiyomizu-dera, peeking into the shops."),
-         lat=34.99680, lng=135.78120,
-         text=T("産寧坂（さんねいざか）と二年坂（にねんざか）\n\n清水寺の門前から北へ下る、石畳の坂道です。昔ながらの町家にお土産屋さんやカフェが並び、京都らしい町並みが続きます。\n\n町家を生かしたスターバックスや、抹茶のお菓子のお店など、のぞいてみたいお店がたくさん。昼間はとても混むので、朝早くや夕方の、人の少ない時間もおすすめです。\n\nおすすめ訪問時間：14:00〜14:40",
-                "Sannenzaka and Ninenzaka\n\nStone-paved lanes running downhill north of Kiyomizu-dera. Old townhouses with souvenir shops and cafés line the way: the classic Kyoto streetscape.\n\nThere’s a Starbucks in a traditional townhouse, matcha sweet shops and much more to browse. It’s very crowded in the middle of the day; early morning or evening, when it’s quieter, is lovely too.\n\nRecommended visit time: 14:00–14:40"),
-         gmaps=[gm("産寧坂", "Sannenzaka", 34.99680, 135.78120, "産寧坂")],
-         links=[], info={"rows": [], "cash": False, "tip": None, "checked": CHECKED}),
-    dict(id="yasakatower", name=T("八坂の塔（法観寺）", "Yasaka Pagoda (Hokan-ji)"), kind=T("町並み・お寺", "Historic street & temple"),
-         blurb=T("石畳の坂の先にそびえる五重塔。東山でいちばん絵になる景色です。",
-                 "A five-storied pagoda rising at the end of a stone-paved lane: the most photogenic view in Higashiyama."),
-         lat=34.99843, lng=135.77952,
-         text=T("八坂の塔（やさかのとう）\n\n法観寺（ほうかんじ）の五重塔で、高さは約46m。八坂通の坂道から見上げる塔の姿は、京都を代表する景色のひとつです。\n\n夕暮れどき、空を背にした塔のシルエットもすてきです。\n\nおすすめ訪問時間：14:40",
-                "Yasaka Pagoda\n\nThe roughly 46-meter five-storied pagoda of Hokan-ji. The view of it from the slope of Yasaka-dori is one of Kyoto’s iconic sights.\n\nAt dusk, its silhouette against the sky is lovely too.\n\nRecommended visit time: 14:40"),
-         gmaps=[gm("八坂の塔", "Yasaka Pagoda", 34.99843, 135.77952, "八坂の塔 法観寺")],
-         links=[], info={"rows": [], "cash": False, "tip": None, "checked": CHECKED}),
-    dict(id="kodaiji", name=T("高台寺と圓徳院", "Kodai-ji and Entoku-in"), kind=T("お寺", "Temple"),
-         blurb=T("豊臣秀吉の妻・ねねゆかりのお寺。秋の夜のライトアップは、池に映る紅葉が見事です。",
-                 "The temple of Nene, wife of Toyotomi Hideyoshi. In autumn evenings the lit-up maples reflect in the pond."),
-         lat=35.00077, lng=135.78166,
-         text=T("高台寺（こうだいじ）と圓徳院（えんとくいん）\n\n豊臣秀吉の妻・北政所（きたのまんどころ）ねねが、秀吉の菩提を弔うために建てたお寺です。池泉回遊式の庭や竹林の小道を歩けます。\n\n春・夏・秋には夜間特別拝観があり、庭のライトアップと方丈前庭のプロジェクションマッピングを楽しめます。ねねの道をはさんだ向かいの圓徳院は、ねねが晩年を過ごした場所で、座敷から眺める北庭がおすすめ。2か寺の共通券があります。\n\nおすすめ訪問時間：15:00〜15:50",
-                "Kodai-ji and Entoku-in\n\nKodai-ji was built by Nene (Kita-no-Mandokoro), wife of Toyotomi Hideyoshi, to pray for him. You can walk its pond garden and bamboo path.\n\nIn spring, summer and autumn there are special evening openings, with the garden lit up and projection mapping on the rock garden. Across Nene-no-michi, Entoku-in is where Nene spent her last years; its north garden, seen from the tatami rooms, is my favorite. There’s a combined ticket for both.\n\nRecommended visit time: 15:00–15:50"),
-         gmaps=[gm("高台寺", "Kodai-ji", 35.00077, 135.78166, "高台寺"), gm("圓徳院", "Entoku-in", 35.00066, 135.77942, "圓徳院 京都")],
-         links=[link("official", "高台寺 公式サイト（拝観案内）", "Kodai-ji (official, Japanese)", "https://www.kodaiji.com/haikan.html")],
-         info=info([row("hours", "9:00〜17:30（受付17:00まで）。夜間特別拝観の期間は22:00まで（受付21:30）", "9:00–17:30 (last entry 17:00). Until 22:00 during evening openings (last entry 21:30)"),
-                    row("fee", "高台寺 大人800円・中高生400円。高台寺・圓徳院の共通券1,200円", "Kodai-ji ¥800 adults, ¥400 junior/senior high. Combined ticket with Entoku-in ¥1,200")])),
-    dict(id="yasaka", name=T("八坂神社と円山公園", "Yasaka Shrine and Maruyama Park"), kind=T("神社・公園", "Shrine & park"),
-         blurb=T("祇園の「八坂さん」。奥の円山公園には、春に夜桜が見事な「祇園しだれ桜」があります。",
-                 "Gion’s beloved shrine. In Maruyama Park behind it, the great weeping cherry is stunning at night in spring."),
-         lat=35.00366, lng=135.77856,
-         text=T("八坂神社（やさかじんじゃ）と円山公園（まるやまこうえん）\n\n祇園の東の端にある、京都の人に「八坂さん」と親しまれる神社です。四条通の突き当たりに立つ朱色の西楼門が目印。祇園祭はこの神社のお祭りです。\n\n境内を抜けた先の円山公園には、大きな「祇園しだれ桜」があり、春の夜のライトアップは本当にきれいです。円山公園の北には知恩院（ちおんいん）があり、南禅寺へ歩く途中で国宝の大きな三門の前を通ります。\n\n境内は自由に参拝できます。\n\nおすすめ訪問時間：16:00〜16:30",
-                "Yasaka Shrine and Maruyama Park\n\nAt the eastern end of Gion, this shrine is affectionately called “Yasaka-san” by locals. Its vermilion west gate at the end of Shijo-dori is the landmark, and the Gion Matsuri is this shrine’s festival.\n\nThrough the grounds, Maruyama Park has a huge weeping cherry tree; lit up on spring nights, it’s truly beautiful. Just north of the park is Chion-in: on the walk to Nanzen-ji you pass its huge Sanmon gate, a National Treasure.\n\nThe shrine grounds are open to visit freely.\n\nRecommended visit time: 16:00–16:30"),
-         gmaps=[gm("八坂神社", "Yasaka Shrine", 35.00366, 135.77856, "八坂神社"), gm("円山公園", "Maruyama Park", 35.00380, 135.78000, "円山公園 京都")],
-         links=[link("official", "八坂神社 公式サイト", "Yasaka Shrine (official)", "https://www.yasaka-jinja.or.jp/")],
-         info={"rows": [], "cash": False, "tip": None, "checked": CHECKED}),
-    dict(id="nanzenji", name=T("南禅寺", "Nanzen-ji Temple"), kind=T("お寺", "Temple"),
-         blurb=T("巨大な三門と、レンガ造りの水路閣。紅葉の季節はとくに見事です。",
-                 "A huge wooden gate and the brick Suirokaku aqueduct, especially beautiful in autumn."),
-         lat=35.01136, lng=135.79348,
-         text=T("南禅寺（なんぜんじ）\n\n八坂神社から歩いて約25分（地下鉄なら蹴上駅から歩いて約10分）。歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、上に登って東山の景色を眺められます（三門と方丈庭園は17:00まで。上りたい日は、ほかの場所を減らして16:40までに着くように）。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣があり、今も水が流れています。小堀遠州作と伝わる方丈庭園もおすすめです。境内は自由に歩けます。\n\nおすすめ訪問時間：17:00〜17:25（境内と水路閣。三門と方丈庭園は17:00で閉まります）",
-                "Nanzen-ji Temple\n\nAbout 25 minutes on foot from Yasaka Shrine (or about 10 minutes from Keage subway station). You can climb the huge Sanmon gate, made famous in kabuki, for a view over Higashiyama. (The gate and Hojo garden close at 17:00; to go up, drop a stop or two and arrive by 16:40.)\n\nDeeper in the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto, and water still flows over it. The Hojo garden, said to be by Kobori Enshu, is lovely too. The grounds are free to walk around.\n\nRecommended visit time: 17:00–17:25 (the grounds and aqueduct; the gate and Hojo garden close at 17:00)"),
-         gmaps=[gm("南禅寺", "Nanzen-ji", 35.01136, 135.79348, "南禅寺"), gm("水路閣", "Suirokaku", 35.01080, 135.79470, "南禅寺 水路閣")],
-         links=[link("official", "南禅寺 公式サイト（拝観案内）", "Nanzen-ji (official, Japanese)", "https://nanzenji.or.jp/about_rinzaishu/visit")],
-         info=info([row("hours", "8:40〜17:00（12〜2月は16:30まで）。受付は20分前まで。12月28〜31日は拝観休止", "8:40–17:00 (until 16:30 Dec–Feb); last entry 20 min before. No visits 28–31 Dec"),
-                    row("fee", "三門 大人600円、方丈庭園 大人600円（境内は無料）", "Sanmon gate ¥600, Hojo garden ¥600 per adult (grounds free)")])),
-    dict(id="ginkakuji", name=T("哲学の道と銀閣寺", "Philosopher’s Path and Ginkaku-ji"), kind=T("散歩道・お寺", "Walk & temple"),
-         blurb=T("疏水沿いの散歩道を北へ歩いて、銀閣寺へ。白い砂の庭と、こけら葺きの観音殿（銀閣）を見ます。17:00に閉まるので、夜の永観堂より先に。",
-                 "Walk north along the canal path to Ginkaku-ji, with its white sand garden and shingle-roofed Silver Pavilion. It closes at 17:00, so come before the evening at Eikan-do."),
-         lat=35.02690, lng=135.79837,
-         text=T("哲学の道（てつがくのみち）と銀閣寺（ぎんかくじ）\n\n哲学の道は、永観堂の少し北の若王子橋（にゃくおうじばし）から銀閣寺橋まで、琵琶湖疏水に沿って続く約1.5kmの散歩道です。春は桜、秋は紅葉の並木になります。南禅寺から銀閣寺までは、この道を通って歩いて約40分。\n\n"
-                "銀閣寺の正式な名前は慈照寺（じしょうじ）。室町幕府の8代将軍・足利義政の山荘がもとになったお寺です。入ってすぐ、白砂を段に盛った銀沙灘（ぎんしゃだん）と円すい形の向月台（こうげつだい）、その奥に観音殿（銀閣・国宝）。順路は山の上の展望所まで続き、境内と京都の町を見下ろせます。中を回るのに約30分です（公式サイトより）。\n\n"
-                "閉まるのは17:00（12月〜2月は16:30）。このマップの時間どおりに八坂神社まで回ると間に合わないので、銀閣寺へ行く日は手前の場所をいくつか外して、南禅寺を15:25ごろに出てください。\n\n"
-                "秋の夜に永観堂や金戒光明寺のライトアップへ行く日も、銀閣寺が先です。見終わったら哲学の道を戻って（約25分）、17:30からの永観堂へ。ここで終わる日は、「銀閣寺道」のバス停から市バスで四条河原町や京都駅へ帰れます。\n\nおすすめ訪問時間：16:05〜16:40（17:00に閉まります。12月〜2月は16:30）",
-                "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn. From Nanzen-ji to Ginkaku-ji along the path is about 40 minutes on foot.\n\n"
-                "Ginkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\n"
-                "It closes at 17:00 (16:30 from December to February). If you follow this map’s times as far as Yasaka Shrine you won’t make it, so on a Ginkaku-ji day drop a few earlier places and leave Nanzen-ji at about 15:25.\n\n"
-                "Ginkaku-ji also comes first on autumn evenings when you’re going to the light-ups at Eikan-do or Konkai Komyo-ji. Afterwards walk back down the path (about 25 minutes) for Eikan-do from 17:30. If you finish here, city buses from the “Ginkakuji-michi” stop go to Shijo-Kawaramachi and Kyoto Station.\n\nRecommended visit time: 16:05–16:40 (closes at 17:00; 16:30 from December to February)"),
-         gmaps=[gm("銀閣寺", "Ginkaku-ji", 35.02690, 135.79837, "銀閣寺 慈照寺"), gm("哲学の道（若王子橋）", "Philosopher’s Path (south end)", 35.01539, 135.79580, "哲学の道 若王子橋")],
-         links=[link("official", "銀閣寺 公式サイト（アクセス・拝観）", "Ginkaku-ji (official, Japanese)", "https://www.shokoku-ji.jp/ginkakuji/access/")],
-         info={"rows": [row("hours", "3月1日〜11月30日 8:30〜17:00、12月1日〜2月末 9:00〜16:30。年中無休", "1 Mar – 30 Nov 8:30–17:00; 1 Dec – end of Feb 9:00–16:30. Open every day"),
-                        row("fee", "大人（高校生以上）1,000円、小・中学生500円（2026年4月から）", "¥1,000 adults (high school and up), ¥500 elementary/junior high (from April 2026)"),
-                        row("hours", "秋の特別拝観（東求堂など、2026年11月1日〜12月5日）：10:00・11:00・12:00・13:30・14:30・15:30から約30分、各回約20名。当日、本堂前の申込表に名前を書きます。2,000円（拝観料は別）",
-                            "Autumn special viewing (Togudo and more, 1 Nov – 5 Dec 2026): about 30 min from 10:00, 11:00, 12:00, 13:30, 14:30 and 15:30, about 20 people each. Sign up on the day at the main hall. ¥2,000 on top of admission; guided in Japanese", until="2026-12-05"),
-                        row("train", "市バス「銀閣寺道」（5・7・32・203・204系統など）", "City bus stop “Ginkakuji-michi” (routes 5, 7, 32, 203, 204 and others)")],
-               "cash": False, "checked": "2026-11-21",
-               "tip": T("2026年11月21日に銀閣寺（相国寺）の公式サイトで確認しました。哲学の道の長さと歩く時間は地図で測った目安です。", "Checked on the official Ginkaku-ji (Shokoku-ji) website on 21 November 2026. The length of the path and walking times are estimates measured on a map.")},
-         _extra=[cc("ginkakuji-1.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Fall1.jpg"),
-                 cc("ginkakuji-2.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Sand Garden.jpg"),
-                 cc("ginkakuji-3.jpg", "Stephan Ridgway", "CC BY 2.0", "File:Philosophers Walk, Kyoto (49073313687).jpg"),
-                 cc("ginkakuji-4.jpg", "Yiannis Theologos Michellis", "CC0", "File:Japan Spring Down the Philosopher's Path (14164491752).jpg")]),
-    dict(id="eikando", name=T("永観堂（禅林寺）", "Eikan-do (Zenrin-ji)"), kind=T("お寺", "Temple"),
-         blurb=T("「もみじの永観堂」。秋の夜は、池のまわりの紅葉がライトアップで燃えるようです。",
-                 "“Eikan-do of the maples”. On autumn nights, the lit-up leaves around the pond seem to blaze."),
-         lat=35.01445, lng=135.79452,
-         text=T("永観堂（えいかんどう）\n\n南禅寺から歩いて約5分。古くから「もみじの永観堂」と呼ばれる紅葉の名所です。秋の寺宝展の期間は夜のライトアップがあり、放生池（ほうじょういけ）の水面に、紅葉と山の上の多宝塔が映ります。\n\n昼の寺宝展と夜のライトアップは入れ替え制で、券も別です。秋の夜はとても混むので、時間に余裕をもって行きましょう。\n\nおすすめ訪問時間：17:30〜18:30（秋のライトアップ）",
-                "Eikan-do (Zenrin-ji)\n\nAbout 5 minutes on foot from Nanzen-ji. Long known as “Eikan-do of the maples”. During the autumn treasure exhibition there are evening light-ups, with the maples and the hilltop pagoda reflected in the pond.\n\nThe daytime exhibition and the evening light-up are separate, with separate tickets. Autumn evenings are very busy, so allow plenty of time.\n\nRecommended visit time: 17:30–18:30 (autumn light-up)"),
-         gmaps=[gm("永観堂", "Eikan-do", 35.01445, 135.79452, "永観堂 禅林寺")],
-         links=[link("official", "永観堂 拝観のご案内", "Eikan-do visitor info (Japanese)", "https://www.eikando.or.jp/haikan.html")],
-         info=info([row("hours", "秋の寺宝展（2026年11月11日〜12月6日）受付9:00〜16:00（17:00閉門）。ライトアップ（11月20日〜12月6日）受付17:30〜20:30（21:00閉門）。昼と夜は入れ替え制",
-                        "Autumn exhibition (11 Nov – 6 Dec 2026): entry 9:00–16:00 (gates close 17:00). Light-up (20 Nov – 6 Dec): entry 17:30–20:30 (close 21:00). Day and night are separate sessions", until=AUTUMN_END),
-                    row("fee", "秋の寺宝展 一般1,500円、ライトアップ 中高生以上1,000円", "Autumn exhibition ¥1,500; light-up ¥1,000 (junior high and up)", until=AUTUMN_END),
-                    row("hours", "秋の寺宝展以外 受付9:00〜16:00（17:00閉門）、年中無休", "Outside the autumn exhibition: entry 9:00–16:00 (gates close 17:00), open every day"),
-                    row("fee", "秋の寺宝展以外 一般1,000円", "Outside the autumn exhibition: ¥1,000 (adults)")]),
-         notices=[NIGHT_AUTUMN_ONLY]),
-    dict(id="kurodani", name=T("金戒光明寺（くろ谷さん）", "Konkai Komyo-ji (Kurodani)"), kind=T("お寺", "Temple"),
-         blurb=T("京都の人に「くろ谷さん」と呼ばれる大きなお寺。石段の上の山門から、京都の町を見渡せます。",
-                 "A large temple known locally as “Kurodani-san”. From the gate at the top of the steps, you look out over Kyoto."),
-         lat=35.01975, lng=135.78838,
-         text=T("金戒光明寺（こんかいこうみょうじ）\n\n永観堂から歩いて約15分。浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上にそびえる山門は迫力があります。\n\n境内は自由に歩けます。秋などには庭園の特別公開やライトアップがあり、竹林や池のまわりの紅葉が照らされます（2026年秋の夜間特別拝観は11月13日〜12月6日。予約はいりません）。\n\n帰りは岡崎道のバス停から市バス、または地下鉄の東山駅まで歩いて約20分です。\n\nおすすめ訪問時間：18:45〜19:20",
-                "Konkai Komyo-ji\n\nAbout 15 minutes on foot from Eikan-do. A large Pure Land temple, it served as the headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The great gate at the top of the stone steps is impressive.\n\nThe grounds are free to walk around. In autumn and other seasons there are special garden openings and light-ups, with the bamboo grove and maples around the pond lit up (the 2026 autumn evening opening runs 13 Nov – 6 Dec, no booking needed).\n\nTo go back, take a city bus from Okazaki-michi, or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: 18:45–19:20"),
-         gmaps=[gm("金戒光明寺", "Konkai Komyo-ji", 35.01975, 135.78838, "金戒光明寺")],
-         links=[link("official", "金戒光明寺 公式サイト", "Konkai Komyo-ji (official, Japanese)", "https://www.kurodani.jp/"),
-                link("info", "金戒光明寺 特別夜間拝観", "Konkai Komyo-ji evening opening", "https://www.kurodani.jp/lightup/")],
-         info=info([row("hours", "夜間特別拝観（2026年11月13日〜12月6日）17:30〜20:30（最終入場20:00）", "Evening opening (13 Nov – 6 Dec 2026): 17:30–20:30 (last entry 20:00)", until=AUTUMN_END),
-                    row("fee", "夜間特別拝観 御影堂・大方丈・紫雲の庭 大人1,000円、栄摂院 大人800円、セット券 大人1,600円", "Evening opening: Main hall, Hojo & garden ¥1,000; Eisho-in ¥800; set ticket ¥1,600 (adults)", until=AUTUMN_END),
-                    row("hours", "ふだんの受付 9:00〜16:00（境内は自由に歩けます）", "Usual reception hours 9:00–16:00 (grounds free to walk)")]),
-         notices=[NIGHT_AUTUMN_ONLY]),
+# ---------------------------------------------------------------------------
+# スポットごとの、コースで変わらない内容
+# ---------------------------------------------------------------------------
+BASE = dict(
+    # 銀閣寺は Toshi がまだ行っていない場所。文章は公式サイトの情報だけで書き、写真は Wikimedia Commons（_extra）。2026-11-21 追加
+    kiyomizu=dict(
+        name=T("清水寺", "Kiyomizu-dera"), kind=T("お寺", "Temple"),
+        blurb=T("崖にせり出した「清水の舞台」から京都の町を一望。朝6:00に開きます。",
+                "Kyoto spread out below the famous wooden stage. It opens at 6:00 in the morning."),
+        lat=34.99485, lng=135.78505,
+        body=T("清水寺（きよみずでら）\n\n音羽山（おとわやま）の中腹に建つお寺。朱色の仁王門と三重塔を過ぎると、崖の上にせり出した本堂の「清水の舞台」に出ます。少し先の奥の院のあたりから振り返ると、木々の上に浮かぶ舞台の全体が見えます。\n\n舞台の下には、3本の筋になって水が落ちる音羽の滝があります。\n\n春・夏・秋の夜間特別拝観の期間は21:30まで開いていて（受付は21:00まで）、ライトアップされた舞台と京都の夜景が見られます。",
+               "Kiyomizu-dera\n\nA temple on the slope of Mt. Otowa. Past the vermilion Nio Gate and three-storied pagoda you come out onto the “Kiyomizu stage” of the main hall, built out over the cliff. Look back from near the Okunoin hall a little further on for the whole stage floating above the trees.\n\nBelow the stage is the Otowa waterfall, falling in three streams.\n\nDuring the special evening openings in spring, summer and autumn the temple stays open until 21:30 (last entry 21:00), with the stage lit up and the city lights below."),
+        gmaps=[gm("清水寺", "Kiyomizu-dera", 34.99485, 135.78505, "清水寺")],
+        links=[link("official", "清水寺 公式サイト（拝観時間・アクセス）", "Kiyomizu-dera (official)", "https://www.kiyomizudera.or.jp/access.php"),
+               link("info", "清水寺 よくある質問", "Kiyomizu-dera FAQ (Japanese)", "https://www.kiyomizudera.or.jp/faq.php")],
+        info=info([row("hours", "6:00開門、18:00閉門（7・8月は18:30）", "Opens 6:00, closes 18:00 (18:30 in July and August)"),
+                   row("hours", "秋の夜間特別拝観（2026年11月21日〜30日）：21:30まで開門、受付は21:00まで", "Autumn evening opening (21–30 Nov 2026): open until 21:30, last entry 21:00", until=KIYOMIZU_NIGHT_END),
+                   row("fee", "拝観料は、公式サイトでは金額を確かめられませんでした（要確認）", "The admission fee could not be confirmed on the official website (unconfirmed)")],
+                  "清水寺 公式サイト（拝観時間・アクセス、よくある質問）。2026年の夜間特別拝観は春3/27〜4/5、夏8/14〜16、秋11/21〜30。拝観料は公式サイトの3ページ（トップ、アクセス、よくある質問）に金額がなく未確認",
+                  verified=False),
+        caution=T("入口は清水坂と茶わん坂の2つだけ", "Only two ways in: Kiyomizu-zaka and Chawan-zaka"),
+        notices=[notice("入口は2つだけ。地図アプリの近道に注意", "Only two ways in: beware map-app shortcuts",
+                        "境内に入れるのは、清水坂を上って仁王門の前に出る道と、茶わん坂を上る道だけです。Googleマップなどが、入れない道を案内することがあります（公式サイト）。",
+                        "You can only enter by walking up Kiyomizu-zaka to the Nio Gate, or up Chawan-zaka. Google Maps and other apps sometimes send you along a route with no way in (official site).",
+                        url="https://www.kiyomizudera.or.jp/access.php"),
+                 notice("三脚・一脚は使えません", "No tripods or monopods",
+                        "境内での飲食（フタの閉まる飲み物を除く）、喫煙、ペットを連れての拝観もできません（公式サイトのよくある質問）。",
+                        "Eating in the grounds (drinks with a lid are fine), smoking and pets are not allowed either (from the official FAQ).",
+                        url="https://www.kiyomizudera.or.jp/faq.php")]),
+    sanneizaka=dict(
+        name=T("産寧坂（三年坂）と二年坂", "Sannenzaka and Ninenzaka"), kind=T("町並み", "Historic street"),
+        blurb=T("清水寺の門前から北へ下る石畳の坂。昼はとても混みます。早朝コースでは、店が開く前に歩きます。",
+                "Stone-paved lanes running north downhill from Kiyomizu-dera. Very crowded by day; the early course walks them before the shops open."),
+        lat=34.99680, lng=135.78120,
+        body=T("産寧坂（さんねいざか）と二年坂（にねんざか）\n\n清水寺の門前から北へ下る、石畳の坂道です。古い町家に、お土産やお菓子の店、カフェが並びます。\n\n昼間はとても混みます。\n\n二年坂の途中にある町家のスターバックス（京都二寧坂ヤサカ茶屋店）は8:00から20:00まで（不定休）。店の前に並ぶことはできず、混むときは入店を制限することがあります（公式サイト）。",
+               "Sannenzaka and Ninenzaka\n\nStone-paved lanes running north downhill from the gate of Kiyomizu-dera, lined with old townhouses that hold souvenir and sweet shops and cafés.\n\nThey are very crowded in the daytime.\n\nThe Starbucks in a townhouse on Ninenzaka (Kyoto Ninenzaka Yasaka Chaya) is open 8:00–20:00 (irregular closing days). Queuing outside is not allowed and entry may be limited when busy (official site)."),
+        gmaps=[gm("産寧坂", "Sannenzaka", 34.99680, 135.78120, "産寧坂"),
+               gm("スターバックス 京都二寧坂ヤサカ茶屋店", "Starbucks Kyoto Ninenzaka Yasaka Chaya", 34.99830, 135.78080, "スターバックス コーヒー 京都二寧坂ヤサカ茶屋店")],
+        links=[link("official", "スターバックス 京都二寧坂ヤサカ茶屋店", "Starbucks Kyoto Ninenzaka Yasaka Chaya (Japanese)", "https://store.starbucks.co.jp/detail-1476/")],
+        info=info([row("hours", "スターバックス 京都二寧坂ヤサカ茶屋店 8:00〜20:00、不定休", "Starbucks Kyoto Ninenzaka Yasaka Chaya: 8:00–20:00, irregular closing days")],
+                  "スターバックス 公式サイトの店舗ページ。ほかの店の開く時間は確かめていない")),
+    yasakatower=dict(
+        name=T("八坂の塔（法観寺）", "Yasaka Pagoda (Hokan-ji)"), kind=T("町並み・お寺", "Historic street & temple"),
+        blurb=T("石畳の坂の先に立つ五重塔。清水寺が開く前の早朝に、ここで写真を撮る人が多い場所です。",
+                "A five-storied pagoda at the end of a stone-paved lane. Many people come here for photos early, before Kiyomizu-dera opens."),
+        lat=34.99843, lng=135.77952,
+        body=T("八坂の塔（やさかのとう）\n\n法観寺（ほうかんじ）の五重塔で、高さは約46m。八坂通の坂道から見上げる塔は、東山でいちばんよく写真に撮られる景色です。\n\n坂の下から塔を見上げる向きと、塔を過ぎてから振り返る向き、どちらも撮れます。まわりは人が住んでいる町なので、早朝は静かに。",
+               "Yasaka Pagoda\n\nThe five-storied pagoda of Hokan-ji, about 46 m tall. The view up the slope of Yasaka-dori to the pagoda is the most photographed in Higashiyama.\n\nYou can shoot looking up from the bottom of the slope, or looking back after you pass the pagoda. People live all around here, so keep your voice down early in the morning."),
+        gmaps=[gm("八坂の塔", "Yasaka Pagoda", 34.99843, 135.77952, "八坂の塔 法観寺")],
+        links=[], info={"rows": [], "cash": False, "tip": None, "checked": CHECKED}),
+    kodaiji=dict(
+        name=T("高台寺と圓徳院", "Kodai-ji and Entoku-in"), kind=T("お寺", "Temple"),
+        blurb=T("豊臣秀吉の妻・ねねのお寺。開門は9:00。秋の夜は22:00まで開いていて、池に映る紅葉が見られます。",
+                "The temple of Nene, wife of Toyotomi Hideyoshi. Opens at 9:00; on autumn evenings it stays open until 22:00, with maples reflected in the pond."),
+        lat=35.00077, lng=135.78166,
+        body=T("高台寺（こうだいじ）と圓徳院（えんとくいん）\n\n豊臣秀吉の妻・北政所（きたのまんどころ）ねねが、秀吉をとむらうために建てたお寺です。池のまわりの庭を歩き、山の斜面を上って、帰りは竹林の小道を下ります。\n\nねねの道をはさんだ向かいの圓徳院は、ねねが晩年を過ごした場所。座敷に座って北庭を眺められます。2か寺の共通券があります。\n\n夜間特別拝観の期間は17:00に明かりがつき、22:00まで（受付21:30まで）。昼と夜の入れ替えはないので、夕方に入ってそのまま暗くなるのを待てます。",
+               "Kodai-ji and Entoku-in\n\nBuilt by Nene (Kita-no-Mandokoro), wife of Toyotomi Hideyoshi, to pray for him. You walk the garden around the pond, climb the hillside, and come back down a bamboo path.\n\nAcross Nene-no-michi, Entoku-in is where Nene spent her last years; you can sit in the tatami rooms and look out at the north garden. There’s a combined ticket for both.\n\nDuring the special evening openings the lights come on at 17:00 and it stays open until 22:00 (last entry 21:30). Day and night are not separate sessions, so you can go in late in the afternoon and wait for dark."),
+        gmaps=[gm("高台寺", "Kodai-ji", 35.00077, 135.78166, "高台寺"), gm("圓徳院", "Entoku-in", 35.00066, 135.77942, "圓徳院 京都")],
+        links=[link("official", "高台寺 公式サイト（拝観案内）", "Kodai-ji (official, Japanese)", "https://www.kodaiji.com/haikan.html"),
+               link("official", "圓徳院（拝観休止のお知らせ）", "Entoku-in (official, Japanese)", "https://www.kodaiji.com/entoku-in/")],
+        info=info([row("hours", "9:00〜17:30（受付17:00まで）", "9:00–17:30 (last entry 17:00)"),
+                   row("hours", "秋の夜間特別拝観（2026年10月23日〜12月13日）：17:00点灯、22:00閉門（受付21:30まで）。入れ替えなし", "Autumn evening opening (23 Oct – 13 Dec 2026): lights on at 17:00, closes 22:00 (last entry 21:30). No separate evening session", until=KODAIJI_NIGHT_END),
+                   row("fee", "高台寺 大人800円・中高生400円。高台寺・圓徳院の共通券1,200円", "Kodai-ji ¥800 adults, ¥400 junior/senior high. Combined ticket with Entoku-in ¥1,200"),
+                   row("hours", "圓徳院だけの拝観時間と料金は、公式サイトで確かめられませんでした（要確認）", "Entoku-in’s own hours and single-ticket price could not be confirmed on the official site (unconfirmed)")],
+                  "高台寺 公式サイト（拝観案内、歳時）、圓徳院のページ（拝観休止の予定）"),
+        notices=[notice("圓徳院は12月11日・12日が休み", "Entoku-in closed 11–12 December",
+                        "2026年12月11日（金）・12日（土）は、行事のため圓徳院は一日休みです（公式サイト）。高台寺は拝観できます。",
+                        "Entoku-in is closed all day on 11 and 12 December 2026 for an event (official site). Kodai-ji itself is open.",
+                        url="https://www.kodaiji.com/entoku-in/", to="2026-12-12")]),
+    yasaka=dict(
+        name=T("八坂神社と円山公園", "Yasaka Shrine and Maruyama Park"), kind=T("神社・公園", "Shrine & park"),
+        blurb=T("祇園の「八坂さん」。四条通の突き当たりの朱色の門が目印です。奥は円山公園。",
+                "Gion’s “Yasaka-san”, marked by the vermilion gate at the end of Shijo-dori. Maruyama Park is behind it."),
+        lat=35.00366, lng=135.77856,
+        body=T("八坂神社（やさかじんじゃ）と円山公園（まるやまこうえん）\n\n祇園の東の端にある神社で、京都の人は「八坂さん」と呼びます。四条通の突き当たりに立つ朱色の西楼門が目印。7月の祇園祭は、この神社のお祭りです。\n\n境内を東へ抜けると円山公園。まん中に大きな「祇園しだれ桜」があり、春は夜にライトアップされます。公園の北には知恩院（ちおんいん）の大きな三門（国宝）があります。\n\n境内は自由にお参りできます。",
+               "Yasaka Shrine and Maruyama Park\n\nThe shrine at the eastern end of Gion, “Yasaka-san” to people in Kyoto. Its vermilion west gate stands at the end of Shijo-dori. The Gion Festival in July is this shrine’s festival.\n\nWalk east through the grounds into Maruyama Park, with its huge weeping cherry in the middle, lit up at night in spring. North of the park is the massive Sanmon gate of Chion-in, a National Treasure.\n\nThe shrine grounds are free to enter."),
+        gmaps=[gm("八坂神社", "Yasaka Shrine", 35.00366, 135.77856, "八坂神社"), gm("円山公園", "Maruyama Park", 35.00380, 135.78000, "円山公園 京都")],
+        links=[link("official", "八坂神社 公式サイト", "Yasaka Shrine (official)", "https://www.yasaka-jinja.or.jp/")],
+        info={"rows": [], "cash": False, "tip": None, "checked": CHECKED}),
+    nanzenji=dict(
+        name=T("南禅寺", "Nanzen-ji Temple"), kind=T("お寺", "Temple"),
+        blurb=T("上に登れる大きな三門と、レンガ造りの水路閣。境内は無料で歩けます。",
+                "A huge gate you can climb, and the brick Suirokaku aqueduct. The grounds are free to walk."),
+        lat=35.01136, lng=135.79348,
+        body=T("南禅寺（なんぜんじ）\n\n歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、急な階段で上に登れて、京都の町と東山を見渡せます。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣（すいろかく）。アーチの上を、今も水が流れています。方丈庭園は小堀遠州の作と伝わる石の庭です。\n\n境内と水路閣は無料。三門と方丈庭園は、それぞれ拝観料がかかります。",
+               "Nanzen-ji Temple\n\nYou can climb the huge Sanmon gate, famous from a kabuki play, by a steep staircase for a view over the city and the Higashiyama hills.\n\nAt the back of the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto. Water still runs along the top of its arches. The Hojo garden is a rock garden attributed to Kobori Enshu.\n\nThe grounds and aqueduct are free. The gate and the Hojo garden each have their own fee."),
+        gmaps=[gm("南禅寺", "Nanzen-ji", 35.01136, 135.79348, "南禅寺"), gm("水路閣", "Suirokaku", 35.01080, 135.79470, "南禅寺 水路閣")],
+        links=[link("official", "南禅寺 公式サイト（拝観案内）", "Nanzen-ji (official, Japanese)", "https://nanzenji.or.jp/about_rinzaishu/visit")],
+        info=info([row("hours", "3〜11月 8:40〜17:00、12〜2月 8:40〜16:30。受付は20分前まで", "Mar–Nov 8:40–17:00; Dec–Feb 8:40–16:30. Last entry 20 min before"),
+                   row("closed", "12月28〜31日は拝観できません", "No admission 28–31 December"),
+                   row("fee", "三門 一般600円、方丈庭園 一般600円、南禅院 一般500円（境内は無料）", "Sanmon gate ¥600, Hojo garden ¥600, Nanzen-in ¥500 per adult (grounds free)"),
+                   row("train", "地下鉄東西線 蹴上駅から歩いて約10分（三条京阪→蹴上 約4分・220円）", "About 10 min on foot from Keage Station on the Tozai subway line (Sanjo Keihan → Keage: about 4 min, ¥220)")],
+                  "南禅寺 公式サイト（拝観案内）。地下鉄の時間と運賃は乗換案内。蹴上駅からの徒歩は地図で測った目安")),
+    eikando=dict(
+        name=T("永観堂（禅林寺）", "Eikan-do (Zenrin-ji)"), kind=T("お寺", "Temple"),
+        blurb=T("「もみじの永観堂」。受付は16:00まで。秋の夜のライトアップは、昼とは別の券で17:30から。",
+                "“Eikan-do of the maples”. Last entry 16:00. The autumn light-up is a separate ticket, from 17:30."),
+        lat=35.01445, lng=135.79452,
+        body=T("永観堂（えいかんどう）\n\n古くから「もみじの永観堂」と呼ばれる紅葉の名所です。お堂が渡り廊下でつながっていて、靴を脱いで上がり、山の斜面に沿って奥の阿弥陀堂まで歩きます。庭の放生池（ほうじょういけ）には、もみじと山の上の多宝塔が映ります。\n\n秋の寺宝展の期間は拝観料が上がり、夜はライトアップがあります。昼と夜は入れ替え制で、券も別です。券は当日に窓口で買うものだけです。",
+               "Eikan-do (Zenrin-ji)\n\nLong known as “Eikan-do of the maples”. The halls are joined by covered corridors: you take off your shoes and walk along the hillside to the Amida hall at the far end. The maples and the hilltop pagoda are reflected in the pond in the garden.\n\nDuring the autumn treasure exhibition the fee goes up and there is an evening light-up. Day and night are separate sessions with separate tickets, sold only at the gate on the day."),
+        gmaps=[gm("永観堂", "Eikan-do", 35.01445, 135.79452, "永観堂 禅林寺")],
+        links=[link("official", "永観堂 拝観のご案内", "Eikan-do visitor info (Japanese)", "https://www.eikando.or.jp/haikan.html")],
+        info=info([row("hours", "秋の寺宝展（2026年11月11日〜12月6日）受付9:00〜16:00（17:00閉門）。ライトアップ（11月20日〜12月6日）受付17:30〜20:30（21:00閉門）。昼と夜は入れ替え制",
+                       "Autumn exhibition (11 Nov – 6 Dec 2026): entry 9:00–16:00 (gates close 17:00). Light-up (20 Nov – 6 Dec): entry 17:30–20:30 (close 21:00). Day and night are separate sessions", until=AUTUMN_END),
+                   row("fee", "秋の寺宝展 一般1,500円・中高生800円、ライトアップ 中高生以上1,000円", "Autumn exhibition ¥1,500 (junior/senior high ¥800); light-up ¥1,000 (junior high and up)", until=AUTUMN_END),
+                   row("hours", "秋の寺宝展以外 受付9:00〜16:00（17:00閉門）、年中無休", "Outside the autumn exhibition: entry 9:00–16:00 (gates close 17:00), open every day"),
+                   row("fee", "秋の寺宝展以外 一般1,000円、中高生600円、小学生200円", "Outside the autumn exhibition: ¥1,000 adults, ¥600 junior/senior high, ¥200 elementary")],
+                  "永観堂 公式サイト（拝観のご案内）"),
+        caution=T("三脚・一脚は使えません。境内は飲食禁止", "No tripods or monopods; no eating in the grounds"),
+        notices=[notice("受付は16:00まで。三脚・一脚は使えません", "Last entry 16:00. No tripods or monopods",
+                        "境内での飲食、ペットを連れての拝観、お堂の中の文化財の撮影もできません。秋の寺宝展とライトアップの券は前売りがなく、当日に窓口で買います（公式サイト）。",
+                        "No eating in the grounds, no pets, and no photos of the artworks inside the halls. Tickets for the autumn exhibition and light-up are not sold in advance: buy them at the gate on the day (official site).",
+                        url="https://www.eikando.or.jp/haikan.html")]),
+    ginkakuji=dict(
+        name=T("哲学の道と銀閣寺", "Philosopher’s Path and Ginkaku-ji"), kind=T("散歩道・お寺", "Walk & temple"),
+        blurb=T("疏水沿いの散歩道を北へ歩いて銀閣寺へ。白い砂の庭と、こけら葺きの観音殿（銀閣）。17:00に閉まります（12〜2月は16:30）。",
+                "Walk north along the canal path to Ginkaku-ji: a white sand garden and the shingle-roofed Silver Pavilion. Closes at 17:00 (16:30 Dec–Feb)."),
+        lat=35.02690, lng=135.79837,
+        body=T("哲学の道（てつがくのみち）と銀閣寺（ぎんかくじ）\n\n哲学の道は、永観堂の少し北の若王子橋（にゃくおうじばし）から銀閣寺橋まで、琵琶湖疏水に沿って続く約1.5kmの散歩道です。春は桜、秋は紅葉の並木になります。\n\n銀閣寺の正式な名前は慈照寺（じしょうじ）。室町幕府の8代将軍・足利義政の山荘がもとになったお寺です。入ってすぐ、白砂を段に盛った銀沙灘（ぎんしゃだん）と円すい形の向月台（こうげつだい）、その奥に観音殿（銀閣・国宝）。順路は山の上の展望所まで続き、境内と京都の町を見下ろせます。中を回るのに約30分です（公式サイトより）。\n\n拝観料は現金のほか、キャッシュレスでも払えます。",
+               "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn.\n\nGinkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\nYou can pay the admission in cash or cashless."),
+        gmaps=[gm("銀閣寺", "Ginkaku-ji", 35.02690, 135.79837, "銀閣寺 慈照寺"), gm("哲学の道（若王子橋）", "Philosopher’s Path (south end)", 35.01539, 135.79580, "哲学の道 若王子橋")],
+        links=[link("official", "銀閣寺 公式サイト（アクセス・拝観）", "Ginkaku-ji (official, Japanese)", "https://www.shokoku-ji.jp/ginkakuji/access/")],
+        info=info([row("hours", "3月1日〜11月30日 8:30〜17:00、12月1日〜2月末 9:00〜16:30。年中無休", "1 Mar – 30 Nov 8:30–17:00; 1 Dec – end of Feb 9:00–16:30. Open every day"),
+                   row("fee", "大人（高校生以上）1,000円、小・中学生500円", "¥1,000 adults (high school and up), ¥500 elementary/junior high"),
+                   row("hours", "秋の特別拝観（東求堂など、2026年11月1日〜12月5日）：10:00・11:00・12:00・13:30・14:30・15:30から約30分、各回約20名。当日、本堂前の申込表に名前を書きます。2,000円（拝観料は別）",
+                       "Autumn special viewing (Togudo and more, 1 Nov – 5 Dec 2026): about 30 min from 10:00, 11:00, 12:00, 13:30, 14:30 and 15:30, about 20 people each. Sign up on the day at the main hall. ¥2,000 on top of admission; guided in Japanese", until="2026-12-05"),
+                   row("train", "帰りは市バス「銀閣寺道」から（5・7・32・203・204系統など、230円）。参道を下って歩いて約10分", "Way back: city buses from “Ginkakuji-michi” (routes 5, 7, 32, 203, 204 and others, ¥230), about 10 min on foot down the approach")],
+                  "銀閣寺（相国寺）公式サイト（アクセス・拝観）。秋の特別拝観とバスの系統は2026-11-21の確認、市バスの運賃は2026-11-20に京都市交通局で確認。哲学の道の長さと歩く時間は地図で測った目安",
+                  tip=T("どの系統のバスがどこを通るかは確かめていません。バス停の案内で、行き先（四条河原町・三条京阪・京都駅）を見てから乗ってください。", "We haven’t checked which bus route goes where. Read the sign at the stop for your destination (Shijo-Kawaramachi, Sanjo-Keihan or Kyoto Station) before you board.")),
+        _extra=[cc("ginkakuji-1.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Fall1.jpg"),
+                cc("ginkakuji-2.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Sand Garden.jpg"),
+                cc("ginkakuji-3.jpg", "Stephan Ridgway", "CC BY 2.0", "File:Philosophers Walk, Kyoto (49073313687).jpg"),
+                cc("ginkakuji-4.jpg", "Yiannis Theologos Michellis", "CC0", "File:Japan Spring Down the Philosopher's Path (14164491752).jpg")]),
+    kurodani=dict(
+        name=T("金戒光明寺（くろ谷さん）", "Konkai Komyo-ji (Kurodani)"), kind=T("お寺", "Temple"),
+        blurb=T("京都の人が「くろ谷さん」と呼ぶ大きなお寺。石段の上の山門が目印です。秋の夜は庭のライトアップがあります。",
+                "A large temple people in Kyoto call “Kurodani-san”, with a great gate at the top of stone steps. In autumn the garden is lit up at night."),
+        lat=35.01975, lng=135.78838,
+        body=T("金戒光明寺（こんかいこうみょうじ）\n\n浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上に立つ山門は見上げるほどの大きさです。境内は高台にあって、京都の町が見えます。\n\n境内は自由に歩けます。秋は夜の特別拝観があり、庭の池のまわりのもみじと竹林に明かりが入ります（夜は山門には上れません）。",
+               "Konkai Komyo-ji\n\nA large Pure Land temple that served as headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The gate at the top of the stone steps towers over you. The grounds sit on a rise with a view over the city.\n\nThe grounds are free to walk. In autumn there is a special evening opening, with the maples around the garden pond and the bamboo grove lit up (the gate itself can’t be climbed at night)."),
+        gmaps=[gm("金戒光明寺", "Konkai Komyo-ji", 35.01975, 135.78838, "金戒光明寺")],
+        links=[link("official", "金戒光明寺 公式サイト", "Konkai Komyo-ji (official, Japanese)", "https://www.kurodani.jp/"),
+               link("info", "金戒光明寺 特別夜間拝観", "Konkai Komyo-ji evening opening", "https://www.kurodani.jp/lightup/")],
+        info=info([row("hours", "夜間特別拝観（2026年11月13日〜12月6日）17:30〜20:30（最終入場20:00）。予約はいりません", "Evening opening (13 Nov – 6 Dec 2026): 17:30–20:30 (last entry 20:00). No booking needed", until=AUTUMN_END),
+                   row("fee", "夜間特別拝観 御影堂・大方丈・紫雲の庭 大人1,000円、栄摂院 大人800円、セット券 大人1,600円", "Evening opening: Main hall, Hojo & garden ¥1,000; Eisho-in ¥800; set ticket ¥1,600 (adults)", until=AUTUMN_END),
+                   row("hours", "ふだんは境内を自由に歩けます。お堂の受付は9:00〜16:00（公式サイトの下に書かれた受付時間。拝観の時間としては要確認）", "The grounds are normally free to walk. Hall reception 9:00–16:00 (the reception hours printed at the foot of the official site; unconfirmed as visiting hours)")],
+                  "金戒光明寺 公式サイト（特別夜間拝観）。ふだんの時間はトップページ下の「受付時間 9時〜16時（閉堂）」だけで、拝観時間としての記載は見つからない")),
+)
+
+VIS, ARR = ("おすすめ訪問時間", "Recommended visit time"), ("おすすめ到着時間", "Recommended arrival time")
+
+# 秋の夜、永観堂・金戒光明寺へ行く人への注意（期間が終わると消える）
+EIKANDO_NIGHT = notice("秋の夜のライトアップは17:30から", "The autumn light-up starts at 17:30",
+                       "ライトアップ（2026年は11月20日〜12月6日）は昼とは別の券で、受付は17:30〜20:30。昼に入った人は、いったん出てから並び直します。",
+                       "The light-up (20 Nov – 6 Dec in 2026) is a separate ticket, with entry from 17:30 to 20:30. If you visited in the daytime you leave and queue again.",
+                       url="https://www.eikando.or.jp/haikan.html", to=AUTUMN_END)
+DARK_AT_SIX = notice("11月〜2月の朝6時はまだ暗い", "At 6:00 it is still dark from November to February",
+                     "この時期の日の出は6時すぎ〜7時すぎです。暗い道や石段では足もとに気をつけて。写真が目当ての日は、明るくなる時間も考えて出発を決めてください。",
+                     "Sunrise in these months is between just after 6:00 and just after 7:00. Watch your step on dark lanes and stone steps. If you’re here for photos, plan your start around the light.",
+                     frm="2026-11-01", to="2027-02-28")
+
+# ---------------------------------------------------------------------------
+# コースごとの並び順・時間・行き方
+#   order の1件 = (スポットの id, 時間の見出し, 時間（日本語）, 時間（英語）, このコースでの行き方・過ごし方)
+# ---------------------------------------------------------------------------
+COURSES = [
+    dict(
+        id="late", file="higashiyama.json",
+        note="「9〜10時に出発」コース。三条を9:15ごろ出て、京阪で清水五条へ。清水寺→産寧坂・二年坂→八坂の塔→（お昼）→高台寺→八坂神社→南禅寺→哲学の道と銀閣寺まで歩き、市バスで戻る（18時ごろ）。永観堂と金戒光明寺は時間割の外で、足したときの回り方は hints。",
+        order=[
+            ("kiyomizu", VIS, "9:50〜10:50", "9:50–10:50",
+             T("三条駅から京阪電車で清水五条駅へ（約3分・180円）。五条坂から茶わん坂を上って、歩いて約25分です。三条から歩くと約45分。\n\n日中の清水寺は混みます。人の少ない舞台を見たい日は、一覧の上のボタンで「早朝に出発」に切り替えてください。",
+               "Take the Keihan line from Sanjo to Kiyomizu-Gojo (about 3 min, ¥180), then walk up Gojo-zaka and Chawan-zaka, about 25 minutes. Walking all the way from Sanjo takes about 45.\n\nKiyomizu-dera is crowded in the daytime. If you want the stage with fewer people, switch to “Early start” with the buttons above the list.")),
+            ("sanneizaka", VIS, "10:50〜11:35", "10:50–11:35",
+             T("清水寺の門前から、産寧坂、二年坂の順に下ります。昼間はとても混むので、急がず店をのぞきながら。",
+               "From the temple gate, walk down Sannenzaka and then Ninenzaka. It’s very crowded in the daytime, so take it slowly and look into the shops.")),
+            ("yasakatower", VIS, "11:40", "11:40",
+             T("二年坂を下りきる手前で左へ。八坂通に出ると、坂の先に塔が見えます。\n\nお昼は塔のまわりか、高台寺へ向かうねねの道のあたりで（11:50〜12:40）。人の多い場所なので、12時より前に入るのがおすすめです。",
+               "Turn left before the bottom of Ninenzaka onto Yasaka-dori, and the pagoda is ahead up the slope.\n\nHave lunch around the pagoda or along Nene-no-michi on the way to Kodai-ji (11:50–12:40). It’s a busy area, so try to sit down before noon.")),
+            ("kodaiji", VIS, "12:45〜13:40", "12:45–13:40",
+             T("八坂の塔から歩いて約7分。ねねの道から石段（台所坂）を上がります。圓徳院まで見るなら、あと20分ほど。",
+               "About 7 minutes on foot from Yasaka Pagoda: climb the stone steps (Daidokoro-zaka) from Nene-no-michi. Allow another 20 minutes if you add Entoku-in.")),
+            ("yasaka", VIS, "13:50〜14:20", "13:50–14:20",
+             T("ねねの道を北へ歩いて約10分。南の門から入って本殿へ。本殿の東が円山公園です。",
+               "About 10 minutes north along Nene-no-michi. Enter by the south gate for the main hall; Maruyama Park is just east of it.")),
+            ("nanzenji", VIS, "14:50〜15:25", "14:50–15:25",
+             T("円山公園から知恩院の三門の前を通り、北へ歩いて約30分。歩くのがつらくなってきたら、地下鉄の東山駅から蹴上駅まで1駅乗れます。\n\n銀閣寺が17:00に閉まるので、ここは35分ほど。三門に上るか、方丈庭園に入るか、どちらか1つにして、水路閣を見てください。",
+               "About 30 minutes’ walk north from Maruyama Park, passing the Sanmon gate of Chion-in. If your legs are going, ride the subway one stop from Higashiyama to Keage.\n\nGinkaku-ji closes at 17:00, so allow about 35 minutes here: climb the gate or see the Hojo garden, not both, and walk to the aqueduct.")),
+            ("eikando", VIS, "足す日は14:35〜15:20（高台寺を外して。受付16:00まで）", "if added, 14:35–15:20 (dropping Kodai-ji; last entry 16:00)",
+             T("南禅寺から北へ歩いて約7分。このコースの時間割には入っていません。昼に入る日は、高台寺を外して1時間早く進めないと、銀閣寺に間に合いません。",
+               "About 7 minutes’ walk north of Nanzen-ji. It isn’t in this course’s timetable: to go in during the day, drop Kodai-ji and run an hour earlier, or you won’t make Ginkaku-ji.")),
+            ("ginkakuji", VIS, "16:05〜16:40（17:00に閉まります。12〜2月は16:30）", "16:05–16:40 (closes at 17:00; 16:30 from December to February)",
+             T("南禅寺から永観堂の前を通り、哲学の道を歩いて約40分。\n\n見終わったら、参道を下りた「銀閣寺道」のバス停から市バスで四条河原町・三条のほうへ（230円）。戻るのは18時ごろを見ておいてください。",
+               "About 40 minutes on foot from Nanzen-ji, past Eikan-do and along the Philosopher’s Path.\n\nAfterwards walk down the approach to the “Ginkakuji-michi” stop for a city bus back toward Shijo-Kawaramachi or Sanjo (¥230). Allow until about 18:00 to get back.")),
+            ("kurodani", VIS, "足す日は17:05ごろ（境内）。秋の夜は18:45〜19:20", "if added, about 17:05 (grounds); 18:45–19:20 on autumn evenings",
+             T("銀閣寺から南西へ歩いて約25分。このコースの時間割には入っていません。",
+               "About 25 minutes’ walk southwest of Ginkaku-ji. It isn’t in this course’s timetable.")),
+        ],
+        sections=[dict(first="kiyomizu", last="yasakatower", day=0), dict(first="kodaiji", last="yasaka", day=2), dict(first="nanzenji", last="nanzenji", day=3),
+                  dict(first="eikando", last="eikando", area=T("足すなら", "Optional"), title=T("もみじの永観堂", "Eikan-do of the maples")),
+                  dict(first="ginkakuji", last="ginkakuji", day=3),
+                  dict(first="kurodani", last="kurodani", area=T("足すなら", "Optional"), title=T("くろ谷さん", "Kurodani"))],
+        default=["kiyomizu", "sanneizaka", "yasakatower", "kodaiji", "yasaka", "nanzenji", "ginkakuji"],
+        extra_notices={"ginkakuji": [notice("12月〜2月は16:30に閉まります", "Closes at 16:30 from December to February",
+                                             "この時期は、南禅寺を15:10に出てください（哲学の道を歩いて約40分）。または高台寺を外すと、全体が1時間早くなります。",
+                                             "In these months leave Nanzen-ji at 15:10 (it’s about 40 minutes along the Philosopher’s Path). Or drop Kodai-ji, which moves everything an hour earlier.",
+                                             frm="2026-12-01", to="2027-02-28")],
+                       "eikando": [EIKANDO_NIGHT]},
+        hints=[
+            ("eikando", dict(any=["eikando"], andAny=["ginkakuji"]), None, AUTUMN_END,
+             "ライトアップへ行く日は、銀閣寺を先に。16:40に銀閣寺を出て哲学の道を戻ると、17:10ごろ永観堂に着きます。受付は17:30から。秋の夜はとても混みます。",
+             "On a light-up evening, see Ginkaku-ji first: leave it at 16:40, walk back down the Philosopher’s Path and you reach Eikan-do at about 17:10. Entry starts at 17:30, and autumn evenings are very busy."),
+            ("eikando", dict(any=["eikando"], andAny=["kodaiji"]), "2026-12-07", None,
+             "永観堂の受付は16:00まで。高台寺を外すと、南禅寺に13:50、永観堂に14:35、銀閣寺に16:00ごろ着けます。",
+             "Eikan-do’s last entry is 16:00. Drop Kodai-ji and you reach Nanzen-ji at 13:50, Eikan-do at 14:35 and Ginkaku-ji at about 16:00."),
+            ("kurodani", dict(any=["kurodani"], andAny=["eikando"]), None, AUTUMN_END,
+             "永観堂のライトアップを18:30ごろ出て、歩いて約15分。夜間特別拝観の最終入場は20:00です。帰りは「岡崎道」のバス停から市バス、または地下鉄の東山駅まで歩いて約20分。",
+             "Leave the Eikan-do light-up at about 18:30; it’s about 15 minutes on foot. Last entry to the evening opening is 20:00. To go back, take a city bus from “Okazaki-michi” or walk about 20 minutes to Higashiyama subway station."),
+        ]),
+    dict(
+        id="early", file="higashiyama-early.json",
+        note="「早朝に出発」コース。三条を5:10ごろ歩いて出て、八坂の塔と坂道を通り、6:00の開門に清水寺へ。8:00から二年坂のスターバックスで朝ごはん、9:00の開門に高台寺、八坂神社、南禅寺、（お昼）、永観堂、哲学の道と銀閣寺まで。金戒光明寺は時間割の外。5時台に三条から東山へ行く電車は京阪の5:04・5:24発（清水五条まで約3分）だけなので、歩きを基本にした。",
+        order=[
+            ("yasakatower", VIS, "5:35〜5:45", "5:35–5:45",
+             T("三条から歩いて約30分。5:05ごろ出て、鴨川の東の道を南へ、祇園を抜けて八坂通へ入ります。この時間に動いている電車は京阪だけで（三条5:04発・5:24発、清水五条まで約3分・180円）、清水五条駅からは坂を上って約20分。歩くのがつらい日はタクシーで。\n\n清水寺が開くまでの間に、塔と坂道の写真を撮っていきます。",
+               "About 30 minutes on foot from Sanjo. Leave at about 5:05, head south along the east side of the Kamo River, through Gion and onto Yasaka-dori. The only trains running this early are on the Keihan line (5:04 and 5:24 from Sanjo; about 3 min to Kiyomizu-Gojo, ¥180), and from that station it’s a 20-minute climb. Take a taxi if you’d rather not walk.\n\nPhotograph the pagoda and the lanes on your way, while you wait for Kiyomizu-dera to open.")),
+            ("sanneizaka", VIS, "5:45（上り）、7:15〜8:50（下りと朝ごはん）", "5:45 (going up), 7:15–8:50 (coming down, and breakfast)",
+             T("行きは、八坂の塔から二年坂、産寧坂と上って、清水寺の仁王門へ（約15分）。\n\n清水寺を出たら、同じ坂をゆっくり下ります。8:00になったら、二年坂のスターバックスで朝ごはんにして、9:00に高台寺が開くまで休みます。",
+               "On the way up, walk from Yasaka Pagoda up Ninenzaka and Sannenzaka to Kiyomizu-dera’s Nio Gate (about 15 minutes).\n\nAfter the temple, come slowly back down the same lanes. At 8:00 the Starbucks on Ninenzaka opens: have breakfast and rest there until Kodai-ji opens at 9:00.")),
+            ("kiyomizu", VIS, "6:00〜7:15", "6:00–7:15",
+             T("6:00の開門に合わせて仁王門の前へ。舞台、奥の院、音羽の滝と、順路のとおりに回って1時間ほどです。",
+               "Be at the Nio Gate for the 6:00 opening. Follow the route past the stage, the Okunoin hall and the Otowa waterfall: about an hour.")),
+            ("kodaiji", VIS, "9:00〜10:00", "9:00–10:00",
+             T("二年坂のスターバックスから、ねねの道を歩いて約5分。9:00の開門に合わせて入ります。圓徳院も合わせて1時間ほど。",
+               "About 5 minutes along Nene-no-michi from the Starbucks on Ninenzaka. Go in when it opens at 9:00; an hour covers Entoku-in as well.")),
+            ("yasaka", VIS, "10:10〜10:40", "10:10–10:40",
+             T("ねねの道を北へ歩いて約10分。南の門から入って本殿へ。本殿の東が円山公園です。",
+               "About 10 minutes north along Nene-no-michi. Enter by the south gate for the main hall; Maruyama Park is just east of it.")),
+            ("nanzenji", VIS, "11:10〜12:05", "11:10–12:05",
+             T("円山公園から知恩院の三門の前を通り、北へ歩いて約30分。朝から歩いているので、地下鉄の東山駅から蹴上駅まで1駅乗ってもかまいません。\n\n三門に上って、水路閣まで歩きます。お昼は南禅寺の参道か、永観堂へ向かう道のあたりで（12:05〜13:00）。",
+               "About 30 minutes’ walk north from Maruyama Park, passing the Sanmon gate of Chion-in. You’ve been walking since dawn, so feel free to ride the subway one stop from Higashiyama to Keage.\n\nClimb the gate and walk to the aqueduct. Have lunch on the approach to Nanzen-ji or on the way to Eikan-do (12:05–13:00).")),
+            ("eikando", VIS, "13:05〜14:00", "13:05–14:00",
+             T("南禅寺から北へ歩いて約7分。",
+               "About 7 minutes’ walk north of Nanzen-ji.")),
+            ("ginkakuji", VIS, "14:40〜15:25", "14:40–15:25",
+             T("永観堂から哲学の道を歩いて約35分。途中にベンチがあるので、休みながら。\n\n見終わったら、参道を下りた「銀閣寺道」のバス停から市バスで四条河原町・三条のほうへ（230円）。夜まで時間があるので、いったん宿で休めます。",
+               "About 35 minutes along the Philosopher’s Path from Eikan-do, with benches along the way.\n\nAfterwards walk down the approach to the “Ginkakuji-michi” stop for a city bus back toward Shijo-Kawaramachi or Sanjo (¥230). There’s time to rest at your lodging before the evening.")),
+            ("kurodani", VIS, "足す日は15:50〜16:20", "if added, 15:50–16:20",
+             T("銀閣寺から南西へ歩いて約25分。このコースの時間割には入っていません。帰りは「岡崎道」のバス停から市バス、または地下鉄の東山駅まで歩いて約20分。",
+               "About 25 minutes’ walk southwest of Ginkaku-ji. It isn’t in this course’s timetable. To go back, take a city bus from “Okazaki-michi” or walk about 20 minutes to Higashiyama subway station.")),
+        ],
+        sections=[dict(first="yasakatower", last="kiyomizu", day=0), dict(first="kodaiji", last="yasaka", day=2), dict(first="nanzenji", last="eikando", day=3),
+                  dict(first="ginkakuji", last="ginkakuji", day=4),
+                  dict(first="kurodani", last="kurodani", area=T("足すなら", "Optional"), title=T("くろ谷さん", "Kurodani"))],
+        default=["yasakatower", "sanneizaka", "kiyomizu", "kodaiji", "yasaka", "nanzenji", "eikando", "ginkakuji"],
+        extra_notices={"yasakatower": [DARK_AT_SIX], "eikando": [EIKANDO_NIGHT]},
+        hints=[]),
 ]
 
-spots = []
-for i, s in enumerate(S, 1):
-    s = dict(s)
-    out = {"no": i, "id": s.pop("id")}
-    out.update(s)
-    out["photos"] = photos(out["id"], out.pop("_extra", None))
-    out.setdefault("notices", [])
-    spots.append(out)
+NOTE_HEAD = "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル："
+NOTE_TAIL = " 「哲学の道と銀閣寺」は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。"
 
-NO = {s["id"]: s["no"] for s in spots}
-H = lambda spot, rule, ja, en: {"spot": NO[spot], "rule": rule, "text": T(ja, en)}
-N = len(spots)
-data = {
-    "id": "higashiyama",
-    "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。2026-11-21 に三十三間堂と「哲学の道と銀閣寺」を追加（Toshi はまだ行っていない場所。写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ。もとの12か所の時間には入っていない寄り道）。JR稲荷駅から伏見稲荷・東福寺・泉涌寺・清水寺・産寧坂・八坂の塔・高台寺・八坂神社・南禅寺・永観堂・金戒光明寺へ、南から北へ歩く。見どころが多いので「選んで回る」で開く（plan.defaultMode）。写真は Toshi の写真ライブラリから選んだもの（東山の約3,300枚の横写真をスポットごとに全部見て、1か所10枚以内・Nikon D7000 を含む。長辺1600px・位置情報なし）。夜の写真の多くは春・秋のライトアップの時期のもの。info.checked は事実情報を確認した日（各寺社の公式サイト。JRの運賃は乗換案内）。info.verified=false は公式サイトで確認できなかった情報（要確認）。このファイルは scripts/build_higashiyama_data.py で作る。",
-    "sections": [
-        {"first": 1, "last": 2, "day": 0}, {"first": NO["tofukuji"], "last": NO["sanjusangendo"], "day": 1}, {"first": NO["kiyomizu"], "last": NO["yasakatower"], "day": 2},
-        {"first": NO["kodaiji"], "last": NO["yasaka"], "day": 3}, {"first": NO["nanzenji"], "last": NO["kurodani"], "day": 4},
-    ],
-    "plan": {"_note": "「選んで回る」の設定。駅（1）はいつも入る。2〜14 は行きたい場所を選ぶ。三十三間堂と銀閣寺はもとの時間に入っていない寄り道（hints に回り方）。", "defaultMode": "pick",
-             "picks": list(range(2, N + 1)), "auto": {"1": {"always": True}},
-             "hints": [
-                 H("sanjusangendo", {"any": [NO["sanjusangendo"]], "none": [NO["tofukuji"], NO["sennyuji"]]},
-                   "東福寺・泉涌寺に寄らない日は、伏見稲荷から京阪電車で七条駅へ（伏見稲荷駅から約5分・180円）。駅から歩いて約7分です。",
-                   "Skipping Tofuku-ji and Sennyu-ji? Take the Keihan line from Fushimi-Inari to Shichijo (about 5 min, ¥180), then walk about 7 minutes."),
-                 H("nanzenji", {"any": [NO["ginkakuji"]], "andAny": [NO["nanzenji"]]},
-                   "銀閣寺は17:00まで（12月〜2月は16:30）。南禅寺を15:25ごろに出られるように、手前の場所をいくつか外してください。南禅寺から銀閣寺までは、哲学の道を歩いて約40分です。",
-                   "Ginkaku-ji closes at 17:00 (16:30 from December to February). Drop a few earlier places so that you can leave Nanzen-ji at about 15:25; it’s about 40 minutes’ walk to Ginkaku-ji along the Philosopher’s Path."),
-                 H("ginkakuji", {"any": [NO["ginkakuji"]], "andAny": [NO["eikando"], NO["kurodani"]]},
-                   "秋のライトアップ（永観堂・金戒光明寺は17:30から）へ行く日は、銀閣寺を先に。16:40ごろに出て哲学の道を戻れば、永観堂に17:10ごろ着きます。秋以外の時期は、永観堂は16:00で受付が終わるので、哲学の道を歩く前に寄ってください。",
-                   "On an autumn light-up evening (Eikan-do and Konkai Komyo-ji open from 17:30), see Ginkaku-ji first: leave at about 16:40 and walk back down the path to reach Eikan-do at about 17:10. Outside autumn, Eikan-do stops admitting at 16:00, so visit it before you walk the path."),
-                 H("ginkakuji", {"any": [NO["ginkakuji"]], "none": [NO["eikando"], NO["kurodani"]]},
-                   "銀閣寺がゴールの日は、参道を下りた「銀閣寺道」のバス停から、市バスで四条河原町・京都駅へ（230円）。",
-                   "Finishing at Ginkaku-ji? Walk down the approach to the “Ginkakuji-michi” stop and take a city bus to Shijo-Kawaramachi or Kyoto Station (¥230)."),
-             ]},
-    "photoBase": "../images/higashiyama/",
-    "spots": spots,
-}
-json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print("wrote", OUT, [(s["no"], s["id"], len(s["photos"])) for s in spots])
+
+def build(c):
+    order = c["order"]
+    NO = {x[0]: i for i, x in enumerate(order, 1)}
+    spots = []
+    for sid, (lj, le), tj, te, go in order:
+        b = copy.deepcopy(BASE[sid])
+        body = b.pop("body")
+        text = T(body["ja"] + ("\n\n" + go["ja"] if go else "") + f"\n\n{lj}：{tj}",
+                 body["en"] + ("\n\n" + go["en"] if go else "") + f"\n\n{le}: {te}")
+        out = {"no": NO[sid], "id": sid}
+        out.update(b)
+        out["text"] = text
+        out["photos"] = photos(sid, out.pop("_extra", None))
+        out["notices"] = c.get("extra_notices", {}).get(sid, []) + out.get("notices", [])
+        spots.append(out)
+    auto = c.get("auto", [])
+    secs = []
+    for s in c["sections"]:
+        d = {"first": NO[s["first"]], "last": NO[s["last"]]}
+        if "day" in s:
+            d["day"] = s["day"]
+        else:
+            d["area"], d["title"] = s["area"], s["title"]
+        secs.append(d)
+    rule = lambda r: {k: [NO[i] for i in v] for k, v in r.items()}
+    data = {
+        "id": MAP_ID,
+        "course": c["id"],
+        "_note": NOTE_HEAD + c["note"] + NOTE_TAIL,
+        "sections": secs,
+        "plan": {"_note": "「選んで回る」の設定。defaultPicks は1日で無理なく回れる組み合わせ（時間割どおり）。それ以外は時間割の外で、足したときの回り方は各スポットの文章と hints（from〜to の間だけ出る）。",
+                 "defaultMode": "pick",
+                 "picks": [NO[x[0]] for x in order if x[0] not in auto],
+                 "defaultPicks": [NO[i] for i in c["default"]],
+                 "auto": {str(NO[i]): {"always": True} for i in auto},
+                 "hints": [{"spot": NO[sid], "rule": rule(r), "from": frm, "to": to, "text": T(ja, en)} for sid, r, frm, to, ja, en in c["hints"]]},
+        "photoBase": f"../images/{MAP_ID}/",
+        "spots": spots,
+    }
+    out = f"{R}/data/routes/{c['file']}"
+    json.dump(data, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print("wrote", out, [(s["no"], s["id"], len(s["photos"])) for s in spots])
+
+
+for c in COURSES:
+    build(c)

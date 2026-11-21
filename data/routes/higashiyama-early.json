@@ -1,0 +1,1034 @@
+{
+ "id": "higashiyama",
+ "course": "early",
+ "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル：「早朝に出発」コース。三条を5:10ごろ歩いて出て、八坂の塔と坂道を通り、6:00の開門に清水寺へ。8:00から二年坂のスターバックスで朝ごはん、9:00の開門に高台寺、八坂神社、南禅寺、（お昼）、永観堂、哲学の道と銀閣寺まで。金戒光明寺は時間割の外。5時台に三条から東山へ行く電車は京阪の5:04・5:24発（清水五条まで約3分）だけなので、歩きを基本にした。 「哲学の道と銀閣寺」は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "day": 0
+  },
+  {
+   "first": 4,
+   "last": 5,
+   "day": 2
+  },
+  {
+   "first": 6,
+   "last": 7,
+   "day": 3
+  },
+  {
+   "first": 8,
+   "last": 8,
+   "day": 4
+  },
+  {
+   "first": 9,
+   "last": 9,
+   "area": {
+    "ja": "足すなら",
+    "en": "Optional"
+   },
+   "title": {
+    "ja": "くろ谷さん",
+    "en": "Kurodani"
+   }
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。defaultPicks は1日で無理なく回れる組み合わせ（時間割どおり）。それ以外は時間割の外で、足したときの回り方は各スポットの文章と hints（from〜to の間だけ出る）。",
+  "defaultMode": "pick",
+  "picks": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "defaultPicks": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "auto": {},
+  "hints": []
+ },
+ "photoBase": "../images/higashiyama/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "yasakatower",
+   "name": {
+    "ja": "八坂の塔（法観寺）",
+    "en": "Yasaka Pagoda (Hokan-ji)"
+   },
+   "kind": {
+    "ja": "町並み・お寺",
+    "en": "Historic street & temple"
+   },
+   "blurb": {
+    "ja": "石畳の坂の先に立つ五重塔。清水寺が開く前の早朝に、ここで写真を撮る人が多い場所です。",
+    "en": "A five-storied pagoda at the end of a stone-paved lane. Many people come here for photos early, before Kiyomizu-dera opens."
+   },
+   "lat": 34.99843,
+   "lng": 135.77952,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "八坂の塔",
+      "en": "Yasaka Pagoda"
+     },
+     "lat": 34.99843,
+     "lng": 135.77952,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%9D%82%E3%81%AE%E5%A1%94%20%E6%B3%95%E8%A6%B3%E5%AF%BA"
+    }
+   ],
+   "links": [],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22"
+   },
+   "text": {
+    "ja": "八坂の塔（やさかのとう）\n\n法観寺（ほうかんじ）の五重塔で、高さは約46m。八坂通の坂道から見上げる塔は、東山でいちばんよく写真に撮られる景色です。\n\n坂の下から塔を見上げる向きと、塔を過ぎてから振り返る向き、どちらも撮れます。まわりは人が住んでいる町なので、早朝は静かに。\n\n三条から歩いて約30分。5:05ごろ出て、鴨川の東の道を南へ、祇園を抜けて八坂通へ入ります。この時間に動いている電車は京阪だけで（三条5:04発・5:24発、清水五条まで約3分・180円）、清水五条駅からは坂を上って約20分。歩くのがつらい日はタクシーで。\n\n清水寺が開くまでの間に、塔と坂道の写真を撮っていきます。\n\nおすすめ訪問時間：5:35〜5:45",
+    "en": "Yasaka Pagoda\n\nThe five-storied pagoda of Hokan-ji, about 46 m tall. The view up the slope of Yasaka-dori to the pagoda is the most photographed in Higashiyama.\n\nYou can shoot looking up from the bottom of the slope, or looking back after you pass the pagoda. People live all around here, so keep your voice down early in the morning.\n\nAbout 30 minutes on foot from Sanjo. Leave at about 5:05, head south along the east side of the Kamo River, through Gion and onto Yasaka-dori. The only trains running this early are on the Keihan line (5:04 and 5:24 from Sanjo; about 3 min to Kiyomizu-Gojo, ¥180), and from that station it’s a 20-minute climb. Take a taxi if you’d rather not walk.\n\nPhotograph the pagoda and the lanes on your way, while you wait for Kiyomizu-dera to open.\n\nRecommended visit time: 5:35–5:45"
+   },
+   "photos": [
+    "yasakatower-1.jpg",
+    "yasakatower-2.jpg",
+    "yasakatower-4.jpg",
+    "yasakatower-5.jpg"
+   ],
+   "notices": [
+    {
+     "from": "2026-11-01",
+     "to": "2027-02-28",
+     "url": null,
+     "head": {
+      "ja": "11月〜2月の朝6時はまだ暗い",
+      "en": "At 6:00 it is still dark from November to February"
+     },
+     "text": {
+      "ja": "この時期の日の出は6時すぎ〜7時すぎです。暗い道や石段では足もとに気をつけて。写真が目当ての日は、明るくなる時間も考えて出発を決めてください。",
+      "en": "Sunrise in these months is between just after 6:00 and just after 7:00. Watch your step on dark lanes and stone steps. If you’re here for photos, plan your start around the light."
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "sanneizaka",
+   "name": {
+    "ja": "産寧坂（三年坂）と二年坂",
+    "en": "Sannenzaka and Ninenzaka"
+   },
+   "kind": {
+    "ja": "町並み",
+    "en": "Historic street"
+   },
+   "blurb": {
+    "ja": "清水寺の門前から北へ下る石畳の坂。昼はとても混みます。早朝コースでは、店が開く前に歩きます。",
+    "en": "Stone-paved lanes running north downhill from Kiyomizu-dera. Very crowded by day; the early course walks them before the shops open."
+   },
+   "lat": 34.9968,
+   "lng": 135.7812,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "産寧坂",
+      "en": "Sannenzaka"
+     },
+     "lat": 34.9968,
+     "lng": 135.7812,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%94%A3%E5%AF%A7%E5%9D%82"
+    },
+    {
+     "label": {
+      "ja": "スターバックス 京都二寧坂ヤサカ茶屋店",
+      "en": "Starbucks Kyoto Ninenzaka Yasaka Chaya"
+     },
+     "lat": 34.9983,
+     "lng": 135.7808,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%90%E3%83%83%E3%82%AF%E3%82%B9%20%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E4%BA%AC%E9%83%BD%E4%BA%8C%E5%AF%A7%E5%9D%82%E3%83%A4%E3%82%B5%E3%82%AB%E8%8C%B6%E5%B1%8B%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "スターバックス 京都二寧坂ヤサカ茶屋店",
+      "en": "Starbucks Kyoto Ninenzaka Yasaka Chaya (Japanese)"
+     },
+     "url": {
+      "ja": "https://store.starbucks.co.jp/detail-1476/",
+      "en": "https://store.starbucks.co.jp/detail-1476/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "スターバックス 京都二寧坂ヤサカ茶屋店 8:00〜20:00、不定休",
+       "en": "Starbucks Kyoto Ninenzaka Yasaka Chaya: 8:00–20:00, irregular closing days"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "スターバックス 公式サイトの店舗ページ。ほかの店の開く時間は確かめていない"
+   },
+   "text": {
+    "ja": "産寧坂（さんねいざか）と二年坂（にねんざか）\n\n清水寺の門前から北へ下る、石畳の坂道です。古い町家に、お土産やお菓子の店、カフェが並びます。\n\n昼間はとても混みます。\n\n二年坂の途中にある町家のスターバックス（京都二寧坂ヤサカ茶屋店）は8:00から20:00まで（不定休）。店の前に並ぶことはできず、混むときは入店を制限することがあります（公式サイト）。\n\n行きは、八坂の塔から二年坂、産寧坂と上って、清水寺の仁王門へ（約15分）。\n\n清水寺を出たら、同じ坂をゆっくり下ります。8:00になったら、二年坂のスターバックスで朝ごはんにして、9:00に高台寺が開くまで休みます。\n\nおすすめ訪問時間：5:45（上り）、7:15〜8:50（下りと朝ごはん）",
+    "en": "Sannenzaka and Ninenzaka\n\nStone-paved lanes running north downhill from the gate of Kiyomizu-dera, lined with old townhouses that hold souvenir and sweet shops and cafés.\n\nThey are very crowded in the daytime.\n\nThe Starbucks in a townhouse on Ninenzaka (Kyoto Ninenzaka Yasaka Chaya) is open 8:00–20:00 (irregular closing days). Queuing outside is not allowed and entry may be limited when busy (official site).\n\nOn the way up, walk from Yasaka Pagoda up Ninenzaka and Sannenzaka to Kiyomizu-dera’s Nio Gate (about 15 minutes).\n\nAfter the temple, come slowly back down the same lanes. At 8:00 the Starbucks on Ninenzaka opens: have breakfast and rest there until Kodai-ji opens at 9:00.\n\nRecommended visit time: 5:45 (going up), 7:15–8:50 (coming down, and breakfast)"
+   },
+   "photos": [
+    "sanneizaka-1.jpg",
+    "sanneizaka-3.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "kiyomizu",
+   "name": {
+    "ja": "清水寺",
+    "en": "Kiyomizu-dera"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "崖にせり出した「清水の舞台」から京都の町を一望。朝6:00に開きます。",
+    "en": "Kyoto spread out below the famous wooden stage. It opens at 6:00 in the morning."
+   },
+   "lat": 34.99485,
+   "lng": 135.78505,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "清水寺",
+      "en": "Kiyomizu-dera"
+     },
+     "lat": 34.99485,
+     "lng": 135.78505,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%B0%B4%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "清水寺 公式サイト（拝観時間・アクセス）",
+      "en": "Kiyomizu-dera (official)"
+     },
+     "url": {
+      "ja": "https://www.kiyomizudera.or.jp/access.php",
+      "en": "https://www.kiyomizudera.or.jp/access.php"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "清水寺 よくある質問",
+      "en": "Kiyomizu-dera FAQ (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kiyomizudera.or.jp/faq.php",
+      "en": "https://www.kiyomizudera.or.jp/faq.php"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "6:00開門、18:00閉門（7・8月は18:30）",
+       "en": "Opens 6:00, closes 18:00 (18:30 in July and August)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の夜間特別拝観（2026年11月21日〜30日）：21:30まで開門、受付は21:00まで",
+       "en": "Autumn evening opening (21–30 Nov 2026): open until 21:30, last entry 21:00"
+      },
+      "until": "2026-11-30",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "拝観料は、公式サイトでは金額を確かめられませんでした（要確認）",
+       "en": "The admission fee could not be confirmed on the official website (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "清水寺 公式サイト（拝観時間・アクセス、よくある質問）。2026年の夜間特別拝観は春3/27〜4/5、夏8/14〜16、秋11/21〜30。拝観料は公式サイトの3ページ（トップ、アクセス、よくある質問）に金額がなく未確認",
+    "verified": false
+   },
+   "caution": {
+    "ja": "入口は清水坂と茶わん坂の2つだけ",
+    "en": "Only two ways in: Kiyomizu-zaka and Chawan-zaka"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.kiyomizudera.or.jp/access.php",
+     "head": {
+      "ja": "入口は2つだけ。地図アプリの近道に注意",
+      "en": "Only two ways in: beware map-app shortcuts"
+     },
+     "text": {
+      "ja": "境内に入れるのは、清水坂を上って仁王門の前に出る道と、茶わん坂を上る道だけです。Googleマップなどが、入れない道を案内することがあります（公式サイト）。",
+      "en": "You can only enter by walking up Kiyomizu-zaka to the Nio Gate, or up Chawan-zaka. Google Maps and other apps sometimes send you along a route with no way in (official site)."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.kiyomizudera.or.jp/faq.php",
+     "head": {
+      "ja": "三脚・一脚は使えません",
+      "en": "No tripods or monopods"
+     },
+     "text": {
+      "ja": "境内での飲食（フタの閉まる飲み物を除く）、喫煙、ペットを連れての拝観もできません（公式サイトのよくある質問）。",
+      "en": "Eating in the grounds (drinks with a lid are fine), smoking and pets are not allowed either (from the official FAQ)."
+     }
+    }
+   ],
+   "text": {
+    "ja": "清水寺（きよみずでら）\n\n音羽山（おとわやま）の中腹に建つお寺。朱色の仁王門と三重塔を過ぎると、崖の上にせり出した本堂の「清水の舞台」に出ます。少し先の奥の院のあたりから振り返ると、木々の上に浮かぶ舞台の全体が見えます。\n\n舞台の下には、3本の筋になって水が落ちる音羽の滝があります。\n\n春・夏・秋の夜間特別拝観の期間は21:30まで開いていて（受付は21:00まで）、ライトアップされた舞台と京都の夜景が見られます。\n\n6:00の開門に合わせて仁王門の前へ。舞台、奥の院、音羽の滝と、順路のとおりに回って1時間ほどです。\n\nおすすめ訪問時間：6:00〜7:15",
+    "en": "Kiyomizu-dera\n\nA temple on the slope of Mt. Otowa. Past the vermilion Nio Gate and three-storied pagoda you come out onto the “Kiyomizu stage” of the main hall, built out over the cliff. Look back from near the Okunoin hall a little further on for the whole stage floating above the trees.\n\nBelow the stage is the Otowa waterfall, falling in three streams.\n\nDuring the special evening openings in spring, summer and autumn the temple stays open until 21:30 (last entry 21:00), with the stage lit up and the city lights below.\n\nBe at the Nio Gate for the 6:00 opening. Follow the route past the stage, the Okunoin hall and the Otowa waterfall: about an hour.\n\nRecommended visit time: 6:00–7:15"
+   },
+   "photos": [
+    "kiyomizu-2.jpg",
+    "kiyomizu-3.jpg",
+    "kiyomizu-4.jpg",
+    "kiyomizu-5.jpg",
+    "kiyomizu-6.jpg",
+    "kiyomizu-7.jpg",
+    "kiyomizu-8.jpg",
+    "kiyomizu-9.jpg",
+    "kiyomizu-10.jpg",
+    "kiyomizu-11.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "kodaiji",
+   "name": {
+    "ja": "高台寺と圓徳院",
+    "en": "Kodai-ji and Entoku-in"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "豊臣秀吉の妻・ねねのお寺。開門は9:00。秋の夜は22:00まで開いていて、池に映る紅葉が見られます。",
+    "en": "The temple of Nene, wife of Toyotomi Hideyoshi. Opens at 9:00; on autumn evenings it stays open until 22:00, with maples reflected in the pond."
+   },
+   "lat": 35.00077,
+   "lng": 135.78166,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "高台寺",
+      "en": "Kodai-ji"
+     },
+     "lat": 35.00077,
+     "lng": 135.78166,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%8F%B0%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "圓徳院",
+      "en": "Entoku-in"
+     },
+     "lat": 35.00066,
+     "lng": 135.77942,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9C%93%E5%BE%B3%E9%99%A2%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "高台寺 公式サイト（拝観案内）",
+      "en": "Kodai-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kodaiji.com/haikan.html",
+      "en": "https://www.kodaiji.com/haikan.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "圓徳院（拝観休止のお知らせ）",
+      "en": "Entoku-in (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kodaiji.com/entoku-in/",
+      "en": "https://www.kodaiji.com/entoku-in/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:30（受付17:00まで）",
+       "en": "9:00–17:30 (last entry 17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の夜間特別拝観（2026年10月23日〜12月13日）：17:00点灯、22:00閉門（受付21:30まで）。入れ替えなし",
+       "en": "Autumn evening opening (23 Oct – 13 Dec 2026): lights on at 17:00, closes 22:00 (last entry 21:30). No separate evening session"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "高台寺 大人800円・中高生400円。高台寺・圓徳院の共通券1,200円",
+       "en": "Kodai-ji ¥800 adults, ¥400 junior/senior high. Combined ticket with Entoku-in ¥1,200"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "圓徳院だけの拝観時間と料金は、公式サイトで確かめられませんでした（要確認）",
+       "en": "Entoku-in’s own hours and single-ticket price could not be confirmed on the official site (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "高台寺 公式サイト（拝観案内、歳時）、圓徳院のページ（拝観休止の予定）"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-12",
+     "url": "https://www.kodaiji.com/entoku-in/",
+     "head": {
+      "ja": "圓徳院は12月11日・12日が休み",
+      "en": "Entoku-in closed 11–12 December"
+     },
+     "text": {
+      "ja": "2026年12月11日（金）・12日（土）は、行事のため圓徳院は一日休みです（公式サイト）。高台寺は拝観できます。",
+      "en": "Entoku-in is closed all day on 11 and 12 December 2026 for an event (official site). Kodai-ji itself is open."
+     }
+    }
+   ],
+   "text": {
+    "ja": "高台寺（こうだいじ）と圓徳院（えんとくいん）\n\n豊臣秀吉の妻・北政所（きたのまんどころ）ねねが、秀吉をとむらうために建てたお寺です。池のまわりの庭を歩き、山の斜面を上って、帰りは竹林の小道を下ります。\n\nねねの道をはさんだ向かいの圓徳院は、ねねが晩年を過ごした場所。座敷に座って北庭を眺められます。2か寺の共通券があります。\n\n夜間特別拝観の期間は17:00に明かりがつき、22:00まで（受付21:30まで）。昼と夜の入れ替えはないので、夕方に入ってそのまま暗くなるのを待てます。\n\n二年坂のスターバックスから、ねねの道を歩いて約5分。9:00の開門に合わせて入ります。圓徳院も合わせて1時間ほど。\n\nおすすめ訪問時間：9:00〜10:00",
+    "en": "Kodai-ji and Entoku-in\n\nBuilt by Nene (Kita-no-Mandokoro), wife of Toyotomi Hideyoshi, to pray for him. You walk the garden around the pond, climb the hillside, and come back down a bamboo path.\n\nAcross Nene-no-michi, Entoku-in is where Nene spent her last years; you can sit in the tatami rooms and look out at the north garden. There’s a combined ticket for both.\n\nDuring the special evening openings the lights come on at 17:00 and it stays open until 22:00 (last entry 21:30). Day and night are not separate sessions, so you can go in late in the afternoon and wait for dark.\n\nAbout 5 minutes along Nene-no-michi from the Starbucks on Ninenzaka. Go in when it opens at 9:00; an hour covers Entoku-in as well.\n\nRecommended visit time: 9:00–10:00"
+   },
+   "photos": [
+    "kodaiji-1.jpg",
+    "kodaiji-3.jpg",
+    "kodaiji-4.jpg",
+    "kodaiji-5.jpg",
+    "kodaiji-6.jpg",
+    "kodaiji-7.jpg",
+    "kodaiji-8.jpg",
+    "kodaiji-9.jpg",
+    "kodaiji-10.jpg"
+   ]
+  },
+  {
+   "no": 5,
+   "id": "yasaka",
+   "name": {
+    "ja": "八坂神社と円山公園",
+    "en": "Yasaka Shrine and Maruyama Park"
+   },
+   "kind": {
+    "ja": "神社・公園",
+    "en": "Shrine & park"
+   },
+   "blurb": {
+    "ja": "祇園の「八坂さん」。四条通の突き当たりの朱色の門が目印です。奥は円山公園。",
+    "en": "Gion’s “Yasaka-san”, marked by the vermilion gate at the end of Shijo-dori. Maruyama Park is behind it."
+   },
+   "lat": 35.00366,
+   "lng": 135.77856,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "八坂神社",
+      "en": "Yasaka Shrine"
+     },
+     "lat": 35.00366,
+     "lng": 135.77856,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%9D%82%E7%A5%9E%E7%A4%BE"
+    },
+    {
+     "label": {
+      "ja": "円山公園",
+      "en": "Maruyama Park"
+     },
+     "lat": 35.0038,
+     "lng": 135.78,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "八坂神社 公式サイト",
+      "en": "Yasaka Shrine (official)"
+     },
+     "url": {
+      "ja": "https://www.yasaka-jinja.or.jp/",
+      "en": "https://www.yasaka-jinja.or.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22"
+   },
+   "text": {
+    "ja": "八坂神社（やさかじんじゃ）と円山公園（まるやまこうえん）\n\n祇園の東の端にある神社で、京都の人は「八坂さん」と呼びます。四条通の突き当たりに立つ朱色の西楼門が目印。7月の祇園祭は、この神社のお祭りです。\n\n境内を東へ抜けると円山公園。まん中に大きな「祇園しだれ桜」があり、春は夜にライトアップされます。公園の北には知恩院（ちおんいん）の大きな三門（国宝）があります。\n\n境内は自由にお参りできます。\n\nねねの道を北へ歩いて約10分。南の門から入って本殿へ。本殿の東が円山公園です。\n\nおすすめ訪問時間：10:10〜10:40",
+    "en": "Yasaka Shrine and Maruyama Park\n\nThe shrine at the eastern end of Gion, “Yasaka-san” to people in Kyoto. Its vermilion west gate stands at the end of Shijo-dori. The Gion Festival in July is this shrine’s festival.\n\nWalk east through the grounds into Maruyama Park, with its huge weeping cherry in the middle, lit up at night in spring. North of the park is the massive Sanmon gate of Chion-in, a National Treasure.\n\nThe shrine grounds are free to enter.\n\nAbout 10 minutes north along Nene-no-michi. Enter by the south gate for the main hall; Maruyama Park is just east of it.\n\nRecommended visit time: 10:10–10:40"
+   },
+   "photos": [
+    "yasaka-1.jpg",
+    "yasaka-2.jpg",
+    "yasaka-3.jpg",
+    "yasaka-4.jpg",
+    "yasaka-5.jpg",
+    "yasaka-6.jpg",
+    "yasaka-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 6,
+   "id": "nanzenji",
+   "name": {
+    "ja": "南禅寺",
+    "en": "Nanzen-ji Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "上に登れる大きな三門と、レンガ造りの水路閣。境内は無料で歩けます。",
+    "en": "A huge gate you can climb, and the brick Suirokaku aqueduct. The grounds are free to walk."
+   },
+   "lat": 35.01136,
+   "lng": 135.79348,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "南禅寺",
+      "en": "Nanzen-ji"
+     },
+     "lat": 35.01136,
+     "lng": 135.79348,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E7%A6%85%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "水路閣",
+      "en": "Suirokaku"
+     },
+     "lat": 35.0108,
+     "lng": 135.7947,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E7%A6%85%E5%AF%BA%20%E6%B0%B4%E8%B7%AF%E9%96%A3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "南禅寺 公式サイト（拝観案内）",
+      "en": "Nanzen-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://nanzenji.or.jp/about_rinzaishu/visit",
+      "en": "https://nanzenji.or.jp/about_rinzaishu/visit"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "3〜11月 8:40〜17:00、12〜2月 8:40〜16:30。受付は20分前まで",
+       "en": "Mar–Nov 8:40–17:00; Dec–Feb 8:40–16:30. Last entry 20 min before"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月28〜31日は拝観できません",
+       "en": "No admission 28–31 December"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "三門 一般600円、方丈庭園 一般600円、南禅院 一般500円（境内は無料）",
+       "en": "Sanmon gate ¥600, Hojo garden ¥600, Nanzen-in ¥500 per adult (grounds free)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄東西線 蹴上駅から歩いて約10分（三条京阪→蹴上 約4分・220円）",
+       "en": "About 10 min on foot from Keage Station on the Tozai subway line (Sanjo Keihan → Keage: about 4 min, ¥220)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "南禅寺 公式サイト（拝観案内）。地下鉄の時間と運賃は乗換案内。蹴上駅からの徒歩は地図で測った目安"
+   },
+   "text": {
+    "ja": "南禅寺（なんぜんじ）\n\n歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、急な階段で上に登れて、京都の町と東山を見渡せます。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣（すいろかく）。アーチの上を、今も水が流れています。方丈庭園は小堀遠州の作と伝わる石の庭です。\n\n境内と水路閣は無料。三門と方丈庭園は、それぞれ拝観料がかかります。\n\n円山公園から知恩院の三門の前を通り、北へ歩いて約30分。朝から歩いているので、地下鉄の東山駅から蹴上駅まで1駅乗ってもかまいません。\n\n三門に上って、水路閣まで歩きます。お昼は南禅寺の参道か、永観堂へ向かう道のあたりで（12:05〜13:00）。\n\nおすすめ訪問時間：11:10〜12:05",
+    "en": "Nanzen-ji Temple\n\nYou can climb the huge Sanmon gate, famous from a kabuki play, by a steep staircase for a view over the city and the Higashiyama hills.\n\nAt the back of the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto. Water still runs along the top of its arches. The Hojo garden is a rock garden attributed to Kobori Enshu.\n\nThe grounds and aqueduct are free. The gate and the Hojo garden each have their own fee.\n\nAbout 30 minutes’ walk north from Maruyama Park, passing the Sanmon gate of Chion-in. You’ve been walking since dawn, so feel free to ride the subway one stop from Higashiyama to Keage.\n\nClimb the gate and walk to the aqueduct. Have lunch on the approach to Nanzen-ji or on the way to Eikan-do (12:05–13:00).\n\nRecommended visit time: 11:10–12:05"
+   },
+   "photos": [
+    "nanzenji-1.jpg",
+    "nanzenji-2.jpg",
+    "nanzenji-3.jpg",
+    "nanzenji-4.jpg",
+    "nanzenji-5.jpg",
+    "nanzenji-6.jpg",
+    "nanzenji-7.jpg",
+    "nanzenji-8.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "eikando",
+   "name": {
+    "ja": "永観堂（禅林寺）",
+    "en": "Eikan-do (Zenrin-ji)"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "「もみじの永観堂」。受付は16:00まで。秋の夜のライトアップは、昼とは別の券で17:30から。",
+    "en": "“Eikan-do of the maples”. Last entry 16:00. The autumn light-up is a separate ticket, from 17:30."
+   },
+   "lat": 35.01445,
+   "lng": 135.79452,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "永観堂",
+      "en": "Eikan-do"
+     },
+     "lat": 35.01445,
+     "lng": 135.79452,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B8%E8%A6%B3%E5%A0%82%20%E7%A6%85%E6%9E%97%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "永観堂 拝観のご案内",
+      "en": "Eikan-do visitor info (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.eikando.or.jp/haikan.html",
+      "en": "https://www.eikando.or.jp/haikan.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の寺宝展（2026年11月11日〜12月6日）受付9:00〜16:00（17:00閉門）。ライトアップ（11月20日〜12月6日）受付17:30〜20:30（21:00閉門）。昼と夜は入れ替え制",
+       "en": "Autumn exhibition (11 Nov – 6 Dec 2026): entry 9:00–16:00 (gates close 17:00). Light-up (20 Nov – 6 Dec): entry 17:30–20:30 (close 21:00). Day and night are separate sessions"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "秋の寺宝展 一般1,500円・中高生800円、ライトアップ 中高生以上1,000円",
+       "en": "Autumn exhibition ¥1,500 (junior/senior high ¥800); light-up ¥1,000 (junior high and up)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の寺宝展以外 受付9:00〜16:00（17:00閉門）、年中無休",
+       "en": "Outside the autumn exhibition: entry 9:00–16:00 (gates close 17:00), open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "秋の寺宝展以外 一般1,000円、中高生600円、小学生200円",
+       "en": "Outside the autumn exhibition: ¥1,000 adults, ¥600 junior/senior high, ¥200 elementary"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "永観堂 公式サイト（拝観のご案内）"
+   },
+   "caution": {
+    "ja": "三脚・一脚は使えません。境内は飲食禁止",
+    "en": "No tripods or monopods; no eating in the grounds"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-06",
+     "url": "https://www.eikando.or.jp/haikan.html",
+     "head": {
+      "ja": "秋の夜のライトアップは17:30から",
+      "en": "The autumn light-up starts at 17:30"
+     },
+     "text": {
+      "ja": "ライトアップ（2026年は11月20日〜12月6日）は昼とは別の券で、受付は17:30〜20:30。昼に入った人は、いったん出てから並び直します。",
+      "en": "The light-up (20 Nov – 6 Dec in 2026) is a separate ticket, with entry from 17:30 to 20:30. If you visited in the daytime you leave and queue again."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.eikando.or.jp/haikan.html",
+     "head": {
+      "ja": "受付は16:00まで。三脚・一脚は使えません",
+      "en": "Last entry 16:00. No tripods or monopods"
+     },
+     "text": {
+      "ja": "境内での飲食、ペットを連れての拝観、お堂の中の文化財の撮影もできません。秋の寺宝展とライトアップの券は前売りがなく、当日に窓口で買います（公式サイト）。",
+      "en": "No eating in the grounds, no pets, and no photos of the artworks inside the halls. Tickets for the autumn exhibition and light-up are not sold in advance: buy them at the gate on the day (official site)."
+     }
+    }
+   ],
+   "text": {
+    "ja": "永観堂（えいかんどう）\n\n古くから「もみじの永観堂」と呼ばれる紅葉の名所です。お堂が渡り廊下でつながっていて、靴を脱いで上がり、山の斜面に沿って奥の阿弥陀堂まで歩きます。庭の放生池（ほうじょういけ）には、もみじと山の上の多宝塔が映ります。\n\n秋の寺宝展の期間は拝観料が上がり、夜はライトアップがあります。昼と夜は入れ替え制で、券も別です。券は当日に窓口で買うものだけです。\n\n南禅寺から北へ歩いて約7分。\n\nおすすめ訪問時間：13:05〜14:00",
+    "en": "Eikan-do (Zenrin-ji)\n\nLong known as “Eikan-do of the maples”. The halls are joined by covered corridors: you take off your shoes and walk along the hillside to the Amida hall at the far end. The maples and the hilltop pagoda are reflected in the pond in the garden.\n\nDuring the autumn treasure exhibition the fee goes up and there is an evening light-up. Day and night are separate sessions with separate tickets, sold only at the gate on the day.\n\nAbout 7 minutes’ walk north of Nanzen-ji.\n\nRecommended visit time: 13:05–14:00"
+   },
+   "photos": [
+    "eikando-1.jpg",
+    "eikando-3.jpg",
+    "eikando-4.jpg",
+    "eikando-5.jpg",
+    "eikando-6.jpg",
+    "eikando-7.jpg",
+    "eikando-8.jpg",
+    "eikando-9.jpg",
+    "eikando-10.jpg"
+   ]
+  },
+  {
+   "no": 8,
+   "id": "ginkakuji",
+   "name": {
+    "ja": "哲学の道と銀閣寺",
+    "en": "Philosopher’s Path and Ginkaku-ji"
+   },
+   "kind": {
+    "ja": "散歩道・お寺",
+    "en": "Walk & temple"
+   },
+   "blurb": {
+    "ja": "疏水沿いの散歩道を北へ歩いて銀閣寺へ。白い砂の庭と、こけら葺きの観音殿（銀閣）。17:00に閉まります（12〜2月は16:30）。",
+    "en": "Walk north along the canal path to Ginkaku-ji: a white sand garden and the shingle-roofed Silver Pavilion. Closes at 17:00 (16:30 Dec–Feb)."
+   },
+   "lat": 35.0269,
+   "lng": 135.79837,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "銀閣寺",
+      "en": "Ginkaku-ji"
+     },
+     "lat": 35.0269,
+     "lng": 135.79837,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E9%96%A3%E5%AF%BA%20%E6%85%88%E7%85%A7%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "哲学の道（若王子橋）",
+      "en": "Philosopher’s Path (south end)"
+     },
+     "lat": 35.01539,
+     "lng": 135.7958,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%93%B2%E5%AD%A6%E3%81%AE%E9%81%93%20%E8%8B%A5%E7%8E%8B%E5%AD%90%E6%A9%8B"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "銀閣寺 公式サイト（アクセス・拝観）",
+      "en": "Ginkaku-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.shokoku-ji.jp/ginkakuji/access/",
+      "en": "https://www.shokoku-ji.jp/ginkakuji/access/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "3月1日〜11月30日 8:30〜17:00、12月1日〜2月末 9:00〜16:30。年中無休",
+       "en": "1 Mar – 30 Nov 8:30–17:00; 1 Dec – end of Feb 9:00–16:30. Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人（高校生以上）1,000円、小・中学生500円",
+       "en": "¥1,000 adults (high school and up), ¥500 elementary/junior high"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の特別拝観（東求堂など、2026年11月1日〜12月5日）：10:00・11:00・12:00・13:30・14:30・15:30から約30分、各回約20名。当日、本堂前の申込表に名前を書きます。2,000円（拝観料は別）",
+       "en": "Autumn special viewing (Togudo and more, 1 Nov – 5 Dec 2026): about 30 min from 10:00, 11:00, 12:00, 13:30, 14:30 and 15:30, about 20 people each. Sign up on the day at the main hall. ¥2,000 on top of admission; guided in Japanese"
+      },
+      "until": "2026-12-05",
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰りは市バス「銀閣寺道」から（5・7・32・203・204系統など、230円）。参道を下って歩いて約10分",
+       "en": "Way back: city buses from “Ginkakuji-michi” (routes 5, 7, 32, 203, 204 and others, ¥230), about 10 min on foot down the approach"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "どの系統のバスがどこを通るかは確かめていません。バス停の案内で、行き先（四条河原町・三条京阪・京都駅）を見てから乗ってください。",
+     "en": "We haven’t checked which bus route goes where. Read the sign at the stop for your destination (Shijo-Kawaramachi, Sanjo-Keihan or Kyoto Station) before you board."
+    },
+    "checked": "2026-11-22",
+    "source": "銀閣寺（相国寺）公式サイト（アクセス・拝観）。秋の特別拝観とバスの系統は2026-11-21の確認、市バスの運賃は2026-11-20に京都市交通局で確認。哲学の道の長さと歩く時間は地図で測った目安"
+   },
+   "text": {
+    "ja": "哲学の道（てつがくのみち）と銀閣寺（ぎんかくじ）\n\n哲学の道は、永観堂の少し北の若王子橋（にゃくおうじばし）から銀閣寺橋まで、琵琶湖疏水に沿って続く約1.5kmの散歩道です。春は桜、秋は紅葉の並木になります。\n\n銀閣寺の正式な名前は慈照寺（じしょうじ）。室町幕府の8代将軍・足利義政の山荘がもとになったお寺です。入ってすぐ、白砂を段に盛った銀沙灘（ぎんしゃだん）と円すい形の向月台（こうげつだい）、その奥に観音殿（銀閣・国宝）。順路は山の上の展望所まで続き、境内と京都の町を見下ろせます。中を回るのに約30分です（公式サイトより）。\n\n拝観料は現金のほか、キャッシュレスでも払えます。\n\n永観堂から哲学の道を歩いて約35分。途中にベンチがあるので、休みながら。\n\n見終わったら、参道を下りた「銀閣寺道」のバス停から市バスで四条河原町・三条のほうへ（230円）。夜まで時間があるので、いったん宿で休めます。\n\nおすすめ訪問時間：14:40〜15:25",
+    "en": "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn.\n\nGinkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\nYou can pay the admission in cash or cashless.\n\nAbout 35 minutes along the Philosopher’s Path from Eikan-do, with benches along the way.\n\nAfterwards walk down the approach to the “Ginkakuji-michi” stop for a city bus back toward Shijo-Kawaramachi or Sanjo (¥230). There’s time to rest at your lodging before the evening.\n\nRecommended visit time: 14:40–15:25"
+   },
+   "photos": [
+    {
+     "file": "ginkakuji-1.jpg",
+     "credit": {
+      "author": "Jmhullot",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AGinkakuji_Fall1.jpg"
+     }
+    },
+    {
+     "file": "ginkakuji-2.jpg",
+     "credit": {
+      "author": "Jmhullot",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AGinkakuji_Sand_Garden.jpg"
+     }
+    },
+    {
+     "file": "ginkakuji-3.jpg",
+     "credit": {
+      "author": "Stephan Ridgway",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3APhilosophers_Walk%2C_Kyoto_%2849073313687%29.jpg"
+     }
+    },
+    {
+     "file": "ginkakuji-4.jpg",
+     "credit": {
+      "author": "Yiannis Theologos Michellis",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AJapan_Spring_Down_the_Philosopher%27s_Path_%2814164491752%29.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 9,
+   "id": "kurodani",
+   "name": {
+    "ja": "金戒光明寺（くろ谷さん）",
+    "en": "Konkai Komyo-ji (Kurodani)"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "京都の人が「くろ谷さん」と呼ぶ大きなお寺。石段の上の山門が目印です。秋の夜は庭のライトアップがあります。",
+    "en": "A large temple people in Kyoto call “Kurodani-san”, with a great gate at the top of stone steps. In autumn the garden is lit up at night."
+   },
+   "lat": 35.01975,
+   "lng": 135.78838,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "金戒光明寺",
+      "en": "Konkai Komyo-ji"
+     },
+     "lat": 35.01975,
+     "lng": 135.78838,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%88%92%E5%85%89%E6%98%8E%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "金戒光明寺 公式サイト",
+      "en": "Konkai Komyo-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kurodani.jp/",
+      "en": "https://www.kurodani.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "金戒光明寺 特別夜間拝観",
+      "en": "Konkai Komyo-ji evening opening"
+     },
+     "url": {
+      "ja": "https://www.kurodani.jp/lightup/",
+      "en": "https://www.kurodani.jp/lightup/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夜間特別拝観（2026年11月13日〜12月6日）17:30〜20:30（最終入場20:00）。予約はいりません",
+       "en": "Evening opening (13 Nov – 6 Dec 2026): 17:30–20:30 (last entry 20:00). No booking needed"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "夜間特別拝観 御影堂・大方丈・紫雲の庭 大人1,000円、栄摂院 大人800円、セット券 大人1,600円",
+       "en": "Evening opening: Main hall, Hojo & garden ¥1,000; Eisho-in ¥800; set ticket ¥1,600 (adults)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ふだんは境内を自由に歩けます。お堂の受付は9:00〜16:00（公式サイトの下に書かれた受付時間。拝観の時間としては要確認）",
+       "en": "The grounds are normally free to walk. Hall reception 9:00–16:00 (the reception hours printed at the foot of the official site; unconfirmed as visiting hours)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "金戒光明寺 公式サイト（特別夜間拝観）。ふだんの時間はトップページ下の「受付時間 9時〜16時（閉堂）」だけで、拝観時間としての記載は見つからない"
+   },
+   "text": {
+    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上に立つ山門は見上げるほどの大きさです。境内は高台にあって、京都の町が見えます。\n\n境内は自由に歩けます。秋は夜の特別拝観があり、庭の池のまわりのもみじと竹林に明かりが入ります（夜は山門には上れません）。\n\n銀閣寺から南西へ歩いて約25分。このコースの時間割には入っていません。帰りは「岡崎道」のバス停から市バス、または地下鉄の東山駅まで歩いて約20分。\n\nおすすめ訪問時間：足す日は15:50〜16:20",
+    "en": "Konkai Komyo-ji\n\nA large Pure Land temple that served as headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The gate at the top of the stone steps towers over you. The grounds sit on a rise with a view over the city.\n\nThe grounds are free to walk. In autumn there is a special evening opening, with the maples around the garden pond and the bamboo grove lit up (the gate itself can’t be climbed at night).\n\nAbout 25 minutes’ walk southwest of Ginkaku-ji. It isn’t in this course’s timetable. To go back, take a city bus from “Okazaki-michi” or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: if added, 15:50–16:20"
+   },
+   "photos": [
+    "kurodani-1.jpg",
+    "kurodani-2.jpg",
+    "kurodani-3.jpg",
+    "kurodani-4.jpg",
+    "kurodani-5.jpg",
+    "kurodani-6.jpg",
+    "kurodani-7.jpg",
+    "kurodani-8.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}

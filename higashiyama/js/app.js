@@ -1,5 +1,5 @@
-/* 京都 東山（伏見稲荷〜清水寺〜南禅寺） — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/higashiyama.json（写真は ../images/higashiyama/）. Texts: js/i18n.js
+/* 京都 東山（清水寺〜南禅寺〜銀閣寺） — map, list, spot detail, intro and language switch.
+   Data: ../data/routes/higashiyama.json と higashiyama-early.json（コースで読み分ける。写真は ../images/higashiyama/）. Texts: js/i18n.js
    eizan-line/js/app.js の複製。違いは scripts/sync_higashiyama.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_higashiyama.py で写し直す） */
 (function () {
@@ -31,6 +31,19 @@
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
   var KEY_MODE = 'kyoto-maps-higashiyama-mode', KEY_PICKS = 'kyoto-maps-higashiyama-picks';
   var mode = 'all', picks = {}, routeLine = null;
+  // コース: early（早朝に出発）か late（9〜10時に出発）。コースごとにデータファイルが別で、スポットの番号も変わる。
+  // 一覧の上のボタン（data-course）で切り替える。?course=early でも開ける
+  var KEY_COURSE = 'kyoto-maps-higashiyama-course';
+  var course = { id: (location.search.match(/[?&]course=(early|late)/) || [])[1] || load(KEY_COURSE) };
+  if (course.id !== 'early') course.id = 'late';
+  course.file = 'higashiyama' + (course.id === 'early' ? '-early' : '') + '.json';
+  // 「行った」印・回り方・選んだ場所はコースごとに別に保存する（番号がコースで変わるため）
+  KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;
+  // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
+  Object.keys(I18N).forEach(function (l) {
+    var o = I18N[l].introFor && I18N[l].introFor[course.id];
+    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+  });
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -70,6 +83,7 @@
   function loadPlan() {
     mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';
     try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}
+    if (load(KEY_PICKS) === null && data.plan && data.plan.defaultPicks) data.plan.defaultPicks.forEach(function (n) { if (isPick(n)) picks[n] = true; });
   }
   function savePlan() { store(KEY_MODE, mode); store(KEY_PICKS, JSON.stringify(Object.keys(picks).map(Number))); }
   function isPick(no) { return !!(data.plan && data.plan.picks.indexOf(no) >= 0); }
@@ -89,7 +103,7 @@
   // 選んだ組み合わせによって行き方が変わるところの一言（例：古今 藤やを選んだらバスに乗らず歩く）
   function hintsFor(no) {
     if (mode !== 'pick' || !data.plan || !data.plan.hints) return [];
-    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule); });
+    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule) && inRange(h.from, h.to); });
   }
   function routeSpots() { return spots.filter(function (s) { return included(s.no); }); }
   function neighbor(no, dir) {       // 前後の「ルートに入っている」スポット
@@ -201,10 +215,10 @@
     var r = routeSpots();
     var n = r.filter(function (s) { return visited[s.no]; }).length, t = r.length || spots.length;
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+      b.setAttribute('aria-pressed', String(b.dataset.course ? b.dataset.course === course.id : b.dataset.mode === mode));
     });
-    // 「選んで回る」の設定（data.plan）がないマップでは、切り替えボタンごと出さない
-    document.querySelector('.modesw').hidden = !(data && data.plan);
+    // 「選んで回る」の設定（data.plan）がないマップでは、回り方のボタンを出さない（コースのボタンはいつも出す）
+    document.querySelector('.modesw:not(.coursesw)').hidden = !(data && data.plan);
     $('pick-box').hidden = mode !== 'pick';
     $('pick-count').textContent = pickCount() ? fill(T().pickCount, { n: pickCount(), t: r.length }) : T().pickEmpty;
     $('progress-label').textContent = fill(T().progress, { n: n, t: t });
@@ -314,9 +328,16 @@
     $('btn-list').setAttribute('aria-expanded', 'false');
   }
 
+  function listTop() {
+    if (location.hash !== '#list') return;
+    viewList.scrollTop = 0;
+    setTimeout(function () { if (location.hash === '#list') viewList.scrollTop = 0; }, 80);
+  }
+  window.addEventListener('load', listTop);
   function route() {
     showRoute();
     updateTabs();
+    listTop();
   }
 
   // Phones: highlight the tab for what is on screen (the spot details count as part of the list)
@@ -346,7 +367,11 @@
   }
 
   /* ---------- intro ---------- */
-  function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // [スポットの番号 or id, 写真の番号]（コースで番号が変わるので id で指定する）
+  function introPhoto(p) {
+    var s = typeof p[0] === 'string' ? spots.filter(function (x) { return x.id === p[0]; })[0] : byNo[p[0]];
+    return photoUrl(s.photos[p[1]]);
+  }
   // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
     return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
@@ -499,6 +524,13 @@
     mode = m;
     savePlan();
     updateRoute();
+  }
+  // コースを切り替えたら、そのコースのデータで読み直す（一覧を開いた状態で）
+  function setCourse(c) {
+    if (c === course.id) return;
+    store(KEY_COURSE, c);
+    history.replaceState(null, '', location.pathname + '#list');
+    location.reload();
   }
 
   // Update one spot in the list in place, so its photos and the scroll position stay where they are
@@ -775,7 +807,7 @@
       savePlan(); updateRoute();
     });
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.addEventListener('click', function () { setMode(b.dataset.mode); });
+      b.addEventListener('click', function () { if (b.dataset.course) setCourse(b.dataset.course); else setMode(b.dataset.mode); });
     });
     $('btn-pick-all').addEventListener('click', function () {
       data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
@@ -847,7 +879,7 @@
     route();
   }
 
-  fetch('../data/routes/higashiyama.json?v=5')
+  fetch('../data/routes/' + course.file + '?v=6')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

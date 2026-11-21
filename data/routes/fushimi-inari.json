@@ -1,0 +1,962 @@
+{
+ "id": "fushimi-inari",
+ "course": "late",
+ "_note": "伏見稲荷から七条への1日ルート（fushimi-inari/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（fushimi-inari.json＝9〜10時に出発、fushimi-inari-early.json＝早朝に出発）。このファイル：「9〜10時に出発」コース。三条を9:15ごろの京阪で出て、伏見稲荷（9:35〜11:15、四ツ辻まで）→参道でお昼→東福寺→泉涌寺・雲龍院→三十三間堂（冬は受付15:30まで）→サウナの梅湯→Kyoto Beer Lab→高瀬川・木屋町を歩いて三条へ（19時すぎ。そのまま木屋町・先斗町で21時ごろまで）。 三十三間堂は Toshi がまだ行っていない場所（写真は公道から撮った外観だけ・Wikimedia Commons の CC0。寺が境内の写真の利用に許可を求めているため）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_fushimi_inari_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 5,
+   "day": 2
+  },
+  {
+   "first": 6,
+   "last": 7,
+   "day": 3
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。defaultPicks は1日で無理なく回れる組み合わせ（時間割どおり）。それ以外は時間割の外で、足したときの回り方は各スポットの文章と hints（from〜to の間だけ出る）。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "andAny": [
+      7
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "梅湯は木曜が休みです。木曜は、三十三間堂からまっすぐ Kyoto Beer Lab へ（歩いて約15分）。",
+     "en": "Umeyu is closed on Thursdays. On a Thursday, walk straight from Sanjusangen-do to Kyoto Beer Lab (about 15 minutes)."
+    }
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      4
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "泉涌寺に寄らない日は、東福寺駅から京阪電車で七条駅へ1駅。駅から歩いて約7分です。",
+     "en": "Skipping Sennyu-ji? Ride the Keihan line one stop from Tofukuji to Shichijo, then walk about 7 minutes."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/fushimi-inari/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "station",
+   "name": {
+    "ja": "伏見稲荷の駅（京阪・JR）",
+    "en": "Fushimi Inari stations (Keihan & JR)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "三条からは京阪電車で乗り換えなしの約10分。京都駅からはJR奈良線で約5分です。",
+    "en": "About 10 minutes direct from Sanjo on the Keihan line, or about 5 minutes from Kyoto Station on the JR Nara Line."
+   },
+   "lat": 34.96717,
+   "lng": 135.76926,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "京阪 伏見稲荷駅",
+      "en": "Keihan Fushimi-Inari Station"
+     },
+     "lat": 34.96717,
+     "lng": 135.76926,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%98%AA%20%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "JR稲荷駅",
+      "en": "JR Inari Station"
+     },
+     "lat": 34.96717,
+     "lng": 135.76926,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E7%A8%B2%E8%8D%B7%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "京阪電車（時刻表・運賃）",
+      "en": "Keihan Railway timetables"
+     },
+     "url": {
+      "ja": "https://www.keihan.co.jp/traffic/",
+      "en": "https://www.keihan.co.jp/traffic/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻表）",
+      "en": "JR West timetables (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.jr-odekake.net/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京阪 三条→伏見稲荷 約10分・240円（乗り換えなし）。三条発は5:04・5:24・5:46（平日も土曜も同じ）",
+       "en": "Keihan, Sanjo → Fushimi-Inari: about 10 min, ¥240, no changes. First trains leave Sanjo at 5:04, 5:24 and 5:46 (weekdays and Saturdays alike)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "JR奈良線 京都→稲荷 約5分・150円",
+       "en": "JR Nara Line, Kyoto → Inari: about 5 min, ¥150"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で調べました（2026年11月の平日と土曜）。ダイヤは変わるので、前の晩に確かめてください。",
+     "en": "Times and fares are from a route planner (a weekday and a Saturday in November 2026). Timetables change, so check the night before."
+    },
+    "checked": "2026-11-22",
+    "source": "京阪の時刻・運賃は乗換案内（2026-11-24 火曜と11-28 土曜の時刻で検索）。駅からの徒歩は伏見稲荷大社の公式サイト（交通アクセス）。JRの運賃は2026-11-20に乗換案内で確認"
+   },
+   "text": {
+    "ja": "伏見稲荷の駅（京阪 伏見稲荷駅・JR稲荷駅）\n\n京都の中心（三条・祇園四条）から行くなら、京阪電車が乗り換えなしで楽です。伏見稲荷駅で降りて、東へ歩いて約5分で大鳥居の前に着きます。\n\n京都駅からはJR奈良線の各駅停車で2駅、約5分。朱色に塗られた小さなJR稲荷駅を出ると、目の前が大鳥居です（写真はJR稲荷駅）。\n\n三条駅から京阪電車の淀屋橋方面行きに乗って約10分。準急か普通に乗ってください（特急は伏見稲荷に止まりません）。\n\nおすすめ到着時間：9:25（三条 9:15ごろ発）",
+    "en": "Fushimi Inari stations (Keihan Fushimi-Inari and JR Inari)\n\nFrom central Kyoto (Sanjo or Gion-Shijo), the Keihan line is the easy way: no changes. Get off at Fushimi-Inari and walk east for about 5 minutes to the great torii.\n\nFrom Kyoto Station it’s two stops, about 5 minutes, on a JR Nara Line local train. The little vermilion JR Inari Station opens right onto the torii (the photos show JR Inari Station).\n\nAbout 10 minutes from Sanjo on a Keihan train bound for Yodoyabashi. Take a sub-express or local: limited expresses don’t stop at Fushimi-Inari.\n\nRecommended arrival time: 9:25 (leaving Sanjo at about 9:15)"
+   },
+   "photos": [
+    "station-1.jpg",
+    "station-2.jpg",
+    "station-3.jpg",
+    "station-4.jpg",
+    "station-5.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "inari",
+   "name": {
+    "ja": "伏見稲荷大社",
+    "en": "Fushimi Inari Taisha"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "朱色の鳥居がすき間なく続く「千本鳥居」。入口に6:00に着けばまだ人が少なく、6:30にはもう多くなっています。",
+    "en": "The vermilion tunnels of the Thousand Torii. At the entrance by 6:00 it’s still quiet; by 6:30 the crowds are already building."
+   },
+   "lat": 34.96714,
+   "lng": 135.77267,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "伏見稲荷大社",
+      "en": "Fushimi Inari Taisha"
+     },
+     "lat": 34.96714,
+     "lng": 135.77267,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE"
+    },
+    {
+     "label": {
+      "ja": "Vermillion - cafe.",
+      "en": "Vermillion - cafe."
+     },
+     "lat": 34.96842,
+     "lng": 135.77415,
+     "url": "https://www.google.com/maps/search/?api=1&query=Vermillion%20-%20cafe.%20%E4%BA%AC%E9%83%BD%E5%B8%82%E4%BC%8F%E8%A6%8B%E5%8C%BA%E6%B7%B1%E8%8D%89%E9%96%8B%E5%9C%9F%E5%8F%A3%E7%94%BA5-31"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "伏見稲荷大社 公式サイト",
+      "en": "Fushimi Inari Taisha (official)"
+     },
+     "url": {
+      "ja": "https://inari.jp/",
+      "en": "https://inari.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ご参拝の皆様へ（境内の決まり）",
+      "en": "Rules for visitors (Japanese)"
+     },
+     "url": {
+      "ja": "https://inari.jp/request/",
+      "en": "https://inari.jp/request/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "Vermillion（カフェ）公式サイト",
+      "en": "Vermillion café (official)"
+     },
+     "url": {
+      "ja": "https://www.vermillioncafe.com/",
+      "en": "https://www.vermillioncafe.com/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "伏見稲荷大社：無料",
+       "en": "Fushimi Inari Taisha: free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "Vermillion - cafe.：営業時間・定休日・支払い方法は公式サイトに記載がありません（要確認）",
+       "en": "Vermillion - cafe.: hours, closing days and payment are not on its official site (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "早朝・夜に入れる時間は、公式サイトに書かれていません（要確認）。6:00に入口に着いて歩けたのは、オーナーの体験です",
+       "en": "The official site doesn’t state early-morning or night hours (unconfirmed). Walking in from the entrance at 6:00 is the map owner’s own experience"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "混み方はこのマップを作ったToshiの体験です。稲荷山を歩く時間は目安で、公式サイトには書かれていません。",
+     "en": "The crowd notes are the experience of Toshi, who made this map. Walking times on the hill are estimates; the official site doesn’t give them."
+    },
+    "checked": "2026-11-22",
+    "source": "伏見稲荷大社 公式サイト（交通アクセス、ご参拝の皆様へ）。Vermillion - cafe. は公式サイトのアクセスのページで住所だけ確認（営業時間・定休日・支払い方法は記載なしで未確認。位置はオーナーが教えてくれた Googleマップの位置）。早朝の混み方はオーナーの体験（6:00はまだ少なく、6:30には多い）。稲荷山の所要時間は公式サイトに記載がなく、目安",
+    "verified": false
+   },
+   "caution": {
+    "ja": "食べ歩きはできません（飲食は無料休憩所だけ）",
+    "en": "No eating while walking (only in the free rest house)"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://inari.jp/request/",
+     "head": {
+      "ja": "境内で食べられるのは無料休憩所だけ",
+      "en": "Eat only in the free rest house"
+     },
+     "text": {
+      "ja": "食べ歩き・立ち食いは禁止です（公式サイトの決まり）。ペットを連れての参拝、ドローン、細い参道で立ち止まって通行をふさぐ撮影もできません。",
+      "en": "Eating while walking or standing is not allowed (official rule). No pets, no drones, and don’t block the narrow path to take photos."
+     }
+    }
+   ],
+   "text": {
+    "ja": "伏見稲荷大社（ふしみいなりたいしゃ）\n\n全国の稲荷神社の総本宮。楼門と本殿にお参りしたら、奥へ進んで千本鳥居へ。奉納された鳥居がすき間なく並び、朱色のトンネルが山の上まで続きます。あちこちにいるキツネの像は神さまのお使いで、口に鍵や玉をくわえています。\n\nどこまで上るかで、時間が大きく変わります。千本鳥居を抜けた奥社奉拝所（おくしゃほうはいしょ）で引き返すと、本殿から往復で30〜40分。京都の町が見える四ツ辻（よつつじ）まで上ると、往復で1時間半くらい。山頂を回って戻ると2時間ほどです。四ツ辻から上は石段が続くので、歩きやすい靴で。\n\n境内は自由にお参りできます（拝観料はありません）。\n\n鳥居の道から下りてきたあたりに、カフェの「Vermillion - cafe.」があります（深草開土口町5-31）。営業時間と定休日は公式サイトに書かれていないので、行く前にお店のSNSで確かめてください（要確認）。\n\nこの時間は、もう鳥居の道が人でいっぱいです（6:30にはもう多い、というのがオーナーの体験です）。人の少ない千本鳥居を歩きたい日は、一覧の上のボタンで「早朝に出発」に切り替えてください。\n\n四ツ辻まで上って戻るとちょうどこの時間。お昼は、下りてきてから参道か駅のまわり、または Vermillion - cafe. で（11:15〜12:00）。境内では食べ歩きができません。\n\nおすすめ訪問時間：9:35〜11:15",
+    "en": "Fushimi Inari Taisha\n\nThe head shrine of all the Inari shrines in Japan. After the gate and the main hall, keep going to the Thousand Torii: donated gates set so close together that they make vermilion tunnels all the way up the hill. The fox statues are the god’s messengers, holding keys or jewels in their mouths.\n\nHow far you climb changes the time a lot. Turning back at the Okusha worship hall, just past the Thousand Torii, is 30–40 minutes there and back from the main hall. Up to Yotsutsuji, where the city comes into view, is about an hour and a half. The full loop over the summit is about two hours. Above Yotsutsuji it’s steps all the way, so wear proper shoes.\n\nThe grounds are free to enter.\n\nNear where the torii path comes back down is the café Vermillion - cafe. (5-31 Fukakusa Kaidoguchi-cho). Its website doesn’t give opening hours or closing days, so check the café’s social media before you go (unconfirmed).\n\nBy this time the torii path is already full of people (the map owner’s experience is that it’s busy by 6:30). To walk the Thousand Torii with fewer people, switch to “Early start” with the buttons above the list.\n\nUp to Yotsutsuji and back fits this slot. Have lunch afterwards on the approach, around the stations, or at Vermillion - cafe. (11:15–12:00). You can’t eat while walking inside the shrine.\n\nRecommended visit time: 9:35–11:15"
+   },
+   "photos": [
+    "inari-1.jpg",
+    "inari-2.jpg",
+    "inari-3.jpg",
+    "inari-4.jpg",
+    "inari-5.jpg",
+    "inari-7.jpg",
+    "inari-8.jpg",
+    "inari-9.jpg",
+    "inari-10.jpg"
+   ]
+  },
+  {
+   "no": 3,
+   "id": "tofukuji",
+   "name": {
+    "ja": "東福寺",
+    "en": "Tofuku-ji Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "谷を埋めるもみじを、木の橋「通天橋」から見下ろします。開門は9:00（秋の通天橋は8:30）。",
+    "en": "Look down from the wooden Tsutenkyo bridge onto a valley of maples. Opens at 9:00 (the bridge from 8:30 in autumn)."
+   },
+   "lat": 34.97677,
+   "lng": 135.77371,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "東福寺",
+      "en": "Tofuku-ji"
+     },
+     "lat": 34.97677,
+     "lng": 135.77371,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E7%A6%8F%E5%AF%BA%20%E9%80%9A%E5%A4%A9%E6%A9%8B"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "東福寺 公式サイト（拝観案内）",
+      "en": "Tofuku-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://tofukuji.jp/guide/",
+      "en": "https://tofukuji.jp/guide/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋（11月14日〜12月6日）：通天橋 8:30〜16:00、本坊庭園 9:00〜16:00（16:30閉門）",
+       "en": "Autumn (14 Nov – 6 Dec): Tsutenkyo 8:30–16:00, Hojo garden 9:00–16:00 (gates close 16:30)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "秋（2026年11月14日〜12月6日）：通天橋・開山堂 大人1,000円、本坊庭園 大人600円。共通券はありません",
+       "en": "Autumn (14 Nov – 6 Dec 2026): Tsutenkyo & Kaisando ¥1,000, Hojo garden ¥600 per adult. No combined ticket"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "4月1日〜11月13日 9:00〜16:00（16:30閉門）、12月7日〜3月31日 9:00〜15:30（16:00閉門）",
+       "en": "1 Apr – 13 Nov: 9:00–16:00 (gates close 16:30). 7 Dec – 31 Mar: 9:00–15:30 (close 16:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "秋以外：通天橋・開山堂 大人600円、本坊庭園 大人600円、共通券 大人1,000円",
+       "en": "Outside autumn: Tsutenkyo & Kaisando ¥600, Hojo garden ¥600, combined ticket ¥1,000 per adult"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京阪・JR 東福寺駅から歩いて約10分",
+       "en": "About 10 min on foot from Tofukuji Station (Keihan / JR)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "東福寺 公式サイト（拝観案内）。秋の通天橋の料金は2026-11-20の確認。駅からの徒歩は地図で測った目安"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-06",
+     "url": "https://tofukuji.jp/guide/",
+     "head": {
+      "ja": "秋は橋の上で写真を撮れないことがあります",
+      "en": "In autumn, photos on the bridges may be stopped"
+     },
+     "text": {
+      "ja": "11月14日〜12月6日はとても混むので、通天橋と臥雲橋の上での撮影を遠慮するよう案内されることがあります（公式サイト）。この期間は共通券もありません。",
+      "en": "From 14 November to 6 December it is so busy that you may be asked not to take photos on the Tsutenkyo and Gaunkyo bridges (official site). There is no combined ticket in this period either."
+     }
+    }
+   ],
+   "text": {
+    "ja": "東福寺（とうふくじ）\n\n大きな禅寺で、境内の谷にかかる通天橋（つうてんきょう）から、もみじの谷を見下ろせます。秋は谷じゅうが赤くなり、新緑のころは一面の緑です。\n\n通天橋・開山堂と、本坊庭園（方丈の庭）は券が別です。秋の見ごろ（11月中ごろ〜12月はじめ）はとても混みます。\n\n境内の南には、塔頭（たっちゅう）の光明院（こうみょういん）があります。拝観の時間と料金は公式サイト（komyoin.jp）で確かめられなかったので、寄る人は現地で確かめてください（要確認）。\n\n伏見稲荷から北へ歩いて約20分。電車なら京阪で伏見稲荷駅から2駅の東福寺駅で降りて、歩いて約10分です。\n\nおすすめ訪問時間：12:20〜13:15",
+    "en": "Tofuku-ji Temple\n\nA large Zen temple. From the Tsutenkyo bridge across the ravine in its grounds you look down on a valley of maples: all red in autumn, all green in early summer.\n\nThe bridge (with Kaisando hall) and the Hojo garden have separate tickets. It gets very crowded at the autumn peak (mid-November to early December).\n\nSouth of the main grounds is the sub-temple Komyo-in. Its hours and fee could not be confirmed on its official site (komyoin.jp), so check on the spot if you want to go in (unconfirmed).\n\nAbout 20 minutes’ walk north of Fushimi Inari. By train, it’s two stops on the Keihan line from Fushimi-Inari to Tofukuji, then about 10 minutes on foot.\n\nRecommended visit time: 12:20–13:15"
+   },
+   "photos": [
+    "tofukuji-1.jpg",
+    "tofukuji-3.jpg",
+    "tofukuji-4.jpg",
+    "tofukuji-6.jpg",
+    "tofukuji-7.jpg",
+    "tofukuji-8.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "sennyuji",
+   "name": {
+    "ja": "泉涌寺と雲龍院",
+    "en": "Sennyu-ji and Unryu-in"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "皇室とゆかりの深い「御寺（みてら）」。奥の雲龍院では、丸い窓から庭を眺めます。雲龍院は水曜休み（11月を除く）。",
+    "en": "The “Mitera”, a temple tied to the imperial family. At Unryu-in, further in, you view the garden through a round window. Unryu-in is closed on Wednesdays (except in November)."
+   },
+   "lat": 34.9781,
+   "lng": 135.7801,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "泉涌寺",
+      "en": "Sennyu-ji"
+     },
+     "lat": 34.9781,
+     "lng": 135.7801,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B3%89%E6%B6%8C%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "雲龍院",
+      "en": "Unryu-in"
+     },
+     "lat": 34.97727,
+     "lng": 135.7804,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B3%89%E6%B6%8C%E5%AF%BA%20%E9%9B%B2%E9%BE%8D%E9%99%A2"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "御寺 泉涌寺（拝観のご案内）",
+      "en": "Sennyu-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.mitera.org/guide/",
+      "en": "https://www.mitera.org/guide/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "泉涌寺別院 雲龍院（参拝ご案内）",
+      "en": "Unryu-in (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.unryuin.jp/worship",
+      "en": "https://www.unryuin.jp/worship"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "泉涌寺 3〜11月 9:00〜16:30（17:00閉門）、12〜2月 9:00〜16:00（16:30閉門）",
+       "en": "Sennyu-ji: Mar–Nov 9:00–16:30 (gates close 17:00); Dec–Feb 9:00–16:00 (close 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "泉涌寺 伽藍拝観 大人500円・小中学生300円",
+       "en": "Sennyu-ji: ¥500 adults, ¥300 elementary/junior high"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "雲龍院 9:00〜17:00（受付16:30まで）",
+       "en": "Unryu-in: 9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "雲龍院は水曜休み（11月を除く）。行事で休む日もあり、公式サイトのお知らせに出ます",
+       "en": "Unryu-in: closed Wednesdays (except November), plus some event days announced on its website"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "雲龍院 400円（泉涌寺とは別）",
+       "en": "Unryu-in: ¥400 (separate from Sennyu-ji)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "御寺 泉涌寺 公式サイト（拝観のご案内）、雲龍院 公式サイト（参拝ご案内）"
+   },
+   "caution": {
+    "ja": "雲龍院は水曜休み（11月を除く）",
+    "en": "Unryu-in closed Wednesdays (except November)"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.mitera.org/guide/",
+     "head": {
+      "ja": "建物の中は撮影できません",
+      "en": "No photos inside the buildings"
+     },
+     "text": {
+      "ja": "泉涌寺の建物の中は、写真・ビデオとも撮影禁止です（公式サイト）。雲龍院は水曜が休みです（11月を除く）。",
+      "en": "Photos and video are not allowed inside Sennyu-ji’s buildings (official site). Unryu-in is closed on Wednesdays (except in November)."
+     }
+    }
+   ],
+   "text": {
+    "ja": "泉涌寺（せんにゅうじ）と雲龍院（うんりゅういん）\n\n歴代の天皇のお墓がある、皇室の菩提寺です。大門をくぐると、仏殿へ向かって参道が下っていきます。木に囲まれた境内は、東山の中では人が少なく、静かです。\n\n奥にある別院の雲龍院では、「悟りの窓」と呼ばれる丸い窓や、障子の四角い窓ごしに庭を眺められます。拝観料は泉涌寺とは別です。\n\n参道の途中から少し入ると、朱色の橋の先に今熊野観音寺（いまくまのかんのんじ）もあります。\n\n東福寺から歩いて約15分。最後は泉涌寺道の坂を上ります。\n\nおすすめ訪問時間：13:30〜14:25",
+    "en": "Sennyu-ji and Unryu-in\n\nThe family temple of the imperial household, where generations of emperors are buried. From the main gate the approach slopes down to the Buddha hall. The wooded grounds are quiet, with far fewer people than the rest of Higashiyama.\n\nAt the sub-temple Unryu-in, further in, you look at the garden through the round “Window of Enlightenment” and square paper-screen windows. It has its own admission.\n\nJust off the approach, across a vermilion bridge, is Imakumano Kannon-ji.\n\nAbout 15 minutes on foot from Tofuku-ji, ending with the climb up Sennyuji-michi.\n\nRecommended visit time: 13:30–14:25"
+   },
+   "photos": [
+    "sennyuji-1.jpg",
+    "sennyuji-2.jpg",
+    "sennyuji-3.jpg",
+    "sennyuji-4.jpg",
+    "sennyuji-5.jpg",
+    "sennyuji-6.jpg",
+    "sennyuji-7.jpg",
+    "sennyuji-8.jpg",
+    "sennyuji-9.jpg"
+   ]
+  },
+  {
+   "no": 5,
+   "id": "sanjusangendo",
+   "name": {
+    "ja": "三十三間堂",
+    "en": "Sanjusangen-do"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "長さ約120mのお堂に、1,001体の千手観音が並びます。堂内は撮影できません。",
+    "en": "A hall about 120 m long holding 1,001 statues of the thousand-armed Kannon. No photos inside."
+   },
+   "lat": 34.98817,
+   "lng": 135.77178,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三十三間堂",
+      "en": "Sanjusangen-do"
+     },
+     "lat": 34.98817,
+     "lng": 135.77178,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%8D%81%E4%B8%89%E9%96%93%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三十三間堂 公式サイト（拝観）",
+      "en": "Sanjusangen-do (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.sanjusangendo.jp/visit/",
+      "en": "https://www.sanjusangendo.jp/visit/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "4月1日〜11月15日 8:30〜17:00、11月16日〜3月31日 9:00〜16:00（受付は30分前まで）。年中無休",
+       "en": "1 Apr – 15 Nov 8:30–17:00; 16 Nov – 31 Mar 9:00–16:00 (last entry 30 min before). Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "一般600円、中高生400円、小学生300円",
+       "en": "¥600 adults, ¥400 junior/senior high, ¥300 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京阪 七条駅から歩いて約7分。市バス「博物館三十三間堂前」すぐ",
+       "en": "7 min on foot from Keihan Shichijo Station. City bus stop “Hakubutsukan-Sanjusangendo-mae” is right outside"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-21",
+    "source": "三十三間堂 公式サイト（拝観）。2026-11-21に確認（11-22は公式サイトが開けず、確かめ直していない）"
+   },
+   "caution": {
+    "ja": "堂内は撮影禁止",
+    "en": "No photos inside"
+   },
+   "notices": [
+    {
+     "from": "2026-11-16",
+     "to": "2027-03-31",
+     "url": null,
+     "head": {
+      "ja": "冬は受付が15:30まで",
+      "en": "In winter, last entry is 15:30"
+     },
+     "text": {
+      "ja": "11月16日〜3月31日は16:00に閉まり、受付は15:30までです。このコースでは14:50に着くので、泉涌寺を14:25までに出てください。",
+      "en": "From 16 November to 31 March it closes at 16:00, with last entry at 15:30. This course arrives at 14:50, so leave Sennyu-ji by 14:25."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.sanjusangendo.jp/visit/",
+     "head": {
+      "ja": "堂内は撮影できません",
+      "en": "No photos inside the hall"
+     },
+     "text": {
+      "ja": "11月16日〜3月31日は受付が15:30までと早く閉まります。",
+      "en": "From 16 November to 31 March last entry is as early as 15:30."
+     }
+    }
+   ],
+   "text": {
+    "ja": "三十三間堂（さんじゅうさんげんどう）\n\n正式な名前は蓮華王院（れんげおういん）。南北に約120mある本堂（国宝）の中に、千手観音の立像が1,001体、段になって並んでいます。柱と柱の間が33あるので「三十三間堂」。観音像の前には風神・雷神と二十八部衆の像も立ち、すべて国宝です（公式サイトより）。\n\n靴を脱いで上がるので、脱ぎやすい靴が楽です。\n\n泉涌寺から坂を下り、東大路通を北へ、七条通を西へ歩いて約25分。疲れていたら、東福寺駅まで戻って京阪で1駅の七条駅へ（駅から歩いて約7分）。\n\nおすすめ訪問時間：14:50〜15:30",
+    "en": "Sanjusangen-do\n\nOfficially Rengeo-in. Inside the main hall, a National Treasure about 120 m long from north to south, 1,001 standing statues of the thousand-armed Kannon are lined up in tiers. The name means “hall of 33 bays”, the spaces between its pillars. Statues of the Wind and Thunder Gods and 28 guardian deities stand in front, all National Treasures (from the official website).\n\nYou take your shoes off, so wear ones that slip on and off.\n\nAbout 25 minutes on foot from Sennyu-ji: down the slope, north along Higashioji-dori, then west on Shichijo-dori. If you’re tired, go back to Tofukuji Station and ride the Keihan one stop to Shichijo (about 7 minutes’ walk from there).\n\nRecommended visit time: 14:50–15:30"
+   },
+   "photos": [
+    {
+     "file": "sanjusangendo-1.jpg",
+     "credit": {
+      "author": "TKdows 2026",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AJP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E4%B8%83%E6%A2%9D%E9%80%9A_Shichijo_Dori_Street_tourism_%E4%B8%89%E5%8D%81%E4%B8%89%E9%96%93%E5%A0%82_Sanj%C5%ABsangen-d%C5%8D_Temples_June_2026_N13P_07.jpg"
+     }
+    },
+    {
+     "file": "sanjusangendo-2.jpg",
+     "credit": {
+      "author": "TKdows 2026",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AJP_%E6%97%A5%E6%9C%AC_Japan_%E4%BA%AC%E9%83%BD_Kyoto_%E4%B8%83%E6%A2%9D%E9%80%9A_Shichijo_Dori_Street_tourism_%E4%B8%89%E5%8D%81%E4%B8%89%E9%96%93%E5%A0%82_Sanj%C5%ABsangen-d%C5%8D_Temples_June_2026_N13P_40.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "umeyu",
+   "name": {
+    "ja": "サウナの梅湯",
+    "en": "Sauna no Umeyu (public bath)"
+   },
+   "kind": {
+    "ja": "銭湯",
+    "en": "Public bath"
+   },
+   "blurb": {
+    "ja": "高瀬川のほとりの銭湯。朝6:00から深夜2:00まで、木曜休み。大人550円、支払いは現金かPayPay。",
+    "en": "A neighbourhood bathhouse beside the Takase River. Open 6:00 to 2:00 at night, closed Thursdays. ¥550, cash or PayPay."
+   },
+   "lat": 34.99295,
+   "lng": 135.76566,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "サウナの梅湯",
+      "en": "Sauna no Umeyu"
+     },
+     "lat": 34.99295,
+     "lng": 135.76566,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%82%A6%E3%83%8A%E3%81%AE%E6%A2%85%E6%B9%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "サウナの梅湯（ゆとなみ社）",
+      "en": "Sauna no Umeyu (operator’s site, Japanese)"
+     },
+     "url": {
+      "ja": "https://yutonamisha.com/sento/umeyu/",
+      "en": "https://yutonamisha.com/sento/umeyu/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "6:00〜26:00（深夜2:00）",
+       "en": "6:00–26:00 (2:00 at night)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "木曜",
+       "en": "Thursdays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人550円、中学生400円、小学生200円。貸しタオル：フェイスタオル100円、バスタオルとのセット350円",
+       "en": "¥550 adults, ¥400 junior high, ¥200 elementary. Towel rental: face towel ¥100, set with bath towel ¥350"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "支払いは現金かPayPay",
+       "en": "Pay in cash or with PayPay"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "入れ墨・タトゥーの扱い、サウナの追加料金、最終受付は公式サイトに記載がありません（要確認）",
+       "en": "Tattoo policy, any extra sauna charge and last entry are not stated on the official site (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京阪 清水五条駅から歩いて約10分、JR京都駅から約15分",
+       "en": "About 10 min on foot from Keihan Kiyomizu-Gojo Station, about 15 from JR Kyoto Station"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": null,
+    "checked": "2026-11-22",
+    "verified": false,
+    "source": "ゆとなみ社 公式サイトの梅湯のページ（営業時間・定休日・料金・支払い・貸しタオル・アクセス）。オーナーが撮った店頭の案内（2025-09-17）も「6:00〜26:00 定休日 木曜日」。タトゥー・サウナ料金・最終受付は記載なしで未確認。位置は OpenStreetMap"
+   },
+   "caution": {
+    "ja": "木曜休み。現金かPayPay",
+    "en": "Closed Thursdays. Cash or PayPay"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://yutonamisha.com/sento/umeyu/",
+     "head": {
+      "ja": "木曜は休み。支払いは現金かPayPay",
+      "en": "Closed Thursdays. Cash or PayPay only"
+     },
+     "text": {
+      "ja": "クレジットカードは公式サイトの支払い方法に載っていません。タオルは借りられるので、手ぶらで入れます。",
+      "en": "Credit cards are not among the payment methods on the official site. Towels can be rented, so you can come empty-handed."
+     }
+    }
+   ],
+   "text": {
+    "ja": "サウナの梅湯（うめゆ）\n\n高瀬川のほとりに建つ銭湯です。夜は「サウナの梅湯」の赤と緑のネオンがつきます。歩いたあとの汗を流して、ひと休みするのにちょうどいい場所です。\n\nシャンプーとボディソープ、ドライヤーは備え付け。タオルは借りられます（フェイスタオル100円、バスタオルとのセット350円）。浴室にドライサウナがあります。\n\n入れ墨・タトゥーの扱いは、公式サイトに書かれていません（要確認）。心配な人は、受付で聞いてから入ってください。\n\n三十三間堂から七条通を西へ、鴨川を渡って高瀬川に出たら、川に沿って北へ。歩いて約15分です。\n\nおすすめ訪問時間：15:50〜17:00",
+    "en": "Sauna no Umeyu\n\nA public bathhouse on the bank of the Takase River. At night its red and green “Sauna no Umeyu” neon sign is lit. It’s a good place to wash off the day’s walking and rest.\n\nShampoo, body soap and hair dryers are provided. Towels can be rented (face towel ¥100, set with bath towel ¥350). There is a dry sauna in the bathing area.\n\nThe official website says nothing about tattoos (unconfirmed). If you’re unsure, ask at the front desk before you go in.\n\nFrom Sanjusangen-do walk west on Shichijo-dori, cross the Kamo River to the Takase River, then follow it north: about 15 minutes.\n\nRecommended visit time: 15:50–17:00"
+   },
+   "photos": [
+    "umeyu-1.jpg",
+    "umeyu-2.jpg",
+    "umeyu-3.jpg",
+    "umeyu-4.jpg",
+    "umeyu-5.jpg",
+    "umeyu-6.jpg"
+   ]
+  },
+  {
+   "no": 7,
+   "id": "beerlab",
+   "name": {
+    "ja": "Kyoto Beer Lab 本店",
+    "en": "Kyoto Beer Lab (main pub)"
+   },
+   "kind": {
+    "ja": "クラフトビール",
+    "en": "Craft beer"
+   },
+   "blurb": {
+    "ja": "高瀬川ぞいの小さなブリューパブ。13:00から23:00まで。梅湯から歩いてすぐです。",
+    "en": "A small brewpub on the Takase River, open 13:00–23:00, a short walk from Umeyu."
+   },
+   "lat": 34.99067,
+   "lng": 135.76558,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "Kyoto Beer Lab 本店",
+      "en": "Kyoto Beer Lab"
+     },
+     "lat": 34.99067,
+     "lng": 135.76558,
+     "url": "https://www.google.com/maps/search/?api=1&query=Kyoto%20Beer%20Lab%20%E4%BA%AC%E9%83%BD%E5%B8%82%E4%B8%8B%E4%BA%AC%E5%8C%BA%E5%8D%81%E7%A6%85%E5%B8%AB%E7%94%BA201-3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "Kyoto Beer Lab 公式サイト",
+      "en": "Kyoto Beer Lab (official)"
+     },
+     "url": {
+      "ja": "https://kyotobeerlab.jp/",
+      "en": "https://kyotobeerlab.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "13:00〜23:00",
+       "en": "13:00–23:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "定休日は公式サイトに記載がありません（要確認）",
+       "en": "Closing days are not stated on the official site (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "値段と支払い方法は公式サイトで確かめられませんでした（要確認）",
+       "en": "Prices and payment methods could not be confirmed on the official site (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "verified": false,
+    "source": "Kyoto Beer Lab 公式サイト（本店の住所：下京区十禅師町201-3、営業時間 13:00〜23:00、予約）。定休日・値段・支払い方法は記載が見つからず未確認。位置はオーナーの写真の位置情報。三条まで歩く時間は地図で測った目安"
+   },
+   "text": {
+    "ja": "Kyoto Beer Lab（京都ビアラボ）本店\n\n2018年に高瀬川のほとりで始まったブリューパブで、店の中でビールを造っています。本店でしか飲めないビールもあります（公式サイトより）。店内のモニターに、その日つながっているビールの一覧が出ます。\n\n席の予約は公式サイトからできます。定休日と支払い方法は、公式サイトでは確かめられませんでした（要確認）。\n\n飲んだあとは、高瀬川に沿って北へ。五条通を渡ると木屋町通に入り、四条を過ぎて三条まで、川ぞいにお店が続きます。鴨川へ出て、河原を歩いて戻ることもできます。三条まで歩いて35〜40分です。\n\n梅湯から高瀬川に沿って南へ、歩いて約5分。\n\n18:30に出て北へ歩くと、三条に19時すぎ。途中の木屋町や先斗町（ぽんとちょう）で晩ごはんにすれば、21時ごろまで過ごせます。\n\nおすすめ訪問時間：17:10〜18:30",
+    "en": "Kyoto Beer Lab (main pub)\n\nA brewpub that opened beside the Takase River in 2018 and brews on the premises; some beers are only poured here (from the official website). A screen inside lists what’s on tap that day.\n\nYou can reserve a seat on the official website. Closing days and payment methods could not be confirmed there (unconfirmed).\n\nAfterwards, follow the Takase River north. Across Gojo-dori you’re on Kiyamachi-dori, lined with places to eat and drink past Shijo all the way to Sanjo. Or cut across to the Kamo River and walk back along the bank. It’s 35–40 minutes on foot to Sanjo.\n\nAbout 5 minutes’ walk south along the Takase River from Umeyu.\n\nLeave at 18:30 and walk north to reach Sanjo soon after 19:00. Stop for dinner in Kiyamachi or Pontocho on the way and the evening runs to about 21:00.\n\nRecommended visit time: 17:10–18:30"
+   },
+   "photos": [
+    "beerlab-1.jpg",
+    "beerlab-2.jpg",
+    "beerlab-3.jpg",
+    "beerlab-4.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}
