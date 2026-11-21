@@ -522,8 +522,8 @@
     "06-7.jpg"
    ],
    "text": {
-    "ja": "箕面大滝（みのおおおたき）\n\n帰りは「滝道（たきみち）」を歩いて下りましょう。川ぞいの道を約40分（約2.8km）歩くと、阪急箕面駅に着きます。途中にはお寺やカフェ、もみじの天ぷらのお店が並んでいて、ずっと下り坂なので楽に歩けます。\n\n温泉に入らないコースでは、滝でゆっくりできます。15:00ごろに滝を出て、滝道を1時間10分ほどかけて下りましょう（歩くだけなら約40分）。16:10ごろに箕面駅に着けば大丈夫です。下のほうまで来たら、瀧安寺（りゅうあんじ）にお参りしたり、滝道のお店でもみじの天ぷらを買ったり。滝道ぞいには箕面公園昆虫館もあります（10:00〜17:00、受付は16:30まで、火曜休み、高校生以上280円）。\n\nお昼がまだの人へ：滝道ぞいには、うどんや喫茶など、食事のできるお店が何軒もあります（箕面市観光協会の「グルメ」の一覧にのっています）。ただ、午後の何時まで開いているかはお店ごとに違い、確認できていません（要確認）。川のテラスのチンクエピュウはラストオーダーが14:30なので、このコースでは間に合いません。\n\nおすすめ訪問時間：14:15〜15:00",
-    "en": "Minoh Falls\n\nOn the way back, walk down the Takimichi, the riverside path. It takes about 40 minutes (about 2.8 km) to Hankyu Minoh Station, past temples, cafés and momiji-tempura shops, and it’s downhill all the way.\n\nOn the no-onsen course you can take your time at the falls. Leave at about 15:00 and give yourself around 1 hour 10 minutes for the Takimichi (the walk alone is about 40 minutes); you just need to reach Minoh Station by about 16:10. Near the bottom you can visit Ryuanji Temple, or buy momiji tempura at one of the shops on the path. The Minoh Park Insect Museum is on the Takimichi too (10:00–17:00, last entry 16:30, closed Tuesdays, ¥280 for high-school age and up).\n\nStill need lunch? There are several places to eat along the Takimichi, such as udon shops and cafés (see the Minoh Tourism Association’s “Gourmet” list). How late each one stays open in the afternoon differs, and I could not confirm it (please check). The river terrace, Cinque Piu, takes last orders at 14:30, so it is out of reach on this course.\n\nRecommended visit time: 14:15–15:00"
+    "ja": "箕面大滝（みのおおおたき）\n\n帰りは「滝道（たきみち）」を歩いて下りましょう。川ぞいの道を約40分（約2.8km）歩くと、阪急箕面駅に着きます。途中にはお寺やカフェ、もみじの天ぷらのお店が並んでいて、ずっと下り坂なので楽に歩けます。\n\n温泉に入らないコースでは、滝でゆっくりできます。15:00ごろに滝を出て、滝道を1時間10分ほどかけて下りましょう（歩くだけなら約40分）。16:10ごろに箕面駅に着けば大丈夫です。下のほうまで来たら、瀧安寺（りゅうあんじ）にお参りしたり、滝道のお店でもみじの天ぷらを買ったり。滝道ぞいの箕面公園昆虫館もおすすめです。中の「放蝶園（ほうちょうえん）」では、一年中たくさんのチョウが飛んでいます（10:00〜17:00、受付は16:30まで、火曜休み、高校生以上280円）。\n\nお昼がまだの人へ：滝道ぞいには、うどんや喫茶など、食事のできるお店が何軒もあります（箕面市観光協会の「グルメ」の一覧にのっています）。ただ、午後の何時まで開いているかはお店ごとに違い、確認できていません（要確認）。川のテラスのチンクエピュウはラストオーダーが14:30なので、このコースでは間に合いません。\n\nおすすめ訪問時間：14:15〜15:00",
+    "en": "Minoh Falls\n\nOn the way back, walk down the Takimichi, the riverside path. It takes about 40 minutes (about 2.8 km) to Hankyu Minoh Station, past temples, cafés and momiji-tempura shops, and it’s downhill all the way.\n\nOn the no-onsen course you can take your time at the falls. Leave at about 15:00 and give yourself around 1 hour 10 minutes for the Takimichi (the walk alone is about 40 minutes); you just need to reach Minoh Station by about 16:10. Near the bottom you can visit Ryuanji Temple, or buy momiji tempura at one of the shops on the path. The Minoh Park Insect Museum on the Takimichi is worth a stop too: its butterfly garden has butterflies flying around you all year (10:00–17:00, last entry 16:30, closed Tuesdays, ¥280 for high-school age and up).\n\nStill need lunch? There are several places to eat along the Takimichi, such as udon shops and cafés (see the Minoh Tourism Association’s “Gourmet” list). How late each one stays open in the afternoon differs, and I could not confirm it (please check). The river terrace, Cinque Piu, takes last orders at 14:30, so it is out of reach on this course.\n\nRecommended visit time: 14:15–15:00"
    },
    "gmaps": [
     {
@@ -905,9 +905,9 @@
    "checked": "2026-11-21"
   },
   {
-   "what": "箕面公園昆虫館：10:00〜17:00（最終受付16:30）・火曜休館・高校生以上280円",
+   "what": "箕面公園昆虫館：10:00〜17:00（最終受付16:30）・火曜休館・高校生以上280円。放蝶園は一年中チョウが飛んでいる（公式サイトの「放蝶園」のページ）",
    "url": "https://www.mino-konchu.jp/c8060.html",
-   "checked": "2026-11-21"
+   "checked": "2026-11-22"
   },
   {
    "what": "カバーシールの大きさ（6.5cm×10.5cm）は大江戸温泉物語グループの他施設のFAQの検索結果から。箕面温泉スパーガーデンのページには大きさ・値段の記載なし（要確認）",
