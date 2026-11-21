@@ -1,6 +1,6 @@
 /* 大阪 箕面 — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/minoh.json（写真は ../images/minoh/）. Texts: js/i18n.js
-   eizan-line/js/app.js の複製。データのパス、保存キー、「お得なきっぷ」欄を省略できるようにした点だけが違う
+   Data: ../data/routes/minoh.json と minoh-late.json（出発時間で読み分ける。写真は ../images/minoh/）. Texts: js/i18n.js
+   eizan-line/js/app.js の複製。違いは scripts/sync_minoh.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_minoh.py で写し直す） */
 (function () {
   'use strict';
@@ -31,6 +31,23 @@
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
   var KEY_MODE = 'kyoto-maps-minoh-mode', KEY_PICKS = 'kyoto-maps-minoh-picks';
   var mode = 'all', picks = {}, routeLine = null;
+  // 箕面: 出発時間（early / late）と、箕面温泉に入るか（yes / no）を別々に選べる。組み合わせごとにデータファイルが別。
+  // 一覧の上の切り替えボタン（all / pick）を出発時間に使い、その下に温泉のボタン（data-onsen）の段がある
+  var KEY_COURSE = 'kyoto-maps-minoh-course', KEY_ONSEN = 'kyoto-maps-minoh-onsen';
+  function chosen(name, key, opts) {
+    var q = (location.search.match(new RegExp('[?&]' + name + '=([a-z]+)')) || [])[1] || load(key);
+    return opts.indexOf(q) >= 0 ? q : opts[0];
+  }
+  var course = { start: chosen('course', KEY_COURSE, ['early', 'late']), onsen: chosen('onsen', KEY_ONSEN, ['yes', 'no']) };
+  course.id = course.start + (course.onsen === 'no' ? '-noonsen' : '');
+  course.file = 'minoh' + (course.start === 'late' ? '-late' : '') + (course.onsen === 'no' ? '-noonsen' : '') + '.json';
+  // 「行った」印はコースごとに別（早めに出発・温泉に入る は、これまでのキーのまま）
+  if (course.id !== 'early') KEY_VISITED += '-' + course.id;
+  // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
+  Object.keys(I18N).forEach(function (l) {
+    var o = I18N[l].introFor && I18N[l].introFor[course.id];
+    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+  });
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -187,11 +204,12 @@
   function renderProgress() {
     var r = routeSpots();
     var n = r.filter(function (s) { return visited[s.no]; }).length, t = r.length || spots.length;
+    // 箕面: 切り替えボタンは「出発時間」（all = 早めに出発、pick = ゆっくり出発）と「温泉に入る／入らない」
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+      var on = b.dataset.onsen ? b.dataset.onsen === course.onsen : b.dataset.mode === (course.start === 'late' ? 'pick' : 'all');
+      b.setAttribute('aria-pressed', String(on));
     });
-    // 「選んで回る」の設定（data.plan）がないマップでは、切り替えボタンごと出さない
-    document.querySelector('.modesw').hidden = !(data && data.plan);
+    [].forEach.call(document.querySelectorAll('.modesw'), function (el) { el.hidden = false; });
     $('pick-box').hidden = mode !== 'pick';
     $('pick-count').textContent = pickCount() ? fill(T().pickCount, { n: pickCount(), t: r.length }) : T().pickEmpty;
     $('progress-label').textContent = fill(T().progress, { n: n, t: t });
@@ -301,9 +319,16 @@
     $('btn-list').setAttribute('aria-expanded', 'false');
   }
 
+  function listTop() {
+    if (location.hash !== '#list') return;
+    viewList.scrollTop = 0;
+    setTimeout(function () { if (location.hash === '#list') viewList.scrollTop = 0; }, 80);
+  }
+  window.addEventListener('load', listTop);
   function route() {
     showRoute();
     updateTabs();
+    listTop();
   }
 
   // Phones: highlight the tab for what is on screen (the spot details count as part of the list)
@@ -333,7 +358,11 @@
   }
 
   /* ---------- intro ---------- */
-  function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // [スポットの番号 or id, 写真の番号]（箕面はコースで番号が変わるので id で指定する）
+  function introPhoto(p) {
+    var s = typeof p[0] === 'string' ? spots.filter(function (x) { return x.id === p[0]; })[0] : byNo[p[0]];
+    return photoUrl(s.photos[p[1]]);
+  }
   // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
     return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
@@ -480,11 +509,14 @@
     savePlan();
     keepInView(no, updateRoute);
   }
-  function setMode(m) {
-    if (m === mode) return;
-    mode = m;
-    savePlan();
-    updateRoute();
+  // 箕面: 出発時間か温泉を切り替えたら、その組み合わせのデータで読み直す（一覧を開いた状態で）
+  function setMode(m, o) {
+    var start = m ? (m === 'pick' ? 'late' : 'early') : course.start, onsen = o || course.onsen;
+    if (start === course.start && onsen === course.onsen) return;
+    store(KEY_COURSE, start);
+    store(KEY_ONSEN, onsen);
+    history.replaceState(null, '', location.pathname + '#list');
+    location.reload();
   }
 
   // Update one spot in the list in place, so its photos and the scroll position stay where they are
@@ -754,7 +786,7 @@
       savePlan(); updateRoute();
     });
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.addEventListener('click', function () { setMode(b.dataset.mode); });
+      b.addEventListener('click', function () { setMode(b.dataset.mode, b.dataset.onsen); });
     });
     $('btn-pick-all').addEventListener('click', function () {
       data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
@@ -826,7 +858,7 @@
     route();
   }
 
-  fetch('../data/routes/minoh.json?v=7')
+  fetch('../data/routes/' + course.file + '?v=8')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

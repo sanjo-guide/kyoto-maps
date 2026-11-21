@@ -1,0 +1,928 @@
+{
+ "id": "minoh",
+ "_note": "大阪・箕面マップのコース「late-noonsen」のデータ。scripts/build_minoh_courses.py が data/routes/minoh.json から作る。このファイルは直接直さない（直すのは minoh.json かスクリプト）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 3,
+   "day": 1
+  },
+  {
+   "first": 4,
+   "last": 6,
+   "day": 2
+  },
+  {
+   "first": 7,
+   "last": 7,
+   "day": 3
+  },
+  {
+   "first": 8,
+   "last": 10,
+   "day": 4
+  }
+ ],
+ "photoBase": "../images/minoh/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "kayano",
+   "name": {
+    "ja": "箕面萱野駅",
+    "en": "Minoh-Kayano Station"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "このルートのスタート。梅田・なんばから御堂筋線で乗り換えなし。駅の横にフードコートのあるモールも。",
+    "en": "The start. Midosuji Line trains from Umeda and Namba run straight through. There’s a mall with a food court next door."
+   },
+   "lat": 34.832406,
+   "lng": 135.48901,
+   "photos": [
+    "01-1.jpg",
+    "01-2.jpg",
+    "01-3.jpg",
+    "01-4.jpg",
+    "01-5.jpg",
+    "01-6.jpg",
+    "01-7.jpg",
+    "01-8.jpg"
+   ],
+   "text": {
+    "ja": "箕面萱野駅（みのおかやのえき）\n\n2024年に開業した、新しい駅です。御堂筋線の電車がそのまま乗り入れているので、梅田から最速25分、なんばから最速34分で着きます。\n\n駅前のバスターミナルから、勝尾寺へ行くバスが出ています（次の2番）。\n\nゆっくり出発のコースは、山の中でお昼の時間になります。勝尾寺から滝までの山道ぞいで、食事のできるお店は確認できていません。お昼ごはんは、ここで買って持って行きましょう。駅の横のみのおキューズモール STATION棟1階に、ファミリーマートがあります（24時間営業）。\n\nおすすめ到着時間：10:30ごろ",
+    "en": "Minoh-Kayano Station\n\nA new station that opened in 2024. Midosuji Line trains run straight through, so it takes as little as 25 minutes from Umeda or 34 minutes from Namba.\n\nThe bus to Katsuoji leaves from the bus terminal in front of the station (stop 2).\n\nOn the late course, lunchtime comes while you are up in the hills. I could not confirm any place serving meals on the trail between Katsuoji and the falls, so buy lunch here and carry it. There is a FamilyMart on the 1st floor of the STATION building of Minoh Q’s Mall, next to the station (open 24 hours).\n\nRecommended arrival time: about 10:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "箕面萱野駅",
+      "en": "箕面萱野駅"
+     },
+     "lat": 34.832406,
+     "lng": 135.48901,
+     "url": "https://maps.app.goo.gl/7egBxBRCVtcf5j1B6"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "北大阪急行（箕面萱野駅へのアクセス）",
+      "en": "Kita-Osaka Kyuko (access, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kita-kyu.co.jp/enshin/index3.html",
+      "en": "https://www.kita-kyu.co.jp/enshin/index3.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "みのおキューズモール：ファミリーマート（STATION棟1階）",
+      "en": "Minoh Q’s Mall: FamilyMart, STATION 1F (Japanese)"
+     },
+     "url": {
+      "ja": "https://qs-mall.jp/minoh/shop/detail/330128002?tenant_cd=330128002",
+      "en": "https://qs-mall.jp/minoh/shop/detail/330128002?tenant_cd=330128002"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "梅田から480円、なんばから530円（大人・きっぷ）",
+       "en": "From Umeda ¥480, from Namba ¥530 (adult, single ticket)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "bus",
+   "name": {
+    "ja": "箕面萱野駅 バスのりば",
+    "en": "Minoh-Kayano bus terminal"
+   },
+   "kind": {
+    "ja": "バス停",
+    "en": "Bus stop"
+   },
+   "blurb": {
+    "ja": "勝尾寺へは、駅前の8番のりばから直行バスで約22分。",
+    "en": "The direct bus to Katsuoji leaves from stand 8 in front of the station: about 22 minutes."
+   },
+   "lat": 34.831996,
+   "lng": 135.489596,
+   "photos": [
+    "02-1.jpg",
+    "02-2.jpg",
+    "02-3.jpg",
+    "02-4.jpg",
+    "02-5.jpg",
+    "02-6.jpg",
+    "02-7.jpg"
+   ],
+   "text": {
+    "ja": "箕面萱野駅のまわりにはバスのりばがたくさんあります。勝尾寺行きは「8番のりば」から出ます。\n\n時刻表は阪急バスのサイトで見られるので、出かける前にチェックしておくと安心です。勝尾寺へ行くバスは15:00が最終なので、遅くならないように。\n\nゆっくり出発のコースでは、平日は10:30発、土日祝は10:40発のバスに乗ります。梅田を10:00ごろに出ると、10:30ごろに箕面萱野駅に着きます。平日の10:30発に間に合わなければ、次は11:00発です（勝尾寺の時間が30分短くなります）。\n\nこのバスは交通系ICカードだけ、川のテラスのランチ（チンクエピュウ）は現金だけです。ICカードと現金の両方を持って行きましょう。\n\nおすすめ出発時間：平日10:30・土日祝10:40",
+    "en": "There are lots of bus stands around Minoh-Kayano Station. The bus to Katsuoji leaves from stand 8.\n\nThe timetable is on the Hankyu Bus website, so check it before you go. The last bus up to Katsuoji is at 15:00, so don’t leave it too late.\n\nOn the late course you take the 10:30 bus on weekdays or the 10:40 on weekends and holidays. Leave Umeda around 10:00 and you reach Minoh-Kayano at about 10:30. If you miss the 10:30 on a weekday, the next one is 11:00 (you get 30 minutes less at Katsuoji).\n\nThis bus takes IC cards only, and lunch at the river terrace (Cinque Piu) is cash only. Carry both an IC card and cash.\n\nRecommended departure time: 10:30 on weekdays, 10:40 on weekends and holidays"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "箕面萱野駅 8番のりば",
+      "en": "Minoh-Kayano Station, bus stand 8"
+     },
+     "lat": 34.831996,
+     "lng": 135.489596,
+     "url": "https://maps.app.goo.gl/4hPDBH5SBVictYrG8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "阪急バス 時刻表（箕面萱野駅）",
+      "en": "Hankyu Bus timetable (Minoh-Kayano)"
+     },
+     "url": {
+      "ja": "http://www.hankyubus.co.jp/rosen/pole/2021.html",
+      "en": "http://www.hankyubus.co.jp/rosen/pole/2021.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "阪急バス：現金が使えなくなるお知らせ",
+      "en": "Hankyu Bus: cashless notice (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hankyubus.co.jp/news/2026101.html",
+      "en": "https://www.hankyubus.co.jp/news/2026101.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "箕面萱野駅発 9:00〜15:00。平日は30分ごと、土日祝は12:40まで20分ごと・そのあと30分ごと",
+       "en": "From Minoh-Kayano 9:00–15:00: every 30 min on weekdays; on weekends and holidays every 20 min until 12:40, then every 30 min"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人800円・小児400円（片道）。交通系ICカードか阪急バスのhanicaで。現金は使えません",
+       "en": "Adults ¥800, children ¥400 (one way). Pay with an IC card (ICOCA, Suica, etc.) or Hankyu’s hanica. No cash"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ICカードがない人は、8番のりばの係員から専用乗車券を買えます（クレジットカードのみ）。車内でICカードのチャージはできないので、残高も確認しておきましょう。",
+     "en": "No IC card? Buy a special ticket from the bus staff at stand 8 (credit card only). You can’t top up an IC card on the bus, so check your balance first."
+    },
+    "checked": "2026-11-21"
+   },
+   "notices": [
+    {
+     "from": "2026-10-01",
+     "to": "2027-03-31",
+     "url": "https://www.hankyubus.co.jp/news/2026101.html",
+     "text": {
+      "ja": "2026年10月1日から、箕面萱野駅〜勝尾寺のバスは現金で乗れなくなりました。交通系ICカード、hanica、または8番のりばで買える専用乗車券（クレジットカードのみ）で乗ってください。",
+      "en": "From Oct 1, 2026, the Minoh-Kayano – Katsuoji bus no longer takes cash. Use an IC card, hanica, or a special ticket sold at stand 8 (credit card only)."
+     }
+    }
+   ],
+   "caution": {
+    "ja": "現金では乗れません。ICカードの用意を",
+    "en": "No cash on the bus: have an IC card ready"
+   }
+  },
+  {
+   "no": 3,
+   "id": "katsuoji",
+   "name": {
+    "ja": "勝尾寺",
+    "en": "Katsuoji Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "「勝ちダルマ」のお寺。境内のあちこちに小さな赤いダルマがいて、探して歩くだけで楽しい。",
+    "en": "The temple of “victory” daruma. Little red daruma sit all over the grounds, and hunting for them is half the fun."
+   },
+   "lat": 34.864494,
+   "lng": 135.49355,
+   "photos": [
+    "03-1.jpg",
+    "03-2.jpg",
+    "03-3.jpg",
+    "03-4.jpg",
+    "03-5.jpg",
+    "03-6.jpg",
+    "03-7.jpg",
+    "03-8.jpg",
+    "03-9.jpg",
+    "03-10.jpg"
+   ],
+   "text": {
+    "ja": "勝尾寺（かつおうじ）\n\n入口から池にかかる橋をわたり、山門をくぐると、あちこちに小さな赤いダルマ。奉納されたダルマが山のように積まれた棚は、いちばんの撮影スポットです。多宝塔のある丘の上や本堂のまわりも、ゆっくり歩いてみてください。11月は池のまわりの紅葉もきれいです。\n\n勝尾寺から箕面大滝へはバスなどの交通手段がないので、歩いて行くのがおすすめです！ ほとんど下り坂で、歩く時間は合わせて約1時間10分です。途中の箕面ビジターセンターでひと休みし、杉の茶屋まで来れば、滝はもうすぐです。\n\n勝尾寺から箕面ビジターセンターまでは約1.8km、ゆっくり歩いて約40分です。\n\nお昼について：勝尾寺の中で食事ができるかどうかは、公式サイトに案内がなく、確認できていません（要確認）。箕面萱野駅で買ったお昼を、次のビジターセンターの広場で食べるのが確実です。\n\nおすすめ訪問時間：11:00〜12:30",
+    "en": "Katsuoji Temple\n\nCross the bridge over the pond, go through the main gate, and little red daruma start appearing everywhere. The shelves piled high with offered daruma are the best photo spot. Take your time on the hill with the pagoda and around the main hall, too. In November the maples around the pond turn red.\n\nThere’s no bus or other transport from Katsuoji Temple to Minoh Falls, so walk it! The trail is mostly downhill, and the walking takes about 1 hour 10 minutes in all. The Minoh Visitor Center on the way is a good place for a break. Once you reach Sugi no Chaya, a small shop, the waterfall is just a short walk away.\n\nFrom Katsuoji to the Minoh Visitor Center it is about 1.8 km, around 40 minutes at an easy pace.\n\nAbout lunch: the temple’s official website says nothing about a place to eat inside, so I could not confirm one (please check). The safe plan is to eat the lunch you bought at Minoh-Kayano at the Visitor Center, the next stop.\n\nRecommended visit time: 11:00–12:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "勝尾寺",
+      "en": "勝尾寺"
+     },
+     "lat": 34.864494,
+     "lng": 135.49355,
+     "url": "https://maps.app.goo.gl/kksz5skXdxncg2si8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "勝尾寺 公式サイト（参拝時間・アクセス）",
+      "en": "Katsuoji Temple (English guide)"
+     },
+     "url": {
+      "ja": "https://katsuo-ji-temple.or.jp/access/",
+      "en": "https://katsuo-ji-temple.or.jp/audioguidance/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:00〜17:00（土曜は18:00まで）。受付は閉まる30分前まで",
+       "en": "8:00–17:00 (Saturdays until 18:00). Last entry 30 min before closing"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "入山志納料 大人（高校生以上）500円、小・中学生400円、未就学児100円、2歳以下無料",
+       "en": "Admission: adults (high school and up) ¥500, elementary and junior high ¥400, preschoolers ¥100, under 3 free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "混む日は、公式サイトから買える「Web入山券」があると、行列に並ばずに入れます。",
+     "en": "On busy days, a “Web ticket” bought on the official website lets you skip the ticket queue."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": [
+    {
+     "from": "2026-10-20",
+     "to": "2026-11-29",
+     "url": "https://katsuo-ji-temple.or.jp/news/14198/",
+     "text": {
+      "ja": "2026年11月の土日祝は、夜のライトアップ「錦秋の宵詣り」があります（日没〜20:30、受付は20:00まで）。",
+      "en": "On weekends and holidays in November 2026 the temple is lit up at night (sunset–20:30, last entry 20:00)."
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "visitor",
+   "name": {
+    "ja": "箕面ビジターセンター",
+    "en": "Minoh Visitor Center"
+   },
+   "kind": {
+    "ja": "休憩・展示",
+    "en": "Rest stop & exhibits"
+   },
+   "blurb": {
+    "ja": "勝尾寺から滝へ歩く途中の、無料の休憩所。トイレもあるので、ここでひと休み。",
+    "en": "A free rest stop on the walk from Katsuoji to the falls, with toilets and small exhibits."
+   },
+   "lat": 34.857523,
+   "lng": 135.478971,
+   "photos": [
+    "04-2.jpg",
+    "04-1.jpg",
+    "04-4.jpg",
+    "04-5.jpg",
+    "04-6.jpg",
+    "04-7.jpg",
+    "04-8.jpg",
+    "04-9.jpg",
+    "04-10.jpg"
+   ],
+   "text": {
+    "ja": "明治の森箕面国定公園のビジターセンターです。勝尾寺からここまでは、森の中の山道と車道ぞいの道を歩きます。秋は道のまわりの紅葉もきれいです。\n\n建物の中には、箕面の山の立体地図や、箕面に住む野生のサルや、いろいろなもみじの葉の紹介などがあります。ここから滝までは、あと35分ほどです。\n\nここで20分ほど休みましょう。ビジターセンターから杉の茶屋までは約1.5km、ゆっくり歩いて約30分です。杉の茶屋から滝までは約5分。\n\nゆっくり出発のコースでは、ここでお昼にします。ビジターセンターのある政ノ茶屋園地（まさのちゃやえんち）には、お弁当を広げて休める「もみじ広場」があります（箕面市観光協会の案内より）。野生のサルがいるので、食べ物を出しっぱなしにしないで、ゴミは持ち帰ってください。\n\nおすすめ訪問時間：13:10〜13:40",
+    "en": "This is the visitor center of Meiji no Mori Minoo Quasi-National Park. From Katsuoji you walk here along a forest trail and a quiet mountain road. In autumn the leaves along the way are beautiful.\n\nInside there’s a 3D model of the Minoh mountains and displays about the wild monkeys that live here and the many kinds of maple leaf. From here it’s about 35 minutes to the falls.\n\nRest here for about 20 minutes. From the Visitor Center to Sugi no Chaya it is about 1.5 km, around 30 minutes at an easy pace. From Sugi no Chaya to the falls takes about 5 minutes.\n\nOn the late course, this is your lunch stop. The Masa-no-chaya area around the Visitor Center has the “Momiji Hiroba”, a lawn where you can sit down with a packed lunch (per the Minoh Tourism Association). Wild monkeys live here, so don’t leave food out, and take your rubbish with you.\n\nRecommended visit time: 13:10–13:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "箕面ビジターセンター",
+      "en": "Minoh Visitor Center"
+     },
+     "lat": 34.857523,
+     "lng": 135.478971,
+     "url": "https://maps.app.goo.gl/3GeWp5KxjcZEfhzf6"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "大阪府 箕面ビジターセンター",
+      "en": "Osaka Prefecture: Minoh Visitor Center (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.pref.osaka.lg.jp/shisetsu/o120150/shisetsu_000096.html",
+      "en": "https://www.pref.osaka.lg.jp/shisetsu/o120150/shisetsu_000096.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "箕面市観光協会：箕面ビジターセンター（もみじ広場）",
+      "en": "Minoh Tourism Association: Visitor Center and Momiji Hiroba (Japanese)"
+     },
+     "url": {
+      "ja": "https://minohkankou.net/sights/319/",
+      "en": "https://minohkankou.net/sights/319/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10:00〜16:00（4〜11月の土日祝は9:30〜17:00）",
+       "en": "10:00–16:00 (9:30–17:00 on weekends and holidays, April–November)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "火曜日（祝日なら次の平日）、12月29日〜1月4日",
+       "en": "Tuesdays (the next weekday if Tuesday is a holiday), Dec 29 – Jan 4"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "sugi",
+   "name": {
+    "ja": "杉の茶屋",
+    "en": "Sugi no Chaya"
+   },
+   "kind": {
+    "ja": "おみやげ・おやつ",
+    "en": "Snacks & souvenirs"
+   },
+   "blurb": {
+    "ja": "滝のすぐ上の小さなお店。箕面名物「もみじの天ぷら」と、おサルの顔のせんべい。",
+    "en": "A small shop just above the falls selling Minoh’s momiji tempura (fried maple leaves) and monkey-face crackers."
+   },
+   "lat": 34.853957,
+   "lng": 135.472917,
+   "photos": [
+    "05-2.jpg",
+    "05-3.jpg",
+    "05-1.jpg"
+   ],
+   "text": {
+    "ja": "杉の茶屋（すぎのちゃや）\n\nもみじの天ぷらは、もみじの葉に衣をつけて揚げた、サクサクの甘いお菓子です。歩きながらではなく、滝の前などで座って食べてくださいね。このあたりには野生のサルがいます。食べ物や食べ物の袋を見せない、エサをあげない、近づかない、が箕面市のお願いです。\n\nお店はお休みの日もあります。もみじの天ぷらは、滝道（たきみち）ぞいのお店でも買えます。\n\nここからはトンネルを抜けて階段を下り、少し歩けば滝です。\n\nおすすめ訪問時間：14:10",
+    "en": "Sugi no Chaya\n\nMomiji tempura is a sweet, crunchy snack made by frying maple leaves in batter. Sit down by the falls to eat it rather than eating while you walk. Wild monkeys live around here: Minoh City asks you not to show food or food bags, not to feed them, and not to go near them.\n\nThe shop is sometimes closed. You can also buy momiji tempura at shops along the Takimichi path.\n\nFrom here, go through the tunnel and down the steps, and the falls are a short walk away.\n\nRecommended visit time: 14:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "杉の茶屋",
+      "en": "杉の茶屋"
+     },
+     "lat": 34.853957,
+     "lng": 135.472917,
+     "url": "https://maps.app.goo.gl/5nt2sjaQYRNJ86Fa7"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "箕面市観光協会：杉の茶屋",
+      "en": "Minoh Tourism Association: Sugi no Chaya (Japanese)"
+     },
+     "url": {
+      "ja": "https://minohkankou.net/sights/1493/",
+      "en": "https://minohkankou.net/sights/1493/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "箕面市：サルに出会ったら",
+      "en": "Minoh City: about the monkeys (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.minoh.lg.jp/faq/kurashi/pet/saru_esa.html",
+      "en": "https://www.city.minoh.lg.jp/faq/kurashi/pet/saru_esa.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": {
+     "ja": "営業時間は要確認です。休みは不定期（箕面市観光協会の案内より）。",
+     "en": "Opening hours not confirmed; closes on irregular days (per the Minoh Tourism Association)."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 6,
+   "id": "falls",
+   "name": {
+    "ja": "箕面大滝",
+    "en": "Minoh Falls"
+   },
+   "kind": {
+    "ja": "滝",
+    "en": "Waterfall"
+   },
+   "blurb": {
+    "ja": "森の中に落ちる、箕面のシンボルの滝。夏は青もみじ、秋は紅葉。滝の前にベンチがあります。",
+    "en": "Minoh’s waterfall, deep in the forest: green maples in summer, red in autumn. There are benches right in front."
+   },
+   "lat": 34.853594,
+   "lng": 135.471998,
+   "photos": [
+    "06-1.jpg",
+    "06-2.jpg",
+    "06-3.jpg",
+    "06-4.jpg",
+    "06-5.jpg",
+    "06-6.jpg",
+    "06-7.jpg"
+   ],
+   "text": {
+    "ja": "箕面大滝（みのおおおたき）\n\n帰りは「滝道（たきみち）」を歩いて下りましょう。川ぞいの道を約40分（約2.8km）歩くと、阪急箕面駅に着きます。途中にはお寺やカフェ、もみじの天ぷらのお店が並んでいて、ずっと下り坂なので楽に歩けます。\n\n温泉に入らないコースでは、滝でゆっくりできます。15:00ごろに滝を出て、滝道を1時間10分ほどかけて下りましょう（歩くだけなら約40分）。16:10ごろに箕面駅に着けば大丈夫です。下のほうまで来たら、瀧安寺（りゅうあんじ）にお参りしたり、滝道のお店でもみじの天ぷらを買ったり。滝道ぞいには箕面公園昆虫館もあります（10:00〜17:00、受付は16:30まで、火曜休み、高校生以上280円）。\n\nお昼がまだの人へ：滝道ぞいには、うどんや喫茶など、食事のできるお店が何軒もあります（箕面市観光協会の「グルメ」の一覧にのっています）。ただ、午後の何時まで開いているかはお店ごとに違い、確認できていません（要確認）。川のテラスのチンクエピュウはラストオーダーが14:30なので、このコースでは間に合いません。\n\nおすすめ訪問時間：14:15〜15:00",
+    "en": "Minoh Falls\n\nOn the way back, walk down the Takimichi, the riverside path. It takes about 40 minutes (about 2.8 km) to Hankyu Minoh Station, past temples, cafés and momiji-tempura shops, and it’s downhill all the way.\n\nOn the no-onsen course you can take your time at the falls. Leave at about 15:00 and give yourself around 1 hour 10 minutes for the Takimichi (the walk alone is about 40 minutes); you just need to reach Minoh Station by about 16:10. Near the bottom you can visit Ryuanji Temple, or buy momiji tempura at one of the shops on the path. The Minoh Park Insect Museum is on the Takimichi too (10:00–17:00, last entry 16:30, closed Tuesdays, ¥280 for high-school age and up).\n\nStill need lunch? There are several places to eat along the Takimichi, such as udon shops and cafés (see the Minoh Tourism Association’s “Gourmet” list). How late each one stays open in the afternoon differs, and I could not confirm it (please check). The river terrace, Cinque Piu, takes last orders at 14:30, so it is out of reach on this course.\n\nRecommended visit time: 14:15–15:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "箕面大滝",
+      "en": "箕面大滝"
+     },
+     "lat": 34.853594,
+     "lng": 135.471998,
+     "url": "https://maps.app.goo.gl/fqfGw9WYkNXKCakg6"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "箕面市観光協会",
+      "en": "Osaka tourism: Meiji no Mori Minoo Park"
+     },
+     "url": {
+      "ja": "https://minohkankou.net/",
+      "en": "https://osaka-info.jp/en/spot/meiji-no-mori-mino-park/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "箕面市観光協会：グルメ（滝道のお店の一覧）",
+      "en": "Minoh Tourism Association: places to eat (Japanese)"
+     },
+     "url": {
+      "ja": "https://minohkankou.net/sights/gourmets/",
+      "en": "https://minohkankou.net/sights/gourmets/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": {
+     "ja": "滝の前にトイレがあります。",
+     "en": "There are toilets by the falls."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": [
+    {
+     "from": "2026-11-01",
+     "to": "2026-12-06",
+     "url": "https://www.mino-park.jp/article/1122/",
+     "text": {
+      "ja": "2026年11月14日〜12月6日は「もみじまつり」。毎日、日没〜21:30に箕面大滝と滝道ぞいがライトアップされます。この期間の土日祝は滝道が人の波になるので、箕面公園は平日をすすめています。せまい道なので三脚はひかえて。",
+      "en": "Momiji (maple) festival, Nov 14 – Dec 6, 2026: the falls and the riverside path are lit up every evening from sunset to 21:30. On weekends and holidays in this period the path is packed, and the park recommends coming on a weekday. Please don’t use a tripod on the narrow path."
+     }
+    },
+    {
+     "from": "2026-08-07",
+     "to": "2027-03-31",
+     "url": "https://www.mino-park.jp/article/1278/",
+     "text": {
+      "ja": "2025年11月に、滝のすぐ横のお店が火事で焼けました。滝道は全区間を通れますが、焼け跡の前は仮のフェンスで道が少し狭くなっています。",
+      "en": "A shop right next to the falls burned down in November 2025. The whole riverside path is open again, but it’s a little narrower by the fenced-off site."
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "minoh-st",
+   "name": {
+    "ja": "箕面駅",
+    "en": "Minoh Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "滝道の終わり。阪急箕面線の終点で、駅前に観光案内所があります。",
+    "en": "The end of the Takimichi path and of the Hankyu Minoo Line. There’s a tourist information center by the station."
+   },
+   "lat": 34.835283,
+   "lng": 135.468612,
+   "photos": [
+    "08-1.jpg",
+    "08-2.jpg",
+    "08-3.jpg",
+    "08-4.jpg",
+    "08-5.jpg",
+    "08-6.jpg",
+    "08-7.jpg",
+    "08-8.jpg",
+    "08-9.jpg",
+    "08-10.jpg"
+   ],
+   "text": {
+    "ja": "阪急 箕面駅（みのおえき）\n\n滝道は、緑の中を川にそって続く、気持ちのいい散歩道です。このルートでは滝から下ってきて、ここで滝道は終わりです。\n\nこのあとのたこ焼き屋さん（次の8番）までは、歩いても行けます。そのまま電車で大阪梅田へ帰るなら、石橋阪大前駅で乗り換えて約30分です。\n\nおすすめ訪問時間：16:10",
+    "en": "Hankyu Minoh Station\n\nThe Takimichi is a lovely walk through the green along the river. On this route you come down from the falls, and the path ends here.\n\nYou can walk on to the takoyaki shop (stop 8). If you’d rather head straight back to Osaka-umeda, change trains at Ishibashi Handai-mae; it takes about 30 minutes.\n\nRecommended visit time: 16:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "阪急 箕面駅",
+      "en": "阪急 箕面駅"
+     },
+     "lat": 34.835283,
+     "lng": 135.468612,
+     "url": "https://maps.app.goo.gl/SnASPhFhjhnkz6856"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "箕面市観光協会：アクセス",
+      "en": "Minoh Tourism Association: access (Japanese)"
+     },
+     "url": {
+      "ja": "https://minohkankou.net/access/",
+      "en": "https://minohkankou.net/access/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "箕面→大阪梅田 280円（石橋阪大前で乗り換え）",
+       "en": "Minoh → Osaka-umeda ¥280 (change at Ishibashi Handai-mae)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 8,
+   "id": "ahoya",
+   "name": {
+    "ja": "あほや 牧落店",
+    "en": "Ahoya Makiochi"
+   },
+   "kind": {
+    "ja": "たこ焼き",
+    "en": "Takoyaki"
+   },
+   "blurb": {
+    "ja": "Toshiがいちばん好きなたこ焼き屋さん！ 外はこんがり、中はとろとろ。店の前のベンチで焼きたてを。",
+    "en": "My favorite takoyaki shop! Crisp outside, soft and gooey inside. Eat them hot on the bench out front."
+   },
+   "lat": 34.825754,
+   "lng": 135.467113,
+   "photos": [
+    "09-1.jpg",
+    "09-2.jpg",
+    "09-3.jpg",
+    "09-4.jpg",
+    "09-5.jpg",
+    "09-6.jpg",
+    "09-7.jpg",
+    "09-8.jpg"
+   ],
+   "text": {
+    "ja": "あほや 牧落店（まきおちてん）\n\n大阪名物のたこ焼きをいろいろ食べてきた中で、ここが最高です。\n\nソース、ポン酢、しょうゆ、塩など、味を選べます。焼きたては熱いので気をつけて！\n\nたこ焼きは6個・8個・10個・12個から選べます。「あほや名物」と書いてある平たい「ぺちゃ焼」（写真の4枚目）もあります。\n\nおすすめ訪問時間：16:30",
+    "en": "Ahoya Makiochi\n\nTakoyaki is Osaka’s specialty, and of all the places I’ve tried, this one is the best.\n\nYou can choose your topping: sauce, ponzu, soy sauce, salt and more. They come straight off the grill, so careful, they’re hot!\n\nTakoyaki come in 6, 8, 10 or 12. The flat “pecha-yaki” in the fourth photo is the shop’s own specialty.\n\nRecommended visit time: 16:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "あほや 牧落店",
+      "en": "あほや 牧落店"
+     },
+     "lat": 34.825754,
+     "lng": 135.467113,
+     "url": "https://maps.app.goo.gl/FuWz86rQ3YE8yoEr6"
+    }
+   ],
+   "links": [],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": {
+     "ja": "営業時間は要確認です（公式サイトがありません）。",
+     "en": "Opening hours not confirmed (there’s no official website)."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 9,
+   "id": "beer",
+   "name": {
+    "ja": "箕面ビール WAREHOUSE",
+    "en": "Minoh Beer WAREHOUSE"
+   },
+   "kind": {
+    "ja": "クラフトビール",
+    "en": "Craft beer"
+   },
+   "blurb": {
+    "ja": "箕面ビールの直営店。醸造所から歩いて1分で、できたてが何種類も飲めます。",
+    "en": "Minoh Beer’s own taproom, a minute’s walk from the brewery, with plenty of styles on tap."
+   },
+   "lat": 34.82332,
+   "lng": 135.472751,
+   "photos": [
+    "10-1.jpg",
+    "10-2.jpg",
+    "10-3.jpg",
+    "10-4.jpg",
+    "10-5.jpg",
+    "10-6.jpg",
+    "10-7.jpg",
+    "10-8.jpg",
+    "10-9.jpg",
+    "10-10.jpg"
+   ],
+   "text": {
+    "ja": "箕面ビール WAREHOUSE\n\n箕面はゆずと桃が有名で、収穫の季節には、地元の果物を使ったビールも飲めます。地元の素材を大切にしている醸造所です。\n\n私のいちばんのお気に入りはW-IPA。いちばん有名なのはスタウトで、コーヒーのように香ばしくて深い味わいが最高です。ビールに合う料理もたくさんあります。\n\nグラスはパイント（473ml）とハーフパイント（270ml）。ハーフでいくつか飲み比べるのもおすすめです。\n\n木曜日はお休みです。木曜に行く人は、たこ焼きのあと牧落駅から帰りましょう。日曜は20:00に閉まります（ラストオーダー19:30）。\n\nおすすめ訪問時間：17:00〜",
+    "en": "Minoh Beer WAREHOUSE\n\nMinoh is famous for its yuzu and peaches, and in harvest season you can taste beers brewed with these local fruits. The brewery takes real pride in local produce.\n\nMy personal favorite is the W-IPA, but the most famous one here is the Stout: rich, roasted and almost coffee-like, and my pick if you only have one. There’s plenty of food to go with it.\n\nBeer comes by the pint (473 ml) or half pint (270 ml), so order halves and try a few.\n\nIt is closed on Thursdays: if you come on a Thursday, head home from Makiochi Station after the takoyaki. On Sundays it closes at 20:00 (last order 19:30).\n\nRecommended visit time: 17:00–"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "箕面ビール WAREHOUSE",
+      "en": "Minoh Beer WAREHOUSE"
+     },
+     "lat": 34.82332,
+     "lng": 135.472751,
+     "url": "https://maps.app.goo.gl/bzgaV57AcKqAn9Zb8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "箕面ビール 店舗案内",
+      "en": "Minoh Beer: shops (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.minoh-beer.jp/store/",
+      "en": "https://www.minoh-beer.jp/store/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:00〜21:00（ラストオーダー20:30）、日曜は11:00〜20:00（ラストオーダー19:30）",
+       "en": "11:00–21:00 (last order 20:30); Sundays 11:00–20:00 (last order 19:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "木曜日（祝日の前後は時間が変わることがあります）",
+       "en": "Thursdays (hours may change around public holidays)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 10,
+   "id": "makiochi",
+   "name": {
+    "ja": "牧落駅",
+    "en": "Makiochi Station"
+   },
+   "kind": {
+    "ja": "駅（ゴール）",
+    "en": "Station (finish)"
+   },
+   "blurb": {
+    "ja": "ゴール。あほやと箕面ビールにいちばん近い駅。梅田へは石橋阪大前で乗り換えです。",
+    "en": "The finish, and the nearest station to Ahoya and Minoh Beer. For Umeda, change at Ishibashi Handai-mae."
+   },
+   "lat": 34.823147,
+   "lng": 135.465947,
+   "photos": [
+    "11-1.jpg",
+    "11-2.jpg",
+    "11-3.jpg"
+   ],
+   "text": {
+    "ja": "阪急 牧落駅（まきおちえき）\n\n大阪梅田までは、乗り換えを入れて約25〜30分です。\n\nおすすめ出発時間：18:30〜",
+    "en": "Hankyu Makiochi Station\n\nIt takes about 25–30 minutes to Osaka-umeda, including the change.\n\nRecommended departure time: 18:30–"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "阪急 牧落駅",
+      "en": "阪急 牧落駅"
+     },
+     "lat": 34.823147,
+     "lng": 135.465947,
+     "url": "https://maps.app.goo.gl/u5tKQwF1r4btzroD7"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "阪急 牧落駅 時刻表（平日）",
+      "en": "Hankyu Makiochi Station timetable (weekdays)"
+     },
+     "url": {
+      "ja": "https://www.hankyu.co.jp/station/html/HK-58_mi_1_w.html",
+      "en": "https://www.hankyu.co.jp/station/html/HK-58_mi_1_w.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "牧落→大阪梅田 280円（石橋阪大前で乗り換え）",
+       "en": "Makiochi → Osaka-umeda ¥280 (change at Ishibashi Handai-mae)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  }
+ ],
+ "course": "late-noonsen",
+ "sources": [
+  {
+   "what": "箕面萱野駅のファミリーマート（みのおキューズモール STATION 1F・24時間）",
+   "url": "https://qs-mall.jp/minoh/shop/detail/330128002?tenant_cd=330128002",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "政ノ茶屋園地の「もみじ広場」（お弁当を広げて休憩できる）",
+   "url": "https://minohkankou.net/sights/319/",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "滝道ぞいの食事のできる店の一覧（各店の営業時間は未確認）",
+   "url": "https://minohkankou.net/sights/gourmets/",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "箕面温泉スパーガーデンの営業時間・入館料・タトゥーの決まり・アクセス（公式サイト。休館日とカバーシールの大きさ・値段は記載なし）",
+   "url": "https://www.ooedoonsen.jp/minoh-spa/",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "チンクエピュウ テラス：1オーダー制・精算は現金のみ・11:30〜15:00（ラストオーダー14:30）・雨天休み",
+   "url": "https://cinquepiu.jp/terrace/",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "みのおキューズモールの銀行（三井住友銀行 みのおキューズモール店・関西みらい銀行。アクセスのページの一覧に記載）",
+   "url": "https://qs-mall.jp/minoh/access/",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "箕面公園昆虫館：10:00〜17:00（最終受付16:30）・火曜休館・高校生以上280円",
+   "url": "https://www.mino-konchu.jp/c8060.html",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "カバーシールの大きさ（6.5cm×10.5cm）は大江戸温泉物語グループの他施設のFAQの検索結果から。箕面温泉スパーガーデンのページには大きさ・値段の記載なし（要確認）",
+   "url": "https://www.ooedoonsen.jp/minoh-spa/",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "勝尾寺の中の食事処：公式サイト（katsuo-ji-temple.or.jp のトップ・アクセス・おみやげ・境内マップ・お問い合わせ）に記載なし。おみやげのページは「準備中」。要確認",
+   "url": "https://katsuo-ji-temple.or.jp/facility/shop.php",
+   "checked": "2026-11-21"
+  },
+  {
+   "what": "阪急バス30系統 箕面萱野駅8番のりば発の時刻（2026年2月1日現在の時刻表。平日 毎時00・30分、土休日 9:00〜12:40は20分ごと・13:00〜15:00は30分ごと）",
+   "url": "https://transfer-cloud.navitime.biz/hankyubus/courses/timetables?busstop=00021386&timetable-id=202106",
+   "checked": "2026-11-21"
+  }
+ ]
+}

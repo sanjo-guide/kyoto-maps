@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
-<link rel="stylesheet" href="css/style.css?v=19">
+<link rel="stylesheet" href="css/style.css?v=20">
 <meta name="robots" content="noimageindex">
 <script src="../assets/protect.js?v=1" defer></script>
 </head>
@@ -95,9 +95,15 @@
       <span data-t="spot1Howto">このマップの使い方を見る</span>
     </button>
     <!-- 「全部回る」か「選んで回る」か -->
+    <p class="sw-label" data-t="swStart">出発時間</p>
     <div class="modesw" role="group" data-t-aria="modeAria" aria-label="回り方">
       <button type="button" data-mode="all" data-t="modeAll">全部回る</button>
       <button type="button" data-mode="pick" data-t="modePick">選んで回る</button>
+    </div>
+    <p class="sw-label" data-t="swOnsen">箕面温泉</p>
+    <div class="modesw" role="group" data-t-aria="onsenAria" aria-label="箕面温泉に入るかどうか">
+      <button type="button" data-onsen="yes" data-t="onsenYes">温泉に入る</button>
+      <button type="button" data-onsen="no" data-t="onsenNo">温泉に入らない</button>
     </div>
     <div class="pick-box" id="pick-box" hidden>
       <p class="pick-note" data-t="pickNote"></p>
@@ -180,7 +186,7 @@
 <script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
 <script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
 <script src="../assets/basemap.js?v=3"></script>
-<script src="js/i18n.js?v=21"></script>
-<script src="js/app.js?v=25"></script>
+<script src="js/i18n.js?v=22"></script>
+<script src="js/app.js?v=26"></script>
 </body>
 </html>

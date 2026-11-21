@@ -1,7 +1,11 @@
 /* Page texts in Japanese and English.
    Toshi 個人のマップ。スタートは箕面萱野駅、ゴールは牧落駅。
-   Photos are [spot number, photo index] from data/routes/minoh.json.
-   料金・時間は2026年11月20日に各社の公式サイトで確認。 */
+   コースは4つ（出発時間 早め/ゆっくり × 箕面温泉に入る/入らない）。データは data/routes/minoh.json・minoh-noonsen.json・
+   minoh-late.json・minoh-late-noonsen.json（4つとも scripts/build_minoh_courses.py が作る）。
+   紹介ページのうちコースで変わる項目（lead・who・dayHead・day・how）は、各言語の introParts から
+   このファイルのいちばん下で組み立てて introFor[コースの id] に入れる（app.js が読み込むときに intro に上書きする）。
+   Photos are [spot id, photo index]（番号はコースで変わるので id で指定）.
+   料金・時間は2026年11月20日〜21日に各社の公式サイトで確認。 */
 window.MINOH_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -15,7 +19,7 @@ window.MINOH_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '番号の順にめぐると1日で回れるルートです。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '番号の順にめぐると1日で回れるルートです。上のボタンで、出発時間と、箕面温泉に入るかどうかを選べます。選ぶと番号と時間が変わります。「早めに出発」は梅田を8:30までに出て、川のテラスでランチ（現金だけ）。「ゆっくり出発」は10時ごろに出て、お昼は持って行きます。箕面温泉は、タトゥーがあるとカバーシール2枚で完全に隠せる場合しか入れません。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -35,10 +39,11 @@ window.MINOH_I18N = {
     fee: '料金',
     closed: '休み',
     cable: 'ケーブル',
+    tattoo: 'タトゥー',
     cash: '現金を用意してください',
     checked: '{d}に公式サイトで確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月20日',
+    checkedDate: '2026年11月20日〜21日',
     noticeHead: 'この時期の注意',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -51,9 +56,14 @@ window.MINOH_I18N = {
     progress: '{n} / {t} か所 行った',
     reset: 'リセット',
     resetAsk: 'もう一度押すと、行った印をすべて消します',
-    modeAria: '回り方',
-    modeAll: '全部回る',
-    modePick: '選んで回る',
+    modeAria: '出発時間',
+    modeAll: '早めに出発\n（川のテラスでランチ）',
+    modePick: 'ゆっくり出発\n（10時ごろ）',
+    swStart: '出発時間',
+    swOnsen: '箕面温泉（タトゥーがある人は注意）',
+    onsenAria: '箕面温泉に入るかどうか',
+    onsenYes: '温泉に入る',
+    onsenNo: '温泉に入らない',
     pickNote: '行きたい場所の「行きたい」を押してください。駅・バス停・ハイキング入口は、選んだ場所に合わせて自動で入ったり外れたりします。時間は全部回る場合の目安です。',
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（駅などを含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から行きたい場所を選んでください。',
@@ -68,29 +78,12 @@ window.MINOH_I18N = {
     intro: {
       kicker: 'Toshiが歩いて作った1日ルート',
       h1: '大阪の街から少し足をのばして、ダルマと森と滝の1日。',
-      lead: 'ダルマだらけの勝尾寺から、森の山道を歩いて箕面大滝へ。川ぞいの滝道を下ったら、締めくくりは大阪名物のたこ焼きと地元のクラフトビール。実際に歩いて作った、大阪・箕面の1日ルートです。',
       favLabel: 'いちばんの見どころ',
       favName: '勝尾寺',
       favText: 'お寺じゅうに、小さな赤い「勝ちダルマ」。',
-      favPhoto: [3, 0],
+      favPhoto: ['katsuoji', 0],
       whoHead: 'こんな人におすすめ',
-      who: [
-        '大阪の街から日帰りで、山と滝の自然を楽しみたい人に',
-        'スタートは箕面萱野駅。梅田から地下鉄で乗り換えなし、最速25分',
-        '秋の紅葉シーズンは特におすすめ。夜は滝のライトアップも',
-        '約1時間15分の山道ハイキングあり（ほとんど下り坂）。歩きやすい靴で',
-        '歩いたあとは箕面温泉、締めくくりはたこ焼きと地ビール'
-      ],
-      dayHead: '1日の流れ（目安）',
       from: '',
-      day: [
-        { time: '9:30', area: '箕面萱野', title: 'バスで山の上のお寺へ', text: '駅前の8番のりばから、勝尾寺への直行バスで約22分。', note: 'バスは現金不可。ICカードで', photo: [2, 0] },
-        { time: '10:00', area: '勝尾寺', title: 'ダルマだらけのお寺', text: '山門、池、多宝塔。境内のあちこちに小さな赤いダルマ。', photo: [3, 1] },
-        { time: '11:15', area: '森の山道', title: '森を歩いて滝へ', text: 'ほとんど下り坂の山道を約1時間15分。ビジターセンターでひと休みして、箕面大滝へ。', badge: 'ハイキングあり', photo: [6, 0] },
-        { time: '12:50', area: '滝道', title: '川ぞいのテラスでランチ', text: '滝道を下りながら、川の上のテラス席でランチ。もみじの天ぷらも。', note: 'ランチのラストオーダーは14:30', photo: [7, 0] },
-        { time: '14:45', area: '箕面温泉', title: '歩いたあとの温泉', text: '滝道から展望エレベーターで上がる日帰り温泉。ビールの前にひと風呂。', note: '入らない人は飛ばしてOK', photo: [8, 0] },
-        { time: '17:00', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、箕面ビールの直営店で乾杯。', note: '箕面ビールは木曜休み', photo: [10, 0] }
-      ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
       dealsLead: '梅田から出発して梅田へ戻ると、電車とバスで大人1人1,560円です（勝尾寺の入山料500円は別）。',
@@ -102,14 +95,60 @@ window.MINOH_I18N = {
       dealsNote: '大人の普通運賃です。2026年11月20日に各社の公式サイトで確認しました。',
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
-      how: [
-        { title: '番号の順にめぐる', text: '1〜12の番号は、順番にめぐると1日で効率よく全部回れるように並んでいます。' },
+      cta: '地図を見る',
+      footer1: 'Toshiが実際に歩いて作った、オリジナルマップです。'
+    },
+    // 紹介ページのうち、コースで変わるところ（下で組み立てる）
+    introParts: {
+      lead: 'ダルマだらけの勝尾寺から、森の山道を歩いて箕面大滝へ。川ぞいの滝道を下ったら、締めくくりは大阪名物のたこ焼きと地元のクラフトビール。実際に歩いて作った、大阪・箕面の1日ルートです。',
+      leadPick: '出発時間（早め／ゆっくり）と、箕面温泉に入るかどうかを選べます。',
+      leadNow: { early: '今は「早めに出発・温泉に入る」の流れです。', 'early-noonsen': '今は「早めに出発・温泉に入らない」の流れです。', late: '今は「ゆっくり出発・温泉に入る」の流れです。', 'late-noonsen': '今は「ゆっくり出発・温泉に入らない」の流れです。' },
+      who: {
+        common: [
+          '大阪の街から日帰りで、山と滝の自然を楽しみたい人に',
+          'スタートは箕面萱野駅。梅田から地下鉄で乗り換えなし、最速25分',
+          '秋の紅葉シーズンは特におすすめ。夜は滝のライトアップも',
+          '山道を歩く時間は約1時間10分（ほとんど下り坂）。途中で20分休みます。歩きやすい靴で'
+        ],
+        start: {
+          early: ['梅田を8:30までに出て、お昼は川の上のテラスで。朝ゆっくりの人は「ゆっくり出発」（10時ごろ）に切り替えを'],
+          late: ['10時ごろ出発。お昼は箕面萱野駅で買って、山の広場で食べます。梅田を8:30までに出られるなら「早めに出発」へ（川のテラスでランチ）']
+        },
+        cash: {
+          early: ['バスは現金が使えず、川のテラスのランチは現金だけ。ICカードと現金の両方を持って行く'],
+          late: ['バスは現金が使えません。交通系ICカードを用意']
+        },
+        onsen: {
+          yes: ['タトゥーがある人は注意：箕面温泉は、専用のカバーシール2枚までで完全に隠せる場合だけ入れます。隠せない人は「温泉に入らない」を選んでください'],
+          no: ['箕面温泉には入らない流れです。そのぶん滝と滝道でゆっくりできます（タトゥーがあって温泉に入れない人もこちら）']
+        },
+        end: ['締めくくりはたこ焼きと地ビール。箕面ビールは木曜休み']
+      },
+      dayHead: { early: '1日の流れ（早めに出発・温泉に入る）', 'early-noonsen': '1日の流れ（早めに出発・温泉なし）', late: '1日の流れ（ゆっくり出発・温泉に入る）', 'late-noonsen': '1日の流れ（ゆっくり出発・温泉なし）' },
+      day: {
+        busE: { time: '9:00', area: '箕面萱野', title: 'バスで山の上のお寺へ', text: '駅前の8番のりばから、9:00発の直行バスで約22分。梅田は8:30までに出ます。', note: 'バスは現金不可。ICカードで', photo: ['bus', 0] },
+        busL: { time: '10:30', area: '箕面萱野', title: 'お昼を買って、バスで山の上のお寺へ', text: '駅の横のファミリーマートでお昼を買って、8番のりばから直行バスで約22分。平日は10:30発、土日祝は10:40発。', note: 'バスは現金不可。ICカードで', photo: ['bus', 0] },
+        templeE: { time: '9:30', area: '勝尾寺', title: 'ダルマだらけのお寺', text: '山門、池、多宝塔。境内のあちこちに小さな赤いダルマ。11:00まで1時間半。', photo: ['katsuoji', 1] },
+        templeL: { time: '11:00', area: '勝尾寺', title: 'ダルマだらけのお寺', text: '山門、池、多宝塔。境内のあちこちに小さな赤いダルマ。12:30まで1時間半。', photo: ['katsuoji', 1] },
+        walkE: { time: '11:00', area: '森の山道', title: '森を歩いて滝へ', text: 'ビジターセンターまで約40分、20分休んで、杉の茶屋まで約30分。歩く時間は合わせて約1時間10分。滝は12:35〜13:10。', badge: 'ハイキングあり', photo: ['falls', 0] },
+        walkL: { time: '12:30', area: '森の山道', title: '森を歩いて滝へ。途中の広場でお昼', text: 'ビジターセンターまで約40分。前の「もみじ広場」でお昼を食べて20分休み、杉の茶屋まで約30分。滝は14:05〜14:40。', badge: 'ハイキングあり', photo: ['falls', 0] },
+        walkLNo: { time: '12:30', area: '森の山道', title: '森を歩いて滝へ。途中の広場でお昼', text: 'ビジターセンターまで約40分。前の「もみじ広場」でお昼を食べて30分休み、杉の茶屋まで約30分。滝は14:15〜15:00、ゆっくりできます。', badge: 'ハイキングあり', photo: ['falls', 0] },
+        lunch: { time: '13:10', area: '滝道', title: '川ぞいのテラスでランチ', text: '滝道を35〜40分下って、13:50ごろ川の上のテラス席へ。着いたらすぐ注文を。', note: '現金だけ・ラストオーダー14:30', photo: ['cinque', 0] },
+        onsenE: { time: '15:05', area: '箕面温泉', title: '歩いたあとの温泉', text: '滝道から展望エレベーターで上がる日帰り温泉。ビールの前にひと風呂。16:45まで。', note: 'タトゥーはシール2枚で隠せる場合だけ', photo: ['onsen', 0] },
+        onsenL: { time: '14:40', area: '滝道・箕面温泉', title: '滝道を下って温泉へ', text: '川ぞいの滝道を約40分。15:25ごろ、展望エレベーターで上がる日帰り温泉へ。17:05まで。', note: 'タトゥーはシール2枚で隠せる場合だけ', photo: ['onsen', 0] },
+        strollE: { time: '14:50', area: '滝道・箕面駅', title: 'ランチのあとは滝道でのんびり', text: '駅までは歩いて10分ほど。瀧安寺にお参りしたり、もみじの天ぷらを買ったり、昆虫館に寄ったり。16:10ごろ箕面駅へ。', photo: ['minoh-st', 0] },
+        strollL: { time: '15:00', area: '滝道・箕面駅', title: '滝道をゆっくり下る', text: '歩くだけなら約40分の道を、1時間10分かけて。お店をのぞいたり、瀧安寺にお参りしたり。16:10ごろ箕面駅へ。', photo: ['minoh-st', 0] },
+        endE: { time: '17:20', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、17:45ごろから箕面ビールの直営店で乾杯。牧落駅を19:15ごろ。', note: '箕面ビールは木曜休み・日曜は20時まで', photo: ['ahoya', 0] },
+        endL: { time: '17:40', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、18:05ごろから箕面ビールの直営店で乾杯。牧落駅を19:30ごろ。', note: '箕面ビールは木曜休み・日曜は20時まで', photo: ['ahoya', 0] },
+        endNo: { time: '16:30', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、17:00ごろから箕面ビールの直営店で乾杯。牧落駅を18:30ごろ。', note: '箕面ビールは木曜休み・日曜は20時まで', photo: ['ahoya', 0] }
+      },
+      howPick: { title: '出発時間と温泉を選ぶ', text: '「一覧」のいちばん上に、ボタンが2段あります。上は出発時間（「早めに出発」＝梅田を8:30までに出て川のテラスでランチ／「ゆっくり出発」＝10時ごろ出る、テラスのランチはなし）。下は箕面温泉に入るかどうか。タトゥーがあって温泉に入れない人は「温泉に入らない」を。押すと、番号と時間が変わります。' },
+      howRest: [
+        { title: '番号の順にめぐる', text: '1〜{n}の番号は、順番にめぐると1日で全部回れるように並んでいます。' },
         { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・おすすめの時間が見られます。' },
         { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。時刻表や公式サイトへのリンクもあります。' },
         { title: '時間は目安', text: '時間が足りなければスキップ、気に入った場所では長めに。自分のペースで調整してください。' }
-      ],
-      cta: '地図を見る',
-      footer1: 'Toshiが実際に歩いて作った、オリジナルマップです。'
+      ]
     }
   },
   en: {
@@ -124,7 +163,7 @@ window.MINOH_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'Follow the numbers for a one-day route. The dotted line shows the order, not the actual path.',
+    listNote: 'Follow the numbers for a one-day route. With the buttons above, choose your start time and whether to go to Minoh Onsen: the numbers and times change to match. “Early start” leaves Umeda by 8:30 and has lunch on the river terrace (cash only). “Late start” leaves around 10:00 and you carry your lunch. Minoh Onsen admits tattoos only if two cover stickers hide them completely. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -144,10 +183,11 @@ window.MINOH_I18N = {
     fee: 'Fee',
     closed: 'Closed',
     cable: 'Cable car',
+    tattoo: 'Tattoos',
     cash: 'Bring cash',
     checked: 'Checked on the official website on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 20, 2026',
+    checkedDate: 'Nov 20–21, 2026',
     noticeHead: 'Right now',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -160,9 +200,14 @@ window.MINOH_I18N = {
     progress: '{n} of {t} visited',
     reset: 'Reset',
     resetAsk: 'Tap again to clear all visited marks',
-    modeAria: 'How to go',
-    modeAll: 'Full route',
-    modePick: 'Choose stops',
+    modeAria: 'Start time',
+    modeAll: 'Early start\n(lunch on the river terrace)',
+    modePick: 'Late start\n(around 10:00)',
+    swStart: 'Start time',
+    swOnsen: 'Minoh Onsen (check first if you have tattoos)',
+    onsenAria: 'Minoh Onsen or not',
+    onsenYes: 'With the onsen',
+    onsenNo: 'No onsen',
     pickNote: 'Tap “Want to go” on the places you like. Stations, bus stops and the trail entrance are added or skipped automatically to match. Times are for the full route.',
     pickCount: '{n} places chosen · {t} stops in your route (incl. stations)',
     pickEmpty: 'Nothing chosen yet. Pick the places you want from the list below.',
@@ -177,29 +222,12 @@ window.MINOH_I18N = {
     intro: {
       kicker: 'A day trip, hand-walked by Toshi',
       h1: 'Daruma, forest and a waterfall, a short hop from central Osaka.',
-      lead: 'From Katsuoji, a temple full of daruma, walk through the forest to Minoh Falls. Follow the river path down into town, then finish with Osaka’s famous takoyaki and local craft beer. A one-day route in Minoh, Osaka, that I walked myself.',
       favLabel: 'Don’t miss',
       favName: 'Katsuoji Temple',
       favText: 'Little red “victory” daruma, all over the temple.',
-      favPhoto: [3, 0],
+      favPhoto: ['katsuoji', 0],
       whoHead: 'Who it’s for',
-      who: [
-        'A day out of the city: mountains, forest and a waterfall',
-        'Starts at Minoh-Kayano Station, 25 min from Umeda by subway, no change',
-        'Best in autumn, when the falls are lit up at night',
-        'Includes an hour’s forest walk, mostly downhill. Wear comfy shoes',
-        'Ends with Osaka’s famous takoyaki and local craft beer'
-      ],
-      dayHead: 'One day, roughly like this',
       from: 'From',
-      day: [
-        { time: '9:30', area: 'Minoh-Kayano', title: 'Bus up to a mountain temple', text: 'A 22-minute direct bus from stand 8 in front of the station.', note: 'No cash on the bus: use an IC card', photo: [2, 0] },
-        { time: '10:00', area: 'Katsuoji', title: 'A temple full of daruma', text: 'Gate, pond and pagoda, with little red daruma everywhere.', photo: [3, 1] },
-        { time: '11:15', area: 'Forest walk', title: 'Walk the forest to the falls', text: 'About an hour and a quarter, mostly downhill, with a break at the Visitor Center.', badge: 'Includes a hike', photo: [6, 0] },
-        { time: '12:50', area: 'Takimichi', title: 'Lunch over the river', text: 'Walk down the riverside path and have lunch on a terrace above the water.', note: 'Lunch: last order 14:30', photo: [7, 0] },
-        { time: '14:45', area: 'Minoh Onsen', title: 'A hot spring after the walk', text: 'A day-use hot spring reached by a viewing elevator from the falls path: a bath before the beer.', note: 'Skip it if you’re not bathing', photo: [8, 0] },
-        { time: '17:00', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom.', note: 'Minoh Beer is closed on Thursdays', photo: [10, 0] }
-      ],
       timeSuffix: '',
       dealsHead: 'Getting around: fares',
       dealsLead: 'From Umeda and back again, trains and the bus cost ¥1,560 per adult (plus ¥500 admission at Katsuoji).',
@@ -211,14 +239,88 @@ window.MINOH_I18N = {
       dealsNote: 'Adult single fares, checked on each operator’s official website on Nov 20, 2026.',
       dealsMore: 'See official site',
       howHead: 'How to use this map',
-      how: [
-        { title: 'Follow the numbers', text: 'Spots 1–12 are in order. Follow them and you can see everything in one day.' },
+      cta: 'Open the map',
+      footer1: 'An original map, hand-walked by Toshi.'
+    },
+    // the parts of the intro that change with the course (assembled at the bottom of this file)
+    introParts: {
+      lead: 'From Katsuoji, a temple full of daruma, walk through the forest to Minoh Falls. Follow the river path down into town, then finish with Osaka’s famous takoyaki and local craft beer. A one-day route in Minoh, Osaka, that I walked myself.',
+      leadPick: 'You can choose your start time (early or late) and whether to go to the hot spring, Minoh Onsen.',
+      leadNow: { early: 'This is the early start, with the onsen.', 'early-noonsen': 'This is the early start, without the onsen.', late: 'This is the late start, with the onsen.', 'late-noonsen': 'This is the late start, without the onsen.' },
+      who: {
+        common: [
+          'A day out of the city: mountains, forest and a waterfall',
+          'Starts at Minoh-Kayano Station, 25 min from Umeda by subway, no change',
+          'Best in autumn, when the falls are lit up at night',
+          'About 1 hour 10 minutes of walking on a forest trail, mostly downhill, with a 20-minute rest. Wear comfy shoes'
+        ],
+        start: {
+          early: ['Leave Umeda by 8:30 and have lunch on a terrace over the river. Slow morning? Switch to “Late start” (around 10:00)'],
+          late: ['Leave around 10:00. Buy lunch at Minoh-Kayano and eat it on a lawn in the hills. Can you leave Umeda by 8:30? Switch to “Early start” for lunch on the river terrace']
+        },
+        cash: {
+          early: ['The bus takes no cash and the terrace lunch is cash only: carry both an IC card and cash'],
+          late: ['The bus takes no cash: have an IC card ready']
+        },
+        onsen: {
+          yes: ['Tattoos? Minoh Onsen lets you in only if no more than two of its cover stickers hide them completely. If they can’t, choose “No onsen”'],
+          no: ['This version skips Minoh Onsen, so you get more time at the falls and on the river path (also the one to pick if your tattoos keep you out of the bath)']
+        },
+        end: ['Ends with takoyaki and local craft beer. Minoh Beer is closed on Thursdays']
+      },
+      dayHead: { early: 'One day, roughly like this (early start, with onsen)', 'early-noonsen': 'One day, roughly like this (early start, no onsen)', late: 'One day, roughly like this (late start, with onsen)', 'late-noonsen': 'One day, roughly like this (late start, no onsen)' },
+      day: {
+        busE: { time: '9:00', area: 'Minoh-Kayano', title: 'Bus up to a mountain temple', text: 'The 9:00 direct bus from stand 8 in front of the station, 22 minutes. Leave Umeda by 8:30.', note: 'No cash on the bus: use an IC card', photo: ['bus', 0] },
+        busL: { time: '10:30', area: 'Minoh-Kayano', title: 'Buy lunch, then the bus up to a mountain temple', text: 'Buy lunch at the FamilyMart next to the station, then take the direct bus from stand 8, 22 minutes. It leaves at 10:30 on weekdays and 10:40 on weekends and holidays.', note: 'No cash on the bus: use an IC card', photo: ['bus', 0] },
+        templeE: { time: '9:30', area: 'Katsuoji', title: 'A temple full of daruma', text: 'Gate, pond and pagoda, with little red daruma everywhere. An hour and a half, until 11:00.', photo: ['katsuoji', 1] },
+        templeL: { time: '11:00', area: 'Katsuoji', title: 'A temple full of daruma', text: 'Gate, pond and pagoda, with little red daruma everywhere. An hour and a half, until 12:30.', photo: ['katsuoji', 1] },
+        walkE: { time: '11:00', area: 'Forest walk', title: 'Walk the forest to the falls', text: 'About 40 minutes to the Visitor Center, a 20-minute rest, then about 30 minutes to Sugi no Chaya: 1 hour 10 minutes of walking in all. At the falls 12:35–13:10.', badge: 'Includes a hike', photo: ['falls', 0] },
+        walkL: { time: '12:30', area: 'Forest walk', title: 'Walk the forest to the falls, with a picnic on the way', text: 'About 40 minutes to the Visitor Center. Eat your lunch on the lawn in front and rest for 20 minutes, then about 30 minutes to Sugi no Chaya. At the falls 14:05–14:40.', badge: 'Includes a hike', photo: ['falls', 0] },
+        walkLNo: { time: '12:30', area: 'Forest walk', title: 'Walk the forest to the falls, with a picnic on the way', text: 'About 40 minutes to the Visitor Center. Eat your lunch on the lawn in front and rest for 30 minutes, then about 30 minutes to Sugi no Chaya. At the falls 14:15–15:00, with time to linger.', badge: 'Includes a hike', photo: ['falls', 0] },
+        lunch: { time: '13:10', area: 'Takimichi', title: 'Lunch over the river', text: 'Walk 35–40 minutes down the riverside path to a terrace above the water, arriving about 13:50. Order as soon as you arrive.', note: 'Cash only · last order 14:30', photo: ['cinque', 0] },
+        onsenE: { time: '15:05', area: 'Minoh Onsen', title: 'A hot spring after the walk', text: 'A day-use hot spring reached by a viewing elevator from the falls path: a bath before the beer. Until 16:45.', note: 'Tattoos: only if two stickers cover them', photo: ['onsen', 0] },
+        onsenL: { time: '14:40', area: 'Takimichi & Minoh Onsen', title: 'Down the river path to a hot spring', text: 'About 40 minutes down the riverside path. At about 15:25, take the viewing elevator up to the day-use hot spring. Until 17:05.', note: 'Tattoos: only if two stickers cover them', photo: ['onsen', 0] },
+        strollE: { time: '14:50', area: 'Takimichi & Minoh Station', title: 'A slow hour on the river path', text: 'The station is only about 10 minutes’ walk away. Visit Ryuanji Temple, buy momiji tempura, or drop into the Insect Museum. Reach Minoh Station at about 16:10.', photo: ['minoh-st', 0] },
+        strollL: { time: '15:00', area: 'Takimichi & Minoh Station', title: 'Take the river path slowly', text: 'The walk alone is about 40 minutes; give it 1 hour 10 minutes. Look into the shops and visit Ryuanji Temple. Reach Minoh Station at about 16:10.', photo: ['minoh-st', 0] },
+        endE: { time: '17:20', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom from about 17:45. Train home from Makiochi at about 19:15.', note: 'Minoh Beer: closed Thursdays, shuts at 20:00 on Sundays', photo: ['ahoya', 0] },
+        endL: { time: '17:40', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom from about 18:05. Train home from Makiochi at about 19:30.', note: 'Minoh Beer: closed Thursdays, shuts at 20:00 on Sundays', photo: ['ahoya', 0] },
+        endNo: { time: '16:30', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom from about 17:00. Train home from Makiochi at about 18:30.', note: 'Minoh Beer: closed Thursdays, shuts at 20:00 on Sundays', photo: ['ahoya', 0] }
+      },
+      howPick: { title: 'Choose your start time and the onsen', text: 'At the top of the “Spots” list there are two rows of buttons. The first is your start time: “Early start” (leave Umeda by 8:30, lunch on the river terrace) or “Late start” (leave around 10:00, no terrace lunch). The second is whether you go to Minoh Onsen. If tattoos keep you out of the bath, choose “No onsen”. The numbers and times change when you tap.' },
+      howRest: [
+        { title: 'Follow the numbers', text: 'Spots 1–{n} are in order. Follow them and you can see everything in one day.' },
         { title: 'Tap a number', text: 'Tap a number on the map, or open the list, to see photos, tips and suggested times.' },
         { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions. Some spots also link to timetables and official websites.' },
         { title: 'Times are rough guides', text: 'Short on time? Skip a spot. Love a place? Stay longer. Go at your own pace.' }
-      ],
-      cta: 'Open the map',
-      footer1: 'An original map, hand-walked by Toshi.'
+      ]
     }
   }
 };
+
+/* コースごとの紹介ページ（lead・who・dayHead・day・how）を introParts から組み立てる。
+   day の並びは、データの sections の day（何番目か）と合わせてある（scripts/build_minoh_courses.py の SECTIONS）。 */
+(function () {
+  var SEQ = {
+    'early': ['busE', 'templeE', 'walkE', 'lunch', 'onsenE', 'endE'],
+    'early-noonsen': ['busE', 'templeE', 'walkE', 'lunch', 'strollE', 'endNo'],
+    'late': ['busL', 'templeL', 'walkL', 'onsenL', 'endL'],
+    'late-noonsen': ['busL', 'templeL', 'walkLNo', 'strollL', 'endNo']
+  };
+  var COUNT = { 'early': 12, 'early-noonsen': 11, 'late': 11, 'late-noonsen': 10 };
+  Object.keys(window.MINOH_I18N).forEach(function (l) {
+    var t = window.MINOH_I18N[l], p = t.introParts;
+    t.introFor = {};
+    Object.keys(SEQ).forEach(function (id) {
+      var start = id.indexOf('late') === 0 ? 'late' : 'early', onsen = /noonsen$/.test(id) ? 'no' : 'yes';
+      t.introFor[id] = {
+        lead: p.lead + (l === 'ja' ? '' : ' ') + p.leadPick + (l === 'ja' ? '' : ' ') + p.leadNow[id],
+        who: p.who.common.concat(p.who.start[start], p.who.onsen[onsen], p.who.cash[start], p.who.end),
+        dayHead: p.dayHead[id],
+        day: SEQ[id].map(function (k) { return p.day[k]; }),
+        how: [p.howPick].concat(p.howRest.map(function (h) { return { title: h.title, text: h.text.replace('{n}', COUNT[id]) }; }))
+      };
+    });
+    // 何も選んでいないとき（早めに出発・温泉に入る）の内容を intro に入れておく
+    Object.keys(t.introFor.early).forEach(function (k) { t.intro[k] = t.introFor.early[k]; });
+  });
+})();
