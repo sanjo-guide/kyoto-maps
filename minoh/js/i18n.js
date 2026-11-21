@@ -84,11 +84,11 @@ window.MINOH_I18N = {
       dayHead: '1日の流れ（目安）',
       from: '',
       day: [
-        { time: '9:00', area: '箕面萱野', title: 'バスで山の上のお寺へ', text: '駅前の8番のりばから、勝尾寺への直行バスで約22分。', note: 'バスは現金不可。ICカードで', photo: [2, 0] },
-        { time: '9:30', area: '勝尾寺', title: 'ダルマだらけのお寺', text: '山門、池、多宝塔。境内のあちこちに小さな赤いダルマ。', photo: [3, 1] },
-        { time: '11:00', area: '森の山道', title: '森を歩いて滝へ', text: 'ほとんど下り坂の山道を約1時間15分。ビジターセンターでひと休みして、箕面大滝へ。', badge: 'ハイキングあり', photo: [6, 0] },
-        { time: '12:45', area: '滝道', title: '川ぞいのテラスでランチ', text: '滝道を下りながら、川の上のテラス席でランチ。もみじの天ぷらも。', note: 'ランチのラストオーダーは14:30', photo: [7, 0] },
-        { time: '14:40', area: '箕面温泉', title: '歩いたあとの温泉', text: '滝道から展望エレベーターで上がる日帰り温泉。ビールの前にひと風呂。', note: '入らない人は飛ばしてOK', photo: [8, 0] },
+        { time: '9:30', area: '箕面萱野', title: 'バスで山の上のお寺へ', text: '駅前の8番のりばから、勝尾寺への直行バスで約22分。', note: 'バスは現金不可。ICカードで', photo: [2, 0] },
+        { time: '10:00', area: '勝尾寺', title: 'ダルマだらけのお寺', text: '山門、池、多宝塔。境内のあちこちに小さな赤いダルマ。', photo: [3, 1] },
+        { time: '11:15', area: '森の山道', title: '森を歩いて滝へ', text: 'ほとんど下り坂の山道を約1時間15分。ビジターセンターでひと休みして、箕面大滝へ。', badge: 'ハイキングあり', photo: [6, 0] },
+        { time: '12:50', area: '滝道', title: '川ぞいのテラスでランチ', text: '滝道を下りながら、川の上のテラス席でランチ。もみじの天ぷらも。', note: 'ランチのラストオーダーは14:30', photo: [7, 0] },
+        { time: '14:45', area: '箕面温泉', title: '歩いたあとの温泉', text: '滝道から展望エレベーターで上がる日帰り温泉。ビールの前にひと風呂。', note: '入らない人は飛ばしてOK', photo: [8, 0] },
         { time: '17:00', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、箕面ビールの直営店で乾杯。', note: '箕面ビールは木曜休み', photo: [10, 0] }
       ],
       timeSuffix: '〜',
@@ -193,11 +193,11 @@ window.MINOH_I18N = {
       dayHead: 'One day, roughly like this',
       from: 'From',
       day: [
-        { time: '9:00', area: 'Minoh-Kayano', title: 'Bus up to a mountain temple', text: 'A 22-minute direct bus from stand 8 in front of the station.', note: 'No cash on the bus: use an IC card', photo: [2, 0] },
-        { time: '9:30', area: 'Katsuoji', title: 'A temple full of daruma', text: 'Gate, pond and pagoda, with little red daruma everywhere.', photo: [3, 1] },
-        { time: '11:00', area: 'Forest walk', title: 'Walk the forest to the falls', text: 'About an hour and a quarter, mostly downhill, with a break at the Visitor Center.', badge: 'Includes a hike', photo: [6, 0] },
-        { time: '12:45', area: 'Takimichi', title: 'Lunch over the river', text: 'Walk down the riverside path and have lunch on a terrace above the water.', note: 'Lunch: last order 14:30', photo: [7, 0] },
-        { time: '14:40', area: 'Minoh Onsen', title: 'A hot spring after the walk', text: 'A day-use hot spring reached by a viewing elevator from the falls path: a bath before the beer.', note: 'Skip it if you’re not bathing', photo: [8, 0] },
+        { time: '9:30', area: 'Minoh-Kayano', title: 'Bus up to a mountain temple', text: 'A 22-minute direct bus from stand 8 in front of the station.', note: 'No cash on the bus: use an IC card', photo: [2, 0] },
+        { time: '10:00', area: 'Katsuoji', title: 'A temple full of daruma', text: 'Gate, pond and pagoda, with little red daruma everywhere.', photo: [3, 1] },
+        { time: '11:15', area: 'Forest walk', title: 'Walk the forest to the falls', text: 'About an hour and a quarter, mostly downhill, with a break at the Visitor Center.', badge: 'Includes a hike', photo: [6, 0] },
+        { time: '12:50', area: 'Takimichi', title: 'Lunch over the river', text: 'Walk down the riverside path and have lunch on a terrace above the water.', note: 'Lunch: last order 14:30', photo: [7, 0] },
+        { time: '14:45', area: 'Minoh Onsen', title: 'A hot spring after the walk', text: 'A day-use hot spring reached by a viewing elevator from the falls path: a bath before the beer.', note: 'Skip it if you’re not bathing', photo: [8, 0] },
         { time: '17:00', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom.', note: 'Minoh Beer is closed on Thursdays', photo: [10, 0] }
       ],
       timeSuffix: '',
