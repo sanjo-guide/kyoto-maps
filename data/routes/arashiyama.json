@@ -15,22 +15,22 @@
   {
    "first": 8,
    "last": 11,
-   "day": 2
+   "day": 3
   },
   {
    "first": 12,
    "last": 14,
-   "day": 3
+   "day": 4
   },
   {
    "first": 15,
    "last": 17,
-   "day": 4
+   "day": 5
   },
   {
    "first": 18,
    "last": 18,
-   "day": 5
+   "day": 6
   }
  ],
  "focus": {
@@ -173,6 +173,7 @@
  "spots": [
   {
    "no": 1,
+   "id": "kawaramachi",
    "name": {
     "ja": "京都河原町駅",
     "en": "Kyoto-kawaramachi Station"
@@ -195,8 +196,8 @@
     "01-5.jpg"
    ],
    "text": {
-    "ja": "京都河原町駅（きょうとかわらまちえき）\n\n阪急電車の大阪梅田行きに乗り、「桂（かつら）」で嵐山線に乗り換えます。特急なら桂まで約7分、桂から嵐山までは約8分です。\n\n出発の時間は、4番のバスから逆算します。平日と土曜は1時間に1本（9:44、10:44）なので、9:44に乗るならここを9:00ごろに。\n\nゆっくり出たい日は、10:00ごろの電車で10:44のバスへ。あとの時間が全部1時間ずつ遅くなるので、8〜10のお寺は1つにしてください。\n\n奥嵯峨（6〜11番のあたり）は食事の店が少なめです。パンやおにぎりを駅のまわりで買っておくと、お昼に困りません。\n\nおすすめ出発時間：9:00",
-    "en": "Kyoto-kawaramachi Station\n\nTake a Hankyu train bound for Osaka-umeda and change at Katsura for the Arashiyama Line. A limited express takes about 7 minutes to Katsura, then it’s about 8 minutes to Arashiyama.\n\nWork back from the bus at stop 4. On weekdays and Saturdays it runs once an hour (9:44, 10:44), so for the 9:44 bus leave here at about 9:00.\n\nFor a slower morning, take a train at about 10:00 for the 10:44 bus. Everything after that runs an hour later, so pick just one of the temples in 8–10.\n\nThere are few places to eat in Oku-Saga (around stops 6–11). Buy bread or rice balls near the station and lunch won’t be a problem.\n\nRecommended departure time: 9:00"
+    "ja": "京都河原町駅（きょうとかわらまちえき）\n\n阪急電車の大阪梅田行きに乗り、「桂（かつら）」で嵐山線に乗り換えます。特急なら桂まで約7分、桂から嵐山までは約8分です。\n\n出発の時間は、4番のバスから逆算します。9:44のバスに乗るなら、平日は9:04か9:08、土曜・日曜・祝日は9:04か9:15の電車で（嵐山に9:33、土日祝は9:37に着きます）。平日と土曜のバスは1時間に1本（9:44、10:44）です。\n\nゆっくり出たい日は、10:00ごろの電車で10:44のバスへ。あとの時間が全部1時間ずつ遅くなるので、8〜10のお寺は1つにしてください。\n\n奥嵯峨（6〜11番のあたり）は食事の店が少なめです。パンやおにぎりを駅のまわりで買っておくと、お昼に困りません。\n\n京都の中心、三条通のあたりからは、河原町通を南へ歩いて10〜15分です。\n\nおすすめ出発時間：9:00",
+    "en": "Kyoto-kawaramachi Station\n\nTake a Hankyu train bound for Osaka-umeda and change at Katsura for the Arashiyama Line. A limited express takes about 7 minutes to Katsura, then it’s about 8 minutes to Arashiyama.\n\nWork back from the bus at stop 4. For the 9:44 bus, take the 9:04 or 9:08 train on weekdays, or the 9:04 or 9:15 on weekends and holidays (arriving in Arashiyama at 9:33, or 9:37 on weekends and holidays). On weekdays and Saturdays the bus runs once an hour (9:44, 10:44).\n\nFor a slower morning, take a train at about 10:00 for the 10:44 bus. Everything after that runs an hour later, so pick just one of the temples in 8–10.\n\nThere are few places to eat in Oku-Saga (around stops 6–11). Buy bread or rice balls near the station and lunch won’t be a problem.\n\nFrom the Sanjo-dori area in central Kyoto, it’s a 10–15 minute walk south along Kawaramachi-dori.\n\nRecommended departure time: 9:00"
    },
    "gmaps": [
     {
@@ -242,6 +243,7 @@
   },
   {
    "no": 2,
+   "id": "katsura",
    "name": {
     "ja": "桂駅",
     "en": "Katsura Station"
@@ -311,6 +313,7 @@
   },
   {
    "no": 3,
+   "id": "hankyu",
    "name": {
     "ja": "阪急嵐山駅",
     "en": "Hankyu Arashiyama Station"
@@ -380,6 +383,7 @@
   },
   {
    "no": 4,
+   "id": "bus",
    "name": {
     "ja": "阪急嵐山駅前 バスのりば",
     "en": "Hankyu Arashiyama-ekimae bus stop"
@@ -500,6 +504,7 @@
   },
   {
    "no": 5,
+   "id": "otagi",
    "name": {
     "ja": "愛宕念仏寺",
     "en": "Otagi Nenbutsu-ji Temple"
@@ -612,6 +617,7 @@
   },
   {
    "no": 6,
+   "id": "toriimoto",
    "name": {
     "ja": "嵯峨鳥居本の町並み",
     "en": "Saga-Toriimoto old street"
@@ -699,6 +705,7 @@
   },
   {
    "no": 7,
+   "id": "adashino",
    "name": {
     "ja": "化野念仏寺",
     "en": "Adashino Nenbutsu-ji Temple"
@@ -803,6 +810,7 @@
   },
   {
    "no": 8,
+   "id": "gioji",
    "name": {
     "ja": "祇王寺",
     "en": "Gio-ji Temple"
@@ -899,6 +907,7 @@
   },
   {
    "no": 9,
+   "id": "nisonin",
    "name": {
     "ja": "二尊院",
     "en": "Nison-in Temple"
@@ -990,6 +999,7 @@
   },
   {
    "no": 10,
+   "id": "jojakkoji",
    "name": {
     "ja": "常寂光寺",
     "en": "Jojakko-ji Temple"
@@ -1112,6 +1122,7 @@
   },
   {
    "no": 11,
+   "id": "okochi",
    "name": {
     "ja": "大河内山荘庭園",
     "en": "Okochi Sanso Garden"
@@ -1197,6 +1208,7 @@
   },
   {
    "no": 12,
+   "id": "bamboo",
    "name": {
     "ja": "嵐山 竹林の小径",
     "en": "Arashiyama Bamboo Grove"
@@ -1267,6 +1279,7 @@
   },
   {
    "no": 13,
+   "id": "nonomiya",
    "name": {
     "ja": "嵯峨野 竹林の小径・野宮神社",
     "en": "Sagano Bamboo Path & Nonomiya Shrine"
@@ -1337,6 +1350,7 @@
   },
   {
    "no": 14,
+   "id": "tenryuji",
    "name": {
     "ja": "天龍寺",
     "en": "Tenryu-ji Temple"
@@ -1436,6 +1450,7 @@
   },
   {
    "no": 15,
+   "id": "saganoyu",
    "name": {
     "ja": "嵯峨野湯",
     "en": "Sagano-yu"
@@ -1538,6 +1553,7 @@
   },
   {
    "no": 16,
+   "id": "togetsukyo",
    "name": {
     "ja": "渡月橋",
     "en": "Togetsukyo Bridge"
@@ -1621,6 +1637,7 @@
   },
   {
    "no": 17,
+   "id": "monkey",
    "name": {
     "ja": "嵐山モンキーパークいわたやま",
     "en": "Arashiyama Monkey Park Iwatayama"
@@ -1778,6 +1795,7 @@
   },
   {
    "no": 18,
+   "id": "pontocho",
    "name": {
     "ja": "京都の街なかへ（先斗町）",
     "en": "Back downtown: Pontocho"
@@ -1803,8 +1821,8 @@
     "18-8.jpg"
    ],
    "text": {
-    "ja": "先斗町（ぽんとちょう）\n\n帰りは阪急嵐山駅から乗って、桂で乗り換え、京都河原町まで約30分（240円）。渡月橋から駅までは歩いて8分ほどです。駅を出て鴨川のほうへ歩くと、すぐに先斗町の入口。\n\n石畳の細い路地に、小さな料理屋さんや居酒屋さんが並びます。夏は鴨川に面した「川床」も。店は多いので、歩きながら表のお品書きを見て決められます。\n\nおすすめ移動時間：17:50〜",
-    "en": "Pontocho\n\nOn the way back, take the train from Hankyu Arashiyama (about 8 minutes on foot from the bridge), change at Katsura, and it’s about 30 minutes (¥240) to Kyoto-kawaramachi. Walk from the station toward the Kamo River and you’re at the entrance to Pontocho.\n\nThe narrow stone-paved lane is lined with small restaurants and izakaya, and in summer many open terraces over the river. There are plenty of places, so you can walk along and choose from the menus posted outside.\n\nRecommended travel time: from 17:50"
+    "ja": "先斗町（ぽんとちょう）\n\n帰りは阪急嵐山駅から乗って、桂で乗り換え、京都河原町まで約30分（240円）。渡月橋から駅までは歩いて8分ほどです。駅を出て鴨川のほうへ歩くと、すぐに先斗町の入口。\n\n石畳の細い路地に、小さな料理屋さんや居酒屋さんが並びます。夏は鴨川に面した「川床」も。店は多いので、歩きながら表のお品書きを見て決められます。\n\n先斗町は、四条通から三条通まで南北に続く細い路地です。晩ごはんのあと三条のほうへ歩けば、そのまま三条通に出られます。遅くまで開いている店もありますが、閉まる時間とラストオーダーは店ごとに違います。入る前に、表の案内で確かめてください。\n\nおすすめ移動時間：17:50〜",
+    "en": "Pontocho\n\nOn the way back, take the train from Hankyu Arashiyama (about 8 minutes on foot from the bridge), change at Katsura, and it’s about 30 minutes (¥240) to Kyoto-kawaramachi. Walk from the station toward the Kamo River and you’re at the entrance to Pontocho.\n\nThe narrow stone-paved lane is lined with small restaurants and izakaya, and in summer many open terraces over the river. There are plenty of places, so you can walk along and choose from the menus posted outside.\n\nPontocho is a narrow lane running north from Shijo-dori to Sanjo-dori. After dinner, keep walking north and you come out on Sanjo-dori. Some places stay open late, but closing times and last orders differ from shop to shop: check the sign outside before you go in.\n\nRecommended travel time: from 17:50"
    },
    "gmaps": [
     {
@@ -1856,6 +1874,54 @@
     "checked": "2026-11-20"
    },
    "notices": []
+  }
+ ],
+ "course": "late",
+ "sources": [
+  {
+   "what": "愛宕念仏寺：9:00〜16:00、水曜・土曜休み、拝観料1,000円。タクシーはJR嵯峨嵐山駅北口から5分・およそ1,500円（公式サイトの拝観案内）",
+   "url": "https://www.otagiji.com/visit-jp",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都バス 阪急嵐山駅前発 清滝行き（現行ダイヤ）：平日 7:11・7:55・8:39・9:44…、土曜 7:13・7:55・8:41・9:44…、休日 7:13・7:55・8:41・9:14・9:44・10:14・10:44…。平日8:39発（92系統）は愛宕寺前8:50、休日8:41発は8:52。運賃230円",
+   "url": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "天龍寺：庭園 8:30〜17:00（受付16:50まで）、北門受付も同じ。2026年11月14日〜30日は特別早朝参拝で庭園受付7:30〜（北門は8:30〜）。庭園500円",
+   "url": "https://www.tenryuji.com/visit/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→嵐山（桂で乗り換え、240円）。2026年11月24日（火）：7:50発→8:13着、8:01発→8:26着、9:04発・9:08発→9:33着。11月28日（土）：7:45発→8:07着。11月29日（日）：7:45発→8:07着、8:00発→8:23着、9:04発・9:15発→9:37着",
+   "url": "https://transit.yahoo.co.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町（桂で乗り換え）。2026年11月24日（火）：17:12発→17:37着、17:20発→17:46着。11月29日（日）：17:09発→17:33着（臨時）、17:14発→17:38着。16時台の時刻は調べていない（約25〜30分として書いた）",
+   "url": "https://transit.yahoo.co.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "パンとエスプレッソと嵐山庭園「エスプレッソと」（カフェ）：8:00〜18:00、不定休。ラストオーダー・朝のメニュー・支払い方法は記載なし（公式サイトの店舗ページ）",
+   "url": "https://bread-espresso.jp/shop/arashiyama-cafe.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "天龍寺 篩月（精進料理）：11:00〜14:00、木曜休み、要予約（雪は2日前まで）。予約なしでは入れないので、ルートには入れていない",
+   "url": "https://www.tenryuji.com/shigetsu/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "鮎茶屋 平野屋：公式サイトのトップとお品書きに営業時間・定休日の記載なし（要確認）",
+   "url": "https://ayuchaya-hiranoya.com/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "歩く時間（阪急嵐山駅→天龍寺 15〜20分、野宮神社→エスプレッソと 約10分、エスプレッソと→常寂光寺 15〜20分、祇王寺→化野念仏寺 約10分、祇王寺→嵯峨野湯 約30分、鳥居本→嵐山の中心 35〜40分）は地図上の距離からのめやす。実際に歩いて測ったものではない",
+   "url": null,
+   "checked": "2026-11-22"
   }
  ]
 }

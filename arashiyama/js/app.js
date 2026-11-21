@@ -1,5 +1,5 @@
 /* 京都 嵐山・嵯峨野 — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/arashiyama.json（写真は ../images/arashiyama/）. Texts: js/i18n.js
+   Data: ../data/routes/arashiyama.json・arashiyama-early.json・arashiyama-tenryuji.json（コースで読み分ける。写真は ../images/arashiyama/）. Texts: js/i18n.js
    eizan-line/js/app.js の複製。違いは scripts/sync_arashiyama.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_arashiyama.py で写し直す） */
 (function () {
@@ -31,6 +31,24 @@
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
   var KEY_MODE = 'kyoto-maps-arashiyama-mode', KEY_PICKS = 'kyoto-maps-arashiyama-picks';
   var mode = 'all', picks = {}, routeLine = null;
+  // 嵐山: 出発のしかた（コース）を3つから選べる。コースごとにデータファイルが別。
+  // 一覧の上のボタン（.coursesw、data-course）で切り替える。「全部回る／選んで回る」のボタンはその下にそのまま残る
+  var KEY_COURSE = 'kyoto-maps-arashiyama-course';
+  var COURSE_FILES = { late: 'arashiyama.json', early: 'arashiyama-early.json', tenryuji: 'arashiyama-tenryuji.json' };
+  var course = { id: (location.search.match(/[?&]course=([a-z]+)/) || [])[1] || load(KEY_COURSE) };
+  if (!COURSE_FILES[course.id]) course.id = 'late';
+  course.file = COURSE_FILES[course.id];
+  // 「行った」印・回り方・選んだ場所はコースごとに別（9〜10時に出発 は、これまでのキーのまま）
+  if (course.id !== 'late') { KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id; }
+  // i18n.js の courseFor[コース] に書いてある文言で上書きする（intro は項目ごと）
+  Object.keys(I18N).forEach(function (l) {
+    var o = I18N[l].courseFor && I18N[l].courseFor[course.id];
+    if (!o) return;
+    Object.keys(o).forEach(function (k) {
+      if (k === 'intro') Object.keys(o.intro).forEach(function (j) { I18N[l].intro[j] = o.intro[j]; });
+      else I18N[l][k] = o[k];
+    });
+  });
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -201,11 +219,11 @@
   function renderProgress() {
     var r = routeSpots();
     var n = r.filter(function (s) { return visited[s.no]; }).length, t = r.length || spots.length;
+    // 嵐山: ボタンは2段。上がコース（data-course）、下が「全部回る／選んで回る」（data-mode）
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+      b.setAttribute('aria-pressed', String(b.dataset.course ? b.dataset.course === course.id : b.dataset.mode === mode));
     });
-    // 「選んで回る」の設定（data.plan）がないマップでは、切り替えボタンごと出さない
-    document.querySelector('.modesw').hidden = !(data && data.plan);
+    document.querySelector('.modesw:not(.coursesw)').hidden = !(data && data.plan);
     $('pick-box').hidden = mode !== 'pick';
     $('pick-count').textContent = pickCount() ? fill(T().pickCount, { n: pickCount(), t: r.length }) : T().pickEmpty;
     $('progress-label').textContent = fill(T().progress, { n: n, t: t });
@@ -315,9 +333,16 @@
     $('btn-list').setAttribute('aria-expanded', 'false');
   }
 
+  function listTop() {
+    if (location.hash !== '#list') return;
+    viewList.scrollTop = 0;
+    setTimeout(function () { if (location.hash === '#list') viewList.scrollTop = 0; }, 80);
+  }
+  window.addEventListener('load', listTop);
   function route() {
     showRoute();
     updateTabs();
+    listTop();
   }
 
   // Phones: highlight the tab for what is on screen (the spot details count as part of the list)
@@ -347,7 +372,11 @@
   }
 
   /* ---------- intro ---------- */
-  function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // [スポットの番号 or id, 写真の番号]（コースで番号が変わるので、id でも指定できる）
+  function introPhoto(p) {
+    var s = typeof p[0] === 'string' ? spots.filter(function (x) { return x.id === p[0]; })[0] : byNo[p[0]];
+    return photoUrl(s.photos[p[1]]);
+  }
   // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
     return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
@@ -494,6 +523,13 @@
     if (picks[no]) delete picks[no]; else picks[no] = true;
     savePlan();
     keepInView(no, updateRoute);
+  }
+  // 嵐山: コースを切り替えたら、そのコースのデータで読み直す（一覧を開いた状態で）
+  function setCourse(c) {
+    if (c === course.id) return;
+    store(KEY_COURSE, c);
+    history.replaceState(null, '', location.pathname + '#list');
+    location.reload();
   }
   function setMode(m) {
     if (m === mode) return;
@@ -776,7 +812,7 @@
       savePlan(); updateRoute();
     });
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.addEventListener('click', function () { setMode(b.dataset.mode); });
+      b.addEventListener('click', function () { if (b.dataset.course) setCourse(b.dataset.course); else setMode(b.dataset.mode); });
     });
     $('btn-pick-all').addEventListener('click', function () {
       data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
@@ -848,7 +884,7 @@
     route();
   }
 
-  fetch('../data/routes/arashiyama.json?v=8')
+  fetch('../data/routes/' + course.file + '?v=9')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

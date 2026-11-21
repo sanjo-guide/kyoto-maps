@@ -431,3 +431,9 @@ html[lang="ja"] .in-title { font-family: var(--f); font-weight: 700; font-size: 
 .l-cr { left: 10px; bottom: 10px; }
 .ph-credit { right: 10px; top: 10px; }
 .l-cr[hidden], .ph-credit[hidden] { display: none; }
+/* 嵐山: コース（出発のしかた）のボタン。3つを縦に並べる。その上に見出し */
+.sw-label { margin: 8px 0 0; font-size: 12.5px; font-weight: 700; line-height: 1.5; color: var(--ink); }
+.sw-label + .modesw { margin-top: 4px; }
+.coursesw { grid-template-columns: 1fr; }
+.coursesw button { padding: 8px 12px; text-align: left; line-height: 1.4; font-size: 13.5px; }
+.coursesw button + button { border-top: 1px solid var(--ink); }

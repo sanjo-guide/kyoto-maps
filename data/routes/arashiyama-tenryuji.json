@@ -1,0 +1,1659 @@
+{
+ "id": "arashiyama",
+ "_note": "京都 嵐山・嵯峨野マップのコース「tenryuji」のデータ。scripts/build_arashiyama_courses.py が data/routes/arashiyama.json から作る。このファイルは直接直さない（直すのは arashiyama.json かスクリプト）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "day": 0
+  },
+  {
+   "first": 4,
+   "last": 7,
+   "day": 1
+  },
+  {
+   "first": 8,
+   "last": 12,
+   "day": 3
+  },
+  {
+   "first": 13,
+   "last": 15,
+   "day": 4
+  },
+  {
+   "first": 16,
+   "last": 16,
+   "day": 5
+  }
+ ],
+ "focus": {
+  "first": 3,
+  "last": 15
+ },
+ "plan": {
+  "_note": "早朝に出発（水・土＝愛宕念仏寺が休みの日）の「選んで回る」。天龍寺と竹林は全員共通。大河内山荘・化野念仏寺・鳥居本は時間割の外の寄り道。scripts/build_arashiyama_courses.py が作る。",
+  "picks": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "2": {
+    "always": true
+   },
+   "3": {
+    "always": true
+   },
+   "4": {
+    "always": true
+   },
+   "5": {
+    "always": true
+   },
+   "16": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "大河内山荘を足すと、このあとが40分ほど遅くなります（朝ごはんが10:35ごろ、お昼が13:55ごろ）。",
+     "en": "Adding Okochi Sanso pushes everything after it back by about 40 minutes (breakfast at about 10:35, lunch at about 13:55)."
+    }
+   },
+   {
+    "spot": 11,
+    "rule": {
+     "any": [
+      11
+     ],
+     "none": [
+      12
+     ]
+    },
+    "text": {
+     "ja": "化野念仏寺を足すと、お昼が14:10ごろ、渡月橋が15:05ごろになります。モンキーパーク（入園16:00まで）には間に合います。",
+     "en": "Adding Adashino moves lunch to about 14:10 and the bridge to about 15:05. You still make the Monkey Park (last entry 16:00)."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ]
+    },
+    "text": {
+     "ja": "鳥居本まで上ると、お昼は15時ごろになります。モンキーパーク（入園16:00まで）には間に合わないので、どちらか1つにしてください。",
+     "en": "Going up to Toriimoto moves lunch to about 15:00, too late for the Monkey Park (last entry 16:00). Choose one or the other."
+    }
+   }
+  ],
+  "defaultMode": "pick",
+  "defaultPicks": [
+   7,
+   8,
+   9,
+   10,
+   13,
+   14,
+   15
+  ]
+ },
+ "photoBase": "../images/arashiyama/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "kawaramachi",
+   "name": {
+    "ja": "京都河原町駅",
+    "en": "Kyoto-kawaramachi Station"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "スタートは四条通の地下にある阪急電車の駅。嵐山へは「桂」で乗り換えて約30分です。天龍寺の開門（8:30）に合わせて、7:50ごろの電車で。",
+    "en": "The start: the Hankyu station under Shijo-dori. Arashiyama is about 30 minutes away with one change at Katsura. Take a train at about 7:50 to be at Tenryu-ji for its 8:30 opening."
+   },
+   "lat": 35.003763,
+   "lng": 135.769608,
+   "photos": [
+    "01-1.jpg",
+    "01-2.jpg",
+    "01-3.jpg",
+    "01-4.jpg",
+    "01-5.jpg"
+   ],
+   "text": {
+    "ja": "京都河原町駅（きょうとかわらまちえき）\n\n阪急電車の大阪梅田行きに乗り、「桂（かつら）」で嵐山線に乗り換えます。特急なら桂まで約7分、桂から嵐山までは約8分です。\n\n出発の時間は、天龍寺の開門から逆算します。庭園は8:30に開くので、水曜は7:50、土曜は7:45の電車で（嵐山に8:13、土曜は8:07に着きます）。祝日の水曜は、土曜と同じ時刻です。駅から天龍寺までは、渡月橋を渡って歩いて15〜20分。\n\n朝ごはんは、天龍寺と竹林を見たあと、10時ごろにカフェで食べる時間割です（7番に書いてあります）。それまでお腹がもたない人は、駅のまわりで軽いものを買って行きましょう。\n\n京都の中心、三条通のあたりからは、河原町通を南へ歩いて10〜15分です。\n\nおすすめ出発時間：水曜7:50、土曜7:45",
+    "en": "Kyoto-kawaramachi Station\n\nTake a Hankyu train bound for Osaka-umeda and change at Katsura for the Arashiyama Line. A limited express takes about 7 minutes to Katsura, then it’s about 8 minutes to Arashiyama.\n\nWork back from the opening of Tenryu-ji. The garden opens at 8:30, so take the 7:50 train on a Wednesday or the 7:45 on a Saturday (arriving in Arashiyama at 8:13, or 8:07 on Saturdays). If the Wednesday is a holiday, use the Saturday times. From the station it is a 15–20 minute walk across Togetsukyo Bridge to Tenryu-ji.\n\nOn this timetable, breakfast comes at a café at about 10:00, after Tenryu-ji and the bamboo grove (see stop 7). If you can’t wait that long, buy something light near the station.\n\nFrom the Sanjo-dori area in central Kyoto, it’s a 10–15 minute walk south along Kawaramachi-dori.\n\nRecommended departure time: 7:50 on Wednesdays, 7:45 on Saturdays"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "京都河原町駅",
+      "en": "Kyoto-kawaramachi Station"
+     },
+     "lat": 35.003763,
+     "lng": 135.769608,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "阪急電鉄 京都河原町駅（時刻表・構内図）",
+      "en": "Hankyu: Kyoto-kawaramachi Station (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hankyu.co.jp/station/kawaramachi.html",
+      "en": "https://www.hankyu.co.jp/station/kawaramachi.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都河原町→嵐山 大人240円・子ども120円（桂で乗り換え）。交通系ICカードも使えます",
+       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240, children ¥120 (change at Katsura). IC cards accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "katsura",
+   "name": {
+    "ja": "桂駅",
+    "en": "Katsura Station"
+   },
+   "kind": {
+    "ja": "駅（乗り換え）",
+    "en": "Station (change trains)"
+   },
+   "blurb": {
+    "ja": "嵐山線への乗り換え駅。京都河原町から来た電車を降りたら、案内に沿って嵐山線のホームへ。嵐山線はふだん1時間に4本ほどです。",
+    "en": "Change here for the Arashiyama Line. Follow the signs to the Arashiyama Line platform. It usually runs about 4 trains an hour."
+   },
+   "lat": 34.979432,
+   "lng": 135.703261,
+   "photos": [
+    "02-1.jpg",
+    "02-2.jpg",
+    "02-3.jpg",
+    "02-4.jpg",
+    "02-5.jpg"
+   ],
+   "text": {
+    "ja": "桂駅（かつらえき）\n\n嵐山線は桂と嵐山を結ぶ短い路線で、途中の上桂・松尾大社に止まって約8分で嵐山に着きます。京都河原町から嵐山への直通電車はないので、ここで必ず乗り換えます。\n\nおすすめ移動時間：8:00ごろ",
+    "en": "Katsura Station\n\nThe Arashiyama Line is a short line from Katsura to Arashiyama, about 8 minutes with two stops on the way. There are no direct trains from Kyoto-kawaramachi, so you always change here.\n\nRecommended travel time: around 8:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "桂駅",
+      "en": "Katsura Station"
+     },
+     "lat": 34.979432,
+     "lng": 135.703261,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E6%A1%82%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "阪急電鉄 桂駅（時刻表・構内図）",
+      "en": "Hankyu: Katsura Station (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hankyu.co.jp/station/katsura.html",
+      "en": "https://www.hankyu.co.jp/station/katsura.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": [
+    {
+     "from": "2026-11-01",
+     "to": "2026-11-29",
+     "url": "https://www.hankyu.co.jp/topics/detail/014177.html",
+     "text": {
+      "ja": "紅葉シーズンの11月の土日祝（1・3・7・8・14・15・21・22・23・28・29日）は、桂〜嵐山の臨時電車が増発されます。京都河原町からの直通電車はないので、桂での乗り換えは同じです。",
+      "en": "On weekends and holidays in November 2026 (1, 3, 7, 8, 14, 15, 21, 22, 23, 28, 29), extra trains run between Katsura and Arashiyama. There are still no direct trains from Kyoto-kawaramachi, so you change at Katsura as usual."
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "hankyu",
+   "name": {
+    "ja": "阪急嵐山駅",
+    "en": "Hankyu Arashiyama Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "嵐山に到着。朝の渡月橋を渡って、天龍寺まで歩きます。帰りもこの駅から京都河原町へ戻ります。",
+    "en": "Welcome to Arashiyama. Walk across Togetsukyo Bridge in the morning quiet to Tenryu-ji. You come back to this station at the end of the day."
+   },
+   "lat": 35.010035,
+   "lng": 135.681915,
+   "photos": [
+    "03-1.jpg",
+    "03-3.jpg",
+    "03-4.jpg",
+    "03-5.jpg",
+    "03-6.jpg"
+   ],
+   "text": {
+    "ja": "阪急嵐山駅（はんきゅうあらしやまえき）\n\n桂川の南側にある、嵐山線の終点です。改札を出たら、中之島を抜けて渡月橋を渡り、まっすぐ北へ。左側に天龍寺の入口があります。歩いて15〜20分です。\n\n朝の渡月橋は、昼間よりずっと人が少ないことが多い時間です。午後にもう一度ゆっくり来ます（14番）。\n\nおすすめ訪問時間：8:10ごろ",
+    "en": "Hankyu Arashiyama Station\n\nThe end of the Arashiyama Line, on the south side of the Katsura River. From the ticket gates, cross Nakanoshima and Togetsukyo Bridge and keep going north: the entrance to Tenryu-ji is on your left. Allow 15–20 minutes on foot.\n\nIn the early morning the bridge usually has far fewer people than in the daytime. You come back for a proper look in the afternoon (stop 14).\n\nRecommended visit time: about 8:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "阪急嵐山駅",
+      "en": "Hankyu Arashiyama Station"
+     },
+     "lat": 35.010035,
+     "lng": 135.681915,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E5%B5%90%E5%B1%B1%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "阪急電鉄 嵐山駅（時刻表・構内図）",
+      "en": "Hankyu: Arashiyama Station (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hankyu.co.jp/station/arashiyama.html",
+      "en": "https://www.hankyu.co.jp/station/arashiyama.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都河原町→嵐山 大人240円・子ども120円（桂で乗り換え）。交通系ICカードも使えます",
+       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240, children ¥120 (change at Katsura). IC cards accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "tenryuji",
+   "name": {
+    "ja": "天龍寺",
+    "en": "Tenryu-ji Temple"
+   },
+   "kind": {
+    "ja": "お寺（世界遺産）",
+    "en": "Temple (World Heritage)"
+   },
+   "blurb": {
+    "ja": "嵐山を代表する禅寺で、世界遺産。嵐山を背にした池の庭「曹源池庭園」は、ゆっくり眺めていたくなる美しさです。8:30の開門に合わせて入り、北門から竹林へ出ます。",
+    "en": "Arashiyama’s great Zen temple and a World Heritage site. Its pond garden, with the hills of Arashiyama behind it, is one to sit and gaze at. Arrive for the 8:30 opening and leave by the north gate into the bamboo."
+   },
+   "lat": 35.016166,
+   "lng": 135.674618,
+   "photos": [
+    "14-1.jpg",
+    "14-2.jpg",
+    "14-3.jpg",
+    "14-4.jpg",
+    "14-7.jpg",
+    "14-9.jpg"
+   ],
+   "text": {
+    "ja": "天龍寺（てんりゅうじ）\n\n足利尊氏が後醍醐天皇の霊を弔うために建てた、臨済宗天龍寺派の大本山です。夢窓疎石が造った「曹源池（そうげんち）庭園」は、嵐山や亀山を借景にした池泉回遊式の庭。\n\nこのコースでは、開門の8:30に合わせて正面から入ります。庭園受付で拝観料を払って池の庭を歩き、奥の北門から出ると、そこが竹林の小径です（次の5番）。開いてすぐは、昼間より静かに庭を眺められることが多い時間です。\n\n建物の中（大方丈・書院・多宝殿）は追加で300円、法堂の天井の「雲龍図」は別に500円（公開日は土日祝など）。\n\nおすすめ訪問時間：8:30〜9:15",
+    "en": "Tenryu-ji Temple\n\nThe head temple of the Tenryu-ji school of Rinzai Zen, founded by the shogun Ashikaga Takauji. Its Sogenchi pond garden, designed by the monk Muso Soseki, “borrows” the hills of Arashiyama as its backdrop.\n\nOn this course you arrive for the 8:30 opening and go in from the front. Pay at the garden reception, walk round the pond garden, and leave by the north gate at the back: you step straight out onto the bamboo path (stop 5). Right after opening, the garden is usually quieter than in the daytime.\n\nThe buildings (abbot’s hall and more) cost ¥300 extra; the cloud-dragon ceiling painting in the Dharma Hall is a separate ¥500 and open on weekends, holidays and in some seasons.\n\nRecommended visit time: 8:30–9:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天龍寺 北門",
+      "en": "Tenryu-ji north gate"
+     },
+     "lat": 35.017126,
+     "lng": 135.672276,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E9%BE%8D%E5%AF%BA%20%E5%8C%97%E9%96%80"
+    },
+    {
+     "label": {
+      "ja": "天龍寺",
+      "en": "Tenryu-ji"
+     },
+     "lat": 35.016166,
+     "lng": 135.674618,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E9%BE%8D%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "天龍寺 公式サイト（参拝・交通案内）",
+      "en": "Tenryu-ji (visitor info)"
+     },
+     "url": {
+      "ja": "https://www.tenryuji.com/visit/",
+      "en": "https://www.tenryuji.com/en/visit/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "庭園 8:30〜17:00（受付は16:50まで）。建物の中は16:45まで（受付16:30まで）、法堂は9:00〜16:30（受付16:20まで）",
+       "en": "Garden 8:30–17:00 (last entry 16:50). Buildings until 16:45 (last entry 16:30); Dharma Hall 9:00–16:30 (last entry 16:20)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "庭園：高校生以上500円、小・中学生300円、未就学児は無料。建物の中は300円追加",
+       "en": "Garden: ¥500 (high school and up), ¥300 (elementary/junior high), preschoolers free. Buildings ¥300 extra"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "天龍寺 公式サイト（参拝・交通案内）"
+   },
+   "notices": [
+    {
+     "from": "2026-11-14",
+     "to": "2026-11-30",
+     "url": "https://www.tenryuji.com/visit/",
+     "text": {
+      "ja": "2026年11月14日〜30日は「特別早朝参拝」で、庭園が7:30から開きます（北門は8:30から）。",
+      "en": "Nov 14–30, 2026: the garden opens early at 7:30 (the north gate opens at 8:30)."
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "bamboo",
+   "name": {
+    "ja": "嵐山 竹林の小径",
+    "en": "Arashiyama Bamboo Grove"
+   },
+   "kind": {
+    "ja": "散策路",
+    "en": "Walking path"
+   },
+   "blurb": {
+    "ja": "高い竹が両側から空をおおう、嵐山でいちばん有名な小道。天龍寺の北門を出ると、もう竹林の中です。",
+    "en": "Arashiyama’s most famous path, where tall bamboo closes over the sky on both sides. Step out of Tenryu-ji’s north gate and you’re already in it."
+   },
+   "lat": 35.0169,
+   "lng": 135.6715,
+   "photos": [
+    "12-1.jpg",
+    "12-2.jpg",
+    "12-3.jpg",
+    "12-4.jpg",
+    "12-5.jpg",
+    "12-8.jpg"
+   ],
+   "text": {
+    "ja": "竹林の小径（ちくりんのこみち）\n\n野宮神社から天龍寺の北門を通って大河内山荘まで続く、約400メートルの道です。いつでも無料で歩けます。\n\n昼間はとても混むので、写真を撮るなら朝早くか夕方がおすすめ。風が吹くと、竹がサラサラと鳴る音も楽しめます。\n\n竹林を抜けた先にトロッコ嵐山駅があり、保津川の渓谷を走る嵯峨野トロッコ列車に乗れます（片道880円、亀岡まで約25分。3月1日〜12月29日の運行で、水曜に休む日があります）。全席指定で、乗る日の1か月前から公式サイトで予約できます。当日券は駅の窓口で売り切れるまで（公式サイトで2026年11月21日に確認）。\n\nこのコースでは、天龍寺の北門を出て9時すぎに歩きます。大河内山荘の前まで上って、同じ道を野宮神社のほうへ戻ります。朝は昼間より人が少ないことが多いですが、紅葉や桜の時期の土曜は、この時間でも人が出ています。\n\nおすすめ訪問時間：9:15〜9:30",
+    "en": "Bamboo Grove path\n\nAbout 400 meters long, running from Nonomiya Shrine past the north gate of Tenryu-ji to Okochi Sanso. It’s free and always open.\n\nIt gets very crowded in the daytime, so for photos come early in the morning or late in the afternoon. When the wind blows, listen to the bamboo rustle.\n\nJust beyond the grove is Torokko Arashiyama Station, where you can board the Sagano Romantic Train through the Hozu River gorge (¥880 one way, about 25 minutes to Kameoka; it runs 1 March – 29 December, with some Wednesdays off). All seats are reserved: book on the official website from one month ahead, or buy a same-day ticket at the station window while they last (checked on the official website, 21 Nov 2026).\n\nOn this course you walk it soon after 9:00, straight out of Tenryu-ji’s north gate. Go up as far as the entrance to Okochi Sanso, then come back the same way toward Nonomiya Shrine. Mornings usually have fewer people than midday, but on Saturdays in the autumn-leaf and cherry seasons it can be busy even at this hour.\n\nRecommended visit time: 9:15–9:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "竹林の小径",
+      "en": "Bamboo Grove"
+     },
+     "lat": 35.0169,
+     "lng": 135.6715,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E6%9E%97%E3%81%AE%E5%B0%8F%E5%BE%84%20%E5%B5%90%E5%B1%B1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "京都観光Navi：竹林の小径（京都市公式）",
+      "en": "Kyoto City guide: Bamboo path (Japanese)"
+     },
+     "url": {
+      "ja": "https://ja.kyoto.travel/tourism/single01.php?category_id=8&tourism_id=2683",
+      "en": "https://ja.kyoto.travel/tourism/single01.php?category_id=8&tourism_id=2683"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料。いつでも歩けます",
+       "en": "Free, always open"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 6,
+   "id": "okochi",
+   "name": {
+    "ja": "大河内山荘庭園",
+    "en": "Okochi Sanso Garden"
+   },
+   "kind": {
+    "ja": "庭園",
+    "en": "Garden"
+   },
+   "blurb": {
+    "ja": "時代劇スター・大河内傳次郎が30年ほどかけて造った山荘の庭。小倉山の上から比叡山や京都の街を見渡し、最後にお抹茶とお菓子でひと休み。",
+    "en": "The hillside garden that silent-film star Denjiro Okochi spent 30 years creating. Look out over Kyoto to Mount Hiei, then rest with matcha and a sweet."
+   },
+   "lat": 35.016542,
+   "lng": 135.670234,
+   "photos": [
+    "11-1.jpg",
+    "11-2.jpg",
+    "11-3.jpg",
+    "11-4.jpg",
+    "11-5.jpg",
+    "11-6.jpg",
+    "11-7.jpg",
+    "11-8.jpg",
+    "11-9.jpg",
+    "11-10.jpg"
+   ],
+   "text": {
+    "ja": "大河内山荘庭園（おおこうちさんそうていえん）\n\n竹林の小径のいちばん奥にある、広い回遊式の庭園です。坂道をぐるりと歩くと、京都の街と比叡山、反対側には保津峡の山あいが見えます。\n\n入園料にはお抹茶とお菓子が含まれていて、入口でもらう券を茶室で渡します。人の多い竹林のすぐ隣ですが、中は静かです。\n\nめやすの時間割には入っていない寄り道です。入れると、このあとが40分ほど遅くなります。入園料は公式の情報で確かめられていません（要確認）。\n\nこのコースでは、竹林を上りきったところで寄れます。9:00から開いていて、お抹茶つきなので、朝のひと休みにもなります。\n\nおすすめ訪問時間：9:30〜10:10",
+    "en": "Okochi Sanso Garden\n\nA large strolling garden at the far end of the bamboo path. As you follow the paths around the hill, you can see Kyoto and Mount Hiei on one side and the Hozu Gorge on the other.\n\nAdmission includes matcha and a sweet: hand in the ticket you get at the entrance at the tea house. It’s right next to the crowded bamboo grove, but inside it’s very peaceful.\n\nThis is an extra, not part of the suggested timetable: adding it pushes everything after it back by about 40 minutes. The admission fee couldn’t be confirmed from an official source.\n\nOn this course you pass it at the top of the bamboo path. It opens at 9:00 and the matcha is included, so it also works as a morning rest.\n\nRecommended visit time: 9:30–10:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大河内山荘庭園",
+      "en": "Okochi Sanso"
+     },
+     "lat": 35.016542,
+     "lng": 135.670234,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%B2%B3%E5%86%85%E5%B1%B1%E8%8D%98%E5%BA%AD%E5%9C%92"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "京都観光Navi：大河内山荘庭園（京都市公式）",
+      "en": "Kyoto City guide: Okochi Sanso (Japanese)"
+     },
+     "url": {
+      "ja": "https://ja.kyoto.travel/tourism/single01.php?category_id=8&tourism_id=693",
+      "en": "https://ja.kyoto.travel/tourism/single01.php?category_id=8&tourism_id=693"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（入園は16:30まで）。休みなし。京都市の観光サイトで確認",
+       "en": "9:00–17:00 (last entry 16:30). Open every day, per Kyoto City’s tourism site"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "1,000円（お抹茶とお菓子つき）（要確認）",
+       "en": "¥1,000 including matcha and a sweet (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "verified": false,
+    "source": "時間と休みは京都観光Navi（京都市公式）。入園料は公式の情報が見つからず未確認（2026-11-22）"
+   },
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "nonomiya",
+   "name": {
+    "ja": "嵯峨野 竹林の小径・野宮神社",
+    "en": "Sagano Bamboo Path & Nonomiya Shrine"
+   },
+   "kind": {
+    "ja": "散策路・神社",
+    "en": "Path & shrine"
+   },
+   "blurb": {
+    "ja": "竹林の小径の東側。『源氏物語』にも登場する野宮神社は、皮のついたままの木で造った「黒木の鳥居」が目印の、縁結びの神社です。",
+    "en": "The eastern part of the bamboo path. Nonomiya Shrine, which appears in The Tale of Genji, is known for its torii gate of unbarked wood and for good luck in love."
+   },
+   "lat": 35.017585,
+   "lng": 135.673303,
+   "photos": [
+    "13-4.jpg",
+    "13-1.jpg",
+    "13-2.jpg",
+    "13-3.jpg",
+    "13-6.jpg",
+    "13-8.jpg"
+   ],
+   "text": {
+    "ja": "野宮神社（ののみやじんじゃ）\n\n天皇の代わりに伊勢神宮に仕える皇女（斎王）が、伊勢へ向かう前に身を清めた場所と伝わる神社です。『源氏物語』の「賢木（さかき）」の巻の舞台にもなっています。\n\n朝ごはんはこのあと。天龍寺の近くの「エスプレッソと」（パンとエスプレッソと嵐山庭園のカフェ）は、8:00〜18:00、不定休です（お店の公式サイトで2026年11月22日に確認）。野宮神社から歩いて10分ほど。休みの日が決まっていないので、行く日に開いているかはお店の案内で確かめてください。\n\nおすすめ訪問時間：9:35〜9:45（そのあと朝ごはん 9:55〜10:40）",
+    "en": "Nonomiya Shrine\n\nThis is said to be where imperial princesses purified themselves before going to serve at Ise Shrine on the emperor’s behalf. It also appears in The Tale of Genji.\n\nBreakfast comes next. “Espresso to”, the café of Bread, Espresso & Arashiyama Garden near Tenryu-ji, is open 8:00–18:00 with irregular closing days (checked on its official website, Nov 22, 2026). It’s about 10 minutes on foot from Nonomiya Shrine. As the closing days aren’t fixed, check that it’s open on the day.\n\nRecommended visit time: 9:35–9:45 (then breakfast, 9:55–10:40)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "野宮神社",
+      "en": "Nonomiya Shrine"
+     },
+     "lat": 35.017755,
+     "lng": 135.674165,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%8E%E5%AE%AE%E7%A5%9E%E7%A4%BE"
+    },
+    {
+     "label": {
+      "ja": "朝ごはん：エスプレッソと",
+      "en": "Breakfast: Espresso to"
+     },
+     "lat": 35.01482,
+     "lng": 135.67492,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%91%E3%83%B3%E3%81%A8%E3%82%A8%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%82%BD%E3%81%A8%E5%B5%90%E5%B1%B1%E5%BA%AD%E5%9C%92"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "野宮神社 公式サイト",
+      "en": "Nonomiya Shrine (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.nonomiya.com/",
+      "en": "https://www.nonomiya.com/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "パンとエスプレッソと嵐山庭園「エスプレッソと」（朝ごはん）",
+      "en": "Bread, Espresso & Arashiyama Garden: café (Japanese)"
+     },
+     "url": {
+      "ja": "https://bread-espresso.jp/shop/arashiyama-cafe.html",
+      "en": "https://bread-espresso.jp/shop/arashiyama-cafe.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "竹林の小径・野宮神社の境内は無料",
+       "en": "The path and the shrine grounds are free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "朝ごはんの「エスプレッソと」：8:00〜18:00、不定休",
+       "en": "Breakfast café “Espresso to”: 8:00–18:00, irregular closing days"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "野宮神社は2026-11-20の確認。カフェの時間はパンとエスプレッソと 公式サイト（2026-11-22）"
+   },
+   "notices": []
+  },
+  {
+   "no": 8,
+   "id": "jojakkoji",
+   "name": {
+    "ja": "常寂光寺",
+    "en": "Jojakko-ji Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "小倉山の斜面に建つ紅葉の名所。茅葺きの仁王門から石段を上ると、多宝塔のそばから京都の街が見渡せます。",
+    "en": "A temple on the slopes of Mount Ogura, famous for autumn leaves. Climb from the thatched gate to the pagoda for a view over Kyoto."
+   },
+   "lat": 35.019608,
+   "lng": 135.669755,
+   "photos": [
+    "10-1.jpg",
+    "10-2.jpg",
+    "10-3.jpg",
+    "10-4.jpg",
+    "10-5.jpg",
+    "10-6.jpg",
+    "10-7.jpg",
+    "10-8.jpg",
+    "10-9.jpg",
+    "10-10.jpg"
+   ],
+   "text": {
+    "ja": "常寂光寺（じょうじゃっこうじ）\n\n山門から茅葺きの仁王門、苔の石段と、上るほどに景色が広がります。いちばん上の多宝塔の近くからは、京都の街と東山の山なみが一望できます。\n\n石段が多いので、ゆっくり上ってください。三脚・一脚は持ち込めません。\n\nこのコースでは、朝ごはんのあとにここから奥嵯峨を北へ歩きます。カフェからは歩いて15〜20分です。\n\nおすすめ訪問時間：11:00〜11:35",
+    "en": "Jojakko-ji Temple\n\nFrom the main gate to the thatched Nio-mon gate and up mossy stone steps, the view opens up as you climb. Near the pagoda at the top you can see across Kyoto to the Higashiyama hills.\n\nThere are a lot of steps, so take your time. Tripods and monopods are not allowed.\n\nOn this course, this is where the walk north through Oku-Saga begins after breakfast. It’s 15–20 minutes on foot from the café.\n\nRecommended visit time: 11:00–11:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "常寂光寺",
+      "en": "Jojakko-ji"
+     },
+     "lat": 35.019608,
+     "lng": 135.669755,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E5%AF%82%E5%85%89%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "常寂光寺 公式サイト",
+      "en": "Jojakko-ji official site (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jojakko-ji.or.jp/",
+      "en": "https://www.jojakko-ji.or.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "常寂光寺 よくある質問（拝観料・三脚など）",
+      "en": "Jojakko-ji FAQ (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jojakko-ji.or.jp/faq/",
+      "en": "https://www.jojakko-ji.or.jp/faq/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（受付は16:30まで）。休みの日はありません",
+       "en": "9:00–17:00 (last entry 16:30). Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "600円",
+       "en": "¥600"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "常寂光寺 公式サイト（よくある質問）"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.jojakko-ji.or.jp/faq/",
+     "head": {
+      "ja": "三脚・一脚は持ち込めません",
+      "en": "No tripods or monopods"
+     },
+     "text": {
+      "ja": "受付で預かってもらうこともできません（公式サイトのよくある質問）。",
+      "en": "They can’t be left at the reception either (per the temple’s FAQ)."
+     }
+    },
+    {
+     "from": "2026-11-18",
+     "to": "2026-11-30",
+     "url": "https://www.jojakko-ji.or.jp/news/",
+     "text": {
+      "ja": "2026年11月18日〜30日は「本堂特別拝観」（拝観料に600円追加、予約不要）で、本堂と書院に上がれます。",
+      "en": "Nov 18–30, 2026: special opening of the main hall and study hall (¥600 extra, no booking needed)."
+     }
+    }
+   ],
+   "caution": {
+    "ja": "三脚・一脚は持ち込めません",
+    "en": "No tripods or monopods"
+   }
+  },
+  {
+   "no": 9,
+   "id": "nisonin",
+   "name": {
+    "ja": "二尊院",
+    "en": "Nison-in Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "総門から本堂へまっすぐのびる参道は「紅葉の馬場」と呼ばれる紅葉の名所。釈迦如来と阿弥陀如来の2体の仏さまをまつるお寺です。",
+    "en": "The long, straight approach from the gate, known as the “Maple Riding Ground”, is famous for autumn color. The temple enshrines two Buddhas, Shaka and Amida."
+   },
+   "lat": 35.021738,
+   "lng": 135.669666,
+   "photos": [
+    "09-2.jpg",
+    "09-1.jpg",
+    "09-3.jpg",
+    "09-4.jpg",
+    "09-5.jpg",
+    "09-6.jpg",
+    "09-7.jpg",
+    "09-8.jpg",
+    "09-9.jpg",
+    "09-10.jpg"
+   ],
+   "text": {
+    "ja": "二尊院（にそんいん）\n\n名前のとおり、送り出してくれる釈迦如来と、迎えてくれる阿弥陀如来の「二尊」をまつっています。\n\n総門をくぐると、ゆるやかな石段の参道「紅葉の馬場」がまっすぐ本堂へ。秋は真っ赤なもみじのトンネルになります。本堂の奥の高台からは、嵯峨野の町並みと山が見渡せます。\n\n境内での飲食はできません。\n\nおすすめ訪問時間：11:40〜12:05",
+    "en": "Nison-in Temple\n\nAs the name says, it enshrines “two honored ones”: Shaka, who sends us off, and Amida, who welcomes us.\n\nFrom the gate, a broad, gently stepped path called the Momiji-no-Baba (“Maple Riding Ground”) leads straight to the main hall, and in autumn it becomes a tunnel of red maples. From the hillside behind the main hall you can look out over Sagano.\n\nNo eating in the temple grounds.\n\nRecommended visit time: 11:40–12:05"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "二尊院",
+      "en": "Nison-in"
+     },
+     "lat": 35.021738,
+     "lng": 135.669666,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E5%B0%8A%E9%99%A2%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "二尊院 公式サイト（拝観と交通）",
+      "en": "Nison-in (visitor info, Japanese)"
+     },
+     "url": {
+      "ja": "https://nisonin.jp/info",
+      "en": "https://nisonin.jp/info"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:30受付終了。休みの日はありません",
+       "en": "9:00–16:30 last entry. Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人（中学生以上）600円、小学生以下は無料",
+       "en": "Adults (junior high and up) ¥600, elementary and under free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "公式サイトの中に500円と書かれたページも残っていますが、拝観案内のページでは600円です。",
+     "en": "One page of the official site still says ¥500, but the admission page says ¥600."
+    },
+    "checked": "2026-11-22",
+    "source": "二尊院 公式サイト（拝観と交通）。飲食の決まりは2026-11-20の確認"
+   },
+   "notices": [],
+   "caution": {
+    "ja": "境内で飲食はできません",
+    "en": "No eating or drinking in the grounds"
+   }
+  },
+  {
+   "no": 10,
+   "id": "gioji",
+   "name": {
+    "ja": "祇王寺",
+    "en": "Gio-ji Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "一面の苔の庭に、もみじと竹。茅葺きの小さな草庵には、光が差し込む大きな丸窓「吉野窓」があります。",
+    "en": "A garden carpeted in moss under maples and bamboo, and a small thatched hut with a big round “Yoshino window”."
+   },
+   "lat": 35.023512,
+   "lng": 135.666801,
+   "photos": [
+    "08-1.jpg",
+    "08-2.jpg",
+    "08-3.jpg",
+    "08-4.jpg",
+    "08-5.jpg",
+    "08-6.jpg",
+    "08-7.jpg",
+    "08-8.jpg",
+    "08-9.jpg",
+    "08-10.jpg"
+   ],
+   "text": {
+    "ja": "祇王寺（ぎおうじ）\n\n『平家物語』に登場する白拍子の祇王が、平清盛の心が離れたあと、母と妹とともに出家して暮らしたと伝わる尼寺です。\n\n境内は小さく、20〜30分で回れます。苔がきれいなのは新緑のころと、もみじが苔の上に散る11月下旬〜12月上旬。\n\n拝観料は公式サイトがつながらず、確かめられていません（要確認）。\n\nこのコースでは、ここで折り返します。来た道を下って、嵐山の中心まで歩いて25〜30分。お昼は13:15ごろです。\n\nおすすめ訪問時間：12:15〜12:45",
+    "en": "Gio-ji Temple\n\nA small nunnery linked to the Tale of the Heike: Gio, a dancer loved by the warlord Taira no Kiyomori, is said to have become a nun here with her mother and sister after he turned away from her.\n\nThe grounds are small, but the moss garden is one of the most beautiful in Sagano: in fresh spring green, and when the maple leaves fall on the moss in late November to early December.\n\nThere is also a joint ticket with Daikaku-ji Temple.\n\nOn this course you turn round here. Walk back down the way you came: central Arashiyama is 25–30 minutes away, and lunch is at about 13:15.\n\nRecommended visit time: 12:15–12:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "祇王寺",
+      "en": "Gio-ji"
+     },
+     "lat": 35.023512,
+     "lng": 135.666801,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E7%8E%8B%E5%AF%BA%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "京都観光Navi：祇王寺（京都市公式）",
+      "en": "Kyoto City guide: Gio-ji (Japanese)"
+     },
+     "url": {
+      "ja": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=258",
+      "en": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=258"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "祇王寺 公式サイト",
+      "en": "Gio-ji official site (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.giouji.or.jp/",
+      "en": "https://www.giouji.or.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:30受付終了（12月31日は15:00受付終了、1月1日は休み）。京都市の観光サイトで確認",
+       "en": "9:00–16:30 last entry (15:00 on Dec 31; closed Jan 1), per Kyoto City’s tourism site"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、小・中・高校生100円。祇王寺・大覚寺の共通券1,000円（要確認）",
+       "en": "Adults ¥500, students ¥100. Joint ticket with Daikaku-ji ¥1,000 (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "verified": false,
+    "source": "時間と休みは京都観光Navi（京都市公式）。拝観料は祇王寺の公式サイトが503で開けず未確認（2026-11-22）"
+   },
+   "notices": []
+  },
+  {
+   "no": 11,
+   "id": "adashino",
+   "name": {
+    "ja": "化野念仏寺",
+    "en": "Adashino Nenbutsu-ji Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "約8000体の石仏・石塔が並ぶお寺。本堂の裏には、静かな竹林の石段もあります。秋は境内のもみじも見事。",
+    "en": "A temple with around 8,000 stone Buddhas and stupas, and a quiet bamboo stairway behind the main hall. The maples are lovely in autumn."
+   },
+   "lat": 35.02695,
+   "lng": 135.665,
+   "photos": [
+    "07-1.jpg",
+    "07-2.jpg",
+    "07-3.jpg",
+    "07-4.jpg",
+    "07-5.jpg",
+    "07-6.jpg",
+    "07-7.jpg",
+    "07-8.jpg",
+    "07-9.jpg"
+   ],
+   "text": {
+    "ja": "化野念仏寺（あだしのねんぶつじ）\n\n「化野」は、昔このあたりが葬送の地だったころの地名。野ざらしになっていた石仏や石塔を集めてまつったのが「西院の河原（さいのかわら）」です。\n\n本堂の裏から竹林の小道が続いています。嵐山の竹林よりずっと静かで、拝観料だけで歩けます。\n\n毎年8月の最後の土・日曜日には、たくさんのろうそくを灯す「千灯供養」があります。\n\nこのコースでは、祇王寺から10分ほど坂を上る寄り道です。足すと、お昼が14:10ごろになります。\n\nおすすめ訪問時間：12:55〜13:35",
+    "en": "Adashino Nenbutsu-ji Temple\n\n“Adashino” was once a burial ground. The stone Buddhas and stupas left out in the fields were gathered here into the area called Sai-no-kawara.\n\nA bamboo path leads up behind the main hall. It’s much quieter than the famous Arashiyama grove, and it’s covered by the admission.\n\nOn the last Saturday and Sunday of August, thousands of candles are lit for the Sento Kuyo ceremony.\n\nOn this course it’s an extra, about 10 minutes uphill from Gio-ji. Adding it moves lunch to about 14:10.\n\nRecommended visit time: 12:55–13:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "化野念仏寺",
+      "en": "Adashino Nenbutsu-ji"
+     },
+     "lat": 35.02695,
+     "lng": 135.665,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%A0%E3%81%97%E9%87%8E%E5%BF%B5%E4%BB%8F%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "あだし野念仏寺 公式サイト",
+      "en": "Adashino Nenbutsu-ji (English)"
+     },
+     "url": {
+      "ja": "https://nenbutsuji.jp/",
+      "en": "https://nenbutsuji.jp/eng"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:30受付終了（12月・1月・2月は15:30受付終了）。閉門は受付終了の最大30分後",
+       "en": "9:00–16:30 last entry (15:30 in December, January and February). Gates close up to 30 minutes after last entry"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、中高生400円、小学生以下は無料（保護者同伴）",
+       "en": "Adults ¥500, junior/senior high ¥400, elementary and under free (with a guardian)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "京都市に暴風警報が出た日、雪が積もった日・凍った日は休みです。臨時の法要の日は、時間が変わるか休みになることがあります。",
+     "en": "Closed when a storm warning is issued for Kyoto City and on days of snow or ice. Hours may change, or the temple may close, for special ceremonies."
+    },
+    "checked": "2026-11-22",
+    "source": "あだし野念仏寺 公式サイト（日本語・英語）"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://nenbutsuji.jp/eng/",
+     "head": {
+      "ja": "「西院の河原」の中は撮影禁止",
+      "en": "No photos inside Sai-no-kawara"
+     },
+     "text": {
+      "ja": "石仏が並ぶ「西院の河原」の囲いの中では、写真を撮れません（公式サイト英語版の案内）。",
+      "en": "Taking photos inside the walls of Sai-no-kawara, where the stone Buddhas stand, is prohibited (per the temple’s English page)."
+     }
+    }
+   ],
+   "caution": {
+    "ja": "「西院の河原」の中は撮影禁止",
+    "en": "No photos inside Sai-no-kawara"
+   }
+  },
+  {
+   "no": 12,
+   "id": "toriimoto",
+   "name": {
+    "ja": "嵯峨鳥居本の町並み",
+    "en": "Saga-Toriimoto old street"
+   },
+   "kind": {
+    "ja": "町並み・茶屋",
+    "en": "Old street & teahouses"
+   },
+   "blurb": {
+    "ja": "化野念仏寺の先に続く坂道。茅葺き屋根の茶屋や町家が残る、昔ながらの町並みです。朱色の鳥居の前の茶屋でひと休みも。",
+    "en": "The lane that climbs on past Adashino Nenbutsu-ji. Thatched teahouses and old townhouses line the way. Stop for tea by the red torii gate."
+   },
+   "lat": 35.0281,
+   "lng": 135.6633,
+   "photos": [
+    "06-1.jpg",
+    "06-2.jpg",
+    "06-3.jpg",
+    "06-4.jpg",
+    "06-5.jpg",
+    "06-6.jpg",
+    "06-7.jpg",
+    "06-8.jpg",
+    "06-9.jpg",
+    "06-10.jpg"
+   ],
+   "text": {
+    "ja": "嵯峨鳥居本（さがとりいもと）\n\n愛宕山へ向かう参道として栄えた町で、国の重要伝統的建造物群保存地区に選ばれています。坂の上には愛宕神社の一の鳥居が立ち、そのそばに茅葺き屋根の茶屋「平野屋」があります。\n\n平野屋では、お抹茶と名物の団子「志んこ」のセット（1,200円）でひと休みできます（冬は柚子しぐれ、春は桜餅）。\n\nこのコースでは、化野念仏寺から坂を10分ほど上った先の寄り道です。坂の上の愛宕念仏寺は水曜・土曜が休みなので、平野屋のあたりで折り返します。嵐山の中心までは、同じ道を下って歩いて35〜40分。\n\nおすすめ訪問時間：13:45〜14:15",
+    "en": "Saga-Toriimoto\n\nThis old street grew up along the pilgrims’ path to Mount Atago, and it’s now a national preservation district. At the top stands the first torii gate of Atago Shrine, and beside it Hiranoya, a teahouse with a thatched roof.\n\nAt Hiranoya you can rest with matcha and “shinko”, a local dumpling (set ¥1,200; yuzu sweets in winter, sakura-mochi in spring).\n\nOn this course it’s an extra: about 10 minutes uphill from Adashino Nenbutsu-ji. Otagi Nenbutsu-ji at the top is closed on Wednesdays and Saturdays, so turn round at Hiranoya. Central Arashiyama is 35–40 minutes’ walk back down the same road.\n\nRecommended visit time: 13:45–14:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "鮎茶屋 平野屋",
+      "en": "Hiranoya teahouse"
+     },
+     "lat": 35.028512,
+     "lng": 135.662346,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AE%8E%E8%8C%B6%E5%B1%8B%20%E5%B9%B3%E9%87%8E%E5%B1%8B%20%E5%B5%AF%E5%B3%A8%E9%B3%A5%E5%B1%85%E6%9C%AC"
+    },
+    {
+     "label": {
+      "ja": "嵯峨鳥居本の町並み",
+      "en": "Saga-Toriimoto street"
+     },
+     "lat": 35.02642,
+     "lng": 135.666806,
+     "url": "https://www.google.com/maps/search/?api=1&query=35.02642%2C135.666806"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "鮎茶屋 平野屋（お品書き）",
+      "en": "Hiranoya (menu, Japanese)"
+     },
+     "url": {
+      "ja": "https://ayuchaya-hiranoya.com/menu/",
+      "en": "https://ayuchaya-hiranoya.com/menu/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "平野屋：お抹茶と志んこのセット1,200円（税込）",
+       "en": "Hiranoya: matcha and shinko set ¥1,200 (tax incl.)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "平野屋の営業時間は、公式サイトのお品書きのページでは確認できませんでした（要確認）。休みの日は公式サイトのお知らせに載っています。",
+     "en": "Hiranoya’s opening hours aren’t on its menu page (unconfirmed). Closed days are posted in the news on its website."
+    },
+    "checked": "2026-11-22",
+    "source": "鮎茶屋 平野屋 公式サイト（お品書き）。営業時間は載っていない"
+   },
+   "notices": []
+  },
+  {
+   "no": 13,
+   "id": "saganoyu",
+   "name": {
+    "ja": "嵯峨野湯",
+    "en": "Sagano-yu"
+   },
+   "kind": {
+    "ja": "カフェ",
+    "en": "Café"
+   },
+   "blurb": {
+    "ja": "昔の銭湯を改装したカフェ。白いタイルの壁や高い天井に銭湯の面影が残っています。このコースでは、ここでお昼に。",
+    "en": "A café in a converted public bathhouse, with the white tiles and high ceiling still in place. On this course it’s your lunch stop."
+   },
+   "lat": 35.017024,
+   "lng": 135.681327,
+   "photos": [
+    "15-1.jpg",
+    "15-2.jpg",
+    "15-3.jpg",
+    "15-4.jpg",
+    "15-5.jpg",
+    "15-6.jpg",
+    "15-7.jpg",
+    "15-8.jpg",
+    "15-9.jpg"
+   ],
+   "text": {
+    "ja": "嵯峨野湯（さがのゆ）\n\n昔の銭湯の建物を生かしたカフェで、パスタなどの食事、ケーキ、コーヒーがあります。嵐電の嵐電嵯峨駅のすぐそば、JR嵯峨嵐山駅からも歩いてすぐです。\n\n営業時間とラストオーダーは、お店の公式サイトでは確かめられませんでした（下の時間は食べログに載っているもの）。行く日の営業は、Googleマップなどで見てから。\n\nこのコースでは、ここでお昼にします。祇王寺から歩いて30分ほど。閉まっていたら、嵐電の嵐山駅のまわり（天龍寺の前の通り）に食事の店が並んでいます。ここから渡月橋までは10分ほどです。\n\nおすすめ訪問時間：13:15〜14:00",
+    "en": "Sagano-yu\n\nA café in an old public bathhouse building, serving pasta and other meals, cakes and coffee. It’s right by Randen-Saga Station and a short walk from JR Saga-Arashiyama Station.\n\nThe opening hours and last order couldn’t be confirmed on the café’s own website (the hours below are from Tabelog). Check Google Maps or similar on the day.\n\nOn this course this is your lunch stop, about 30 minutes on foot from Gio-ji. If it’s closed, there are plenty of places to eat around Randen Arashiyama Station, on the street in front of Tenryu-ji. From here it’s about 10 minutes to Togetsukyo Bridge.\n\nRecommended visit time: 13:15–14:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "嵯峨野湯",
+      "en": "Sagano-yu"
+     },
+     "lat": 35.017024,
+     "lng": 135.681327,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B5%AF%E5%B3%A8%E9%87%8E%E6%B9%AF%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "食べログ：嵯峨野湯（店舗の公式情報）",
+      "en": "Tabelog: Sagano-yu (Japanese)"
+     },
+     "url": {
+      "ja": "https://tabelog.com/kyoto/A2601/A260403/26005250/",
+      "en": "https://tabelog.com/kyoto/A2601/A260403/26005250/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:00〜19:00（ラストオーダー18:00）（要確認）",
+       "en": "11:00–19:00, last order 18:00 (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "クレジットカード（VISA・Master）が使えます。電子マネー・QRコード決済は使えません（要確認）",
+       "en": "Visa and Mastercard accepted; no e-money or QR payments (unconfirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20",
+    "verified": false,
+    "source": "食べログの店舗情報（2026-11-20）。公式サイト（sagano-yu.com）は通販のページだけで営業時間が載っていない（2026-11-22）"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "営業時間は要確認",
+      "en": "Opening hours unconfirmed"
+     },
+     "text": {
+      "ja": "お店の公式サイトで営業時間と休みを確かめられませんでした。行く日に開いているか、先に調べてください。",
+      "en": "The opening hours and closed days couldn’t be confirmed on the café’s own website. Check that it’s open on the day you go."
+     }
+    }
+   ],
+   "caution": {
+    "ja": "営業時間は要確認",
+    "en": "Opening hours unconfirmed"
+   }
+  },
+  {
+   "no": 14,
+   "id": "togetsukyo",
+   "name": {
+    "ja": "渡月橋",
+    "en": "Togetsukyo Bridge"
+   },
+   "kind": {
+    "ja": "橋・景色",
+    "en": "Bridge & view"
+   },
+   "blurb": {
+    "ja": "嵐山のシンボル。桂川にかかる長い橋から、嵐山の山と川を眺めます。夕方の景色がきれいです。",
+    "en": "The symbol of Arashiyama: a long bridge over the Katsura River with the hills behind it. It looks best in the evening light."
+   },
+   "lat": 35.012868,
+   "lng": 135.677763,
+   "photos": [
+    "16-1.jpg",
+    "16-2.jpg",
+    "16-3.jpg",
+    "16-4.jpg",
+    "16-6.jpg",
+    "16-7.jpg",
+    "16-8.jpg",
+    "16-10.jpg"
+   ],
+   "text": {
+    "ja": "渡月橋（とげつきょう）\n\n鎌倉時代、亀山上皇が「くまなき月の渡るに似る」と言ったことから、この名前がついたと伝えられています。\n\n橋の上は人が多いので、川岸の公園や中之島に下りると、橋と山がきれいに見えます。橋を南に渡ると、モンキーパークの入口と阪急嵐山駅です。\n\nおすすめ訪問時間：14:10〜14:30",
+    "en": "Togetsukyo Bridge\n\nThe name means “moon-crossing bridge”: in the 13th century, Emperor Kameyama is said to have remarked that the moon seemed to be crossing it.\n\nThe bridge itself is crowded, so go down to the riverbank or Nakanoshima Park for the best view of the bridge and the hills. Cross to the south side for the Monkey Park entrance and Hankyu Arashiyama Station.\n\nRecommended visit time: 14:10–14:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "渡月橋",
+      "en": "Togetsukyo Bridge"
+     },
+     "lat": 35.012868,
+     "lng": 135.677763,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B8%A1%E6%9C%88%E6%A9%8B"
+    }
+   ],
+   "links": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料。いつでも渡れます",
+       "en": "Free, always open"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": [
+    {
+     "from": "2026-11-21",
+     "to": "2026-11-29",
+     "url": "https://www.pref.kyoto.jp/fukei/kotu/kisei_k/rinji_kisei/documents/r8-sagaarashiyama.pdf",
+     "text": {
+      "ja": "11月21〜23・28・29日の13:00〜17:00は、渡月橋の北にある長辻通が歩行者天国になります（車は通れません）。とても混み合うので、時間に余裕をもって。",
+      "en": "Nov 21–23, 28 and 29, 13:00–17:00: Nagatsuji-dori, the main street north of the bridge, is closed to cars. It gets very crowded, so allow extra time."
+     }
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "id": "monkey",
+   "name": {
+    "ja": "嵐山モンキーパークいわたやま",
+    "en": "Arashiyama Monkey Park Iwatayama"
+   },
+   "kind": {
+    "ja": "動物・展望",
+    "en": "Monkeys & view"
+   },
+   "blurb": {
+    "ja": "山道を約20分上った頂上に、野生のニホンザルがたくさん。京都の街を見渡せる展望広場で、おさるさんを間近に見られます。",
+    "en": "Climb about 20 minutes up the hill to find wild Japanese macaques at the top, with a view over all of Kyoto."
+   },
+   "lat": 35.01142,
+   "lng": 135.676729,
+   "photos": [
+    {
+     "file": "17-1.jpg",
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Iwatayama_Monkey_Park,_Kyoto_3-25_(26396971592).jpg"
+     }
+    },
+    {
+     "file": "17-2.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_20.jpg"
+     }
+    },
+    {
+     "file": "17-3.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_04.jpg"
+     }
+    },
+    "17-4.jpg",
+    {
+     "file": "17-5.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_09.jpg"
+     }
+    },
+    {
+     "file": "17-7.jpg",
+     "credit": {
+      "author": "Helito",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Iwatayama_Monkey_Kyoto.jpg"
+     }
+    }
+   ],
+   "text": {
+    "ja": "嵐山モンキーパークいわたやま\n\n渡月橋の南、櫟谷宗像神社の境内に入って左手が入口です。入口から頂上まで、石段の多い山道を約20分上ります。\n\n入園は16:00まで（山頂は16:30まで）で、支払いは現金だけです。このコースでは14:40ごろに入口へ。山頂でゆっくりして、16時ごろに下りてきます。\n\nおさるさんは野生なので、目をじっと見つめない、さわらない、外でエサをあげない、がルール。エサは頂上の休憩所で買って、金網ごしにあげます。\n\nモンキーパークを出たら、阪急嵐山駅までは歩いて7〜8分です。\n\nおすすめ訪問時間：14:40〜15:55",
+    "en": "Arashiyama Monkey Park Iwatayama\n\nThe entrance is on the south side of Togetsukyo Bridge, on the left inside the grounds of Ichitanimunakata Shrine. From there it’s about a 20-minute climb, with lots of steps, to the top.\n\nLast entry is 16:00 (the summit closes at 16:30) and it’s cash only. On this course you reach the entrance at about 14:40, with plenty of time at the top before coming down at about 16:00.\n\nThe monkeys are wild, so don’t stare into their eyes, don’t touch them, and don’t feed them outside. Buy food at the rest house at the top and feed them through the wire mesh.\n\nFrom the Monkey Park it’s 7–8 minutes on foot to Hankyu Arashiyama Station.\n\nRecommended visit time: 14:40–15:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "嵐山モンキーパークいわたやま 入口",
+      "en": "Monkey Park entrance"
+     },
+     "lat": 35.01142,
+     "lng": 135.676729,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E3%83%A2%E3%83%B3%E3%82%AD%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%E3%81%84%E3%82%8F%E3%81%9F%E3%82%84%E3%81%BE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "嵐山モンキーパーク 公式サイト",
+      "en": "Arashiyama Monkey Park (official)"
+     },
+     "url": {
+      "ja": "http://www.monkeypark.jp/",
+      "en": "http://www.monkeypark.jp/eng-index.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "観光庁 多言語解説：嵐山モンキーパークいわたやま",
+      "en": "Japan Tourism Agency: Monkey Park (English)"
+     },
+     "url": {
+      "ja": "https://www.mlit.go.jp/tagengo-db/R2-01466.html",
+      "en": "https://www.mlit.go.jp/tagengo-db/R2-01466.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00（山頂は16:30まで）。おサルが山に帰ったときは早く閉まります",
+       "en": "9:00–16:00 (the summit until 16:30). Closes early if the monkeys go back into the mountains"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "不定休（大雨・大雪・台風などのときも休み）、1月1日",
+       "en": "Irregular days (also closed in heavy rain, snow or typhoons), and Jan 1"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人（16歳以上）800円、子ども（4〜15歳）400円、3歳以下は無料。現金のみ（クレジットカード・電子マネーは使えません）",
+       "en": "Adults (16 and over) ¥800, children (4–15) ¥400, under 4 free. Cash only (no cards or e-money)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "入園券を買ったら、15分以内に入園してください。",
+     "en": "Enter within 15 minutes of buying your ticket."
+    },
+    "checked": "2026-11-22",
+    "verified": true,
+    "source": "嵐山モンキーパーク 公式サイト（http://www.monkeypark.jp/）"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "http://www.monkeypark.jp/",
+     "head": {
+      "ja": "現金のみ・入園は16:00まで",
+      "en": "Cash only · last entry 16:00"
+     },
+     "text": {
+      "ja": "カードや電子マネーは使えません。入園券を買ったら15分以内に入ります。入口から頂上までは山道を約20分。",
+      "en": "No cards or e-money. Enter within 15 minutes of buying your ticket. It’s about a 20-minute climb from the entrance to the top."
+     }
+    }
+   ],
+   "caution": {
+    "ja": "現金のみ・入園は16:00まで",
+    "en": "Cash only · last entry 16:00"
+   }
+  },
+  {
+   "no": 16,
+   "id": "pontocho",
+   "name": {
+    "ja": "京都の街なかへ（先斗町）",
+    "en": "Back downtown: Pontocho"
+   },
+   "kind": {
+    "ja": "ゴール",
+    "en": "Finish"
+   },
+   "blurb": {
+    "ja": "阪急嵐山駅から電車で京都河原町へ戻ると17時ごろ。ひと休みしてから、鴨川ぞいの細い路地、先斗町で晩ごはんに。",
+    "en": "The train from Hankyu Arashiyama gets you back to Kyoto-kawaramachi at about 17:00. Take a rest, then have dinner in Pontocho, the narrow lane by the Kamo River."
+   },
+   "lat": 35.0056,
+   "lng": 135.7708,
+   "photos": [
+    "18-1.jpg",
+    "18-2.jpg",
+    "18-3.jpg",
+    "18-4.jpg",
+    "18-5.jpg",
+    "18-6.jpg",
+    "18-7.jpg",
+    "18-8.jpg"
+   ],
+   "text": {
+    "ja": "先斗町（ぽんとちょう）\n\n帰りは阪急嵐山駅から乗って、桂で乗り換え、京都河原町まで約30分（240円）。渡月橋から駅までは歩いて8分ほどです。駅を出て鴨川のほうへ歩くと、すぐに先斗町の入口。\n\n石畳の細い路地に、小さな料理屋さんや居酒屋さんが並びます。夏は鴨川に面した「川床」も。店は多いので、歩きながら表のお品書きを見て決められます。\n\n先斗町は、四条通から三条通まで南北に続く細い路地です。晩ごはんのあと三条のほうへ歩けば、そのまま三条通に出られます。遅くまで開いている店もありますが、閉まる時間とラストオーダーは店ごとに違います。入る前に、表の案内で確かめてください。\n\nこのコースでは、嵐山を16:20ごろに出て、17時ごろに京都河原町に着きます。朝が早かったので、いったん休んでから晩ごはんに出るのもいいと思います。\n\nおすすめ移動時間：16:20〜",
+    "en": "Pontocho\n\nOn the way back, take the train from Hankyu Arashiyama (about 8 minutes on foot from the bridge), change at Katsura, and it’s about 30 minutes (¥240) to Kyoto-kawaramachi. Walk from the station toward the Kamo River and you’re at the entrance to Pontocho.\n\nThe narrow stone-paved lane is lined with small restaurants and izakaya, and in summer many open terraces over the river. There are plenty of places, so you can walk along and choose from the menus posted outside.\n\nPontocho is a narrow lane running north from Shijo-dori to Sanjo-dori. After dinner, keep walking north and you come out on Sanjo-dori. Some places stay open late, but closing times and last orders differ from shop to shop: check the sign outside before you go in.\n\nOn this course you leave Arashiyama at about 16:20 and reach Kyoto-kawaramachi at about 17:00. After such an early start, a rest before heading out for dinner is a good idea.\n\nRecommended travel time: from 16:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "先斗町",
+      "en": "Pontocho"
+     },
+     "lat": 35.0056,
+     "lng": 135.7708,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%88%E6%96%97%E7%94%BA%20%E4%BA%AC%E9%83%BD"
+    },
+    {
+     "label": {
+      "ja": "京都河原町駅",
+      "en": "Kyoto-kawaramachi Station"
+     },
+     "lat": 35.003763,
+     "lng": 135.769608,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "阪急電鉄 嵐山駅 時刻表（桂方面・土曜・休日）",
+      "en": "Hankyu timetable from Arashiyama (weekends, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hankyu.co.jp/station/html/HK-98_ar_1_h.html",
+      "en": "https://www.hankyu.co.jp/station/html/HK-98_ar_1_h.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都河原町→嵐山 大人240円・子ども120円（桂で乗り換え）。交通系ICカードも使えます",
+       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240, children ¥120 (change at Katsura). IC cards accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  }
+ ],
+ "course": "tenryuji",
+ "sources": [
+  {
+   "what": "愛宕念仏寺：9:00〜16:00、水曜・土曜休み、拝観料1,000円。タクシーはJR嵯峨嵐山駅北口から5分・およそ1,500円（公式サイトの拝観案内）",
+   "url": "https://www.otagiji.com/visit-jp",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都バス 阪急嵐山駅前発 清滝行き（現行ダイヤ）：平日 7:11・7:55・8:39・9:44…、土曜 7:13・7:55・8:41・9:44…、休日 7:13・7:55・8:41・9:14・9:44・10:14・10:44…。平日8:39発（92系統）は愛宕寺前8:50、休日8:41発は8:52。運賃230円",
+   "url": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "天龍寺：庭園 8:30〜17:00（受付16:50まで）、北門受付も同じ。2026年11月14日〜30日は特別早朝参拝で庭園受付7:30〜（北門は8:30〜）。庭園500円",
+   "url": "https://www.tenryuji.com/visit/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→嵐山（桂で乗り換え、240円）。2026年11月24日（火）：7:50発→8:13着、8:01発→8:26着、9:04発・9:08発→9:33着。11月28日（土）：7:45発→8:07着。11月29日（日）：7:45発→8:07着、8:00発→8:23着、9:04発・9:15発→9:37着",
+   "url": "https://transit.yahoo.co.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町（桂で乗り換え）。2026年11月24日（火）：17:12発→17:37着、17:20発→17:46着。11月29日（日）：17:09発→17:33着（臨時）、17:14発→17:38着。16時台の時刻は調べていない（約25〜30分として書いた）",
+   "url": "https://transit.yahoo.co.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "パンとエスプレッソと嵐山庭園「エスプレッソと」（カフェ）：8:00〜18:00、不定休。ラストオーダー・朝のメニュー・支払い方法は記載なし（公式サイトの店舗ページ）",
+   "url": "https://bread-espresso.jp/shop/arashiyama-cafe.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "天龍寺 篩月（精進料理）：11:00〜14:00、木曜休み、要予約（雪は2日前まで）。予約なしでは入れないので、ルートには入れていない",
+   "url": "https://www.tenryuji.com/shigetsu/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "鮎茶屋 平野屋：公式サイトのトップとお品書きに営業時間・定休日の記載なし（要確認）",
+   "url": "https://ayuchaya-hiranoya.com/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "歩く時間（阪急嵐山駅→天龍寺 15〜20分、野宮神社→エスプレッソと 約10分、エスプレッソと→常寂光寺 15〜20分、祇王寺→化野念仏寺 約10分、祇王寺→嵯峨野湯 約30分、鳥居本→嵐山の中心 35〜40分）は地図上の距離からのめやす。実際に歩いて測ったものではない",
+   "url": null,
+   "checked": "2026-11-22"
+  }
+ ]
+}
