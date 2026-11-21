@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Toshi's Maps｜京都・滋賀・大阪・神戸・姫路・金沢・福岡・広島・南紀・四国おすすめマップ</title>
-<meta name="description" content="Toshiが実際に歩いて選んだ、京都・滋賀・大阪・神戸・姫路・金沢・福岡・広島・南紀・四国のおすすめマップ集。Kyoto, Shiga, Osaka, Kobe, Himeji, Kanazawa, Fukuoka, Hiroshima, Nanki &amp; Shikoku maps by Toshi.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Toshi's Maps｜京都と、京都から出かける旅のおすすめマップ</title>
+<meta name="description" content="Toshiが歩いて選んだ、京都の1日ルートと、京都から出かける日帰り・泊まりの旅のおすすめマップ集。Maps by Toshi: one-day routes in Kyoto, day trips from Kyoto and longer trips around Japan.">
 <meta name="theme-color" content="#F2F0EA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +79,22 @@
   .meta { margin-top: auto !important; padding-top: 10px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; font-weight: 500; color: var(--ink) !important; }
   .go { font-family: var(--f-display); letter-spacing: .12em; white-space: nowrap; }
 
+
+  /* いつでも／季節限定 のタブ */
+  .tabs { display: flex; gap: 8px; margin: 26px 0 0; position: sticky; top: calc(57px + env(safe-area-inset-top, 0px)); z-index: 9; background: var(--paper); padding: 10px 0; }
+  .tabs button { flex: 1 1 0; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 8px 10px; font: 700 14.5px/1.35 var(--f); color: var(--ink); background: var(--card); border: 1.5px solid var(--ink); cursor: pointer; text-align: center; }
+  .tabs button b { font: 400 13px/1 var(--f-display); letter-spacing: .06em; padding: 4px 7px; border: 1px solid currentColor; border-radius: 999px; }
+  .tabs button[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+  .now { margin: 10px 0 0; font-size: 14px; }
+  .now a { display: block; padding: 10px 14px; background: color-mix(in srgb, var(--gold) 16%, var(--card)); border-left: 4px solid var(--gold); text-decoration: none; font-weight: 500; }
+  .season-note { color: var(--muted); font-size: 14px; margin: 18px 0 0; }
+  .panel .group:first-of-type { padding-top: 22px; }
+  .tag.s { left: auto; right: 12px; color: #fff; }
+  .tag.sp { background: #B24A72; } .tag.su { background: #2F7A58; } .tag.au { background: #B5561F; }
+  .group.seas.sp .en { color: #B24A72; } .group.seas.su .en { color: #2F7A58; } .group.seas.au .en { color: #B5561F; }
+  @media (prefers-color-scheme: dark) { .tag.s { color: #fff; } .group.seas.sp .en { color: #E59AB8; } .group.seas.su .en { color: #7FCDA6; } .group.seas.au .en { color: #EBA06E; } }
+  .card p.when { margin: 6px 0 0; font-size: 13.5px; font-weight: 700; color: var(--ink); }
+
   .foot { margin: 48px 0 0; padding: 22px 0 calc(28px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
   .foot p { margin: 0 0 6px; }
   @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
@@ -97,17 +115,24 @@
 
 <main class="wrap">
   <section class="hero">
-    <p class="eyebrow">Kyoto, Shiga, Osaka, Kobe, Himeji, Kanazawa, Fukuoka, Hiroshima, Nanki &amp; Shikoku</p>
-    <h1 data-ja="京都・滋賀・大阪・神戸・姫路・金沢・福岡・広島・南紀・四国 おすすめマップ" data-en="Our favorite places in Kyoto, Shiga, Osaka, Kobe, Himeji, Kanazawa, Fukuoka, Hiroshima, Nanki &amp; Shikoku">京都・滋賀・大阪・神戸・姫路・金沢・福岡・広島・南紀・四国 おすすめマップ</h1>
-    <p class="lead" data-ja="実際に歩いて「ここはいい！」と感じた場所だけを集めました。写真と地図、Googleマップのリンクつきなので、スマホひとつで出かけられます。" data-en="Every place here is one I walked myself and truly loved. Each map has photos and Google Maps links, so your phone is all you need.">実際に歩いて「ここはいい！」と感じた場所だけを集めました。写真と地図、Googleマップのリンクつきなので、スマホひとつで出かけられます。</p>
+    <p class="eyebrow">Kyoto · Day trips · Longer trips</p>
+    <h1 data-ja="京都と、京都から出かける旅のおすすめマップ" data-en="My favorite places in Kyoto, and trips from Kyoto">京都と、京都から出かける旅のおすすめマップ</h1>
+    <p class="lead" data-ja="実際に歩いて「ここはいい！」と感じた場所を中心に、あわせて行きたい定番の名所も紹介しています。写真と地図、Googleマップのリンクつきなので、スマホひとつで出かけられます。" data-en="Built around places I walked myself and loved, plus the classic sights worth adding nearby. Each map has photos and Google Maps links, so your phone is all you need.">実際に歩いて「ここはいい！」と感じた場所を中心に、あわせて行きたい定番の名所も紹介しています。写真と地図、Googleマップのリンクつきなので、スマホひとつで出かけられます。</p>
   </section>
 
-  <section class="group route" aria-labelledby="h-route">
+  <div class="tabs" role="tablist" aria-label="マップの種類 / Map type">
+    <button type="button" role="tab" id="tab-year" aria-controls="panel-year" aria-selected="true" data-tab="year"><span data-ja="いつでも行ける" data-en="Any time of year">いつでも行ける</span><b>19</b></button>
+    <button type="button" role="tab" id="tab-season" aria-controls="panel-season" aria-selected="false" data-tab="season"><span data-ja="季節限定（桜・紅葉など）" data-en="Seasonal (cherry, maples…)">季節限定（桜・紅葉など）</span><b>8</b></button>
+  </div>
+  <p class="now" id="now" hidden><a href="#season"></a></p>
+
+  <div class="panel" id="panel-year" role="tabpanel" aria-labelledby="tab-year">
+  <section class="group route" aria-labelledby="h-kyoto">
     <div class="group-head">
-      <h2 id="h-route" data-ja="順番に回る1日ルート" data-en="One-day routes">順番に回る1日ルート</h2>
-      <span class="en">Route</span>
+      <h2 id="h-kyoto" data-ja="京都市内の1日ルート" data-en="One-day routes in Kyoto">京都市内の1日ルート</h2>
+      <span class="en">Kyoto</span>
     </div>
-    <p class="group-note" data-ja="番号の順にめぐると、1日で効率よく回れます。" data-en="Follow the numbers in order and you can see it all in one day.">番号の順にめぐると、1日で効率よく回れます。</p>
+    <p class="group-note" data-ja="番号の順にめぐると、1日で回れます。行きたい場所だけ選ぶこともできます。" data-en="Follow the numbers for a full day, or pick only the stops you want.">番号の順にめぐると、1日で回れます。行きたい場所だけ選ぶこともできます。</p>
     <ul class="cards">
       <li>
         <a class="card" href="eizan-line/">
@@ -138,7 +163,7 @@
             <h3 data-ja="京都 東山" data-en="Higashiyama, Kyoto">京都 東山</h3>
             <span class="alt" data-ja="Higashiyama, Kyoto" data-en="京都 東山">Higashiyama, Kyoto</span>
             <p data-ja="伏見稲荷の千本鳥居から、清水寺、産寧坂、八坂の塔、高台寺、南禅寺、永観堂へ。行きたい場所を選んで、南から北へ歩くルートです。" data-en="From the Thousand Torii of Fushimi Inari to Kiyomizu-dera, Sannenzaka, Yasaka Pagoda, Kodai-ji, Nanzen-ji and Eikan-do. Pick the places you like and walk from south to north.">伏見稲荷の千本鳥居から、清水寺、産寧坂、八坂の塔、高台寺、南禅寺、永観堂へ。行きたい場所を選んで、南から北へ歩くルートです。</p>
-            <p class="meta"><span data-ja="12か所" data-en="12 spots">12か所</span><span class="go">VIEW →</span></p>
+            <p class="meta"><span data-ja="14か所" data-en="14 spots">14か所</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
@@ -164,50 +189,15 @@
           </div>
         </a>
       </li>
-      <li>
-        <a class="card" href="takagamine/">
-          <figure><img src="images/takagamine/koetsuji-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="京都 今宮神社と鷹峯" data-en="Imamiya & Takagamine, Kyoto">京都 今宮神社と鷹峯</h3>
-            <span class="alt" data-ja="Imamiya &amp; Takagamine, Kyoto" data-en="京都 今宮神社と鷹峯">Imamiya &amp; Takagamine, Kyoto</span>
-            <p data-ja="今宮神社の門前で千年続くあぶり餅を食べて、市バスで鷹峯へ。光悦寺・源光庵・常照寺のもみじを、歩いて数分ずつ回ります。" data-en="Aburi-mochi outside Imamiya Shrine, a treat for a thousand years, then by bus to Takagamine for the maples of Koetsuji, Genkoan and Joshoji, a few minutes apart.">今宮神社の門前で千年続くあぶり餅を食べて、市バスで鷹峯へ。光悦寺・源光庵・常照寺のもみじを、歩いて数分ずつ回ります。</p>
-            <p class="meta"><span data-ja="4か所" data-en="4 spots">4か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="takao/">
-          <figure><img src="images/takao/jingoji-3.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="京都 高雄の紅葉" data-en="Autumn in Takao, Kyoto">京都 高雄の紅葉</h3>
-            <span class="alt" data-ja="Autumn in Takao, Kyoto" data-en="京都 高雄の紅葉">Autumn in Takao, Kyoto</span>
-            <p data-ja="JRバスで高雄へ。清滝川の高雄橋を渡り、もみじの石段を神護寺へ。川沿いを歩いて指月橋の先の西明寺まで。" data-en="JR Bus to Takao: cross Takao bridge over the Kiyotaki, climb the maple stairs to Jingoji, then walk the river path to Saimyoji.">JRバスで高雄へ。清滝川の高雄橋を渡り、もみじの石段を神護寺へ。川沿いを歩いて指月橋の先の西明寺まで。</p>
-            <p class="meta"><span data-ja="3か所" data-en="3 spots">3か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="daigo/">
-          <figure><img src="images/daigo/benten-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="京都 醍醐寺の夜の紅葉" data-en="Daigoji by night, Kyoto">京都 醍醐寺の夜の紅葉</h3>
-            <span class="alt" data-ja="Daigoji by night, Kyoto" data-en="京都 醍醐寺の夜の紅葉">Daigoji by night, Kyoto</span>
-            <p data-ja="秋の夜だけ公開される醍醐寺の伽藍。照らされた五重塔と、池に映る弁天堂のもみじ。2026年は11月20日〜12月6日。" data-en="Daigoji’s precinct opens on autumn evenings only: the lit pagoda and the Benten hall mirrored in its pond. 20 Nov – 6 Dec 2026.">秋の夜だけ公開される醍醐寺の伽藍。照らされた五重塔と、池に映る弁天堂のもみじ。2026年は11月20日〜12月6日。</p>
-            <p class="meta"><span data-ja="3か所" data-en="3 spots">3か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="yawata/">
-          <figure><img src="images/yawata/sewaritei-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="京都 淀・八幡の桜" data-en="Yodo &amp; Yawata cherries, Kyoto">京都 淀・八幡の桜</h3>
-            <span class="alt" data-ja="Yodo &amp; Yawata cherries, Kyoto" data-en="京都 淀・八幡の桜">Yodo &amp; Yawata cherries, Kyoto</span>
-            <p data-ja="3月は淀水路の河津桜、4月は背割堤の桜のトンネル。ケーブルで石清水八幡宮にも。京阪で回る、京都の南の春のマップです。" data-en="Kawazu cherries along the Yodo canal in March, the Sewaritei tunnel of blossoms in April, and Iwashimizu Hachimangu by cable car: spring south of Kyoto by Keihan.">3月は淀水路の河津桜、4月は背割堤の桜のトンネル。ケーブルで石清水八幡宮にも。京阪で回る、京都の南の春のマップです。</p>
-            <p class="meta"><span data-ja="4か所" data-en="4 spots">4か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
+    </ul>
+  </section>
+  <section class="group route" aria-labelledby="h-day">
+    <div class="group-head">
+      <h2 id="h-day" data-ja="京都から日帰りのルート" data-en="Day trips from Kyoto">京都から日帰りのルート</h2>
+      <span class="en">Day trips</span>
+    </div>
+    <p class="group-note" data-ja="朝に京都を出て、夜に戻ってこられるルートです。" data-en="Leave Kyoto in the morning and be back by night.">朝に京都を出て、夜に戻ってこられるルートです。</p>
+    <ul class="cards">
       <li>
         <a class="card" href="minoh/">
           <figure><img src="images/minoh/03-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
@@ -231,50 +221,6 @@
         </a>
       </li>
       <li>
-        <a class="card" href="amanohashidate/">
-          <figure><img src="images/amanohashidate/kasamatsu-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="京都 天橋立・伊根（京都から日帰り）" data-en="Amanohashidate &amp; Ine, a day trip from Kyoto">京都 天橋立・伊根（京都から日帰り）</h3>
-            <span class="alt" data-ja="Amanohashidate &amp; Ine, Kyoto" data-en="京都 天橋立・伊根">Amanohashidate &amp; Ine, Kyoto</span>
-            <p data-ja="京都から特急で約2時間。フリーパスで、カモメと一緒の観光船（自転車でも）で天橋立を渡り、傘松公園の「昇龍観」と、伊根の舟屋をめぐります。どちらを先に回るか選べます。" data-en="About 2 hours from Kyoto by express. With a day pass, cross Amanohashidate by boat with the seagulls (or by bike), see the “rising dragon” view and cruise past Ine’s boathouses, in the order you choose.">京都から特急で約2時間。フリーパスで、カモメと一緒の観光船（自転車でも）で天橋立を渡り、傘松公園の「昇龍観」と、伊根の舟屋をめぐります。どちらを先に回るか選べます。</p>
-            <p class="meta"><span data-ja="12か所" data-en="12 spots">12か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="kinosaki/">
-          <figure><img src="images/kinosaki/river-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="城崎温泉・竹田城跡（京都から日帰り）" data-en="Kinosaki Onsen &amp; Takeda Castle, a day trip from Kyoto">城崎温泉・竹田城跡（京都から日帰り）</h3>
-            <span class="alt" data-ja="Kinosaki Onsen &amp; Takeda Castle, Hyogo" data-en="城崎温泉・竹田城跡">Kinosaki Onsen &amp; Takeda Castle, Hyogo</span>
-            <p data-ja="京都から特急で約2時間20分。「天空の城」竹田城跡の石垣を歩いて、城崎温泉で柳並木の川沿いを外湯めぐり。行きたい外湯を選んで回るマップです。" data-en="About 2 h 20 min from Kyoto by express. Walk the stone walls of Takeda, the “castle in the sky”, then hop between Kinosaki’s public baths along a willow-lined river. Pick the baths you like.">京都から特急で約2時間20分。「天空の城」竹田城跡の石垣を歩いて、城崎温泉で柳並木の川沿いを外湯めぐり。行きたい外湯を選んで回るマップです。</p>
-            <p class="meta"><span data-ja="13か所" data-en="13 spots">13か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="tomogashima/">
-          <figure><img src="images/tomogashima/dai3-3.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="友ヶ島・加太（京都から日帰り）" data-en="Tomogashima &amp; Kada, a day trip from Kyoto">友ヶ島・加太（京都から日帰り）</h3>
-            <span class="alt" data-ja="Tomogashima &amp; Kada, Wakayama" data-en="友ヶ島・加太">Tomogashima &amp; Kada, Wakayama</span>
-            <p data-ja="京都から電車で和歌山の加太へ。船で無人島の友ヶ島に渡り、苔むしたレンガの砲台跡と灯台を歩いて回ります。帰りは淡嶋神社にも。" data-en="By train from Kyoto to Kada in Wakayama, then by boat to the uninhabited island of Tomogashima to walk among moss-covered brick batteries and a lighthouse. Visit Awashima Shrine on the way back.">京都から電車で和歌山の加太へ。船で無人島の友ヶ島に渡り、苔むしたレンガの砲台跡と灯台を歩いて回ります。帰りは淡嶋神社にも。</p>
-            <p class="meta"><span data-ja="10か所" data-en="10 spots">10か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="higashiomi/">
-          <figure><img src="images/higashiomi/eigenji-3.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="湖東の紅葉（京都から日帰り）" data-en="Autumn leaves in Higashiomi, a day trip from Kyoto">湖東の紅葉（京都から日帰り）</h3>
-            <span class="alt" data-ja="Taroubou-gu, Eigenji, Hyakusaiji &amp; Kyorinbo, Shiga" data-en="湖東の紅葉">Taroubou-gu, Eigenji, Hyakusaiji &amp; Kyorinbo, Shiga</span>
-            <p data-ja="742段の石段の先の太郎坊宮、渓谷の永源寺、苔むした参道の百済寺、夜の竹林がライトアップされる教林坊。行きたいお寺を選んで回る、秋のマップです。" data-en="Taroubou-gu above 742 steps, Eigenji in its maple valley, Hyakusaiji’s mossy approach and Kyorinbo’s lit-up bamboo at night. Pick the temples you want.">742段の石段の先の太郎坊宮、渓谷の永源寺、苔むした参道の百済寺、夜の竹林がライトアップされる教林坊。行きたいお寺を選んで回る、秋のマップです。</p>
-            <p class="meta"><span data-ja="6か所" data-en="6 spots">6か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
         <a class="card" href="kobe/">
           <figure><img src="images/kobe/meriken-2.jpg" alt="" width="1600" height="900" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
           <div class="card-body">
@@ -292,41 +238,51 @@
             <h3 data-ja="姫路・明石・須磨（京都から日帰り）" data-en="Himeji, Akashi &amp; Suma, a day trip from Kyoto">姫路・明石・須磨（京都から日帰り）</h3>
             <span class="alt" data-ja="Himeji, Akashi &amp; Suma, Hyogo" data-en="姫路・明石・須磨">Himeji, Akashi &amp; Suma, Hyogo</span>
             <p data-ja="世界遺産の姫路城と好古園、明石の魚の棚で明石焼のお昼、須磨浦公園のロープウェー、舞子から明石海峡大橋の夕日。海沿いを京都の方へ戻りながら回ります。" data-en="Himeji Castle and Kokoen, akashiyaki at Akashi’s Uonotana, the Sumaura ropeway and sunset at the Akashi Kaikyo Bridge, working back towards Kyoto along the coast.">世界遺産の姫路城と好古園、明石の魚の棚で明石焼のお昼、須磨浦公園のロープウェー、舞子から明石海峡大橋の夕日。海沿いを京都の方へ戻りながら回ります。</p>
-            <p class="meta"><span data-ja="6か所" data-en="6 spots">6か所</span><span class="go">VIEW →</span></p>
+            <p class="meta"><span data-ja="7か所" data-en="7 spots">7か所</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
       <li>
-        <a class="card" href="kohoku/">
-          <figure><img src="images/kohoku/sakura-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
+        <a class="card" href="amanohashidate/">
+          <figure><img src="images/amanohashidate/kasamatsu-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
           <div class="card-body">
-            <h3 data-ja="海津大崎の桜と長浜（京都から日帰り）" data-en="Kaizu-Osaki cherries &amp; Nagahama, a day trip from Kyoto">海津大崎の桜と長浜（京都から日帰り）</h3>
-            <span class="alt" data-ja="Kaizu-Osaki &amp; Nagahama, Shiga" data-en="海津大崎の桜と長浜">Kaizu-Osaki &amp; Nagahama, Shiga</span>
-            <p data-ja="琵琶湖の岸に約4km続く海津大崎の桜並木を歩いて、午後は秀吉の城下町・長浜へ。長浜城、慶雲館、旧長浜駅舎、黒壁スクエアを回る春のマップです。" data-en="Walk the 4 km cherry avenue of Kaizu-Osaki along Lake Biwa, then Hideyoshi’s castle town of Nagahama: the castle, Keiunkan, the old station and Kurokabe Square.">琵琶湖の岸に約4km続く海津大崎の桜並木を歩いて、午後は秀吉の城下町・長浜へ。長浜城、慶雲館、旧長浜駅舎、黒壁スクエアを回る春のマップです。</p>
+            <h3 data-ja="京都 天橋立・伊根（京都から日帰り）" data-en="Amanohashidate &amp; Ine, a day trip from Kyoto">京都 天橋立・伊根（京都から日帰り）</h3>
+            <span class="alt" data-ja="Amanohashidate &amp; Ine, Kyoto" data-en="京都 天橋立・伊根">Amanohashidate &amp; Ine, Kyoto</span>
+            <p data-ja="京都から特急で約2時間。フリーパスで、カモメと一緒の観光船（自転車でも）で天橋立を渡り、傘松公園の「昇龍観」と、伊根の舟屋をめぐります。どちらを先に回るか選べます。" data-en="About 2 hours from Kyoto by express. With a day pass, cross Amanohashidate by boat with the seagulls (or by bike), see the “rising dragon” view and cruise past Ine’s boathouses, in the order you choose.">京都から特急で約2時間。フリーパスで、カモメと一緒の観光船（自転車でも）で天橋立を渡り、傘松公園の「昇龍観」と、伊根の舟屋をめぐります。どちらを先に回るか選べます。</p>
+            <p class="meta"><span data-ja="12か所" data-en="12 spots">12か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="kinosaki/">
+          <figure><img src="images/kinosaki/river-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
+          <div class="card-body">
+            <h3 data-ja="城崎温泉・竹田城跡（京都から日帰り）" data-en="Kinosaki Onsen &amp; Takeda Castle, a day trip from Kyoto">城崎温泉・竹田城跡（京都から日帰り）</h3>
+            <span class="alt" data-ja="Kinosaki Onsen &amp; Takeda Castle, Hyogo" data-en="城崎温泉・竹田城跡">Kinosaki Onsen &amp; Takeda Castle, Hyogo</span>
+            <p data-ja="京都から特急で約2時間20分。「天空の城」竹田城跡の石垣を歩いて、城崎温泉で柳並木の川沿いを外湯めぐり。行きたい外湯を選んで回るマップです。" data-en="About 2 h 20 min from Kyoto by express. Walk the stone walls of Takeda, the “castle in the sky”, then hop between Kinosaki’s public baths along a willow-lined river. Pick the baths you like.">京都から特急で約2時間20分。「天空の城」竹田城跡の石垣を歩いて、城崎温泉で柳並木の川沿いを外湯めぐり。行きたい外湯を選んで回るマップです。</p>
+            <p class="meta"><span data-ja="14か所" data-en="14 spots">14か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="tomogashima/">
+          <figure><img src="images/tomogashima/dai3-3.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
+          <div class="card-body">
+            <h3 data-ja="友ヶ島・加太（京都から日帰り）" data-en="Tomogashima &amp; Kada, a day trip from Kyoto">友ヶ島・加太（京都から日帰り）</h3>
+            <span class="alt" data-ja="Tomogashima &amp; Kada, Wakayama" data-en="友ヶ島・加太">Tomogashima &amp; Kada, Wakayama</span>
+            <p data-ja="京都から電車で和歌山の加太へ。船で無人島の友ヶ島に渡り、苔むしたレンガの砲台跡と灯台を歩いて回ります。帰りは淡嶋神社にも。" data-en="By train from Kyoto to Kada in Wakayama, then by boat to the uninhabited island of Tomogashima to walk among moss-covered brick batteries and a lighthouse. Visit Awashima Shrine on the way back.">京都から電車で和歌山の加太へ。船で無人島の友ヶ島に渡り、苔むしたレンガの砲台跡と灯台を歩いて回ります。帰りは淡嶋神社にも。</p>
             <p class="meta"><span data-ja="10か所" data-en="10 spots">10か所</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="miidera/">
-          <figure><img src="images/miidera/sosui-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span></figure>
-          <div class="card-body">
-            <h3 data-ja="三井寺の夜桜（京都から日帰り）" data-en="Miidera by night, a day trip from Kyoto">三井寺の夜桜（京都から日帰り）</h3>
-            <span class="alt" data-ja="Miidera, Otsu, Shiga" data-en="大津 三井寺の夜桜">Miidera, Otsu, Shiga</span>
-            <p data-ja="京都から電車で30分の大津へ。春の約3週間だけライトアップされる琵琶湖疏水の桜並木と、三井寺の金堂・三重塔・観音堂を夜に歩きます。" data-en="30 minutes by train to Otsu: the Lake Biwa Canal cherries and Miidera’s main hall, pagoda and Kannon hall, lit up at night for about three weeks each spring.">京都から電車で30分の大津へ。春の約3週間だけライトアップされる琵琶湖疏水の桜並木と、三井寺の金堂・三重塔・観音堂を夜に歩きます。</p>
-            <p class="meta"><span data-ja="5か所" data-en="5 spots">5か所</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
     </ul>
   </section>
-
   <section class="group guide" aria-labelledby="h-guide">
     <div class="group-head">
-      <h2 id="h-guide" data-ja="おすすめスポット紹介" data-en="Spot guides">おすすめスポット紹介</h2>
+      <h2 id="h-guide" data-ja="泊まりで行くおすすめ" data-en="Longer trips">泊まりで行くおすすめ</h2>
       <span class="en">Guide</span>
     </div>
-    <p class="group-note" data-ja="回る順番は決めていません。気になる場所を選んでください。" data-en="No set order. Pick the places that interest you.">回る順番は決めていません。気になる場所を選んでください。</p>
+    <p class="group-note" data-ja="1泊以上で行きたい場所。回る順番は決めていないので、気になるところを選んでください。" data-en="Places worth a night or more. No set order: pick what interests you.">1泊以上で行きたい場所。回る順番は決めていないので、気になるところを選んでください。</p>
     <ul class="cards">
       <li>
         <a class="card" href="tango-tajima/">
@@ -334,8 +290,19 @@
           <div class="card-body">
             <h3 data-ja="丹後・但馬（天橋立・伊根・舞鶴・城崎温泉・豊岡）のおすすめ" data-en="Tango &amp; Tajima: Amanohashidate, Ine, Maizuru, Kinosaki &amp; Toyooka">丹後・但馬（天橋立・伊根・舞鶴・城崎温泉・豊岡）のおすすめ</h3>
             <span class="alt" data-ja="Tango &amp; Tajima" data-en="丹後・但馬のおすすめ">Tango &amp; Tajima</span>
-            <p data-ja="京都から日帰りなら天橋立と伊根。泊まるなら豊岡のHostel Actを拠点に、城崎温泉・竹野の海・舞鶴・竹田城跡へ。1泊・2泊・3泊のモデルプランつき。" data-en="A day trip to Amanohashidate and Ine, or stay at Hostel Act in Toyooka and explore Kinosaki, Takeno, Maizuru and Takeda Castle. With model plans for 1–3 nights.">京都から日帰りなら天橋立と伊根。泊まるなら豊岡のHostel Actを拠点に、城崎温泉・竹野の海・舞鶴・竹田城跡へ。1泊・2泊・3泊のモデルプランつき。</p>
-            <p class="meta"><span data-ja="豊岡まわり3か所・拠点の宿・3エリア・モデルプラン4つ" data-en="3 spots near Toyooka · a base · 3 areas · 4 model plans">豊岡まわり3か所・拠点の宿・3エリア・モデルプラン4つ</span><span class="go">VIEW →</span></p>
+            <p data-ja="京都から日帰りなら天橋立と伊根。泊まるなら豊岡のHostel Actを拠点に、城崎温泉・出石・竹野の海・舞鶴・竹田城跡へ。1泊・2泊・3泊のモデルプランつき。" data-en="A day trip to Amanohashidate and Ine, or stay at Hostel Act in Toyooka and explore Kinosaki, Izushi, Takeno, Maizuru and Takeda Castle. With model plans for 1–3 nights.">京都から日帰りなら天橋立と伊根。泊まるなら豊岡のHostel Actを拠点に、城崎温泉・出石・竹野の海・舞鶴・竹田城跡へ。1泊・2泊・3泊のモデルプランつき。</p>
+            <p class="meta"><span data-ja="豊岡まわり5か所・拠点の宿・3エリア・モデルプラン4つ" data-en="5 spots near Toyooka · a base · 3 areas · 4 model plans">豊岡まわり5か所・拠点の宿・3エリア・モデルプラン4つ</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="matsue/">
+          <figure><img src="matsue/img/matsuejo-1.jpg" alt="" width="1280" height="720" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span></figure>
+          <div class="card-body">
+            <h3 data-ja="松江・出雲・足立美術館のおすすめ" data-en="Matsue, Izumo &amp; the Adachi Museum">松江・出雲・足立美術館のおすすめ</h3>
+            <span class="alt" data-ja="Matsue, Izumo &amp; Adachi Museum" data-en="松江・出雲・足立美術館">Matsue, Izumo &amp; Adachi Museum</span>
+            <p data-ja="国宝の松江城とお堀の町、縁結びの出雲大社、庭園日本一の足立美術館。京都から特急やくもで行く、山陰の旅のモデルプランつき。" data-en="Matsue’s National Treasure castle and moats, Izumo Taisha, and the Adachi Museum’s famous garden, with model plans from Kyoto.">国宝の松江城とお堀の町、縁結びの出雲大社、庭園日本一の足立美術館。京都から特急やくもで行く、山陰の旅のモデルプランつき。</p>
+            <p class="meta"><span data-ja="松江・出雲・安来" data-en="Matsue, Izumo &amp; Yasugi">松江・出雲・安来</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
@@ -346,18 +313,7 @@
             <h3 data-ja="金沢のおすすめと日帰り旅" data-en="Kanazawa &amp; day trips">金沢のおすすめと日帰り旅</h3>
             <span class="alt" data-ja="Kanazawa &amp; Day Trips" data-en="金沢のおすすめと日帰り旅">Kanazawa &amp; Day Trips</span>
             <p data-ja="市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢から日帰りで行ける場所。" data-en="Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.">市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢から日帰りで行ける場所。</p>
-            <p class="meta"><span data-ja="市内9か所・海鮮・日帰り7エリア" data-en="9 city spots · seafood · 7 day-trip areas">市内9か所・海鮮・日帰り7エリア</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="fukuoka/">
-          <figure><img src="fukuoka/img/nakasu-1.jpg" alt="" width="1280" height="720" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span></figure>
-          <div class="card-body">
-            <h3 data-ja="福岡・唐津のおすすめと日帰り旅" data-en="Fukuoka, Karatsu &amp; day trips">福岡・唐津のおすすめと日帰り旅</h3>
-            <span class="alt" data-ja="Fukuoka, Karatsu &amp; Day Trips" data-en="福岡・唐津のおすすめと日帰り旅">Fukuoka, Karatsu &amp; Day Trips</span>
-            <p data-ja="福岡市内の見どころ、何度も通っているお店、そして唐津・糸島・太宰府・柳川・門司港・熊本への日帰り旅。" data-en="Places to see in Fukuoka, restaurants I keep going back to, and day trips to Karatsu, Itoshima, Dazaifu, Yanagawa, Mojiko and Kumamoto.">福岡市内の見どころ、何度も通っているお店、そして唐津・糸島・太宰府・柳川・門司港・熊本への日帰り旅。</p>
-            <p class="meta"><span data-ja="市内8か所・お店6軒・日帰り9エリア" data-en="8 city spots · 6 restaurants · 9 day-trip areas">市内8か所・お店6軒・日帰り9エリア</span><span class="go">VIEW →</span></p>
+            <p class="meta"><span data-ja="市内11か所・お店2軒・日帰り7エリア" data-en="11 city spots · 2 places to eat · 7 day-trip areas">市内11か所・お店2軒・日帰り7エリア</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
@@ -367,19 +323,8 @@
           <div class="card-body">
             <h3 data-ja="広島・宮島・尾道のおすすめと日帰り旅" data-en="Hiroshima, Miyajima, Onomichi &amp; day trips">広島・宮島・尾道のおすすめと日帰り旅</h3>
             <span class="alt" data-ja="Hiroshima, Miyajima &amp; Onomichi" data-en="広島・宮島・尾道のおすすめと日帰り旅">Hiroshima, Miyajima &amp; Onomichi</span>
-            <p data-ja="平和記念公園と路面電車、実際に食べたお好み焼き、そして宮島・尾道・西条・呉への日帰り旅。" data-en="The Peace Park and streetcars, okonomiyaki I’ve eaten, and day trips to Miyajima, Onomichi, Saijo and Kure.">平和記念公園と路面電車、実際に食べたお好み焼き、そして宮島・尾道・西条・呉への日帰り旅。</p>
-            <p class="meta"><span data-ja="市内4か所・お店3軒・日帰り4エリア" data-en="4 city spots · 3 restaurants · 4 day-trip areas">市内4か所・お店3軒・日帰り4エリア</span><span class="go">VIEW →</span></p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="nanki/">
-          <figure><img src="nanki/img/seigantoji-1.jpg" alt="" width="1280" height="848" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span></figure>
-          <div class="card-body">
-            <h3 data-ja="南紀（白浜・那智勝浦・熊野・串本）のおすすめ" data-en="Nanki: Shirahama, Nachikatsuura, Kumano &amp; Kushimoto">南紀（白浜・那智勝浦・熊野・串本）のおすすめ</h3>
-            <span class="alt" data-ja="Nanki, Wakayama" data-en="南紀のおすすめ">Nanki, Wakayama</span>
-            <p data-ja="白良浜と円月島、千畳敷・三段壁の白浜。那智の滝と熊野那智大社、勝浦のまぐろ、湯の峰のつぼ湯、本州最南端の潮岬。" data-en="Shirahama’s beach, Engetsu Island and sea cliffs; Nachi Falls and Kumano Nachi Taisha, Katsuura tuna, Tsuboyu at Yunomine and Shionomisaki.">白良浜と円月島、千畳敷・三段壁の白浜。那智の滝と熊野那智大社、勝浦のまぐろ、湯の峰のつぼ湯、本州最南端の潮岬。</p>
-            <p class="meta"><span data-ja="白浜5か所・那智勝浦や熊野など4エリア" data-en="5 Shirahama spots · 4 areas further east">白浜5か所・那智勝浦や熊野など4エリア</span><span class="go">VIEW →</span></p>
+            <p data-ja="平和記念公園と路面電車、実際に食べたお好み焼き、そして宮島・尾道・西条・呉・岩国の錦帯橋への日帰り旅。" data-en="The Peace Park and streetcars, okonomiyaki I’ve eaten, and day trips to Miyajima, Onomichi, Saijo, Kure and Iwakuni’s Kintaikyo Bridge.">平和記念公園と路面電車、実際に食べたお好み焼き、そして宮島・尾道・西条・呉・岩国の錦帯橋への日帰り旅。</p>
+            <p class="meta"><span data-ja="市内4か所・お店3軒・日帰り5エリア" data-en="4 city spots · 3 restaurants · 5 day-trip areas">市内4か所・お店3軒・日帰り5エリア</span><span class="go">VIEW →</span></p>
           </div>
         </a>
       </li>
@@ -394,8 +339,158 @@
           </div>
         </a>
       </li>
+      <li>
+        <a class="card" href="nanki/">
+          <figure><img src="nanki/img/seigantoji-1.jpg" alt="" width="1280" height="848" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span></figure>
+          <div class="card-body">
+            <h3 data-ja="南紀（白浜・那智勝浦・熊野・串本）のおすすめ" data-en="Nanki: Shirahama, Nachikatsuura, Kumano &amp; Kushimoto">南紀（白浜・那智勝浦・熊野・串本）のおすすめ</h3>
+            <span class="alt" data-ja="Nanki, Wakayama" data-en="南紀のおすすめ">Nanki, Wakayama</span>
+            <p data-ja="白良浜と円月島、千畳敷・三段壁の白浜。那智の滝と熊野那智大社、勝浦のまぐろ、熊野本宮大社と湯の峰のつぼ湯、本州最南端の潮岬。" data-en="Shirahama’s beach, Engetsu Island and sea cliffs; Nachi Falls and Kumano Nachi Taisha, Katsuura tuna, Tsuboyu at Yunomine and Shionomisaki.">白良浜と円月島、千畳敷・三段壁の白浜。那智の滝と熊野那智大社、勝浦のまぐろ、熊野本宮大社と湯の峰のつぼ湯、本州最南端の潮岬。</p>
+            <p class="meta"><span data-ja="白浜7か所・那智勝浦や熊野など4エリア" data-en="7 Shirahama spots · 4 areas further east">白浜7か所・那智勝浦や熊野など4エリア</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="fukuoka/">
+          <figure><img src="fukuoka/img/nakasu-1.jpg" alt="" width="1280" height="720" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span></figure>
+          <div class="card-body">
+            <h3 data-ja="福岡・唐津のおすすめと日帰り旅" data-en="Fukuoka, Karatsu &amp; day trips">福岡・唐津のおすすめと日帰り旅</h3>
+            <span class="alt" data-ja="Fukuoka, Karatsu &amp; Day Trips" data-en="福岡・唐津のおすすめと日帰り旅">Fukuoka, Karatsu &amp; Day Trips</span>
+            <p data-ja="福岡市内の見どころ、実際に行ったお店、そして唐津・糸島・太宰府・柳川・門司港・熊本への日帰り旅。" data-en="Places to see in Fukuoka, restaurants I’ve actually eaten at, and day trips to Karatsu, Itoshima, Dazaifu, Yanagawa, Mojiko and Kumamoto.">福岡市内の見どころ、実際に行ったお店、そして唐津・糸島・太宰府・柳川・門司港・熊本への日帰り旅。</p>
+            <p class="meta"><span data-ja="市内8か所・食べる6か所・日帰り9エリア" data-en="8 city spots · 6 places to eat · 9 day-trip areas">市内8か所・食べる6か所・日帰り9エリア</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
     </ul>
   </section>
+  </div>
+
+  <div class="panel" id="panel-season" role="tabpanel" aria-labelledby="tab-season" hidden>
+    <p class="season-note" data-ja="行く時期が決まっているマップです。見ごろやライトアップの日程は年によって変わるので、お出かけ前に確かめてください。" data-en="These maps are for one season only. Peak dates and illumination schedules change every year, so check before you go.">行く時期が決まっているマップです。見ごろやライトアップの日程は年によって変わるので、お出かけ前に確かめてください。</p>
+  <section class="group route seas sp" aria-labelledby="h-spring">
+    <div class="group-head">
+      <h2 id="h-spring" data-ja="春・桜のマップ" data-en="Spring: cherry blossom">春・桜のマップ</h2>
+      <span class="en">Spring</span>
+    </div>
+    <p class="group-note" data-ja="3月〜4月の桜の時期だけおすすめするマップです。" data-en="Recommended only in cherry-blossom season, March to April.">3月〜4月の桜の時期だけおすすめするマップです。</p>
+    <ul class="cards">
+      <li>
+        <a class="card" href="yawata/">
+          <figure><img src="images/yawata/sewaritei-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s sp" data-ja="春・桜" data-en="Spring">春・桜</span></figure>
+          <div class="card-body">
+            <h3 data-ja="京都 淀・八幡の桜" data-en="Yodo &amp; Yawata cherries, Kyoto">京都 淀・八幡の桜</h3>
+            <span class="alt" data-ja="Yodo &amp; Yawata cherries, Kyoto" data-en="京都 淀・八幡の桜">Yodo &amp; Yawata cherries, Kyoto</span>
+            <p data-ja="3月は淀水路の河津桜、4月は背割堤の桜のトンネル。ケーブルで石清水八幡宮にも。京阪で回る、京都の南の春のマップです。" data-en="Kawazu cherries along the Yodo canal in March, the Sewaritei tunnel of blossoms in April, and Iwashimizu Hachimangu by cable car: spring south of Kyoto by Keihan.">3月は淀水路の河津桜、4月は背割堤の桜のトンネル。ケーブルで石清水八幡宮にも。京阪で回る、京都の南の春のマップです。</p>
+            <p class="when" data-ja="見ごろ：淀の河津桜は3月上旬〜中旬、背割堤は3月下旬〜4月上旬" data-en="Best: early–mid March (Yodo), late March–early April (Sewaritei)">見ごろ：淀の河津桜は3月上旬〜中旬、背割堤は3月下旬〜4月上旬</p>
+            <p class="meta"><span data-ja="4か所" data-en="4 spots">4か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="kohoku/">
+          <figure><img src="images/kohoku/sakura-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s sp" data-ja="春・桜" data-en="Spring">春・桜</span></figure>
+          <div class="card-body">
+            <h3 data-ja="海津大崎の桜と長浜（京都から日帰り）" data-en="Kaizu-Osaki cherries &amp; Nagahama, a day trip from Kyoto">海津大崎の桜と長浜（京都から日帰り）</h3>
+            <span class="alt" data-ja="Kaizu-Osaki &amp; Nagahama, Shiga" data-en="海津大崎の桜と長浜">Kaizu-Osaki &amp; Nagahama, Shiga</span>
+            <p data-ja="琵琶湖の岸に約4km続く海津大崎の桜並木を歩いて、午後は秀吉の城下町・長浜へ。長浜城や黒壁スクエア、船で渡る竹生島も選べる春のマップです。" data-en="Walk the 4 km cherry avenue of Kaizu-Osaki along Lake Biwa, then Hideyoshi’s castle town of Nagahama: the castle, Kurokabe Square, or a boat to Chikubushima island.">琵琶湖の岸に約4km続く海津大崎の桜並木を歩いて、午後は秀吉の城下町・長浜へ。長浜城や黒壁スクエア、船で渡る竹生島も選べる春のマップです。</p>
+            <p class="when" data-ja="見ごろ：例年4月上旬〜中旬" data-en="Best: usually early to mid April">見ごろ：例年4月上旬〜中旬</p>
+            <p class="meta"><span data-ja="11か所" data-en="11 spots">11か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="miidera/">
+          <figure><img src="images/miidera/sosui-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s sp" data-ja="春・夜桜" data-en="Spring nights">春・夜桜</span></figure>
+          <div class="card-body">
+            <h3 data-ja="三井寺の夜桜（京都から日帰り）" data-en="Miidera by night, a day trip from Kyoto">三井寺の夜桜（京都から日帰り）</h3>
+            <span class="alt" data-ja="Miidera, Otsu, Shiga" data-en="大津 三井寺の夜桜">Miidera, Otsu, Shiga</span>
+            <p data-ja="京都から電車で30分の大津へ。春の約3週間だけライトアップされる琵琶湖疏水の桜並木と、三井寺の金堂・三重塔・観音堂を夜に歩きます。" data-en="30 minutes by train to Otsu: the Lake Biwa Canal cherries and Miidera’s main hall, pagoda and Kannon hall, lit up at night for about three weeks each spring.">京都から電車で30分の大津へ。春の約3週間だけライトアップされる琵琶湖疏水の桜並木と、三井寺の金堂・三重塔・観音堂を夜に歩きます。</p>
+            <p class="when" data-ja="3月下旬〜4月中旬の夜だけ（2026年は3/25〜4/12）" data-en="Late March to mid April, evenings only (25 Mar – 12 Apr in 2026)">3月下旬〜4月中旬の夜だけ（2026年は3/25〜4/12）</p>
+            <p class="meta"><span data-ja="5か所" data-en="5 spots">5か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="group guide seas su" aria-labelledby="h-summer">
+    <div class="group-head">
+      <h2 id="h-summer" data-ja="夏・高原のマップ" data-en="Summer: the highlands">夏・高原のマップ</h2>
+      <span class="en">Summer</span>
+    </div>
+    <p class="group-note" data-ja="山の上のゴンドラが動く、6月〜10月のマップです。" data-en="For June to October, when the mountain gondolas run.">山の上のゴンドラが動く、6月〜10月のマップです。</p>
+    <ul class="cards">
+      <li>
+        <a class="card" href="hakuba/">
+          <figure><img src="hakuba/img/happo-1.jpg" alt="" width="1280" height="848" decoding="async"><span class="tag" data-ja="スポット紹介" data-en="Spot guide">スポット紹介</span><span class="tag s su" data-ja="夏・高原" data-en="Summer">夏・高原</span></figure>
+          <div class="card-body">
+            <h3 data-ja="白馬（八方尾根・岩岳）のおすすめ" data-en="Hakuba: Happo-one &amp; Iwatake">白馬（八方尾根・岩岳）のおすすめ</h3>
+            <span class="alt" data-ja="Hakuba, Nagano" data-en="白馬のおすすめ">Hakuba, Nagano</span>
+            <p data-ja="ゴンドラとリフトで山の上へ。雪の残る北アルプスを映す八方池と、岩岳の山頂テラス。京都から1泊・2泊のモデルプランつき。" data-en="Gondolas and lifts up to Happo Pond, mirroring the snowy Northern Alps, and the summit terrace at Iwatake. With 1- and 2-night plans from Kyoto.">ゴンドラとリフトで山の上へ。雪の残る北アルプスを映す八方池と、岩岳の山頂テラス。京都から1泊・2泊のモデルプランつき。</p>
+            <p class="when" data-ja="6月〜10月（ゴンドラの夏の営業期間）" data-en="June to October (summer gondola season)">6月〜10月（ゴンドラの夏の営業期間）</p>
+            <p class="meta"><span data-ja="白馬の町・八方尾根・岩岳" data-en="Hakuba town, Happo-one &amp; Iwatake">白馬の町・八方尾根・岩岳</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section class="group route seas au" aria-labelledby="h-autumn">
+    <div class="group-head">
+      <h2 id="h-autumn" data-ja="秋・紅葉のマップ" data-en="Autumn: maple leaves">秋・紅葉のマップ</h2>
+      <span class="en">Autumn</span>
+    </div>
+    <p class="group-note" data-ja="11月〜12月はじめの紅葉の時期だけおすすめするマップです。" data-en="Recommended only in maple season, November to early December.">11月〜12月はじめの紅葉の時期だけおすすめするマップです。</p>
+    <ul class="cards">
+      <li>
+        <a class="card" href="takao/">
+          <figure><img src="images/takao/jingoji-3.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s au" data-ja="秋・紅葉" data-en="Autumn">秋・紅葉</span></figure>
+          <div class="card-body">
+            <h3 data-ja="京都 高雄の紅葉" data-en="Autumn in Takao, Kyoto">京都 高雄の紅葉</h3>
+            <span class="alt" data-ja="Autumn in Takao, Kyoto" data-en="京都 高雄の紅葉">Autumn in Takao, Kyoto</span>
+            <p data-ja="JRバスで高雄へ。清滝川の高雄橋を渡り、もみじの石段を神護寺へ。川沿いを歩いて指月橋の先の西明寺まで。" data-en="JR Bus to Takao: cross Takao bridge over the Kiyotaki, climb the maple stairs to Jingoji, then walk the river path to Saimyoji.">JRバスで高雄へ。清滝川の高雄橋を渡り、もみじの石段を神護寺へ。川沿いを歩いて指月橋の先の西明寺まで。</p>
+            <p class="when" data-ja="見ごろ：例年11月上旬〜下旬" data-en="Best: usually early to late November">見ごろ：例年11月上旬〜下旬</p>
+            <p class="meta"><span data-ja="4か所" data-en="4 spots">4か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="takagamine/">
+          <figure><img src="images/takagamine/koetsuji-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s au" data-ja="秋・紅葉" data-en="Autumn">秋・紅葉</span></figure>
+          <div class="card-body">
+            <h3 data-ja="京都 今宮神社と鷹峯" data-en="Imamiya & Takagamine, Kyoto">京都 今宮神社と鷹峯</h3>
+            <span class="alt" data-ja="Imamiya &amp; Takagamine, Kyoto" data-en="京都 今宮神社と鷹峯">Imamiya &amp; Takagamine, Kyoto</span>
+            <p data-ja="今宮神社の門前で千年続くあぶり餅を食べて、市バスで鷹峯へ。光悦寺・源光庵・常照寺のもみじを、歩いて数分ずつ回ります。" data-en="Aburi-mochi outside Imamiya Shrine, a treat for a thousand years, then by bus to Takagamine for the maples of Koetsuji, Genkoan and Joshoji, a few minutes apart.">今宮神社の門前で千年続くあぶり餅を食べて、市バスで鷹峯へ。光悦寺・源光庵・常照寺のもみじを、歩いて数分ずつ回ります。</p>
+            <p class="when" data-ja="見ごろ：例年11月中旬〜下旬" data-en="Best: usually mid to late November">見ごろ：例年11月中旬〜下旬</p>
+            <p class="meta"><span data-ja="4か所" data-en="4 spots">4か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="higashiomi/">
+          <figure><img src="images/higashiomi/eigenji-3.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s au" data-ja="秋・紅葉" data-en="Autumn">秋・紅葉</span></figure>
+          <div class="card-body">
+            <h3 data-ja="湖東の紅葉（京都から日帰り）" data-en="Autumn leaves in Higashiomi, a day trip from Kyoto">湖東の紅葉（京都から日帰り）</h3>
+            <span class="alt" data-ja="Taroubou-gu, Eigenji, Hyakusaiji &amp; Kyorinbo, Shiga" data-en="湖東の紅葉">Taroubou-gu, Eigenji, Hyakusaiji &amp; Kyorinbo, Shiga</span>
+            <p data-ja="742段の石段の先の太郎坊宮、渓谷の永源寺、苔むした参道の百済寺、夜の竹林がライトアップされる教林坊。行きたいお寺を選んで回る、秋のマップです。" data-en="Taroubou-gu above 742 steps, Eigenji in its maple valley, Hyakusaiji’s mossy approach and Kyorinbo’s lit-up bamboo at night. Pick the temples you want.">742段の石段の先の太郎坊宮、渓谷の永源寺、苔むした参道の百済寺、夜の竹林がライトアップされる教林坊。行きたいお寺を選んで回る、秋のマップです。</p>
+            <p class="when" data-ja="見ごろ：例年11月中旬〜下旬" data-en="Best: usually mid to late November">見ごろ：例年11月中旬〜下旬</p>
+            <p class="meta"><span data-ja="8か所" data-en="8 spots">8か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="daigo/">
+          <figure><img src="images/daigo/benten-1.jpg" alt="" width="1600" height="1060" decoding="async"><span class="tag" data-ja="1日ルート" data-en="1-day route">1日ルート</span><span class="tag s au" data-ja="秋・夜の紅葉" data-en="Autumn nights">秋・夜の紅葉</span></figure>
+          <div class="card-body">
+            <h3 data-ja="京都 醍醐寺の夜の紅葉" data-en="Daigoji by night, Kyoto">京都 醍醐寺の夜の紅葉</h3>
+            <span class="alt" data-ja="Daigoji by night, Kyoto" data-en="京都 醍醐寺の夜の紅葉">Daigoji by night, Kyoto</span>
+            <p data-ja="秋の夜だけ公開される醍醐寺の伽藍。照らされた五重塔と、池に映る弁天堂のもみじ。2026年は11月20日〜12月6日。" data-en="Daigoji’s precinct opens on autumn evenings only: the lit pagoda and the Benten hall mirrored in its pond. 20 Nov – 6 Dec 2026.">秋の夜だけ公開される醍醐寺の伽藍。照らされた五重塔と、池に映る弁天堂のもみじ。2026年は11月20日〜12月6日。</p>
+            <p class="when" data-ja="夜間拝観の期間だけ（2026年は11/20〜12/6）" data-en="Evening opening only (20 Nov – 6 Dec in 2026)">夜間拝観の期間だけ（2026年は11/20〜12/6）</p>
+            <p class="meta"><span data-ja="3か所" data-en="3 spots">3か所</span><span class="go">VIEW →</span></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  </div>
 
   <footer class="foot">
     <p data-ja="掲載情報は確認時点のものです。営業時間・料金は、お出かけ前に公式サイト等でご確認ください。" data-en="Information is as of when we checked it. Please check official websites for the latest hours and fees before you go.">掲載情報は確認時点のものです。営業時間・料金は、お出かけ前に公式サイト等でご確認ください。</p>
@@ -403,28 +498,6 @@
   </footer>
 </main>
 
-<script>
-  /* 言語の切り替え。選んだ言語は各マップにも引き継ぐ（同じサイト内なので保存先を共有できる） */
-  (function () {
-    var KEYS = ['kyoto-maps-lang', 'kanazawa-lang'];
-    function load() {
-      var q = (location.search.match(/[?&]lang=(ja|en)\b/) || [])[1];
-      if (q) return q;
-      try { var s = localStorage.getItem(KEYS[0]); if (s === 'ja' || s === 'en') return s; } catch (e) {}
-      return /^ja\b/i.test((navigator.languages || [navigator.language || ''])[0] || '') ? 'ja' : 'en';
-    }
-    function apply(lang) {
-      document.documentElement.lang = lang;
-      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) { el.innerHTML = el.getAttribute('data-' + lang); });
-      document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
-    }
-    document.querySelector('.lang').addEventListener('click', function (e) {
-      var b = e.target.closest('button[data-lang]'); if (!b) return;
-      KEYS.forEach(function (k) { try { localStorage.setItem(k, b.dataset.lang); } catch (err) {} });
-      apply(b.dataset.lang);
-    });
-    apply(load());
-  })();
-</script>
+<script src="assets/top.js?v=1"></script>
 </body>
 </html>

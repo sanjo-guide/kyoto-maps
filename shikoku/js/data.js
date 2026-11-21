@@ -4,15 +4,15 @@ window.GUIDE = {
   "ja": [
    "四国の松山・道後を中心に、高知と高松のおすすめをまとめました。",
    "松山は京都から新幹線で岡山へ行き、特急しおかぜに乗りかえて約4時間。街の真ん中の山の上に松山城があり、路面電車で20分ほどの道後温泉では、改修を終えた道後温泉本館に入れます。",
-   "松山から足をのばして、高知のひろめ市場や鰹のたたき、港町・久礼の市場、和紙の町・いの、高松の栗林公園も紹介します。四国の中の移動は時間がかかるので、泊まりながら回るのがおすすめです。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。",
+   "松山から足をのばして、高知のひろめ市場や鰹のたたき、港町・久礼の市場、和紙の町・いの、青い水の仁淀ブルー、高松の栗林公園も紹介します。四国の中の移動は時間がかかるので、泊まりながら回るのがおすすめです。",
+   "「食べる」のお店は、私が実際に行ったところだけを載せています。高知城と仁淀ブルーは、ほかの方の写真をお借りして紹介しています。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Shikoku, centred on Matsuyama and Dogo Onsen, with Kochi and Takamatsu too.",
    "Matsuyama is about 4 hours from Kyoto: shinkansen to Okayama, then the Shiokaze limited express. Matsuyama Castle stands on a hill in the middle of town, and about 20 minutes away by streetcar you can bathe at Dogo Onsen Honkan, newly restored.",
-   "Further afield, I also cover Hirome Market and seared bonito in Kochi, the market in the port town of Kure, the paper-making town of Ino, and Ritsurin Garden in Takamatsu. Getting around Shikoku takes time, so stay a few nights as you go.",
-   "In the food section I only list places I have actually been to myself.",
+   "Further afield, I also cover Hirome Market and seared bonito in Kochi, the market in the port town of Kure, the paper-making town of Ino, the blue water of the Niyodo River, and Ritsurin Garden in Takamatsu. Getting around Shikoku takes time, so stay a few nights as you go.",
+   "In the food section I only list places I have actually been to myself. Kochi Castle and the Niyodo Blue spots are shown with photos by other photographers, credited on each photo.",
    "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
   ]
  },
@@ -170,11 +170,11 @@ window.GUIDE = {
    "body": {
     "ja": [
      "明治時代に建てられた木造3階建ての共同浴場で、国の重要文化財です。夏目漱石の小説『坊っちゃん』にも出てくる、日本でいちばん古いといわれる温泉のひとつです。",
-     "6年ほどかかった保存修理工事が2024年12月に終わり、全館で営業しています。夜、明かりがともった本館の姿はとてもきれいです。"
+     "2019年1月から5年半かけた保存修理工事を終え、2024年7月11日に全館での営業を再開しました。夜、明かりがともった本館の姿はとてもきれいです。"
     ],
     "en": [
      "A three-storey wooden public bathhouse from the Meiji era and an Important Cultural Property. It appears in Natsume Soseki’s novel Botchan, at what’s said to be one of Japan’s oldest hot springs.",
-     "About six years of restoration work finished in December 2024, and the whole building is open again. Lit up at night, it’s beautiful."
+     "After five and a half years of restoration from January 2019, the whole building reopened on 11 July 2024. Lit up at night, it’s beautiful."
     ]
    },
    "note": {
@@ -202,15 +202,6 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "honkan-3.jpg",
-     "cap": {
-      "ja": "木造3階建ての本館",
-      "en": "The three-storey wooden building"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "honkan-4.jpg",
      "cap": {
       "ja": "本館の前に集まる人たち",
@@ -220,28 +211,10 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "honkan-5.jpg",
-     "cap": {
-      "ja": "本館の入り口の額",
-      "en": "The sign over the entrance"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "honkan-6.jpg",
-     "cap": {
-      "ja": "冬の本館の入り口（2026年2月）",
-      "en": "The entrance in winter (Feb 2026)"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "honkan-7.jpg",
      "cap": {
-      "ja": "夕方の本館",
-      "en": "The bathhouse in the evening"
+      "ja": "夜の本館",
+      "en": "The bathhouse at night"
      },
      "w": 1280,
      "h": 720
@@ -280,15 +253,6 @@ window.GUIDE = {
      "cap": {
       "ja": "道後温泉駅の駅舎",
       "en": "Dogo Onsen Station"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "dogost-2.jpg",
-     "cap": {
-      "ja": "夕方の駅舎",
-      "en": "The station in the evening"
      },
      "w": 1280,
      "h": 848
@@ -585,6 +549,87 @@ window.GUIDE = {
    }
   },
   {
+   "id": "kochijo",
+   "ja": "高知城",
+   "en": "Kochi Castle",
+   "pins": [
+    {
+     "lat": 33.56069,
+     "lon": 133.53146,
+     "ja": "高知城",
+     "en": "Kochi Castle",
+     "anchor": "middle",
+     "ldir": "top"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E7%9F%A5%E5%9F%8E",
+   "time": {
+    "ja": "高知駅前から路面電車で、はりまや橋で乗りかえて「高知城前」まで15〜20分（230円）。ひろめ市場からは歩いて3分ほど",
+    "en": "15–20 min by streetcar from Kochi Station (change at Harimayabashi) to “Kochijo-mae” (¥230). About 3 min on foot from Hirome Market"
+   },
+   "body": {
+    "ja": [
+     "江戸時代の天守が残る、全国で12のお城のひとつです。天守だけでなく、殿様が使った本丸御殿も残っていて、天守とつながったまま見られるのは高知城だけです。",
+     "入り口の追手門（おうてもん）の前に立つと、門と天守が1枚の写真に入ります。門と天守の両方が残るお城は、全国に3つしかありません。",
+     "天守までは石段をしばらく上ります。いちばん上の階からは、本丸の屋根と高知の町がぐるりと見えます。ひろめ市場がすぐ隣なので、昼のうちにお城、夕方からひろめ市場、の順がちょうどいいです。"
+    ],
+    "en": [
+     "One of only twelve castles in Japan whose Edo-period keep survives. The lord’s palace in the main enclosure survives too, and Kochi is the only castle where you can still see it joined to the keep.",
+     "Stand in front of the Otemon gate at the entrance and the gate and the keep fit in one photo. Only three castles in Japan still have both.",
+     "It is a fair climb up stone steps to the keep. From the top floor you look down on the palace roofs and out over the town. Hirome Market is right next door, so the castle by day and the market from early evening works well."
+    ]
+   },
+   "note": {
+    "ja": "天守と本丸御殿（懐徳館）は18歳以上500円、18歳未満は無料。9:00〜17:00（入館は16:30まで）、12月26日〜1月1日は休み。連休やよさこい祭りのころなど、夜まで開く日があります。お城の公園は無料で歩けます。2026年11月21日に公式サイトで確認。路面電車は乗換案内。",
+    "en": "Keep and palace (Kaitokukan): ¥500 for ages 18 and over, free under 18. 9:00–17:00 (last entry 16:30), closed 26 Dec – 1 Jan; open into the evening on some days, such as holidays and the Yosakoi Festival. The castle park is free to walk around. Checked on the official website on 21 Nov 2026; streetcar from a route planner."
+   },
+   "photos": [
+    {
+     "f": "web-kochijo-1.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "石垣の上の天守",
+      "en": "The keep on its stone walls"
+     },
+     "credit": {
+      "author": "小池 隆",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:高知城天守.JPG"
+     }
+    },
+    {
+     "f": "web-kochijo-2.jpg",
+     "w": 1280,
+     "h": 851,
+     "cap": {
+      "ja": "追手門と、奥に見える天守",
+      "en": "The Otemon gate with the keep behind"
+     },
+     "credit": {
+      "author": "Saigen Jiro",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kochi_Castle,_Outemon.jpg"
+     }
+    },
+    {
+     "f": "web-kochijo-3.jpg",
+     "w": 1280,
+     "h": 960,
+     "cap": {
+      "ja": "天守から見下ろす本丸",
+      "en": "The main enclosure from the keep"
+     },
+     "credit": {
+      "author": "Reggaeman",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kochi_Castle_06.JPG"
+     }
+    }
+   ],
+   "no": 1
+  },
+  {
    "id": "hirome",
    "ja": "ひろめ市場",
    "en": "Hirome Market",
@@ -612,7 +657,7 @@ window.GUIDE = {
     "ja": "月〜土10:00〜23:00、日9:00〜23:00（お店によってちがいます）。年に数日の休館日があり、2027年は1月1日・2月16〜18日・6月9〜10日・10月6〜7日。2026年11月20日に公式サイトで確認。",
     "en": "Mon–Sat 10:00–23:00, Sun 9:00–23:00 (shops vary). A few closing days a year; in 2027: 1 Jan, 16–18 Feb, 9–10 Jun, 6–7 Oct. Checked on the official website on 20 Nov 2026."
    },
-   "no": 1,
+   "no": 2,
    "photos": [
     {
      "f": "hirome-1.jpg",
@@ -708,7 +753,7 @@ window.GUIDE = {
     "ja": "私が実際に行ったお店です。営業時間と休みの日は、Googleマップなどで確認してください。",
     "en": "A place I’ve actually been to. Check opening hours and closing days on Google Maps."
    },
-   "no": 2,
+   "no": 3,
    "photos": [
     {
      "f": "myojin-1.jpg",
@@ -794,7 +839,7 @@ window.GUIDE = {
     "ja": "営業時間は昼前〜夕方（お店によってちがいます）。1月1〜3日と、海が荒れて漁に出られない日は休み。2026年11月20日に中土佐町のサイトで確認。",
     "en": "Open from late morning to early evening (varies by shop). Closed 1–3 January and on days when rough seas stop the boats. Checked on Nakatosa Town’s website on 20 Nov 2026."
    },
-   "no": 3,
+   "no": 4,
    "photos": [
     {
      "f": "kure-1.jpg",
@@ -916,7 +961,7 @@ window.GUIDE = {
     "ja": "工事のため、2026年11月16日〜2027年3月31日は臨時休館（予定）。ふだんは9:00〜17:00、月曜休み、入館料 大人500円、紙すき体験500円（別に入館料）。2026年11月20日に公式サイトで確認。",
     "en": "Temporarily closed for works from 16 Nov 2026 to 31 Mar 2027 (planned). Normally 9:00–17:00, closed Mondays, ¥500 for adults; paper-making ¥500 (plus entry). Checked on the official website on 20 Nov 2026."
    },
-   "no": 4,
+   "no": 5,
    "photos": [
     {
      "f": "ino-1.jpg",
@@ -1003,6 +1048,218 @@ window.GUIDE = {
   },
   {
    "kind": "group",
+   "id": "g-niyodo",
+   "ja": "仁淀ブルー（によどブルー）",
+   "en": "Niyodo Blue",
+   "time": {
+    "ja": "車がないと行きにくい場所です。にこ淵はJR伊野駅からバスで約55分＋歩き約30分、中津渓谷はJR佐川（さかわ）駅からバスで約35分＋歩き約10分。どちらも1日に数本だけ",
+    "en": "Hard to reach without a car. Nikobuchi is about 55 min by bus from JR Ino Station plus a 30-min walk; Nakatsu Gorge is about 35 min by bus from JR Sakawa Station plus a 10-min walk. Both have only a few buses a day"
+   },
+   "body": {
+    "ja": [
+     "仁淀川（によどがわ）の上流の、青く透きとおった水は「仁淀ブルー」と呼ばれています。よく知られているのは、にこ淵・安居渓谷（やすいけいこく）・中津渓谷の3か所です。",
+     "バスで行けるのは、にこ淵と中津渓谷です。安居渓谷はいちばん奥にあり、最後は住民のための町民バス（1日2〜3本）しかないので、地元の観光協議会も公共交通ではすすめていません。細い山道が約8km続くため、運転に慣れていない人はタクシーが安心です。3か所を1日で回る観光タクシー（約8時間、昼食つき、2人なら1人30,500円、5日前までに予約、火・水曜と混む日は休み）もあります。",
+     "水の色は日の差し方で変わります。晴れた日の、日が高い昼ごろに着くように予定を組むと安心です。大雨のあとは水がにごることがあります。"
+    ],
+    "en": [
+     "The clear blue water of the upper Niyodo River is known as “Niyodo Blue”. The three best-known spots are Nikobuchi, Yasui Gorge and Nakatsu Gorge.",
+     "You can reach Nikobuchi and Nakatsu Gorge by bus. Yasui Gorge is the furthest in: the last stretch has only a residents’ bus (two or three a day), and even the local tourism council does not recommend going by public transport. The final 8 km is a narrow mountain road, so take a taxi if you are not a confident driver. There is also a sightseeing taxi that covers all three in a day (about 8 hours with lunch; ¥30,500 each for two people; book 5 days ahead; not on Tuesdays, Wednesdays or peak days).",
+     "The colour depends on the light. Plan to arrive around midday on a sunny day, when the sun is high. After heavy rain the water can turn cloudy."
+    ]
+   }
+  },
+  {
+   "id": "nikobuchi",
+   "ja": "にこ淵（にこぶち）",
+   "en": "Nikobuchi",
+   "pins": [
+    {
+     "lat": 33.70514,
+     "lon": 133.3411,
+     "ja": "にこ淵",
+     "en": "Nikobuchi",
+     "anchor": "end"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E3%81%AB%E3%81%93%E6%B7%B5",
+   "time": {
+    "ja": "JR伊野駅から県交北部交通のバスで「程野入口（ほどのいりぐち）」まで約55分（1,430円）、そこから歩いて約30分（約2km、少し上り坂）",
+    "en": "About 55 min by Kenko Hokubu Kotsu bus from JR Ino Station to “Hodono-iriguchi” (¥1,430), then about 30 min on foot (about 2 km, slightly uphill)"
+   },
+   "body": {
+    "ja": [
+     "仁淀川の支流にある滝つぼです。光が差すと、水が緑がかった青に光ります。季節や時間で色が変わります。",
+     "水神の化身の大蛇がすむと伝えられ、地元の人は近づかなかった神聖な場所です。水に入ること、飲食は禁止。静かに眺めてください。",
+     "2025年に新しい遊歩道ができて、前半はゆるいスロープ、後半は段の低い階段で下りられます。途中に展望台もあります。岩はすべりやすいので、すべりにくい靴で。",
+     "バスなら、伊野駅9:32発→程野入口10:25着、帰りは12:54発→伊野駅13:49着の組み合わせがちょうどよく、にこ淵で1時間ほど過ごせます（いの町観光協会の案内）。"
+    ],
+    "en": [
+     "A waterfall pool on a tributary of the Niyodo River. When the light reaches it the water glows a greenish blue, and the colour shifts with the season and the hour.",
+     "A great serpent, an incarnation of the water god, is said to live here, and local people kept away from this sacred place. No entering the water and no eating or drinking; please look quietly.",
+     "A new path opened in 2025: a gentle slope first, then low steps down, with a viewing deck on the way. The rocks are slippery, so wear shoes with grip.",
+     "By bus, the 9:32 from Ino Station (arriving Hodono-iriguchi 10:25) with the 12:54 back (Ino Station 13:49) works well and gives you about an hour at the pool, as the Ino tourism association suggests."
+    ]
+   },
+   "note": {
+    "ja": "バスは行きが1日6本、帰りも6本ほど（夕方の最終は土日祝は運休）。大型連休やお盆は、国道からの林道が渋滞して2時間以上かかることがあるので避けてください。駐車場の近くにトイレがあります。2026年11月21日に、いの町観光協会と仁淀ブルー観光協議会の公式サイトで確認（バスの時刻は2026年6月の案内）。",
+    "en": "About six buses each way a day (the last evening bus back does not run at weekends or on holidays). Avoid Golden Week and Obon: the forest road off the highway can jam for over two hours. There are toilets near the car park. Checked on the Ino tourism association and Niyodo Blue tourism council websites on 21 Nov 2026 (bus times from their June 2026 guide)."
+   },
+   "photos": [
+    {
+     "f": "web-nikobuchi-1.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "青く光るにこ淵",
+      "en": "The blue pool of Nikobuchi"
+     },
+     "credit": {
+      "author": "かるちる",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Niko_Buchi_deep_water_No.1.jpg"
+     }
+    },
+    {
+     "f": "web-nikobuchi-2.jpg",
+     "w": 1280,
+     "h": 913,
+     "cap": {
+      "ja": "滝と滝つぼ",
+      "en": "The waterfall and its pool"
+     },
+     "credit": {
+      "author": "Dokudami",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikobuti03.jpg"
+     }
+    },
+    {
+     "f": "web-nikobuchi-3.jpg",
+     "w": 1280,
+     "h": 959,
+     "cap": {
+      "ja": "上から見たにこ淵",
+      "en": "Nikobuchi from above"
+     },
+     "credit": {
+      "author": "Dokudami",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikobuti02.jpg"
+     }
+    },
+    {
+     "f": "web-nikobuchi-4.jpg",
+     "w": 1280,
+     "h": 959,
+     "cap": {
+      "ja": "岩の向こうの滝",
+      "en": "The falls beyond the rocks"
+     },
+     "credit": {
+      "author": "Dokudami",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikobuti_01.jpg"
+     }
+    }
+   ],
+   "no": 6
+  },
+  {
+   "id": "nakatsu",
+   "ja": "中津渓谷（なかつけいこく）",
+   "en": "Nakatsu Gorge",
+   "pins": [
+    {
+     "lat": 33.56382,
+     "lon": 133.12573,
+     "ja": "中津渓谷",
+     "en": "Nakatsu Gorge",
+     "anchor": "end"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E6%B4%A5%E6%B8%93%E8%B0%B7",
+   "time": {
+    "ja": "JR佐川駅から黒岩観光バスの川渡（かわど）行きで「名野川（なのかわ）」まで約35分（980円）、そこから車道を歩いて約700m。佐川駅は高知駅から特急で約25分",
+    "en": "About 35 min by Kuroiwa Kanko bus (bound for Kawado) from JR Sakawa Station to “Nanokawa” (¥980), then about 700 m on foot along the road. Sakawa is about 25 min from Kochi by limited express"
+   },
+   "body": {
+    "ja": [
+     "大きな岩のあいだを、青い水が流れる渓谷です。岩をぬうように遊歩道が続き、いちばん奥に落差20mの「雨竜（うりゅう）の滝」があります。赤みのある岩と滝の組み合わせは、ここだけの景色です。",
+     "入り口から雨竜の滝を見て戻るだけなら1時間ほど。その上の竜宮淵と石柱まで行くと、往復で約1時間半です。道はぬれてすべりやすいので、歩きやすい靴で。写真に夢中になって足をふみ外す事故も起きています。",
+     "3か所の中では、バスでいちばん行きやすい場所です。平日と土曜は、佐川駅10:55発→名野川11:29着、帰りは14:50発→佐川駅15:32着で、渓谷をゆっくり歩けます。日曜は帰りの14:50の便がないので向きません。"
+    ],
+    "en": [
+     "A gorge where blue water runs between huge boulders. The path threads through the rocks to Uryu Falls, 20 m high, at the far end. The reddish rock around the falls is a sight you only get here.",
+     "To the falls and back takes about an hour; going on up to Ryugu-buchi pool and the stone pillar makes it about 1½ hours return. The path is wet and slippery, so wear good shoes. People have fallen while concentrating on photos.",
+     "Of the three spots this is the easiest by bus. On weekdays and Saturdays, the 10:55 from Sakawa Station (Nanokawa 11:29) and the 14:50 back (Sakawa 15:32) give you plenty of time. On Sundays the 14:50 bus does not run, so it doesn’t work."
+    ]
+   },
+   "note": {
+    "ja": "川渡行きのバスは本数が少なく、佐川駅発の多くは途中の大崎止まりです。行き先を確かめて乗ってください。大型連休・お盆・11月の土日祝はとても混みます。2026年11月21日に仁淀ブルー観光協議会の公式サイトで確認。バスの時刻と運賃は乗換案内（2026年11月の平日・土曜・日曜）。",
+    "en": "Buses to Kawado are few, and most buses from Sakawa Station stop short at Osaki, so check the destination. Very crowded in Golden Week, around Obon and on November weekends. Checked on the Niyodo Blue tourism council website on 21 Nov 2026; bus times and fares from a route planner (weekday, Saturday and Sunday, Nov 2026)."
+   },
+   "photos": [
+    {
+     "f": "web-nakatsu-1.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "石の橋と雨竜の滝",
+      "en": "The stone bridge and Uryu Falls"
+     },
+     "credit": {
+      "author": "Koda6029",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:中津渓谷（雨竜の滝）.jpg"
+     }
+    },
+    {
+     "f": "web-nakatsu-2.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "岩のあいだを流れる青い水",
+      "en": "Blue water between the boulders"
+     },
+     "credit": {
+      "author": "Koda6029",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:中津渓谷２.jpg"
+     }
+    },
+    {
+     "f": "web-nakatsu-3.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "雨竜の滝",
+      "en": "Uryu Falls"
+     },
+     "credit": {
+      "author": "r18 INO (PACHIMO)",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:雨竜の滝_-_panoramio.jpg"
+     }
+    },
+    {
+     "f": "web-nakatsu-4.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "渓谷の入り口",
+      "en": "The entrance to the gorge"
+     },
+     "credit": {
+      "author": "Koda6029",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:中津渓谷.jpg"
+     }
+    }
+   ],
+   "no": 7
+  },
+  {
+   "kind": "group",
    "id": "g-takamatsu",
    "ja": "高松",
    "en": "Takamatsu",
@@ -1047,7 +1304,7 @@ window.GUIDE = {
     "ja": "入園料は大人500円・小中学生170円。年中無休。開園はほぼ日の出から日没まで（月によってちがい、11月は6:30〜17:00）。2026年11月20日に公式サイトで確認。JR栗林公園北口駅から歩いて約5分。",
     "en": "Entry ¥500 (adults), ¥170 (elementary and junior high). Open every day, roughly sunrise to sunset (varies by month; November 6:30–17:00). Checked on the official website on 20 Nov 2026. About 5 min on foot from JR Ritsurin-koen-kitaguchi Station."
    },
-   "no": 5,
+   "no": 8,
    "photos": [
     {
      "f": "ritsurin-1.jpg",
@@ -1178,7 +1435,7 @@ window.GUIDE = {
   ]
  },
  "sources": {
-  "checked": "2026-11-20",
+  "checked": "2026-11-21",
   "list": [
    "https://www.matsuyamajo.jp/guide/",
    "https://dogo.jp/onsen/honkan",
@@ -1186,7 +1443,16 @@ window.GUIDE = {
    "https://www.town.nakatosa.lg.jp/life/detail.php?hdnKey=168",
    "https://kamihaku.com/access",
    "https://www.my-kagawa.jp/ritsuringarden/feature/ritsuringarden/guide",
-   "https://transit.yahoo.co.jp/"
+   "https://transit.yahoo.co.jp/",
+   "https://ja.wikipedia.org/wiki/%E9%81%93%E5%BE%8C%E6%B8%A9%E6%B3%89%E6%9C%AC%E9%A4%A8",
+   "https://kochipark.jp/kochijyo/",
+   "https://kochipark.jp/kochijyo/highlights",
+   "https://www.inofan.jp/spot/recommended/n497/",
+   "https://www.inofan.jp/information/news/n5068/",
+   "https://niyodoblue.jp/feature/detail.php?id=6",
+   "https://niyodoblue.jp/feature/detail.php?id=7",
+   "https://niyodoblue.jp/feature/detail.php?id=8",
+   "https://niyodoblue.jp/taxi_new/detail.php?id=11"
   ]
  }
 };
