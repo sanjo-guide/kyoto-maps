@@ -4,27 +4,27 @@ window.GUIDE = {
   "ja": [
    "四国の松山・道後を中心に、高知と高松のおすすめをまとめました。",
    "松山は京都から新幹線で岡山へ行き、特急しおかぜに乗りかえて約4時間。街の真ん中の山の上に松山城があり、路面電車で20分ほどの道後温泉では、改修を終えた道後温泉本館に入れます。",
-   "松山から足をのばして、高知のひろめ市場や鰹のたたき、港町・久礼の市場、和紙の町・いの、青い水の仁淀ブルー、高松の栗林公園も紹介します。四国の中の移動は時間がかかるので、泊まりながら回るのがおすすめです。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。高知城と仁淀ブルーは、ほかの方の写真をお借りして紹介しています。",
+   "松山から足をのばして、高知のひろめ市場や鰹のたたき、港町・久礼の市場、和紙の町・いの、青い水の仁淀ブルーも紹介します。高松は、栗林公園、駅前の無料の展望スペースとさぬきうどん、玉藻公園、屋島、アートの島・直島。四国の中の移動は時間がかかるので、泊まりながら回るのがおすすめです。",
+   "「食べる」のお店と高松駅前のうどんは、私が実際に行ったところだけを載せています。高知城・仁淀ブルー・玉藻公園・屋島・直島は、ほかの方の写真をお借りして紹介しています。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Shikoku, centred on Matsuyama and Dogo Onsen, with Kochi and Takamatsu too.",
    "Matsuyama is about 4 hours from Kyoto: shinkansen to Okayama, then the Shiokaze limited express. Matsuyama Castle stands on a hill in the middle of town, and about 20 minutes away by streetcar you can bathe at Dogo Onsen Honkan, newly restored.",
-   "Further afield, I also cover Hirome Market and seared bonito in Kochi, the market in the port town of Kure, the paper-making town of Ino, the blue water of the Niyodo River, and Ritsurin Garden in Takamatsu. Getting around Shikoku takes time, so stay a few nights as you go.",
-   "In the food section I only list places I have actually been to myself. Kochi Castle and the Niyodo Blue spots are shown with photos by other photographers, credited on each photo.",
+   "Further afield, I also cover Hirome Market and seared bonito in Kochi, the market in the port town of Kure, the paper-making town of Ino and the blue water of the Niyodo River. In Takamatsu: Ritsurin Garden, a free observation floor and Sanuki udon by the station, Tamamo Park, Yashima and the art island of Naoshima. Getting around Shikoku takes time, so stay a few nights as you go.",
+   "The places in the food section and the udon shop by Takamatsu Station are all places I have actually been to myself. Kochi Castle, the Niyodo Blue spots, Tamamo Park, Yashima and Naoshima are shown with photos by other photographers, credited on each photo.",
    "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
   ]
  },
  "outro": {
   "ja": [
    "以上が、私の四国のおすすめです。",
-   "お城と温泉の松山、鰹とお酒の高知、庭園の高松。同じ四国でも町ごとに雰囲気がちがうので、時間があればいくつか回ってみてください。",
+   "お城と温泉の松山、鰹とお酒の高知、うどんと庭園と島の高松。同じ四国でも町ごとに雰囲気がちがうので、時間があればいくつか回ってみてください。",
    "電車やバスの時間を先に確かめて、無理せず、自分らしい旅を楽しんでください。"
   ],
   "en": [
    "That’s my list of picks for Shikoku.",
-   "Castle and hot springs in Matsuyama, bonito and sake in Kochi, a great garden in Takamatsu: each town feels different, so see a few if you have time.",
+   "Castle and hot springs in Matsuyama, bonito and sake in Kochi, udon, a great garden and the islands in Takamatsu: each town feels different, so see a few if you have time.",
    "Check train and bus times first, don’t push yourself too hard, and enjoy the trip your own way."
   ]
  },
@@ -1264,15 +1264,19 @@ window.GUIDE = {
    "ja": "高松",
    "en": "Takamatsu",
    "time": {
-    "ja": "JR松山駅から特急いしづちで高松まで約2時間40分（6,160円）",
-    "en": "About 2 h 40 min from JR Matsuyama to Takamatsu on the Ishizuchi limited express (¥6,160)"
+    "ja": "JR松山駅から特急いしづちで高松まで約2時間40分（6,160円）。岡山からは快速マリンライナーで瀬戸大橋を渡って約1時間",
+    "en": "About 2 h 40 min from JR Matsuyama to Takamatsu on the Ishizuchi limited express (¥6,160). From Okayama it is about 1 hour on the Marine Liner rapid train across the Seto Ohashi Bridge"
    },
    "body": {
     "ja": [
-     "香川県の県庁所在地で、瀬戸内海の島々への船が出る港町です。讃岐うどんのお店もたくさんあります。"
+     "香川県の県庁所在地で、瀬戸内海の島々への船が出る港町です。JR高松駅のまわりに、無料の展望スペース、お城の跡の玉藻公園、直島へのフェリー乗り場がまとまっていて、どれも駅から歩いて5分ほどです。",
+     "半日なら、駅前でうどんを食べて、シンボルタワーの29階から海を見て、玉藻公園か栗林公園へ。1日あれば屋島（やしま）まで足をのばせます。直島（なおしま）は、それだけで丸1日みてください。",
+     "シンボルタワーと駅前のうどんは私が撮った写真、玉藻公園・屋島・直島はほかの方の写真をお借りしています。"
     ],
     "en": [
-     "Kagawa’s capital, a port town with ferries to the islands of the Seto Inland Sea, and full of Sanuki udon shops."
+     "Kagawa’s capital, a port town with ferries to the islands of the Seto Inland Sea. A free observation floor, the castle ruins of Tamamo Park and the Naoshima ferry pier are all within about 5 minutes’ walk of JR Takamatsu Station.",
+     "With half a day: udon by the station, the sea view from the 29th floor of Symbol Tower, then Tamamo Park or Ritsurin Garden. With a full day you can add Yashima. Naoshima needs a whole day to itself.",
+     "The Symbol Tower and udon photos are mine; Tamamo Park, Yashima and Naoshima are shown with photos by other photographers, credited on each photo."
     ]
    }
   },
@@ -1397,6 +1401,491 @@ window.GUIDE = {
      "h": 848
     }
    ]
+  },
+  {
+   "id": "symboltower",
+   "ja": "高松シンボルタワーの展望スペース",
+   "en": "Takamatsu Symbol Tower observation floor",
+   "pins": [
+    {
+     "lat": 34.35275,
+     "lon": 134.0465,
+     "ja": "シンボルタワー",
+     "en": "Symbol Tower",
+     "anchor": "end"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E6%9D%BE%E3%82%B7%E3%83%B3%E3%83%9C%E3%83%AB%E3%82%BF%E3%83%AF%E3%83%BC",
+   "time": {
+    "ja": "JR高松駅から歩いて約3分。タワー棟のエレベーターで29階へ",
+    "en": "About 3 min on foot from JR Takamatsu Station. Take the Tower Building lift to the 29th floor"
+   },
+   "body": {
+    "ja": [
+     "駅のすぐ横に立つ、四国でいちばん高いビルです。29階の展望スペースは無料で、だれでも入れます。",
+     "北側の窓からは、高松港と、女木島（めぎじま）・男木島（おぎじま）、その先の瀬戸内海の島々が見えます。フェリーが港を出入りするのを上から眺められます。東には屋島の平らな山、南には高松の街と玉藻公園の緑。窓ぎわにカウンター席があるので、座ってゆっくりできます。",
+     "私が行ったのは2023年8月6日の昼すぎ。晴れた日は海の色がきれいです。電車や船の待ち時間が30分あれば寄れます。展望スペースの中は飲食禁止です。"
+    ],
+    "en": [
+     "The tallest building in Shikoku, right beside the station. The observation floor on the 29th floor is free and open to everyone.",
+     "The north windows look over Takamatsu Port, the islands of Megijima and Ogijima and the Seto Inland Sea beyond, with ferries coming and going below. To the east is the flat top of Yashima; to the south, the city and the green of Tamamo Park. There are counter seats along the windows, so you can sit and take your time.",
+     "I went just after noon on 6 August 2023. On a clear day the colour of the sea is lovely. If you have 30 minutes before a train or a boat, it is worth going up. No eating or drinking on the observation floor."
+    ]
+   },
+   "note": {
+    "ja": "展望スペースは10:00〜20:00、無料（17時で閉まる日があります。20時以降は29階のお店の利用客だけ）。休みの日でも、29階のエレベーターホールから西側の景色は見られます。ホール棟8階の屋上広場も無料です（天気の悪い日・風の強い日は閉鎖）。2026年11月21日に高松シンボルタワーとマリタイムプラザ高松の公式サイトで確認。",
+    "en": "Observation floor open 10:00–20:00, free (it closes at 17:00 on some days; after 20:00 it is for customers of the 29th-floor bar only). Even on closed days you can see the view to the west from the 29th-floor lift hall. The rooftop plaza on the 8th floor of the Hall Building is also free (closed in bad weather or strong wind). Checked on the Takamatsu Symbol Tower and Maritime Plaza Takamatsu websites on 21 Nov 2026."
+   },
+   "photos": [
+    {
+     "f": "symboltower-1.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "29階から見た高松港と瀬戸内海",
+      "en": "Takamatsu Port and the Inland Sea from the 29th floor"
+     }
+    },
+    {
+     "f": "symboltower-2.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "窓ぎわのカウンター席",
+      "en": "Counter seats by the window"
+     }
+    },
+    {
+     "f": "symboltower-3.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "東側の街と屋島の方向",
+      "en": "The city to the east, towards Yashima"
+     }
+    },
+    {
+     "f": "symboltower-4.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "南側。左下の緑が玉藻公園",
+      "en": "Looking south; the green at lower left is Tamamo Park"
+     }
+    },
+    {
+     "f": "symboltower-5.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "真下に見える高松駅",
+      "en": "Takamatsu Station directly below"
+     }
+    },
+    {
+     "f": "symboltower-6.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "展望スペースの中",
+      "en": "Inside the observation floor"
+     }
+    },
+    {
+     "f": "symboltower-7.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "駅前から見たシンボルタワー",
+      "en": "Symbol Tower from the station plaza"
+     }
+    }
+   ],
+   "no": 9
+  },
+  {
+   "id": "merikenya",
+   "ja": "めりけんや 高松駅前店（さぬきうどん）",
+   "en": "Merikenya Takamatsu Ekimae (Sanuki udon)",
+   "pins": [
+    {
+     "lat": 34.34985,
+     "lon": 134.04755,
+     "ja": "めりけんや",
+     "en": "Merikenya udon",
+     "anchor": "start",
+     "dy": 18
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E3%82%81%E3%82%8A%E3%81%91%E3%82%93%E3%82%84%20%E9%AB%98%E6%9D%BE%E9%A7%85%E5%89%8D%E5%BA%97",
+   "time": {
+    "ja": "JR高松駅から歩いて2〜3分。駅の東側、黄色い「さぬきうどん」の看板が目印",
+    "en": "2–3 min on foot from JR Takamatsu Station, on its east side: look for the big yellow sign"
+   },
+   "body": {
+    "ja": [
+     "駅のすぐ近くに、黄色い壁に筆文字で「さぬきうどん」と書いた大きな看板があります。高松に着いてすぐ、または帰りの電車の前に、私が寄るお店です。朝7時から開いているので、朝ごはんにもなります。",
+     "セルフのお店です。①お盆を取る ②うどんの種類と、小・大・特大、温かい・冷たいを伝える ③お皿を取って、好きな天ぷらをのせる ④レジで払う、の順番。店内に英語・中国語・韓国語の注文の説明があります。釜あげ・釜玉などは、ゆでるのに少し時間がかかります。",
+     "初めてなら、冷たい「ぶっかけ」か「かけ」の小に、天ぷらを1つ。小でもしっかり1玉あります。夏は、すだちをのせた冷たいうどんがおすすめです。写真は2023年8月、2025年9月、2026年9月。"
+    ],
+    "en": [
+     "Right by the station is a big yellow wall with “さぬきうどん” (Sanuki udon) brushed across it. This is where I stop when I arrive in Takamatsu or before my train out. It opens at 7 am, so it works for breakfast too.",
+     "It is self-service: 1) take a tray, 2) tell the staff which udon, small / large / extra large, hot or cold, 3) take a plate and pick your tempura, 4) pay at the till. There are ordering instructions in English, Chinese and Korean inside. Kama-age and kamatama take a little longer because the noodles are boiled to order.",
+     "For a first visit, try a small cold bukkake or kake udon with one piece of tempura. Even a small is a full portion. In summer the cold udon with a slice of sudachi citrus is the one to have. Photos from August 2023, September 2025 and September 2026."
+    ]
+   },
+   "note": {
+    "ja": "営業は毎日7:00〜20:00（55席）。住所は高松市西の丸町6-20。2026年11月21日に、めりけんやの公式サイトで確認。値段は変わるので店頭のメニューで確かめてください（2026年9月は、かけうどんの小が300円台でした）。",
+    "en": "Open every day 7:00–20:00 (55 seats). Address: 6-20 Nishinomaru-cho, Takamatsu. Checked on the Merikenya website on 21 Nov 2026. Prices change, so check the menu at the shop (in September 2026 a small kake udon was in the ¥300s)."
+   },
+   "photos": [
+    {
+     "f": "merikenya-1.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "黄色い壁の「さぬきうどん」の看板",
+      "en": "The yellow wall with the Sanuki udon sign"
+     }
+    },
+    {
+     "f": "merikenya-2.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "冷たいうどんと天ぷら",
+      "en": "Cold udon and tempura"
+     }
+    },
+    {
+     "f": "merikenya-3.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "自分で取る天ぷら",
+      "en": "Help-yourself tempura"
+     }
+    },
+    {
+     "f": "merikenya-4.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "すだちをのせた冷たいうどん",
+      "en": "Cold udon with sudachi citrus"
+     }
+    },
+    {
+     "f": "merikenya-5.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "通りから見たお店",
+      "en": "The shop from the street"
+     }
+    }
+   ],
+   "no": 10
+  },
+  {
+   "id": "tamamo",
+   "ja": "玉藻公園（たまもこうえん）・高松城跡",
+   "en": "Tamamo Park (Takamatsu Castle ruins)",
+   "pins": [
+    {
+     "lat": 34.3505,
+     "lon": 134.0513,
+     "ja": "玉藻公園",
+     "en": "Tamamo Park",
+     "anchor": "start"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E7%8E%89%E8%97%BB%E5%85%AC%E5%9C%92",
+   "time": {
+    "ja": "JR高松駅から歩いて約3分（西門）。ことでん高松築港駅のすぐ横",
+    "en": "About 3 min on foot from JR Takamatsu Station (west gate), right beside Kotoden Takamatsu-Chikko Station"
+   },
+   "body": {
+    "ja": [
+     "高松城の跡を公園にした場所です。海のすぐそばに建てられた「水城（みずじろ）」で、お堀には今も瀬戸内海の海水が引きこまれ、鯛（たい）が泳いでいます。",
+     "天守は残っていませんが、江戸時代の月見櫓（つきみやぐら）と艮櫓（うしとらやぐら）、石垣、お堀が残っています。松の庭に囲まれた大正時代の御殿、披雲閣（ひうんかく）も見どころです。お堀では鯛にエサをやることができ、春から秋は和船でお堀をめぐる体験もあります。",
+     "ひと回りして30分〜1時間。駅のすぐ横なので、電車や船の前後に寄りやすい場所です。月見櫓の中に入れるのは日曜日の日中だけとされています。"
+    ],
+    "en": [
+     "A park on the site of Takamatsu Castle. It was a “water castle” built right on the shore: the moats still take in seawater from the Seto Inland Sea, and sea bream swim in them.",
+     "The main keep is gone, but the Edo-period Tsukimi and Ushitora turrets, the stone walls and the moats remain. Hiunkaku, a mansion from the 1910s set in a pine garden, is another highlight. You can feed the sea bream in the moat, and from spring to autumn there are rides around the moat in a small wooden boat.",
+     "Allow 30 minutes to an hour. It is right beside the station, so it fits easily before or after a train or boat. The inside of the Tsukimi turret is said to be open only on Sundays during the day."
+    ]
+   },
+   "note": {
+    "ja": "【要確認】公式サイトにつながらず、料金と時間を公式には確かめられませんでした。観光案内サイトでは、入園料は大人300円、開園は西門が日の出ごろ〜日没ごろ（11月は6:30〜17:00、12月は7:00〜17:00）、東門は8:30〜17:00、休みは12月29〜31日、和船は3〜11月、とされています（2026年11月21日に確認）。行く前に玉藻公園管理事務所（087-851-1521）で確かめてください。",
+    "en": "Please check: the official website could not be reached, so fees and hours are not officially confirmed. Travel sites give entry as ¥300 for adults; the west gate open from around sunrise to sunset (6:30–17:00 in November, 7:00–17:00 in December), the east gate 8:30–17:00; closed 29–31 December; boat rides March to November (checked 21 Nov 2026). Confirm with the park office (087-851-1521) before you go."
+   },
+   "photos": [
+    {
+     "f": "web-tamamo-1.jpg",
+     "w": 1280,
+     "h": 960,
+     "cap": {
+      "ja": "月見櫓",
+      "en": "Tsukimi turret"
+     },
+     "credit": {
+      "author": "先従隗始",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Takamatsu_Castle_-_Tamamo_Park_20211125_15.jpg"
+     }
+    },
+    {
+     "f": "web-tamamo-2.jpg",
+     "w": 1280,
+     "h": 851,
+     "cap": {
+      "ja": "お堀と艮櫓",
+      "en": "The moat and Ushitora turret"
+     },
+     "credit": {
+      "author": "Reggaeman",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Takamatsu_castle_12.JPG"
+     }
+    },
+    {
+     "f": "web-tamamo-3.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "披雲閣と庭",
+      "en": "Hiunkaku and its garden"
+     },
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tamamo-jo_(Takamatsu_Castle)_(8825969562).jpg"
+     }
+    },
+    {
+     "f": "web-tamamo-4.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "海水のお堀と石垣",
+      "en": "The seawater moat and stone walls"
+     },
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Takamatsu_Castle_(Sanuki)_20170609-3.jpg"
+     }
+    }
+   ],
+   "no": 11
+  },
+  {
+   "id": "yashima",
+   "ja": "屋島（やしま）",
+   "en": "Yashima",
+   "pins": [
+    {
+     "lat": 34.3581,
+     "lon": 134.101,
+     "ja": "屋島",
+     "en": "Yashima",
+     "anchor": "start"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%B1%8B%E5%B3%B6%E5%AF%BA",
+   "time": {
+    "ja": "JR高松駅から高徳線でJR屋島駅まで約16分、駅前から屋島山上シャトルバスで約18分（200円）。土日祝と夏休み・冬休みは、高松駅から山上まで直通のバスもあります（約32分、600円）",
+    "en": "About 16 min from JR Takamatsu to JR Yashima on the Kotoku Line, then about 18 min on the Yashima-Sanjo shuttle bus from the station (¥200). At weekends, on holidays and in the summer and winter school holidays there is also a direct bus from Takamatsu Station to the top (about 32 min, ¥600)"
+   },
+   "body": {
+    "ja": [
+     "高松の東にある、屋根のように平らな形の山です。高さは約290m。上が平らなので、バスで山上に着いたあとは、ほとんど坂のない道を歩いて回れます。源氏と平氏が戦った「屋島の戦い」の場所としても知られています。",
+     "山上のバス停から歩いてすぐの屋島寺（やしまじ）は、四国八十八ヶ所の84番札所です。本堂の横に、大きな狸（たぬき）の石像が並ぶ蓑山大明神（みのやまだいみょうじん）があります。",
+     "お寺から西へ歩いて5分ほどの「獅子の霊巌（ししのれいがん）」展望台は、高松の街と瀬戸内海を見下ろす場所で、夕日と夜景でも知られています。素焼きの小さな皿を海に向かって投げる「かわらけ投げ」ができます。となりの「やしまーる」は、ガラスの回廊がぐるりと続く建物で、歩きながら景色を眺められます。",
+     "山上だけなら1時間半〜2時間。帰りのバスの時刻を先に決めてから歩いてください。山上の新屋島水族館は建て替え中で、2027年春ごろに開く予定です。"
+    ],
+    "en": [
+     "A flat-topped mountain east of Takamatsu, shaped like a roof and about 290 m high. Because the top is level, once the bus drops you there you can walk around with almost no climbing. It is also known as the site of the Battle of Yashima between the Genji and Heike clans.",
+     "Yashima-ji, a short walk from the bus stop, is temple No. 84 of the Shikoku 88-temple pilgrimage. Beside the main hall is Minoyama Daimyojin, a small shrine guarded by large stone tanuki (raccoon dogs).",
+     "About 5 minutes’ walk west of the temple, the Shishi-no-Reigan lookout faces down over Takamatsu and the Seto Inland Sea, and is known for sunsets and night views. Here you can throw small unglazed clay discs (kawarake) out towards the sea. Next to it, Yashimaru is a building with a glass corridor running all the way round, so you take in the view as you walk.",
+     "Allow 1½ to 2 hours on top. Decide which bus you are taking back before you set off. The New Yashima Aquarium on the mountain is being rebuilt and is due to open around spring 2027."
+    ]
+   },
+   "note": {
+    "ja": "JR屋島駅発のバスは毎日9:29・10:41・11:53・13:53・15:05・16:17。山上からJR屋島駅への最終は16:54発です（ことでん屋島駅までなら夜の便もあります）。高松駅（7番のりば）からの直通は土日祝・夏休み・冬休みだけで、9:43・11:13・14:03・17:12発、帰りは山上10:29・12:06・15:18・19:44発。2026年11月21日に、ことでんバスの時刻表と運賃表（2026年7月18日改正）で確認。【要確認】やしまーるは9:00〜17:00（金・土・祝前日は21:00まで）、火曜休み、入館無料とされていますが、屋島の公式サイトにつながらず確かめられませんでした。",
+    "en": "Buses leave JR Yashima Station daily at 9:29, 10:41, 11:53, 13:53, 15:05 and 16:17. The last bus from the top to JR Yashima Station is at 16:54 (later buses run as far as Kotoden-Yashima Station). The direct bus from Takamatsu Station (stop 7) runs only at weekends, on holidays and in the summer and winter holidays, at 9:43, 11:13, 14:03 and 17:12, returning from the top at 10:29, 12:06, 15:18 and 19:44. Checked against the Kotoden Bus timetable and fare table (revised 18 July 2026) on 21 Nov 2026. Please check: Yashimaru is reported as open 9:00–17:00 (to 21:00 on Fridays, Saturdays and days before holidays), closed Tuesdays, free entry, but the official Yashima website could not be reached to confirm."
+   },
+   "photos": [
+    {
+     "f": "web-yashima-1.jpg",
+     "w": 1280,
+     "h": 720,
+     "cap": {
+      "ja": "平らな形の屋島",
+      "en": "The flat top of Yashima"
+     },
+     "credit": {
+      "author": "ラハール",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Mt._Yashima.jpg"
+     }
+    },
+    {
+     "f": "web-yashima-2.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "山上から見た高松の街と海",
+      "en": "Takamatsu and the sea from the top"
+     },
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yashima_and_Takamatsu_3-27_(25998123744).jpg"
+     }
+    },
+    {
+     "f": "web-yashima-3.jpg",
+     "w": 1280,
+     "h": 850,
+     "cap": {
+      "ja": "屋島寺の本堂",
+      "en": "The main hall of Yashima-ji"
+     },
+     "credit": {
+      "author": "Reggaeman",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yashimaji_06.JPG"
+     }
+    },
+    {
+     "f": "web-yashima-4.jpg",
+     "w": 1280,
+     "h": 844,
+     "cap": {
+      "ja": "蓑山大明神の狸",
+      "en": "The tanuki of Minoyama Daimyojin"
+     },
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:The_Yashima_tasaburo_tanuki_(left)_is_one_of_the_three_famous_tanuki_of_Japan,_who_guided_Kobo_Daishi_(the_founder_of_Shingon_buddhism)_to_the_top_of_Yashima_among_other_good_deeds._(6480378621).jpg"
+     }
+    },
+    {
+     "f": "web-yashima-5.jpg",
+     "w": 1280,
+     "h": 523,
+     "cap": {
+      "ja": "やしまーるのガラスの回廊",
+      "en": "The glass corridor of Yashimaru"
+     },
+     "credit": {
+      "author": "Araiyasushige",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yasima_20250828_4.jpg"
+     }
+    }
+   ],
+   "no": 12
+  },
+  {
+   "id": "naoshima",
+   "ja": "直島（なおしま）",
+   "en": "Naoshima",
+   "pins": [
+    {
+     "lat": 34.4573,
+     "lon": 133.9743,
+     "ja": "直島（宮浦港）",
+     "en": "Naoshima (Miyanoura Port)",
+     "anchor": "end"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E7%9B%B4%E5%B3%B6%20%E5%AE%AE%E6%B5%A6%E6%B8%AF",
+   "time": {
+    "ja": "高松港（JR高松駅から歩いて約5分）からフェリーで宮浦港（みやのうらこう）まで約50分（680円）。高速旅客船なら約30分（1,590円）",
+    "en": "About 50 min by ferry from Takamatsu Port (about 5 min on foot from JR Takamatsu Station) to Miyanoura Port (¥680). The high-speed passenger boat takes about 30 min (¥1,590)"
+   },
+   "body": {
+    "ja": [
+     "現代アートの美術館と屋外の作品で知られる島です。正直にいうと、半日では足りません。丸1日を直島だけにあててください。",
+     "フェリーが着く宮浦港には、草間彌生（くさまやよい）の「赤かぼちゃ」があり、中に入れます。ここは予約も料金もいりません。島の南側に、地中美術館やベネッセハウス ミュージアムなどの美術館が集まり、東側の本村（ほんむら）地区には、古い家を作品にした「家プロジェクト」があります。",
+     "いちばん大事なのは予約です。地中美術館は日時指定の予約制で、オンラインのチケットが売り切れると当日の窓口販売もありません。ほかの美術館もオンラインチケットになっています。行く日が決まったら、先にチケットを取り、それに合わせて船を選んでください。月曜日は多くの美術館が休みです（祝日の場合は開いて翌日が休み）。",
+     "日帰りなら、高松8:12発のフェリー（宮浦9:02着）で行き、宮浦17:00発（高松18:00着）で帰るのが基本です。島の中は町営バス（1回100円）か自転車で回ります。船は予約できず先着順なので、混む時期は早めに港へ。"
+    ],
+    "en": [
+     "An island known for its contemporary art museums and outdoor works. Honestly, half a day is not enough: give Naoshima a whole day.",
+     "At Miyanoura Port, where the ferry arrives, stands Yayoi Kusama’s Red Pumpkin, which you can walk inside. No booking or fee here. The museums, including Chichu Art Museum and Benesse House Museum, are on the south side of the island, and in the Honmura district on the east side old houses have been turned into artworks as the Art House Project.",
+     "The most important thing is booking. Chichu Art Museum is by timed reservation only, and if online tickets sell out there are no tickets at the door. The other museums also use online tickets. Once your date is fixed, get tickets first and choose your boat to match. Most museums are closed on Mondays (open if Monday is a holiday, then closed the next day).",
+     "For a day trip the basic plan is the 8:12 ferry from Takamatsu (Miyanoura 9:02) and the 17:00 back (Takamatsu 18:00). Get around the island by town bus (¥100 a ride) or bicycle. Boats cannot be reserved and are first come, first served, so go to the port early in busy seasons."
+    ]
+   },
+   "note": {
+    "ja": "フェリーは高松発8:12・10:14・12:40・15:35・18:05、宮浦発7:00・9:07・11:30・14:20・17:00（帰りは約60分）。高速旅客船は高松発7:20・9:20・20:30、宮浦発6:45・8:40・19:45。フェリーの最終17:00を逃すと、19:45の高速船（1,590円）だけです。高松で買った往復きっぷで帰りに高速船に乗るには差額券（910円）が必要。天気で欠航することがあります。地中美術館は10:00〜17:00（入館は16:00まで）、オンライン購入で平日2,500円・土日祝2,700円。町営バスは両替機がないので小銭を用意してください。2026年11月21日に、四国汽船・ベネッセアートサイト直島・直島町観光協会の公式サイトで確認。",
+    "en": "Ferries leave Takamatsu at 8:12, 10:14, 12:40, 15:35 and 18:05, and Miyanoura at 7:00, 9:07, 11:30, 14:20 and 17:00 (about 60 min on the way back). High-speed boats leave Takamatsu at 7:20, 9:20 and 20:30, and Miyanoura at 6:45, 8:40 and 19:45. If you miss the last ferry at 17:00, only the 19:45 high-speed boat (¥1,590) is left. To take the high-speed boat back on a return ferry ticket bought in Takamatsu you need a supplement (¥910). Boats can be cancelled in bad weather. Chichu Art Museum: 10:00–17:00 (last entry 16:00), ¥2,500 on weekdays and ¥2,700 at weekends and on holidays when bought online. The town bus has no change machine, so bring coins. Checked on the Shikoku Kisen, Benesse Art Site Naoshima and Naoshima Tourism Association websites on 21 Nov 2026."
+   },
+   "photos": [
+    {
+     "f": "web-naoshima-1.jpg",
+     "w": 1280,
+     "h": 853,
+     "cap": {
+      "ja": "高松港の、直島へ行くフェリー",
+      "en": "The Naoshima ferry at Takamatsu Port"
+     },
+     "credit": {
+      "author": "Spaceaero2",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shikoku_kisen_seto_at_takamatsu_port.jpg"
+     }
+    },
+    {
+     "f": "web-naoshima-2.jpg",
+     "w": 1280,
+     "h": 857,
+     "cap": {
+      "ja": "宮浦港のフェリーターミナル「海の駅なおしま」",
+      "en": "The ferry terminal at Miyanoura Port"
+     },
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Miyanoura_port06s3872.jpg"
+     }
+    },
+    {
+     "f": "web-naoshima-3.jpg",
+     "w": 1280,
+     "h": 861,
+     "cap": {
+      "ja": "島の南側、美術館エリアの浜",
+      "en": "The beach by the museum area on the south side"
+     },
+     "credit": {
+      "author": "Joi Ito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Benesse_House_beach,_Naoshima_island_-_Jul_23,_2009.jpg"
+     }
+    },
+    {
+     "f": "web-naoshima-4.jpg",
+     "w": 1280,
+     "h": 960,
+     "cap": {
+      "ja": "本村の港",
+      "en": "Honmura harbour"
+     },
+     "credit": {
+      "author": "Fotointheworld",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Naoshima_honmura_port_2025.JPG"
+     }
+    }
+   ],
+   "no": 13
   }
  ],
  "refs": [],
@@ -1452,7 +1941,15 @@ window.GUIDE = {
    "https://niyodoblue.jp/feature/detail.php?id=6",
    "https://niyodoblue.jp/feature/detail.php?id=7",
    "https://niyodoblue.jp/feature/detail.php?id=8",
-   "https://niyodoblue.jp/taxi_new/detail.php?id=11"
+   "https://niyodoblue.jp/taxi_new/detail.php?id=11",
+   "https://maripla.jp/space/",
+   "https://www.symboltower.com/event/entry-2721.html",
+   "https://merikenya.com/index.php/merikenyashop",
+   "https://www.kotoden.co.jp/publichtm/bus/new/2026/yashima_shuttle7.18/index.html",
+   "https://shikokukisen.com/takamatsu-miyanoura/",
+   "https://benesse-artsite.jp/art/chichu.html",
+   "https://naoshima.net/ja/access/access_from/",
+   "https://kagawan.com/takamatsucastle-tamamopark/"
   ]
  }
 };
