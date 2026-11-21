@@ -7,12 +7,12 @@
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
     home: { en: "← All maps", ja: "← マップ一覧" },
    howto_h: { en: "How to use this page", ja: "このページの使い方" },
-    howto_1: { en: "Use the buttons at the top to switch between the city and the day trips.", ja: "上のボタンで、町の中のおすすめと、日帰りで行ける場所を切り替えられます。" },
+    howto_1: { en: "Use the buttons at the top to switch between “City” and “Day trips”.", ja: "上のボタンで「金沢市内」と「日帰り」を切り替えられます。" },
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
-    howto_3: { en: "Tap “Map” next to a place to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "「地図」を押すとGoogleマップで場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
+    howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
     subtitle: { en: "Two relaxed days in the city, a seafood meal not to miss, and day trips from Kanazawa.", ja: "市内でゆったり2日間、ぜひ食べてほしい海鮮、そして金沢からの日帰り旅。" },
-    nav_city: { en: "Kanazawa city", ja: "金沢市内" }, nav_food: { en: "Seafood", ja: "海鮮" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
+    nav_city: { en: "City", ja: "金沢市内" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "places to eat", ja: "ぜひ食べてほしいお店" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },
     map_h: { en: "Where everything is", ja: "おすすめの場所の地図" },
@@ -21,7 +21,7 @@
     map_fb: { en: "The map images could not load, so a simple map is shown instead.", ja: "地図の画像を読み込めなかったため、簡易な地図を表示しています。" },
     show_all: { en: "Show all", ja: "全体を表示" },
     city_h: { en: "Places you can cover in 2 days", ja: "2日で回れる場所" }, city_sub: { en: "Within Kanazawa City", ja: "金沢市内" },
-    food_h: { en: "A meal you really should not miss", ja: "ぜひ食べてほしい一食" },
+    food_h: { en: "Places to eat you shouldn’t miss", ja: "ぜひ食べてほしいお店" },
     trips_h: { en: "Places you can visit on a day trip from Kanazawa", ja: "金沢から日帰りで行ける場所" },
     trips_sub: { en: "If you have extra time, definitely consider them.", ja: "時間に余裕があれば、ぜひ検討してみてください。" },
     cr_h: { en: "Photo credits", ja: "写真のクレジット" },
@@ -61,7 +61,7 @@
     right: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
   };
 
-  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/" };
+  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/", "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/" };
   const licUrl = (l) => LIC[l] || ("https://creativecommons.org/licenses/" + (/SA/.test(l) ? "by-sa/" : "by/") + ((l.match(/[\d.]+$/) || ["4.0"])[0]) + "/");
 
   /* ---------- cards ---------- */
@@ -132,7 +132,7 @@
   const R = G.region;
   const rp = (lat, lon) => [(lon - R.lon0) * R.c * R.k, (R.lat1 - lat) * R.k];
   const LAB = {
-    higashi: [18, 5, "start"], kazue: [0, -21, "middle"], omicho: [-18, 5, "end"], nagamachi: [-18, 5, "end"], museum21: [-18, 5, "end"],
+    higashi: [18, 5, "start"], kazue: [0, -21, "middle"], omicho: [-18, 5, "end"], nagamachi: [-18, 5, "end"], kenrokuen: [18, 5, "start"], kanazawajo: [-18, 5, "end"], museum21: [-18, 5, "end"],
     suzuki: [18, 5, "start"], nishi: [-18, 5, "end"], myoryuji: [18, 9, "start"], library: [-18, 5, "end"], syuraku: [18, 5, "start"],
   };
   const f1 = (n) => n.toFixed(1);

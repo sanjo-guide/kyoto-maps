@@ -253,22 +253,17 @@ window.GUIDE = {
    },
    "photos": [
     {
+     "f": "hq-kz-03-5.jpg",
+     "w": 1280,
+     "h": 720
+    },
+    {
      "f": "hq-kz-03-1.jpg",
      "w": 1280,
      "h": 720
     },
     {
-     "f": "p2-omicho-3.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "hq-kz-03-8.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hq-kz-03-5.jpg",
      "w": 1280,
      "h": 720
     },
@@ -279,11 +274,6 @@ window.GUIDE = {
     },
     {
      "f": "hq-kz-03-4.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hq-kz-03-9.jpg",
      "w": 1280,
      "h": 720
     },
@@ -304,8 +294,202 @@ window.GUIDE = {
    ]
   },
   {
+   "id": "kenrokuen",
+   "lat": 36.56243,
+   "lon": 136.66235,
+   "en": "Kenrokuen Garden",
+   "ja": "兼六園（けんろくえん）",
+   "short": {
+    "ja": "兼六園",
+    "en": "Kenrokuen"
+   },
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%85%BC%E5%85%AD%E5%9C%92",
+   "time": {
+    "ja": "金沢駅からバスで約12分、「兼六園下・金沢城」で降りて歩いて約5分",
+    "en": "About 12 min by bus from Kanazawa Station to “Kenrokuen-shita / Kanazawa Castle”, then about 5 min on foot"
+   },
+   "body": {
+    "ja": [
+     "金沢でいちばん有名な庭園です。霞ヶ池（かすみがいけ）のほとりに立つ2本足の徽軫灯籠（ことじとうろう）が、金沢の写真によく出てくるあの景色です。",
+     "冬は、雪の重みから枝を守る「雪吊り（ゆきづり）」の縄が松にかけられます。桜や紅葉の時期などは夜のライトアップもあります。",
+     "朝早く起きられる人は、開園前の早朝開園をねらうのも手です。蓮池門口と随身坂口から無料で入れて、人も少なめです（11〜2月は6:00から、有料の開園の15分前までに出ます）。"
+    ],
+    "en": [
+     "Kanazawa’s most famous garden. The two-legged Kotoji stone lantern beside Kasumigaike Pond is the view you see in most photos of the city.",
+     "In winter the pines are roped with “yukizuri”, cone-shaped supports that protect the branches from heavy snow. There are evening light-ups in the cherry blossom and autumn leaf seasons, among others.",
+     "If you can get up early, try the early-morning opening before regular hours: entry is free through the Renchimon and Zuishinzaka gates and there are fewer people (from 6:00 in Nov–Feb; you must leave 15 minutes before paid hours begin)."
+    ]
+   },
+   "note": {
+    "ja": "大人（18歳以上）320円、6〜17歳100円。3月1日〜10月15日は7:00〜18:00、10月16日〜2月末は8:00〜17:00（入園は閉園の30分前まで）。年中無休。2026年11月21日に石川県の公式サイトで確認。",
+    "en": "¥320 (18 and over), ¥100 (6–17). 7:00–18:00 from 1 Mar to 15 Oct, 8:00–17:00 from 16 Oct to the end of Feb (last entry 30 min before closing). Open every day. Checked on Ishikawa Prefecture’s official website on 21 Nov 2026."
+   },
+   "photos": [
+    {
+     "f": "web-kenrokuen-1.jpg",
+     "cap": {
+      "ja": "徽軫灯籠と虹橋",
+      "en": "The Kotoji lantern and Nijibashi bridge"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "そらみみ",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kotoji_Toro_and_Nijibashi_Bridge_in_Kenroku_Garden.JPG"
+     }
+    },
+    {
+     "f": "web-kenrokuen-2.jpg",
+     "cap": {
+      "ja": "松の雪吊り",
+      "en": "Yukizuri ropes on the pines"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Ltd.super Express bound for E235",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%85%BC%E5%85%AD%E5%9C%92_%E3%80%9C%E9%9B%AA%E8%A7%A3%E3%81%91%E5%BE%8C%E3%81%AE%E9%9B%AA%E5%90%8A%E3%82%8A%E3%80%9C.jpg"
+     }
+    },
+    {
+     "f": "web-kenrokuen-3.jpg",
+     "cap": {
+      "ja": "雪吊りのライトアップ",
+      "en": "The yukizuri lit up at night"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kenroku-en_20170131-3.jpg"
+     }
+    },
+    {
+     "f": "web-kenrokuen-4.jpg",
+     "cap": {
+      "ja": "噴水と雪吊り",
+      "en": "The fountain and yukizuri"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "そらみみ",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Fountain_and_Yukizuri_of_Kenroku_Garden.JPG"
+     }
+    }
+   ],
+   "no": 4
+  },
+  {
+   "id": "kanazawajo",
+   "lat": 36.56576,
+   "lon": 136.65945,
+   "en": "Kanazawa Castle Park",
+   "ja": "金沢城公園",
+   "short": {
+    "ja": "金沢城公園",
+    "en": "Kanazawa Castle"
+   },
+   "map": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%B2%A2%E5%9F%8E%E5%85%AC%E5%9C%92%20%E7%9F%B3%E5%B7%9D%E9%96%80",
+   "time": {
+    "ja": "兼六園の桂坂口から、橋を渡ってすぐ石川門",
+    "en": "Straight across the bridge from Kenrokuen’s Katsurazaka gate to the Ishikawa-mon gate"
+   },
+   "body": {
+    "ja": [
+     "兼六園のとなりにある、加賀藩・前田家のお城の跡です。白い壁となまり色の瓦の石川門をくぐると、広い芝生の向こうに五十間長屋（ごじっけんながや）と菱櫓（ひしやぐら）が見えます。",
+     "公園は無料なので、兼六園とあわせて歩くのがおすすめです。西側の玉泉院丸庭園（ぎょくせんいんまるていえん）まで抜けると、長町や21世紀美術館の方へそのまま歩いて行けます。"
+    ],
+    "en": [
+     "The site of the castle of the Maeda lords of Kaga, right next to Kenrokuen. Go through the Ishikawa-mon gate, with its white walls and lead-grey tiles, and across a wide lawn you see the Gojikken Nagaya storehouse and the Hishi Yagura turret.",
+     "The park is free, so walk it together with Kenrokuen. If you carry on through to the Gyokuseninmaru Garden on the west side, you can keep walking toward Nagamachi or the 21st Century Museum."
+    ]
+   },
+   "note": {
+    "ja": "公園は無料、年中無休。3月1日〜10月15日は7:00〜18:00、10月16日〜2月末は8:00〜17:00。菱櫓・五十間長屋・橋爪門続櫓の中は大人320円、9:00〜16:30（入館は16:00まで）。2026年11月21日に石川県の公式サイトで確認。",
+    "en": "The park is free and open every day: 7:00–18:00 from 1 Mar to 15 Oct, 8:00–17:00 from 16 Oct to the end of Feb. Inside the Hishi Yagura, Gojikken Nagaya and Hashizume-mon turret: ¥320 for adults, 9:00–16:30 (last entry 16:00). Checked on Ishikawa Prefecture’s official website on 21 Nov 2026."
+   },
+   "photos": [
+    {
+     "f": "web-kanazawajo-1.jpg",
+     "cap": {
+      "ja": "石川門",
+      "en": "Ishikawa-mon gate"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "Fg2",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Kanazawa-M-5932.jpg"
+     }
+    },
+    {
+     "f": "web-kanazawajo-2.jpg",
+     "cap": {
+      "ja": "五十間長屋と菱櫓",
+      "en": "Gojikken Nagaya and Hishi Yagura"
+     },
+     "w": 1280,
+     "h": 720,
+     "credit": {
+      "author": "Drivephotographer",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kanazawa_castle.jpg"
+     }
+    },
+    {
+     "f": "web-kanazawajo-3.jpg",
+     "cap": {
+      "ja": "玉泉院丸庭園",
+      "en": "Gyokuseninmaru Garden"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Abasaa",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Gyokusen_Inmaru_Garden.JPG"
+     }
+    },
+    {
+     "f": "web-kanazawajo-4.jpg",
+     "cap": {
+      "ja": "夜の玉泉院丸庭園",
+      "en": "Gyokuseninmaru Garden at night"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Okochuke",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Gyokuseninmaru_Garden_(118911057).jpeg"
+     }
+    },
+    {
+     "f": "web-kanazawajo-5.jpg",
+     "cap": {
+      "ja": "橋爪門",
+      "en": "Hashizume-mon gate"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "Balon Greyjoy",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:20190705_Kanazawa_Castle-19.jpg"
+     }
+    }
+   ],
+   "no": 5
+  },
+  {
    "id": "nagamachi",
-   "no": 4,
+   "no": 6,
    "lat": 36.5639,
    "lon": 136.65028,
    "en": "Nagamachi Samurai District",
@@ -385,15 +569,6 @@ window.GUIDE = {
      }
     },
     {
-     "f": "hq-kz-04-7.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "野村家の庭園",
-      "en": "The garden at Nomura-ke"
-     }
-    },
-    {
      "f": "p2-nagamachi-8.jpg",
      "w": 1280,
      "h": 720
@@ -420,7 +595,7 @@ window.GUIDE = {
   },
   {
    "id": "museum21",
-   "no": 5,
+   "no": 7,
    "lat": 36.5608,
    "lon": 136.658,
    "en": "21st Century Museum of Contemporary Art",
@@ -501,7 +676,7 @@ window.GUIDE = {
   },
   {
    "id": "suzuki",
-   "no": 6,
+   "no": 8,
    "lat": 36.55796,
    "lon": 136.661,
    "en": "D.T. Suzuki Museum (+ Green Path)",
@@ -524,11 +699,6 @@ window.GUIDE = {
    "photos": [
     {
      "f": "hq-kz-06-1.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hq-kz-06-2.jpg",
      "w": 1280,
      "h": 720
     },
@@ -583,7 +753,7 @@ window.GUIDE = {
   },
   {
    "id": "nishi",
-   "no": 7,
+   "no": 9,
    "lat": 36.55674,
    "lon": 136.6473,
    "en": "Nishi Chaya District (+ Rakugan Moroe-ya Nishi Chaya Karyo)",
@@ -596,11 +766,11 @@ window.GUIDE = {
    "body": {
     "en": [
      "Compared with Higashi Chaya District, this area has far fewer people, so it’s much easier to walk around at your own pace.",
-     "It’s a small district, but there are several nice cafés, and it has a bit of a hidden-gem feel, which is part of its charm. If you don’t like overly crowded places, I really recommend it."
+     "It’s a small district, but there are several cafés. If you don’t like crowded places, I really recommend it."
     ],
     "ja": [
      "ひがし茶屋街と比べて人がずっと少なく、自分のペースで歩きやすいです。",
-     "小さなエリアですが素敵なカフェがいくつかあり、ちょっと穴場っぽい雰囲気も魅力です。混雑が苦手な人には特におすすめです。"
+     "小さなエリアですが、カフェがいくつかあります。混雑が苦手な人には特におすすめです。"
     ]
    },
    "subs": [
@@ -633,11 +803,6 @@ window.GUIDE = {
       "ja": "落雁 諸江屋（もろえや）",
       "en": "Rakugan Moroe-ya"
      }
-    },
-    {
-     "f": "hq-kz-07-10.jpg",
-     "w": 1280,
-     "h": 720
     },
     {
      "f": "hq-kz-07-3.jpg",
@@ -693,7 +858,7 @@ window.GUIDE = {
   },
   {
    "id": "myoryuji",
-   "no": 8,
+   "no": 10,
    "lat": 36.555229,
    "lon": 136.64946,
    "en": "Myoryuji Temple (Ninja Temple)",
@@ -733,11 +898,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-08-3.jpg",
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "hq-kz-08-7.jpg",
      "w": 1280,
      "h": 720
@@ -749,11 +909,6 @@ window.GUIDE = {
     },
     {
      "f": "hq-kz-08-4.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hq-kz-08-9.jpg",
      "w": 1280,
      "h": 720
     },
@@ -776,7 +931,7 @@ window.GUIDE = {
   },
   {
    "id": "library",
-   "no": 9,
+   "no": 11,
    "lat": 36.54881,
    "lon": 136.68028,
    "en": "Ishikawa Prefectural Library (+ café HUM&Go)",
@@ -847,11 +1002,6 @@ window.GUIDE = {
       "ja": "夜の石川県立図書館",
       "en": "The library at night"
      }
-    },
-    {
-     "f": "hq-kz-09-10.jpg",
-     "w": 1280,
-     "h": 848
     },
     {
      "f": "hq-kz-09-7.jpg",
@@ -939,15 +1089,6 @@ window.GUIDE = {
     }
    ],
    "photos": [
-    {
-     "f": "hq-kz-11-1.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "中央市場店",
-      "en": "Central Market branch"
-     }
-    },
     {
      "f": "hq-kz-10-2.jpg",
      "w": 1280,
@@ -1079,11 +1220,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "hq-kz-12-2.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "hq-kz-12-10.jpg",
      "w": 1280,
      "h": 720
@@ -1113,10 +1249,12 @@ window.GUIDE = {
    },
    "body": {
     "en": [
-     "If the weather in Kanazawa is rainy, or if your legs are tired from walking, this is a great way to relax properly in a hot spring."
+     "If the weather in Kanazawa is rainy, or if your legs are tired from walking, this is a great way to relax properly in a hot spring.",
+     "From Kaga Onsen Station, the CANBUS sightseeing bus (Yama-mawari line) goes to both Yamanaka and Yamashiro Onsen (¥500 per ride; the ¥1,300 day pass is a digital ticket and isn’t sold on the bus). Checked on the official website on 20 Nov 2026."
     ],
     "ja": [
-     "金沢が雨の日や、歩き疲れて足がくたくたのときに、温泉でしっかりくつろげるのでおすすめです。"
+     "金沢が雨の日や、歩き疲れて足がくたくたのときに、温泉でしっかりくつろげるのでおすすめです。",
+     "加賀温泉駅から山中温泉・山代温泉へは、周遊バス「キャン・バス」の山まわり線で行けます（1回500円。1日乗り放題は1,300円のデジタルチケットで、バスの中では買えません）。2026年11月20日に公式サイトで確認。"
     ]
    }
   },
@@ -1290,11 +1428,6 @@ window.GUIDE = {
      }
     },
     {
-     "f": "p2-yamashiro-3.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "hq-dt-01-10.jpg",
      "w": 1280,
      "h": 720,
@@ -1304,22 +1437,12 @@ window.GUIDE = {
      }
     },
     {
-     "f": "p2-yamashiro-5.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "p2-yamashiro-6.jpg",
      "w": 1280,
      "h": 720
     },
     {
      "f": "p2-yamashiro-7.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "p2-yamashiro-8.jpg",
      "w": 1280,
      "h": 720
     },
@@ -1336,8 +1459,8 @@ window.GUIDE = {
    "en": "Gassho-zukuri villages: Gokayama (Ainokura / Suganuma) or Shirakawa-go",
    "ja": "合掌造りの集落：五箇山（相倉・菅沼）または白川郷",
    "time": {
-    "en": "Approx. 1 hour to 1 hour 15 mins by highway bus from Kanazawa",
-    "ja": "金沢から高速バスで約1時間〜1時間15分"
+    "en": "To Shirakawa-go: approx. 1 hour to 1 hour 15 mins by highway bus from Kanazawa. To Gokayama: Shinkansen to Shin-Takaoka (approx. 15 mins), then the Kaetsuno Bus “World Heritage Bus” (approx. 1 hour to Ainokura-guchi)",
+    "ja": "白川郷へは金沢から高速バスで約1時間〜1時間15分。五箇山へは新幹線で新高岡まで約15分、そこから加越能バスの「世界遺産バス」で相倉口まで約1時間"
    },
    "body": {
     "en": [
@@ -1422,8 +1545,8 @@ window.GUIDE = {
      "w": 1280,
      "h": 848,
      "cap": {
-      "ja": "雪の夕暮れの相倉",
-      "en": "A snowy evening in Ainokura"
+      "ja": "雪の相倉",
+      "en": "Ainokura in the snow"
      }
     },
     {
@@ -1469,7 +1592,7 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=%E8%8F%85%E6%B2%BC%E5%90%88%E6%8E%8C%E9%80%A0%E3%82%8A%E9%9B%86%E8%90%BD",
    "body": {
     "en": [
-     "This one is smaller and more compact, with a very charming feel. Compared with Shirakawa-go, these places are often less crowded, which makes them easier to enjoy at a slower pace. Sometimes there also seem to be fewer international tourists, so the atmosphere feels more relaxed. And in winter, the snowy scenery is absolutely beautiful."
+     "This one is smaller and more compact, with a cosy feel. Compared with Shirakawa-go, these places are often less crowded, which makes them easier to enjoy at a slower pace. Sometimes there also seem to be fewer international tourists, so the atmosphere feels more relaxed. And in winter, the snowy scenery is absolutely beautiful."
     ],
     "ja": [
      "こちらは小さくコンパクトで、とても可愛らしい雰囲気です。白川郷に比べて混雑していないことが多く、ゆっくり楽しみやすいです。海外からの観光客も少なめに感じることがあり、のんびりした空気です。そして冬の雪景色は本当に美しいです。"
@@ -1484,16 +1607,6 @@ window.GUIDE = {
       "ja": "五箇山 菅沼（すがぬま）",
       "en": "Suganuma, Gokayama"
      }
-    },
-    {
-     "f": "p2-suganuma-3.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "p2-suganuma-4.jpg",
-     "w": 1280,
-     "h": 720
     },
     {
      "f": "p2-suganuma-5.jpg",
@@ -1554,8 +1667,12 @@ window.GUIDE = {
    ],
    "map": "https://www.google.com/maps/search/?api=1&query=%E7%99%BD%E5%B7%9D%E9%83%B7%20%E8%8D%BB%E7%94%BA%E5%90%88%E6%8E%8C%E9%80%A0%E3%82%8A%E9%9B%86%E8%90%BD",
    "body": {
-    "en": [],
-    "ja": []
+    "en": [
+     "The most famous of the three villages, so it’s also the busiest. The view down over the thatched roofs from the observation point is wonderful, whether under snow in winter or in autumn colours."
+    ],
+    "ja": [
+     "3つの中でいちばん有名な集落で、そのぶん観光客もいちばん多いです。展望台から見下ろす合掌造りの家並みは、冬の雪景色も、秋の紅葉もみごとです。"
+    ]
    },
    "photos": [
     {
@@ -1566,11 +1683,6 @@ window.GUIDE = {
       "ja": "冬の白川郷",
       "en": "Shirakawa-go in winter"
      }
-    },
-    {
-     "f": "p2-shirakawa-2.jpg",
-     "w": 1280,
-     "h": 848
     },
     {
      "f": "p2-shirakawa-3.jpg",
@@ -1595,11 +1707,6 @@ window.GUIDE = {
       "ja": "秋の白川郷",
       "en": "Shirakawa-go in autumn"
      }
-    },
-    {
-     "f": "p2-shirakawa-7.jpg",
-     "w": 1280,
-     "h": 848
     },
     {
      "f": "hq-dt-02-10.jpg",
@@ -1657,11 +1764,13 @@ window.GUIDE = {
    "body": {
     "en": [
      "This is a really interesting place where you can see traditional craftsmanship in action and experience Japanese culture through manufacturing.",
-     "You can join a factory tour for free, and there are also hands-on workshops where you can make your own craft item. I recommend reserving both the factory tour and the workshop in advance through the official website."
+     "You can join a factory tour for free, and there are also hands-on workshops where you can make your own craft item. I recommend reserving both the factory tour and the workshop in advance through the official website.",
+     "The “World Heritage Bus” from Shin-Takaoka to Gokayama and Shirakawa-go also stops at “Nousaku-mae”, about 15 minutes from Shin-Takaoka, so you can combine it with a day in Gokayama."
     ],
     "ja": [
      "伝統の職人技を間近で見て、ものづくりを通して日本の文化を体験できる、とてもおもしろい場所です。",
-     "工場見学は無料で参加でき、自分で作品を作れる体験工房もあります。工場見学と体験は、どちらも公式サイトから事前に予約しておくのがおすすめです。"
+     "工場見学は無料で参加でき、自分で作品を作れる体験工房もあります。工場見学と体験は、どちらも公式サイトから事前に予約しておくのがおすすめです。",
+     "五箇山・白川郷へ行く「世界遺産バス」は、新高岡駅から約15分の「能作前」にも止まるので、五箇山へ行く日にあわせて寄ることもできます。"
     ]
    },
    "photos": [
@@ -1768,13 +1877,27 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8",
    "body": {
     "en": [
-     "The scenery here is truly beautiful, especially on a clear day."
+     "On a clear day you can see the Tateyama mountains across the sea. Crisp winter mornings are said to give the best chance."
     ],
     "ja": [
-     "特に晴れた日は、本当に美しい景色です。"
+     "晴れた日は、海の向こうに立山連峰が見えます。空気の澄んだ冬の朝が、いちばん見えやすいと言われています。"
     ]
    },
    "photos": [
+    {
+     "f": "web-amaharashi.jpg",
+     "cap": {
+      "en": "Amaharashi Coast",
+      "ja": "雨晴海岸"
+     },
+     "w": 1280,
+     "h": 854,
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8%EF%BC%88%E5%A5%B3%E5%B2%A9%E3%83%BB%E7%AB%8B%E5%B1%B1%E9%80%A3%E5%B3%B0%EF%BC%8920250215-IMG_2835.jpg"
+     }
+    },
     {
      "f": "hq-dt-04-1.jpg",
      "w": 1280,
@@ -1815,20 +1938,6 @@ window.GUIDE = {
       "author": "Smiley.toerist",
       "license": "CC BY-SA 4.0",
       "page": "https://commons.wikimedia.org/wiki/File:Amaharashi_coast_2024_4.jpg"
-     }
-    },
-    {
-     "f": "web-amaharashi.jpg",
-     "cap": {
-      "en": "Amaharashi Coast",
-      "ja": "雨晴海岸"
-     },
-     "w": 1280,
-     "h": 854,
-     "credit": {
-      "author": "くろふね",
-      "license": "CC BY 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:%E9%9B%A8%E6%99%B4%E6%B5%B7%E5%B2%B8%EF%BC%88%E5%A5%B3%E5%B2%A9%E3%83%BB%E7%AB%8B%E5%B1%B1%E9%80%A3%E5%B3%B0%EF%BC%8920250215-IMG_2835.jpg"
      }
     }
    ]
@@ -1976,10 +2085,10 @@ window.GUIDE = {
    },
    "body": {
     "en": [
-     "Toyama has a different appeal from Kanazawa. It combines a slightly more urban feel with the charm of a port town and a very strong food scene."
+     "Toyama feels a little more like a big city than Kanazawa. Come for the glass museum, the old port district of Iwase, and the sushi around the station."
     ],
     "ja": [
-     "富山には金沢とはまた違った魅力があります。少し都会的な雰囲気と港町の魅力、そして充実した食が合わさった街です。"
+     "富山は、金沢より少し都会的な街です。ガラス美術館と、港町の岩瀬、そして駅のまわりの寿司が楽しみです。"
     ]
    }
   },
@@ -2038,15 +2147,6 @@ window.GUIDE = {
       "license": "CC BY 2.0",
       "page": "https://commons.wikimedia.org/wiki/File:Toyama_Glass_Art_Museum_-_Dec_11,_2015_(1).jpg"
      }
-    },
-    {
-     "f": "toyama-1.jpg",
-     "cap": {
-      "en": "Glass Art Museum (TOYAMA Kirari)",
-      "ja": "富山市ガラス美術館（TOYAMAキラリ）"
-     },
-     "w": 552,
-     "h": 310
     },
     {
      "f": "toyama-2.jpg",
@@ -2133,11 +2233,6 @@ window.GUIDE = {
      }
     },
     {
-     "f": "p2-iwase-4.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "p2-iwase-5.jpg",
      "w": 1280,
      "h": 720
@@ -2150,11 +2245,6 @@ window.GUIDE = {
       "ja": "岩瀬の町家",
       "en": "A traditional house in Iwase"
      }
-    },
-    {
-     "f": "p2-iwase-7.jpg",
-     "w": 1280,
-     "h": 720
     },
     {
      "f": "hq-dt-05-5.jpg",
@@ -2356,22 +2446,12 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "p2-awara-4.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "p2-awara-5.jpg",
      "w": 1280,
      "h": 720
     },
     {
      "f": "p2-awara-6.jpg",
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "p2-awara-7.jpg",
      "w": 1280,
      "h": 720
     }
@@ -2671,6 +2751,15 @@ window.GUIDE = {
    },
    "photos": [
     {
+     "f": "kurobe-torokko-7.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "湖にかかる赤い橋",
+      "en": "A red bridge over the lake"
+     }
+    },
+    {
      "f": "kurobe-torokko-1.jpg",
      "w": 1280,
      "h": 720,
@@ -2722,15 +2811,6 @@ window.GUIDE = {
      "cap": {
       "ja": "車窓から見るうなづき湖と紅葉",
       "en": "Lake Unazuki and autumn leaves from the train"
-     }
-    },
-    {
-     "f": "kurobe-torokko-7.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "湖にかかる赤い橋",
-      "en": "A red bridge over the lake"
      }
     },
     {
@@ -2803,48 +2883,12 @@ window.GUIDE = {
      }
     },
     {
-     "f": "kurobe-unazuki-2.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "黒部川と赤い鉄橋",
-      "en": "The Kurobe River and the red bridge"
-     }
-    },
-    {
-     "f": "kurobe-unazuki-3.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "山の紅葉と鉄橋",
-      "en": "Autumn mountains and the bridge"
-     }
-    },
-    {
      "f": "kurobe-unazuki-4.jpg",
      "w": 1280,
      "h": 720,
      "cap": {
       "ja": "晴れた日の新山彦橋（2026年11月）",
       "en": "The bridge on a sunny day (Nov 2026)"
-     }
-    },
-    {
-     "f": "kurobe-unazuki-5.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "谷にかかる新山彦橋",
-      "en": "The bridge across the valley"
-     }
-    },
-    {
-     "f": "kurobe-unazuki-6.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "鉄橋と黒部川",
-      "en": "The bridge and the river"
      }
     },
     {
@@ -2947,15 +2991,6 @@ window.GUIDE = {
      }
     },
     {
-     "f": "tateyama-murodo-2.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "池に映る立山の山々",
-      "en": "The peaks reflected in the pond"
-     }
-    },
-    {
      "f": "tateyama-murodo-3.jpg",
      "w": 1280,
      "h": 720,
@@ -2989,15 +3024,6 @@ window.GUIDE = {
      "cap": {
       "ja": "雪どけの池と立山連峰",
       "en": "A thawing pond and the Tateyama range"
-     }
-    },
-    {
-     "f": "tateyama-murodo-7.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "水面に映る山",
-      "en": "Mountains mirrored in the water"
      }
     },
     {
@@ -3101,11 +3127,16 @@ window.GUIDE = {
  },
  "sources": {
   "checked": "2026-11-20",
-  "_note": "黒部・立山・加賀温泉の電車の時間と運賃は乗換案内（2026年11月20日）。黒部峡谷鉄道の運行区間・運賃は公式サイトがメンテナンス中で未確認",
+  "_note": "黒部・立山・加賀温泉の電車の時間と運賃は乗換案内（2026年11月20日）。黒部峡谷鉄道の運行区間・運賃は公式サイトがメンテナンス中で未確認。五箇山への世界遺産バス（新高岡〜相倉口、能作前に停車）は乗換案内（2026年11月25日の検索）、キャン・バスは公式サイト（2026年11月20日）",
   "list": [
    "https://transit.yahoo.co.jp/",
    "https://www.kurotetu.co.jp/",
-   "https://www.alpen-route.com/"
+   "https://www.alpen-route.com/",
+   "http://kaga-canbus.jp/",
+   "https://shiro-niwa.pref.ishikawa.lg.jp/kenrokuen-garden/info.html",
+   "https://shiro-niwa.pref.ishikawa.lg.jp/kenrokuen-garden/access.html",
+   "https://shiro-niwa.pref.ishikawa.lg.jp/kanazawa-castle/info/open.php",
+   "https://shiro-niwa.pref.ishikawa.lg.jp/kanazawa-castle/info/fee.php"
   ]
  }
 };

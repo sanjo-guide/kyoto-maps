@@ -4,15 +4,15 @@ window.GUIDE = {
   "ja": [
    "京都府の北の丹後（天橋立・伊根・舞鶴）と、兵庫県の北の但馬（豊岡・城崎温泉・竹野・竹田城跡）のおすすめをまとめました。",
    "京都から日帰りなら、天橋立と伊根がおすすめです。特急で乗り換えなしで行けて、海の上の松並木と、舟屋の町を1日で回れます。",
-   "1泊以上できるなら、豊岡のゲストハウス「Hostel Act」を拠点にするのがおすすめです。豊岡からは城崎温泉まで電車で約12分、天橋立まで京都丹後鉄道で約1時間15分。天橋立・伊根、舞鶴、城崎温泉、竹野の海、竹田城跡まで、毎日ちがう場所へ出かけられます。",
-   "下の「モデルプラン」に、日帰り・1泊・2泊・3泊の回り方の例を書きました。",
+   "1泊以上できるなら、豊岡のゲストハウス「Hostel Act」を拠点にするのがおすすめです。豊岡からは城崎温泉まで電車で約12分、天橋立まで京都丹後鉄道で約1時間15〜25分。天橋立・伊根、舞鶴、城崎温泉、竹野の海、竹田城跡まで、毎日ちがう場所へ出かけられます。",
+   "下の「モデルプラン」に、日帰り・1泊・2泊・3泊の回り方の例を書きました。出石と玄武洞は、私はまだ行っていませんが、豊岡に泊まるなら外せない場所なので、公式の情報をもとに紹介しています（写真はクレジットつき）。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Tango in northern Kyoto (Amanohashidate, Ine, Maizuru) and Tajima in northern Hyogo (Toyooka, Kinosaki Onsen, Takeno, Takeda Castle).",
    "For a day trip from Kyoto, go to Amanohashidate and Ine. A direct limited express takes you there, and in one day you can see the pine-covered sandbar across the sea and the town of boathouses.",
-   "If you can stay a night or more, base yourself at Hostel Act, a guesthouse in Toyooka. Kinosaki Onsen is about 12 minutes away by train and Amanohashidate about 1 h 15 min on the Kyoto Tango Railway, so each day you can head somewhere different: Amanohashidate and Ine, Maizuru, Kinosaki, the sea at Takeno, or Takeda Castle.",
-   "The model plans below show ways to do it as a day trip, or with one, two or three nights.",
+   "If you can stay a night or more, base yourself at Hostel Act, a guesthouse in Toyooka. Kinosaki Onsen is about 12 minutes away by train and Amanohashidate about 1 h 15–25 min on the Kyoto Tango Railway, so each day you can head somewhere different: Amanohashidate and Ine, Maizuru, Kinosaki, the sea at Takeno, or Takeda Castle.",
+   "The model plans below show ways to do it as a day trip, or with one, two or three nights. I haven’t yet been to Izushi or Genbudo, but if you stay in Toyooka they shouldn’t be missed, so I’ve described them from official information (photos are credited).",
    "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
   ]
  },
@@ -80,8 +80,8 @@ window.GUIDE = {
       "en": "Day 1"
      },
      "text": {
-      "ja": "日帰りプランと同じように天橋立・伊根を回り、夕方の京都丹後鉄道で豊岡へ（天橋立17:21発→豊岡18:47着。フリーパスを持っていればそのまま乗れます。なければ1,200円）。Hostel Actに泊まります。",
-      "en": "See Amanohashidate and Ine as in the day trip, then take the evening Kyoto Tango Railway to Toyooka (Amanohashidate 17:21 → Toyooka 18:47; covered by the free pass, otherwise ¥1,200). Stay at Hostel Act."
+      "ja": "日帰りプランと同じように天橋立・伊根を回り、夕方の京都丹後鉄道で豊岡へ（天橋立17:21発→豊岡18:47着。あとの便は18:21発→19:48着、19:29発→20:51着。フリーパスを持っていればそのまま乗れます。なければ1,200円）。Hostel Actに泊まります。1階のもりめ食堂は2026年末まで休業中なので、夕食は豊岡駅のまわりで。",
+      "en": "See Amanohashidate and Ine as in the day trip, then take the evening Kyoto Tango Railway to Toyooka (Amanohashidate 17:21 → Toyooka 18:47; later trains 18:21 → 19:48 and 19:29 → 20:51; covered by the free pass, otherwise ¥1,200). Stay at Hostel Act. Morime Shokudo downstairs is closed until the end of 2026, so have dinner around Toyooka Station."
      }
     },
     {
@@ -145,8 +145,8 @@ window.GUIDE = {
       "en": "Day 3"
      },
      "text": {
-      "ja": "豊岡から竹田まで電車で約50分（680円）。天空の城・竹田城跡を歩いて、和田山から特急で京都へ。",
-      "en": "About 50 minutes by train from Toyooka to Takeda (¥680). Walk the “castle in the sky”, then take a limited express from Wadayama back to Kyoto."
+      "ja": "豊岡から竹田まで電車で約45分〜1時間15分（和田山で乗り換え、680円。本数が少ないので時刻を確認）。天空の城・竹田城跡を歩いて、和田山から特急で京都へ。竹田城跡は1月4日〜2月末は冬の閉山で入れません。",
+      "en": "About 45 min to 1 h 15 min by train from Toyooka to Takeda (change at Wadayama, ¥680; trains are few, so check the times). Walk the “castle in the sky”, then take a limited express from Wadayama back to Kyoto. Takeda Castle is closed for winter from 4 Jan to the end of February."
      }
     }
    ],
@@ -165,8 +165,8 @@ window.GUIDE = {
     "en": "3 nights, 4 days"
    },
    "sub": {
-    "ja": "舞鶴も入れて、丹後と但馬をぜんぶ",
-    "en": "All of Tango and Tajima, Maizuru included"
+    "ja": "舞鶴と出石も入れて、丹後と但馬をぜんぶ",
+    "en": "All of Tango and Tajima, with Maizuru and Izushi"
    },
    "days": [
     {
@@ -185,8 +185,8 @@ window.GUIDE = {
       "en": "Day 2"
      },
      "text": {
-      "ja": "豊岡から京都丹後鉄道で天橋立へ（約1時間15分）。天橋立と伊根を回って、夕方の電車で豊岡へ戻ります。",
-      "en": "Kyoto Tango Railway from Toyooka to Amanohashidate (about 1 h 15 min). See Amanohashidate and Ine, and ride back to Toyooka in the evening."
+      "ja": "豊岡から京都丹後鉄道で天橋立へ（約1時間15〜25分）。天橋立と伊根を回って、夕方の電車で豊岡へ戻ります。「天橋立・伊根フリーパス 1day」は京都丹後鉄道の有人駅でも買えて、豊岡〜天橋立の電車（片道1,200円）も乗り放題に入っています。",
+      "en": "Kyoto Tango Railway from Toyooka to Amanohashidate (about 1 h 15–25 min). See Amanohashidate and Ine, and ride back to Toyooka in the evening. The Amanohashidate & Ine 1-day free pass is also sold at staffed Kyoto Tango Railway stations and covers the train between Toyooka and Amanohashidate (¥1,200 each way)."
      }
     },
     {
@@ -195,8 +195,8 @@ window.GUIDE = {
       "en": "Day 3"
      },
      "text": {
-      "ja": "城崎温泉で外湯めぐりと、竹野浜の海。豊岡の町や公設市場の散歩も。",
-      "en": "Kinosaki’s baths and the beach at Takeno, plus a stroll around Toyooka and its old market."
+      "ja": "午前は豊岡駅からバスで約30分の出石へ。辰鼓楼のまわりを歩いて、お昼に皿そば。午後は豊岡へ戻って城崎温泉で外湯めぐり。土日祝なら、出石から城崎温泉への直通バス（出石12:50発・14:05発など、800円）も使えます。",
+      "en": "In the morning, take the bus from Toyooka Station to Izushi (about 30 min). Walk around the Shinkoro clock tower and have sara-soba for lunch. In the afternoon, go back to Toyooka and on to Kinosaki for the baths. On weekends and holidays you can also use the direct bus from Izushi to Kinosaki Onsen (leaving Izushi at 12:50 or 14:05, among others; ¥800)."
      }
     },
     {
@@ -205,8 +205,8 @@ window.GUIDE = {
       "en": "Day 4"
      },
      "text": {
-      "ja": "竹田城跡を歩いて、京都へ帰ります。",
-      "en": "Walk Takeda Castle, then head back to Kyoto."
+      "ja": "竹田城跡を歩いて、京都へ帰ります。竹田城跡のかわりに、竹野浜の海でのんびりする1日にしてもいいと思います。",
+      "en": "Walk Takeda Castle, then head back to Kyoto. Or swap the castle for a slow day by the sea at Takeno."
      }
     }
    ],
@@ -255,8 +255,8 @@ window.GUIDE = {
     {
      "f": "toyooka-1.jpg",
      "cap": {
-      "ja": "夜のふれあい公設市場",
-      "en": "The Fureai market at night"
+      "ja": "のれんの並ぶ市場の通り",
+      "en": "The market lane with its curtains"
      },
      "w": 1280,
      "h": 720
@@ -264,8 +264,8 @@ window.GUIDE = {
     {
      "f": "toyooka-2.jpg",
      "cap": {
-      "ja": "のれんの並ぶ市場の通り",
-      "en": "The market lane with its curtains"
+      "ja": "夜のふれあい公設市場",
+      "en": "The Fureai market at night"
      },
      "w": 1280,
      "h": 720
@@ -325,11 +325,11 @@ window.GUIDE = {
    },
    "body": {
     "ja": [
-     "柳並木の大谿川（おおたにがわ）に沿って、外湯（共同浴場）が並ぶ温泉町です。外湯は7つありますが、駅前のさとの湯は2024年4月から改修で休館しています。浴衣と下駄で、外湯をめぐりながら歩くのが城崎の楽しみ方です。",
+     "柳並木の大谿川（おおたにがわ）に沿って、外湯（共同浴場）が並ぶ温泉町です。外湯は7つありますが、駅前のさとの湯は建て替え工事のため休業中です（駅前の足湯も2025年10月15日で終了）。浴衣と下駄で、外湯をめぐりながら歩くのが城崎の楽しみ方です。",
      "外湯めぐりの1日券「ゆめぱ」（1,500円）は、どの外湯でも買えます。夜は川沿いに灯りがともり、冬は雪景色になります。外湯の時間や休みの日は、ルートマップにまとめています。"
     ],
     "en": [
-     "A hot-spring town whose public bathhouses line the willow-fringed Otani River. There are seven, but Sato-no-yu by the station has been closed for renovation since April 2024. The thing to do is wander between them in a yukata and geta.",
+     "A hot-spring town whose public bathhouses line the willow-fringed Otani River. There are seven, but Sato-no-yu by the station is closed for rebuilding (its foot bath by the station also closed on 15 Oct 2025). The thing to do is wander between them in a yukata and geta.",
      "The “Yumepa” day pass (¥1,500) is sold at every bathhouse. At night the river is lit up, and in winter it’s a snow scene. Bathhouse hours and closing days are in the route map."
     ]
    },
@@ -426,6 +426,221 @@ window.GUIDE = {
    ]
   },
   {
+   "id": "genbudo",
+   "lat": 35.58798,
+   "lon": 134.80426,
+   "ja": "玄武洞（げんぶどう）",
+   "en": "Genbudo basalt caves",
+   "short": {
+    "ja": "玄武洞",
+    "en": "Genbudo"
+   },
+   "map": "https://www.google.com/maps/search/?api=1&query=%E7%8E%84%E6%AD%A6%E6%B4%9E%E5%85%AC%E5%9C%92",
+   "time": {
+    "ja": "豊岡駅から全但バスで「玄武洞公園」まで約15分（370円）、城崎温泉駅からは約12分（330円）。タクシーなら豊岡駅から約15分、城崎温泉駅から約10分",
+    "en": "About 15 min by Zentan Bus from Toyooka Station to “Genbudo Koen” (¥370), or about 12 min from Kinosaki Onsen Station (¥330). By taxi, about 15 min from Toyooka or 10 min from Kinosaki Onsen"
+   },
+   "body": {
+    "ja": [
+     "約160万年前の噴火で流れた溶岩が、冷えるときに六角形の柱の形に割れてできた岩の崖です。「玄武岩（げんぶがん）」という岩の名前は、ここから付けられました。国の天然記念物です。",
+     "豊岡と城崎温泉のちょうど間、円山川（まるやまがわ）の東岸にあります。公園の中に洞がいくつかあり、柱が縦にも横にも曲がって並ぶようすを、すぐ近くで見られます。",
+     "バスは1日に数本で、平日だけ・土日祝だけの便もあります。行きと帰りの時刻を先に決めてから出かけてください。入園は16:30までです。"
+    ],
+    "en": [
+     "A rock face made when lava from an eruption about 1.6 million years ago cracked into six-sided columns as it cooled. Basalt is called “genbugan” in Japanese after this place. It is a national natural monument.",
+     "It sits on the east bank of the Maruyama River, halfway between Toyooka and Kinosaki Onsen. The park has several caves, and you can stand right in front of the columns as they run upright, sideways and in curves.",
+     "There are only a few buses a day, and some run on weekdays only or weekends only, so fix your bus there and back before you set off. Last entry is at 16:30."
+    ]
+   },
+   "note": {
+    "ja": "玄武洞公園は大人500円・学生300円。9:00〜17:00（入園は16:30まで）、12月29日〜1月3日は休み（臨時に休むこともあります）。2026年11月21日に玄武洞公園の公式サイトで確認。バスは全但バスの時刻表（2026年11月1日改正）と運賃表で確認。",
+    "en": "Genbudo Park: ¥500 (adults), ¥300 (students). 9:00–17:00 (last entry 16:30), closed 29 Dec – 3 Jan (and occasionally at other times). Checked on the park’s official website on 21 Nov 2026. Bus checked against Zentan Bus’s timetable (revised 1 Nov 2026) and fare table."
+   },
+   "links": [
+    {
+     "ja": "玄武洞公園（公式）",
+     "en": "Genbudo Park (official)",
+     "url": "https://genbudo-park.jp/"
+    }
+   ],
+   "no": 3,
+   "photos": [
+    {
+     "f": "web-genbudo-1.jpg",
+     "cap": {
+      "ja": "玄武洞",
+      "en": "Genbudo cave"
+     },
+     "w": 1280,
+     "h": 857,
+     "credit": {
+      "author": "Hashi photo",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Genbudo_Park_in_Toyooka_Hyogo.JPG"
+     }
+    },
+    {
+     "f": "web-genbudo-2.jpg",
+     "cap": {
+      "ja": "柱のように割れた岩と池",
+      "en": "Rock columns above a pool"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "inunami",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Genbudo_(15073012628).jpg"
+     }
+    },
+    {
+     "f": "web-genbudo-3.jpg",
+     "cap": {
+      "ja": "六角形の岩の断面",
+      "en": "Six-sided column ends"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "tomoha",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E7%8E%84%E6%AD%A6%E6%B4%9E_-_panoramio_(1).jpg"
+     }
+    },
+    {
+     "f": "web-genbudo-4.jpg",
+     "cap": {
+      "ja": "玄武洞の洞",
+      "en": "The cave mouths at Genbudo"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "inunami",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Genbudo_(15072882930).jpg"
+     }
+    }
+   ]
+  },
+  {
+   "id": "izushi",
+   "lat": 35.46216,
+   "lon": 134.87434,
+   "ja": "出石（いずし）の城下町と皿そば",
+   "en": "Izushi castle town and sara-soba",
+   "short": {
+    "ja": "出石",
+    "en": "Izushi"
+   },
+   "map": "https://www.google.com/maps/search/?api=1&query=%E8%BE%B0%E9%BC%93%E6%A5%BC%20%E5%87%BA%E7%9F%B3",
+   "time": {
+    "ja": "豊岡駅から全但バスの出石行きで約30分（630円）。城崎温泉駅からの直通バスは約1時間（800円、平日1往復・土日祝3往復）",
+    "en": "About 30 min by Zentan Bus from Toyooka Station to Izushi (¥630). The direct bus from Kinosaki Onsen Station takes about 1 hour (¥800; one round trip on weekdays, three on weekends and holidays)"
+   },
+   "body": {
+    "ja": [
+     "「但馬の小京都」と呼ばれる小さな城下町です。町のまん中に、時計台の辰鼓楼（しんころう）が立っています。出石城跡の石垣や、赤い鳥居の並ぶ石段、土壁の酒蔵まで、ぜんぶ歩いて回れます。",
+     "名物は出石皿そば。出石焼の小さな皿に盛ったそばを、5皿で1人前として食べます。薬味は玉子・とろろ・ねぎなど。町にはそば屋が約40軒あります。",
+     "食べくらべをしたい人には、3軒で3皿ずつ食べられる「出石皿そば巡り」のセット（2,000円・税別）もあります。バスは豊岡駅から20〜40分おきに出ているので、半日あれば行って帰れます。"
+    ],
+    "en": [
+     "A small castle town known as the “little Kyoto of Tajima”. In the middle stands the Shinkoro clock tower. The stone walls of Izushi Castle, the steps lined with red torii, and the earthen-walled sake storehouse are all within walking distance.",
+     "The local dish is Izushi sara-soba: soba served on small Izushi-ware plates, five plates to a portion, with egg, grated yam, spring onion and other condiments. There are about 40 soba shops in town.",
+     "If you want to compare shops, the “Izushi sara-soba meguri” set (¥2,000 before tax) gets you three plates each at three shops. Buses leave Toyooka Station every 20–40 minutes, so half a day is enough for the round trip."
+    ]
+   },
+   "note": {
+    "ja": "バスの時刻と運賃は全但バスの時刻表（2026年11月1日改正）と運賃表で、そばのことは出石観光協会のサイトで、2026年11月21日に確認。お店ごとの営業時間と休みは、出石観光協会の「そば屋一覧」で確認してください。",
+    "en": "Bus times and fares checked against Zentan Bus’s timetable (revised 1 Nov 2026) and fare table, and the soba details on the Izushi tourist association website, on 21 Nov 2026. For each shop’s hours and closing days, see the association’s soba shop list."
+   },
+   "links": [
+    {
+     "ja": "出石観光協会",
+     "en": "Izushi tourist association",
+     "url": "https://www.izushi.co.jp/"
+    },
+    {
+     "ja": "全但バスの時刻表",
+     "en": "Zentan Bus timetables",
+     "url": "https://www.zentanbus.co.jp/local_bus/"
+    }
+   ],
+   "no": 4,
+   "photos": [
+    {
+     "f": "web-izushi-1.jpg",
+     "cap": {
+      "ja": "辰鼓楼",
+      "en": "The Shinkoro clock tower"
+     },
+     "w": 1280,
+     "h": 852,
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Izushi_Toyooka01n4592.jpg"
+     }
+    },
+    {
+     "f": "web-izushi-2.jpg",
+     "cap": {
+      "ja": "出石皿そば（5皿で1人前）",
+      "en": "Izushi sara-soba (five plates make a portion)"
+     },
+     "w": 1280,
+     "h": 720,
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Izushi-soba02s2816.jpg"
+     }
+    },
+    {
+     "f": "web-izushi-3.jpg",
+     "cap": {
+      "ja": "出石城跡の隅櫓",
+      "en": "A corner turret at Izushi Castle"
+     },
+     "w": 1280,
+     "h": 851,
+     "credit": {
+      "author": "Reggaeman",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Izushi_Castle_002.JPG"
+     }
+    },
+    {
+     "f": "web-izushi-4.jpg",
+     "cap": {
+      "ja": "城跡の稲荷神社へ上る鳥居と石段",
+      "en": "Torii and steps up to the Inari shrine at the castle"
+     },
+     "w": 1280,
+     "h": 851,
+     "credit": {
+      "author": "Reggaeman",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Izushi_Castle_008.JPG"
+     }
+    },
+    {
+     "f": "web-izushi-5.jpg",
+     "cap": {
+      "ja": "土壁の酒蔵",
+      "en": "An earthen-walled sake storehouse"
+     },
+     "w": 1280,
+     "h": 852,
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Izushi_Toyooka07st3200.jpg"
+     }
+    }
+   ]
+  },
+  {
    "id": "takeno",
    "lat": 35.6613,
    "lon": 134.76416,
@@ -446,11 +661,11 @@ window.GUIDE = {
      "浜の東には猫崎（ねこざき）半島の山が海に突き出していて、港には漁船が並びます。城崎温泉とあわせて回るのがおすすめです。"
     ],
     "en": [
-     "A beach of clear water and white sand, chosen as one of Japan’s 100 best shores. It’s busy with swimmers in summer, but quiet the rest of the year, perfect for a walk to the sound of the waves.",
+     "A beach of clear water and white sand, chosen as one of Japan’s 100 best shores. It’s busy with swimmers in summer, but quiet the rest of the year, and you can walk to the sound of the waves.",
      "To the east, the Nekozaki peninsula juts into the sea, and fishing boats line the harbour. Combine it with Kinosaki Onsen."
     ]
    },
-   "no": 3,
+   "no": 5,
    "photos": [
     {
      "f": "takeno-1.jpg",
@@ -484,15 +699,6 @@ window.GUIDE = {
      "cap": {
       "ja": "寄せる波と山",
       "en": "Waves and the headland"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "takeno-5.jpg",
-     "cap": {
-      "ja": "透明な海",
-      "en": "Clear water"
      },
      "w": 1280,
      "h": 720
@@ -565,12 +771,12 @@ window.GUIDE = {
     "ja": [
      "1泊以上するなら、拠点にとてもおすすめなのがこのゲストハウスです。昭和のはじめにできた木造アーケードの市場「ふれあい公設市場」の中にあって、のれんの並ぶ通りに小さな看板が出ています。",
      "2階が客室で、5人の相部屋（ドミトリー）と、畳の個室が2部屋。1階には共用のリビングとキッチン、シャワーがあります。オーナーご夫婦がとても気さくで、町のことやおすすめのお店をいろいろ教えてくれます。",
-     "豊岡は城崎温泉まで電車で約12分、天橋立まで京都丹後鉄道で約1時間15分。毎朝ここから、ちがう場所へ出かけられます。"
+     "豊岡は城崎温泉まで電車で約12分、天橋立まで京都丹後鉄道で約1時間15〜25分。毎朝ここから、ちがう場所へ出かけられます。"
     ],
     "en": [
      "If you’re staying a night or more, this guesthouse is the base I most recommend. It’s inside the Fureai public market, a wooden arcade market from the early Showa era, with a small sign among the curtained shopfronts.",
      "Upstairs are a 5-bed dorm and two tatami private rooms; downstairs, a shared living room, kitchen and showers. The owners, a husband and wife, are really friendly and full of tips about the town and places to eat.",
-     "From Toyooka, Kinosaki Onsen is about 12 minutes by train and Amanohashidate about 1 h 15 min on the Kyoto Tango Railway, so every morning you can set off somewhere new."
+     "From Toyooka, Kinosaki Onsen is about 12 minutes by train and Amanohashidate about 1 h 15–25 min on the Kyoto Tango Railway, so every morning you can set off somewhere new."
     ]
    },
    "note": {
@@ -589,7 +795,7 @@ window.GUIDE = {
      "url": "https://hostelact.com/booking/"
     }
    ],
-   "no": 4,
+   "no": 6,
    "photos": [
     {
      "f": "hostelact-1.jpg",
@@ -655,8 +861,8 @@ window.GUIDE = {
    "ja": "天橋立・伊根",
    "en": "Amanohashidate and Ine",
    "time": {
-    "ja": "京都から特急はしだてで天橋立まで約2時間（乗り換えなし）。豊岡からは京都丹後鉄道で約1時間15分（1,200円）",
-    "en": "About 2 hours from Kyoto to Amanohashidate on the Hashidate express (direct). From Toyooka, about 1 h 15 min on the Kyoto Tango Railway (¥1,200)"
+    "ja": "京都から特急はしだてで天橋立まで約2時間（乗り換えなし）。豊岡からは京都丹後鉄道で約1時間15〜25分（1,200円）",
+    "en": "About 2 hours from Kyoto to Amanohashidate on the Hashidate express (direct). From Toyooka, about 1 h 15–25 min on the Kyoto Tango Railway (¥1,200)"
    },
    "body": {
     "ja": [
@@ -924,15 +1130,6 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "yoshiwara-2.jpg",
-     "cap": {
-      "ja": "水に映る家と船",
-      "en": "Houses and boats reflected"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "yoshiwara-3.jpg",
      "cap": {
       "ja": "入り江に並ぶ家",
@@ -1037,15 +1234,6 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "akarenga-2.jpg",
-     "cap": {
-      "ja": "#MAIZURUの文字と倉庫",
-      "en": "The #MAIZURU sign and warehouses"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "akarenga-3.jpg",
      "cap": {
       "ja": "倉庫の前の庭",
@@ -1125,8 +1313,8 @@ window.GUIDE = {
    "ja": "竹田城跡",
    "en": "Takeda Castle Ruins",
    "time": {
-    "ja": "豊岡から電車で竹田まで約50分（680円）",
-    "en": "About 50 min by train from Toyooka to Takeda (¥680)"
+    "ja": "豊岡から電車で竹田まで、和田山で乗り換えて約45分〜1時間15分（680円）。本数が少ないので時刻を確認してください",
+    "en": "About 45 min to 1 h 15 min by train from Toyooka to Takeda, changing at Wadayama (¥680). Trains are few, so check the times"
    },
    "body": {
     "ja": [
@@ -1275,7 +1463,14 @@ window.GUIDE = {
    "https://hostelact.com/booking/",
    "https://akarenga-park.com/",
    "https://www.city.asago.hyogo.jp/site/takeda/",
-   "https://transit.yahoo.co.jp/"
+   "https://www.tankai.jp/tourist_tickets/",
+   "https://kinosaki-spa.gr.jp/news/27947",
+   "https://transit.yahoo.co.jp/",
+   "https://genbudo-park.jp/",
+   "https://www.izushi.co.jp/access/",
+   "https://www.izushi.co.jp/sobahistory/",
+   "https://www.izushi.co.jp/sobameguri/",
+   "https://www.zentanbus.co.jp/local_bus/"
   ]
  }
 };

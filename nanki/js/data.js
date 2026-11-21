@@ -4,15 +4,15 @@ window.GUIDE = {
   "ja": [
    "和歌山県の南、紀伊半島の南の海沿い「南紀（なんき）」のおすすめをまとめました。",
    "白浜は京都から約3時間15分（新大阪で特急くろしおに乗り換え）。白い砂浜の白良浜、夕日の円月島、千畳敷や三段壁の海の景色が、駅からバスで回れる範囲に集まっています。",
-   "さらに東へ進むと、那智の滝と熊野那智大社のある那智山、まぐろの港町・勝浦、世界遺産の温泉・湯の峰のつぼ湯、本州最南端の潮岬があります。電車とバスの本数が少ないので、泊まりがけでゆっくり回るのがおすすめです。",
-   "お店は、私が実際に行ったところだけを載せています。",
+   "さらに東へ進むと、那智の滝と熊野那智大社のある那智山、まぐろの港町・勝浦、熊野本宮大社と世界遺産の温泉・湯の峰のつぼ湯、本州最南端の潮岬があります。電車とバスの本数が少ないので、泊まりがけでゆっくり回るのがおすすめです。",
+   "お店は、私が実際に行ったところだけを載せています。崎の湯・アドベンチャーワールド・熊野本宮大社・大斎原は、私はまだ行っていませんが、南紀に来たら外せない場所なので、公式の情報をもとに紹介しています（写真はクレジットつき）。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Nanki, the southern coast of the Kii Peninsula in Wakayama.",
    "Shirahama is about 3 h 15 min from Kyoto (changing to the Kuroshio limited express at Shin-Osaka). The white sand of Shirarahama beach, sunset at Engetsu Island, and the sea views at Senjojiki and Sandanbeki are all within a bus ride of the station.",
-   "Further east are Mt. Nachi with Nachi Falls and Kumano Nachi Taisha, the tuna port of Katsuura, Tsuboyu at Yunomine, a World Heritage hot spring, and Shionomisaki, the southern tip of Honshu. Trains and buses are infrequent, so stay a night or two and take your time.",
-   "I only list restaurants I have actually been to myself.",
+   "Further east are Mt. Nachi with Nachi Falls and Kumano Nachi Taisha, the tuna port of Katsuura, Kumano Hongu Taisha and Tsuboyu at Yunomine, a World Heritage hot spring, and Shionomisaki, the southern tip of Honshu. Trains and buses are infrequent, so stay a night or two and take your time.",
+   "I only list restaurants I have actually been to myself. I haven’t yet been to Saki-no-yu, Adventure World, Kumano Hongu Taisha or Oyunohara, but they are places you shouldn’t miss in Nanki, so I’ve described them from official information (photos are credited).",
    "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
   ]
  },
@@ -57,33 +57,6 @@ window.GUIDE = {
    "no": 1,
    "photos": [
     {
-     "f": "shirarahama-1.jpg",
-     "cap": {
-      "ja": "夕方の白良浜",
-      "en": "Shirarahama in the evening"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "shirarahama-2.jpg",
-     "cap": {
-      "ja": "雲が広がる夕方の浜",
-      "en": "Clouds over the beach at dusk"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "shirarahama-3.jpg",
-     "cap": {
-      "ja": "夕日が映る波打ちぎわ",
-      "en": "Sunset light on the water’s edge"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "shirarahama-4.jpg",
      "cap": {
       "ja": "白い砂浜とホテル",
@@ -93,28 +66,10 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "shirarahama-5.jpg",
+     "f": "shirarahama-1.jpg",
      "cap": {
-      "ja": "浜から見る夕方の海",
-      "en": "The sea from the beach in the evening"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "shirarahama-6.jpg",
-     "cap": {
-      "ja": "寄せる波と夕方の光",
-      "en": "Waves and evening light"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "shirarahama-7.jpg",
-     "cap": {
-      "ja": "沈む前の夕日",
-      "en": "Just before sunset"
+      "ja": "夕方の白良浜",
+      "en": "Shirarahama in the evening"
      },
      "w": 1280,
      "h": 848
@@ -127,15 +82,6 @@ window.GUIDE = {
      },
      "w": 1280,
      "h": 720
-    },
-    {
-     "f": "shirarahama-9.jpg",
-     "cap": {
-      "ja": "夕方の雲と浜",
-      "en": "Evening clouds over the beach"
-     },
-     "w": 1280,
-     "h": 848
     },
     {
      "f": "shirarahama-10.jpg",
@@ -184,24 +130,6 @@ window.GUIDE = {
      "cap": {
       "ja": "夕暮れの円月島",
       "en": "Engetsu Island at dusk"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "engetsu-2.jpg",
-     "cap": {
-      "ja": "島の穴の向こうの夕焼け",
-      "en": "Sunset through the hole"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "engetsu-3.jpg",
-     "cap": {
-      "ja": "夕焼けと円月島",
-      "en": "Sunset and the island"
      },
      "w": 1280,
      "h": 848
@@ -321,15 +249,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "senjojiki-6.jpg",
-     "cap": {
-      "ja": "海に突き出た岩畳",
-      "en": "The rock shelf jutting into the sea"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "senjojiki-7.jpg",
      "cap": {
       "ja": "広い岩畳",
@@ -343,15 +262,6 @@ window.GUIDE = {
      "cap": {
       "ja": "重なる地層",
       "en": "Layers of rock"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "senjojiki-9.jpg",
-     "cap": {
-      "ja": "岩畳の上の空",
-      "en": "Sky over the rock shelf"
      },
      "w": 1280,
      "h": 720
@@ -408,28 +318,10 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "sandanbeki-2.jpg",
-     "cap": {
-      "ja": "展望台から見る断崖",
-      "en": "The cliffs from the lookout"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "sandanbeki-3.jpg",
      "cap": {
       "ja": "海に突き出た岩",
       "en": "A rock jutting into the sea"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "sandanbeki-4.jpg",
-     "cap": {
-      "ja": "岩と打ち寄せる波",
-      "en": "Rocks and breaking waves"
      },
      "w": 1280,
      "h": 848
@@ -491,6 +383,137 @@ window.GUIDE = {
    ]
   },
   {
+   "id": "sakinoyu",
+   "lat": 33.67696,
+   "lon": 135.33702,
+   "ja": "崎の湯（さきのゆ）",
+   "en": "Saki-no-yu open-air bath",
+   "short": {
+    "ja": "崎の湯",
+    "en": "Saki-no-yu"
+   },
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%B4%8E%E3%81%AE%E6%B9%AF%20%E7%99%BD%E6%B5%9C",
+   "time": {
+    "ja": "白浜駅から明光バスで約15分、「湯崎」で降りて歩いて約5分",
+    "en": "About 15 min by Meiko Bus from Shirahama Station to “Yuzaki”, then about 5 min on foot"
+   },
+   "body": {
+    "ja": [
+     "白浜温泉の南のはし、海に突き出た岩場にある露天風呂です。湯船のすぐ先が太平洋で、波の音を聞きながら入れます。",
+     "お湯がそのまま海へ流れるので、シャンプーや石けんは使えません。体を洗いたい人は、ほかの温泉とあわせて。受付は終わりの30分前までです。"
+    ],
+    "en": [
+     "An open-air bath on the rocks at the southern end of Shirahama Onsen. The Pacific is right beyond the edge of the bath, and you soak to the sound of the waves.",
+     "The water runs straight into the sea, so shampoo and soap are not allowed; if you want to wash, pair it with another bath. Last entry is 30 minutes before closing."
+    ]
+   },
+   "note": {
+    "ja": "3歳以上500円。8:00〜17:00（4〜6月と9月は18:00まで、7・8月は7:00〜19:00）。無休（メンテナンスなどで臨時に休むことがあります）。2026年11月21日に白浜町の公式サイトで確認。",
+    "en": "¥500 (age 3 and up). 8:00–17:00 (until 18:00 in Apr–Jun and Sep; 7:00–19:00 in Jul–Aug). Open every day, with occasional closures for maintenance. Checked on the Shirahama town website on 21 Nov 2026."
+   },
+   "photos": [
+    {
+     "f": "web-sakinoyu-1.jpg",
+     "cap": {
+      "ja": "岩場の先にある崎の湯（遠くから）",
+      "en": "Saki-no-yu out on the rocks, seen from a distance"
+     },
+     "w": 918,
+     "h": 689,
+     "credit": {
+      "author": "ロリ",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B4%8E%E3%81%AE%E6%B9%AF.JPG"
+     }
+    }
+   ],
+   "no": 5
+  },
+  {
+   "id": "adventure",
+   "lat": 33.6659,
+   "lon": 135.37243,
+   "ja": "アドベンチャーワールド",
+   "en": "Adventure World",
+   "short": {
+    "ja": "アドベンチャーワールド",
+    "en": "Adventure World"
+   },
+   "map": "https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%E7%99%BD%E6%B5%9C",
+   "time": {
+    "ja": "白浜駅から路線バスで約10分",
+    "en": "About 10 min by local bus from Shirahama Station"
+   },
+   "body": {
+    "ja": [
+     "動物園と水族館と遊園地がひとつになった、白浜でいちばん大きなテーマパークです。イルカとクジラの「マリンライブ」、草食動物と肉食動物のいるサファリワールド、ペンギンなど極地の動物がいる海獣館があります。",
+     "長く人気だったジャイアントパンダは、2025年に中国へ返されました。公式サイトの動物の紹介にも、いまはパンダは載っていません。",
+     "休園日は月によって違います（2026年11月は毎週水曜、12月は火曜も休みの週があります）。行く日が決まったら、先に公式サイトのカレンダーを見てください。"
+    ],
+    "en": [
+     "Shirahama’s biggest theme park: a zoo, an aquarium and an amusement park in one. There is the “Marine Live” show with dolphins and whales, Safari World with grazing animals and big cats, and a hall of polar animals including penguins.",
+     "The giant pandas it was long known for were returned to China in 2025, and they no longer appear in the animal list on the official website.",
+     "Closed days change by month (every Wednesday in November 2026; some Tuesdays too in December). Once you know your date, check the calendar on the official website first."
+    ]
+   },
+   "note": {
+    "ja": "1日入園券は大人（18歳以上）5,300円、65歳以上4,800円、12〜17歳4,300円、4〜11歳3,300円。10:00〜17:00（日によって変わります）。2026年11月21日に公式サイトで確認。",
+    "en": "1-day ticket: ¥5,300 (18 and over), ¥4,800 (65 and over), ¥4,300 (12–17), ¥3,300 (4–11). 10:00–17:00 (varies by day). Checked on the official website on 21 Nov 2026."
+   },
+   "links": [
+    {
+     "ja": "公式サイト（営業カレンダー）",
+     "en": "Official site (opening calendar)",
+     "url": "https://www.aws-s.com/guide/opening_hours/"
+    }
+   ],
+   "photos": [
+    {
+     "f": "web-adventure-1.jpg",
+     "cap": {
+      "ja": "イルカのジャンプ",
+      "en": "Dolphins jumping"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Adventure_World,_Shirahama,_Japan_(39566290272).jpg"
+     }
+    },
+    {
+     "f": "web-adventure-2.jpg",
+     "cap": {
+      "ja": "エンペラーペンギン",
+      "en": "Emperor penguins"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "VIA MEDIA",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:NankiShirahamaAdventureWorld_penguin.JPG"
+     }
+    },
+    {
+     "f": "web-adventure-3.jpg",
+     "cap": {
+      "ja": "サファリワールドのチーター",
+      "en": "A cheetah in Safari World"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Adventure_World,_Shirahama,_Japan_(24688784637).jpg"
+     }
+    }
+   ],
+   "no": 6
+  },
+  {
    "id": "panda",
    "lat": 33.67578,
    "lon": 135.38717,
@@ -515,7 +538,7 @@ window.GUIDE = {
      "When I rode in September 2024, it was the panda-faced “Panda Kuroshio” express. There were panda decorations on the platform and in the station too, which made arriving fun."
     ]
    },
-   "no": 5,
+   "no": 7,
    "photos": [
     {
      "f": "panda-1.jpg",
@@ -525,15 +548,6 @@ window.GUIDE = {
      },
      "w": 1280,
      "h": 720
-    },
-    {
-     "f": "panda-2.jpg",
-     "cap": {
-      "ja": "白浜駅のパンダくろしお",
-      "en": "Panda Kuroshio at Shirahama"
-     },
-     "w": 1280,
-     "h": 848
     },
     {
      "f": "panda-3.jpg",
@@ -554,15 +568,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "panda-5.jpg",
-     "cap": {
-      "ja": "白浜駅のホーム",
-      "en": "The platform at Shirahama"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "panda-6.jpg",
      "cap": {
       "ja": "夜の白浜駅と特急くろしお",
@@ -579,15 +584,6 @@ window.GUIDE = {
      },
      "w": 1280,
      "h": 848
-    },
-    {
-     "f": "panda-8.jpg",
-     "cap": {
-      "ja": "夜のホームの特急",
-      "en": "The express on the platform at night"
-     },
-     "w": 1280,
-     "h": 720
     }
    ]
   }
@@ -812,15 +808,6 @@ window.GUIDE = {
      },
      "w": 1280,
      "h": 720
-    },
-    {
-     "f": "taisha-9.jpg",
-     "cap": {
-      "ja": "参道の入り口の鳥居",
-      "en": "The torii at the start of the approach"
-     },
-     "w": 1280,
-     "h": 720
     }
    ]
   },
@@ -887,24 +874,6 @@ window.GUIDE = {
      "cap": {
       "ja": "山の中の三重塔と滝",
       "en": "The pagoda and falls in the mountains"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "seigantoji-5.jpg",
-     "cap": {
-      "ja": "青空と三重塔",
-      "en": "The pagoda under a blue sky"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "seigantoji-6.jpg",
-     "cap": {
-      "ja": "三重塔と那智の山",
-      "en": "The pagoda and Mt. Nachi"
      },
      "w": 1280,
      "h": 848
@@ -1235,7 +1204,7 @@ window.GUIDE = {
      "駅前の通りにある、木の外観がかわいいお店です。ピザや、地元の魚を使った料理が食べられます。2025年7月の夜に行きました。"
     ],
     "en": [
-     "A shop with a charming wooden front on the street by the station, serving pizza and dishes made with local fish. I went one evening in July 2025."
+     "A shop with a wooden front on the street by the station, serving pizza and dishes made with local fish. I went one evening in July 2025."
     ]
    },
    "note": {
@@ -1285,20 +1254,173 @@ window.GUIDE = {
   {
    "kind": "group",
    "id": "g-yunomine",
-   "ja": "湯の峰温泉（ゆのみねおんせん）",
-   "en": "Yunomine Onsen",
+   "ja": "熊野本宮（ほんぐう）・湯の峰温泉",
+   "en": "Kumano Hongu and Yunomine Onsen",
    "time": {
     "ja": "新宮駅から熊野御坊南海バスで約1時間10分（1,570円）、紀伊田辺駅から龍神バスで約1時間50分（1,980円）。バスは本数が少ないので要確認",
     "en": "About 1 h 10 min by Kumano Gobo Nankai Bus from Shingu Station (¥1,570), or about 1 h 50 min by Ryujin Bus from Kii-Tanabe Station (¥1,980). Buses are few, so check times"
    },
    "body": {
     "ja": [
-     "熊野本宮大社の近く、山あいの小さな温泉地です。川沿いに湯けむりが上がり、熊野古道を歩く人たちが疲れをいやしてきた温泉です。"
+     "熊野三山の中心・熊野本宮大社と、その旧社地の大斎原（おおゆのはら）、そして山あいの小さな温泉地・湯の峰温泉です。熊野古道を歩いてきた人たちが、お参りの前後に疲れをいやしてきた場所です。",
+     "湯の峰温泉から本宮大社前までは、バスで約20分（龍神バスの時刻表）。本数が少ないので、帰りのバスの時間を先に決めてから回るのが安心です。"
     ],
     "en": [
-     "A small hot-spring village in the mountains near Kumano Hongu Taisha. Steam rises along the stream, and pilgrims on the Kumano Kodo have rested here for centuries."
+     "Kumano Hongu Taisha, the centre of the three grand shrines of Kumano, its former site at Oyunohara, and the small mountain hot-spring village of Yunomine. Pilgrims on the Kumano Kodo have rested here before and after their prayers for centuries.",
+     "From Yunomine Onsen to the “Hongu Taisha-mae” stop is about 20 min by bus (Ryujin Bus timetable). Buses are few, so fix your bus back first, then plan around it."
     ]
    }
+  },
+  {
+   "id": "hongu",
+   "ja": "熊野本宮大社（くまのほんぐうたいしゃ）",
+   "en": "Kumano Hongu Taisha",
+   "pins": [
+    {
+     "lat": 33.84035,
+     "lon": 135.77363,
+     "ja": "熊野本宮大社",
+     "en": "Kumano Hongu Taisha",
+     "anchor": "end"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E7%86%8A%E9%87%8E%E6%9C%AC%E5%AE%AE%E5%A4%A7%E7%A4%BE",
+   "body": {
+    "ja": [
+     "全国に4,700社以上ある熊野神社の総本宮で、熊野古道のゴールのひとつです。鳥居をくぐると、「熊野大権現」ののぼりが並ぶ158段の石段が、杉木立の中をまっすぐ上っています。",
+     "石段の上の神門をくぐると、檜皮葺（ひわだぶき）の社殿が並びます。お参りのあとは、国道を渡って歩いて10分ほどの大斎原へ。神社の案内でも、この順番がすすめられています。",
+     "石段が長いので、歩きやすい靴で。写真は神門の外で撮られたものだけを載せています。"
+    ],
+    "en": [
+     "The head shrine of more than 4,700 Kumano shrines across Japan, and one of the goals of the Kumano Kodo. Beyond the torii, 158 stone steps lined with “Kumano Daigongen” banners climb straight up through the cedars.",
+     "Through the gate at the top stand the cypress-bark-roofed halls. After praying, cross the main road and walk about 10 minutes to Oyunohara; the shrine itself suggests this order.",
+     "Wear comfortable shoes for the steps. The photos here were all taken outside the inner gate."
+    ]
+   },
+   "note": {
+    "ja": "参拝は8:00〜17:00、境内は無料。2026年11月21日に公式サイトで確認。宝物殿の料金と時間は確認できませんでした（要確認）。",
+    "en": "Open for worship 8:00–17:00; free. Checked on the official website on 21 Nov 2026. I couldn’t confirm the treasure hall’s fee and hours (please check)."
+   },
+   "photos": [
+    {
+     "f": "web-hongu-1.jpg",
+     "cap": {
+      "ja": "入り口の鳥居",
+      "en": "The torii at the entrance"
+     },
+     "w": 1280,
+     "h": 845,
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tanabe_Kumano_Hongu-Taisha_Ichi-no-Torii.jpg"
+     }
+    },
+    {
+     "f": "web-hongu-2.jpg",
+     "cap": {
+      "ja": "のぼりの並ぶ石段",
+      "en": "The stone steps lined with banners"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Nekosuki",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kumano_Kodo_Kumano_Hongu_Taisha_World_heritage_%E7%86%8A%E9%87%8E%E6%9C%AC%E5%AE%AE%E5%A4%A7%E7%A4%BE75.JPG"
+     }
+    },
+    {
+     "f": "web-hongu-3.jpg",
+     "cap": {
+      "ja": "杉木立の参道",
+      "en": "The approach through the cedars"
+     },
+     "w": 1280,
+     "h": 880,
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tanabe_Kumano_Hongu-Taisha_Stairs_01.jpg"
+     }
+    }
+   ],
+   "no": 8
+  },
+  {
+   "id": "oyunohara",
+   "ja": "大斎原（おおゆのはら）",
+   "en": "Oyunohara",
+   "pins": [
+    {
+     "lat": 33.83465,
+     "lon": 135.77441,
+     "ja": "大斎原",
+     "en": "Oyunohara",
+     "anchor": "start",
+     "minor": true
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%96%8E%E5%8E%9F%20%E5%A4%A7%E9%B3%A5%E5%B1%85",
+   "body": {
+    "ja": [
+     "熊野本宮大社がもともとあった場所です。熊野川・音無川・岩田川が合わさる中州にありましたが、1889年（明治22年）の大水害で社殿の多くが流され、残った4社がいまの場所に移されました。",
+     "田んぼの中のまっすぐな道の先に、高さ約34m・幅約42mの大鳥居が立っています。近づくほど大きさがわかるので、ぜひ真下まで歩いてみてください。春は桜の名所でもあります。"
+    ],
+    "en": [
+     "The original site of Kumano Hongu Taisha, on a sandbank where the Kumano, Otonashi and Iwata rivers meet. The great flood of 1889 swept most of the halls away, and the four that survived were moved to where the shrine stands now.",
+     "At the end of a straight path through the rice fields stands a torii about 34 m high and 42 m wide. Its size only sinks in as you get closer, so walk right up underneath it. In spring it is also known for cherry blossoms."
+    ]
+   },
+   "note": {
+    "ja": "熊野本宮大社から歩いて約10分。大鳥居の大きさなどは、2026年11月21日に熊野本宮観光協会のサイトで確認。",
+    "en": "About 10 min on foot from Kumano Hongu Taisha. Torii size and other details checked on the Kumano Hongu Tourist Association website on 21 Nov 2026."
+   },
+   "photos": [
+    {
+     "f": "web-oyunohara-1.jpg",
+     "cap": {
+      "ja": "大鳥居と熊野の山",
+      "en": "The great torii and the Kumano hills"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Douglas Perkins",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Torii_at_Oyunohara_01.jpg"
+     }
+    },
+    {
+     "f": "web-oyunohara-2.jpg",
+     "cap": {
+      "ja": "田んぼの中の道と大鳥居",
+      "en": "The path through the fields to the torii"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Yanajin33",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kumano-hong%C3%BB-taisha_Shrine_-_Torii_at_%C3%94yunohara.jpg"
+     }
+    },
+    {
+     "f": "web-oyunohara-3.jpg",
+     "cap": {
+      "ja": "木々の上にそびえる大鳥居",
+      "en": "The torii towering over the trees"
+     },
+     "w": 1280,
+     "h": 720,
+     "credit": {
+      "author": "baggio4ever",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E7%86%8A%E9%87%8E%E6%9C%AC%E5%AE%AE%E5%A4%A7%E7%A4%BE_%E5%A4%A7%E6%96%8E%E5%8E%9F4_-_panoramio.jpg"
+     }
+    }
+   ],
+   "no": 9
   },
   {
    "id": "tsuboyu",
@@ -1328,7 +1450,7 @@ window.GUIDE = {
     "ja": "大人800円・12歳未満400円。6:00〜21:00（受付は20:30まで）、休みは不定期。2026年11月20日に熊野本宮観光協会のサイトで確認。",
     "en": "¥800 (adults), ¥400 (under 12). 6:00–21:00 (last tickets 20:30), irregular closing days. Checked on the Kumano Hongu Tourism Association website on 20 Nov 2026."
    },
-   "no": 8,
+   "no": 10,
    "photos": [
     {
      "f": "tsuboyu-1.jpg",
@@ -1455,7 +1577,7 @@ window.GUIDE = {
      "Lots of people gathered while it was still dark, and the moment the sun appeared over the horizon was truly beautiful."
     ]
    },
-   "no": 9,
+   "no": 11,
    "photos": [
     {
      "f": "shionomisaki-1.jpg",
@@ -1467,28 +1589,10 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "shionomisaki-2.jpg",
+     "f": "shionomisaki-8.jpg",
      "cap": {
-      "ja": "水平線から昇る太陽",
-      "en": "The sun rising from the horizon"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "shionomisaki-3.jpg",
-     "cap": {
-      "ja": "岩の向こうの朝日",
-      "en": "Sunrise beyond the rocks"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "shionomisaki-4.jpg",
-     "cap": {
-      "ja": "海に映る朝日",
-      "en": "Sunrise reflected on the sea"
+      "ja": "「和歌山県朝日夕陽百選」の碑と潮岬の海",
+      "en": "The Wakayama “best sunrises and sunsets” marker at Shionomisaki"
      },
      "w": 1280,
      "h": 720
@@ -1498,33 +1602,6 @@ window.GUIDE = {
      "cap": {
       "ja": "昇った太陽と海",
       "en": "The risen sun over the sea"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "shionomisaki-6.jpg",
-     "cap": {
-      "ja": "夜明け前の空",
-      "en": "The sky before dawn"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "shionomisaki-7.jpg",
-     "cap": {
-      "ja": "木の間から見る夜明け",
-      "en": "Dawn between the trees"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "shionomisaki-8.jpg",
-     "cap": {
-      "ja": "岬の展望台と灯台",
-      "en": "The cape lookout and lighthouse"
      },
      "w": 1280,
      "h": 720
@@ -1568,7 +1645,12 @@ window.GUIDE = {
    "https://kumanonachitaisha.or.jp/pavilion/waterfall/",
    "https://seigantoji.or.jp/services/",
    "https://www.hongu.jp/onsen/yunomine/tuboyu/",
-   "https://transit.yahoo.co.jp/"
+   "https://transit.yahoo.co.jp/",
+   "https://www.town.shirahama.wakayama.jp/kanko/onsen/1454046714439.html",
+   "https://www.aws-s.com/",
+   "https://www.hongutaisha.jp/",
+   "https://www.hongu.jp/kumanokodo/hongu-taisya/ooyunohara/",
+   "https://www.ryujinbus.com/route/kumano_hongu/"
   ]
  }
 };

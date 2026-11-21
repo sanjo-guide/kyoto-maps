@@ -7,12 +7,12 @@
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
     home: { en: "← All maps", ja: "← マップ一覧" },
    howto_h: { en: "How to use this page", ja: "このページの使い方" },
-    howto_1: { en: "Use the buttons at the top to switch between the city and the day trips.", ja: "上のボタンで、町の中のおすすめと、日帰りで行ける場所を切り替えられます。" },
+    howto_1: { en: "Use the buttons at the top to switch between “City” and “Day trips”.", ja: "上のボタンで「広島市内」と「日帰り」を切り替えられます。" },
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
-    howto_3: { en: "Tap “Map” next to a place to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "「地図」を押すとGoogleマップで場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
+    howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
     subtitle: { en: "The Peace Park and streetcars in the city, okonomiyaki I’ve eaten, and day trips to Miyajima and Onomichi.", ja: "市内の平和記念公園と路面電車、実際に食べたお好み焼き、そして宮島・尾道への日帰り旅。" },
-    nav_city: { en: "Hiroshima city", ja: "広島市内" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
+    nav_city: { en: "City", ja: "広島市内" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "places I've eaten", ja: "実際に行ったお店" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },
     map_h: { en: "Where everything is", ja: "おすすめの場所の地図" },
@@ -25,7 +25,7 @@
     trips_h: { en: "Day trips from Hiroshima", ja: "広島から日帰りで行ける場所" },
     trips_sub: { en: "If you have extra time, definitely consider them.", ja: "時間に余裕があれば、ぜひ検討してみてください。" },
     cr_h: { en: "Photo credits", ja: "写真のクレジット" },
-    cr_toshi: { en: "All photos were taken by Toshi.", ja: "写真はすべてToshiが撮影したものです。" },
+    cr_toshi: { en: "Photos without a credit were taken by Toshi.", ja: "クレジットのない写真は、Toshiが撮影したものです。" },
     cr_map: { en: "Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors. Outlines in the simple map (shown only if the map images cannot load): Global Map Japan (GSI), via dataofjapan/land.", ja: "地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors。簡易地図（地図の画像を読み込めないときだけ表示）の輪郭：地球地図日本（国土地理院）をもとに作成（dataofjapan/land）。" },
     disclaimer: { en: "Opening hours, prices and booking rules can change. Please check the official information before you go.", ja: "営業時間・料金・予約方法は変わることがあります。お出かけ前に公式の情報をご確認ください。" },
     to_top: { en: "Back to top ↑", ja: "ページの先頭へ ↑" },
@@ -63,7 +63,7 @@
     again: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>',
   };
 
-  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/" };
+  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/", "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/" };
   const licUrl = (l) => LIC[l] || ("https://creativecommons.org/licenses/" + (/SA/.test(l) ? "by-sa/" : "by/") + ((l.match(/[\d.]+$/) || ["4.0"])[0]) + "/");
 
   /* ---------- cards ---------- */

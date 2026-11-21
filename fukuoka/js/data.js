@@ -4,14 +4,14 @@ window.GUIDE = {
   "ja": [
    "福岡と唐津のおすすめをまとめました。",
    "福岡は、空港から博多・天神の中心部まで地下鉄ですぐ。街がコンパクトで歩きやすく、ごはんがとにかくおいしい街です。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。何度も通っているお店がほとんどです。",
+   "「食べる」のお店は、私が実際に行ったところだけを載せています。",
    "福岡を拠点にすれば、唐津・呼子、糸島、太宰府、柳川、門司港、熊本などへも日帰りで行けます。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Fukuoka and Karatsu.",
    "Fukuoka is easy: the subway takes you from the airport to Hakata and Tenjin in minutes, the city is compact and walkable, and the food is simply delicious.",
-   "In the food section I only list places I have actually been to myself — most of them I keep going back to.",
+   "In the food section I only list places I have actually been to myself.",
    "With Fukuoka as your base, you can also take day trips to Karatsu and Yobuko, Itoshima, Dazaifu, Yanagawa, Mojiko, Kumamoto and more.",
    "The most important thing is not to overpack your schedule. Take your time and enjoy the places that really interest you."
   ]
@@ -366,12 +366,12 @@ window.GUIDE = {
    "body": {
     "ja": [
      "九州の玄関口で、駅ビルにはお店やレストランがぎっしり。明太子やめんべいなど、福岡のおみやげはここでほとんどそろいます。",
-     "冬は駅前広場がイルミネーションで彩られ、とてもきれいです（私が行ったのは11月）。",
+     "冬は駅前広場がイルミネーションで彩られます。",
      "駅の中のおすすめのお店は「食べる」で紹介しています。"
     ],
     "en": [
      "The gateway to Kyushu. The station building is packed with shops and restaurants, and you can find almost every Fukuoka souvenir here, from mentaiko (spicy cod roe) to Menbei crackers.",
-     "In winter, the station square is decorated with beautiful illuminations (I saw them in November).",
+     "In winter, the station square is decorated with illuminations.",
      "My favourite places to eat inside the station are in the food section."
     ]
    },
@@ -399,15 +399,6 @@ window.GUIDE = {
      "cap": {
       "ja": "博多口の大屋根（夜）",
       "en": "The big canopy at night"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hakata-sta-4.jpg",
-     "cap": {
-      "ja": "駅前の夜景",
-      "en": "The station front at night"
      },
      "w": 1280,
      "h": 720
@@ -732,11 +723,11 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%BB%E3%81%8F%E3%81%A8%E4%BA%AD%20%E6%97%A9%E8%89%AF%E5%8C%BA%E6%9D%B1%E5%85%A5%E9%83%A8",
    "body": {
     "ja": [
-     "福岡に来るたびに寄ってしまう、豚骨ラーメンのお店です。",
+     "福岡でおすすめの、豚骨ラーメンのお店です。",
      "早良区（さわらく）の郊外にあり、中心部からは少し遠いのですが、それでも行く価値があると思っています。大きなチャーシューがのった一杯です。"
     ],
     "en": [
-     "A tonkotsu (pork-bone) ramen shop I end up visiting every time I come to Fukuoka.",
+     "A tonkotsu (pork-bone) ramen shop I recommend in Fukuoka.",
      "It’s out in the suburbs of Sawara Ward, a bit far from the centre, but I think it’s worth the trip. The bowl comes topped with big slices of chashu pork."
     ]
    },
@@ -782,15 +773,6 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "hokutotei-5.jpg",
-     "cap": {
-      "ja": "赤いのれんと提灯",
-      "en": "Red noren and lantern"
-     },
-     "w": 1280,
-     "h": 942
-    },
-    {
      "f": "hokutotei-6.jpg",
      "cap": {
       "ja": "カウンター席",
@@ -813,15 +795,6 @@ window.GUIDE = {
      "cap": {
       "ja": "替え玉",
       "en": "Kaedama, an extra serving of noodles"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hokutotei-9.jpg",
-     "cap": {
-      "ja": "海苔がのった一杯",
-      "en": "A bowl topped with nori"
      },
      "w": 1280,
      "h": 720
@@ -872,12 +845,12 @@ window.GUIDE = {
     "ja": [
      "揚げたての天ぷらを、1品ずつ目の前のお皿に出してくれる天ぷら定食のお店です。食券を買ってカウンターに座るスタイルで、気軽に入れます。",
      "カウンターに置いてある「いかの塩辛」が白ごはんによく合います。",
-     "天神の「アクロス福岡店」は中心部にあって便利。空港の近くには本店もあります。人気店なので、食事どきは行列を覚悟してください。"
+     "天神の「アクロス福岡店」は中心部にあって便利。空港の近くには本店もあります。早良区の早良店は、ほくと亭から約1kmです。人気店なので、食事どきは行列を覚悟してください。"
     ],
     "en": [
      "A tempura set-meal restaurant where each piece is fried fresh and placed on your tray one at a time. You buy a ticket at the machine and sit at the counter, so it’s very easy to go in.",
      "The squid shiokara (salted squid) set out on the counter goes really well with the rice.",
-     "The ACROS Fukuoka branch in Tenjin is the most convenient, and the main shop is near the airport. It’s popular, so expect a queue at mealtimes."
+     "The ACROS Fukuoka branch in Tenjin is the most convenient, and the main shop is near the airport. The Sawara branch is about 1 km from Hokutotei. It’s popular, so expect a queue at mealtimes."
     ]
    },
    "photos": [
@@ -929,7 +902,7 @@ window.GUIDE = {
     {
      "f": "hirao-6.jpg",
      "cap": {
-      "ja": "海老天",
+      "ja": "海老天（本店）",
       "en": "Prawn tempura (main shop)"
      },
      "w": 1280,
@@ -970,11 +943,11 @@ window.GUIDE = {
    "body": {
     "ja": [
      "博多一双（はかたいっそう）は、泡立つような、とろっと濃厚な豚骨スープで人気のラーメン屋さんです。博多駅から歩いて行けます。",
-     "私が行ったときはいつも行列ができていました。麺を食べ終わったら「替え玉（かえだま）」でおかわりもできます。"
+     "私が行ったときは行列ができていました。麺を食べ終わったら「替え玉（かえだま）」でおかわりもできます。"
     ],
     "en": [
      "A popular ramen shop known for its rich, creamy, almost frothy tonkotsu broth. It’s within walking distance of Hakata Station.",
-     "Every time I’ve been there was a queue outside. When you finish your noodles, you can order a kaedama (an extra serving of noodles)."
+     "When I went, there was a queue outside. When you finish your noodles, you can order a kaedama (an extra serving of noodles)."
     ]
    },
    "photos": [
@@ -1116,10 +1089,10 @@ window.GUIDE = {
    ],
    "body": {
     "ja": [
-     "博多駅の中には、何度も寄っているお店がふたつあります。"
+     "博多駅の中で、実際に行ったお店をふたつ紹介します。"
     ],
     "en": [
-     "Inside Hakata Station there are two places I keep stopping at."
+     "Two places inside Hakata Station that I’ve actually been to."
     ]
    },
    "subs": [
@@ -1128,8 +1101,8 @@ window.GUIDE = {
      "en": "il FORNO del MIGNON",
      "map": "https://www.google.com/maps/search/?api=1&query=il%20FORNO%20del%20MIGNON%20%E5%8D%9A%E5%A4%9A%E9%A7%85",
      "t": {
-      "ja": "焼きたてのミニクロワッサンを量り売りしているお店です。駅の中にいい香りが広がっていて、つい行列に並んでしまいます。プレーンのほか、チョコやさつまいもも。移動中のおやつやおみやげに。",
-      "en": "A stand selling freshly baked mini croissants by weight. The smell fills the station and I always end up joining the queue. Besides plain, there are chocolate and sweet potato. Great as a snack on the train or as a gift."
+      "ja": "焼きたてのミニクロワッサンを量り売りしているお店です。駅の中にいい香りが広がっていて、つい行列に並びたくなります。プレーンのほか、チョコやさつまいもも。移動中のおやつやおみやげに。",
+      "en": "A stand selling freshly baked mini croissants by weight. The smell fills the station and it’s hard not to join the queue. Besides plain, there are chocolate and sweet potato. Great as a snack on the train or as a gift."
      }
     },
     {
@@ -1238,11 +1211,11 @@ window.GUIDE = {
    },
    "body": {
     "ja": [
-     "海と城のある、佐賀県の城下町です。私は何度も訪れていて、毎回食べたいものがある大好きな街です。",
+     "海と城のある、佐賀県の城下町です。おいしいものがたくさんある、大好きな街です。",
      "福岡の天神・博多から地下鉄がそのままJR筑肥線（ちくひせん）に乗り入れているので、乗り換えなしで行けるのも便利です。"
     ],
     "en": [
-     "A castle town by the sea in Saga Prefecture. I’ve been many times, and there’s always something I want to eat there.",
+     "A castle town by the sea in Saga Prefecture. It’s a town I love, with lots of good things to eat.",
      "Subway trains from Tenjin and Hakata run straight onto the JR Chikuhi Line, so you can get there without changing trains."
     ]
    }
@@ -1313,15 +1286,6 @@ window.GUIDE = {
      "cap": {
       "ja": "朝の光の唐津城と唐津湾の島",
       "en": "The castle in morning light with an island in Karatsu Bay"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karatsu-castle-6.jpg",
-     "cap": {
-      "ja": "弧を描く城内橋と丘の上の天守",
-      "en": "The arching Jōnai Bridge with the keep on the hill"
      },
      "w": 1280,
      "h": 720
@@ -1403,19 +1367,19 @@ window.GUIDE = {
    ],
    "photos": [
     {
-     "f": "niji-1.jpg",
+     "f": "niji-2.jpg",
      "cap": {
-      "ja": "松林へと弧を描く砂浜と山並み",
-      "en": "The beach curving toward the pine-lined shore and the mountains"
+      "ja": "唐津城天守から見た虹の松原の海岸線と入道雲",
+      "en": "The Niji-no-Matsubara coastline under towering clouds, seen from the castle"
      },
      "w": 1280,
      "h": 720
     },
     {
-     "f": "niji-2.jpg",
+     "f": "niji-1.jpg",
      "cap": {
-      "ja": "唐津城天守から見た虹の松原の海岸線と入道雲",
-      "en": "The Niji-no-Matsubara coastline under towering clouds, seen from the castle"
+      "ja": "松林へと弧を描く砂浜と山並み",
+      "en": "The beach curving toward the pine-lined shore and the mountains"
      },
      "w": 1280,
      "h": 720
@@ -1660,12 +1624,12 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E5%B1%8B%20%E3%81%86%E3%81%AA%E3%81%8E%20%E5%94%90%E6%B4%A5",
    "body": {
     "ja": [
-     "唐津に行ったら必ず寄りたい、うなぎのお店です。趣のある木造3階建ての建物で、うな丼をいただきます。",
-     "香ばしく焼けたうなぎがたっぷりのった一杯は、何度食べても大満足です。人気店なので、時間に余裕をもって行ってください。"
+     "唐津に行ったらぜひ寄ってほしい、うなぎのお店です。古い木造3階建ての建物で、うな丼をいただきます。",
+     "香ばしく焼けたうなぎがたっぷりのった一杯は、大満足です。人気店なので、時間に余裕をもって行ってください。"
     ],
     "en": [
-     "The eel restaurant I always want to visit in Karatsu. You eat your unadon (eel on rice) inside a charming three-storey wooden building.",
-     "The bowl is generously topped with fragrant grilled eel, and I’m completely satisfied every time. It’s popular, so give yourself some extra time."
+     "An eel restaurant I recommend to anyone visiting Karatsu. You eat your unadon (eel on rice) inside an old three-storey wooden building.",
+     "The bowl is generously topped with fragrant grilled eel, and it’s completely satisfying. It’s popular, so give yourself some extra time."
     ]
    },
    "photos": [
@@ -1701,15 +1665,6 @@ window.GUIDE = {
      "cap": {
       "ja": "焼き場の煙が上がる店先",
       "en": "Grill smoke drifting from the shopfront"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "takeya-5.jpg",
-     "cap": {
-      "ja": "上から見たうな丼",
-      "en": "The eel bowl from above"
      },
      "w": 1280,
      "h": 720
@@ -1779,11 +1734,11 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=KARAE%20TABLE%20%E5%94%90%E6%B4%A5",
    "body": {
     "ja": [
-     "唐津の中心にある「KARAE（からえ）」という建物の1階のカフェです。唐津に行くと毎回寄っています。",
+     "唐津の中心にある「KARAE（からえ）」という建物の1階のカフェです。ひと休みにぴったりです。",
      "コーヒーフロートや夏のかき氷が好きです。同じ建物には唐津焼の器を見られるコーナーもあります。"
     ],
     "en": [
-     "A café on the ground floor of KARAE, a building in central Karatsu. I stop by every time I visit.",
+     "A café on the ground floor of KARAE, a building in central Karatsu. A nice place for a break.",
      "I love their coffee float and, in summer, the kakigori shaved ice. The same building also has a corner where you can see Karatsu-ware pottery."
     ]
    },
@@ -2057,15 +2012,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "kabeshima-3.jpg",
-     "cap": {
-      "ja": "空と呼子大橋",
-      "en": "The sky and Yobuko Bridge"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "kabeshima-4.jpg",
      "cap": {
       "ja": "反対側の玄界灘と島々、加部島の畑",
@@ -2073,15 +2019,6 @@ window.GUIDE = {
      },
      "w": 1280,
      "h": 720
-    },
-    {
-     "f": "kabeshima-6.jpg",
-     "cap": {
-      "ja": "呼子大橋のパノラマ",
-      "en": "Panorama of the bridge"
-     },
-     "w": 1280,
-     "h": 576
     },
     {
      "f": "kabeshima-7.jpg",
@@ -2314,33 +2251,6 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "itoshima-coast-3.jpg",
-     "cap": {
-      "ja": "入道雲と海、遠くの島",
-      "en": "Summer clouds over the sea and a distant island"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "itoshima-coast-4.jpg",
-     "cap": {
-      "ja": "雲の下の砂浜と沖の島々",
-      "en": "The beach and offshore islands under clouds"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "itoshima-coast-5.jpg",
-     "cap": {
-      "ja": "岬へ続く砂浜と穏やかな海",
-      "en": "The beach curving toward the headland"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "itoshima-coast-6.jpg",
      "cap": {
       "ja": "雨雲の下の砂浜と海岸線",
@@ -2350,37 +2260,10 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "itoshima-coast-7.jpg",
-     "cap": {
-      "ja": "車窓に広がる唐津湾",
-      "en": "Karatsu Bay from the train window"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "itoshima-coast-8.jpg",
-     "cap": {
-      "ja": "砂浜のパノラマ",
-      "en": "Beach panorama"
-     },
-     "w": 1280,
-     "h": 459
-    },
-    {
      "f": "itoshima-coast-9.jpg",
      "cap": {
       "ja": "海と山にはさまれた国道202号",
       "en": "Route 202 between the sea and the hills"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "itoshima-coast-10.jpg",
-     "cap": {
-      "ja": "海沿いの糸島市観光協会の休憩所",
-      "en": "Itoshima Tourism Association rest stop by the sea"
      },
      "w": 1280,
      "h": 720
@@ -2753,6 +2636,125 @@ window.GUIDE = {
    }
   },
   {
+   "id": "karato",
+   "ja": "唐戸市場（からといちば）",
+   "en": "Karato Market (Shimonoseki)",
+   "pins": [
+    {
+     "lat": 33.95662,
+     "lon": 130.94582,
+     "ja": "唐戸市場",
+     "en": "Karato Market",
+     "anchor": "end",
+     "minor": true
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%94%90%E6%88%B8%E5%B8%82%E5%A0%B4",
+   "body": {
+    "ja": [
+     "関門海峡をはさんだ下関側、門司港から船で数分の魚市場です。ふく（ふぐ）の刺身など、新鮮な海の幸をその場で買って、海を見ながら食べられます。",
+     "週末のお昼には、お寿司などを売る屋台が市場の中にずらりと並びます（開催日は要確認）。"
+    ],
+    "en": [
+     "Shimonoseki’s fish market, just across the strait from Mojiko by ferry. You can buy fresh seafood such as fugu (pufferfish) sashimi and eat it right there by the sea.",
+     "Around lunchtime on weekends, stalls selling sushi and more fill the market floor (check the days before you go)."
+    ]
+   },
+   "photos": [
+    {
+     "f": "karato-1.jpg",
+     "cap": {
+      "ja": "海沿いの遊歩道から見た唐戸市場",
+      "en": "Karato Market from the waterfront boardwalk"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-2.jpg",
+     "cap": {
+      "ja": "船から見た関門橋と海峡",
+      "en": "Kanmon Bridge from the ferry"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-3.jpg",
+     "cap": {
+      "ja": "2階から見下ろした市場のフロア",
+      "en": "The market floor seen from above"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-4.jpg",
+     "cap": {
+      "ja": "市場で買ったふく刺し",
+      "en": "Fugu sashimi bought at the market"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-5.jpg",
+     "cap": {
+      "ja": "「活きいき唐戸市場」の正面",
+      "en": "The front of Karato Market"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-6.jpg",
+     "cap": {
+      "ja": "ずらりと並ぶ鮮魚店",
+      "en": "Rows of fish stalls"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-7.jpg",
+     "cap": {
+      "ja": "関門汽船の船尾から下関を振り返る",
+      "en": "Looking back at Shimonoseki from the ferry"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-8.jpg",
+     "cap": {
+      "ja": "唐戸の桟橋と関門汽船の船",
+      "en": "Karato pier and a Kanmon ferry boat"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-9.jpg",
+     "cap": {
+      "ja": "ヤシの木の遊歩道と関門橋",
+      "en": "Palm-lined promenade and Kanmon Bridge"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "karato-10.jpg",
+     "cap": {
+      "ja": "赤い灯台と唐戸の海辺",
+      "en": "Red lighthouse and the Karato waterfront"
+     },
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "no": 15
+  },
+  {
    "id": "mojiko",
    "ja": "門司港レトロ",
    "en": "Mojiko Retro",
@@ -2868,7 +2870,7 @@ window.GUIDE = {
      "h": 800
     }
    ],
-   "no": 15
+   "no": 16
   },
   {
    "id": "mekari",
@@ -2887,11 +2889,11 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=%E5%92%8C%E5%B8%83%E5%88%88%E7%A5%9E%E7%A4%BE",
    "body": {
     "ja": [
-     "門司港から、窓の大きなトロッコ列車「潮風号」に乗って関門橋のふもとへ。和布刈神社では、海の中に立つ鳥居と関門橋のあいだに夕日が沈む景色が見られました。",
+     "門司港から、窓の大きなトロッコ列車「潮風号」に乗って関門橋のふもとへ。（潮風号は土・日・祝日だけの運行で、平日は走っていません。）和布刈神社では、海の中に立つ鳥居と関門橋のあいだに夕日が沈む景色が見られました。",
      "橋のふもとからは「関門トンネル人道」で、海の下を歩いて本州（下関）へ渡ることもできます。古い客車を使ったパン屋さんのカフェもありました。"
     ],
     "en": [
-     "From Mojiko, ride the Shiokaze trolley train with its big open windows to the foot of Kanmon Bridge. At Mekari Shrine I watched the sun set between the torii standing in the sea and the bridge.",
+     "From Mojiko, ride the Shiokaze trolley train with its big open windows to the foot of Kanmon Bridge. (The Shiokaze runs on weekends and public holidays only, not on weekdays.) At Mekari Shrine I watched the sun set between the torii standing in the sea and the bridge.",
      "From the foot of the bridge you can even walk under the sea to Honshu (Shimonoseki) through the Kanmon pedestrian tunnel. There was also a bakery café in an old railway carriage."
     ]
    },
@@ -2987,125 +2989,6 @@ window.GUIDE = {
      "h": 720
     }
    ],
-   "no": 16
-  },
-  {
-   "id": "karato",
-   "ja": "唐戸市場（からといちば）",
-   "en": "Karato Market (Shimonoseki)",
-   "pins": [
-    {
-     "lat": 33.95662,
-     "lon": 130.94582,
-     "ja": "唐戸市場",
-     "en": "Karato Market",
-     "anchor": "end",
-     "minor": true
-    }
-   ],
-   "map": "https://www.google.com/maps/search/?api=1&query=%E5%94%90%E6%88%B8%E5%B8%82%E5%A0%B4",
-   "body": {
-    "ja": [
-     "門司港から船で渡った先、下関の魚市場です。ふく（ふぐ）の刺身など、新鮮な海の幸をその場で買って、海を見ながら食べられます。",
-     "週末のお昼には、お寿司などを売る屋台が市場の中にずらりと並びます（開催日は要確認）。"
-    ],
-    "en": [
-     "Shimonoseki’s fish market, just across the strait from Mojiko by ferry. You can buy fresh seafood such as fugu (pufferfish) sashimi and eat it right there by the sea.",
-     "Around lunchtime on weekends, stalls selling sushi and more fill the market floor (check the days before you go)."
-    ]
-   },
-   "photos": [
-    {
-     "f": "karato-1.jpg",
-     "cap": {
-      "ja": "海沿いの遊歩道から見た唐戸市場",
-      "en": "Karato Market from the waterfront boardwalk"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-2.jpg",
-     "cap": {
-      "ja": "船から見た関門橋と海峡",
-      "en": "Kanmon Bridge from the ferry"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-3.jpg",
-     "cap": {
-      "ja": "2階から見下ろした市場のフロア",
-      "en": "The market floor seen from above"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-4.jpg",
-     "cap": {
-      "ja": "市場で買ったふく刺し",
-      "en": "Fugu sashimi bought at the market"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-5.jpg",
-     "cap": {
-      "ja": "「活きいき唐戸市場」の正面",
-      "en": "The front of Karato Market"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-6.jpg",
-     "cap": {
-      "ja": "ずらりと並ぶ鮮魚店",
-      "en": "Rows of fish stalls"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-7.jpg",
-     "cap": {
-      "ja": "関門汽船の船尾から下関を振り返る",
-      "en": "Looking back at Shimonoseki from the ferry"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-8.jpg",
-     "cap": {
-      "ja": "唐戸の桟橋と関門汽船の船",
-      "en": "Karato pier and a Kanmon ferry boat"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-9.jpg",
-     "cap": {
-      "ja": "ヤシの木の遊歩道と関門橋",
-      "en": "Palm-lined promenade and Kanmon Bridge"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "karato-10.jpg",
-     "cap": {
-      "ja": "赤い灯台と唐戸の海辺",
-      "en": "Red lighthouse and the Karato waterfront"
-     },
-     "w": 1280,
-     "h": 720
-    }
-   ],
    "no": 17
   },
   {
@@ -3160,33 +3043,6 @@ window.GUIDE = {
     "en": "Check entry fees and hours on the official website (on 20 Nov 2026 it showed last entry at 16:00)."
    },
    "photos": [
-    {
-     "f": "kumamotojo-1.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "黒い天守閣",
-      "en": "The black keep"
-     }
-    },
-    {
-     "f": "kumamotojo-2.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "天守閣と小天守",
-      "en": "The main and small keeps"
-     }
-    },
-    {
-     "f": "kumamotojo-3.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "見上げる天守閣",
-      "en": "Looking up at the keep"
-     }
-    },
     {
      "f": "kumamotojo-4.jpg",
      "w": 1280,
@@ -3297,15 +3153,6 @@ window.GUIDE = {
      }
     },
     {
-     "f": "suizenji-2.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "池に映る松",
-      "en": "Pines reflected in the pond"
-     }
-    },
-    {
      "f": "suizenji-3.jpg",
      "w": 1280,
      "h": 720,
@@ -3315,21 +3162,21 @@ window.GUIDE = {
      }
     },
     {
+     "f": "suizenji-2.jpg",
+     "w": 1280,
+     "h": 848,
+     "cap": {
+      "ja": "池に映る松",
+      "en": "Pines reflected in the pond"
+     }
+    },
+    {
      "f": "suizenji-4.jpg",
      "w": 1280,
      "h": 720,
      "cap": {
       "ja": "池の飛び石",
       "en": "Stepping stones in the pond"
-     }
-    },
-    {
-     "f": "suizenji-5.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "飛び石と茶屋",
-      "en": "Stepping stones and the teahouse"
      }
     },
     {
@@ -3427,8 +3274,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "石段は苔ですべりやすいので、歩きやすい靴で行ってください。",
-    "en": "The mossy steps are slippery, so wear good shoes."
+    "ja": "石段は苔ですべりやすいので、歩きやすい靴で行ってください。南阿蘇鉄道の高森駅から神社までは車で約10分です（熊本県の観光サイトで確認）。神社へのバスは要確認。",
+    "en": "The mossy steps are slippery, so wear good shoes. The shrine is about 10 minutes by car from Takamori Station on the Minamiaso Railway (per Kumamoto Prefecture’s tourism site); check whether any bus goes there."
    },
    "photos": [
     {
@@ -3438,33 +3285,6 @@ window.GUIDE = {
      "cap": {
       "ja": "苔むした鳥居と参道",
       "en": "A mossy torii and the approach"
-     }
-    },
-    {
-     "f": "kamishikimi-2.jpg",
-     "w": 1280,
-     "h": 720,
-     "cap": {
-      "ja": "石段の上の鳥居",
-      "en": "A torii above the steps"
-     }
-    },
-    {
-     "f": "kamishikimi-3.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "森の中の鳥居",
-      "en": "A torii in the forest"
-     }
-    },
-    {
-     "f": "kamishikimi-4.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "しめ縄の鳥居",
-      "en": "A torii with a sacred rope"
      }
     },
     {
@@ -3510,15 +3330,6 @@ window.GUIDE = {
      "cap": {
       "ja": "高森から見る根子岳",
       "en": "Mt. Nekodake from Takamori"
-     }
-    },
-    {
-     "f": "kamishikimi-10.jpg",
-     "w": 1280,
-     "h": 848,
-     "cap": {
-      "ja": "根子岳と高原",
-      "en": "Mt. Nekodake and the highlands"
      }
     }
    ]
@@ -3600,7 +3411,9 @@ window.GUIDE = {
    "https://online.bunka.go.jp/heritages/detail/366964",
    "https://transit.yahoo.co.jp/",
    "https://www.suizenji.or.jp/",
-   "https://kumamoto-guide.jp/kumamoto-castle/"
+   "https://kumamoto-guide.jp/kumamoto-castle/",
+   "https://kumamoto.guide/spots/detail/12741",
+   "https://www.retro-line.net/"
   ]
  }
 };

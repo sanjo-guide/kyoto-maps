@@ -7,25 +7,25 @@
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
     home: { en: "← All maps", ja: "← マップ一覧" },
    howto_h: { en: "How to use this page", ja: "このページの使い方" },
-    howto_1: { en: "Use the buttons at the top to switch between the city and the day trips.", ja: "上のボタンで、町の中のおすすめと、日帰りで行ける場所を切り替えられます。" },
+    howto_1: { en: "Use the buttons at the top to switch between “Toyooka” and “Day trips”. Example itineraries are in “Model plans”.", ja: "上のボタンで「豊岡」と「丹後・竹田」を切り替えられます。回り方の例は「モデルプラン」にあります。" },
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
-    howto_3: { en: "Tap “Map” next to a place to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "「地図」を押すとGoogleマップで場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
+    howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
     subtitle: { en: "A day trip to Amanohashidate and Ine, or a few nights based in Toyooka.", ja: "京都から日帰りで天橋立・伊根へ。泊まるなら、豊岡を拠点に城崎温泉・竹野・舞鶴・竹田城跡へ。" },
-    nav_city: { en: "Toyooka & Kinosaki", ja: "豊岡・城崎" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Tango, Maizuru & Takeda", ja: "丹後・舞鶴・竹田" }, nav_map: { en: "Map", ja: "地図" },
-    jump_city: { en: "Toyooka, Kinosaki & Takeno", ja: "豊岡・城崎・竹野" }, jump_food: { en: "place to stay", ja: "拠点の宿" }, jump_trips: { en: "areas further afield", ja: "天橋立・伊根・舞鶴・竹田のエリア" },
+    nav_city: { en: "Toyooka", ja: "豊岡" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "丹後・竹田" }, nav_map: { en: "Map", ja: "地図" },
+    jump_city: { en: "Toyooka, Kinosaki, Izushi & Takeno", ja: "豊岡・城崎・出石・竹野" }, jump_food: { en: "place to stay", ja: "拠点の宿" }, jump_trips: { en: "areas further afield", ja: "天橋立・伊根・舞鶴・竹田のエリア" },
     group: { en: "AREA", ja: "エリア" },
     map_h: { en: "Where everything is", ja: "おすすめの場所の地図" },
-    tab_city: { en: "Toyooka & Kinosaki", ja: "豊岡・城崎・竹野" }, tab_trips: { en: "Amanohashidate, Ine, Maizuru & Takeda", ja: "天橋立・伊根・舞鶴・竹田" },
+    tab_city: { en: "Toyooka, Kinosaki & Izushi", ja: "豊岡・城崎・出石・竹野" }, tab_trips: { en: "Amanohashidate, Ine, Maizuru & Takeda", ja: "天橋立・伊根・舞鶴・竹田" },
     map_note: { en: "Tap a number to jump to that place. Pinch or use + / − to zoom. For directions, use each place’s “Google Maps” button.", ja: "番号をタップすると、その場所の紹介へ移動します。拡大・縮小は2本指か「＋／−」ボタンで。道順は各スポットの「Googleマップ」ボタンで確認してください。" },
     map_fb: { en: "The map images could not load, so a simple map is shown instead.", ja: "地図の画像を読み込めなかったため、簡易な地図を表示しています。" },
     show_all: { en: "Show all", ja: "全体を表示" },
-    city_h: { en: "Around Toyooka", ja: "豊岡と、そのまわり" }, city_sub: { en: "The old market, Kinosaki Onsen and the sea at Takeno", ja: "公設市場・城崎温泉・竹野の海" },
+    city_h: { en: "Around Toyooka", ja: "豊岡と、そのまわり" }, city_sub: { en: "The old market, Kinosaki Onsen, Genbudo, Izushi and the sea at Takeno", ja: "公設市場・城崎温泉・玄武洞・出石・竹野の海" },
     food_h: { en: "Where to stay", ja: "拠点にするならここ" }, food_sub: { en: "If you’re staying a night or more, base yourself here.", ja: "1泊以上するなら、豊岡のこのゲストハウスがおすすめです。" },
     trips_h: { en: "Amanohashidate, Ine, Maizuru and Takeda", ja: "天橋立・伊根・舞鶴・竹田城跡" },
     trips_sub: { en: "Day trips from Toyooka, or from Kyoto.", ja: "豊岡から、または京都から日帰りで。" },
     cr_h: { en: "Photo credits", ja: "写真のクレジット" },
-    cr_toshi: { en: "All photos were taken by Toshi.", ja: "写真はすべてToshiが撮影したものです。" },
+    cr_toshi: { en: "Photos without a credit were taken by Toshi.", ja: "クレジットのない写真は、Toshiが撮影したものです。" },
     cr_map: { en: "Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors. Outlines in the simple map (shown only if the map images cannot load): Global Map Japan (GSI), via dataofjapan/land.", ja: "地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors。簡易地図（地図の画像を読み込めないときだけ表示）の輪郭：地球地図日本（国土地理院）をもとに作成（dataofjapan/land）。" },
     disclaimer: { en: "Opening hours, prices and booking rules can change. Please check the official information before you go.", ja: "営業時間・料金・予約方法は変わることがあります。お出かけ前に公式の情報をご確認ください。" },
     to_top: { en: "Back to top ↑", ja: "ページの先頭へ ↑" },
@@ -64,7 +64,7 @@
     again: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>',
   };
 
-  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/" };
+  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/", "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/" };
   const licUrl = (l) => LIC[l] || ("https://creativecommons.org/licenses/" + (/SA/.test(l) ? "by-sa/" : "by/") + ((l.match(/[\d.]+$/) || ["4.0"])[0]) + "/");
 
   /* ---------- cards ---------- */
@@ -128,7 +128,7 @@
   }
 
   /* ---------- maps ---------- */
-  const CITY_BOX = { lon0: 134.70, lon1: 134.88, lat0: 35.53, lat1: 35.67, W: 600 };
+  const CITY_BOX = { lon0: 134.70, lon1: 134.92, lat0: 35.44, lat1: 35.67, W: 600 };   // 出石（南）まで入る範囲
   CITY_BOX.c = Math.cos(((CITY_BOX.lat0 + CITY_BOX.lat1) / 2) * Math.PI / 180);
   CITY_BOX.k = CITY_BOX.W / ((CITY_BOX.lon1 - CITY_BOX.lon0) * CITY_BOX.c);
   CITY_BOX.H = Math.round((CITY_BOX.lat1 - CITY_BOX.lat0) * CITY_BOX.k);
@@ -137,7 +137,7 @@
   const BASE = HOME;
   const R = G.region;
   const rp = (lat, lon) => [(lon - R.lon0) * R.c * R.k, (R.lat1 - lat) * R.k];
-  const LAB = {};   // label side per place id in the simple (fallback) city map: [dx, dy, anchor]
+  const LAB = { izushi: [-18, 5, "end"] };   // label side per place id in the simple (fallback) city map: [dx, dy, anchor]
 
   const f1 = (n) => n.toFixed(1);
   function marker(x, y, label, cls, id, r) {
@@ -150,7 +150,7 @@
     const { W, H } = CITY_BOX;
     let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t("tab_city"))}"><rect class="m-bg" width="${W}" height="${H}" rx="3"/>`;
     for (let lon = 134.70; lon < CITY_BOX.lon1; lon += 0.02) { const [x] = cp(CITY_BOX.lat0, lon); s += `<line class="m-grid" x1="${f1(x)}" y1="0" x2="${f1(x)}" y2="${H}"/>`; }
-    for (let lat = 35.53; lat < CITY_BOX.lat1; lat += 0.02) { const [, y] = cp(lat, CITY_BOX.lon0); s += `<line class="m-grid" x1="0" y1="${f1(y)}" x2="${W}" y2="${f1(y)}"/>`; }
+    for (let lat = 35.44; lat < CITY_BOX.lat1; lat += 0.02) { const [, y] = cp(lat, CITY_BOX.lon0); s += `<line class="m-grid" x1="0" y1="${f1(y)}" x2="${W}" y2="${f1(y)}"/>`; }
     G.refs.forEach((r) => {
       const [x, y] = cp(r.lat, r.lon);
       if (r.kind === "park") s += `<circle class="m-park" cx="${f1(x)}" cy="${f1(y)}" r="16"/><text class="m-ref" x="${f1(x)}" y="${f1(y + 4)}" text-anchor="middle">${esc(tr(r))}</text>`;

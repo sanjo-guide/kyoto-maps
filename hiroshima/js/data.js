@@ -4,15 +4,15 @@ window.GUIDE = {
   "ja": [
    "広島と、宮島・尾道のおすすめをまとめました。",
    "広島は京都から新幹線で約1時間40分。駅から路面電車に乗れば、原爆ドームや平和記念公園、本通の商店街まで、市内の見どころをかんたんに回れます。",
-   "広島を拠点にすれば、宮島（厳島神社）や坂の町・尾道、酒蔵の町・西条、港町・呉へも、電車で日帰りで行けます。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。広島に来たら、やっぱりお好み焼きです。",
+   "広島を拠点にすれば、宮島（厳島神社と弥山）や坂の町・尾道、酒蔵の町・西条、港町・呉、錦帯橋の岩国へも、電車で日帰りで行けます。",
+   "「食べる」のお店は、私が実際に行ったところだけを載せています。広島に来たら、やっぱりお好み焼きです。弥山と錦帯橋は、私はまだ行っていませんが、外せない場所なので公式の情報をもとに紹介しています（写真はクレジットつき）。",
    "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
   ],
   "en": [
    "Here are my recommendations for Hiroshima, Miyajima and Onomichi.",
    "Hiroshima is about 1 h 40 min from Kyoto by shinkansen. From the station, the streetcar takes you to the Atomic Bomb Dome, the Peace Memorial Park and the Hondori shopping arcade with no trouble.",
-   "With Hiroshima as your base, you can also take day trips by train to Miyajima (Itsukushima Shrine), the hillside town of Onomichi, the sake town of Saijo and the port town of Kure.",
-   "In the food section I only list places I have actually been to myself. In Hiroshima, okonomiyaki is a must.",
+   "With Hiroshima as your base, you can also take day trips by train to Miyajima (Itsukushima Shrine and Mt. Misen), the hillside town of Onomichi, the sake town of Saijo, the port town of Kure and Iwakuni with its Kintaikyo Bridge.",
+   "In the food section I only list places I have actually been to myself. In Hiroshima, eat okonomiyaki. I haven’t yet been up Mt. Misen or to Kintaikyo, but they shouldn’t be missed, so I’ve described them from official information (photos are credited).",
    "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
   ]
  },
@@ -197,8 +197,8 @@ window.GUIDE = {
     {
      "f": "peace-2.jpg",
      "cap": {
-      "ja": "慰霊碑のアーチの奥に原爆ドーム",
-      "en": "The dome seen through the arch of the Cenotaph"
+      "ja": "慰霊碑と、右奥に原爆ドーム",
+      "en": "The Cenotaph, with the dome to the right"
      },
      "w": 1280,
      "h": 848
@@ -341,15 +341,6 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "tram-5.jpg",
-     "cap": {
-      "ja": "新旧の電車が並ぶ",
-      "en": "Old and new streetcars side by side"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "tram-6.jpg",
      "cap": {
       "ja": "広島駅ビルの2階に入る電車",
@@ -437,15 +428,6 @@ window.GUIDE = {
      "cap": {
       "ja": "昼の本通",
       "en": "Hondori in the daytime"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "hondori-4.jpg",
-     "cap": {
-      "ja": "アーケードの中のお店",
-      "en": "Shops under the arcade"
      },
      "w": 1280,
      "h": 720
@@ -980,19 +962,19 @@ window.GUIDE = {
    "no": 3,
    "photos": [
     {
-     "f": "miyajima-town-1.jpg",
+     "f": "miyajima-town-2.jpg",
      "cap": {
-      "ja": "宮島へ向かうフェリー",
-      "en": "A ferry heading to Miyajima"
+      "ja": "砂浜の鹿",
+      "en": "A deer on the beach"
      },
      "w": 1280,
      "h": 848
     },
     {
-     "f": "miyajima-town-2.jpg",
+     "f": "miyajima-town-1.jpg",
      "cap": {
-      "ja": "砂浜の鹿",
-      "en": "A deer on the beach"
+      "ja": "宮島へ向かうフェリー",
+      "en": "A ferry heading to Miyajima"
      },
      "w": 1280,
      "h": 848
@@ -1052,15 +1034,6 @@ window.GUIDE = {
      "h": 848
     },
     {
-     "f": "miyajima-town-9.jpg",
-     "cap": {
-      "ja": "宮島桟橋に着いたフェリー",
-      "en": "A ferry at Miyajima pier"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
      "f": "miyajima-town-10.jpg",
      "cap": {
       "ja": "夕方の浜辺と鹿",
@@ -1072,22 +1045,120 @@ window.GUIDE = {
    ]
   },
   {
+   "id": "misen",
+   "ja": "弥山（みせん）と宮島ロープウエー",
+   "en": "Mt. Misen and the Miyajima Ropeway",
+   "pins": [
+    {
+     "lat": 34.27959,
+     "lon": 132.31961,
+     "ja": "弥山",
+     "en": "Mt. Misen",
+     "anchor": "start",
+     "minor": true
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E5%BC%A5%E5%B1%B1%20%E5%AE%AE%E5%B3%B6",
+   "body": {
+    "ja": [
+     "宮島のまん中にある標高535mの山です。山頂の展望台からは、瀬戸内海の島々がぐるりと見渡せます。厳島神社だけで帰る人が多いので、時間があればぜひ上まで。",
+     "紅葉谷（もみじだに）駅からロープウエーを乗り継いで獅子岩駅へ。そこから山頂までは、坂道と石段を歩いて約30分です。途中の霊火堂（れいかどう）では、弘法大師が修行したときの火が1200年以上燃え続けていると伝わります。",
+     "桟橋から紅葉谷駅までは歩いて約25分。無料の送迎バスもありますが、お昼（12:10〜13:10ごろ）は走っていません。下りの最終は16:30なので、遅くとも14時ごろまでに上り始めると安心です。靴はスニーカーで。"
+    ],
+    "en": [
+     "A 535 m mountain in the middle of Miyajima. From the observatory on top you look out over the islands of the Seto Inland Sea in every direction. Many people leave after Itsukushima Shrine, so if you have time, go up.",
+     "From Momijidani Station, two ropeway rides take you to Shishiiwa Station; from there it is about 30 minutes on foot to the summit, up slopes and stone steps. On the way, the Reikado hall keeps a fire said to have burned for over 1,200 years since Kobo Daishi trained here.",
+     "Momijidani Station is about 25 min on foot from the pier. There is a free shuttle bus, but it stops around midday (about 12:10–13:10). The last ropeway down is at 16:30, so start up by about 14:00 to be safe. Wear trainers."
+    ]
+   },
+   "note": {
+    "ja": "ロープウエーは大人往復2,000円・片道1,100円、小学生は往復1,000円。9:00〜16:00（下りの最終16:30）。天気で止まることがあり、11月の混む日はWEB予約が必要な日もあります。2026年11月21日に宮島ロープウエーの公式サイトで確認。",
+    "en": "Ropeway: ¥2,000 return / ¥1,100 one way (adults), ¥1,000 return (elementary school). 9:00–16:00 (last car down 16:30). It can stop in bad weather, and on busy November days an online reservation may be required. Checked on the Miyajima Ropeway website on 21 Nov 2026."
+   },
+   "links": [
+    {
+     "ja": "宮島ロープウエー（公式）",
+     "en": "Miyajima Ropeway (official)",
+     "url": "https://miyajima-ropeway.info/"
+    }
+   ],
+   "photos": [
+    {
+     "f": "web-misen-1.jpg",
+     "cap": {
+      "ja": "山頂から見る瀬戸内海の島々",
+      "en": "Islands of the Seto Inland Sea from the summit"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "HKT3012",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Japam_-_Miyajima_-_The_Mount_Misen_mountaintop_view(1)_2015.JPG"
+     }
+    },
+    {
+     "f": "web-misen-2.jpg",
+     "cap": {
+      "ja": "ロープウエーと広島湾",
+      "en": "The ropeway and Hiroshima Bay"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "redlegsfan21",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Miyajima_Ropeway_(13890461069).jpg"
+     }
+    },
+    {
+     "f": "web-misen-3.jpg",
+     "cap": {
+      "ja": "山頂の大きな岩",
+      "en": "Giant boulders at the summit"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "Daderot",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mount_Misen_(Miyajima)_-_DSC02043.JPG"
+     }
+    },
+    {
+     "f": "web-misen-4.jpg",
+     "cap": {
+      "ja": "獅子岩駅と瀬戸内海",
+      "en": "Shishiiwa Station and the Inland Sea"
+     },
+     "w": 1280,
+     "h": 830,
+     "credit": {
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Miyajima_Ropeway-02.jpg"
+     }
+    }
+   ],
+   "no": 4
+  },
+  {
    "kind": "group",
    "id": "g-onomichi",
    "ja": "尾道（おのみち）",
    "en": "Onomichi",
    "time": {
-    "ja": "広島駅からJR山陽本線で約1時間30分（1,520円）",
-    "en": "About 1 h 30 min from Hiroshima Station on the JR Sanyo Line (¥1,520)"
+    "ja": "広島駅からJR山陽本線で約1時間30分（1,520円）。急ぐなら新幹線で三原へ行き、在来線に乗り換えて約1時間10分（2,510円）",
+    "en": "About 1 h 30 min from Hiroshima Station on the JR Sanyo Line (¥1,520). Faster: Shinkansen to Mihara, then change to a local train, about 1 h 10 min (¥2,510)"
    },
    "body": {
     "ja": [
      "坂と路地の町、尾道。山の斜面にお寺や家が重なり、尾道水道（おのみちすいどう）の向こうに向島（むかいしま）の造船所が見える、ほかにはない景色です。",
-     "私は何度も訪れていて、千光寺公園から見る夕暮れの尾道水道が大好きです。夜は尾道ラーメンで締めくくります。"
+     "千光寺公園から見る夕暮れの尾道水道が大好きです。夜は尾道ラーメンで締めくくります。"
     ],
     "en": [
      "Onomichi is a town of slopes and alleys. Temples and houses climb the hillside, and across the narrow Onomichi Channel you see the shipyards of Mukaishima: a view like nowhere else.",
-     "I’ve been many times, and I love the evening view over the channel from Senkoji Park. I always finish the night with a bowl of Onomichi ramen."
+     "I love the evening view over the channel from Senkoji Park. End the night with a bowl of Onomichi ramen."
     ]
    }
   },
@@ -1119,13 +1190,13 @@ window.GUIDE = {
     "ja": "千光寺山ロープウェイ 大人片道500円・往復700円、9:00〜17:15（15分ごと）。",
     "en": "Senkoji ropeway: ¥500 one way, ¥700 return; 9:00–17:15, every 15 min."
    },
-   "no": 4,
+   "no": 5,
    "photos": [
     {
      "f": "senkoji-1.jpg",
      "cap": {
-      "ja": "三重塔と尾道の町",
-      "en": "The three-storied pagoda and the town"
+      "ja": "天寧寺の三重塔と尾道の町",
+      "en": "Tenneiji’s three-storied pagoda and the town"
      },
      "w": 1280,
      "h": 720
@@ -1135,15 +1206,6 @@ window.GUIDE = {
      "cap": {
       "ja": "頂上展望台から見る尾道水道",
       "en": "The Onomichi Channel from the summit deck"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "senkoji-3.jpg",
-     "cap": {
-      "ja": "夕方の尾道水道",
-      "en": "The channel in the evening"
      },
      "w": 1280,
      "h": 848
@@ -1196,8 +1258,8 @@ window.GUIDE = {
     {
      "f": "senkoji-9.jpg",
      "cap": {
-      "ja": "夜の三重塔と町の明かり",
-      "en": "The pagoda and the town lights at night"
+      "ja": "夜の天寧寺の三重塔と町の明かり",
+      "en": "Tenneiji’s pagoda and the town lights at night"
      },
      "w": 1280,
      "h": 720
@@ -1238,7 +1300,7 @@ window.GUIDE = {
      "The Onomichi Hondori shopping street runs east from the station, with shops and cafés in old buildings: a nice place to wander."
     ]
    },
-   "no": 5,
+   "no": 6,
    "photos": [
     {
      "f": "onomichi-town-1.jpg",
@@ -1349,11 +1411,11 @@ window.GUIDE = {
    "map": "https://www.google.com/maps/search/?api=1&query=%E5%B0%BE%E9%81%93%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E3%81%97%E3%82%87%E3%81%86%E3%82%84%E9%A3%AF%E5%BA%97",
    "body": {
     "ja": [
-     "しょうゆ味のスープに、豚の背脂のつぶが浮いた尾道ラーメン。あっさりしているのにコクがあって、何度でも食べたくなります。",
+     "しょうゆ味のスープに、豚の背脂のつぶが浮いた尾道ラーメン。あっさりしているのにコクがあって、また食べたくなる味です。",
      "これまでに、くいしん坊 千両（2022年）、しょうや飯店と朱鳶（あかとび）本店（2026年）で食べました。"
     ],
     "en": [
-     "Onomichi ramen is a soy-sauce soup dotted with bits of pork back fat: light yet rich, and I always want another bowl.",
+     "Onomichi ramen is a soy-sauce soup dotted with bits of pork back fat: light yet rich, the kind you want to eat again.",
      "So far I’ve eaten at Kuishinbo Senryo (2022), and at Shoya Hanten and Akatobi’s main shop (2026)."
     ]
    },
@@ -1390,7 +1452,7 @@ window.GUIDE = {
     "ja": "どのお店も営業時間はGoogleマップで確認してください。",
     "en": "Check each shop’s opening hours on Google Maps."
    },
-   "no": 6,
+   "no": 7,
    "photos": [
     {
      "f": "onomichi-ramen-1.jpg",
@@ -1438,28 +1500,10 @@ window.GUIDE = {
      "h": 720
     },
     {
-     "f": "onomichi-ramen-6.jpg",
-     "cap": {
-      "ja": "ネギたっぷり",
-      "en": "Lots of green onion"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
      "f": "onomichi-ramen-7.jpg",
      "cap": {
       "ja": "朱鳶 本店",
       "en": "Akatobi main shop"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "onomichi-ramen-8.jpg",
-     "cap": {
-      "ja": "朱鳶ののれん",
-      "en": "Akatobi’s noren curtain"
      },
      "w": 1280,
      "h": 720
@@ -1495,26 +1539,8 @@ window.GUIDE = {
     "ja": "営業時間はGoogleマップで確認してください。",
     "en": "Check the opening hours on Google Maps."
    },
-   "no": 7,
+   "no": 8,
    "photos": [
-    {
-     "f": "poppoya-1.jpg",
-     "cap": {
-      "ja": "鉄板の上のお好み焼き",
-      "en": "Okonomiyaki on the griddle"
-     },
-     "w": 1280,
-     "h": 720
-    },
-    {
-     "f": "poppoya-2.jpg",
-     "cap": {
-      "ja": "ソースをかけて",
-      "en": "With sauce"
-     },
-     "w": 1280,
-     "h": 720
-    },
     {
      "f": "poppoya-3.jpg",
      "cap": {
@@ -1588,7 +1614,7 @@ window.GUIDE = {
     "ja": "試飲や見学の時間は蔵ごとに違うので、行く前に確認してください。",
     "en": "Tasting and visiting hours differ by brewery, so check before you go."
    },
-   "no": 8,
+   "no": 9,
    "photos": [
     {
      "f": "saijo-1.jpg",
@@ -1728,22 +1754,13 @@ window.GUIDE = {
     "ja": "私が行ったのは改装中の2026年2月でした。開館時間と料金は公式サイトで確認してください。",
     "en": "I visited in February 2026, during the renovation. Check opening hours and fees on the official websites."
    },
-   "no": 9,
+   "no": 10,
    "photos": [
     {
      "f": "kure-1.jpg",
      "cap": {
       "ja": "てつのくじら館の潜水艦",
       "en": "The submarine at the JMSDF Kure Museum"
-     },
-     "w": 1280,
-     "h": 848
-    },
-    {
-     "f": "kure-2.jpg",
-     "cap": {
-      "ja": "潜水艦と呉の町",
-      "en": "The submarine and the town"
      },
      "w": 1280,
      "h": 848
@@ -1785,6 +1802,121 @@ window.GUIDE = {
      "h": 848
     }
    ]
+  },
+  {
+   "kind": "group",
+   "id": "g-iwakuni",
+   "ja": "岩国（いわくに）",
+   "en": "Iwakuni",
+   "time": {
+    "ja": "広島駅からJR山陽本線で岩国まで約50分（770円）。岩国駅からいわくにバスで「錦帯橋」まで約15〜20分（300円）",
+    "en": "About 50 min from Hiroshima Station to Iwakuni on the JR Sanyo Line (¥770), then about 15–20 min by Iwakuni Bus to “Kintaikyo” (¥300)"
+   },
+   "body": {
+    "ja": [
+     "広島から西へ、山口県に入ってすぐの城下町です。錦川（にしきがわ）にかかる木の橋・錦帯橋で知られています。宮島口から岩国までは電車で約15分なので、朝に宮島、午後に岩国と組み合わせることもできます。"
+    ],
+    "en": [
+     "A castle town just across the border in Yamaguchi, west of Hiroshima, known for Kintaikyo, the wooden bridge over the Nishiki River. Miyajimaguchi to Iwakuni is only about 15 min by train, so you can do Miyajima in the morning and Iwakuni in the afternoon."
+    ]
+   }
+  },
+  {
+   "id": "kintaikyo",
+   "ja": "錦帯橋（きんたいきょう）",
+   "en": "Kintaikyo Bridge",
+   "pins": [
+    {
+     "lat": 34.16764,
+     "lon": 132.17832,
+     "ja": "錦帯橋",
+     "en": "Kintaikyo",
+     "anchor": "start"
+    }
+   ],
+   "map": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6%E5%B8%AF%E6%A9%8B",
+   "body": {
+    "ja": [
+     "長さ約193m、5つのアーチが連なる木の橋です。最初にかけられたのは1673年。いまの橋は2004年にかけ替えが終わったものです。",
+     "渡る前に、まず河原へ下りてみてください。橋を下から見上げると、木を組み上げたアーチの裏側がよく見えます。春は桜、秋は山の紅葉と一緒に見られます。",
+     "橋のきっぷは往復だけです。料金所に人がいない夜は、料金箱にお金を入れて渡ります（照明は22:00まで）。山の上の岩国城まで行くなら、橋・ロープウエー・お城のセット券が少し安くなります。"
+    ],
+    "en": [
+     "A wooden bridge about 193 m long with five arches in a row. It was first built in 1673; the present bridge was finished in 2004 after a full rebuild.",
+     "Before you cross, go down to the riverbed: from below you can see the underside of the arches and how the timbers are fitted together. In spring you see it with cherry blossom, in autumn with the colours of the hill behind.",
+     "Tickets are return only. At night, when the booth is unstaffed, you put the fare in a box and cross (the lights go off at 22:00). If you’re going up to Iwakuni Castle on the hill, the set ticket for the bridge, ropeway and castle is a little cheaper."
+    ]
+   },
+   "note": {
+    "ja": "入橋料（往復）は中学生以上500円・小学生250円。料金所は8:00〜17:00（観光シーズンは18:00、夏は19:00まで）、橋は24時間渡れます。セット券（橋・ロープウエー往復・岩国城）は大人1,550円。2026年11月21日に岩国市の錦帯橋公式サイトで確認。バスは乗換案内で確認。",
+    "en": "Bridge fee (return): ¥500 (junior high and up), ¥250 (elementary). Ticket booth 8:00–17:00 (to 18:00 in the tourist season, 19:00 in summer); the bridge can be crossed 24 hours. Set ticket (bridge, ropeway return, Iwakuni Castle): ¥1,550 for adults. Checked on Iwakuni City’s official Kintaikyo website on 21 Nov 2026; bus checked with a route planner."
+   },
+   "links": [
+    {
+     "ja": "錦帯橋（公式）",
+     "en": "Kintaikyo (official)",
+     "url": "https://kintaikyo.iwakuni-city.net/"
+    }
+   ],
+   "photos": [
+    {
+     "f": "web-kintaikyo-1.jpg",
+     "cap": {
+      "ja": "錦川に映る錦帯橋",
+      "en": "Kintaikyo reflected in the Nishiki River"
+     },
+     "w": 1280,
+     "h": 853,
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kintaikyo_20170125.jpg"
+     }
+    },
+    {
+     "f": "web-kintaikyo-2.jpg",
+     "cap": {
+      "ja": "5つのアーチ",
+      "en": "The five arches"
+     },
+     "w": 1280,
+     "h": 960,
+     "credit": {
+      "author": "redlegsfan21 from Vandalia, OH, United States",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kintai_Bridge_(14073615872).jpg"
+     }
+    },
+    {
+     "f": "web-kintaikyo-3.jpg",
+     "cap": {
+      "ja": "河原から見上げる木組み",
+      "en": "The timber underside from the riverbed"
+     },
+     "w": 1200,
+     "h": 900,
+     "credit": {
+      "author": "z tanuki",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kintai_kyo(Bridge)_,_%E9%8C%A6%E5%B8%AF%E6%A9%8B_-_panoramio_(4).jpg"
+     }
+    },
+    {
+     "f": "web-kintaikyo-4.jpg",
+     "cap": {
+      "ja": "石の橋脚とアーチ",
+      "en": "The stone piers and arches"
+     },
+     "w": 1280,
+     "h": 850,
+     "credit": {
+      "author": "Jakub Hałun",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:20100724_Iwakuni_5235.jpg"
+     }
+    }
+   ],
+   "no": 11
   }
  ],
  "refs": [],
@@ -1844,7 +1976,11 @@ window.GUIDE = {
    "https://hiroden.co.jp/topics/2024/pdf/1216-trainfare/0116/trainfare6.pdf",
    "https://trafficnews.jp/post/542362",
    "https://trafficnews.jp/post/658343",
-   "https://transit.yahoo.co.jp/"
+   "https://transit.yahoo.co.jp/",
+   "https://miyajima-ropeway.info/fare",
+   "https://dive-hiroshima.com/explore/1467/",
+   "https://kintaikyo.iwakuni-city.net/summary.html",
+   "https://kankou.iwakuni-city.net/kintaikyo.html"
   ]
  }
 };

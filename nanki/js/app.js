@@ -7,12 +7,12 @@
     madeby: { en: "Made by Toshi", ja: "Toshiが作成しました" },
     home: { en: "← All maps", ja: "← マップ一覧" },
    howto_h: { en: "How to use this page", ja: "このページの使い方" },
-    howto_1: { en: "Use the buttons at the top to switch between the city and the day trips.", ja: "上のボタンで、町の中のおすすめと、日帰りで行ける場所を切り替えられます。" },
+    howto_1: { en: "Use the buttons at the top to switch between “Shirahama” and “Kumano”.", ja: "上のボタンで「白浜」と「那智・熊野」を切り替えられます。" },
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
-    howto_3: { en: "Tap “Map” next to a place to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "「地図」を押すとGoogleマップで場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
+    howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
     subtitle: { en: "The white beach and sea cliffs of Shirahama, Nachi Falls, Katsuura tuna and the hot springs of Kumano.", ja: "白浜の白い砂浜と海の断崖、那智の滝、勝浦のまぐろ、そして熊野の温泉。" },
-    nav_city: { en: "Shirahama", ja: "白浜" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Nachi, Kumano & more", ja: "那智・熊野ほか" }, nav_map: { en: "Map", ja: "地図" },
+    nav_city: { en: "Shirahama", ja: "白浜" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Kumano", ja: "那智・熊野" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in Shirahama", ja: "白浜のおすすめ" }, jump_food: { en: "places I've eaten", ja: "実際に行ったお店" }, jump_trips: { en: "areas further east", ja: "那智・勝浦・熊野・串本のエリア" },
     group: { en: "AREA", ja: "エリア" },
     map_h: { en: "Where everything is", ja: "おすすめの場所の地図" },
@@ -20,12 +20,12 @@
     map_note: { en: "Tap a number to jump to that place. Pinch or use + / − to zoom. For directions, use each place’s “Google Maps” button.", ja: "番号をタップすると、その場所の紹介へ移動します。拡大・縮小は2本指か「＋／−」ボタンで。道順は各スポットの「Googleマップ」ボタンで確認してください。" },
     map_fb: { en: "The map images could not load, so a simple map is shown instead.", ja: "地図の画像を読み込めなかったため、簡易な地図を表示しています。" },
     show_all: { en: "Show all", ja: "全体を表示" },
-    city_h: { en: "Places to see in Shirahama", ja: "白浜のおすすめ" }, city_sub: { en: "The beach, Engetsu Island and the sea cliffs", ja: "白良浜・円月島・千畳敷・三段壁" },
+    city_h: { en: "Places to see in Shirahama", ja: "白浜のおすすめ" }, city_sub: { en: "The beach, Engetsu Island, the sea cliffs and a seaside bath", ja: "白良浜・円月島・千畳敷・三段壁・崎の湯" },
     food_h: { en: "Places I’ve eaten", ja: "実際に行ったお店" }, food_sub: { en: "Only places I have actually been to.", ja: "私が実際に行ったお店だけを載せています。" },
-    trips_h: { en: "Nachi, Katsuura, Kumano and Kushimoto", ja: "那智・勝浦・熊野・串本" },
+    trips_h: { en: "Nachi, Katsuura, Kumano Hongu and Kushimoto", ja: "那智・勝浦・熊野本宮・串本" },
     trips_sub: { en: "Further east along the coast and into the mountains. Restaurants are only ones I’ve been to.", ja: "白浜から海沿いを東へ、そして熊野の山へ。お店は私が実際に行ったところだけです。" },
     cr_h: { en: "Photo credits", ja: "写真のクレジット" },
-    cr_toshi: { en: "All photos were taken by Toshi.", ja: "写真はすべてToshiが撮影したものです。" },
+    cr_toshi: { en: "Photos without a credit were taken by Toshi.", ja: "クレジットのない写真は、Toshiが撮影したものです。" },
     cr_map: { en: "Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors. Outlines in the simple map (shown only if the map images cannot load): Global Map Japan (GSI), via dataofjapan/land.", ja: "地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors。簡易地図（地図の画像を読み込めないときだけ表示）の輪郭：地球地図日本（国土地理院）をもとに作成（dataofjapan/land）。" },
     disclaimer: { en: "Opening hours, prices and booking rules can change. Please check the official information before you go.", ja: "営業時間・料金・予約方法は変わることがあります。お出かけ前に公式の情報をご確認ください。" },
     to_top: { en: "Back to top ↑", ja: "ページの先頭へ ↑" },
@@ -63,7 +63,7 @@
     again: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>',
   };
 
-  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/" };
+  const LIC = { "CC0": "https://creativecommons.org/publicdomain/zero/1.0/", "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/" };
   const licUrl = (l) => LIC[l] || ("https://creativecommons.org/licenses/" + (/SA/.test(l) ? "by-sa/" : "by/") + ((l.match(/[\d.]+$/) || ["4.0"])[0]) + "/");
 
   /* ---------- cards ---------- */
