@@ -57,14 +57,14 @@ S = [
                 "・近鉄特急：約35分、1,280円（運賃760円＋特急券520円）。全席指定で必ず座れます。土曜は京都8:30発→近鉄奈良9:08着（乗り換えなし）。特急券は駅の券売機か、近鉄の「チケットレスサービス」で。\n"
                 "・近鉄の急行：約50分、760円。橿原神宮前行きに乗り、大和西大寺（やまとさいだいじ）で向かいのホームの奈良行きに乗り換えることがほとんどです。土曜は京都8:42発→9:30着。\n"
                 "・JRのみやこ路快速：約47分、720円。京都9:04発→奈良9:51着（日中は30分おき）。ただしJR奈良駅は近鉄奈良駅より西に約1km離れていて、興福寺まで歩いて約20分かかります。ジャパン・レール・パスを使う人向けです。\n\n"
-                "近鉄奈良駅は地下の駅です。東改札を出て2番出口の階段を上がると、行基（ぎょうき）さんの噴水の前。そこから東へ、ゆるい坂（登大路）を上ると5分で興福寺、その先が奈良公園です。\n\n"
+                "近鉄奈良駅は地下の駅です。地上に上がると、行基（ぎょうき）さんの像が立つ噴水の広場。そこから東へ、ゆるい坂（登大路）を上ると5分で興福寺、その先が奈良公園です。\n\n"
                 "ICカード（ICOCA・Suicaなど）は近鉄・JRとも使えます。お寺の拝観料は現金だけの所が多いので、千円札と小銭を多めに。\n\n"
                 "帰りは、近鉄奈良16:13発の急行（京都16:59着・乗り換えなし）か、16:25発の特急（17:01着）がちょうどいい時間です。\n\nおすすめ到着時間：9:08",
                 "Kintetsu-Nara Station\n\nYou leave from the Kintetsu platforms at Kyoto Station. There are three ways.\n\n"
                 "• Kintetsu limited express: about 35 minutes, ¥1,280 (¥760 fare + ¥520 express ticket). All seats reserved, so you always sit. On Saturdays: Kyoto 8:30 → Kintetsu-Nara 9:08, direct. Buy the express ticket at a station machine or on Kintetsu’s ticketless service.\n"
                 "• Kintetsu express: about 50 minutes, ¥760. Most trains go towards Kashiharajingu-mae; change at Yamato-Saidaiji to the Nara train across the platform. On Saturdays: Kyoto 8:42 → 9:30.\n"
                 "• JR Miyakoji Rapid: about 47 minutes, ¥720. Kyoto 9:04 → Nara 9:51 (every 30 minutes in the daytime). But JR Nara Station is about 1 km west of Kintetsu-Nara, a 20-minute walk to Kofukuji. Best if you hold a Japan Rail Pass.\n\n"
-                "Kintetsu-Nara is underground. Leave by the east gates and take the stairs at Exit 2; you come up by the fountain with the statue of the monk Gyoki. Walk east up the gentle slope (Noborioji): 5 minutes to Kofukuji, with Nara Park just beyond.\n\n"
+                "Kintetsu-Nara is underground. Up at street level you are by the fountain with the statue of the monk Gyoki. Walk east up the gentle slope (Noborioji): 5 minutes to Kofukuji, with Nara Park just beyond.\n\n"
                 "IC cards (ICOCA, Suica and so on) work on both Kintetsu and JR. Many temples take cash only, so bring ¥1,000 notes and coins.\n\n"
                 "Going back, the 16:13 express (Kyoto 16:59, direct) or the 16:25 limited express (Kyoto 17:01) are well timed.\n\nRecommended arrival: 9:08"),
          gmaps=[gm("近鉄奈良駅", "Kintetsu-Nara Station", 34.68414, 135.82854, "近鉄奈良駅"),
@@ -108,7 +108,7 @@ S = [
          blurb=T("興福寺を出たら、もう鹿がいます。鹿せんべいは買ったらすぐあげる。これだけ守れば楽しい時間です。",
                  "Step out of Kofukuji and the deer are already there. Buy the crackers, hand them over at once: keep to that and it’s great fun."),
          lat=34.68412, lng=135.83450,
-         text=T("奈良公園（ならこうえん）の鹿\n\n県庁の向かいの芝生（登大路園地）から東大寺の南大門まで、道ばたにも芝生にも鹿がいます。約1,300頭、国の天然記念物で、飼われているのではなく野生です。\n\n"
+         text=T("奈良公園（ならこうえん）の鹿\n\n県庁の向かいの芝生（登大路園地）から東大寺の南大門まで、道ばたにも芝生にも鹿がいます。1,000頭を超える鹿は国の天然記念物で、飼われているのではなく野生です。\n\n"
                 "鹿せんべいは、道ばたの売り場で買えます（2019年から10枚200円。今の値段は売り場で確かめてください。小銭を用意）。あげ方のコツは奈良県の案内のとおりです。\n\n"
                 "・買ったらすぐにあげる。じらすと、服やお尻をかまれます\n"
                 "・なくなったら、両手を開いて「もうないよ」と見せる。これで離れていきます\n"
@@ -119,7 +119,7 @@ S = [
                 "・秋（9〜11月ごろ）は角のある雄鹿に近づかない\n\n"
                 "南大門の前は鹿も人もいちばん多く、せんべいを持った瞬間に囲まれます。落ち着いてあげたいなら、手前の登大路園地か、春日大社へ向かう参道わきの芝生（飛火野・とびひの）が静かです。公園にごみ箱はないので、包み紙は持ち帰ります（せんべいを束ねている紙は鹿が食べられます）。\n\n"
                 "向かいの奈良国立博物館は、仏像館が改修で2028年春ごろまで休館中。今は青銅器館で仏像の名品を少しだけ見られます。\n\nおすすめ訪問時間：10:00〜10:15",
-                "The deer of Nara Park\n\nFrom the lawn opposite the prefectural office (Noborioji Park) all the way to Todaiji’s Great South Gate, deer are on the paths and on the grass. There are about 1,300 of them; they are a protected natural monument and wild, not kept.\n\n"
+                "The deer of Nara Park\n\nFrom the lawn opposite the prefectural office (Noborioji Park) all the way to Todaiji’s Great South Gate, deer are on the paths and on the grass. There are over a thousand; they are a protected natural monument and wild, not kept.\n\n"
                 "Deer crackers (shika-senbei) are sold at stands along the way (¥200 for ten since 2019; check the price at the stand, and have coins ready). Nara Prefecture’s own advice on feeding:\n\n"
                 "• Hand them over as soon as you buy them. Tease, and you get nipped on the clothes or the backside\n"
                 "• When you run out, show both open hands. The deer understand and walk away\n"

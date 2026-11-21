@@ -126,7 +126,7 @@
       { id: 'label-city', type: 'symbol', source: 'omt', 'source-layer': 'place', minzoom: 5, maxzoom: 13,
         filter: cls(['city']), layout: label({ 'text-size': z([5, 12, 12, 17]), 'text-font': bold }), paint: paintText(c.textStrong, 1.8) }
     );
-    layers.forEach(function (l) { if (l.layout && l.layout['text-field']) (l.metadata = l.metadata || {})['phs:name'] = true; });
+    layers.forEach(function (l) { if (l.layout && l.layout['text-field']) (l.metadata = l.metadata || {})['km:name'] = true; });
 
     return {
       version: 8,
@@ -139,7 +139,7 @@
   function setLang(gl, lang) {
     if (!gl || !gl.getStyle || !gl.isStyleLoaded()) return;
     gl.getStyle().layers.forEach(function (l) {
-      if (l.metadata && l.metadata['phs:name']) gl.setLayoutProperty(l.id, 'text-field', nameExpr(lang));
+      if (l.metadata && l.metadata['km:name']) gl.setLayoutProperty(l.id, 'text-field', nameExpr(lang));
     });
   }
 
