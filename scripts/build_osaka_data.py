@@ -1,0 +1,407 @@
+#!/usr/bin/env python3
+"""京都から日帰り 大阪のデータ（data/routes/osaka.json）を書き出す。
+
+使い方: python3 scripts/build_osaka_data.py
+- 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
+- 自分の写真は images/osaka/<スポットのid>-<番号>.jpg を番号の順に全部使う
+- ネットの写真（Wikimedia Commons）は images/osaka/<id>-w<番号>.jpg。撮影者・ライセンス・ページは下の WEB に書く
+  （WEB_FIRST に入っているスポットは、ネットの写真を先に並べる）
+"""
+import json, os, re, urllib.parse
+
+R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+IMG = f"{R}/images/osaka"
+OUT = f"{R}/data/routes/osaka.json"
+CHECKED = "2026-11-21"
+PICKS = {}
+for f in os.listdir(IMG):
+    m = re.match(r"(.+)-(\d+)\.jpg$", f)
+    if m:
+        PICKS.setdefault(m.group(1), []).append(int(m.group(2)))
+
+# ネットの写真（Wikimedia Commons）。(ファイル, 撮影者, ライセンス, ファイルのページ)
+WEB = json.load(open(f"{R}/scripts/osaka_web_photos.json", encoding="utf-8"))
+WEB_FIRST = {"hozenji", "shinsekai", "shitennoji", "harukas", "sumiyoshi", "kaiyukan", "tenmangu", "skybldg"}
+
+
+def T(ja, en):
+    return {"ja": ja, "en": en}
+
+
+def gm(ja, en, lat, lng, q):
+    return {"label": T(ja, en), "lat": lat, "lng": lng, "url": "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(q)}
+
+
+def link(kind, ja, en, url_ja, url_en=None):
+    return {"kind": kind, "label": T(ja, en), "url": {"ja": url_ja, "en": url_en or url_ja}}
+
+
+def row(kind, ja, en, until=None):
+    return {"kind": kind, "text": T(ja, en), "until": until, "from": None}
+
+
+def info(rows, tip=None, verified=True, cash=False):
+    d = {"rows": rows, "cash": cash, "tip": tip, "checked": CHECKED}
+    if not verified:
+        d["verified"] = False
+    return d
+
+
+def photos(pid):
+    own = [f"{pid}-{i}.jpg" for i in sorted(PICKS.get(pid, []))]
+    web = [{"file": w["file"], "credit": {"author": w["author"], "license": w["license"], "page": w["page"]}} for w in WEB.get(pid, [])]
+    for w in web:
+        assert os.path.exists(f"{IMG}/{w['file']}"), w["file"]
+    out = web + own if pid in WEB_FIRST else own + web
+    assert out, pid
+    return out
+
+
+PLANNER = link("timetable", "乗換案内（Yahoo!路線情報）", "Route planner (Yahoo! Japan)", "https://transit.yahoo.co.jp/")
+METRO = link("info", "Osaka Metro エンジョイエコカード（1日乗車券）", "Osaka Metro Enjoy Eco Card (1-day ticket)", "https://subway.osakametro.co.jp/guide/page/enjoy-eco.php")
+
+S = [
+    dict(id="castle", name=T("大阪城（天守閣・大阪城公園）", "Osaka Castle (main tower & park)"), kind=T("城・公園", "Castle & park"),
+         blurb=T("まず朝いちばんに。お堀と巨大な石垣を見ながら歩いて、天守閣の8階から大阪の街を見渡します。",
+                 "Start here first thing. Walk in past the moats and giant stone walls, then look over the city from the 8th floor of the tower."),
+         lat=34.68735, lng=135.52590,
+         text=T("大阪城（おおさかじょう）\n\n"
+                "京都からの行き方は3つ。祇園四条・三条からなら京阪の特急で天満橋（てんまばし）へ（48分・490円）。ここが大阪城にいちばん近く、大手門まで歩いて約10分です。"
+                "京都駅からならJRの新快速で大阪へ（28分・580円）、環状線に乗り換えて大阪城公園駅へ（10分・180円）。阪急なら京都河原町から大阪梅田へ（47分・410円）、地下鉄の谷町線で天満橋か谷町四丁目へ。\n\n"
+                "正面の大手門から入ると、畳何十枚ぶんもある巨石の石垣が続きます。天守閣は中が博物館で、8階が展望台。5階まではエレベーターがありますが、混む日は階段のほうが早いです。"
+                "切符売り場は10時を過ぎると列が伸びるので、9時台に入るのがおすすめ。公式サイトでWEBチケットも買えます。同じ日なら、天守閣の切符で豊臣石垣館にも入れます。\n\n"
+                "天守閣だけなら1時間、お堀の外まで歩くと2時間近くかかります。写真は2016年2月と2025年4月、夜の天守閣は2026年4月。\n\n"
+                "次のミナミへは、大手門を出て谷町四丁目駅まで歩きます（天守閣から約18分）。\n\nおすすめ訪問時間：9:30〜11:15",
+                "Osaka Castle\n\n"
+                "Three ways from Kyoto. From Gion-Shijo or Sanjo, take the Keihan limited express to Temmabashi (48 min, ¥490): it is the closest station, about 10 minutes’ walk to the Otemon gate. "
+                "From Kyoto Station, the JR Special Rapid reaches Osaka in 28 min (¥580); change to the Loop Line for Osakajokoen (10 min, ¥180). By Hankyu, Kyoto-Kawaramachi to Osaka-Umeda takes 47 min (¥410), then the Tanimachi subway line to Temmabashi or Tanimachi 4-chome.\n\n"
+                "Enter by the main Otemon gate and you pass walls built of single stones the size of a room. The tower is a museum inside, with an observation deck on the 8th floor. A lift goes up to the 5th floor, but on busy days the stairs are quicker. "
+                "The ticket queue grows after 10:00, so go in the 9 o’clock hour; web tickets are sold on the official site. On the same day the tower ticket also admits you to the Toyotomi Stone Wall Museum.\n\n"
+                "Allow 1 hour for the tower alone, nearly 2 hours if you walk the moats. Photos: February 2016 and April 2025; the night view is from April 2026.\n\n"
+                "For the Minami area next, leave by the Otemon gate and walk to Tanimachi 4-chome Station (about 18 minutes from the tower).\n\nRecommended visit time: 9:30–11:15"),
+         gmaps=[gm("大阪城天守閣", "Osaka Castle main tower", 34.68735, 135.52590, "大阪城天守閣"),
+                gm("大手門", "Otemon gate", 34.68605, 135.52125, "大阪城 大手門"),
+                gm("京阪 天満橋駅", "Keihan Temmabashi Station", 34.69006, 135.51690, "天満橋駅")],
+         links=[link("official", "大阪城天守閣 公式サイト", "Osaka Castle Museum (official)", "https://www.osakacastle.net/", "https://www.osakacastle.net/english/"), PLANNER],
+         info=info([row("hours", "天守閣 9:00〜18:00（入館は17:30まで）。公園は自由に歩けます", "Tower 9:00–18:00 (last entry 17:30). The park is always open"),
+                    row("closed", "12月28日〜1月1日", "28 December – 1 January"),
+                    row("fee", "天守閣 大人1,200円（2025年4月から。豊臣石垣館も同じ日に入れます）。エンジョイエコカードを見せると1,080円",
+                        "Tower ¥1,200 (since April 2025; includes the Toyotomi Stone Wall Museum on the same day). ¥1,080 with an Enjoy Eco Card"),
+                    row("train", "京阪：祇園四条8:26発（特急）→ 天満橋9:14着・490円", "Keihan: Gion-Shijo 8:26 (limited express) → Temmabashi 9:14, ¥490"),
+                    row("train", "JR：京都8:29発（新快速）→ 大阪8:57着・580円 → 環状線で大阪城公園へ10分・180円", "JR: Kyoto 8:29 (Special Rapid) → Osaka 8:57, ¥580 → Loop Line to Osakajokoen, 10 min, ¥180"),
+                    row("train", "次へ：谷町四丁目 →（中央線・堺筋本町で堺筋線に乗り換え）→ 日本橋 約10分・190円", "Next: Tanimachi 4-chome → (Chuo Line, change at Sakaisuji-Hommachi to the Sakaisuji Line) → Nippombashi, about 10 min, ¥190")],
+                   tip=T("時間と料金は大阪城天守閣の公式サイト、電車は乗換案内（2026年11月の土曜のダイヤ）で確認しました。", "Hours and fees from the official Osaka Castle site; trains from a route planner (Saturday timetable, November 2026)."))),
+    dict(id="tenmangu", name=T("大阪天満宮・天神橋筋商店街", "Osaka Temmangu & Tenjinbashi-suji arcade"), kind=T("神社・商店街（寄り道）", "Shrine & arcade (detour)"),
+         blurb=T("「天神さん」と、南北2.6kmの日本一長い商店街。観光地というより、大阪のふだんの顔です。",
+                 "“Tenjin-san” and Japan’s longest shopping arcade, 2.6 km from end to end. Less a sight than everyday Osaka."),
+         lat=34.69605, lng=135.51265,
+         text=T("大阪天満宮（おおさかてんまんぐう）と天神橋筋商店街（てんじんばしすじ）\n\n"
+                "学問の神様・菅原道真をまつる神社で、7月24日・25日の天神祭はここのお祭りです。門の前を通る天神橋筋商店街は、1丁目から6丁目まで続くアーケード。コロッケやたこ焼き、立ち飲みの店が並び、値段もミナミより気楽です。\n\n"
+                "全部歩くと40分ほどかかるので、天満宮にお参りして、南森町の駅までの2丁目あたりを歩けば十分。南森町駅からは堺筋線で、次の黒門市場（日本橋駅）まで乗り換えなしで行けます。\n\n"
+                "大阪城からは、天満橋駅まで戻って谷町線で1駅（南森町）。歩いても天満橋駅から約15分です。\n\n"
+                "自分の写真は2024年7月の天神祭の夜の商店街。ふだんはここまで混みません。\n\nおすすめ訪問時間：寄るなら約40分（11:30〜12:10ごろ）",
+                "Osaka Temmangu and the Tenjinbashi-suji arcade\n\n"
+                "The shrine of Sugawara no Michizane, god of learning; the Tenjin Festival on 24–25 July belongs to it. The arcade that runs past its gate stretches from 1-chome to 6-chome: croquettes, takoyaki, standing bars, at easier prices than Minami.\n\n"
+                "Walking it all takes about 40 minutes, so visit the shrine and stroll the 2-chome stretch up to Minami-morimachi Station. From there the Sakaisuji Line runs direct to Nippombashi for Kuromon market.\n\n"
+                "From the castle, go back to Temmabashi and ride the Tanimachi Line one stop to Minami-morimachi, or walk about 15 minutes from Temmabashi Station.\n\n"
+                "My own photo shows the arcade on a Tenjin Festival night in July 2024. It is not normally this crowded.\n\nRecommended visit time: about 40 minutes if you stop (around 11:30–12:10)"),
+         gmaps=[gm("大阪天満宮", "Osaka Temmangu", 34.69605, 135.51265, "大阪天満宮"),
+                gm("南森町駅", "Minami-morimachi Station", 34.69790, 135.51140, "南森町駅")],
+         links=[link("official", "大阪天満宮 公式サイト", "Osaka Temmangu (official, Japanese)", "https://osakatemmangu.or.jp/")],
+         info=info([row("fee", "お参りは無料", "Free to visit"),
+                    row("hours", "門の開く時間は公式サイトで確認できませんでした（要確認）。日中に行けば開いています", "Gate hours could not be confirmed on the official site (please check); it is open in the daytime"),
+                    row("train", "天満橋 →（谷町線）→ 南森町 3分・190円", "Temmabashi → (Tanimachi Line) → Minami-morimachi, 3 min, ¥190"),
+                    row("train", "次へ：南森町 →（堺筋線）→ 日本橋 7分・240円（乗り換えなし）", "Next: Minami-morimachi → (Sakaisuji Line) → Nippombashi, 7 min, ¥240 (direct)")],
+                   tip=T("行き方は大阪天満宮の公式サイト（南森町駅4番出口・JR大阪天満宮駅7番出口）、電車は乗換案内で確認しました。", "Access from the shrine’s official site (Minami-morimachi exit 4, JR Osaka-Temmangu exit 7); trains from a route planner."),
+                   verified=False)),
+    dict(id="kuromon", name=T("黒門市場", "Kuromon Market"), kind=T("市場・食べ歩き", "Market & street food"),
+         blurb=T("約580mのアーケードに約150軒。焼きたての貝や串、果物をつまみながら、お昼をここで済ませます。",
+                 "About 150 shops under a 580 m arcade. Make lunch of grilled shellfish, skewers and fruit as you walk."),
+         lat=34.66540, lng=135.50650,
+         text=T("黒門市場（くろもんいちば）\n\n"
+                "日本橋駅の10番出口を出てすぐ。魚屋、ふぐの店、肉屋、果物屋が並ぶ、ミナミの台所です。店先で焼いたホタテやうなぎの串、まぐろの刺身、いちごやカットフルーツをその場で食べられます。\n\n"
+                "頼み方はかんたんで、指をさして「これを1つ」。値段は札に書いてあります。観光客向けの高い店も増えたので、何軒か値札を見比べてから買うのがコツ。歩きながらではなく、買った店の前やイートインで食べるのがここの決まりです。\n\n"
+                "現金だけの店がまだ多いので、千円札と小銭を用意してください。魚の店は朝が早く、15時を過ぎると品物が減って、17時ごろには閉まり始めます。日曜と水曜は休む店があります。\n\n"
+                "写真は2023年12月29日。年末でいちばん混む日でした。\n\nおすすめ訪問時間：11:50〜12:40",
+                "Kuromon Market\n\n"
+                "Right outside exit 10 of Nippombashi Station: fishmongers, fugu specialists, butchers and fruit shops, the kitchen of Minami. Scallops and eel skewers grilled at the shopfront, tuna sashimi, strawberries and cut fruit are all sold to eat on the spot.\n\n"
+                "Ordering is simple: point and say “kore o hitotsu” (one of these). Prices are on the tags. Some stalls now charge tourist prices, so compare a few before you buy. The rule here is to eat in front of the shop where you bought, or at its seats, not while walking.\n\n"
+                "Many stalls still take cash only, so carry ¥1,000 notes and coins. Fish shops start early: stock thins after 15:00 and shutters come down from about 17:00. Some shops close on Sundays and Wednesdays.\n\n"
+                "Photos: 29 December 2023, the busiest day of the year.\n\nRecommended visit time: 11:50–12:40"),
+         gmaps=[gm("黒門市場", "Kuromon Market", 34.66540, 135.50650, "黒門市場")],
+         links=[link("official", "黒門市場 公式サイト", "Kuromon Market (official)", "https://kuromon.com/jp/", "https://kuromon.com/en/")],
+         info=info([row("hours", "店ごとに違います。目安は9:00ごろ〜17:00ごろ（各店の時間は公式サイトの店舗ページに）", "Varies by shop; roughly 9:00–17:00 (each shop’s hours are on the official site)"),
+                    row("closed", "店ごとに違います（日曜・水曜に休む店があります）", "Varies by shop (some close on Sundays or Wednesdays)"),
+                    row("train", "日本橋駅（堺筋線・千日前線）10番出口からすぐ", "Right outside exit 10 of Nippombashi Station (Sakaisuji and Sennichimae lines)")],
+                   tip=T("店の数と長さは黒門市場の公式サイトから。営業時間は店ごとなので、行きたい店があるときは公式サイトで確かめてください。", "Shop count and length from the official site. Hours differ by shop, so check there if you have one in mind."), cash=True)),
+    dict(id="hozenji", name=T("法善寺横丁・水掛不動", "Hozenji Yokocho & the moss-covered Fudo"), kind=T("路地・お寺", "Alley & temple"),
+         blurb=T("道頓堀のにぎわいから1本入った、石畳の細い路地。苔におおわれたお不動さんに水をかけてお参りします。",
+                 "A narrow stone-paved alley one street back from the noise of Dotonbori. Pour water over the moss-covered Fudo and pray."),
+         lat=34.66790, lng=135.50240,
+         text=T("法善寺横丁（ほうぜんじよこちょう）と水掛不動（みずかけふどう）\n\n"
+                "黒門市場から西へ歩いて約9分。千日前のアーケードを抜けた先に、幅3mほどの石畳の路地が2本あります。割烹や串カツ、バーの小さな店が並び、夕方に提灯がともるといちばん雰囲気が出ます。\n\n"
+                "路地の奥の法善寺には、全身が苔でおおわれた水掛不動さん。柄杓で水をかけてお願いごとをします。お参りは無料で、いつでもできます。となりの「夫婦善哉（めおとぜんざい）」は、1人前が2つのお椀で出てくるぜんざいの店です。\n\n"
+                "昼は静かで5分もあれば歩けます。夜の道頓堀を見るつもりなら、帰りにもう一度通ってみてください。\n\nおすすめ訪問時間：12:50〜13:05",
+                "Hozenji Yokocho and Mizukake Fudo\n\n"
+                "About 9 minutes’ walk west of Kuromon Market. Beyond the Sennichimae arcade lie two stone-paved lanes barely 3 m wide, lined with small kappo restaurants, kushikatsu counters and bars. They look their best at dusk when the lanterns come on.\n\n"
+                "At the end stands Hozenji and its Fudo statue, covered head to foot in moss. Ladle water over it and make a wish. It is free and open at any hour. Next door, Meoto Zenzai serves one portion of sweet red-bean soup in two bowls.\n\n"
+                "By day it is quiet and takes five minutes. If you plan to see Dotonbori after dark, come through again on your way back.\n\nRecommended visit time: 12:50–13:05"),
+         gmaps=[gm("法善寺 水掛不動", "Hozenji (Mizukake Fudo)", 34.66790, 135.50240, "法善寺 水掛不動尊")],
+         links=[link("info", "法善寺横丁（大阪観光局）", "Hozenji Yokocho (Osaka Info)", "https://osaka-info.jp/spot/hozenji-yokocho/", "https://osaka-info.jp/en/spot/hozenji-yokocho/")],
+         info=info([row("fee", "お参りは無料", "Free"),
+                    row("hours", "路地とお不動さんはいつでも。お店は夕方からの所が多い", "The lanes and the Fudo are open at any hour; many restaurants open from the evening")],
+                   tip=T("公式サイトでは時間を確認できませんでした。路地は公道なので自由に歩けます。", "No official page gives hours; the lanes are public streets."), verified=False)),
+    dict(id="dotonbori", name=T("道頓堀・戎橋（グリコの看板）", "Dotonbori & Ebisubashi (the Glico sign)"), kind=T("繁華街・たこ焼き", "Entertainment district & takoyaki"),
+         blurb=T("戎橋の上からグリコの看板を。川沿いの遊歩道に下りると、人ごみを離れて看板と川を撮れます。",
+                 "The Glico runner from Ebisubashi bridge. Step down to the riverside walk to photograph the signs and canal away from the crush."),
+         lat=34.66905, lng=135.50125,
+         text=T("道頓堀（どうとんぼり）と戎橋（えびすばし）\n\n"
+                "法善寺横丁から北へ歩いて3分。戎橋の西側の欄干が、グリコの看板の定位置です。橋の上は一日じゅう人でいっぱいなので、橋のたもとの階段で川沿いの遊歩道「とんぼりリバーウォーク」に下りるのがおすすめ。水面の高さから、看板と行き交う船を落ち着いて撮れます。\n\n"
+                "看板は日が暮れてからが本番。昼に一度見て、帰りの夜にもう一度寄る人も多いです。川を20分ほどで回る「とんぼりリバークルーズ」は、11時から21時まで30分おきに出ています（当日、乗り場で便を決めて券をもらいます。夕方の便は早く売り切れます）。\n\n"
+                "たこ焼きは道頓堀の通りに何軒も並んでいて、どこも店先で買って立って食べます。行列の長さより、焼き上がりの回転が速い店を選ぶと待ちません。券売機か現金の店が多いです。"
+                "ぼくが食べたのは、なんばの地下街「NAMBAなんなん」にある会津屋（あいづや）の元祖たこ焼き。ソースをかけずに、だしの味で食べる小ぶりのたこ焼きです（写真は2023年6月）。戎橋から歩いて7分ほど、御堂筋線のなんば駅のすぐ近くなので、次の新世界へ行く前に寄れます。\n\n"
+                "写真の昼の道頓堀は2023年12月、夜は2024年8月。\n\nおすすめ訪問時間：13:05〜14:00",
+                "Dotonbori and Ebisubashi\n\n"
+                "Three minutes north of Hozenji Yokocho. The west railing of Ebisubashi bridge is the classic spot for the Glico sign. The bridge is packed all day, so take the steps at its foot down to the Tombori River Walk: from water level you can photograph the signs and the passing boats in peace.\n\n"
+                "The signs come into their own after dark, and many people look once by day and come back at night. The Tombori River Cruise, about 20 minutes on the canal, leaves every 30 minutes from 11:00 to 21:00 (pick a sailing at the pier on the day; evening boats sell out early).\n\n"
+                "Takoyaki stands line the main street; you buy at the front and eat standing. Choose a stall that turns batches over quickly rather than the longest queue. Most take a ticket machine or cash. "
+                "The one I ate was the original takoyaki at Aizuya, in the NAMBA Nannan underground mall: small, dashi-flavoured, eaten with no sauce (photo: June 2023). It is about 7 minutes’ walk from Ebisubashi, right by Namba Station on the Midosuji Line, so you can stop on the way to Shinsekai.\n\n"
+                "Daytime photos: December 2023; night: August 2024.\n\nRecommended visit time: 13:05–14:00"),
+         gmaps=[gm("戎橋", "Ebisubashi bridge", 34.66905, 135.50125, "戎橋 道頓堀"),
+                gm("会津屋 ナンバ店", "Aizuya (NAMBA Nannan)", 34.66540, 135.50130, "会津屋 ナンバ店 NAMBAなんなん")],
+         links=[link("official", "とんぼりリバークルーズ（一本松海運）", "Tombori River Cruise (operator, Japanese)", "https://www.ipponmatsu.co.jp/cruise/tombori.html"),
+                link("official", "会津屋 公式サイト（店舗）", "Aizuya (official, shops, Japanese)", "https://www.aiduya.com/shop/")],
+         info=info([row("hours", "とんぼりリバークルーズ 11:00〜21:00、毎時0分・30分発（運休する便あり）。料金は乗り場か公式サイトで確認を（要確認）",
+                        "Tombori River Cruise 11:00–21:00, on the hour and half-hour (some sailings cancelled). Check the fare at the pier or on the official site"),
+                    row("hours", "会津屋 ナンバ店 11:00〜22:00", "Aizuya Namba shop 11:00–22:00"),
+                    row("train", "次へ：なんば →（御堂筋線）→ 動物園前 5分・190円", "Next: Namba → (Midosuji Line) → Dobutsuen-mae, 5 min, ¥190")],
+                   tip=T("クルーズの時間は大阪周遊パスの公式サイト、会津屋の営業時間は公式サイトで確認しました。たこ焼きの値段は変わりやすいので書いていません。",
+                         "Cruise times from the Osaka Amazing Pass site; Aizuya’s hours from its official site. Takoyaki prices change often, so none are given."), cash=True)),
+    dict(id="shinsekai", name=T("新世界・通天閣", "Shinsekai & Tsutenkaku tower"), kind=T("下町・串カツ・展望台", "Old downtown, kushikatsu & tower"),
+         blurb=T("巨大なふぐやビリケンさんの看板が頭の上に並ぶ通りの先に、通天閣。串カツはここで。",
+                 "A street hung with giant blowfish and Billiken signs, with Tsutenkaku tower at the end. This is the place for kushikatsu."),
+         lat=34.65250, lng=135.50630,
+         text=T("新世界（しんせかい）と通天閣（つうてんかく）\n\n"
+                "動物園前駅の1番出口から、ジャンジャン横丁の細いアーケードを抜けて約8分。串カツ屋の派手な看板のあいだから通天閣が見える通りが、写真でよく見る場所です。\n\n"
+                "串カツは1本ずつ頼めます。カウンターに座ったら、まず飲み物と5〜6本。ソースは共用の入れ物に「二度づけ禁止」が決まりでしたが、今はボトルでかける店も増えました。足りないときは、付いてくるキャベツですくってかけます。昼のおやつなら1人1,500円前後で足ります。\n\n"
+                "通天閣の展望台は高さ約90m。このあとスカイビルかハルカスに上るなら、ここは下から見上げるだけで十分です。上るなら、土日は入場時間の券をもらってから待つことが多いので、先に通天閣へ行って券をもらい、待ち時間に串カツを食べるとむだがありません。\n\n"
+                "看板の写真は2023年12月29日のぼくの写真、通天閣の写真はネットから借りたものです。\n\nおすすめ訪問時間：14:15〜15:15",
+                "Shinsekai and Tsutenkaku\n\n"
+                "About 8 minutes from exit 1 of Dobutsuen-mae Station, through the narrow Janjan Yokocho arcade. The street where the tower rises between loud kushikatsu signs is the view you know from photos.\n\n"
+                "Kushikatsu is ordered by the skewer. Sit at the counter and start with a drink and five or six. The old rule was one shared tub of sauce and “no double dipping”; many shops now give you a bottle instead. If you need more sauce, scoop it with the cabbage that comes alongside. For an afternoon snack about ¥1,500 a head is enough.\n\n"
+                "The tower’s deck is about 90 m up. If you are going up the Sky Building or Harukas later, looking up at it from the street is enough. If you do go up, at weekends you usually collect a timed entry slip first, so get the slip, then eat kushikatsu while you wait.\n\n"
+                "The signboard photo is mine (29 December 2023); the tower photos are borrowed from the web.\n\nRecommended visit time: 14:15–15:15"),
+         gmaps=[gm("通天閣", "Tsutenkaku", 34.65250, 135.50630, "通天閣"),
+                gm("動物園前駅", "Dobutsuen-mae Station", 34.64900, 135.50460, "動物園前駅")],
+         links=[link("official", "通天閣 公式サイト", "Tsutenkaku (official)", "https://www.tsutenkaku.co.jp/")],
+         info=info([row("hours", "通天閣 9:00〜21:45（最終入場21:15）。年末年始などは時間が変わります", "Tsutenkaku 9:00–21:45 (last entry 21:15); hours change around New Year"),
+                    row("fee", "一般展望台 大人1,500円（12月30日〜1月3日は1,800円）。屋外の展望台やすべり台は別料金", "General observatory ¥1,500 (¥1,800 from 30 Dec to 3 Jan). The open-air deck and the slide cost extra"),
+                    row("train", "次へ（梅田へ）：動物園前 →（御堂筋線）→ 梅田 13分・240円", "Next (to Umeda): Dobutsuen-mae → (Midosuji Line) → Umeda, 13 min, ¥240")],
+                   tip=T("時間と料金は通天閣の公式サイトで確認しました。串カツの値段は店によって違います。", "Hours and fee from the official Tsutenkaku site. Kushikatsu prices vary by shop."))),
+    dict(id="shitennoji", name=T("四天王寺", "Shitennoji temple"), kind=T("お寺（寄り道）", "Temple (detour)"),
+         blurb=T("聖徳太子が593年に建てたと伝わるお寺。五重塔と金堂がまっすぐ一列に並びます。境内は無料。",
+                 "Said to have been founded by Prince Shotoku in 593. Pagoda and main hall stand in one straight line. The grounds are free."),
+         lat=34.65370, lng=135.51640,
+         text=T("四天王寺（してんのうじ）\n\n"
+                "通天閣から東へ歩いて約14分。門は24時間開いていて、境内を歩くだけなら無料です。南から中門・五重塔・金堂・講堂が一直線に並ぶ「四天王寺式」の伽藍は、有料の中心伽藍の中に入ると見られます。建物は戦後の再建ですが、並び方は創建のころのままです。\n\n"
+                "毎月21日（お大師さん）と22日（お太子さん）は縁日で、境内に骨董や古着、食べ物の露店が出ます。この2日は中心伽藍も無料です。日が合えば、こちらを優先する価値があります。\n\n"
+                "お堂は16時（4〜9月は16時30分）に閉まるので、寄るなら新世界のあとすぐに。帰りは四天王寺前夕陽ケ丘駅から谷町線で天王寺へ1駅、歩いても約15分です。\n\nおすすめ訪問時間：寄るなら約45分（15:15〜16:00ごろ）",
+                "Shitennoji\n\n"
+                "About 14 minutes’ walk east of Tsutenkaku. The gates never close and walking the grounds is free. The “Shitennoji layout”, with middle gate, five-storey pagoda, main hall and lecture hall in one line from the south, is seen inside the paid central precinct. The buildings are post-war, but the plan is that of the founding.\n\n"
+                "On the 21st and 22nd of every month a temple market fills the grounds with antiques, old clothes and food stalls, and the central precinct is free on those two days. If your date matches, it is worth giving this priority.\n\n"
+                "The halls close at 16:00 (16:30 from April to September), so come straight after Shinsekai. Afterwards ride one stop on the Tanimachi Line from Shitennoji-mae Yuhigaoka to Tennoji, or walk about 15 minutes.\n\nRecommended visit time: about 45 minutes if you stop (around 15:15–16:00)"),
+         gmaps=[gm("四天王寺", "Shitennoji", 34.65370, 135.51640, "四天王寺 大阪")],
+         links=[link("official", "四天王寺 公式サイト（拝観案内）", "Shitennoji (official, admission, Japanese)", "https://www.shitennoji.or.jp/admission.html")],
+         info=info([row("hours", "お堂・中心伽藍・庭園 8:30〜16:30（10〜3月は16:00まで）。毎月21日は8:00から", "Halls, central precinct and garden 8:30–16:30 (to 16:00 October–March); from 8:00 on the 21st"),
+                    row("fee", "境内は無料。中心伽藍 500円、庭園 300円、宝物館 500円（毎月21日・22日は中心伽藍が無料）", "Grounds free. Central precinct ¥500, garden ¥300, treasure house ¥500 (central precinct free on the 21st and 22nd)"),
+                    row("closed", "庭園は毎月1〜10日などに休園日あり", "The garden closes on some days, including the 1st–10th of most months"),
+                    row("train", "四天王寺前夕陽ケ丘 →（谷町線）→ 天王寺 2分・190円", "Shitennoji-mae Yuhigaoka → (Tanimachi Line) → Tennoji, 2 min, ¥190")],
+                   tip=T("時間と料金は四天王寺の公式サイト（拝観ご案内）で確認しました。", "Hours and fees from the official Shitennoji site."))),
+    dict(id="harukas", name=T("あべのハルカス（展望台 ハルカス300）", "Abeno Harukas (Harukas 300 observatory)"), kind=T("展望台", "Observation deck"),
+         blurb=T("高さ300mのビルの58〜60階。ガラス張りの回廊を一周して、大阪平野を端から端まで見下ろします。",
+                 "Floors 58–60 of a 300 m tower. Walk the glass-walled gallery for a view right across the Osaka plain."),
+         lat=34.64590, lng=135.51390,
+         text=T("あべのハルカスと展望台「ハルカス300」\n\n"
+                "天王寺駅の真上に建つ、高さ300mのビルです。通天閣からは天王寺公園の芝生広場「てんしば」を抜けて歩いて約18分、御堂筋線なら動物園前から1駅。\n\n"
+                "展望台へは、まず「ハルカスシャトルエレベーター」で16階の切符売り場へ。そこから専用エレベーターで60階まで上ります。60階は四方がガラスの回廊で、足元まで窓。晴れた日は、北に梅田のビル、西に大阪湾と明石海峡大橋、東に生駒山まで見えます。\n\n"
+                "高さはこちらが大阪でいちばん。ただし中はガラス越しで、夜は窓に光が映りこみます。夕日と夜景を外の風で感じたいなら梅田スカイビル、高さと昼の遠くの眺めならハルカス、と覚えてください。両方上る必要はありません。\n\n"
+                "最後の写真は2023年2月の朝、ビルの中ほどの階のカフェの窓からぼくが撮ったもの。ほかはネットから借りた写真です。\n\nおすすめ訪問時間：寄るなら約50分（15:35〜16:25ごろ）",
+                "Abeno Harukas and the Harukas 300 observatory\n\n"
+                "A 300 m tower standing directly over Tennoji Station. From Tsutenkaku it is about 18 minutes on foot across Tenshiba, the lawn of Tennoji Park, or one stop on the Midosuji Line from Dobutsuen-mae.\n\n"
+                "For the observatory, first take the Harukas Shuttle lift to the ticket counter on the 16th floor, then a dedicated lift to the 60th. The 60th floor is a gallery glazed on all four sides, with windows down to your feet. On clear days you see the Umeda towers to the north, Osaka Bay and the Akashi Kaikyo Bridge to the west, and Mt. Ikoma to the east.\n\n"
+                "This is the highest view in Osaka. But you are behind glass, and at night the windows pick up reflections. Remember it like this: the Umeda Sky Building for sunset and night in the open air, Harukas for height and long daytime views. You do not need both.\n\n"
+                "The last photo is mine, taken one morning in February 2023 from a café window partway up the building. The others are borrowed from the web.\n\nRecommended visit time: about 50 minutes if you stop (around 15:35–16:25)"),
+         gmaps=[gm("あべのハルカス", "Abeno Harukas", 34.64590, 135.51390, "あべのハルカス")],
+         links=[link("official", "ハルカス300 公式サイト", "Harukas 300 (official)", "https://www.abenoharukas-300.jp/observatory/", "https://www.abenoharukas-300.jp/en/observatory/")],
+         info=info([row("hours", "9:00〜22:00（最終入場21:30）", "9:00–22:00 (last entry 21:30)"),
+                    row("fee", "当日券 大人2,200円。前の日までにWEBで買うと1,980円。エンジョイエコカードを見せると当日料金から10%引き", "Same-day ticket ¥2,200; ¥1,980 if bought online by the day before. 10% off the same-day price with an Enjoy Eco Card"),
+                    row("train", "次へ：天王寺 →（御堂筋線）→ 梅田 15分・290円", "Next: Tennoji → (Midosuji Line) → Umeda, 15 min, ¥290")],
+                   tip=T("時間と料金はハルカス300の公式サイトで確認しました。大阪周遊パスの無料施設には入っていません。", "Hours and fees from the official Harukas 300 site. It is not among the free facilities of the Osaka Amazing Pass."))),
+    dict(id="sumiyoshi", name=T("住吉大社", "Sumiyoshi Taisha shrine"), kind=T("神社（寄り道）", "Shrine (detour)"),
+         blurb=T("朱色の太鼓橋を渡ってお参りする、全国の住吉神社の総本社。天王寺から路面電車で17分。",
+                 "Head shrine of all the Sumiyoshi shrines, reached over a steep vermilion bridge. 17 minutes by tram from Tennoji."),
+         lat=34.61260, lng=135.49300,
+         text=T("住吉大社（すみよしたいしゃ）\n\n"
+                "大阪の人が「すみよっさん」と呼ぶ、初詣でいちばんにぎわう神社です。池にかかる反橋（そりはし・太鼓橋）は、渡るだけでおはらいになるといわれる急な橋。その奥に、国宝の本殿が4つ、縦に3つと横に1つという珍しい並びで建っています。屋根がまっすぐな「住吉造」は、神社の建物でいちばん古い形のひとつです。\n\n"
+                "行きは、あべのハルカスの前の天王寺駅前から阪堺電車（はんかいでんしゃ）で。道路の上をゴトゴト走る路面電車で、住吉鳥居前まで17分・240円。降りたら目の前が鳥居です。帰りは南海の住吉大社駅（歩いて3分）からなんばへ10分・240円。\n\n"
+                "外の門は16時、本殿のまわりは17時に閉まります。往復を入れて1時間半みてください。入れるなら、新世界かハルカスのどちらかを短くします。\n\n"
+                "阪堺電車の写真は2023年8月に天王寺駅前でぼくが撮ったもの。神社の写真はネットから借りました。\n\nおすすめ訪問時間：寄るなら往復を入れて約1時間半（16時までに着く）",
+                "Sumiyoshi Taisha\n\n"
+                "“Sumiyossan” to people in Osaka, and the city’s busiest shrine at New Year. The steep arched Sorihashi bridge over the pond is said to purify you just by crossing. Beyond stand four main halls, all National Treasures, in an unusual formation of three in a row and one beside. Their straight-roofed Sumiyoshi-zukuri style is among the oldest forms of shrine building.\n\n"
+                "Go by Hankai tram from Tennoji-ekimae, in front of Abeno Harukas: a streetcar rattling down the road, 17 minutes and ¥240 to Sumiyoshi-toriimae, which is right at the torii. Come back from Nankai’s Sumiyoshi-taisha Station (3 minutes’ walk) to Namba, 10 minutes, ¥240.\n\n"
+                "The outer gates close at 16:00 and the inner precinct at 17:00. Allow an hour and a half including the ride, and shorten Shinsekai or Harukas to fit it in.\n\n"
+                "The tram photos are mine, taken at Tennoji-ekimae in August 2023. The shrine photos are borrowed from the web.\n\nRecommended visit time: about 1 h 30 min including the ride (arrive before 16:00)"),
+         gmaps=[gm("住吉大社", "Sumiyoshi Taisha", 34.61260, 135.49300, "住吉大社"),
+                gm("阪堺電車 天王寺駅前", "Hankai tram, Tennoji-ekimae", 34.64600, 135.51290, "阪堺電車 天王寺駅前停留場")],
+         links=[link("official", "住吉大社 公式サイト", "Sumiyoshi Taisha (official)", "https://www.sumiyoshitaisha.net/"),
+                link("timetable", "阪堺電車 公式サイト", "Hankai Tramway (official, Japanese)", "http://www.hankai.co.jp/")],
+         info=info([row("hours", "開門 6:00（10〜3月は6:30）。外の門は16:00、本殿のまわり（御垣内）は17:00に閉まります", "Opens 6:00 (6:30 October–March). Outer gates close at 16:00, the inner precinct at 17:00"),
+                    row("fee", "お参りは無料", "Free"),
+                    row("train", "天王寺駅前 →（阪堺電車 上町線）→ 住吉鳥居前 17分・240円", "Tennoji-ekimae → (Hankai Uemachi Line) → Sumiyoshi-toriimae, 17 min, ¥240"),
+                    row("train", "帰り：住吉大社 →（南海）→ なんば 10分・240円", "Back: Sumiyoshi-taisha → (Nankai) → Namba, 10 min, ¥240")],
+                   tip=T("門の時間と駅からの道は住吉大社の公式サイト、電車は乗換案内で確認しました。阪堺電車は大阪周遊パスやエンジョイエコカードでは乗れません（1日乗り放題の「てくてくきっぷ」は700円）。",
+                         "Gate hours and access from the shrine’s official site; trains from a route planner. The Hankai tram is not covered by the Enjoy Eco Card (its own 1-day ticket is ¥700)."))),
+    dict(id="kaiyukan", name=T("海遊館", "Osaka Aquarium Kaiyukan"), kind=T("水族館（半日コース）", "Aquarium (half a day)"),
+         blurb=T("ジンベエザメが泳ぐ大きな水槽を、8階から螺旋に下りながら見ます。町の西の端なので、行くなら半日つぶれます。",
+                 "Spiral down from the 8th floor around a huge tank with whale sharks. It is at the far west of the city: going costs half a day."),
+         caution=T("ルートから遠く、往復と見学で約4時間かかります", "Far off the route: about 4 hours including travel"),
+         lat=34.65450, lng=135.42900,
+         text=T("海遊館（かいゆうかん）\n\n"
+                "正直に書くと、このルートに足すには遠い場所です。梅田から地下鉄で約26分、中の見学に2時間半ほど。往復を入れると4時間はかかるので、入れる日は大阪城か、新世界〜ハルカスのどちらかをやめてください。雨の日や、子ども連れの日の主役に向いています。\n\n"
+                "見どころは、深さ9mの「太平洋」水槽。8階から始まって、同じ水槽のまわりを螺旋に下りていくので、ジンベエザメやエイを水面近くからも底からも見られます。\n\n"
+                "料金は日によって変わる仕組みで、入る時間も決まります。行く日が決まったら、公式サイトで日時を指定するeチケットを買っておくと、窓口で待たずに入れます。当日に窓口で買うと、希望の時間に入れないことがあります。\n\n"
+                "行き方は中央線の大阪港駅（1番出口）から歩いて約5分。写真はネットから借りたものです。\n\nおすすめ訪問時間：行くなら見学に約2時間半（往復を入れて約4時間）",
+                "Osaka Aquarium Kaiyukan\n\n"
+                "To be honest, this is too far to simply add to the route. It is about 26 minutes by subway from Umeda and a visit takes around two and a half hours: four hours with travel. On a day you include it, drop either the castle or the Shinsekai–Harukas stretch. It suits a rainy day, or a day built around children.\n\n"
+                "The centrepiece is the 9 m deep Pacific Ocean tank. You start on the 8th floor and spiral down around the same tank, so you see the whale sharks and rays from near the surface and from the bottom.\n\n"
+                "Admission varies by date and entry is by time slot. Once your day is fixed, buy a dated, timed e-ticket on the official site and you walk straight in; at the window on the day you may not get the time you want.\n\n"
+                "Access: about 5 minutes’ walk from exit 1 of Osakako Station on the Chuo Line. The photos are borrowed from the web.\n\nRecommended visit time: about 2 h 30 min inside (about 4 hours with travel)"),
+         gmaps=[gm("海遊館", "Kaiyukan", 34.65450, 135.42900, "海遊館")],
+         links=[link("official", "海遊館 公式サイト（入館料）", "Kaiyukan (official, tickets)", "https://www.kaiyukan.com/info/ticket/kaiyukan/", "https://www.kaiyukan.com/language/eng/")],
+         info=info([row("fee", "日によって変わります（価格変動制）。公式サイトのカレンダーで確認を（要確認）", "Varies by date (dynamic pricing). Check the calendar on the official site"),
+                    row("hours", "日によって変わります。公式サイトで確認を（要確認）", "Varies by date. Check the official site"),
+                    row("train", "梅田 →（御堂筋線・本町で中央線に乗り換え）→ 大阪港 約26分・290円。駅から歩いて約5分", "Umeda → (Midosuji Line, change at Hommachi to the Chuo Line) → Osakako, about 26 min, ¥290; then 5 minutes’ walk")],
+                   tip=T("料金の仕組みと駅からの時間は海遊館の公式サイト、電車は乗換案内で確認しました。その日の料金と時間は公式サイトでしか分かりません。大阪周遊パスの無料施設には入っていません。",
+                         "Pricing system and access from the official Kaiyukan site; trains from a route planner. The day’s price and hours are only on the official site. It is not among the free facilities of the Osaka Amazing Pass."), verified=False)),
+    dict(id="nakanoshima", name=T("中之島・中央公会堂と淀屋橋の無料展望テラス", "Nakanoshima: Central Public Hall & the free Yodoyabashi terrace"), kind=T("近代建築・夜景（寄り道）", "Architecture & night view (detour)"),
+         blurb=T("川にはさまれた中之島の赤レンガの公会堂。すぐ横の淀屋橋のビルの30階には、無料で上れる展望テラスがあります。",
+                 "The red-brick public hall on Nakanoshima island, and beside it a free terrace on the 30th floor of a new tower at Yodoyabashi."),
+         lat=34.69330, lng=135.50390,
+         text=T("中之島（なかのしま）の大阪市中央公会堂と、淀屋橋スカイテラス\n\n"
+                "淀屋橋駅から東へ歩いて約5分。堂島川と土佐堀川にはさまれた細長い島に、1918年にできた赤レンガの公会堂が建っています。国の重要文化財で、正面のアーチと銅板の屋根は、夕方の斜めの光でいちばんきれいに見えます。となりは東洋陶磁美術館、その先はバラ園です。\n\n"
+                "もうひとつは、淀屋橋駅の真上のビル「淀屋橋ステーションワン」の30階にある「淀屋橋スカイテラス」。2025年9月から誰でも無料で入れるようになった展望スペースで、中之島と梅田のビル群を見下ろせます。ぼくは夜に上りました（写真は2025年12月と2026年4月）。有料の展望台に行かない日は、ここで夜景を見て帰るのがおすすめです。\n\n"
+                "京阪で帰るなら、淀屋橋は始発駅。特急に並べば座って京都まで帰れます（祇園四条まで49分・490円）。梅田へは御堂筋線で1駅、歩いても約18分です。\n\nおすすめ訪問時間：寄るなら約40分（夕方〜夜）",
+                "Osaka City Central Public Hall on Nakanoshima, and the Yodoyabashi Sky Terrace\n\n"
+                "About 5 minutes’ walk east of Yodoyabashi Station. On a slim island between the Dojima and Tosabori rivers stands the red-brick public hall of 1918, an Important Cultural Property. Its arch and copper roofs look best in low evening light. Next door is the Museum of Oriental Ceramics, and beyond it a rose garden.\n\n"
+                "The other stop is the Yodoyabashi Sky Terrace, on the 30th floor of Yodoyabashi Station One, the tower right above the station. Opened to everyone free of charge in September 2025, it looks down on Nakanoshima and the Umeda skyline. I went up at night (photos: December 2025 and April 2026). On a day without a paid observatory, see the night view here before heading home.\n\n"
+                "If you return by Keihan, Yodoyabashi is the first station: queue for a limited express and you get a seat all the way to Kyoto (49 min to Gion-Shijo, ¥490). Umeda is one stop on the Midosuji Line, or about 18 minutes on foot.\n\nRecommended visit time: about 40 minutes if you stop (evening)"),
+         gmaps=[gm("大阪市中央公会堂", "Osaka City Central Public Hall", 34.69330, 135.50390, "大阪市中央公会堂"),
+                gm("淀屋橋ステーションワン", "Yodoyabashi Station One", 34.69230, 135.50140, "淀屋橋ステーションワン")],
+         links=[link("official", "大阪市中央公会堂 公式サイト", "Osaka City Central Public Hall (official)", "https://osaka-chuokokaido.com/"),
+                link("info", "淀屋橋スカイテラスの一般公開（京阪ホールディングスほかの発表）", "Opening of the Yodoyabashi Sky Terrace (press release, Japanese)", "https://newscast.jp/news/4690043")],
+         info=info([row("fee", "公会堂の外観は自由に見られます。淀屋橋スカイテラスは入場無料", "The hall’s exterior is free to see. The Yodoyabashi Sky Terrace is free"),
+                    row("hours", "スカイテラスの開く時間は公式の資料で確認できませんでした（10:00〜23:00と紹介されています。要確認）。休みはビルの休館日と同じ", "Terrace hours could not be confirmed in an official source (reported as 10:00–23:00; please check). Closed when the building is closed"),
+                    row("hours", "公会堂の中の見学は公式サイトで確認を（要確認）", "For visiting inside the hall, check its official site"),
+                    row("train", "帰り：淀屋橋18:37発（京阪特急・始発）→ 祇園四条19:26着・490円。最終の特急は23:33発", "Return: Yodoyabashi 18:37 (Keihan limited express, starts here) → Gion-Shijo 19:26, ¥490. The last limited express leaves at 23:33")],
+                   tip=T("スカイテラスが無料で一般公開されていることは、京阪ホールディングスと中央日本土地建物の発表（2025年）で確認しました。電車は乗換案内です。",
+                         "That the terrace is open to the public free of charge is from the 2025 press release by Keihan Holdings and Chuo-Nittochi. Trains from a route planner."), verified=False)),
+    dict(id="umekita", name=T("うめきた公園（グラングリーン大阪）", "Umekita Park (Grand Green Osaka)"), kind=T("公園", "Park"),
+         blurb=T("大阪駅の北口を出てすぐの、新しい芝生の公園。芝生の向こうに、これから上るスカイビルが見えます。",
+                 "A new lawn park straight out of Osaka Station’s north side, with the Sky Building you are about to climb rising beyond the grass."),
+         lat=34.70300, lng=135.49310,
+         text=T("うめきた公園（グラングリーン大阪）\n\n"
+                "貨物駅の跡地に2024年9月にできた、駅前とは思えない広さの公園です。梅田駅・大阪駅から梅田スカイビルへは、ここを通り抜けるのがいちばん気持ちのいい道。大阪駅の「うめきた地下口」か、グランフロント大阪の北側から入れます。\n\n"
+                "大きな屋根のイベント広場の下は、雨の日でも座れる休憩場所。芝生に出ると、ビルにかこまれた空の真ん中に、2本の塔を上でつないだスカイビルが見えます。芝生に座って日の入りの時間を待つのにもちょうどいい所です。\n\n"
+                "入るのは無料。写真は2025年6月の昼と、2026年9月の夜。\n\nおすすめ訪問時間：15:50〜16:10",
+                "Umekita Park (Grand Green Osaka)\n\n"
+                "Opened in September 2024 on a former freight yard, and far bigger than you expect in front of a main station. It is the pleasantest way to walk from Umeda or Osaka Station to the Umeda Sky Building. Enter from the station’s Umekita underground gate or from the north side of Grand Front Osaka.\n\n"
+                "Under the great roof of the event plaza you can sit down even in the rain. Out on the lawn, the Sky Building, two towers joined at the top, stands in the middle of the sky between the high-rises. It is a good place to sit and wait for sunset.\n\n"
+                "Free to enter. Photos: daytime in June 2025, night in September 2026.\n\nRecommended visit time: 15:50–16:10"),
+         gmaps=[gm("うめきた公園", "Umekita Park", 34.70300, 135.49310, "うめきた公園 グラングリーン大阪")],
+         links=[link("official", "グラングリーン大阪 公式サイト", "Grand Green Osaka (official)", "https://umekita.com/")],
+         info=info([row("fee", "無料", "Free"),
+                    row("train", "動物園前 →（御堂筋線）→ 梅田 13分・240円。なんばからは8分・240円", "Dobutsuen-mae → (Midosuji Line) → Umeda, 13 min, ¥240; from Namba 8 min, ¥240")],
+                   tip=T("電車は乗換案内で確認しました。公園の細かい決まりは公式サイトにあります。", "Trains from a route planner. Park rules are on the official site."))),
+    dict(id="skybldg", name=T("梅田スカイビル 空中庭園展望台", "Umeda Sky Building: Kuchu Teien Observatory"), kind=T("展望台・夕日", "Observation deck & sunset"),
+         blurb=T("屋上は屋根も窓もない吹きさらし。西の淀川に沈む夕日から夜景まで、ここで一日を終えます。",
+                 "The rooftop has no roof and no glass. End the day here, from the sun setting over the Yodo river into the night view."),
+         lat=34.70530, lng=135.49060,
+         text=T("梅田スカイビルの空中庭園展望台（くうちゅうていえんてんぼうだい）\n\n"
+                "2本のビルを上でつないだ、高さ173mの展望台です。35階までエレベーターで上り、そこから宙に浮いたガラスのエスカレーターで39階へ。さらに階段を上ると、屋上の「スカイ・ウォーク」に出ます。ここは窓のない外の回廊で、風を受けながら360度を一周できます。\n\n"
+                "夕日を見るならここ、というのがこの地図のおすすめです。理由は3つ。屋上が外なのでガラスの映りこみがないこと。西側が淀川と大阪湾の方向に開けていて、夕日がビルにかくれないこと。そして梅田なので、見終わったらそのまま京都行きの電車に乗れることです。\n\n"
+                "日の入りの30〜40分前に着くようにしてください。目安は、11〜1月が16時50分〜17時10分ごろ、春と秋が18時前後、6〜7月が19時10分ごろ。夏は道頓堀や新世界でゆっくりして、時間を合わせます。屋上は風が強く、冬はかなり冷えます。上着を1枚。\n\n"
+                "大阪周遊パスで無料になるのは15時までの入場だけです（15時からは10%引き）。夕日の時間は対象外なので注意してください。\n\n"
+                "帰りは、阪急の大阪梅田駅まで歩いて約9分、JR大阪駅まで約7分。阪急の特急で京都河原町まで43分・410円、JRの新快速で京都駅まで29分・580円です。\n\n"
+                "展望台の写真はネットから借りたものです。\n\nおすすめ訪問時間：日の入りの30〜40分前から（11月下旬なら16:15〜17:30）",
+                "Kuchu Teien Observatory, Umeda Sky Building\n\n"
+                "Two towers joined at the top, with a deck 173 m up. Ride the lift to the 35th floor, then a glass escalator that hangs in mid-air to the 39th. One more flight of stairs brings you out onto the rooftop Sky Walk: an open-air ring with no windows, where you walk the full 360 degrees in the wind.\n\n"
+                "For sunset, this map says come here, for three reasons. The roof is outdoors, so there are no reflections in glass. The west side is open towards the Yodo river and Osaka Bay, so no building hides the sun. And it is in Umeda, so afterwards you step straight onto a train for Kyoto.\n\n"
+                "Arrive 30–40 minutes before sunset: roughly 16:50–17:10 from November to January, around 18:00 in spring and autumn, about 19:10 in June and July. In summer, take your time in Dotonbori and Shinsekai to match. The roof is windy and cold in winter; bring an extra layer.\n\n"
+                "With the Osaka Amazing Pass, entry is free only until 15:00 (10% off after that), so sunset is not covered.\n\n"
+                "Going home: Hankyu Osaka-Umeda Station is about 9 minutes’ walk, JR Osaka Station about 7. The Hankyu limited express takes 43 min to Kyoto-Kawaramachi (¥410); the JR Special Rapid 29 min to Kyoto Station (¥580).\n\n"
+                "The observatory photos are borrowed from the web.\n\nRecommended visit time: from 30–40 minutes before sunset (16:15–17:30 in late November)"),
+         gmaps=[gm("梅田スカイビル", "Umeda Sky Building", 34.70530, 135.49060, "梅田スカイビル 空中庭園展望台"),
+                gm("阪急 大阪梅田駅", "Hankyu Osaka-Umeda Station", 34.70540, 135.49850, "阪急 大阪梅田駅")],
+         links=[link("official", "空中庭園展望台 公式サイト", "Kuchu Teien Observatory (official)", "https://www.skybldg.co.jp/observatory/", "https://www.skybldg.co.jp/en/"), PLANNER],
+         info=info([row("hours", "9:30〜22:30（最終入場22:00）。特別営業の日は変わります", "9:30–22:30 (last entry 22:00); different on special days"),
+                    row("fee", "大人2,000円。エンジョイエコカードを見せると10%引き", "¥2,000. 10% off with an Enjoy Eco Card"),
+                    row("train", "帰り（阪急）：大阪梅田18:30発（特急）→ 京都河原町19:13着・410円", "Return (Hankyu): Osaka-Umeda 18:30 (limited express) → Kyoto-Kawaramachi 19:13, ¥410"),
+                    row("train", "帰り（JR）：大阪18:30発（新快速）→ 京都18:59着・580円。どちらも23時半ごろまで走っています", "Return (JR): Osaka 18:30 (Special Rapid) → Kyoto 18:59, ¥580. Both run until about 23:30")],
+                   tip=T("時間と駅からの道は空中庭園展望台の公式サイト、料金と周遊パスの条件は大阪周遊パスの公式サイト、電車は乗換案内で確認しました。日の入りの時刻はおよその目安です。",
+                         "Hours and access from the official observatory site; fee and pass conditions from the Osaka Amazing Pass site; trains from a route planner. Sunset times are approximate."))),
+]
+
+spots = []
+for i, s in enumerate(S, 1):
+    s = dict(s)
+    out = {"no": i, "id": s.pop("id")}
+    out.update(s)
+    out["photos"] = photos(out["id"])
+    out.setdefault("notices", [])
+    spots.append(out)
+
+NO = {s["id"]: s["no"] for s in spots}
+H = lambda spot, rule, ja, en: {"spot": NO[spot], "rule": rule, "text": T(ja, en)}
+N = lambda *ids: [NO[k] for k in ids]
+SEC = lambda a, b, aj, ae, tj, te: {"first": NO[a], "last": NO[b], "area": T(aj, ae), "title": T(tj, te)}
+data = {
+    "id": "osaka",
+    "_note": "京都から日帰り 大阪のルート（osaka/ のページ専用。形は eizan-line.json と同じ）。大阪城→（大阪天満宮）→黒門市場→法善寺横丁→道頓堀→新世界・通天閣→（四天王寺・あべのハルカス・住吉大社・海遊館・中之島）→うめきた公園→梅田スカイビル。"
+             "かっこの中は寄り道で、最初は選ばれていない（plan.defaultPicks が基本コース）。"
+             "自分の写真は Toshi の写真ライブラリから（大阪城 2016年2月・2025年4月・2026年4月、黒門市場と道頓堀 2023年12月29日・2024年8月、会津屋のたこ焼き 2023年6月、中之島 2024年7月・2025年5月、淀屋橋スカイテラス 2025年12月・2026年4月、うめきた公園 2025年6月・2026年9月、阪堺電車 2023年8月、天神橋筋 2024年7月の天神祭）。"
+             "人の顔が大きく写った部分は切り取ってある。法善寺横丁・通天閣・四天王寺・ハルカス300・住吉大社・海遊館・大阪天満宮・空中庭園展望台は Wikimedia Commons の写真（クレジット表示）。"
+             "info.checked は事実情報を確認した日（各施設の公式サイト、大阪周遊パス・Osaka Metro の公式サイト、電車は乗換案内）。verified: false は公式サイトで確認できなかった項目があるスポット。このファイルは scripts/build_osaka_data.py で作る。",
+    "sections": [SEC("castle", "tenmangu", "大阪城・天満", "Osaka Castle & Temma", "朝は大阪城から", "Morning at the castle"),
+                 SEC("kuromon", "dotonbori", "ミナミ", "Minami", "黒門市場と道頓堀で食べ歩き", "Eating through Kuromon and Dotonbori"),
+                 SEC("shinsekai", "sumiyoshi", "新世界・天王寺", "Shinsekai & Tennoji", "通天閣の下で串カツ", "Kushikatsu under Tsutenkaku"),
+                 SEC("kaiyukan", "kaiyukan", "ベイエリア", "Bay area", "行くなら半日", "Half a day if you go"),
+                 SEC("nakanoshima", "skybldg", "中之島・梅田", "Nakanoshima & Umeda", "夕日と夜景で締めくくり", "Sunset and the night view")],
+    "plan": {"_note": "「選んで回る」の設定。全部が自分で選ぶ場所。defaultMode: pick で最初から「選んで回る」、defaultPicks（基本コース）は最初から選ばれている（sync_osaka.py の差分）。",
+             "defaultMode": "pick",
+             "picks": [s["no"] for s in spots],
+             "defaultPicks": N("castle", "kuromon", "hozenji", "dotonbori", "shinsekai", "umekita", "skybldg"),
+             "auto": {},
+             "hints": [
+                 H("kuromon", {"any": N("tenmangu")},
+                   "大阪天満宮からは、南森町駅から堺筋線で日本橋へ乗り換えなし（7分・240円）。", "From Osaka Temmangu, the Sakaisuji Line runs direct from Minami-morimachi to Nippombashi (7 min, ¥240)."),
+                 H("kuromon", {"any": N("kuromon"), "none": N("castle", "tenmangu")},
+                   "大阪城に寄らない日は、京阪の特急を北浜で降りて堺筋線で日本橋へ（2駅）。阪急・JRなら梅田から御堂筋線でなんばへ（8分・240円）、歩いて約10分です。",
+                   "Skipping the castle? Get off the Keihan limited express at Kitahama and ride the Sakaisuji Line two stops to Nippombashi. From Hankyu or JR, take the Midosuji Line from Umeda to Namba (8 min, ¥240) and walk about 10 minutes."),
+                 H("harukas", {"any": N("harukas"), "andAny": N("skybldg")},
+                   "展望台は1つで十分です。夕日と夜景ならスカイビル、高さと昼の眺めならハルカス。両方上ると4,200円かかります。",
+                   "One observatory is enough: the Sky Building for sunset and night, Harukas for height and daytime views. Both together cost ¥4,200."),
+                 H("skybldg", {"any": N("harukas", "shitennoji", "sumiyoshi")},
+                   "天王寺からは御堂筋線で梅田へ15分・290円。寄り道を足した日は、日の入りの時刻から逆算して新世界を早めに出てください。",
+                   "From Tennoji the Midosuji Line reaches Umeda in 15 min (¥290). With detours added, count back from sunset and leave Shinsekai early."),
+                 H("nakanoshima", {"any": N("nakanoshima"), "none": N("skybldg")},
+                   "スカイビルに上らない日は、ここの無料テラスで夜景を見て、淀屋橋から京阪の特急で帰るのがいちばん楽です。",
+                   "On a day without the Sky Building, see the night view from the free terrace here and go home by Keihan limited express from Yodoyabashi."),
+                 H("kaiyukan", {"any": N("kaiyukan"), "andAny": N("castle", "shinsekai", "harukas")},
+                   "海遊館を入れると約4時間かかります。大阪城か、新世界〜ハルカスのどちらかを外してください。",
+                   "Kaiyukan takes about 4 hours. Drop either the castle or the Shinsekai–Harukas stretch."),
+             ]},
+    "photoBase": "../images/osaka/",
+    "spots": spots,
+}
+json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("wrote", OUT, [(s["no"], s["id"], len(s["photos"])) for s in spots])

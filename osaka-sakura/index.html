@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>大阪 造幣局の桜の通り抜け Osaka Sakura MAP</title>
+<meta name="description" content="4月中旬の1週間だけ開く造幣局の桜の通り抜けと、大川沿いの毛馬桜之宮公園、大阪城 西の丸庭園の桜を歩く春のルートマップ。A mid-April walk in Osaka: the Japan Mint cherry-blossom walk, the Okawa riverside and Osaka Castle.">
+<meta name="theme-color" content="#F2F0EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
+<link rel="stylesheet" href="css/style.css?v=119">
+<meta name="robots" content="noimageindex">
+<script src="../assets/protect.js?v=1" defer></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+</svg>
+
+<div id="map" aria-label="Map"></div>
+
+<header class="titlecard">
+  <a class="tc-home" href="../" data-t="allMaps">← マップ一覧</a>
+  <p class="t-main" id="t-main">造幣局の桜の通り抜け</p>
+  <p class="t-alt" id="t-alt">Osaka Mint cherry walk</p>
+  <p class="t-sub">京都から日帰り Osaka MAP<span class="by">by Toshi</span></p>
+  <div class="tc-actions">
+    <button type="button" class="pill" id="btn-howto" aria-controls="intro">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></svg>
+      <span data-t="howto">使い方</span>
+    </button>
+    <div class="langsw" role="group" aria-label="Language / 言語">
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="ja" lang="ja">日本語</button>
+    </div>
+  </div>
+</header>
+
+<div class="mapbtns">
+  <button type="button" class="fab" id="btn-list" aria-controls="panel" aria-expanded="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>
+    <span data-t="list">一覧</span>
+  </button>
+  <button type="button" class="fab fab-sm" id="btn-fit" data-t-aria="showAll" aria-label="全体を表示">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+  </button>
+  <button type="button" class="fab fab-sm" id="btn-locate" data-t-aria="locate" aria-label="現在地">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="7.5"/></svg>
+  </button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- phones: always-visible tabs to switch between the map, the list and how to use -->
+<nav class="tabbar" id="tabbar" data-t-aria="menu" aria-label="Menu">
+  <a class="tab-home" href="../">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+    <span data-t="home">マップ一覧</span>
+  </a>
+  <button type="button" data-tab="map">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>
+    <span data-t="tabMap">地図</span>
+  </button>
+  <button type="button" data-tab="list">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>
+    <span data-t="list">一覧</span>
+  </button>
+  <button type="button" data-tab="about">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></svg>
+    <span data-t="howto">使い方</span>
+  </button>
+</nav>
+
+<aside class="panel" id="panel" aria-label="Spots">
+  <div class="grab" aria-hidden="true"></div>
+
+  <section class="view view-list" id="view-list">
+    <div class="list-head">
+      <h2 data-t="listHead">スポット一覧</h2>
+      <div class="list-tools">
+        <div class="langsw" role="group" aria-label="Language / 言語">
+          <button type="button" data-lang="en" lang="en">EN</button>
+          <button type="button" data-lang="ja" lang="ja">日本語</button>
+        </div>
+        <button type="button" class="iconbtn only-mobile" id="btn-list-close" data-t-aria="close" aria-label="閉じる">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <button type="button" class="howto-row" id="btn-howto-2">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></svg>
+      <span data-t="spot1Howto">このマップの使い方を見る</span>
+    </button>
+    <!-- 「全部回る」か「選んで回る」か -->
+    <div class="modesw" role="group" data-t-aria="modeAria" aria-label="回り方">
+      <button type="button" data-mode="all" data-t="modeAll">全部回る</button>
+      <button type="button" data-mode="pick" data-t="modePick">選んで回る</button>
+    </div>
+    <div class="pick-box" id="pick-box" hidden>
+      <p class="pick-note" data-t="pickNote"></p>
+      <p class="pick-count" id="pick-count"></p>
+      <div class="pick-tools">
+        <button type="button" class="linkbtn" id="btn-pick-all" data-t="pickAll">すべて選ぶ</button>
+        <button type="button" class="linkbtn" id="btn-pick-none" data-t="pickNone">すべて外す</button>
+      </div>
+    </div>
+    <p class="list-note" data-t="listNote"></p>
+    <div class="progress" id="progress">
+      <div class="progress-txt"><span id="progress-label"></span><button type="button" class="linkbtn" id="btn-reset" data-t="reset" hidden>リセット</button></div>
+      <div class="progress-bar" aria-hidden="true"><span id="progress-fill"></span></div>
+    </div>
+    <ol class="list" id="list"></ol>
+    <p class="credit" data-t-html="credit"></p>
+  </section>
+
+  <section class="view view-detail" id="view-detail" hidden>
+    <div class="detail-head">
+      <button type="button" class="backbtn" id="btn-back">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        <span data-t="back">一覧</span>
+      </button>
+      <button type="button" class="iconbtn" id="btn-detail-close" data-t-aria="close" aria-label="閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="detail-scroll" id="detail-scroll">
+      <div class="carousel" id="carousel">
+        <div class="slides" id="slides"></div>
+        <button type="button" class="slidebtn prev" id="slide-prev" data-t-aria="prevPhoto" aria-label="前の写真"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="slidebtn next" id="slide-next" data-t-aria="nextPhoto" aria-label="次の写真"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <span class="counter" id="counter"></span>
+        <span class="ph-pc" id="ph-pc" hidden></span>
+        <span class="ph-no" id="ph-no"></span>
+        <span class="ph-area" id="ph-area"></span>
+        <span class="ph-credit" id="ph-credit" hidden></span>
+      </div>
+      <div class="detail-body">
+        <h2 class="d-title nm"><b id="d-name"></b><i id="d-alt"></i></h2>
+        <span class="kind" id="d-kind"></span>
+        <p class="d-blurb" id="d-blurb"></p>
+        <button type="button" class="visitbtn" id="btn-visit" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg>
+          <span id="visit-label"></span>
+        </button>
+        <button type="button" class="visitbtn pickbtn" id="btn-pick" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span id="pick-label"></span>
+        </button>
+        <div class="d-notices" id="d-notices"></div>
+        <button type="button" class="howto-row" id="btn-howto-3" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></svg>
+          <span data-t="spot1Howto">このマップの使い方を見る</span>
+        </button>
+        <div class="d-actions" id="d-actions"></div>
+        <div class="d-links" id="d-links"></div>
+        <div class="d-info" id="d-info"></div>
+        <div class="d-text" id="d-text"></div>
+        <button type="button" class="sharebtn" id="btn-share">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          <span id="share-label"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="stepper" aria-label="Previous / next spot">
+      <button type="button" id="btn-prev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span id="prev-label"></span></button>
+      <button type="button" id="btn-next"><span id="next-label"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </nav>
+  </section>
+</aside>
+
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-h" hidden>
+  <div class="intro-card" id="intro-card"></div>
+</div>
+
+<noscript><p class="noscript">この地図を見るにはJavaScriptを有効にしてください。Please enable JavaScript to view this map.</p></noscript>
+
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
+<script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
+<script src="../assets/basemap.js?v=3"></script>
+<script src="js/i18n.js?v=119"></script>
+<script src="js/app.js?v=123"></script>
+</body>
+</html>

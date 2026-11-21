@@ -1,0 +1,475 @@
+{
+ "id": "osaka-sakura",
+ "_note": "大阪 造幣局の桜の通り抜けと大阪城の桜（osaka-sakura/ のページ専用。形は eizan-line.json と同じ）。4月中旬の1週間だけのマップ。京阪 天満橋駅→大阪城 西の丸庭園→造幣局 桜の通り抜け（南門から北門へ一方通行）→毛馬桜之宮公園→天満橋駅か桜ノ宮駅。写真は全部 Toshi の写真ライブラリから（2025年4月9日の Nikon D7000 と iPhone、2026年4月14日の造幣局、2026年4月8日の夜の西の丸庭園。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（造幣局の公式サイト、大阪周遊パスの公式サイトの施設案内、電車は乗換案内）。2027年の通り抜けの日程は未発表なので、verified: false と notices で要確認と出している。このファイルは scripts/build_osaka_sakura_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 3,
+   "day": 1
+  },
+  {
+   "first": 4,
+   "last": 4,
+   "day": 2
+  }
+ ],
+ "photoBase": "../images/osaka-sakura/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "temmabashi",
+   "name": {
+    "ja": "京阪 天満橋駅",
+    "en": "Keihan Temmabashi Station"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "京都の祇園四条から京阪の特急で46分。大阪城にも造幣局にも歩いて行ける、この日の出発点です。",
+    "en": "46 minutes by Keihan limited express from Gion-Shijo in Kyoto. Both the castle and the Mint are within walking distance."
+   },
+   "lat": 34.69006,
+   "lng": 135.5169,
+   "text": {
+    "ja": "京阪 天満橋駅（てんまばしえき）\n\n京都からは京阪の特急で乗り換えなし。祇園四条14:30発に乗ると、天満橋に15:16に着きます（490円）。特急は昼間およそ10分おきです。JRで来るなら、京都から新快速で大阪へ出て、地下鉄の谷町線で東梅田から天満橋へ。\n\n駅の北側が大川（おおかわ）。天満橋の上から、両岸に続く桜並木と大阪城の方のビルが見えます（写真は2025年4月9日）。ここから大阪城の大手門まで歩いて約10分、造幣局の南門まで約15分です。\n\nこのマップは4月中旬、造幣局の桜の通り抜けが開いている1週間のためのものです。造幣局は事前の申し込みが必要なので、入る時間を先に決めてから、ほかの場所の時間を合わせてください。\n\nおすすめ到着時間：15:16",
+    "en": "Keihan Temmabashi Station\n\nDirect from Kyoto by Keihan limited express: the 14:30 from Gion-Shijo arrives at 15:16 (¥490). Limited expresses run about every 10 minutes in the daytime. By JR, take the Special Rapid from Kyoto to Osaka, then the Tanimachi subway line from Higashi-Umeda to Temmabashi.\n\nThe Okawa river runs just north of the station. From Temmabashi bridge you see the cherry trees lining both banks and the towers near the castle (photos: 9 April 2025). From here it is about 10 minutes’ walk to the castle’s Otemon gate and about 15 to the Mint’s south gate.\n\nThis map is for one week in mid-April, while the Mint’s cherry-blossom walk is open. The Mint needs advance booking, so fix your entry time there first and fit the other stops around it.\n\nRecommended arrival: 15:16"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天満橋駅",
+      "en": "Temmabashi Station"
+     },
+     "lat": 34.69006,
+     "lng": 135.5169,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%BA%80%E6%A9%8B%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "祇園四条14:30発（京阪特急）→ 天満橋15:16着・490円（乗り換えなし）",
+       "en": "Gion-Shijo 14:30 (Keihan limited express) → Temmabashi 15:16, ¥490 (direct)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：天満橋20:04発（特急）→ 祇園四条20:50着・490円",
+       "en": "Return: Temmabashi 20:04 (limited express) → Gion-Shijo 20:50, ¥490"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2027年4月の土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
+     "en": "Times and fares from a route planner (Saturday timetable, April 2027). Please check again before you travel."
+    },
+    "checked": "2026-11-21"
+   },
+   "photos": [
+    "temmabashi-1.jpg",
+    "temmabashi-2.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "nishinomaru",
+   "name": {
+    "ja": "大阪城 西の丸庭園の桜",
+    "en": "Cherry blossoms at Osaka Castle’s Nishinomaru Garden"
+   },
+   "kind": {
+    "ja": "城・庭園（昼の桜と夜桜）",
+    "en": "Castle garden (day and night blossoms)"
+   },
+   "blurb": {
+    "ja": "芝生の向こうに天守閣、手前に桜。大阪城でいちばん桜と天守がきれいに重なる庭です。夜のライトアップがある年も。",
+    "en": "The castle tower beyond a lawn, cherry trees in front: the garden where blossoms and tower line up best. In some years it is lit at night."
+   },
+   "lat": 34.687,
+   "lng": 135.5218,
+   "text": {
+    "ja": "大阪城 西の丸庭園（にしのまるていえん）\n\n天満橋駅から歩いて約20分。大手門をくぐって左へ進んだ所が入口です。お堀の内側の広い芝生の庭で、桜の木の間から天守閣を見上げる場所がいくつもあります。有料なので、外の公園よりずっと静かです。\n\n大事なのは時期です。ここの桜の多くはソメイヨシノで、見ごろはふつう3月の終わりから4月のはじめ。造幣局の通り抜け（遅咲きの八重桜）は、その1週間ほど後に開きます。ぼくが昼に行った2025年4月9日は、通り抜けが4月5日からだったので、両方が満開でした（昼の写真）。2026年のように通り抜けが4月9日からの年は、大阪城は散り始めか葉桜のことが多いです。それでも、芝生と天守閣の眺めは変わりません。\n\n桜の時期には、夜に庭を開けてライトアップする「観桜ナイター」があります。夜の写真は2026年4月8日の20時すぎに撮ったもの（入園350円）。白く光る天守閣に夜桜が重なります。開催の日と時間は年によって違い、通り抜けの週にはもう終わっていることもあるので、行く前に公式サイトで確かめてください。\n\nふだんの入園は16:30まで、月曜は休みです。次の造幣局の南門までは、天満橋を渡って歩いて約25分。\n\nおすすめ訪問時間：15:35〜16:45",
+    "en": "Nishinomaru Garden, Osaka Castle\n\nAbout 20 minutes’ walk from Temmabashi Station; go in by the Otemon gate and the entrance is to the left. A wide lawn inside the moat, with many spots where you look up at the tower between cherry trees. As it charges admission, it is far quieter than the park outside.\n\nTiming matters. Most trees here are Somei-yoshino, usually at their best from the end of March to early April. The Mint’s walk, with its late double-flowered cherries, opens about a week later. When I came by day on 9 April 2025, the Mint had opened on 5 April and both were in full bloom (the daytime photos). In a year like 2026, when the Mint opened on 9 April, the castle’s trees are usually falling or in leaf by then. The view of lawn and tower is the same either way.\n\nIn blossom season the garden opens at night with illuminations (“Kan-o Nighter”). The night photos were taken after 20:00 on 8 April 2026 (¥350): night blossoms against the white-lit tower. Dates and hours differ each year and it may be over by the week of the Mint walk, so check the official site first.\n\nOn normal days last entry is 16:30, and the garden is closed on Mondays. The Mint’s south gate is about 25 minutes’ walk from here, across Temmabashi bridge.\n\nRecommended visit time: 15:35–16:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大阪城 西の丸庭園",
+      "en": "Nishinomaru Garden"
+     },
+     "lat": 34.687,
+     "lng": 135.5218,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%9F%8E%20%E8%A5%BF%E3%81%AE%E4%B8%B8%E5%BA%AD%E5%9C%92"
+    },
+    {
+     "label": {
+      "ja": "大手門",
+      "en": "Otemon gate"
+     },
+     "lat": 34.68605,
+     "lng": 135.52125,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%98%AA%E5%9F%8E%20%E5%A4%A7%E6%89%8B%E9%96%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "大阪城パークセンター（大阪城公園）",
+      "en": "Osaka Castle Park (official)"
+     },
+     "url": {
+      "ja": "https://osakacastlepark.jp/",
+      "en": "https://osakacastlepark.jp/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "大阪城天守閣 公式サイト",
+      "en": "Osaka Castle Museum (official)"
+     },
+     "url": {
+      "ja": "https://www.osakacastle.net/",
+      "en": "https://www.osakacastle.net/english/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "3〜10月 9:00〜17:00（入園は16:30まで）",
+       "en": "March–October 9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "月曜（祝日のときは次の平日）、年末年始",
+       "en": "Mondays (next weekday if a holiday), New Year period"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "300円（桜の時期は350円）",
+       "en": "¥300 (¥350 in blossom season)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夜桜のライトアップ（観桜ナイター）：2027年の日程は未発表（要確認）。2026年4月8日は20時台に入れました",
+       "en": "Night illumination: 2027 dates not announced (please check). On 8 April 2026 it was open after 20:00"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・休み・料金は大阪周遊パスの公式サイトの施設案内で確認しました。観桜ナイターの日程は公式サイトで確認できなかったので、2026年に行ったときのことを書いています。",
+     "en": "Hours, closing day and fee from the facility list on the Osaka Amazing Pass site. The night-opening dates could not be confirmed officially; what is written is from my visit in 2026."
+    },
+    "checked": "2026-11-21",
+    "verified": false
+   },
+   "photos": [
+    "nishinomaru-1.jpg",
+    "nishinomaru-2.jpg",
+    "nishinomaru-3.jpg",
+    "nishinomaru-4.jpg",
+    "nishinomaru-5.jpg",
+    "nishinomaru-6.jpg",
+    "nishinomaru-7.jpg",
+    "nishinomaru-8.jpg",
+    "nishinomaru-9.jpg",
+    "nishinomaru-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "mint",
+   "name": {
+    "ja": "造幣局 桜の通り抜け",
+    "en": "Japan Mint cherry-blossom walk"
+   },
+   "kind": {
+    "ja": "桜（4月中旬の1週間だけ）",
+    "en": "Cherry blossoms (one week in mid-April)"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-03-31",
+     "url": "https://www.mint.go.jp/enjoy/toorinuke/",
+     "head": {
+      "ja": "2027年の日程はまだ出ていません",
+      "en": "Dates for 2027 are not out yet"
+     },
+     "text": {
+      "ja": "造幣局の桜の通り抜けは、毎年3月に日程と申し込みの方法が発表されます。ここに書いた日時は2026年のものです。行く前に、かならず造幣局の公式サイトを見てください（要確認）。",
+      "en": "The Mint announces each year’s dates and booking method in March. The dates here are those of 2026. Check the Mint’s official site before you go."
+     }
+    }
+   ],
+   "blurb": {
+    "ja": "硬貨をつくる造幣局の構内を、年に1週間だけ歩けます。約560mの道に、140品種・331本の八重桜（2026年）。",
+    "en": "For one week a year you can walk through the grounds of the Mint: 331 trees of 140 varieties, mostly double-flowered, along 560 m (2026)."
+   },
+   "lat": 34.6955,
+   "lng": 135.5215,
+   "text": {
+    "ja": "造幣局（ぞうへいきょく）の桜の通り抜け\n\n明治16年（1883年）から続く、大阪の春の行事です。大川沿いの造幣局の構内、約560mの道を、南門（天満橋側）から北門（桜宮橋側）へ一方通行で歩きます。後戻りはできません。\n\nここの桜は、ほとんどが遅咲きの八重桜。ソメイヨシノとはまったく違って、ぼたんのように重たい花、緑がかった花、1本に白とピンクが混ざる花と、品種ごとに札が立っています。2026年は140品種331本で、「今年の花」は黄緑色の御衣黄（ぎょいこう）でした。写真は2025年4月9日と2026年4月14日。赤レンガの建物の前の関山（かんざん）や、白い花の札「舞姫」を探してみてください。\n\n近年は事前の申し込みが必要です。2026年は4月9日〜15日の7日間で、インターネットで入場の時間帯を選んで申し込む方式（先着順）。当日は、申し込みのメールに届く2次元コードを入口で見せます。申し込んだ時間帯以外は、原則として入れません。\n\nぼくのおすすめは夕方の時間帯。17時を過ぎると昼より人が少し減り、ぼんぼりに灯が入ります。歩くだけなら30分、写真を撮りながらで1時間。中での飲食はできず、日傘・自撮り棒・三脚も使えません。入口で手荷物の検査があります。\n\nおすすめ訪問時間：17:15〜18:15（申し込んだ時間帯に合わせる）",
+    "en": "The Japan Mint cherry-blossom walk\n\nAn Osaka spring custom since 1883. You walk about 560 m through the Mint’s riverside grounds, one way only, from the south gate (Temmabashi side) to the north gate (Sakuranomiya bridge side). There is no turning back.\n\nNearly all the trees are late-blooming double-flowered cherries, nothing like Somei-yoshino: blooms heavy as peonies, greenish ones, trees mixing white and pink, each variety with its own name board. In 2026 there were 331 trees of 140 varieties, and the “flower of the year” was the yellow-green Gyoiko. Photos: 9 April 2025 and 14 April 2026. Look for the Kanzan in front of the red-brick building and the name board for the white Maihime.\n\nIn recent years you must book ahead. In 2026 it ran for 7 days, 9–15 April, with online booking of an entry time slot (first come, first served). On the day you show the 2D code from your confirmation e-mail at the entrance; outside your slot you are generally not admitted.\n\nI recommend an evening slot. After 17:00 the crowd thins a little and the paper lanterns are lit. It takes 30 minutes just to walk, an hour with photos. No eating or drinking inside, and no parasols, selfie sticks or tripods. Bags are checked at the entrance.\n\nRecommended visit time: 17:15–18:15 (match your booked slot)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "造幣局 南門（入口）",
+      "en": "Mint south gate (entrance)"
+     },
+     "lat": 34.69335,
+     "lng": 135.5206,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%80%A0%E5%B9%A3%E5%B1%80%20%E5%8D%97%E9%96%80%20%E5%A4%A7%E9%98%AA"
+    },
+    {
+     "label": {
+      "ja": "造幣局 北門（出口）",
+      "en": "Mint north gate (exit)"
+     },
+     "lat": 34.6978,
+     "lng": 135.522,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%80%A0%E5%B9%A3%E5%B1%80%20%E5%8C%97%E9%96%80%20%E5%A4%A7%E9%98%AA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "造幣局 桜の通り抜け（公式）",
+      "en": "Japan Mint: cherry-blossom walk (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.mint.go.jp/enjoy/toorinuke/sakura_osaka_news_r8.html",
+      "en": "https://www.mint.go.jp/eng/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年は4月9日（木）〜15日（水）。平日10:00〜19:15、土日9:00〜19:15（19:45までに退場）",
+       "en": "2026: 9–15 April. Weekdays 10:00–19:15, weekends 9:00–19:15 (everyone out by 19:45)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "事前申込制（インターネット・先着順）。2026年は3月18日に受付が始まりました。2027年の日程と申し込み方法は未発表（要確認）",
+       "en": "Advance booking online, first come first served. In 2026 booking opened on 18 March. Dates and booking for 2027 not yet announced (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "造幣博物館は通り抜けの期間は臨時休館（2026年は4月8日〜15日）",
+       "en": "The Mint Museum closes during the event (8–15 April in 2026)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "天満橋駅（京阪は14番出口、谷町線は2号出口）から歩いて約15分。入口は南門だけ",
+       "en": "About 15 minutes’ walk from Temmabashi Station (Keihan exit 14, Tanimachi Line exit 2). Entry is by the south gate only"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "造幣局の公式サイト（2026年の開催情報と「沿革・データ」）で確認しました。受付が始まった日は当時の報道によります。",
+     "en": "From the Mint’s official site (2026 event page and its history page). The date booking opened is from news reports at the time."
+    },
+    "checked": "2026-11-21",
+    "verified": false
+   },
+   "photos": [
+    "mint-1.jpg",
+    "mint-2.jpg",
+    "mint-3.jpg",
+    "mint-4.jpg",
+    "mint-5.jpg",
+    "mint-6.jpg",
+    "mint-7.jpg",
+    "mint-8.jpg",
+    "mint-9.jpg",
+    "mint-10.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "kema",
+   "name": {
+    "ja": "毛馬桜之宮公園（大川沿いの桜並木）",
+    "en": "Kema Sakuranomiya Park (the Okawa riverside)"
+   },
+   "kind": {
+    "ja": "公園・桜並木",
+    "en": "Riverside park & cherry trees"
+   },
+   "blurb": {
+    "ja": "造幣局の北門を出たら、目の前の桜宮橋を渡って川沿いへ。申し込みもお金もいらない、長い桜並木です。",
+    "en": "Out of the Mint’s north gate, cross Sakuranomiya bridge to the riverside: a long avenue of cherry trees with no booking and no charge."
+   },
+   "lat": 34.6976,
+   "lng": 135.5233,
+   "text": {
+    "ja": "毛馬桜之宮公園（けまさくらのみやこうえん）\n\n大川の両岸に、毛馬から天満橋まで約4.2km続く公園で、およそ4,800本の桜が植えられています。造幣局の北門を出ると、銀色のアーチの桜宮橋（さくらのみやばし・通称「銀橋」）のたもと。橋を渡って東岸の遊歩道に下りると、桜の下を川と並んで歩けます。\n\nここはソメイヨシノが中心なので、見ごろは造幣局より1週間ほど早め。写真は2025年4月9日の夕方で、この年は両方が重なりました。水上バスや屋形船が行き来し、対岸の桜と大阪城の方のビルが川に映ります。夕方は西日で花が金色に見える時間です。\n\n桜宮橋から南へ歩けば、天満橋駅まで約18分。通り抜けの期間は、造幣局の裏の川沿いに屋台が並びます（2025年に見たときのこと）。北へ歩けばJR環状線の桜ノ宮駅まで約15分で、大阪駅で新快速に乗り換えて京都へ帰れます（約42分・840円）。\n\nおすすめ訪問時間：18:15〜18:45",
+    "en": "Kema Sakuranomiya Park\n\nA park running about 4.2 km along both banks of the Okawa from Kema down to Temmabashi, planted with some 4,800 cherry trees. The Mint’s north gate brings you out at the foot of Sakuranomiya bridge, a silver arch known locally as Ginbashi. Cross it and step down to the east-bank promenade to walk under the blossoms beside the water.\n\nThe trees here are mostly Somei-yoshino, so they peak about a week before the Mint. The photos are from the evening of 9 April 2025, a year when the two overlapped. Water buses and pleasure boats pass, and the far-bank blossoms and the towers near the castle reflect in the river. Towards evening the low sun turns the flowers gold.\n\nWalking south from the bridge, Temmabashi Station is about 18 minutes. During the Mint week, food stalls line the riverside behind the Mint (as I saw in 2025). Walking north, JR Sakuranomiya Station on the Loop Line is about 15 minutes; change at Osaka to the Special Rapid for Kyoto (about 42 min, ¥840).\n\nRecommended visit time: 18:15–18:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "桜宮橋（銀橋）",
+      "en": "Sakuranomiya bridge"
+     },
+     "lat": 34.6976,
+     "lng": 135.5226,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%A1%9C%E5%AE%AE%E6%A9%8B%20%E5%A4%A7%E9%98%AA"
+    },
+    {
+     "label": {
+      "ja": "JR桜ノ宮駅",
+      "en": "JR Sakuranomiya Station"
+     },
+     "lat": 34.705,
+     "lng": 135.5209,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%A1%9C%E3%83%8E%E5%AE%AE%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "毛馬桜之宮公園（大阪観光局）",
+      "en": "Kema Sakuranomiya Park (Osaka Info)"
+     },
+     "url": {
+      "ja": "https://osaka-info.jp/spot/kema-sakuranomiya-park/",
+      "en": "https://osaka-info.jp/en/spot/kema-sakuranomiya-park/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料。いつでも歩けます",
+       "en": "Free; open at all hours"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り（京阪）：天満橋20:04発（特急）→ 祇園四条20:50着・490円",
+       "en": "Return (Keihan): Temmabashi 20:04 (limited express) → Gion-Shijo 20:50, ¥490"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り（JR）：桜ノ宮19:02発 → 大阪で新快速に乗り換え → 京都19:44着・840円",
+       "en": "Return (JR): Sakuranomiya 19:02 → change at Osaka to the Special Rapid → Kyoto 19:44, ¥840"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "公園の長さと桜の本数は大阪市の広報（2009年）の数字で、今の本数は確認できていません（要確認）。電車は乗換案内です。",
+     "en": "Length and tree count are from an Osaka City bulletin of 2009; the current count is unconfirmed. Trains from a route planner."
+    },
+    "checked": "2026-11-21",
+    "verified": false
+   },
+   "photos": [
+    "kema-1.jpg",
+    "kema-2.jpg",
+    "kema-3.jpg",
+    "kema-4.jpg",
+    "kema-5.jpg",
+    "kema-6.jpg",
+    "kema-7.jpg",
+    "kema-8.jpg",
+    "kema-9.jpg",
+    "kema-10.jpg"
+   ],
+   "notices": []
+  }
+ ]
+}
