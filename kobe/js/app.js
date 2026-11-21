@@ -1,4 +1,4 @@
-/* 京都から日帰り 神戸（布引の滝・北野異人館・メリケンパーク） — map, list, spot detail, intro and language switch.
+/* 神戸 1日ルート（北野異人館・布引の滝・南京町・夜の港） — map, list, spot detail, intro and language switch.
    Data: ../data/routes/kobe.json（写真は ../images/kobe/）. Texts: js/i18n.js
    eizan-line/js/app.js の複製。違いは scripts/sync_kobe.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_kobe.py で写し直す） */
@@ -22,14 +22,14 @@
   var WIDE = window.matchMedia('(min-width: 900px)');
   var I18N = window.KOBE_I18N;
   // 2026-11-20 に番号を振り直した（出町柳スタート）ので、「行った」印は新しいキーで保存し直す
-  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-kobe-intro-seen', KEY_VISITED = 'kyoto-maps-kobe-visited-v2';
+  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-kobe-intro-seen', KEY_VISITED = 'kyoto-maps-kobe-visited-v2-b';
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
   var data, spots = [], byNo = {}, map, markers = {}, photoMode = null, activeNo = null, lang = 'en';
   var visited = {}, resetArmed = false, locLayer = null, toastTimer = null;
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
-  var KEY_MODE = 'kyoto-maps-kobe-mode', KEY_PICKS = 'kyoto-maps-kobe-picks';
+  var KEY_MODE = 'kyoto-maps-kobe-mode', KEY_PICKS = 'kyoto-maps-kobe-picks-b';
   var mode = 'all', picks = {}, routeLine = null;
 
   /* ---------- helpers ---------- */
@@ -847,7 +847,7 @@
     route();
   }
 
-  fetch('../data/routes/kobe.json?v=3')
+  fetch('../data/routes/kobe.json?v=4')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

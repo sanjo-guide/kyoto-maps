@@ -1,11 +1,13 @@
 /* Page texts in Japanese and English.
-   Toshi 個人のマップ。京都から新快速で三宮へ、布引の滝・北野天満神社・北野異人館・三宮のかつ丼・メリケンパークを回る日帰りルート。
-   Photos are [spot number, photo index] from data/routes/kobe.json.
-   時刻・料金は2026年11月20日に確認（各施設・神戸市・神戸観光局の公式サイト、電車は乗換案内）。 */
+   Toshi 個人のマップ。神戸の1日ルート（起点は大阪の梅田〜難波のあたりのホテル。コースは1つ）：
+   大阪梅田9:30発→神戸三宮→北野天満神社→北野異人館街→三宮のかつ丼→布引の滝→南京町→メリケンパーク・ポートタワー→夜のハーバーランド。
+   Photos are [spot number, photo index] from data/routes/kobe.json（1 三宮・2 北野天満神社・3 異人館・4 七兵衛・5 布引の滝・6 メリケンパーク）.
+   時刻・料金は2026年11月22日に確認（各施設・神戸市・神戸観光局の公式サイト、電車は乗換案内）。
+   このファイルは直接直してよい（データは scripts/build_kobe_data.py）。 */
 window.KOBE_I18N = {
   ja: {
     htmlLang: 'ja',
-    docTitle: '京都から日帰り 神戸 Kobe MAP',
+    docTitle: '神戸 1日ルート Kobe MAP',
     titleMain: '神戸',
     titleSub: 'Kobe',
     howto: '使い方',
@@ -15,7 +17,7 @@ window.KOBE_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '三宮から山の手の布引の滝・北野へ上り、坂を下りて三宮でお昼、最後に港へ。行かない場所は「選んで回る」で外せます。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '番号は回る順番です。午前に北野、三宮でお昼、午後に布引の滝、夕方から港へ。南京町と夜のハーバーランドは6番の中で案内しています。行かない場所は「選んで回る」で外せます。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -39,7 +41,7 @@ window.KOBE_I18N = {
     cash: '現金を用意してください',
     checked: '{d}に公式サイトや乗換案内で確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月20日',
+    checkedDate: '2026年11月22日',
     noticeHead: 'お知らせ',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -55,7 +57,7 @@ window.KOBE_I18N = {
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。三宮はいつもルートに入ります。時間は全部回る場合の目安です。',
+    pickNote: '行きたい場所の「行きたい」を押してください。神戸三宮駅はいつもルートに入ります。時間は全部回る場合の目安です。',
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（全員共通の場所を含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から、行きたい場所を選んでください。',
     pickAll: 'すべて選ぶ',
@@ -67,111 +69,144 @@ window.KOBE_I18N = {
     seasonHead: '季節営業の可能性',
     hintHead: 'あなたのルートでは',
     intro: {
-      "kicker": "Toshiが歩いて作った日帰りルート",
-      "h1": "滝と異人館の坂を下りて、港の夕暮れへ。",
-      "lead": "京都から新快速で51分。新幹線の駅の裏にある布引の滝から歩きはじめ、北野天満神社と異人館の坂を下りて、三宮のかつ丼でお昼。最後はメリケンパークとポートタワーで港の景色を。",
+      "kicker": "大阪の梅田〜難波のホテルから1日",
+      "h1": "午前は坂の上の異人館、午後は駅の裏の滝、夜は港のあかり。",
+      "lead": "大阪梅田から阪急の特急で27分。北野坂を上って異人館を歩き、三宮のかつ丼でお昼。午後は新幹線の駅のすぐ裏にある布引の滝へ。南京町でつまんでから、メリケンパークで日の入りを迎え、明かりの入ったポートタワーを対岸から眺めて晩ごはんまで。",
       "favLabel": "いちばんの見どころ",
       "favName": "布引の滝（雄滝）",
-      "favText": "新神戸駅から歩いて15分の、落差43mの滝。",
+      "favText": "新神戸駅から歩いて15分の、落差43mの滝。入場料はいりません。",
       "favPhoto": [
-        2,
+        5,
         0
       ],
       "whoHead": "こんな人におすすめ",
       "who": [
-        "街歩きと景色の両方を1日で楽しみたい人に",
-        "京都から三ノ宮まで新快速で51分（1,110円）",
-        "布引の滝は階段が多いので、歩きやすい靴で",
-        "異人館はどこも17:00ごろまで。午前中に回るのがおすすめ",
-        "冬はメリケンパークがルミナリエの会場に（2027年は1月29日〜2月7日）"
+        "大阪に泊まって、神戸を1日で。梅田を9:30に出て、21時ごろの電車で帰る時間割です",
+        "大阪梅田→神戸三宮は阪急の特急で27分・330円。難波からは阪神なんば線で乗り換えなし・420円",
+        "坂と階段をよく歩きます（北野坂の上りが20分ほど、滝は階段の山道）。歩きやすい靴で",
+        "異人館は館ごとに入館料がかかります。風見鶏の館と萌黄の館の2館券（800円）から",
+        "ポートタワーは日時指定のチケット。夕暮れに上りたい日は、先に公式サイトで",
+        "京都から来る人は、阪急で十三乗り換えの約1時間20分・640円。JRの新快速なら51分・1,110円"
       ],
-      "dayHead": "1日の流れ（目安）",
+      "dayHead": "1日の流れ（11月下旬・土曜の目安）",
       "from": "",
       "day": [
         {
-          "time": "9:51",
-          "area": "三宮 → 布引の滝",
-          "title": "新幹線の駅の裏の滝へ",
-          "text": "地下鉄で新神戸へ。雌滝・鼓ヶ滝・夫婦滝・雄滝と上って、みはらし展望台から神戸の街を一望。",
+          "time": "9:30",
+          "area": "大阪梅田 → 神戸三宮",
+          "title": "阪急の特急で27分",
+          "text": "9:57に着いたら、山のほうへ北野坂をゆっくり上ります。難波からは阪神なんば線で9:37発、10:18着。",
           "photo": [
-            2,
-            1
-          ]
-        },
-        {
-          "time": "11:30",
-          "area": "北野",
-          "title": "天満神社から異人館の坂へ",
-          "text": "北野天満神社から風見鶏の館を見下ろして、萌黄の館や英国館の坂を下ります。",
-          "photo": [
-            4,
-            1
-          ]
-        },
-        {
-          "time": "13:40",
-          "area": "三宮",
-          "title": "高架下のかつ丼でお昼",
-          "text": "北野坂を下って三宮へ。阪急三宮駅のすぐ横の七兵衛で、ボリュームたっぷりのかつ丼を。",
-          "photo": [
-            5,
+            1,
             0
           ]
         },
         {
-          "time": "14:45",
-          "area": "メリケンパーク → 京都",
-          "title": "港とポートタワー",
-          "text": "赤いポートタワーに上って港を見渡し、元町駅から京都へ。",
-          "note": "京都着は17:59",
+          "time": "10:25",
+          "area": "北野",
+          "title": "天満神社から異人館へ",
+          "text": "まず北野天満神社の境内から町と海を見下ろして、風見鶏の館と萌黄の館へ。入る館は2〜3館にしぼります。",
+          "photo": [
+            3,
+            1
+          ]
+        },
+        {
+          "time": "12:20",
+          "area": "三宮",
+          "title": "高架下のかつ丼でお昼",
+          "text": "北野坂を下って、阪急の駅のすぐ横の七兵衛へ。売り切れると閉まるので、お昼は遅くしません。",
+          "photo": [
+            4,
+            0
+          ]
+        },
+        {
+          "time": "13:25",
+          "area": "新神戸",
+          "title": "駅の裏の滝と展望台",
+          "text": "地下鉄で1駅。4つの滝を上って、みはらし展望台のベンチで休みます。15時には下りはじめます。",
+          "photo": [
+            5,
+            1
+          ]
+        },
+        {
+          "time": "15:15",
+          "area": "南京町 → メリケンパーク",
+          "title": "つまんでから、港の日の入りへ",
+          "text": "南京町を抜けて海へ。日の入りは16:50ごろ。16:30ごろの枠でポートタワーに上ると、明かりがつくまでを上から見られます。",
           "photo": [
             6,
-            1
+            2
+          ]
+        },
+        {
+          "time": "18:00",
+          "area": "ハーバーランド",
+          "title": "対岸から夜景、モザイクで晩ごはん",
+          "text": "海ぞいを歩いてモザイクへ。明かりの入ったポートタワーを眺めて、晩ごはん。飲食店は22:00までです。",
+          "note": "神戸21:13発→大阪21:39着",
+          "photo": [
+            6,
+            0
           ]
         }
       ],
       "timeSuffix": "〜",
-      "dealsHead": "交通費のめやす",
-      "dealsLead": "電車は京都から三ノ宮まで片道1,110円（阪急なら640円）。異人館やポートタワーの入館料は別です。",
+      "dealsHead": "交通費と入場料のめやす",
+      "dealsLead": "電車は大阪梅田から神戸三宮まで片道330円、帰りをJR神戸駅からにすると460円。地下鉄の往復420円と合わせて、交通費は1,200円ほど。入館料は別です。",
       "deals": [
         {
-          "name": "JR（京都→三ノ宮）",
-          "price": "片道1,110円",
-          "text": "新快速で乗り換えなし、51分。京都9:00発→三ノ宮9:51着。",
+          "name": "大阪梅田 → 神戸三宮（阪急・阪神）",
+          "price": "片道330円",
+          "text": "阪急の特急で27分、10分おき。JRの新快速は大阪→三ノ宮21分・420円。難波からは阪神なんば線の快速急行で41分・420円、乗り換えなし。",
+          "url": "https://transit.yahoo.co.jp/"
+        },
+        {
+          "name": "地下鉄 三宮 ⇄ 新神戸",
+          "price": "片道210円",
+          "text": "1駅・2分。布引の滝への行き帰りに。歩くと上り坂を約20分です。",
           "url": "https://transit.yahoo.co.jp/"
         },
         {
           "name": "風見鶏の館・萌黄の館 2館共通券",
           "price": "800円",
-          "text": "1館ずつなら各500円。高校生以下は無料。",
+          "text": "1館ずつなら各500円。高校生以下は無料。ほかの館は550〜1,100円です。",
           "url": "https://kobe-kazamidori.com/guide/"
         },
         {
           "name": "神戸ポートタワー",
           "price": "1,200円",
-          "text": "展望フロア＋屋上デッキ。展望フロアだけなら1,000円。日時指定のチケット制。",
-          "url": "https://www.kobe-port-tower.com/"
+          "text": "展望フロア＋屋上デッキ。展望フロアだけなら1,000円。日時指定のチケット制で、当日券は枠に空きがあるときだけ。",
+          "url": "https://www.kobe-port-tower.com/ticket/"
+        },
+        {
+          "name": "京都から来る人・京都へ帰る人",
+          "price": "片道640〜1,110円",
+          "text": "行き：阪急の京都河原町8:46発→十三で乗り換え→神戸三宮10:07着・640円。JRは京都9:00発の新快速→三ノ宮9:51着・1,110円。帰り：JR神戸21:13発の新快速→京都22:09着。最後は神戸23:32発（三ノ宮23:36発）の新快速、阪急なら神戸三宮23:10発です。",
+          "url": "https://transit.yahoo.co.jp/"
         }
       ],
-      "dealsNote": "大人の運賃・料金です。2026年11月20日に確認しました（各施設・神戸市・神戸観光局の公式サイト、電車は乗換案内）。",
+      "dealsNote": "大人の運賃・料金です。2026年11月22日に確認しました（各施設・神戸市・神戸観光局の公式サイト、電車は乗換案内の11月28日・土曜のダイヤ）。",
       "dealsMore": "公式サイトで見る",
       "howHead": "このマップの使い方",
       "how": [
         {
           "title": "番号の順に",
-          "text": "1から6の順に回ると、山の手の滝と北野から、坂を下りて三宮、港へと歩けます。"
+          "text": "1から6の順に回ると、午前に北野、お昼に三宮、午後に滝、夕方から港へと動けます。「おすすめの時間」は、大阪梅田を9:30に出た日の目安です。"
         },
         {
           "title": "選んで回ることも",
-          "text": "「選んで回る」に切り替えると、行きたい場所だけを選べます。"
+          "text": "「選んで回る」に切り替えると、行きたい場所だけを選べます。外した場所に合わせて、行き方のひとことが出ます。"
         },
         {
           "title": "番号をタップ",
-          "text": "地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。"
+          "text": "地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。入る前に知っておきたいことは、いちばん上に出ます。"
         },
         {
           "title": "Googleマップでルート検索",
-          "text": "各スポットの「Googleマップで開く」から、そのままルート検索できます。"
+          "text": "各スポットの「Googleマップ」から、そのままルート検索できます。南京町・モザイク・JR神戸駅は6番の中にあります。"
         }
       ],
       "cta": "地図を見る",
@@ -180,7 +215,7 @@ window.KOBE_I18N = {
   },
   en: {
     htmlLang: 'en',
-    docTitle: 'Day trip from Kyoto: Kobe MAP',
+    docTitle: 'Kobe in one day MAP',
     titleMain: 'Kobe',
     titleSub: '神戸',
     howto: 'How to use',
@@ -190,7 +225,7 @@ window.KOBE_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'From Sannomiya up to Nunobiki Falls and Kitano, back down to Sannomiya for lunch, then to the port. Use “Choose stops” to drop places you’ll skip. The dotted line shows the order, not the actual path.',
+    listNote: 'The numbers are the order to go in: Kitano in the morning, lunch in Sannomiya, Nunobiki Falls after lunch, the harbour from late afternoon. Chinatown and Harborland at night are covered inside stop 6. Use “Choose stops” to drop places you’ll skip. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -214,7 +249,7 @@ window.KOBE_I18N = {
     cash: 'Bring cash',
     checked: 'Checked on official websites and a route planner on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 20, 2026',
+    checkedDate: 'Nov 22, 2026',
     noticeHead: 'Note',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -242,111 +277,144 @@ window.KOBE_I18N = {
     seasonHead: 'Possibly seasonal',
     hintHead: 'On your route',
     intro: {
-      "kicker": "A day trip, hand-walked by Toshi",
-      "h1": "Down from a waterfall and the old foreign houses to the harbour at dusk.",
-      "lead": "51 minutes from Kyoto by Special Rapid. Start at Nunobiki Falls behind the bullet-train station, wander down past Kitano Tenman Shrine and the foreign residences, have katsudon in Sannomiya, and finish with the harbour views at Meriken Park and the Port Tower.",
+      "kicker": "One day from a hotel in Osaka (Umeda–Namba)",
+      "h1": "Hillside houses in the morning, a waterfall behind the station after lunch, harbour lights at night.",
+      "lead": "27 minutes from Osaka-Umeda by Hankyu limited express. Walk up Kitano-zaka to the old foreign residences, have katsudon in Sannomiya, then head for Nunobiki Falls, right behind the bullet-train station. Snack through Chinatown, watch the sun set at Meriken Park, and see the lit-up Port Tower from across the water before dinner.",
       "favLabel": "Highlight",
       "favName": "Nunobiki Falls (Ontaki)",
-      "favText": "A 43 m waterfall 15 minutes’ walk from Shin-Kobe Station.",
+      "favText": "A 43 m waterfall 15 minutes’ walk from Shin-Kobe Station. Free.",
       "favPhoto": [
-        2,
+        5,
         0
       ],
       "whoHead": "Who it’s for",
       "who": [
-        "For a day of city strolling and views",
-        "Kyoto to Sannomiya is 51 min by Special Rapid (¥1,110)",
-        "Nunobiki Falls has lots of steps; wear good shoes",
-        "The houses close around 17:00, so visit Kitano before lunch",
-        "In winter Meriken Park hosts the Luminarie (29 Jan – 7 Feb 2027)"
+        "Staying in Osaka and seeing Kobe in a day: leave Umeda at 9:30, take a train home around 21:00",
+        "Osaka-Umeda to Kobe-Sannomiya is 27 min and ¥330 by Hankyu limited express; from Namba the Hanshin Namba Line runs direct for ¥420",
+        "Plenty of slopes and steps (a 20-minute climb up Kitano-zaka, a trail of steps at the falls): wear good shoes",
+        "Every house in Kitano charges admission. Start with the ¥800 ticket for the Weathercock and Moegi houses",
+        "The Port Tower needs a timed ticket. For a dusk slot, buy on the official site beforehand",
+        "From Kyoto: about 1 h 20 min by Hankyu with a change at Juso (¥640), or 51 min by JR Special Rapid (¥1,110)"
       ],
-      "dayHead": "One day, roughly like this",
+      "dayHead": "One day, roughly like this (a Saturday in late November)",
       "from": "From",
       "day": [
         {
-          "time": "9:51",
-          "area": "Sannomiya → Nunobiki Falls",
-          "title": "A waterfall behind the station",
-          "text": "Subway to Shin-Kobe, then up past four falls to the Miharashi lookout over the city.",
+          "time": "9:30",
+          "area": "Osaka-Umeda → Kobe-Sannomiya",
+          "title": "27 minutes by Hankyu",
+          "text": "Arrive at 9:57 and walk slowly up Kitano-zaka towards the hills. From Namba, the Hanshin Namba Line leaves at 9:37 and arrives at 10:18.",
           "photo": [
-            2,
-            1
-          ]
-        },
-        {
-          "time": "11:30",
-          "area": "Kitano",
-          "title": "From the shrine down the slopes",
-          "text": "Look down on the Weathercock House from Kitano Tenman Shrine, then wander past the Moegi House and the English House.",
-          "photo": [
-            4,
-            1
-          ]
-        },
-        {
-          "time": "13:40",
-          "area": "Sannomiya",
-          "title": "Katsudon under the tracks",
-          "text": "Down Kitano-zaka to Sannomiya for a hearty katsudon at Hichibei by Hankyu Sannomiya.",
-          "photo": [
-            5,
+            1,
             0
           ]
         },
         {
-          "time": "14:45",
-          "area": "Meriken Park → Kyoto",
-          "title": "The harbour and the Port Tower",
-          "text": "Go up the red Port Tower for the harbour view, then head home from Motomachi.",
-          "note": "Arrive Kyoto 17:59",
+          "time": "10:25",
+          "area": "Kitano",
+          "title": "From the shrine to the houses",
+          "text": "First look down over the town and the sea from Kitano Tenman Shrine, then visit the Weathercock and Moegi houses. Pick two or three houses to enter.",
+          "photo": [
+            3,
+            1
+          ]
+        },
+        {
+          "time": "12:20",
+          "area": "Sannomiya",
+          "title": "Katsudon under the tracks",
+          "text": "Down Kitano-zaka to Hichibei, right beside the Hankyu station. It closes when it sells out, so lunch is not left late.",
+          "photo": [
+            4,
+            0
+          ]
+        },
+        {
+          "time": "13:25",
+          "area": "Shin-Kobe",
+          "title": "The falls and lookout behind the station",
+          "text": "One stop by subway. Climb past four falls and rest on the benches at the Miharashi lookout. Start down by 15:00.",
+          "photo": [
+            5,
+            1
+          ]
+        },
+        {
+          "time": "15:15",
+          "area": "Chinatown → Meriken Park",
+          "title": "A snack, then sunset at the harbour",
+          "text": "Through Nankinmachi to the sea. Sunset is around 16:50; with a Port Tower slot around 16:30 you watch the lights come on from above.",
           "photo": [
             6,
-            1
+            2
+          ]
+        },
+        {
+          "time": "18:00",
+          "area": "Harborland",
+          "title": "The night view, and dinner at Mosaic",
+          "text": "Walk along the water to Mosaic, look back at the lit-up Port Tower, and have dinner. Restaurants stay open until 22:00.",
+          "note": "Kobe 21:13 → Osaka 21:39",
+          "photo": [
+            6,
+            0
           ]
         }
       ],
       "timeSuffix": "",
-      "dealsHead": "Fares",
-      "dealsLead": "Trains from Kyoto to Sannomiya are ¥1,110 each way (¥640 by Hankyu). Admission to the houses and the Port Tower is extra.",
+      "dealsHead": "Fares and admission",
+      "dealsLead": "Osaka-Umeda to Kobe-Sannomiya is ¥330 one way; going home from JR Kobe Station costs ¥460. With ¥420 for the subway there and back, transport comes to about ¥1,200. Admission is extra.",
       "deals": [
         {
-          "name": "JR (Kyoto → Sannomiya)",
-          "price": "¥1,110 one way",
-          "text": "Special Rapid, direct, 51 min. Kyoto 9:00 → Sannomiya 9:51.",
+          "name": "Osaka-Umeda → Kobe-Sannomiya (Hankyu / Hanshin)",
+          "price": "¥330 one way",
+          "text": "27 min by Hankyu limited express, every 10 minutes. JR Special Rapid Osaka → Sannomiya is 21 min, ¥420. From Namba, the Hanshin Namba Line rapid express takes 41 min, ¥420, direct.",
+          "url": "https://transit.yahoo.co.jp/"
+        },
+        {
+          "name": "Subway Sannomiya ⇄ Shin-Kobe",
+          "price": "¥210 one way",
+          "text": "One stop, 2 minutes, to and from Nunobiki Falls. On foot it is about 20 minutes uphill.",
           "url": "https://transit.yahoo.co.jp/"
         },
         {
           "name": "Weathercock & Moegi combined ticket",
           "price": "¥800",
-          "text": "¥500 each separately. Free for high school and under.",
+          "text": "¥500 each separately. Free for high school and under. Other houses cost ¥550–1,100.",
           "url": "https://kobe-kazamidori.com/guide/"
         },
         {
           "name": "Kobe Port Tower",
           "price": "¥1,200",
-          "text": "Observation floor + rooftop deck; ¥1,000 for the floor only. Timed tickets.",
-          "url": "https://www.kobe-port-tower.com/"
+          "text": "Observation floors + rooftop deck; ¥1,000 for the floors only. Timed tickets; same-day tickets only if the slot has space.",
+          "url": "https://www.kobe-port-tower.com/ticket/"
+        },
+        {
+          "name": "To and from Kyoto",
+          "price": "¥640–1,110 one way",
+          "text": "Out: Hankyu from Kyoto-Kawaramachi 8:46, change at Juso, Kobe-Sannomiya 10:07, ¥640. JR Special Rapid from Kyoto 9:00, Sannomiya 9:51, ¥1,110. Back: JR Special Rapid from Kobe 21:13, Kyoto 22:09. The last ones are the Special Rapid from Kobe at 23:32 (Sannomiya 23:36) and Hankyu from Kobe-Sannomiya at 23:10.",
+          "url": "https://transit.yahoo.co.jp/"
         }
       ],
-      "dealsNote": "Adult fares and fees, checked on Nov 20, 2026 (official sites of the venues, Kobe City and Feel KOBE; trains on a route planner).",
+      "dealsNote": "Adult fares and fees, checked on Nov 22, 2026 (official sites of the venues, Kobe City and Feel KOBE; trains on a route planner, Saturday 28 November timetable).",
       "dealsMore": "See official site",
       "howHead": "How to use this map",
       "how": [
         {
           "title": "In number order",
-          "text": "Follow 1 to 6: up to the falls and Kitano, down to Sannomiya, then out to the port."
+          "text": "Follow 1 to 6: Kitano in the morning, lunch in Sannomiya, the falls after lunch, the harbour from late afternoon. Suggested times assume you leave Osaka-Umeda at 9:30."
         },
         {
           "title": "Or choose your stops",
-          "text": "Switch to “Choose stops” to pick only the places you want."
+          "text": "Switch to “Choose stops” to pick only the places you want. A short note tells you how the route changes."
         },
         {
           "title": "Tap a number",
-          "text": "Tap a number on the map, or open the list, to see photos, tips, fees and suggested times."
+          "text": "Tap a number on the map, or open the list, to see photos, tips, fees and suggested times. Things to know before you go in are shown at the top."
         },
         {
           "title": "Get directions",
-          "text": "Use “Open in Google Maps” at each spot for directions."
+          "text": "Use the Google Maps buttons at each spot for directions. Chinatown, Mosaic and JR Kobe Station are inside stop 6."
         }
       ],
       "cta": "Open the map",

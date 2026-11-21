@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ルート型のテンプレート（eizan-line/）の index.html・css・app.js を kobe/ に写し、神戸用の差分をかけ直す。
-（sync_higashiyama.py と同じ差分。data.plan.defaultMode がないので「全部回る」で開く）
+（sync_higashiyama.py と同じ差分のうち、コースの切り替え以外。コースは1つで、data.plan.defaultMode がないので「全部回る」で開く）
+2026-11-22: 大阪の梅田〜難波のホテル起点の時間割に作り直し、回る順（番号）が変わったので、「行った」印と選んだ場所の保存キーの末尾に -b を付けた
 
 使い方: python3 scripts/sync_kobe.py
 - かけ直す差分:
@@ -23,16 +24,20 @@ def rep(a, b, n=1):
     assert s.count(a) == n, (a[:80], s.count(a))
     s = s.replace(a, b)
 
-s = s.replace(s.split('(function () {')[0], """/* 京都から日帰り 神戸（布引の滝・北野異人館・メリケンパーク） — map, list, spot detail, intro and language switch.
+s = s.replace(s.split('(function () {')[0], """/* 神戸 1日ルート（北野異人館・布引の滝・南京町・夜の港） — map, list, spot detail, intro and language switch.
    Data: ../data/routes/kobe.json（写真は ../images/kobe/）. Texts: js/i18n.js
    eizan-line/js/app.js の複製。違いは scripts/sync_kobe.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_kobe.py で写し直す） */
 """, 1)
 assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.KOBE_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-kobe-")
-s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 7;", s)
+# 番号を振り直したので、保存キーの末尾に -b（古い「行った」印・選んだ場所が、別のスポットに付かないように）
+for k in ("'kyoto-maps-kobe-visited-v2'", "'kyoto-maps-kobe-picks'"):
+    assert s.count(k) == 1, k
+    s = s.replace(k, k[:-1] + "-b'")
+s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 6;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/kobe.json?v=3')")
+s = s.replace(m.group(0), "fetch('../data/routes/kobe.json?v=4')")
 
 # 最初から「選んで回る」
 rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
@@ -102,17 +107,17 @@ app_js = s
 
 # index.html
 h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
-h = re.sub(r'<title>.*?</title>', '<title>京都から日帰り 神戸 Kobe MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="京都から電車で神戸へ。布引の滝、北野天満神社と北野異人館、三宮のかつ丼、メリケンパークとポートタワーを回る日帰りルートマップ。A day trip from Kyoto to Kobe: Nunobiki Falls, the Kitano foreign residences, a katsudon lunch and Meriken Park.">', h)
+h = re.sub(r'<title>.*?</title>', '<title>神戸 1日ルート｜北野異人館・布引の滝・夜の港 Kobe MAP</title>', h)
+h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="大阪の梅田〜難波のホテルから1日で回る神戸。午前は北野の異人館、三宮でかつ丼、午後は新神戸駅の裏の布引の滝、南京町を抜けてメリケンパークの夕暮れ、夜のハーバーランドまで。時刻つきのルートマップ。Kobe in one day from a hotel in Osaka: the Kitano foreign residences, a katsudon lunch, Nunobiki Falls, Chinatown, sunset at Meriken Park and the harbour at night, with a timetable.">', h)
 h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1神戸\2', h)
 h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Kobe\2', h)
-h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都から日帰り Kobe MAP\2', h)
+h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1神戸 1日ルート Kobe MAP\2', h)
 a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-# EXTRA: このマップだけ i18n.js・app.js（データの ?v）を変えたときに足す数（2026-11-20 点検の修正で +1）
-EXTRA = {'css/style.css': 0, 'js/i18n.js': 1, 'js/app.js': 1}
+# EXTRA: このマップだけ i18n.js・app.js（データの ?v）を変えたときに足す数（2026-11-20 点検の修正で +1、2026-11-22 の作り直しで +1）
+EXTRA = {'css/style.css': 0, 'js/i18n.js': 2, 'js/app.js': 2}
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
