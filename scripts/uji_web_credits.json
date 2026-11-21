@@ -1,0 +1,234 @@
+{
+ "ujieki": [
+  {
+   "file": "ujieki-w1.jpg",
+   "credit": {
+    "author": "Nesnad",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Uji_Station_-_2015_12_29.jpg"
+   }
+  },
+  {
+   "file": "ujieki-w2.jpg",
+   "credit": {
+    "author": "Saigen Jiro",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Uji_Station_(JR_West),_ekisha.jpg"
+   }
+  }
+ ],
+ "ujibashi": [
+  {
+   "file": "ujibashi-w1.jpg",
+   "credit": {
+    "author": "suri",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Uji-bashi_(5709198691).jpg"
+   }
+  },
+  {
+   "file": "ujibashi-w2.jpg",
+   "credit": {
+    "author": "京都東",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Uji-Bridge.jpg"
+   }
+  }
+ ],
+ "ujigami": [
+  {
+   "file": "ujigami-w1.jpg",
+   "credit": {
+    "author": "Ctny",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ujigami_shrine.jpg"
+   }
+  },
+  {
+   "file": "ujigami-w2.jpg",
+   "credit": {
+    "author": "Saigen Jiro",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ujigami-jinja,_honden.jpg"
+   }
+  }
+ ],
+ "koshoji": [
+  {
+   "file": "koshoji-w1.jpg",
+   "credit": {
+    "author": "coniferconifer",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Gate,_K%C5%8Dsh%C5%8D-ji_temple,_Uji,_Kyoto_-_Jul_5,_2020.jpg"
+   }
+  },
+  {
+   "file": "koshoji-w2.jpg",
+   "credit": {
+    "author": "Motokoka",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sanmon_gate,_K%C5%8Dsh%C5%8D-ji_02.jpg"
+   }
+  },
+  {
+   "file": "koshoji-w3.jpg",
+   "credit": {
+    "author": "Motokoka",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yakuimon_gate,_K%C5%8Dsh%C5%8D-ji_02.jpg"
+   }
+  },
+  {
+   "file": "koshoji-w4.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Koshoji_Uji_Kyoto02n4592.jpg"
+   }
+  }
+ ],
+ "mimuroto": [
+  {
+   "file": "mimuroto-w1.jpg",
+   "credit": {
+    "author": "Naokijp",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hydrangea_macrophylla_at_Mimuroto-ji_Garden_002.jpg"
+   }
+  },
+  {
+   "file": "mimuroto-w2.jpg",
+   "credit": {
+    "author": "Naokijp",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hydrangea_macrophylla_at_Mimuroto-ji_Garden_001.jpg"
+   }
+  },
+  {
+   "file": "mimuroto-w3.jpg",
+   "credit": {
+    "author": "Hyppolyte de Saint-Rambert",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mimuroto-ji_(UJI,_Kyoto)_hdsr_Temple_S5_54a.jpg"
+   }
+  }
+ ],
+ "keihanuji": [
+  {
+   "file": "keihanuji-w1.jpg",
+   "credit": {
+    "author": "オクノサンライズ",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:IMG_keihan_uji_station.jpg"
+   }
+  },
+  {
+   "file": "keihanuji-w2.jpg",
+   "credit": {
+    "author": "L26",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Keihan_Uji_station_concourse.jpg"
+   }
+  }
+ ],
+ "teradaya": [
+  {
+   "file": "teradaya-w1.jpg",
+   "credit": {
+    "author": "Fg2",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Teradaya_fg2.jpg"
+   }
+  },
+  {
+   "file": "teradaya-w2.jpg",
+   "credit": {
+    "author": "Wadakon234",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%AF%BA%E7%94%B0%E5%B1%8B3.jpg"
+   }
+  }
+ ],
+ "jikkoku": [
+  {
+   "file": "jikkoku-w1.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Fushimi_Horikawa01s4592.jpg"
+   }
+  },
+  {
+   "file": "jikkoku-w2.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Fushimi_Horikawa02s4592.jpg"
+   }
+  },
+  {
+   "file": "jikkoku-w3.jpg",
+   "credit": {
+    "author": "ブルーノ・プラス",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Misu_lock_gate.jpg"
+   }
+  }
+ ],
+ "gekkeikan": [
+  {
+   "file": "gekkeikan-w1.jpg",
+   "credit": {
+    "author": "Maechan0360",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:%E6%9C%88%E6%A1%82%E5%86%A0_01.JPG"
+   }
+  }
+ ],
+ "gokonomiya": [
+  {
+   "file": "gokonomiya-w1.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Gokogu-jinja06nt3200.jpg"
+   }
+  },
+  {
+   "file": "gokonomiya-w2.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Gokogu-jinja15nt3200.jpg"
+   }
+  },
+  {
+   "file": "gokonomiya-w3.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Gokogu-jinja02n4592.jpg"
+   }
+  }
+ ],
+ "kizakura": [
+  {
+   "file": "kizakura-w1.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Kizakura_Kappa_Country01n4592.jpg"
+   }
+  }
+ ],
+ "momoyama": [
+  {
+   "file": "momoyama-w1.jpg",
+   "credit": {
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Gokogu-jinja04n4592.jpg"
+   }
+  }
+ ]
+}
