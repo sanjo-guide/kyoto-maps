@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
-"""京都から日帰り 友ヶ島・加太ルートのデータ（data/routes/tomogashima.json）を書き出す。
+"""友ヶ島・加太（大阪の梅田〜難波のホテルから日帰り）のデータを書き出す。行きの船ごとに1ファイル。
 
-使い方: python3 scripts/build_tomogashima_data.py
+使い方: python3 scripts/build_tomogashima_data.py   （そのあと python3 scripts/sync_tomogashima.py）
+- data/routes/tomogashima.json        … 「11:00の船」（late。なんば8:14発→加太→淡嶋神社→11:00の船→島で5時間→16:30の船→夜はなんば）
+- data/routes/tomogashima-early.json  … 「9:00の船」（early。なんば6:38発→9:00の船→島で4時間→13:30の船→加太でお昼・淡嶋神社・温泉→夜はなんば）
+- 起点は大阪の梅田〜難波のあたりのホテル（2026-11-22 オーナーの指示。京都の三条のあたりから来る人の電車は補足として書く）
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
-- 写真は images/tomogashima/<スポットのid>-<番号>.jpg を番号の順に全部使う
+- スポットの文章は「名前 → コースごとの行き方（pre）→ 共通の説明（body）→ コースごとの次へ（post）→ おすすめ訪問時間」の順に組み立てる
+- 確認した出典（2026-11-22）:
+  - 船：友ヶ島汽船の公式サイト（時刻表・運航日・整理券・運賃は画像。運航連絡はトップページ）。支払い方法と整理券を配りはじめる時刻は書かれていない（要確認）
+  - 島の中：和歌山市の公式サイト「友ヶ島」（トイレ4か所、飲み物は野奈浦広場のまわりだけ、水道なし、ごみ持ち帰り、名所探訪コース3.3km、深蛇池・虎島は見学不可）
+  - 電車：乗換案内（Yahoo!路線情報）2026-11-26（木）と 11-28（土）のダイヤ
+  - 淡嶋神社：kada.jp/awashima（参拝9〜17時）。活魚料理いなさ：inasa.net。ひいなの湯：hiina.com。休暇村紀州加太：qkamura.or.jp/kada。加太海月：kada-kaigetsu.com
+  - 日の入り：国立天文台 暦計算室（和歌山）
+- 店名を出しているのは、公式サイトで営業時間を確かめた店だけ（いなさ、ひいなの湯、休暇村紀州加太、加太海月、島のらぴゅカフェ）。行ったとは書いていない
+- 写真は images/tomogashima/<スポットのid>-<番号>.jpg を番号の順に全部使う（2026-11-22 の作り直しでは足していない）
 """
 import json, os, re, urllib.parse
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = f"{R}/images/tomogashima"
-OUT = f"{R}/data/routes/tomogashima.json"
-CHECKED = "2026-11-20"
+CHECKED = "2026-11-22"
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -34,8 +44,15 @@ def row(kind, ja, en, until=None):
     return {"kind": kind, "text": T(ja, en), "until": until, "from": None}
 
 
-def info(rows, tip=None, verified=True):
-    d = {"rows": rows, "cash": False, "tip": tip, "checked": CHECKED}
+def notice(hja, hen, ja, en, url=None):
+    d = {"head": T(hja, hen), "text": T(ja, en)}
+    if url:
+        d["url"] = url
+    return d
+
+
+def info(rows, tip=None, verified=True, cash=False, source=None):
+    d = {"rows": rows, "cash": cash, "tip": tip, "checked": CHECKED, "source": source or []}
     if not verified:
         d["verified"] = False
     return d
@@ -45,177 +62,382 @@ def photos(pid):
     return [f"{pid}-{i}.jpg" for i in sorted(PICKS[pid])]
 
 
-NONE = {"rows": [], "cash": False, "tip": None, "checked": CHECKED}
-KISEN = link("official", "友ヶ島汽船 公式サイト（運航連絡・時刻・運賃）", "Tomogashima Kisen ferry (official, Japanese)", "https://tomogashimakisen.com/main/")
-JR = link("timetable", "乗換案内（Yahoo!路線情報）", "Route planner (Yahoo! Japan)", "https://transit.yahoo.co.jp/")
-TRAIN_TIP = T("時刻と運賃は乗換案内（2026年11月の平日のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
-              "Times and fares checked on a route planner (weekday timetable, November 2026). Please check again before you travel.")
+KISEN_URL = "https://tomogashimakisen.com/main/"
+CITY_URL = "https://www.city.wakayama.wakayama.jp/kankou/kankouspot/1027585/index.html"
+KISEN = link("official", "友ヶ島汽船 公式サイト（今日の運航連絡・時刻・運賃）", "Tomogashima Kisen ferry: today’s operating notice, times, fares (official, Japanese)", KISEN_URL)
+CITY = link("info", "和歌山市「友ヶ島」（島の地図・通れない道・注意）", "Wakayama City: Tomogashima (island map, closed trails, cautions; Japanese)", CITY_URL)
+PLANNER = link("timetable", "乗換案内（Yahoo!路線情報）", "Route planner (Yahoo! Japan)", "https://transit.yahoo.co.jp/")
+MEDETAI = link("timetable", "めでたいでんしゃ（南海電鉄・運行ダイヤ）", "Medetai Densha: which train runs when (Nankai, Japanese)", "https://www.nankai.co.jp/kada/medetai.html")
+OSAKA_MAP = link("info", "夜のなんば：大阪マップ（法善寺横丁・道頓堀）", "Evening in Namba: the Osaka map (Hozenji Yokocho, Dotonbori)", "../osaka/")
+SRC_KISEN = "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡）"
+SRC_CITY = "和歌山市 公式サイト「友ヶ島」（散策コース・施設・注意・通行止め）"
+SRC_PLANNER = "乗換案内（Yahoo!路線情報）2026-11-26（木）・11-28（土）のダイヤ"
+TRAIN_TIP = T("電車の時刻と運賃は乗換案内（2026年11月26日・木曜と28日・土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
+              "Train times and fares checked on a route planner (timetables for Thu 26 and Sat 28 Nov 2026). Please check again before you travel.")
+ISLAND_TIP = T("歩く時間は、和歌山市の「名所探訪コース」（3.3km、歩くだけで1時間20分）をもとに、少しゆったりめにしてあります。",
+               "Walking times follow Wakayama City’s “Meisho Tambo” course (3.3 km, 1 h 20 min of walking alone), with a little slack added.")
 
-S = [
-    dict(id="kadaeki", name=T("南海 加太駅", "Nankai Kada Station"), kind=T("駅（スタート）", "Station (start)"),
-         blurb=T("和歌山市駅から加太線で終点の加太へ。鯛の形の吊り革がかわいい「めでたいでんしゃ」に会えるかも。",
-                 "Ride the Kada Line from Wakayamashi to the end of the line. You may catch the “Medetai Densha”, with sea-bream-shaped straps."),
-         lat=34.27507, lng=135.08070,
-         text=T("南海 加太駅（かだえき）\n\n京都からは、JRの新快速で大阪へ、地下鉄御堂筋線でなんばへ出て、南海線で和歌山市駅、そこから加太線で終点の加太へ。"
-                "京都7:35発に乗ると、加太に10:19に着きます（約2時間45分・1,830円）。\n\n"
-                "加太線には、鯛をモチーフにした「めでたいでんしゃ」が走っています。赤やピンクの車両で、車内の吊り革も鯛の形。どの色がいつ走るかは、南海電鉄のサイトの「運行ダイヤ」に出ています。\n\n"
-                "駅から加太港の友ヶ島汽船乗り場までは、歩いて15分ほどです。\n\nおすすめ到着時間：10:19",
-                "Nankai Kada Station\n\nFrom Kyoto, take a JR Special Rapid to Osaka, the Midosuji subway to Namba, the Nankai Line to Wakayamashi, then the Kada Line to the end. "
-                "Leave Kyoto at 7:35 and you reach Kada at 10:19 (about 2 h 45 min, ¥1,830).\n\n"
-                "The Kada Line runs the “Medetai Densha”, trains themed on the lucky sea bream, in red or pink with fish-shaped hand straps. Nankai’s website has a timetable showing which colour runs when.\n\n"
-                "The Tomogashima ferry pier at Kada Port is about 15 minutes’ walk from the station.\n\nRecommended arrival: 10:19"),
-         gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
-         links=[JR, link("timetable", "めでたいでんしゃ（南海電鉄・運行ダイヤ）", "Medetai Densha: which train runs when (Nankai, Japanese)", "https://www.nankai.co.jp/kada/medetai.html")],
-         info=info([row("train", "京都7:35発（JR新快速）→ 大阪 → 地下鉄御堂筋線 → なんば → 南海線 → 和歌山市 → 加太線 → 加太10:19着",
-                        "Kyoto 7:35 (JR Special Rapid) → Osaka → Midosuji subway → Namba → Nankai Line → Wakayamashi → Kada Line → Kada 10:19"),
-                    row("fee", "京都→加太 1,830円（南海の特急サザンは自由席なら追加料金なし）", "Kyoto → Kada ¥1,830 (no extra charge in the unreserved cars of Nankai’s Southern express)")],
-                   tip=TRAIN_TIP)),
-    dict(id="port", name=T("加太港（友ヶ島汽船乗り場）", "Kada Port (Tomogashima ferry)"), kind=T("船乗り場", "Ferry pier"),
-         blurb=T("友ヶ島へ渡る船は、ここから1日に数便だけ。2便目からは当日の整理券を配ります。",
-                 "Only a few boats a day leave here for Tomogashima. From the second boat on, same-day numbered tickets are handed out."),
-         lat=34.27549, lng=135.07041,
-         text=T("加太港（かだこう）の友ヶ島汽船乗り場\n\n漁港の町・加太の港から、友ヶ島汽船の船で沖ノ島（友ヶ島）の野奈浦（のなうら）桟橋へ渡ります。\n\n"
-                "3月〜12月は加太港発 9:00・11:00・13:00・16:00（春の連休と夏休みは臨時便あり）。帰りの友ヶ島発は 9:30・11:30・13:30・16:30 です。"
-                "2便目からは当日の乗船整理券が配られ、1便の定員は100人。前日までの予約はできないので、混む日は早めに港へ行きましょう。\n\n"
-                "風が強い日や海が荒れた日は欠航になります。風が強くなる日は、帰りの最終便が早まることもあります（例：2026年11月17日は友ヶ島発15:30が最終）。行く日の朝に、公式サイトの運航連絡を確かめてください。\n\nおすすめ乗船時間：11:00",
-                "Kada Port: Tomogashima Kisen ferry\n\nFrom the fishing port of Kada, the Tomogashima Kisen boat takes you to Nonaura pier on Okinoshima (Tomogashima).\n\n"
-                "March to December, boats leave Kada at 9:00, 11:00, 13:00 and 16:00 (extra sailings in Golden Week and the summer holidays). Return boats leave the island at 9:30, 11:30, 13:30 and 16:30. "
-                "From the second boat on, same-day numbered tickets are handed out; each boat takes 100 people and there are no advance bookings, so arrive early on busy days.\n\n"
-                "Boats are cancelled in strong wind or rough seas, and on days when the wind picks up the last boat back may leave earlier (on 17 Nov 2026 the last boat left the island at 15:30). Check the operating notice on the website on the morning you go.\n\nRecommended boat: 11:00"),
-         gmaps=[gm("友ヶ島汽船 乗り場", "Tomogashima Kisen pier", 34.27549, 135.07041, "友ヶ島汽船 加太")],
-         links=[KISEN],
-         info=info([row("hours", "3月〜12月：加太港発 9:00・11:00・13:00・16:00／友ヶ島発 9:30・11:30・13:30・16:30（4月29日〜5月5日と7月20日〜8月31日は臨時便あり）",
-                        "Mar–Dec: Kada 9:00, 11:00, 13:00, 16:00 / island 9:30, 11:30, 13:30, 16:30 (extra boats 29 Apr – 5 May and 20 Jul – 31 Aug)"),
-                    row("closed", "3月〜12月は水曜運休（祝日は運航）。1月〜2月は土・日・祝日だけ運航（12月29日〜1月3日は運休）。悪天候の日は欠航。風の強い日は帰りの最終便が早まることもある",
-                        "Mar–Dec: no boats on Wednesdays (except holidays). Jan–Feb: Sat, Sun and holidays only (none 29 Dec – 3 Jan). Cancelled in bad weather; on windy days the last boat back may be earlier"),
-                    row("fee", "往復 大人2,800円（2026年7月1日から）", "Round trip ¥2,800 per adult (from 1 Jul 2026)")],
-                   tip=T("運航日・時刻・運賃は友ヶ島汽船の公式サイトで確認しました。", "Days, times and fares checked on the Tomogashima Kisen website."))),
-    dict(id="nonaura", name=T("友ヶ島 野奈浦桟橋", "Nonaura Pier, Tomogashima"), kind=T("船着き場", "Pier"),
-         blurb=T("無人島の友ヶ島に到着。山道を歩いて、森の中に残るレンガの砲台跡をめぐります。",
-                 "Landing on uninhabited Tomogashima. Walk the hill trails to brick gun batteries hidden in the woods."),
-         lat=34.28380, lng=135.00860,
-         text=T("友ヶ島 野奈浦桟橋（のなうらさんばし）\n\n加太港から船で20分ほど。友ヶ島は紀淡海峡に浮かぶ無人島の集まりで、船が着くのはいちばん大きな沖ノ島です。"
-                "明治時代に大阪湾を守る要塞が造られ、レンガ造りの砲台跡が森の中に残っています。\n\n"
-                "島の中は舗装されていない山道が多いので、歩きやすい靴で。桟橋のすぐそばには友ヶ島案内センターと「らぴゅカフェ」（9:30〜16:00、ドリンクと軽食。船が出る日だけで、天気で時間が変わることもあります）がありますが、飲み物は多めに持っていくと安心です。お昼は加太で買っていくか、島を回って桟橋に戻ってから、帰りの船を待つあいだにカフェで。"
-                "砲台跡を回って戻ってくるまで、2時間半〜3時間ほどみておきましょう。\n\n帰りは16:30発の船で加太港へ（13:30発でも主な場所は回れますが、急ぎ足になります）。風が強くなる日は最終便が早まることがあるので、着いたら当日の運航連絡で帰りの時刻を確かめてから歩きはじめましょう。\n\nおすすめ到着時間：11:20",
-                "Nonaura Pier, Tomogashima\n\nAbout 20 minutes by boat from Kada. Tomogashima is a group of uninhabited islands in the Kitan Strait; boats land on the largest, Okinoshima. "
-                "In the Meiji era it was fortified to guard Osaka Bay, and brick gun batteries still stand in the woods.\n\n"
-                "Most trails are unpaved hill paths, so wear good shoes. Right by the pier there are an information centre and the Rapyu Cafe (9:30–16:00, drinks and light meals; open only on days the boats run, hours may change with the weather), but bring plenty to drink. For lunch, buy something in Kada, or eat at the cafe while you wait for the boat back after your walk. "
-                "Allow two and a half to three hours to walk round the batteries and back.\n\nTake the 16:30 boat back to Kada (the 13:30 also works for the main sights, but it’s a rush). On windy days the last boat may leave earlier, so check that day’s operating notice for the return time before you set off.\n\nRecommended arrival: 11:20"),
-         gmaps=[gm("野奈浦桟橋", "Nonaura Pier", 34.28380, 135.00860, "友ヶ島 野奈浦桟橋")],
-         links=[KISEN],
-         info=NONE),
-    dict(id="dai3", name=T("第3砲台跡", "No. 3 Battery ruins"), kind=T("砲台跡", "Fort ruins"),
-         blurb=T("レンガのアーチが並ぶ、友ヶ島でいちばん有名な場所。暗いトンネルを抜けた先にあります。",
-                 "Tomogashima’s best-known sight: rows of brick arches at the far end of a dark tunnel."),
-         lat=34.28005, lng=135.00666,
-         text=T("第3砲台跡（だいさんほうだいあと）\n\n野奈浦桟橋から山道を登って約0.5km。レンガ造りの弾薬庫のアーチが並び、苔とつたに覆われています。アニメ映画の世界のようだと人気の場所です。\n\n"
-                "長いレンガのトンネルの中は真っ暗な所もあるので、スマホのライトがあると安心です。建物の上や崩れかけた所には登らないでください。\n\nおすすめ訪問時間：11:40〜12:20",
-                "No. 3 Battery ruins\n\nAbout 0.5 km up the hill from Nonaura pier. Rows of brick magazine arches covered in moss and ivy make it look like a scene from an animated film, which is why it’s so popular.\n\n"
-                "Parts of the long brick tunnel are pitch dark, so a phone torch helps. Don’t climb on the structures or crumbling sections.\n\nRecommended visit time: 11:40–12:20"),
-         gmaps=[gm("友ヶ島 第3砲台跡", "No. 3 Battery, Tomogashima", 34.28005, 135.00666, "友ヶ島 第3砲台跡")],
-         links=[KISEN],
-         info=NONE),
-    dict(id="takanosu", name=T("タカノス山展望台", "Takanosu-yama Observatory"), kind=T("展望台", "Viewpoint"),
-         blurb=T("島のいちばん高い所にある展望台。淡路島と紀淡海峡が見渡せます。",
-                 "The lookout at the island’s highest point, with views over Awaji Island and the Kitan Strait."),
-         lat=34.28133, lng=135.00597,
-         text=T("タカノス山展望台（たかのすやまてんぼうだい）\n\n第3砲台跡のすぐ近く、島の山の上にある展望台です。白い屋根の休憩所があり、海の向こうに淡路島が大きく見えます。\n\n"
-                "道しるべでは「大展望台」と書かれています。ひと休みしてから、島の北西の海岸へ下りていきましょう。\n\nおすすめ訪問時間：12:30〜12:50",
-                "Takanosu-yama Observatory\n\nA lookout on the hilltop right by the No. 3 Battery. There’s a shelter with white roofs, and Awaji Island looms across the sea.\n\n"
-                "Signposts call it the “Dai-tenbodai” (big observatory). Rest here, then head down to the north-west coast of the island.\n\nRecommended visit time: 12:30–12:50"),
-         gmaps=[gm("タカノス山展望台", "Takanosu-yama Observatory", 34.28133, 135.00597, "タカノス山展望台 友ヶ島")],
-         links=[KISEN],
-         info=NONE),
-    dict(id="kosuke", name=T("孝助松海岸", "Kosukematsu beach"), kind=T("海岸", "Beach"),
-         blurb=T("とがった岩が海に突き出す、島の北西の海岸。「孝助松」と書いた木の道しるべが目印です。",
-                 "A beach on the north-west shore where a pointed rock juts into the sea. A wooden signpost marks the spot."),
-         lat=34.28330, lng=135.00240,
-         text=T("孝助松海岸（こうすけまつかいがん）\n\n展望台から下って、池尻広場の先にある海岸です。海にとがった岩が突き出し、晴れた日は海の色がとてもきれいです。\n\n"
-                "ここから友ヶ島灯台と第2砲台跡までは、道しるべに沿って歩いて10分ほどです。\n\nおすすめ訪問時間：13:10〜13:25",
-                "Kosukematsu beach\n\nDown from the lookout, just past Ikejiri Square. A pointed rock juts into the sea, and on sunny days the water is beautiful.\n\n"
-                "From here it’s about 10 minutes along the signposted trail to the lighthouse and the No. 2 Battery.\n\nRecommended visit time: 13:10–13:25"),
-         gmaps=[gm("孝助松海岸", "Kosukematsu beach", 34.28330, 135.00240, "友ヶ島 孝助松海岸")],
-         links=[KISEN],
-         info=NONE),
-    dict(id="toudai", name=T("友ヶ島灯台", "Tomogashima Lighthouse"), kind=T("灯台", "Lighthouse"),
-         blurb=T("明治時代に建てられた白い灯台。足元には岩場の海が広がります。",
-                 "A white lighthouse from the Meiji era, above a rocky shore."),
-         lat=34.28091, lng=135.00046,
-         text=T("友ヶ島灯台（ともがしまとうだい）\n\n島の西の端に立つ白い灯台で、明治時代に建てられた古い灯台のひとつです。灯台のまわりは芝生の広場になっていて、岩場の海を見下ろせます。\n\n"
-                "すぐ近くに第2砲台跡があります。\n\nおすすめ訪問時間：13:35〜13:55",
-                "Tomogashima Lighthouse\n\nA white lighthouse at the western tip of the island, one of Japan’s early Meiji-era lighthouses. A grassy area surrounds it, looking down on the rocky shore.\n\n"
-                "The No. 2 Battery is close by.\n\nRecommended visit time: 13:35–13:55"),
-         gmaps=[gm("友ヶ島灯台", "Tomogashima Lighthouse", 34.28091, 135.00046, "友ヶ島灯台")],
-         links=[KISEN],
-         info=NONE),
-    dict(id="dai2", name=T("第2砲台跡", "No. 2 Battery ruins"), kind=T("砲台跡", "Fort ruins"),
-         blurb=T("海に面して崩れたままのレンガの砲台跡。崩れた壁の向こうに淡路島が見えます。",
-                 "A brick battery on the sea, left as it collapsed. Awaji Island shows through the broken walls."),
-         lat=34.28213, lng=135.00055,
-         text=T("第2砲台跡（だいにほうだいあと）\n\n灯台のすぐ近く、海に面した砲台跡です。大きなコンクリートの塊が崩れ落ちたまま残っていて、第3砲台跡とはまた違う迫力があります。\n\n"
-                "崩れていて危ないので、柵の中には入らないでください。ここから野奈浦桟橋までは、歩いて20〜30分ほどです。\n\nおすすめ訪問時間：14:00〜14:30",
-                "No. 2 Battery ruins\n\nRight by the lighthouse, facing the sea. Huge blocks of concrete lie where they fell, with a different kind of drama from the No. 3 Battery.\n\n"
-                "It’s unstable, so stay outside the fences. Nonaura pier is 20 to 30 minutes’ walk from here.\n\nRecommended visit time: 14:00–14:30"),
-         gmaps=[gm("友ヶ島 第2砲台跡", "No. 2 Battery, Tomogashima", 34.28213, 135.00055, "友ヶ島 第2砲台跡")],
-         links=[KISEN],
-         info=NONE),
-    dict(id="awashima", name=T("淡嶋神社", "Awashima Shrine"), kind=T("神社", "Shrine"),
-         blurb=T("人形供養で知られる神社。加太港から歩いてすぐです。",
-                 "A shrine known for its memorial services for dolls, a short walk from Kada Port."),
-         lat=34.27360, lng=135.06671,
-         text=T("淡嶋神社（あわしまじんじゃ）\n\n加太港のすぐ近く、海に向かって朱色の鳥居が立つ神社です。人形供養で知られ、境内には全国から納められたたくさんの人形が並んでいます。"
-                "毎年3月3日には、ひな人形を小舟にのせて海へ流す「雛流し」が行われます。\n\n"
-                "友ヶ島から16:30の船で戻ったら、ここにお参りしてから駅へ向かいましょう。\n\nおすすめ訪問時間：16:55〜17:20",
-                "Awashima Shrine\n\nRight by Kada Port, with a vermilion torii facing the sea. It’s known for memorial services for dolls, and countless dolls sent from all over Japan line the grounds. "
-                "Every 3 March, in the “Hina-nagashi”, Girls’ Day dolls are set adrift on the sea in little boats.\n\n"
-                "Back from the island on the 16:30 boat, pay a visit here on your way to the station.\n\nRecommended visit time: 16:55–17:20"),
-         gmaps=[gm("淡嶋神社", "Awashima Shrine", 34.27360, 135.06671, "淡嶋神社 和歌山市加太")],
-         links=[],
-         info=NONE),
-    dict(id="kadaeki2", name=T("南海 加太駅（帰り）", "Nankai Kada Station (return)"), kind=T("駅（ゴール）", "Station (finish)"),
-         blurb=T("17:46発の電車で京都へ。20:29着です（淡嶋神社に寄らなければ17:27発にも間に合います）。",
-                 "Take the 17:46 train back, arriving in Kyoto at 20:29 (skip Awashima Shrine and you can make the 17:27)."),
-         lat=34.27507, lng=135.08070,
-         text=T("南海 加太駅（帰り）\n\n17:46発の加太線で和歌山市へ、南海線でなんば、地下鉄御堂筋線で梅田（大阪）、JRで京都へ。京都には20:29に着きます（1,830円）。\n\n"
-                "淡嶋神社から駅までは歩いて20分ほどです。淡嶋神社に寄らずに港からまっすぐ駅へ向かえば、1本前の17:27発（京都19:59着）にも間に合います。\n\nおすすめ出発時間：17:46",
-                "Nankai Kada Station (return)\n\nTake the 17:46 Kada Line to Wakayamashi, the Nankai Line to Namba, the Midosuji subway to Umeda (Osaka) and JR to Kyoto, arriving at 20:29 (¥1,830).\n\n"
-                "The station is about 20 minutes’ walk from Awashima Shrine. Skip the shrine and walk straight from the port, and you can make the earlier 17:27 (Kyoto 19:59).\n\nRecommended departure time: 17:46"),
-         gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
-         links=[JR],
-         info=info([row("train", "加太17:46発 → 和歌山市 → なんば → 梅田（大阪）→ 京都20:29着（1本前は17:27発 → 京都19:59着）", "Kada 17:46 → Wakayamashi → Namba → Umeda (Osaka) → Kyoto 20:29 (the one before: 17:27 → Kyoto 19:59)"),
-                    row("fee", "加太→京都 1,830円", "Kada → Kyoto ¥1,830")],
-                   tip=TRAIN_TIP)),
-]
+# ---------------------------------------------------------------------------
+# スポット（コースで変わらない部分）
+# ---------------------------------------------------------------------------
+S = dict(
+    kadaeki=dict(
+        name=T("南海 加太駅", "Nankai Kada Station"), kind=T("駅（スタート）", "Station (start)"),
+        title=T("南海 加太駅（かだえき）", "Nankai Kada Station"),
+        lat=34.27507, lng=135.08070,
+        caution=T("出かける前に、今日の船が出るかを確認", "Before you set off, check that today’s boats are running"),
+        body=T("運賃はなんばから加太まで1,010円。特急サザンは、なんば寄りの4両が自由席で、乗車券だけで乗れます（指定席は700円）。梅田のあたりのホテルからは、御堂筋線でなんばへ8分・240円。地下鉄から南海への乗り換えには、10分ほどみてください。\n\n"
+               "和歌山市から先の加太線には、鯛をモチーフにした「めでたいでんしゃ」が走っています。吊り革も鯛の形。追加料金も予約もいりません。どの色がいつ走るかは、南海電鉄のサイトに出ています。\n\n"
+               "島には売店がカフェ1軒しかありません。お昼に食べるものと飲み物は、なんばで電車に乗る前に買っておくのが確実です。",
+               "Namba to Kada is ¥1,010. On the Southern limited express the four cars at the Namba end are unreserved and need only an ordinary ticket (reserved seats are ¥700). From a hotel around Umeda, the Midosuji Line takes 8 minutes to Namba (¥240); allow about 10 minutes to change from the subway to the Nankai platforms.\n\n"
+               "Beyond Wakayamashi, the Kada Line runs the “Medetai Densha”, trains themed on the lucky sea bream, down to the fish-shaped hand straps. No surcharge, no booking. Nankai’s website shows which colour runs when.\n\n"
+               "The island has just one small cafe. The sure way is to buy your lunch and drinks in Namba before you board the train."),
+        gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
+        links=[KISEN, PLANNER, MEDETAI],
+        notices=[notice("出かける前に：今日、船は出ますか", "Before you leave: are the boats running today?",
+                        "友ヶ島汽船は風と波でよく欠航します。2026年11月16日〜21日の6日間で、船が出たのは17日だけでした（18日は水曜の運休、ほかの4日は強風・荒天で全便欠航）。出るかどうかはその日の朝に決まり、友ヶ島汽船の公式サイトの「運航連絡」に出ます。何時に出るかは決まっていません。和歌山市の案内では、朝8時以降なら電話（073-459-1333、日本語）でも確かめられます。",
+                        "The Tomogashima boats are often cancelled for wind and waves. In the six days from 16 to 21 November 2026 they ran on the 17th only (the 18th was the regular Wednesday off; the other four days were cancelled for strong wind or rough weather). The decision is made that morning and posted under “運航連絡” on the ferry’s website, at no fixed time. Wakayama City says you can also phone after 8:00 (073-459-1333, Japanese).",
+                        KISEN_URL)],
+        tip=TRAIN_TIP, source=[SRC_PLANNER, "南海電鉄 公式サイト（特急サザン・めでたいでんしゃ）", SRC_KISEN]),
+    port=dict(
+        name=T("加太港（友ヶ島汽船乗り場）", "Kada Port (Tomogashima ferry)"), kind=T("船乗り場", "Ferry pier"),
+        title=T("加太港（かだこう）の友ヶ島汽船乗り場", "Kada Port: the Tomogashima Kisen ferry"),
+        lat=34.27549, lng=135.07041,
+        caution=T("水曜運休（1〜2月は土日祝だけ）。強風で欠航。現金を用意", "No boats Wed (Jan–Feb: weekends and holidays only). Cancelled in strong wind. Bring cash"),
+        body=T("船は1日4往復だけです。加太港発 9:00・11:00・13:00・16:00、友ヶ島発 9:30・11:30・13:30・16:30。片道20分ほど。4月29日〜5月5日と7月20日〜8月31日は臨時便（加太発10:00）が増えますが、15:00の便は迎えの船なので日帰りの人は乗れません。\n\n"
+               "往復で大人2,800円、こども1,250円。予約はできません。2便目（11:00）からは当日の乗船整理券が配られ、1便の定員は100人です。配りはじめる時刻と支払い方法は公式サイトに書かれていないので（要確認）、現金を用意して、船の時刻の45分前には港に着くようにしています。\n\n"
+               "9〜10時にホテルを出る人は、13:00の船になります（なんば9:45発の特急サザン11号で加太11:21着、土曜は11:22着）。港で整理券をもらってから加太でお昼を食べ、島にいられるのは13:20〜16:30の約3時間。主な場所は回れますが、帰りは最終便しかありません。風で最終便が早まる日（2026年11月17日は友ヶ島発15:30が最終でした）は回りきれないので、できれば11:00までの船に乗ってください。\n\n"
+               "欠航だった日は、加太で淡嶋神社とお昼と温泉にするか、和歌山市駅まで戻って和歌山城へ。",
+               "There are only four round trips a day: from Kada at 9:00, 11:00, 13:00 and 16:00; from the island at 9:30, 11:30, 13:30 and 16:30. The crossing takes about 20 minutes. From 29 April to 5 May and 20 July to 31 August there is an extra 10:00 from Kada; the 15:00 extra is a pick-up run and day visitors cannot use it.\n\n"
+               "A return ticket is ¥2,800 for adults, ¥1,250 for children. There are no advance bookings. From the second boat (11:00) on, same-day numbered tickets are handed out, and each boat takes 100 people. The website says neither when the tickets start being handed out nor how you can pay (unconfirmed), so bring cash, and this plan gets you to the port 45 minutes before the boat.\n\n"
+               "If you leave your hotel at 9–10, your boat is the 13:00 (Southern 11 from Namba at 9:45, Kada 11:21, 11:22 on Saturdays). Get your numbered ticket, have lunch in Kada, and you have about three hours on the island, 13:20 to 16:30. That covers the main sights, but your only way back is the last boat. On days when wind brings the last boat forward (on 17 Nov 2026 it left the island at 15:30) you won’t get round, so take the 11:00 or earlier if you can.\n\n"
+               "If the boats are cancelled: stay in Kada for Awashima Shrine, lunch and a hot spring, or go back to Wakayamashi Station for Wakayama Castle."),
+        gmaps=[gm("友ヶ島汽船 乗り場", "Tomogashima Kisen pier", 34.27549, 135.07041, "友ヶ島汽船 加太")],
+        links=[KISEN, CITY],
+        notices=[notice("船が出ない日", "Days with no boats",
+                        "3月〜12月は水曜が運休（祝日は運航）。1月〜2月は土・日・祝日だけ。12月29日〜1月3日は運休。そのほかの日も、風や波で欠航します。風が強くなる日は帰りの最終便が早まることがあります。",
+                        "March to December: no boats on Wednesdays (they run if it is a public holiday). January and February: Saturdays, Sundays and holidays only. None from 29 December to 3 January. On any other day they can be cancelled for wind or waves, and on windy days the last boat back may leave early.",
+                        KISEN_URL)],
+        rows=[row("hours", "加太港発 9:00・11:00・13:00・16:00／友ヶ島発 9:30・11:30・13:30・16:30（3月〜12月と、1〜2月の土日祝）。臨時便：4月29日〜5月5日・7月20日〜8月31日",
+                  "From Kada 9:00, 11:00, 13:00, 16:00 / from the island 9:30, 11:30, 13:30, 16:30 (Mar–Dec, and weekends and holidays in Jan–Feb). Extra boats 29 Apr – 5 May and 20 Jul – 31 Aug"),
+              row("closed", "3月〜12月の水曜（祝日は運航）。1月〜2月の平日。12月29日〜1月3日。悪天候の日は欠航",
+                  "Wednesdays in Mar–Dec (except public holidays). Weekdays in Jan–Feb. 29 Dec – 3 Jan. Cancelled in bad weather"),
+              row("fee", "往復 大人2,800円・こども1,250円（2026年7月1日から）。支払い方法は要確認", "Return: adults ¥2,800, children ¥1,250 (from 1 Jul 2026). Payment methods unconfirmed")],
+        cash=True,
+        tip=T("運航日・時刻・運賃・整理券は友ヶ島汽船の公式サイトで確認しました。電話番号は和歌山市の公式サイトから。", "Days, times, fares and numbered tickets checked on the Tomogashima Kisen website; the phone number is from the Wakayama City website."),
+        source=[SRC_KISEN, "和歌山市 公式サイト（友ヶ島汽船の電話番号・朝8時以降の問い合わせ）"]),
+    nonaura=dict(
+        name=T("友ヶ島 野奈浦桟橋", "Nonaura Pier, Tomogashima"), kind=T("船着き場", "Pier"),
+        title=T("友ヶ島 野奈浦桟橋（のなうらさんばし）", "Nonaura Pier, Tomogashima"),
+        lat=34.28380, lng=135.00860,
+        caution=T("島に水道なし。飲み物を買えるのは桟橋のまわりだけ", "No drinking water on the island. Drinks are sold only around the pier"),
+        blurb=T("無人島の友ヶ島に到着。歩きだす前に、帰りの船の時刻・トイレ・飲み物の3つを済ませます。",
+                "Landing on uninhabited Tomogashima. Before you walk: the boat back, the toilet, and something to drink."),
+        body=T("友ヶ島は紀淡海峡に浮かぶ無人島の集まりで、船が着くのはいちばん大きな沖ノ島です。明治時代に大阪湾を守る要塞が造られ、レンガの砲台跡が森の中に残っています。\n\n"
+               "桟橋のそばに友ヶ島案内センターとトイレ、「らぴゅカフェ」があります。カフェは9:30〜16:00、船が出る日だけ（天気で時間が変わります）。飲み物・ソフトクリーム・軽食があり、島で飲み物を買えるのはこのあたりだけです。島に水道はなく、井戸の水は沸かしても飲めません。1人1リットルは持って歩きましょう。\n\n"
+               "トイレは島に4か所：ここ（野奈浦広場）、第3砲台跡の下、池尻広場、南垂水広場。ごみは全部持ち帰ります。道は舗装のない山道で、雨のあとは荒れています。歩きやすい靴で。砲台跡の中は暗いので、スマホのライトを使います。\n\n"
+               "深蛇池（しんじゃいけ）と虎島へは、いまは行けません（和歌山市、2026年8月の案内）。",
+               "Tomogashima is a group of uninhabited islands in the Kitan Strait; boats land on the largest, Okinoshima. In the Meiji era it was fortified to guard Osaka Bay, and brick gun batteries still stand in the woods.\n\n"
+               "By the pier are the information centre, toilets and the Rapyu Cafe. The cafe opens 9:30–16:00, only on days the boats run (hours change with the weather), with drinks, soft-serve and light meals. This is the only place on the island where drinks are sold. There is no tap water, and the well water is not drinkable even boiled: carry a litre each.\n\n"
+               "There are four toilets on the island: here (Nonaura Square), below the No. 3 Battery, Ikejiri Square and Minami-tarumi Square. Take all your rubbish back with you. The trails are unpaved and rough after rain: wear proper shoes. The batteries are dark inside, so use your phone torch.\n\n"
+               "Shinja-ike pond and Torajima are closed for now (Wakayama City notice, August 2026)."),
+        gmaps=[gm("野奈浦桟橋", "Nonaura Pier", 34.28380, 135.00860, "友ヶ島 野奈浦桟橋")],
+        links=[KISEN, CITY, link("official", "らぴゅカフェ（友ヶ島汽船）", "Rapyu Cafe (Tomogashima Kisen, Japanese)", "https://tomogashimakisen.com/cafe/")],
+        tip=ISLAND_TIP, source=[SRC_CITY, "らぴゅカフェ（tomogashimakisen.com/cafe/）", SRC_KISEN]),
+    dai3=dict(
+        name=T("第3砲台跡", "No. 3 Battery ruins"), kind=T("砲台跡", "Fort ruins"),
+        title=T("第3砲台跡（だいさんほうだいあと）", "No. 3 Battery ruins"),
+        lat=34.28005, lng=135.00666,
+        blurb=T("レンガのアーチが並ぶ、友ヶ島でいちばん有名な場所。桟橋から上り坂を25分ほど。",
+                "Tomogashima’s best-known sight: rows of brick arches, about 25 minutes uphill from the pier."),
+        body=T("野奈浦桟橋から0.9km。山道の上りで、ゆっくり歩いて25分ほどです。\n\n"
+               "レンガ造りの弾薬庫のアーチが並び、苔とつたに覆われています。地下の通路は真っ暗な所があるので、スマホのライトをつけて、足元を見ながら。建物の上や崩れかけた所には登らないでください。\n\n"
+               "砲台跡の下にトイレがあります。次の展望台にはないので、ここで済ませておきましょう。",
+               "0.9 km from Nonaura pier, up a hill trail: about 25 minutes at an easy pace.\n\n"
+               "Rows of brick magazine arches stand covered in moss and ivy. Parts of the underground passages are pitch dark, so switch on your phone torch and watch your step. Don’t climb on the structures or crumbling sections.\n\n"
+               "There is a toilet just below the battery, and none at the lookout that comes next."),
+        gmaps=[gm("友ヶ島 第3砲台跡", "No. 3 Battery, Tomogashima", 34.28005, 135.00666, "友ヶ島 第3砲台跡")],
+        links=[CITY], tip=ISLAND_TIP, source=[SRC_CITY]),
+    takanosu=dict(
+        name=T("タカノス山展望台", "Takanosu-yama Observatory"), kind=T("展望台", "Viewpoint"),
+        title=T("タカノス山展望台（たかのすやまてんぼうだい）", "Takanosu-yama Observatory"),
+        lat=34.28133, lng=135.00597,
+        blurb=T("島のいちばん高い所。屋根のある休憩所があり、淡路島と紀淡海峡が見渡せます。",
+                "The island’s highest point, with a roofed shelter and views over Awaji Island and the Kitan Strait."),
+        body=T("第3砲台跡から階段を上って5分ほど。白い屋根の休憩所があり、海の向こうに淡路島が大きく見えます。道しるべには「大展望台」と書かれています。\n\n"
+               "トイレはありません（第3砲台跡の下まで、階段を下りて5分ほど）。",
+               "About 5 minutes up the steps from the No. 3 Battery. There is a shelter with white roofs, and Awaji Island looms across the sea. Signposts call it the “Dai-tenbodai”.\n\n"
+               "No toilet here (the nearest is below the No. 3 Battery, about 5 minutes down the steps)."),
+        gmaps=[gm("タカノス山展望台", "Takanosu-yama Observatory", 34.28133, 135.00597, "タカノス山展望台 友ヶ島")],
+        links=[CITY], tip=ISLAND_TIP, source=[SRC_CITY]),
+    kosuke=dict(
+        name=T("孝助松海岸", "Kosukematsu beach"), kind=T("海岸", "Beach"),
+        title=T("孝助松海岸（こうすけまつかいがん）", "Kosukematsu beach"),
+        lat=34.28330, lng=135.00240,
+        blurb=T("とがった岩が海に突き出す、島の北西の海岸。となりの池尻広場にトイレがあります。",
+                "A beach on the north-west shore where a pointed rock juts into the sea. Toilets at Ikejiri Square next door."),
+        body=T("展望台から山道を下って約1km、20〜25分。「孝助松」と書いた木の道しるべが目印です。海にとがった岩が突き出し、晴れた日は水の色がよく見えます。泳ぐのは禁止です。\n\n"
+               "すぐとなりの池尻広場にトイレがあります。ここから灯台までは歩いて10分ほど。",
+               "About 1 km down the trail from the lookout, 20 to 25 minutes. A wooden signpost reading “孝助松” marks the spot. A pointed rock juts into the sea, and on a clear day you can see the colour of the water. No swimming.\n\n"
+               "Ikejiri Square, right beside it, has toilets. From here the lighthouse is about 10 minutes’ walk."),
+        gmaps=[gm("孝助松海岸", "Kosukematsu beach", 34.28330, 135.00240, "友ヶ島 孝助松海岸")],
+        links=[CITY], tip=ISLAND_TIP, source=[SRC_CITY]),
+    toudai=dict(
+        name=T("友ヶ島灯台", "Tomogashima Lighthouse"), kind=T("灯台", "Lighthouse"),
+        title=T("友ヶ島灯台（ともがしまとうだい）", "Tomogashima Lighthouse"),
+        lat=34.28091, lng=135.00046,
+        blurb=T("明治時代に建てられた白い灯台。まわりは芝生で、腰を下ろして休めます。",
+                "A white lighthouse from the Meiji era, with grass around it to sit and rest on."),
+        body=T("島の西の端に立つ白い灯台です。明治時代に建てられた古い灯台のひとつで、まわりは芝生の広場。岩場の海を見下ろせます。すぐとなりが子午線広場です。\n\n"
+               "第2砲台跡までは歩いて10分ほどです。",
+               "A white lighthouse at the western tip of the island, one of Japan’s early Meiji-era lighthouses. Grass surrounds it, looking down on the rocky shore. Shigosen (Meridian) Square is right beside it.\n\n"
+               "The No. 2 Battery is about 10 minutes’ walk."),
+        gmaps=[gm("友ヶ島灯台", "Tomogashima Lighthouse", 34.28091, 135.00046, "友ヶ島灯台")],
+        links=[CITY], tip=ISLAND_TIP, source=[SRC_CITY]),
+    dai2=dict(
+        name=T("第2砲台跡", "No. 2 Battery ruins"), kind=T("砲台跡", "Fort ruins"),
+        title=T("第2砲台跡（だいにほうだいあと）", "No. 2 Battery ruins"),
+        lat=34.28213, lng=135.00055,
+        body=T("海に面した砲台跡です。大きなレンガとコンクリートの塊が崩れ落ちたまま残っていて、第3砲台跡とは違う迫力があります。崩れていて危ないので、柵の中には入らないでください。\n\n"
+               "ここから野奈浦桟橋までは0.9km、ゆっくり歩いて25分ほどです。",
+               "A battery facing the sea. Huge blocks of brick and concrete lie where they fell, a different kind of drama from the No. 3 Battery. It is unstable, so stay outside the fences.\n\n"
+               "From here it is 0.9 km to Nonaura pier, about 25 minutes at an easy pace."),
+        gmaps=[gm("友ヶ島 第2砲台跡", "No. 2 Battery, Tomogashima", 34.28213, 135.00055, "友ヶ島 第2砲台跡")],
+        links=[CITY, KISEN], tip=ISLAND_TIP, source=[SRC_CITY, SRC_KISEN]),
+    awashima=dict(
+        name=T("淡嶋神社", "Awashima Shrine"), kind=T("神社", "Shrine"),
+        title=T("淡嶋神社（あわしまじんじゃ）", "Awashima Shrine"),
+        lat=34.27360, lng=135.06671,
+        caution=T("参拝は9:00〜17:00", "Open 9:00–17:00"),
+        body=T("人形供養で知られる神社です。社殿のまわりに、全国から納められた人形がびっしり並んでいます。毎年3月3日には、ひな人形を小舟にのせて海へ流す「雛流し」があります。参拝は9:00〜17:00。\n\n"
+               "参道には、つぼ焼きやよもぎ餅を売るみやげ物屋が3軒あります（雨の日は休むことがあります）。",
+               "A shrine known for its memorial services for dolls: dolls sent from all over Japan stand packed around the hall. Every 3 March, in the “Hina-nagashi”, Girls’ Day dolls are set adrift on the sea in little boats. Open 9:00–17:00.\n\n"
+               "Three souvenir stalls on the approach sell grilled turban shells and yomogi rice cakes (they may close on rainy days)."),
+        gmaps=[gm("淡嶋神社", "Awashima Shrine", 34.27360, 135.06671, "淡嶋神社 和歌山市加太")],
+        rows=[row("hours", "参拝 9:00〜17:00", "Open 9:00–17:00")],
+        tip=T("参拝時間は淡嶋神社の公式ページ、お店と温泉の時間はそれぞれの公式サイトで確認しました。", "Shrine hours checked on the shrine’s official page; restaurant and bath hours on their own websites."),
+        source=["淡嶋神社 公式ページ（kada.jp/awashima）", "活魚料理 いなさ（inasa.net）", "加太淡嶋温泉 大阪屋 ひいなの湯（hiina.com）", "休暇村紀州加太（qkamura.or.jp/kada）", "シーサイドホテル加太海月（kada-kaigetsu.com）"]),
+    kadaeki2=dict(
+        name=T("南海 加太駅（帰り）", "Nankai Kada Station (return)"), kind=T("駅（ゴール）", "Station (finish)"),
+        title=T("南海 加太駅（帰り）", "Nankai Kada Station (return)"),
+        lat=34.27507, lng=135.08070,
+        body=T("加太で夜に開いている店は、公式サイトで時間を確かめられたところがありません。晩ごはんはなんばに戻ってからにしています。なんば駅から法善寺横丁と道頓堀までは歩いて5分ほど。店は大阪マップにまとめてあります。\n\n"
+               "遅くなっても、加太22:13発に乗ればなんばに23:53に着きます（木曜のダイヤ）。京都へ帰る人は、なんばを23時までに出てください（淀屋橋23:33発の京阪特急で三条0:22着、阪急は大阪梅田23:45発で京都河原町0:34着）。",
+               "No place in Kada could be confirmed open in the evening on an official website, so dinner in this plan is back in Namba. Hozenji Yokocho and Dotonbori are about 5 minutes’ walk from Namba Station; the Osaka map lists where to eat.\n\n"
+               "If you run late, the 22:13 from Kada still reaches Namba at 23:53 (Thursday timetable). For Kyoto, leave Namba by 23:00 (Keihan limited express from Yodoyabashi at 23:33, Sanjo 0:22; or Hankyu from Osaka-Umeda at 23:45, Kyoto-Kawaramachi 0:34)."),
+        gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
+        links=[PLANNER, OSAKA_MAP], tip=TRAIN_TIP, source=[SRC_PLANNER]),
+)
 
-spots = []
-for i, s in enumerate(S, 1):
-    s = dict(s)
-    out = {"no": i, "id": s.pop("id")}
-    out.update(s)
-    out["photos"] = photos(out["id"])
-    out.setdefault("notices", [])
-    spots.append(out)
+# 加太のお昼・温泉（淡嶋神社のスポットの中で紹介する。どれも公式サイトで確認、タトゥーは書いてあるものだけ）
+LUNCH = T("お昼：加太の鯛を出す「活魚料理 いなさ」は11:00〜15:00（オーダーストップ14:30）、火・水曜休み。現金だけかどうかは公式サイトに書かれていません。",
+          "Lunch: Inasa, which serves Kada sea bream, opens 11:00–15:00 (last orders 14:30), closed Tuesdays and Wednesdays. Its website does not say whether it is cash only.")
+BATHS = T("温泉：神社のすぐそばの旅館・大阪屋の「ひいなの湯」は日帰り入浴11:00〜19:00（土日祝と混む日は15:00まで）、1,200円・フェイスタオルつき。タトゥーの決まりは公式サイトに書かれていないので、入る前に受付で聞いてください（要確認）。"
+          "休暇村紀州加太の「天空の湯」は12:00〜15:50（受付15:00まで）・1,500円ですが、タトゥーのある人は入れません（公式サイト）。シーサイドホテル加太海月は11:00〜15:00（受付14:30まで）・1,200円、タトゥーは要確認。",
+          "Baths: Hiina-no-yu at the Osakaya inn, right by the shrine, takes day visitors 11:00–19:00 (until 15:00 on weekends, holidays and busy days), ¥1,200 with a small towel. Its website says nothing about tattoos, so ask at the desk first (unconfirmed). "
+          "Tenku-no-yu at Kyukamura Kishu-Kada is 12:00–15:50 (entry until 15:00), ¥1,500, but does not admit guests with tattoos (official site). Seaside Hotel Kada Kaigetsu is 11:00–15:00 (entry until 14:30), ¥1,200; tattoo policy unconfirmed.")
+AW_LINKS = [link("official", "淡嶋神社", "Awashima Shrine (Japanese)", "https://www.kada.jp/awashima/"),
+            link("official", "活魚料理 いなさ（11:00〜15:00、火・水曜休み）", "Inasa restaurant (11:00–15:00, closed Tue & Wed; Japanese)", "http://www.inasa.net/index.html"),
+            link("official", "ひいなの湯（日帰り入浴）", "Hiina-no-yu day bathing (Japanese)", "https://www.hiina.com/spa/"),
+            link("official", "休暇村紀州加太（日帰り入浴・タトゥー不可）", "Kyukamura Kishu-Kada day bathing (no tattoos; Japanese)", "https://www.qkamura.or.jp/kada/oneday/")]
+S["awashima"]["links"] = AW_LINKS
 
-NO = {s["id"]: s["no"] for s in spots}
-ISLAND = [NO[k] for k in ("dai3", "takanosu", "kosuke", "toudai", "dai2")]
-data = {
-    "id": "tomogashima",
-    "_note": "京都から日帰り 友ヶ島・加太のルート（tomogashima/ のページ専用。形は eizan-line.json と同じ）。京都からJR・地下鉄・南海で加太へ、加太港から友ヶ島汽船で沖ノ島の野奈浦桟橋へ渡り、"
-             "第3砲台跡・タカノス山展望台・孝助松海岸・友ヶ島灯台・第2砲台跡を歩いて回り、16:30の船で戻って淡嶋神社にお参りしてから京都へ。"
-             "写真は Toshi の写真ライブラリから選んだもの（加太は2022年7月8日、友ヶ島と淡嶋神社は2023年6月20日。Nikon D7000 の写真は島にGPSの写真が2枚しかないので、道しるべの看板と撮影時刻の順で場所を決めた。"
-             "1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（船は友ヶ島汽船の公式サイト、らぴゅカフェは同じサイトのカフェのページ、電車は乗換案内）。port-1.jpg は、窓に貼ってあった選挙のポスターが写らないように上の部分だけを切り出した。"
-             "このファイルは scripts/build_tomogashima_data.py で作る。",
-    "sections": [
-        {"first": 1, "last": 2, "day": 0}, {"first": 3, "last": 5, "day": 1}, {"first": 6, "last": 8, "day": 2}, {"first": 9, "last": 10, "day": 3},
-    ],
-    "focus": {"first": NO["nonaura"], "last": NO["dai2"]},
-    "plan": {"_note": "「選んで回る」の設定。駅・港・桟橋はいつも入る。島の中と淡嶋神社は選べる。",
-             "picks": ISLAND + [NO["awashima"]],
-             "auto": {str(NO[k]): {"always": True} for k in ("kadaeki", "port", "nonaura", "kadaeki2")},
-             "hints": []},
-    "photoBase": "../images/tomogashima/",
-    "spots": spots,
-}
-json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print("wrote", OUT, [(s["no"], s["id"], len(s["photos"])) for s in spots])
+KYOTO_OUT_LATE = row("train", "京都から：三条6:48発（京阪）→ 淀屋橋7:50着 →（御堂筋線）→ なんば8:03着 → 8:14発の特急サザン5号に。三条→加太 1,690円。土曜は三条6:58発の特急で同じサザン5号（なんば8:15発）",
+                     "From Kyoto: Sanjo 6:48 (Keihan) → Yodoyabashi 7:50 → (Midosuji Line) → Namba 8:03 → Southern 5 at 8:14. Sanjo → Kada ¥1,690. Saturdays: the 6:58 limited express from Sanjo makes the same Southern 5 (Namba 8:15)")
+KYOTO_OUT_EARLY = row("train", "京都から：三条5:04発（京阪・始発）→ 北浜6:14着 →（堺筋線）→ 天下茶屋6:34着 → 6:42発の南海の急行 → 和歌山市7:47着・7:55発 → 加太8:19着。1,700円・乗り換え3回",
+                      "From Kyoto: Sanjo 5:04 (the first Keihan train) → Kitahama 6:14 → (Sakaisuji Line) → Tengachaya 6:34 → Nankai express 6:42 → Wakayamashi 7:47 / 7:55 → Kada 8:19. ¥1,700, three changes")
+KYOTO_BACK = row("train", "京都へ帰る人：加太17:27発 → なんば18:59着 →（御堂筋線）→ 淀屋橋 →（京阪）→ 三条20:20ごろ。最後は、なんば23:09発 → 淀屋橋23:33発の京阪特急 → 三条0:22着",
+                 "Back to Kyoto: Kada 17:27 → Namba 18:59 → (Midosuji Line) → Yodoyabashi → (Keihan) → Sanjo about 20:20. The last connection: Namba 23:09 → Keihan limited express from Yodoyabashi 23:33 → Sanjo 0:22")
+LAST_ROW = row("train", "遅い電車：加太22:13発 → なんば23:53着（木曜）。土曜は22:25発 → 0:02着。なんば→梅田は御堂筋線で8分・240円",
+               "Late trains: Kada 22:13 → Namba 23:53 (Thursday); Saturday 22:25 → 0:02. Namba → Umeda is 8 min on the Midosuji Line (¥240)")
+
+# ---------------------------------------------------------------------------
+# コース
+# ---------------------------------------------------------------------------
+LATE = dict(
+    id="late", file="tomogashima.json",
+    order=["kadaeki", "port", "awashima", "nonaura", "dai3", "takanosu", "kosuke", "toudai", "dai2", "kadaeki2"],
+    sections=[("kadaeki", "awashima", "加太", "Kada", "なんばから電車で加太へ。整理券をもらって淡嶋神社", "By train from Namba; get your boat ticket, then the shrine"),
+              ("nonaura", "takanosu", "友ヶ島", "Tomogashima", "11:00の船で島へ。第3砲台跡と展望台でお昼", "The 11:00 boat; the No. 3 Battery and lunch at the lookout"),
+              ("kosuke", "dai2", "友ヶ島の西", "West side of the island", "海岸・灯台・第2砲台跡。15:15に桟橋へ向かう", "Beach, lighthouse, No. 2 Battery; head for the pier at 15:15"),
+              ("kadaeki2", "kadaeki2", "加太 → なんば", "Kada → Namba", "16:30の船で戻って、夜はなんばで", "Back on the 16:30 boat; evening in Namba")],
+    spots=dict(
+        kadaeki=dict(
+            blurb=T("なんば8:14発の特急サザン5号で、加太に9:58着（土曜は8:15発・9:48着）。お昼と飲み物は、乗る前になんばで。",
+                    "Southern 5 leaves Namba at 8:14 and gets you to Kada at 9:58 (Saturdays 8:15, arriving 9:48). Buy lunch and drinks in Namba first."),
+            pre=T("なんば8:14発の特急サザン5号で和歌山市へ（9:17着）、9:35発の加太線に乗り換えて、加太に9:58に着きます。土曜は、なんば8:15発・和歌山市9:14着、9:24発・加太9:48着。梅田のあたりのホテルは7:40ごろ、難波のあたりなら8:00ごろに出れば間に合います。",
+                  "Take Southern 5 from Namba at 8:14 to Wakayamashi (9:17), change to the 9:35 Kada Line train and arrive at 9:58. On Saturdays: Namba 8:15, Wakayamashi 9:14 / 9:24, Kada 9:48. Leave a hotel around Umeda at about 7:40, or one around Namba at about 8:00."),
+            post=T("駅から加太港の友ヶ島汽船乗り場までは、歩いて15〜20分。まっすぐ港へ行き、先に船の整理券をもらいます。",
+                   "The ferry pier at Kada Port is 15 to 20 minutes’ walk. Go straight there and get your numbered boat ticket first."),
+            time=T("9:58着（土曜は9:48着）", "arrive 9:58 (9:48 on Saturdays)"),
+            rows=[row("train", "なんば8:14発（特急サザン5号）→ 和歌山市9:17着・9:35発（加太線）→ 加太9:58着。土曜：なんば8:15発 → 和歌山市9:14着・9:24発 → 加太9:48着",
+                      "Namba 8:14 (Southern 5) → Wakayamashi 9:17 / 9:35 (Kada Line) → Kada 9:58. Saturdays: Namba 8:15 → Wakayamashi 9:14 / 9:24 → Kada 9:48"),
+                  row("fee", "なんば→加太 1,010円（サザンの自由席は追加料金なし）。梅田→なんば 240円", "Namba → Kada ¥1,010 (no surcharge in the Southern’s unreserved cars). Umeda → Namba ¥240"),
+                  KYOTO_OUT_LATE]),
+        port=dict(
+            blurb=T("10:15に港に着いて11:00の船の整理券をもらい、船まで淡嶋神社へ。帰りは16:30の最終便です。",
+                    "Reach the port at 10:15 for a numbered ticket for the 11:00 boat, then visit the shrine. You come back on the last boat, the 16:30."),
+            pre=T("10:15ごろ港に着いたら、まず11:00の船の乗船整理券をもらい、乗船券を買います。船が出るまでの30分ほどで、歩いて5分の淡嶋神社へ。10:50には乗り場に戻ってください。列が長い日は、神社は鳥居だけ見て戻ります。",
+                  "Arriving at about 10:15, first get your numbered ticket for the 11:00 boat and buy your fare. In the half hour before it leaves, walk 5 minutes to Awashima Shrine, and be back at the pier by 10:50. If the queue is long, just look at the torii and come back."),
+            time=T("10:15着・11:00の船に乗る", "arrive 10:15, board the 11:00 boat"), rows=[]),
+        awashima=dict(
+            blurb=T("人形供養で知られる神社。整理券をもらってから、船が出るまでの20分でお参りします。",
+                    "A shrine known for its doll memorials: a 20-minute visit between getting your ticket and boarding."),
+            pre=T("港から歩いて5分。帰りの船が加太に着くのは16:50で、神社は17:00に閉まります。このコースでは、行きの船に乗る前にお参りしておきます。",
+                  "Five minutes’ walk from the port. The boat back reaches Kada at 16:50 and the shrine closes at 17:00, so on this course you visit before the outbound boat."),
+            post=T("船で戻ったあとの加太：11月下旬の日の入りは16:50ごろで、船を降りるころに日が沈みます（1月中旬は17:10ごろ、3月下旬は18:15ごろ）。\n\n" + BATHS["ja"] + "\n\n平日なら、16:30の船で戻ってから「ひいなの湯」に入れます。",
+                   "Kada after the boat back: in late November the sun sets at about 16:50, just as you step off the boat (about 17:10 in mid-January, 18:15 in late March).\n\n" + BATHS["en"] + "\n\nOn weekdays you can still use Hiina-no-yu after the 16:30 boat."),
+            time=T("10:22〜10:42", "10:22–10:42"), rows=[]),
+        nonaura=dict(
+            pre=T("11:00の船で、11:20に着きます。", "The 11:00 boat lands at 11:20."),
+            post=T("帰りは16:30発の最終便です。着いたらすぐ、乗り場かカフェで「今日の最終便は何時ですか」と確かめてください。風の強い日は15:30に早まることがあり、その日は下の時間を1時間ずつ前に詰めます。最終便を逃すと、その日のうちに島を出る船はありません。\n\n"
+                   "時間割：11:35に出発 → 第3砲台跡 → 展望台でお昼 → 孝助松海岸 → 灯台 → 第2砲台跡を15:15に出る → 15:40に桟橋。カフェは16:00までなので、冷たいものはそれまでに。16:10には乗り場に並びます。",
+                   "You go back on the last boat, the 16:30. As soon as you land, ask at the pier or the cafe what time today’s last boat leaves. On windy days it can be brought forward to 15:30; if so, move everything below an hour earlier. Miss the last boat and there is no other boat off the island that day.\n\n"
+                   "Timetable: set off at 11:35 → No. 3 Battery → lunch at the lookout → Kosukematsu beach → lighthouse → leave the No. 2 Battery at 15:15 → pier at 15:40. The cafe closes at 16:00, so have your cold drink before then, and queue at the pier by 16:10."),
+            time=T("11:20着〜11:35出発（帰りは16:30の船）", "arrive 11:20, set off 11:35 (16:30 boat back)"),
+            rows=[row("hours", "らぴゅカフェ 9:30〜16:00（船が出る日だけ。天気で変わる）", "Rapyu Cafe 9:30–16:00 (only on days the boats run; changes with the weather)")]),
+        dai3=dict(time=T("12:00〜12:40", "12:00–12:40")),
+        takanosu=dict(
+            post=T("持ってきたお昼は、ここの休憩所で。", "Eat the lunch you brought in the shelter here."),
+            time=T("12:45〜13:25（お昼）", "12:45–13:25 (lunch)")),
+        kosuke=dict(time=T("13:45〜14:05", "13:45–14:05")),
+        toudai=dict(time=T("14:15〜14:40", "14:15–14:40")),
+        dai2=dict(
+            blurb=T("海に面して崩れたままの砲台跡。ここを15:15に出れば、16:30の船に余裕で間に合います。",
+                    "A battery left as it collapsed, facing the sea. Leave here at 15:15 and you make the 16:30 boat with time to spare."),
+            post=T("15:15にはここを出て、桟橋へ。写真を撮っていて遅れても、15:45には歩きはじめてください。",
+                   "Leave here at 15:15 for the pier. Even if photos hold you up, be walking by 15:45."),
+            time=T("14:45〜15:15", "14:45–15:15")),
+        kadaeki2=dict(
+            blurb=T("16:50に港に戻り、17:27発でなんばに18:59着。晩ごはんは法善寺横丁か道頓堀で。",
+                    "Back at the port at 16:50; the 17:27 train reaches Namba at 18:59. Dinner at Hozenji Yokocho or Dotonbori."),
+            pre=T("16:30の船は加太港に16:50に着きます。港から駅まで歩いて15〜20分。17:27発に乗ると、和歌山市で特急サザン50号に乗り換えて、なんばに18:59に着きます。平日に「ひいなの湯」に入るなら、18:24発（土曜は18:20発）でなんば20:00ごろ。",
+                  "The 16:30 boat reaches Kada Port at 16:50, and the station is 15 to 20 minutes’ walk. The 17:27 connects at Wakayamashi with Southern 50 and reaches Namba at 18:59. If you take a bath at Hiina-no-yu on a weekday, the 18:24 (18:20 on Saturdays) gets you to Namba at about 20:00."),
+            time=T("17:27発（なんば18:59着）", "depart 17:27 (Namba 18:59)"),
+            rows=[row("train", "加太17:27発 → 和歌山市17:52着・18:00発（特急サザン50号）→ なんば18:59着・1,010円。次は17:46発 → 19:25着、18:03発 → 19:48着（土曜は19:55着）、18:24発（土曜18:20発）→ 20:00ごろ",
+                      "Kada 17:27 → Wakayamashi 17:52 / 18:00 (Southern 50) → Namba 18:59, ¥1,010. Then 17:46 → 19:25, 18:03 → 19:48 (19:55 on Saturdays), 18:24 (18:20 on Saturdays) → about 20:00"),
+                  LAST_ROW, KYOTO_BACK]),
+    ),
+)
+
+EARLY = dict(
+    id="early", file="tomogashima-early.json",
+    order=["kadaeki", "port", "nonaura", "dai3", "takanosu", "kosuke", "toudai", "dai2", "awashima", "kadaeki2"],
+    sections=[("kadaeki", "port", "加太", "Kada", "なんば6:38発。8:40に港へ", "Namba 6:38; at the port by 8:40"),
+              ("nonaura", "takanosu", "友ヶ島", "Tomogashima", "9:00の船で島へ。人の少ない第3砲台跡", "The 9:00 boat; the No. 3 Battery before the crowds"),
+              ("kosuke", "dai2", "友ヶ島の西", "West side of the island", "海岸・灯台・第2砲台跡。12:45に桟橋へ向かう", "Beach, lighthouse, No. 2 Battery; head for the pier at 12:45"),
+              ("awashima", "kadaeki2", "加太 → なんば", "Kada → Namba", "13:30の船で戻って、加太でお昼と神社と温泉", "Back on the 13:30 boat: lunch, shrine and a bath in Kada")],
+    spots=dict(
+        kadaeki=dict(
+            blurb=T("なんば6:38発の急行で、加太に8:19着（土曜は6:24発・7:59着）。朝ごはんと飲み物は、乗る前になんばで。",
+                    "The 6:38 express from Namba gets you to Kada at 8:19 (Saturdays 6:24, arriving 7:59). Buy breakfast and drinks in Namba first."),
+            pre=T("なんば6:38発の急行で和歌山市へ（7:47着）、7:55発の加太線に乗り換えて、加太に8:19に着きます。土曜は、なんば6:24発の区間急行で紀ノ川7:35着、7:38発に乗り換えて加太7:59着（次の6:40発の空港急行だと、泉佐野と紀ノ川で乗り換えて8:21着）。梅田のあたりのホテルは6:00ごろ、難波のあたりなら6:20ごろに出ます。\n\n"
+                  "この時間は、まだ今日の運航連絡が出ていないことがあります。電車の中と加太駅でもう一度、公式サイトを見てください。",
+                  "Take the 6:38 express from Namba to Wakayamashi (7:47), change to the 7:55 Kada Line train and arrive at 8:19. On Saturdays: the 6:24 semi-express from Namba to Kinokawa (7:35), change to the 7:38 and arrive at 7:59 (the next train, the 6:40 airport express, means changing at Izumisano and Kinokawa and arrives 8:21). Leave a hotel around Umeda at about 6:00, or one around Namba at about 6:20.\n\n"
+                  "At this hour today’s operating notice may not be up yet. Look at the ferry’s website again on the train and at Kada Station."),
+            post=T("駅から加太港の友ヶ島汽船乗り場までは、歩いて15〜20分です。", "The ferry pier at Kada Port is 15 to 20 minutes’ walk."),
+            time=T("8:19着（土曜は7:59着）", "arrive 8:19 (7:59 on Saturdays)"),
+            rows=[row("train", "なんば6:38発（急行）→ 和歌山市7:47着・7:55発（加太線）→ 加太8:19着。土曜：なんば6:24発（区間急行）→ 紀ノ川7:35着・7:38発 → 加太7:59着",
+                      "Namba 6:38 (express) → Wakayamashi 7:47 / 7:55 (Kada Line) → Kada 8:19. Saturdays: Namba 6:24 (semi-express) → Kinokawa 7:35 / 7:38 → Kada 7:59"),
+                  row("fee", "なんば→加太 1,010円。梅田→なんば 240円（御堂筋線の始発は梅田5:15発）", "Namba → Kada ¥1,010. Umeda → Namba ¥240 (first Midosuji Line train from Umeda 5:15)"),
+                  KYOTO_OUT_EARLY]),
+        port=dict(
+            blurb=T("8:40に港に着いて、9:00の最初の船へ。帰りは13:30の船にして、午後は加太で過ごします。",
+                    "At the port by 8:40 for the first boat at 9:00. Come back on the 13:30 and spend the afternoon in Kada."),
+            pre=T("8:40ごろ港に着いて、9:00の最初の船に乗ります。公式の案内では、整理券が配られるのは2便目からの分です。最初の船は、乗り場で乗船券を買って乗ります。帰りは13:30の船。そのあとにも16:30の便があるので、風で予定が変わった日も戻りやすいのがこの船のいいところです。",
+                  "Reach the port at about 8:40 and take the first boat at 9:00. According to the ferry company, numbered tickets are for the second boat on; for the first you simply buy your fare at the pier. You come back on the 13:30. With the 16:30 still to come after it, this is the boat that leaves you a way back if the wind changes the day."),
+            time=T("8:40着・9:00の船に乗る", "arrive 8:40, board the 9:00 boat"), rows=[]),
+        nonaura=dict(
+            pre=T("9:00の船で、9:20に着きます。カフェが開くのは9:30です。", "The 9:00 boat lands at 9:20. The cafe opens at 9:30."),
+            post=T("帰りは13:30発の船です。着いたら、乗り場で今日の帰りの便の時刻を確かめてから歩きはじめます。\n\n"
+                   "時間割：9:35に出発 → 第3砲台跡 → 展望台でひと休み → 孝助松海岸 → 灯台 → 第2砲台跡を12:45に出る → 13:10に桟橋。13:20には乗り場に並びます。お昼は加太に戻ってからなので、おにぎりかパンを1つ持って歩くと楽です。",
+                   "You go back on the 13:30 boat. On landing, check today’s return times at the pier before you set off.\n\n"
+                   "Timetable: set off at 9:35 → No. 3 Battery → a rest at the lookout → Kosukematsu beach → lighthouse → leave the No. 2 Battery at 12:45 → pier at 13:10. Queue at the pier by 13:20. Lunch is back in Kada, so carry a rice ball or a bun to keep you going."),
+            time=T("9:20着〜9:35出発（帰りは13:30の船）", "arrive 9:20, set off 9:35 (13:30 boat back)"),
+            rows=[row("hours", "らぴゅカフェ 9:30〜16:00（船が出る日だけ。天気で変わる）", "Rapyu Cafe 9:30–16:00 (only on days the boats run; changes with the weather)")]),
+        dai3=dict(
+            blurb=T("レンガのアーチが並ぶ、友ヶ島でいちばん有名な場所。最初の船なら、人の少ないうちに着きます。",
+                    "Tomogashima’s best-known sight: rows of brick arches. Off the first boat, you get here before most people."),
+            time=T("10:00〜10:40", "10:00–10:40")),
+        takanosu=dict(time=T("10:45〜11:10", "10:45–11:10")),
+        kosuke=dict(time=T("11:30〜11:45", "11:30–11:45")),
+        toudai=dict(time=T("11:55〜12:15", "11:55–12:15")),
+        dai2=dict(
+            blurb=T("海に面して崩れたままの砲台跡。ここを12:45に出れば、13:30の船に間に合います。",
+                    "A battery left as it collapsed, facing the sea. Leave here at 12:45 and you make the 13:30 boat."),
+            post=T("12:45にはここを出て、桟橋へ。遅くとも13:00には歩きはじめてください。乗り遅れても16:30の便がありますが、加太の午後はなくなります。",
+                   "Leave here at 12:45 for the pier, 13:00 at the very latest. If you miss the boat there is still the 16:30, but you lose your afternoon in Kada."),
+            time=T("12:20〜12:45", "12:20–12:45")),
+        awashima=dict(
+            blurb=T("13:50に港に戻ったら、加太でお昼、淡嶋神社、温泉。神社は17:00まで。",
+                    "Back at the port at 13:50: lunch in Kada, Awashima Shrine and a bath. The shrine closes at 17:00."),
+            pre=T("13:30の船は加太港に13:50に着きます。先にお昼、そのあと神社（港から歩いて5分）、時間があれば温泉の順です。\n\n" + LUNCH["ja"] + "港に着いてからオーダーストップまで40分しかないので、船を降りたらまっすぐ向かいます（場所はGoogleマップで「活魚料理 いなさ」）。火曜と、間に合わなかった日は、神社の参道の店でつぼ焼きを。",
+                  "The 13:30 boat reaches Kada Port at 13:50. Lunch first, then the shrine (5 minutes’ walk from the port), then a bath if there is time.\n\n" + LUNCH["en"] + " You have only 40 minutes between landing and last orders, so head straight there off the boat (search “活魚料理 いなさ” in Google Maps). On Tuesdays, or if you are too late, have grilled turban shells at the stalls on the shrine approach."),
+            post=T(BATHS["ja"] + "\n\n土日祝は3つとも受付が15:00ごろまでなので、温泉に入りたい日は、船を降りたら先に温泉へ。",
+                   BATHS["en"] + "\n\nOn weekends and holidays all three stop taking bathers at about 15:00, so if you want a bath, go there first off the boat."),
+            time=T("お昼13:55〜14:40、神社14:45〜15:10", "lunch 13:55–14:40, shrine 14:45–15:10"), rows=[]),
+        kadaeki2=dict(
+            blurb=T("神社から駅まで歩いて約20分。16:25発でなんばに17:59着。温泉に入った日は16:56発で18:29着。",
+                    "About 20 minutes’ walk from the shrine. The 16:25 reaches Namba at 17:59; after a bath, the 16:56 arrives at 18:29."),
+            pre=T("淡嶋神社から駅までは歩いて約20分。神社を15:10に出て町をぶらぶら歩いても、16:25発に間に合います。和歌山市で特急サザン46号に乗り換えて、なんばに17:59着。平日に「ひいなの湯」に入った日は16:56発（土曜は16:58発）で18:29着。夕日まで加太にいるなら17:27発で18:59着です（11月下旬の日の入りは16:50ごろ）。",
+                  "The station is about 20 minutes’ walk from Awashima Shrine. Leave the shrine at 15:10, wander through the town, and you still make the 16:25, which connects at Wakayamashi with Southern 46 and reaches Namba at 17:59. After a weekday bath at Hiina-no-yu, take the 16:56 (16:58 on Saturdays), arriving 18:29. To stay for the sunset, the 17:27 arrives at 18:59 (sunset is about 16:50 in late November)."),
+            time=T("16:25発（なんば17:59着）", "depart 16:25 (Namba 17:59)"),
+            rows=[row("train", "加太16:25発 → 和歌山市16:49着・17:00発（特急サザン46号）→ なんば17:59着・1,010円。前は15:59発（土曜15:58発）→ 17:29着。あとは16:56発（土曜16:58発）→ 18:29着、17:27発 → 18:59着",
+                      "Kada 16:25 → Wakayamashi 16:49 / 17:00 (Southern 46) → Namba 17:59, ¥1,010. Before it: 15:59 (15:58 on Saturdays) → 17:29. After it: 16:56 (16:58 on Saturdays) → 18:29, 17:27 → 18:59"),
+                  LAST_ROW, KYOTO_BACK]),
+    ),
+)
+
+NOTE_HEAD = ("友ヶ島・加太の日帰りルート（tomogashima/ のページ専用。形は eizan-line.json と同じ）。起点は大阪の梅田〜難波のあたりのホテル。一覧の上のボタンで行きの船を選び、コースごとに別のファイルを読む"
+             "（tomogashima.json＝11:00の船で渡って16:30の船で戻る、tomogashima-early.json＝9:00の船で渡って13:30の船で戻り、午後は加太）。このファイル：")
+NOTE_TAIL = (" 写真は Toshi の写真ライブラリから（加太は2022年7月8日、友ヶ島と淡嶋神社は2023年6月20日。Nikon D7000 の写真は島にGPSの写真が2枚しかないので、道しるべの看板と撮影時刻の順で場所を決めた。"
+             "1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。port-1.jpg は、窓に貼ってあった選挙のポスターが写らないように上の部分だけを切り出した。"
+             "info.source は確認した出典、info.checked は確認日。入口で困ること（欠航・運休日・現金・水道なし・参拝時間）は caution と head つきの notices。"
+             "友ヶ島汽船の支払い方法、整理券を配りはじめる時刻、ひいなの湯と加太海月のタトゥーの決まりは公式サイトに書かれておらず、文章の中で「要確認」としている。"
+             "店名を出しているのは公式サイトで営業時間を確かめた店だけ（いなさ・ひいなの湯・休暇村紀州加太・加太海月・らぴゅカフェ）。"
+             "各スポットの「おすすめ訪問時間」は11月下旬・木曜のダイヤの時間割。このファイルは scripts/build_tomogashima_data.py で作る（直接直さない）。")
+
+
+def build(c):
+    cs = c["spots"]
+    spots = []
+    for i, sid in enumerate(c["order"], 1):
+        b, o = S[sid], cs.get(sid, {})
+        parts = [b["title"], o.get("pre"), b["body"], o.get("post")]
+        tm = o["time"]
+        text = {}
+        lead = {"ja": "おすすめ到着時間：" if sid in ("kadaeki", "port", "nonaura") else "おすすめ出発時間：" if sid == "kadaeki2" else "おすすめ訪問時間：",
+                "en": "Recommended arrival: " if sid in ("kadaeki", "port", "nonaura") else "Recommended departure time: " if sid == "kadaeki2" else "Recommended visit time: "}
+        for lang in ("ja", "en"):
+            text[lang] = "\n\n".join(p[lang] for p in parts if p) + "\n\n" + lead[lang] + tm[lang]
+        out = {"no": i, "id": sid, "name": b["name"], "kind": b["kind"], "blurb": o.get("blurb") or b["blurb"], "lat": b["lat"], "lng": b["lng"]}
+        if b.get("caution"):
+            out["caution"] = b["caution"]
+        out["text"] = text
+        out["gmaps"] = b["gmaps"]
+        out["links"] = b["links"]
+        out["info"] = info(o.get("rows", []) + b.get("rows", []), tip=b["tip"], cash=b.get("cash", False), source=b.get("source"))
+        out["photos"] = photos(sid)
+        out["notices"] = b.get("notices", [])
+        spots.append(out)
+    NO = {s["id"]: s["no"] for s in spots}
+    data = {
+        "id": "tomogashima", "course": c["id"],
+        "_note": NOTE_HEAD + c["file"] + "。" + NOTE_TAIL,
+        "sections": [{"first": NO[a], "last": NO[b], "area": T(aj, ae), "title": T(tj, te)} for a, b, aj, ae, tj, te in c["sections"]],
+        "focus": {"first": NO["nonaura"], "last": NO["dai2"]},
+        "plan": {"_note": "「選んで回る」の設定。駅・港・桟橋はいつも入る。島の中と淡嶋神社は選べる。",
+                 "picks": sorted(NO[k] for k in ("dai3", "takanosu", "kosuke", "toudai", "dai2", "awashima")),
+                 "auto": {str(NO[k]): {"always": True} for k in ("kadaeki", "port", "nonaura", "kadaeki2")},
+                 "hints": []},
+        "photoBase": "../images/tomogashima/",
+        "spots": spots,
+    }
+    out = f"{R}/data/routes/{c['file']}"
+    json.dump(data, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print("wrote", out, [(s["no"], s["id"], len(s["photos"])) for s in spots])
+
+
+assert set(LATE["order"]) == set(EARLY["order"]) == set(S)
+for c in (LATE, EARLY):
+    build(c)
