@@ -22,14 +22,14 @@
   var WIDE = window.matchMedia('(min-width: 900px)');
   var I18N = window.ARASHIYAMA_I18N;
   // 2026-11-20 に番号を振り直した（出町柳スタート）ので、「行った」印は新しいキーで保存し直す
-  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-arashiyama-intro-seen', KEY_VISITED = 'kyoto-maps-arashiyama-visited-v2';
+  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-arashiyama-intro-seen', KEY_VISITED = 'kyoto-maps-arashiyama-visited-v3';
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
   var data, spots = [], byNo = {}, map, markers = {}, photoMode = null, activeNo = null, lang = 'en';
   var visited = {}, resetArmed = false, locLayer = null, toastTimer = null;
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
-  var KEY_MODE = 'kyoto-maps-arashiyama-mode', KEY_PICKS = 'kyoto-maps-arashiyama-picks';
+  var KEY_MODE = 'kyoto-maps-arashiyama-mode', KEY_PICKS = 'kyoto-maps-arashiyama-picks-v2';
   var mode = 'all', picks = {}, routeLine = null;
   // 嵐山: 出発のしかた（コース）を3つから選べる。コースごとにデータファイルが別。
   // 一覧の上のボタン（.coursesw、data-course）で切り替える。「全部回る／選んで回る」のボタンはその下にそのまま残る
@@ -884,7 +884,7 @@
     route();
   }
 
-  fetch('../data/routes/' + course.file + '?v=9')
+  fetch('../data/routes/' + course.file + '?v=10')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

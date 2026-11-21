@@ -41,9 +41,12 @@ s = s.replace(s.split('(function () {')[0], """/* 京都 嵐山・嵯峨野 — 
 """, 1)
 assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.ARASHIYAMA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-arashiyama-")
-s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 18;", s)
+s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 19;", s)
+# 2026-11-22 にお昼の店（仙翁）を足して番号が1つずつずれたので、「行った」印と選んだ場所は新しいキーで保存し直す
+rep("'kyoto-maps-arashiyama-visited-v2'", "'kyoto-maps-arashiyama-visited-v3'")
+rep("KEY_PICKS = 'kyoto-maps-arashiyama-picks'", "KEY_PICKS = 'kyoto-maps-arashiyama-picks-v2'")
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/' + course.file + '?v=9')")
+s = s.replace(m.group(0), "fetch('../data/routes/' + course.file + '?v=10')")
 
 # コース（出発のしかた）の切り替え
 rep("""  var mode = 'all', picks = {}, routeLine = null;
@@ -203,8 +206,8 @@ h = h.replace(_m.group(0),
   '      <button type="button" data-course="tenryuji" data-t="courseTenryuji">早朝に出発：天龍寺の開門へ（水・土）</button>\n'
   '      <button type="button" data-course="late" data-t="courseLate">9〜10時に出発</button>\n'
   '    </div>\n' + _m.group(0))
-# CSS / JS の ?v= は、テンプレートの数字に BUMP を足す（嵐山だけ更新したときは BUMP を1つ上げる。2026-11-22 に 100→101→102）
-BUMP = 102
+# CSS / JS の ?v= は、テンプレートの数字に BUMP を足す（嵐山だけ更新したときは BUMP を1つ上げる。2026-11-22 に 100→101→102→103）
+BUMP = 103
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + BUMP}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """

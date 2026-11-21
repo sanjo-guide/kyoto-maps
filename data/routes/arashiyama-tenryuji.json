@@ -14,26 +14,26 @@
   },
   {
    "first": 8,
-   "last": 12,
+   "last": 13,
    "day": 3
   },
   {
-   "first": 13,
-   "last": 15,
-   "day": 4
-  },
-  {
-   "first": 16,
+   "first": 14,
    "last": 16,
    "day": 5
+  },
+  {
+   "first": 17,
+   "last": 17,
+   "day": 6
   }
  ],
  "focus": {
   "first": 3,
-  "last": 15
+  "last": 16
  },
  "plan": {
-  "_note": "早朝に出発（水・土＝愛宕念仏寺が休みの日）の「選んで回る」。天龍寺と竹林は全員共通。大河内山荘・化野念仏寺・鳥居本は時間割の外の寄り道。scripts/build_arashiyama_courses.py が作る。",
+  "_note": "早朝に出発（水・土＝愛宕念仏寺が休みの日）の「選んで回る」。天龍寺と竹林は全員共通。大河内山荘・化野念仏寺・鳥居本・嵯峨野湯は時間割の外の寄り道。scripts/build_arashiyama_courses.py が作る。",
   "picks": [
    6,
    7,
@@ -44,7 +44,8 @@
    12,
    13,
    14,
-   15
+   15,
+   16
   ],
   "auto": {
    "1": {
@@ -62,7 +63,7 @@
    "5": {
     "always": true
    },
-   "16": {
+   "17": {
     "always": true
    }
   },
@@ -75,23 +76,8 @@
      ]
     },
     "text": {
-     "ja": "大河内山荘を足すと、このあとが40分ほど遅くなります（朝ごはんが10:35ごろ、お昼が13:55ごろ）。",
-     "en": "Adding Okochi Sanso pushes everything after it back by about 40 minutes (breakfast at about 10:35, lunch at about 13:55)."
-    }
-   },
-   {
-    "spot": 11,
-    "rule": {
-     "any": [
-      11
-     ],
-     "none": [
-      12
-     ]
-    },
-    "text": {
-     "ja": "化野念仏寺を足すと、お昼が14:10ごろ、渡月橋が15:05ごろになります。モンキーパーク（入園16:00まで）には間に合います。",
-     "en": "Adding Adashino moves lunch to about 14:10 and the bridge to about 15:05. You still make the Monkey Park (last entry 16:00)."
+     "ja": "大河内山荘を足すと、このあとが40分ほど遅くなります（朝ごはんが10:35ごろ、お昼が13:30ごろ）。",
+     "en": "Adding Okochi Sanso pushes everything after it back by about 40 minutes (breakfast at about 10:35, lunch at about 13:30)."
     }
    },
    {
@@ -99,11 +85,38 @@
     "rule": {
      "any": [
       12
+     ],
+     "none": [
+      13
      ]
     },
     "text": {
-     "ja": "鳥居本まで上ると、お昼は15時ごろになります。モンキーパーク（入園16:00まで）には間に合わないので、どちらか1つにしてください。",
-     "en": "Going up to Toriimoto moves lunch to about 15:00, too late for the Monkey Park (last entry 16:00). Choose one or the other."
+     "ja": "お昼のあとに化野念仏寺を足すと、渡月橋に着くのが15:00ごろになります。モンキーパーク（入園16:00まで）には間に合います。",
+     "en": "Adding Adashino after lunch puts you at the bridge at about 15:00. You still make the Monkey Park (last entry 16:00)."
+    }
+   },
+   {
+    "spot": 13,
+    "rule": {
+     "any": [
+      13
+     ]
+    },
+    "text": {
+     "ja": "鳥居本まで上ると、渡月橋に着くのは15:45ごろ。モンキーパーク（入園16:00まで）にはぎりぎりなので、どちらか1つにしてください。",
+     "en": "Going up to Toriimoto puts you at the bridge at about 15:45, cutting it very fine for the Monkey Park (last entry 16:00). Choose one or the other."
+    }
+   },
+   {
+    "spot": 14,
+    "rule": {
+     "any": [
+      14
+     ]
+    },
+    "text": {
+     "ja": "嵯峨野湯に寄ると、あとが45分ほど遅くなります（モンキーパークの入口に15:25ごろ）。",
+     "en": "A stop at Sagano-yu makes the rest about 45 minutes later (Monkey Park entrance at about 15:25)."
     }
    }
   ],
@@ -113,9 +126,9 @@
    8,
    9,
    10,
-   13,
-   14,
-   15
+   11,
+   15,
+   16
   ]
  },
  "photoBase": "../images/arashiyama/",
@@ -285,8 +298,8 @@
     "03-6.jpg"
    ],
    "text": {
-    "ja": "阪急嵐山駅（はんきゅうあらしやまえき）\n\n桂川の南側にある、嵐山線の終点です。改札を出たら、中之島を抜けて渡月橋を渡り、まっすぐ北へ。左側に天龍寺の入口があります。歩いて15〜20分です。\n\n朝の渡月橋は、昼間よりずっと人が少ないことが多い時間です。午後にもう一度ゆっくり来ます（14番）。\n\nおすすめ訪問時間：8:10ごろ",
-    "en": "Hankyu Arashiyama Station\n\nThe end of the Arashiyama Line, on the south side of the Katsura River. From the ticket gates, cross Nakanoshima and Togetsukyo Bridge and keep going north: the entrance to Tenryu-ji is on your left. Allow 15–20 minutes on foot.\n\nIn the early morning the bridge usually has far fewer people than in the daytime. You come back for a proper look in the afternoon (stop 14).\n\nRecommended visit time: about 8:10"
+    "ja": "阪急嵐山駅（はんきゅうあらしやまえき）\n\n桂川の南側にある、嵐山線の終点です。改札を出たら、中之島を抜けて渡月橋を渡り、まっすぐ北へ。左側に天龍寺の入口があります。歩いて15〜20分です。\n\n朝の渡月橋は、昼間よりずっと人が少ないことが多い時間です。午後にもう一度ゆっくり来ます（15番）。\n\nおすすめ訪問時間：8:10ごろ",
+    "en": "Hankyu Arashiyama Station\n\nThe end of the Arashiyama Line, on the south side of the Katsura River. From the ticket gates, cross Nakanoshima and Togetsukyo Bridge and keep going north: the entrance to Tenryu-ji is on your left. Allow 15–20 minutes on foot.\n\nIn the early morning the bridge usually has far fewer people than in the daytime. You come back for a proper look in the afternoon (stop 15).\n\nRecommended visit time: about 8:10"
    },
    "gmaps": [
     {
@@ -933,8 +946,8 @@
     "08-10.jpg"
    ],
    "text": {
-    "ja": "祇王寺（ぎおうじ）\n\n『平家物語』に登場する白拍子の祇王が、平清盛の心が離れたあと、母と妹とともに出家して暮らしたと伝わる尼寺です。\n\n境内は小さく、20〜30分で回れます。苔がきれいなのは新緑のころと、もみじが苔の上に散る11月下旬〜12月上旬。\n\n拝観料は公式サイトがつながらず、確かめられていません（要確認）。\n\nこのコースでは、ここで折り返します。来た道を下って、嵐山の中心まで歩いて25〜30分。お昼は13:15ごろです。\n\nおすすめ訪問時間：12:15〜12:45",
-    "en": "Gio-ji Temple\n\nA small nunnery linked to the Tale of the Heike: Gio, a dancer loved by the warlord Taira no Kiyomori, is said to have become a nun here with her mother and sister after he turned away from her.\n\nThe grounds are small, but the moss garden is one of the most beautiful in Sagano: in fresh spring green, and when the maple leaves fall on the moss in late November to early December.\n\nThere is also a joint ticket with Daikaku-ji Temple.\n\nOn this course you turn round here. Walk back down the way you came: central Arashiyama is 25–30 minutes away, and lunch is at about 13:15.\n\nRecommended visit time: 12:15–12:45"
+    "ja": "祇王寺（ぎおうじ）\n\n『平家物語』に登場する白拍子の祇王が、平清盛の心が離れたあと、母と妹とともに出家して暮らしたと伝わる尼寺です。\n\n境内は小さく、20〜30分で回れます。苔がきれいなのは新緑のころと、もみじが苔の上に散る11月下旬〜12月上旬。\n\n拝観料は公式サイトがつながらず、確かめられていません（要確認）。\n\nこのコースでは、ここで折り返します。お昼は、歩いて5分ほどの喫茶店「仙翁」で（次の11番）。\n\nおすすめ訪問時間：12:15〜12:45",
+    "en": "Gio-ji Temple\n\nA small nunnery linked to the Tale of the Heike: Gio, a dancer loved by the warlord Taira no Kiyomori, is said to have become a nun here with her mother and sister after he turned away from her.\n\nThe grounds are small, but the moss garden is one of the most beautiful in Sagano: in fresh spring green, and when the maple leaves fall on the moss in late November to early December.\n\nThere is also a joint ticket with Daikaku-ji Temple.\n\nOn this course you turn round here. Lunch is at Senno, a café about 5 minutes’ walk away (stop 11).\n\nRecommended visit time: 12:15–12:45"
    },
    "gmaps": [
     {
@@ -1002,6 +1015,156 @@
   },
   {
    "no": 11,
+   "id": "senno",
+   "name": {
+    "ja": "仙翁（お昼ごはん）",
+    "en": "Senno (lunch)"
+   },
+   "kind": {
+    "ja": "喫茶店・お昼",
+    "en": "Café & lunch"
+   },
+   "blurb": {
+    "ja": "祇王寺の手前にある喫茶店。カレーが5種類とパスタがあって、奥嵯峨でお昼を食べるのにちょうどいい場所です。現金だけ。",
+    "en": "A café just before Gio-ji, with five kinds of curry and pasta: a handy place for lunch in Oku-Saga. Cash only."
+   },
+   "lat": 35.02318,
+   "lng": 135.66871,
+   "photos": [
+    "senno-1.jpg",
+    "senno-2.jpg",
+    "senno-3.jpg",
+    "senno-4.jpg"
+   ],
+   "text": {
+    "ja": "仙翁（せんおう）\n\n奥嵯峨は食事の店が少ないので、お昼はここで。私はビーフカレーを食べました。美味しかったです（写真は2025年10月）。\n\n店頭のメニュー（2025年10月の写真）では、カレーは欧風ビーフ、ローストスパイスビーフ、バターチキン、キーマ、チキンの5種類で、どれも税込1,300円。パスタも1,300円、ケーキは800円、コーヒーは550円からでした。1人1品の注文が必要で、支払いは現金だけです。\n\n時間と休みは、お店の公式の案内が見つかりませんでした。食べログでは9:00〜15:30、木曜休みとなっています（要確認）。\n\n休みや満席のときは、すぐ隣の「茶房さがの」へ。店頭のメニュー（2024年7月の写真）には、ビーフカレーとエビピラフが900円、スパゲティが750〜1,000円、サンドイッチ、甘味がありました。時間と休みは確認できていません（要確認）。食べログではカード・電子マネーとも不可となっているので、ここも現金で。\n\nもう1軒、化野念仏寺のほうへ150メートルほど戻ったところに「寿楽庵（じゅらくあん）」があります。じゃらんの情報では11:00〜17:00、不定休、わらびもちとお薄のセットが730円（要確認）。食事のメニューは確認できていません。\n\n祇王寺から歩いて5分ほど。食べ終わったら、来た道を下って、渡月橋まで歩いて30分ほどです。\n\nおすすめ訪問時間：12:50〜13:35",
+    "en": "Senno\n\nThere are few places to eat in Oku-Saga, so have lunch here. I had the beef curry, and it was good (photos from October 2025).\n\nOn the menu board outside (photographed in October 2025) there were five curries, European-style beef, roast spice beef, butter chicken, keema and chicken, each ¥1,300 including tax. Pasta was also ¥1,300, cakes ¥800 and coffee from ¥550. Each person needs to order one item, and it’s cash only.\n\nI couldn’t find the café’s own information on hours and closing days. Tabelog lists 9:00–15:30, closed Thursdays (please check).\n\nIf it’s closed or full, try Sabo Sagano, right next door. Its menu board (photographed in July 2024) had beef curry and shrimp pilaf at ¥900, spaghetti at ¥750–1,000, sandwiches and Japanese sweets. I couldn’t confirm its hours or closing days (please check). Tabelog lists it as taking neither cards nor e-money, so bring cash here too.\n\nOne more: Jurakuan, about 150 meters back toward Adashino Nenbutsu-ji. Jalan lists it as open 11:00–17:00 with irregular closing days, and a warabi-mochi and matcha set at ¥730 (please check). I couldn’t confirm what meals it serves.\n\nAbout 5 minutes on foot from Gio-ji. After lunch, walk back down the way you came: Togetsukyo Bridge is about 30 minutes away.\n\nRecommended visit time: 12:50–13:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "仙翁",
+      "en": "Senno"
+     },
+     "lat": 35.02318,
+     "lng": 135.66871,
+     "url": "https://www.google.com/maps/search/?api=1&query=35.02318%2C135.66871"
+    },
+    {
+     "label": {
+      "ja": "茶房さがの",
+      "en": "Sabo Sagano"
+     },
+     "lat": 35.02337,
+     "lng": 135.66875,
+     "url": "https://www.google.com/maps/search/?api=1&query=35.02337%2C135.66875"
+    },
+    {
+     "label": {
+      "ja": "寿楽庵",
+      "en": "Jurakuan"
+     },
+     "lat": 35.02467,
+     "lng": 135.66844,
+     "url": "https://www.google.com/maps/search/?api=1&query=35.02467%2C135.66844"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "食べログ：仙翁",
+      "en": "Tabelog: Senno (Japanese)"
+     },
+     "url": {
+      "ja": "https://tabelog.com/kyoto/A2601/A260403/26021386/",
+      "en": "https://tabelog.com/kyoto/A2601/A260403/26021386/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "食べログ：茶房さがの",
+      "en": "Tabelog: Sabo Sagano (Japanese)"
+     },
+     "url": {
+      "ja": "https://tabelog.com/kyoto/A2601/A260403/26009893/",
+      "en": "https://tabelog.com/kyoto/A2601/A260403/26009893/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "じゃらん：寿楽庵",
+      "en": "Jalan: Jurakuan (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jalan.net/gourmet/grm_guide000000177770/",
+      "en": "https://www.jalan.net/gourmet/grm_guide000000177770/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "仙翁：9:00〜15:30（食べログの情報。要確認）",
+       "en": "Senno: 9:00–15:30 (per Tabelog; please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "仙翁：木曜日（食べログの情報。要確認）",
+       "en": "Senno: Thursdays (per Tabelog; please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "仙翁：カレー・パスタ 各1,300円（税込）、ケーキ800円、コーヒー550円から（2025年10月の店頭のメニュー）。現金のみ",
+       "en": "Senno: curry and pasta ¥1,300 each (tax incl.), cakes ¥800, coffee from ¥550 (menu board, October 2025). Cash only"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "3軒とも、お店の公式サイトや公式SNSは見つかりませんでした。値段は店頭のメニューの写真から、時間と休みは食べログ・じゃらんからです。",
+     "en": "None of the three has an official website or social account that I could find. Prices are from photos of the menu boards; hours and closing days are from Tabelog and Jalan."
+    },
+    "checked": "2026-11-22",
+    "verified": false,
+    "source": "値段・1人1品・現金のみ：オーナーが撮った仙翁の店頭と店内の写真（2025-10-10）、茶房さがのの店頭の写真（2024-07-30）。時間・休み：食べログ（仙翁）、じゃらん（寿楽庵）。茶房さがのの時間は食べログにも記載なし"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "現金だけです",
+      "en": "Cash only"
+     },
+     "text": {
+      "ja": "仙翁の店内に「We only accept cash」と書いてあります（2025年10月の写真）。1人1品の注文が必要です。木曜は休みのようです（要確認）。",
+      "en": "A sign inside Senno says “We only accept cash” (photographed in October 2025). Each person needs to order one item. It seems to be closed on Thursdays (please check)."
+     }
+    }
+   ],
+   "caution": {
+    "ja": "現金だけ・木曜は休みのよう（要確認）",
+    "en": "Cash only · seems closed Thursdays (please check)"
+   }
+  },
+  {
+   "no": 12,
    "id": "adashino",
    "name": {
     "ja": "化野念仏寺",
@@ -1029,8 +1192,8 @@
     "07-9.jpg"
    ],
    "text": {
-    "ja": "化野念仏寺（あだしのねんぶつじ）\n\n「化野」は、昔このあたりが葬送の地だったころの地名。野ざらしになっていた石仏や石塔を集めてまつったのが「西院の河原（さいのかわら）」です。\n\n本堂の裏から竹林の小道が続いています。嵐山の竹林よりずっと静かで、拝観料だけで歩けます。\n\n毎年8月の最後の土・日曜日には、たくさんのろうそくを灯す「千灯供養」があります。\n\nこのコースでは、祇王寺から10分ほど坂を上る寄り道です。足すと、お昼が14:10ごろになります。\n\nおすすめ訪問時間：12:55〜13:35",
-    "en": "Adashino Nenbutsu-ji Temple\n\n“Adashino” was once a burial ground. The stone Buddhas and stupas left out in the fields were gathered here into the area called Sai-no-kawara.\n\nA bamboo path leads up behind the main hall. It’s much quieter than the famous Arashiyama grove, and it’s covered by the admission.\n\nOn the last Saturday and Sunday of August, thousands of candles are lit for the Sento Kuyo ceremony.\n\nOn this course it’s an extra, about 10 minutes uphill from Gio-ji. Adding it moves lunch to about 14:10.\n\nRecommended visit time: 12:55–13:35"
+    "ja": "化野念仏寺（あだしのねんぶつじ）\n\n「化野」は、昔このあたりが葬送の地だったころの地名。野ざらしになっていた石仏や石塔を集めてまつったのが「西院の河原（さいのかわら）」です。\n\n本堂の裏から竹林の小道が続いています。嵐山の竹林よりずっと静かで、拝観料だけで歩けます。\n\n毎年8月の最後の土・日曜日には、たくさんのろうそくを灯す「千灯供養」があります。\n\nこのコースでは、お昼のあとに10分ほど坂を上る寄り道です。足すと、渡月橋に着くのが15:00ごろになります。\n\nおすすめ訪問時間：13:45〜14:25",
+    "en": "Adashino Nenbutsu-ji Temple\n\n“Adashino” was once a burial ground. The stone Buddhas and stupas left out in the fields were gathered here into the area called Sai-no-kawara.\n\nA bamboo path leads up behind the main hall. It’s much quieter than the famous Arashiyama grove, and it’s covered by the admission.\n\nOn the last Saturday and Sunday of August, thousands of candles are lit for the Sento Kuyo ceremony.\n\nOn this course it’s an extra after lunch, about 10 minutes uphill. Adding it puts you at Togetsukyo Bridge at about 15:00.\n\nRecommended visit time: 13:45–14:25"
    },
    "gmaps": [
     {
@@ -1106,7 +1269,7 @@
    }
   },
   {
-   "no": 12,
+   "no": 13,
    "id": "toriimoto",
    "name": {
     "ja": "嵯峨鳥居本の町並み",
@@ -1135,8 +1298,8 @@
     "06-10.jpg"
    ],
    "text": {
-    "ja": "嵯峨鳥居本（さがとりいもと）\n\n愛宕山へ向かう参道として栄えた町で、国の重要伝統的建造物群保存地区に選ばれています。坂の上には愛宕神社の一の鳥居が立ち、そのそばに茅葺き屋根の茶屋「平野屋」があります。\n\n平野屋では、お抹茶と名物の団子「志んこ」のセット（1,200円）でひと休みできます（冬は柚子しぐれ、春は桜餅）。\n\nこのコースでは、化野念仏寺から坂を10分ほど上った先の寄り道です。坂の上の愛宕念仏寺は水曜・土曜が休みなので、平野屋のあたりで折り返します。嵐山の中心までは、同じ道を下って歩いて35〜40分。\n\nおすすめ訪問時間：13:45〜14:15",
-    "en": "Saga-Toriimoto\n\nThis old street grew up along the pilgrims’ path to Mount Atago, and it’s now a national preservation district. At the top stands the first torii gate of Atago Shrine, and beside it Hiranoya, a teahouse with a thatched roof.\n\nAt Hiranoya you can rest with matcha and “shinko”, a local dumpling (set ¥1,200; yuzu sweets in winter, sakura-mochi in spring).\n\nOn this course it’s an extra: about 10 minutes uphill from Adashino Nenbutsu-ji. Otagi Nenbutsu-ji at the top is closed on Wednesdays and Saturdays, so turn round at Hiranoya. Central Arashiyama is 35–40 minutes’ walk back down the same road.\n\nRecommended visit time: 13:45–14:15"
+    "ja": "嵯峨鳥居本（さがとりいもと）\n\n愛宕山へ向かう参道として栄えた町で、国の重要伝統的建造物群保存地区に選ばれています。坂の上には愛宕神社の一の鳥居が立ち、そのそばに茅葺き屋根の茶屋「平野屋」があります。\n\n平野屋では、お抹茶と名物の団子「志んこ」のセット（1,200円）でひと休みできます（冬は柚子しぐれ、春は桜餅）。\n\nこのコースでは、化野念仏寺から坂を10分ほど上った先の寄り道です。坂の上の愛宕念仏寺は水曜・土曜が休みなので、平野屋のあたりで折り返します。嵐山の中心までは、同じ道を下って歩いて35〜40分。\n\nおすすめ訪問時間：14:35〜15:05",
+    "en": "Saga-Toriimoto\n\nThis old street grew up along the pilgrims’ path to Mount Atago, and it’s now a national preservation district. At the top stands the first torii gate of Atago Shrine, and beside it Hiranoya, a teahouse with a thatched roof.\n\nAt Hiranoya you can rest with matcha and “shinko”, a local dumpling (set ¥1,200; yuzu sweets in winter, sakura-mochi in spring).\n\nOn this course it’s an extra: about 10 minutes uphill from Adashino Nenbutsu-ji. Otagi Nenbutsu-ji at the top is closed on Wednesdays and Saturdays, so turn round at Hiranoya. Central Arashiyama is 35–40 minutes’ walk back down the same road.\n\nRecommended visit time: 14:35–15:05"
    },
    "gmaps": [
     {
@@ -1194,7 +1357,7 @@
    "notices": []
   },
   {
-   "no": 13,
+   "no": 14,
    "id": "saganoyu",
    "name": {
     "ja": "嵯峨野湯",
@@ -1205,8 +1368,8 @@
     "en": "Café"
    },
    "blurb": {
-    "ja": "昔の銭湯を改装したカフェ。白いタイルの壁や高い天井に銭湯の面影が残っています。このコースでは、ここでお昼に。",
-    "en": "A café in a converted public bathhouse, with the white tiles and high ceiling still in place. On this course it’s your lunch stop."
+    "ja": "昔の銭湯を改装したカフェ。白いタイルの壁や高い天井に銭湯の面影が残っています。歩き終わりに、食事やコーヒーでひと休み。",
+    "en": "A café in a converted public bathhouse, with the white tiles and high ceiling still in place. A place to sit down for a meal or coffee at the end of the walk."
    },
    "lat": 35.017024,
    "lng": 135.681327,
@@ -1222,8 +1385,8 @@
     "15-9.jpg"
    ],
    "text": {
-    "ja": "嵯峨野湯（さがのゆ）\n\n昔の銭湯の建物を生かしたカフェで、パスタなどの食事、ケーキ、コーヒーがあります。嵐電の嵐電嵯峨駅のすぐそば、JR嵯峨嵐山駅からも歩いてすぐです。\n\n営業時間とラストオーダーは、お店の公式サイトでは確かめられませんでした（下の時間は食べログに載っているもの）。行く日の営業は、Googleマップなどで見てから。\n\nこのコースでは、ここでお昼にします。祇王寺から歩いて30分ほど。閉まっていたら、嵐電の嵐山駅のまわり（天龍寺の前の通り）に食事の店が並んでいます。ここから渡月橋までは10分ほどです。\n\nおすすめ訪問時間：13:15〜14:00",
-    "en": "Sagano-yu\n\nA café in an old public bathhouse building, serving pasta and other meals, cakes and coffee. It’s right by Randen-Saga Station and a short walk from JR Saga-Arashiyama Station.\n\nThe opening hours and last order couldn’t be confirmed on the café’s own website (the hours below are from Tabelog). Check Google Maps or similar on the day.\n\nOn this course this is your lunch stop, about 30 minutes on foot from Gio-ji. If it’s closed, there are plenty of places to eat around Randen Arashiyama Station, on the street in front of Tenryu-ji. From here it’s about 10 minutes to Togetsukyo Bridge.\n\nRecommended visit time: 13:15–14:00"
+    "ja": "嵯峨野湯（さがのゆ）\n\n昔の銭湯の建物を生かしたカフェで、パスタなどの食事、ケーキ、コーヒーがあります。嵐電の嵐電嵯峨駅のすぐそば、JR嵯峨嵐山駅からも歩いてすぐです。\n\n営業時間とラストオーダーは、お店の公式サイトでは確かめられませんでした（下の時間は食べログに載っているもの）。行く日の営業は、Googleマップなどで見てから。\n\nこのコースでは、奥嵯峨から下りてきたあとの寄り道です。お昼の11番から歩いて30分ほど。寄ると、あとが45分ほど遅くなります。ここから渡月橋までは10分ほどです。\n\nおすすめ訪問時間：14:05〜14:45",
+    "en": "Sagano-yu\n\nA café in an old public bathhouse building, serving pasta and other meals, cakes and coffee. It’s right by Randen-Saga Station and a short walk from JR Saga-Arashiyama Station.\n\nThe opening hours and last order couldn’t be confirmed on the café’s own website (the hours below are from Tabelog). Check Google Maps or similar on the day.\n\nOn this course it’s an extra after you come down from Oku-Saga, about 30 minutes on foot from lunch at stop 11. Stopping here makes the rest about 45 minutes later. From here it’s about 10 minutes to Togetsukyo Bridge.\n\nRecommended visit time: 14:05–14:45"
    },
    "gmaps": [
     {
@@ -1297,7 +1460,7 @@
    }
   },
   {
-   "no": 14,
+   "no": 15,
    "id": "togetsukyo",
    "name": {
     "ja": "渡月橋",
@@ -1368,7 +1531,7 @@
    ]
   },
   {
-   "no": 15,
+   "no": 16,
    "id": "monkey",
    "name": {
     "ja": "嵐山モンキーパークいわたやま",
@@ -1526,7 +1689,7 @@
    }
   },
   {
-   "no": 16,
+   "no": 17,
    "id": "pontocho",
    "name": {
     "ja": "京都の街なかへ（先斗町）",
@@ -1648,6 +1811,31 @@
   {
    "what": "鮎茶屋 平野屋：公式サイトのトップとお品書きに営業時間・定休日の記載なし（要確認）",
    "url": "https://ayuchaya-hiranoya.com/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "仙翁：カレー5種（欧風ビーフ・ローストスパイスビーフ・バターチキン・キーマ・チキン）各税込1,300円、パスタ1,300円、ケーキ800円、コーヒー550円〜、1人1品、現金のみ（店内の掲示「We only accept cash」）。オーナーが2025-10-10に撮った店頭のメニューと店内の写真から。公式サイト・公式SNSは見つからず（食べログにある旧ホームページのURLは404）",
+   "url": null,
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "仙翁（読みはセンオウ）：9:00〜15:30、木曜休み。食べログの情報（お店の公式情報ではない。要確認）。食べログは「カード可・電子マネー可」としているが、店内の掲示（2025年10月）は現金のみ",
+   "url": "https://tabelog.com/kyoto/A2601/A260403/26021386/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "茶房さがの：ビーフカレー900円、エビピラフ900円、スパゲティ750〜1,000円、ミックスサンド、甘味。オーナーが2024-07-30に撮った店頭のメニューの写真から（値段は変わっている可能性あり）。営業時間・定休日は食べログにも記載なし（要確認）。食べログではカード・電子マネー・QR決済とも不可",
+   "url": "https://tabelog.com/kyoto/A2601/A260403/26009893/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "寿楽庵（ジュラクアン）：11時〜17時、不定休、わらびもち・お薄セット730円。じゃらんの情報（お店の公式情報ではない。要確認）。公式サイト・公式SNSは見つからず、食事のメニューと支払い方法は未確認",
+   "url": "https://www.jalan.net/gourmet/grm_guide000000177770/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "3軒の位置はオーナーが Googleマップで調べたもの（仙翁 35.02318, 135.66871／茶房さがの 35.02337, 135.66875／寿楽庵 35.02467, 135.66844）。化野念仏寺→仙翁 約10分、仙翁→祇王寺 約5分、仙翁→渡月橋 約30分は地図上の距離からのめやす",
+   "url": null,
    "checked": "2026-11-22"
   },
   {
