@@ -68,8 +68,9 @@
   /* ---------- 選んで回る ---------- */
   // 自分で選ぶ場所（picks）と、選んだ場所に合わせて自動で入る駅・バス停（auto）は data.plan に書いてある
   function loadPlan() {
-    mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';
+    mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';
     try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}
+    if (load(KEY_PICKS) === null && data.plan && data.plan.defaultPicks) data.plan.defaultPicks.forEach(function (n) { if (isPick(n)) picks[n] = true; });
   }
   function savePlan() { store(KEY_MODE, mode); store(KEY_PICKS, JSON.stringify(Object.keys(picks).map(Number))); }
   function isPick(no) { return !!(data.plan && data.plan.picks.indexOf(no) >= 0); }
@@ -847,7 +848,7 @@
     route();
   }
 
-  fetch('../data/routes/arashiyama.json?v=7')
+  fetch('../data/routes/arashiyama.json?v=8')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

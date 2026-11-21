@@ -10,6 +10,9 @@
   - 地図を開いたときは data.focus の範囲（歩くエリア）だけを映す。「全体を表示」ボタンでは全部
   - 写真カードに切り替わるズームを 16 に（スポットが近いので、14 だと重なる）
   - 番号だけの #16 のリンクも、そのままの番号で開く（叡山電鉄の旧番号の読み替えはしない）
+  - 最初から「選んで回る」で開く（data.plan.defaultMode が 'pick' のとき。一度切り替えたらその選択を覚える）
+  - はじめて開いたときは、1日で無理なく回れる組み合わせ（data.plan.defaultPicks）を選んだ状態にする
+    （sync_osaka.py と同じ差分。2026-11-22 の見直しで追加）
 - arashiyama/js/i18n.js は嵐山専用なので触らない。テンプレートに新しい文言キーが増えたら、i18n.js に手で足す
 - テンプレートの作りが変わって置き換え先が見つからないと、途中で止まる（そのときはこのスクリプトを直す）
 """
@@ -31,10 +34,19 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.ARASHIYAMA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-arashiyama-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 18;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/arashiyama.json?v=7')")
+s = s.replace(m.group(0), "fetch('../data/routes/arashiyama.json?v=8')")
 
 # 写真カードに切り替わるズーム
 s, k = re.subn(r"var PHOTO_ZOOM = 14;[^\n]*", "var PHOTO_ZOOM = 16;          // show photo cards at this zoom and closer（嵐山はスポットが近いので16から）", s); assert k == 1
+
+# 最初から「選んで回る」
+rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
+    "mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';")
+
+# はじめて開いたときは、基本の組み合わせ（data.plan.defaultPicks）を選んだ状態にする（一度でも選び直したらその選択を覚える）
+rep("""    try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}""",
+"""    try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}
+    if (load(KEY_PICKS) === null && data.plan && data.plan.defaultPicks) data.plan.defaultPicks.forEach(function (n) { if (isPick(n)) picks[n] = true; });""")
 
 # 番号だけのリンク
 rep("""    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（スタート前の2か所を含む）なので 2 を引いて開く
@@ -108,8 +120,9 @@ h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1嵐山 Arashiyama MAP\2', h)
 a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
-# CSS / JS の ?v= は、テンプレートの数字に 100 を足す（嵐山だけ更新したときに上げやすいように別の番号）
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100}', h)
+# CSS / JS の ?v= は、テンプレートの数字に BUMP を足す（嵐山だけ更新したときは BUMP を1つ上げる。2026-11-22 に 100→101）
+BUMP = 101
+h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + BUMP}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 /* 嵐山: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */

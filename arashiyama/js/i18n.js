@@ -2,7 +2,8 @@
    Toshi 個人のマップ。スタートは京都河原町駅、阪急嵐山駅からバスで愛宕念仏寺へ行き、坂を下って嵐山の中心へ。
    1〜7（バス〜化野念仏寺）は全員共通、8〜17 はゲストが選んで回る。
    Photos are [spot number, photo index] from data/routes/arashiyama.json.
-   料金・時間は2026年11月20日に確認（公式サイトで確認できなかったものはデータに「要確認」と書いてある）。 */
+   料金・時間は2026年11月20日に確認（公式サイトで確認できなかったものはデータに「要確認」と書いてある）。
+   2026年11月22日に1日の時間割を見直した（バス 9:44→愛宕寺前 10:01、お昼は化野念仏寺のあと、先斗町は18:20ごろ）。 */
 window.ARASHIYAMA_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -16,7 +17,7 @@ window.ARASHIYAMA_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '1〜7（バスで愛宕念仏寺へ行き、坂を下って化野念仏寺まで）は全員共通。8〜17は見どころが多いので、「選んで回る」で行きたい場所を選んで、番号の順に歩いてください。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '1〜7（バスで愛宕念仏寺へ行き、坂を下って化野念仏寺まで）は全員共通。8〜17は、1日で無理なく回れる組み合わせが最初から選ばれています。番号の順に歩いてください。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -55,7 +56,7 @@ window.ARASHIYAMA_I18N = {
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。1〜7（電車とバスで愛宕念仏寺へ行き、坂を下って化野念仏寺まで）と、帰りの18は全員共通で、いつもルートに入ります。時間は全部回る場合の目安です。',
+    pickNote: '行かない場所は「行く」を押して外し、足したい場所は「行きたい」を押してください。1〜7（電車とバスで愛宕念仏寺へ行き、坂を下って化野念仏寺まで）と、帰りの18は全員共通です。時間は、最初から選ばれている場所を9:44のバスで回る場合の目安。大河内山荘とモンキーパークは、足すとほかを減らすことになります。',
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（全員共通の場所を含む）',
     pickEmpty: 'まだ選んでいません。下の一覧の8〜17から、行きたい場所を選んでください。',
     pickAll: 'すべて選ぶ',
@@ -77,28 +78,31 @@ window.ARASHIYAMA_I18N = {
       whoHead: 'こんな人におすすめ',
       who: [
         '嵐山の定番スポットも、静かな奥嵯峨も、両方楽しみたい人に',
-        'スタートは京都河原町駅。阪急電車で嵐山まで約30分',
+        'スタートは京都河原町駅を9:00ごろ。阪急電車で嵐山まで約30分',
         '最初にバスで山の上へ。あとはほとんど下り坂を歩くだけ',
-        '後半のお寺や名所は、行きたいところを選んで回るスタイル',
+        '後半のお寺や名所は、行きたいところを選んで回る',
         '全部回ると歩く距離は約6km。歩きやすい靴で',
-        '愛宕念仏寺は水曜・土曜がお休み'
+        '愛宕念仏寺は水曜・土曜がお休み',
+        '奥嵯峨は食事の店が少なめ。パンやおにぎりを持っていくと安心',
+        '拝観料は現金で用意を。モンキーパークは現金のみ'
       ],
       dayHead: '1日の流れ（目安）',
       from: '',
       day: [
-        { time: '9:00', area: '京都河原町 → 嵐山', title: '阪急電車で嵐山へ', text: '京都河原町から約30分。桂で嵐山線に乗り換えます。', photo: [3, 0] },
-        { time: '9:44', area: '愛宕念仏寺 → 化野', title: 'バスで山の上へ、あとは坂を下るだけ', text: 'バスで愛宕念仏寺へ。羅漢さんに会ったら、鳥居本の町並みを歩いて化野念仏寺まで下ります。', note: 'バスは1時間に1本', badge: 'ここまでは全員同じルート', photo: [5, 1] },
-        { time: '12:30', area: '奥嵯峨', title: '苔と紅葉のお寺を選んで', text: '祇王寺、二尊院、常寂光寺、大河内山荘。気になるところを選んで。', note: 'このあたりは食事の店が少なめ', badge: '好きな場所を選ぶ', photo: [8, 0] },
-        { time: '15:00', area: '竹林 → 天龍寺', title: '竹林の小径と天龍寺の庭', text: '竹林を歩いて野宮神社へ。天龍寺には北門から入って、池の庭を眺めます。', note: '天龍寺の庭園は16:50受付終了', photo: [12, 0] },
-        { time: '16:20', area: '嵐山の中心', title: '銭湯カフェと渡月橋', text: '元銭湯のカフェでひと休みしたら、渡月橋へ。おさるの山に行くなら早めに。', note: 'モンキーパークは16:00ごろまで', photo: [16, 0] },
-        { time: '17:30', area: '京都の街なかへ', title: '夜は先斗町へ', text: '阪急電車で京都河原町へ戻って、灯りのともる先斗町へ。', photo: [18, 0] }
+        { time: '9:00', area: '京都河原町 → 嵐山', title: '阪急電車で嵐山へ', text: '京都河原町から約30分。桂で嵐山線に乗り換えます。', note: 'ゆっくり出る日は10:00ごろ発（バスは10:44）', photo: [3, 0] },
+        { time: '9:44', area: '愛宕念仏寺 → 化野', title: 'バスで山の上へ、あとは坂を下るだけ', text: '10:01に愛宕寺前に着きます。羅漢さんを見たら、鳥居本の茶屋で団子を食べて、化野念仏寺まで下ります。', note: 'バスは平日・土曜は1時間に1本', badge: 'ここまでは全員同じルート', photo: [5, 1] },
+        { time: '12:15', area: '化野念仏寺のあたり', title: 'お昼ごはん', text: '食事の店が少ないところです。開いていた店に入るか、持ってきたパンやおにぎりを。', note: '次に食事ができるのは16:30ごろの嵯峨野湯', photo: [6, 0] },
+        { time: '13:10', area: '奥嵯峨', title: '苔と紅葉のお寺を選んで', text: '祇王寺、二尊院、常寂光寺。それぞれ歩いて5〜10分です。全部でなくても大丈夫。', note: '大河内山荘を足すと、あとが40分遅くなります', badge: '好きな場所を選ぶ', photo: [8, 0] },
+        { time: '15:05', area: '竹林 → 天龍寺', title: '竹林の小径と天龍寺の庭', text: '竹林を歩いて野宮神社へ。天龍寺には北門から入って、池の庭を眺めます。', note: '天龍寺の庭園は16:50受付終了', photo: [12, 0] },
+        { time: '16:30', area: '嵐山の中心', title: '銭湯カフェと渡月橋', text: '元銭湯のカフェでひと休みしたら、渡月橋へ。11月〜1月は、橋に着くころには暗くなっています。', note: 'モンキーパークは入園16:00まで・現金のみ。行く日はお寺を1つに', photo: [16, 0] },
+        { time: '17:50', area: '京都の街なかへ', title: '夜は先斗町へ', text: '阪急電車で京都河原町へ戻ると18:20ごろ。先斗町で晩ごはんに。', photo: [18, 0] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
       dealsLead: '京都河原町から出発して京都河原町へ戻ると、電車とバスで大人1人710円です（拝観料は別）。',
       deals: [
         { name: '阪急電車（京都河原町→嵐山）', price: '240円', text: '桂で嵐山線に乗り換えます。交通系ICカードも使えます。', url: 'https://www.hankyu.co.jp/station/kawaramachi.html' },
-        { name: '京都バス 62・92・94系統（阪急嵐山駅前→愛宕寺前）', price: '230円', text: '清滝行き。平日と土曜は1時間に1本ほど（日曜・祝日は30分おき）なので、時刻表を確認してから。ICカードは降りるときにタッチ。', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
+        { name: '京都バス 92・94系統（阪急嵐山駅前→愛宕寺前）', price: '230円', text: '清滝行き。平日と土曜は1時間に1本（9:44、10:44）。日曜・祝日の午前は9:14、9:44、10:14、10:44。ICカードは降りるときにタッチ。', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
         { name: '阪急電車（嵐山→京都河原町）', price: '240円', text: '帰りも桂で乗り換えです。', url: 'https://www.hankyu.co.jp/station/arashiyama.html' }
       ],
       dealsNote: '大人の普通運賃です。2026年11月20日に阪急電鉄・京都バスの公式サイトで確認しました。「地下鉄・バス1日券」は阪急電車に使えないので、このルートではお得になりません。',
@@ -106,7 +110,7 @@ window.ARASHIYAMA_I18N = {
       howHead: 'このマップの使い方',
       how: [
         { title: '1〜7は番号の順に', text: '京都河原町から電車とバスで愛宕念仏寺へ行き、坂を下って化野念仏寺まで。ここまでは全員同じルートです。' },
-        { title: '8〜17は選んで回る', text: '見どころが多くて1日では全部回れません。一覧の上の「選んで回る」を押して、行きたい場所だけを選んでください。選んだ場所だけが地図の点線でつながります。' },
+        { title: '8〜17は選んで回る', text: '見どころが多くて1日では全部回れません。最初は、無理なく回れる組み合わせ（大河内山荘とモンキーパーク以外）が選ばれています。行かない場所は外し、足したい場所は「行きたい」を押してください。選んだ場所だけが地図の点線でつながります。' },
         { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。' },
         { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。時刻表や公式サイトへのリンクもあります。' }
       ],
@@ -126,7 +130,7 @@ window.ARASHIYAMA_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'Spots 1–7 (bus up to Otagi Nenbutsu-ji, then walk downhill to Adashino) are for everyone. There’s too much to see in 8–17, so use “Choose stops” to pick the ones you like and visit them in number order. The dotted line shows the order, not the actual path.',
+    listNote: 'Spots 1–7 (bus up to Otagi Nenbutsu-ji, then walk downhill to Adashino) are for everyone. In 8–17, a set that fits comfortably into one day is already chosen for you. Visit them in number order. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -165,7 +169,7 @@ window.ARASHIYAMA_I18N = {
     modeAria: 'How to go',
     modeAll: 'Full route',
     modePick: 'Choose stops',
-    pickNote: 'Tap “Want to go” on the places you like. Spots 1–7 (train and bus up to Otagi Nenbutsu-ji, then downhill to Adashino) and the way home (18) are the same for everyone and always stay on your route. Times are for the full route.',
+    pickNote: 'Tap “Going” to drop a place, or “Want to go” to add one. Spots 1–7 (train and bus up to Otagi Nenbutsu-ji, then downhill to Adashino) and the way home (18) are the same for everyone. Times assume the places chosen at the start and the 9:44 bus. Adding Okochi Sanso or the Monkey Park means dropping something else.',
     pickCount: '{n} places chosen · {t} stops in your route (incl. the shared ones)',
     pickEmpty: 'Nothing chosen yet. Pick the places you want from 8–17 in the list below.',
     pickAll: 'Choose all',
@@ -187,28 +191,31 @@ window.ARASHIYAMA_I18N = {
       whoHead: 'Who it’s for',
       who: [
         'For both the famous sights of Arashiyama and quiet, hidden Sagano',
-        'Starts at Kyoto-kawaramachi Station, about 30 min to Arashiyama by Hankyu train',
+        'Leave Kyoto-kawaramachi Station at about 9:00; about 30 min to Arashiyama by Hankyu train',
         'Ride a bus up the hill first, then it’s almost all downhill on foot',
         'In the second half, pick the temples and sights you want to see',
         'About 6 km on foot if you see everything. Wear comfy shoes',
-        'Otagi Nenbutsu-ji is closed on Wednesdays and Saturdays'
+        'Otagi Nenbutsu-ji is closed on Wednesdays and Saturdays',
+        'Few places to eat in Oku-Saga: bring bread or rice balls to be safe',
+        'Bring cash for temple admissions. The Monkey Park is cash only'
       ],
       dayHead: 'One day, roughly like this',
       from: 'From',
       day: [
-        { time: '9:00', area: 'Kawaramachi → Arashiyama', title: 'Hankyu train to Arashiyama', text: 'About 30 minutes from Kyoto-kawaramachi, changing at Katsura.', photo: [3, 0] },
-        { time: '9:44', area: 'Otagi → Adashino', title: 'Bus up the hill, then walk down', text: 'Bus to Otagi Nenbutsu-ji and its stone rakan, then walk down the old Toriimoto street to Adashino Nenbutsu-ji.', note: 'Only about one bus an hour', badge: 'Everyone does this part', photo: [5, 1] },
-        { time: '12:30', area: 'Oku-Saga', title: 'Moss temples: take your pick', text: 'Gio-ji, Nison-in, Jojakko-ji, Okochi Sanso. Choose the ones you like.', note: 'Few places to eat around here', badge: 'Pick what you like', photo: [8, 0] },
-        { time: '15:00', area: 'Bamboo → Tenryu-ji', title: 'Bamboo grove & Zen garden', text: 'Walk the bamboo path to Nonomiya Shrine, then enter Tenryu-ji by the north gate for its pond garden.', note: 'Tenryu-ji garden: last entry 16:50', photo: [12, 0] },
-        { time: '16:20', area: 'Central Arashiyama', title: 'Bathhouse café & Togetsukyo', text: 'Rest in a café in an old public bath, then on to the bridge. For the monkeys, go earlier.', note: 'Monkey Park closes around 16:00', photo: [16, 0] },
-        { time: '17:30', area: 'Back downtown', title: 'Pontocho at night', text: 'Hankyu train back to Kyoto-kawaramachi, then the lantern-lit lane of Pontocho.', photo: [18, 0] }
+        { time: '9:00', area: 'Kawaramachi → Arashiyama', title: 'Hankyu train to Arashiyama', text: 'About 30 minutes from Kyoto-kawaramachi, changing at Katsura.', note: 'Slow morning? Leave at about 10:00 for the 10:44 bus', photo: [3, 0] },
+        { time: '9:44', area: 'Otagi → Adashino', title: 'Bus up the hill, then walk down', text: 'The bus reaches Otagidera-mae at 10:01. See the stone rakan, have a dumpling at the teahouse in Toriimoto, then walk down to Adashino Nenbutsu-ji.', note: 'One bus an hour on weekdays and Saturdays', badge: 'Everyone does this part', photo: [5, 1] },
+        { time: '12:15', area: 'Around Adashino', title: 'Lunch', text: 'There are few places to eat here. Eat where you find one open, or have the bread or rice balls you brought.', note: 'The next place for a meal is Sagano-yu, at about 16:30', photo: [6, 0] },
+        { time: '13:10', area: 'Oku-Saga', title: 'Moss temples: take your pick', text: 'Gio-ji, Nison-in, Jojakko-ji, each 5–10 minutes’ walk apart. You don’t have to see all three.', note: 'Adding Okochi Sanso makes the rest 40 min later', badge: 'Pick what you like', photo: [8, 0] },
+        { time: '15:05', area: 'Bamboo → Tenryu-ji', title: 'Bamboo grove & Zen garden', text: 'Walk the bamboo path to Nonomiya Shrine, then enter Tenryu-ji by the north gate for its pond garden.', note: 'Tenryu-ji garden: last entry 16:50', photo: [12, 0] },
+        { time: '16:30', area: 'Central Arashiyama', title: 'Bathhouse café & Togetsukyo', text: 'Rest in a café in an old public bath, then on to the bridge. From November to January it’s dark by the time you get there.', note: 'Monkey Park: last entry 16:00, cash only. Pick just one temple that day', photo: [16, 0] },
+        { time: '17:50', area: 'Back downtown', title: 'Pontocho in the evening', text: 'The Hankyu train gets you back to Kyoto-kawaramachi at about 18:20: dinner in Pontocho.', photo: [18, 0] }
       ],
       timeSuffix: '',
       dealsHead: 'Getting around: fares',
       dealsLead: 'From Kyoto-kawaramachi and back, trains and the bus cost ¥710 per adult (temple admission not included).',
       deals: [
         { name: 'Hankyu train (Kyoto-kawaramachi → Arashiyama)', price: '¥240', text: 'Change at Katsura for the Arashiyama Line. IC cards accepted.', url: 'https://www.hankyu.co.jp/station/kawaramachi.html' },
-        { name: 'Kyoto Bus 62 / 92 / 94 (Hankyu Arashiyama-ekimae → Otagidera-mae)', price: '¥230', text: 'Bound for Kiyotaki. About one bus an hour on weekdays and Saturdays (every 30 min on Sundays and holidays), so check the timetable. With an IC card, tap when you get off.', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
+        { name: 'Kyoto Bus 92 / 94 (Hankyu Arashiyama-ekimae → Otagidera-mae)', price: '¥230', text: 'Bound for Kiyotaki. One bus an hour on weekdays and Saturdays (9:44, 10:44); on Sunday and holiday mornings 9:14, 9:44, 10:14 and 10:44. With an IC card, tap when you get off.', url: 'https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=421_3' },
         { name: 'Hankyu train (Arashiyama → Kyoto-kawaramachi)', price: '¥240', text: 'Change at Katsura again on the way back.', url: 'https://www.hankyu.co.jp/station/arashiyama.html' }
       ],
       dealsNote: 'Adult single fares, checked on the Hankyu and Kyoto Bus official websites on Nov 20, 2026. The Subway & Bus One-day Pass doesn’t cover Hankyu trains, so it doesn’t save money on this route.',
@@ -216,7 +223,7 @@ window.ARASHIYAMA_I18N = {
       howHead: 'How to use this map',
       how: [
         { title: 'Spots 1–7 in order', text: 'Train and bus from Kyoto-kawaramachi up to Otagi Nenbutsu-ji, then walk downhill to Adashino Nenbutsu-ji. Everyone follows this part.' },
-        { title: 'Pick from 8–17', text: 'There’s too much to see in one day. Tap “Choose stops” at the top of the list and pick only the places you want. Your chosen stops are joined by the dotted line on the map.' },
+        { title: 'Pick from 8–17', text: 'There’s too much to see in one day. A set that fits comfortably (everything except Okochi Sanso and the Monkey Park) is chosen to start with. Drop the places you don’t want and tap “Want to go” to add others. Your chosen stops are joined by the dotted line on the map.' },
         { title: 'Tap a number', text: 'Tap a number on the map, or open the list, to see photos, tips, fees and suggested times.' },
         { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions. Some spots also link to timetables and official websites.' }
       ],
