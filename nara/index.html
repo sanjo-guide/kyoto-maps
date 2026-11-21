@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>京都から日帰り 奈良 Nara MAP</title>
-<meta name="description" content="京都から近鉄で奈良へ。興福寺、奈良公園の鹿、東大寺の大仏、二月堂、春日大社、ならまちを歩いて回る日帰りルートマップ。A day trip from Kyoto to Nara on foot: Kofukuji, the deer, the Great Buddha of Todaiji, Nigatsudo, Kasuga Taisha and Naramachi.">
+<title>京都・大阪から日帰り 奈良｜東大寺・春日大社・ならまち Nara MAP</title>
+<meta name="description" content="京都・大阪から近鉄で奈良へ。大仏殿の開門に合わせる早朝コースと、昼の混雑を避けて夕方に大仏殿・夕暮れの二月堂へ行く9〜10時発コースを選べる1日ルートマップ。興福寺、春日大社、ならまち、酒蔵「春鹿」のきき酒も。A day in Nara on foot from Kyoto or Osaka: an early course timed for the opening of the Great Buddha Hall, or a 9–10 o’clock course that saves Todaiji for late afternoon and Nigatsudo for dusk.">
 <meta name="theme-color" content="#F2F0EA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
-<link rel="stylesheet" href="css/style.css?v=119">
+<link rel="stylesheet" href="css/style.css?v=120">
 <meta name="robots" content="noimageindex">
 <script src="../assets/protect.js?v=1" defer></script>
 </head>
@@ -27,7 +27,7 @@
   <a class="tc-home" href="../" data-t="allMaps">← マップ一覧</a>
   <p class="t-main" id="t-main">奈良</p>
   <p class="t-alt" id="t-alt">Nara</p>
-  <p class="t-sub">京都から日帰り Nara MAP<span class="by">by Toshi</span></p>
+  <p class="t-sub">京都・大阪から日帰り Nara MAP<span class="by">by Toshi</span></p>
   <div class="tc-actions">
     <button type="button" class="pill" id="btn-howto" aria-controls="intro">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></svg>
@@ -95,6 +95,12 @@
       <span data-t="spot1Howto">このマップの使い方を見る</span>
     </button>
     <!-- 「全部回る」か「選んで回る」か -->
+    <p class="sw-label" data-t="swCourse">出発時間</p>
+    <div class="modesw coursesw" role="group" data-t-aria="courseAria" aria-label="出発時間">
+      <button type="button" data-course="early" data-t="courseEarly">早朝に出発</button>
+      <button type="button" data-course="late" data-t="courseLate">9〜10時に出発</button>
+    </div>
+    <p class="sw-label" data-t="swMode">回り方</p>
     <div class="modesw" role="group" data-t-aria="modeAria" aria-label="回り方">
       <button type="button" data-mode="all" data-t="modeAll">全部回る</button>
       <button type="button" data-mode="pick" data-t="modePick">選んで回る</button>
@@ -181,7 +187,7 @@
 <script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
 <script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
 <script src="../assets/basemap.js?v=3"></script>
-<script src="js/i18n.js?v=119"></script>
-<script src="js/app.js?v=123"></script>
+<script src="js/i18n.js?v=120"></script>
+<script src="js/app.js?v=124"></script>
 </body>
 </html>

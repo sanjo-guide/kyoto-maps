@@ -23,8 +23,9 @@ PHOTOS = {
                W("kasuga-w3.jpg", "Zairon", "CC BY 4.0", "File:Nara Kasuga-taisha Lanterns & Deer 02.jpg"),
                "kasuga-1.jpg"],
     "naramachi": [W("naramachi-w1.jpg", "Maarten Heerlien", "CC BY 2.0", "File:Street in Naramachi area (6156072416).jpg"),
-                  W("naramachi-w2.jpg", "Bernard Gagnon", "CC BY-SA 3.0", "File:Gango-ji Gokurakubo.jpg"),
-                  "naramachi-1.jpg", "naramachi-2.jpg", "naramachi-3.jpg"],
+                  W("naramachi-w2.jpg", "Bernard Gagnon", "CC BY-SA 3.0", "File:Gango-ji Gokurakubo.jpg")],
+    # 春鹿（今西清兵衛商店）：Toshi の写真（2022-12-28。店の前・きき酒のグラス・冷蔵庫の瓶）。2026-11-22 に ならまち のスポットから分けた（もとは naramachi-1〜3.jpg）
+    "harushika": ["harushika-1.jpg", "harushika-2.jpg", "harushika-3.jpg"],
     "heijo": [W("heijo-w1.jpg", "663highland", "CC BY-SA 4.0", "File:181103 Heijo Palace Daigokuden Nara Japan03bs.jpg"),
               W("heijo-w2.jpg", "Cun Cun", "CC BY-SA 4.0", "File:Suzakumon in Heijo Palace.jpg"),
               W("heijo-w3.jpg", "663highland", "CC BY-SA 4.0", "File:181103 Heijo Palace Daigokuden Nara Japan06s3.jpg")],
