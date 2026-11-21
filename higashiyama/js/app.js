@@ -38,7 +38,8 @@
   if (course.id !== 'early') course.id = 'late';
   course.file = 'higashiyama' + (course.id === 'early' ? '-early' : '') + '.json';
   // 「行った」印・回り方・選んだ場所はコースごとに別に保存する（番号がコースで変わるため）
-  KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;
+  // 番号を振り直したので、保存キーの末尾に -b を付けてある
+  KEY_VISITED += '-' + course.id + '-b'; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id + '-b';
   // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
   Object.keys(I18N).forEach(function (l) {
     var o = I18N[l].introFor && I18N[l].introFor[course.id];
@@ -879,7 +880,7 @@
     route();
   }
 
-  fetch('../data/routes/' + course.file + '?v=6')
+  fetch('../data/routes/' + course.file + '?v=7')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

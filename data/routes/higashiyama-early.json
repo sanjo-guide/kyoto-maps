@@ -1,7 +1,7 @@
 {
  "id": "higashiyama",
  "course": "early",
- "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル：「早朝に出発」コース。三条を5:10ごろ歩いて出て、八坂の塔と坂道を通り、6:00の開門に清水寺へ。8:00から二年坂のスターバックスで朝ごはん、9:00の開門に高台寺、八坂神社、南禅寺、（お昼）、永観堂、哲学の道と銀閣寺まで。金戒光明寺は時間割の外。5時台に三条から東山へ行く電車は京阪の5:04・5:24発（清水五条まで約3分）だけなので、歩きを基本にした。 「哲学の道と銀閣寺」は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。",
+ "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル：「早朝に出発」コース。三条を5:10ごろ歩いて出て、八坂の塔と坂道を通り、6:00の開門に清水寺へ。8:00から二年坂のスターバックスで朝ごはん、9:00の開門に高台寺、八坂神社、青蓮院、南禅寺、（お昼）、永観堂、金戒光明寺、真如堂（受付15:45まで）、銀閣寺まで（16:45）。無鄰菴は時間割の外。5時台に三条から東山へ行く電車は京阪の5:04・5:24発（清水五条まで約3分）だけなので、歩きを基本にした。 「哲学の道と銀閣寺」・無鄰菴・真如堂は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。",
  "sections": [
   {
    "first": 1,
@@ -10,30 +10,30 @@
   },
   {
    "first": 4,
-   "last": 5,
+   "last": 6,
    "day": 2
   },
   {
-   "first": 6,
+   "first": 7,
    "last": 7,
-   "day": 3
-  },
-  {
-   "first": 8,
-   "last": 8,
-   "day": 4
-  },
-  {
-   "first": 9,
-   "last": 9,
    "area": {
     "ja": "足すなら",
     "en": "Optional"
    },
    "title": {
-    "ja": "くろ谷さん",
-    "en": "Kurodani"
+    "ja": "東山を借景にした庭",
+    "en": "A garden borrowing the hills"
    }
+  },
+  {
+   "first": 8,
+   "last": 9,
+   "day": 3
+  },
+  {
+   "first": 10,
+   "last": 12,
+   "day": 4
   }
  ],
  "plan": {
@@ -48,7 +48,10 @@
    6,
    7,
    8,
-   9
+   9,
+   10,
+   11,
+   12
   ],
   "defaultPicks": [
    1,
@@ -57,11 +60,50 @@
    4,
    5,
    6,
-   7,
-   8
+   8,
+   9,
+   10,
+   11,
+   12
   ],
   "auto": {},
-  "hints": []
+  "hints": [
+   {
+    "spot": 7,
+    "rule": {
+     "any": [
+      7
+     ],
+     "andAny": [
+      10
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "無鄰菴を足す日は、金戒光明寺を外してください。南禅寺12:40〜13:30、お昼、永観堂14:25〜15:10、真如堂15:25〜15:45（受付15:45まで）。予約の枠は、着く時間に合わせて選んでください。",
+     "en": "To add Murin-an, drop Konkai Komyo-ji: Nanzen-ji 12:40–13:30, lunch, Eikan-do 14:25–15:10, Shinnyo-do 15:25–15:45 (last entry 15:45). Book the slot that matches your arrival time."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ],
+     "none": [
+      10,
+      11
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "金戒光明寺と真如堂に寄らない日は、永観堂から哲学の道を歩いて約35分。銀閣寺に15:05ごろ着きます。",
+     "en": "If you skip Konkai Komyo-ji and Shinnyo-do, walk the Philosopher’s Path from Eikan-do (about 35 minutes) and reach Ginkaku-ji at about 15:05."
+    }
+   }
+  ]
  },
  "photoBase": "../images/higashiyama/",
  "spots": [
@@ -549,6 +591,281 @@
   },
   {
    "no": 6,
+   "id": "shorenin",
+   "name": {
+    "ja": "青蓮院門跡",
+    "en": "Shoren-in Temple"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "門前の大きなクスノキが目印。座敷から池の庭を眺めるお寺で、このマップを作ったToshiの好きな場所です。",
+    "en": "Marked by the huge camphor trees at its gate. You look out at a pond garden from the tatami rooms. A favourite of Toshi, who made this map."
+   },
+   "lat": 35.00769,
+   "lng": 135.78327,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "青蓮院門跡",
+      "en": "Shoren-in"
+     },
+     "lat": 35.00769,
+     "lng": 135.78327,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%9D%92%E8%93%AE%E9%99%A2%E9%96%80%E8%B7%A1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "青蓮院門跡（拝観のご案内）",
+      "en": "Shoren-in (visitor info, Japanese)"
+     },
+     "url": {
+      "ja": "http://www.shorenin.com/haikan/",
+      "en": "http://www.shorenin.com/haikan/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "青蓮院門跡 夜間の特別拝観",
+      "en": "Shoren-in evening opening (Japanese)"
+     },
+     "url": {
+      "ja": "http://www.shorenin.com/night/",
+      "en": "http://www.shorenin.com/night/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（受付16:30まで）",
+       "en": "9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人600円、中高生400円、小学生200円",
+       "en": "¥600 adults, ¥400 junior/senior high, ¥200 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "秋の夜の特別拝観（2026年11月6日〜12月6日）：18:00〜22:00（受付21:30まで）。大人1,500円、小学生1,000円",
+       "en": "Autumn evening opening (6 Nov – 6 Dec 2026): 18:00–22:00 (last entry 21:30). ¥1,500 adults, ¥1,000 elementary"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄東西線 東山駅から歩いて約5分。円山公園から歩いて約10分",
+       "en": "About 5 min on foot from Higashiyama Station on the Tozai subway line; about 10 from Maruyama Park"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "青蓮院門跡 公式サイト（拝観のご案内、夜間の特別拝観）。休みの日と、拝観者の撮影の決まりは記載が見つからない。位置は OpenStreetMap"
+   },
+   "text": {
+    "ja": "青蓮院門跡（しょうれんいんもんぜき）\n\n知恩院のすぐ北にあるお寺で、門前に大きなクスノキが根を張っています。江戸時代に仮の御所になったことがあり、粟田御所（あわたごしょ）とも呼ばれます（公式サイトより）。\n\n建物に上がって座敷から池の庭を眺め、そのあと庭に下りて歩けます。Toshiの好きなお寺です。\n\n春と秋には夜の特別拝観があり、庭と建物がライトアップされます。\n\n円山公園から知恩院の前を通って、北へ歩いて約10分。門前の大きなクスノキが目印です。\n\nおすすめ訪問時間：10:50〜11:35",
+    "en": "Shoren-in Temple\n\nA temple just north of Chion-in, with huge camphor trees spreading their roots at the gate. It served as a temporary imperial palace in the Edo period and is also called the Awata Palace (from the official website).\n\nYou go up into the buildings to look at the pond garden from the tatami rooms, then step down and walk through the garden. It is one of Toshi’s favourite temples.\n\nIn spring and autumn there are special evening openings, with the garden and buildings lit up.\n\nAbout 10 minutes’ walk north of Maruyama Park, past Chion-in. Look for the huge camphor trees at the gate.\n\nRecommended visit time: 10:50–11:35"
+   },
+   "photos": [
+    "shorenin-1.jpg",
+    {
+     "file": "shorenin-2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File%3AKyoto_Shorenin19n4272.jpg"
+     }
+    },
+    {
+     "file": "shorenin-3.jpg",
+     "credit": {
+      "author": "Christophe95",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASh%C5%8Dren-in_overview.jpg"
+     }
+    },
+    {
+     "file": "shorenin-4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3A251218_Shoren-in_Kyoto_Japan06s3.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "murinan",
+   "name": {
+    "ja": "無鄰菴",
+    "en": "Murin-an"
+   },
+   "kind": {
+    "ja": "庭園",
+    "en": "Garden"
+   },
+   "blurb": {
+    "ja": "東山を借景にした、明治時代の庭。入場は時間ごとの人数制で、予約が確実です。秋（10月31日〜12月6日）は1,500円。",
+    "en": "A Meiji-era garden that borrows the Higashiyama hills as its backdrop. Entry is by timed slots, so book ahead to be sure. ¥1,500 in autumn (31 Oct – 6 Dec)."
+   },
+   "lat": 35.01155,
+   "lng": 135.78727,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "無鄰菴",
+      "en": "Murin-an"
+     },
+     "lat": 35.01155,
+     "lng": 135.78727,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%84%A1%E9%84%B0%E8%8F%B4%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "無鄰菴 公式サイト（ご利用案内）",
+      "en": "Murin-an (official)"
+     },
+     "url": {
+      "ja": "https://murin-an.jp/info/",
+      "en": "https://murin-an.jp/info/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "無鄰菴 予約ページ",
+      "en": "Murin-an booking page"
+     },
+     "url": {
+      "ja": "https://select-type.com/rsv/?id=YBa25BF9GP0&c_id=240240",
+      "en": "https://select-type.com/rsv/?id=YBa25BF9GP0&c_id=240240"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "4〜9月 9:00〜18:00、10〜3月 9:00〜17:00（入場は30分前まで）",
+       "en": "Apr–Sep 9:00–18:00; Oct–Mar 9:00–17:00 (last entry 30 min before)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29〜31日。2026年12月9日（水）は臨時閉場",
+       "en": "29–31 December. Also closed on Wednesday 9 December 2026"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "通常日600円。混む時期は1,000円か1,500円（2026年10月31日〜12月6日は1,500円）。小学生未満は無料",
+       "en": "¥600 on regular days; ¥1,000 or ¥1,500 in busy periods (¥1,500 from 31 Oct to 6 Dec 2026). Free under elementary school age"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄東西線 蹴上駅から歩いて約7分",
+       "en": "About 7 min on foot from Keage Station on the Tozai subway line"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "無鄰菴 公式サイト（ご利用案内、お知らせ）。料金は購入時に変わることがあると書かれている。位置は OpenStreetMap"
+   },
+   "caution": {
+    "ja": "予約が確実（時間ごとの人数制）",
+    "en": "Book ahead (timed entry)"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://murin-an.jp/info/",
+     "head": {
+      "ja": "予約が確実です",
+      "en": "Book ahead to be sure of getting in"
+     },
+     "text": {
+      "ja": "入場は1時間ごとの人数制。混んでいる日は、予約のない人は断られることがあります（公式サイト）。予約は前払いで、キャンセルしても返金はありません。",
+      "en": "Entry is by hourly slots. On busy days visitors without a booking may be refused (official site). Bookings are prepaid and non-refundable."
+     }
+    }
+   ],
+   "text": {
+    "ja": "無鄰菴（むりんあん）\n\n南禅寺の参道のすぐ西にある、明治時代に造られた庭園です（国の名勝）。芝生の中を浅い流れが通り、木々の向こうに東山が見えます。母屋には庭を眺められるカフェがあります（公式サイトより）。\n\n入場は1時間ごとの枠で人数が決まっていて、混んでいる日は予約のない人は入れないことがあります。予約は公式サイトから、30日前から1時間前まで。予約した時間に遅れると入れません。\n\n三脚・一脚・自撮り棒を使う撮影と、人や持ち込んだ物を主役にした撮影は、事前の申請が必要です。\n\n青蓮院から歩いて約12分。このコースの時間割には入っていません。足すと40分ほど遅れて真如堂の受付（15:45）に間に合わなくなるので、金戒光明寺を外してください。\n\nおすすめ訪問時間：足す日は11:50〜12:30（予約した時間に合わせて）",
+    "en": "Murin-an\n\nA garden laid out in the Meiji era, just west of the approach to Nanzen-ji (a nationally designated Place of Scenic Beauty). A shallow stream runs through the lawn, with the Higashiyama hills rising beyond the trees. There is a café in the main house overlooking the garden (from the official website).\n\nEntry is by hourly slots with a fixed number of visitors, and on busy days people without a booking may be turned away. Book on the official website from 30 days to one hour ahead. If you arrive after your slot you can’t go in.\n\nShooting with a tripod, monopod or selfie stick, or photos with people or props as the main subject, need an application in advance.\n\nAbout 12 minutes on foot from Shoren-in. It isn’t in this course’s timetable. Adding it costs about 40 minutes and you’d miss the 15:45 last entry at Shinnyo-do, so drop Konkai Komyo-ji.\n\nRecommended visit time: if added, 11:50–12:30 (match your booked slot)"
+   },
+   "photos": [
+    {
+     "file": "murinan-1.jpg",
+     "credit": {
+      "author": "Daderot",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File%3AMurin-an%2C_Kyoto_-_IMG_5104.JPG"
+     }
+    },
+    {
+     "file": "murinan-2.jpg",
+     "credit": {
+      "author": "Yasu",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AView_of_Murin-an_garden_from_main_house.jpg"
+     }
+    },
+    {
+     "file": "murinan-3.jpg",
+     "credit": {
+      "author": "Daderot",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File%3AMurin-an%2C_Kyoto_-_IMG_5124.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
    "id": "nanzenji",
    "name": {
     "ja": "南禅寺",
@@ -642,8 +959,8 @@
     "source": "南禅寺 公式サイト（拝観案内）。地下鉄の時間と運賃は乗換案内。蹴上駅からの徒歩は地図で測った目安"
    },
    "text": {
-    "ja": "南禅寺（なんぜんじ）\n\n歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、急な階段で上に登れて、京都の町と東山を見渡せます。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣（すいろかく）。アーチの上を、今も水が流れています。方丈庭園は小堀遠州の作と伝わる石の庭です。\n\n境内と水路閣は無料。三門と方丈庭園は、それぞれ拝観料がかかります。\n\n円山公園から知恩院の三門の前を通り、北へ歩いて約30分。朝から歩いているので、地下鉄の東山駅から蹴上駅まで1駅乗ってもかまいません。\n\n三門に上って、水路閣まで歩きます。お昼は南禅寺の参道か、永観堂へ向かう道のあたりで（12:05〜13:00）。\n\nおすすめ訪問時間：11:10〜12:05",
-    "en": "Nanzen-ji Temple\n\nYou can climb the huge Sanmon gate, famous from a kabuki play, by a steep staircase for a view over the city and the Higashiyama hills.\n\nAt the back of the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto. Water still runs along the top of its arches. The Hojo garden is a rock garden attributed to Kobori Enshu.\n\nThe grounds and aqueduct are free. The gate and the Hojo garden each have their own fee.\n\nAbout 30 minutes’ walk north from Maruyama Park, passing the Sanmon gate of Chion-in. You’ve been walking since dawn, so feel free to ride the subway one stop from Higashiyama to Keage.\n\nClimb the gate and walk to the aqueduct. Have lunch on the approach to Nanzen-ji or on the way to Eikan-do (12:05–13:00).\n\nRecommended visit time: 11:10–12:05"
+    "ja": "南禅寺（なんぜんじ）\n\n歌舞伎で石川五右衛門が「絶景かな」と言う大きな三門は、急な階段で上に登れて、京都の町と東山を見渡せます。\n\n境内の奥には、明治時代に琵琶湖の水を京都へ引くために造られたレンガの水路閣（すいろかく）。アーチの上を、今も水が流れています。方丈庭園は小堀遠州の作と伝わる石の庭です。\n\n境内と水路閣は無料。三門と方丈庭園は、それぞれ拝観料がかかります。\n\n青蓮院から三条通を渡り、北東へ歩いて約20分。朝から歩いているので、地下鉄の東山駅から蹴上駅まで1駅乗ってもかまいません。\n\n三門に上って、水路閣まで歩きます。お昼は南禅寺の参道か、永観堂へ向かう道のあたりで（12:45〜13:35）。\n\nおすすめ訪問時間：11:55〜12:45",
+    "en": "Nanzen-ji Temple\n\nYou can climb the huge Sanmon gate, famous from a kabuki play, by a steep staircase for a view over the city and the Higashiyama hills.\n\nAt the back of the grounds stands the brick Suirokaku aqueduct, built in the Meiji era to bring water from Lake Biwa to Kyoto. Water still runs along the top of its arches. The Hojo garden is a rock garden attributed to Kobori Enshu.\n\nThe grounds and aqueduct are free. The gate and the Hojo garden each have their own fee.\n\nAbout 20 minutes’ walk northeast from Shoren-in, across Sanjo-dori. You’ve been walking since dawn, so feel free to ride the subway one stop from Higashiyama to Keage.\n\nClimb the gate and walk to the aqueduct. Have lunch on the approach to Nanzen-ji or on the way to Eikan-do (12:45–13:35).\n\nRecommended visit time: 11:55–12:45"
    },
    "photos": [
     "nanzenji-1.jpg",
@@ -658,7 +975,7 @@
    "notices": []
   },
   {
-   "no": 7,
+   "no": 9,
    "id": "eikando",
    "name": {
     "ja": "永観堂（禅林寺）",
@@ -775,8 +1092,8 @@
     }
    ],
    "text": {
-    "ja": "永観堂（えいかんどう）\n\n古くから「もみじの永観堂」と呼ばれる紅葉の名所です。お堂が渡り廊下でつながっていて、靴を脱いで上がり、山の斜面に沿って奥の阿弥陀堂まで歩きます。庭の放生池（ほうじょういけ）には、もみじと山の上の多宝塔が映ります。\n\n秋の寺宝展の期間は拝観料が上がり、夜はライトアップがあります。昼と夜は入れ替え制で、券も別です。券は当日に窓口で買うものだけです。\n\n南禅寺から北へ歩いて約7分。\n\nおすすめ訪問時間：13:05〜14:00",
-    "en": "Eikan-do (Zenrin-ji)\n\nLong known as “Eikan-do of the maples”. The halls are joined by covered corridors: you take off your shoes and walk along the hillside to the Amida hall at the far end. The maples and the hilltop pagoda are reflected in the pond in the garden.\n\nDuring the autumn treasure exhibition the fee goes up and there is an evening light-up. Day and night are separate sessions with separate tickets, sold only at the gate on the day.\n\nAbout 7 minutes’ walk north of Nanzen-ji.\n\nRecommended visit time: 13:05–14:00"
+    "ja": "永観堂（えいかんどう）\n\n古くから「もみじの永観堂」と呼ばれる紅葉の名所です。お堂が渡り廊下でつながっていて、靴を脱いで上がり、山の斜面に沿って奥の阿弥陀堂まで歩きます。庭の放生池（ほうじょういけ）には、もみじと山の上の多宝塔が映ります。\n\n秋の寺宝展の期間は拝観料が上がり、夜はライトアップがあります。昼と夜は入れ替え制で、券も別です。券は当日に窓口で買うものだけです。\n\n南禅寺から北へ歩いて約7分。\n\nおすすめ訪問時間：13:40〜14:30",
+    "en": "Eikan-do (Zenrin-ji)\n\nLong known as “Eikan-do of the maples”. The halls are joined by covered corridors: you take off your shoes and walk along the hillside to the Amida hall at the far end. The maples and the hilltop pagoda are reflected in the pond in the garden.\n\nDuring the autumn treasure exhibition the fee goes up and there is an evening light-up. Day and night are separate sessions with separate tickets, sold only at the gate on the day.\n\nAbout 7 minutes’ walk north of Nanzen-ji.\n\nRecommended visit time: 13:40–14:30"
    },
    "photos": [
     "eikando-1.jpg",
@@ -791,7 +1108,250 @@
    ]
   },
   {
-   "no": 8,
+   "no": 10,
+   "id": "kurodani",
+   "name": {
+    "ja": "金戒光明寺（くろ谷さん）",
+    "en": "Konkai Komyo-ji (Kurodani)"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "京都の人が「くろ谷さん」と呼ぶ大きなお寺。石段の上の山門が目印です。秋の夜は庭のライトアップがあります。",
+    "en": "A large temple people in Kyoto call “Kurodani-san”, with a great gate at the top of stone steps. In autumn the garden is lit up at night."
+   },
+   "lat": 35.01975,
+   "lng": 135.78838,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "金戒光明寺",
+      "en": "Konkai Komyo-ji"
+     },
+     "lat": 35.01975,
+     "lng": 135.78838,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%88%92%E5%85%89%E6%98%8E%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "金戒光明寺 公式サイト",
+      "en": "Konkai Komyo-ji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kurodani.jp/",
+      "en": "https://www.kurodani.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "金戒光明寺 特別夜間拝観",
+      "en": "Konkai Komyo-ji evening opening"
+     },
+     "url": {
+      "ja": "https://www.kurodani.jp/lightup/",
+      "en": "https://www.kurodani.jp/lightup/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夜間特別拝観（2026年11月13日〜12月6日）17:30〜20:30（最終入場20:00）。予約はいりません",
+       "en": "Evening opening (13 Nov – 6 Dec 2026): 17:30–20:30 (last entry 20:00). No booking needed"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "夜間特別拝観 御影堂・大方丈・紫雲の庭 大人1,000円、栄摂院 大人800円、セット券 大人1,600円",
+       "en": "Evening opening: Main hall, Hojo & garden ¥1,000; Eisho-in ¥800; set ticket ¥1,600 (adults)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ふだんは境内を自由に歩けます。お堂の受付は9:00〜16:00（公式サイトの下に書かれた受付時間。拝観の時間としては要確認）",
+       "en": "The grounds are normally free to walk. Hall reception 9:00–16:00 (the reception hours printed at the foot of the official site; unconfirmed as visiting hours)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "金戒光明寺 公式サイト（特別夜間拝観）。ふだんの時間はトップページ下の「受付時間 9時〜16時（閉堂）」だけで、拝観時間としての記載は見つからない"
+   },
+   "text": {
+    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上に立つ山門は見上げるほどの大きさです。境内は高台にあって、京都の町が見えます。\n\n境内は自由に歩けます。秋は夜の特別拝観があり、庭の池のまわりのもみじと竹林に明かりが入ります（夜は山門には上れません）。\n\n永観堂から北西へ歩いて約15分。石段を上って山門をくぐり、境内を歩きます。真如堂の受付が15:45までなので、ここは25分ほどで。\n\nおすすめ訪問時間：14:45〜15:10",
+    "en": "Konkai Komyo-ji\n\nA large Pure Land temple that served as headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The gate at the top of the stone steps towers over you. The grounds sit on a rise with a view over the city.\n\nThe grounds are free to walk. In autumn there is a special evening opening, with the maples around the garden pond and the bamboo grove lit up (the gate itself can’t be climbed at night).\n\nAbout 15 minutes’ walk northwest of Eikan-do. Climb the stone steps, pass under the great gate and walk the grounds. Shinnyo-do stops admitting at 15:45, so keep this to about 25 minutes.\n\nRecommended visit time: 14:45–15:10"
+   },
+   "photos": [
+    "kurodani-1.jpg",
+    "kurodani-2.jpg",
+    "kurodani-3.jpg",
+    "kurodani-4.jpg",
+    "kurodani-5.jpg",
+    "kurodani-6.jpg",
+    "kurodani-7.jpg",
+    "kurodani-8.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 11,
+   "id": "shinnyodo",
+   "name": {
+    "ja": "真如堂（真正極楽寺）",
+    "en": "Shinnyo-do (Shinsho Gokuraku-ji)"
+   },
+   "kind": {
+    "ja": "お寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "金戒光明寺のすぐ北。本堂と三重塔のあるお寺で、受付は15:45まで。紅葉の時期（11月18日〜12月7日）は境内に入るのに500円かかります。",
+    "en": "Just north of Konkai Komyo-ji: a temple with a main hall and a three-storied pagoda. Last entry 15:45. In the autumn-leaf season (18 Nov – 7 Dec) there is a ¥500 charge to enter the grounds."
+   },
+   "lat": 35.02124,
+   "lng": 135.78933,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "真如堂",
+      "en": "Shinnyo-do"
+     },
+     "lat": 35.02124,
+     "lng": 135.78933,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%9C%9F%E5%A6%82%E5%A0%82%20%E7%9C%9F%E6%AD%A3%E6%A5%B5%E6%A5%BD%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "真如堂 公式サイト（拝観案内）",
+      "en": "Shinnyo-do (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://shin-nyo-do.jp/info/",
+      "en": "https://shin-nyo-do.jp/info/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00（受付15:45まで）",
+       "en": "9:00–16:00 (last entry 15:45)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "紅葉の時期（2026年11月18日〜12月7日、8:30〜16:30）：境内に入るのに入山料500円、本堂・書院はさらに500円（高校生は入山料だけ、中学生以下は無料）",
+       "en": "Autumn-leaf season (18 Nov – 7 Dec 2026, 8:30–16:30): ¥500 to enter the grounds, plus ¥500 for the main hall and study (high-school students pay the grounds charge only; junior high and under free)"
+      },
+      "until": "2026-12-07",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "通常期：本堂・庭園 大人500円、高校生300円、中学生以下は無料",
+       "en": "Regular season: main hall & gardens ¥500 adults, ¥300 high school, free for junior high and under"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "庭園は第2日曜（8月・11月を除く）などに拝観休止。行事で休みや制限のある日があります",
+       "en": "The gardens are closed on the second Sunday of the month (except August and November) and some other days; events can close or limit visits"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22",
+    "source": "真如堂 公式サイト（トップのお知らせ、拝観案内）。紅葉の時期の入山料の日付はトップのお知らせ。位置は OpenStreetMap"
+   },
+   "caution": {
+    "ja": "受付は15:45まで。三脚・一脚は使えません",
+    "en": "Last entry 15:45. No tripods or monopods"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-07",
+     "url": "https://shin-nyo-do.jp/",
+     "head": {
+      "ja": "紅葉の時期は、境内に入るのに500円",
+      "en": "In the autumn-leaf season, ¥500 to enter the grounds"
+     },
+     "text": {
+      "ja": "2026年11月18日〜12月7日の8:30〜16:30は、境内に入る人から入山料500円を集めています（公式サイト）。本堂・書院はさらに500円です。",
+      "en": "From 18 November to 7 December 2026, between 8:30 and 16:30, there is a ¥500 charge to enter the grounds (official site). The main hall and study are another ¥500."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://shin-nyo-do.jp/info/",
+     "head": {
+      "ja": "受付は15:45まで",
+      "en": "Last entry 15:45"
+     },
+     "text": {
+      "ja": "拝観は16:00まで。三脚・一脚は使えません。写生や撮影会、衣装を着ての撮影もできません（公式サイト）。",
+      "en": "Visits end at 16:00. No tripods or monopods; sketching, photo sessions and costume shoots are not allowed (official site)."
+     }
+    }
+   ],
+   "text": {
+    "ja": "真如堂（しんにょどう）\n\n正式な名前は真正極楽寺（しんしょうごくらくじ）。金戒光明寺の北どなりにあり、境内に本堂と三重塔が立っています。紅葉の見ごろは例年11月中ごろ〜12月はじめです（公式サイトより）。\n\n本堂と庭園の拝観は有料で、受付は本堂の中の左手にあります。境内は、紅葉の時期を除いて拝観料の案内がありません。\n\n三脚・一脚は使えません。写生もできません。\n\n金戒光明寺の境内を北へ抜けて、歩いて約5分。\n\nおすすめ訪問時間：15:15〜15:45",
+    "en": "Shinnyo-do\n\nOfficially Shinsho Gokuraku-ji. It stands just north of Konkai Komyo-ji, with a main hall and a three-storied pagoda in its grounds. The autumn leaves are usually at their best from mid-November to early December (from the official website).\n\nThere is a fee for the main hall and gardens; the reception is on the left inside the main hall. Outside the autumn-leaf season no charge is listed for the grounds.\n\nNo tripods or monopods, and no sketching.\n\nAbout 5 minutes on foot, north through the grounds of Konkai Komyo-ji.\n\nRecommended visit time: 15:15–15:45"
+   },
+   "photos": [
+    {
+     "file": "shinnyodo-1.jpg",
+     "credit": {
+      "author": "KENPEI",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3AShinsh%C5%8D-gokuraku-ji_hondo.jpg"
+     }
+    },
+    {
+     "file": "shinnyodo-2.jpg",
+     "credit": {
+      "author": "Hikomi Moneru",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3A%E7%9C%9F%E6%AD%A3%E6%A5%B5%E6%A5%BD%E5%AF%BA_%28%E7%9C%9F%E5%A6%82%E5%A0%82%29%E4%B8%89%E9%87%8D%E5%A1%94_Shinsh%C5%8Dgokuraku-ji_%28Shinnyo-d%C5%8D%29_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 12,
    "id": "ginkakuji",
    "name": {
     "ja": "哲学の道と銀閣寺",
@@ -888,8 +1448,8 @@
     "source": "銀閣寺（相国寺）公式サイト（アクセス・拝観）。秋の特別拝観とバスの系統は2026-11-21の確認、市バスの運賃は2026-11-20に京都市交通局で確認。哲学の道の長さと歩く時間は地図で測った目安"
    },
    "text": {
-    "ja": "哲学の道（てつがくのみち）と銀閣寺（ぎんかくじ）\n\n哲学の道は、永観堂の少し北の若王子橋（にゃくおうじばし）から銀閣寺橋まで、琵琶湖疏水に沿って続く約1.5kmの散歩道です。春は桜、秋は紅葉の並木になります。\n\n銀閣寺の正式な名前は慈照寺（じしょうじ）。室町幕府の8代将軍・足利義政の山荘がもとになったお寺です。入ってすぐ、白砂を段に盛った銀沙灘（ぎんしゃだん）と円すい形の向月台（こうげつだい）、その奥に観音殿（銀閣・国宝）。順路は山の上の展望所まで続き、境内と京都の町を見下ろせます。中を回るのに約30分です（公式サイトより）。\n\n拝観料は現金のほか、キャッシュレスでも払えます。\n\n永観堂から哲学の道を歩いて約35分。途中にベンチがあるので、休みながら。\n\n見終わったら、参道を下りた「銀閣寺道」のバス停から市バスで四条河原町・三条のほうへ（230円）。夜まで時間があるので、いったん宿で休めます。\n\nおすすめ訪問時間：14:40〜15:25",
-    "en": "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn.\n\nGinkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\nYou can pay the admission in cash or cashless.\n\nAbout 35 minutes along the Philosopher’s Path from Eikan-do, with benches along the way.\n\nAfterwards walk down the approach to the “Ginkakuji-michi” stop for a city bus back toward Shijo-Kawaramachi or Sanjo (¥230). There’s time to rest at your lodging before the evening.\n\nRecommended visit time: 14:40–15:25"
+    "ja": "哲学の道（てつがくのみち）と銀閣寺（ぎんかくじ）\n\n哲学の道は、永観堂の少し北の若王子橋（にゃくおうじばし）から銀閣寺橋まで、琵琶湖疏水に沿って続く約1.5kmの散歩道です。春は桜、秋は紅葉の並木になります。\n\n銀閣寺の正式な名前は慈照寺（じしょうじ）。室町幕府の8代将軍・足利義政の山荘がもとになったお寺です。入ってすぐ、白砂を段に盛った銀沙灘（ぎんしゃだん）と円すい形の向月台（こうげつだい）、その奥に観音殿（銀閣・国宝）。順路は山の上の展望所まで続き、境内と京都の町を見下ろせます。中を回るのに約30分です（公式サイトより）。\n\n拝観料は現金のほか、キャッシュレスでも払えます。\n\n真如堂から東へ坂を下りて白川通を渡り、哲学の道に出て北へ。歩いて約25分です。哲学の道の南半分（永観堂のあたり）は、このコースでは歩きません。\n\n見終わったら、参道を下りた「銀閣寺道」のバス停から市バスで四条河原町・三条のほうへ（230円）。戻るのは17時半〜18時ごろを見ておいてください。\n\nおすすめ訪問時間：16:10〜16:45（17:00に閉まります。12〜2月は16:30）",
+    "en": "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn.\n\nGinkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\nYou can pay the admission in cash or cashless.\n\nFrom Shinnyo-do walk down the slope to the east, cross Shirakawa-dori and join the Philosopher’s Path heading north: about 25 minutes. This course doesn’t walk the southern half of the path (around Eikan-do).\n\nAfterwards walk down the approach to the “Ginkakuji-michi” stop for a city bus back toward Shijo-Kawaramachi or Sanjo (¥230). Allow until about 17:30–18:00 to get back.\n\nRecommended visit time: 16:10–16:45 (closes at 17:00; 16:30 from December to February)"
    },
    "photos": [
     {
@@ -925,110 +1485,21 @@
      }
     }
    ],
-   "notices": []
-  },
-  {
-   "no": 9,
-   "id": "kurodani",
-   "name": {
-    "ja": "金戒光明寺（くろ谷さん）",
-    "en": "Konkai Komyo-ji (Kurodani)"
-   },
-   "kind": {
-    "ja": "お寺",
-    "en": "Temple"
-   },
-   "blurb": {
-    "ja": "京都の人が「くろ谷さん」と呼ぶ大きなお寺。石段の上の山門が目印です。秋の夜は庭のライトアップがあります。",
-    "en": "A large temple people in Kyoto call “Kurodani-san”, with a great gate at the top of stone steps. In autumn the garden is lit up at night."
-   },
-   "lat": 35.01975,
-   "lng": 135.78838,
-   "gmaps": [
+   "notices": [
     {
-     "label": {
-      "ja": "金戒光明寺",
-      "en": "Konkai Komyo-ji"
+     "from": "2026-12-01",
+     "to": "2027-02-28",
+     "url": null,
+     "head": {
+      "ja": "12月〜2月は16:30に閉まります",
+      "en": "Closes at 16:30 from December to February"
      },
-     "lat": 35.01975,
-     "lng": 135.78838,
-     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%88%92%E5%85%89%E6%98%8E%E5%AF%BA"
-    }
-   ],
-   "links": [
-    {
-     "kind": "official",
-     "label": {
-      "ja": "金戒光明寺 公式サイト",
-      "en": "Konkai Komyo-ji (official, Japanese)"
-     },
-     "url": {
-      "ja": "https://www.kurodani.jp/",
-      "en": "https://www.kurodani.jp/"
-     }
-    },
-    {
-     "kind": "info",
-     "label": {
-      "ja": "金戒光明寺 特別夜間拝観",
-      "en": "Konkai Komyo-ji evening opening"
-     },
-     "url": {
-      "ja": "https://www.kurodani.jp/lightup/",
-      "en": "https://www.kurodani.jp/lightup/"
+     "text": {
+      "ja": "この時期は金戒光明寺を外して、永観堂から真如堂へまっすぐ（14:50〜15:20）。銀閣寺に15:45ごろ着けます。",
+      "en": "In these months skip Konkai Komyo-ji and go straight from Eikan-do to Shinnyo-do (14:50–15:20); you reach Ginkaku-ji at about 15:45."
      }
     }
-   ],
-   "info": {
-    "rows": [
-     {
-      "kind": "hours",
-      "text": {
-       "ja": "夜間特別拝観（2026年11月13日〜12月6日）17:30〜20:30（最終入場20:00）。予約はいりません",
-       "en": "Evening opening (13 Nov – 6 Dec 2026): 17:30–20:30 (last entry 20:00). No booking needed"
-      },
-      "until": "2026-12-06",
-      "from": null
-     },
-     {
-      "kind": "fee",
-      "text": {
-       "ja": "夜間特別拝観 御影堂・大方丈・紫雲の庭 大人1,000円、栄摂院 大人800円、セット券 大人1,600円",
-       "en": "Evening opening: Main hall, Hojo & garden ¥1,000; Eisho-in ¥800; set ticket ¥1,600 (adults)"
-      },
-      "until": "2026-12-06",
-      "from": null
-     },
-     {
-      "kind": "hours",
-      "text": {
-       "ja": "ふだんは境内を自由に歩けます。お堂の受付は9:00〜16:00（公式サイトの下に書かれた受付時間。拝観の時間としては要確認）",
-       "en": "The grounds are normally free to walk. Hall reception 9:00–16:00 (the reception hours printed at the foot of the official site; unconfirmed as visiting hours)"
-      },
-      "until": null,
-      "from": null
-     }
-    ],
-    "cash": false,
-    "tip": null,
-    "checked": "2026-11-22",
-    "source": "金戒光明寺 公式サイト（特別夜間拝観）。ふだんの時間はトップページ下の「受付時間 9時〜16時（閉堂）」だけで、拝観時間としての記載は見つからない"
-   },
-   "text": {
-    "ja": "金戒光明寺（こんかいこうみょうじ）\n\n浄土宗の大きなお寺で、幕末には京都守護職・会津藩の本陣が置かれました。石段の上に立つ山門は見上げるほどの大きさです。境内は高台にあって、京都の町が見えます。\n\n境内は自由に歩けます。秋は夜の特別拝観があり、庭の池のまわりのもみじと竹林に明かりが入ります（夜は山門には上れません）。\n\n銀閣寺から南西へ歩いて約25分。このコースの時間割には入っていません。帰りは「岡崎道」のバス停から市バス、または地下鉄の東山駅まで歩いて約20分。\n\nおすすめ訪問時間：足す日は15:50〜16:20",
-    "en": "Konkai Komyo-ji\n\nA large Pure Land temple that served as headquarters of the Aizu clan, Kyoto’s guardians, at the end of the Edo period. The gate at the top of the stone steps towers over you. The grounds sit on a rise with a view over the city.\n\nThe grounds are free to walk. In autumn there is a special evening opening, with the maples around the garden pond and the bamboo grove lit up (the gate itself can’t be climbed at night).\n\nAbout 25 minutes’ walk southwest of Ginkaku-ji. It isn’t in this course’s timetable. To go back, take a city bus from “Okazaki-michi” or walk about 20 minutes to Higashiyama subway station.\n\nRecommended visit time: if added, 15:50–16:20"
-   },
-   "photos": [
-    "kurodani-1.jpg",
-    "kurodani-2.jpg",
-    "kurodani-3.jpg",
-    "kurodani-4.jpg",
-    "kurodani-5.jpg",
-    "kurodani-6.jpg",
-    "kurodani-7.jpg",
-    "kurodani-8.jpg"
-   ],
-   "notices": []
+   ]
   }
  ]
 }

@@ -31,7 +31,7 @@ window.HIGASHIYAMA_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
-    credit: "写真・文章：Toshi（哲学の道・銀閣寺の写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
+    credit: "写真・文章：Toshi（哲学の道・銀閣寺、無鄰菴、真如堂と、青蓮院の一部の写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
     photoBy: '写真：',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
@@ -116,7 +116,7 @@ window.HIGASHIYAMA_I18N = {
         "清水寺と産寧坂・二年坂は、昼間とても混みます。静かに歩きたい人は「早朝に出発」へ",
         "歩くのは全部で約9km。坂と石段が多いので、歩きやすい靴で",
         "銀閣寺は17:00まで（12〜2月は16:30）。南禅寺を15:25に出ます",
-        "永観堂と金戒光明寺は時間割の外。秋の夜のライトアップに足せます",
+        "青蓮院・無鄰菴・永観堂・真如堂・金戒光明寺は時間割の外。足し方は各スポットに書いてあります",
         "伏見稲荷は別のマップ「伏見稲荷から七条へ」にあります"
       ],
       "dayHead": "1日の流れ（9〜10時に出発）",
@@ -167,7 +167,7 @@ window.HIGASHIYAMA_I18N = {
           "time": "17:00",
           "area": "街なかへ",
           "title": "バスで戻って、夜は祇園・先斗町へ",
-          "text": "銀閣寺道から市バスで戻ると18時ごろ。秋の夜は、高台寺（12月13日まで22:00閉門）、清水寺（11月30日まで21:30閉門）、永観堂・金戒光明寺（12月6日まで）のライトアップがあります。ほかの時期は、祇園や先斗町（ぽんとちょう）で晩ごはんを。",
+          "text": "銀閣寺道から市バスで戻ると18時ごろ。秋の夜は、高台寺（12月13日まで22:00閉門）、清水寺（11月30日まで21:30閉門）、青蓮院・永観堂・金戒光明寺（12月6日まで）のライトアップがあります。ほかの時期は、祇園や先斗町（ぽんとちょう）で晩ごはんを。",
           "photo": [
             "yasaka",
             0
@@ -200,7 +200,7 @@ window.HIGASHIYAMA_I18N = {
           "清水寺と産寧坂・二年坂は、昼間とても混みます。静かに歩きたい人は「早朝に出発」へ",
           "歩くのは全部で約9km。坂と石段が多いので、歩きやすい靴で",
           "銀閣寺は17:00まで（12〜2月は16:30）。南禅寺を15:25に出ます",
-          "永観堂と金戒光明寺は時間割の外。秋の夜のライトアップに足せます",
+          "青蓮院・無鄰菴・永観堂・真如堂・金戒光明寺は時間割の外。足し方は各スポットに書いてあります",
           "伏見稲荷は別のマップ「伏見稲荷から七条へ」にあります"
         ],
         "dayHead": "1日の流れ（9〜10時に出発）",
@@ -251,7 +251,7 @@ window.HIGASHIYAMA_I18N = {
             "time": "17:00",
             "area": "街なかへ",
             "title": "バスで戻って、夜は祇園・先斗町へ",
-            "text": "銀閣寺道から市バスで戻ると18時ごろ。秋の夜は、高台寺（12月13日まで22:00閉門）、清水寺（11月30日まで21:30閉門）、永観堂・金戒光明寺（12月6日まで）のライトアップがあります。ほかの時期は、祇園や先斗町（ぽんとちょう）で晩ごはんを。",
+            "text": "銀閣寺道から市バスで戻ると18時ごろ。秋の夜は、高台寺（12月13日まで22:00閉門）、清水寺（11月30日まで21:30閉門）、青蓮院・永観堂・金戒光明寺（12月6日まで）のライトアップがあります。ほかの時期は、祇園や先斗町（ぽんとちょう）で晩ごはんを。",
             "photo": [
               "yasaka",
               0
@@ -277,14 +277,14 @@ window.HIGASHIYAMA_I18N = {
       },
       early: {
         "h1": "朝6時、開いたばかりの清水寺へ。八坂の塔と坂道を、店が開く前に歩く。",
-        "lead": "清水寺は朝6:00に開きます。三条を5時すぎに歩いて出て、八坂の塔と坂道の写真を撮りながら上り、開門に合わせて舞台へ。8:00に二年坂のスターバックスが開いたら朝ごはんにして、9:00の開門に高台寺へ。そのあと八坂神社、南禅寺、永観堂、哲学の道と銀閣寺まで歩きます。",
+        "lead": "清水寺は朝6:00に開きます。三条を5時すぎに歩いて出て、八坂の塔と坂道の写真を撮りながら上り、開門に合わせて舞台へ。8:00に二年坂のスターバックスが開いたら朝ごはんにして、9:00の開門に高台寺へ。そのあと八坂神社、青蓮院、南禅寺、永観堂、金戒光明寺、真如堂、銀閣寺まで歩きます。",
         "who": [
           "早起きして、人の少ない清水寺と坂道を歩きたい人に",
           "三条から八坂の塔まで歩いて約30分。5時台に動いている電車は京阪だけです",
           "11月〜2月の朝6時はまだ暗いです",
           "朝ごはんは8:00から、二年坂のスターバックスで",
-          "歩くのは全部で約10km。午後は地下鉄を1駅使うと楽です",
-          "15時半ごろ銀閣寺で終わり。夕方は宿で休めます"
+          "歩くのは全部で約11km。長い1日なので、行かない場所は外してください",
+          "真如堂は受付15:45まで、銀閣寺は17:00まで。16:45ごろ銀閣寺で終わります"
         ],
         "dayHead": "1日の流れ（早朝に出発）",
         "day": [
@@ -311,19 +311,19 @@ window.HIGASHIYAMA_I18N = {
           },
           {
             "time": "9:00",
-            "area": "高台寺 → 八坂神社",
-            "title": "ねねの寺と祇園の八坂さん",
-            "text": "開門に合わせて高台寺と圓徳院へ。ねねの道を歩いて、八坂神社と円山公園へ。",
+            "area": "高台寺 → 八坂神社 → 青蓮院",
+            "title": "ねねの寺、祇園の八坂さん、大クスノキの青蓮院",
+            "text": "開門に合わせて高台寺と圓徳院へ。ねねの道を歩いて八坂神社と円山公園、10:50に青蓮院。",
             "photo": [
               "kodaiji",
               0
             ]
           },
           {
-            "time": "11:10",
+            "time": "11:55",
             "area": "南禅寺 → 永観堂",
             "title": "三門と水路閣、お昼、永観堂",
-            "text": "南禅寺の三門に上って水路閣へ。12時すぎにお昼を食べて、13:05に永観堂。",
+            "text": "南禅寺の三門に上って水路閣へ。12:45からお昼を食べて、13:40に永観堂。",
             "note": "永観堂の受付は16:00まで",
             "photo": [
               "nanzenji",
@@ -331,20 +331,21 @@ window.HIGASHIYAMA_I18N = {
             ]
           },
           {
-            "time": "14:40",
-            "area": "哲学の道 → 銀閣寺",
-            "title": "疏水ぞいを歩いて銀閣寺へ",
-            "text": "永観堂から哲学の道を約35分。銀閣寺を見て、15:25ごろ終わりです。",
+            "time": "14:45",
+            "area": "くろ谷 → 真如堂 → 銀閣寺",
+            "title": "丘の上のお寺を2つ、最後に銀閣寺",
+            "text": "金戒光明寺の山門をくぐり、となりの真如堂へ（15:15〜15:45）。坂を下りて哲学の道を歩き、16:10に銀閣寺。",
+            "note": "真如堂の受付は15:45まで",
             "photo": [
               "ginkakuji",
               0
             ]
           },
           {
-            "time": "16:00",
+            "time": "17:00",
             "area": "街なかへ",
-            "title": "宿で休んで、夜は祇園・先斗町へ",
-            "text": "銀閣寺道から市バスで戻ります。秋の夜は、高台寺（12月13日まで22:00閉門）、清水寺（11月30日まで21:30閉門）、永観堂・金戒光明寺（12月6日まで）のライトアップがあります。ほかの時期は、祇園や先斗町（ぽんとちょう）で晩ごはんを。",
+            "title": "バスで戻って、夜は祇園・先斗町へ",
+            "text": "銀閣寺道から市バスで戻ると17時半〜18時ごろ。秋の夜は、高台寺（12月13日まで22:00閉門）、清水寺（11月30日まで21:30閉門）、青蓮院・永観堂・金戒光明寺（12月6日まで）のライトアップがあります。ほかの時期は、祇園や先斗町（ぽんとちょう）で晩ごはんを。",
             "photo": [
               "yasaka",
               0
@@ -396,7 +397,7 @@ window.HIGASHIYAMA_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
-    credit: "Photos &amp; text: Toshi (the Philosopher’s Path and Ginkaku-ji photos are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
+    credit: "Photos &amp; text: Toshi (the photos of the Philosopher’s Path and Ginkaku-ji, Murin-an and Shinnyo-do, and some of Shoren-in, are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
     photoBy: 'Photo: ',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
@@ -481,7 +482,7 @@ window.HIGASHIYAMA_I18N = {
         "Kiyomizu-dera, Sannenzaka and Ninenzaka are very crowded by day. For a quieter walk, use “Early start”",
         "About 9 km on foot in all, with slopes and stone steps. Wear proper shoes",
         "Ginkaku-ji closes at 17:00 (16:30 Dec–Feb): you leave Nanzen-ji at 15:25",
-        "Eikan-do and Konkai Komyo-ji are outside the timetable; add them for the autumn light-ups",
+        "Shoren-in, Murin-an, Eikan-do, Shinnyo-do and Konkai Komyo-ji are outside the timetable; each spot explains how to fit it in",
         "Fushimi Inari is on a separate map, “Fushimi Inari to Shichijo”"
       ],
       "dayHead": "The day (leaving at 9–10)",
@@ -532,7 +533,7 @@ window.HIGASHIYAMA_I18N = {
           "time": "17:00",
           "area": "Back downtown",
           "title": "Bus back, then Gion or Pontocho for the evening",
-          "text": "A city bus from Ginkakuji-michi gets you back at about 18:00. On autumn evenings Kodai-ji (open until 22:00 through 13 Dec), Kiyomizu-dera (until 21:30 through 30 Nov), Eikan-do and Konkai Komyo-ji (through 6 Dec) are lit up. At other times of year, have dinner in Gion or Pontocho.",
+          "text": "A city bus from Ginkakuji-michi gets you back at about 18:00. On autumn evenings Kodai-ji (open until 22:00 through 13 Dec), Kiyomizu-dera (until 21:30 through 30 Nov), Shoren-in, Eikan-do and Konkai Komyo-ji (through 6 Dec) are lit up. At other times of year, have dinner in Gion or Pontocho.",
           "photo": [
             "yasaka",
             0
@@ -565,7 +566,7 @@ window.HIGASHIYAMA_I18N = {
           "Kiyomizu-dera, Sannenzaka and Ninenzaka are very crowded by day. For a quieter walk, use “Early start”",
           "About 9 km on foot in all, with slopes and stone steps. Wear proper shoes",
           "Ginkaku-ji closes at 17:00 (16:30 Dec–Feb): you leave Nanzen-ji at 15:25",
-          "Eikan-do and Konkai Komyo-ji are outside the timetable; add them for the autumn light-ups",
+          "Shoren-in, Murin-an, Eikan-do, Shinnyo-do and Konkai Komyo-ji are outside the timetable; each spot explains how to fit it in",
           "Fushimi Inari is on a separate map, “Fushimi Inari to Shichijo”"
         ],
         "dayHead": "The day (leaving at 9–10)",
@@ -616,7 +617,7 @@ window.HIGASHIYAMA_I18N = {
             "time": "17:00",
             "area": "Back downtown",
             "title": "Bus back, then Gion or Pontocho for the evening",
-            "text": "A city bus from Ginkakuji-michi gets you back at about 18:00. On autumn evenings Kodai-ji (open until 22:00 through 13 Dec), Kiyomizu-dera (until 21:30 through 30 Nov), Eikan-do and Konkai Komyo-ji (through 6 Dec) are lit up. At other times of year, have dinner in Gion or Pontocho.",
+            "text": "A city bus from Ginkakuji-michi gets you back at about 18:00. On autumn evenings Kodai-ji (open until 22:00 through 13 Dec), Kiyomizu-dera (until 21:30 through 30 Nov), Shoren-in, Eikan-do and Konkai Komyo-ji (through 6 Dec) are lit up. At other times of year, have dinner in Gion or Pontocho.",
             "photo": [
               "yasaka",
               0
@@ -642,14 +643,14 @@ window.HIGASHIYAMA_I18N = {
       },
       early: {
         "h1": "Kiyomizu-dera at 6 am, just as it opens, with Yasaka Pagoda and the lanes before the shops wake up.",
-        "lead": "Kiyomizu-dera opens at 6:00. Leave Sanjo on foot a little after 5:00, photograph Yasaka Pagoda and the lanes on your way up, and be at the stage for opening. When the Starbucks on Ninenzaka opens at 8:00, have breakfast, then go into Kodai-ji when it opens at 9:00. From there walk on to Yasaka Shrine, Nanzen-ji, Eikan-do and along the Philosopher’s Path to Ginkaku-ji.",
+        "lead": "Kiyomizu-dera opens at 6:00. Leave Sanjo on foot a little after 5:00, photograph Yasaka Pagoda and the lanes on your way up, and be at the stage for opening. When the Starbucks on Ninenzaka opens at 8:00, have breakfast, then go into Kodai-ji when it opens at 9:00. From there walk on to Yasaka Shrine, Shoren-in, Nanzen-ji, Eikan-do, Konkai Komyo-ji, Shinnyo-do and Ginkaku-ji.",
         "who": [
           "For early risers who want Kiyomizu-dera and the lanes with fewer people",
           "About 30 minutes on foot from Sanjo to Yasaka Pagoda. The only trains running before six are on the Keihan line",
           "At 6:00 it is still dark from November to February",
           "Breakfast from 8:00 at the Starbucks on Ninenzaka",
-          "About 10 km on foot in all; one subway stop in the afternoon saves your legs",
-          "You finish at Ginkaku-ji at about 15:30, with time to rest before the evening"
+          "About 11 km on foot in all. It’s a long day, so drop the places you can live without",
+          "Shinnyo-do’s last entry is 15:45 and Ginkaku-ji closes at 17:00; you finish at Ginkaku-ji at about 16:45"
         ],
         "dayHead": "The day (early start)",
         "day": [
@@ -676,19 +677,19 @@ window.HIGASHIYAMA_I18N = {
           },
           {
             "time": "9:00",
-            "area": "Kodai-ji → Yasaka Shrine",
-            "title": "Nene’s temple and Gion’s shrine",
-            "text": "Go into Kodai-ji and Entoku-in at opening, then walk Nene-no-michi to Yasaka Shrine and Maruyama Park.",
+            "area": "Kodai-ji → Yasaka Shrine → Shoren-in",
+            "title": "Nene’s temple, Gion’s shrine and the camphor trees of Shoren-in",
+            "text": "Go into Kodai-ji and Entoku-in at opening, walk Nene-no-michi to Yasaka Shrine and Maruyama Park, and reach Shoren-in at 10:50.",
             "photo": [
               "kodaiji",
               0
             ]
           },
           {
-            "time": "11:10",
+            "time": "11:55",
             "area": "Nanzen-ji → Eikan-do",
             "title": "The gate and aqueduct, lunch, Eikan-do",
-            "text": "Climb Nanzen-ji’s gate and walk to the aqueduct. Lunch soon after 12:00, then Eikan-do at 13:05.",
+            "text": "Climb Nanzen-ji’s gate and walk to the aqueduct. Lunch from 12:45, then Eikan-do at 13:40.",
             "note": "Eikan-do: last entry 16:00",
             "photo": [
               "nanzenji",
@@ -696,20 +697,21 @@ window.HIGASHIYAMA_I18N = {
             ]
           },
           {
-            "time": "14:40",
-            "area": "Philosopher’s Path → Ginkaku-ji",
-            "title": "Along the canal to Ginkaku-ji",
-            "text": "About 35 minutes along the Philosopher’s Path from Eikan-do. You finish at Ginkaku-ji at about 15:25.",
+            "time": "14:45",
+            "area": "Kurodani → Shinnyo-do → Ginkaku-ji",
+            "title": "Two hilltop temples, then Ginkaku-ji",
+            "text": "Pass under the great gate of Konkai Komyo-ji and on to Shinnyo-do next door (15:15–15:45). Walk down the hill and along the Philosopher’s Path to reach Ginkaku-ji at 16:10.",
+            "note": "Shinnyo-do: last entry 15:45",
             "photo": [
               "ginkakuji",
               0
             ]
           },
           {
-            "time": "16:00",
+            "time": "17:00",
             "area": "Back downtown",
-            "title": "Rest, then Gion or Pontocho for the evening",
-            "text": "Take a city bus back from Ginkakuji-michi. On autumn evenings Kodai-ji (open until 22:00 through 13 Dec), Kiyomizu-dera (until 21:30 through 30 Nov), Eikan-do and Konkai Komyo-ji (through 6 Dec) are lit up. At other times of year, have dinner in Gion or Pontocho.",
+            "title": "Bus back, then Gion or Pontocho for the evening",
+            "text": "A city bus from Ginkakuji-michi gets you back at about 17:30–18:00. On autumn evenings Kodai-ji (open until 22:00 through 13 Dec), Kiyomizu-dera (until 21:30 through 30 Nov), Shoren-in, Eikan-do and Konkai Komyo-ji (through 6 Dec) are lit up. At other times of year, have dinner in Gion or Pontocho.",
             "photo": [
               "yasaka",
               0

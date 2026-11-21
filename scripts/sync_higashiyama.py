@@ -24,10 +24,10 @@ import os, re, shutil
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 HIGASHIYAMA = dict(
-    id='higashiyama', i18n='HIGASHIYAMA_I18N', count=9, data_v=6, bump=103,
+    id='higashiyama', i18n='HIGASHIYAMA_I18N', count=12, data_v=7, bump=104, keyv='-b',   # keyv: 2026-11-22 に3か所足して番号が変わった
     head='京都 東山（清水寺〜南禅寺〜銀閣寺）',
     title='京都 東山｜清水寺・南禅寺・銀閣寺 Higashiyama MAP',
-    desc='朝6時の清水寺から、高台寺、八坂神社、南禅寺、永観堂、哲学の道と銀閣寺へ。早朝に出るコースと9〜10時に出るコースを選べる、京都・東山の1日ルートマップ。A one-day route through Higashiyama, Kyoto, from Kiyomizu-dera at its 6:00 opening to Nanzen-ji and Ginkaku-ji, with an early-start and a 9–10 o’clock course.',
+    desc='朝6時の清水寺から、高台寺、八坂神社、青蓮院、南禅寺、永観堂、真如堂、銀閣寺へ。早朝に出るコースと9〜10時に出るコースを選べる、京都・東山の1日ルートマップ。A one-day route through Higashiyama, Kyoto, from Kiyomizu-dera at its 6:00 opening to Nanzen-ji and Ginkaku-ji, with an early-start and a 9–10 o’clock course.',
     main='京都 東山', alt='Higashiyama, Kyoto', sub='東山 Higashiyama MAP')
 
 
@@ -63,6 +63,10 @@ rep("""    try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n
     if (load(KEY_PICKS) === null && data.plan && data.plan.defaultPicks) data.plan.defaultPicks.forEach(function (n) { if (isPick(n)) picks[n] = true; });""")
 
 # コース（早朝に出発 / 9〜10時に出発）の切り替え
+# スポットの番号を振り直したら keyv を変える（古い「行った」印・選んだ場所が、別のスポットに付かないように）
+KV = C.get('keyv', '')
+KEYS_JS = (f"  // 番号を振り直したので、保存キーの末尾に {KV} を付けてある\n  KEY_VISITED += '-' + course.id + '{KV}'; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id + '{KV}';" if KV
+           else "  KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;")
 rep("""  var mode = 'all', picks = {}, routeLine = null;
 """, f"""  var mode = 'all', picks = {{}}, routeLine = null;
   // コース: early（早朝に出発）か late（9〜10時に出発）。コースごとにデータファイルが別で、スポットの番号も変わる。
@@ -72,7 +76,7 @@ rep("""  var mode = 'all', picks = {}, routeLine = null;
   if (course.id !== 'early') course.id = 'late';
   course.file = '{ID}' + (course.id === 'early' ? '-early' : '') + '.json';
   // 「行った」印・回り方・選んだ場所はコースごとに別に保存する（番号がコースで変わるため）
-  KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;
+{KEYS_JS}
   // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
   Object.keys(I18N).forEach(function (l) {{
     var o = I18N[l].introFor && I18N[l].introFor[course.id];
