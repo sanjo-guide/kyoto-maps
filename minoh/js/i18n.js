@@ -37,6 +37,7 @@ window.MINOH_I18N = {
     cable: 'ケーブル',
     cash: '現金を用意してください',
     checked: '{d}に公式サイトで確認しました。変わることがあるので、行く前に公式サイトも見てください。',
+    unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
     checkedDate: '2026年11月20日',
     noticeHead: 'この時期の注意',
     more: '詳しく',
@@ -77,17 +78,18 @@ window.MINOH_I18N = {
         '大阪の街から日帰りで、山と滝の自然を楽しみたい人に',
         'スタートは箕面萱野駅。梅田から地下鉄で乗り換えなし、最速25分',
         '秋の紅葉シーズンは特におすすめ。夜は滝のライトアップも',
-        '約1時間の山道ハイキングあり（ほとんど下り坂）。歩きやすい靴で',
-        '締めくくりは大阪名物のたこ焼きと地ビール'
+        '約1時間15分の山道ハイキングあり（ほとんど下り坂）。歩きやすい靴で',
+        '歩いたあとは箕面温泉、締めくくりはたこ焼きと地ビール'
       ],
       dayHead: '1日の流れ（目安）',
       from: '',
       day: [
         { time: '9:00', area: '箕面萱野', title: 'バスで山の上のお寺へ', text: '駅前の8番のりばから、勝尾寺への直行バスで約22分。', note: 'バスは現金不可。ICカードで', photo: [2, 0] },
         { time: '9:30', area: '勝尾寺', title: 'ダルマだらけのお寺', text: '山門、池、多宝塔。境内のあちこちに小さな赤いダルマ。', photo: [3, 1] },
-        { time: '11:00', area: '森の山道', title: '森を歩いて滝へ', text: 'ほとんど下り坂の山道を約1時間。ビジターセンターでひと休みして、箕面大滝へ。', badge: 'ハイキングあり', photo: [6, 0] },
-        { time: '12:30', area: '滝道', title: '川ぞいのテラスでランチ', text: '滝道を下りながら、川の上のテラス席でランチ。もみじの天ぷらも。', note: 'ランチのラストオーダーは14:30', photo: [7, 0] },
-        { time: '14:45', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、箕面ビールの直営店で乾杯。', note: '箕面ビールは木曜休み', photo: [9, 0] }
+        { time: '11:00', area: '森の山道', title: '森を歩いて滝へ', text: 'ほとんど下り坂の山道を約1時間15分。ビジターセンターでひと休みして、箕面大滝へ。', badge: 'ハイキングあり', photo: [6, 0] },
+        { time: '12:45', area: '滝道', title: '川ぞいのテラスでランチ', text: '滝道を下りながら、川の上のテラス席でランチ。もみじの天ぷらも。', note: 'ランチのラストオーダーは14:30', photo: [7, 0] },
+        { time: '14:40', area: '箕面温泉', title: '歩いたあとの温泉', text: '滝道から展望エレベーターで上がる日帰り温泉。ビールの前にひと風呂。', note: '入らない人は飛ばしてOK', photo: [8, 0] },
+        { time: '17:00', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、箕面ビールの直営店で乾杯。', note: '箕面ビールは木曜休み', photo: [10, 0] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
@@ -101,7 +103,7 @@ window.MINOH_I18N = {
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
       how: [
-        { title: '番号の順にめぐる', text: '1〜11の番号は、順番にめぐると1日で効率よく全部回れるように並んでいます。' },
+        { title: '番号の順にめぐる', text: '1〜12の番号は、順番にめぐると1日で効率よく全部回れるように並んでいます。' },
         { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・おすすめの時間が見られます。' },
         { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。時刻表や公式サイトへのリンクもあります。' },
         { title: '時間は目安', text: '時間が足りなければスキップ、気に入った場所では長めに。自分のペースで調整してください。' }
@@ -144,6 +146,7 @@ window.MINOH_I18N = {
     cable: 'Cable car',
     cash: 'Bring cash',
     checked: 'Checked on the official website on {d}. Details can change, so please check before you go.',
+    unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
     checkedDate: 'Nov 20, 2026',
     noticeHead: 'Right now',
     more: 'Details',
@@ -192,9 +195,10 @@ window.MINOH_I18N = {
       day: [
         { time: '9:00', area: 'Minoh-Kayano', title: 'Bus up to a mountain temple', text: 'A 22-minute direct bus from stand 8 in front of the station.', note: 'No cash on the bus: use an IC card', photo: [2, 0] },
         { time: '9:30', area: 'Katsuoji', title: 'A temple full of daruma', text: 'Gate, pond and pagoda, with little red daruma everywhere.', photo: [3, 1] },
-        { time: '11:00', area: 'Forest walk', title: 'Walk the forest to the falls', text: 'About an hour, mostly downhill, with a break at the Visitor Center.', badge: 'Includes a hike', photo: [6, 0] },
-        { time: '12:30', area: 'Takimichi', title: 'Lunch over the river', text: 'Walk down the riverside path and have lunch on a terrace above the water.', note: 'Lunch: last order 14:30', photo: [7, 0] },
-        { time: '14:45', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom.', note: 'Minoh Beer is closed on Thursdays', photo: [9, 0] }
+        { time: '11:00', area: 'Forest walk', title: 'Walk the forest to the falls', text: 'About an hour and a quarter, mostly downhill, with a break at the Visitor Center.', badge: 'Includes a hike', photo: [6, 0] },
+        { time: '12:45', area: 'Takimichi', title: 'Lunch over the river', text: 'Walk down the riverside path and have lunch on a terrace above the water.', note: 'Lunch: last order 14:30', photo: [7, 0] },
+        { time: '14:40', area: 'Minoh Onsen', title: 'A hot spring after the walk', text: 'A day-use hot spring reached by a viewing elevator from the falls path: a bath before the beer.', note: 'Skip it if you’re not bathing', photo: [8, 0] },
+        { time: '17:00', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom.', note: 'Minoh Beer is closed on Thursdays', photo: [10, 0] }
       ],
       timeSuffix: '',
       dealsHead: 'Getting around: fares',
@@ -208,7 +212,7 @@ window.MINOH_I18N = {
       dealsMore: 'See official site',
       howHead: 'How to use this map',
       how: [
-        { title: 'Follow the numbers', text: 'Spots 1–11 are in order. Follow them and you can see everything in one day.' },
+        { title: 'Follow the numbers', text: 'Spots 1–12 are in order. Follow them and you can see everything in one day.' },
         { title: 'Tap a number', text: 'Tap a number on the map, or open the list, to see photos, tips and suggested times.' },
         { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions. Some spots also link to timetables and official websites.' },
         { title: 'Times are rough guides', text: 'Short on time? Skip a spot. Love a place? Stay longer. Go at your own pace.' }

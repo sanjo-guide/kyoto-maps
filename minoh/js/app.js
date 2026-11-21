@@ -591,7 +591,7 @@
         '</dl>';
     }
     if (inf.cash) html += '<p class="cash">' + ICON.cash + esc(t.cash) + '</p>';
-    if (rows.length) html += '<p class="checked">' + esc(fill(t.checked, { d: t.checkedDate })) + '</p>';
+    if (rows.length) html += '<p class="checked">' + esc(fill(inf.verified === false ? t.unchecked : t.checked, { d: t.checkedDate })) + '</p>';
     if (inf.tip) html += '<p class="tip">' + esc(inf.tip[lang]) + '</p>';
     return html;
   }
@@ -826,7 +826,7 @@
     route();
   }
 
-  fetch('../data/routes/minoh.json?v=5')
+  fetch('../data/routes/minoh.json?v=6')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

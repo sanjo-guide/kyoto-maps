@@ -16,9 +16,9 @@ s=s.replace(s.split('(function () {')[0],"""/* 大阪 箕面 — map, list, spot
 """,1)
 assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s=s.replace("window.EIZAN_I18N","window.MINOH_I18N").replace("'kyoto-maps-eizan-","'kyoto-maps-minoh-")
-s=re.sub(r"t = spots\.length \|\| \d+;","t = spots.length || 11;",s)
+s=re.sub(r"t = spots\.length \|\| \d+;","t = spots.length || 12;",s)
 m=re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)",s); assert m
-s=s.replace(m.group(0),"fetch('../data/routes/minoh.json?v=5')")
+s=s.replace(m.group(0),"fetch('../data/routes/minoh.json?v=6')")
 s2=re.sub(r"""(        )'<section class="in-sec"><h2 class="in-h2">' \+ esc\(x\.dealsHead\) \+ (.*?)'</div><p class="in-deals-note">' \+ esc\(x\.dealsNote\) \+ '</p></section>' \+""",
   lambda m: m.group(1)+"""(x.deals && x.deals.length ? '<section class="in-sec"><h2 class="in-h2">' + esc(x.dealsHead) + """+m.group(2).replace("""'<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a></div>';""","""(d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a>' : '') + '</div>';""")+"""'</div>' + (x.dealsNote ? '<p class="in-deals-note">' + esc(x.dealsNote) + '</p>' : '') + '</section>' : '') +""", s, flags=re.S)
 assert s2!=s, 'deals block not found'; s=s2
@@ -30,6 +30,12 @@ h=re.sub(r'<meta name="description" content="[^"]*">','<meta name="description" 
 h=re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)',r'\1大阪 箕面\2',h)
 h=re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)',r'\1Minoh, Osaka\2',h)
 h=re.sub(r'(<p class="t-sub">)[^<]*(<span)',r'\1箕面 Minoh MAP\2',h)
+# 要確認（info.verified が false のスポットは「公式サイトで確認しました」ではなく「要確認」の一文を出す）
+_a = """    if (rows.length) html += '<p class="checked">' + esc(fill(t.checked, { d: t.checkedDate })) + '</p>';"""
+assert app_js.count(_a) == 1
+app_js = app_js.replace(_a, """    if (rows.length) html += '<p class="checked">' + esc(fill(inf.verified === false ? t.unchecked : t.checked, { d: t.checkedDate })) + '</p>';""")
+# このマップだけ i18n.js / app.js を直したときの番号（テンプレートの番号に足す）
+h = re.sub(r'(js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 1}', h)
 # ここまで来たら全部書き込む
 shutil.copy(f'{R}/eizan-line/css/style.css', f'{R}/minoh/css/style.css')
 open(f'{R}/minoh/js/app.js','w',encoding='utf-8').write(app_js)
