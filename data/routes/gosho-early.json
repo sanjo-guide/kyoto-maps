@@ -1,0 +1,1665 @@
+{
+ "id": "gosho",
+ "course": "early",
+ "_note": "京都の中心：二条城と京都御所のルート（gosho/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（gosho.json＝9〜10時に出発、gosho-early.json＝開城に合わせる）。出発は京都の中心・三条のあたり（地下鉄 京都市役所前駅）を想定。このファイル：「開城に合わせる」コース。三条のあたりを8:10ごろ出発、京都市役所前8:24発（地下鉄東西線）→二条城前8:28着、二条城8:45〜10:30→神泉苑→二条城前10:58発→（烏丸御池で乗り換え）→丸太町11:10着→御苑の西側（梅林・蛤御門）→京都御所11:55→檜垣でお昼12:55→御苑の北側→梨木神社14:35→寺町通を南へ歩く（一保堂茶舗）→錦市場16:10→錦天満宮→先斗町・木屋町で晩ごはん（21〜22時ごろまで）。晴明神社・仙洞御所（15:30の回）・マンガミュージアムは寄り道。 写真は Toshi の写真ライブラリから選んだもの（御苑：2015年3月・2016年2月・2017年1月の雪・2017年11月の紅葉・2019年1月と3月・2020年4月・2023年4月、京都御所：2024年1月6日と11月6日、梨木神社：2026年5月18日、二条城の夜：2016年8月と2017年4月、錦市場：2025年11月。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。二条城の昼・神泉苑・晴明神社・蛤御門・仙洞御所・マンガミュージアム・錦市場のアーケードの写真は Wikimedia Commons（photos の要素が {file, credit}。一覧は scripts/gosho_web_photos.json）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。このファイルは scripts/build_gosho_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "area": {
+    "ja": "二条城のまわり",
+    "en": "Around Nijo Castle"
+   },
+   "title": {
+    "ja": "開城と同時に将軍の城へ",
+    "en": "The shogun’s castle at opening time"
+   }
+  },
+  {
+   "first": 4,
+   "last": 8,
+   "area": {
+    "ja": "京都御苑",
+    "en": "Imperial Palace Park"
+   },
+   "title": {
+    "ja": "御所と、それを囲む広い公園",
+    "en": "The Palace and the park around it"
+   }
+  },
+  {
+   "first": 9,
+   "last": 10,
+   "area": {
+    "ja": "寺町通〜錦市場〜先斗町・木屋町",
+    "en": "Teramachi-dori, Nishiki Market, Pontocho & Kiyamachi"
+   },
+   "title": {
+    "ja": "歩いて街なかへ戻って夜まで",
+    "en": "Walk back into town for the evening"
+   }
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。defaultPicks は時間割どおりに1日で回れる7か所。それ以外（晴明神社・仙洞御所・マンガミュージアム）は寄り道で、足したときの回り方は各スポットの文章と hints。全員共通の場所（駅など）はない。",
+  "defaultMode": "pick",
+  "picks": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "defaultPicks": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   7,
+   10
+  ],
+  "auto": {},
+  "hints": [
+   {
+    "spot": 8,
+    "rule": {
+     "any": [
+      8
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "仙洞御所は申し込みが要ります（18歳以上・本人確認の書類）。このコースは15:30の回が合います。終わるのが16:30なので、錦市場はやめて、寺町通を歩いて晩ごはんへ。",
+     "en": "The Sento Palace needs an application (ages 18+, bring ID). The 15:30 tour fits this course. It ends at 16:30, so skip Nishiki Market and walk down Teramachi-dori to dinner."
+    }
+   },
+   {
+    "spot": 9,
+    "rule": {
+     "any": [
+      9
+     ],
+     "andAny": [
+      8,
+      6,
+      7
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "マンガミュージアム（最終入館16:30）は、御苑の北側・梨木神社・仙洞御所とは方向が逆です。どちらかにすると、錦市場に17時前に着けます。",
+     "en": "The Manga Museum (last entry 16:30) is in the opposite direction from the north side of the park, Nashinoki Shrine and the Sento Palace. Choose one or the other to reach Nishiki Market before 17:00."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4,
+      5
+     ],
+     "none": [
+      1,
+      2,
+      3
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "二条城に寄らない日は、「9〜10時に出発」コースの順（寺町通を歩いて御苑の東から）が歩きやすいです。地下鉄なら京都市役所前から丸太町へ10〜12分・220円。",
+     "en": "Skipping Nijo Castle? The order of the “Leave at 9–10” course (on foot up Teramachi-dori, entering the park from the east) is easier. By subway, Kyoto Shiyakusho-mae to Marutamachi takes 10–12 minutes, ¥220."
+    }
+   },
+   {
+    "spot": 10,
+    "rule": {
+     "any": [
+      10
+     ],
+     "none": [
+      7,
+      6,
+      8,
+      9
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "御苑の東と北に寄らない日は、お昼のあと丸太町駅から地下鉄で四条へ（3分・220円）。駅から錦市場まで歩いて約5分で、14時台に着けます。",
+     "en": "Skipping the east and north of the park? After lunch take the subway from Marutamachi to Shijo (3 min, ¥220); the market is about 5 minutes’ walk from the station and you arrive before 15:00."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/gosho/",
+ "spots": [
+  {
+   "no": 1,
+   "id": "nijojo",
+   "name": {
+    "ja": "二条城",
+    "en": "Nijo Castle"
+   },
+   "kind": {
+    "ja": "城（世界遺産）",
+    "en": "Castle (World Heritage)"
+   },
+   "blurb": {
+    "ja": "徳川家康が建て、慶喜が大政奉還を告げた城。国宝の二の丸御殿は、金のふすま絵と、歩くと鳴るうぐいす張りの廊下。開城は8:45、入城は16:00まで。",
+    "en": "Built by Tokugawa Ieyasu; here the last shogun announced the return of power to the emperor. The National Treasure Ninomaru Palace has gold-leaf screens and “nightingale” floors. Opens 8:45; last entry 16:00."
+   },
+   "lat": 35.01353,
+   "lng": 135.74972,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "二条城 東大手門（入口）",
+      "en": "Nijo Castle East Gate (entrance)"
+     },
+     "lat": 35.01425,
+     "lng": 135.75205,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9D%A1%E5%9F%8E%20%E6%9D%B1%E5%A4%A7%E6%89%8B%E9%96%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "二条城 公式サイト",
+      "en": "Nijo Castle (official)"
+     },
+     "url": {
+      "ja": "https://nijo-jocastle.city.kyoto.lg.jp/",
+      "en": "https://nijo-jocastle.city.kyoto.lg.jp/?lang=en"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "開城時間・休城日（公式）",
+      "en": "Hours & closed days (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://nijo-jocastle.city.kyoto.lg.jp/guide/annai/",
+      "en": "https://nijo-jocastle.city.kyoto.lg.jp/guide/annai/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "料金・本丸御殿の予約（公式）",
+      "en": "Fees & Honmaru Palace tickets (official)"
+     },
+     "url": {
+      "ja": "https://nijo-jocastle.city.kyoto.lg.jp/admission/",
+      "en": "https://nijo-jocastle.city.kyoto.lg.jp/admission/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!）",
+      "en": "Train times (Yahoo! Transit, Japanese)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-06",
+     "url": "https://nijo-jocastle.city.kyoto.lg.jp/news/12-6uketsuke/",
+     "head": {
+      "ja": "12月6日（日）は入城の受付が12:00まで",
+      "en": "On Sunday 6 December, last entry is 12:00"
+     },
+     "text": {
+      "ja": "2026年12月6日（日）は行事（寛永行幸400年の行列）のため、入城の受付が12:00まで、二の丸御殿の受付が12:10までになります（閉城は17:00のまま）。この日に行くなら「開城に合わせる」コースで。",
+      "en": "On Sunday 6 December 2026, because of an event (a procession marking 400 years since the Kan’ei imperial visit), last entry to the castle is 12:00 and to the Ninomaru Palace 12:10 (the castle still closes at 17:00). If you go that day, use the “Castle at opening” course."
+     }
+    },
+    {
+     "from": "2026-11-25",
+     "to": "2027-01-31",
+     "url": "https://nijo-jocastle.city.kyoto.lg.jp/guide/annai/",
+     "head": {
+      "ja": "12月と1月の火曜は、二の丸御殿に入れません",
+      "en": "No Ninomaru Palace on Tuesdays in December and January"
+     },
+     "text": {
+      "ja": "1月・7月・8月・12月の火曜（祝日のときは翌日）と12月26〜28日、1月1〜3日は、二の丸御殿の観覧が休みです。城には入れますが、いちばんの見どころが見られないので、別の曜日に。12月29〜31日は城ごと休みです。",
+      "en": "The Ninomaru Palace is closed on Tuesdays in January, July, August and December (the next day if Tuesday is a holiday), on 26–28 December and on 1–3 January. The castle grounds are open, but you would miss the main sight: choose another day. The whole castle is closed on 29–31 December."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://nijo-jocastle.city.kyoto.lg.jp/admission/",
+     "head": {
+      "ja": "二の丸御殿の中は撮影禁止。本丸御殿は事前予約制",
+      "en": "No photos inside the Ninomaru Palace; the Honmaru Palace is by advance booking"
+     },
+     "text": {
+      "ja": "二の丸御殿は靴を脱いで上がります。本丸御殿（別に1,000円）はWEBチケットで日時を予約した人だけ入れます。予約がなくても、本丸の庭と天守閣跡には入城券で入れます。",
+      "en": "You take your shoes off in the Ninomaru Palace. The Honmaru Palace (¥1,000 extra) is only for visitors with a timed web ticket. Without one you can still walk the Honmaru garden and climb the keep base on the ordinary ticket."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "開城 8:45、入城は16:00まで（閉城17:00）。二の丸御殿の受付は8:45〜16:10、本丸御殿（要予約）は9:30〜16:00",
+       "en": "Opens 8:45; last entry 16:00 (closes 17:00). Ninomaru Palace entry 8:45–16:10; Honmaru Palace (booking required) 9:30–16:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "休城は12月29〜31日。二の丸御殿は1月・7月・8月・12月の火曜（祝日なら翌日）と12月26〜28日、1月1〜3日は入れません。本丸御殿は毎月第3月曜とその翌日（祝日なら開く）も休み",
+       "en": "Castle closed 29–31 December. The Ninomaru Palace is also closed on Tuesdays in January, July, August and December (next day if a holiday), 26–28 December and 1–3 January. The Honmaru Palace is also closed on the third Monday of each month and the day after (open if a holiday)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "入城＋二の丸御殿 一般1,300円（入城だけなら800円、中高生400円、小学生300円）。本丸御殿は別に一般1,000円・中高生300円・小学生200円（要予約）",
+       "en": "Castle + Ninomaru Palace ¥1,300 (castle only ¥800; ages 12–18 ¥400, 6–12 ¥300). Honmaru Palace extra: ¥1,000, ages 12–18 ¥300, 6–12 ¥200 (booking required)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄東西線 二条城前駅の1番出口から東大手門まで歩いて約5分。京都市役所前から4分・220円、三条京阪から6分・220円（数分おき）",
+       "en": "About 5 min on foot from exit 1 of Nijojo-mae station (Tozai subway line) to the East Gate. From Kyoto Shiyakusho-mae 4 min, ¥220; from Sanjo Keihan 6 min, ¥220 (every few minutes)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "二条城の公式サイトと乗換案内（2026年11月28日・土曜の時刻）で確認しました。地下鉄一日券か地下鉄・バス一日券を当日の券売所で見せると、入城料800円が700円になります（公式サイト。WEBチケットでは割引になりません）。京都駅からは地下鉄烏丸線で烏丸御池へ、東西線に乗り換えて約15分・260円です。唐門・二の丸御殿・二の丸庭園・本丸の昼の写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the castle website and Yahoo! Transit (times for Saturday 28 November 2026). Show a subway or subway & bus one-day pass at the ticket office and the ¥800 entry fee becomes ¥700 (castle website; not available with web tickets). From Kyoto Station: Karasuma subway line to Karasuma-Oike, change to the Tozai line, about 15 minutes, ¥260. The daytime photos of the Karamon gate, Ninomaru Palace, garden and Honmaru are from Wikimedia Commons (author and license shown on each photo)."
+    },
+    "checked": "2026-11-22",
+    "source": "二条城の公式サイト（開城時間・休城日等、料金、12月6日のお知らせ）、乗換案内（2026年11月28日のダイヤ）"
+   },
+   "text": {
+    "ja": "二条城（にじょうじょう）\n\nこのコースのスタートです。地下鉄東西線の京都市役所前駅から太秦天神川（うずまさてんじんがわ）行きに乗って2駅、4分・220円。8:24発に乗ると二条城前に8:28に着きます（1本前は8:17発、次は8:28発。土曜の時刻で、平日も数分おき）。三条京阪駅からなら8:22発で同じ電車です。1番出口から東大手門まで歩いて約5分。8:35ごろ着いて、券売所に並びましょう。\n\n開城の8:45に入ると、団体が増える前に二の丸御殿を静かに見られます。入ったらまっすぐ二の丸御殿へ。庭と本丸はそのあとに。\n\n本丸御殿を予約するなら、9:30〜10:00の枠が合います。\n\n1603年に徳川家康が建てた城で、1867年に15代将軍の慶喜が大政奉還を告げた場所でもあります。東大手門から入り、金の飾りの唐門（からもん）をくぐると、国宝の二の丸御殿。部屋が奥へ奥へと続き、狩野派の虎や松のふすま絵が並びます。廊下は歩くとキュッキュッと鳴る「うぐいす張り」。御殿の中は靴を脱いで上がり、撮影はできません。冬は床が冷たいので厚手の靴下を。\n\n回る順番は、二の丸御殿（40〜50分）→二の丸庭園→内堀を渡って本丸→天守閣跡の石垣の上→北側の清流園を通って出口へ。全部で1時間半〜2時間です。天守閣跡に上ると、本丸御殿の屋根と京都の町が見渡せます。\n\n入城券と二の丸御殿のセットで1,300円。本丸御殿（2024年に修理が終わって公開）は別に1,000円で、日時を決めたWEBチケットの事前予約が要ります（来城日の30日前から）。\n\n夜の写真は2016年8月と2017年4月の夜のライトアップのときのもの。夜の公開は年によって内容も期間も変わるので、公式サイトで確認してください。\n\nおすすめ訪問時間：8:45〜10:30（三条のあたりを8:10ごろ出発）",
+    "en": "Nijo Castle\n\nThe start of this course. From Kyoto Shiyakusho-mae station take the Tozai subway line (for Uzumasa-Tenjingawa) two stops: 4 minutes, ¥220. The 8:24 reaches Nijojo-mae at 8:28 (the train before leaves at 8:17, the next at 8:28. Saturday times; every few minutes on weekdays too). From Sanjo Keihan station the same train leaves at 8:22. From exit 1 it’s about 5 minutes on foot to the East Gate. Arrive at about 8:35 and join the ticket queue.\n\nGo in at the 8:45 opening and you see the Ninomaru Palace quietly, before the tour groups build up. Head straight for the palace; leave the gardens and the Honmaru for afterwards.\n\nIf you book the Honmaru Palace, a slot between 9:30 and 10:00 fits.\n\nTokugawa Ieyasu built the castle in 1603, and in 1867 the 15th shogun, Yoshinobu, announced here that he was returning power to the emperor. Enter by the East Gate, pass under the gold-fitted Karamon gate, and you reach the Ninomaru Palace, a National Treasure. Room leads on to room, lined with Kano-school tigers and pines on gold leaf. The corridor floors chirp underfoot (“nightingale floors”). You take your shoes off to go in, and photography is not allowed inside. The floors are cold in winter: wear thick socks.\n\nA good order: the Ninomaru Palace (40–50 minutes) → the Ninomaru garden → across the inner moat to the Honmaru → up the stone base of the old keep → out through the Seiryu-en garden on the north side. Allow an hour and a half to two hours. From the keep base you look over the Honmaru Palace roofs and the city.\n\nCastle entry with the Ninomaru Palace is ¥1,300. The Honmaru Palace (reopened in 2024 after repairs) costs another ¥1,000 and needs a timed web ticket booked in advance (on sale from 30 days before).\n\nThe night photos are from evening illuminations in August 2016 and April 2017. Evening openings change from year to year, so check the official website.\n\nRecommended visit time: 8:45–10:30 (leave the Sanjo area at about 8:10)"
+   },
+   "photos": [
+    {
+     "file": "nijojo-w1.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nijo_jo_Palais_Ninomaru.jpg"
+     }
+    },
+    {
+     "file": "nijojo-w2.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nijo_jo_Karamon.jpg"
+     }
+    },
+    {
+     "file": "nijojo-w3.jpg",
+     "credit": {
+      "author": "Martin Falbisoner",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Ninomaru_Palace%2C_November_2016.jpg"
+     }
+    },
+    {
+     "file": "nijojo-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Nijojo-ninomaru-garden01s3s4592.jpg"
+     }
+    },
+    {
+     "file": "nijojo-w5.jpg",
+     "credit": {
+      "author": "DXR",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Building_of_Honmaru_Palace%2C_Nij%C5%8D_Castle%2C_Kyoto_as_seen_from_Fortification_130811_1.jpg"
+     }
+    },
+    "nijojo-1.jpg",
+    "nijojo-2.jpg",
+    "nijojo-3.jpg",
+    "nijojo-4.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "shinsenen",
+   "name": {
+    "ja": "神泉苑",
+    "en": "Shinsen-en"
+   },
+   "kind": {
+    "ja": "寺・池",
+    "en": "Temple & pond"
+   },
+   "blurb": {
+    "ja": "二条城のすぐ南。平安京ができたときの天皇の庭の名残で、池に朱色の法成橋がかかります。無料、20:00まで。",
+    "en": "Just south of the castle: what remains of the emperor’s garden from the founding of Kyoto, with the vermilion Hojo bridge over its pond. Free, open until 20:00."
+   },
+   "lat": 35.01155,
+   "lng": 135.74807,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "神泉苑",
+      "en": "Shinsen-en"
+     },
+     "lat": 35.01155,
+     "lng": 135.74807,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%9E%E6%B3%89%E8%8B%91%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "神泉苑 公式サイト",
+      "en": "Shinsen-en (official, Japanese)"
+     },
+     "url": {
+      "ja": "http://www.shinsenen.org/",
+      "en": "http://www.shinsenen.org/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "境内の参拝 6:30〜20:00",
+       "en": "Grounds open 6:30–20:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄東西線 二条城前駅から歩いて約2分（神泉苑の案内）",
+       "en": "About 2 min on foot from Nijojo-mae station, Tozai subway line (temple’s access page)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "神泉苑の公式サイトで確認しました。二条城からの歩く時間は OpenStreetMap で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the temple website. The walking time from the castle is an estimate measured on OpenStreetMap. Photos are from Wikimedia Commons (author and license shown on each photo)."
+    },
+    "checked": "2026-11-21",
+    "source": "神泉苑の公式サイト"
+   },
+   "text": {
+    "ja": "神泉苑（しんせんえん）\n\n二条城の東大手門を出て、堀に沿って南へ、押小路通を西へ歩いて約7分。見終わったら二条城前駅まで歩いて約4分です。\n\n二条城前10:58発の地下鉄（東西線）に乗り、次の烏丸御池で烏丸線（国際会館行き）に乗り換えて1駅、丸太町に11:10に着きます（220円。次は11:06発→11:16着）。\n\n794年、平安京と一緒に桓武天皇が造った庭（禁苑）の名残です。もとはずっと広く、二条城を造るときに大きく削られて、今の広さになりました。\n\n池にかかる朱色の法成橋（ほうじょうばし）と、池の中の善女龍王社（ぜんにょりゅうおうしゃ）が見どころ。824年に空海がここで雨乞いをして、龍王を呼んだと伝わります。疫病をしずめるためにここで行われた御霊会（ごりょうえ）は、祇園祭の始まりとされています。\n\n境内は無料で、10〜15分で回れます。二条城の大きさを見たあとだと、ここが城より800年古い庭だということがよく分かります。\n\nおすすめ訪問時間：10:40〜10:55",
+    "en": "Shinsen-en\n\nLeave the castle by the East Gate, follow the moat south and walk west along Oshikoji-dori: about 7 minutes. Afterwards it’s about 4 minutes on foot to Nijojo-mae station.\n\nTake the 10:58 subway (Tozai line) from Nijojo-mae, change at the next stop, Karasuma-Oike, to the Karasuma line (for Kokusaikaikan) and go one stop to Marutamachi, arriving 11:10 (¥220; the next is 11:06 → 11:16).\n\nThis is what is left of the imperial garden Emperor Kanmu laid out in 794 along with the new capital. It was once far larger; much of it was taken when Nijo Castle was built.\n\nLook for the vermilion Hojo bridge over the pond and the small shrine to the dragon queen Zennyo Ryuo on the island. In 824 the monk Kukai is said to have prayed for rain here and summoned the dragon. A ritual held here to calm an epidemic is counted as the origin of the Gion Festival.\n\nEntry is free and 10–15 minutes is enough. After the scale of the castle, it is striking that this garden is 800 years older.\n\nRecommended visit time: 10:40–10:55"
+   },
+   "photos": [
+    {
+     "file": "shinsenen-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Shinsenen_Kyoto_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "shinsenen-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Shinsenen_Kyoto_Japan07s3.jpg"
+     }
+    },
+    {
+     "file": "shinsenen-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Shinsenen_Kyoto_Japan04n.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "seimei",
+   "name": {
+    "ja": "晴明神社",
+    "en": "Seimei Shrine"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "陰陽師・安倍晴明をまつる神社。鳥居にも提灯にも、五芒星（晴明桔梗）の印。寄り道で、20分ほど。",
+    "en": "The shrine of Abe no Seimei, the Heian-period yin-yang master; his five-pointed star is on the torii and the lanterns. A side stop of about 20 minutes."
+   },
+   "lat": 35.02776,
+   "lng": 135.75114,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "晴明神社",
+      "en": "Seimei Shrine"
+     },
+     "lat": 35.02776,
+     "lng": 135.75114,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%99%B4%E6%98%8E%E7%A5%9E%E7%A4%BE%20%E4%BA%AC%E9%83%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "晴明神社 公式サイト",
+      "en": "Seimei Shrine (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.seimeijinja.jp/",
+      "en": "https://www.seimeijinja.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "市バスの時刻表（京都市交通局）",
+      "en": "City bus timetables (Kyoto City, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.kyoto.lg.jp/kotsu/",
+      "en": "https://www.city.kyoto.lg.jp/kotsu/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（授与所は16:30まで）",
+       "en": "9:00–17:00 (amulet counter until 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "無休",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "市バス9・12系統「一条戻橋・晴明神社前」すぐ・230円。バスの時刻は要確認",
+       "en": "City bus 9 or 12 to “Ichijo-modoribashi / Seimei-jinja-mae”, right outside, ¥230. Bus times: please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "晴明神社の公式サイトで確認しました（バスの系統も公式サイトの案内）。バスの時刻は確認していません。歩く時間と距離は OpenStreetMap で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the shrine website (bus numbers are from its access page). Bus times were not checked. Walking times and distances are estimates measured on OpenStreetMap. Photos are from Wikimedia Commons (author and license shown on each photo)."
+    },
+    "checked": "2026-11-21",
+    "source": "晴明神社の公式サイト（時間・バスの系統）。バスの時刻は未確認"
+   },
+   "text": {
+    "ja": "晴明神社（せいめいじんじゃ）\n\nこのコースでは寄り道です。二条城前のバス停から堀川通を北へ、市バス9・12系統で「一条戻橋・晴明神社前」へ（230円。時刻は要確認）。歩くと約25分です。\n\nここから京都御苑へは、中立売通を東へまっすぐ歩いて約15分（約1.1km）で中立売御門。そのまま進むと京都御所の入口の清所門です。4番の梅林・桃林と蛤御門は、御所とお昼のあとに回ってください。\n\n平安時代の陰陽師、安倍晴明（あべのせいめい）の屋敷があった場所に建つ神社です。\n\n一の鳥居の額は、神社の名前ではなく金色の五芒星（ごぼうせい）。「晴明桔梗」と呼ばれる神社の紋です。境内には、晴明が念力で湧かせたと伝わる「晴明井」、なでて厄を落とす「厄除桃」、昔の一条戻橋の欄干と式神の石像があります。小さな境内なので20分ほどで回れます。\n\nおすすめ訪問時間：11:10〜11:30（寄る日は、梅林・桃林を御所のあとに）",
+    "en": "Seimei Shrine\n\nA side stop on this course. From the Nijojo-mae bus stop take city bus 9 or 12 north along Horikawa-dori to “Ichijo-modoribashi / Seimei-jinja-mae” (¥230; times: please check). On foot it takes about 25 minutes.\n\nFrom here walk straight east along Nakadachiuri-dori for about 15 minutes (1.1 km) to the Nakadachiuri gate of the Imperial Palace Park; keep going and you reach the Seishomon gate, the entrance to the Palace. See the plum and peach groves and the Hamaguri gate (No. 4) after the Palace and lunch.\n\nThe shrine stands where the house of Abe no Seimei, the Heian-period yin-yang master, once stood.\n\nThe plaque on the first torii carries not the shrine’s name but a golden five-pointed star, the shrine’s crest. Inside are the Seimei well, said to have sprung up by Seimei’s power; a bronze peach you stroke to rub off bad luck; and the railing posts of the old Ichijo Modoribashi bridge with a stone figure of his spirit servant. It’s a small precinct: 20 minutes is enough.\n\nRecommended visit time: 11:10–11:30 (if you go, see the plum and peach groves after the Palace)"
+   },
+   "photos": [
+    {
+     "file": "seimei-w1.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Seimei-jinja_%28Kamigyo-ku%2C_Kyoto%29_Shrine_hdsr_S5_04.jpg"
+     }
+    },
+    {
+     "file": "seimei-w2.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Seimei-jinja_%28Kamigyo-ku%2C_Kyoto%29_Shrine_hdsr_S5_08.jpg"
+     }
+    },
+    {
+     "file": "seimei-w3.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Seimei-jinja_%28Kamigyo-ku%2C_Kyoto%29_Shrine_hdsr_S5_03.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "gyoen",
+   "name": {
+    "ja": "京都御苑：梅林・桃林と蛤御門",
+    "en": "Imperial Palace Park: plum & peach groves, Hamaguri gate"
+   },
+   "kind": {
+    "ja": "公園",
+    "en": "Park"
+   },
+   "blurb": {
+    "ja": "御所を囲む、24時間入れる無料の公園。西側に、しだれ桜・桃林・梅林と、弾の跡が残る蛤御門。",
+    "en": "The free park around the Palace, open round the clock. On its west side: a weeping cherry, peach and plum groves, and the Hamaguri gate with its bullet marks."
+   },
+   "lat": 35.0218,
+   "lng": 135.7604,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "出水の小川（しだれ桜）",
+      "en": "Demizu stream (weeping cherry)"
+     },
+     "lat": 35.02011,
+     "lng": 135.7607,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91%20%E5%87%BA%E6%B0%B4%E3%81%AE%E5%B0%8F%E5%B7%9D"
+    },
+    {
+     "label": {
+      "ja": "蛤御門",
+      "en": "Hamaguri gate"
+     },
+     "lat": 35.02315,
+     "lng": 135.7596,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%9B%A4%E5%BE%A1%E9%96%80%20%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91"
+    },
+    {
+     "label": {
+      "ja": "地下鉄 丸太町駅",
+      "en": "Marutamachi subway station"
+     },
+     "lat": 35.01741,
+     "lng": 135.75955,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%B8%E5%A4%AA%E7%94%BA%E9%A7%85%20%E4%BA%AC%E9%83%BD%E5%B8%82%E5%96%B6%E5%9C%B0%E4%B8%8B%E9%89%84"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都御苑（国民公園協会）",
+      "en": "Kyoto Gyoen (National Parks Foundation, Japanese)"
+     },
+     "url": {
+      "ja": "https://fng.or.jp/kyoto/",
+      "en": "https://fng.or.jp/kyoto/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "京都御苑（環境省）",
+      "en": "Kyoto Gyoen (Ministry of the Environment)"
+     },
+     "url": {
+      "ja": "https://www.env.go.jp/garden/kyotogyoen/",
+      "en": "https://www.env.go.jp/garden/kyotogyoen/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!）",
+      "en": "Train times (Yahoo! Transit, Japanese)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "24時間入れます",
+       "en": "Open 24 hours"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄烏丸線 丸太町駅の1番出口から、御苑の南西の角まで歩いて約5分。二条城前〜丸太町は烏丸御池で乗り換えて10〜12分・220円",
+       "en": "About 5 min on foot from exit 1 of Marutamachi station (Karasuma subway line) to the park’s south-west corner. Nijojo-mae to Marutamachi: change at Karasuma-Oike, 10–12 min, ¥220"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "梅は2月中旬〜3月中旬、桃は3月中旬〜4月上旬（国民公園協会の案内）",
+       "en": "Plums mid-Feb to mid-March, peaches mid-March to early April (park foundation’s guide)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "環境省と国民公園協会の京都御苑のサイト、乗換案内（2026年11月28日・土曜の時刻）で確認しました。歩く時間は OpenStreetMap で測った目安です。蛤御門の写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the park’s websites (Ministry of the Environment and the National Parks Foundation) and Yahoo! Transit (times for Saturday 28 November 2026). Walking times are estimates measured on OpenStreetMap. The photo of the Hamaguri gate is from Wikimedia Commons (author and license shown on the photo)."
+    },
+    "checked": "2026-11-22",
+    "source": "環境省と国民公園協会の京都御苑のサイト、乗換案内（2026年11月28日のダイヤ）"
+   },
+   "text": {
+    "ja": "京都御苑（きょうとぎょえん）\n\n丸太町駅の1番出口から北へ歩いて約5分で、御苑の南西の角です。出水の小川、桃林、梅林と、西側を北へ歩いて蛤御門へ。門を見たら、北東へ約6分で京都御所の入口・清所門です。\n\n京都御苑は、京都御所を囲む東西約700m・南北約1.3kmの公園。江戸時代まで約200の公家屋敷が並んでいた場所で、今は玉砂利の広い道と松林です。毎日24時間、無料で入れます。\n\n西側の南から順に、出水（でみず）の小川のそばに御苑でも早く咲くしだれ桜（写真1枚目は2015年3月25日）。その北が約70本の桃林（見ごろは3月中旬〜4月上旬）、続いて約130本の梅林（2月中旬〜3月中旬）。梅の写真は2016年2月22日と2019年3月2日、花の色が混ざった4月の写真は2023年4月10日です。花のない季節は、松と大きなクスノキの下の静かな道です。\n\n梅林のすぐ北が蛤御門（はまぐりごもん）。1864年の「禁門の変」で長州藩と会津・薩摩藩が戦った場所で、門の柱や梁に、そのときのものと伝わる弾の跡が残っています。\n\n玉砂利は思ったより足が疲れます。自転車が通ってできた細いわだち（砂利のない筋）の上を歩くと楽です。\n\nおすすめ訪問時間：11:20〜11:50",
+    "en": "Kyoto Imperial Palace Park (Kyoto Gyoen)\n\nFrom exit 1 of Marutamachi station it’s about 5 minutes’ walk north to the south-west corner of the park. Walk up the west side: Demizu stream, peach grove, plum grove, then the Hamaguri gate. From the gate it’s about 6 minutes north-east to Seishomon, the entrance to the Palace.\n\nKyoto Gyoen is the park around the Imperial Palace, about 700 m east to west and 1.3 km north to south. Until the end of the Edo period some 200 court nobles’ houses stood here; now it is wide gravel avenues and pines. It’s open 24 hours a day and free.\n\nOn the west side, from the south: by the Demizu stream is a weeping cherry that flowers early (photo 1: 25 March 2015). North of it is the peach grove, about 70 trees (best mid-March to early April), then the plum grove, about 130 trees (mid-February to mid-March). The plum photos are from 22 February 2016 and 2 March 2019; the April photos with mixed colours are from 10 April 2023. Out of season it is a quiet path under pines and big camphor trees.\n\nJust north of the plums is the Hamaguri gate. In 1864 Choshu troops fought the Aizu and Satsuma domains here (the Kinmon incident), and the gate’s posts and beams still carry what are said to be bullet marks from that day.\n\nThe gravel is more tiring than it looks. Walk along the narrow tracks worn clear by bicycles.\n\nRecommended visit time: 11:20–11:50"
+   },
+   "photos": [
+    "gyoen-1.jpg",
+    "gyoen-2.jpg",
+    "gyoen-3.jpg",
+    "gyoen-4.jpg",
+    "gyoen-5.jpg",
+    "gyoen-6.jpg",
+    "gyoen-7.jpg",
+    "gyoen-8.jpg",
+    "gyoen-9.jpg",
+    {
+     "file": "gyoen-w1.jpg",
+     "credit": {
+      "author": "Brakeet",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hamaguri-Gomon_002.jpg"
+     }
+    }
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "gosho",
+   "name": {
+    "ja": "京都御所",
+    "en": "Kyoto Imperial Palace"
+   },
+   "kind": {
+    "ja": "御所",
+    "en": "Palace"
+   },
+   "blurb": {
+    "ja": "明治まで約500年、天皇の住まいだった場所。予約なし・無料。月曜休みで、冬は15:20までに入場。お昼はすぐ横の休憩所で。",
+    "en": "The emperors’ home for some 500 years until 1869. Free, no booking. Closed Mondays; in winter enter by 15:20. Lunch at the rest house next door."
+   },
+   "lat": 35.02583,
+   "lng": 135.76102,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "清所門（京都御所の入口）",
+      "en": "Seishomon gate (Palace entrance)"
+     },
+     "lat": 35.02583,
+     "lng": 135.76102,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%BE%A1%E6%89%80%20%E6%B8%85%E6%89%80%E9%96%80"
+    },
+    {
+     "label": {
+      "ja": "中立売休憩所（お昼）",
+      "en": "Nakadachiuri rest house (lunch)"
+     },
+     "lat": 35.0256,
+     "lng": 135.7599,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91%20%E4%B8%AD%E7%AB%8B%E5%A3%B2%E4%BC%91%E6%86%A9%E6%89%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都御所（宮内庁）",
+      "en": "Kyoto Imperial Palace (Imperial Household Agency)"
+     },
+     "url": {
+      "ja": "https://kyoto-gosho.kunaicho.go.jp/",
+      "en": "https://kyoto-gosho.kunaicho.go.jp/en"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "参観要領・カレンダー",
+      "en": "Visiting guide & calendar"
+     },
+     "url": {
+      "ja": "https://kyoto-gosho.kunaicho.go.jp/visit",
+      "en": "https://kyoto-gosho.kunaicho.go.jp/en/visit"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "中立売休憩所（国民公園協会）",
+      "en": "Nakadachiuri rest house (Japanese)"
+     },
+     "url": {
+      "ja": "https://fng.or.jp/kyoto/place/rest/",
+      "en": "https://fng.or.jp/kyoto/place/rest/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://kyoto-gosho.kunaicho.go.jp/visit",
+     "head": {
+      "ja": "月曜休み。冬は15:20までに入場。飲食とスーツケースは不可",
+      "en": "Closed Mondays; in winter enter by 15:20. No food, no suitcases"
+     },
+     "text": {
+      "ja": "京都御所の公開は、月曜（祝日のときは翌日）と12月28日〜1月4日が休みです。行事で休む日もあるので、行く前に宮内庁の参観カレンダーを見てください。入場は10〜2月が15:20まで、3月と9月が15:50まで、4〜8月が16:20まで。中で食事はできず、スーツケースなどの大きな荷物とペットは持ち込めません。",
+      "en": "The Palace is closed on Mondays (the next day if Monday is a holiday) and from 28 December to 4 January, and sometimes for court events, so check the Imperial Household Agency’s calendar first. Last entry is 15:20 from October to February, 15:50 in March and September, and 16:20 from April to August. You can’t eat inside, and suitcases, other large bags and pets are not allowed."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "入場 9:00〜15:20（10〜2月、最終退出16:00）／〜15:50（3月・9月、最終退出16:30）／〜16:20（4〜8月、最終退出17:00）",
+       "en": "Entry 9:00–15:20 (Oct–Feb, out by 16:00) / until 15:50 (Mar & Sep, out by 16:30) / until 16:20 (Apr–Aug, out by 17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "月曜（祝日のときは翌日）、12月28日〜1月4日、行事のある日（カレンダーで確認）",
+       "en": "Mondays (next day if a holiday), 28 Dec–4 Jan, and days of court events (see the calendar)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料・予約不要",
+       "en": "Free, no booking"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄烏丸線 今出川駅3番出口から歩いて約5分（丸太町駅からは御苑の中を歩いて約20分）",
+       "en": "About 5 min on foot from exit 3 of Imadegawa station, Karasuma subway line (about 20 min through the park from Marutamachi)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "中立売休憩所：レストラン「檜垣」8:00〜18:30（ラストオーダー18:00）、売店9:00〜16:30。年末年始のほかは無休",
+       "en": "Nakadachiuri rest house: Higaki restaurant 8:00–18:30 (last order 18:00), shop 9:00–16:30; open daily except the New Year holidays"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "宮内庁の京都御所のサイト（参観要領・よくあるご質問）と、国民公園協会の京都御苑のサイトで確認しました。檜垣のメニューと値段は確認していません。",
+     "en": "Checked on the Imperial Household Agency’s Kyoto Imperial Palace website (visiting guide and FAQ) and the park foundation’s website. Higaki’s menu and prices were not checked."
+    },
+    "checked": "2026-11-22",
+    "source": "宮内庁の京都御所のサイト（参観要領・よくあるご質問）、国民公園協会の京都御苑のサイト（食事・お土産）"
+   },
+   "text": {
+    "ja": "京都御所（きょうとごしょ）\n\n11:55ごろ清所門から入ります。順路は約50分。出たら、西へ歩いて3分の中立売休憩所の「檜垣」でお昼にします。朝8時から動いているので、ここでしっかり休んでください。おなかがすいていたら、先にお昼にしてから（11:55〜）御所に入る順でもかまいません。冬でも15:20までに入れば大丈夫です。\n\n1331年から明治のはじめまで、天皇が住んでいた場所です。今の建物は1855年に、平安時代の様式で建て直されたもの。予約はいらず、無料で入れます。入口は西側の清所門（せいしょもん）で、入るときに手荷物検査があります。小さな荷物は、入ってすぐの参観者休所のロッカーに預けられます。\n\n順路は約50分。御車寄（おくるまよせ）、朱色の回廊と承明門（じょうめいもん）、その奥に即位の礼が行われた紫宸殿（ししんでん）。写真2枚目のように、承明門の柱のあいだから紫宸殿を正面に見られます。続いて清涼殿、池に欅橋がかかる御池庭（おいけにわ）、御常御殿と御内庭へ。建物の中には入れず、外から見ます。\n\n職員の案内（無料・予約なし、約50分）は英語と中国語が10:00・14:00、日本語が9:30・10:30・13:30・14:30。開始時間までに参観者休所へ。時間が合わなければ、無料の音声ガイドアプリ（6言語）を先にスマホに入れておくと便利です。\n\nお昼は、清所門から歩いて3分の中立売（なかだちうり）休憩所で。レストラン「檜垣（ひがき）」は8:00〜18:30（ラストオーダー18:00）で、年末年始のほかは休みなし。無料で座れる休憩スペースと売店（9:00〜16:30）もあります。御苑の中に食事ができる場所は少ないので、ここで食べるのがいちばん楽です。\n\n写真は2024年1月6日と11月6日。\n\nおすすめ訪問時間：11:55〜12:50、そのあと檜垣でお昼（12:55〜13:45）",
+    "en": "Kyoto Imperial Palace (Kyoto Gosho)\n\nGo in by the Seishomon gate at about 11:55. The route takes about 50 minutes. When you come out, have lunch at Higaki in the Nakadachiuri rest house, 3 minutes’ walk west. You have been on the move since 8:00, so take a proper break. If you are hungry, eat first (from 11:55) and see the Palace afterwards: even in winter you only need to be inside by 15:20.\n\nThe emperors lived here from 1331 until the start of the Meiji era. The present buildings were rebuilt in 1855 in the style of the Heian period. No booking, no charge. The entrance is the Seishomon gate on the west side; bags are checked as you go in. Small bags can go in the lockers in the visitors’ rest house just inside.\n\nThe route takes about 50 minutes: the Okurumayose carriage porch, the vermilion corridors and Jomeimon gate, and beyond them the Shishinden, the hall of enthronements. As in photo 2, you can look straight at the Shishinden between the pillars of the Jomeimon. Then come the Seiryoden, the Oikeniwa pond garden with its Keyaki bridge, and the Otsunegoten with its inner garden. You see the buildings from outside; you can’t go in.\n\nFree staff-guided tours (no booking, about 50 minutes): English and Chinese at 10:00 and 14:00; Japanese at 9:30, 10:30, 13:30 and 14:30. Be at the visitors’ rest house by the start time. If the times don’t suit, install the free audio-guide app (six languages) on your phone beforehand.\n\nFor lunch, the Nakadachiuri rest house is 3 minutes’ walk from the Seishomon gate. Its restaurant, Higaki, is open 8:00–18:30 (last order 18:00) every day except the New Year holidays, and there is a free seating area and a shop (9:00–16:30). There are few places to eat inside the park, so this is the easy choice.\n\nPhotos: 6 January and 6 November 2024.\n\nRecommended visit time: 11:55–12:50, then lunch at Higaki (12:55–13:45)"
+   },
+   "photos": [
+    "gosho-1.jpg",
+    "gosho-2.jpg",
+    "gosho-3.jpg",
+    "gosho-4.jpg",
+    "gosho-5.jpg",
+    "gosho-6.jpg",
+    "gosho-7.jpg",
+    "gosho-8.jpg",
+    "gosho-9.jpg"
+   ]
+  },
+  {
+   "no": 6,
+   "id": "kitagyoen",
+   "name": {
+    "ja": "京都御苑の北側：紅葉・近衞邸跡のしだれ桜",
+    "en": "North side of the park: maples & the Konoe weeping cherries"
+   },
+   "kind": {
+    "ja": "公園",
+    "en": "Park"
+   },
+   "blurb": {
+    "ja": "御所の北は人が少なくて静か。秋は乾御門のあたりのもみじとイチョウ、春は近衞邸跡のしだれ桜、冬は雪の松林。和菓子屋のカフェがある休憩所も。",
+    "en": "North of the Palace it’s quiet. Maples and ginkgo near the Inui gate in autumn, weeping cherries at the old Konoe residence in spring, snow on the pines in winter; and a rest house with a sweet-maker’s café."
+   },
+   "lat": 35.02832,
+   "lng": 135.76191,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "近衞邸跡",
+      "en": "Konoe residence site"
+     },
+     "lat": 35.02832,
+     "lng": 135.76191,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91%20%E8%BF%91%E8%A1%9B%E9%82%B8%E8%B7%A1"
+    },
+    {
+     "label": {
+      "ja": "乾御門",
+      "en": "Inui gate"
+     },
+     "lat": 35.02748,
+     "lng": 135.75963,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B9%BE%E5%BE%A1%E9%96%80%20%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91"
+    },
+    {
+     "label": {
+      "ja": "近衞邸跡休憩所（SASAYAIORI+）",
+      "en": "Konoe rest house (SASAYAIORI+ café)"
+     },
+     "lat": 35.0285,
+     "lng": 135.7611,
+     "url": "https://www.google.com/maps/search/?api=1&query=SASAYAIORI%2B%20%E4%BA%AC%E9%83%BD%E5%BE%A1%E8%8B%91"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都御苑の自然（国民公園協会）",
+      "en": "Nature in Kyoto Gyoen (Japanese)"
+     },
+     "url": {
+      "ja": "https://fng.or.jp/kyoto/place/creature/",
+      "en": "https://fng.or.jp/kyoto/place/creature/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "近衞邸跡休憩所（国民公園協会）",
+      "en": "Konoe rest house (Japanese)"
+     },
+     "url": {
+      "ja": "https://fng.or.jp/kyoto/place/rest/",
+      "en": "https://fng.or.jp/kyoto/place/rest/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "叡山電鉄のマップ（下鴨神社）",
+      "en": "Eizan Railway map (Shimogamo Shrine)"
+     },
+     "url": {
+      "ja": "../eizan-line/",
+      "en": "../eizan-line/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "24時間入れます",
+       "en": "Open 24 hours"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "近衞邸跡休憩所（SASAYAIORI+）：10:00〜16:30（10〜2月、ラストオーダー16:00）／〜17:00（3〜9月、同16:30）。月曜（祝日なら次の平日）と年末年始は休み",
+       "en": "Konoe rest house (SASAYAIORI+): 10:00–16:30 (Oct–Feb, last order 16:00) / until 17:00 (Mar–Sep, last order 16:30). Closed Mondays (next weekday if a holiday) and New Year"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "近衞邸跡のしだれ桜は3月中旬から約1か月（国民公園協会の案内）。紅葉の時期は年によって変わります",
+       "en": "Konoe weeping cherries: about a month from mid-March (park foundation’s guide). Autumn colour varies by year"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄烏丸線 今出川駅まで歩いて約5分",
+       "en": "About 5 min on foot to Imadegawa station, Karasuma subway line"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "国民公園協会の京都御苑のサイトで確認しました。歩く時間は OpenStreetMap で測った目安です。紅葉の見ごろの時期は公式の案内がないので、写真の日付（11月23日）を目安にしてください。",
+     "en": "Checked on the park foundation’s website. Walking times are estimates measured on OpenStreetMap. There is no official guide to the autumn-colour dates; use the date of the photos (23 November) as a rough guide."
+    },
+    "checked": "2026-11-22",
+    "source": "国民公園協会の京都御苑のサイト（自然、食事・お土産）"
+   },
+   "text": {
+    "ja": "京都御苑の北側\n\n中立売休憩所から御所の西の塀に沿って北へ歩いて約7分で乾御門のあたり。もみじとイチョウ、その東の近衞邸跡を見て、北の門の朔平門へ。甘いものが欲しくなったら近衞邸跡のそばの休憩所へ（月曜休み）。\n\n朔平門から御所の東の塀に沿って南へ歩いて約10分で、清和院御門と梨木神社です。\n\n御苑の北西、乾御門（いぬいごもん）の近くは、秋になるともみじが赤く、大きなイチョウが黄色くなります（写真1〜5枚目は2017年11月23日）。芝生に落ち葉が積もり、お寺の紅葉とちがって人が少なく、無料です。\n\nその東が近衞邸跡（このえていあと）。五摂家の近衞家の屋敷があった場所で、池のまわりに約60本のしだれ桜（糸桜）があります。御苑でいちばん早く、3月中旬に咲き始め、種類によって時期がずれるので1か月ほど楽しめます。\n\n近衞邸跡のそばの休憩所には、和菓子の笹屋伊織（ささやいおり）のカフェ「SASAYAIORI+ 京都御苑」が入っています。10:00から、10〜2月は16:30（ラストオーダー16:00）、3〜9月は17:00（同16:30）まで。月曜（祝日のときは次の平日）と年末年始は休みです。席だけ使える無料の休憩所でもあるので、歩き疲れたらここで座れます。\n\n御所の北の門が朔平門（さくへいもん、写真10枚目）。ここから御所の東側へ回ると、長い築地塀（ついじべい）と松林が続きます。雪の写真は2017年1月15日と2019年1月27日。京都の町なかで雪が積もるのは年に数回なので、積もった朝はまずここへ。\n\nおすすめ訪問時間：13:50〜14:25",
+    "en": "North side of the park\n\nFrom the Nakadachiuri rest house walk about 7 minutes north along the west wall of the Palace to the Inui gate area. See the maples and ginkgo, then the Konoe site to the east, and go on to the north gate, the Sakuheimon. Want something sweet? The rest house by the Konoe site is right there (closed Mondays).\n\nFrom the Sakuheimon walk about 10 minutes south along the east wall of the Palace to the Seiwain gate and Nashinoki Shrine.\n\nIn the north-west of the park, near the Inui gate, the maples turn red and a big ginkgo turns yellow in autumn (photos 1–5: 23 November 2017). Leaves pile up on the grass; unlike the temples, there are few people and no charge.\n\nEast of it is the site of the Konoe residence, home of one of the five regent families, with about 60 weeping cherries around a pond. They are the first in the park to flower, from mid-March, and as the varieties differ the blossom lasts about a month.\n\nThe rest house beside the Konoe site has a café run by the Kyoto sweet-maker Sasaya Iori, SASAYAIORI+ Kyoto Gyoen. It opens at 10:00 and closes at 16:30 from October to February (last order 16:00) and 17:00 from March to September (last order 16:30); closed Mondays (the next weekday if a holiday) and over the New Year. It is also a free rest house, so you can simply sit down.\n\nThe Palace’s north gate is the Sakuheimon (photo 10). Walk round from here to the east side and the long earthen wall and pine woods go on and on. The snow photos are from 15 January 2017 and 27 January 2019. Snow settles in central Kyoto only a few times a year; on such a morning, come here first.\n\nRecommended visit time: 13:50–14:25"
+   },
+   "photos": [
+    "kitagyoen-1.jpg",
+    "kitagyoen-2.jpg",
+    "kitagyoen-3.jpg",
+    "kitagyoen-4.jpg",
+    "kitagyoen-5.jpg",
+    "kitagyoen-6.jpg",
+    "kitagyoen-7.jpg",
+    "kitagyoen-8.jpg",
+    "kitagyoen-9.jpg",
+    "kitagyoen-10.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "nashinoki",
+   "name": {
+    "ja": "梨木神社",
+    "en": "Nashinoki Shrine"
+   },
+   "kind": {
+    "ja": "神社・名水",
+    "en": "Shrine & spring water"
+   },
+   "blurb": {
+    "ja": "御苑の東の門を出てすぐの、木立の中の小さな神社。京都三名水でただ一つ残る「染井」の水が湧いています。門は16:30まで。",
+    "en": "A small shrine in the trees just outside the park’s east gate, with Somei, the only one of Kyoto’s three famous wells still flowing. Gates close at 16:30."
+   },
+   "lat": 35.02454,
+   "lng": 135.76733,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "梨木神社",
+      "en": "Nashinoki Shrine"
+     },
+     "lat": 35.02454,
+     "lng": 135.76733,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%A2%A8%E6%9C%A8%E7%A5%9E%E7%A4%BE%20%E4%BA%AC%E9%83%BD"
+    },
+    {
+     "label": {
+      "ja": "一保堂茶舗 京都本店（寺町二条）",
+      "en": "Ippodo Tea, Kyoto main store (Teramachi Nijo)"
+     },
+     "lat": 35.01437,
+     "lng": 135.76745,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E4%BF%9D%E5%A0%82%E8%8C%B6%E8%88%97%20%E4%BA%AC%E9%83%BD%E6%9C%AC%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "梨木神社 公式サイト",
+      "en": "Nashinoki Shrine (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.nashinoki.jp/",
+      "en": "https://www.nashinoki.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "一保堂茶舗 京都本店（公式）",
+      "en": "Ippodo Tea, Kyoto main store (official)"
+     },
+     "url": {
+      "ja": "https://www.ippodo-tea.co.jp/pages/store-kyoto",
+      "en": "https://www.ippodo-tea.co.jp/pages/store-kyoto"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "開門7:30、閉門16:30。授与所は9:00〜16:30（12:15〜13:15は休み）",
+       "en": "Gates 7:30–16:30; amulet counter 9:00–16:30 (closed 12:15–13:15)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "染井の水の蛇口は6:00〜18:30ごろ",
+       "en": "Somei water taps: about 6:00–18:30"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "Coffee Base NASHINOKI の営業時間は公式の情報で確認できていません（要確認）",
+       "en": "Coffee Base NASHINOKI’s hours could not be confirmed from an official source (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "寺町通の一保堂茶舗 京都本店：店も喫茶室「嘉木」も10:00〜17:00（喫茶室のラストオーダー16:30）。第2水曜休み",
+       "en": "Ippodo Tea main store on Teramachi-dori: shop and Kaboku tearoom 10:00–17:00 (tearoom last order 16:30); closed on the second Wednesday of the month"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "梨木神社の公式サイト（11月21日）と一保堂茶舗の公式サイト（11月22日）で確認しました。寺町通を歩く時間は OpenStreetMap で測った目安です。",
+     "en": "Checked on the shrine website (21 November) and the Ippodo website (22 November). Walking times along Teramachi-dori are estimates measured on OpenStreetMap."
+    },
+    "checked": "2026-11-22",
+    "source": "梨木神社の公式サイト（2026-11-21）、一保堂茶舗の公式サイト（京都本店、2026-11-22）"
+   },
+   "text": {
+    "ja": "梨木神社（なしのきじんじゃ）\n\n清和院御門を出て、向かいが梨木神社です。門は16:30に閉まります。\n\nここからは地下鉄に乗らず、寺町通（てらまちどおり）を南へ歩いて街なかへ戻ります。古道具屋や紙の店が並ぶ静かな通りで、三条まで約25分（約1.7km）。途中、歩いて約15分の寺町二条にある一保堂茶舗（いっぽどうちゃほ）は、日本茶の店。喫茶室「嘉木（かぼく）」でお茶を飲んでひと休みできます（10:00〜17:00、ラストオーダー16:30、第2水曜休み）。軽くて割れないお茶は、おみやげにも向いています。\n\n御苑の東側の清和院御門（せいわいんごもん）を出てすぐ北。明治18年に、明治維新に尽くした三條實萬（さねつむ）・實美（さねとみ）の親子をまつって建てられた神社です。萩の名所で、9月下旬に萩まつりがあります。\n\n手水舎の水は「染井（そめい）」。京都三名水のうち、今も湧いているただ一つの井戸です。蛇口から自由に汲めて、口にふくむとやわらかい水です（蛇口が開いているのは6:00〜18:30ごろ）。空のペットボトルを持って行くと、持ち帰れます。\n\n境内の古い茶室は、今はコーヒースタンド「Coffee Base NASHINOKI」。染井の水でいれたコーヒーが飲めます（写真6・7枚目。営業の日と時間は要確認）。\n\n写真は2026年5月18日、青もみじの時期です。\n\nおすすめ訪問時間：14:35〜14:55",
+    "en": "Nashinoki Shrine\n\nLeave the park by the Seiwain gate; the shrine is opposite. Its gates close at 16:30.\n\nFrom here, skip the subway and walk back into town down Teramachi-dori, a quiet street of antique dealers and paper shops: about 25 minutes (1.7 km) to Sanjo. On the way, about 15 minutes’ walk at Teramachi Nijo, is Ippodo Tea, a Japanese tea shop. You can sit down for tea in its Kaboku tearoom (10:00–17:00, last order 16:30; closed on the second Wednesday of the month). Tea is light and unbreakable, so it also makes a good present.\n\nJust north of the Seiwain gate on the east side of the park. The shrine was founded in 1885 for Sanjo Sanetsumu and his son Sanetomi, court nobles who worked for the Meiji Restoration. It is known for bush clover, with a festival in late September.\n\nThe water at the purification basin is Somei, the only one of Kyoto’s three famous wells that still flows. Anyone may fill a bottle from the taps; the water tastes soft (taps are open from about 6:00 to 18:30). Bring an empty bottle and take some with you.\n\nThe old tea room in the grounds is now a coffee stand, Coffee Base NASHINOKI, brewing with Somei water (photos 6 and 7; opening days and hours: please check).\n\nPhotos: 18 May 2026, with the maples in fresh green.\n\nRecommended visit time: 14:35–14:55"
+   },
+   "photos": [
+    "nashinoki-1.jpg",
+    "nashinoki-2.jpg",
+    "nashinoki-3.jpg",
+    "nashinoki-4.jpg",
+    "nashinoki-5.jpg",
+    "nashinoki-6.jpg",
+    "nashinoki-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 8,
+   "id": "sento",
+   "name": {
+    "ja": "京都仙洞御所",
+    "en": "Sento Imperial Palace"
+   },
+   "kind": {
+    "ja": "庭園（要申し込み）",
+    "en": "Garden (application needed)"
+   },
+   "blurb": {
+    "ja": "退位した天皇の御所の庭。二つの池と、丸い石を敷きつめた洲浜を、職員の案内で約1時間歩きます。申し込みが必要、18歳以上・無料。",
+    "en": "The garden of the retired emperors’ palace: two ponds and a shore of rounded stones, seen on a one-hour guided walk. Application needed; ages 18 and over, free."
+   },
+   "lat": 35.02168,
+   "lng": 135.76563,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "京都仙洞御所",
+      "en": "Sento Imperial Palace"
+     },
+     "lat": 35.02168,
+     "lng": 135.76563,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E4%BB%99%E6%B4%9E%E5%BE%A1%E6%89%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都仙洞御所（宮内庁）",
+      "en": "Sento Imperial Palace (Imperial Household Agency)"
+     },
+     "url": {
+      "ja": "https://kyoto-gosho.kunaicho.go.jp/sento-gosho",
+      "en": "https://kyoto-gosho.kunaicho.go.jp/en/sento-gosho"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "参観の申し込み（宮内庁）",
+      "en": "Apply for a visit (Imperial Household Agency)"
+     },
+     "url": {
+      "ja": "https://sankan.kunaicho.go.jp/",
+      "en": "https://sankan.kunaicho.go.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://kyoto-gosho.kunaicho.go.jp/sento-gosho/visit",
+     "head": {
+      "ja": "申し込みが必要。18歳以上、全員の本人確認の書類を",
+      "en": "Application needed; ages 18+, ID for everyone"
+     },
+     "text": {
+      "ja": "予約（3か月前の1日〜3日前）か、当日8:40から配る整理券（1日50人・各回10人、先着順）が要ります。月曜（祝日のときは翌日）と12月28日〜1月4日、行事のある日は休み。パスポートなどを忘れると入れません。",
+      "en": "You need a booking (from the 1st of the month three months ahead until three days before) or a same-day ticket handed out from 8:40 (50 a day, 10 per tour, first come first served). Closed Mondays (next day if a holiday), 28 December–4 January and on days of court events. Without your passport or other ID you can’t go in."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "案内の開始 9:30・11:00・13:30・14:30・15:30（7・8月は原則9:30・11:00・15:30）。約60分",
+       "en": "Tours at 9:30, 11:00, 13:30, 14:30, 15:30 (Jul–Aug normally 9:30, 11:00, 15:30); about 60 min"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "月曜（祝日のときは翌日）、12月28日〜1月4日、行事のある日",
+       "en": "Mondays (next day if a holiday), 28 Dec–4 Jan, and days of court events"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料。18歳以上、要申し込み（1件4人まで）。当日の整理券は8:40から先着順・1日50人（各回10人）",
+       "en": "Free. Ages 18+, application needed (up to 4 people each). Same-day tickets from 8:40, first come first served, 50 a day (10 per tour)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄烏丸線 丸太町駅1番出口から歩いて約15分（宮内庁の案内）",
+       "en": "About 15 min on foot from exit 1 of Marutamachi station, Karasuma subway line (official access)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "宮内庁の「京都仙洞御所 参観申込要領」で確認しました。受付に行く時刻は、予約の通知や整理券の案内に従ってください。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked in the Imperial Household Agency’s application guide for the Sento Imperial Palace. Follow your booking notice or ticket for when to report. Photos are from Wikimedia Commons (author and license shown on each photo)."
+    },
+    "checked": "2026-11-22",
+    "source": "宮内庁「京都仙洞御所 参観申込要領」（PDF）"
+   },
+   "text": {
+    "ja": "京都仙洞御所（きょうとせんとうごしょ）\n\nこのコースでは寄り道です。梨木神社のすぐ西、清和院御門を入って左（南）へ歩いて3分。このコースで予約するなら15:30の回が合います（7・8月もある回です）。14:30の回にするなら、御苑の北側（6番）を短くして梨木神社を先に。\n\n当日の整理券は8:40から配るので、二条城の開城には間に合いません。整理券をねらう日は「9〜10時に出発」コースの順で回ってください。\n\n17世紀のはじめ、退位した後水尾上皇のために造られた御所です。建物は1854年の火事で焼けて、庭が残りました。北池と南池のまわりを歩く庭で、南池の岸は、平たく丸い石を一面に敷きつめた洲浜（すはま）になっています。\n\n自由には入れず、職員の案内で約1時間（約1km）。開始は9:30・11:00・13:30・14:30・15:30で、7・8月は原則9:30・11:00・15:30だけです。参観できるのは18歳以上（子ども連れは入れません）、無料。全員の本人確認の書類（外国の人はパスポート）が要ります。\n\n申し込みは2通り。①宮内庁のサイトで、行く月の3か月前の1日から、3日前までに予約（1件4人まで）。②当日、仙洞御所の前で8:40から先着順に配る整理券（1日50人、各回10人。予約の空きが出た分は足されます）。確実に入りたい人は予約を。\n\n説明は日本語です。英語・中国語・フランス語・韓国語・スペイン語の音声ガイドを無料で借りられます（数に限りあり）。手すりのない細い石橋や飛び石があるので、歩きやすい靴で。入口は御苑の中、清和院御門から西へ入ったところです。\n\nおすすめ訪問時間：15:30〜16:30（15:30の回。入る日は、錦市場をやめて晩ごはんへ）",
+    "en": "Sento Imperial Palace (Kyoto Sento Gosho)\n\nA side stop on this course. Just west of Nashinoki Shrine: go in at the Seiwain gate and walk 3 minutes left (south). If you book for this course, the 15:30 tour fits (it also runs in July and August). For the 14:30 tour, shorten the north side of the park (No. 6) and see Nashinoki Shrine first.\n\nSame-day tickets are handed out from 8:40, which clashes with the castle opening. If you want one, follow the order of the “Leave at 9–10” course instead.\n\nBuilt in the early 17th century for the retired emperor Go-Mizunoo. The buildings burned down in 1854; the garden remains. You walk round a north pond and a south pond, and the shore of the south pond is paved all over with flat, rounded stones.\n\nYou can’t walk in freely: visits are guided by staff and take about an hour (about 1 km). Tours start at 9:30, 11:00, 13:30, 14:30 and 15:30; in July and August normally only 9:30, 11:00 and 15:30. Visitors must be 18 or over (no children, even accompanied); it’s free. Everyone needs ID (a passport for visitors from abroad).\n\nTwo ways to get in. (1) Book on the Imperial Household Agency website, from the 1st of the month three months ahead until three days before (up to 4 people per booking). (2) Same-day tickets, handed out in front of the Sento Palace from 8:40, first come first served (50 a day, 10 per tour, plus any unfilled booked places). Book if you want to be sure.\n\nThe tour is in Japanese; free audio guides are lent in English, Chinese, French, Korean and Spanish (limited numbers). There are narrow stone bridges without rails and stepping stones, so wear good shoes. The entrance is inside the park, just west of the Seiwain gate.\n\nRecommended visit time: 15:30–16:30 (the 15:30 tour; if you go, skip Nishiki Market and go on to dinner)"
+   },
+   "photos": [
+    {
+     "file": "sento-w1.jpg",
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sento_Gosho_%283718446959%29.jpg"
+     }
+    },
+    {
+     "file": "sento-w2.jpg",
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sento_Gosho_%283719258930%29.jpg"
+     }
+    },
+    {
+     "file": "sento-w3.jpg",
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sento_Gosho_%283719253512%29.jpg"
+     }
+    },
+    {
+     "file": "sento-w4.jpg",
+     "credit": {
+      "author": "KimonBerlin",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sento_Gosho_%283719248098%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "id": "manga",
+   "name": {
+    "ja": "京都国際マンガミュージアム",
+    "en": "Kyoto International Manga Museum"
+   },
+   "kind": {
+    "ja": "ミュージアム",
+    "en": "Museum"
+   },
+   "blurb": {
+    "ja": "昔の小学校の校舎が、マンガの博物館に。壁いっぱいの本棚のマンガを好きなだけ読めます。雨の日の行き先に。水曜休み。",
+    "en": "An old primary school turned manga museum: take any book from the walls of shelves and read. Good for a rainy day. Closed Wednesdays."
+   },
+   "lat": 35.0117,
+   "lng": 135.75918,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "京都国際マンガミュージアム",
+      "en": "Kyoto International Manga Museum"
+     },
+     "lat": 35.0117,
+     "lng": 135.75918,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E5%9B%BD%E9%9A%9B%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都国際マンガミュージアム 公式サイト",
+      "en": "Kyoto International Manga Museum (official)"
+     },
+     "url": {
+      "ja": "https://kyotomm.jp/",
+      "en": "https://kyotomm.jp/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://kyotomm.jp/",
+     "head": {
+      "ja": "水曜休み。最終入館は16:30",
+      "en": "Closed Wednesdays; last entry 16:30"
+     },
+     "text": {
+      "ja": "水曜のほかに臨時の休みもあります。行く前に公式サイトのカレンダーを見てください。",
+      "en": "There are occasional other closures besides Wednesdays: check the calendar on the website before you go."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10:00〜17:00（最終入館16:30）",
+       "en": "10:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "水曜。ほかに臨時の休みもあるので公式サイトで確認を",
+       "en": "Wednesdays; occasional other closures, see the website"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,200円、中高生400円、小学生200円",
+       "en": "Adults ¥1,200, ages 12–18 ¥400, 6–12 ¥200"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄 烏丸御池駅2番出口から歩いて2分。丸太町からも二条城前からも1駅・220円",
+       "en": "2 min on foot from exit 2 of Karasuma-Oike subway station; one stop from either Marutamachi or Nijojo-mae, ¥220"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "京都国際マンガミュージアムの公式サイトと乗換案内で確認しました。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the museum website and Yahoo! Transit. Photos are from Wikimedia Commons (author and license shown on each photo)."
+    },
+    "checked": "2026-11-21",
+    "source": "京都国際マンガミュージアムの公式サイト、乗換案内"
+   },
+   "text": {
+    "ja": "京都国際マンガミュージアム\n\nこのコースでは寄り道です。お昼のあと蛤御門から丸太町駅へ歩き（約15分）、地下鉄で1駅の烏丸御池へ。2番出口から歩いて2分です。雨の日や寒い日は、御苑の北側と梨木神社のかわりにここへ。出たら、烏丸通を南へ歩いて約13分で錦市場の西の入口です。\n\n地下鉄の烏丸御池駅の2番出口から歩いて2分。昭和のはじめに建った小学校の校舎を使った、マンガの博物館です。\n\n廊下の壁が上から下まで本棚になっていて、並んでいるマンガはどれでも手に取って読めます。天気のいい日は、校庭だった芝生に寝ころんで読む人も。外国語に訳されたマンガの棚もあるので、日本語が読めなくても楽しめます。\n\n雨の日や、夏と冬に歩き疲れたときの休み場所としても便利です。御苑と二条城のあいだの乗り換え駅なので、どちらのコースでも途中で寄れます。\n\nおすすめ訪問時間：14:50〜15:50（御苑の北側と梨木神社のかわりに）",
+    "en": "Kyoto International Manga Museum\n\nA side stop on this course. After lunch walk from the Hamaguri gate to Marutamachi station (about 15 minutes) and take the subway one stop to Karasuma-Oike; the museum is 2 minutes from exit 2. On a wet or cold day, come here instead of the north side of the park and Nashinoki Shrine. Afterwards the west entrance of Nishiki Market is about 13 minutes’ walk south down Karasuma-dori.\n\nTwo minutes’ walk from exit 2 of Karasuma-Oike subway station. The museum occupies a primary-school building from the early Showa era.\n\nThe corridor walls are bookshelves from top to bottom, and you may take down and read any manga on them. On a fine day people lie reading on the lawn that was once the playground. There are shelves of manga translated into other languages too, so you don’t need to read Japanese.\n\nIt’s a good place to rest on a rainy day, or when the heat or cold has worn you out. It stands at the interchange station between the park and Nijo Castle, so you can stop here on either course.\n\nRecommended visit time: 14:50–15:50 (instead of the north side of the park and Nashinoki Shrine)"
+   },
+   "photos": [
+    {
+     "file": "manga-w1.jpg",
+     "credit": {
+      "author": "珈琲ルンバ",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BA%AC%E9%83%BD%E5%9B%BD%E9%9A%9B%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0.jpg"
+     }
+    },
+    {
+     "file": "manga-w2.jpg",
+     "credit": {
+      "author": "Party Lin",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kyoto_International_Manga_Museum_%287900208022%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "id": "nishiki",
+   "name": {
+    "ja": "錦市場から、夜の先斗町・木屋町へ",
+    "en": "Nishiki Market, then Pontocho and Kiyamachi by night"
+   },
+   "kind": {
+    "ja": "市場・夜の街なか",
+    "en": "Market & evening in town"
+   },
+   "blurb": {
+    "ja": "「京の台所」と呼ばれる390mのアーケード。夕方は早く閉まる店が多いので17時までに。そのあとは先斗町・木屋町で晩ごはん、三条へ歩いて帰ります。",
+    "en": "“Kyoto’s kitchen”, a 390-metre covered market. Many shops close early, so come by 17:00. Then dinner in Pontocho or Kiyamachi and a walk back to Sanjo."
+   },
+   "lat": 35.00502,
+   "lng": 135.76557,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "錦市場（西の入口・高倉通）",
+      "en": "Nishiki Market (west end, Takakura-dori)"
+     },
+     "lat": 35.00505,
+     "lng": 135.7617,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6%E5%B8%82%E5%A0%B4%20%E9%AB%98%E5%80%89%E9%80%9A"
+    },
+    {
+     "label": {
+      "ja": "錦天満宮（東の端）",
+      "en": "Nishiki Tenmangu (east end)"
+     },
+     "lat": 35.00506,
+     "lng": 135.76742,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6%E5%A4%A9%E6%BA%80%E5%AE%AE"
+    },
+    {
+     "label": {
+      "ja": "先斗町",
+      "en": "Pontocho"
+     },
+     "lat": 35.0052,
+     "lng": 135.7708,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%88%E6%96%97%E7%94%BA%20%E4%BA%AC%E9%83%BD"
+    },
+    {
+     "label": {
+      "ja": "木屋町通（三条）",
+      "en": "Kiyamachi-dori (at Sanjo)"
+     },
+     "lat": 35.00885,
+     "lng": 135.77035,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E6%9D%A1%E6%9C%A8%E5%B1%8B%E7%94%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "錦市場商店街 公式サイト",
+      "en": "Nishiki Market (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kyoto-nishiki.or.jp/",
+      "en": "https://www.kyoto-nishiki.or.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "お願いとご案内（食べ歩きについて）",
+      "en": "Requests to visitors (about eating while walking, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kyoto-nishiki.or.jp/manner/",
+      "en": "https://www.kyoto-nishiki.or.jp/manner/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "錦天満宮 公式サイト",
+      "en": "Nishiki Tenmangu (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://nishikitenmangu.or.jp/",
+      "en": "https://nishikitenmangu.or.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.kyoto-nishiki.or.jp/manner/",
+     "head": {
+      "ja": "夕方は早く閉まる店が多い。食べながら歩かない",
+      "en": "Many shops close early; don’t eat while walking"
+     },
+     "text": {
+      "ja": "営業時間と休みは店ごとにちがいます。17時までに着くのがおすすめ。買ったものは、その店の前か中で食べてください。",
+      "en": "Hours and closing days differ from shop to shop. Try to arrive by 17:00. Eat what you buy in front of or inside the shop."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "錦市場の営業時間と休みは店ごとにちがいます（要確認）",
+       "en": "Nishiki Market: hours and closing days differ from shop to shop (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "錦天満宮 8:00〜20:00",
+       "en": "Nishiki Tenmangu 8:00–20:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "食べながら歩かない。買った店の前か店の中で食べる（商店街のお願い）",
+       "en": "Don’t eat while walking: eat in front of or inside the shop where you bought it (market’s request)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄烏丸線 四条駅・阪急 烏丸駅から歩いて約5分。三条からは寺町通か新京極を南へ歩いて約10分",
+       "en": "About 5 min on foot from Shijo (Karasuma subway line) or Hankyu Karasuma station; about 10 min on foot south from Sanjo along Teramachi-dori or Shinkyogoku"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "錦市場商店街と錦天満宮の公式サイトで確認しました。店ごとの営業時間、「17時まで」というめやす、先斗町・木屋町の店の時間は公式の情報では確認できていません。歩く時間は OpenStreetMap で測った目安です。アーケードの写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the websites of the market association and Nishiki Tenmangu. Individual shop hours, the “by 17:00” rule of thumb and the hours of places in Pontocho and Kiyamachi could not be confirmed from official sources. Walking times are estimates measured on OpenStreetMap. The arcade photos are from Wikimedia Commons (author and license shown on each photo)."
+    },
+    "checked": "2026-11-22",
+    "source": "錦市場商店街の公式サイト（長さ390m、食べ歩きについてのお願い）、錦天満宮の公式サイト（開門8時・閉門20時）",
+    "verified": false
+   },
+   "text": {
+    "ja": "錦市場（にしきいちば）と夜の街なか\n\n一保堂から寺町通をそのまま南へ。御池通を渡るとアーケードになり、三条通を過ぎて約20分で、錦天満宮と錦市場の東の端に着きます。市場を西へ歩いて、気になる店で少しずつ。17時ごろ、東の端の錦天満宮へ戻ります。\n\nそのあと新京極を抜けて鴨川へ。日が暮れるころの四条大橋や河原を少し歩いて、先斗町・木屋町で晩ごはんにします。朝が早かった日なので、18時ごろから食べ始めると楽です。食後に北へ歩けば、そのまま三条です。\n\n錦市場は、高倉通から寺町通まで東西390mのアーケードです。魚屋、漬物屋、だし巻き卵、湯葉、串にさした焼き魚や天ぷら。少しずつ買って食べるのが楽しい場所ですが、食べながら歩くのは商店街がやめてほしいと呼びかけています。買ったものは、その店の前か店の中で食べてください。イートインの席がある店も多いです。\n\n営業時間は店ごとにちがい、夕方は早く閉まる店が多いです。17時までに着くと安心です。昼どきはとても混みます。\n\n東の端は錦天満宮（にしきてんまんぐう）。繁華街の真ん中の小さな神社で、20:00まで開いています。\n\nここから夜の街なかへ。新京極を抜けて東へ7分歩くと、鴨川と先斗町（ぽんとちょう）です。先斗町は四条通から三条通まで南北に続く、人がすれちがうのがやっとの細い路地。両側に料理屋や居酒屋、バーが並び、北へ歩けばそのまま三条に出ます。1本西の木屋町通（きやまちどおり）は高瀬川ぞいの飲み屋街で、気軽な店はこちらに多いです。晩ごはんを食べて、もう1軒寄って、21〜22時ごろまで過ごせます。閉まる時間とラストオーダーは店ごとにちがうので、入る前に表の案内で確かめてください。席料（お通し）がつく店もあります。\n\n写真1枚目は2025年11月。\n\nおすすめ訪問時間：16:10〜17:00、そのあと晩ごはん（21〜22時ごろまで）",
+    "en": "Nishiki Market and the evening in town\n\nFrom Ippodo keep going south down Teramachi-dori. It becomes a covered arcade once you cross Oike-dori; pass Sanjo-dori and in about 20 minutes you reach Nishiki Tenmangu and the east end of Nishiki Market. Walk west through the market, trying a little here and there. Come back to Nishiki Tenmangu at the east end at about 17:00.\n\nThen go through Shinkyogoku to the Kamo river. Walk a little by Shijo bridge and the riverbank as it gets dark, and have dinner in Pontocho or Kiyamachi. After an early start, sitting down to eat at about 18:00 is comfortable. Afterwards walk north and you are back at Sanjo.\n\nNishiki Market is a covered arcade running 390 m east to west from Takakura-dori to Teramachi-dori: fishmongers, pickle shops, rolled omelette, yuba, grilled fish and tempura on skewers. Buying a little here and there is the fun of it, but the market association asks people not to eat while walking. Eat what you buy in front of the shop or inside it; many shops have a few seats.\n\nHours differ from shop to shop and many close early in the evening. Arrive by 17:00 to be safe. It gets very crowded around lunchtime.\n\nAt the east end is Nishiki Tenmangu, a small shrine in the middle of the shopping streets, open until 20:00.\n\nFrom here, the evening. Go through Shinkyogoku and 7 minutes east you reach the Kamo river and Pontocho, a lane barely wide enough for two people to pass, running north from Shijo-dori to Sanjo-dori. It is lined with restaurants, izakaya and bars, and if you walk north you come out at Sanjo. One street west, Kiyamachi-dori follows the Takase canal and has more casual places. Have dinner, stop somewhere for one more drink, and you can easily stay out until 21:00 or 22:00. Closing times and last orders differ, so check the sign outside before you go in. Some places add a small seating charge (otoshi).\n\nPhoto 1 is from November 2025.\n\nRecommended visit time: 16:10–17:00, then dinner (out until 21:00–22:00)"
+   },
+   "photos": [
+    "nishiki-1.jpg",
+    {
+     "file": "nishiki-w1.jpg",
+     "credit": {
+      "author": "pokpok313",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nishiki_Ichiba_by_pokpok313_in_Kyoto.jpg"
+     }
+    },
+    {
+     "file": "nishiki-w2.jpg",
+     "credit": {
+      "author": "collinox",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tsukemono_shop_by_collinox_in_Nishiki_Ichiba%2C_Kyoto.jpg"
+     }
+    },
+    {
+     "file": "nishiki-w3.jpg",
+     "credit": {
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nishiki_market_Kyoto_hdsr_2019_06_02_9999_31.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
