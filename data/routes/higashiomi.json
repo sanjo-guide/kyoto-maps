@@ -1,7 +1,7 @@
 {
  "id": "higashiomi",
  "course": "eigenji",
- "_note": "京都から日帰り 湖東の紅葉、コース「太郎坊宮・永源寺」（9〜10時に出発）。三条京阪9:44→近江八幡→近江鉄道で太郎坊宮前10:57→太郎坊宮→八日市13:15のバスで永源寺（お昼）→16:24のバス→近江鉄道・JRで安土17:44→タクシーで教林坊のライトアップ→安土19:28→三条京阪20:32。写真は Toshi の写真ライブラリ（太郎坊宮は2024年12月1日、永源寺と教林坊は2026年11月17日、近江八幡駅は omihachiman の流用）。このファイルは scripts/build_higashiomi_data.py で作る。",
+ "_note": "京都から日帰り 湖東の紅葉、コース「太郎坊宮・永源寺」（京都駅10:00発）。京都駅10:00→近江八幡→近江鉄道で太郎坊宮前10:57→太郎坊宮→八日市13:15のバスで永源寺（お昼）→16:24のバス→近江鉄道・JRで安土17:44→タクシーで教林坊のライトアップ→安土19:28→京都駅20:12。写真は Toshi の写真ライブラリ（太郎坊宮は2024年12月1日、永源寺と教林坊は2026年11月17日、近江八幡駅は omihachiman の流用）。このファイルは scripts/build_higashiomi_data.py で作る。",
  "sections": [
   {
    "first": 1,
@@ -76,8 +76,8 @@
      ]
     },
     "text": {
-     "ja": "太郎坊宮に寄らない日は、近江八幡10:42発の近江鉄道を終点の八日市（ようかいち）まで乗り（460円）、駅の1番のりば11:15発のバスで永源寺前に11:43ごろ着。永源寺でお昼にして、ゆっくり回れます。",
-     "en": "Skipping Taroubou-gu? Stay on the 10:42 Ohmi Railway to the end of the line at Yokaichi (¥460) and take the 11:15 bus from stop 1, reaching Eigenji-mae around 11:43. Lunch at Eigenji and take your time."
+     "ja": "太郎坊宮に寄らない日は、京都駅10:00発の新快速で近江八幡へ。10:42発の近江鉄道を八日市（ようかいち）まで乗り、駅の1番のりば11:15発のバスで永源寺前に11:44（土日祝11:43）着。京都駅から1,810円です。永源寺でお昼にして、ゆっくり回れます。",
+     "en": "Skipping Taroubou-gu? Take the 10:00 Special Rapid from Kyoto Station to Omi-Hachiman, the 10:42 Ohmi Railway to Yokaichi and the 11:15 bus from stop 1, reaching Eigenji-mae at 11:44 (11:43 at weekends), ¥1,810 from Kyoto Station. Lunch at Eigenji and take your time."
     }
    },
    {
@@ -106,8 +106,8 @@
      ]
     },
     "text": {
-     "ja": "教林坊に行かない日は、永源寺のライトアップ（17時から）を見てから帰れます。永源寺前18:24発（土日祝は18:16発）のバスに乗ると、近江鉄道・JR・地下鉄を乗り継いで三条京阪に20:32（土日祝20:30）着（1,980円）。",
-     "en": "Skipping Kyorinbo? Stay for Eigenji’s illumination (from 17:00). The 18:24 bus from Eigenji-mae (18:16 at weekends) connects by Ohmi Railway, JR and subway to Sanjo Keihan at 20:32 (20:30), ¥1,980."
+     "ja": "教林坊に行かない日は、永源寺のライトアップ（17時から）を見てから帰れます。永源寺前18:24発（土日祝は18:16発）のバスに乗ると、近江鉄道と近江八幡19:37発の新快速を乗り継いで、京都駅に20:12着（1,810円）。",
+     "en": "Skipping Kyorinbo? Stay for Eigenji’s illumination (from 17:00). The 18:24 bus from Eigenji-mae (18:16 at weekends) connects with the Ohmi Railway and the 19:37 Special Rapid from Omi-Hachiman, reaching Kyoto Station at 20:12 (¥1,810)."
     },
     "to": "2026-11-28"
    },
@@ -122,8 +122,8 @@
      ]
     },
     "text": {
-     "ja": "教林坊に行かない日は、永源寺前16:24発（土日祝16:25発）のバスで八日市へ。近江鉄道で近江八幡に17:28、17:36の新快速で山科へ出て地下鉄に乗り換え、三条京阪に18:29（土日祝は18:33）着きます（1,980円）。",
-     "en": "Skipping Kyorinbo? Take the 16:24 bus (16:25 at weekends) to Yokaichi and the Ohmi Railway to Omi-Hachiman (17:28). The 17:36 Special Rapid gets you to Yamashina; change to the subway for Sanjo Keihan at 18:29 (18:33 at weekends), ¥1,980."
+     "ja": "教林坊に行かない日は、永源寺前16:24発（土日祝16:25発）のバスで八日市へ。近江鉄道で近江八幡に17:28、17:36の新快速で京都駅に18:12に着きます（1,810円）。",
+     "en": "Skipping Kyorinbo? Take the 16:24 bus (16:25 at weekends) to Yokaichi and the Ohmi Railway to Omi-Hachiman (17:28). The 17:36 Special Rapid reaches Kyoto Station at 18:12 (¥1,810)."
     },
     "from": "2026-11-29"
    },
@@ -138,8 +138,8 @@
      ]
     },
     "text": {
-     "ja": "永源寺に寄らない日は、近江八幡から米原方面の普通電車でひと駅、安土へ。ライトアップは17:30からなので、17:20ごろ安土に着く電車で十分です。",
-     "en": "Not going to Eigenji? From Omi-Hachiman take a local train one stop towards Maibara to Azuchi. The illumination starts at 17:30, so a train reaching Azuchi around 17:20 is fine."
+     "ja": "永源寺に寄らない日は、近江八幡から米原方面の普通電車でひと駅、安土へ。ライトアップは17:30からなので、近江八幡17:24発（安土17:27着・190円）で十分です。",
+     "en": "Not going to Eigenji? From Omi-Hachiman take a local train one stop towards Maibara to Azuchi. The illumination starts at 17:30, so the 17:24 from Omi-Hachiman (Azuchi 17:27, ¥190) is fine."
     }
    }
   ]
@@ -161,13 +161,88 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "安土→三条京阪（JR・山科で地下鉄）：2026年11月25日（水）18:50→19:54、18:58→19:54、19:20→20:22、19:28→20:32（940円）、19:50→20:53、20:20→21:25、20:55→21:58、21:07、21:36→22:36、22:03→23:03、22:33→23:49。11月28日（土）：19:28→近江八幡19:37新快速→20:30、19:55→20:53、20:19→21:15、22:33→23:49",
-   "url": "https://transit.yahoo.co.jp/",
+   "what": "乗換案内 安土→京都 11月25日：19:28→近江八幡19:37新快速→20:12（770円）、次19:50→20:36",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=19&m1=2&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
    "checked": "2026-11-22"
   },
   {
-   "what": "三条京阪→太郎坊宮前：11月25日（水）9:44 六地蔵行→山科10:06 新快速 近江塩津行→近江八幡10:35、近江鉄道10:42→太郎坊宮前10:57（260＋590＋390＝1,240円）。11月28日（土）9:43→10:05→10:34→10:42→10:57。びわ湖浜大津行は京阪山科着で1,370円。京都駅10:00の新快速で近江八幡10:35（土10:34）・680円",
-   "url": "https://transit.yahoo.co.jp/",
+   "what": "乗換案内 安土→京都 11月28日：19:28→近江八幡19:37新快速→20:12（770円）、次19:55→20:41",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=19&m1=2&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 12月5日：19:28→20:12（770円）、次19:55→20:41",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=19&m1=2&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月25日：22:33→23:20、23:04→23:50、最終23:23→0:12",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=22&m1=2&m2=8&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月28日：22:33→23:20、23:04→23:50、最終23:23→0:12",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=22&m1=2&m2=8&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→三条京阪 11月25日：地下鉄20:15→20:32（烏丸御池で乗り換え・260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&y=2026&m=11&d=25&hh=20&m1=1&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→太郎坊宮前 11月25日：10:00新快速 近江塩津行→近江八幡10:35/10:42→10:57（1,070円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&y=2026&m=11&d=25&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→太郎坊宮前 11月28日：10:00→近江八幡10:34/10:42→10:57（1,070円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&y=2026&m=11&d=28&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→太郎坊宮前 12月2日：10:00→10:57（1,070円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&y=2026&m=12&d=02&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→京都 11月25日：9:30→9:47（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=09&m1=2&m2=9&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→京都 11月28日：9:32→9:45（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=09&m1=3&m2=1&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→近江八幡 11月25日：9:44六地蔵行→山科10:06新快速→10:35（850円）。びわ湖浜大津行は980円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&y=2026&m=11&d=25&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→近江八幡 11月28日：9:43→山科10:05→10:34（850円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&y=2026&m=11&d=28&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→永源寺前 11月25日：10:00→八日市駅11:15のバス→11:44（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=11&d=25&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→永源寺前 11月28日：10:00→八日市駅11:15のバス→11:43（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=11&d=28&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 八日市→永源寺前 11月25日：バス13:15→13:44（670円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%85%AB%E6%97%A5%E5%B8%82&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=11&d=25&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 八日市→永源寺前 11月28日：バス13:15→13:43（670円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%85%AB%E6%97%A5%E5%B8%82&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=11&d=28&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
    "checked": "2026-11-22"
   },
   {
@@ -181,13 +256,43 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "永源寺前→安土：11月25日（水）16:24→八日市駅16:59、近江鉄道17:09→近江八幡17:28、JR17:41→安土17:44（670＋460＋190＝1,320円）。11月28日（土）16:25→17:00→17:09→17:28→17:41→17:44",
-   "url": "https://transit.yahoo.co.jp/",
+   "what": "乗換案内 永源寺前→安土 11月25日：16:24→八日市17:09→近江八幡17:41→17:44（1,320円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E5%AE%89%E5%9C%9F&y=2026&m=11&d=25&hh=16&m1=2&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
    "checked": "2026-11-22"
   },
   {
-   "what": "永源寺前→三条京阪（ライトアップのあと）：平日18:24→20:32、土日祝18:16→20:30（1,980円）",
-   "url": "https://transit.yahoo.co.jp/",
+   "what": "乗換案内 永源寺前→安土 11月28日：16:25→八日市17:09→近江八幡17:41→17:44（1,320円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E5%AE%89%E5%9C%9F&y=2026&m=11&d=28&hh=16&m1=2&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 11月25日：18:24→近江八幡19:37新快速→20:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=18&m1=2&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 11月28日：18:16→近江八幡19:37新快速→20:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=18&m1=1&m2=2&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 11月30日：16:24→近江八幡17:36新快速→18:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=30&hh=16&m1=2&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 12月5日：16:25→近江八幡17:36新快速→18:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=16&m1=2&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 近江八幡→安土 11月25日：17:24→17:27（190円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&to=%E5%AE%89%E5%9C%9F&y=2026&m=11&d=25&hh=17&m1=0&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 近江八幡→安土 11月28日：17:24→17:27（190円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&to=%E5%AE%89%E5%9C%9F&y=2026&m=11&d=28&hh=17&m1=0&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
    "checked": "2026-11-22"
   },
   {
@@ -216,8 +321,13 @@
    "checked": "2026-11-20"
   },
   {
-   "what": "近江八幡→三条京阪：11月25日（水）21:13 新快速→山科21:50→21:58（850円）。永源寺前16:24→近江八幡17:36 新快速→三条京阪18:29（11月30日（月））、土日祝16:25→18:33（12月5日（土））",
-   "url": "https://transit.yahoo.co.jp/",
+   "what": "乗換案内 近江八幡→京都 11月25日：21:13新快速→21:48（680円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=21&m1=1&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 近江八幡→京都 11月28日：21:13新快速→21:48（680円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=21&m1=1&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
    "checked": "2026-11-22"
   }
  ],
@@ -234,14 +344,14 @@
     "en": "Station (start)"
    },
    "blurb": {
-    "ja": "三条から地下鉄で山科へ出て、JRの新快速で近江八幡へ。同じ駅で近江鉄道に乗り換えて、太郎坊宮前まで1時間15分ほど。",
-    "en": "From Sanjo, subway to Yamashina, then the JR Special Rapid to Omi-Hachiman, where you change to the Ohmi Railway. About 1 hour 15 minutes to Taroubougu-mae."
+    "ja": "京都駅10:00発の新快速で近江八幡へ35分。同じ駅で近江鉄道に乗り換えて、太郎坊宮前に10:57。三条のあたりからは、地下鉄で京都駅へ（約15分）。",
+    "en": "The 10:00 Special Rapid from Kyoto Station takes 35 minutes to Omi-Hachiman. Change there to the Ohmi Railway for Taroubougu-mae (10:57). From around Sanjo, take the subway to Kyoto Station first (about 15 minutes)."
    },
    "lat": 35.1228,
    "lng": 136.1028,
    "text": {
-    "ja": "京都から近江八幡へ\n\n三条京阪9:44発（土日祝は9:43発）の地下鉄東西線「六地蔵（ろくじぞう）」行きで山科（やましな）へ。10:06発（土日祝は10:05発）の新快速「近江塩津（おうみしおつ）」行きに乗り換えて、近江八幡に10:35（土日祝は10:34）に着きます。京都市役所前からは同じ電車がその2分ほど前に出ます。\n\n近江八幡で近江鉄道の八日市線（ようかいちせん）に乗り換え（7分）。10:42発の電車で、太郎坊宮前（たろうぼうぐうまえ）に10:57に着きます。地下鉄260円＋JR590円＋近江鉄道390円で、合わせて1,240円。近江鉄道は2026年3月からICOCAなどの交通系ICカードで乗れます。\n\n地下鉄は「六地蔵」行きに乗ってください。「びわ湖浜大津」行きは京阪山科駅に着くので、乗り換えに少し歩き、運賃も130円高くなります。京都駅から乗るなら、10:00発の同じ新快速で近江八幡まで680円です。\n\nこのあと太郎坊宮から永源寺へのバスに乗るまで、食べる店はほとんどありません。お昼は永源寺で14時ごろになるので、朝ごはんはしっかり、おやつを持っていくと安心です。\n\nおすすめ出発時間：三条京阪 9:44（土日祝は9:43）",
-    "en": "Kyoto to Omi-Hachiman\n\nTake the Tozai subway line from Sanjo Keihan at 9:44 (9:43 at weekends and holidays), bound for Rokujizo, to Yamashina. Change to the 10:06 (10:05) Special Rapid bound for Omi-Shiotsu and you reach Omi-Hachiman at 10:35 (10:34). The same subway leaves Kyoto Shiyakusho-mae about 2 minutes earlier.\n\nAt Omi-Hachiman, change to the Ohmi Railway Yokaichi Line (7 minutes). The 10:42 train reaches Taroubougu-mae at 10:57. Subway ¥260 + JR ¥590 + Ohmi Railway ¥390 = ¥1,240. Since March 2026 you can ride the Ohmi Railway with ICOCA and other transport IC cards.\n\nTake a subway bound for Rokujizo. The one for Biwako-Hamaotsu stops at Keihan Yamashina instead, a short walk away, and costs ¥130 more. From Kyoto Station, the same 10:00 Special Rapid takes you to Omi-Hachiman for ¥680.\n\nThere’s almost nowhere to eat until Eigenji, and lunch there will be around 14:00. Have a good breakfast and bring a snack.\n\nRecommended departure: Sanjo Keihan 9:44 (9:43 at weekends and holidays)"
+    "ja": "京都から近江八幡へ\n\n京都駅10:00発の新快速「近江塩津（おうみしおつ）」行きに乗れば、乗り換えなしで近江八幡に10:35（土日祝は10:34）着。680円です。\n\n近江八幡で近江鉄道の八日市線（ようかいちせん）に乗り換え（7分）。10:42発の電車で、太郎坊宮前（たろうぼうぐうまえ）に10:57に着きます。390円で、京都駅から合わせて1,070円。近江鉄道は2026年3月からICOCAなどの交通系ICカードで乗れます。\n\n三条のあたりからは、地下鉄で京都駅へ（烏丸御池（からすまおいけ）で乗り換え、約15分・260円）。平日は三条京阪9:30発、土日祝は9:32発なら間に合います。\n\n三条からは、地下鉄「六地蔵（ろくじぞう）」行きで山科（やましな）へ出て、同じ新快速に乗ることもできます（三条京阪9:44発、土日祝9:43発。近江八幡まで850円）。「びわ湖浜大津」行きは京阪山科駅に着き、運賃も130円高くなります。\n\nこのあと太郎坊宮から永源寺へのバスに乗るまで、食べる店はほとんどありません。お昼は永源寺で14時ごろになるので、朝ごはんはしっかり、おやつを持っていくと安心です。\n\nおすすめ出発時間：京都駅 10:00",
+    "en": "Kyoto to Omi-Hachiman\n\nTake the 10:00 Special Rapid for Omi-Shiotsu from Kyoto Station. It runs direct to Omi-Hachiman, arriving at 10:35 (10:34 at weekends and holidays), for ¥680.\n\nAt Omi-Hachiman, change to the Ohmi Railway Yokaichi Line (7 minutes). The 10:42 train reaches Taroubougu-mae at 10:57 for ¥390, so ¥1,070 from Kyoto Station. Since March 2026 you can ride the Ohmi Railway with ICOCA and other transport IC cards.\n\nFrom around Sanjo, take the subway to Kyoto Station (change at Karasuma Oike; about 15 minutes, ¥260). The 9:30 from Sanjo Keihan on weekdays, or the 9:32 at weekends and holidays, gets you there in time.\n\nFrom Sanjo you can also ride a Rokujizo-bound subway to Yamashina and board the same Special Rapid (Sanjo Keihan 9:44, or 9:43 at weekends and holidays; ¥850 to Omi-Hachiman). Subways for Biwako-Hamaotsu stop at Keihan Yamashina instead and cost ¥130 more.\n\nThere’s almost nowhere to eat until Eigenji, and lunch there will be around 14:00. Have a good breakfast and bring a snack.\n\nRecommended departure: Kyoto Station 10:00"
    },
    "gmaps": [
     {
@@ -283,8 +393,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "三条京阪 9:44（土日祝9:43）→ 山科 10:06（10:05）新快速 → 近江八幡 10:35（10:34）→ 近江鉄道 10:42 → 太郎坊宮前 10:57。1,240円",
-       "en": "Sanjo Keihan 9:44 (weekends 9:43) → Yamashina 10:06 (10:05) Special Rapid → Omi-Hachiman 10:35 (10:34) → Ohmi Railway 10:42 → Taroubougu-mae 10:57. ¥1,240"
+       "ja": "京都駅 10:00 新快速 → 近江八幡 10:35（土日祝10:34）→ 近江鉄道 10:42 → 太郎坊宮前 10:57。1,070円（JR680円＋近江鉄道390円）",
+       "en": "Kyoto Station 10:00 Special Rapid → Omi-Hachiman 10:35 (weekends 10:34) → Ohmi Railway 10:42 → Taroubougu-mae 10:57. ¥1,070 (JR ¥680 + Ohmi Railway ¥390)"
       },
       "until": null,
       "from": null
@@ -292,8 +402,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "京都駅から：10:00発の新快速で近江八幡 10:35（土日祝10:34）、680円",
-       "en": "From Kyoto Station: 10:00 Special Rapid to Omi-Hachiman 10:35 (10:34), ¥680"
+       "ja": "三条京阪 → 京都駅：地下鉄（烏丸御池で乗り換え）約15分・260円",
+       "en": "Sanjo Keihan → Kyoto Station: subway (change at Karasuma Oike), about 15 min, ¥260"
       },
       "until": null,
       "from": null
@@ -485,8 +595,8 @@
    "lat": 35.08058,
    "lng": 136.31999,
    "text": {
-    "ja": "永源寺（えいげんじ）\n\n鈴鹿の山あいを流れる愛知川（えちがわ）のほとりにある、臨済宗永源寺派の大本山です。旦度橋（たんどばし）を渡り、石段を上ると大きな山門。その先の法堂や方丈のまわりを、たくさんのもみじが囲んでいます。紅葉は11月上旬から下旬で、中旬が色づきのピーク（永源寺の案内）。\n\n八日市駅の1番のりばから13:15発の近江鉄道バス（永源寺車庫行き）に乗り、「永源寺前」に13:43ごろ着（670円）。着いたらまずお昼を。永源寺のお知らせでは、紅葉の時期は食事処とキッチンカーが開いていて、うどん・そば・ぜんざいなどがあります（営業時間は要確認）。門前の茶店では名物の永源寺こんにゃくも。\n\n2026年秋は、ボランティアガイドの案内で山門と法堂に上がれる特別拝観が10:00・11:30・14:00にあります（1,500円・参拝志納料込み。11月18日の永源寺のお知らせ。いつまで行うか・申し込み方法は要確認）。11月18日のお知らせでは、山門の上から見るもみじが見ごろでした。14:00の回なら間に合います。\n\n帰りは永源寺前16:24発（土日祝は16:25発）のバスで八日市へ。教林坊に行かない日は、夕方のライトアップ（2026年は11月28日まで、17時から）を見てから帰ることもできます。\n\nおすすめ訪問時間：13:45〜16:20",
-    "en": "Eigenji Temple\n\nHead temple of the Eigenji school of Rinzai Zen, on the Echigawa river in the Suzuka hills. Cross the Tando bridge and climb to the great gate; beyond, the lecture hall and abbot’s quarters are wrapped in maples. The leaves turn from early to late November, peaking in mid-November (temple FAQ).\n\nTake the 13:15 Ohmi bus (for Eigenji Shako) from stop 1 at Yokaichi Station and get off at “Eigenji-mae” at about 13:43 (¥670). Have lunch first. The temple’s news page says a seasonal eatery and a food truck are open in the leaf season, with udon, soba, zenzai and the like (hours not confirmed). Tea houses by the gate sell the local Eigenji konnyaku.\n\nIn autumn 2026, volunteer guides take visitors up into the great gate and lecture hall at 10:00, 11:30 and 14:00 (¥1,500 including admission; temple news of 18 Nov; end date and booking not confirmed). On 18 Nov the temple said the maples seen from the top of the gate were at their best; the 14:00 tour is within reach.\n\nLeave on the 16:24 bus from Eigenji-mae (16:25 at weekends and holidays). If you’re skipping Kyorinbo, you can stay for the evening illumination instead (until 28 Nov in 2026, from 17:00).\n\nRecommended visit time: 13:45–16:20"
+    "ja": "永源寺（えいげんじ）\n\n鈴鹿の山あいを流れる愛知川（えちがわ）のほとりにある、臨済宗永源寺派の大本山です。旦度橋（たんどばし）を渡り、石段を上ると大きな山門。その先の法堂や方丈のまわりを、たくさんのもみじが囲んでいます。紅葉は11月上旬から下旬で、中旬が色づきのピーク（永源寺の案内）。\n\n八日市駅の1番のりばから13:15発の近江鉄道バス（永源寺車庫行き）に乗り、「永源寺前」に13:44（土日祝は13:43）着（670円）。着いたらまずお昼を。永源寺のお知らせでは、紅葉の時期は食事処とキッチンカーが開いていて、うどん・そば・ぜんざいなどがあります（営業時間は要確認）。門前の茶店では名物の永源寺こんにゃくも。\n\n2026年秋は、ボランティアガイドの案内で山門と法堂に上がれる特別拝観が10:00・11:30・14:00にあります（1,500円・参拝志納料込み。11月18日の永源寺のお知らせ。いつまで行うか・申し込み方法は要確認）。11月18日のお知らせでは、山門の上から見るもみじが見ごろでした。14:00の回に間に合いますが、その前にお昼を食べる時間はありません。出るなら、持ってきたもので先に軽く食べておきましょう。\n\n帰りは永源寺前16:24発（土日祝は16:25発）のバスで八日市へ。教林坊に行かない日は、夕方のライトアップ（2026年は11月28日まで、17時から）を見てから帰ることもできます。\n\nおすすめ訪問時間：13:45〜16:20",
+    "en": "Eigenji Temple\n\nHead temple of the Eigenji school of Rinzai Zen, on the Echigawa river in the Suzuka hills. Cross the Tando bridge and climb to the great gate; beyond, the lecture hall and abbot’s quarters are wrapped in maples. The leaves turn from early to late November, peaking in mid-November (temple FAQ).\n\nTake the 13:15 Ohmi bus (for Eigenji Shako) from stop 1 at Yokaichi Station and get off at “Eigenji-mae” at 13:44 (13:43 at weekends and holidays; ¥670). Have lunch first. The temple’s news page says a seasonal eatery and a food truck are open in the leaf season, with udon, soba, zenzai and the like (hours not confirmed). Tea houses by the gate sell the local Eigenji konnyaku.\n\nIn autumn 2026, volunteer guides take visitors up into the great gate and lecture hall at 10:00, 11:30 and 14:00 (¥1,500 including admission; temple news of 18 Nov; end date and booking not confirmed). On 18 Nov the temple said the maples seen from the top of the gate were at their best. You can make the 14:00 tour, but there’s no time for lunch before it, so if you join, eat something you’ve brought beforehand.\n\nLeave on the 16:24 bus from Eigenji-mae (16:25 at weekends and holidays). If you’re skipping Kyorinbo, you can stay for the evening illumination instead (until 28 Nov in 2026, from 17:00).\n\nRecommended visit time: 13:45–16:20"
    },
    "gmaps": [
     {
@@ -579,8 +689,8 @@
      {
       "kind": "bus",
       "text": {
-       "ja": "八日市駅1番のりば 13:15 → 永源寺前 13:43ごろ（670円）。帰りは永源寺前 16:24（土日祝16:25）→ 八日市駅 16:59（17:00）",
-       "en": "Yokaichi stop 1 13:15 → Eigenji-mae about 13:43 (¥670). Back: Eigenji-mae 16:24 (weekends 16:25) → Yokaichi 16:59 (17:00)"
+       "ja": "八日市駅1番のりば 13:15 → 永源寺前 13:44（土日祝13:43）、670円。帰りは永源寺前 16:24（土日祝16:25）→ 八日市駅 16:59（17:00）",
+       "en": "Yokaichi stop 1 13:15 → Eigenji-mae 13:44 (weekends 13:43), ¥670. Back: Eigenji-mae 16:24 (weekends 16:25) → Yokaichi 16:59 (17:00)"
       },
       "until": null,
       "from": null
@@ -629,8 +739,8 @@
     "en": "Taxi from the station · until 6 Dec"
    },
    "text": {
-    "ja": "教林坊（きょうりんぼう）\n\n観音正寺のある繖山（きぬがさやま）のふもと、安土町石寺の山あいにある小さなお寺です。ふだんは公開されておらず、春と秋の特別公開のときだけ入れます。竹林の小道を抜けると、苔と巨石の庭。書院の丸窓や三日月の窓から見る庭も絵のようです。写真は2026年11月17日の夜のライトアップです。\n\n永源寺前16:24（土日祝16:25）のバスで八日市駅16:59、17:09の近江鉄道で近江八幡17:28、17:41のJR（米原行き）でひと駅、安土（あづち）に17:44着（バス670円・近江鉄道460円・JR190円）。北口からタクシーで約10分、18時ごろに着きます。タクシーは前もって予約し、帰りの迎えも頼んでおきましょう。\n\n帰りは安土19:28発の電車で山科へ（土日祝は近江八幡で19:37の新快速に乗り換え）、地下鉄に乗り換えて三条京阪に20:32（土日祝は20:30）着（940円）。三条・木屋町・先斗町（ぽんとちょう）のあたりは遅くまで開いている店が多いので、21〜22時まで晩ごはんを楽しめます。次の電車は19:50（土日祝は19:55）発で三条京阪20:53着。\n\n近江八幡で晩ごはんにするなら、19:28の電車をひと駅の近江八幡（19:32着）で降りて、北口から歩いて3分のティファニーへ（ディナーのラストオーダー20:00、火曜休み。近江八幡のマップの13番）。食後は21:13発の新快速で、山科で地下鉄に乗り換えて三条京阪に21:58着（平日。850円）。\n\n三脚・一脚は使えません。写真を撮るための長い滞在も断られています（公式サイト）。\n\nタクシーは、東近江市観光協会の一覧にある滋賀第一交通 近江八幡営業所（0748-37-4000）など。\n\nおすすめ訪問時間：18:00〜19:00",
-    "en": "Kyorinbo\n\nA small temple tucked in the hills of Ishidera, Azuchi, at the foot of Mt. Kinugasa. It is usually closed and opens only for special spring and autumn openings. A path through bamboo leads to a garden of moss and huge rocks, framed by the round and crescent-moon windows of the study hall. The photos show the illumination on 17 November 2026.\n\nTake the 16:24 bus from Eigenji-mae (16:25 at weekends) to Yokaichi (16:59), the 17:09 Ohmi Railway to Omi-Hachiman (17:28), and the 17:41 JR train for Maibara one stop to Azuchi (17:44). Bus ¥670, Ohmi Railway ¥460, JR ¥190. A taxi from the north exit takes about 10 minutes, so you arrive around 18:00. Book the taxi ahead, including the pick-up back.\n\nHead home on the 19:28 train from Azuchi to Yamashina (at weekends, change at Omi-Hachiman to the 19:37 Special Rapid), then the subway to Sanjo Keihan: 20:32 (20:30 at weekends), ¥940. Around Sanjo, Kiyamachi and Pontocho many places stay open late, so dinner can run to 21:00–22:00. The next train leaves at 19:50 (19:55 at weekends), reaching Sanjo Keihan at 20:53.\n\nFor dinner in Omihachiman instead, get off the 19:28 train one stop later at Omi-Hachiman (19:32) and walk 3 minutes from the north exit to Tiffany (dinner last order 20:00, closed Tuesdays; no. 13 on our Omihachiman map). Afterwards the 21:13 Special Rapid and the subway from Yamashina get you to Sanjo Keihan at 21:58 (weekdays, ¥850).\n\nTripods and monopods are not allowed, and long stays just to take photos are discouraged (official website).\n\nFor taxis, the Higashiomi tourism association lists Shiga Daiichi Kotsu, Omi-Hachiman office (0748-37-4000), among others.\n\nRecommended visit time: 18:00–19:00"
+    "ja": "教林坊（きょうりんぼう）\n\n観音正寺のある繖山（きぬがさやま）のふもと、安土町石寺の山あいにある小さなお寺です。ふだんは公開されておらず、春と秋の特別公開のときだけ入れます。竹林の小道を抜けると、苔と巨石の庭。書院の丸窓や三日月の窓から見る庭も絵のようです。写真は2026年11月17日の夜のライトアップです。\n\n永源寺前16:24（土日祝16:25）のバスで八日市駅16:59、17:09の近江鉄道で近江八幡17:28、17:41のJR（米原行き）でひと駅、安土（あづち）に17:44着（バス670円・近江鉄道460円・JR190円）。北口からタクシーで約10分、18時ごろに着きます。タクシーは前もって予約し、帰りの迎えも頼んでおきましょう。\n\n帰りは安土19:28発の電車に乗り、次の近江八幡で19:37発の新快速に乗り換えて、京都駅に20:12着（770円）。次は安土19:50発で京都駅20:36着（土日祝は19:55発で20:41着）。最終は23:23発で0:12着です。\n\n晩ごはんは京都に戻ってから、21〜22時まで。三条・木屋町・先斗町（ぽんとちょう）のあたりは遅くまで開いている店が多く、京都駅から地下鉄で約15分です。\n\n近江八幡で晩ごはんにするなら、19:28の電車をひと駅の近江八幡（19:32着）で降りて、北口から歩いて3分のティファニーへ（ディナーのラストオーダー20:00、火曜休み。近江八幡のマップの13番）。食後は21:13発の新快速で、京都駅に21:48着（680円）。\n\n三脚・一脚は使えません。写真を撮るための長い滞在も断られています（公式サイト）。\n\nタクシーは、東近江市観光協会の一覧にある滋賀第一交通 近江八幡営業所（0748-37-4000）など。\n\nおすすめ訪問時間：18:00〜19:00",
+    "en": "Kyorinbo\n\nA small temple tucked in the hills of Ishidera, Azuchi, at the foot of Mt. Kinugasa. It is usually closed and opens only for special spring and autumn openings. A path through bamboo leads to a garden of moss and huge rocks, framed by the round and crescent-moon windows of the study hall. The photos show the illumination on 17 November 2026.\n\nTake the 16:24 bus from Eigenji-mae (16:25 at weekends) to Yokaichi (16:59), the 17:09 Ohmi Railway to Omi-Hachiman (17:28), and the 17:41 JR train for Maibara one stop to Azuchi (17:44). Bus ¥670, Ohmi Railway ¥460, JR ¥190. A taxi from the north exit takes about 10 minutes, so you arrive around 18:00. Book the taxi ahead, including the pick-up back.\n\nHead home on the 19:28 train from Azuchi and change one stop later at Omi-Hachiman to the 19:37 Special Rapid: Kyoto Station at 20:12, ¥770. The next leaves Azuchi at 19:50, reaching Kyoto Station at 20:36 (19:55 → 20:41 at weekends and holidays). The last is 23:23, arriving 0:12.\n\nDinner back in Kyoto can run to 21:00–22:00. Many places around Sanjo, Kiyamachi and Pontocho stay open late; they are about 15 minutes from Kyoto Station by subway.\n\nFor dinner in Omihachiman instead, get off the 19:28 train one stop later at Omi-Hachiman (19:32) and walk 3 minutes from the north exit to Tiffany (dinner last order 20:00, closed Tuesdays; no. 13 on our Omihachiman map). Afterwards the 21:13 Special Rapid gets you to Kyoto Station at 21:48 (¥680).\n\nTripods and monopods are not allowed, and long stays just to take photos are discouraged (official website).\n\nFor taxis, the Higashiomi tourism association lists Shiga Daiichi Kotsu, Omi-Hachiman office (0748-37-4000), among others.\n\nRecommended visit time: 18:00–19:00"
    },
    "gmaps": [
     {
@@ -789,8 +899,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "帰り：安土 19:28 → 山科で地下鉄 → 三条京阪 20:32（土日祝20:30）、940円。次は19:50（土日祝19:55）→ 20:53。遅い便は22:33 → 23:49",
-       "en": "Back: Azuchi 19:28 → subway at Yamashina → Sanjo Keihan 20:32 (weekends 20:30), ¥940. Next 19:50 (weekends 19:55) → 20:53. A late one: 22:33 → 23:49"
+       "ja": "帰り：安土 19:28 → 近江八幡 19:37 新快速 → 京都駅 20:12、770円。次は19:50 → 20:36（土日祝19:55 → 20:41）。最終は23:23 → 0:12",
+       "en": "Back: Azuchi 19:28 → Omi-Hachiman 19:37 Special Rapid → Kyoto Station 20:12, ¥770. Next 19:50 → 20:36 (weekends 19:55 → 20:41). Last train 23:23 → 0:12"
       },
       "until": null,
       "from": null

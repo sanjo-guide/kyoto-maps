@@ -17,10 +17,10 @@ import os, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = (dict(
-    id='higashiomi', i18n='HIGASHIOMI_I18N', count=5, data_v=4, bump=103,
+    id='higashiomi', i18n='HIGASHIOMI_I18N', count=5, data_v=5, bump=104,
     head='湖東の紅葉（太郎坊宮・永源寺・湖東三山・教林坊）',
     title='京都から日帰り 湖東の紅葉｜太郎坊宮・永源寺・湖東三山・教林坊 Higashiomi MAP',
-    desc='京都の三条から日帰りで湖東の紅葉へ。太郎坊宮と永源寺を回って教林坊の夜のライトアップで締めるコースと、彦根からの紅葉シャトルバスで西明寺・百済寺・金剛輪寺の湖東三山を回るコースを選べる、時刻つきの1日マップ。A timed day trip from central Kyoto to the autumn leaves east of Lake Biwa: Taroubou-gu, Eigenji and the Kyorinbo illumination, or the three Koto Sanzan temples by shuttle bus from Hikone.',
+    desc='京都駅から日帰りで湖東の紅葉へ。太郎坊宮と永源寺を回って教林坊の夜のライトアップで締めるコースと、彦根からの紅葉シャトルバスで西明寺・百済寺・金剛輪寺の湖東三山を回るコースを選べる、時刻つきの1日マップ。A timed day trip from Kyoto Station to the autumn leaves east of Lake Biwa: Taroubou-gu, Eigenji and the Kyorinbo illumination, or the three Koto Sanzan temples by shuttle bus from Hikone.',
     main='湖東の紅葉', alt='Autumn in Higashiomi', sub='京都から日帰り Higashiomi MAP'))
 runpy.run_path(os.path.join(R, 'scripts', 'sync_higashiyama.py'), init_globals={'CFG': CFG})
 

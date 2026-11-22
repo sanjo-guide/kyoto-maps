@@ -1,5 +1,5 @@
 /* Page texts in Japanese and English.
-   Toshi 個人のマップ。京都の三条のあたりから日帰りで湖東の紅葉へ。
+   Toshi 個人のマップ。京都駅から日帰りで湖東の紅葉へ（2026-11-22 オーナーの指示で、起点を三条から京都駅に変えた）。
    コースは2つ（一覧の上のボタン）：eigenji＝太郎坊宮・永源寺と教林坊のライトアップ（data/routes/higashiomi.json）、
    sanzan＝彦根からの紅葉シャトルバスで湖東三山（higashiomi-sanzan.json）。どちらも scripts/build_higashiomi_data.py が作る。
    intro はどちらのコースにも共通の項目で、コースで変わる項目は introFor[コース] が app.js で上書きされる（scripts/sync_higashiomi.py）。
@@ -93,11 +93,13 @@ window.HIGASHIOMI_I18N = {
     introFor: {
       eigenji: {
         h1: '742段の石段の先の紅葉から、竹林のライトアップまで。',
-        lead: '三条を9時台に出て、近江鉄道で太郎坊宮へ。とがった山の中腹の神社から近江の平野を見下ろしたら、バスで愛知川の渓谷の永源寺へ。遅めのお昼のあと夕方までもみじの中で過ごし、最後は春と秋だけ公開される教林坊の夜の庭へ。三条に戻るのは20時半ごろです。',
+        lead: '京都駅を10:00の新快速で出て、近江鉄道で太郎坊宮へ。とがった山の中腹の神社から近江の平野を見下ろしたら、バスで愛知川の渓谷の永源寺へ。遅めのお昼のあと夕方までもみじの中で過ごし、最後は春と秋だけ公開される教林坊の夜の庭へ。京都駅に戻るのは20:12です。',
         favName: '永源寺',
         favText: '山門と法堂を包む一面のもみじ。',
         favPhoto: ['eigenji', 2],
+        dayHead: '1日の流れ（京都駅 10:00発）',
         who: [
+          '京都駅10:00発の新快速と近江鉄道で、太郎坊宮前に10:57（1,070円）。三条のあたりからは、地下鉄で京都駅まで約15分',
           '太郎坊宮は742段の石段。歩きやすい靴で',
           '太郎坊宮から永源寺へのバスに乗るまで、食べる店はほぼない。お昼は永源寺で14時ごろなので、朝ごはんはしっかり',
           '教林坊は安土駅からタクシーで約10分（2,500円前後）。行きも帰りも前もって予約を',
@@ -106,15 +108,15 @@ window.HIGASHIOMI_I18N = {
           '湖東三山（西明寺・百済寺・金剛輪寺）は、上の「湖東三山」のコースで'
         ],
         day: [
-          { time: '9:44', area: '三条 → 近江八幡', title: '地下鉄で山科、新快速で近江八幡へ', text: '三条京阪9:44（土日祝9:43）発。近江八幡で近江鉄道に乗り換えて、太郎坊宮前に10:57。', photo: ['omihachimaneki', 1] },
+          { time: '10:00', area: '京都駅 → 近江八幡', title: 'JRの新快速で近江八幡へ', text: '京都駅10:00発の新快速「近江塩津」行きで、乗り換えなし。近江八幡に10:35（土日祝10:34）。10:42の近江鉄道に乗り換えて、太郎坊宮前に10:57。', photo: ['omihachimaneki', 1] },
           { time: '11:15', area: '太郎坊宮', title: '石段を登って、勝運の神社へ', text: '742段の石段と夫婦岩を通って本殿へ。近江の平野が見渡せます。12:41か12:59の電車で八日市へ。', photo: ['taroubou', 5] },
           { time: '13:45', area: '永源寺', title: '遅めのお昼と、渓谷のもみじ', text: '八日市13:15のバスで永源寺へ。まずお昼、それから山門と法堂のもみじ。16:24（土日祝16:25）のバスで帰ります。', photo: ['eigenji', 0] },
           { time: '18:00', area: '安土 → 教林坊', title: '竹林と庭のライトアップ', text: '近江鉄道とJRで安土17:44、タクシーで教林坊へ。19:00ごろまで夜の庭を。', photo: ['kyorinbo', 0] },
-          { time: '20:32', area: '三条', title: '街なかで晩ごはん', text: '安土19:28発で三条京阪20:32（土日祝20:30）。木屋町・先斗町のあたりで21〜22時まで。近江八幡で晩ごはんにする手もあります。', photo: ['kyorinbo', 3] }
+          { time: '20:12', area: '京都駅', title: '京都に戻って晩ごはん', text: '安土19:28発、近江八幡で新快速に乗り換えて京都駅20:12。街なかで21〜22時まで（三条・木屋町・先斗町へは地下鉄で約15分）。近江八幡で晩ごはんにする手もあります。', photo: ['kyorinbo', 3] }
         ],
-        dealsLead: 'このコースの電車とバスは、合わせて4,330円（三条京阪→太郎坊宮前1,240円、太郎坊宮前→八日市160円、八日市→永源寺前のバス670円、永源寺前→八日市のバス670円と八日市→安土650円、安土→三条京阪940円）。拝観料（永源寺600円・教林坊1,000円）と、教林坊へのタクシー代（片道2,500円前後）は別です。',
+        dealsLead: '京都駅から回って京都駅へ帰ると、電車とバスは合わせて3,990円（京都駅→太郎坊宮前1,070円、太郎坊宮前→八日市160円、八日市→永源寺前のバス670円、永源寺前→八日市のバス670円と八日市→安土650円、安土→京都駅770円）。拝観料（永源寺600円・教林坊1,000円）と、教林坊へのタクシー代（片道2,500円前後）は別です。',
         deals: [
-          { name: '三条京阪 → 太郎坊宮前', price: '1,240円', text: '地下鉄260円＋JR590円＋近江鉄道390円。京都駅からなら、JR680円＋近江鉄道390円。', url: 'https://transit.yahoo.co.jp/' },
+          { name: '京都駅 → 太郎坊宮前', price: '1,070円', text: 'JR680円＋近江鉄道390円。帰りは安土→京都駅770円。三条のあたりからは、地下鉄で京都駅まで260円（烏丸御池で乗り換え）。', url: 'https://transit.yahoo.co.jp/' },
           { name: '八日市駅 → 永源寺前（近江鉄道バス）', price: '670円', text: '八日市駅1番のりば13:15発。帰りは永源寺前16:24（土日祝16:25）発。', url: 'https://www.ohmitetudo.co.jp/bus/access/eigenji/' },
           { name: 'タクシー（安土駅 ↔ 教林坊）', price: '片道2,500円前後', text: '約10分。金額は教林坊の公式サイトの目安。行きと帰りの迎えを予約しておきましょう。', url: 'https://kyourinbo.jimdofree.com/' }
         ],
@@ -128,33 +130,34 @@ window.HIGASHIOMI_I18N = {
       },
       sanzan: {
         h1: '国宝の本堂を2つと、苔むした参道を、シャトルバスで。',
-        lead: '湖東三山の西明寺・百済寺・金剛輪寺は、鈴鹿の山すそに離れて建っています。紅葉の時期（2026年は11月19日〜29日）だけ、彦根駅から3つのお寺を結ぶシャトルバスが出ます。三条を8時台の前半に出て10:00のバスに乗り、西明寺の門前で近江牛のお昼、午後は百済寺、夕方は金剛輪寺。三条には19時ごろに戻ります。',
+        lead: '湖東三山の西明寺・百済寺・金剛輪寺は、鈴鹿の山すそに離れて建っています。紅葉の時期（2026年は11月19日〜29日）だけ、彦根駅から3つのお寺を結ぶシャトルバスが出ます。京都駅を平日8:37・土日祝8:30の新快速で出て10:00のバスに乗り、西明寺の門前で近江牛のお昼、午後は百済寺、夕方は金剛輪寺。京都駅には18:42に戻ります。',
         favName: '西明寺',
         favText: '杉木立に並ぶ、国宝の本堂と三重塔。',
         favPhoto: ['saimyoji', 0],
+        dayHead: 'シャトルバスの日の流れ（京都駅 8:37発、土日祝8:30発）',
         who: [
-          '三条京阪を平日8:22・土日祝8:10に出て、彦根駅10:00のシャトルバスへ',
+          '京都駅を平日8:37・土日祝8:30の新快速で出て、彦根駅10:00のシャトルバスへ（乗り換えなし・1,170円）。三条のあたりからは、地下鉄で京都駅まで約15分',
           'シャトルバスは路線バスの車両で座れないことも。もみじきっぷ（2,500円・現金）を買う人は、彦根駅発の便を予約できる',
           '西明寺の境内は持ち込みの飲食ができない。お昼は門前の千成亭ぎゅ〜じあむ（月・火は電話で確認）',
           '金剛輪寺は受付16:30まで。百済寺からのバスで15:43に着いたら、まっすぐ本堂へ',
-          'シャトルバスのない日（12月）は、JR河瀬駅・稲枝駅からの予約制の乗合タクシーで',
+          'シャトルバスのない日（11月30日から）は、京都駅9:34（土日祝9:37）発で河瀬へ。予約制の乗合タクシー（現金のみ）で西明寺と金剛輪寺の2つを回る。時刻は1番の駅の注意に',
           '西明寺と金剛輪寺の写真は Wikimedia Commons から（Toshi はまだ行っていません）'
         ],
         day: [
-          { time: '8:22', area: '三条 → 彦根', title: '地下鉄で山科、新快速で彦根へ', text: '三条京阪8:22（土日祝8:10）発。彦根に9:31（9:20）着。西口の4番のりばへ。', photo: ['hikoneeki', 0] },
+          { time: '8:37', area: '京都駅 → 彦根', title: 'JRの新快速で彦根へ', text: '京都駅8:37発で、乗り換えなしで彦根に9:31。土日祝は8:30発で9:20着。西口の4番のりばへ。', photo: ['hikoneeki', 0] },
           { time: '10:32', area: '西明寺', title: '国宝の本堂と三重塔、門前でお昼', text: '10:00のシャトルバスで西明寺へ。1時間ほどお参りして、門前で近江牛のお昼。12:32のバスで百済寺へ。', photo: ['saimyoji', 1] },
           { time: '13:10', area: '百済寺', title: '苔むした参道と天下遠望の庭', text: '仁王門をくぐって本堂へ。本坊の庭と遠望台から湖東の平野を。15:20のバスで金剛輪寺へ。', photo: ['hyakusaiji', 0] },
           { time: '15:43', area: '金剛輪寺', title: '千体地蔵の参道と血染めのもみじ', text: '受付は16:30まで。夕方の光の中の本堂と三重塔。16:43のバスで彦根駅へ。', photo: ['kongorinji', 0] },
-          { time: '17:52', area: '彦根 → 三条', title: '新快速で京都へ、晩ごはん', text: '彦根17:52発で三条京阪19:00（土日祝18:55）。木屋町・先斗町のあたりで21〜22時まで。教林坊のライトアップに寄る手もあります。', photo: ['kongorinji', 2] }
+          { time: '17:52', area: '彦根 → 京都駅', title: '新快速で京都へ、晩ごはん', text: '彦根17:52発で京都駅18:42（平日・土日祝とも）。街なかで21〜22時まで（三条・木屋町・先斗町へは地下鉄で約15分）。教林坊のライトアップに寄る手もあります。', photo: ['kongorinji', 2] }
         ],
-        dealsLead: 'このコースの電車とバスは、合わせて4,800円（三条京阪↔彦根1,250円×2、シャトルバス700＋500＋300＋800円）。もみじきっぷ（2,500円）にすると、3つのお寺の入山料が50円ずつ安くなり、彦根駅発のバスを予約できます。入山料は西明寺800円・百済寺600円・金剛輪寺800円。',
+        dealsLead: 'シャトルバスの日に京都駅から回って京都駅へ帰ると、電車とバスは合わせて4,640円（京都駅↔彦根1,170円×2、シャトルバス700＋500＋300＋800円）。もみじきっぷ（2,500円）にすると、3つのお寺の入山料が50円ずつ安くなり、彦根駅発のバスを予約できます。入山料は西明寺800円・百済寺600円・金剛輪寺800円。',
         deals: [
-          { name: '三条京阪 → 彦根', price: '1,250円', text: '地下鉄260円＋JR990円。京都駅からなら1,170円。', url: 'https://transit.yahoo.co.jp/' },
+          { name: '京都駅 → 彦根', price: '1,170円', text: '新快速で乗り換えなし。帰りも1,170円。三条のあたりからは、地下鉄で京都駅まで260円（烏丸御池で乗り換え）。', url: 'https://transit.yahoo.co.jp/' },
           { name: '紅葉シャトルバス（2026年11月19日〜29日）', price: '1回200〜1,000円', text: '彦根駅→西明寺700円、西明寺→百済寺500円、百済寺→金剛輪寺300円、金剛輪寺→彦根駅800円。', url: 'https://www.ohmitetudo.co.jp/bus/icoico/event/kotosanzanshuttlebus2026/' },
           { name: 'もみじきっぷ（1日乗り放題）', price: '2,500円', text: '当日、彦根駅西口のバスのりばかバスの中で、現金で。こども1,250円。三山の入山料50円引き、クレフィール湖東の水、千成亭ぎゅ〜じあむのウーロン茶（食事をした人）。', url: 'https://kokokubus.rsvsys.jp/reservations/calendar?category=5' },
-          { name: '乗合タクシー「愛のりタクシー」（シャトルバスのない日）', price: '1人800円', text: 'JR河瀬駅→西明寺、JR稲枝駅↔金剛輪寺。毎日運行（12/29〜1/3は運休）、乗る1時間前までに予約（近江タクシー彦根営業所 0749-22-1111）。', url: 'https://saimyouji.com/access/' }
+          { name: '乗合タクシー「愛のりタクシー」（シャトルバスのない日）', price: '1回400〜800円', text: '河瀬駅→西明寺800円、西明寺→金剛輪寺400円、金剛輪寺→稲枝駅800円。現金のみ。JRは京都駅→河瀬990円、稲枝→京都駅990円。12/29〜1/3は運休、乗る1時間前までに予約（近江タクシー彦根営業所 0749-22-1111）。', url: 'https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html' }
         ],
-        dealsNote: '大人の運賃・料金です。2026年11月22日に、近江鉄道のシャトルバスの案内・湖東三山のチラシ・各寺の公式サイト、電車は乗換案内で確認しました。',
+        dealsNote: '大人の運賃・料金です。2026年11月22日に、近江鉄道のシャトルバスの案内・湖東三山のチラシ・各寺の公式サイト・彦根市の愛のりタクシー時刻表、電車は乗換案内で確認しました。',
         how: [
           { title: 'コースを選ぶ', text: '一覧の上のボタンで「太郎坊宮・永源寺」か「湖東三山」を選びます。コースによって、時間割と番号が変わります。' },
           { title: '行きたい場所を入れ替える', text: '最初は三山が選んであります。教林坊を足すと、帰りに夜のライトアップへ寄る行き方が出ます。' },
@@ -250,11 +253,13 @@ window.HIGASHIOMI_I18N = {
     introFor: {
       eigenji: {
         h1: 'From maples above 742 stone steps to a lantern-lit bamboo grove.',
-        lead: 'Leave Sanjo in the 9 o’clock hour and take the Ohmi Railway to Taroubou-gu, a shrine halfway up a pointed peak with the Omi plain below. Then a bus into the Echigawa valley to Eigenji for a late lunch and the maples until late afternoon, and finally the night garden of Kyorinbo, open only in spring and autumn. Back in Sanjo around 20:30.',
+        lead: 'Leave Kyoto Station on the 10:00 Special Rapid and change to the Ohmi Railway for Taroubou-gu, a shrine halfway up a pointed peak with the Omi plain below. Then a bus into the Echigawa valley to Eigenji for a late lunch and the maples until late afternoon, and finally the night garden of Kyorinbo, open only in spring and autumn. Back at Kyoto Station at 20:12.',
         favName: 'Eigenji',
         favText: 'The great gate and lecture hall wrapped in maples.',
         favPhoto: ['eigenji', 2],
+        dayHead: 'The day, leaving Kyoto Station at 10:00',
         who: [
+          'The 10:00 Special Rapid from Kyoto Station and the Ohmi Railway get you to Taroubougu-mae at 10:57 (¥1,070). From around Sanjo, the subway to Kyoto Station takes about 15 minutes',
           'Taroubou-gu means 742 stone steps; wear good shoes',
           'There’s almost nowhere to eat until Eigenji, where lunch is around 14:00. Have a good breakfast',
           'Kyorinbo is about 10 min by taxi from Azuchi Station (around ¥2,500). Book both ways ahead',
@@ -263,15 +268,15 @@ window.HIGASHIOMI_I18N = {
           'For the Koto Sanzan temples (Saimyoji, Hyakusaiji, Kongorinji), switch to the “Koto Sanzan” course above'
         ],
         day: [
-          { time: '9:44', area: 'Sanjo → Omi-Hachiman', title: 'Subway to Yamashina, Special Rapid on', text: 'Sanjo Keihan at 9:44 (9:43 at weekends). Change to the Ohmi Railway at Omi-Hachiman; Taroubougu-mae at 10:57.', photo: ['omihachimaneki', 1] },
+          { time: '10:00', area: 'Kyoto Sta. → Omi-Hachiman', title: 'JR Special Rapid to Omi-Hachiman', text: 'The 10:00 Special Rapid for Omi-Shiotsu goes direct: Omi-Hachiman at 10:35 (10:34 at weekends). Change to the 10:42 Ohmi Railway; Taroubougu-mae at 10:57.', photo: ['omihachimaneki', 1] },
           { time: '11:15', area: 'Taroubou-gu', title: 'Up the steps to the shrine of victory', text: '742 steps and the Meoto-iwa rocks to the main hall, with the Omi plain below. Take the 12:41 or 12:59 train to Yokaichi.', photo: ['taroubou', 5] },
           { time: '13:45', area: 'Eigenji', title: 'A late lunch and the valley maples', text: 'The 13:15 bus from Yokaichi. Lunch first, then the gate and lecture hall in red. Leave on the 16:24 bus (16:25 at weekends).', photo: ['eigenji', 0] },
           { time: '18:00', area: 'Azuchi → Kyorinbo', title: 'Bamboo and garden by lantern light', text: 'Ohmi Railway and JR to Azuchi (17:44), then a taxi. Enjoy the night garden until about 19:00.', photo: ['kyorinbo', 0] },
-          { time: '20:32', area: 'Sanjo', title: 'Dinner in town', text: 'The 19:28 from Azuchi reaches Sanjo Keihan at 20:32 (20:30 at weekends). Kiyamachi and Pontocho stay busy until 21:00–22:00. Or have dinner in Omihachiman.', photo: ['kyorinbo', 3] }
+          { time: '20:12', area: 'Kyoto Sta.', title: 'Dinner back in Kyoto', text: 'The 19:28 from Azuchi, with a change to the Special Rapid at Omi-Hachiman, reaches Kyoto Station at 20:12. The evening in town can run to 21:00–22:00 (Sanjo, Kiyamachi and Pontocho are about 15 min by subway). Or have dinner in Omihachiman.', photo: ['kyorinbo', 3] }
         ],
-        dealsLead: 'Trains and buses on this course come to ¥4,330 (Sanjo Keihan → Taroubougu-mae ¥1,240, Taroubougu-mae → Yokaichi ¥160, bus to Eigenji ¥670, bus back ¥670 plus Yokaichi → Azuchi ¥650, Azuchi → Sanjo Keihan ¥940). Admission (Eigenji ¥600, Kyorinbo ¥1,000) and the taxi to Kyorinbo (around ¥2,500 each way) are extra.',
+        dealsLead: 'From Kyoto Station and back, trains and buses come to ¥3,990 (Kyoto Station → Taroubougu-mae ¥1,070, Taroubougu-mae → Yokaichi ¥160, bus to Eigenji ¥670, bus back ¥670 plus Yokaichi → Azuchi ¥650, Azuchi → Kyoto Station ¥770). Admission (Eigenji ¥600, Kyorinbo ¥1,000) and the taxi to Kyorinbo (around ¥2,500 each way) are extra.',
         deals: [
-          { name: 'Sanjo Keihan → Taroubougu-mae', price: '¥1,240', text: 'Subway ¥260 + JR ¥590 + Ohmi Railway ¥390. From Kyoto Station: JR ¥680 + Ohmi Railway ¥390.', url: 'https://transit.yahoo.co.jp/' },
+          { name: 'Kyoto Station → Taroubougu-mae', price: '¥1,070', text: 'JR ¥680 + Ohmi Railway ¥390. Back from Azuchi to Kyoto Station ¥770. From around Sanjo, the subway to Kyoto Station is ¥260 (change at Karasuma Oike).', url: 'https://transit.yahoo.co.jp/' },
           { name: 'Yokaichi → Eigenji-mae (Ohmi bus)', price: '¥670', text: '13:15 from stop 1 at Yokaichi Station. Back from Eigenji-mae at 16:24 (16:25 at weekends).', url: 'https://www.ohmitetudo.co.jp/bus/access/eigenji/' },
           { name: 'Taxi (Azuchi Station ↔ Kyorinbo)', price: 'about ¥2,500 each way', text: 'About 10 minutes; the fare is the temple’s own estimate. Book the ride there and the pick-up back.', url: 'https://kyourinbo.jimdofree.com/' }
         ],
@@ -285,33 +290,34 @@ window.HIGASHIOMI_I18N = {
       },
       sanzan: {
         h1: 'Two National Treasure halls and a mossy approach, by shuttle bus.',
-        lead: 'The three Koto Sanzan temples, Saimyoji, Hyakusaiji and Kongorinji, stand far apart at the foot of the Suzuka hills. Only in the leaf season (19–29 Nov in 2026) does a shuttle bus link them from Hikone Station. Leave Sanjo early in the 8 o’clock hour for the 10:00 bus, have Omi beef for lunch by Saimyoji’s gate, spend the afternoon at Hyakusaiji and late afternoon at Kongorinji. Back in Sanjo around 19:00.',
+        lead: 'The three Koto Sanzan temples, Saimyoji, Hyakusaiji and Kongorinji, stand far apart at the foot of the Suzuka hills. Only in the leaf season (19–29 Nov in 2026) does a shuttle bus link them from Hikone Station. Take the Special Rapid from Kyoto Station at 8:37 (8:30 at weekends and holidays) for the 10:00 bus, have Omi beef for lunch by Saimyoji’s gate, spend the afternoon at Hyakusaiji and late afternoon at Kongorinji. Back at Kyoto Station at 18:42.',
         favName: 'Saimyoji',
         favText: 'A National Treasure hall and pagoda among tall cedars.',
         favPhoto: ['saimyoji', 0],
+        dayHead: 'A shuttle-bus day, leaving Kyoto Station at 8:37 (weekends 8:30)',
         who: [
-          'Leave Sanjo Keihan at 8:22 on weekdays (8:10 at weekends) for the 10:00 shuttle from Hikone',
+          'Take the direct Special Rapid from Kyoto Station at 8:37 (8:30 at weekends and holidays; ¥1,170) for the 10:00 shuttle from Hikone. From around Sanjo, the subway to Kyoto Station takes about 15 minutes',
           'The shuttle is an ordinary bus and you may have to stand. With a Momiji Kippu (¥2,500, cash) you can book buses from Hikone',
           'No food or drink of your own at Saimyoji. Lunch is at Sennaritei Gyuseum by the gate (phone ahead on Mon/Tue)',
           'Kongorinji’s last entry is 16:30. Arriving on the 15:43 bus, head straight up to the main hall',
-          'On days without the shuttle (December), use the bookable shared taxis from JR Kawase and Inae stations',
+          'On days without the shuttle (from 30 Nov), take the 9:34 from Kyoto Station (9:37 at weekends) to Kawase, then bookable shared taxis (cash only) to two temples, Saimyoji and Kongorinji. Times are in the note at stop 1',
           'The Saimyoji and Kongorinji photos are from Wikimedia Commons (Toshi hasn’t been yet)'
         ],
         day: [
-          { time: '8:22', area: 'Sanjo → Hikone', title: 'Subway to Yamashina, Special Rapid on', text: 'Sanjo Keihan at 8:22 (8:10 at weekends); Hikone at 9:31 (9:20). Go to stop 4 at the west exit.', photo: ['hikoneeki', 0] },
+          { time: '8:37', area: 'Kyoto Sta. → Hikone', title: 'JR Special Rapid to Hikone', text: 'The 8:37 from Kyoto Station runs direct, reaching Hikone at 9:31. At weekends and holidays, take the 8:30 (Hikone 9:20). Go to stop 4 at the west exit.', photo: ['hikoneeki', 0] },
           { time: '10:32', area: 'Saimyoji', title: 'National Treasures, then lunch by the gate', text: 'The 10:00 shuttle to Saimyoji. An hour at the temple, Omi beef for lunch, then the 12:32 bus to Hyakusaiji.', photo: ['saimyoji', 1] },
           { time: '13:10', area: 'Hyakusaiji', title: 'Mossy approach and a garden with a view', text: 'Through the Nio gate to the main hall, then the garden and the lookout over the plain. The 15:20 bus to Kongorinji.', photo: ['hyakusaiji', 0] },
           { time: '15:43', area: 'Kongorinji', title: 'A thousand Jizo and blood-red maples', text: 'Last entry 16:30. The main hall and pagoda in late-afternoon light. The 16:43 bus to Hikone.', photo: ['kongorinji', 0] },
-          { time: '17:52', area: 'Hikone → Sanjo', title: 'Back to Kyoto for dinner', text: 'The 17:52 from Hikone reaches Sanjo Keihan at 19:00 (18:55 at weekends). Kiyamachi and Pontocho until 21:00–22:00, or stop at the Kyorinbo illumination on the way.', photo: ['kongorinji', 2] }
+          { time: '17:52', area: 'Hikone → Kyoto Sta.', title: 'Back to Kyoto for dinner', text: 'The 17:52 from Hikone reaches Kyoto Station at 18:42 every day. The evening in town can run to 21:00–22:00 (Sanjo, Kiyamachi and Pontocho are about 15 min by subway), or stop at the Kyorinbo illumination on the way.', photo: ['kongorinji', 2] }
         ],
-        dealsLead: 'Trains and buses on this course come to ¥4,800 (Sanjo Keihan ↔ Hikone ¥1,250 each way, shuttle ¥700 + ¥500 + ¥300 + ¥800). With the ¥2,500 Momiji Kippu, each temple’s admission is ¥50 cheaper and you can book buses from Hikone. Admission: Saimyoji ¥800, Hyakusaiji ¥600, Kongorinji ¥800.',
+        dealsLead: 'On a shuttle day, trains and buses from Kyoto Station and back come to ¥4,640 (Kyoto Station ↔ Hikone ¥1,170 each way, shuttle ¥700 + ¥500 + ¥300 + ¥800). With the ¥2,500 Momiji Kippu, each temple’s admission is ¥50 cheaper and you can book buses from Hikone. Admission: Saimyoji ¥800, Hyakusaiji ¥600, Kongorinji ¥800.',
         deals: [
-          { name: 'Sanjo Keihan → Hikone', price: '¥1,250', text: 'Subway ¥260 + JR ¥990. From Kyoto Station ¥1,170.', url: 'https://transit.yahoo.co.jp/' },
+          { name: 'Kyoto Station → Hikone', price: '¥1,170', text: 'Direct by Special Rapid; ¥1,170 back too. From around Sanjo, the subway to Kyoto Station is ¥260 (change at Karasuma Oike).', url: 'https://transit.yahoo.co.jp/' },
           { name: 'Autumn shuttle bus (19–29 Nov 2026)', price: '¥200–1,000 a ride', text: 'Hikone → Saimyoji ¥700, Saimyoji → Hyakusaiji ¥500, Hyakusaiji → Kongorinji ¥300, Kongorinji → Hikone ¥800.', url: 'https://www.ohmitetudo.co.jp/bus/icoico/event/kotosanzanshuttlebus2026/' },
           { name: 'Momiji Kippu (day pass)', price: '¥2,500', text: 'Cash on the day, at the Hikone west-exit bus stop or on the bus; children ¥1,250. ¥50 off each temple, a bottle of water at Klefiel Koto, an oolong tea with a meal at Sennaritei Gyuseum.', url: 'https://kokokubus.rsvsys.jp/reservations/calendar?category=5' },
-          { name: '“Ainori Taxi” shared taxi (days without the shuttle)', price: '¥800 per person', text: 'JR Kawase → Saimyoji, JR Inae ↔ Kongorinji. Daily except 29 Dec – 3 Jan; book at least 1 hour ahead (Ohmi Taxi Hikone, 0749-22-1111).', url: 'https://saimyouji.com/access/' }
+          { name: '“Ainori Taxi” shared taxi (days without the shuttle)', price: '¥400–800 a ride', text: 'Kawase → Saimyoji ¥800, Saimyoji → Kongorinji ¥400, Kongorinji → Inae ¥800. Cash only. JR: Kyoto Station → Kawase ¥990, Inae → Kyoto Station ¥990. Not running 29 Dec – 3 Jan; book at least 1 hour ahead (Ohmi Taxi Hikone, 0749-22-1111).', url: 'https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html' }
         ],
-        dealsNote: 'Adult fares and fees, checked on Nov 22, 2026 (Ohmi Railway’s shuttle page, the Koto Sanzan leaflet, the temple websites, and a route planner for trains).',
+        dealsNote: 'Adult fares and fees, checked on Nov 22, 2026 (Ohmi Railway’s shuttle page, the Koto Sanzan leaflet, the temple websites, Hikone City’s Ainori Taxi timetables, and a route planner for trains).',
         how: [
           { title: 'Choose a course', text: 'Use the buttons above the list to pick “Taroubou-gu & Eigenji” or “Koto Sanzan temples”. The timetable and numbering change with the course.' },
           { title: 'Swap places in and out', text: 'The three temples are selected at first. Add Kyorinbo to see how to stop at its evening illumination on the way home.' },
