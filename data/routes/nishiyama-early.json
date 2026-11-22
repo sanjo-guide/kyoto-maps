@@ -1,0 +1,1263 @@
+{
+ "id": "nishiyama",
+ "course": "early",
+ "_note": "京都 西山のルート（nishiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（nishiyama.json＝9〜10時に出発、nishiyama-early.json＝鈴虫寺の最初の説法へ）。このファイル：「鈴虫寺の最初の説法へ」コース。京都河原町8:01（土日祝8:00）の阪急で松尾大社駅→鈴虫寺9:00の説法→BAMBOO COFFEE でひと休み→地蔵院→浄住寺→苔乃茶屋でお昼→松尾大社→14:05の阪急で嵐山（モンキーパーク・天龍寺）か、申し込んだ人は桂離宮→夜は街なか。浄住寺の公開が終わった12月14日からは、お昼を早める。 写真は Toshi の写真ライブラリから選んだもの（2025年10月30日と2026年1月13日の Nikon D7000。地蔵院のハートの窓は iPhone の位置情報で地蔵院と確認。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。嵐山・桂離宮・西芳寺・カフェは文章で案内している。info.source は確認した出典、info.checked は確認日、sources は時刻・料金の出典の一覧。このファイルは scripts/build_nishiyama_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "area": {
+    "ja": "松室",
+    "en": "Matsumuro"
+   },
+   "title": {
+    "ja": "最初の説法と、朝のひと休み",
+    "en": "The first talk, then a morning rest"
+   }
+  },
+  {
+   "first": 2,
+   "last": 3,
+   "area": {
+    "ja": "山田",
+    "en": "Yamada"
+   },
+   "title": {
+    "ja": "竹と苔の静かなお寺",
+    "en": "Quiet temples of bamboo and moss"
+   }
+  },
+  {
+   "first": 4,
+   "last": 5,
+   "area": {
+    "ja": "門前 → 松尾",
+    "en": "Moss Temple → Matsuo"
+   },
+   "title": {
+    "ja": "お昼、お酒の神様、午後は嵐山か桂",
+    "en": "Lunch, the god of sake, then Arashiyama or Katsura"
+   }
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。全部選べる。外したときの回り方は hints。offPicks は浄住寺の公開が終わった日からの最初の選び方。",
+  "picks": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "auto": {},
+  "offPicks": [
+   1,
+   2,
+   4,
+   5
+  ],
+  "hints": [
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      3
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "浄住寺に寄らない日は、11:30ごろにお昼。松尾大社の庭園をゆっくり見るか、30分ほど早い電車で嵐山へ。",
+     "en": "Skipping Jojuji: lunch about 11:30, then either linger in Matsunoo’s gardens or take a train to Arashiyama about 30 minutes earlier."
+    }
+   },
+   {
+    "spot": 1,
+    "rule": {
+     "any": [
+      1
+     ],
+     "none": [
+      3,
+      2
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "地蔵院も浄住寺も行かない日は、ひと休みのあと松尾大社へ（歩いて20分ほど）。午前のうちに嵐山へ進めます。",
+     "en": "Skipping both Jojuji and Jizoin: after your rest walk to Matsunoo (about 20 minutes) and go on to Arashiyama before noon."
+    }
+   },
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      1
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "鈴虫寺に寄らない日は、早く出なくて大丈夫。上のボタンで「9〜10時に出発」のコースに切り替えてください。",
+     "en": "Skipping Suzumushi-dera: no need to start early. Switch to the “Leave at 9–10” course with the buttons above."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      5
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "松尾大社に寄らない日は、終点12:58発（土日祝13:01発）の京都バス63系統で阪急嵐山駅前へ7分・230円。",
+     "en": "Skipping Matsunoo: Kyoto Bus 63 from the terminus at 12:58 (13:01 at weekends and on holidays) reaches Hankyu Arashiyama in 7 minutes, ¥230."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/nishiyama/",
+ "sources": [
+  {
+   "what": "阪急 京都河原町→上桂（平日 2026-11-25）：9:18発→桂9:25着・9:34発→上桂9:36着、200円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&to=%E4%B8%8A%E6%A1%82&y=2026&m=11&d=25&hh=09&m1=1&m2=2&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→上桂（土 11-28。日 11-29・元日も同じ）：9:15発→桂9:25着・9:30発→上桂9:32着、200円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&to=%E4%B8%8A%E6%A1%82&y=2026&m=11&d=28&hh=09&m1=1&m2=2&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→上桂（平日）：9:58発→桂10:06着・10:12発→上桂10:14着、200円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&to=%E4%B8%8A%E6%A1%82&y=2026&m=11&d=25&hh=09&m1=5&m2=8&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→上桂（土）：10:00発→桂10:07着・10:12発→上桂10:14着、200円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&to=%E4%B8%8A%E6%A1%82&y=2026&m=11&d=28&hh=09&m1=5&m2=8&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→松尾大社（平日 11-25。12-16も同じ）：8:01発→桂8:12着・8:18発→8:23着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&to=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE&y=2026&m=11&d=25&hh=08&m1=0&m2=1&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 京都河原町→松尾大社（土 11-28。日 11-29も同じ）：8:00発→桂8:10着・8:15発→8:20着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&to=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE&y=2026&m=11&d=28&hh=08&m1=0&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 松尾大社→嵐山（平日・土）：14:05発→14:07着、170円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE&to=%E5%B5%90%E5%B1%B1&y=2026&m=11&d=25&hh=14&m1=0&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 松尾大社→嵐山（平日・土・日）：15:17発→15:19着、170円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE&to=%E5%B5%90%E5%B1%B1&y=2026&m=11&d=25&hh=15&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 松尾大社→桂（平日・土）：14:17発→14:22着、170円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE&to=%E6%A1%82&y=2026&m=11&d=25&hh=14&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 桂→京都河原町（平日・土）：特急8分、200円（平日16:25発→16:33着）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%A1%82&to=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&y=2026&m=11&d=25&hh=16&m1=2&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町（平日 11-25。12-16も同じ）：17:33発→桂17:41着・17:46発→17:57着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B5%90%E5%B1%B1&to=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&y=2026&m=11&d=25&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町（土 11-28。日 11-29も同じ）：17:27発→桂17:35着・17:46発→17:53着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B5%90%E5%B1%B1&to=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&y=2026&m=11&d=28&hh=17&m1=2&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町（平日）：19:05発→桂19:13着・19:20発→19:31着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B5%90%E5%B1%B1&to=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&y=2026&m=11&d=25&hh=19&m1=0&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町（土）：19:14発→桂19:22着・19:26発→19:33着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B5%90%E5%B1%B1&to=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&y=2026&m=11&d=28&hh=19&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阪急 嵐山→京都河原町 終電（平日・土・日）：23:51発→桂23:59着・0:08発→0:19着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B5%90%E5%B1%B1&to=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA&y=2026&m=11&d=25&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都バス63系統 三条京阪前（2026-09-28からのダイヤ）：平日7:15発、土日祝7:38発",
+   "url": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=114_5",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "同じ便の停車時刻と運賃：平日7:15→松尾大社前8:02→苔寺・すず虫寺8:07、土日祝7:38→8:25→8:30、230円",
+   "url": "https://www.kyotobus.jp/assets/json/114_5/master/20260928/fare.json",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都バス63系統 苔寺・すず虫寺発：平日12:58・14:28・最終19:50、土日祝13:01・14:31・最終19:42",
+   "url": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=6109_1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "同じ便の停車時刻と運賃：平日12:58→松尾大社前13:01→阪急嵐山駅前13:05、19:50→三条京阪前20:48。土日祝13:01→13:04→13:08、19:42→三条京阪前20:40。230円",
+   "url": "https://www.kyotobus.jp/assets/json/6109_1/master/20260928/fare.json",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "鈴虫寺：9:00〜17:00（入門16:30まで）、無休、大人500円・子ども300円、説法10回（9:00、9:50、10:40、11:30、12:20、13:10、14:00、14:50、15:40、16:20）。支払い方法・受付の開始時刻の記載なし",
+   "url": "https://suzutera.or.jp/guide/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "鈴虫寺：石段80段、予約不要、約40分、1回約125名（最大約175名）、約1時間待つ場合あり",
+   "url": "https://suzutera.or.jp/howto/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "鈴虫寺 混雑予想：終日混んでいる 11/22・23・28・29、比較的混雑 11/24〜27・30、12/5・6・26〜30。午後からは空いている場合あり",
+   "url": "https://suzutera.or.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "地蔵院：9:00〜16:00（最終受付15:40、方丈15:50）、木金休み（7・8月は月木）、大人1,000円（国内在住は当面500円、寺宝特別拝観の間は一律1,000円）、猪目窓は寺宝特別拝観の間は見られない",
+   "url": "https://www.takenotera-jizoin.jp/access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "地蔵院 拝観カレンダー（トップに埋め込み）：寺宝特別公開10/31〜12/13。休観 2026-12/14・17〜24・29、2027-1/5〜8・12〜15・1/18〜2/5・2/8〜10・2/14、2/18からは木金",
+   "url": "https://www.takenotera-jizoin.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "浄住寺：通常拝観なし。秋の特別拝観 2026-11/21〜12/13、9:30〜16:30（最終受付16:00）、1,000円・子ども500円、抹茶1,000円は土日祝のみ",
+   "url": "https://jojuji.org/admission.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "浄住寺 特別拝観のチラシ：期間・時間・料金は同じ。上桂駅から徒歩約10分（約800m）",
+   "url": "https://jojuji.org/r/admission/1.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "松尾大社：庭園・神像館 9:00〜16:00（日祝16:30）、大人500円・学生400円・子ども300円",
+   "url": "https://www.matsunoo.or.jp/guide03",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "松尾大社：境内5:00〜18:00、無休（京都観光Navi）",
+   "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=466",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "西芳寺 日々参拝：前日までの申込制、写経のあと庭園・約60分",
+   "url": "https://intosaihoji.com/nichinichi/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "西芳寺 オンライン：2か月前〜前日23:59、4,000円以上＋165円、カードのみ、2名まで、13歳以上、取消料は3日前から",
+   "url": "https://intosaihoji.com/nichinichi/online/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "西芳寺 往復はがき：2か月前〜1か月前消印、4,000円以上・当日現金のみ、時間指定不可（原則10〜12時ごろ）",
+   "url": "https://saihoji-kokedera.com/postcard/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "西芳寺：日々参拝は2027-01-12〜02-26休止",
+   "url": "https://intosaihoji.com/news/2026102/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "BAMBOO COFFEE：9:30〜17:30、年中無休（不定休）、電子マネー・スマホ決済・カード・現金、バス停から0分",
+   "url": "https://bamboocoffee.store/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "BAMBOO COFFEE：苔寺の休みに合わせて不定休（京都市「にしてらす」。閉店は17:00とあり公式と違う）",
+   "url": "https://nishiterrace.city.kyoto.lg.jp/shop/bamboo-coffee/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "苔乃茶屋：公式サイトなし。グルメサイトの店舗情報（2020-01-07更新）9:30〜16:00（料理LO15:30）、カード・電子マネー不可。いまの時間は要確認",
+   "url": "https://www.hotpepper.jp/strJ000108629/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "天龍寺：庭園8:30〜17:00（受付16:50、北門も）、500円",
+   "url": "https://www.tenryuji.com/visit/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "宝厳院：夜間特別拝観 2026-11/13〜12/6、17:30〜20:30（受付20:00）、1,000円、昼夜入替",
+   "url": "https://www.hogonin.jp/event/index.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "嵐山モンキーパーク：9:00〜16:00（山頂16:30）、800円、現金のみ、1/1休み、阪急嵐山駅から7分",
+   "url": "http://www.monkeypark.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "桂離宮：日本語の回は毎時（10〜2月は16時なし）・英語15:20ほか、約60分、1,000円、中学生以上、本人確認、月曜と12/28〜1/4休み、ネット申込は3日前23:59まで、当日は8:40から整理券、桂駅東口から徒歩20分",
+   "url": "https://kyoto-gosho.kunaicho.go.jp/pdf/visit-1A3_ja.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "紅葉の例年の見ごろ：浄住寺11月下旬、地蔵院11月下旬〜12月上旬",
+   "url": "https://ja.kyoto.travel/flower/momiji/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "歩く時間（OpenStreetMap の徒歩ルートの目安。文章では長めに）：上桂駅→浄住寺12分・地蔵院13分・鈴虫寺18分、浄住寺→地蔵院4分、地蔵院→苔乃茶屋4分、浄住寺→苔乃茶屋6分、苔乃茶屋→鈴虫寺3分、鈴虫寺→松尾大社14分、苔乃茶屋→松尾大社15分、阪急嵐山駅→天龍寺16分",
+   "url": "https://routing.openstreetmap.de/",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "suzumushi",
+   "name": {
+    "ja": "鈴虫寺（華厳寺）",
+    "en": "Suzumushi-dera (Kegon-ji)"
+   },
+   "kind": {
+    "ja": "寺・説法",
+    "en": "Temple & talk"
+   },
+   "blurb": {
+    "ja": "一年中鈴虫が鳴く部屋で、お茶とお菓子と30分の説法。そのあと、京都の町を見下ろす庭へ。",
+    "en": "Tea, a sweet and a 30-minute talk in a room of crickets that sing all year, then a garden looking over Kyoto."
+   },
+   "caution": {
+    "ja": "説法の回に合わせて早めに。入門は16:30まで。石段80段",
+    "en": "Arrive ahead of the talk. Last entry 16:30. 80 stone steps"
+   },
+   "lat": 34.99368,
+   "lng": 135.68519,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "鈴虫寺",
+      "en": "Suzumushi-dera"
+     },
+     "lat": 34.99368,
+     "lng": 135.68519,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E8%99%AB%E5%AF%BA%20%E8%8F%AF%E5%8E%B3%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "苔寺・すず虫寺バス停",
+      "en": "Kokedera-Suzumushidera bus stop"
+     },
+     "lat": 34.992,
+     "lng": 135.68587,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8B%94%E5%AF%BA%E3%83%BB%E3%81%99%E3%81%9A%E8%99%AB%E5%AF%BA%20%E3%83%90%E3%82%B9%E5%81%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "鈴虫寺（拝観時間・説法の時間）",
+      "en": "Suzumushi-dera: hours and talk times (Japanese)"
+     },
+     "url": {
+      "ja": "https://suzutera.or.jp/guide/",
+      "en": "https://suzutera.or.jp/guide/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "鈴虫寺 混雑予想カレンダー",
+      "en": "Suzumushi-dera crowd forecast (Japanese)"
+     },
+     "url": {
+      "ja": "https://suzutera.or.jp/#calendar",
+      "en": "https://suzutera.or.jp/#calendar"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "BAMBOO COFFEE（営業時間）",
+      "en": "BAMBOO COFFEE (hours, Japanese)"
+     },
+     "url": {
+      "ja": "https://bamboocoffee.store/",
+      "en": "https://bamboocoffee.store/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "京都バスの時刻表（三条京阪前）",
+      "en": "Kyoto Bus timetable: Sanjo-Keihan-mae (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=114_5",
+      "en": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=114_5"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": "2026-10-15",
+     "to": "2026-12-06",
+     "url": "https://ja.kyoto.travel/flower/momiji/",
+     "head": {
+      "ja": "紅葉の見ごろは例年11月下旬から",
+      "en": "Autumn leaves: usually from late November"
+     },
+     "text": {
+      "ja": "例年の見ごろは浄住寺が11月下旬、地蔵院が11月下旬〜12月上旬です（京都観光Naviの紅葉だより）。年によって前後します。写真は2025年10月と2026年1月に撮ったものです。",
+      "en": "The usual peak is late November at Jojuji and late November to early December at Jizoin (Kyoto City’s autumn-leaf report); it shifts from year to year. My photos are from October 2025 and January 2026."
+     }
+    },
+    {
+     "from": "2026-12-14",
+     "to": null,
+     "url": "https://www.takenotera-jizoin.jp/",
+     "head": {
+      "ja": "浄住寺の秋の公開は終わりました",
+      "en": "Jojuji’s autumn opening is over"
+     },
+     "text": {
+      "ja": "浄住寺に入れないので、浄住寺を外した4か所で回ります。地蔵院も休みの日が多い時期があります。出る前に地蔵院の拝観カレンダーを見てください。",
+      "en": "Jojuji is closed, so the route has four stops without it. Jizoin closes more often in some seasons too: check its calendar before you set out."
+     }
+    },
+    {
+     "from": "2026-11-22",
+     "to": "2026-12-06",
+     "url": "https://suzutera.or.jp/",
+     "head": {
+      "ja": "混む日（お寺の予想）",
+      "en": "Busy days (temple forecast)"
+     },
+     "text": {
+      "ja": "お寺の混雑予想では、11月22・23・28・29日が「終日混んでいる」、11月24〜27日・30日と12月5・6日が「比較的混雑」です。どちらの日も「午後からは空いている場合がある」と書かれています。",
+      "en": "The temple’s forecast marks 22, 23, 28 and 29 November as “crowded all day”, and 24–27 and 30 November and 5–6 December as “fairly busy”. It adds that even on these days the afternoon can be quieter."
+     }
+    },
+    {
+     "from": "2026-12-20",
+     "to": "2026-12-30",
+     "url": "https://suzutera.or.jp/",
+     "head": {
+      "ja": "年末の混む日（お寺の予想）",
+      "en": "Busy days at the end of the year (temple forecast)"
+     },
+     "text": {
+      "ja": "お寺の混雑予想では、12月26〜30日が「比較的混雑」です。説法の時間は、混むと予告なく変わることがあります。",
+      "en": "The temple’s forecast marks 26–30 December as “fairly busy”. Talk times can change without notice when it’s crowded."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "行き：京都河原町8:01発（土日祝8:00発）の阪急 → 桂で乗り換え → 松尾大社8:23着（土日祝8:20着）・240円、歩いて15〜20分",
+       "en": "Out: Hankyu from Kyoto-Kawaramachi 8:01 (8:00 at weekends and on holidays) → change at Katsura → Matsuo-taisha 8:23 (8:20), ¥240, then 15–20 min on foot"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "乗り換えなし：三条京阪前7:15発（土日祝7:38発）の京都バス63系統 → 苔寺・すず虫寺8:07着（土日祝8:30着）・230円、歩いて5分",
+       "en": "No change: Kyoto Bus 63 from Sanjo-Keihan-mae 7:15 (7:38 at weekends and on holidays) → Kokedera-Suzumushidera 8:07 (8:30), ¥230, then 5 min on foot"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（入門は16:30まで）。説法は9:00から16:20まで1日10回",
+       "en": "9:00–17:00 (last entry 16:30). Ten talks a day, 9:00 to 16:20"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年中無休",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、子ども（4歳〜中学生）300円。お茶とお菓子つき",
+       "en": "¥500 adults, ¥300 children aged 4 to junior high; tea and a sweet included"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "鈴虫寺の公式サイト（拝観案内・はじめての方へ・混雑予想）で確認しました。支払い方法は書かれていません（要確認）。阪急は乗換案内（Yahoo!路線情報）で平日・土曜・日曜を、京都バスは公式の時刻表（2026年9月28日からのダイヤ）で確認しました。年末年始の運行は要確認です。歩く時間は地図で測って、少しゆったりめに書いています。",
+     "en": "Checked on the temple website (visitor guide, first-visit page, crowd forecast). Payment methods aren’t stated (please check). Hankyu was checked on a route planner for a weekday, a Saturday and a Sunday; Kyoto Bus on its official timetable (from 28 September 2026). Please check services over the New Year. Walking times are map estimates, rounded up a little."
+    },
+    "checked": "2026-11-22",
+    "source": "鈴虫寺 公式サイト（拝観案内、初めてご参拝の方へ、混雑予想カレンダー）。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "鈴虫寺（すずむしでら）・華厳寺（けごんじ）\n\n受付をすませると、鈴虫が鳴く部屋に通されます。お茶とお菓子をいただきながら30分ほどの説法を聞き、庭を回って、門の前のわらじをはいた「幸福地蔵」にお参りします。全部で約40分です。正座はしなくてよく、いすも頼めます。\n\n説法が始まるのは9:00、9:50、10:40、11:30、12:20、13:10、14:00、14:50、15:40、16:20の予定。予約はいりません。1回に約125人（最大約175人）ずつで、季節や時間によっては1時間ほど待つことがあります（お寺の案内）。時間は混むと予告なく変わります。\n\n9:00より前に受付が始まるかどうかは書かれていません（要確認）。英語での説明があるかも書かれていないので、日本語がわからない人はお寺に確かめてください。\n\nこのコースは、最初の9:00の説法に入ります。松尾大社駅から鳥居の前を左（南）へ、山すその道を歩いて15〜20分。8:45ごろに門の前に着いて待ちます。バスは道が混むと遅れます。\n\n朝ごはんは出る前に食べるか、軽いものを持っていってください。説法のあとのひと休みは、終点のバス停のそばの BAMBOO COFFEE へ。9:30開店で、コーヒーや紅茶があり、カード・電子マネーも使えます（お店の公式サイト）。不定休です。10:20ごろに出れば、地蔵院まで歩いて5〜10分。\n\nおすすめ訪問時間：8:45〜9:45（説法は9:00の回）",
+    "en": "Suzumushi-dera (Kegon-ji)\n\nAfter reception you are shown into a room of singing crickets for tea, a sweet and a talk of about 30 minutes. Then walk round the garden and pray to the “Kofuku Jizo” in straw sandals by the gate: about 40 minutes in all. There’s no need to kneel, and chairs are available.\n\nTalks are scheduled for 9:00, 9:50, 10:40, 11:30, 12:20, 13:10, 14:00, 14:50, 15:40 and 16:20. No booking is needed. About 125 people (175 at most) go in each time, and in some seasons and hours you may wait about an hour (temple guide). Times change without notice when it’s busy.\n\nThe temple doesn’t say whether reception opens before 9:00 (please check), nor whether there is any explanation in English, so ask the temple if you don’t understand Japanese.\n\nThis course takes the first talk at 9:00. From Matsuo-taisha Station turn left (south) at the torii and follow the foot of the hills for 15–20 minutes, to wait at the gate from about 8:45. Buses can be late in traffic.\n\nEat breakfast before you leave or bring something light. After the talk, rest at BAMBOO COFFEE by the bus terminus: open from 9:30 with coffee and tea, cards and e-money accepted (shop website), closing days irregular. Leave about 10:20; Jizoin is 5–10 minutes’ walk.\n\nRecommended visit time: 8:45–9:45 (the 9:00 talk)"
+   },
+   "photos": [
+    "suzumushi-1.jpg",
+    "suzumushi-2.jpg",
+    "suzumushi-3.jpg",
+    "suzumushi-4.jpg",
+    "suzumushi-5.jpg",
+    "suzumushi-6.jpg",
+    "suzumushi-7.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "jizoin",
+   "name": {
+    "ja": "地蔵院（竹の寺）",
+    "en": "Jizoin (the Bamboo Temple)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "竹林の参道の先に、座って眺める苔の庭。ハートの形の窓でも知られる「竹の寺」です。",
+    "en": "Bamboo along the approach, then a moss garden to sit and look at; also known for a heart-shaped window."
+   },
+   "caution": {
+    "ja": "受付15:40まで。ハートの窓は12月14日から。冬は休みの日が多い",
+    "en": "Last entry 15:40. Heart window from 14 Dec. Often closed in winter"
+   },
+   "lat": 34.99069,
+   "lng": 135.68636,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "地蔵院（竹の寺）",
+      "en": "Jizoin"
+     },
+     "lat": 34.99069,
+     "lng": 135.68636,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E8%94%B5%E9%99%A2%20%E7%AB%B9%E3%81%AE%E5%AF%BA%20%E8%A5%BF%E4%BA%AC%E5%8C%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "地蔵院（拝観案内・料金）",
+      "en": "Jizoin: hours and fees (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.takenotera-jizoin.jp/access/",
+      "en": "https://www.takenotera-jizoin.jp/access/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "地蔵院の拝観カレンダー",
+      "en": "Jizoin opening calendar (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.takenotera-jizoin.jp/",
+      "en": "https://www.takenotera-jizoin.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-13",
+     "url": "https://www.takenotera-jizoin.jp/access/",
+     "head": {
+      "ja": "12月13日まで寺宝特別拝観",
+      "en": "Treasure display until 13 December"
+     },
+     "text": {
+      "ja": "2026年10月31日〜12月13日は毎日開いていて、拝観料はだれでも大人1,000円です。この間、ハートの窓（猪目窓）のある茶室は見られません。",
+      "en": "From 31 October to 13 December 2026 it is open every day and admission is ¥1,000 for every adult. The tea room with the heart-shaped window can’t be seen during this time."
+     }
+    },
+    {
+     "from": "2026-12-07",
+     "to": "2026-12-31",
+     "url": "https://www.takenotera-jizoin.jp/",
+     "head": {
+      "ja": "12月14日からは休みに注意",
+      "en": "Watch the closing days from 14 December"
+     },
+     "text": {
+      "ja": "公式の拝観カレンダーでは、2026年12月は14日（月）・17〜24日・29日が休みです。急に休む日もあります。",
+      "en": "On the temple’s calendar it is closed on Monday 14, 17–24 and 29 December 2026. It can also close at short notice."
+     }
+    },
+    {
+     "from": "2026-12-25",
+     "to": "2027-02-28",
+     "url": "https://www.takenotera-jizoin.jp/",
+     "head": {
+      "ja": "1月・2月は休みの日が多い",
+      "en": "Closed on many days in January and February"
+     },
+     "text": {
+      "ja": "公式の拝観カレンダーでは、2027年は1月5〜8日・12〜15日・18日〜2月5日・2月8〜10日・14日が休みです（11月22日に確認）。2月18日からは木曜・金曜が休みです。",
+      "en": "On the temple’s calendar it is closed on 5–8 and 12–15 January, 18 January – 5 February, and 8–10 and 14 February 2027 (as of 22 November). From 18 February it closes on Thursdays and Fridays."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00（最終受付15:40、方丈は15:50まで）",
+       "en": "9:00–16:00 (last entry 15:40; abbot’s hall until 15:50)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月13日までは無休（臨時休みを除く）",
+       "en": "Open daily until 13 December (barring special closures)"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "2026年12月14日・17〜24日・29日",
+       "en": "14, 17–24 and 29 December 2026"
+      },
+      "until": "2026-12-31",
+      "from": "2026-12-01"
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "2027年1月5〜8日・12〜15日・18日〜2月5日・2月8〜10日・14日",
+       "en": "5–8 and 12–15 January, 18 January – 5 February, 8–10 and 14 February 2027"
+      },
+      "until": "2027-02-14",
+      "from": "2026-12-14"
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "ふだんは木曜・金曜（7・8月は月曜・木曜）。臨時休みあり",
+       "en": "Usually Thursdays and Fridays (Mondays and Thursdays in July and August); special closures happen"
+      },
+      "until": null,
+      "from": "2026-12-14"
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "12月13日までは、だれでも大人1,000円、6〜17歳500円",
+       "en": "Until 13 December: ¥1,000 for every adult, ¥500 aged 6–17"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,000円、6〜17歳500円。日本に住んでいる人は当面、大人500円・小中高生300円（寺宝特別拝観の間は除く）",
+       "en": "¥1,000 adults, ¥500 aged 6–17. For now residents of Japan pay ¥500, pupils ¥300 (except during treasure displays)"
+      },
+      "until": null,
+      "from": "2026-12-14"
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "地蔵院の公式サイト（参拝案内と拝観カレンダー）で確認しました。支払い方法は書かれていません（要確認）。",
+     "en": "Checked on the temple website (visitor guide and calendar). Payment methods aren’t stated (please check)."
+    },
+    "checked": "2026-11-22",
+    "source": "地蔵院 公式サイト（参拝案内・アクセス、拝観カレンダー）。2026-11-22に確認。最終受付はトップに15:50、参拝案内に15:40とあり、早い方を書いた"
+   },
+   "text": {
+    "ja": "地蔵院（じぞういん）・竹の寺\n\n山門をくぐると、竹林の中を参道が続きます。奥の方丈（ほうじょう）は靴を脱いで上がります。苔の庭は座って眺める庭で、中には入れません。方丈は15:50に閉まります。\n\n写真のハートの形の窓（猪目窓）は茶室にあり、外からのぞきます。春と秋の寺宝特別拝観の間は見られません。2026年の秋は10月31日〜12月13日です。\n\n12月14日からは休みの日が多くなります。ふだんは木曜・金曜が休みですが、年末から2月は日によって違うので、お寺の公式サイトのいちばん新しい拝観カレンダーを見てから行ってください。\n\n方丈に座って庭を見たら、南へ歩いて5分ほどで浄住寺です。12月14日からは浄住寺を飛ばして、11:30ごろにお昼へ。そのぶん松尾大社の庭園をゆっくり見られます。\n\nおすすめ訪問時間：10:30〜11:10",
+    "en": "Jizoin (the Bamboo Temple)\n\nThrough the gate a path runs through bamboo. Take your shoes off for the abbot’s hall at the end, which closes at 15:50. Its moss garden is for looking at from a seat; you can’t walk in it.\n\nThe heart-shaped window in the photo is in a tea room, seen from outside. It can’t be seen during the spring and autumn treasure displays (31 October – 13 December in autumn 2026).\n\nFrom 14 December it closes more often. Thursdays and Fridays are the usual closing days, but they vary from late December to February, so check the calendar on the temple website before you go.\n\nSit in the abbot’s hall, then walk about 5 minutes south to Jojuji. From 14 December skip Jojuji, have lunch around 11:30 and take longer in Matsunoo’s gardens.\n\nRecommended visit time: 10:30–11:10"
+   },
+   "photos": [
+    "jizoin-1.jpg",
+    "jizoin-2.jpg",
+    "jizoin-3.jpg",
+    "jizoin-4.jpg",
+    "jizoin-5.jpg",
+    "jizoin-7.jpg",
+    "jizoin-8.jpg"
+   ]
+  },
+  {
+   "no": 3,
+   "id": "jojuji",
+   "name": {
+    "ja": "浄住寺",
+    "en": "Jojuji"
+   },
+   "kind": {
+    "ja": "寺（特別公開）",
+    "en": "Temple (special opening)"
+   },
+   "blurb": {
+    "ja": "長い石段と苔、亀甲竹の黄檗宗のお寺。特別公開のときだけ中に入れます。",
+    "en": "A long flight of steps, moss and tortoise-shell bamboo at an Obaku Zen temple open only for special viewings."
+   },
+   "caution": {
+    "ja": "ふだんは非公開。2026年秋は11月21日〜12月13日だけ",
+    "en": "Usually closed. Autumn 2026: 21 Nov – 13 Dec only"
+   },
+   "lat": 34.98916,
+   "lng": 135.6868,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "浄住寺",
+      "en": "Jojuji"
+     },
+     "lat": 34.98916,
+     "lng": 135.6868,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%84%E4%BD%8F%E5%AF%BA%20%E8%A5%BF%E4%BA%AC%E5%8C%BA"
+    },
+    {
+     "label": {
+      "ja": "阪急 上桂駅",
+      "en": "Hankyu Kami-Katsura Station"
+     },
+     "lat": 34.9903,
+     "lng": 135.69593,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E4%B8%8A%E6%A1%82%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "浄住寺（拝観案内）",
+      "en": "Jojuji: visiting (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://jojuji.org/admission.html",
+      "en": "https://jojuji.org/admission.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-13",
+     "url": "https://jojuji.org/admission.html",
+     "head": {
+      "ja": "秋の特別拝観は12月13日まで",
+      "en": "Autumn opening until 13 December"
+     },
+     "text": {
+      "ja": "2026年11月21日〜12月13日、9:30〜16:30（最終受付16:00）。土日祝は抹茶とお菓子（1,000円）もあり、なくなり次第終わりです。",
+      "en": "21 November – 13 December 2026, 9:30–16:30 (last entry 16:00). At weekends and on holidays there is matcha with a sweet (¥1,000) until it runs out."
+     }
+    },
+    {
+     "from": "2026-12-14",
+     "to": null,
+     "url": "https://jojuji.org/admission.html",
+     "head": {
+      "ja": "いまは拝観できません",
+      "en": "Not open now"
+     },
+     "text": {
+      "ja": "ふだんの拝観はしていません。2026年の秋の特別拝観は12月13日で終わりました。次の公開の日程は、お寺の公式サイトで確かめてください。",
+      "en": "The temple has no regular opening, and the autumn 2026 opening ended on 13 December. Check the temple website for the next dates."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11月21日〜12月13日 9:30〜16:30（最終受付16:00）",
+       "en": "21 Nov – 13 Dec, 9:30–16:30 (last entry 16:00)"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "ふだんの拝観はなし。次の特別拝観は公式サイトで",
+       "en": "No regular opening; see the website for the next special opening"
+      },
+      "until": null,
+      "from": "2026-12-14"
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,000円、子ども500円。抹茶とお菓子は土日祝だけ・1,000円",
+       "en": "¥1,000 adults, ¥500 children. Matcha and a sweet at weekends and holidays only, ¥1,000"
+      },
+      "until": "2026-12-13",
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "浄住寺の公式サイトと特別拝観のチラシで確認しました。支払い方法は書かれていません（要確認）。",
+     "en": "Checked on the temple website and its leaflet. Payment methods aren’t stated (please check)."
+    },
+    "checked": "2026-11-22",
+    "source": "浄住寺 公式サイト（拝観について、特別拝観のPDF）。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "浄住寺（じょうじゅうじ）\n\n石の門柱の先に石段が続き、中国風のお堂が一列に建つ黄檗宗（おうばくしゅう）のお寺です。亀の甲羅のような節の「亀甲竹（きっこうちく）」も見られます。\n\nふだんの拝観はありません。2026年の秋の特別拝観は11月21日〜12月13日、9:30〜16:30（最終受付16:00）です。写真は2026年1月のもので、紅葉の景色ではありません。\n\n見終わったら、来た道を北へ戻ってお昼に（歩いて10分ほど）。\n\nおすすめ訪問時間：11:15〜11:55（12月13日まで）",
+    "en": "Jojuji\n\nAn Obaku Zen temple: stone steps beyond the gateposts and Chinese-style halls in a single line, with “kikkochiku”, bamboo whose joints look like a tortoise shell.\n\nThere is no regular opening. The autumn 2026 special opening runs 21 November – 13 December, 9:30–16:30 (last entry 16:00). The photos are from January 2026, so they don’t show the autumn colours.\n\nAfterwards walk back north for lunch (about 10 minutes).\n\nRecommended visit time: 11:15–11:55 (until 13 December)"
+   },
+   "photos": [
+    "jojuji-1.jpg",
+    "jojuji-2.jpg",
+    "jojuji-3.jpg",
+    "jojuji-4.jpg",
+    "jojuji-5.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "kokenochaya",
+   "name": {
+    "ja": "苔乃茶屋（お昼）",
+    "en": "Koke-no-chaya (lunch)"
+   },
+   "kind": {
+    "ja": "ランチ",
+    "en": "Lunch"
+   },
+   "blurb": {
+    "ja": "苔寺の門前の茶屋で、とろろそばか、にしんそば。",
+    "en": "A teahouse near the Moss Temple gate: soba with grated yam, or with herring."
+   },
+   "caution": {
+    "ja": "現金を用意。営業時間と休みは要確認",
+    "en": "Bring cash. Hours and closing days: please check"
+   },
+   "lat": 34.99221,
+   "lng": 135.68567,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "苔乃茶屋",
+      "en": "Koke-no-chaya"
+     },
+     "lat": 34.99221,
+     "lng": 135.68567,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8B%94%E4%B9%83%E8%8C%B6%E5%B1%8B%20%E4%BA%AC%E9%83%BD%20%E8%A5%BF%E8%8A%B3%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "西芳寺（苔寺）",
+      "en": "Saihoji (Moss Temple)"
+     },
+     "lat": 34.992,
+     "lng": 135.6837,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E8%8A%B3%E5%AF%BA%20%E8%8B%94%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "西芳寺：オンラインの申し込み",
+      "en": "Saihoji: apply online (official)"
+     },
+     "url": {
+      "ja": "https://intosaihoji.com/nichinichi/online/",
+      "en": "https://intosaihoji.com/en/nichinichi/online/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "西芳寺：往復はがきの申し込み",
+      "en": "Saihoji: apply by postcard (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://saihoji-kokedera.com/postcard/",
+      "en": "https://saihoji-kokedera.com/postcard/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "苔乃茶屋（グルメサイト・2020年更新）",
+      "en": "Koke-no-chaya (restaurant listing updated 2020, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hotpepper.jp/strJ000108629/",
+      "en": "https://www.hotpepper.jp/strJ000108629/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": "2026-11-22",
+     "to": "2027-02-26",
+     "url": "https://intosaihoji.com/news/2026102/",
+     "head": {
+      "ja": "苔寺は2027年1月12日〜2月26日休止",
+      "en": "Moss Temple: no regular visits 12 Jan – 26 Feb 2027"
+     },
+     "text": {
+      "ja": "境内整備のため、西芳寺（苔寺）の日々参拝は2027年1月12日〜2月26日がお休みです。近くの BAMBOO COFFEE も苔寺の休みに合わせて休むことがあるので、開いているか確かめてください。",
+      "en": "Saihoji (the Moss Temple) suspends its regular visits from 12 January to 26 February 2027 for work on the grounds. BAMBOO COFFEE nearby may follow the temple’s closing days, so check that it is open."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "要確認（2020年更新のグルメサイトでは9:30〜16:00、料理は15:30まで）",
+       "en": "Please check (a 2020 listing gives 9:30–16:00, food until 15:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "要確認",
+       "en": "Please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "西芳寺の申し込み方は西芳寺と西芳会の公式サイトで確認しました。",
+     "en": "The Saihoji application details were checked on its official websites."
+    },
+    "checked": "2026-11-22",
+    "source": "苔乃茶屋：公式サイトなし。ホットペッパーの店舗情報（2020-01-07更新）は参考（要確認）。西芳寺：公式サイトと into Saihoji。2026-11-22に確認",
+    "verified": false
+   },
+   "text": {
+    "ja": "苔乃茶屋（こけのちゃや）\n\n京都バスの終点「苔寺・すず虫寺」のそばの茶屋です。名物はとろろそば。写真はにしんそばです。\n\n公式サイトが見つからず、営業時間と休みは要確認です。グルメサイトのお店の情報（2020年更新）では9:30〜16:00（料理は15:30まで）で、カードや電子マネーは使えません。閉まっていたときのために、飲みものと軽い食べものを持っていると安心です。\n\n苔寺（西芳寺・さいほうじ）に入りたい人へ\nすぐ近くの苔寺は申し込んだ人だけが入れます。写経とお参りのあと庭を見て、約60分です。13歳以上、1回の申し込みは2人まで。\n・オンライン：2か月前〜前日23:59。4,000円以上と利用料1人165円、クレジットカードで先払い。時間は申し込みのカレンダーで選びます。取り消しは3日前から有料です。\n・往復はがき：2か月前〜1か月前の消印。4,000円以上を当日に現金で。時間は選べず、原則10時〜12時ごろの案内です。\n入る日は、その時間を先に決めて、浄住寺か地蔵院のどちらかを外すと無理がありません。\n\nお昼のあとは、北へ歩いて20分ほどで松尾大社です。疲れたら、終点のバス停から12:58発（土日祝13:01発）の京都バス63系統で松尾大社前へ3分・230円。\n\nおすすめ訪問時間：12:05〜12:50",
+    "en": "Koke-no-chaya\n\nA teahouse by the bus terminus “Kokedera-Suzumushidera”, known for soba with grated yam. The photo shows soba with herring.\n\nNo official website was found, so hours and closing days need checking. The shop’s listing on a restaurant site (updated 2020) gives 9:30–16:00 (food until 15:30) and no cards or e-money. Carry a drink and a snack in case it’s closed.\n\nIf you want to see the Moss Temple (Saihoji)\nOnly people who applied in advance can enter. You copy a sutra, pray and then see the garden: about 60 minutes. Age 13 and over, two people per application.\n• Online: from two months before until 23:59 the day before. ¥4,000 or more plus a ¥165 fee each, prepaid by credit card; pick a time on the booking calendar. Cancelling costs money from three days before.\n• Return postcard: postmarked two months to one month before. ¥4,000 or more in cash on the day. You can’t choose the time; it is normally around 10:00–12:00.\nOn such a day fix that time first and drop either Jojuji or Jizoin.\n\nAfter lunch Matsunoo Taisha is about 20 minutes’ walk north. If you’re tired, Kyoto Bus 63 leaves the terminus at 12:58 (13:01 at weekends and on holidays): 3 minutes to Matsuo-taisha-mae, ¥230.\n\nRecommended visit time: 12:05–12:50"
+   },
+   "photos": [
+    "kokenochaya-1.jpg",
+    "kokenochaya-2.jpg"
+   ]
+  },
+  {
+   "no": 5,
+   "id": "matsuo",
+   "name": {
+    "ja": "松尾大社",
+    "en": "Matsunoo Taisha"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "お酒の神様として知られる古い神社。奉納された酒樽の壁と、重森三玲の石の庭。",
+    "en": "An ancient shrine to the god of sake, with a wall of donated barrels and stone gardens by Shigemori Mirei."
+   },
+   "caution": {
+    "ja": "庭園は16:00まで（日曜・祝日は16:30）",
+    "en": "Gardens close at 16:00 (16:30 Sundays and holidays)"
+   },
+   "lat": 35.00019,
+   "lng": 135.6853,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "松尾大社",
+      "en": "Matsunoo Taisha"
+     },
+     "lat": 35.00019,
+     "lng": 135.6853,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE"
+    },
+    {
+     "label": {
+      "ja": "阪急 松尾大社駅",
+      "en": "Hankyu Matsuo-taisha Station"
+     },
+     "lat": 35.00032,
+     "lng": 135.68824,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%AA%E6%80%A5%20%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "嵐山モンキーパーク",
+      "en": "Arashiyama Monkey Park"
+     },
+     "lat": 35.0113,
+     "lng": 135.6764,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E3%83%A2%E3%83%B3%E3%82%AD%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF%E3%81%84%E3%82%8F%E3%81%9F%E3%82%84%E3%81%BE"
+    },
+    {
+     "label": {
+      "ja": "桂離宮",
+      "en": "Katsura Imperial Villa"
+     },
+     "lat": 34.984,
+     "lng": 135.7097,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%A1%82%E9%9B%A2%E5%AE%AE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "松尾大社（庭園拝観）",
+      "en": "Matsunoo Taisha: gardens (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.matsunoo.or.jp/guide03",
+      "en": "https://www.matsunoo.or.jp/guide03"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "嵐山のマップ（竹林・渡月橋・お店）",
+      "en": "Arashiyama map (bamboo grove, bridge, places to eat)"
+     },
+     "url": {
+      "ja": "../arashiyama/#list",
+      "en": "../arashiyama/#list"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "天龍寺（時間・料金）",
+      "en": "Tenryu-ji: hours and fees (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.tenryuji.com/visit/",
+      "en": "https://www.tenryuji.com/visit/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "嵐山モンキーパーク",
+      "en": "Arashiyama Monkey Park (Japanese)"
+     },
+     "url": {
+      "ja": "http://www.monkeypark.jp/",
+      "en": "http://www.monkeypark.jp/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "桂離宮（参観の申し込み）",
+      "en": "Katsura Imperial Villa: applications"
+     },
+     "url": {
+      "ja": "https://kyoto-gosho.kunaicho.go.jp/katsura-rikyu/visit",
+      "en": "https://kyoto-gosho.kunaicho.go.jp/katsura-rikyu/visit"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "宝厳院（秋の夜間特別拝観）",
+      "en": "Hogon-in: autumn evening opening (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hogonin.jp/event/index.html",
+      "en": "https://www.hogonin.jp/event/index.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "叡山電鉄のマップ（夜の祇園四条・先斗町は24〜26番）",
+      "en": "Eizan Railway map (evening stops 24–26)"
+     },
+     "url": {
+      "ja": "../eizan-line/#list",
+      "en": "../eizan-line/#list"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "京都バスの時刻表（苔寺・すず虫寺）",
+      "en": "Kyoto Bus timetable: Kokedera-Suzumushidera (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=6109_1",
+      "en": "https://www.kyotobus.jp/route/timetable/schedule.html?stop_id=6109_1"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-06",
+     "url": "https://www.hogonin.jp/event/index.html",
+     "head": {
+      "ja": "宝厳院の夜の紅葉は12月6日まで",
+      "en": "Hogon-in’s evening opening until 6 December"
+     },
+     "text": {
+      "ja": "嵐山の宝厳院（ほうごんいん）の夜間特別拝観は2026年11月13日〜12月6日、17:30〜20:30（受付20:00まで）、大人1,000円。昼の券では入れません。開門の直後は混みます（宝厳院の公式サイト）。",
+      "en": "Hogon-in in Arashiyama opens in the evening from 13 November to 6 December 2026, 17:30–20:30 (last entry 20:00), ¥1,000. Daytime tickets aren’t valid, and it is busy right after opening (temple website)."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "境内 5:00〜18:00。庭園と神像館 9:00〜16:00（日曜・祝日は16:30まで）",
+       "en": "Grounds 5:00–18:00. Gardens and statue hall 9:00–16:00 (16:30 on Sundays and holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "庭園と神像館の共通券 大人500円、学生400円、子ども300円。お参りだけなら無料",
+       "en": "Gardens and statue hall ¥500 adults, ¥400 students, ¥300 children. Free just to visit the shrine"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "嵐山へ：松尾大社駅14:05発→嵐山14:07着・170円。桂離宮へ：14:17発→桂14:22着・170円（どちらも毎日同じ）",
+       "en": "To Arashiyama: Matsuo-taisha 14:05 → 14:07, ¥170. For Katsura villa: 14:17 → Katsura 14:22, ¥170 (both every day)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "宝厳院の夜：17:30〜20:30（受付20:00まで）・1,000円、12月6日まで",
+       "en": "Hogon-in evenings: 17:30–20:30 (last entry 20:00), ¥1,000, until 6 Dec"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：阪急嵐山17:33発（土日祝17:27発）→京都河原町17:57着（17:53着）・240円。最後は23:51発→0:19着",
+       "en": "Back: Hankyu Arashiyama 17:33 (weekends and holidays 17:27) → Kyoto-Kawaramachi 17:57 (17:53), ¥240. Last 23:51 → 0:19"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都バス63系統で三条京阪前へ：苔寺・すず虫寺から約65分・230円。最終は平日19:50発→20:48着、土日祝19:42発→20:40着",
+       "en": "Kyoto Bus 63 to Sanjo-Keihan-mae: about 65 min from Kokedera-Suzumushidera, ¥230. Last: weekdays 19:50 → 20:48, weekends and holidays 19:42 → 20:40"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "庭園の時間と料金は松尾大社の公式サイト、境内の時間は京都観光Naviで確認しました。支払い方法は書かれていません（要確認）。阪急は乗換案内（Yahoo!路線情報）で平日・土曜・日曜を、京都バスは公式の時刻表（2026年9月28日からのダイヤ）で確認しました。年末年始の運行は要確認です。歩く時間は地図で測って、少しゆったりめに書いています。",
+     "en": "Garden hours and fees from the shrine website, grounds hours from Kyoto Kanko Navi. Payment methods aren’t stated (please check). Hankyu was checked on a route planner for a weekday, a Saturday and a Sunday; Kyoto Bus on its official timetable (from 28 September 2026). Please check services over the New Year. Walking times are map estimates, rounded up a little."
+    },
+    "checked": "2026-11-22",
+    "source": "松尾大社 公式サイト（庭園拝観）、京都観光Navi 松尾大社（境内の時間）。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "松尾大社（まつのおたいしゃ）\n\n平安京ができるより前、701年に社殿が建てられた神社です。お酒の神様として酒造りの人たちの信仰を集め、境内には奉納された酒樽が壁のように積まれています。\n\n「松風苑（しょうふうえん）」は重森三玲（しげもりみれい）が1975年に完成させた3つの庭で、神像館と共通券です（大人500円）。お酒造りの人が水を持ち帰る「亀の井」と、その奥の霊亀の滝も境内にあります。\n\n阪急の松尾大社駅の目の前です。\n\n朝は通りすぎた松尾大社へ。庭園と神像館、酒樽の壁、亀の井を見たら、午後は嵐山か桂離宮へ進みます。\n\nおすすめ訪問時間：13:10〜13:55\n\n午後の続き：嵐山へ（14:05ごろ）\n\n松尾大社駅14:05発の阪急で嵐山へ（14:07着・170円。平日・土日祝とも同じ）。駅から歩いて7分のモンキーパークは16:00まで（山頂16:30まで）・800円・現金だけ。20分ほど山道を上ります。15:30ごろに下りて、天龍寺へ（歩いて20分ほど。庭園17:00まで・受付16:50、500円）。北門から竹林を歩き、渡月橋へ戻ります。山を上りたくない人は、天龍寺と竹林をゆっくりどうぞ。ほかの場所は嵐山のマップへ。\n\nまたは、桂離宮（かつらりきゅう）へ（申し込みが必要）\n松尾大社駅14:17発→桂14:22着（170円）。東口から歩いて20分で、15:00の日本語の回（英語は15:20）に間に合う時間です（集合時刻は参観許可の案内で確かめてください）。約60分・18歳以上1,000円。中学生以上だけで、本人確認できるものが必要です。月曜（祝日なら翌日）と12月28日〜1月4日は休み。ネットの申し込みは3日前の23:59まで。当日の整理券は現地で朝8:40からなので、このコースの人は先に申し込んでください。帰りは桂から京都河原町へ特急で8分・200円。\n\n帰りと、夜\n阪急嵐山駅17:33発（土日祝17:27発）→京都河原町17:57着（17:53着）・240円、桂で乗り換え。朝が早かったので、いったん休んでから晩ごはんに出ても。12月6日までは、嵐山に残って宝厳院の夜の紅葉（17:30から）も。19:05発（土日祝19:14発）で京都河原町19:31着（19:33着）です。\n\n京都河原町に着いたら、鴨川のほうへ歩くとすぐ先斗町（ぽんとちょう）です。三条までの細い路地と、となりの木屋町通に、夜も開いている店が並びます。晩ごはんのあと鴨川ぞいを三条へ歩けば、21〜22時ごろまで楽しめます。閉まる時間とラストオーダーは店ごとに違うので、表の案内で確かめてください。店を決めておきたい人は、叡山電鉄のマップの24〜26番へ。\n嵐山から京都河原町へ帰れる最後の電車は23:51発（0:19着、桂で乗り換え。平日・土日祝とも）。京都バス63系統で三条京阪前へ帰る最終は、苔寺・すず虫寺発が平日19:50・土日祝19:42です。",
+    "en": "Matsunoo Taisha\n\nIts main hall was first built in 701, before Kyoto became the capital. Sake brewers revere it as the god of sake, and donated barrels are stacked like a wall.\n\nShofu-en, three gardens finished by Shigemori Mirei in 1975, shares a ticket with the statue hall (¥500). The grounds also have Kame-no-i, a spring whose water brewers take home, and the Reiki waterfall behind it.\n\nIt is right in front of Hankyu Matsuo-taisha Station.\n\nBack to the shrine you passed this morning: gardens, statue hall, barrels and spring. Then on to Arashiyama or Katsura villa.\n\nRecommended visit time: 13:10–13:55\n\nAfternoon: on to Arashiyama (about 14:05)\n\nHankyu from Matsuo-taisha at 14:05 to Arashiyama (14:07, ¥170, every day). The Monkey Park, 7 minutes from the station, is open until 16:00 (summit 16:30), ¥800, cash only, with a 20-minute climb. Come down by about 15:30 for Tenryu-ji (about 20 minutes’ walk; garden until 17:00, last entry 16:50, ¥500), then out through the bamboo and back to Togetsukyo. If you don’t want the climb, take Tenryu-ji and the bamboo slowly. The Arashiyama map has the rest.\n\nOr Katsura Imperial Villa (application needed)\nMatsuo-taisha 14:17 → Katsura 14:22 (¥170), then 20 minutes on foot from the east exit, in time for the 15:00 tour in Japanese (English 15:20; check the meeting time on your permit). About 60 minutes, ¥1,000 for 18 and over; junior-high age and up only, and bring photo ID. Closed Mondays (the next day if a holiday) and 28 December – 4 January. Apply online by 23:59 three days before: same-day tickets are handed out there from 8:40, which doesn’t fit this course. From Katsura, an express to Kyoto-Kawaramachi takes 8 minutes, ¥200.\n\nBack to town, and the evening\nHankyu Arashiyama 17:33 (17:27 at weekends and on holidays) → Kyoto-Kawaramachi 17:57 (17:53), ¥240, change at Katsura. After an early start you may want a rest before dinner. Until 6 December you could stay for Hogon-in’s lit-up maples (from 17:30): the 19:05 (19:14) gets you back at 19:31 (19:33).\n\nFrom Kyoto-Kawaramachi, walk toward the river and you’re at Pontocho: a narrow lane up to Sanjo, with Kiyamachi-dori beside it, both lined with places open at night. Dinner, then a stroll along the Kamo river to Sanjo will take you to 21:00 or 22:00. Closing times and last orders differ, so check the sign at the door; if you’d rather have a place picked out, see stops 24–26 on the Eizan Railway map.\nThe last train from Arashiyama to Kyoto-Kawaramachi leaves at 23:51 (arrives 0:19, change at Katsura; every day). The last Kyoto Bus 63 from Kokedera-Suzumushidera to Sanjo-Keihan-mae leaves at 19:50 on weekdays and 19:42 at weekends and on holidays."
+   },
+   "photos": [
+    "matsuo-1.jpg",
+    "matsuo-2.jpg",
+    "matsuo-3.jpg",
+    "matsuo-4.jpg",
+    "matsuo-5.jpg",
+    "matsuo-6.jpg"
+   ]
+  }
+ ]
+}
