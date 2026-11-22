@@ -1,6 +1,7 @@
 {
  "id": "takagamine",
- "_note": "京都 今宮神社と鷹峯のルート（takagamine/ のページ専用。形は eizan-line.json と同じ）。今宮神社であぶり餅→市バスで鷹峯へ、光悦寺→源光庵→常照寺→市バスで北大路へ。写真は Toshi の写真ライブラリから選んだもの（鷹峯は2025年11月4日の Nikon D7000、今宮神社は2026年5月15日。人の顔が写る写真は使っていない。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。info.checked は事実情報を確認した日（各寺社の公式サイト・京都観光Navi、バスは乗換案内）。このファイルは scripts/build_takagamine_data.py で作る。",
+ "course": "late",
+ "_note": "京都 今宮神社と鷹峯のルート（takagamine/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（takagamine.json＝9〜10時に出発、takagamine-early.json＝鷹峯の開門に合わせる）。このファイル：「9〜10時に出発」コース。四条河原町9:36（日祝9:39）の市バス46系統→今宮神社前10:11（日祝10:14）着。今宮神社とあぶり餅→佛教大学前11:04の市バス6系統で鷹峯源光庵前11:08着→源光庵→常照寺→光悦寺→しょうざんでお昼と庭園→歩いて金閣寺→金閣寺道から市バス59系統で河原町三条→夜は三条・先斗町（12月6日まではしょうざんの夜のライトアップも）。 写真は Toshi の写真ライブラリから選んだもの（鷹峯は2025年11月4日の Nikon D7000、今宮神社は2026年5月15日。人の顔が写る写真は使っていない。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。大徳寺・しょうざん・金閣寺・船岡温泉は写真がないので、最後のスポットの文章で案内している。info.source は確認した出典、info.checked は確認日、sources は時刻・料金の出典の一覧。このファイルは scripts/build_takagamine_data.py で作る（直接直さない）。",
  "sections": [
   {
    "first": 1,
@@ -13,8 +14,12 @@
    "day": 1
   }
  ],
+ "focus": {
+  "first": 1,
+  "last": 4
+ },
  "plan": {
-  "_note": "「選んで回る」の設定。全部選べる。",
+  "_note": "「選んで回る」の設定。全部選べる。外したときの回り方は hints。",
   "picks": [
    1,
    2,
@@ -33,14 +38,147 @@
       1
      ]
     },
+    "from": null,
+    "to": null,
     "text": {
-     "ja": "今宮神社に寄らない日は、地下鉄の北大路駅から市バス北1系統で「鷹峯源光庵前」へ（約18分・230円）。",
-     "en": "Skipping Imamiya? From Kitaoji subway station take city bus Kita-1 to “Takagamine-Genkoan-mae” (about 18 min, ¥230)."
+     "ja": "今宮神社に寄らない日は、二条駅前 9:46発の市バス6系統で「鷹峯源光庵前」へ直接（10:08着・230円。京都市役所前から地下鉄東西線で二条へ）。",
+     "en": "Skipping Imamiya? Take city bus 6 from Nijo-eki-mae at 9:46 straight to “Takagamine-Genkoan-mae” (10:08, ¥230; the Tozai subway takes you from Kyoto Shiyakusho-mae to Nijo)."
+    }
+   },
+   {
+    "spot": 1,
+    "rule": {
+     "any": [
+      1
+     ],
+     "none": [
+      2,
+      3,
+      4
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "今宮神社だけの日は、南へ歩いて10分ほどの大徳寺へ。帰りは大徳寺前から市バス12系統で三条京阪へ、今宮神社前からなら46系統で四条河原町へ（日中は12分おき）。",
+     "en": "Only Imamiya? Walk about 10 minutes south to Daitoku-ji. Back to town by city bus 12 from Daitokuji-mae to Sanjo-Keihan, or bus 46 from Imamiya-jinja-mae to Shijo-Kawaramachi (every 12 minutes in the daytime)."
     }
    }
   ]
  },
  "photoBase": "../images/takagamine/",
+ "sources": [
+  {
+   "what": "市バス6系統（2026年3月20日改正）：二条駅前→佛教大学・玄琢行き 平日8:10・土休日8:13、毎日9:46。佛教大学前（玄琢行き）毎日10:04・11:04。鷹峯源光庵前（四条大宮・京都駅行き）毎日10:08・10:38。土天井町（四条大宮・京都駅行き）最終 平日20:37・土休日20:27",
+   "url": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "市バス北1系統（2026年3月20日改正）：北大路バスターミナル→佛教大学・玄琢行き 平日8:09・土休日8:15、日中は15・35・55分。佛教大学前（玄琢行き）毎日11:09。土天井町（北大路バスターミナル行き）平日20:01・20:31・21:01・21:30・22:00・22:37、土休日20:01・20:41・21:20・22:00・22:37",
+   "url": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "市バス46系統（2026年3月20日改正）：四条河原町→佛教大学・今宮神社・上賀茂神社行き 平日・土曜9:36、休日9:39、日中は12分おき。今宮神社前（上賀茂神社行き）平日・土曜10:11、休日10:14",
+   "url": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "市バス12系統（2026年3月20日改正）：大徳寺前→金閣寺道 6分（土曜13:05→13:11、平日13:32→13:38）、日中は12〜15分おき",
+   "url": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "市バス59系統（2026年3月20日改正）：金閣寺道→四条河原町・三条京阪行き 日中15〜20分おき、最終20:39（平日・土休日）",
+   "url": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内（Yahoo!路線情報、11月22日に検索）：平日 京都市役所前7:55→二条8:01、二条駅前8:10→鷹峯源光庵前8:32（450円）。土曜・日曜 京都市役所前8:01→二条8:07、二条駅前8:13→鷹峯源光庵前8:33。平日 北大路バスターミナル8:09（北1）→鷹峯源光庵前8:27。平日 四条河原町9:36（46系統）→今宮神社前10:11（230円）。平日 京都市役所前9:32、土曜9:31→二条駅前9:46→佛教大学前10:04。鷹峯源光庵前10:38（6系統）→佛教大学前10:46（平日・土曜）。金閣寺道16:35（59系統）→河原町三条17:05（平日）。土天井町21:30（北1）→北大路新町21:44・北大路バスターミナル21:47、北大路21:59の烏丸線→烏丸御池22:06、22:13の東西線→京都市役所前22:14（平日）",
+   "url": "https://transit.yahoo.co.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "今宮神社：所在地・TEL受付9:00〜17:00、市バス46番「今宮神社前」下車すぐ、船岡山から北へ徒歩7分、大徳寺バス停から北西へ徒歩13分（交通案内）",
+   "url": "http://www.imamiyajinja.org/access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "あぶり餅 一和：定休日 水曜（1日・15日・祝日が水曜の場合は翌日）、年末12/16〜12/31、1人前600円。営業時間の記載なし（京都府観光連盟）",
+   "url": "https://www.kyoto-kankou.or.jp/info_search/680",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "あぶり餅 かざりや：10時〜17時、定休日 水曜（1日・15日・祝日が水曜の場合は翌日）、年末12/16〜12/31、1人前600円（京都府観光連盟）",
+   "url": "https://www.kyoto-kankou.or.jp/info_search/681",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "光悦寺：8:00〜17:00（紅葉時8:30〜17:00）、通常400円（紅葉時500円）、定休日11/10〜11/13、市バス「源光庵前」徒歩約3分、ホームページの記載なし（京都観光Navi）",
+   "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=279",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "源光庵：9:00〜17:00（16:30受付終了）、行事の日は拝観中止あり、靴袋持参のお願い、駐車場休止11/14〜12/6（お知らせ2026-11-09）。拝観料の記載なし（公式サイト）",
+   "url": "https://genkouan.or.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "常照寺：庭園と堂内の拝観 8:30〜17:00、拝観志納金 大人400円・小学生200円（トップ）。市バス6系統・北1系統「鷹峯源光庵前」徒歩2分（アクセス）",
+   "url": "http://tsakae.justhpbs.jp/joshoji/toppage.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "しょうざんリゾート京都：北庭 日本庭園 9:00〜17:00（閉門）無休、一般500円（お食事割引300円）（日本庭園のページの画像）。秋の紅葉ライトアップ 2026年10月31日〜12月6日 17:30〜20:00（最終受付19:30）、入園料800円（ライトアップのページの画像）。市バス北1・6系統「土天井町」徒歩約5分（交通アクセス）",
+   "url": "https://www.shozan.co.jp/sansaku/index.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "しょうざん わかどり：ランチ11:30〜14:30（LO14:00）、17:00〜22:00（LO21:30）、休業日はカレンダー。楼蘭：年中無休、ランチ 平日12:00〜14:30（LO14:00）・土日祝11:30〜14:30（LO14:30）、17:00〜21:00（LO20:30）",
+   "url": "https://www.shozan.co.jp/restaurant/louran.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "大徳寺 黄梅院 秋の特別公開：2026年10月9日〜12月6日、10:00〜15:45受付終了、大人1,000円・中高生500円・現金のみ、休止日10/10・11・28、静止画撮影可（人物・自撮り棒・三脚は不可）（京都春秋。京都観光Naviのイベント情報も同じ）",
+   "url": "https://kyotoshunju.com/temple/daitokuji-oubaiin/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "大仙院：通年9時〜16時30分（臨時変更あり、カレンダーで確認）、大人500円・小人300円・お抹茶500円、年中無休（公式サイト）",
+   "url": "https://daisen-in.net/fee_information/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "泉仙 大慈院店：11:00〜16:00（L.O）、年中無休（12/28〜31は休み）、6名以上は予約、あやめ4,500円・ゆり5,500円・ぼたん6,500円（公式サイト）",
+   "url": "https://kyoto-izusen.com/html2/restrant_daijiin.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "金閣寺：参拝時間 9:00〜17:00 年中無休、大人（高校生以上）500円・小中学生300円、現金・おまいりPay（相国寺の公式サイト）",
+   "url": "https://www.shokoku-ji.jp/kinkakuji/access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "紅葉の見ごろ（例年）：源光庵・しょうざんリゾート京都・大徳寺黄梅院 11月中旬〜下旬。大徳寺高桐院は当面拝観休止（京都観光Navi 紅葉だより、11月20日更新）",
+   "url": "https://ja.kyoto.travel/flower/momiji/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "地下鉄・バス1日券 大人1,100円（地下鉄・市バスなどが1日乗り放題）（京都観光Navi 交通のお得なチケット）",
+   "url": "https://ja.kyoto.travel/feature/traffic/ticket.php",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "船岡温泉：公式サイト（funaokaonsen.net）はドメインが切れていて開けず、営業時間・料金は確認できない（要確認）",
+   "url": null,
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "歩く時間（OpenStreetMap の道で測った目安）：鷹峯源光庵前〜光悦寺 約4分、光悦寺〜源光庵 約4分、源光庵〜常照寺 約2分、今宮神社〜佛教大学前 5〜7分、今宮神社〜大仙院 約9分、常照寺〜今宮神社 約25分、しょうざん〜金閣寺 約22分（文章では少しゆったりめに書いた）",
+   "url": "https://www.openstreetmap.org/",
+   "checked": "2026-11-22"
+  }
+ ],
  "spots": [
   {
    "no": 1,
@@ -54,15 +192,15 @@
     "en": "Shrine & snack"
    },
    "blurb": {
-    "ja": "朱の楼門の今宮神社。東門の前では、向かい合う2軒の茶店が、千年続くあぶり餅を焼いています。",
-    "en": "Imamiya Shrine with its vermilion gate; outside the east gate, two facing teahouses grill aburi-mochi, a thousand-year-old treat."
+    "ja": "朱の楼門の今宮神社。東門の前では、向かい合う2軒の茶店が、平安時代から続くあぶり餅を焼いています。",
+    "en": "Imamiya Shrine with its vermilion gate; outside the east gate, two facing teahouses grill aburi-mochi, made here since the Heian period."
+   },
+   "caution": {
+    "ja": "あぶり餅の2軒は水曜休み（1日・15日・祝日なら翌日）、12月16日〜31日も休み",
+    "en": "Both aburi-mochi shops close on Wednesdays (Thursday if the 1st, 15th or a holiday) and 16–31 December"
    },
    "lat": 35.0456,
    "lng": 135.74213,
-   "text": {
-    "ja": "今宮神社（いまみやじんじゃ）とあぶり餅\n\n四条河原町から市バス46系統で「今宮神社前」へ（約35分・230円）。地下鉄の北大路駅からなら、北大路バスターミナルから204・205系統で「船岡山」へ、歩いて7分です。\n\n朱色の楼門をくぐると、広い境内に本殿が建ちます。東門を出た参道では、「一和（一文字屋和輔）」と「かざりや」の2軒が向かい合っています。竹ぐしに刺した小さなお餅を炭火であぶり、白みそのたれをからめた「あぶり餅」は、一和が平安時代（長保2年）から続く名物です。\n\n2軒とも水曜休み（1日・15日・祝日が水曜日のときは翌日）で、12月16日〜31日もお休み。1人前600円（京都府観光連盟の案内）。写真は2026年5月。\n\nおすすめ訪問時間：10:00〜10:45",
-    "en": "Imamiya Shrine and aburi-mochi\n\nFrom Shijo-Kawaramachi take city bus 46 to “Imamiya-jinja-mae” (about 35 min, ¥230). From Kitaoji subway station, take bus 204 or 205 from the bus terminal to “Funaokayama” and walk 7 minutes.\n\nThrough the vermilion gate is a broad precinct and the main hall. On the lane outside the east gate, two teahouses face each other: Ichiwa (Ichimonjiya Wasuke) and Kazariya. Small bamboo-skewered rice cakes toasted over charcoal and coated in sweet white-miso sauce: Ichiwa has served aburi-mochi since the Heian period (the year 1000).\n\nBoth shops close on Wednesdays (on Thursday instead when the 1st, the 15th or a holiday falls on a Wednesday) and from 16 to 31 December. ¥600 a portion (Kyoto Prefecture tourism guide). Photos from May 2026.\n\nRecommended visit time: 10:00–10:45"
-   },
    "gmaps": [
     {
      "label": {
@@ -71,7 +209,7 @@
      },
      "lat": 35.0456,
      "lng": 135.74213,
-     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BB%8A%E5%AE%AE%E7%A5%9E%E7%A4%BE"
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BB%8A%E5%AE%AE%E7%A5%9E%E7%A4%BE%20%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8C%97%E5%8C%BA"
     },
     {
      "label": {
@@ -81,18 +219,27 @@
      "lat": 35.04521,
      "lng": 135.74279,
      "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%B6%E3%82%8A%E9%A4%85%20%E3%81%8B%E3%81%96%E3%82%8A%E3%82%84"
+    },
+    {
+     "label": {
+      "ja": "佛教大学前バス停",
+      "en": "Bukkyo-daigaku-mae bus stop"
+     },
+     "lat": 35.0459,
+     "lng": 135.73904,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BD%9B%E6%95%99%E5%A4%A7%E5%AD%A6%E5%89%8D%20%E3%83%90%E3%82%B9%E5%81%9C%20%E4%BB%8A%E5%AE%AE%E9%80%9A"
     }
    ],
    "links": [
     {
      "kind": "official",
      "label": {
-      "ja": "今宮神社 公式サイト",
-      "en": "Imamiya Shrine (official, Japanese)"
+      "ja": "今宮神社 公式サイト（交通案内）",
+      "en": "Imamiya Shrine: access (official, Japanese)"
      },
      "url": {
-      "ja": "http://www.imamiyajinja.org/",
-      "en": "http://www.imamiyajinja.org/"
+      "ja": "http://www.imamiyajinja.org/access/",
+      "en": "http://www.imamiyajinja.org/access/"
      }
     },
     {
@@ -116,15 +263,94 @@
       "ja": "https://www.kyoto-kankou.or.jp/info_search/681",
       "en": "https://www.kyoto-kankou.or.jp/info_search/681"
      }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "市バス 停留所ごとの時刻表（京都市交通局）",
+      "en": "Kyoto City Bus timetables by stop (Japanese)"
+     },
+     "url": {
+      "ja": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+      "en": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": "2026-10-01",
+     "to": "2026-12-06",
+     "url": "https://ja.kyoto.travel/flower/momiji/",
+     "head": {
+      "ja": "紅葉の見ごろは例年11月中旬〜下旬",
+      "en": "Autumn leaves: usually mid to late November"
+     },
+     "text": {
+      "ja": "京都観光Navi（京都市）の紅葉だよりでは、例年の見ごろは源光庵・しょうざんリゾート京都・大徳寺黄梅院が11月中旬〜下旬です。年によって前後するので、行く前に紅葉だよりを見てください。鷹峯の写真は2025年11月4日、今宮神社は2026年5月に撮ったものです。",
+      "en": "Kyoto City’s autumn-leaf report gives the usual peak at Genkoan, Shozan Resort Kyoto and Daitoku-ji’s Obai-in as mid to late November. It shifts from year to year, so check the report before you go. My Takagamine photos are from 4 November 2025; Imamiya’s from May 2026."
+     }
+    },
+    {
+     "from": "2026-12-07",
+     "to": "2027-02-28",
+     "url": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+     "head": {
+      "ja": "紅葉が終わったあと（12月〜2月）",
+      "en": "After the leaves have gone (December–February)"
+     },
+     "text": {
+      "ja": "お寺はふだんどおり開いています。光悦寺は紅葉の時期が終わると8:00から・400円（京都観光Navi）。12月7日からは、しょうざんの夜のライトアップと大徳寺黄梅院の特別公開はありません。大徳寺では一年中開いている大仙院へ。あぶり餅の2軒は12月16日〜31日がお休みです。12月29日〜1月3日の市バスは休日の時刻で走ります。",
+      "en": "The temples keep their usual hours; Koetsuji opens at 8:00 and costs ¥400 outside the autumn season (Kyoto Kanko Navi). From 7 December there is no evening light-up at Shozan and no special opening at Daitoku-ji’s Obai-in; go to Daisen-in, open all year. Both aburi-mochi shops close from 16 to 31 December. From 29 December to 3 January city buses run to the Sunday/holiday timetable."
+     }
+    },
+    {
+     "from": "2026-12-10",
+     "to": "2026-12-31",
+     "url": "https://www.kyoto-kankou.or.jp/info_search/681",
+     "head": {
+      "ja": "あぶり餅は12月16日〜31日お休み",
+      "en": "Aburi-mochi: closed 16–31 December"
+     },
+     "text": {
+      "ja": "一和・かざりやの2軒とも、年末（12月16日〜31日）はお休みです（京都府観光連盟の案内）。今宮神社のお参りはできます。",
+      "en": "Both Ichiwa and Kazariya close at the end of the year, 16–31 December (Kyoto Prefecture tourism guide). You can still visit the shrine."
+     }
     }
    ],
    "info": {
     "rows": [
      {
+      "kind": "train",
+      "text": {
+       "ja": "行き：四条河原町 9:36発（日祝 9:39発）の市バス46系統（佛教大学・今宮神社・上賀茂神社行き）→「今宮神社前」10:11着（日祝 10:14着）・230円。日中は12分おき",
+       "en": "Out: city bus 46 (for Bukkyo-daigaku, Imamiya-jinja, Kamigamo-jinja) from Shijo-Kawaramachi at 9:36 (9:39 on Sundays and holidays) → “Imamiya-jinja-mae” 10:11 (10:14), ¥230. Every 12 min in the daytime"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄なら：京都市役所前 9:32（土休日 9:31）発の東西線で二条へ（220円）→ 二条駅前 9:46発の市バス6系統 →「佛教大学前」10:04着（230円）、歩いて5〜7分",
+       "en": "By subway: Tozai line from Kyoto Shiyakusho-mae at 9:32 (9:31 on weekends and holidays) to Nijo (¥220) → city bus 6 from Nijo-eki-mae at 9:46 → “Bukkyo-daigaku-mae” 10:04 (¥230), then 5–7 min on foot"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "今宮神社 → 鷹峯：佛教大学前 11:04発の市バス6系統 →「鷹峯源光庵前」11:08着（北1系統なら11:09発→11:13着）・230円。毎日同じ時刻",
+       "en": "Imamiya → Takagamine: city bus 6 from Bukkyo-daigaku-mae at 11:04 → “Takagamine-Genkoan-mae” 11:08 (or Kita-1 at 11:09 → 11:13), ¥230. The same every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "hours",
       "text": {
-       "ja": "参拝自由。社務所 9:00〜17:00",
-       "en": "Open to visit; shrine office 9:00–17:00"
+       "ja": "社務所（電話の受付）9:00〜17:00",
+       "en": "Shrine office (phone) 9:00–17:00"
       },
       "until": null,
       "from": null
@@ -132,7 +358,7 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "あぶり餅 1人前600円（かざりやは10:00〜17:00、一和の時間は要確認）",
+       "ja": "あぶり餅 1人前600円（かざりや 10:00〜17:00、一和の時間は要確認）",
        "en": "Aburi-mochi ¥600 a portion (Kazariya 10:00–17:00; Ichiwa’s hours: please check)"
       },
       "until": null,
@@ -150,21 +376,223 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "今宮神社の公式サイトと、京都府観光連盟の案内（あぶり餅のお店）で確認しました。",
-     "en": "Checked on the shrine website and the Kyoto Prefecture tourism guide (aburi-mochi shops)."
+     "ja": "今宮神社の公式サイト（交通案内）と、京都府観光連盟の案内（あぶり餅の2軒）で確認しました（11月22日）。一和の営業時間は、公式の案内に書かれていません。市バスは京都市交通局の停留所ごとの時刻表（2026年3月20日改正）、地下鉄と乗り継ぎは乗換案内（Yahoo!路線情報）で、11月22日に確認しました。紅葉の時期は道が混んで、バスが遅れることがあります。",
+     "en": "Checked on the shrine’s access page and the Kyoto Prefecture tourism guide for the two shops (22 November). Ichiwa’s opening hours aren’t given in any official source. City bus times are from the Kyoto City Transportation Bureau’s stop timetables (revised 20 March 2026), the subway and connections from a route planner, all checked on 22 November. In the autumn season traffic can make buses late."
     },
-    "checked": "2026-11-20"
+    "checked": "2026-11-22",
+    "source": "今宮神社 公式サイト（交通案内）、京都府観光連盟（あぶり餅 一和・かざりや）。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "今宮神社（いまみやじんじゃ）とあぶり餅\n\n朱色の楼門をくぐると、広い境内に本殿が建ちます。東門を出た参道では、「一和（いちわ。一文字屋和輔）」と「かざりや」の2軒が向かい合っています。竹ぐしに刺した小さなお餅を炭火であぶり、白みそのたれをからめた「あぶり餅」。一和は平安時代（長保2年＝1000年）から続く店です。1人前600円（京都府観光連盟の案内）。どちらに入っても同じ値段です。\n\nかざりやは10:00〜17:00。一和の時間は公式の案内で確かめられませんでした（要確認）。2軒とも水曜休み（1日・15日・祝日が水曜日のときは翌日）、12月16日〜31日もお休みです。\n\nバス停は「今宮神社前」（市バス46系統）と、歩いて5〜7分の「佛教大学前」（6・北1・46系統。鷹峯行きはここから）。大徳寺は南へ歩いて10分ほどです。\n\nこのコースは、四条河原町から市バス46系統1本で今宮神社前へ（約35分）。三条からは、四条河原町のバス停まで歩いて10分ほどです。\n\nあぶり餅は10時から。お参りのあとに、2軒のどちらかで1人前を。午前のおやつにちょうどいい量で、お昼までもちます。\n\n食べたら、今宮通を西へ歩いて「佛教大学前」のバス停へ（5〜7分）。11:04発の市バス6系統で鷹峯へ上ります。\n\nおすすめ到着時間：10:11（四条河原町 9:36発）。今宮神社とあぶり餅 10:15〜10:55",
+    "en": "Imamiya Shrine and aburi-mochi\n\nThrough the vermilion gate is a broad precinct and the main hall. On the lane outside the east gate, two teahouses face each other: Ichiwa (Ichimonjiya Wasuke) and Kazariya. Small bamboo-skewered rice cakes are toasted over charcoal and coated in sweet white-miso sauce; Ichiwa has been making them since the year 1000. ¥600 a portion at either shop (Kyoto Prefecture tourism guide).\n\nKazariya is open 10:00–17:00; Ichiwa’s hours couldn’t be confirmed from an official source (please check). Both close on Wednesdays (on Thursday instead when the 1st, the 15th or a holiday falls on a Wednesday) and from 16 to 31 December.\n\nBus stops: “Imamiya-jinja-mae” (city bus 46), and “Bukkyo-daigaku-mae”, 5–7 minutes’ walk (buses 6, Kita-1 and 46; buses up to Takagamine leave from here). Daitoku-ji is about 10 minutes’ walk south.\n\nOn this course one city bus, no. 46, takes you from Shijo-Kawaramachi to Imamiya-jinja-mae (about 35 minutes). From Sanjo it’s about 10 minutes’ walk to the Shijo-Kawaramachi stop.\n\nThe aburi-mochi shops open at 10:00. After visiting the shrine, share a portion at either one: a good mid-morning snack that will see you through to lunch.\n\nThen walk west along Imamiya-dori to the “Bukkyo-daigaku-mae” stop (5–7 minutes) for the 11:04 city bus 6 up to Takagamine.\n\nRecommended arrival time: 10:11 (the 9:36 from Shijo-Kawaramachi). Shrine and aburi-mochi 10:15–10:55"
    },
    "photos": [
     "imamiya-1.jpg",
     "imamiya-2.jpg",
     "imamiya-3.jpg",
     "imamiya-4.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "genkoan",
+   "name": {
+    "ja": "源光庵",
+    "en": "Genkoan"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "丸窓のある山門と、本堂から眺める静かな庭。四角い「迷いの窓」と丸い「悟りの窓」で知られるお寺です。",
+    "en": "A gate with a round window and a quiet garden seen from the main hall; famous for its square “Window of Confusion” and round “Window of Enlightenment”."
+   },
+   "caution": {
+    "ja": "9:00〜17:00（受付16:30まで）。靴を入れる袋を持って。拝観料は要確認",
+    "en": "9:00–17:00 (last entry 16:30). Bring a bag for your shoes. Admission: please check"
+   },
+   "lat": 35.05484,
+   "lng": 135.73182,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "源光庵",
+      "en": "Genkoan"
+     },
+     "lat": 35.05484,
+     "lng": 135.73182,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%BA%90%E5%85%89%E5%BA%B5%20%E9%B7%B9%E5%B3%AF"
+    },
+    {
+     "label": {
+      "ja": "鷹峯源光庵前バス停",
+      "en": "Takagamine-Genkoan-mae bus stop"
+     },
+     "lat": 35.05432,
+     "lng": 135.73237,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%B7%B9%E5%B3%AF%E6%BA%90%E5%85%89%E5%BA%B5%E5%89%8D%20%E3%83%90%E3%82%B9%E5%81%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "源光庵 公式サイト",
+      "en": "Genkoan (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://genkouan.or.jp/",
+      "en": "https://genkouan.or.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "源光庵のお知らせ",
+      "en": "Genkoan notices (Japanese)"
+     },
+     "url": {
+      "ja": "https://genkouan.or.jp/notice/",
+      "en": "https://genkouan.or.jp/notice/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（受付は16:30まで）。行事の日は拝観中止のことあり",
+       "en": "9:00–17:00 (last entry 16:30); closed during temple events"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "拝観料は公式の案内に書かれていません（要確認）",
+       "en": "Admission isn’t given in the official information (please check)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "源光庵の公式サイト（拝観時間・お知らせ・アクセス）で確認しました（11月22日）。",
+     "en": "Checked on the temple website (hours, notices, access) on 22 November."
+    },
+    "checked": "2026-11-22",
+    "source": "源光庵 公式サイト（拝観時間、お知らせ 2026-11-09「駐車場ご利用休止のご案内（11月14日～12月6日）」、靴袋のお願い、アクセス）。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "源光庵（げんこうあん）\n\n「鷹峯源光庵前」バス停のすぐそば。丸い窓のある山門をくぐると、本堂の縁側から苔と植え込みの庭が眺められます。本堂の四角い「迷いの窓」と丸い「悟りの窓」は、人の一生と悟りの心を表すといわれ、紅葉の時期は窓の外が赤く染まります。窓の前は、人が少ない朝のうちが落ち着いて座れます。\n\n本堂の天井は、伏見城の遺構の「血天井」です。\n\n本堂に上がるので、脱いだ靴を入れる袋を持っていきましょう（お寺のお願い）。お寺の行事があるときは、拝観を止めることがあります。拝観料は公式サイトに書かれていません（要確認）。2026年は11月14日〜12月6日、駐車場が使えません。\n\n「鷹峯源光庵前」で降りたら、目の前です。窓の前に、人の少ない朝のうちに座りたい人は、上のボタンで「鷹峯の開門に合わせる」コースに切り替えてください。\n\n出たら、東へ歩いて2分の常照寺へ。\n\nおすすめ訪問時間：11:10〜11:50",
+    "en": "Genkoan\n\nRight by the “Takagamine-Genkoan-mae” bus stop. Through a gate with a round window, look out from the main hall’s veranda over a garden of moss and clipped shrubs. The hall’s square “Window of Confusion” and round “Window of Enlightenment” are said to stand for human life and an enlightened mind; in autumn the view through them turns red. Early in the day, with fewer people, you can sit in front of the windows in peace.\n\nThe hall’s ceiling is the “blood ceiling”, a remnant of Fushimi Castle.\n\nYou take your shoes off for the hall, so bring a bag for them (the temple asks visitors to). Visits are suspended during temple events. Admission isn’t given on the temple website (please check). In 2026 the car park is closed from 14 November to 6 December.\n\nGet off at “Takagamine-Genkoan-mae” and it’s right there. To sit at the windows early, before most people arrive, switch to the “Takagamine at opening” course with the buttons above.\n\nThen walk 2 minutes east to Joshoji.\n\nRecommended visit time: 11:10–11:50"
+   },
+   "photos": [
+    "genkoan-1.jpg",
+    "genkoan-2.jpg",
+    "genkoan-3.jpg",
+    "genkoan-4.jpg",
+    "genkoan-5.jpg",
+    "genkoan-7.jpg",
+    "genkoan-8.jpg"
    ],
    "notices": []
   },
   {
-   "no": 2,
+   "no": 3,
+   "id": "joshoji",
+   "name": {
+    "ja": "常照寺",
+    "en": "Joshoji"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "江戸時代の名妓・吉野太夫が寄進した朱の「吉野門」。丸い窓の茶室と、もみじの庭。",
+    "en": "The vermilion “Yoshino gate” donated by the famed Edo-era courtesan Yoshino Tayu, a round-windowed teahouse and a maple garden."
+   },
+   "caution": {
+    "ja": "8:30〜17:00。大人400円",
+    "en": "8:30–17:00. ¥400"
+   },
+   "lat": 35.05525,
+   "lng": 135.73283,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "常照寺",
+      "en": "Joshoji"
+     },
+     "lat": 35.05525,
+     "lng": 135.73283,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E7%85%A7%E5%AF%BA%20%E9%B7%B9%E5%B3%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "常照寺（お寺のサイト）",
+      "en": "Joshoji (temple site, Japanese)"
+     },
+     "url": {
+      "ja": "http://tsakae.justhpbs.jp/joshoji/toppage.html",
+      "en": "http://tsakae.justhpbs.jp/joshoji/toppage.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:30〜17:00",
+       "en": "8:30–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人400円、小学生200円",
+       "en": "¥400 adults, ¥200 elementary"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "常照寺のサイト（トップ・アクセス・行事）で確認しました（11月22日）。",
+     "en": "Checked on the temple website (top, access and events pages) on 22 November."
+    },
+    "checked": "2026-11-22",
+    "source": "常照寺 公式サイト（トップの拝観時間・拝観志納金、アクセス、行事）。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "常照寺（じょうしょうじ）\n\n源光庵から歩いて2分。参道の先の朱色の山門は、江戸時代の名妓・吉野太夫（よしのたゆう）が寄進したと伝わる「吉野門」です。境内には丸い窓の茶室や、池のある庭があり、春は桜、秋はもみじがきれいです。\n\n庭園と堂内の拝観は8:30〜17:00、大人400円・小学生200円（お寺のサイト）。\n\n朱の吉野門をくぐって、庭と茶室へ。見終わったら、源光庵の前を通って西へ、光悦寺まで歩いて5分ほど。\n\nおすすめ訪問時間：11:55〜12:25",
+    "en": "Joshoji\n\nTwo minutes’ walk from Genkoan. The vermilion gate at the end of the approach is the “Yoshino-mon”, said to have been donated by Yoshino Tayu, a celebrated courtesan of the Edo period. The grounds hold a teahouse with a round window and a pond garden: cherries in spring, maples in autumn.\n\nThe garden and halls are open 8:30–17:00; ¥400 adults, ¥200 elementary (temple website).\n\nThrough the red Yoshino gate to the garden and teahouse. Then walk west past Genkoan to Koetsuji, about 5 minutes.\n\nRecommended visit time: 11:55–12:25"
+   },
+   "photos": [
+    "joshoji-1.jpg",
+    "joshoji-2.jpg",
+    "joshoji-3.jpg",
+    "joshoji-4.jpg",
+    "joshoji-5.jpg",
+    "joshoji-6.jpg",
+    "joshoji-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
    "id": "koetsuji",
    "name": {
     "ja": "光悦寺",
@@ -178,12 +606,12 @@
     "ja": "江戸時代の芸術家・本阿弥光悦が開いた芸術村の跡。もみじのトンネルの参道と、竹を組んだ「光悦垣」。",
     "en": "The site of the artists’ village founded by Hon’ami Koetsu: a tunnel of maples and the woven bamboo “Koetsu fence”."
    },
+   "caution": {
+    "ja": "紅葉の時期は8:30から・500円。毎年11月10日〜13日は拝観できません",
+    "en": "In autumn from 8:30, ¥500. Closed every year 10–13 November"
+   },
    "lat": 35.05352,
    "lng": 135.73019,
-   "text": {
-    "ja": "光悦寺（こうえつじ）\n\n今宮神社から歩いて6分の「佛教大学前」から、市バス北1・6系統で「鷹峯源光庵前」へ（4分・230円）。バス停から歩いて約3分です。\n\n江戸時代のはじめ、書や陶芸で知られる本阿弥光悦が徳川家康からこの地をもらい、職人たちと芸術村を開いた所です。石畳の参道はもみじのトンネルになり、境内には竹を斜めに組んだ「光悦垣」や茶室が点在します。鷹ヶ峰・鷲ヶ峰の山並みが目の前です。\n\n紅葉の見ごろは例年11月中旬〜下旬です（京都観光Naviの紅葉だよりの、となりの源光庵の目安）。毎年11月10日〜13日は拝観できません。\n\nおすすめ訪問時間：11:15〜11:55",
-    "en": "Koetsuji\n\nFrom “Bukkyo-daigaku-mae”, 6 minutes’ walk from Imamiya Shrine, take city bus Kita-1 or 6 to “Takagamine-Genkoan-mae” (4 min, ¥230), then walk about 3 minutes.\n\nIn the early Edo period, Hon’ami Koetsu, famous for calligraphy and pottery, was given this land by Tokugawa Ieyasu and founded an artists’ village with craftsmen. The stone-paved approach becomes a tunnel of maples; the grounds hold teahouses and the “Koetsu-gaki”, a fence of diagonally woven bamboo, with Takagamine’s hills right in front.\n\nThe maples usually peak in mid to late November (Kyoto City’s autumn-leaf report, figure for Genkoan next door). Closed to visitors every year from 10 to 13 November.\n\nRecommended visit time: 11:15–11:55"
-   },
    "gmaps": [
     {
      "label": {
@@ -193,6 +621,33 @@
      "lat": 35.05352,
      "lng": 135.73019,
      "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%89%E6%82%A6%E5%AF%BA%20%E9%B7%B9%E5%B3%AF"
+    },
+    {
+     "label": {
+      "ja": "しょうざんリゾート京都",
+      "en": "Shozan Resort Kyoto"
+     },
+     "lat": 35.05092,
+     "lng": 135.73227,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%97%E3%82%87%E3%81%86%E3%81%96%E3%82%93%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%E4%BA%AC%E9%83%BD"
+    },
+    {
+     "label": {
+      "ja": "金閣寺",
+      "en": "Kinkaku-ji"
+     },
+     "lat": 35.03937,
+     "lng": 135.72924,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E9%96%A3%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "金閣寺道バス停",
+      "en": "Kinkakuji-michi bus stop"
+     },
+     "lat": 35.0369,
+     "lng": 135.733,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E9%96%A3%E5%AF%BA%E9%81%93%20%E3%83%90%E3%82%B9%E5%81%9C"
     }
    ],
    "links": [
@@ -205,6 +660,83 @@
      "url": {
       "ja": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=279",
       "en": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=279"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "しょうざん 日本庭園",
+      "en": "Shozan Japanese garden (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.shozan.co.jp/sansaku/index.html",
+      "en": "https://www.shozan.co.jp/sansaku/index.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "しょうざん わかどり",
+      "en": "Shozan: Wakadori (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.shozan.co.jp/restaurant/wakadori.html",
+      "en": "https://www.shozan.co.jp/restaurant/wakadori.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "しょうざん 楼蘭",
+      "en": "Shozan: Louran (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.shozan.co.jp/restaurant/louran.html",
+      "en": "https://www.shozan.co.jp/restaurant/louran.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "金閣寺（参拝時間・料金）",
+      "en": "Kinkaku-ji: hours and fees (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.shokoku-ji.jp/kinkakuji/access/",
+      "en": "https://www.shokoku-ji.jp/kinkakuji/access/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "金閣寺〜北野のマップ（金閣寺・龍安寺・北野天満宮）",
+      "en": "Kinkaku-ji to Kitano map (Kinkaku-ji, Ryoan-ji, Kitano Tenmangu)"
+     },
+     "url": {
+      "ja": "../kinkakuji/#list",
+      "en": "../kinkakuji/#list"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "叡山電鉄のマップ（夜の祇園四条・先斗町は24〜26番）",
+      "en": "Eizan Railway map (evening stops 24–26)"
+     },
+     "url": {
+      "ja": "../eizan-line/#list",
+      "en": "../eizan-line/#list"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "市バス 停留所ごとの時刻表（京都市交通局）",
+      "en": "Kyoto City Bus timetables by stop (Japanese)"
+     },
+     "url": {
+      "ja": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm",
+      "en": "https://www2.city.kyoto.lg.jp/kotsu/busdia/bustime.htm"
      }
     }
    ],
@@ -236,14 +768,70 @@
       },
       "until": null,
       "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "しょうざん：庭園 9:00〜17:00・無休・500円（食事をした人は300円）／わかどり ランチ11:30〜14:30（LO14:00）／楼蘭 ランチ 平日12:00〜・土日祝11:30〜14:30（LO 平日14:00・土日祝14:30）、年中無休",
+       "en": "Shozan: garden 9:00–17:00, open daily, ¥500 (¥300 after a meal) / Wakadori lunch 11:30–14:30 (LO 14:00) / Louran lunch from 12:00 weekdays, 11:30 weekends–14:30 (LO 14:00 weekdays, 14:30 weekends), open daily"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "金閣寺 9:00〜17:00・年中無休、大人500円",
+       "en": "Kinkaku-ji 9:00–17:00, open daily, ¥500"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：金閣寺道 → 河原町三条 市バス59系統 約30分・230円（平日16:35発→17:05着。最終20:39発）",
+       "en": "Back: Kinkakuji-michi → Kawaramachi-Sanjo, city bus 59, about 30 min, ¥230 (weekdays 16:35 → 17:05; last 20:39)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "しょうざんから：土天井町 → 北大路バスターミナル 市バス北1系統 約17分（最終22:37発）、地下鉄で京都市役所前へ（平日21:30発なら22:14着）",
+       "en": "From Shozan: Dotenjocho → Kitaoji bus terminal, city bus Kita-1, about 17 min (last 22:37), then the subway to Kyoto Shiyakusho-mae (the 21:30 bus gets you there at 22:14 on weekdays)"
+      },
+      "until": null,
+      "from": null
      }
     ],
     "cash": false,
     "tip": {
-     "ja": "京都観光Navi（京都市）で確認しました。お寺の公式サイトは見つかりませんでした。",
-     "en": "Checked on Kyoto Kanko Navi (Kyoto City); no temple website was found."
+     "ja": "京都観光Navi（京都市）で確認しました（11月22日）。お寺の公式サイトは見つかりませんでした。市バスは京都市交通局の停留所ごとの時刻表（2026年3月20日改正）、地下鉄と乗り継ぎは乗換案内（Yahoo!路線情報）で、11月22日に確認しました。紅葉の時期は道が混んで、バスが遅れることがあります。",
+     "en": "Checked on Kyoto Kanko Navi (Kyoto City) on 22 November; no temple website was found. City bus times are from the Kyoto City Transportation Bureau’s stop timetables (revised 20 March 2026), the subway and connections from a route planner, all checked on 22 November. In the autumn season traffic can make buses late."
     },
-    "checked": "2026-11-20"
+    "checked": "2026-11-22",
+    "source": "京都観光Navi 光悦寺（営業時間・拝観料・休み）。2026-11-22に確認"
+   },
+   "notices": [
+    {
+     "from": "2026-10-31",
+     "to": "2026-12-06",
+     "url": "https://www.shozan.co.jp/topic/lightup.html",
+     "head": {
+      "ja": "しょうざん庭園の秋の紅葉ライトアップ（12月6日まで）",
+      "en": "Shozan garden autumn light-up (until 6 December)"
+     },
+     "text": {
+      "ja": "2026年10月31日〜12月6日、17:30〜20:00（最終受付19:30）、入園料800円（しょうざんの公式サイト）。鷹峯から歩いて15分ほど。晩ごはんは中にある中国料理の楼蘭（17:00〜21:00、ラストオーダー20:30、年中無休）か、鳥料理と和食のわかどり（17:00〜22:00、ラストオーダー21:30、休業日はサイトのカレンダー）。帰りは土天井町から市バス北1系統で北大路バスターミナルへ約17分、地下鉄で三条のあたりへ（北1系統の最終は22:37発）。",
+      "en": "31 October – 6 December 2026, 17:30–20:00 (last entry 19:30), ¥800 (Shozan website). About 15 minutes’ walk from Takagamine. For dinner inside: Louran, Chinese (17:00–21:00, last orders 20:30, open every day), or Wakadori, chicken and Japanese (17:00–22:00, last orders 21:30; closing days on its calendar). Back by city bus Kita-1 from Dotenjocho to Kitaoji bus terminal (about 17 minutes), then the subway to the Sanjo area (last Kita-1 at 22:37)."
+     }
+    }
+   ],
+   "text": {
+    "ja": "光悦寺（こうえつじ）\n\n江戸時代のはじめ、書や陶芸で知られる本阿弥光悦（ほんあみこうえつ）が徳川家康からこの地をもらい、職人たちと芸術村を開いた所です。石畳の参道はもみじのトンネルになり、境内には竹を斜めに組んだ「光悦垣」や茶室が点在します。鷹ヶ峰・鷲ヶ峰の山並みが目の前です。\n\n「鷹峯源光庵前」バス停から歩いて約4分、源光庵からも約4分（地図で見た目安）。\n\n拝観は8:00〜17:00（紅葉の時期は8:30から）、400円（紅葉の時期は500円）。毎年11月10日〜13日は拝観できません（京都観光Navi）。お寺の公式サイトは見つかりませんでした。\n\nもみじのトンネルの参道を抜けて、光悦垣の前から鷹ヶ峰の山並みを眺めてください。\n\n出たら、鷹峯の街道を南へ下って、しょうざんでお昼に（歩いて15分ほど）。\n\nおすすめ訪問時間：12:30〜13:10\n\nお昼は、しょうざんで（13:30ごろ）\n\n光悦寺から鷹峯の街道を南へ下ると、しょうざんリゾート京都の西門です（歩いて15分ほど。地図で見た目安）。広い日本庭園の中に料理店があります（しょうざんの公式サイト）。\n・わかどり（鳥料理と和食）：ランチ11:30〜14:30（ラストオーダー14:00）。休業日はサイトのカレンダーで。\n・楼蘭（中国料理）：ランチは平日12:00〜、土日祝11:30〜、14:30まで（ラストオーダーは平日14:00・土日祝14:30）。年中無休。\nラストオーダーが14時なので、13時半までに入ってください。\n\n食べたら、北庭の日本庭園へ（9:00〜17:00、無休。一般500円、店で食事をした人は300円）。紙屋川の流れと、茶室や屋敷が点在する庭です。\n\n金閣寺へ歩いて下りる（15:00ごろ）\nしょうざんから金閣寺までは、歩いて25分ほど（地図で見た目安）。金閣寺は9:00〜17:00、大人500円（相国寺の公式サイト）。15時半ごろに入れば、閉まるまで1時間あります。金閣寺から先、北野天満宮や龍安寺へ回るなら、同じサイトの「金閣寺〜北野」のマップを見てください。\n\n帰りと、夜\n金閣寺道から市バス59系統で河原町三条へ約30分・230円（平日16:35発→17:05着。日中は15〜20分おき。59系統の最終は20:39発）。三条大橋のまわりの木屋町通（きやまちどおり）と先斗町（ぽんとちょう）には、遅くまで開いている店が並びます。閉まる時間とラストオーダーは店ごとに違うので、入る前に表の案内で確かめてください。店を決めておきたい人は、叡山電鉄のマップの24〜26番も見てください。\n\n12月6日までは、金閣寺のかわりに、しょうざんの夜の紅葉ライトアップ（17:30〜20:00）もあります。このスポットの「お知らせ」を見てください。\n\n船岡温泉（ふなおかおんせん）は、今宮神社の南、船岡山のふもとの古い銭湯です。公式サイトが見つからず、営業時間・料金・タトゥーの扱いは確かめられていません（要確認）。行くなら、千本鞍馬口のバス停から歩いて6分ほど（地図で見た目安）。",
+    "en": "Koetsuji\n\nIn the early Edo period, Hon’ami Koetsu, famous for calligraphy and pottery, was given this land by Tokugawa Ieyasu and founded an artists’ village with craftsmen. The stone-paved approach becomes a tunnel of maples; the grounds hold teahouses and the “Koetsu-gaki”, a fence of diagonally woven bamboo, with Takagamine’s hills right in front.\n\nAbout 4 minutes’ walk from the “Takagamine-Genkoan-mae” bus stop, and about 4 from Genkoan (map estimate).\n\nOpen 8:00–17:00 (from 8:30 in the autumn-leaf season), ¥400 (¥500 in autumn). Closed every year from 10 to 13 November (Kyoto Kanko Navi). No temple website was found.\n\nWalk through the tunnel of maples and look out over Takagamine’s hills from beside the Koetsu fence.\n\nThen head south down the old road to Shozan for lunch (about 15 minutes’ walk).\n\nRecommended visit time: 12:30–13:10\n\nLunch at Shozan (around 13:30)\n\nFrom Koetsuji, walk south down the old Takagamine road to the west gate of Shozan Resort Kyoto (about 15 minutes; map estimate). Its restaurants sit inside a large Japanese garden (Shozan website):\n• Wakadori (chicken and Japanese): lunch 11:30–14:30 (last orders 14:00). Closing days are on its online calendar.\n• Louran (Chinese): lunch from 12:00 on weekdays, from 11:30 at weekends and on holidays, until 14:30 (last orders 14:00 on weekdays, 14:30 at weekends). Open every day.\nWith last orders at 14:00, get there by 13:30.\n\nAfter lunch, walk round the north garden (9:00–17:00, open every day; ¥500, or ¥300 if you ate at one of the restaurants): the Kamiya river runs through it past teahouses and old houses.\n\nWalk down to Kinkaku-ji (around 15:00)\nFrom Shozan to Kinkaku-ji is about 25 minutes on foot (map estimate). Kinkaku-ji is open 9:00–17:00, ¥500 (Shokoku-ji website). In by about 15:30 gives you an hour before it closes. To go on to Kitano Tenmangu or Ryoan-ji, see the Kinkaku-ji to Kitano map on this site.\n\nBack to town, and the evening\nCity bus 59 from Kinkakuji-michi to Kawaramachi-Sanjo takes about 30 minutes, ¥230 (weekdays 16:35 → 17:05; every 15–20 minutes in the daytime; the last 59 leaves at 20:39). Around Sanjo Ohashi bridge, Kiyamachi-dori and Pontocho are lined with places that stay open late. Closing times and last orders differ, so check the sign at the door. If you’d rather have a place picked out, see stops 24–26 on the Eizan Railway map.\n\nUntil 6 December there is also Shozan’s evening autumn light-up (17:30–20:00) instead of Kinkaku-ji: see the notes at the top of this spot.\n\nFunaoka Onsen, south of Imamiya at the foot of Funaokayama hill, is an old public bath. No official website could be found, so its hours, price and tattoo rules are unconfirmed (please check). It’s about 6 minutes’ walk from the Senbon-Kuramaguchi bus stop (map estimate)."
    },
    "photos": [
     "koetsuji-1.jpg",
@@ -252,196 +840,7 @@
     "koetsuji-5.jpg",
     "koetsuji-6.jpg",
     "koetsuji-7.jpg"
-   ],
-   "notices": []
-  },
-  {
-   "no": 3,
-   "id": "genkoan",
-   "name": {
-    "ja": "源光庵",
-    "en": "Genkoan"
-   },
-   "kind": {
-    "ja": "寺",
-    "en": "Temple"
-   },
-   "blurb": {
-    "ja": "丸窓のある山門と、本堂から眺める静かな庭。四角い「迷いの窓」と丸い「悟りの窓」で知られるお寺です。",
-    "en": "A gate with a round window and a quiet garden seen from the main hall; famous for its square “Window of Confusion” and round “Window of Enlightenment”."
-   },
-   "lat": 35.05484,
-   "lng": 135.73182,
-   "text": {
-    "ja": "源光庵（げんこうあん）\n\n光悦寺から歩いて約3分。丸い窓のある山門をくぐると、本堂の縁側から苔と植え込みの庭が眺められます。本堂の四角い「迷いの窓」と丸い「悟りの窓」は、人の一生と悟りの心を表すといわれ、紅葉の時期は窓の外が赤く染まります。\n\n本堂の天井は、伏見城の遺構の「血天井」です。\n\n本堂に上がるので、脱いだ靴を入れる袋を持っていきましょう（お寺のお願い）。お寺の行事があるときは拝観を中止することがあります。11月14日〜12月6日は駐車場が使えません。\n\nおすすめ訪問時間：12:00〜12:40",
-    "en": "Genkoan\n\nAbout 3 minutes’ walk from Koetsuji. Through a gate with a round window, look out from the main hall’s veranda over a garden of moss and clipped shrubs. The hall’s square “Window of Confusion” and round “Window of Enlightenment” are said to stand for human life and an enlightened mind; in autumn the view through them turns red.\n\nThe hall’s ceiling is the “blood ceiling”, a remnant of Fushimi Castle.\n\nYou take your shoes off for the hall, so bring a bag for them (the temple asks visitors to). Visits are suspended during temple events. The car park is closed from 14 November to 6 December.\n\nRecommended visit time: 12:00–12:40"
-   },
-   "gmaps": [
-    {
-     "label": {
-      "ja": "源光庵",
-      "en": "Genkoan"
-     },
-     "lat": 35.05484,
-     "lng": 135.73182,
-     "url": "https://www.google.com/maps/search/?api=1&query=%E6%BA%90%E5%85%89%E5%BA%B5%20%E9%B7%B9%E5%B3%AF"
-    }
-   ],
-   "links": [
-    {
-     "kind": "official",
-     "label": {
-      "ja": "源光庵 公式サイト",
-      "en": "Genkoan (official, Japanese)"
-     },
-     "url": {
-      "ja": "https://genkouan.or.jp/",
-      "en": "https://genkouan.or.jp/"
-     }
-    }
-   ],
-   "info": {
-    "rows": [
-     {
-      "kind": "hours",
-      "text": {
-       "ja": "9:00〜17:00（受付は16:30まで）。行事の日は拝観中止のことあり",
-       "en": "9:00–17:00 (last entry 16:30); closed during temple events"
-      },
-      "until": null,
-      "from": null
-     },
-     {
-      "kind": "fee",
-      "text": {
-       "ja": "拝観料は公式の案内に書かれていません（要確認）",
-       "en": "Admission isn’t given in the official information (please check)"
-      },
-      "until": null,
-      "from": null
-     }
-    ],
-    "cash": false,
-    "tip": {
-     "ja": "源光庵の公式サイトで確認しました。",
-     "en": "Checked on the temple website."
-    },
-    "checked": "2026-11-20"
-   },
-   "photos": [
-    "genkoan-1.jpg",
-    "genkoan-2.jpg",
-    "genkoan-3.jpg",
-    "genkoan-4.jpg",
-    "genkoan-5.jpg",
-    "genkoan-7.jpg",
-    "genkoan-8.jpg"
-   ],
-   "notices": []
-  },
-  {
-   "no": 4,
-   "id": "joshoji",
-   "name": {
-    "ja": "常照寺",
-    "en": "Joshoji"
-   },
-   "kind": {
-    "ja": "寺",
-    "en": "Temple"
-   },
-   "blurb": {
-    "ja": "江戸時代の名妓・吉野太夫が寄進した朱の「吉野門」。丸い窓の茶室と、もみじの庭。",
-    "en": "The vermilion “Yoshino gate” donated by the famed Edo-era courtesan Yoshino Tayu, a round-windowed teahouse and a maple garden."
-   },
-   "lat": 35.05525,
-   "lng": 135.73283,
-   "text": {
-    "ja": "常照寺（じょうしょうじ）\n\n源光庵から歩いて2分。参道の先の朱色の山門は、江戸時代の名妓・吉野太夫が寄進したと伝わる「吉野門」です。境内には丸い窓の茶室や、池のある庭があり、春は桜、秋はもみじがきれいです。\n\n帰りは「鷹峯源光庵前」から市バス北1系統で北大路バスターミナルへ（18分・230円、20分おき）。6系統なら四条大宮・京都駅の方へ行けます。お昼は、バスで北大路に出てから駅のまわりで。今宮神社であぶり餅を食べておくと、13時半ごろまでもちます。\n\nおすすめ訪問時間：12:45〜13:25",
-    "en": "Joshoji\n\nTwo minutes’ walk from Genkoan. The vermilion gate at the end of the approach is the “Yoshino-mon”, said to have been donated by Yoshino Tayu, a celebrated courtesan of the Edo period. The grounds hold a teahouse with a round window and a pond garden: cherries in spring, maples in autumn.\n\nHead home on city bus Kita-1 from “Takagamine-Genkoan-mae” to Kitaoji bus terminal (18 min, ¥230, every 20 min), or bus 6 towards Shijo-Omiya and Kyoto Station. Have lunch around Kitaoji after the bus; the aburi-mochi at Imamiya will keep you going until about 13:30.\n\nRecommended visit time: 12:45–13:25"
-   },
-   "gmaps": [
-    {
-     "label": {
-      "ja": "常照寺",
-      "en": "Joshoji"
-     },
-     "lat": 35.05525,
-     "lng": 135.73283,
-     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E7%85%A7%E5%AF%BA%20%E9%B7%B9%E5%B3%AF"
-    }
-   ],
-   "links": [
-    {
-     "kind": "official",
-     "label": {
-      "ja": "常照寺（お寺のサイト）",
-      "en": "Joshoji (temple site, Japanese)"
-     },
-     "url": {
-      "ja": "http://tsakae.justhpbs.jp/joshoji/toppage.html",
-      "en": "http://tsakae.justhpbs.jp/joshoji/toppage.html"
-     }
-    },
-    {
-     "kind": "timetable",
-     "label": {
-      "ja": "乗換案内（Yahoo!路線情報）",
-      "en": "Route planner (Yahoo! Japan)"
-     },
-     "url": {
-      "ja": "https://transit.yahoo.co.jp/",
-      "en": "https://transit.yahoo.co.jp/"
-     }
-    }
-   ],
-   "info": {
-    "rows": [
-     {
-      "kind": "hours",
-      "text": {
-       "ja": "8:30〜17:00",
-       "en": "8:30–17:00"
-      },
-      "until": null,
-      "from": null
-     },
-     {
-      "kind": "fee",
-      "text": {
-       "ja": "大人400円、小学生200円",
-       "en": "¥400 adults, ¥200 elementary"
-      },
-      "until": null,
-      "from": null
-     },
-     {
-      "kind": "train",
-      "text": {
-       "ja": "鷹峯源光庵前 → 北大路バスターミナル 市バス北1系統 18分・230円（毎時13・33・53分）",
-       "en": "Takagamine-Genkoan-mae → Kitaoji bus terminal, city bus Kita-1, 18 min, ¥230 (:13, :33, :53)"
-      },
-      "until": null,
-      "from": null
-     }
-    ],
-    "cash": false,
-    "tip": {
-     "ja": "常照寺のサイトと乗換案内で確認しました。",
-     "en": "Checked on the temple site and a route planner."
-    },
-    "checked": "2026-11-20"
-   },
-   "photos": [
-    "joshoji-1.jpg",
-    "joshoji-2.jpg",
-    "joshoji-3.jpg",
-    "joshoji-4.jpg",
-    "joshoji-5.jpg",
-    "joshoji-6.jpg",
-    "joshoji-7.jpg"
-   ],
-   "notices": []
+   ]
   }
  ]
 }
