@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>近江八幡｜京都から日帰り（彦根まで延長も）</title>
-<meta name="description" content="京都駅から電車で約35分。八幡堀、八幡山ロープウェーと琵琶湖の絶景、近江牛のランチ、クラフトビール、ラ コリーナ。行きたい場所を選んで回る、近江八幡の1日マップ（彦根城・玄宮園まで延長も）。A day trip from Kyoto to Omihachiman: pick the places you like — canal, ropeway and Lake Biwa views, Omi beef, craft beer, La Collina — with an optional extension to Hikone Castle.">
+<title>近江八幡｜京都から日帰り（彦根城にも）</title>
+<meta name="description" content="京都の三条から地下鉄とJRで約1時間。八幡堀、八幡山ロープウェーと琵琶湖の眺め、近江牛のランチ、蔵のクラフトビール、夕方のラ コリーナ。夜は京都に戻るか近江八幡で晩ごはん。彦根城にも行くコースに切り替えられる、時刻つきの1日マップ。A timed day trip from central Kyoto to Omihachiman: canal, ropeway and Lake Biwa views, Omi beef, craft beer and La Collina, with a second course that adds Hikone Castle.">
 <meta name="theme-color" content="#F2F0EA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
-<link rel="stylesheet" href="css/style.css?v=19">
+<link rel="stylesheet" href="css/style.css?v=120">
 <meta name="robots" content="noimageindex">
 <script src="../assets/protect.js?v=1" defer></script>
 </head>
@@ -95,6 +95,12 @@
       <span data-t="spot1Howto">このマップの使い方を見る</span>
     </button>
     <!-- 「全部回る」か「選んで回る」か -->
+    <p class="sw-label" data-t="swCourse">コース</p>
+    <div class="modesw coursesw" role="group" data-t-aria="courseAria" aria-label="コース">
+      <button type="button" data-course="day" data-t="courseDay">近江八幡で1日</button>
+      <button type="button" data-course="hikone" data-t="courseHikone">彦根城にも行く</button>
+    </div>
+    <p class="sw-label" data-t="swMode">回り方</p>
     <div class="modesw" role="group" data-t-aria="modeAria" aria-label="回り方">
       <button type="button" data-mode="all" data-t="modeAll">全部回る</button>
       <button type="button" data-mode="pick" data-t="modePick">選んで回る</button>
@@ -135,6 +141,7 @@
         <span class="ph-pc" id="ph-pc" hidden></span>
         <span class="ph-no" id="ph-no"></span>
         <span class="ph-area" id="ph-area"></span>
+        <span class="ph-credit" id="ph-credit" hidden></span>
       </div>
       <div class="detail-body">
         <h2 class="d-title nm"><b id="d-name"></b><i id="d-alt"></i></h2>
@@ -180,7 +187,7 @@
 <script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
 <script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
 <script src="../assets/basemap.js?v=3"></script>
-<script src="js/i18n.js?v=19"></script>
-<script src="js/app.js?v=23"></script>
+<script src="js/i18n.js?v=120"></script>
+<script src="js/app.js?v=124"></script>
 </body>
 </html>

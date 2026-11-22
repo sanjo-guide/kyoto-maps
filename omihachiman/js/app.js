@@ -1,7 +1,6 @@
-/* 近江八幡（京都発・彦根まで延長も） — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/omihachiman.json（写真は ../images/omihachiman/）. Texts: js/i18n.js
-   eizan-line/js/app.js の複製。違うのは データのパス・保存キー・「お得なきっぷ」欄の省略・
-   最初から「選んで回る」で開くこと・最初の地図を近江八幡の町に合わせること（data.home）
+/* 近江八幡（京都の三条から日帰り・彦根城にも） — map, list, spot detail, intro and language switch.
+   Data: ../data/routes/omihachiman.json と omihachiman-hikone.json（コースで読み分ける。写真は ../images/omihachiman/）. Texts: js/i18n.js
+   eizan-line/js/app.js の複製。違いは scripts/sync_higashiyama.py と scripts/sync_omihachiman.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_omihachiman.py で写し直す） */
 (function () {
   'use strict';
@@ -32,6 +31,19 @@
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
   var KEY_MODE = 'kyoto-maps-omihachiman-mode', KEY_PICKS = 'kyoto-maps-omihachiman-picks';
   var mode = 'all', picks = {}, routeLine = null;
+  // コース: day（近江八幡で1日）か hikone（彦根城にも行く）。コースごとにデータファイルが別で、スポットの番号も変わる。
+  // 一覧の上のボタン（data-course）で切り替える。?course=hikone でも開ける
+  var KEY_COURSE = 'kyoto-maps-omihachiman-course';
+  var course = { id: (location.search.match(/[?&]course=(hikone|day)/) || [])[1] || load(KEY_COURSE) };
+  if (course.id !== 'hikone') course.id = 'day';
+  course.file = 'omihachiman' + (course.id === 'hikone' ? '-hikone' : '') + '.json';
+  // 「行った」印・回り方・選んだ場所はコースごとに別に保存する（番号がコースで変わるため）
+  KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;
+  // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
+  Object.keys(I18N).forEach(function (l) {
+    var o = I18N[l].introFor && I18N[l].introFor[course.id];
+    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+  });
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -40,7 +52,20 @@
     });
   }
   function pad(n) { return (n < 10 ? '0' : '') + n; }
-  function photoUrl(f) { return data.photoBase + f; }
+  // a photo is a file name, or {file, credit: {author, license, page}} for a photo taken from the web
+  function photoFile(p) { return typeof p === 'string' ? p : p.file; }
+  function photoUrl(p) { return data.photoBase + photoFile(p); }
+  function creditHtml(p) {
+    var c = p && p.credit;
+    if (!c) return '';
+    return '<a href="' + esc(c.page) + '" target="_blank" rel="noopener noreferrer">' + esc(T().photoBy) + esc(c.author) + ' / ' + esc(c.license) + '</a>';
+  }
+  function showCredit(el, p) {
+    if (!el) return;
+    var h = creditHtml(p);
+    el.innerHTML = h;
+    el.hidden = !h;
+  }
   function T() { return I18N[lang]; }
   function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -58,6 +83,7 @@
   function loadPlan() {
     mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';
     try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}
+    if (load(KEY_PICKS) === null && data.plan && data.plan.defaultPicks) data.plan.defaultPicks.forEach(function (n) { if (isPick(n)) picks[n] = true; });
   }
   function savePlan() { store(KEY_MODE, mode); store(KEY_PICKS, JSON.stringify(Object.keys(picks).map(Number))); }
   function isPick(no) { return !!(data.plan && data.plan.picks.indexOf(no) >= 0); }
@@ -77,7 +103,7 @@
   // 選んだ組み合わせによって行き方が変わるところの一言（例：古今 藤やを選んだらバスに乗らず歩く）
   function hintsFor(no) {
     if (mode !== 'pick' || !data.plan || !data.plan.hints) return [];
-    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule); });
+    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule) && inRange(h.from, h.to); });
   }
   function routeSpots() { return spots.filter(function (s) { return included(s.no); }); }
   function neighbor(no, dir) {       // 前後の「ルートに入っている」スポット
@@ -189,10 +215,10 @@
     var r = routeSpots();
     var n = r.filter(function (s) { return visited[s.no]; }).length, t = r.length || spots.length;
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+      b.setAttribute('aria-pressed', String(b.dataset.course ? b.dataset.course === course.id : b.dataset.mode === mode));
     });
-    // 「選んで回る」の設定（data.plan）がないマップでは、切り替えボタンごと出さない
-    document.querySelector('.modesw').hidden = !(data && data.plan);
+    // 「選んで回る」の設定（data.plan）がないマップでは、回り方のボタンを出さない（コースのボタンはいつも出す）
+    document.querySelector('.modesw:not(.coursesw)').hidden = !(data && data.plan);
     $('pick-box').hidden = mode !== 'pick';
     $('pick-count').textContent = pickCount() ? fill(T().pickCount, { n: pickCount(), t: r.length }) : T().pickEmpty;
     $('progress-label').textContent = fill(T().progress, { n: n, t: t });
@@ -302,9 +328,16 @@
     $('btn-list').setAttribute('aria-expanded', 'false');
   }
 
+  function listTop() {
+    if (location.hash !== '#list') return;
+    viewList.scrollTop = 0;
+    setTimeout(function () { if (location.hash === '#list') viewList.scrollTop = 0; }, 80);
+  }
+  window.addEventListener('load', listTop);
   function route() {
     showRoute();
     updateTabs();
+    listTop();
   }
 
   // Phones: highlight the tab for what is on screen (the spot details count as part of the list)
@@ -318,9 +351,9 @@
   function showRoute() {
     if (location.hash === '#about') { showIntro(); return; }
     hideIntro();
-    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（スタート前の2か所を含む）なので 2 を引いて開く
-    var m = location.hash.match(/^#spot-(\d+)$/), old = location.hash.match(/^#(\d+)$/);
-    var no = m ? Number(m[1]) : old ? Number(old[1]) - 2 : 0;
+    // #spot-16 の形。番号だけの #16 でも同じスポットを開く
+    var m = location.hash.match(/^#spot-(\d+)$/) || location.hash.match(/^#(\d+)$/);
+    var no = m ? Number(m[1]) : 0;
     if (no && byNo[no]) {
       showDetail(no);
       return;
@@ -334,7 +367,11 @@
   }
 
   /* ---------- intro ---------- */
-  function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // [スポットの番号 or id, 写真の番号]（コースで番号が変わるので id で指定する）
+  function introPhoto(p) {
+    var s = typeof p[0] === 'string' ? spots.filter(function (x) { return x.id === p[0]; })[0] : byNo[p[0]];
+    return photoUrl(s.photos[p[1]]);
+  }
   // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
     return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
@@ -386,13 +423,13 @@
               '<span class="in-text">' + esc(d.text) + '</span></div></li>';
           }).join('') +
         '</ol></section>' +
-        (x.deals && x.deals.length ? '<section class="in-sec"><h2 class="in-h2">' + esc(x.dealsHead) + '</h2><p class="in-deals-lead">' + esc(x.dealsLead) + '</p><div class="in-deals">' +
+        '<section class="in-sec"><h2 class="in-h2">' + esc(x.dealsHead) + '</h2><p class="in-deals-lead">' + esc(x.dealsLead) + '</p><div class="in-deals">' +
           x.deals.map(function (d) {
             return '<div class="in-deal' + (d.best ? ' best' : '') + '">' + (d.best ? '<span class="in-best">' + esc(d.best) + '</span>' : '') +
               '<p class="in-deal-name"><b>' + esc(d.name) + '</b><span>' + esc(d.price) + '</span></p><p>' + esc(d.text) + '</p>' +
-              (d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a>' : '') + '</div>';
+              '<a href="' + esc(d.url) + '" target="_blank" rel="noopener noreferrer">' + esc(x.dealsMore) + '</a></div>';
           }).join('') +
-        '</div>' + (x.dealsNote ? '<p class="in-deals-note">' + esc(x.dealsNote) + '</p>' : '') + '</section>' : '') +
+        '</div><p class="in-deals-note">' + esc(x.dealsNote) + '</p></section>' +
         '<footer class="in-foot">' + logo('in-logo') +
           '<p>' + esc(x.footer1) + '</p></footer>' +
       '</div>' +
@@ -441,6 +478,7 @@
         s.photos.map(function (f, i) {
           return '<img src="' + photoUrl(f) + '" alt=""' + ' loading="lazy" decoding="async">';
         }).join('') + '</div>' + badge(s.no) +
+        '<span class="l-cr"' + (creditHtml(s.photos[0]) ? '' : ' hidden') + '>' + creditHtml(s.photos[0]) + '</span>' +
         (n > 1 ? '<span class="l-count">1 / ' + n + '</span>' +
           '<button type="button" class="l-arrow prev" data-step="-1" aria-label="' + esc(T().prevPhoto) + '" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>' +
           '<button type="button" class="l-arrow next" data-step="1" aria-label="' + esc(T().nextPhoto) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>' : '') +
@@ -487,6 +525,13 @@
     savePlan();
     updateRoute();
   }
+  // コースを切り替えたら、そのコースのデータで読み直す（一覧を開いた状態で）
+  function setCourse(c) {
+    if (c === course.id) return;
+    store(KEY_COURSE, c);
+    history.replaceState(null, '', location.pathname + '#list');
+    location.reload();
+  }
 
   // Update one spot in the list in place, so its photos and the scroll position stay where they are
   function updateListItem(no) {
@@ -505,6 +550,7 @@
     $('counter').textContent = (i + 1) + ' / ' + n;
     $('slide-prev').disabled = i <= 0;
     $('slide-next').disabled = i >= n - 1;
+    if (activeNo && byNo[activeNo]) showCredit($('ph-credit'), byNo[activeNo].photos[i]);
   }
 
   function renderDetail(s) {
@@ -555,6 +601,7 @@
     [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
       img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
     });
+    if (activeNo === s.no) updateCounter();   // photo credit in the current language
   }
 
   function renderPickBtn(s) {
@@ -592,7 +639,7 @@
         '</dl>';
     }
     if (inf.cash) html += '<p class="cash">' + ICON.cash + esc(t.cash) + '</p>';
-    if (rows.length) html += '<p class="checked">' + esc(fill(t.checked, { d: t.checkedDate })) + '</p>';
+    if (rows.length) html += '<p class="checked">' + esc(fill(inf.verified === false ? t.unchecked : t.checked, { d: t.checkedDate })) + '</p>';
     if (inf.tip) html += '<p class="tip">' + esc(inf.tip[lang]) + '</p>';
     return html;
   }
@@ -610,6 +657,7 @@
     renderDetail(s);
     $('detail-scroll').scrollTop = 0;
     setActive(no);
+    showCredit($('ph-credit'), s.photos[0]);
     focusMarker(s);
   }
 
@@ -659,17 +707,11 @@
   }
 
   /* ---------- init ---------- */
-  function fitAll() {
-    var r = routeSpots();
+  // 地図を開いたときは歩くエリア（data.focus）だけを映す。「全体を表示」ボタン（e がある）では全部
+  function fitAll(e) {
+    var r = routeSpots(), f = !e && data.focus;
+    if (f) r = r.filter(function (x) { return x.no >= f.first && x.no <= f.last; });
     var b = L.latLngBounds((r.length >= 2 ? r : spots).map(function (s) { return [s.lat, s.lng]; }));
-    map.fitBounds(b, WIDE.matches ? { padding: [40, 40] } : { paddingTopLeft: [20, 150], paddingBottomRight: [20, 80] });
-  }
-
-  // 近江八幡: 最初の地図は町の中（data.home の番号の範囲）に合わせる
-  function fitHome() {
-    var h = data.home;
-    if (!h) { fitAll(); return; }
-    var b = L.latLngBounds(spots.filter(function (s) { return s.no >= h[0] && s.no <= h[1]; }).map(function (s) { return [s.lat, s.lng]; }));
     map.fitBounds(b, WIDE.matches ? { padding: [40, 40] } : { paddingTopLeft: [20, 150], paddingBottomRight: [20, 80] });
   }
 
@@ -697,7 +739,7 @@
       color: '#AE3A22', weight: 2.5, opacity: 0.75, dashArray: '2 8', lineCap: 'round', interactive: false
     }).addTo(map);
 
-    fitHome();
+    fitAll();
     addBaseMap();     // after the map has a view: the layer is only created then
     photoMode = map.getZoom() >= PHOTO_ZOOM;
     spots.forEach(function (s) {
@@ -741,6 +783,8 @@
         var n = sl.children.length, i = Math.round(sl.scrollLeft / Math.max(1, sl.clientWidth));
         var box = sl.parentNode, c = box.querySelector('.l-count');
         if (c) c.textContent = (i + 1) + ' / ' + n;
+        var sp = byNo[Number(sl.dataset.open)];
+        if (sp) showCredit(box.querySelector('.l-cr'), sp.photos[i]);
         var pv = box.querySelector('.l-arrow.prev'), nx = box.querySelector('.l-arrow.next');
         if (pv) pv.disabled = i <= 0;
         if (nx) nx.disabled = i >= n - 1;
@@ -763,7 +807,7 @@
       savePlan(); updateRoute();
     });
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.addEventListener('click', function () { setMode(b.dataset.mode); });
+      b.addEventListener('click', function () { if (b.dataset.course) setCourse(b.dataset.course); else setMode(b.dataset.mode); });
     });
     $('btn-pick-all').addEventListener('click', function () {
       data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
@@ -835,7 +879,7 @@
     route();
   }
 
-  fetch('../data/routes/omihachiman.json?v=3')
+  fetch('../data/routes/' + course.file + '?v=4')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

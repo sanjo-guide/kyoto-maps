@@ -1,8 +1,10 @@
 /* Page texts in Japanese and English.
-   Toshi 個人のマップ。京都駅スタート、近江八幡を回って京都へ帰る（彦根まで延長も）。
-   見どころが多くて1日では回りきれないので、最初から「選んで回る」で開く（data の plan.defaultMode）。
-   Photos are [spot number, photo index] from data/routes/omihachiman.json.
-   料金・時間の確認日はデータ側（info.checked）と dealsNote に書いている。 */
+   Toshi 個人のマップ。京都の三条のあたりから出発して、近江八幡を回って帰る。
+   コースは2つ（一覧の上のボタン）：day＝近江八幡で1日（data/routes/omihachiman.json）、hikone＝彦根城にも行く（omihachiman-hikone.json）。
+   intro はどちらのコースにも共通の項目で、コースで変わる項目（h1・lead・who・dayHead・day・dealsLead・deals）は
+   introFor[コース] が app.js で上書きされる（scripts/sync_omihachiman.py）。
+   写真は [スポットの id, 写真の番号]（コースで番号が変わるため）。
+   料金・時間の確認日はデータ側（info.checked・sources）と dealsNote に書いている。 */
 window.OMI_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -16,7 +18,7 @@ window.OMI_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '番号はおすすめの順番です。全部を1日で回るのはむずかしいので、行きたい場所を選んでください。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '番号は回る順番です。最初は時間割どおりの場所が選んであるので、行きたい場所に入れ替えてください。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -30,6 +32,7 @@ window.OMI_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
+    photoBy: '写真：',
     credit: '写真・文章：Toshi<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
@@ -41,7 +44,8 @@ window.OMI_I18N = {
     train: '電車',
     cash: '現金を用意してください',
     checked: '{d}に公式サイトなどで確認しました。変わることがあるので、行く前に公式サイトも見てください。',
-    checkedDate: '2026年11月20日',
+    checkedDate: '2026年11月20〜22日',
+    unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
     noticeHead: 'この時期の注意',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -54,10 +58,15 @@ window.OMI_I18N = {
     progress: '{n} / {t} か所 行った',
     reset: 'リセット',
     resetAsk: 'もう一度押すと、行った印をすべて消します',
+    swCourse: 'コース',
+    courseAria: 'コース',
+    courseDay: '近江八幡で1日\n（夕方はラ コリーナ）',
+    courseHikone: '彦根城にも行く\n（14:34の電車で彦根へ）',
+    swMode: '回り方',
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。選んだ場所だけが点線でつながります。駅とロープウェーは、選んだ場所に合わせて自動で入ったり外れたりします。おすすめの時間は、全部回る場合の目安です。',
+    pickNote: '行きたい場所の「行きたい」を押してください。選んだ場所だけが点線でつながります。駅とロープウェーは、選んだ場所に合わせて自動で入ったり外れたりします。めやすの時間は、最初に選んである組み合わせで回る場合のものです。',
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（駅などを含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から行きたい場所を選んでください。',
     pickAll: 'すべて選ぶ',
@@ -70,51 +79,84 @@ window.OMI_I18N = {
     hintHead: 'あなたのルートでは',
     intro: {
       kicker: 'Toshiが歩いて作った日帰りルート',
-      h1: '京都から電車で35分。堀と蔵の町を、好きな場所を選んで歩く1日。',
-      lead: '八幡堀の白壁の蔵と舟、ロープウェーで上る八幡山からの琵琶湖、近江牛のランチ、蔵のクラフトビール、草屋根のラ コリーナ。見どころが多くて1日では回りきれないので、行きたい場所を選んで、自分だけのルートを作ってください。余裕があれば、彦根城まで足をのばすのもおすすめです。',
       favLabel: 'いちばんの見どころ',
       favName: '八幡堀',
       favText: '白壁の蔵と石垣のあいだを、舟がゆっくり進む。',
-      favPhoto: [3, 0],
+      favPhoto: ['hori', 0],
       whoHead: 'こんな人におすすめ',
-      who: [
-        '京都から日帰りで、古い町並みと琵琶湖の景色を楽しみたい人に',
-        'スタートは京都駅。新快速で約35分、乗り換えなし',
-        '近江牛のランチ、クラフトビール、焼きたてバームクーヘンと、食べるものも楽しみ',
-        '見どころが多いので、行きたい場所を選んで自分のプランに',
-        '余裕があれば、新快速で14分の彦根へ。国宝の彦根城と玄宮園まで'
-      ],
-      dayHead: '1日の流れ（全部回る場合の目安）',
       from: '',
-      day: [
-        { time: '9:00', area: '京都駅', title: '新快速で近江八幡へ', text: '京都駅から琵琶湖線の新快速で約35分。近江八幡駅の北口6番のりばから、バスで八幡堀へ。', note: '「野洲」行きは手前で終点', photo: [1, 0] },
-        { time: '9:50', area: '八幡堀・八幡山', title: '堀を見て、ロープウェーで山の上へ', text: '八幡堀をひと回りしたら、ロープウェーで八幡山へ。展望台から琵琶湖を見下ろして、山頂の瑞龍寺へ。', photo: [5, 0] },
-        { time: '11:15', area: '日牟禮八幡宮', title: '八幡宮と近江牛のランチ', text: '山を下りて日牟禮八幡宮へ。ランチは近江牛の久ぼ多屋か、まるたけ近江西川で。', note: '久ぼ多屋は木曜、まるたけは火曜休み', photo: [7, 0] },
-        { time: '13:00', area: '八幡堀', title: '蔵のビアハウスと町歩き', text: '白壁の蔵のビアハウスでクラフトビールを1杯。そのあとは新町通りや堀ぞいの石畳をのんびり。', note: 'ビアハウスは12:00から・火曜休み', photo: [10, 0] },
-        { time: '14:45', area: '北之庄', title: '歩いてラ コリーナへ', text: '北へ歩いて約20分。草屋根の建物と焼きたてバームクーヘン。帰りはバスで駅へ。', photo: [12, 0] },
-        { time: '17:00', area: '近江八幡駅', title: '近江牛のディナー、そして京都へ', text: '駅前のティファニーで近江牛のディナー（ランチで行くのもあり）。新快速で京都へ。', note: 'ティファニーは火曜休み', photo: [13, 0] }
-      ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
-      dealsLead: '京都駅から近江八幡を回って京都へ帰ると、電車・バス・ロープウェーで大人1人 2,980円です（瑞龍寺の拝観料などは別）。',
-      deals: [
-        { name: 'JR琵琶湖線（京都→近江八幡）', price: '680円', text: '新快速で約35分。ICカードもきっぷも同じ運賃です。帰りの近江八幡→京都も680円。' },
-        { name: '近江鉄道バス（近江八幡駅→八幡堀）', price: '260円', text: '北口6番のりばから約6分。ラ コリーナ前までは410円、ラ コリーナから駅へも410円です。', url: 'https://www.ohmitetudo.co.jp/bus/guide/terminal' },
-        { name: '八幡山ロープウェー（往復）', price: '950円', text: '片道なら540円。山頂まで約4分です。', url: 'https://www.ohmitetudo.co.jp/ropeway/open-price/' },
-        { name: '延長：JR（近江八幡→彦根→京都）', price: '420円＋1,170円', text: '彦根まで行く日は、帰りの近江八幡→京都（680円）のかわりに、近江八幡→彦根が420円、彦根→京都が1,170円です。' }
-      ],
-      dealsNote: '大人の運賃です。バスとロープウェーは各社の公式サイト、JRは乗換案内で、2026年11月20日に確認しました。',
+      dealsNote: '大人の運賃です。バスとロープウェーは各社の公式サイト、JRと地下鉄は乗換案内で、2026年11月22日に確認しました。',
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
       how: [
-        { title: '行きたい場所を選ぶ', text: 'このマップは「選んで回る」で開きます。一覧で行きたい場所の「行きたい」を押すと、選んだ場所だけが点線でつながります。駅とロープウェーは自動で入ります。' },
-        { title: '番号はおすすめの順番', text: '番号の順に回ると、移動にむだがありません。全部見たいときは「全部回る」に切り替えられます。' },
-        { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・おすすめの時間が見られます。' },
+        { title: 'コースを選ぶ', text: '一覧の上のボタンで「近江八幡で1日」か「彦根城にも行く」を選びます。コースによって、時間割と番号が変わります。' },
+        { title: '行きたい場所を入れ替える', text: '最初は、時間割どおりの場所が選んであります。一覧の「行きたい」「行く」を押して入れ替えると、選んだ場所だけが点線でつながります。駅とロープウェーは自動で入ります。' },
+        { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・めやすの時間が見られます。' },
         { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。時刻表や公式サイトへのリンクもあります。' },
-        { title: '時間は目安', text: 'おすすめの時間は全部回る場合の目安です。選んだ場所が少なければ、そのぶんゆっくりどうぞ。' }
+        { title: '時刻は行く前にもう一度', text: '電車とバスの時刻は2026年11月に確かめたものです。平日と土日祝で違うところは両方書いています。変わることがあるので、行く前に時刻表も見てください。' }
       ],
       cta: '地図を見る',
       footer1: 'Toshiが実際に歩いて作った、オリジナルマップです。'
+    },
+    introFor: {
+      day: {
+        h1: '三条から1時間。堀と蔵の町を、夕方まで歩く1日。',
+        lead: '三条を9:44に出て、八幡堀、ロープウェーで上る八幡山、近江牛のお昼、蔵のクラフトビール、夕方のラ コリーナまで。夜は京都に戻って晩ごはんにするか、近江八幡で食べて帰るかを選べます。行きたい場所は、一覧で入れ替えられます。',
+        who: [
+          '京都から日帰りで、古い町並みと琵琶湖の景色を楽しみたい人に',
+          '三条のあたりから約1時間。地下鉄で山科へ出て、JRの新快速に乗り換え（850円）',
+          '近江牛のランチ、クラフトビール、焼きたてバームクーヘンと、食べるものも楽しみ',
+          '火曜日はお店の休みが多いので、できればほかの曜日に',
+          '国宝の彦根城にも行きたい日は、一覧の上のボタンで「彦根城にも行く」コースへ'
+        ],
+        dayHead: '1日の流れ（三条京阪 9:44発）',
+        day: [
+          { time: '9:44', area: '三条', title: '地下鉄とJRで近江八幡へ', text: '三条京阪から地下鉄で山科へ。10:06の新快速に乗り換えて、近江八幡に10:35。北口の6番のりばから、10:45のバスで八幡堀へ。', note: '土日祝は電車が1分早い', photo: ['start', 0] },
+          { time: '10:55', area: '八幡堀・八幡山', title: '堀を見て、ロープウェーで山の上へ', text: '八幡堀をひと回りしたら、11:15ごろのロープウェーで八幡山へ。琵琶湖を見下ろして、山頂の瑞龍寺へ。', photo: ['summit', 0] },
+          { time: '12:20', area: '日牟禮八幡宮', title: '八幡宮と近江牛のランチ', text: '山を下りて日牟禮八幡宮へ。ランチは12:45ごろ、近江牛の久ぼ多屋か、まるたけ近江西川で。', note: '久ぼ多屋は木曜、まるたけは火曜休み', photo: ['himure', 0] },
+          { time: '13:50', area: '八幡堀', title: '蔵のビアハウスと町歩き', text: '白壁の蔵のビアハウスでクラフトビールを1杯。そのあとは新町通りや堀ぞいの石畳をのんびり。舟に乗るならこの時間に。', note: 'ビアハウスは火曜休み', photo: ['beer', 0] },
+          { time: '15:30', area: '北之庄', title: '歩いてラ コリーナへ', text: '北へ歩いて20〜25分。草屋根の建物と焼きたてバームクーヘン。帰りは平日16:44、土日祝16:57のバスで駅へ。', note: '平日は16:44の次が17:42', photo: ['collina', 0] },
+          { time: '17:36', area: '近江八幡駅', title: '京都で晩ごはん、または近江八幡で', text: '17:36の新快速で三条に18:30ごろ。街なかで21〜22時まで。近江八幡で食べるなら駅前のティファニーへ。金曜・土曜は八幡堀のビアハウスも20:00まで。', note: 'ティファニーは火曜休み', photo: ['tiffany', 0] }
+        ],
+        dealsLead: '三条から近江八幡を回って三条へ帰ると、電車・バス・ロープウェーで大人1人 3,320円です（ラ コリーナまで歩いた場合。瑞龍寺の拝観料などは別）。',
+        deals: [
+          { name: '地下鉄東西線（三条京阪→山科）', price: '260円', text: '9分。京都市役所前からも同じ運賃です。帰りの山科→三条京阪も260円。', url: 'https://www.city.kyoto.lg.jp/kotsu/' },
+          { name: 'JR琵琶湖線（山科→近江八幡）', price: '590円', text: '新快速で約30分。帰りも590円。京都駅から乗る場合は680円です。', url: 'https://www.jr-odekake.net/' },
+          { name: '近江鉄道バス（近江八幡駅→八幡堀）', price: '260円', text: '北口6番のりばから6分。帰りのラ コリーナ前→駅は410円です。', url: 'https://www.ohmitetudo.co.jp/bus/guide/terminal' },
+          { name: '八幡山ロープウェー（往復）', price: '950円', text: '片道なら540円。山頂まで約4分です。', url: 'https://www.ohmitetudo.co.jp/ropeway/open-price/' }
+        ]
+      },
+      hikone: {
+        h1: '堀と蔵の町を歩いて、午後は国宝の彦根城へ。',
+        lead: '午前は近江八幡で八幡堀と八幡山、お昼は近江牛。14:34の新快速で14分の彦根へ行き、彦根城と玄宮園を閉まる17:00まで歩きます。彦根城の入場は16:30までなので、近江八幡では場所をしぼってあります。ラ コリーナは、八幡山のかわりになら行けます。',
+        who: [
+          '近江八幡と彦根城を、1日で両方見たい人に',
+          '三条のあたりから約1時間。地下鉄で山科へ出て、JRの新快速に乗り換え（850円）',
+          '彦根城と玄宮園の入場は16:30まで。近江八幡を14:34の電車で出ます',
+          '火曜日はお店の休みが多いので、できればほかの曜日に',
+          '近江八幡をゆっくり回りたい日は、一覧の上のボタンで「近江八幡で1日」コースへ'
+        ],
+        dayHead: '1日の流れ（三条京阪 9:44発）',
+        day: [
+          { time: '9:44', area: '三条', title: '地下鉄とJRで近江八幡へ', text: '三条京阪から地下鉄で山科へ。10:06の新快速に乗り換えて、近江八幡に10:35。北口の6番のりばから、10:45のバスで八幡堀へ。', note: '土日祝は電車が1分早い', photo: ['start', 0] },
+          { time: '10:55', area: '八幡堀・八幡山', title: '堀を見て、ロープウェーで山の上へ', text: '八幡堀の石畳を歩いたら、11:15ごろのロープウェーで八幡山へ。琵琶湖を見下ろして、12:00ごろに下ります。', photo: ['summit', 0] },
+          { time: '12:05', area: '日牟禮八幡宮', title: '八幡宮と近江牛のランチ', text: '日牟禮八幡宮にお参りして、12:25ごろからランチ。近江牛の久ぼ多屋か、まるたけ近江西川で。', note: '久ぼ多屋は木曜、まるたけは火曜休み', photo: ['himure', 0] },
+          { time: '13:20', area: '八幡堀', title: '1杯だけ飲むか、新町通りを歩く', text: '蔵のビアハウスで1杯、または新町通りへ。13:55（土日祝は14:00）のバスで駅へ戻ります。', note: 'ビアハウスは火曜休み', photo: ['beer', 0] },
+          { time: '14:34', area: '近江八幡駅', title: '新快速で彦根へ', text: '京都と反対方向の新快速で14分。彦根駅から彦根城までは歩いて約15分です。', note: '彦根城の入場は16:30まで', photo: ['hikone-sta', 0] },
+          { time: '15:05', area: '彦根', title: '彦根城と玄宮園', text: '先に天守へ上がり、そのあと玄宮園へ。15:00〜15:30は、博物館の門の前にひこにゃんが出てくることが多い時間です。', note: '17:00に閉まります', photo: ['castle', 0] },
+          { time: '17:52', area: '彦根駅', title: '京都へ、または近江八幡で晩ごはん', text: '17:52の新快速で三条に19:00ごろ。途中の近江八幡で降りて、駅前のティファニーで近江牛のディナーにする手もあります。', note: 'ティファニーは火曜休み', photo: ['tiffany', 0] }
+        ],
+        dealsLead: '三条から近江八幡と彦根を回って三条へ帰ると、電車・バス・ロープウェーで大人1人 3,990円です（彦根城の1,000円などは別）。',
+        deals: [
+          { name: '地下鉄東西線（三条京阪→山科）', price: '260円', text: '9分。京都市役所前からも同じ運賃です。帰りの山科→三条京阪も260円。', url: 'https://www.city.kyoto.lg.jp/kotsu/' },
+          { name: 'JR琵琶湖線（山科→近江八幡）', price: '590円', text: '新快速で約30分。京都駅から乗る場合は680円です。', url: 'https://www.jr-odekake.net/' },
+          { name: '近江鉄道バス（近江八幡駅⇔八幡堀）', price: '260円×2', text: '北口6番のりばから6分。駅へ戻るバスは約15分かかります。', url: 'https://www.ohmitetudo.co.jp/bus/guide/terminal' },
+          { name: '八幡山ロープウェー（往復）', price: '950円', text: '片道なら540円。山頂まで約4分です。', url: 'https://www.ohmitetudo.co.jp/ropeway/open-price/' },
+          { name: 'JR（近江八幡→彦根→山科）', price: '420円＋990円', text: '彦根まで新快速で14分。帰りは彦根から山科まで約45分、京都駅までなら1,170円です。', url: 'https://www.jr-odekake.net/' }
+        ]
+      }
     }
   },
   en: {
@@ -129,7 +171,7 @@ window.OMI_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'The numbers show the best order. There’s more here than one day allows, so pick the places you want. The dotted line shows the order, not the actual path.',
+    listNote: 'The numbers show the order. The stops on the timetable are already chosen; swap in the places you want. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -143,6 +185,7 @@ window.OMI_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
+    photoBy: 'Photo: ',
     credit: 'Photos &amp; text: Toshi<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
@@ -154,7 +197,8 @@ window.OMI_I18N = {
     train: 'Train',
     cash: 'Bring cash',
     checked: 'Checked on {d}, mostly on official websites. Details can change, so please check before you go.',
-    checkedDate: 'Nov 20, 2026',
+    checkedDate: 'Nov 20–22, 2026',
+    unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
     noticeHead: 'Right now',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -167,10 +211,15 @@ window.OMI_I18N = {
     progress: '{n} of {t} visited',
     reset: 'Reset',
     resetAsk: 'Tap again to clear all visited marks',
+    swCourse: 'Course',
+    courseAria: 'Course',
+    courseDay: 'Omihachiman all day\n(La Collina late afternoon)',
+    courseHikone: 'Add Hikone Castle\n(14:34 train to Hikone)',
+    swMode: 'Stops',
     modeAria: 'How to go',
     modeAll: 'Full route',
     modePick: 'Choose stops',
-    pickNote: 'Tap “Want to go” on the places you like, and only those are joined by the dotted line. Stations and the ropeway are added or skipped automatically to match. Suggested times are for the full route.',
+    pickNote: 'Tap “Want to go” on the places you like, and only those are joined by the dotted line. Stations and the ropeway are added or skipped automatically to match. Suggested times are for the stops chosen at the start.',
     pickCount: '{n} places chosen · {t} stops in your route (incl. stations)',
     pickEmpty: 'Nothing chosen yet. Pick the places you want from the list below.',
     pickAll: 'Choose all',
@@ -183,51 +232,84 @@ window.OMI_I18N = {
     hintHead: 'On your route',
     intro: {
       kicker: 'A day trip, hand-walked by Toshi',
-      h1: 'Canals, castles and Omi beef, 35 minutes from Kyoto.',
-      lead: 'White storehouses and boats on the Hachimanbori canal, Lake Biwa from the top of Mt. Hachiman, Omi-beef lunch, craft beer in an old storehouse, and the grass-roofed La Collina. There’s more than one day can hold, so pick the places you like and make the route your own. With time to spare, carry on to Hikone Castle.',
       favLabel: 'Don’t miss',
       favName: 'Hachimanbori Canal',
       favText: 'Boats gliding between stone walls and white storehouses.',
-      favPhoto: [3, 0],
+      favPhoto: ['hori', 0],
       whoHead: 'Who it’s for',
-      who: [
-        'A day out of Kyoto: an old merchant town and views of Lake Biwa',
-        'Starts at Kyoto Station: 35 min by Special Rapid, no change',
-        'Good eating: Omi-beef lunch, local craft beer, fresh baumkuchen',
-        'Lots to see, so pick the places you want and build your own plan',
-        'Time to spare? Hikone is 14 min further, with its National Treasure castle'
-      ],
-      dayHead: 'The full route, roughly like this',
       from: 'From',
-      day: [
-        { time: '9:00', area: 'Kyoto Station', title: 'Special Rapid to Omihachiman', text: 'About 35 min on the Biwako Line. From stop 6 at the North Exit, take the bus to the canal.', note: 'Not a train for Yasu: it stops short', photo: [1, 0] },
-        { time: '9:50', area: 'Canal & Mt. Hachiman', title: 'Canal, then up by ropeway', text: 'A first look at the canal, then the ropeway up Mt. Hachiman for Lake Biwa and Zuiryuji Temple.', photo: [5, 0] },
-        { time: '11:15', area: 'Himure Hachimangu', title: 'Shrine and an Omi-beef lunch', text: 'Down to Himure Hachimangu Shrine, then lunch at Kubotaya or Marutake.', note: 'Kubotaya closed Thu, Marutake closed Tue', photo: [7, 0] },
-        { time: '13:00', area: 'Hachimanbori', title: 'Craft beer and an old-town stroll', text: 'A beer in a white storehouse, then a slow walk along Shinmachi Street and the canal paths.', note: 'Beer house opens 12:00, closed Tue', photo: [10, 0] },
-        { time: '14:45', area: 'Kitanosho', title: 'Walk to La Collina', text: 'About 20 min north. Grass roofs and fresh baumkuchen; bus back to the station.', photo: [12, 0] },
-        { time: '17:00', area: 'Omi-Hachiman Sta.', title: 'Omi-beef dinner, then Kyoto', text: 'Dinner at Tiffany by the station (or make it lunch), then the Special Rapid back to Kyoto.', note: 'Tiffany closed Tue', photo: [13, 0] }
-      ],
       timeSuffix: '',
       dealsHead: 'Getting around: fares',
-      dealsLead: 'Kyoto Station to Omihachiman and back, with the buses and the ropeway, costs ¥2,980 per adult (temple admission etc. extra).',
-      deals: [
-        { name: 'JR Biwako Line (Kyoto → Omi-Hachiman)', price: '¥680', text: 'About 35 min by Special Rapid. Same fare with an IC card or a ticket; ¥680 back to Kyoto too.' },
-        { name: 'Ohmi Railway bus (station → canal)', price: '¥260', text: 'About 6 min from North Exit stop 6. ¥410 to La Collina, and ¥410 from La Collina back to the station.', url: 'https://www.ohmitetudo.co.jp/bus/guide/terminal' },
-        { name: 'Hachimanyama Ropeway (return)', price: '¥950', text: '¥540 one way. About 4 minutes to the top.', url: 'https://www.ohmitetudo.co.jp/ropeway/open-price/' },
-        { name: 'Extension: JR (Omi-Hachiman → Hikone → Kyoto)', price: '¥420 + ¥1,170', text: 'Going on to Hikone? Instead of ¥680 back to Kyoto, it’s ¥420 to Hikone and ¥1,170 from Hikone to Kyoto.' }
-      ],
-      dealsNote: 'Adult fares, checked on Nov 20, 2026: buses and ropeway on the operators’ websites, JR on a route planner.',
+      dealsNote: 'Adult fares, checked on Nov 22, 2026: buses and ropeway on the operators’ websites, JR and subway on a route planner.',
       dealsMore: 'See official site',
       howHead: 'How to use this map',
       how: [
-        { title: 'Pick the places you want', text: 'The map opens in “Choose stops”. Tap “Want to go” in the list, and only your picks are joined by the dotted line. Stations and the ropeway are added for you.' },
-        { title: 'The numbers are the best order', text: 'Go in number order and you won’t backtrack. Want everything? Switch to “Full route”.' },
+        { title: 'Choose a course', text: 'Use the buttons above the list: “Omihachiman all day” or “Add Hikone Castle”. The timetable and the stop numbers change with the course.' },
+        { title: 'Swap in the places you want', text: 'The stops on the timetable are chosen to begin with. Tap “Want to go” / “Going” in the list to change them, and only your picks are joined by the dotted line. Stations and the ropeway are added for you.' },
         { title: 'Tap a number', text: 'Tap a number on the map, or open the list, to see photos, tips and suggested times.' },
         { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions. Some spots also link to timetables and official websites.' },
-        { title: 'Times are rough guides', text: 'Suggested times are for the full route. Fewer stops means more time at each.' }
+        { title: 'Check times again before you go', text: 'Train and bus times were checked in November 2026. Where weekdays and weekends differ, both are given. They can change, so look at the timetable before you set out.' }
       ],
       cta: 'Open the map',
       footer1: 'An original map, hand-walked by Toshi.'
+    },
+    introFor: {
+      day: {
+        h1: 'An hour from Sanjo: a canal town to walk until evening.',
+        lead: 'Leave Sanjo at 9:44 for the Hachimanbori canal, the ropeway up Mt. Hachiman, an Omi-beef lunch, craft beer in an old storehouse and La Collina in the late afternoon. For the evening, go back to Kyoto for dinner or eat here first. You can swap stops in the list.',
+        who: [
+          'A day out of Kyoto: an old merchant town and views of Lake Biwa',
+          'About an hour from Sanjo: subway to Yamashina, then a JR Special Rapid (¥850)',
+          'Good eating: Omi-beef lunch, local craft beer, fresh baumkuchen',
+          'Several shops close on Tuesdays, so pick another day if you can',
+          'Want Hikone Castle too? Switch to “Add Hikone Castle” above the list'
+        ],
+        dayHead: 'The day, leaving Sanjo Keihan at 9:44',
+        day: [
+          { time: '9:44', area: 'Sanjo', title: 'Subway and JR to Omihachiman', text: 'Subway from Sanjo Keihan to Yamashina, then the 10:06 Special Rapid: Omi-Hachiman at 10:35. From stop 6 at the North Exit, the 10:45 bus to the canal.', note: 'Trains run 1 min earlier on weekends', photo: ['start', 0] },
+          { time: '10:55', area: 'Canal & Mt. Hachiman', title: 'Canal, then up by ropeway', text: 'A first look at the canal, then the ropeway at about 11:15 for Lake Biwa and Zuiryuji Temple on the summit.', photo: ['summit', 0] },
+          { time: '12:20', area: 'Himure Hachimangu', title: 'Shrine and an Omi-beef lunch', text: 'Down to Himure Hachimangu Shrine, then lunch at about 12:45 at Kubotaya or Marutake.', note: 'Kubotaya closed Thu, Marutake closed Tue', photo: ['himure', 0] },
+          { time: '13:50', area: 'Hachimanbori', title: 'Craft beer and an old-town stroll', text: 'A beer in a white storehouse, then a slow walk along Shinmachi Street and the canal paths. This is the time for the boat, too.', note: 'Beer house closed Tue', photo: ['beer', 0] },
+          { time: '15:30', area: 'Kitanosho', title: 'Walk to La Collina', text: 'A 20–25 minute walk north. Grass roofs and fresh baumkuchen; bus to the station at 16:44 on weekdays, 16:57 on weekends and holidays.', note: 'Weekdays: after 16:44 the next bus is 17:42', photo: ['collina', 0] },
+          { time: '17:36', area: 'Omi-Hachiman Sta.', title: 'Dinner in Kyoto, or here', text: 'The 17:36 Special Rapid gets you to Sanjo at about 18:30, with the evening in town until 21:00–22:00. Eating here? Tiffany is by the station, and on Fridays and Saturdays the beer house stays open until 20:00.', note: 'Tiffany closed Tue', photo: ['tiffany', 0] }
+        ],
+        dealsLead: 'Sanjo to Omihachiman and back, with the buses and the ropeway, costs ¥3,320 per adult (walking to La Collina; temple admission etc. extra).',
+        deals: [
+          { name: 'Tozai subway line (Sanjo Keihan → Yamashina)', price: '¥260', text: '9 minutes. Same fare from Kyoto Shiyakusho-mae, and ¥260 again coming back.', url: 'https://www.city.kyoto.lg.jp/kotsu/' },
+          { name: 'JR Biwako Line (Yamashina → Omi-Hachiman)', price: '¥590', text: 'About 30 min by Special Rapid; ¥590 back too. From Kyoto Station it is ¥680.', url: 'https://www.jr-odekake.net/' },
+          { name: 'Ohmi Railway bus (station → canal)', price: '¥260', text: '6 min from North Exit stop 6. La Collina back to the station is ¥410.', url: 'https://www.ohmitetudo.co.jp/bus/guide/terminal' },
+          { name: 'Hachimanyama Ropeway (return)', price: '¥950', text: '¥540 one way. About 4 minutes to the top.', url: 'https://www.ohmitetudo.co.jp/ropeway/open-price/' }
+        ]
+      },
+      hikone: {
+        h1: 'A canal town in the morning, a National Treasure castle in the afternoon.',
+        lead: 'Spend the morning in Omihachiman on the canal and Mt. Hachiman, with Omi beef for lunch. Then take the 14:34 Special Rapid, 14 minutes to Hikone, for the castle and Genkyuen Garden until they close at 17:00. Last entry at the castle is 16:30, so the Omihachiman half is kept short. La Collina only fits in place of Mt. Hachiman.',
+        who: [
+          'For seeing both Omihachiman and Hikone Castle in one day',
+          'About an hour from Sanjo: subway to Yamashina, then a JR Special Rapid (¥850)',
+          'Last entry at the castle and garden is 16:30; you leave Omihachiman on the 14:34 train',
+          'Several shops close on Tuesdays, so pick another day if you can',
+          'Prefer a slower day in Omihachiman? Switch to “Omihachiman all day” above the list'
+        ],
+        dayHead: 'The day, leaving Sanjo Keihan at 9:44',
+        day: [
+          { time: '9:44', area: 'Sanjo', title: 'Subway and JR to Omihachiman', text: 'Subway from Sanjo Keihan to Yamashina, then the 10:06 Special Rapid: Omi-Hachiman at 10:35. From stop 6 at the North Exit, the 10:45 bus to the canal.', note: 'Trains run 1 min earlier on weekends', photo: ['start', 0] },
+          { time: '10:55', area: 'Canal & Mt. Hachiman', title: 'Canal, then up by ropeway', text: 'Walk the stone path by the canal, then take the ropeway at about 11:15 for the view of Lake Biwa. Come down at about 12:00.', photo: ['summit', 0] },
+          { time: '12:05', area: 'Himure Hachimangu', title: 'Shrine and an Omi-beef lunch', text: 'A visit to Himure Hachimangu Shrine, then lunch from about 12:25 at Kubotaya or Marutake.', note: 'Kubotaya closed Thu, Marutake closed Tue', photo: ['himure', 0] },
+          { time: '13:20', area: 'Hachimanbori', title: 'One quick beer, or Shinmachi Street', text: 'One beer in the storehouse taproom, or a walk down Shinmachi Street. Then the 13:55 bus (14:00 on weekends and holidays) back to the station.', note: 'Beer house closed Tue', photo: ['beer', 0] },
+          { time: '14:34', area: 'Omi-Hachiman Sta.', title: 'Special Rapid to Hikone', text: 'Fourteen minutes on the Special Rapid heading away from Kyoto. The castle is about 15 minutes’ walk from Hikone Station.', note: 'Last entry at the castle 16:30', photo: ['hikone-sta', 0] },
+          { time: '15:05', area: 'Hikone', title: 'Hikone Castle and Genkyuen', text: 'Climb to the keep first, then go down to the garden. Hikonyan usually appears at the museum gate 15:00–15:30.', note: 'Closes at 17:00', photo: ['castle', 0] },
+          { time: '17:52', area: 'Hikone Sta.', title: 'Back to Kyoto, or dinner in Omihachiman', text: 'The 17:52 Special Rapid gets you to Sanjo at about 19:00. Or get off at Omi-Hachiman on the way for an Omi-beef dinner at Tiffany by the station.', note: 'Tiffany closed Tue', photo: ['tiffany', 0] }
+        ],
+        dealsLead: 'Sanjo to Omihachiman and Hikone and back, with the buses and the ropeway, costs ¥3,990 per adult (the ¥1,000 castle ticket etc. extra).',
+        deals: [
+          { name: 'Tozai subway line (Sanjo Keihan → Yamashina)', price: '¥260', text: '9 minutes. Same fare from Kyoto Shiyakusho-mae, and ¥260 again coming back.', url: 'https://www.city.kyoto.lg.jp/kotsu/' },
+          { name: 'JR Biwako Line (Yamashina → Omi-Hachiman)', price: '¥590', text: 'About 30 min by Special Rapid. From Kyoto Station it is ¥680.', url: 'https://www.jr-odekake.net/' },
+          { name: 'Ohmi Railway bus (station ⇔ canal)', price: '¥260 × 2', text: '6 min from North Exit stop 6. The bus back to the station takes about 15 minutes.', url: 'https://www.ohmitetudo.co.jp/bus/guide/terminal' },
+          { name: 'Hachimanyama Ropeway (return)', price: '¥950', text: '¥540 one way. About 4 minutes to the top.', url: 'https://www.ohmitetudo.co.jp/ropeway/open-price/' },
+          { name: 'JR (Omi-Hachiman → Hikone → Yamashina)', price: '¥420 + ¥990', text: '14 min to Hikone by Special Rapid. Back from Hikone, about 45 min to Yamashina; to Kyoto Station it is ¥1,170.', url: 'https://www.jr-odekake.net/' }
+        ]
+      }
     }
   }
 };

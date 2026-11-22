@@ -1,0 +1,1846 @@
+{
+ "id": "omihachiman-hikone",
+ "course": "hikone",
+ "_note": "近江八幡マップの「彦根城にも行く」コース。scripts/build_omihachiman_courses.py が data/routes/omihachiman.json から作る。このファイルは直接直さない。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "day": 0
+  },
+  {
+   "first": 3,
+   "last": 6,
+   "day": 1
+  },
+  {
+   "first": 7,
+   "last": 9,
+   "day": 2
+  },
+  {
+   "first": 10,
+   "last": 11,
+   "day": 3
+  },
+  {
+   "first": 12,
+   "last": 12,
+   "area": {
+    "ja": "北之庄",
+    "en": "Kitanosho"
+   },
+   "title": {
+    "ja": "八幡山のかわりに行くなら",
+    "en": "Instead of Mt. Hachiman"
+   }
+  },
+  {
+   "first": 13,
+   "last": 14,
+   "day": 4
+  },
+  {
+   "first": 15,
+   "last": 16,
+   "day": 5
+  },
+  {
+   "first": 17,
+   "last": 17,
+   "day": 6
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 13
+ },
+ "photoBase": "../images/omihachiman/",
+ "plan": {
+  "_note": "「選んで回る」の設定。defaultPicks は時間割どおりの組み合わせ（八幡堀→八幡山→日牟禮八幡宮→お昼→1杯→彦根城→玄宮園）。駅は必ず入り、ロープウェーは山頂か瑞龍寺を選ぶと入る。",
+  "defaultMode": "pick",
+  "picks": [
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   15,
+   16,
+   17
+  ],
+  "defaultPicks": [
+   3,
+   5,
+   7,
+   8,
+   10,
+   15,
+   16
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "2": {
+    "always": true
+   },
+   "4": {
+    "any": [
+     5,
+     6
+    ]
+   },
+   "13": {
+    "always": true
+   },
+   "14": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 8,
+    "rule": {
+     "any": [
+      8
+     ],
+     "andAny": [
+      9
+     ]
+    },
+    "text": {
+     "ja": "久ぼ多屋とまるたけ近江西川はすぐ近く。ランチはどちらか1軒で十分です。",
+     "en": "Kubotaya and Marutake are next door to each other; one lunch is plenty."
+    }
+   },
+   {
+    "spot": 9,
+    "rule": {
+     "any": [
+      9
+     ],
+     "andAny": [
+      8
+     ]
+    },
+    "text": {
+     "ja": "久ぼ多屋とまるたけ近江西川はすぐ近く。ランチはどちらか1軒で十分です。",
+     "en": "Kubotaya and Marutake are next door to each other; one lunch is plenty."
+    }
+   },
+   {
+    "spot": 12,
+    "rule": {
+     "any": [
+      12
+     ],
+     "andAny": [
+      5,
+      6
+     ]
+    },
+    "text": {
+     "ja": "彦根へ行く日は、八幡山とラ コリーナの両方は入りません。どちらか1つにしてください。",
+     "en": "A Hikone day has no room for both Mt. Hachiman and La Collina. Please choose one."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      5,
+      6
+     ],
+     "andAny": [
+      12
+     ]
+    },
+    "text": {
+     "ja": "彦根へ行く日は、八幡山とラ コリーナの両方は入りません。どちらか1つにしてください。",
+     "en": "A Hikone day has no room for both Mt. Hachiman and La Collina. Please choose one."
+    }
+   }
+  ]
+ },
+ "sources": [
+  {
+   "what": "三条京阪→近江八幡（地下鉄東西線で山科、JR琵琶湖線に乗り換え、260円＋590円）。2026年11月25日（水）：三条京阪9:44→山科9:53、山科10:06 新快速 近江塩津行→近江八幡10:35。11月28日（土）・29日（日）：9:43→9:52、10:05→10:34。京都市役所前は平日9:42発。びわ湖浜大津行きは京阪山科着で390円。京都駅からは10:00発の同じ新快速で680円",
+   "url": "https://transit.yahoo.co.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "山科駅 琵琶湖線 米原方面の時刻表：昼間の新快速のうち近江八幡まで行くのは毎時5分ごろの近江塩津行き1本（平日の9時台はなし）。ほかは野洲行き・草津行き。普通の米原行きが1時間に2本",
+   "url": "https://transit.yahoo.co.jp/timetable/25786/1590",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江鉄道バス 長命寺線 近江八幡駅6番のりば：平日 10:00・10:15・10:45・11:15…、土日祝 10:00・10:15・10:30・10:45・11:00・11:15…。10:45発は八幡堀八幡山ロープウェー口10:51（260円）、北之庄ラコリーナ前10:54（410円）",
+   "url": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00481069",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江鉄道バス 北之庄ラコリーナ前→近江八幡駅：平日 …15:54・16:22・16:44・17:42・18:17・19:12・20:07、土日祝 …16:27・16:47・16:57・17:12・17:42・17:57・18:27…。16:44発は八幡堀16:47（280円）、駅17:03（410円）",
+   "url": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00480486",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江鉄道バス 八幡堀八幡山ロープウェー口→近江八幡駅（約15分・260円）：平日 13:25・13:55…19:15・19:35・20:10・20:21・20:38（最終）、土日祝 13:30・13:45・14:00…19:00・19:30・20:00・20:30（最終）。ラコリーナ方面は平日・土日祝とも15:21発（ラコリーナ前15:24、280円）",
+   "url": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00480481",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "八幡山ロープウェー：9:00〜17:00、上り最終16:30、15分間隔、年中無休。おとな往復950円・片道540円。2027年1月25日〜2月10日は運休",
+   "url": "https://www.ohmitetudo.co.jp/ropeway/open-price/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "八幡堀めぐり：10:00〜16:00、大人1,500円、年中無休、予約なしは2名以上から",
+   "url": "https://www.oumi-waden.com/ship",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "元祖 近江八幡水郷めぐり（近江八幡和船観光協同組合）：乗合船は4月1日〜11月30日、10:00・15:00、大人2,400円、予約不要。2026年11月末で運航終了（令和8年8月のお知らせ）",
+   "url": "http://www.suigou-meguri.com/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "ラ コリーナ近江八幡：9:00〜18:00、フードコンテナ10:00〜17:00。2026年11月19日のお知らせ「連休中のご来店について」（土日祝は駐車場の出入りに時間、公共交通機関で）。混雑予想は11月22日（日）が全時間帯「大混雑」",
+   "url": "https://taneya.jp/la_collina/congestion/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江八幡→京都方面の新快速：16〜19時台は毎時6分・36分ごろ（19時台は平日・土日祝とも19:06・19:37）、平日20:06・20:37、土日祝20:13・20:33、21:13、21:53。2026年11月25日（水）：17:36→山科18:07、地下鉄18:20→三条京阪18:29。18:06→山科18:37、地下鉄18:51→三条京阪19:00。19:37→三条京阪20:32。21:53→三条京阪22:50",
+   "url": "https://transit.yahoo.co.jp/timetable/25495/1591",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江八幡→彦根：14:34 新快速 近江塩津行→14:48（420円）、14:52 普通→15:12、15:04 新快速 長浜行→15:18。彦根→京都方面の新快速は毎時22分・52分ごろ。2026年11月25日（水）：彦根17:52→近江八幡18:06。彦根17:22→山科18:07（990円）、地下鉄18:20→三条京阪18:29。彦根20:59→三条京阪21:58、21:19→22:36。11月29日（日）：17:52→三条京阪18:55",
+   "url": "https://transit.yahoo.co.jp/timetable/25558/1591",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "彦根城・玄宮園：8:30〜17:00、入場は16:30まで、天守など建物の中は16:45まで。彦根城（玄宮園を含む）一般1,000円、玄宮園だけ400円",
+   "url": "https://hikonecastle.com/information.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "ひこにゃん：ふだんは13:30〜14:00 天守前（天気が悪い日は博物館の冠木門）、15:00〜15:30 博物館の冠木門（無料の区域）。土日祝は11:00〜11:30 四番町スクエアにも",
+   "url": "http://hikonyanfan.net/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "錦秋の玄宮園ライトアップ（2026年）：11月14日〜29日、18:00〜21:00（入場は20:30まで）、大人900円。昼の観覧券では入れない。当日券は現金かPayPay",
+   "url": "https://www.hikoneshi.com/event/article/c/kinshu",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "start",
+   "name": {
+    "ja": "京都から近江八幡へ",
+    "en": "Kyoto to Omihachiman"
+   },
+   "kind": {
+    "ja": "電車（スタート）",
+    "en": "Train (start)"
+   },
+   "blurb": {
+    "ja": "三条のあたりからは、地下鉄で山科（やましな）へ出てJRの新快速に乗り換えるのが早くて安い行き方。京都駅からなら乗り換えなしです。",
+    "en": "From around Sanjo, the quick, cheap way is the subway to Yamashina and a JR Special Rapid from there. From Kyoto Station it’s a direct train."
+   },
+   "lat": 34.98535,
+   "lng": 135.758766,
+   "photos": [
+    "01-1.jpg",
+    "01-2.jpg",
+    "01-3.jpg",
+    "01-4.jpg",
+    "01-5.jpg",
+    "01-6.jpg",
+    "01-7.jpg"
+   ],
+   "text": {
+    "ja": "京都から近江八幡へ\n\n三条のあたりからは、京都駅へ出るより、地下鉄東西線で山科（やましな）へ出てJRに乗り換えるほうが早くて安く着きます。三条京阪9:44発（土日祝は9:43発）の「六地蔵（ろくじぞう）」行きに乗り、山科で10:06発（土日祝は10:05発）の新快速「近江塩津（おうみしおつ）」行きに乗り換えて、近江八幡に10:35（土日祝は10:34）着。地下鉄260円＋JR 590円で、850円です。京都市役所前からは、同じ電車がその2分ほど前に出ます（運賃は同じ）。\n\n地下鉄は「六地蔵」行きに乗ってください。「びわ湖浜大津」行きは途中から京阪の線に入って京阪山科駅に着き、運賃が130円高くなります。\n\n京都駅から乗るなら、10:00発の新快速「近江塩津」行き（上と同じ電車）で乗り換えなし、680円。写真は京都駅です。\n\n近江八幡まで乗り換えなしで行く新快速は、昼間は1時間に1本です。「野洲（やす）」行きと「草津」行きの新快速は手前が終点なので、乗るとホームで次の普通電車を待つことになります。「湖西線（こせいせん）経由」は別の線を通るので、乗らないでください。\n\nおすすめ出発時間：三条京阪 9:44（土日祝は9:43）",
+    "en": "Kyoto to Omihachiman\n\nFrom around Sanjo it’s quicker and cheaper to take the Tozai subway line to Yamashina and change to JR there than to go via Kyoto Station. Take the 9:44 from Sanjo Keihan (9:43 on weekends and holidays) bound for Rokujizo, then at Yamashina the 10:06 Special Rapid (10:05 on weekends and holidays) bound for Omi-Shiotsu. You reach Omi-Hachiman at 10:35 (10:34). Subway ¥260 + JR ¥590 = ¥850. From Kyoto Shiyakusho-mae the same subway train leaves about 2 minutes earlier (same fare).\n\nMake sure the subway train says Rokujizo. Trains for Biwako-Hamaotsu switch to the Keihan line, arrive at Keihan Yamashina Station and cost ¥130 more.\n\nStarting from Kyoto Station? The 10:00 Special Rapid for Omi-Shiotsu (the same train) goes direct for ¥680. The photos show Kyoto Station.\n\nIn the daytime only one Special Rapid an hour runs through to Omi-Hachiman. Special Rapids for Yasu or Kusatsu stop short, and you end up waiting on the platform for the next local train. Don’t board anything marked “via Kosei Line”: it takes a different line.\n\nRecommended departure time: 9:44 from Sanjo Keihan (9:43 on weekends and holidays)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "地下鉄 三条京阪駅",
+      "en": "Sanjo Keihan (subway)"
+     },
+     "lat": 35.00934,
+     "lng": 135.77267,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E4%B8%8B%E9%89%84%20%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "JR山科駅",
+      "en": "JR Yamashina Station"
+     },
+     "lat": 34.99236,
+     "lng": 135.81709,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%B1%B1%E7%A7%91%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "JR京都駅",
+      "en": "JR Kyoto Station"
+     },
+     "lat": 34.98535,
+     "lng": 135.758766,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%BA%AC%E9%83%BD%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan, Japanese)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "三条京阪→山科 地下鉄9分・260円、山科→近江八幡 新快速で約30分・590円（合わせて850円）",
+       "en": "Sanjo Keihan → Yamashina: subway, 9 min, ¥260. Yamashina → Omi-Hachiman: about 30 min by Special Rapid, ¥590 (¥850 in all)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都駅→近江八幡 新快速で約35分・680円",
+       "en": "Kyoto Station → Omi-Hachiman: about 35 min by Special Rapid, ¥680"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "火曜日は、まるたけ近江西川・TWO RABBITS BEER HOUSE・ティファニーがお休みです。火曜のランチは久ぼ多屋（木曜休み）へ。時刻は2026年11月の乗換案内で確かめたものです。",
+     "en": "On Tuesdays, Marutake Ohmi Nishikawa, Two Rabbits Beer House and Tiffany are closed. For lunch on a Tuesday, go to Kubotaya (closed Thursdays). Train times were checked on a route planner in November 2026."
+    },
+    "checked": "2026-11-22"
+   },
+   "notices": []
+  },
+  {
+   "no": 2,
+   "id": "omi-sta",
+   "name": {
+    "ja": "近江八幡駅",
+    "en": "Omi-Hachiman Station"
+   },
+   "kind": {
+    "ja": "駅・バスのりば",
+    "en": "Station & bus"
+   },
+   "blurb": {
+    "ja": "着いたら北口へ。バスターミナルの6番のりばから、10:45のバスで八幡堀へ（6分・260円）。",
+    "en": "Head for the North Exit. From stop 6 at the bus terminal, the 10:45 bus gets you to the canal in 6 minutes (¥260)."
+   },
+   "lat": 35.122949,
+   "lng": 136.101999,
+   "photos": [
+    "02-1.jpg",
+    "02-2.jpg",
+    "02-3.jpg",
+    "02-4.jpg",
+    "02-5.jpg",
+    "02-6.jpg",
+    "02-7.jpg",
+    "02-8.jpg"
+   ],
+   "text": {
+    "ja": "近江八幡駅（おうみはちまんえき）\n\n北口を出て、バスターミナルの6番のりばへ。10:45発の近江鉄道バス（長命寺線・ちょうめいじせん）に乗ると、「八幡堀八幡山ロープウェー口」に10:51に着きます。260円で、ICOCAなどの交通系ICカードが使えます。電車を降りてからバスまで10分ほどあるので、お手洗いは駅で。\n\n10:45を逃すと、次は平日が11:15、土日祝が11:00です。平日の昼間は30分に1本。歩くと八幡堀まで30分以上かかります。\n\nラ コリーナへ直接行くときは、同じバスで「北之庄 ラ コリーナ前」まで約9分、410円。ただし「ヴォーリズ学園前」行きと、時刻表に「学」と書いてある便は、ラ コリーナ前には停まりません。\n\nおすすめ移動時間：10:45のバス",
+    "en": "Omi-Hachiman Station\n\nGo out the North Exit to stop 6 at the bus terminal. The 10:45 Ohmi Railway bus (Chomeiji Line) reaches “Hachimanbori Hachimanyama Ropeway-guchi” at 10:51. It costs ¥260 and takes IC cards (ICOCA, Suica, etc.). You have about 10 minutes between train and bus, so use the toilets at the station.\n\nMiss the 10:45 and the next bus is 11:15 on weekdays, 11:00 on weekends and holidays. On weekday daytimes there is one every 30 minutes. Walking to the canal takes over 30 minutes.\n\nGoing straight to La Collina? Stay on the same bus to “Kitanosho La Collina-mae”: about 9 minutes, ¥410. Buses for “Vories Gakuen-mae” and departures marked 学 in the timetable don’t stop there.\n\nRecommended travel time: the 10:45 bus"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "近江八幡駅 北口 バスのりば",
+      "en": "近江八幡駅 北口 バスのりば"
+     },
+     "lat": 35.122949,
+     "lng": 136.101999,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E9%A7%85%20%E5%8C%97%E5%8F%A3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "近江鉄道バス 近江八幡駅のりば案内",
+      "en": "Ohmi Railway bus stops at the station (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.ohmitetudo.co.jp/bus/guide/terminal",
+      "en": "https://www.ohmitetudo.co.jp/bus/guide/terminal"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "6番のりばの時刻表（近江鉄道バス）",
+      "en": "Stop 6 timetable (Ohmi Railway bus)"
+     },
+     "url": {
+      "ja": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00481069",
+      "en": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00481069"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "北口6番のりば 10:45発 → 八幡堀八幡山ロープウェー口 10:51着・260円（ラ コリーナ前は10:54着・410円）",
+       "en": "North Exit, stop 6: 10:45 → Hachimanbori Hachimanyama Ropeway-guchi 10:51, ¥260 (La Collina-mae 10:54, ¥410)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22"
+   },
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "hori",
+   "name": {
+    "ja": "八幡堀",
+    "en": "Hachimanbori Canal"
+   },
+   "kind": {
+    "ja": "運河・町並み",
+    "en": "Canal"
+   },
+   "blurb": {
+    "ja": "石垣と白壁の蔵のあいだを舟が進む、近江八幡でいちばんの景色。春の桜、秋の紅葉、雪の日も。",
+    "en": "Boats between stone walls and white storehouses: the view Omihachiman is known for. Cherry blossom in spring, red maples in autumn, snow in winter."
+   },
+   "lat": 35.139829,
+   "lng": 136.090589,
+   "photos": [
+    "03-1.jpg",
+    "03-2.jpg",
+    "03-3.jpg",
+    "03-4.jpg",
+    "03-5.jpg",
+    "03-6.jpg",
+    "03-7.jpg",
+    "03-8.jpg",
+    "03-9.jpg",
+    "03-10.jpg"
+   ],
+   "text": {
+    "ja": "八幡堀（はちまんぼり）\n\n八幡山に城を築いた豊臣秀次（とよとみひでつぐ）が造らせた堀です。バス停から歩いてすぐ。白雲橋（はくうんばし）のあたりから堀ぞいの石畳の道に下りると、時代劇に出てくるような景色です。散策は無料です。\n\n着いたらまず、ここをひと回り。彦根へ行く日は午後にゆっくり歩く時間がないので、石畳の道はこのときに歩いておきましょう。\n\n舟で回る「八幡堀めぐり」は10:00〜16:00、大人1,500円、約30分。彦根へ行く日に乗るなら、八幡山に上るのをやめて、この時間に。予約なしで乗れるのは2人以上から。1人のときは乗り場で聞いてみてください。\n\n夜は白雲橋から新町浜までがライトアップされます（点灯の時間は公式の案内に書かれていません）。冬は17時ごろには暗くなります。\n\nおすすめ訪問時間：10:55〜11:10",
+    "en": "Hachimanbori Canal\n\nThe canal was dug when Toyotomi Hidetsugu built his castle on Mt. Hachiman. A short walk from the bus stop. Go down to the stone path along the water near Hakuun Bridge and you’re in a period drama. Walking here is free.\n\nTake a turn around it when you arrive. On a Hikone day there is no time for a slow walk in the afternoon, so do the stone path now.\n\nThe Hachimanbori boat tour runs 10:00–16:00: ¥1,500 per adult, about 30 minutes. To fit it into a Hikone day, take it now and skip Mt. Hachiman. Walk-ups are for two or more people; if you’re alone, ask at the landing.\n\nAt night the stretch from Hakuun Bridge to Shinmachi-hama is lit up (the official information gives no times). In winter it is dark by about 17:00.\n\nRecommended visit time: 10:55–11:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "八幡堀",
+      "en": "八幡堀"
+     },
+     "lat": 35.139829,
+     "lng": 136.090589,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%B9%A1%E5%A0%80%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%AE%AE%E5%86%85%E7%94%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "近江八幡観光物産協会：八幡堀",
+      "en": "Omihachiman tourism: Hachimanbori (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.omi8.com/spot/detail_1228.html",
+      "en": "https://www.omi8.com/spot/detail_1228.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "八幡堀めぐり（和でん）",
+      "en": "Hachimanbori boat tour (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.oumi-waden.com/ship",
+      "en": "https://www.oumi-waden.com/ship"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "散策は無料。八幡堀めぐり（舟）は大人1,500円・約30分（10:00〜16:00）",
+       "en": "Walking is free. Boat tour: ¥1,500 per adult, about 30 min (10:00–16:00)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "真っ暗な中の夜の写真は、2024年10月のイベントの日に撮ったものです。",
+     "en": "The night photo was taken during an event in October 2024."
+    },
+    "checked": "2026-11-22"
+   },
+   "notices": [
+    {
+     "from": "2026-11-22",
+     "to": "2026-11-30",
+     "url": "http://www.suigou-meguri.com/",
+     "text": {
+      "ja": "町の北の水郷を手こぎの舟で回る「元祖 近江八幡水郷めぐり」（乗合船は10:00・15:00発、大人2,400円、予約不要）は、2026年11月30日で運航を終えます。乗り場は、ラ コリーナの1つ手前のバス停「豊年橋和船のりば口」の近くです。",
+      "en": "The hand-rowed boat tour of the reed marshes north of town (“Ganso Omihachiman Suigo-meguri”; shared boats at 10:00 and 15:00, ¥2,400, no booking) ends for good on Nov 30, 2026. The landing is near the “Honenbashi Wasen Noriba-guchi” bus stop, one before La Collina."
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "ropeway",
+   "name": {
+    "ja": "八幡山ロープウェー",
+    "en": "Hachimanyama Ropeway"
+   },
+   "kind": {
+    "ja": "ロープウェー",
+    "en": "Ropeway"
+   },
+   "blurb": {
+    "ja": "日牟禮八幡宮の横から、八幡山の山頂まで約4分。ゴンドラの窓の下に、近江八幡の町と田んぼがみるみる広がっていきます。",
+    "en": "Four minutes from beside Himure Hachimangu Shrine to the top of Mt. Hachiman. The town and its rice fields open up below the gondola as you climb."
+   },
+   "lat": 35.141326,
+   "lng": 136.088866,
+   "photos": [
+    "04-1.jpg",
+    "04-2.jpg",
+    "04-3.jpg",
+    "04-4.jpg",
+    "04-5.jpg",
+    "04-6.jpg",
+    "04-7.jpg",
+    "04-8.jpg",
+    "04-9.jpg",
+    "04-10.jpg"
+   ],
+   "text": {
+    "ja": "八幡山ロープウェー（はちまんやまロープウェー）\n\n山麓（さんろく）の乗り場は日牟禮八幡宮のすぐ横。9:00から15分ごとに出ていて、混んでいるときは続けて運転します。上りの最終は16:30、営業は17:00までです。山頂の駅を出ると、展望台（5番）と瑞龍寺（6番）はすぐそこです。\n\n山の上には飲食店がないので、飲み物は下で買うか、山頂の自動販売機で。\n\nおすすめ移動時間：上り 11:15ごろ、下り 12:00ごろ",
+    "en": "Hachimanyama Ropeway\n\nThe lower station is right next to Himure Hachimangu Shrine. Gondolas leave every 15 minutes from 9:00, and run back to back when it’s busy. The last ride up is at 16:30 and the ropeway closes at 17:00. From the top station, the viewpoints (stop 5) and Zuiryuji Temple (stop 6) are only a few minutes’ walk.\n\nThere’s nowhere to eat on the mountain, so buy a drink before you go up or use the vending machine at the top.\n\nRecommended travel time: up at about 11:15, down at about 12:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "八幡山ロープウェー",
+      "en": "八幡山ロープウェー"
+     },
+     "lat": 35.141326,
+     "lng": 136.088866,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%B9%A1%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%83%BC%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%AE%AE%E5%86%85%E7%94%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "八幡山ロープウェー（近江鉄道）",
+      "en": "Hachimanyama Ropeway (Ohmi Railway)"
+     },
+     "url": {
+      "ja": "https://www.ohmitetudo.co.jp/ropeway/",
+      "en": "https://www.ohmitetudo.co.jp/ropeway/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（上りの最終は16:30）、15分ごと。年中無休",
+       "en": "9:00–17:00 (last ride up 16:30), every 15 min. Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "往復950円・片道540円（大人）",
+       "en": "¥950 return, ¥540 one way (adult)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "現金のほか、クレジットカード・電子マネー・QR決済も使えます。",
+     "en": "Cash, credit cards, e-money and QR payments are all accepted."
+    },
+    "checked": "2026-11-22"
+   },
+   "notices": [
+    {
+     "from": "2026-11-20",
+     "to": "2027-02-10",
+     "url": "https://www.ohmitetudo.co.jp/ropeway/",
+     "text": {
+      "ja": "2027年1月25日〜2月10日は、設備更新のため運休します。",
+      "en": "Closed Jan 25 – Feb 10, 2027, for equipment renewal."
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "summit",
+   "name": {
+    "ja": "八幡山 山頂（八幡山城跡）",
+    "en": "Mt. Hachiman summit"
+   },
+   "kind": {
+    "ja": "展望",
+    "en": "Viewpoint"
+   },
+   "blurb": {
+    "ja": "秀次の城があった山の上。片側に琵琶湖、反対側に近江八幡の町と田んぼが見渡せます。",
+    "en": "The hilltop where Hidetsugu’s castle stood. Lake Biwa on one side; the town and its rice fields on the other."
+   },
+   "lat": 35.144337,
+   "lng": 136.081639,
+   "photos": [
+    "05-1.jpg",
+    "05-2.jpg",
+    "05-3.jpg",
+    "05-4.jpg",
+    "05-5.jpg",
+    "05-6.jpg",
+    "05-7.jpg",
+    "05-8.jpg",
+    "05-9.jpg",
+    "05-10.jpg"
+   ],
+   "text": {
+    "ja": "八幡山城跡（はちまんやまじょうあと）\n\n山頂の駅から西の丸跡まで歩いて約3分。琵琶湖と対岸の山々が見えるのは、この西の丸跡のあたりです。反対側からは、近江八幡の町や田んぼ、西の湖（にしのこ）まで見えます。山の上をぐるっと回る遊歩道は1周約30分。彦根へ行く日は、12:00ごろのロープウェーで下りてください。\n\n山頂の展望館にはいすとテーブルがあり、ひと休みできます。\n\nおすすめ訪問時間：11:20〜11:55",
+    "en": "Hachimanyama Castle ruins\n\nThe West Bailey ruins are about 3 minutes’ walk from the top station; this is where you look out over Lake Biwa to the mountains beyond. The other side looks over the town, the rice fields and Lake Nishinoko. The path around the summit takes about 30 minutes. On a Hikone day, take the ropeway down at about 12:00.\n\nThe observation building at the top has tables and chairs if you need a break.\n\nRecommended visit time: 11:20–11:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "八幡山城跡 西の丸跡",
+      "en": "八幡山城跡 西の丸跡"
+     },
+     "lat": 35.144337,
+     "lng": 136.081639,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%B9%A1%E5%B1%B1%E5%9F%8E%E8%B7%A1%20%E8%A5%BF%E3%81%AE%E4%B8%B8%E8%B7%A1%20%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "八幡山周辺散策MAP（PDF）",
+      "en": "Walking map of Mt. Hachiman (PDF, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.ohmitetudo.co.jp/ropeway-sansakumap.pdf",
+      "en": "https://www.ohmitetudo.co.jp/ropeway-sansakumap.pdf"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": {
+     "ja": "山の上の道は石段や土の道です。歩きやすい靴で。",
+     "en": "Paths on the summit are stone steps and dirt. Wear comfortable shoes."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 6,
+   "id": "zuiryuji",
+   "name": {
+    "ja": "村雲御所 瑞龍寺門跡",
+    "en": "Zuiryuji Temple"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "山頂にある、皇族ゆかりのお寺。秀次の母が、秀次をとむらうために建てました。秋は紅葉。",
+    "en": "A temple with imperial ties on the summit, founded by Hidetsugu’s mother to pray for her son. Red maples in autumn."
+   },
+   "lat": 35.144278,
+   "lng": 136.082489,
+   "photos": [
+    "06-1.jpg",
+    "06-2.jpg",
+    "06-3.jpg",
+    "06-4.jpg",
+    "06-5.jpg",
+    "06-6.jpg",
+    "06-7.jpg",
+    "06-8.jpg",
+    "06-9.jpg",
+    "06-10.jpg"
+   ],
+   "text": {
+    "ja": "村雲御所 瑞龍寺門跡（むらくもごしょ ずいりゅうじもんぜき）\n\n日蓮宗でただひとつの門跡寺院（もんぜきじいん＝皇族ゆかりのお寺）です。秀次の母・日秀（にっしゅう）が京都に建て、のちにこの山の上に移されました。\n\n山頂の駅から歩いてすぐ。石段を上がった先に山門があり、静かな境内からも近江の景色が見えます。\n\n境内では黒ねこに会えることも。\n\nおすすめ訪問時間：11:35〜11:55（寄るなら、山頂の散歩を短めに）",
+    "en": "Murakumo Gosho Zuiryuji Monzeki\n\nThe only monzeki temple (a temple with imperial ties) of the Nichiren school. Hidetsugu’s mother founded it in Kyoto, and it was later moved up here.\n\nA short walk from the top station. Climb the stone steps to the gate; the quiet grounds have views over the Omi plain too.\n\nYou might meet the temple’s black cat.\n\nRecommended visit time: 11:35–11:55 (if you go in, keep the summit walk short)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "村雲御所瑞龍寺門跡",
+      "en": "村雲御所瑞龍寺門跡"
+     },
+     "lat": 35.144278,
+     "lng": 136.082489,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%91%E9%9B%B2%E5%BE%A1%E6%89%80%E7%91%9E%E9%BE%8D%E5%AF%BA%E9%96%80%E8%B7%A1%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%AE%AE%E5%86%85%E7%94%BA19-9"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "村雲御所 瑞龍寺門跡",
+      "en": "Zuiryuji Temple (Japanese)"
+     },
+     "url": {
+      "ja": "https://zuiryuji-murakumo.com/",
+      "en": "https://zuiryuji-murakumo.com/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "近江八幡観光物産協会：瑞龍寺",
+      "en": "Omihachiman tourism: Zuiryuji (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.omi8.com/spot/detail_1010.html",
+      "en": "https://www.omi8.com/spot/detail_1010.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:30",
+       "en": "9:00–16:30"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "800円",
+       "en": "¥800"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "法要などで拝観できない日があります。",
+     "en": "Closed to visitors on some days for services."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 7,
+   "id": "himure",
+   "name": {
+    "ja": "日牟禮八幡宮",
+    "en": "Himure Hachimangu Shrine"
+   },
+   "kind": {
+    "ja": "神社・和菓子",
+    "en": "Shrine & sweets"
+   },
+   "blurb": {
+    "ja": "近江商人が信仰してきた神社。お参りのあとは、となりの「たねや」で和菓子とお茶を。",
+    "en": "The shrine of the Omi merchants. After your visit, have tea and Japanese sweets next door at Taneya."
+   },
+   "lat": 35.140951,
+   "lng": 136.089723,
+   "photos": [
+    "07-1.jpg",
+    "07-2.jpg",
+    "07-3.jpg",
+    "07-4.jpg",
+    "07-5.jpg",
+    "07-6.jpg",
+    "07-7.jpg",
+    "07-8.jpg",
+    "07-9.jpg",
+    "07-10.jpg"
+   ],
+   "text": {
+    "ja": "日牟禮八幡宮（ひむれはちまんぐう）\n\nロープウェーの乗り場から歩いてすぐ。大きな鳥居と楼門（ろうもん）をくぐってお参りします。境内はいつでもお参りできます（無料）。\n\n鳥居の横の「たねや 日牟禮乃舍」は、ラ コリーナと同じ近江八幡の和菓子屋さん「たねや」のお店。茶屋では、いろりのある部屋で和菓子とお茶がいただけます。近くの「クラブハリエ 日牟禮館」では洋菓子が買えます（カフェは改修のため休業中）。\n\nおすすめ訪問時間：12:05〜12:20",
+    "en": "Himure Hachimangu Shrine\n\nA short walk from the ropeway. You go in through the great torii and a two-storey gate. The grounds are open at all times and free.\n\nTaneya Himure-no-ya, by the torii, belongs to Taneya, the Omihachiman sweet maker behind La Collina. In its tea room you can have Japanese sweets and tea by a big sunken hearth. Club Harie Himure-kan nearby sells Western cakes (its café is closed for renovation).\n\nRecommended visit time: 12:05–12:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "日牟禮八幡宮",
+      "en": "日牟禮八幡宮"
+     },
+     "lat": 35.140951,
+     "lng": 136.089723,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E7%89%9F%E7%A6%AE%E5%85%AB%E5%B9%A1%E5%AE%AE%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%AE%AE%E5%86%85%E7%94%BA257"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "日牟禮八幡宮",
+      "en": "Himure Hachimangu (Japanese)"
+     },
+     "url": {
+      "ja": "https://himure.jp/",
+      "en": "https://himure.jp/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "たねや 日牟禮乃舍",
+      "en": "Taneya Himure-no-ya (Japanese)"
+     },
+     "url": {
+      "ja": "https://taneya.jp/shop/shiga_himure",
+      "en": "https://taneya.jp/shop/shiga_himure"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "境内はいつでもお参りできます",
+       "en": "Grounds open at all times"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "たねや 日牟禮乃舍は9:30〜17:00（食事は11:00〜15:00）、年中無休。クラブハリエ 日牟禮館は9:30〜17:00。",
+     "en": "Taneya Himure-no-ya: 9:30–17:00 (meals 11:00–15:00), open every day. Club Harie Himure-kan: 9:30–17:00."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": [
+    {
+     "from": "2026-11-20",
+     "to": "2026-11-23",
+     "url": "https://himure.jp/",
+     "text": {
+      "ja": "11月23日は新嘗祭（にいなめさい）などの祭事のため、本殿前でのお参りと撮影に制限があります。",
+      "en": "On Nov 23, festival rites limit praying and photography in front of the main hall."
+     }
+    },
+    {
+     "from": "2026-11-20",
+     "to": "2026-12-16",
+     "url": "https://taneya.jp/news/detail/942",
+     "text": {
+      "ja": "たねや 日牟禮乃舍は、2026年11月30日は12:00〜17:00に短縮、12月16日は臨時休業です（外壁の修繕のため）。",
+      "en": "Taneya Himure-no-ya opens 12:00–17:00 on Nov 30, 2026, and is closed on Dec 16 (exterior repairs)."
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "kubotaya",
+   "name": {
+    "ja": "近江牛創作料理 久ぼ多屋",
+    "en": "Kubotaya (Omi beef)"
+   },
+   "kind": {
+    "ja": "ランチ（近江牛）",
+    "en": "Lunch (Omi beef)"
+   },
+   "blurb": {
+    "ja": "八幡堀のそば、赤い丸い塔が目印の近江牛のお店。焼肉丼からステーキの御膳まで。木曜休み。",
+    "en": "Omi beef by the canal; look for the round red tower. From beef rice bowls to steak sets. Closed Thursdays."
+   },
+   "lat": 35.138966,
+   "lng": 136.092224,
+   "photos": [
+    "08-1.jpg",
+    "08-2.jpg",
+    "08-3.jpg",
+    "08-4.jpg",
+    "08-5.jpg",
+    "08-6.jpg"
+   ],
+   "text": {
+    "ja": "近江牛創作料理 久ぼ多屋（くぼたや）\n\n写真は近江牛の焼肉丼のセット。赤こんにゃくなどの小鉢とサラダが付いていました。個室の座敷もあります。\n\nすぐ近くの「まるたけ近江西川」（9番）とあわせて、ランチはどちらか1軒を選んでください。夜の営業はありません。\n\nおすすめ訪問時間：12:25〜13:20",
+    "en": "Kubotaya\n\nIn the photos: the Omi-beef yakiniku rice bowl set, with red konnyaku, other small sides and salad. There are private tatami rooms too.\n\nMarutake Ohmi Nishikawa (stop 9) is just next door, so pick one of the two for lunch. No dinner service.\n\nRecommended visit time: 12:25–13:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "近江牛創作料理 久ぼ多屋",
+      "en": "近江牛創作料理 久ぼ多屋"
+     },
+     "lat": 35.138966,
+     "lng": 136.092224,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%BF%91%E6%B1%9F%E7%89%9B%E5%89%B5%E4%BD%9C%E6%96%99%E7%90%86%20%E4%B9%85%E3%81%BC%E5%A4%9A%E5%B1%8B%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E4%BB%B2%E5%B1%8B%E7%94%BA%E4%B8%AD14"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "久ぼ多屋（Facebook）",
+      "en": "Kubotaya (Facebook)"
+     },
+     "url": {
+      "ja": "https://www.facebook.com/kubotaya2121",
+      "en": "https://www.facebook.com/kubotaya2121"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "近江八幡観光物産協会：久ぼ多屋",
+      "en": "Omihachiman tourism: Kubotaya (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.omi8.com/restaurant/detail_1045.html",
+      "en": "https://www.omi8.com/restaurant/detail_1045.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:00〜17:00（土日祝は18:00ごろまで）",
+       "en": "11:00–17:00 (to about 18:00 on weekends and holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "木曜（1〜3月は不定休あり）",
+       "en": "Thursdays (plus some irregular days Jan–Mar)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "price",
+      "text": {
+       "ja": "ランチ 約1,700〜5,500円",
+       "en": "Lunch about ¥1,700–5,500"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "土日祝の閉店時間は資料によって18:00と18:30があります。予約もできます（0748-32-2121）。",
+     "en": "Sources differ on weekend closing (18:00 or 18:30). Reservations: 0748-32-2121."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 9,
+   "id": "marutake",
+   "name": {
+    "ja": "まるたけ近江西川",
+    "en": "Marutake Ohmi Nishikawa"
+   },
+   "kind": {
+    "ja": "ランチ（近江牛）",
+    "en": "Lunch (Omi beef)"
+   },
+   "blurb": {
+    "ja": "お肉屋さんがやっている近江牛のレストラン。すきやき丼は1,540円。1階でカツサンドも買えます。火曜休み。",
+    "en": "A butcher’s own Omi-beef restaurant. Sukiyaki rice bowl ¥1,540; katsu sandwiches to take away downstairs. Closed Tuesdays."
+   },
+   "lat": 35.13892,
+   "lng": 136.091977,
+   "photos": [
+    "09-1.jpg",
+    "09-2.jpg",
+    "09-3.jpg",
+    "09-4.jpg",
+    "09-5.jpg",
+    "09-6.jpg",
+    "09-7.jpg",
+    "09-8.jpg",
+    "09-9.jpg"
+   ],
+   "text": {
+    "ja": "まるたけ近江西川（まるたけおうみにしかわ）\n\n日野町の自社牧場「まるたけ牧場」の近江牛を出すお店です。すきやき丼（1,540円）や、すきやき・しゃぶしゃぶ・鉄板焼の御膳（4,180円）など。大きな窓の席からは、古い町並みが見えます。\n\n2階の座敷と団体は予約が必要です。すぐ近くの「久ぼ多屋」（8番）とあわせて、ランチはどちらか1軒を選んでください。昼の営業は15:00まで。17:00〜19:00には夜の営業もあります。\n\nおすすめ訪問時間：12:25〜13:20",
+    "en": "Marutake Ohmi Nishikawa\n\nThe beef comes from the shop’s own Marutake farm in Hino. Sukiyaki rice bowl ¥1,540; sukiyaki, shabu-shabu or teppanyaki sets ¥4,180, and more. Window seats look out on the old town.\n\nBook ahead for the upstairs tatami room or for groups. Kubotaya (stop 8) is just next door, so pick one of the two for lunch. Lunch service ends at 15:00; it opens again 17:00–19:00.\n\nRecommended visit time: 12:25–13:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "まるたけ近江西川",
+      "en": "まるたけ近江西川"
+     },
+     "lat": 35.13892,
+     "lng": 136.091977,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%BE%E3%82%8B%E3%81%9F%E3%81%91%E8%BF%91%E6%B1%9F%E8%A5%BF%E5%B7%9D%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E4%BB%B2%E5%B1%8B%E7%94%BA%E4%B8%AD16"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "まるたけ近江西川（レストラン）",
+      "en": "Marutake Ohmi Nishikawa: restaurant (Japanese)"
+     },
+     "url": {
+      "ja": "https://oumi-marutake.jp/restaurant/",
+      "en": "https://oumi-marutake.jp/restaurant/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:00〜15:00、17:00〜19:00（1階のレストラン）",
+       "en": "11:00–15:00, 17:00–19:00 (ground-floor restaurant)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "火曜（祝日は営業）",
+       "en": "Tuesdays (open on public holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "price",
+      "text": {
+       "ja": "すきやき丼1,540円、御膳4,180円〜",
+       "en": "Sukiyaki bowl ¥1,540; sets from ¥4,180"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "天候などで時間が変わることがあります。",
+     "en": "Hours may change, e.g. with the weather."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 10,
+   "id": "beer",
+   "name": {
+    "ja": "TWO RABBITS BEER HOUSE",
+    "en": "Two Rabbits Beer House"
+   },
+   "kind": {
+    "ja": "クラフトビール",
+    "en": "Craft beer"
+   },
+   "blurb": {
+    "ja": "八幡堀のそば、白壁の蔵で飲める近江八幡のクラフトビール。12:00から、火曜休み。缶の持ち帰りもできます。",
+    "en": "Omihachiman’s own craft beer, on tap in a white-walled storehouse by the canal. From 12:00, closed Tuesdays. Cans to take away too."
+   },
+   "lat": 35.13947,
+   "lng": 136.089,
+   "photos": [
+    "10-1.jpg",
+    "10-2.jpg",
+    "10-3.jpg",
+    "10-4.jpg",
+    "10-5.jpg",
+    "10-6.jpg",
+    "10-7.jpg",
+    "10-8.jpg",
+    "10-9.jpg",
+    "10-10.jpg"
+   ],
+   "text": {
+    "ja": "TWO RABBITS BEER HOUSE（トゥー ラビッツ ビアハウス）\n\n近江八幡の醸造所「TWO RABBITS BREWING（二兎醸造）」のお店です。ランチのあとに1杯。蔵の中に、タップがずらりと並んだカウンターがあります。缶ビールも買えるので、帰りの電車用やおみやげにも。\n\n彦根へ行く日は、お昼のあとに1杯だけ。13:55（土日祝は14:00）のバスに乗るので、13:45には店を出てください。\n\n営業日や時間が変わることがあるので、行く前に公式インスタグラムを見てください（2026年1月22日は缶の販売だけの日でした）。\n\nおすすめ訪問時間：13:20〜13:45（1杯だけ）",
+    "en": "Two Rabbits Beer House\n\nThe taproom of Two Rabbits Brewing, the town’s own brewery. A beer after lunch. Inside the storehouse there’s a bar with a long row of taps, and cans to buy for the train home or as a souvenir.\n\nOn a Hikone day, make it one quick beer after lunch. Leave by 13:45 for the 13:55 bus (14:00 on weekends and holidays).\n\nOpening days and hours change at times, so check their Instagram before you go (on Jan 22, 2026, it was selling cans only).\n\nRecommended visit time: 13:20–13:45 (just the one)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "TWO RABBITS BEER HOUSE",
+      "en": "TWO RABBITS BEER HOUSE"
+     },
+     "lat": 35.13947,
+     "lng": 136.089,
+     "url": "https://www.google.com/maps/search/?api=1&query=Two%20Rabbits%20Brewing%20BEER%20HOUSE%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%A4%A7%E6%9D%89%E7%94%BA27"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "TWO RABBITS BEER HOUSE（Instagram）",
+      "en": "Two Rabbits Beer House (Instagram)"
+     },
+     "url": {
+      "ja": "https://www.instagram.com/tworabbitsbeerhouse/",
+      "en": "https://www.instagram.com/tworabbitsbeerhouse/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": {
+     "ja": "2026年4月の店頭の案内では、月・水・木・日・祝 12:00〜18:00、金・土 12:00〜20:00、火曜休み。資料によって時間が違うので、行く前に確認してください。",
+     "en": "The sign at the door in April 2026: Mon, Wed, Thu, Sun and holidays 12:00–18:00; Fri–Sat 12:00–20:00; closed Tuesdays. Other sources differ, so check before you go."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 11,
+   "id": "shinmachi",
+   "name": {
+    "ja": "新町通り（古い町並み）",
+    "en": "Shinmachi Street (old town)"
+   },
+   "kind": {
+    "ja": "町歩き",
+    "en": "Old town walk"
+   },
+   "blurb": {
+    "ja": "近江商人のお屋敷が並ぶ通りと、八幡堀ぞいの石畳を、のんびり散歩。",
+    "en": "A slow walk down a street of Omi merchants’ houses and along the stone paths by the canal."
+   },
+   "lat": 35.1379,
+   "lng": 136.0894,
+   "photos": [
+    "11-1.jpg",
+    "11-2.jpg",
+    "11-3.jpg",
+    "11-4.jpg",
+    "11-5.jpg",
+    "11-8.jpg",
+    "11-9.jpg",
+    "11-10.jpg"
+   ],
+   "text": {
+    "ja": "新町通り（しんまちどおり）\n\n八幡堀から南へ少し歩くと、黒い板塀と格子の家が並ぶ新町通りに出ます。このあたりの町並みは、国の重要伝統的建造物群保存地区に選ばれています。\n\n白壁の洋館「白雲館（はくうんかん）」は明治時代に建てられた学校で、今は観光案内所です。\n\nビールを飲まない人は、お昼のあとの時間をこの通りで。バス停「八幡堀八幡山ロープウェー口」へは歩いて5分ほどです。13:55（土日祝は14:00）のバスで駅へ戻ります。\n\nおすすめ訪問時間：13:20〜13:45",
+    "en": "Shinmachi Street\n\nA few minutes south of the canal, Shinmachi Street is lined with dark board fences and lattice-fronted houses. The old town here is a nationally protected historic district.\n\nThe white Western-style Hakuunkan was built as a school in the Meiji era and is now the tourist information centre.\n\nNot having a beer? Spend the time after lunch on this street instead. The “Hachimanbori Hachimanyama Ropeway-guchi” bus stop is about 5 minutes’ walk; take the 13:55 bus (14:00 on weekends and holidays) back to the station.\n\nRecommended visit time: 13:20–13:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "新町通り",
+      "en": "新町通り"
+     },
+     "lat": 35.1379,
+     "lng": 136.0894,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%94%BA%E9%80%9A%E3%82%8A%20%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "近江八幡観光物産協会",
+      "en": "Omihachiman tourism (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.omi8.com/",
+      "en": "https://www.omi8.com/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  },
+  {
+   "no": 12,
+   "id": "collina",
+   "name": {
+    "ja": "ラ コリーナ近江八幡",
+    "en": "La Collina Omihachiman"
+   },
+   "kind": {
+    "ja": "お菓子・カフェ",
+    "en": "Sweets & café"
+   },
+   "blurb": {
+    "ja": "草屋根の建物と、焼きたてのバームクーヘン。彦根へ行く日は、八幡山のかわりに朝いちばんで。",
+    "en": "A grass-roofed building and freshly baked baumkuchen. On a Hikone day, come first thing instead of going up Mt. Hachiman."
+   },
+   "lat": 35.148748,
+   "lng": 136.091607,
+   "photos": [
+    "12-1.jpg",
+    "12-2.jpg",
+    "12-3.jpg",
+    "12-4.jpg",
+    "12-5.jpg",
+    "12-6.jpg",
+    "12-7.jpg",
+    "12-8.jpg",
+    "12-9.jpg",
+    "12-10.jpg"
+   ],
+   "text": {
+    "ja": "ラ コリーナ近江八幡（ら こりーな おうみはちまん）\n\n彦根へ行く日は、八幡山（4〜6番）とラ コリーナの両方は入りません。こちらを選ぶなら、駅の6番のりば10:45発のバスをそのまま「北之庄 ラ コリーナ前」まで乗ってください（10:54着・410円）。\n\n焼きたてのバームクーヘンは、メインショップのクラブハリエやバームファクトリーで。草屋根のメインショップは、建築家・藤森照信（ふじもりてるのぶ）さんの設計。買い物をしなくても、田んぼのまわりの道や木の回廊を歩けます。\n\n土日祝と連休は、公式サイトの混雑予想が朝から夕方まで「大混雑」になる日があります。買い物やカフェは並ぶつもりで。行く日の混み具合は、公式サイトの「混雑予想」で見られます。\n\n八幡堀へ戻るバスは、平日11:52発、土日祝11:57発（3分・280円）。駅へ向かうバスと同じのりばで、道路の向かい側です。歩くと20〜25分。八幡堀に着いたら、日牟禮八幡宮（7番）とお昼へ。\n\nおすすめ訪問時間：10:55〜11:50（八幡山のかわりに行く場合）",
+    "en": "La Collina Omihachiman\n\nA Hikone day has no room for both Mt. Hachiman (stops 4–6) and La Collina. If you choose this, stay on the 10:45 bus from stop 6 at the station all the way to “Kitanosho La Collina-mae” (arrives 10:54, ¥410).\n\nGet freshly baked baumkuchen at Club Harie in the main shop or at the Baum Factory. The grass-roofed main shop is by architect Terunobu Fujimori. Even without shopping, you can walk the paths round the rice field and the timber colonnade.\n\nOn weekends, holidays and long weekends, the official crowd forecast can show “very crowded” from morning to evening, so expect queues at the shops and cafés. The forecast for your day is on the official website.\n\nBuses back to the canal leave at 11:52 on weekdays and 11:57 on weekends and holidays (3 minutes, ¥280), from the same stop as buses for the station, across the road. On foot it is 20–25 minutes. From the canal, go on to Himure Hachimangu Shrine (stop 7) and lunch.\n\nRecommended visit time: 10:55–11:50 (if you come here instead of Mt. Hachiman)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ラ コリーナ近江八幡",
+      "en": "ラ コリーナ近江八幡"
+     },
+     "lat": 35.148748,
+     "lng": 136.091607,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%20%E3%82%B3%E3%83%AA%E3%83%BC%E3%83%8A%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%8C%97%E4%B9%8B%E5%BA%84%E7%94%BA615-1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ラ コリーナ近江八幡（たねや）",
+      "en": "La Collina (Taneya)"
+     },
+     "url": {
+      "ja": "https://taneya.jp/la_collina/",
+      "en": "https://taneya.jp/la_collina/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ラ コリーナへの行き方",
+      "en": "Getting to La Collina (Japanese)"
+     },
+     "url": {
+      "ja": "https://taneya.jp/la_collina/info/access/",
+      "en": "https://taneya.jp/la_collina/info/access/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ラ コリーナの混雑予想",
+      "en": "La Collina crowd forecast (Japanese)"
+     },
+     "url": {
+      "ja": "https://taneya.jp/la_collina/congestion/",
+      "en": "https://taneya.jp/la_collina/congestion/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "ラ コリーナ前の時刻表（近江鉄道バス）",
+      "en": "La Collina-mae bus timetable (Japanese)"
+     },
+     "url": {
+      "ja": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00480486",
+      "en": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00480486"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜18:00（フードコンテナは10:00〜17:00）",
+       "en": "9:00–18:00 (Food Container 10:00–17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "1月1日",
+       "en": "January 1"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "ラ コリーナ前 → 八幡堀八幡山ロープウェー口 3分・280円。平日11:52発、土日祝11:57発",
+       "en": "La Collina-mae → Hachimanbori Hachimanyama Ropeway-guchi: 3 min, ¥280. 11:52 on weekdays, 11:57 on weekends and holidays"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "台風や大雪のときは、時間の変更や休業があります。",
+     "en": "Hours may change, or it may close, in typhoons or heavy snow."
+    },
+    "checked": "2026-11-22"
+   },
+   "notices": [
+    {
+     "from": "2026-11-16",
+     "to": "2027-02-20",
+     "url": "https://taneya.jp/la_collina/news/detail/964",
+     "text": {
+      "ja": "2026年11月16日〜2027年2月中旬は、メインショップ前の園路工事のため、通れる道が一部制限されます。",
+      "en": "Nov 16, 2026 – mid-Feb 2027: path works in front of the main shop close some routes."
+     }
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "id": "goal",
+   "name": {
+    "ja": "近江八幡駅（彦根へ）",
+    "en": "Omi-Hachiman Station (on to Hikone)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "八幡堀13:55（土日祝は14:00）のバスで駅へ戻り、14:34発の新快速で彦根へ。14分で着きます。",
+    "en": "Take the 13:55 bus from the canal (14:00 on weekends and holidays) back to the station, then the 14:34 Special Rapid to Hikone: 14 minutes."
+   },
+   "lat": 35.122804,
+   "lng": 136.102912,
+   "photos": [
+    "14-2.jpg",
+    "14-1.jpg",
+    "14-3.jpg",
+    "14-4.jpg",
+    "14-5.jpg",
+    "14-6.jpg",
+    "14-7.jpg"
+   ],
+   "text": {
+    "ja": "近江八幡駅（おうみはちまんえき）\n\nバス停「八幡堀八幡山ロープウェー口」から、平日は13:55発（駅に14:10着）、土日祝は14:00発（14:15着）のバスで駅へ戻ります。260円。土日祝は13:45発（14:00着）もあります。\n\n駅からは、京都と反対方向の14:34発の新快速「近江塩津（おうみしおつ）」行きに乗って、彦根に14:48着。420円です。乗り遅れたら、14:52発の普通（15:12着）か、15:04発の新快速（15:18着）で。\n\n駅には近江鉄道（おうみてつどう）の電車も乗り入れていて、青いカラフルな車両に出会えることも。\n\nおすすめ出発時間：14:34の新快速",
+    "en": "Omi-Hachiman Station\n\nFrom the “Hachimanbori Hachimanyama Ropeway-guchi” stop, take the 13:55 bus on weekdays (station 14:10) or the 14:00 on weekends and holidays (station 14:15). ¥260. On weekends and holidays there is also a 13:45 (station 14:00).\n\nAt the station, board the 14:34 Special Rapid for Omi-Shiotsu, heading away from Kyoto. It reaches Hikone at 14:48 (¥420). If you miss it, take the 14:52 local (arrives 15:12) or the 15:04 Special Rapid (arrives 15:18).\n\nOhmi Railway trains also use this station; you might spot one of their colourful blue cars.\n\nRecommended departure time: the 14:34 Special Rapid"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "近江八幡駅",
+      "en": "近江八幡駅"
+     },
+     "lat": 35.122804,
+     "lng": 136.102912,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "八幡堀のバス停の時刻表（近江鉄道バス）",
+      "en": "Canal bus stop timetable (Japanese)"
+     },
+     "url": {
+      "ja": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00480481",
+      "en": "https://transfer-cloud.navitime.biz/ohmitetudo/courses?busstop=00480481"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan, Japanese)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "八幡堀八幡山ロープウェー口 → 近江八幡駅 約15分・260円。平日13:55発、土日祝14:00発",
+       "en": "Hachimanbori Hachimanyama Ropeway-guchi → station: about 15 min, ¥260. 13:55 on weekdays, 14:00 on weekends and holidays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "近江八幡14:34発 → 彦根14:48着（新快速・420円）",
+       "en": "Omi-Hachiman 14:34 → Hikone 14:48 (Special Rapid, ¥420)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22"
+   },
+   "notices": []
+  },
+  {
+   "no": 14,
+   "id": "hikone-sta",
+   "name": {
+    "ja": "彦根駅",
+    "en": "Hikone Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "近江八幡から新快速で14分。駅を出たら、ひこにゃんの案内に沿って歩けば彦根城です。",
+    "en": "Fourteen minutes from Omihachiman by Special Rapid. Out of the station, follow the Hikonyan signs to the castle."
+   },
+   "lat": 35.272473,
+   "lng": 136.262573,
+   "photos": [
+    "15-1.jpg",
+    "15-2.jpg",
+    "15-3.jpg",
+    "15-4.jpg",
+    "15-5.jpg"
+   ],
+   "text": {
+    "ja": "彦根駅（ひこねえき）\n\n近江八幡14:34発の新快速「近江塩津」行きで14:48着、420円。彦根城までは西口から歩いて約15分です。\n\n彦根城と玄宮園の入場は16:30まで、閉まるのは17:00です。着いたら寄り道せずにお城へ向かってください。\n\n帰りは17:52発の新快速に乗ると、山科で地下鉄に乗り換えて三条京阪に19:00ごろ着きます（JR 990円＋地下鉄260円）。京都駅までなら乗り換えなしで約50分、1,170円。新快速は彦根を毎時22分・52分ごろに出ます（20時台からは時刻が変わります）。遅くなる日も、21:19発の電車（三条京阪に22:36着）までには乗ってください。\n\nおすすめ移動時間：14:48着",
+    "en": "Hikone Station\n\nThe 14:34 Special Rapid for Omi-Shiotsu from Omi-Hachiman arrives at 14:48 (¥420). The castle is about 15 minutes’ walk from the West Exit.\n\nLast entry to the castle and Genkyuen is 16:30, and both close at 17:00, so head straight for the castle.\n\nGoing back, the 17:52 Special Rapid and a change to the subway at Yamashina get you to Sanjo Keihan at about 19:00 (JR ¥990 + subway ¥260). To Kyoto Station it is about 50 minutes direct, ¥1,170. Special Rapids leave Hikone at about 22 and 52 minutes past the hour (the pattern changes from the 20:00s). However late you stay, be on the 21:19 train at the latest (Sanjo Keihan 22:36).\n\nRecommended travel time: arrive 14:48"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "彦根駅",
+      "en": "彦根駅"
+     },
+     "lat": 35.272473,
+     "lng": 136.262573,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%BD%A6%E6%A0%B9%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "彦根観光協会：アクセス",
+      "en": "Hikone tourism: access (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hikoneshi.com/jp/access/",
+      "en": "https://www.hikoneshi.com/jp/access/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan, Japanese)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "近江八幡→彦根 新快速14分・420円",
+       "en": "Omi-Hachiman → Hikone: 14 min by Special Rapid, ¥420"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "彦根→山科 新快速で約45分・990円、山科→三条京阪 地下鉄9分・260円（京都駅までは約50分・1,170円）",
+       "en": "Hikone → Yamashina: about 45 min by Special Rapid, ¥990. Yamashina → Sanjo Keihan: subway, 9 min, ¥260 (Kyoto Station: about 50 min, ¥1,170)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22"
+   },
+   "notices": []
+  },
+  {
+   "no": 15,
+   "id": "castle",
+   "name": {
+    "ja": "彦根城",
+    "en": "Hikone Castle"
+   },
+   "kind": {
+    "ja": "城",
+    "en": "Castle"
+   },
+   "blurb": {
+    "ja": "江戸時代の天守が残る、国宝のお城。天守から琵琶湖が見えます。春は堀ぞいの桜も。",
+    "en": "A National Treasure castle with its original Edo-period keep and a view of Lake Biwa. Cherry trees along the moats in spring."
+   },
+   "lat": 35.276482,
+   "lng": 136.251925,
+   "photos": [
+    "16-1.jpg",
+    "16-2.jpg",
+    "16-3.jpg",
+    "16-4.jpg",
+    "16-5.jpg",
+    "16-6.jpg",
+    "16-7.jpg",
+    "16-8.jpg",
+    "16-9.jpg",
+    "16-10.jpg"
+   ],
+   "text": {
+    "ja": "彦根城（ひこねじょう）\n\n江戸時代からの天守が残り、国宝になっている全国5つのお城のひとつです。天守までは石段を約140段。城の券（1,000円）で、となりの玄宮園にも入れます。\n\n天守など建物の中は16:45に閉まります。この時間割では着くのが15時すぎなので、先に天守へ上がり、そのあと玄宮園へ下りてください。\n\nひこにゃんは、ふだん15:00〜15:30に彦根城博物館の冠木門（かぶきもん）の前に出てきます（券のいらない場所です）。ちょうど着くころなので、門の前を通るときに見られます。13:30〜14:00の天守前には、この時間割では間に合いません。日によって変わるので、当日の予定は「ひこにゃん出陣スケジュール」で確かめてください。\n\n夜の写真は、春の桜のライトアップ（2025年4月）と、秋のライトアップ（2025年11月）のときです。\n\nおすすめ訪問時間：15:05〜16:20",
+    "en": "Hikone Castle\n\nOne of only five castles in Japan whose original keep is a National Treasure. About 140 stone steps up to the keep. The castle ticket (¥1,000) also gets you into Genkyuen Garden next door.\n\nThe keep and other buildings close at 16:45. On this timetable you arrive just after 15:00, so climb to the keep first and go down to Genkyuen afterwards.\n\nHikonyan, the castle’s cat mascot, usually appears 15:00–15:30 at the Kabuki-mon gate of the Hikone Castle Museum (outside the ticketed area), right when you arrive, so you can see him on your way in. You won’t make the 13:30–14:00 appearance in front of the keep on this timetable. Times change from day to day; check the Hikonyan schedule site on the day.\n\nThe night photos are from the spring cherry illumination (April 2025) and the autumn light-up (November 2025).\n\nRecommended visit time: 15:05–16:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "彦根城 天守",
+      "en": "彦根城 天守"
+     },
+     "lat": 35.276482,
+     "lng": 136.251925,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%BD%A6%E6%A0%B9%E5%9F%8E%20%E5%A4%A9%E5%AE%88%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E5%BD%A6%E6%A0%B9%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "彦根城 観覧案内",
+      "en": "Hikone Castle: visitor info (Japanese)"
+     },
+     "url": {
+      "ja": "https://hikonecastle.com/information.html",
+      "en": "https://hikonecastle.com/information.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ひこにゃん出陣スケジュール",
+      "en": "Hikonyan schedule (Japanese)"
+     },
+     "url": {
+      "ja": "http://hikonyanfan.net/",
+      "en": "http://hikonyanfan.net/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:30〜17:00（入場は16:30まで）",
+       "en": "8:30–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "1,000円（玄宮園にも入れます）",
+       "en": "¥1,000 (includes Genkyuen Garden)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "天守など建物の中は16:45に閉まります。",
+     "en": "The keep and other buildings close at 16:45."
+    },
+    "checked": "2026-11-22"
+   },
+   "notices": []
+  },
+  {
+   "no": 16,
+   "id": "genkyuen",
+   "name": {
+    "ja": "玄宮園",
+    "en": "Genkyuen Garden"
+   },
+   "kind": {
+    "ja": "庭園",
+    "en": "Garden"
+   },
+   "blurb": {
+    "ja": "彦根城のすぐ下にある大名庭園。池のむこうに天守を見上げる景色は、彦根でいちばんの眺めです。秋には夜のライトアップも。",
+    "en": "The feudal lords’ garden just below Hikone Castle. Looking up at the keep across the pond is the classic Hikone view. Lit up on autumn nights."
+   },
+   "lat": 35.278232,
+   "lng": 136.254065,
+   "photos": [
+    "17-5.jpg",
+    "17-1.jpg",
+    "17-2.jpg",
+    "17-3.jpg",
+    "17-4.jpg",
+    "17-6.jpg",
+    "17-7.jpg",
+    "17-8.jpg",
+    "17-9.jpg",
+    "17-10.jpg"
+   ],
+   "text": {
+    "ja": "玄宮園（げんきゅうえん）\n\n彦根城の券で入れます（玄宮園だけなら400円）。入場は16:30まで、17:00に閉まります。池のまわりを歩いて、ゆっくり一周できます。\n\n夜の写真は、秋のライトアップのとき（2025年11月）です。毎年の期間は彦根観光協会のサイトで確認してください。\n\n帰りは彦根駅まで歩いて約20分。17:52発の新快速で、三条京阪に19:00ごろ着きます。晩ごはんは京都に戻ってからか、途中の近江八幡で降りてティファニー（17番）で。\n\nおすすめ訪問時間：16:20〜17:00",
+    "en": "Genkyuen Garden\n\nThe castle ticket covers it (garden only: ¥400). Last entry is 16:30 and it closes at 17:00. A path takes you all the way round the pond.\n\nThe night photos are from the autumn illumination (November 2025); check the Hikone tourism website for each year’s dates.\n\nHikone Station is about 20 minutes’ walk. The 17:52 Special Rapid gets you to Sanjo Keihan at about 19:00. Have dinner back in Kyoto, or get off at Omi-Hachiman on the way for Tiffany (stop 17).\n\nRecommended visit time: 16:20–17:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "玄宮園",
+      "en": "玄宮園"
+     },
+     "lat": 35.278232,
+     "lng": 136.254065,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%8E%84%E5%AE%AE%E5%9C%92%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E5%BD%A6%E6%A0%B9%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "彦根城 観覧案内（玄宮園）",
+      "en": "Hikone Castle & Genkyuen: visitor info (Japanese)"
+     },
+     "url": {
+      "ja": "https://hikonecastle.com/information.html",
+      "en": "https://hikonecastle.com/information.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "錦秋の玄宮園ライトアップ（彦根観光協会）",
+      "en": "Genkyuen autumn illumination (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hikoneshi.com/event/article/c/kinshu",
+      "en": "https://www.hikoneshi.com/event/article/c/kinshu"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:30〜17:00（入場は16:30まで）",
+       "en": "8:30–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "彦根城の券で入れます（玄宮園だけなら400円）",
+       "en": "Included in the castle ticket (garden only ¥400)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-22"
+   },
+   "notices": [
+    {
+     "from": "2026-11-22",
+     "to": "2026-11-29",
+     "url": "https://www.hikoneshi.com/event/article/c/kinshu",
+     "text": {
+      "ja": "2026年11月29日まで、夜に「錦秋の玄宮園ライトアップ」があります（18:00〜21:00、入場は20:30まで、大人900円）。昼の券では入れません。当日券は会場の入口で、現金かPayPayで。見て帰るなら、彦根20:59発の電車で三条京阪に21:58着です。",
+      "en": "Until Nov 29, 2026, the garden is lit up at night (18:00–21:00, last entry 20:30, ¥900). Daytime tickets are not valid. Buy a ticket at the entrance with cash or PayPay. Going back afterwards, the 20:59 train from Hikone reaches Sanjo Keihan at 21:58."
+     }
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "id": "tiffany",
+   "name": {
+    "ja": "特選近江牛レストラン ティファニー",
+    "en": "Tiffany (Omi beef restaurant)"
+   },
+   "kind": {
+    "ja": "ディナー（近江牛）",
+    "en": "Dinner (Omi beef)"
+   },
+   "blurb": {
+    "ja": "駅の北口から歩いて3分、お肉屋さん「カネ吉山本」の近江牛レストラン。火曜休み。ランチで行くのもあり。",
+    "en": "Three minutes from the North Exit: the Omi-beef restaurant of butcher Kanekichi Yamamoto. Closed Tuesdays. Lunch works too."
+   },
+   "lat": 35.123885,
+   "lng": 136.100791,
+   "photos": [
+    "13-1.jpg",
+    "13-2.jpg",
+    "13-3.jpg",
+    "13-4.jpg",
+    "13-5.jpg",
+    "13-6.jpg",
+    "13-7.jpg"
+   ],
+   "text": {
+    "ja": "特選近江牛レストラン ティファニー\n\nディナーのコースは9,000円から、ランチは3,850円からでした（2026年3月・2024年11月の店頭のメニュー）。\n\n1階のお肉屋さんでは、近江牛のコロッケなどのお惣菜も買えます。電車を待つあいだのおやつにも。\n\n彦根の帰りに、近江八幡で途中下車して晩ごはんにする場合です。彦根17:52発の新快速で近江八幡に18:06着。ディナーのラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。20:06（土日祝は20:13）の新快速に乗ると、山科で地下鉄に乗り換えて三条京阪に21:00ごろ着きます。\n\nおすすめ訪問時間：18:15〜19:45",
+    "en": "Tiffany\n\nDinner courses started at ¥9,000 and lunch at ¥3,850 (menus at the door, March 2026 and November 2024).\n\nThe butcher’s shop downstairs sells Omi-beef croquettes and other deli food, good for a snack while you wait for the train.\n\nThis is for breaking the journey back from Hikone for dinner. The 17:52 Special Rapid from Hikone reaches Omi-Hachiman at 18:06. Last orders for dinner are at 20:00. The station is a short walk away afterwards: take the 20:06 Special Rapid (20:13 on weekends and holidays), change to the subway at Yamashina, and you are back at Sanjo Keihan at about 21:00.\n\nRecommended visit time: 18:15–19:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "特選近江牛レストラン ティファニー",
+      "en": "特選近江牛レストラン ティファニー"
+     },
+     "lat": 35.123885,
+     "lng": 136.100791,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%89%B9%E9%81%B8%E8%BF%91%E6%B1%9F%E7%89%9B%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%83%8B%E3%83%BC%20%E6%BB%8B%E8%B3%80%E7%9C%8C%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E9%B7%B9%E9%A3%BC%E7%94%BA558"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "カネ吉山本（店舗案内）",
+      "en": "Kanekichi Yamamoto: shops (Japanese)"
+     },
+     "url": {
+      "ja": "https://oumigyuu.co.jp/pages/store-information",
+      "en": "https://oumigyuu.co.jp/pages/store-information"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ランチ 11:30〜15:00（L.O.）、ディナー 17:00〜20:00（L.O.）",
+       "en": "Lunch 11:30–15:00 (last order), dinner 17:00–20:00 (last order)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "火曜（祝日は営業）",
+       "en": "Tuesdays (open on public holidays)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "予約は 050-1784-1825 へ。",
+     "en": "Reservations: 050-1784-1825."
+    },
+    "checked": "2026-11-20"
+   },
+   "notices": []
+  }
+ ]
+}
