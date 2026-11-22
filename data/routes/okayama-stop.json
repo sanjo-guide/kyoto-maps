@@ -1,0 +1,2876 @@
+{
+ "id": "okayama",
+ "course": "stop",
+ "_note": "岡山と倉敷（okayama/ のページ専用。形は eizan-line.json と同じ）。「移動の途中に立ち寄る」。京都・新大阪→岡山→広島。最初は岡山城・月見橋・後楽園だけ。倉敷はかわりに選ぶ。日帰りの時間割は作らない（2026-11-22 オーナー）。後楽園・吉備津神社・倉敷と改修後の岡山城は Wikimedia Commons の写真（一覧は scripts/okayama_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_okayama_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 6,
+   "area": {
+    "ja": "岡山",
+    "en": "Okayama"
+   },
+   "title": {
+    "ja": "最初に選んであるのは、お城と後楽園（約4時間40分）",
+    "en": "Selected to start: castle and garden (about 4 h 40)"
+   }
+  },
+  {
+   "first": 7,
+   "last": 13,
+   "area": {
+    "ja": "倉敷",
+    "en": "Kurashiki"
+   },
+   "title": {
+    "ja": "かわりに倉敷へ寄るなら（約5時間半）",
+    "en": "Or Kurashiki instead (about 5½ hours)"
+   }
+  },
+  {
+   "first": 14,
+   "last": 14,
+   "area": {
+    "ja": "広島へ",
+    "en": "To Hiroshima"
+   },
+   "title": {
+    "ja": "広島には15:42（倉敷に寄ると16:27）",
+    "en": "Hiroshima at 15:42 (16:27 via Kurashiki)"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 6
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。駅と路面電車は自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "defaultPicks": [
+   4,
+   5,
+   6
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "2": {
+    "always": true
+   },
+   "3": {
+    "any": [
+     4,
+     5,
+     6
+    ]
+   },
+   "7": {
+    "any": [
+     12,
+     13,
+     10,
+     9,
+     8,
+     11
+    ]
+   },
+   "14": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 1,
+    "rule": {
+     "any": [
+      4,
+      5,
+      6
+     ],
+     "andAny": [
+      12,
+      13,
+      10,
+      9,
+      8,
+      11
+     ]
+    },
+    "text": {
+     "ja": "岡山と倉敷の両方は、立ち寄りの時間には入りません（9時間はかかります）。どちらかを外すか、「1泊2日」のコースに切り替えてください。",
+     "en": "Both towns don’t fit in a stopover (at least 9 hours). Drop one, or switch to the overnight course."
+    }
+   },
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      4,
+      5,
+      6
+     ],
+     "andAny": [
+      12,
+      13,
+      10,
+      9,
+      8,
+      11
+     ]
+    },
+    "text": {
+     "ja": "岡山と倉敷の両方は、立ち寄りの時間には入りません（9時間はかかります）。どちらかを外すか、「1泊2日」のコースに切り替えてください。",
+     "en": "Both towns don’t fit in a stopover (at least 9 hours). Drop one, or switch to the overnight course."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4,
+      5,
+      6
+     ],
+     "andAny": [
+      12,
+      13,
+      10,
+      9,
+      8,
+      11
+     ]
+    },
+    "text": {
+     "ja": "岡山と倉敷の両方は、立ち寄りの時間には入りません（9時間はかかります）。どちらかを外すか、「1泊2日」のコースに切り替えてください。",
+     "en": "Both towns don’t fit in a stopover (at least 9 hours). Drop one, or switch to the overnight course."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      4,
+      5,
+      6
+     ],
+     "andAny": [
+      12,
+      13,
+      10,
+      9,
+      8,
+      11
+     ]
+    },
+    "text": {
+     "ja": "岡山と倉敷の両方は、立ち寄りの時間には入りません（9時間はかかります）。どちらかを外すか、「1泊2日」のコースに切り替えてください。",
+     "en": "Both towns don’t fit in a stopover (at least 9 hours). Drop one, or switch to the overnight course."
+    }
+   },
+   {
+    "spot": 8,
+    "rule": {
+     "any": [
+      4,
+      5,
+      6
+     ],
+     "andAny": [
+      12,
+      13,
+      10,
+      9,
+      8,
+      11
+     ]
+    },
+    "text": {
+     "ja": "岡山と倉敷の両方は、立ち寄りの時間には入りません（9時間はかかります）。どちらかを外すか、「1泊2日」のコースに切り替えてください。",
+     "en": "Both towns don’t fit in a stopover (at least 9 hours). Drop one, or switch to the overnight course."
+    }
+   },
+   {
+    "spot": 10,
+    "rule": {
+     "any": [
+      4,
+      5,
+      6
+     ],
+     "andAny": [
+      12,
+      13,
+      10,
+      9,
+      8,
+      11
+     ]
+    },
+    "text": {
+     "ja": "岡山と倉敷の両方は、立ち寄りの時間には入りません（9時間はかかります）。どちらかを外すか、「1泊2日」のコースに切り替えてください。",
+     "en": "Both towns don’t fit in a stopover (at least 9 hours). Drop one, or switch to the overnight course."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "none": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "後楽園だけなら約3時間です。城下電停から鶴見橋を渡って正門へ（約10分）。月見橋でお城を眺めて戻ります。",
+     "en": "Korakuen alone takes about 3 hours. Cross Tsurumi bridge from Shiroshita to the main gate (about 10 min), see the castle from Tsukimi bridge and return."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "andAny": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "岡山城と後楽園の両方に入るなら、共通券（800円）を。",
+     "en": "Going into both castle and garden? Buy the ¥800 combined ticket."
+    }
+   },
+   {
+    "spot": 11,
+    "rule": {
+     "any": [
+      11
+     ],
+     "andAny": [
+      13,
+      12
+     ]
+    },
+    "text": {
+     "ja": "川舟・阿智神社・アイビースクエアは同じ時間帯です。15:06か15:13の電車に乗るなら、1つにしてください。",
+     "en": "The boat, Achi Shrine and Ivy Square share one slot. Pick one to catch the 15:06 or 15:13."
+    }
+   },
+   {
+    "spot": 13,
+    "rule": {
+     "any": [
+      13
+     ],
+     "andAny": [
+      12
+     ]
+    },
+    "text": {
+     "ja": "阿智神社とアイビースクエアは同じ時間帯です。どちらか1つに。",
+     "en": "Achi Shrine and Ivy Square share one slot. Pick one."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/okayama/",
+ "sources": [
+  {
+   "what": "京都→岡山 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "のぞみ9号 9:25→10:25、自由席7,140円（乗車券3,740円＋3,400円）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→岡山 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=28&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "のぞみ9号 9:25→10:25、自由席7,140円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→岡山 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=29&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "のぞみ9号 9:25→10:25",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→岡山 指定席 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=2&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "8,100円（特急料金4,360円）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→岡山 指定席 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=28&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=2&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "8,300円（特急料金4,560円）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→岡山 年末",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=12&d=30&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "のぞみは指定席だけ、8,500円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "新大阪→岡山 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=09&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%96%B0%E5%A4%A7%E9%98%AA",
+   "saw": "のぞみ9号 9:41→10:25、自由席5,610円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "新大阪→岡山 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=28&hh=09&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%96%B0%E5%A4%A7%E9%98%AA",
+   "saw": "のぞみ9号 9:41→10:25",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "新大阪→岡山 指定席",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=09&m1=3&m2=0&type=1&ticket=normal&expkind=2&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%96%B0%E5%A4%A7%E9%98%AA",
+   "saw": "6,460円（特急料金3,380円）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三条京阪→京都 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=08&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA",
+   "saw": "8:55→9:10、260円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三条京阪→京都 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=08&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA",
+   "saw": "8:52→9:09、260円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "梅田→新大阪",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=25&hh=09&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%A2%85%E7%94%B0%28Osaka+Metro%29",
+   "saw": "6分、240円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "難波→新大阪",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=25&hh=09&m1=0&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E9%9B%A3%E6%B3%A2%28Osaka+Metro%29",
+   "saw": "9:08→9:27、290円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 行き 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%9F%8E%E4%B8%8B%28%E5%B2%A1%E5%B1%B1%E7%9C%8C%29&y=2026&m=11&d=25&hh=10&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D",
+   "saw": "10:44→10:52、160円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 行き 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%9F%8E%E4%B8%8B%28%E5%B2%A1%E5%B1%B1%E7%9C%8C%29&y=2026&m=11&d=28&hh=10&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D",
+   "saw": "10:44→10:52",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 行き 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%9F%8E%E4%B8%8B%28%E5%B2%A1%E5%B1%B1%E7%9C%8C%29&y=2026&m=11&d=29&hh=10&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D",
+   "saw": "10:44→10:52",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 帰り 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D&y=2026&m=11&d=25&hh=14&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%9F%8E%E4%B8%8B%28%E5%B2%A1%E5%B1%B1%E7%9C%8C%29",
+   "saw": "14:25→14:32、160円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 帰り 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D&y=2026&m=11&d=28&hh=14&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%9F%8E%E4%B8%8B%28%E5%B2%A1%E5%B1%B1%E7%9C%8C%29",
+   "saw": "14:25→14:32",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 帰り 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D&y=2026&m=11&d=29&hh=14&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%9F%8E%E4%B8%8B%28%E5%B2%A1%E5%B1%B1%E7%9C%8C%29",
+   "saw": "14:25→14:32",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→倉敷 1日目 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=25&hh=14&m1=3&m2=8&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "15:04→15:20、330円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→倉敷 1日目 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=28&hh=14&m1=5&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "15:04→15:20、330円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→倉敷 1日目 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=29&hh=14&m1=3&m2=8&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "15:04→15:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→倉敷 午前 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=25&hh=10&m1=3&m2=3&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "10:40→10:58、330円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→倉敷 午前 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=28&hh=10&m1=3&m2=3&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "10:40→10:58",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→倉敷 午前 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=29&hh=10&m1=3&m2=3&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "10:40→10:58",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 夜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=20&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "20:49→21:05（土曜も同じ）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 2日目 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=13&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "13:11→13:28、330円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 2日目 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=28&hh=13&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "13:11→13:28",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 2日目 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=29&hh=13&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "13:11→13:28",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 入れ替えの朝",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "9:23→9:40（土曜も同じ）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→吉備津 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%90%89%E5%82%99%E6%B4%A5&y=2026&m=11&d=25&hh=13&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "13:52→14:07、14:22→14:37、210円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→吉備津 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%90%89%E5%82%99%E6%B4%A5&y=2026&m=11&d=28&hh=13&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "13:52→14:07",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→吉備津 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%90%89%E5%82%99%E6%B4%A5&y=2026&m=11&d=29&hh=13&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "13:52→14:07",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "吉備津→岡山 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=15&m1=0&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%90%89%E5%82%99%E6%B4%A5",
+   "saw": "15:47→16:05、210円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "吉備津→岡山 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=28&hh=15&m1=0&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%90%89%E5%82%99%E6%B4%A5",
+   "saw": "15:47→16:05",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "吉備津→岡山 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=29&hh=15&m1=0&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%90%89%E5%82%99%E6%B4%A5",
+   "saw": "15:47→16:05",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 2日目 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=16&m1=1&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ38号 16:20→17:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 2日目 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=16&m1=1&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ38号 16:20→17:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 2日目 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=29&hh=16&m1=1&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ38号 16:20→17:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→新大阪 2日目",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=25&hh=16&m1=1&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ38号 16:20→17:04（土日も同じ）、5,610円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 2日目 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=16&m1=1&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ35号 16:26→17:02",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 2日目 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=28&hh=16&m1=1&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ35号 16:26→17:02",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 2日目 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=29&hh=16&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ35号 16:26→17:02",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "乗り換えなしは21:44→22:45、最終は22:48発みずほ＋新快速で0:30着",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "21:44→22:45、22:48→0:30",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→京都 最終",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "21:13発で22:45着、最終22:18発で0:30着（土日も同じ）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→新大阪 最終",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=25&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "22:48→23:37（土曜も同じ）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→三条京阪 最終",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&y=2026&m=11&d=25&hh=23&m1=4&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "地下鉄の最終は23:25発→23:58着",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 立ち寄り 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ69号 15:06→15:42、自由席5,610円（乗車券3,080円＋2,530円）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 立ち寄り 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=28&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ69号 15:06→15:42",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 立ち寄り 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=29&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ69号 15:06→15:42",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 指定席 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=14&m1=4&m2=0&type=1&ticket=normal&expkind=2&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ6,460円（特急料金3,380円）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 指定席 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=28&hh=14&m1=4&m2=0&type=1&ticket=normal&expkind=2&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ6,660円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "15:13発（岡山乗換）5,940円、15:06発（福山乗換）5,170円、どちらも16:27着",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=28&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "15:13発・15:06発とも16:27着",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=29&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "15:13発・15:06発とも16:27着",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 夕方",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=18&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "18:18発（岡山）→19:23、18:46発（新倉敷）→19:46。新倉敷経由は60分",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 最終",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "22:42発→23:54着（岡山乗換）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 最終",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "23:14→23:54",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→広島 通し",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "380.6km、乗車券6,600円、通しの自由席10,770円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "新大阪→広島 通し",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=25&hh=09&m1=3&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%96%B0%E5%A4%A7%E9%98%AA",
+   "saw": "341.6km、乗車券5,720円、通しの自由席9,890円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都→倉敷 立ち寄り",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%80%89%E6%95%B7&y=2026&m=11&d=25&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%BA%AC%E9%83%BD",
+   "saw": "9:25→10:58（岡山乗換）、自由席7,470円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→京都",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=17&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "京都〜倉敷は自由席7,470円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "広島→岡山 逆向き 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=25&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%BA%83%E5%B3%B6",
+   "saw": "のぞみ124号 9:29→10:04",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "広島→岡山 逆向き 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=28&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%BA%83%E5%B3%B6",
+   "saw": "のぞみ124号 9:29→10:04",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 逆向き 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ34号 15:20→16:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 逆向き 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ34号 15:20→16:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→新大阪 逆向き",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=25&hh=15&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "のぞみ34号 15:20→16:04（土曜も同じ）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 逆向き 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=29&hh=15&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "15:20→16:20",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→新大阪 逆向き 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=29&hh=15&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "15:20→16:04",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 遅い時間 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=29&hh=21&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "21:44→22:45が乗り換えなしの最後",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→京都 最終 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=29&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "22:48→0:30",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→新大阪 最終 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%96%B0%E5%A4%A7%E9%98%AA&y=2026&m=11&d=29&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "22:48→23:37",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=28&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "23:14→23:54",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山→広島 最終 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=29&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B2%A1%E5%B1%B1",
+   "saw": "23:14→23:54",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=28&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "22:42→23:54",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→広島 最終 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%BA%83%E5%B3%B6&y=2026&m=11&d=29&hh=23&m1=0&m2=0&type=2&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "22:42→23:54",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 夜 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=29&hh=20&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "20:49→21:05",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→岡山 入れ替えの朝 月曜祝日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B2%A1%E5%B1%B1&y=2026&m=11&d=23&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "9:23→9:40",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三条京阪→京都 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=29&hh=08&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA",
+   "saw": "8:52→9:09",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷→京都 夕方 日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=29&hh=17&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%80%89%E6%95%B7",
+   "saw": "17:44→19:19",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "途中下車",
+   "url": "https://railway.jr-central.co.jp/ticket-rule/rule05.html",
+   "saw": "乗車券は後戻りしなければ何回でも途中下車可。100キロまでと特急券は不可",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗車券の有効期間",
+   "url": "https://railway.jr-central.co.jp/ticket-rule/rule04.html",
+   "saw": "200キロまで2日、400キロまで3日",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "スマートEX",
+   "url": "https://smart-ex.jp/product/plan/service/",
+   "saw": "途中下車はできません。下車した先の区間は無効",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "スマートEXのおねだん",
+   "url": "https://smart-ex.jp/product/plan/service/pdf/service_fares_reserved.pdf",
+   "saw": "のぞみ通常期：京都〜岡山7,900円、新大阪〜岡山6,260円、岡山〜広島6,260円、京都〜広島11,740円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "特大荷物",
+   "url": "https://smart-ex.jp/reservation/reserve_smart/oversized-baggage/",
+   "saw": "3辺160cm超250cm以内は予約が必要、予約なしは1,000円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "特大荷物と自由席",
+   "url": "https://www.westjr.co.jp/travel-information/en/train-usage-guide/luggage/",
+   "saw": "Oversized baggage is not allowed in non-reserved seats",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "のぞみ全席指定の期間",
+   "url": "https://jr-central.co.jp/news/release/_pdf/000045592.pdf",
+   "saw": "11/21〜23、12/25〜1/5、1/9〜11、3/20〜22",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "ねこのてステーション",
+   "url": "https://www.okayama-kanko.jp/spot/detail_10022.html",
+   "saw": "新幹線改札口すぐ。預かり8:00〜20:00・600円/800円、宿への配達は13:30まで受付・1,500円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山駅のロッカー",
+   "url": "https://www.akilocker.biz/mobile/map.html?locationId=JR_OKAYAMA&mapId=M51001&lang=1",
+   "saw": "H：2F新幹線改札外、0:00〜24:00、ICカード専用、大8・中45・小56。料金の記載なし",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山駅の設備",
+   "url": "https://eki.jr-odekake.net/top?id=0650608",
+   "saw": "コインロッカーあり",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷駅の設備",
+   "url": "https://eki.jr-odekake.net/top?id=0650612",
+   "saw": "コインロッカーあり。場所・料金の記載なし",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷駅前観光案内所",
+   "url": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E9%A7%85%E5%89%8D%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/",
+   "saw": "西ビル2階、ロッカー9:00〜17:00・当日のみ",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷館観光案内所",
+   "url": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E9%A4%A8%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/",
+   "saw": "9:00〜18:00、ロッカー9:00〜17:00・当日のみ",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "倉敷市観光休憩所",
+   "url": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E5%B8%82%E8%A6%B3%E5%85%89%E4%BC%91%E6%86%A9%E6%89%80/",
+   "saw": "ロッカー9:00〜17:00。過ぎると翌日まで出せない",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山城",
+   "url": "https://okayama-castle.jp/guide/",
+   "saw": "9:00〜17:30（入場17:00まで）、12/29〜31休み、500円、共通券800円",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山城 所要時間",
+   "url": "https://okayama-castle.jp/faq",
+   "saw": "平均50〜60分、ロッカーは天守に100円返却式",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山城 再入場",
+   "url": "https://okayama-castle.jp/news",
+   "saw": "天守の再入場はできません",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山城 ライトアップ",
+   "url": "https://okayama-castle.jp/2929/",
+   "saw": "毎日、日没〜24時",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "岡山城 秋の烏城灯源郷",
+   "url": "https://okayama-castle.jp/5898/",
+   "saw": "11/20〜29 17:00〜20:30（天守は20:00まで）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "後楽園",
+   "url": "https://okayama-korakuen.jp/goriyo/441.html",
+   "saw": "10/1〜3/19 8:00〜17:00（入園16:45）、3/20〜9/30 7:30〜18:00（17:45）、500円、無休",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "後楽園 アクセス",
+   "url": "https://okayama-korakuen.jp/goriyo/130.html",
+   "saw": "城下から徒歩10分、岡山駅から徒歩25分",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "幻想庭園",
+   "url": "https://okayama-korakuen.jp/ibento/1303.html",
+   "saw": "秋は11/20〜29 17:00〜20:30（入園20:00まで）",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "四季彩",
+   "url": "https://korakuen-shikisai.jp/",
+   "saw": "後楽園外苑、食事11:00〜14:30、年中無休",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車",
+   "url": "https://okayama-kido.co.jp/tram/route-map/",
+   "saw": "160円、1日券400円、交通系IC可",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "路面電車 MOMO",
+   "url": "https://okayama-kido.co.jp/tram/",
+   "saw": "検査のため運休中",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "大原美術館",
+   "url": "https://www.ohara.or.jp/visitor_info/",
+   "saw": "3〜11月9:00〜17:00（入館16:30）、12〜2月〜15:00（14:30）、月曜休み（祝日は開館）、2,000円、撮影不可",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "大原美術館 カレンダー",
+   "url": "https://www.ohara.or.jp/cms/wp-content/themes/ohara/images/top/calendar_pdf/2026calendar.pdf",
+   "saw": "12/21〜25・28、1/12〜15も休館。元日は本館のみ",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "川舟",
+   "url": "https://kankou-kurashiki.jp/special/kawafune/",
+   "saw": "9:30〜17:00・30分おき、第2月曜休み、1〜2月は土日祝、1,000円、30日前からWEB予約",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "川舟 よくある質問",
+   "url": "https://kankou-kurashiki.jp/wp-content/uploads/2026/07/0a31b13f80349a6fcc7616b8c89f4fef.pdf",
+   "saw": "当日券は午前中に売り切れることも。12:00・12:30便は当日券のみ。夏は15:30便以降運休の可能性",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "夜間景観照明",
+   "url": "https://www.kurashiki-tabi.jp/see/201/",
+   "saw": "10〜3月は日没〜21:00、4〜9月は日没〜22:00",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "夜めぐりマップ",
+   "url": "https://www.kurashiki-tabi.jp/feature/yorumeguri-map/",
+   "saw": "夜の230店舗を掲載",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "ウイステリア・バー",
+   "url": "https://www.kurashiki-kokusai-hotel.co.jp/restaurants",
+   "saw": "夜17:00〜21:00（L.O.20:00）。バー18:00〜24:00、日月休み",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三宅商店",
+   "url": "https://miyakeshouten.com/time/",
+   "saw": "平日11:30、土11:00、日8:30〜17:00（L.O.16:30）、年中無休",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "吾妻寿司",
+   "url": "http://azumazushi.ecgo.jp/page0111.html",
+   "saw": "さんすて岡山2F、11:00〜22:00（L.O.21:00）、年中無休",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "さんすて岡山",
+   "url": "https://sun-ste.com/okayama-ichibangai/information/",
+   "saw": "レストラン11:00〜22:00",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "吉備津神社",
+   "url": "https://www.kibitujinja.com/",
+   "saw": "5:00〜18:00、御守は16時ごろまで、鳴釜神事9:00〜14:00・金曜休み、駅から徒歩約10分",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "阿智神社",
+   "url": "https://achi.or.jp/",
+   "saw": "参拝は終日可、授与所9:00〜17:00",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "日の入り（岡山）",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s3411.html",
+   "saw": "11月22日16:56、28日16:54",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "kyoto",
+   "name": {
+    "ja": "京都駅（新幹線）",
+    "en": "Kyoto Station (Shinkansen)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "京都9:25発ののぞみで、岡山に10:25着。大阪からは新大阪9:41発の同じ列車です。",
+    "en": "The 9:25 Nozomi reaches Okayama at 10:25. From Osaka, board the same train at Shin-Osaka at 9:41."
+   },
+   "caution": {
+    "ja": "スマートEXの通しでは途中下車不可。岡山で区切って買う。荷物は改札の外で預ける",
+    "en": "No stopovers on a through smartEX ticket: split at Okayama. Leave bags outside the gates"
+   },
+   "lat": 34.98535,
+   "lng": 135.75877,
+   "text": {
+    "ja": "京都駅（新幹線）\n\n広島へ行く途中に、岡山で降ります。9:25ののぞみに乗ると、お城と後楽園とお昼で広島に15:42着。\n\n使える時間（岡山駅に着いてから出るまで）で選んでください。\n・3時間：後楽園と月見橋だけ。\n・4時間40分：お城、後楽園、お昼。最初はこれを選んであります。\n・5時間半：岡山はやめて、倉敷の美術館と町並み（広島に16:27着）。\n・岡山と倉敷の両方：9時間はかかります。立ち寄りではなく「1泊2日」のコースにしてください。\n\nきっぷの合計（自由席、岡山だけに寄る場合）：\n・京都から：乗車券を通しにして特急券2枚で12,530円。全部区間ごとに買うと12,750円。寄らなければ10,770円。\n・新大阪から：通しの乗車券で10,780円。区間ごとだと11,220円。寄らなければ9,890円。\n・スマートEX（のぞみ指定席・通常期）を2つに分けると、京都から14,160円、新大阪から12,520円。\n\n逆向き（広島 → 京都・大阪）は、広島9:29発ののぞみで岡山10:04着。同じ順に回って、岡山15:20発で新大阪16:04・京都16:20着です。\n\n三条のあたりからは、地下鉄で京都駅まで15〜17分・260円。三条京阪8:55発（土日は8:52発）で京都駅に9:10ごろ着きます。\n\n大阪から行く人は、新大阪9:41発の同じのぞみに乗ります（岡山まで44分・自由席5,610円）。新大阪までは御堂筋線で、梅田から6分・240円、なんばから約20分・290円です。\n\nおすすめ出発時間：9:25発（京都駅に9:10ごろ）",
+    "en": "Kyoto Station (Shinkansen)\n\nGet off at Okayama on the way to Hiroshima. Take the 9:25 Nozomi and, with castle, garden and lunch, you reach Hiroshima at 15:42.\n\nChoose by the time you have between arriving at and leaving Okayama Station.\n• 3 hours: Korakuen and Tsukimi bridge only.\n• 4 hours 40: castle, garden and lunch. This is selected to start with.\n• 5½ hours: skip Okayama for Kurashiki’s museum and old quarter (Hiroshima 16:27).\n• Both towns: at least 9 hours. That is not a stopover, so use the overnight course.\n\nTicket totals (unreserved, stopping at Okayama only):\n• From Kyoto: ¥12,530 with a through fare ticket and two express tickets; ¥12,750 bought section by section; ¥10,770 without stopping.\n• From Shin-Osaka: ¥10,780 with a through fare ticket; ¥11,220 by section; ¥9,890 without stopping.\n• Two smartEX bookings (reserved Nozomi, regular season): ¥14,160 from Kyoto, ¥12,520 from Shin-Osaka.\n\nThe other way (Hiroshima to Kyoto or Osaka): the 9:29 Nozomi from Hiroshima reaches Okayama at 10:04. Do the same round and take the 15:20 (Shin-Osaka 16:04, Kyoto 16:20).\n\nFrom around Sanjo the subway to Kyoto Station takes 15–17 minutes (¥260): the 8:55 from Sanjo Keihan (8:52 at weekends) arrives at about 9:10.\n\nFrom Osaka, take the same Nozomi from Shin-Osaka at 9:41 (44 minutes to Okayama, ¥5,610 unreserved). The Midosuji subway reaches Shin-Osaka in 6 minutes from Umeda (¥240) and about 20 from Namba (¥290).\n\nRecommended departure time: the 9:25 train (be at Kyoto Station by about 9:10)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "京都駅 新幹線のりば",
+      "en": "Kyoto Station (Shinkansen gates)"
+     },
+     "lat": 34.98535,
+     "lng": 135.75877,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E9%A7%85%20%E6%96%B0%E5%B9%B9%E7%B7%9A%E4%B8%AD%E5%A4%AE%E5%8F%A3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻・運賃）",
+      "en": "JR West timetables and fares"
+     },
+     "url": {
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.westjr.co.jp/global/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "途中下車の決まり（JR東海）",
+      "en": "Stopover rules (JR Central, Japanese)"
+     },
+     "url": {
+      "ja": "https://railway.jr-central.co.jp/ticket-rule/rule05.html",
+      "en": "https://railway.jr-central.co.jp/ticket-rule/rule05.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "スマートEX（途中下車は不可）",
+      "en": "smartEX (no stopovers; Japanese)"
+     },
+     "url": {
+      "ja": "https://smart-ex.jp/product/plan/service/",
+      "en": "https://smart-ex.jp/product/plan/service/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "きっぷ：スマートEXの通しでは途中で降りられません",
+      "en": "Tickets: you cannot stop over on a through smartEX ticket"
+     },
+     "text": {
+      "ja": "スマートEXは途中下車ができず、岡山で改札を出ると広島までの分は無効になります。EXで買うなら京都→岡山、岡山→広島の2つに分けてください。紙のきっぷなら、乗車券は広島までの1枚で途中下車できます。特急券は途中下車できないので、岡山で区切って2枚買います。",
+      "en": "smartEX does not allow stopovers: leave the gates at Okayama and the rest to Hiroshima is void. With EX, book Kyoto–Okayama and Okayama–Hiroshima separately. With paper tickets one fare ticket to Hiroshima allows a stopover, but express tickets do not, so buy two, split at Okayama."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://smart-ex.jp/product/plan/service/"
+    },
+    {
+     "head": {
+      "ja": "荷物：新幹線の改札を出てすぐ預ける",
+      "en": "Bags: leave them just outside the Shinkansen gates"
+     },
+     "text": {
+      "ja": "「ねこのてステーション」の一時預かりは8:00〜20:00。3辺120cm・15kgまで600円、160cm・25kgまで800円で、それより大きい荷物は預かってもらえません。改札の外のロッカーは24時間・交通系ICカード専用で、大は8つだけ（料金は要確認）。",
+      "en": "Bag storage at Nekonote Station runs 8:00–20:00: ¥600 up to 120 cm and 15 kg, ¥800 up to 160 cm and 25 kg, nothing larger. The lockers outside the gates are open 24 hours and take IC cards only, with just eight large ones (prices not confirmed)."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.okayama-kanko.jp/spot/detail_10022.html"
+    },
+    {
+     "head": {
+      "ja": "大きな荷物は予約が要ります",
+      "en": "Oversized bags need a reservation"
+     },
+     "text": {
+      "ja": "3辺の合計が160cmを超える荷物（250cmまで）は、「特大荷物スペースつき座席」の予約が要ります。予約なしだと1,000円の手数料です。自由席には持ち込めません。",
+      "en": "A bag over 160 cm in total dimensions (up to 250 cm) needs a seat with an oversized baggage area. Without one the charge is ¥1,000, and such bags are not allowed in unreserved cars."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://smart-ex.jp/reservation/reserve_smart/oversized-baggage/"
+    },
+    {
+     "head": {
+      "ja": "のぞみに自由席がない日",
+      "en": "Days with no unreserved seats on the Nozomi"
+     },
+     "text": {
+      "ja": "2026年11月21〜23日、12月25日〜2027年1月5日、1月9〜11日、3月20〜22日は、のぞみが全席指定です。指定席を先に買ってください。ひかり・さくら・こだまには自由席があります。",
+      "en": "On 21–23 November 2026, 25 December–5 January, 9–11 January and 20–22 March 2027 every Nozomi seat is reserved, so buy a seat first. Hikari, Sakura and Kodama trains keep their unreserved cars."
+     },
+     "from": null,
+     "to": "2027-03-22",
+     "url": "https://jr-central.co.jp/news/release/_pdf/000045592.pdf"
+    },
+    {
+     "head": {
+      "ja": "11月29日までは、夕方から寄っても入れます",
+      "en": "Until 29 November an evening stop works too"
+     },
+     "text": {
+      "ja": "後楽園と岡山城は20:30まで開いています（入場は20:00まで）。夕方に岡山に着いて夜の庭とお城を見てから、広島へ進めます。岡山から広島への最終は23:14発（23:54着）です。",
+      "en": "The garden and castle are open until 20:30 (last entry 20:00), so you can arrive late, see both lit up and carry on. The last train to Hiroshima leaves Okayama at 23:14 (arrives 23:54)."
+     },
+     "from": null,
+     "to": "2026-11-29",
+     "url": "https://okayama-korakuen.jp/ibento/1303.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "通しの乗車券：京都→広島6,600円、新大阪→広島5,720円（3日間有効・岡山で途中下車できます）",
+       "en": "Through fare ticket: Kyoto–Hiroshima ¥6,600, Shin-Osaka–Hiroshima ¥5,720 (valid three days; stopover allowed)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "特急券（自由席）：京都→岡山3,400円、新大阪→岡山2,530円、岡山→広島2,530円",
+       "en": "Express tickets (unreserved): Kyoto–Okayama ¥3,400, Shin-Osaka–Okayama ¥2,530, Okayama–Hiroshima ¥2,530"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都9:25 → 岡山10:25、新大阪9:41 → 岡山10:25（平日・土・日とも）",
+       "en": "Kyoto 9:25 → Okayama 10:25; Shin-Osaka 9:41 → Okayama 10:25 (weekdays and weekends)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都→岡山：自由席7,140円。のぞみの指定席は日によって変わります（11月25日は8,100円、28日は8,300円、12月30日は8,500円）",
+       "en": "Kyoto–Okayama: ¥7,140 unreserved. Reserved Nozomi seats vary by date (¥8,100 on 25 Nov, ¥8,300 on 28 Nov, ¥8,500 on 30 Dec)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "新大阪→岡山：自由席5,610円。指定席は6,460円（11月25日）",
+       "en": "Shin-Osaka–Okayama: ¥5,610 unreserved; ¥6,460 reserved (25 Nov)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で2026年11月25日（水）・28日（土）・29日（日）を確認しました。きっぷと荷物の決まりはJR東海・JR西日本・スマートEXの公式の説明です。写真は岡山駅で撮った新幹線（2025年9月）。",
+     "en": "Times and fares from a route planner for Wed 25, Sat 28 and Sun 29 November 2026. Ticket and luggage rules from JR Central, JR West and smartEX. The photo is a Shinkansen at Okayama (September 2025)."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "eki-1.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "okayamaeki",
+   "name": {
+    "ja": "岡山駅",
+    "en": "Okayama Station"
+   },
+   "kind": {
+    "ja": "駅・荷物",
+    "en": "Station & bags"
+   },
+   "blurb": {
+    "ja": "新幹線の改札を出たら、まず荷物。そのあと後楽園口（東口）から路面電車へ。",
+    "en": "Out of the Shinkansen gates, deal with bags first, then take the Korakuen (east) exit for the tram."
+   },
+   "caution": {
+    "ja": "預かりは20:00まで・160cmまで。大きいロッカーは8つだけ",
+    "en": "Bag storage until 20:00, up to 160 cm. Only eight large lockers"
+   },
+   "lat": 34.6664,
+   "lng": 133.9185,
+   "text": {
+    "ja": "岡山駅\n\n荷物を預けたら「後楽園口（東口）」へ下ります。駅前の広場に、犬・猿・きじを連れた桃太郎の像と噴水があり、その先の大通りのまん中が路面電車ののりばです（写真は2023年8月の夕方）。\n\nロッカーは、新幹線の改札の外（24時間）、さんすて岡山南館2F（6:00〜24:00）、地下の一番街にもあります。空きはリンク先の地図で見られます。\n\nおすすめ訪問時間：10:25〜10:40",
+    "en": "Okayama Station\n\nWith bags stowed, go down to the Korakuen exit on the east side. In the square are a statue of Momotaro with his dog, monkey and pheasant, and a fountain; the tram stop is beyond them in the middle of the avenue (my photo is from an August evening in 2023).\n\nThere are lockers outside the Shinkansen gates (24 hours), on 2F of Sun Station Terrace South (6:00–24:00) and in the underground mall. The linked map shows which are free.\n\nRecommended visit time: 10:25–10:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "岡山駅 後楽園口（東口）",
+      "en": "Okayama Station, Korakuen exit"
+     },
+     "lat": 34.6664,
+     "lng": 133.9185,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E9%A7%85%20%E6%9D%B1%E5%8F%A3%20%E6%A1%83%E5%A4%AA%E9%83%8E%E5%83%8F"
+    },
+    {
+     "label": {
+      "ja": "ねこのてステーション",
+      "en": "Nekonote Station"
+     },
+     "lat": 34.6663,
+     "lng": 133.9179,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%AD%E3%81%93%E3%81%AE%E3%81%A6%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20%E5%B2%A1%E5%B1%B1%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ねこのてステーション（手荷物）",
+      "en": "Nekonote Station (luggage)"
+     },
+     "url": {
+      "ja": "https://www.okayama-kanko.jp/spot/detail_10022.html",
+      "en": "https://www.okayama-japan.jp/en/spot/10887"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "岡山駅のロッカーの空き状況",
+      "en": "Locker availability at Okayama Station"
+     },
+     "url": {
+      "ja": "https://www.akilocker.biz/mobile/map.html?locationId=JR_OKAYAMA&mapId=M51001&lang=1",
+      "en": "https://www.akilocker.biz/mobile/map.html?locationId=JR_OKAYAMA&mapId=M51001&lang=1"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "岡山観光WEB",
+      "en": "Okayama Prefecture tourism website"
+     },
+     "url": {
+      "ja": "https://www.okayama-kanko.jp/",
+      "en": "https://www.okayama-japan.jp/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "荷物：新幹線の改札を出てすぐ預ける",
+      "en": "Bags: leave them just outside the Shinkansen gates"
+     },
+     "text": {
+      "ja": "「ねこのてステーション」の一時預かりは8:00〜20:00。3辺120cm・15kgまで600円、160cm・25kgまで800円で、それより大きい荷物は預かってもらえません。改札の外のロッカーは24時間・交通系ICカード専用で、大は8つだけ（料金は要確認）。",
+      "en": "Bag storage at Nekonote Station runs 8:00–20:00: ¥600 up to 120 cm and 15 kg, ¥800 up to 160 cm and 25 kg, nothing larger. The lockers outside the gates are open 24 hours and take IC cards only, with just eight large ones (prices not confirmed)."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.okayama-kanko.jp/spot/detail_10022.html"
+    },
+    {
+     "head": {
+      "ja": "きっぷ：スマートEXの通しでは途中で降りられません",
+      "en": "Tickets: you cannot stop over on a through smartEX ticket"
+     },
+     "text": {
+      "ja": "スマートEXは途中下車ができず、岡山で改札を出ると広島までの分は無効になります。EXで買うなら京都→岡山、岡山→広島の2つに分けてください。紙のきっぷなら、乗車券は広島までの1枚で途中下車できます。特急券は途中下車できないので、岡山で区切って2枚買います。",
+      "en": "smartEX does not allow stopovers: leave the gates at Okayama and the rest to Hiroshima is void. With EX, book Kyoto–Okayama and Okayama–Hiroshima separately. With paper tickets one fare ticket to Hiroshima allows a stopover, but express tickets do not, so buy two, split at Okayama."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://smart-ex.jp/product/plan/service/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ねこのてステーション：一時預かり8:00〜20:00、宿への配達の受付8:00〜13:30",
+       "en": "Nekonote Station: storage 8:00–20:00; hotel delivery accepted 8:00–13:30"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "一時預かり600円（120cm・15kgまで）、800円（160cm・25kgまで）。宿への配達1,500円",
+       "en": "Storage ¥600 (up to 120 cm, 15 kg) or ¥800 (160 cm, 25 kg). Hotel delivery ¥1,500"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "コインロッカーの料金は確認できませんでした（要確認）",
+       "en": "Locker prices could not be confirmed (please check)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "手荷物は岡山県の観光サイト、ロッカーの場所と時間はJRの駅ページからリンクされている空き状況の地図で確認しました。",
+     "en": "Luggage services from the prefecture’s tourism site; locker locations and hours from the availability map linked from JR’s station page."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "eki-3.jpg"
+   ]
+  },
+  {
+   "no": 3,
+   "id": "tram",
+   "name": {
+    "ja": "路面電車（岡山駅前 → 城下）",
+    "en": "Tram: Okayama-ekimae → Shiroshita"
+   },
+   "kind": {
+    "ja": "路面電車",
+    "en": "Tram"
+   },
+   "blurb": {
+    "ja": "「東山」行きで3つ目の城下へ。8分・160円。交通系ICカードが使えます。",
+    "en": "A Higashiyama-bound tram to Shiroshita, the third stop: 8 minutes, ¥160. IC cards accepted."
+   },
+   "lat": 34.66575,
+   "lng": 133.92895,
+   "text": {
+    "ja": "路面電車（岡山駅前 → 城下）\n\n10:44発で城下に10:52着。帰りは城下14:25発で、岡山駅前に14:32着です。\n\n行き先は2つあります。「東山（ひがしやま）」行きに乗ってください。「清輝橋（せいきばし）」行きは途中で曲がってしまいます。\n\n3つ目の「城下（しろした）」で降ります。始発の駅前はどのドアからも乗れて、お金は降りるときに前で。おつりは出ないので、現金なら両替機で160円にしてから入れます。交通系ICカードは使えますが、車内でチャージはできません。\n\n城下から岡山城までも、後楽園の正門までも、歩いて約10分。1日乗車券は400円ですが、往復の2回なら買わなくて大丈夫です。\n\n写真の青い電車は低床車の「MOMO」です（2023年8月）。2026年11月22日の時点では検査で運休しています。\n\nおすすめ移動時間：10:44〜10:52",
+    "en": "Tram: Okayama-ekimae → Shiroshita\n\nThe 10:44 reaches Shiroshita at 10:52. Back, the 14:25 reaches the station at 14:32.\n\nThere are two destinations: take a tram for Higashiyama. Trams for Seikibashi turn off partway.\n\nGet off at Shiroshita, the third stop. At the terminus you can board by any door; pay at the front as you get off. No change is given, so break notes or coins in the machine to pay exactly ¥160. IC cards work but cannot be topped up on board.\n\nFrom Shiroshita it is about 10 minutes on foot to either the castle or Korakuen’s main gate. The ¥400 day pass isn’t worth it for a return trip.\n\nThe blue tram in the photo is the low-floor MOMO (August 2023). As of 22 November 2026 it is out of service for inspection.\n\nRecommended travel time: 10:44–10:52"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "城下電停",
+      "en": "Shiroshita tram stop"
+     },
+     "lat": 34.66575,
+     "lng": 133.92895,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9F%8E%E4%B8%8B%E9%A7%85%20%E5%B2%A1%E5%B1%B1%E9%9B%BB%E6%B0%97%E8%BB%8C%E9%81%93"
+    },
+    {
+     "label": {
+      "ja": "岡山駅前電停",
+      "en": "Okayama-ekimae tram stop"
+     },
+     "lat": 34.66585,
+     "lng": 133.9196,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E9%A7%85%E5%89%8D%E9%A7%85%20%E5%B2%A1%E5%B1%B1%E9%9B%BB%E6%B0%97%E8%BB%8C%E9%81%93"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "岡山電気軌道（路面電車）",
+      "en": "Okayama Electric Tramway (Japanese)"
+     },
+     "url": {
+      "ja": "https://okayama-kido.co.jp/tram/route-map/",
+      "en": "https://okayama-kido.co.jp/tram/route-map/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "岡山駅前10:44 → 城下10:52。帰りは城下14:25 → 岡山駅前14:32（平日・土・日とも）",
+       "en": "Okayama-ekimae 10:44 → Shiroshita 10:52; back 14:25 → 14:32 (weekdays and weekends)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人160円、子ども80円。1日乗車券400円",
+       "en": "¥160, children ¥80. Day pass ¥400"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "運賃・乗り方・MOMOの運休は岡山電気軌道の公式サイト、時刻は乗換案内で確認しました。",
+     "en": "Fares, boarding and MOMO’s suspension from the tramway’s website; times from a route planner."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "tram-1.jpg"
+   ]
+  },
+  {
+   "no": 4,
+   "id": "castle",
+   "name": {
+    "ja": "岡山城",
+    "en": "Okayama Castle"
+   },
+   "kind": {
+    "ja": "城",
+    "en": "Castle"
+   },
+   "blurb": {
+    "ja": "黒い板張りの天守から「烏城（うじょう）」と呼ばれる城。中は2022年に新しくなった展示室です。",
+    "en": "The “Crow Castle”, named for its black-boarded keep. Inside are exhibition rooms renewed in 2022."
+   },
+   "caution": {
+    "ja": "天守は再入場できません。12月29〜31日は休み",
+    "en": "No re-entry to the keep. Closed 29–31 December"
+   },
+   "lat": 34.66515,
+   "lng": 133.93605,
+   "text": {
+    "ja": "岡山城\n\n宇喜多秀家（うきたひでいえ）が築いた城です。天守は1945年の空襲で焼け、今の建物は1966年に建て直したコンクリート造り。2022年に「令和の大改修」が終わりました（私の写真は改修前の2021年3月）。\n\n天守の中は博物館で、古い木の階段や柱はありません。見学は50〜60分の人が多いそうです。時間がなければ外から眺めるだけにしても。エレベーターは4階までで、5・6階は階段です。\n\n見るところは、いびつな五角形の天守台、本丸の北西の角に残る江戸時代の月見櫓（つきみやぐら）、旭川と後楽園を見下ろす最上階。\n\n入場券は後楽園との共通券（800円）を。別々だと500円ずつです。天守の中に100円が戻るロッカーがあります。夜は毎日、日没から24時まで天守に明かりがつきます。\n\nおすすめ訪問時間：11:05〜12:00",
+    "en": "Okayama Castle\n\nBuilt by Ukita Hideie. The keep burned in the 1945 air raid; today’s is a concrete rebuild of 1966, renovated in 2022 (my photo is from March 2021, before that work).\n\nThe inside is a museum, with no old timber stairs or pillars. Most visitors take 50–60 minutes. If time is short, look from outside. The lift goes to the 4th floor; the 5th and 6th are by stairs.\n\nLook for the irregular pentagonal base, the original Edo-period moon-viewing turret at the north-west corner, and the top-floor view over the river and Korakuen.\n\nBuy the combined ticket with Korakuen (¥800) instead of ¥500 each. There are coin-return lockers (¥100) in the keep. It is lit every night from sunset to midnight.\n\nRecommended visit time: 11:05–12:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "岡山城 天守",
+      "en": "Okayama Castle keep"
+     },
+     "lat": 34.66515,
+     "lng": 133.93605,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E5%9F%8E%20%E5%A4%A9%E5%AE%88%E9%96%A3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "岡山城 公式サイト",
+      "en": "Okayama Castle (official)"
+     },
+     "url": {
+      "ja": "https://okayama-castle.jp/guide/",
+      "en": "https://okayama-castle.jp/home-en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:30（入場は17:00まで）",
+       "en": "9:00–17:30 (last entry 17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11月20〜29日は20:30まで（入場は20:00まで）",
+       "en": "20–29 November until 20:30 (last entry 20:00)"
+      },
+      "until": "2026-11-29",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29〜31日。荒天や点検で休む日もあります",
+       "en": "29–31 December; also for bad weather or inspections"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人（15歳以上）500円、中学生以下無料。後楽園との共通券800円。カード・交通系IC・QR決済可",
+       "en": "¥500 (15+), junior high and under free. Combined with Korakuen ¥800. Cards, IC and QR payments accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "岡山城の公式サイトで確認しました。再入場不可は2026年のお知らせにある案内です。改修後の写真は Wikimedia Commons から。",
+     "en": "Checked on the castle’s website; the no re-entry rule is from its 2026 news. Post-renovation photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "castle-w1.jpg",
+     "credit": {
+      "author": "Kanesue",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Castle_main_keep_2023-10-18.jpg"
+     }
+    },
+    {
+     "file": "castle-w2.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Okayama-jo_Keep_Exterior_28.jpg"
+     }
+    },
+    {
+     "file": "castle-w3.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Okayama-jo_Keep_Panoramic_View_15.jpg"
+     }
+    },
+    {
+     "file": "castle-w4.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Okayama-jo_Keep_Exterior_Evening_11.jpg"
+     }
+    },
+    "castle-1.jpg"
+   ]
+  },
+  {
+   "no": 5,
+   "id": "tsukimi",
+   "name": {
+    "ja": "月見橋",
+    "en": "Tsukimi bridge"
+   },
+   "kind": {
+    "ja": "橋",
+    "en": "Bridge"
+   },
+   "blurb": {
+    "ja": "お城と後楽園をつなぐ歩行者の橋。ふり返ると、川の上に天守が立って見えます。",
+    "en": "The footbridge between castle and garden. Look back for the keep standing above the river."
+   },
+   "lat": 34.6664,
+   "lng": 133.93486,
+   "text": {
+    "ja": "月見橋\n\n天守の北側の「廊下門（ろうかもん）」を出て坂を下ると、旭川に架かる鉄の橋があります。渡った先が後楽園の南門です。\n\n橋のまん中でふり返ると、石垣の上の天守と川が一度に入ります（写真1枚目、2021年3月）。渡ってから右へ少し歩いた川べりからも撮れます（写真3枚目）。\n\nおすすめ訪問時間：12:00〜12:15",
+    "en": "Tsukimi bridge\n\nLeave by the Roka-mon gate north of the keep and walk down to the iron bridge over the Asahi river. Korakuen’s south gate is on the far side.\n\nLook back from the middle for keep, stone walls and river in one view (photo 1, March 2021). The riverbank a little to the right after crossing works too (photo 3).\n\nRecommended visit time: 12:00–12:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "月見橋",
+      "en": "Tsukimi bridge"
+     },
+     "lat": 34.6664,
+     "lng": 133.93486,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%88%E8%A6%8B%E6%A9%8B%20%E5%B2%A1%E5%B1%B1%E5%B8%82%E5%8C%97%E5%8C%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻・運賃）",
+      "en": "JR West timetables and fares"
+     },
+     "url": {
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.westjr.co.jp/global/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "自由に渡れます。天守から後楽園の南門まで歩いて5〜10分",
+       "en": "Free to cross. 5–10 minutes on foot from the keep to the garden’s south gate"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "歩く時間は地図で測った目安に、ゆとりを足したものです。",
+     "en": "The walking time is an estimate from the map, with some slack."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "tsukimi-1.jpg",
+    "tsukimi-2.jpg",
+    "tsukimi-3.jpg"
+   ]
+  },
+  {
+   "no": 6,
+   "id": "korakuen",
+   "name": {
+    "ja": "岡山後楽園",
+    "en": "Okayama Korakuen"
+   },
+   "kind": {
+    "ja": "庭園（日本三名園）",
+    "en": "Garden"
+   },
+   "blurb": {
+    "ja": "広い芝生と池のむこうに天守。約300年前に岡山藩主がつくった庭です。お昼は正門の外で。",
+    "en": "Wide lawns and ponds with the keep beyond: a lord’s garden of about 300 years ago. Lunch is outside the main gate."
+   },
+   "caution": {
+    "ja": "10月〜3月19日は17:00まで（入園16:45まで）",
+    "en": "1 Oct–19 Mar: closes 17:00 (last entry 16:45)"
+   },
+   "lat": 34.6678,
+   "lng": 133.9356,
+   "text": {
+    "ja": "岡山後楽園\n\n庭を1時間、13:20からお昼。14:10に出て城下14:25発の電車で駅へ戻り、荷物を取って15:06ののぞみに乗ります。\n\n岡山藩主の池田綱政（いけだつなまさ）がつくらせた庭で、兼六園、偕楽園と並ぶ日本三名園の一つです。ひと回り1時間ほど。\n\n南門から入って、こう歩くと戻らずにすみます。\n\n・唯心山（ゆいしんざん）：小さな築山。芝生と池が一度に見えます。\n・流店（りゅうてん）：水路が建物の中を通る休憩所。\n・沢の池（さわのいけ）：園の中心の池。北側からふり返ると天守が入ります。\n・延養亭（えんようてい）：藩主が庭を眺めた建物。前からの眺めが、この庭の正面です。\n・鶴舎（かくしゃ）：タンチョウがいます。\n\n正門を出たところの「四季彩（しきさい）」で食事ができます（11:00〜14:30、年中無休。夜は予約制）。軽くすませるなら、岡山駅2階の駅弁売り場（7:00〜20:30）で買っても。\n\n帰りは正門から鶴見橋を渡って城下電停へ、歩いて約10分。日かげが少ないので夏は帽子と水を。\n\nおすすめ訪問時間：12:15〜14:10（お昼を含む）",
+    "en": "Okayama Korakuen\n\nAn hour in the garden, lunch from 13:20. Leave at 14:10 for the 14:25 tram, collect bags and board the 15:06 Nozomi.\n\nLaid out for Ikeda Tsunamasa, lord of Okayama, and one of Japan’s three great gardens with Kenroku-en and Kairaku-en. Allow about an hour.\n\nFrom the south gate this order avoids doubling back.\n\n• Yuishinzan: a small hill with lawns and ponds in one view.\n• Ryuten: a rest pavilion with a stream running through it.\n• Sawa-no-ike: the central pond. Look back from its north side for the keep.\n• Enyo-tei: the lord’s viewing house. The view from in front is the garden’s “front”.\n• The aviary, with red-crowned cranes.\n\nShikisai, just outside the main gate, serves lunch 11:00–14:30 every day (evenings by reservation). For something lighter, the boxed-meal shop on 2F at Okayama Station is open 7:00–20:30.\n\nFrom the main gate, cross Tsurumi bridge to the Shiroshita tram stop: about 10 minutes. There is little shade, so bring a hat and water in summer.\n\nRecommended visit time: 12:15–14:10 (including lunch)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "後楽園 南門",
+      "en": "Korakuen south gate"
+     },
+     "lat": 34.6669,
+     "lng": 133.9347,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E5%BE%8C%E6%A5%BD%E5%9C%92%20%E5%8D%97%E9%96%80"
+    },
+    {
+     "label": {
+      "ja": "後楽園 正門",
+      "en": "Korakuen main gate"
+     },
+     "lat": 34.6693,
+     "lng": 133.9342,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E5%BE%8C%E6%A5%BD%E5%9C%92%20%E6%AD%A3%E9%96%80"
+    },
+    {
+     "label": {
+      "ja": "四季彩",
+      "en": "Shikisai"
+     },
+     "lat": 34.66935,
+     "lng": 133.934,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%BE%8C%E6%A5%BD%E5%9C%92%20%E5%9B%9B%E5%AD%A3%E5%BD%A9"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "岡山後楽園 公式サイト",
+      "en": "Okayama Korakuen (official)"
+     },
+     "url": {
+      "ja": "https://okayama-korakuen.jp/goriyo/441.html",
+      "en": "https://okayama-korakuen.jp/foregin_taravelers.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "四季彩 公式サイト",
+      "en": "Shikisai (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://korakuen-shikisai.jp/",
+      "en": "https://korakuen-shikisai.jp/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10月1日〜3月19日 8:00〜17:00（入園16:45まで）／3月20日〜9月30日 7:30〜18:00（入園17:45まで）",
+       "en": "1 Oct–19 Mar 8:00–17:00 (last entry 16:45) / 20 Mar–30 Sep 7:30–18:00 (last entry 17:45)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11月20〜29日は20:30まで（入園20:00まで）",
+       "en": "20–29 November until 20:30 (last entry 20:00)"
+      },
+      "until": "2026-11-29",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "休みなし",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、65歳以上200円、高校生以下無料（2027年3月31日まで）。岡山城との共通券800円（シニア用はなし）",
+       "en": "¥500; 65+ ¥200; high school and under free (until 31 March 2027). Combined with the castle ¥800 (no senior version)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "四季彩：お食事11:00〜14:30、年中無休",
+       "en": "Shikisai: lunch 11:00–14:30, every day"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "後楽園・四季彩・さんすて岡山の公式サイトで確認しました。共通券を売らない日もあります。写真は Wikimedia Commons から。",
+     "en": "Checked on the websites of the garden, Shikisai and Sun Station Terrace. The combined ticket is withheld on some days. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "korakuen-w1.jpg",
+     "credit": {
+      "author": "Fjkelfeimvvn",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Korakuen_Garden01.jpg"
+     }
+    },
+    {
+     "file": "korakuen-w2.jpg",
+     "credit": {
+      "author": "Daderot",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:December_view_-_Korakuen_%28Okayama%29_-_DSC01696.JPG"
+     }
+    },
+    {
+     "file": "korakuen-w3.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Korakuen_18.jpg"
+     }
+    },
+    {
+     "file": "korakuen-w4.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Korakuen_37.jpg"
+     }
+    },
+    {
+     "file": "korakuen-w5.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Korakuen_27.jpg"
+     }
+    },
+    {
+     "file": "korakuen-w6.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Okayama_Korakuen_03.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "lunch",
+   "name": {
+    "ja": "倉敷駅",
+    "en": "Kurashiki Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "岡山から16〜18分・330円。南口から美観地区まで歩いて10〜15分です。",
+    "en": "16–18 minutes from Okayama, ¥330. The old quarter is 10–15 minutes on foot from the south exit."
+   },
+   "lat": 34.60085,
+   "lng": 133.7661,
+   "text": {
+    "ja": "倉敷駅\n\nお城と後楽園のかわりに倉敷へ寄る場合です。岡山10:40発の伯備線で倉敷10:58着。帰りに岡山で乗り換えるなら、荷物は岡山駅に預けても取りに寄れます。福山で乗り換えるなら、荷物は倉敷まで持ってきてください。\n\n南口へ出ます。美観地区への道は、まっすぐ南への倉敷中央通りか、左手から続くアーケードの商店街。雨の日は商店街が楽です。\n\n荷物は駅のコインロッカーか（場所と料金は要確認）、南口の西ビル2階の倉敷駅前観光案内所、美観地区の倉敷館・観光休憩所のロッカーへ。案内所と休憩所のロッカーは9:00〜17:00の当日かぎりです。17:00を過ぎる日は駅のほうに預けてください。\n\nおすすめ移動時間：10:40〜10:58",
+    "en": "Kurashiki Station\n\nThis is for Kurashiki instead of the castle and garden. The 10:40 Hakubi line train from Okayama arrives at 10:58. If you will change at Okayama later you can leave bags there; if at Fukuyama, bring them to Kurashiki.\n\nUse the south exit. Either follow Chuo-dori straight south, or the covered arcades from the left of the square, which are easier in rain.\n\nBags go in the station lockers (location and price not confirmed), or in lockers at the tourist office on 2F of the West Building by the south exit, at Kurashiki-kan or at the rest house in the old quarter. Those three are same-day, 9:00–17:00 only. If you’ll be later than 17:00, use the station.\n\nRecommended travel time: 10:40–10:58"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "倉敷駅 南口",
+      "en": "Kurashiki Station, south exit"
+     },
+     "lat": 34.60085,
+     "lng": 133.7661,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E9%A7%85%20%E5%8D%97%E5%8F%A3"
+    },
+    {
+     "label": {
+      "ja": "倉敷駅前観光案内所",
+      "en": "Kurashiki station-front tourist office"
+     },
+     "lat": 34.6009,
+     "lng": 133.7657,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E9%A7%85%E5%89%8D%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "倉敷駅前観光案内所",
+      "en": "Station-front tourist office (Japanese)"
+     },
+     "url": {
+      "ja": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E9%A7%85%E5%89%8D%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/",
+      "en": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E9%A7%85%E5%89%8D%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "倉敷観光WEB",
+      "en": "Kurashiki tourism website"
+     },
+     "url": {
+      "ja": "https://www.kurashiki-tabi.jp/",
+      "en": "https://www.kurashiki-tabi.jp/for/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻・運賃）",
+      "en": "JR West timetables and fares"
+     },
+     "url": {
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.westjr.co.jp/global/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "岡山10:40 → 倉敷10:58（平日・土・日とも）。330円",
+       "en": "Okayama 10:40 → Kurashiki 10:58 (weekdays and weekends). ¥330"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "倉敷駅前観光案内所9:00〜18:00（12月29日〜1月1日休み）。ロッカーは9:00〜17:00",
+       "en": "Station-front office 9:00–18:00 (closed 29 Dec–1 Jan); its lockers 9:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "倉敷駅のロッカーの場所と料金は要確認",
+       "en": "Location and price of the station lockers: please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "倉敷観光コンベンションビューロー、JRの駅ページ、乗換案内で確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked with the Kurashiki visitors bureau, JR’s station page and a route planner. The photo is from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "lunch-w1.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JRW_Kurashiki-STA_South.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "ohara",
+   "name": {
+    "ja": "大原美術館",
+    "en": "Ohara Museum of Art"
+   },
+   "kind": {
+    "ja": "美術館",
+    "en": "Art museum"
+   },
+   "blurb": {
+    "ja": "エル・グレコ「受胎告知」、モネ「睡蓮」。1930年にできた西洋美術の美術館。月曜休みです。",
+    "en": "El Greco’s Annunciation and Monet’s Water Lilies, in a museum of Western art opened in 1930. Closed Mondays."
+   },
+   "caution": {
+    "ja": "月曜休み（祝日は開館）。12〜2月は15:00まで。館内は撮影禁止",
+    "en": "Closed Mondays (open on holidays). Until 15:00 Dec–Feb. No photos inside"
+   },
+   "lat": 34.59603,
+   "lng": 133.77044,
+   "text": {
+    "ja": "大原美術館\n\n倉敷に寄る場合の最初の場所です。見たらお昼は本町の三宅商店などで。月曜なら美術館は飛ばして、川舟かアイビースクエアに。\n\n倉敷の実業家・大原孫三郎が、画家の児島虎次郎（こじまとらじろう）に集めてもらった絵をもとに開いた美術館です。柱の並ぶ本館が今橋の前に立っています。\n\n1枚の入館券で、本館、工芸・東洋館、児島虎次郎記念館に入れます。見ていない館は別の日にも使えます。分館は長く休館中です。1時間なら本館だけに、もう30分あれば米蔵を使った工芸・東洋館へ。\n\n荷物は入館券売場の隣で無料で預かってくれます。\n\nおすすめ訪問時間：11:15〜12:30",
+    "en": "Ohara Museum of Art\n\nThe first stop if you choose Kurashiki. Have lunch afterwards on Honmachi, at Miyake Shoten for example. On a Monday skip the museum for the boat or Ivy Square.\n\nOpened by the Kurashiki industrialist Ohara Magosaburo around pictures the painter Kojima Torajiro collected for him. The columned main building faces Imabashi.\n\nOne ticket covers the Main Gallery, the Craft and Asian Art Gallery and the Kojima Torajiro Memorial Hall; unused halls can be visited another day. The Annex is closed long-term. With an hour, see the Main Gallery; with 30 minutes more, add the galleries in the old rice storehouses.\n\nBags are looked after free next to the ticket office.\n\nRecommended visit time: 11:15–12:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大原美術館 本館",
+      "en": "Ohara Museum of Art, Main Gallery"
+     },
+     "lat": 34.59603,
+     "lng": 133.77044,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%8E%9F%E7%BE%8E%E8%A1%93%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "大原美術館 公式サイト",
+      "en": "Ohara Museum of Art (official)"
+     },
+     "url": {
+      "ja": "https://www.ohara.or.jp/visitor_info/",
+      "en": "https://www.ohara.or.jp/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "開館カレンダー（PDF）",
+      "en": "Opening calendar (PDF, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.ohara.or.jp/cms/wp-content/themes/ohara/images/top/calendar_pdf/2026calendar.pdf",
+      "en": "https://www.ohara.or.jp/cms/wp-content/themes/ohara/images/top/calendar_pdf/2026calendar.pdf"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "この冬、月曜のほかに休む日",
+      "en": "Extra closures this winter"
+     },
+     "text": {
+      "ja": "開館カレンダーでは2026年12月21〜25日・28日、2027年1月12〜15日も休館、元日は本館だけの開館です。年末の29〜31日は、カレンダー（開館）と公式ページの上の表示（休館）が食い違っています（要確認）。",
+      "en": "The calendar also shows closures on 21–25 and 28 December 2026 and 12–15 January 2027, with only the Main Gallery open on New Year’s Day. For 29–31 December the calendar (open) and the website header (closed) disagree, so check first."
+     },
+     "from": null,
+     "to": "2027-01-15",
+     "url": "https://www.ohara.or.jp/cms/wp-content/themes/ohara/images/top/calendar_pdf/2026calendar.pdf"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "3〜11月 9:00〜17:00（入館16:30まで）／12〜2月 9:00〜15:00（入館14:30まで）。児島虎次郎記念館は10:00〜16:00（冬は15:00まで）",
+       "en": "Mar–Nov 9:00–17:00 (last entry 16:30) / Dec–Feb 9:00–15:00 (last entry 14:30). Kojima hall 10:00–16:00 (15:00 in winter)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "月曜（祝日・振替休日は開館。8月は無休）。臨時休館あり",
+       "en": "Mondays (open on holidays; none in August). Occasional extra closures"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "一般2,000円、18歳未満の小〜高校生500円。現金・カード・電子マネー・QR決済可",
+       "en": "¥2,000; school pupils under 18 ¥500. Cash, cards, e-money and QR accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "大原美術館の公式サイトと2026年度の開館カレンダーで確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked on the museum’s website and 2026 calendar. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "ohara-w1.jpg",
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Ohara_Museum_of_Art_20190324.jpg"
+     }
+    },
+    {
+     "file": "ohara-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:080727_Ohara_Museum_of_Art_Kurashiki_Okayama_pref_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "ohara-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Ohara_Art_Museum03n4592.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "id": "honmachi",
+   "name": {
+    "ja": "本町・東町",
+    "en": "Honmachi & Higashimachi"
+   },
+   "kind": {
+    "ja": "町家の通り",
+    "en": "Townhouse streets"
+   },
+   "blurb": {
+    "ja": "川ぞいの一本北、格子の町家の通り。東へ行くほど、ふつうの暮らしの町になります。",
+    "en": "One street north of the canal, lined with latticed townhouses, more residential the further east you go."
+   },
+   "lat": 34.5964,
+   "lng": 133.774,
+   "text": {
+    "ja": "本町・東町\n\nお昼を食べる通りです。三宅商店は平日11:30開店。食べ終わったら川ぞいへ。14:25ごろ美観地区を出て、駅へ向かいます。\n\n鶴形山のふもとの昔の街道です。格子窓、しっくいと焼き板の壁の町家に、帆布、マスキングテープ、器などの店が入っています。\n\n東へ歩くと東町（ひがしまち）。店が減って、静かな家並みになります。端まで行って戻って15分ほど。住んでいる人の家なので、戸口や中は撮らないように。\n\n「三宅商店」は本町通りの町家のカフェで、野菜のカレーと季節のパフェがあります。平日11:30、土曜11:00、日曜8:30から17:00まで（L.O.16:30）、年中無休です。\n\nおすすめ訪問時間：12:35〜13:25（お昼）",
+    "en": "Honmachi & Higashimachi\n\nThe street for lunch; Miyake Shoten opens at 11:30 on weekdays. Then the canal. Leave the old quarter at about 14:25 for the station.\n\nAn old highway at the foot of Tsurugata hill. Townhouses with lattice windows, plaster and charred-board walls hold shops for canvas, masking tape and tableware.\n\nEast is Higashimachi, where shops thin out into a quiet street of homes: about 15 minutes to the end and back. People live here, so don’t photograph doorways or interiors.\n\nMiyake Shoten is a townhouse cafe on Honmachi with vegetable curry and seasonal parfaits. It opens at 11:30 on weekdays, 11:00 on Saturdays and 8:30 on Sundays, until 17:00 (last order 16:30), every day.\n\nRecommended visit time: 12:35–13:25 (lunch)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "本町通り",
+      "en": "Honmachi street"
+     },
+     "lat": 34.5964,
+     "lng": 133.774,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E5%B8%82%E6%9C%AC%E7%94%BA%20%E6%9C%AC%E7%94%BA%E9%80%9A%E3%82%8A"
+    },
+    {
+     "label": {
+      "ja": "東町",
+      "en": "Higashimachi"
+     },
+     "lat": 34.59672,
+     "lng": 133.77706,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E5%B8%82%E6%9D%B1%E7%94%BA"
+    },
+    {
+     "label": {
+      "ja": "三宅商店",
+      "en": "Miyake Shoten"
+     },
+     "lat": 34.5964,
+     "lng": 133.7729,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E5%AE%85%E5%95%86%E5%BA%97%20%E5%80%89%E6%95%B7%E5%B8%82%E6%9C%AC%E7%94%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三宅商店 営業時間",
+      "en": "Miyake Shoten hours (Japanese)"
+     },
+     "url": {
+      "ja": "https://miyakeshouten.com/time/",
+      "en": "https://miyakeshouten.com/time/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "倉敷観光WEB",
+      "en": "Kurashiki tourism website"
+     },
+     "url": {
+      "ja": "https://www.kurashiki-tabi.jp/",
+      "en": "https://www.kurashiki-tabi.jp/for/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "通りは自由に歩けます。ほかの店の時間と休みは店ごと（要確認）",
+       "en": "Free to walk. Other shops’ hours and closing days vary (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "三宅商店：平日11:30、土11:00、日8:30〜17:00（L.O.16:30）、年中無休",
+       "en": "Miyake Shoten: from 11:30 weekdays, 11:00 Sat, 8:30 Sun, to 17:00 (last order 16:30), every day"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "三宅商店は公式サイトで確認しました。通りの説明は倉敷観光WEBによります。写真は Wikimedia Commons から。",
+     "en": "Miyake Shoten was checked on its website. The street description draws on the Kurashiki tourism website. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "honmachi-w1.jpg",
+     "credit": {
+      "author": "ajari",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%80%89%E6%95%B7%E5%B8%82%E6%9C%AC%E7%94%BA%E9%80%9A%E3%82%8A_%E6%9C%AC%E7%94%BA10%E3%81%A8%E6%9C%AC%E7%94%BA11%E3%81%AE%E9%96%93_Jul_15%2C_2014.jpg"
+     }
+    },
+    {
+     "file": "honmachi-w2.jpg",
+     "credit": {
+      "author": "DVMG",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Honmachi_-_panoramio_%2872%29.jpg"
+     }
+    },
+    {
+     "file": "honmachi-w3.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Bikan_historical_quarter_at_late_afternoon_01.jpg"
+     }
+    },
+    {
+     "file": "honmachi-w4.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Bikan_historical_quarter_at_late_afternoon_04.jpg"
+     }
+    },
+    {
+     "file": "honmachi-w5.jpg",
+     "credit": {
+      "author": "DVMG",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Honmachi_-_panoramio_%2874%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "id": "bikan",
+   "name": {
+    "ja": "倉敷川と白壁の町並み",
+    "en": "Kurashiki canal and the white-walled quarter"
+   },
+   "kind": {
+    "ja": "町並み",
+    "en": "Old quarter"
+   },
+   "blurb": {
+    "ja": "柳の川ぞいに蔵と屋敷。夜は21時（4〜9月は22時）まで明かりがつきます。",
+    "en": "Storehouses along a willow-lined canal, lit until 21:00 (22:00 April–September)."
+   },
+   "lat": 34.5961,
+   "lng": 133.77105,
+   "text": {
+    "ja": "倉敷川と白壁の町並み\n\nお昼（12:35〜13:25）のあとに川ぞいを歩きます。\n\n江戸時代、このあたりの米や綿を舟で運び出した川です。両岸の蔵と屋敷は商人たちのもの。\n\n・今橋（いまばし）：美術館の前の石橋。ここから川下を見るのが定番の眺めです。\n・中橋（なかばし）と倉敷館：川が曲がる角の石橋と、洋風の木造の観光案内所。\n・高砂橋（たかさごばし）：舟が折り返すあたり。\n\n夜間景観照明は日没から、10〜3月は21:00、4〜9月は22:00まで。11〜12月の日の入りは17時前後です。\n\nおすすめ訪問時間：13:25〜13:50",
+    "en": "Kurashiki canal and the white-walled quarter\n\nWalk the canal after lunch (12:35–13:25).\n\nThis canal carried the district’s rice and cotton away by boat in the Edo period; the buildings along it were the merchants’.\n\n• Imabashi: the stone bridge before the museum, for the classic view downstream.\n• Nakabashi and Kurashiki-kan: the bridge at the bend and the wooden Western-style tourist office.\n• Takasago-bashi: where the boats turn.\n\nThe night lighting runs from sunset to 21:00 October–March and 22:00 April–September. In November and December the sun sets at about 17:00.\n\nRecommended visit time: 13:25–13:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "中橋・倉敷館",
+      "en": "Nakabashi & Kurashiki-kan"
+     },
+     "lat": 34.59582,
+     "lng": 133.77176,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E9%A4%A8%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80"
+    },
+    {
+     "label": {
+      "ja": "今橋",
+      "en": "Imabashi"
+     },
+     "lat": 34.5964,
+     "lng": 133.77065,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BB%8A%E6%A9%8B%20%E5%80%89%E6%95%B7%E7%BE%8E%E8%A6%B3%E5%9C%B0%E5%8C%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "夜間景観照明",
+      "en": "Night lighting (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kurashiki-tabi.jp/see/201/",
+      "en": "https://www.kurashiki-tabi.jp/see/201/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "倉敷観光WEB",
+      "en": "Kurashiki tourism website"
+     },
+     "url": {
+      "ja": "https://www.kurashiki-tabi.jp/",
+      "en": "https://www.kurashiki-tabi.jp/for/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "町並みは自由に歩けます。夜間景観照明：日没〜21:00（4〜9月は22:00）",
+       "en": "Free to walk. Night lighting: sunset–21:00 (22:00 April–September)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "倉敷館観光案内所9:00〜18:00（12月31日・1月1日休み）",
+       "en": "Kurashiki-kan 9:00–18:00 (closed 31 Dec and 1 Jan)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "倉敷観光WEB、倉敷観光コンベンションビューロー、国立天文台の日の入りの表で確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked on the Kurashiki tourism website, with the visitors bureau and on the national observatory’s sunset table. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "bikan-w1.jpg",
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Bikan_historical_quarter_20190324.jpg"
+     }
+    },
+    {
+     "file": "bikan-w2.jpg",
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Bikan_historical_quarter_20190324-3.jpg"
+     }
+    },
+    {
+     "file": "bikan-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:161015_At_Kurashiki_Bikan_historical_quarter_Kurashiki_Okayama_pref_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "bikan-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashikikahan01bs4592.jpg"
+     }
+    },
+    {
+     "file": "bikan-w5.jpg",
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Bikan_historical_quarter_20190324-2.jpg"
+     }
+    },
+    {
+     "file": "bikan-w6.jpg",
+     "credit": {
+      "author": "Miya",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki-river-Ima-bridge-view20190727.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "id": "boat",
+   "name": {
+    "ja": "くらしき川舟流し",
+    "en": "Kurashiki river boat"
+   },
+   "kind": {
+    "ja": "川舟（約20分）",
+    "en": "Canal boat (about 20 min)"
+   },
+   "blurb": {
+    "ja": "小さな舟で倉敷川を約20分。1艘6人なので、WEB予約か朝9時の当日券を。",
+    "en": "Twenty minutes on the canal. Six to a boat, so book online or buy at 9:00 on the day."
+   },
+   "caution": {
+    "ja": "売り切れ・雨で中止あり。第2月曜休み、1〜2月は土日祝だけ",
+    "en": "Sells out; cancelled in rain. No boats 2nd Monday; weekends and holidays only Jan–Feb"
+   },
+   "lat": 34.5957,
+   "lng": 133.7715,
+   "text": {
+    "ja": "くらしき川舟流し\n\n立ち寄りで乗るなら、阿智神社のかわりに14:00の便をWEB予約で。着いてからの当日券はあてにしないほうが安全です。\n\nすげ笠をかぶって、石垣と白壁を下から見上げます。船頭さんの案内は日本語だけです。\n\n券は2通りです。\n・WEB予約：乗る日の30日前の0:00から。前日15:00までは取り消せます。12:00と12:30の便にはありません。\n・当日券：9:00から倉敷館観光案内所で、便ごとに先着順。土日祝は午前中に売り切れることもあります。WEBが満席でも別の枠です。\n\n乗り場は倉敷館の対岸。乗り遅れは払い戻しがありません。雨傘も日傘もさせません。\n\nおすすめ訪問時間：14:00〜14:20",
+    "en": "Kurashiki river boat\n\nOn a stopover, book the 14:00 boat online instead of Achi Shrine. Don’t count on same-day tickets after you arrive.\n\nIn a sedge hat, you look up at the stone banks and white walls. The boatman’s commentary is Japanese only.\n\nTwo ways to get a ticket.\n• Online: from 0:00, 30 days ahead; free cancellation until 15:00 the day before. None for the 12:00 and 12:30 boats.\n• On the day: from 9:00 at Kurashiki-kan, per departure, first come first served. On weekends and holidays they can be gone by late morning. These seats are separate from online ones.\n\nThe landing is opposite Kurashiki-kan. No refund if you miss the boat, and no umbrellas or parasols on board.\n\nRecommended visit time: 14:00–14:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "川舟乗り場",
+      "en": "Boat landing"
+     },
+     "lat": 34.5957,
+     "lng": 133.7715,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%82%89%E3%81%97%E3%81%8D%E5%B7%9D%E8%88%9F%E6%B5%81%E3%81%97%20%E4%B9%97%E8%88%B9%E5%A0%B4"
+    },
+    {
+     "label": {
+      "ja": "倉敷館観光案内所（当日券）",
+      "en": "Kurashiki-kan (same-day tickets)"
+     },
+     "lat": 34.59582,
+     "lng": 133.77176,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E9%A4%A8%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "くらしき川舟流し 公式ページ（WEB予約）",
+      "en": "River boat: official page and booking (Japanese)"
+     },
+     "url": {
+      "ja": "https://kankou-kurashiki.jp/special/kawafune/",
+      "en": "https://kankou-kurashiki.jp/special/kawafune/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "運航状況（Instagram）",
+      "en": "Today’s operation (Instagram, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.instagram.com/kurashiki_riverboat/",
+      "en": "https://www.instagram.com/kurashiki_riverboat/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:30〜17:00発、30分おき。夏は15:30以降の便が運休することも",
+       "en": "Departures 9:30–17:00, every 30 min. Boats from 15:30 may be cancelled in summer"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夜の川舟：11月28日までの土曜18:00〜19:00（3便）",
+       "en": "Evening boats: Saturdays until 28 November, 18:00–19:00 (three boats)"
+      },
+      "until": "2026-11-28",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "3〜12月の第2月曜（祝日は運航）、1〜2月の平日、12月29日〜1月3日。雨・強風・低水位は中止",
+       "en": "2nd Monday Mar–Dec (runs on holidays), weekdays Jan–Feb, 29 Dec–3 Jan. Cancelled in rain, wind or low water"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,000円、5歳〜小学生500円、5歳未満無料",
+       "en": "¥1,000; age 5 to elementary school ¥500; under 5 free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "倉敷観光コンベンションビューローの公式ページと「よくある質問」で確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked on the visitors bureau’s official page and FAQ. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "boat-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashikikahan03n4592.jpg"
+     }
+    },
+    {
+     "file": "boat-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:080727_At_Kurashiki_Bikan_historical_quarter_Kurashiki_Okayama_pref_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "boat-w3.jpg",
+     "credit": {
+      "author": "takeokahp",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%80%89%E6%95%B7%E7%BE%8E%E8%A6%B3%E5%9C%B0%E5%8C%BA_by_takeokahp_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "boat-w4.jpg",
+     "credit": {
+      "author": "Miya.m",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurasiki_morning01.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "id": "ivy",
+   "name": {
+    "ja": "倉敷アイビースクエア",
+    "en": "Kurashiki Ivy Square"
+   },
+   "kind": {
+    "ja": "赤れんがの工場あと",
+    "en": "Former brick mill"
+   },
+   "blurb": {
+    "ja": "明治の紡績工場を使ったホテルと広場。つたのからむ中庭は、泊まらなくても歩けます。",
+    "en": "A Meiji cotton mill turned hotel. The ivy-walled courtyard is open to non-guests."
+   },
+   "lat": 34.5947,
+   "lng": 133.7735,
+   "text": {
+    "ja": "倉敷アイビースクエア\n\n1889年にできた倉敷紡績所の最初の工場です。外壁と骨組みを残して、建築家・浦辺鎮太郎（うらべしずたろう）がホテルに作りかえました。\n\n見るのは中庭。つたは夏に緑、秋に赤、冬は葉が落ちます。西の門から入って東の門へ抜けると、本町通りへの近道です。倉紡記念館の時間と料金は確認できませんでした（要確認）。\n\nおすすめ訪問時間：14:00〜14:20（阿智神社のかわりに）",
+    "en": "Kurashiki Ivy Square\n\nThe first mill of the Kurashiki Spinning Works, built in 1889. The architect Urabe Shizutaro turned it into a hotel, keeping walls and frame.\n\nThe courtyard is the thing to see: ivy green in summer, red in autumn, bare in winter. In by the west gate and out by the east is a short cut to Honmachi. Hours and fee of the Kurabo Memorial Hall could not be confirmed (please check).\n\nRecommended visit time: 14:00–14:20 (instead of Achi Shrine)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "倉敷アイビースクエア",
+      "en": "Kurashiki Ivy Square"
+     },
+     "lat": 34.5947,
+     "lng": 133.7735,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%80%89%E6%95%B7%E3%82%A2%E3%82%A4%E3%83%93%E3%83%BC%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "倉敷アイビースクエア 公式サイト",
+      "en": "Kurashiki Ivy Square (official)"
+     },
+     "url": {
+      "ja": "https://www.ivysquare.co.jp/history/",
+      "en": "https://www.ivysquare.co.jp/history/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "中庭は自由に歩けます",
+       "en": "The courtyard is free to walk through"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "倉紡記念館の時間と料金は要確認",
+       "en": "Kurabo Memorial Hall hours and fee: please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "建物の歴史は公式サイトで確認しました。写真は Wikimedia Commons から。",
+     "en": "The history is from the official website. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "ivy-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Ivy_Square26s5.jpg"
+     }
+    },
+    {
+     "file": "ivy-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Ivy_Square25s.jpg"
+     }
+    },
+    {
+     "file": "ivy-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Ivy_Square14n4592.jpg"
+     }
+    },
+    {
+     "file": "ivy-w4.jpg",
+     "credit": {
+      "author": "倉敷アイビースクエア",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%80%89%E6%95%B7%E3%82%A2%E3%82%A4%E3%83%93%E3%83%BC%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2_-_%E6%AD%A3%E9%9D%A2%E7%8E%84%E9%96%A2.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "id": "achi",
+   "name": {
+    "ja": "阿智神社",
+    "en": "Achi Shrine"
+   },
+   "kind": {
+    "ja": "神社（町を見下ろす丘）",
+    "en": "Shrine on the hill"
+   },
+   "blurb": {
+    "ja": "鶴形山の上。石段を3〜4分上ると、美観地区の瓦屋根を見下ろせます。",
+    "en": "On Tsurugata hill: 3–4 minutes of steps to a view over the tiled roofs."
+   },
+   "caution": {
+    "ja": "日が暮れると石段は暗い。明るいうちに",
+    "en": "The steps are dark after sunset: go in daylight"
+   },
+   "lat": 34.5972,
+   "lng": 133.77344,
+   "text": {
+    "ja": "阿智神社\n\n本町通りから石段を上ります。上りきってふり返るか、境内の南の端の絵馬殿から、瓦屋根の重なりが見えます。\n\n参拝はいつでもできますが、授与所は17:00まで。秋と冬は日が暮れる前に上ってください。\n\nおすすめ訪問時間：14:00〜14:20",
+    "en": "Achi Shrine\n\nClimb the steps from Honmachi. Turn round at the top, or go to the votive-tablet hall at the south edge, for the layers of tiled roofs.\n\nOpen at all hours, but the amulet office closes at 17:00. In autumn and winter climb before dusk.\n\nRecommended visit time: 14:00–14:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "阿智神社",
+      "en": "Achi Shrine"
+     },
+     "lat": 34.5972,
+     "lng": 133.77344,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%98%BF%E6%99%BA%E7%A5%9E%E7%A4%BE%20%E5%80%89%E6%95%B7%E5%B8%82%E6%9C%AC%E7%94%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "阿智神社 公式サイト",
+      "en": "Achi Shrine (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://achi.or.jp/",
+      "en": "https://achi.or.jp/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "参拝は終日。授与所9:00〜17:00",
+       "en": "Open all day. Amulet office 9:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "阿智神社の公式サイトで確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked on the shrine’s website. Photos are from Wikimedia Commons."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "achi-w1.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Achi-jinja_Panoramic_View_06.jpg"
+     }
+    },
+    {
+     "file": "achi-w2.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Achi-jinja_First_Torii_3.jpg"
+     }
+    },
+    {
+     "file": "achi-w3.jpg",
+     "credit": {
+      "author": "Zairon",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurashiki_Achi-jinja_Balcony_1.jpg"
+     }
+    },
+    {
+     "file": "achi-w4.jpg",
+     "credit": {
+      "author": "江戸村のとくぞう (Edomura no Tokuzo)",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Achi_Jinja5.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "id": "kaeri",
+   "name": {
+    "ja": "広島へ（岡山駅）",
+    "en": "On to Hiroshima (Okayama Station)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "岡山15:06発で広島15:42着。倉敷からは15:13発か15:06発で16:27着。",
+    "en": "Okayama 15:06 → Hiroshima 15:42. From Kurashiki, the 15:13 or 15:06 arrives 16:27."
+   },
+   "lat": 34.66668,
+   "lng": 133.9174,
+   "text": {
+    "ja": "広島へ（岡山駅）\n\n・岡山城と後楽園に寄った日：のぞみ15:06発 → 広島15:42着（自由席5,610円）。\n\n・倉敷に寄った日：広島に着くのはどちらも16:27です。\n　倉敷15:13発、岡山でのぞみに乗り換え：5,940円。岡山駅に荷物がある人はこちら。\n　倉敷15:06発、福山で同じのぞみに乗り換え：5,170円。荷物を持っている人はこちらが安い。\n　京都→倉敷を7,470円で買うと、京都からの合計は12,640円（福山乗り換え）か13,410円（岡山乗り換え）。\n\n新倉敷でこだまに乗る方法もあります。速いかどうかは時間によって変わり、倉敷18:46発なら新倉敷・福山で乗り換えて19:46着の60分、18:18発の岡山回りは19:23着の65分でした。\n\n最終は岡山23:14発（広島23:54着）、倉敷22:42発（岡山乗り換え、広島23:54着）です。\n\n在来線からは乗り換え口まで5分、荷物を取るなら10分はみてください。きびだんごなどのおみやげと駅弁は、改札のある2階で買えます。\n\n岡山駅で晩ごはんにするなら、さんすて岡山2Fの「吾妻寿司」が22:00まで（L.O.21:00）、年中無休。ばら寿司やままかりの店です。\n\n写真は岡山駅の新幹線ホーム（2021年3月）。\n\nおすすめ出発時間：15:06発（広島に15:42着）",
+    "en": "On to Hiroshima (Okayama Station)\n\n• After the castle and garden: the 15:06 Nozomi arrives in Hiroshima at 15:42 (¥5,610 unreserved).\n\n• After Kurashiki, both options arrive at 16:27.\nThe 15:13 from Kurashiki, changing to a Nozomi at Okayama: ¥5,940, for anyone with bags at Okayama.\nThe 15:06, changing to the same Nozomi at Fukuyama: ¥5,170, cheaper if you have your bags with you.\nWith a ¥7,470 Kyoto–Kurashiki ticket, the total from Kyoto is ¥12,640 via Fukuyama or ¥13,410 via Okayama.\n\nA Kodama from Shin-Kurashiki is another way. Which is faster depends on the hour: the 18:46 from Kurashiki via Shin-Kurashiki and Fukuyama took 60 minutes (19:46), the 18:18 via Okayama 65 (19:23).\n\nLast trains: Okayama 23:14 (Hiroshima 23:54); Kurashiki 22:42 via Okayama (23:54).\n\nAllow 5 minutes from the local platforms to the transfer gate, 10 if collecting bags. Souvenirs such as kibi-dango and boxed meals are sold on 2F, the same floor as the gates.\n\nFor dinner at the station, Azumazushi on 2F of Sun Station Terrace is open until 22:00 (last order 21:00), every day, serving bara-zushi and mamakari.\n\nThe photo is the Shinkansen platform at Okayama (March 2021).\n\nRecommended departure time: the 15:06 (Hiroshima 15:42)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "岡山駅 新幹線のりば",
+      "en": "Okayama Station (Shinkansen)"
+     },
+     "lat": 34.66668,
+     "lng": 133.9174,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E9%A7%85%20%E6%96%B0%E5%B9%B9%E7%B7%9A"
+    },
+    {
+     "label": {
+      "ja": "吾妻寿司 さんすて岡山店",
+      "en": "Azumazushi, Sun Station Terrace"
+     },
+     "lat": 34.66546,
+     "lng": 133.91779,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%90%BE%E5%A6%BB%E5%AF%BF%E5%8F%B8%20%E3%81%95%E3%82%93%E3%81%99%E3%81%A6%E5%B2%A1%E5%B1%B1%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JRおでかけネット（時刻・運賃）",
+      "en": "JR West timetables and fares"
+     },
+     "url": {
+      "ja": "https://www.jr-odekake.net/",
+      "en": "https://www.westjr.co.jp/global/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "途中下車の決まり（JR東海）",
+      "en": "Stopover rules (JR Central, Japanese)"
+     },
+     "url": {
+      "ja": "https://railway.jr-central.co.jp/ticket-rule/rule05.html",
+      "en": "https://railway.jr-central.co.jp/ticket-rule/rule05.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "吾妻寿司 公式サイト",
+      "en": "Azumazushi (official, Japanese)"
+     },
+     "url": {
+      "ja": "http://azumazushi.ecgo.jp/page0111.html",
+      "en": "http://azumazushi.ecgo.jp/page0111.html"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "岡山15:06 → 広島15:42（平日・土・日とも）。指定席は6,460円（11月25日）、6,660円（28日）",
+       "en": "Okayama 15:06 → Hiroshima 15:42 (weekdays and weekends). Reserved ¥6,460 (25 Nov), ¥6,660 (28 Nov)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "倉敷15:13（岡山乗換）・15:06（福山乗換）→ 広島16:27（平日・土・日とも）",
+       "en": "Kurashiki 15:13 via Okayama or 15:06 via Fukuyama → Hiroshima 16:27 (weekdays and weekends)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "吾妻寿司：11:00〜22:00（L.O.21:00）、年中無休。売り切れで早く閉まることも",
+       "en": "Azumazushi: 11:00–22:00 (last order 21:00), every day; may close early when sold out"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻は乗換案内（2026年11月25日・28日・29日）、吾妻寿司は公式サイトで確認しました。",
+     "en": "Times from a route planner (25, 28 and 29 November 2026); Azumazushi from its website."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "eki-4.jpg"
+   ]
+  }
+ ]
+}
