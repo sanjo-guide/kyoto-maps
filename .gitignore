@@ -10,3 +10,9 @@ __pycache__/
 CLAUDE.md
 # 作業用の道具（公開しない）
 _tools/
+
+# ほかのAI（Antigravity など）向けの決まり（公開しない）
+AGENTS.md
+GEMINI.md
+.agents/
+.agent/
