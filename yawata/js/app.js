@@ -1,6 +1,6 @@
 /* 京都 淀・八幡の桜（淀水路の河津桜・石清水八幡宮・背割堤） — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/yawata.json（写真は ../images/yawata/）. Texts: js/i18n.js
-   eizan-line/js/app.js の複製。違いは scripts/sync_yawata.py の説明を参照
+   Data: ../data/routes/yawata.json・yawata-sakura.json・yawata-early.json（コースで読み分ける。写真は ../images/yawata/）. Texts: js/i18n.js
+   eizan-line/js/app.js の複製。違いは scripts/sync_yawata.py と scripts/sync_higashiyama.py の説明を参照
    （テンプレートを更新したら python3 scripts/sync_yawata.py で写し直す） */
 (function () {
   'use strict';
@@ -31,6 +31,33 @@
   // 「選んで回る」: mode は 'all'（全部回る）か 'pick'（選んで回る）。picks は選んだ場所の番号
   var KEY_MODE = 'kyoto-maps-yawata-mode', KEY_PICKS = 'kyoto-maps-yawata-picks';
   var mode = 'all', picks = {}, routeLine = null;
+  // コース: kawazu（3月）・sakura（4月）・early（4月、開園へ）。コースごとにデータファイルが別で、スポットの番号も変わる。
+  // 一覧の上のボタン（data-course）で切り替える。?course=sakura でも開ける
+  var KEY_COURSE = 'kyoto-maps-yawata-course';
+  var COURSE_FILES = { kawazu: 'yawata.json', sakura: 'yawata-sakura.json', early: 'yawata-early.json' };
+  var md = todayJST().slice(5);     // 月-日
+  var course = { id: (location.search.match(/[?&]course=(kawazu|sakura|early)/) || [])[1] || load(KEY_COURSE) };
+  // 何も選んでいなければ、咲く時期に合わせる
+  if (!COURSE_FILES.hasOwnProperty(course.id)) course.id = md >= '03-25' && md <= '04-30' ? 'sakura' : 'kawazu';
+  course.file = COURSE_FILES[course.id];
+  var offSeason = md < '03-01' || md > '04-15';
+  // 「行った」印・回り方・選んだ場所はコースごとに別に保存する（番号がコースで変わるため）
+  KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;
+  // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
+  Object.keys(I18N).forEach(function (l) {
+    var o = I18N[l].introFor && I18N[l].introFor[course.id];
+    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+    // 春以外は「春のマップ」の一文を先に出す
+    if (offSeason) {
+      I18N[l].intro.kicker = I18N[l].offKicker;
+      // 使い方の1つ目は、開いて最初に見える場所
+      I18N[l].intro.how[0].title = I18N[l].offHow;
+      I18N[l].intro.how[0].text = I18N[l].offHowText + I18N[l].intro.how[0].text;
+      I18N[l].intro.lead = I18N[l].offLead + I18N[l].intro.lead;
+      I18N[l].listNote = I18N[l].offNote + I18N[l].listNote;
+    }
+  });
+  if (offSeason) document.body.classList.add('off-season');
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -70,6 +97,7 @@
   function loadPlan() {
     mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';
     try { (JSON.parse(load(KEY_PICKS) || '[]') || []).forEach(function (n) { if (isPick(n)) picks[n] = true; }); } catch (e) {}
+    if (load(KEY_PICKS) === null && data.plan && data.plan.defaultPicks) data.plan.defaultPicks.forEach(function (n) { if (isPick(n)) picks[n] = true; });
   }
   function savePlan() { store(KEY_MODE, mode); store(KEY_PICKS, JSON.stringify(Object.keys(picks).map(Number))); }
   function isPick(no) { return !!(data.plan && data.plan.picks.indexOf(no) >= 0); }
@@ -89,7 +117,7 @@
   // 選んだ組み合わせによって行き方が変わるところの一言（例：古今 藤やを選んだらバスに乗らず歩く）
   function hintsFor(no) {
     if (mode !== 'pick' || !data.plan || !data.plan.hints) return [];
-    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule); });
+    return data.plan.hints.filter(function (h) { return h.spot === no && ruleOk(h.rule) && inRange(h.from, h.to); });
   }
   function routeSpots() { return spots.filter(function (s) { return included(s.no); }); }
   function neighbor(no, dir) {       // 前後の「ルートに入っている」スポット
@@ -201,10 +229,10 @@
     var r = routeSpots();
     var n = r.filter(function (s) { return visited[s.no]; }).length, t = r.length || spots.length;
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+      b.setAttribute('aria-pressed', String(b.dataset.course ? b.dataset.course === course.id : b.dataset.mode === mode));
     });
-    // 「選んで回る」の設定（data.plan）がないマップでは、切り替えボタンごと出さない
-    document.querySelector('.modesw').hidden = !(data && data.plan);
+    // 「選んで回る」の設定（data.plan）がないマップでは、回り方のボタンを出さない（コースのボタンはいつも出す）
+    document.querySelector('.modesw:not(.coursesw)').hidden = !(data && data.plan);
     $('pick-box').hidden = mode !== 'pick';
     $('pick-count').textContent = pickCount() ? fill(T().pickCount, { n: pickCount(), t: r.length }) : T().pickEmpty;
     $('progress-label').textContent = fill(T().progress, { n: n, t: t });
@@ -314,9 +342,16 @@
     $('btn-list').setAttribute('aria-expanded', 'false');
   }
 
+  function listTop() {
+    if (location.hash !== '#list') return;
+    viewList.scrollTop = 0;
+    setTimeout(function () { if (location.hash === '#list') viewList.scrollTop = 0; }, 80);
+  }
+  window.addEventListener('load', listTop);
   function route() {
     showRoute();
     updateTabs();
+    listTop();
   }
 
   // Phones: highlight the tab for what is on screen (the spot details count as part of the list)
@@ -346,7 +381,11 @@
   }
 
   /* ---------- intro ---------- */
-  function introPhoto(p) { return photoUrl(byNo[p[0]].photos[p[1]]); }
+  // [スポットの番号 or id, 写真の番号]（コースで番号が変わるので id で指定する）
+  function introPhoto(p) {
+    var s = typeof p[0] === 'string' ? spots.filter(function (x) { return x.id === p[0]; })[0] : byNo[p[0]];
+    return photoUrl(s.photos[p[1]]);
+  }
   // Toshi 個人のマップなので、ロゴは文字だけ
   function logo(cls) {
     return '<span class="' + cls + ' in-brand">TOSHI’S MAPS</span>';
@@ -499,6 +538,13 @@
     mode = m;
     savePlan();
     updateRoute();
+  }
+  // コースを切り替えたら、そのコースのデータで読み直す（一覧を開いた状態で）
+  function setCourse(c) {
+    if (c === course.id) return;
+    store(KEY_COURSE, c);
+    history.replaceState(null, '', location.pathname + '#list');
+    location.reload();
   }
 
   // Update one spot in the list in place, so its photos and the scroll position stay where they are
@@ -775,7 +821,7 @@
       savePlan(); updateRoute();
     });
     [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
-      b.addEventListener('click', function () { setMode(b.dataset.mode); });
+      b.addEventListener('click', function () { if (b.dataset.course) setCourse(b.dataset.course); else setMode(b.dataset.mode); });
     });
     $('btn-pick-all').addEventListener('click', function () {
       data.plan.picks.forEach(function (n) { picks[n] = true; }); savePlan(); updateRoute();
@@ -847,7 +893,7 @@
     route();
   }
 
-  fetch('../data/routes/yawata.json?v=2')
+  fetch('../data/routes/' + course.file + '?v=3')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

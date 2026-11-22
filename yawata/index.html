@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>京都 淀・八幡の桜 Yawata MAP</title>
-<meta name="description" content="3月の淀水路の河津桜と、4月の背割堤の桜並木。石清水八幡宮へケーブルで上る、京阪沿線の春のルートマップ。Kawazu cherries at Yodo, Iwashimizu Hachimangu and the Sewaritei cherry avenue.">
+<title>京都 淀・八幡の桜｜3月の河津桜・4月の背割堤 Yawata MAP</title>
+<meta name="description" content="春のマップ。3月は淀水路の河津桜、3月末〜4月上旬は背割堤の桜のトンネル。三条から京阪で、石清水八幡宮とケーブル、門前のお昼、伏見の酒蔵、夜桜まで。時期と出発時間で選べる3コース。A spring map south of Kyoto by Keihan: Kawazu cherries at Yodo in March or the Sewaritei cherry avenue in late March and early April, with Iwashimizu Hachimangu, lunch, Fushimi and an evening in town.">
 <meta name="theme-color" content="#F2F0EA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
-<link rel="stylesheet" href="css/style.css?v=119">
+<link rel="stylesheet" href="css/style.css?v=121">
 <meta name="robots" content="noimageindex">
 <script src="../assets/protect.js?v=1" defer></script>
 </head>
@@ -95,6 +95,13 @@
       <span data-t="spot1Howto">このマップの使い方を見る</span>
     </button>
     <!-- 「全部回る」か「選んで回る」か -->
+    <p class="sw-label" data-t="swCourse">行く時期・出発時間</p>
+    <div class="modesw coursesw" role="group" data-t-aria="courseAria" aria-label="行く時期・出発時間">
+      <button type="button" data-course="kawazu" data-t="courseKawazu">3月：淀の河津桜（9:30ごろ発）</button>
+      <button type="button" data-course="sakura" data-t="courseSakura">3月末〜4月上旬：背割堤の桜（9:30ごろ発）</button>
+      <button type="button" data-course="early" data-t="courseEarly">3月末〜4月上旬：背割堤の開園9:00へ（8:10ごろ発）</button>
+    </div>
+    <p class="sw-label" data-t="swMode">回り方</p>
     <div class="modesw" role="group" data-t-aria="modeAria" aria-label="回り方">
       <button type="button" data-mode="all" data-t="modeAll">全部回る</button>
       <button type="button" data-mode="pick" data-t="modePick">選んで回る</button>
@@ -181,7 +188,7 @@
 <script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
 <script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
 <script src="../assets/basemap.js?v=3"></script>
-<script src="js/i18n.js?v=120"></script>
-<script src="js/app.js?v=124"></script>
+<script src="js/i18n.js?v=121"></script>
+<script src="js/app.js?v=125"></script>
 </body>
 </html>

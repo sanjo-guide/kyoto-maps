@@ -1,0 +1,972 @@
+{
+ "id": "yawata",
+ "course": "early",
+ "_note": "京都 淀・八幡の桜のルート（yawata/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで3つのコースを切り替え、コースごとに別のファイルを読む（yawata.json＝3月の河津桜、yawata-sakura.json＝4月の背割堤、yawata-early.json＝4月の背割堤の開園へ）。このファイル：「4月：背割堤の開園へ」コース。三条8:11（土日祝8:12）→展望塔9:00→背割堤→走井餅でひと休み→石清水八幡宮→遅めのお昼→15:13→中書島→月桂冠→祇園四条の夜桜。 写真は Toshi の写真ライブラリから選んだもの（淀水路と石清水八幡宮は2026年3月23日、背割堤は2026年4月8日。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。春の日程・料金は2026年春の実績で、来春は要確認。info.source は確認した出典、info.checked は確認日、sources は時刻・料金の出典の一覧。このファイルは scripts/build_yawata_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "area": {
+    "ja": "背割堤",
+    "en": "Sewaritei"
+   },
+   "title": {
+    "ja": "開園に合わせて、桜のトンネルへ",
+    "en": "The tunnel of blossom at opening time"
+   }
+  },
+  {
+   "first": 3,
+   "last": 3,
+   "area": {
+    "ja": "男山 → 伏見・祇園",
+    "en": "Mt. Otokoyama → Fushimi, Gion"
+   },
+   "title": {
+    "ja": "山の上の国宝、午後は酒蔵、夜は夜桜",
+    "en": "The shrine, breweries, cherries by night"
+   }
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。時期はコースで分けたので、最初は「全部回る」。外したときの回り方は hints。",
+  "picks": [
+   1,
+   2,
+   3
+  ],
+  "auto": {},
+  "defaultPicks": [
+   1,
+   2,
+   3
+  ],
+  "hints": [
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      3
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "石清水八幡宮に寄らない日は、ひと休みのあと京阪で中書島へ（320円）。伏見でお昼と酒蔵をゆっくり回れます。",
+     "en": "Skipping the shrine: after your break take the train to Chushojima (¥320) for lunch and an unhurried look at Fushimi’s breweries."
+    }
+   },
+   {
+    "spot": 3,
+    "rule": {
+     "any": [
+      3
+     ],
+     "none": [
+      2,
+      1
+     ]
+    },
+    "from": null,
+    "to": null,
+    "text": {
+     "ja": "背割堤に行かない日は、早く出なくて大丈夫。ケーブルは8:10から動いています。",
+     "en": "Skipping Sewaritei: there’s no need to start early. The cable car runs from 8:10."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/yawata/",
+ "sources": [
+  {
+   "what": "京阪 三条→淀（平日 11-25。2027-03-10で検索しても同じ）：9:29発→丹波橋9:40着・9:44発→淀9:53着、360円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E6%B7%80&y=2026&m=11&d=25&hh=09&m1=2&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→淀（土 11-28。日 11-29・祝 2027-03-22も同じ）：9:26発→丹波橋9:37着・9:39発→淀9:48着、360円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E6%B7%80&y=2026&m=11&d=28&hh=09&m1=2&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→淀 早朝（平日）：7:05発→丹波橋7:16着・7:17発→淀7:26着、360円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E6%B7%80&y=2026&m=11&d=25&hh=07&m1=0&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→淀 早朝（土・日）：7:12発→丹波橋7:23着・7:24発→淀7:34着、360円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E6%B7%80&y=2026&m=11&d=28&hh=07&m1=0&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→石清水八幡宮（平日）：9:29発→丹波橋9:40着・9:44発→9:56着、400円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&y=2026&m=11&d=25&hh=09&m1=2&m2=8&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→石清水八幡宮（土・祝 11-23）：9:26発→丹波橋9:37着・9:39発→9:51着、400円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&y=2026&m=11&d=28&hh=09&m1=1&m2=8&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→石清水八幡宮 開園へ（平日 11-25・2027-03-31）：8:11発→中書島8:24着・8:30発→8:39着、400円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&y=2026&m=11&d=25&hh=08&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 三条→石清水八幡宮 開園へ（土 11-28・2027-04-03、祝 11-23）：8:12発→丹波橋8:23着・8:25発→8:38着、400円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1&to=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&y=2026&m=11&d=28&hh=08&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 淀→石清水八幡宮（平日）：11:38発→11:42着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B7%80&to=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&y=2026&m=11&d=25&hh=11&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 淀→石清水八幡宮（土・日）：11:37発→11:40着、240円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B7%80&to=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&y=2026&m=11&d=28&hh=11&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 石清水八幡宮→中書島（平日・土・日）：15:13発→15:22着、320円、乗り換えなし",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&to=%E4%B8%AD%E6%9B%B8%E5%B3%B6&y=2026&m=11&d=25&hh=14&m1=5&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 石清水八幡宮→中書島（平日）：16:49発→16:58着、320円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&to=%E4%B8%AD%E6%9B%B8%E5%B3%B6&y=2026&m=11&d=25&hh=16&m1=3&m2=8&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 石清水八幡宮→中書島（土・日）：16:48発→16:58着、320円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&to=%E4%B8%AD%E6%9B%B8%E5%B3%B6&y=2026&m=11&d=28&hh=16&m1=3&m2=8&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 石清水八幡宮→祇園四条（平日）：17:14発→丹波橋17:27着・17:30発→17:39着、360円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&to=%E7%A5%87%E5%9C%92%E5%9B%9B%E6%9D%A1&y=2026&m=11&d=25&hh=17&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 石清水八幡宮→祇園四条（土・日・祝 11-23）：17:12発→丹波橋17:26着・17:28発→17:37着、360円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&to=%E7%A5%87%E5%9C%92%E5%9B%9B%E6%9D%A1&y=2026&m=11&d=28&hh=17&m1=1&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 中書島→祇園四条（平日）：17:27発→17:39着、320円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%AD%E6%9B%B8%E5%B3%B6&to=%E7%A5%87%E5%9C%92%E5%9B%9B%E6%9D%A1&y=2026&m=11&d=25&hh=17&m1=1&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 中書島→祇園四条（土・日）：17:26発→17:37着、320円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%AD%E6%9B%B8%E5%B3%B6&to=%E7%A5%87%E5%9C%92%E5%9B%9B%E6%9D%A1&y=2026&m=11&d=28&hh=17&m1=1&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 中書島→三条：19:52発→平日20:06着・土日20:05着、320円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%AD%E6%9B%B8%E5%B3%B6&to=%E4%B8%89%E6%9D%A1&y=2026&m=11&d=25&hh=19&m1=4&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 石清水八幡宮→三条 終電（平日・土・日）：23:58発→丹波橋0:10着・0:12発→0:22着、400円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE&to=%E4%B8%89%E6%9D%A1&y=2026&m=11&d=25&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪 中書島→三条 終電（平日・土・日）：0:09発→0:22着、320円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%AD%E6%9B%B8%E5%B3%B6&to=%E4%B8%89%E6%9D%A1&y=2026&m=11&d=25&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&ws=3&s=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京阪のダイヤ変更：2026年8月22日初発から（上の時刻はこのダイヤ）",
+   "url": "https://www.keihan.co.jp/traffic/news/2026/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "参道ケーブル：毎日同じ。8時台10・※30・45、9〜17時台※00・15・※30・45、18時台※00・15（※は乗客がいるとき）。3分、片道300円・往復600円",
+   "url": "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "淀水路：例年3月上〜中旬、約300本・約1.3km・30分、中央改札から約10分、改札外にトイレなし、いつでも無料。満開 2026年3/7ごろ・2025年3/21ごろ、2026年3/27葉桜",
+   "url": "https://totteoki.kyoto.travel/28467/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "淀本町商店街 桜まつり（2026年の実績）：3/14・21の10:00〜17:00、商店街と淀城跡公園。来春は要確認",
+   "url": "https://totteoki.kyoto.travel/events/11848/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "石清水八幡宮：6:00〜18:00（正月は変動）、定休日なし、山上駅から徒歩約5分",
+   "url": "https://www.kankou-yawata.org/?shuhen_jinja=%e7%9f%b3%e6%b8%85%e6%b0%b4%e5%85%ab%e5%b9%a1%e5%ae%ae",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "石清水八幡宮：山上のトイレ2か所、ケーブルでも階段が数段",
+   "url": "https://iwashimizu.or.jp/qa/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "表参道・展望台：本殿→展望台 約5分、一ノ鳥居→本殿の区間の合計 約28分（下りは30〜35分と書いた）",
+   "url": "https://www.kankou-yawata.org/course_omoteurasando.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "八幡市観光協会 2026年春号：石清水八幡宮の特別公開 3/20〜4/12・9:00〜16:00・大人1,000円・中高生500円、展望塔はまつり期間中 大人300円・子ども100円、最終受付16:20。どちらも来春は要確認",
+   "url": "https://totteoki.kyoto.travel/wp-content/uploads/2026/03/kyotoyawatasansaku-chirashi_compressed.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "背割堤さくらまつり（2026年の実績）：3/28〜4/5・9:00〜17:00、協力金1人100円以上（6歳未満除く）、マルシェ40店舗、3/26〜4/8は会場と周辺の駐車場閉鎖、駅から約10分。来春は未発表",
+   "url": "https://www.yodogawa-park.jp/cms/wp-content/uploads/2026/03/bb7e63930cdcd26969e16163becee2c9.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "背割堤の見ごろの目安：2026年のまつりは「桜が見頃の9日間程度」を3/21〜4/12の間で決める（2025-12-22の報道資料）。実際は3/28〜4/5",
+   "url": "https://www.yodogawa-park.jp/cms/wp-content/uploads/2025/12/2c942c910b3a6e6f2fe0541c8c92e2ec.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "淀川河川公園 開園時間（2025年4月時点）：背割堤は通年9時〜17時、12/29〜1/3休園",
+   "url": "https://www.yodogawa-park.jp/cms/wp-content/uploads/2025/04/1a70aa284aa3d9b47315d6a7958e48e8.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "背割堤：堤防の上の園路は自転車の押し歩きも禁止、ごみ持ち帰り",
+   "url": "https://www.yodogawa-park.jp/riyouannai/riyou/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "背割堤：約1.4km・約220本、まつり期間は駐車場利用不可、駅から徒歩約10分（徒歩ルートの写真案内は15分）",
+   "url": "https://www.yodogawa-park.jp/annai/sewaritei/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "背割堤：約20万人が訪れる花見名所（八幡市観光協会トップ）",
+   "url": "https://www.kankou-yawata.org/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "混雑度（お花見期間中）：背割堤は平日 混雑・休日 大変混雑（ウェザーニュース。公式の数字ではない）",
+   "url": "https://weathernews.jp/sakura/spot/61030/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "混雑度（お花見期間中）：淀水路は平日 混雑・休日 大変混雑（ウェザーニュース。公式の数字ではない）",
+   "url": "https://weathernews.jp/sakura/spot/61050/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "御幸橋の読み（ごこうばし）：橋のたもとの表示（淀川河川事務所の河川モニター報告）",
+   "url": "https://www-1.kkr.mlit.go.jp/yodogawa/activity/keep/monitor/bd083b00000038ka-att/a1572588736978.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "さくらであい館：9:00〜17:00、展望塔9:00〜16:30（受付16:20）、12/29〜1/3休館、ふだん無料・繁忙期は有料の場合あり",
+   "url": "https://www.yodogawa-park.jp/sansen/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "さくらであい館の売店：パン・寿司は土日と連休最終の祝日 9:30〜16:00",
+   "url": "https://www.yodogawa-park.jp/sansen/style/sakura-shop-open2020/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "朝日屋 本店：11:00〜17:00（金土日の夜は予約制）、月・火休み（祝日は営業）、駅前",
+   "url": "https://sabasusi-asahiya.com/shop/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "やわた走井餅老舗：9:00〜17:30（喫茶LO17:00）、月曜休み（祝日なら翌日）、駅から2分",
+   "url": "http://www.yawata-hashiriimochi.com/access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "走井餅老舗の喫茶：ぜんざい・うどんもある（八幡市観光協会）",
+   "url": "https://www.kankou-yawata.org/syokujionly/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "月桂冠大倉記念館：9:30〜16:30（受付16:00）、20歳以上600円、現金不可、予約は2週間前9:30〜前日16:30、8/13〜16・12/28〜1/4ほか臨時休館",
+   "url": "https://www.gekkeikan.co.jp/enjoy/museum/access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "黄桜酒場：夜17:00〜21:30（LO20:50）、火曜休み（祝日なら水曜）",
+   "url": "https://kizakura.co.jp/restaurant/country/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "円山公園 桜ライトアップ（2026年の実績）：3/24〜4/8、無料。来春は要確認",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=4081",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "祇園白川宵桜ライトアップ 3/27〜4/5・18:00〜22:00・無料、円山公園 18:00〜22:00（2026年の実績）。来春は要確認",
+   "url": "https://ja.kyoto.travel/times/night/article/single.php?id=472",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "歩く時間（OpenStreetMap の徒歩ルートの目安。文章では長めに）：石清水八幡宮駅→さくらであい館11分、淀駅→淀水路9分、中書島→月桂冠10分・黄桜11分、祇園四条→円山公園10分",
+   "url": "https://routing.openstreetmap.de/",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "deaikan",
+   "name": {
+    "ja": "さくらであい館（展望塔）",
+    "en": "Sakura Deaikan (observation tower)"
+   },
+   "kind": {
+    "ja": "展望塔",
+    "en": "Lookout tower"
+   },
+   "blurb": {
+    "ja": "高さ約25mの展望塔から、3つの川と、まっすぐ延びる背割堤を見下ろします。",
+    "en": "From the 25 m tower, look down on three rivers and the straight line of Sewaritei."
+   },
+   "caution": {
+    "ja": "展望塔の最終受付は16:20",
+    "en": "Last entry to the tower 16:20"
+   },
+   "lat": 34.89042,
+   "lng": 135.70148,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "さくらであい館",
+      "en": "Sakura Deaikan"
+     },
+     "lat": 34.89042,
+     "lng": 135.70148,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%8F%E3%82%89%E3%81%A7%E3%81%82%E3%81%84%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "京阪 石清水八幡宮駅",
+      "en": "Keihan Iwashimizu-hachimangu Station"
+     },
+     "lat": 34.88444,
+     "lng": 135.70028,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%98%AA%20%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "さくらであい館",
+      "en": "Sakura Deaikan (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.yodogawa-park.jp/sansen/",
+      "en": "https://www.yodogawa-park.jp/sansen/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-02-28",
+     "url": null,
+     "head": {
+      "ja": "春のマップです",
+      "en": "A spring map"
+     },
+     "text": {
+      "ja": "3月〜4月上旬に使う春のマップです。いまは見ごろの時期ではありません。日程・料金は2026年春の実績、電車は2026年11月の時刻です。来春は要確認。",
+      "en": "This map is for March to early April and the blossoms aren’t at their best now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring."
+     }
+    },
+    {
+     "from": "2027-04-16",
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "春のマップです",
+      "en": "A spring map"
+     },
+     "text": {
+      "ja": "3月〜4月上旬に使う春のマップです。いまは見ごろの時期ではありません。日程・料金は2026年春の実績、電車は2026年11月の時刻です。来春は要確認。",
+      "en": "This map is for March to early April and the blossoms aren’t at their best now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.yodogawa-park.jp/sansen/",
+     "head": {
+      "ja": "展望塔の最終受付は16:20",
+      "en": "Last entry to the tower 16:20"
+     },
+     "text": {
+      "ja": "展望塔は9:00〜16:30。ふだんは無料ですが、混む時期は有料になります。2026年のさくらまつりの間は大人300円・子ども100円でした（来春は要確認）。雪などの天気で止まることもあります。",
+      "en": "The tower is open 9:00–16:30. It is usually free but charges at busy times: ¥300 adults and ¥100 children during the 2026 festival (please check for next spring). It can close in bad weather, such as snow."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "行き：三条8:11発（土日祝8:12発）→ 石清水八幡宮8:39着（土日祝8:38着）・400円。乗り換えは平日が中書島、土日祝が丹波橋",
+       "en": "Out: Sanjo 8:11 (weekends and holidays 8:12) → Iwashimizu-hachimangu 8:39 (8:38), ¥400. Change at Chushojima on weekdays, Tambabashi at weekends and on holidays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00。展望塔 9:00〜16:30（最終受付16:20）",
+       "en": "9:00–17:00. Tower 9:00–16:30 (last entry 16:20)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月29日〜1月3日",
+       "en": "29 Dec – 3 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "展望塔はふだん無料。2026年のさくらまつりの間は大人300円・子ども100円（来春は要確認）",
+       "en": "Tower usually free. ¥300 adults, ¥100 children during the 2026 festival (please check for next spring)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "淀川河川公園の公式サイトと、八幡市観光協会の2026年春の観光ガイド（展望塔の料金）で確認しました。京阪は乗換案内で平日・土曜・日曜・祝日を確認しました（2026年11月の時刻）。春までに変わることがあるので要確認。歩く時間は少しゆったりめです。",
+     "en": "Checked on the park website and the Yawata tourism association’s spring 2026 guide (tower fee). Keihan times were checked on a route planner for a weekday, Saturday, Sunday and holiday (November 2026 timetable) and may change by spring. Walking times are rounded up a little."
+    },
+    "checked": "2026-11-22",
+    "source": "淀川河川公園 https://www.yodogawa-park.jp/sansen/、売店 https://www.yodogawa-park.jp/sansen/style/sakura-shop-open2020/、料金は八幡市観光協会の2026年春号 https://totteoki.kyoto.travel/wp-content/uploads/2026/03/kyotoyawatasansaku-chirashi_compressed.pdf。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "さくらであい館\n\n背割堤の入口、石清水八幡宮駅から御幸橋（ごこうばし）を渡って歩いて10〜15分。展望塔はエレベーターで上がれ、宇治川・木津川・桂川が淀川になるあたりと、まっすぐ延びる並木を見下ろせます。\n\n館内にトイレ、自販機、コインロッカー（開館中だけ）、売店があります。パンとお寿司の販売は土日などだけで、9:30〜16:00です。\n\n三条を8:10ごろに出て、9:00の開館に合わせます。駅の改札を出て左へ。踏切を渡って橋のほうへ10〜15分です。展望塔に列ができる前に上がってから、堤防へ。朝は軽く食べて出てください。\n\nおすすめ訪問時間：8:55〜9:30（9:00開館）",
+    "en": "Sakura Deaikan\n\nAt the entrance to Sewaritei, 10–15 minutes’ walk from Iwashimizu-hachimangu Station across the Goko bridge. A lift takes you up the tower to see where the Uji, Katsura and Kizu rivers become the Yodo, and the avenue from above.\n\nInside are toilets, vending machines, coin lockers (opening hours only) and a shop. Bread and sushi are sold only on weekends and some holidays, 9:30–16:00.\n\nLeave Sanjo about 8:10 to be here for the 9:00 opening. Turn left out of the station gates, cross the level crossing and head for the bridge: 10–15 minutes. Go up the tower before a queue builds, then onto the levee. Eat something light before you set out.\n\nRecommended visit time: 8:55–9:30 (opens 9:00)"
+   },
+   "photos": [
+    "deaikan-1.jpg",
+    "deaikan-2.jpg",
+    "deaikan-4.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "sewaritei",
+   "name": {
+    "ja": "背割堤の桜並木",
+    "en": "Sewaritei cherry avenue"
+   },
+   "kind": {
+    "ja": "桜（3月末〜4月上旬）",
+    "en": "Cherries (late Mar – early Apr)"
+   },
+   "blurb": {
+    "ja": "木津川と宇治川を分ける細い堤防に、約1.4km、約220本のソメイヨシノのトンネルです。",
+    "en": "A tunnel of about 220 Somei-Yoshino, 1.4 km long, on the narrow levee that divides the Kizu and Uji rivers."
+   },
+   "caution": {
+    "ja": "開園9:00〜17:00。昼は人が多い",
+    "en": "Open 9:00–17:00. Crowded around midday"
+   },
+   "lat": 34.89,
+   "lng": 135.693,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "背割堤",
+      "en": "Sewaritei"
+     },
+     "lat": 34.89,
+     "lng": 135.693,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%83%8C%E5%89%B2%E5%A0%A4%20%E6%A1%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "淀川河川公園 背割堤地区",
+      "en": "Yodogawa River Park, Sewaritei (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.yodogawa-park.jp/annai/sewaritei/",
+      "en": "https://www.yodogawa-park.jp/annai/sewaritei/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都やわた背割堤さくらまつり",
+      "en": "Sewaritei cherry festival"
+     },
+     "url": {
+      "ja": "https://www.yodogawa-park.jp/sakurafes/",
+      "en": "https://www.yodogawa-park.jp/sakurafes/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-02-28",
+     "url": null,
+     "head": {
+      "ja": "春のマップです",
+      "en": "A spring map"
+     },
+     "text": {
+      "ja": "3月〜4月上旬に使う春のマップです。いまは見ごろの時期ではありません。日程・料金は2026年春の実績、電車は2026年11月の時刻です。来春は要確認。",
+      "en": "This map is for March to early April and the blossoms aren’t at their best now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring."
+     }
+    },
+    {
+     "from": "2027-04-16",
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "春のマップです",
+      "en": "A spring map"
+     },
+     "text": {
+      "ja": "3月〜4月上旬に使う春のマップです。いまは見ごろの時期ではありません。日程・料金は2026年春の実績、電車は2026年11月の時刻です。来春は要確認。",
+      "en": "This map is for March to early April and the blossoms aren’t at their best now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.yodogawa-park.jp/annai/sewaritei/",
+     "head": {
+      "ja": "開園は9:00〜17:00、車は止められません",
+      "en": "Open 9:00–17:00, and no parking"
+     },
+     "text": {
+      "ja": "背割堤地区の開園は9:00〜17:00です（公園の開園時間表）。さくらまつりの前後は駐車場も閉まるので電車で。堤防の上の道は、自転車を押して歩くのも禁止です。ごみは持ち帰りです。",
+      "en": "The Sewaritei section of the park opens 9:00–17:00 (park timetable). Parking shuts around the festival, so come by train. Bicycles can’t be taken along the top path, even pushed. Take your litter home."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.yodogawa-park.jp/cms/wp-content/uploads/2026/03/bb7e63930cdcd26969e16163becee2c9.pdf",
+     "head": {
+      "ja": "さくらまつり（2026年の実績）",
+      "en": "Cherry festival (as held in 2026)"
+     },
+     "text": {
+      "ja": "2026年は3月28日〜4月5日、9:00〜17:00。入場のときに運営協力金（1人100円以上、6歳未満は不要）があり、屋台のさくらマルシェに40店舗が出ました。来春の日程と金額は要確認。支払い方法も書かれていないので、小銭があると安心です。",
+      "en": "In 2026 it ran 28 March – 5 April, 9:00–17:00, with a contribution of ¥100 or more on entry (not for under-6s) and a market of 40 stalls. Please check next spring’s dates and amount. Payment methods aren’t stated, so carry some coins."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（公園の開園時間表、2025年4月時点）。時間外に歩けるかは要確認",
+       "en": "9:00–17:00 (park timetable as of April 2025). Please check whether you can walk it outside those hours"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料。さくらまつりの間は運営協力金（2026年は1人100円以上。来春は要確認）",
+       "en": "Free. A contribution during the festival (¥100 or more in 2026; please check for next spring)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "淀川河川公園の公式サイト・開園時間表・2026年の報道資料と、八幡市観光協会で確認しました。",
+     "en": "Checked on the park website, its timetable and 2026 press release, and with the Yawata tourism association."
+    },
+    "checked": "2026-11-22",
+    "source": "淀川河川公園 https://www.yodogawa-park.jp/annai/sewaritei/・https://www.yodogawa-park.jp/cms/wp-content/uploads/2025/04/1a70aa284aa3d9b47315d6a7958e48e8.pdf・https://www.yodogawa-park.jp/cms/wp-content/uploads/2026/03/bb7e63930cdcd26969e16163becee2c9.pdf、八幡市観光協会 https://www.kankou-yawata.org/?shuhen_jinja=%e8%83%8c%e5%89%b2%e5%a0%a4。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "背割堤（せわりてい）の桜並木\n\n行きは堤防の上の道で桜のトンネルをくぐり、帰りは下の芝生から。川と並木が広く入ります。先端まで行って戻ると約2.8km、写真を撮りながらで1時間〜1時間半です。途中で引き返してもかまいません。まつりの間は、現地の通行の案内に従ってください。\n\n見ごろは3月末〜4月上旬ごろで、年によって前後します。八幡市観光協会によると約20万人が訪れる名所です。写真は2026年4月8日、さくらまつりが終わった3日後です。まつりの日程を過ぎても咲いていることがあります。\n\n昼に人が増える前に歩きます。10:50ごろ出て15分ほど歩き、一ノ鳥居前の走井餅老舗（9:00から）で朝のひと休み。餅とお茶があり、八幡市観光協会の案内ではぜんざいとうどんも出ます。月曜は休みなので、朝ごはんを持ってきて芝生で。\n\nおすすめ訪問時間：9:35〜10:50",
+    "en": "Sewaritei cherry avenue\n\nGo out along the top path through the tunnel and come back on the grass below, where the river and the whole row fit in one view. To the tip and back is about 2.8 km, one to one and a half hours with photos; turn back earlier if you like. During the festival follow the signs for which way to walk.\n\nIt is best around late March to early April, varying by year. The Yawata tourism association says it draws about 200,000 people. My photos are from 8 April 2026, three days after that year’s festival ended: blossom can outlast the festival dates.\n\nWalk it before the midday crowds. Leave about 10:50 and walk 15 minutes to Hashiriimochi by the first torii (open from 9:00) for a morning break: rice cakes and tea, and the tourism association also lists sweet bean soup and udon. It closes on Mondays, so bring breakfast to eat on the grass.\n\nRecommended visit time: 9:35–10:50"
+   },
+   "photos": [
+    "sewaritei-1.jpg",
+    "sewaritei-2.jpg",
+    "sewaritei-3.jpg",
+    "sewaritei-4.jpg",
+    "sewaritei-5.jpg",
+    "sewaritei-8.jpg",
+    "sewaritei-9.jpg"
+   ]
+  },
+  {
+   "no": 3,
+   "id": "iwashimizu",
+   "name": {
+    "ja": "石清水八幡宮",
+    "en": "Iwashimizu Hachimangu"
+   },
+   "kind": {
+    "ja": "神社（国宝）",
+    "en": "Shrine (National Treasure)"
+   },
+   "blurb": {
+    "ja": "男山の上に建つ、朱と金の国宝の社殿。行きはケーブル、帰りは竹と木立の表参道を歩きます。",
+    "en": "A vermilion-and-gold National Treasure on Mt. Otokoyama: up by cable car, down on foot through bamboo and woods."
+   },
+   "caution": {
+    "ja": "ケーブルは18:15まで。歩いて下りると石段",
+    "en": "Cable car until 18:15. Stone steps on the walk down"
+   },
+   "lat": 34.87973,
+   "lng": 135.70005,
+   "gmaps": [
+    {
+     "label": {
+      "ja": "石清水八幡宮",
+      "en": "Iwashimizu Hachimangu"
+     },
+     "lat": 34.87973,
+     "lng": 135.70005,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%9F%B3%E6%B8%85%E6%B0%B4%E5%85%AB%E5%B9%A1%E5%AE%AE"
+    },
+    {
+     "label": {
+      "ja": "ケーブル八幡宮口駅",
+      "en": "Cable Hachimangu-guchi"
+     },
+     "lat": 34.88449,
+     "lng": 135.69947,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E5%85%AB%E5%B9%A1%E5%AE%AE%E5%8F%A3"
+    },
+    {
+     "label": {
+      "ja": "月桂冠大倉記念館",
+      "en": "Gekkeikan Okura Sake Museum"
+     },
+     "lat": 34.92888,
+     "lng": 135.76163,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%88%E6%A1%82%E5%86%A0%E5%A4%A7%E5%80%89%E8%A8%98%E5%BF%B5%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "祇園白川",
+      "en": "Gion Shirakawa"
+     },
+     "lat": 35.0056,
+     "lng": 135.7739,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92%E7%99%BD%E5%B7%9D%20%E5%B7%BD%E6%A9%8B"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "石清水八幡宮 公式サイト",
+      "en": "Iwashimizu Hachimangu (official)"
+     },
+     "url": {
+      "ja": "https://iwashimizu.or.jp/",
+      "en": "https://iwashimizu.or.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "参道ケーブルの時刻表（京阪）",
+      "en": "Sando cable car timetable (Keihan, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html",
+      "en": "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "朝日屋（時間・休み）",
+      "en": "Asahiya: hours and closing days (Japanese)"
+     },
+     "url": {
+      "ja": "https://sabasusi-asahiya.com/shop/",
+      "en": "https://sabasusi-asahiya.com/shop/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "やわた走井餅老舗（時間・休み）",
+      "en": "Hashiriimochi: hours and closing days (Japanese)"
+     },
+     "url": {
+      "ja": "http://www.yawata-hashiriimochi.com/access/",
+      "en": "http://www.yawata-hashiriimochi.com/access/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "月桂冠大倉記念館（時間・予約）",
+      "en": "Gekkeikan Okura Sake Museum: hours and booking"
+     },
+     "url": {
+      "ja": "https://www.gekkeikan.co.jp/enjoy/museum/access/",
+      "en": "https://www.gekkeikan.co.jp/enjoy/museum/access/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "宇治と伏見のマップ（酒蔵の町）",
+      "en": "Uji & Fushimi map (the sake town)"
+     },
+     "url": {
+      "ja": "../uji/#list",
+      "en": "../uji/#list"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "2026年春の夜桜ライトアップ（京都観光Navi）",
+      "en": "Evening cherry light-ups in spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://ja.kyoto.travel/times/night/article/single.php?id=472",
+      "en": "https://ja.kyoto.travel/times/night/article/single.php?id=472"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "叡山電鉄のマップ（夜の祇園四条・先斗町は24〜26番）",
+      "en": "Eizan Railway map (evening stops 24–26)"
+     },
+     "url": {
+      "ja": "../eizan-line/#list",
+      "en": "../eizan-line/#list"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2027-02-28",
+     "url": null,
+     "head": {
+      "ja": "春のマップです",
+      "en": "A spring map"
+     },
+     "text": {
+      "ja": "3月〜4月上旬に使う春のマップです。いまは見ごろの時期ではありません。日程・料金は2026年春の実績、電車は2026年11月の時刻です。来春は要確認。",
+      "en": "This map is for March to early April and the blossoms aren’t at their best now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring."
+     }
+    },
+    {
+     "from": "2027-04-16",
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "春のマップです",
+      "en": "A spring map"
+     },
+     "text": {
+      "ja": "3月〜4月上旬に使う春のマップです。いまは見ごろの時期ではありません。日程・料金は2026年春の実績、電車は2026年11月の時刻です。来春は要確認。",
+      "en": "This map is for March to early April and the blossoms aren’t at their best now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html",
+     "head": {
+      "ja": "ケーブルの最終は18:15、階段もあります",
+      "en": "Last cable car 18:15, and some steps"
+     },
+     "text": {
+      "ja": "毎時15分・45分発（朝は8:10から）。00分・30分は乗る人がいるときだけです。山上駅から本殿までにも階段が少しあります。表参道を歩いて下りると石段と坂で30〜35分です。",
+      "en": "Departures at :15 and :45 (from 8:10); :00 and :30 only run when there are passengers. There are a few steps up to the main hall. Walking down the main approach takes 30–35 minutes of steps and slopes."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://totteoki.kyoto.travel/wp-content/uploads/2026/03/kyotoyawatasansaku-chirashi_compressed.pdf",
+     "head": {
+      "ja": "春の特別公開（2026年の実績）",
+      "en": "Spring special opening (as held in 2026)"
+     },
+     "text": {
+      "ja": "2026年は3月20日〜4月12日、受付9:00〜16:00、大人1,000円・中高生500円で国宝の本社が公開されました。来春にあるかどうかと日程は要確認です。境内のお参りは無料です。",
+      "en": "In 2026 the National Treasure main buildings opened from 20 March to 12 April, entry 9:00–16:00, ¥1,000 adults and ¥500 for junior and senior high. Please check whether and when it runs next spring. The grounds are free."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://sabasusi-asahiya.com/shop/",
+     "head": {
+      "ja": "月曜・火曜はお昼の店に注意",
+      "en": "Lunch on Mondays and Tuesdays"
+     },
+     "text": {
+      "ja": "駅前の朝日屋は月・火が休み（祝日は営業）、走井餅老舗は月曜が休み（祝日なら翌日）です。月曜はお弁当を買ってから電車に乗ってください。",
+      "en": "Asahiya by the station closes Mondays and Tuesdays (open on holidays) and Hashiriimochi on Mondays (the next day if a holiday). On Mondays buy a packed lunch before you take the train."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "6:00〜18:00（正月は変わる）",
+       "en": "6:00–18:00 (different at New Year)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "境内は無料。春の特別公開は別（2026年は大人1,000円。来春は要確認）",
+       "en": "Grounds free. Spring special opening extra (¥1,000 in 2026; please check for next spring)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "cable",
+      "text": {
+       "ja": "8:10〜18:15、毎時15分・45分発（00分・30分は不定期）。毎日同じ。片道300円・往復600円",
+       "en": "8:10–18:15 at :15 and :45 (:00 and :30 irregular), same every day. ¥300 one way, ¥600 return"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "朝日屋（駅前・鯖寿司）11:00〜17:00、月・火休み（祝日は営業）",
+       "en": "Asahiya (by the station, mackerel sushi) 11:00–17:00, closed Mon and Tue (open on holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "走井餅老舗（一ノ鳥居前）9:00〜17:30、喫茶は17:00ラストオーダー、月曜休み（祝日なら翌日）",
+       "en": "Hashiriimochi (by the first torii) 9:00–17:30, tearoom last order 17:00, closed Mon (next day if a holiday)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "伏見へ：石清水八幡宮15:13発 → 中書島15:22着・320円（毎日同じ）",
+       "en": "To Fushimi: Iwashimizu-hachimangu 15:13 → Chushojima 15:22, ¥320 (every day)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：中書島17:27発（土日祝17:26発）→ 祇園四条17:39着（17:37着）・320円",
+       "en": "Back: Chushojima 17:27 (weekends and holidays 17:26) → Gion-Shijo 17:39 (17:37), ¥320"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "最終：石清水八幡宮23:58発、中書島0:09発 → 三条0:22着（毎日同じ）",
+       "en": "Last: Iwashimizu-hachimangu 23:58, Chushojima 0:09 → Sanjo 0:22 (every day)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "月桂冠大倉記念館（伏見）9:30〜16:30、受付16:00まで。20歳以上600円、現金不可。臨時休館あり",
+       "en": "Gekkeikan museum (Fushimi) 9:30–16:30, last entry 16:00. ¥600 for 20 and over, no cash. Occasional closures"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "神社・京阪・お店の公式サイトと八幡市観光協会で確認しました。お店の支払い方法は書かれていません（要確認）。京阪は乗換案内で平日・土曜・日曜・祝日を確認しました（2026年11月の時刻）。春までに変わることがあるので要確認。歩く時間は少しゆったりめです。",
+     "en": "Checked on the shrine, Keihan and shop websites and with the Yawata tourism association. The shops don’t state payment methods (please check). Keihan times were checked on a route planner for a weekday, Saturday, Sunday and holiday (November 2026 timetable) and may change by spring. Walking times are rounded up a little."
+    },
+    "checked": "2026-11-22",
+    "source": "石清水八幡宮 公式サイト https://iwashimizu.or.jp/、八幡市観光協会 https://www.kankou-yawata.org/?shuhen_jinja=%e7%9f%b3%e6%b8%85%e6%b0%b4%e5%85%ab%e5%b9%a1%e5%ae%ae、京阪 https://www.keihan.co.jp/traffic/time-fare/iwashimizu.html、朝日屋 https://sabasusi-asahiya.com/shop/、走井餅老舗 http://www.yawata-hashiriimochi.com/access/。2026-11-22に確認"
+   },
+   "text": {
+    "ja": "石清水八幡宮（いわしみずはちまんぐう）\n\n859年に始まった「やわたのはちまんさん」。今の社殿は徳川家光の造替で、本社10棟が国宝です。本殿の欄間（らんま）には極彩色の彫刻が並びます。織田信長が寄進したと伝わる黄金の雨樋は、ふだんは非公開です。\n\n駅の隣からケーブルで3分（片道300円）、山上駅から歩いて5分ほど。本殿から展望台までも約5分で、3つの川の向こうに京都の町が見えます。\n\n帰りは歩いて下りるのがおすすめです。エジソン記念碑（電球のフィラメントに男山の竹が使われた縁）、一ッ石、二ノ鳥居を通り、一ノ鳥居まで30〜35分。麓の高良神社は、徒然草の「仁和寺にある法師」が、ここが八幡宮だと思って帰ってしまった場所です。\n\n山上のトイレは、ケーブルから上がる東参道の左手と、南総門の手前左の建物の裏の2か所です。\n\n11:45発のケーブルで上がります。お参りと展望台のあと、13:15ごろから表参道を歩いて13:50ごろ下に着きます。\n\nおすすめ訪問時間：11:55〜13:15\n\n午後の続き：遅めのお昼、伏見の酒蔵へ（13:50ごろ）\n\n表参道を下りたら、駅前の朝日屋で鯖寿司のお昼（11:00〜17:00）。月・火は休みなので、お弁当か会場の屋台で早めに。石清水八幡宮15:13発の京阪で、中書島15:22着・320円（毎日同じ）。\n歩いて10分ほどの月桂冠大倉記念館へ。9:30〜16:30、受付は16:00まで、20歳以上600円でおみやげときき酒つき。現金は使えません。予約は2週間前の9:30から前日16:30までで、予約なしだと混む日は入れないことがあります。\nそのあと川沿いを歩いて、中書島17:27発（土日祝17:26発）の特急で祇園四条17:39着（17:37着）・320円。\n\n夜：祇園四条から夜桜へ\n駅から歩いて5分ほどの祇園白川、そこから15分ほどの円山公園のしだれ桜へ。2026年春のライトアップは、祇園白川が3月27日〜4月5日、円山公園が3月24日〜4月8日、どちらも18:00〜22:00で無料でした。来春は要確認です。\n19:30ごろ四条通を戻って橋を渡ると、先斗町（ぽんとちょう）と木屋町です。晩ごはんのあと三条へ歩いて、21〜22時ごろまで。閉まる時間は店の表で確かめてください。\n三条へ帰れる最後の電車は、石清水八幡宮23:58発、中書島0:09発（どちらも0:22着。毎日同じ）。",
+    "en": "Iwashimizu Hachimangu\n\nFounded in 859. The present buildings were rebuilt under the shogun Tokugawa Iemitsu and ten are National Treasures, with brightly painted carvings on the main hall. The golden gutter said to be Oda Nobunaga’s gift isn’t normally on view.\n\nThe cable car next to the station takes 3 minutes (¥300 one way), then it’s about 5 minutes’ walk. The lookout, 5 minutes from the main hall, faces Kyoto across three rivers.\n\nWalk down if you can: past the Edison monument (Otokoyama bamboo made his light-bulb filaments), the Hitotsu-ishi stone and the second torii, 30–35 minutes to the first torii. Kora Shrine at the foot is where the monk in the 14th-century “Essays in Idleness” turned back, thinking he had seen the whole shrine.\n\nThere are two toilets on the hill: left of the east approach from the cable car, and behind the building to the left before the south gate.\n\nTake the 11:45 cable car up. After the shrine and lookout, walk down from about 13:15 to reach the bottom about 13:50.\n\nRecommended visit time: 11:55–13:15\n\nAfternoon: a late lunch, then Fushimi’s breweries (about 13:50)\n\nAt the foot of the main approach, lunch on mackerel sushi at Asahiya by the station (11:00–17:00). It closes Mondays and Tuesdays, so eat a packed lunch or something from the festival stalls earlier on those days. Take the 15:13 to Chushojima, arriving 15:22, ¥320 (every day).\nThe Gekkeikan Okura Sake Museum is about 10 minutes’ walk: 9:30–16:30, last entry 16:00, ¥600 for 20 and over with a gift and tasting. No cash. Book from 9:30 two weeks ahead until 16:30 the day before; without a booking you may not get in on busy days.\nThen walk the canal and take the express from Chushojima at 17:27 (17:26 at weekends and on holidays) → Gion-Shijo 17:39 (17:37), ¥320.\n\nEvening: blossom by lamplight from Gion-Shijo\nGion Shirakawa is about 5 minutes from the station, and Maruyama Park’s weeping cherry 15 minutes beyond. In spring 2026 Shirakawa was lit 27 March – 5 April and Maruyama Park 24 March – 8 April, both 18:00–22:00 and free. Please check for next spring.\nAround 19:30 walk back down Shijo-dori and over the bridge to Pontocho and Kiyamachi. Dinner, then stroll up to Sanjo until 21:00 or 22:00; check closing times at the door.\nThe last trains to Sanjo leave Iwashimizu-hachimangu at 23:58 and Chushojima at 0:09 (both arrive 0:22, every day)."
+   },
+   "photos": [
+    "iwashimizu-1.jpg",
+    "iwashimizu-2.jpg",
+    "iwashimizu-4.jpg",
+    "iwashimizu-5.jpg",
+    "iwashimizu-6.jpg",
+    "iwashimizu-7.jpg",
+    "iwashimizu-8.jpg",
+    "iwashimizu-9.jpg"
+   ]
+  }
+ ]
+}

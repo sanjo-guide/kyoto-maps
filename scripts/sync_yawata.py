@@ -1,132 +1,106 @@
 #!/usr/bin/env python3
-"""ルート型のテンプレート（eizan-line/）の index.html・css・app.js を yawata/ に写し、淀・八幡用の差分をかけ直す。
-（sync_higashiyama.py と同じ差分。data.plan.defaultMode が pick なので「選んで回る」で開く）
+"""ルート型のテンプレート（eizan-line/）の index.html・css・app.js を yawata/ に写し、差分をかけ直す。
 
 使い方: python3 scripts/sync_yawata.py
-- かけ直す差分:
-  - データのパス、保存キー（kyoto-maps-yawata-…）、タイトルと説明文
-  - 写真ごとのクレジット表示（data の photos の要素を {"file", "credit": {"author", "license", "page"}} にすると、
-    ネットから借りた写真の上に撮影者とライセンスを出す）
-  - info.verified が false のスポットは「公式サイトで確認しました」ではなく「要確認」の一文を出す
-  - 地図を開いたときは data.focus の範囲（歩くエリア）だけを映す。「全体を表示」ボタンでは全部
-  - 最初から「選んで回る」で開く（data.plan.defaultMode が 'pick' のとき。一度切り替えたらその選択を覚える）
-  - 番号だけの #16 のリンクも、そのままの番号で開く（叡山電鉄の旧番号の読み替えはしない）
-- yawata/js/i18n.js は淀・八幡専用なので触らない。テンプレートに新しい文言キーが増えたら、i18n.js に手で足す
-- テンプレートの作りが変わって置き換え先が見つからないと、途中で止まる（そのときはこのスクリプトを直す）
+- 共通の差分（コースの切り替え・写真のクレジット・要確認の一文など）は scripts/sync_higashiyama.py にあり、
+  ここではこのマップの名前と番号だけを渡して、そのファイルを実行する
+- そのあと、淀・八幡だけの差分をかける:
+  - コースは3つ（scripts/build_yawata_data.py が作る）。ボタンは縦に3つ
+      kawazu（3月：淀の河津桜）= data/routes/yawata.json
+      sakura（4月：背割堤の桜）= data/routes/yawata-sakura.json
+      early （4月：背割堤の開園へ）= data/routes/yawata-early.json
+    何も選んでいなければ、SAKURA_FROM〜SAKURA_TO（月-日）に開くと sakura、それ以外は kawazu。?course=sakura でも開ける
+  - 春以外（SEASON_FROM〜SEASON_TO の外）に開くと「春のマップ」の一文（i18n.js の offKicker・offHow・offHowText・offLead・offNote）を
+    使い方・紹介ページ・一覧に出す。日付は毎年同じ（月-日で見る）
+- 2026-11-22 にコースを分けて番号の順が変わった。「行った」印・回り方・選んだ場所の保存キーはコースごとの新しい名前
+  （kyoto-maps-yawata-visited-v2-kawazu など）になるので、前の印は引き継がれない
+- yawata/js/i18n.js はこのマップ専用なので触らない。テンプレートに新しい文言キーが増えたら、i18n.js に手で足す
+- このマップだけ更新したときは、data_v（データ）と bump（css・js）の数字を上げる
+  （2026-11-22 までは css +100・i18n/app +101 だったので、bump は 102 から）
+- 置き換え先が見つからないと途中で止まる（そのときはこのスクリプトを直す）
 """
-import os, re, shutil
-R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-s = open(f'{R}/eizan-line/js/app.js', encoding='utf-8').read()
+import os, re, runpy
 
-def rep(a, b, n=1):
+SEASON_FROM, SEASON_TO = '03-01', '04-15'
+SAKURA_FROM, SAKURA_TO = '03-25', '04-30'
+R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CFG = dict(
+    id='yawata', i18n='YAWATA_I18N', count=3, data_v=3, bump=102,
+    head='京都 淀・八幡の桜（淀水路の河津桜・石清水八幡宮・背割堤）',
+    title='京都 淀・八幡の桜｜3月の河津桜・4月の背割堤 Yawata MAP',
+    desc='春のマップ。3月は淀水路の河津桜、3月末〜4月上旬は背割堤の桜のトンネル。三条から京阪で、石清水八幡宮とケーブル、門前のお昼、伏見の酒蔵、夜桜まで。時期と出発時間で選べる3コース。A spring map south of Kyoto by Keihan: Kawazu cherries at Yodo in March or the Sewaritei cherry avenue in late March and early April, with Iwashimizu Hachimangu, lunch, Fushimi and an evening in town.',
+    main='淀・八幡の桜', alt='Yodo & Yawata cherries', sub='京都 Yawata MAP')
+runpy.run_path(os.path.join(R, 'scripts', 'sync_higashiyama.py'), init_globals={'CFG': CFG})
+
+s = ''
+
+
+def rep(a, b):
     global s
-    assert s.count(a) == n, (a[:80], s.count(a))
+    assert s.count(a) == 1, (a[:80], s.count(a))
     s = s.replace(a, b)
 
-s = s.replace(s.split('(function () {')[0], """/* 京都 淀・八幡の桜（淀水路の河津桜・石清水八幡宮・背割堤） — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/yawata.json（写真は ../images/yawata/）. Texts: js/i18n.js
-   eizan-line/js/app.js の複製。違いは scripts/sync_yawata.py の説明を参照
-   （テンプレートを更新したら python3 scripts/sync_yawata.py で写し直す） */
-""", 1)
-assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
-s = s.replace("window.EIZAN_I18N", "window.YAWATA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-yawata-")
-s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 4;", s)
-m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/yawata.json?v=2')")
 
-# 最初から「選んで回る」
-rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
-    "mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';")
+# app.js
+APP = f'{R}/yawata/js/app.js'
+s = open(APP, encoding='utf-8').read()
+rep("yawata.json と yawata-early.json（コースで読み分ける。",
+    "yawata.json・yawata-sakura.json・yawata-early.json（コースで読み分ける。")
+rep("違いは scripts/sync_higashiyama.py の説明を参照",
+    "違いは scripts/sync_yawata.py と scripts/sync_higashiyama.py の説明を参照")
+rep("""  // コース: early（早朝に出発）か late（9〜10時に出発）。コースごとにデータファイルが別で、スポットの番号も変わる。
+  // 一覧の上のボタン（data-course）で切り替える。?course=early でも開ける
+""", """  // コース: kawazu（3月）・sakura（4月）・early（4月、開園へ）。コースごとにデータファイルが別で、スポットの番号も変わる。
+  // 一覧の上のボタン（data-course）で切り替える。?course=sakura でも開ける
+""")
+rep("""  var course = { id: (location.search.match(/[?&]course=(early|late)/) || [])[1] || load(KEY_COURSE) };
+  if (course.id !== 'early') course.id = 'late';
+  course.file = 'yawata' + (course.id === 'early' ? '-early' : '') + '.json';
+""", f"""  var COURSE_FILES = {{ kawazu: 'yawata.json', sakura: 'yawata-sakura.json', early: 'yawata-early.json' }};
+  var md = todayJST().slice(5);     // 月-日
+  var course = {{ id: (location.search.match(/[?&]course=(kawazu|sakura|early)/) || [])[1] || load(KEY_COURSE) }};
+  // 何も選んでいなければ、咲く時期に合わせる
+  if (!COURSE_FILES.hasOwnProperty(course.id)) course.id = md >= '{SAKURA_FROM}' && md <= '{SAKURA_TO}' ? 'sakura' : 'kawazu';
+  course.file = COURSE_FILES[course.id];
+  var offSeason = md < '{SEASON_FROM}' || md > '{SEASON_TO}';
+""")
+rep("""    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+  });
+""", """    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+    // 春以外は「春のマップ」の一文を先に出す
+    if (offSeason) {
+      I18N[l].intro.kicker = I18N[l].offKicker;
+      // 使い方の1つ目は、開いて最初に見える場所
+      I18N[l].intro.how[0].title = I18N[l].offHow;
+      I18N[l].intro.how[0].text = I18N[l].offHowText + I18N[l].intro.how[0].text;
+      I18N[l].intro.lead = I18N[l].offLead + I18N[l].intro.lead;
+      I18N[l].listNote = I18N[l].offNote + I18N[l].listNote;
+    }
+  });
+  if (offSeason) document.body.classList.add('off-season');
+""")
+open(APP, 'w', encoding='utf-8').write(s)
 
-# 番号だけのリンク
-rep("""    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（スタート前の2か所を含む）なので 2 を引いて開く
-    var m = location.hash.match(/^#spot-(\\d+)$/), old = location.hash.match(/^#(\\d+)$/);
-    var no = m ? Number(m[1]) : old ? Number(old[1]) - 2 : 0;""",
-"""    // #spot-16 の形。番号だけの #16 でも同じスポットを開く
-    var m = location.hash.match(/^#spot-(\\d+)$/) || location.hash.match(/^#(\\d+)$/);
-    var no = m ? Number(m[1]) : 0;""")
+# index.html（ボタンを3つに）
+PAGE = f'{R}/yawata/index.html'
+s = open(PAGE, encoding='utf-8').read()
+m = re.search(r'    <p class="sw-label" data-t="swCourse">.*?    </div>\n', s, re.S)
+assert m
+rep(m.group(0),
+    '    <p class="sw-label" data-t="swCourse">行く時期・出発時間</p>\n'
+    '    <div class="modesw coursesw" role="group" data-t-aria="courseAria" aria-label="行く時期・出発時間">\n'
+    '      <button type="button" data-course="kawazu" data-t="courseKawazu">3月：淀の河津桜（9:30ごろ発）</button>\n'
+    '      <button type="button" data-course="sakura" data-t="courseSakura">3月末〜4月上旬：背割堤の桜（9:30ごろ発）</button>\n'
+    '      <button type="button" data-course="early" data-t="courseEarly">3月末〜4月上旬：背割堤の開園9:00へ（8:10ごろ発）</button>\n'
+    '    </div>\n')
+open(PAGE, 'w', encoding='utf-8').write(s)
 
-# 写真ごとのクレジット
-rep("  function photoUrl(f) { return data.photoBase + f; }",
-"""  // a photo is a file name, or {file, credit: {author, license, page}} for a photo taken from the web
-  function photoFile(p) { return typeof p === 'string' ? p : p.file; }
-  function photoUrl(p) { return data.photoBase + photoFile(p); }
-  function creditHtml(p) {
-    var c = p && p.credit;
-    if (!c) return '';
-    return '<a href="' + esc(c.page) + '" target="_blank" rel="noopener noreferrer">' + esc(T().photoBy) + esc(c.author) + ' / ' + esc(c.license) + '</a>';
-  }
-  function showCredit(el, p) {
-    if (!el) return;
-    var h = creditHtml(p);
-    el.innerHTML = h;
-    el.hidden = !h;
-  }""")
-rep("""        }).join('') + '</div>' + badge(s.no) +""",
-"""        }).join('') + '</div>' + badge(s.no) +
-        '<span class="l-cr"' + (creditHtml(s.photos[0]) ? '' : ' hidden') + '>' + creditHtml(s.photos[0]) + '</span>' +""")
-rep("""        var box = sl.parentNode, c = box.querySelector('.l-count');
-        if (c) c.textContent = (i + 1) + ' / ' + n;""",
-"""        var box = sl.parentNode, c = box.querySelector('.l-count');
-        if (c) c.textContent = (i + 1) + ' / ' + n;
-        var sp = byNo[Number(sl.dataset.open)];
-        if (sp) showCredit(box.querySelector('.l-cr'), sp.photos[i]);""")
-rep("""    $('slide-next').disabled = i >= n - 1;
-  }""", """    $('slide-next').disabled = i >= n - 1;
-    if (activeNo && byNo[activeNo]) showCredit($('ph-credit'), byNo[activeNo].photos[i]);
-  }""")
-rep("""    $('detail-scroll').scrollTop = 0;
-    setActive(no);""", """    $('detail-scroll').scrollTop = 0;
-    setActive(no);
-    showCredit($('ph-credit'), s.photos[0]);""")
-rep("""    [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
-      img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
-    });
-  }""", """    [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
-      img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
-    });
-    if (activeNo === s.no) updateCounter();   // photo credit in the current language
-  }""")
-
-# 要確認
-rep("""    if (rows.length) html += '<p class="checked">' + esc(fill(t.checked, { d: t.checkedDate })) + '</p>';""",
-"""    if (rows.length) html += '<p class="checked">' + esc(fill(inf.verified === false ? t.unchecked : t.checked, { d: t.checkedDate })) + '</p>';""")
-
-# 最初に映す範囲
-rep("""  function fitAll() {
-    var r = routeSpots();""", """  // 地図を開いたときは歩くエリア（data.focus）だけを映す。「全体を表示」ボタン（e がある）では全部
-  function fitAll(e) {
-    var r = routeSpots(), f = !e && data.focus;
-    if (f) r = r.filter(function (x) { return x.no >= f.first && x.no <= f.last; });""")
-app_js = s
-
-# index.html
-h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
-h = re.sub(r'<title>.*?</title>', '<title>京都 淀・八幡の桜 Yawata MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="3月の淀水路の河津桜と、4月の背割堤の桜並木。石清水八幡宮へケーブルで上る、京阪沿線の春のルートマップ。Kawazu cherries at Yodo, Iwashimizu Hachimangu and the Sewaritei cherry avenue.">', h)
-h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1淀・八幡の桜\2', h)
-h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Yodo & Yawata cherries\2', h)
-h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都 Yawata MAP\2', h)
-a = '<span class="ph-area" id="ph-area"></span>'
-assert h.count(a) == 1
-h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
-# CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-# このマップだけ直したときは EXTRA を上げる（2026-11-20: データと i18n.js を直したので app.js と i18n.js を +1）
-EXTRA = {'css/style.css': 0, 'js/i18n.js': 1, 'js/app.js': 1}
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
-
-css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
-/* 淀・八幡: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */
-.l-cr, .ph-credit { position: absolute; z-index: 1; max-width: calc(100% - 120px); font-size: 10.5px; line-height: 1.35; color: #fff; background: rgba(18,22,20,.62); padding: 3px 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.l-cr a, .ph-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
-.l-cr { left: 10px; bottom: 10px; }
-.ph-credit { right: 10px; top: 10px; }
-.l-cr[hidden], .ph-credit[hidden] { display: none; }
-"""
-
-# ここまで来たら全部書き込む
-os.makedirs(f'{R}/yawata/js', exist_ok=True); os.makedirs(f'{R}/yawata/css', exist_ok=True)
-open(f'{R}/yawata/css/style.css', 'w', encoding='utf-8').write(css)
-open(f'{R}/yawata/js/app.js', 'w', encoding='utf-8').write(app_js)
-open(f'{R}/yawata/index.html', 'w', encoding='utf-8').write(h)
-print('synced')
+# css
+CSS = f'{R}/yawata/css/style.css'
+open(CSS, 'a', encoding='utf-8').write("""/* 淀・八幡: コースのボタンは3つを縦に。春以外は一覧の一文を目立たせる */
+.coursesw { grid-template-columns: 1fr; }
+.coursesw button { padding: 8px 12px; text-align: left; font-size: 13.5px; }
+.coursesw button + button { border-top: 1px solid var(--ink); }
+.off-season .list-note { padding: 8px 10px; background: var(--warn-soft); color: #4A3209; }
+""")
+print('patched yawata (3 courses, season)')
