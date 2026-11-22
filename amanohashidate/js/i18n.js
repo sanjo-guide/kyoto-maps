@@ -2,7 +2,8 @@
    Toshi 個人のマップ。京都駅から特急はしだてで天橋立へ。天橋立駅の観光案内所でフリーパス（1day）を買い、観光船か自転車で府中へ渡り、
    傘松公園・籠神社と伊根を回って（どちらを先にするかは選べる）、観光船か自転車で戻って18:09の特急で京都へ（オーナーの希望 2026-11-20）。
    Photos are [spot id, photo index] from data/routes/amanohashidate*.json（順番で番号が変わるので id で指定）.
-   料金・時間は2026年11月20日に確認（各社・各施設の公式サイト。特急の運賃は乗換案内）。 */
+   2026-11-22 に「ゲストが実際に回れる1日」として見直し（三条のあたりから出発、乗り遅れたときの次の便、お昼と晩ごはん）。
+   料金・時間は2026年11月22日に確認（各社・各施設の公式サイト。特急と地下鉄は乗換案内）。 */
 window.AMANOHASHIDATE_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -16,7 +17,7 @@ window.AMANOHASHIDATE_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '番号の順に回るルートです。上のボタンで「傘松公園が先」か「伊根が先」かを選ぶと、番号と時間がその順番に変わります。11の智恵の湯は時間があるときだけ（火・水・木曜はお休み）。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '番号の順に回るルートです。上のボタンで「傘松公園が先」か「伊根が先」かを選ぶと、番号と時間がその順番に変わります。土日祝は「傘松公園が先」が回りやすいです。木曜は向井酒造、水曜は伊根の舟屋日和、火・水・木曜は智恵の湯が休み。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -42,7 +43,7 @@ window.AMANOHASHIDATE_I18N = {
     cash: '現金を用意してください',
     checked: '{d}に公式サイトなどで確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月20日',
+    checkedDate: '2026年11月22日',
     noticeHead: 'お知らせ',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -72,7 +73,7 @@ window.AMANOHASHIDATE_I18N = {
     intro: {
       kicker: 'Toshiが歩いて作った1日ルート',
       h1: '天に架かる橋を船で渡って、海に浮かぶ舟屋の町へ。',
-      lead: '京都駅から特急で乗り換えなしの約2時間。天橋立駅でフリーパスを買ったら、カモメと一緒に観光船で（自転車でも）日本三景・天橋立を渡ります。山の上から「昇龍観」を眺めて、バスで伊根へ。遊覧船で舟屋の並ぶ静かな湾をめぐる「海の京都」の1日です。',
+      lead: '三条のあたりを8時ごろに出て、京都駅8:38の特急で乗り換えなしの約2時間。フリーパスを買って観光船で天橋立を渡り、山の上から「昇龍観」を眺め、バスで伊根へ。舟屋の並ぶ湾を遊覧船でめぐり、18:09の特急で帰ります。バスと船は本数が少ないので、乗る便と、乗り遅れたときの次の便を各スポットに書いています。',
       favLabel: 'いちばんの見どころ',
       favName: '伊根の舟屋',
       favText: '1階が船のガレージ。海の上に約230軒が並ぶ漁師町。',
@@ -81,35 +82,37 @@ window.AMANOHASHIDATE_I18N = {
       who: [
         '京都に泊まりながら、海の景色も見に行きたい人に',
         '京都駅から特急はしだてで約2時間。乗り換えなしで着きます',
-        '天橋立駅の観光案内所で「フリーパス 1day」を買えば、船・ケーブルカー・バス・遊覧船が乗り放題',
-        '天橋立は、カモメと一緒の観光船か、松並木を走る自転車で渡ります',
-        '傘松公園と伊根、どちらを先に回るか選べます',
-        '冬は雪をかぶった舟屋が見られることも'
+        '「フリーパス 1day」1枚で、船・ケーブルカー・バス・遊覧船に乗れます',
+        '傘松公園と伊根、どちらを先に回るか選べます。土日祝は「傘松公園が先」が回りやすいです',
+        '行く曜日に注意：木曜は向井酒造、水曜は伊根の舟屋日和、火・水・木曜は智恵の湯が休み',
+        '風や波の強い日は船が止まります。冬は雪の日もあるので、朝に運行情報を見てください'
       ],
       dayHead: '1日の流れ（目安）',
       from: '',
       day: [
-        { time: '8:38', area: '京都 → 天橋立', title: '特急はしだてで天橋立へ', text: '京都駅から乗り換えなしで約2時間。10:39に天橋立駅に着きます。', note: '帰りの18:09の指定席も一緒に', photo: ['kyoto', 0] },
-        { time: '10:39', area: '天橋立駅（文珠）', title: 'フリーパスを買って、智恩寺へ', text: '駅の観光案内所で「天橋立・伊根フリーパス 1day」（3,550円）を。観光船乗り場の横の智恩寺にお参りします。', photo: ['station', 0] },
-        { time: '11:00', area: '天橋立を渡る', title: '観光船か自転車で府中へ', text: '船ならカモメと一緒に12分。自転車なら松並木の中を15〜20分で、対岸の一の宮桟橋へ。', photo: ['crossing', 2] },
-        { time: '11:15', area: '府中（傘松公園・籠神社）', title: '「昇龍観」と元伊勢 籠神社', text: '籠神社にお参りして、ケーブルカーで傘松公園へ。股のぞきで天橋立を逆さまに。展望レストランでお昼ごはん。', note: '伊根が先なら15:45ごろから', badge: '順番を選べます', photo: ['kasamatsu', 0] },
-        { time: '13:58', area: '伊根', title: '遊覧船と舟屋の町', text: 'バスで伊根へ。カモメといっしょに伊根湾を一周して、向井酒造に寄り、舟屋の町を歩きます。', note: '伊根が先なら11:53（土日祝は12:37）ごろから', badge: 'このマップのハイライト', photo: ['ineboat', 1] },
-        { time: '16:45', area: '天橋立を渡って戻る', title: '観光船か自転車で天橋立駅側へ', text: '一の宮桟橋から16:45の観光船で戻ります（16:57着）。自転車なら夕方の松並木を走って。', photo: ['return', 0] },
-        { time: '17:05', area: '天橋立駅 → 京都', title: '温泉でひと休みして、18:09の特急へ', text: '駅横の智恵の湯で足を休めたら、特急はしだて8号で京都へ（20:21着）。', note: '智恵の湯は火・水・木曜休み', photo: ['station2', 1] }
+        { time: '8:00', area: '三条のあたり → 京都駅 → 天橋立', title: '8:38の特急はしだてで天橋立へ', text: '烏丸御池8:04発の地下鉄で京都駅へ（8:09着）。特急は31番のりばから、乗り換えなしで10:39に天橋立駅に着きます。', note: '帰りの18:09の指定席も一緒に', photo: ['kyoto', 0] },
+        { time: '10:39', area: '天橋立駅（文珠）', title: 'フリーパスを買って、智恩寺へ', text: '最初に「天橋立・伊根フリーパス 1day」（3,550円）を買い、観光船乗り場の横の智恩寺にお参りします。', photo: ['station', 0] },
+        { time: '11:00', area: '天橋立を渡る', title: '観光船か自転車で府中へ', text: '船ならカモメと一緒に12分（土日祝の11:00発は22分のコース）。自転車なら松並木の中を15〜20分で、対岸の一の宮桟橋へ。', note: '風や波の強い日は船が止まります', photo: ['crossing', 2] },
+        { time: '11:15', area: '府中（傘松公園・籠神社）', title: '「昇龍観」と元伊勢 籠神社', text: '籠神社にお参りして、11:45のケーブルカーで傘松公園へ。股のぞきで天橋立を逆さまに。お昼は山の上の展望レストランで。13:29のバスで伊根へ向かいます。', note: '伊根が先なら15:40ごろから（お昼は伊根で）', badge: '順番を選べます', photo: ['kasamatsu', 0] },
+        { time: '13:58', area: '伊根', title: '遊覧船と舟屋の町', text: '14:30の遊覧船で伊根湾を一周（約25分）。向井酒造に寄り、舟屋の町を歩いて、16:00のバスで戻ります。', note: '伊根が先なら11:53から', badge: 'このマップのハイライト', photo: ['ineboat', 1] },
+        { time: '16:45', area: '天橋立を渡って戻る', title: '観光船か自転車で天橋立駅側へ', text: '一の宮桟橋から16:45の観光船で戻ります（16:57着）。11〜2月はこれが最後の船。乗り遅れたらバスで駅へ戻れます。', photo: ['return', 0] },
+        { time: '17:05', area: '天橋立駅 → 京都', title: '温泉でひと休みして、18:09の特急へ', text: '駅横の智恵の湯で足を休めたら、特急はしだて8号で京都へ（20:21着）。18:09の次は19:05が最後の特急です。', note: '智恵の湯は火・水・木曜休み・タトゥー不可', photo: ['station2', 1] },
+        { time: '20:21', area: '京都駅 → 三条のあたり', title: '京都駅で晩ごはん', text: '京都駅ビル10階の京都拉麺小路（ラストオーダー21:30）か、京都ポルタの食事の店（22:00まで）へ。三条のあたりへは地下鉄で烏丸御池まで約6分です。', photo: ['station2', 0] }
       ],
       timeSuffix: '〜',
       dealsHead: '交通費のめやす',
-      dealsLead: '京都駅から天橋立・伊根を回って京都へ帰ると、特急の往復9,600円とフリーパス3,550円で、大人1人 13,150円です（観光船で行き帰りする場合。温泉代は別）。',
+      dealsLead: '京都駅から天橋立・伊根を回って京都へ帰ると、特急の往復9,600〜10,400円とフリーパス3,550円で、大人1人 13,150〜13,950円です（温泉・食事は別）。',
       deals: [
-        { name: '特急はしだて（京都⇔天橋立）往復', price: '9,600円', text: '片道4,800円（乗車券＋指定席特急料金・通常期）。時期によって少し変わります。', url: 'https://www.jr-odekake.net/' },
-        { name: '海の京都 天橋立・伊根フリーパス 1day', price: '3,550円', text: '天橋立駅の観光案内所で。観光船（行き帰り1,600円）、ケーブルカー・リフト往復（800円）、伊根へのバス（行き帰り400円）、遊覧船（1,200円）が全部乗れて、別々に買うより450円お得。小児1,780円。', url: 'https://www.tankai.jp/tourist_tickets/' },
+        { name: '特急はしだて（京都⇔天橋立）往復', price: '9,600〜10,400円', text: '片道4,800〜5,200円（乗車券2,320円＋指定席特急料金）。日によって変わります。', url: 'https://www.jr-odekake.net/' },
+        { name: '安く行くなら：高速バス（京都駅前⇔天橋立駅）片道', price: '3,400〜3,900円', text: '京都駅前9:00発→天橋立駅11:05着、帰りは18:00発→20:10着。日によって値段が変わり、予約できます。「傘松公園が先」の順番で、11:30の観光船から始めます。', url: 'https://www.tankai.jp/highwaybus/kyotoline/' },
+        { name: '海の京都 天橋立・伊根フリーパス 1day', price: '3,550円', text: '天橋立駅か天橋立桟橋で。観光船（往復1,300円、片道ずつなら1,600円）、ケーブルカー・リフト往復（800円）、伊根へのバス（行き帰り400円）、遊覧船（1,200円）に乗れて、別々に買うより150〜450円安くなります。小児1,780円。', url: 'https://www.tankai.jp/tourist_tickets/' },
         { name: '自転車で渡る人は：レンタサイクル傘松まるごとチケット', price: '2,000円', text: '行きは自転車（2時間）、帰りは観光船、ケーブルカー・リフト往復がセット。伊根へのバス（400円）と遊覧船（1,200円）は別に払って、合計3,600円です。フリーパスには自転車は含まれません。', url: 'https://www.tankai.jp/tourist_tickets/' }
       ],
-      dealsNote: '大人の料金です。2026年11月20日に、特急の時刻はJR西日本の時刻表、運賃は乗換案内、そのほかは丹後海陸交通の公式サイトで確認しました。',
+      dealsNote: '大人の料金です。2026年11月22日に、特急の時刻と料金は乗換案内、そのほかは丹後海陸交通の公式サイトで確認しました。',
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
       how: [
-        { title: '番号の順に', text: '京都駅から特急で天橋立へ。フリーパスを買って天橋立を渡り、傘松公園と伊根を回って、天橋立を渡って戻ります。' },
+        { title: '番号の順に', text: '京都駅から特急で天橋立へ。フリーパスを買って天橋立を渡り、傘松公園と伊根を回って、天橋立を渡って戻ります。バスと船は、各スポットに書いた時刻の便に乗ってください。' },
         { title: '順番を選ぶ', text: '一覧の上の「傘松公園が先」「伊根が先」で、回る順番を切り替えられます。番号・おすすめの時間・地図の点線が、選んだ順番に変わります。' },
         { title: '番号をタップ', text: '地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。' },
         { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。時刻表や公式サイトへのリンクもあります。' }
@@ -130,7 +133,7 @@ window.AMANOHASHIDATE_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'Visit the spots in number order. Use the buttons above to choose “Kasamatsu first” or “Ine first”: the numbers and times change to match. Stop 11, Chie-no-Yu, is only if you have time (closed Tue–Thu). The dotted line shows the order, not the actual path.',
+    listNote: 'Visit the spots in number order. Use the buttons above to choose “Kasamatsu first” or “Ine first”: the numbers and times change to match. On weekends and holidays, “Kasamatsu first” is easier. Mukai Sake Brewery closes on Thursdays, Funaya Biyori in Ine on Wednesdays, and the Chie-no-Yu hot spring Tue–Thu. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -156,7 +159,7 @@ window.AMANOHASHIDATE_I18N = {
     cash: 'Bring cash',
     checked: 'Checked on official websites on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 20, 2026',
+    checkedDate: 'Nov 22, 2026',
     noticeHead: 'Note',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -186,7 +189,7 @@ window.AMANOHASHIDATE_I18N = {
     intro: {
       kicker: 'A day trip, hand-walked by Toshi',
       h1: 'Cross the “bridge to heaven” by boat, then visit a village of boathouses on the sea.',
-      lead: 'About two hours from Kyoto Station by limited express, no change of trains. Pick up a day pass at Amanohashidate Station and cross Amanohashidate, one of Japan’s Three Scenic Views, by boat with the seagulls (or by bike). Take in the “rising dragon” view from the hill, then the bus to Ine and a cruise around its calm bay of boathouses: a day on “Kyoto by the Sea”.',
+      lead: 'Leave the Sanjo area around 8:00 for the 8:38 limited express from Kyoto Station: about two hours, no change. Buy a day pass, cross Amanohashidate by boat, take in the “rising dragon” view from the hill, then ride the bus to Ine for a cruise past its boathouses, and come back on the 18:09 express. Buses and boats are few, so each stop tells you which one to take and what comes next if you miss it.',
       favLabel: 'Don’t miss',
       favName: 'Ine’s funaya',
       favText: 'About 230 boathouses on the water, each with a boat garage downstairs.',
@@ -195,35 +198,37 @@ window.AMANOHASHIDATE_I18N = {
       who: [
         'For anyone staying in Kyoto who also wants to see the sea',
         'About 2 hours from Kyoto Station on the Hashidate limited express, no change',
-        'With the 1-day free pass from the station’s tourist office, boats, cable car, buses and the Ine boat are all covered',
-        'Cross Amanohashidate by sightseeing boat with the seagulls, or by bike through the pines',
-        'You choose whether to visit Kasamatsu Park or Ine first',
-        'In winter you may see the boathouses under snow'
+        'One 1-day free pass covers the boats, cable car, buses and the Ine boat',
+        'You choose whether to visit Kasamatsu Park or Ine first. On weekends and holidays, Kasamatsu first is easier',
+        'Mind the day of the week: Mukai Sake Brewery closes on Thursdays, Funaya Biyori in Ine on Wednesdays, the Chie-no-Yu hot spring Tue–Thu',
+        'Boats stop in strong wind or waves, and it can snow in winter: check the service status in the morning'
       ],
       dayHead: 'One day, roughly like this',
       from: 'From',
       day: [
-        { time: '8:38', area: 'Kyoto → Amanohashidate', title: 'Hashidate express to the coast', text: 'About 2 hours from Kyoto Station with no change, arriving at 10:39.', note: 'Reserve the 18:09 back too', photo: ['kyoto', 0] },
-        { time: '10:39', area: 'Amanohashidate Station (Monju)', title: 'Get the day pass, visit Chion-ji', text: 'Buy the Amanohashidate & Ine Free Pass 1day (¥3,550) at the station’s tourist office, then visit Chion-ji next to the boat pier.', photo: ['station', 0] },
-        { time: '11:00', area: 'Across the sandbar', title: 'Boat or bike to Fuchu', text: '12 minutes by boat with the seagulls, or 15–20 minutes by bike through the pines, to Ichinomiya pier.', photo: ['crossing', 2] },
-        { time: '11:15', area: 'Fuchu (Kasamatsu Park & Kono Shrine)', title: '“Rising dragon” view & Kono Shrine', text: 'Visit Kono Shrine, then take the cable car up to Kasamatsu Park and look at Amanohashidate upside down. Lunch at the viewing restaurant.', note: 'From about 15:45 if you do Ine first', badge: 'You choose the order', photo: ['kasamatsu', 0] },
-        { time: '13:58', area: 'Ine', title: 'Boat ride & the boathouse village', text: 'Bus to Ine, loop around Ine Bay with the seagulls, stop at Mukai Sake Brewery and stroll among the funaya.', note: 'Ine first: from 11:53 (weekends and holidays 12:37)', badge: 'The highlight of this map', photo: ['ineboat', 1] },
-        { time: '16:45', area: 'Back across the sandbar', title: 'Boat or bike back to the station side', text: 'The 16:45 boat from Ichinomiya pier (arr. 16:57), or ride back through the evening pines.', photo: ['return', 0] },
-        { time: '17:05', area: 'Amanohashidate → Kyoto', title: 'Hot spring, then the 18:09 express', text: 'Rest your legs at Chie-no-Yu next to the station, then the Hashidate No. 8 to Kyoto (arr. 20:21).', note: 'Hot spring closed Tue–Thu', photo: ['station2', 1] }
+        { time: '8:00', area: 'Sanjo area → Kyoto Station → Amanohashidate', title: 'The 8:38 Hashidate express to the coast', text: 'Take the 8:04 subway from Karasuma Oike to Kyoto Station (arr. 8:09). The express leaves from platform 31 and reaches Amanohashidate at 10:39 with no change.', note: 'Reserve the 18:09 back too', photo: ['kyoto', 0] },
+        { time: '10:39', area: 'Amanohashidate Station (Monju)', title: 'Get the day pass, visit Chion-ji', text: 'First buy the Amanohashidate & Ine Free Pass 1day (¥3,550), then visit Chion-ji next to the boat pier.', photo: ['station', 0] },
+        { time: '11:00', area: 'Across the sandbar', title: 'Boat or bike to Fuchu', text: '12 minutes by boat with the seagulls (the 11:00 on weekends and holidays takes a 22-minute route), or 15–20 minutes by bike through the pines, to Ichinomiya pier.', note: 'Boats stop in strong wind or waves', photo: ['crossing', 2] },
+        { time: '11:15', area: 'Fuchu (Kasamatsu Park & Kono Shrine)', title: '“Rising dragon” view & Kono Shrine', text: 'Visit Kono Shrine, then take the 11:45 cable car up to Kasamatsu Park and look at Amanohashidate upside down. Lunch at the viewing restaurant at the top, then the 13:29 bus to Ine.', note: 'From about 15:40 if you do Ine first (lunch in Ine)', badge: 'You choose the order', photo: ['kasamatsu', 0] },
+        { time: '13:58', area: 'Ine', title: 'Boat ride & the boathouse village', text: 'The 14:30 boat loops around Ine Bay (about 25 min). Stop at Mukai Sake Brewery, walk among the funaya, and take the 16:00 bus back.', note: 'Ine first: from 11:53', badge: 'The highlight of this map', photo: ['ineboat', 1] },
+        { time: '16:45', area: 'Back across the sandbar', title: 'Boat or bike back to the station side', text: 'The 16:45 boat from Ichinomiya pier (arr. 16:57): the last boat from November to February. If you miss it, a bus takes you back to the station.', photo: ['return', 0] },
+        { time: '17:05', area: 'Amanohashidate → Kyoto', title: 'Hot spring, then the 18:09 express', text: 'Rest your legs at Chie-no-Yu next to the station, then the Hashidate No. 8 to Kyoto (arr. 20:21). After the 18:09, the 19:05 is the last express.', note: 'Hot spring closed Tue–Thu · no tattoos', photo: ['station2', 1] },
+        { time: '20:21', area: 'Kyoto Station → Sanjo area', title: 'Dinner at Kyoto Station', text: 'Kyoto Ramen Koji on the 10th floor of the station building (last order 21:30), or the restaurants in Kyoto Porta (until 22:00). The subway to Karasuma Oike, for the Sanjo area, takes about 6 minutes.', photo: ['station2', 0] }
       ],
       timeSuffix: '',
       dealsHead: 'Getting around: fares',
-      dealsLead: 'From Kyoto Station to Amanohashidate and Ine and back: ¥9,600 for the express round trip plus ¥3,550 for the free pass, ¥13,150 per adult (crossing by boat both ways; hot spring not included).',
+      dealsLead: 'From Kyoto Station to Amanohashidate and Ine and back: ¥9,600–10,400 for the express round trip plus ¥3,550 for the free pass, ¥13,150–13,950 per adult (hot spring and meals not included).',
       deals: [
-        { name: 'Hashidate limited express (Kyoto ⇔ Amanohashidate), round trip', price: '¥9,600', text: '¥4,800 each way (fare + reserved-seat express charge, regular season). Varies a little by season.', url: 'https://www.jr-odekake.net/' },
-        { name: 'Kyoto by the Sea Amanohashidate & Ine Free Pass 1day', price: '¥3,550', text: 'At the station’s tourist office. Covers the boat both ways (¥1,600), the cable car round trip (¥800), the bus to Ine and back (¥400) and the Ine Bay boat (¥1,200): ¥450 cheaper than separate tickets. Children ¥1,780.', url: 'https://www.tankai.jp/tourist_tickets/' },
+        { name: 'Hashidate limited express (Kyoto ⇔ Amanohashidate), round trip', price: '¥9,600–10,400', text: '¥4,800–5,200 each way (fare ¥2,320 + reserved-seat express charge). It depends on the day.', url: 'https://www.jr-odekake.net/' },
+        { name: 'Cheaper: highway bus (Kyoto Station ⇔ Amanohashidate Station), one way', price: '¥3,400–3,900', text: 'Kyoto Station 9:00 → Amanohashidate Station 11:05; back 18:00 → 20:10. The fare depends on the day and seats can be booked. Choose “Kasamatsu first” and start with the 11:30 boat.', url: 'https://www.tankai.jp/highwaybus/kyotoline/' },
+        { name: 'Kyoto by the Sea Amanohashidate & Ine Free Pass 1day', price: '¥3,550', text: 'At Amanohashidate Station or Amanohashidate pier. Covers the boat (¥1,300 round trip, or ¥1,600 as two singles), the cable car round trip (¥800), the bus to Ine and back (¥400) and the Ine Bay boat (¥1,200): ¥150–450 cheaper than separate tickets. Children ¥1,780.', url: 'https://www.tankai.jp/tourist_tickets/' },
         { name: 'Going by bike? Rental Bike & Kasamatsu ticket', price: '¥2,000', text: 'Bike there (2 hours), boat back, and the cable car round trip. Pay the bus (¥400) and the Ine boat (¥1,200) separately: ¥3,600 in all. Bikes aren’t covered by the free pass.', url: 'https://www.tankai.jp/tourist_tickets/' }
       ],
-      dealsNote: 'Adult fares, checked on Nov 20, 2026: express times on JR West’s timetable, the express fare on a route planner, and the rest on Tankai’s official website.',
+      dealsNote: 'Adult fares, checked on Nov 22, 2026: express times and fares on a route planner, and the rest on Tankai’s official website.',
       dealsMore: 'See official site',
       howHead: 'How to use this map',
       how: [
-        { title: 'Go in number order', text: 'Limited express from Kyoto to Amanohashidate, get the day pass, cross the sandbar, see Kasamatsu Park and Ine, then cross back.' },
+        { title: 'Go in number order', text: 'Limited express from Kyoto to Amanohashidate, get the day pass, cross the sandbar, see Kasamatsu Park and Ine, then cross back. Take the buses and boats at the times given under each stop.' },
         { title: 'Choose the order', text: 'Use “Kasamatsu first” or “Ine first” at the top of the list. The numbers, suggested times and the dotted line on the map follow your choice.' },
         { title: 'Tap a number', text: 'Tap a number on the map, or open the list, to see photos, tips, fees and suggested times.' },
         { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions. Some spots also link to timetables and official websites.' }

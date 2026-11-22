@@ -38,7 +38,8 @@
     var q = (location.search.match(/[?&]course=(\w+)/) || [])[1] || load(KEY_COURSE);
     return COURSES.filter(function (c) { return c.id === q; })[0] || COURSES[0];
   })();
-  KEY_VISITED += '-' + course.id;
+  // 「伊根が先」は 2026-11-22 に 8番と9番（籠神社・傘松公園）を入れ替えたので、「行った」印の保存キーを変えた
+  KEY_VISITED += '-' + course.id + (course.id === 'ine' ? '2' : '');
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -861,7 +862,7 @@
     route();
   }
 
-  fetch('../data/routes/' + course.file + '?v=4')
+  fetch('../data/routes/' + course.file + '?v=5')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

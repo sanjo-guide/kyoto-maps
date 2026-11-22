@@ -35,7 +35,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.AMANOHASHIDATE_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-amanohashidate-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 14;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/amanohashidate.json?v=4')")
+s = s.replace(m.group(0), "fetch('../data/routes/amanohashidate.json?v=5')")
 
 
 # 番号だけのリンク
@@ -108,7 +108,8 @@ rep("""  var mode = 'all', picks = {}, routeLine = null;
     var q = (location.search.match(/[?&]course=(\\w+)/) || [])[1] || load(KEY_COURSE);
     return COURSES.filter(function (c) { return c.id === q; })[0] || COURSES[0];
   })();
-  KEY_VISITED += '-' + course.id;
+  // 「伊根が先」は 2026-11-22 に 8番と9番（籠神社・傘松公園）を入れ替えたので、「行った」印の保存キーを変えた
+  KEY_VISITED += '-' + course.id + (course.id === 'ine' ? '2' : '');
 """)
 rep("""    [].forEach.call(document.querySelectorAll('.modesw button'), function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
@@ -145,15 +146,15 @@ app_js = s
 # index.html
 h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
 h = re.sub(r'<title>.*?</title>', '<title>天橋立・伊根｜京都から日帰り Amanohashidate &amp; Ine MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="京都駅から特急はしだてで約2時間。日本三景・天橋立を展望台から眺め、松並木を歩いて渡り、バスで伊根へ。遊覧船でカモメと一緒に舟屋の並ぶ湾をめぐる、京都からの日帰りルートマップ。A day trip from Kyoto: see Amanohashidate from above, walk across its pine-covered sandbar, then ride a boat past the boathouses of Ine.">', h)
+h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="京都駅8:38の特急はしだてで天橋立へ。観光船で天橋立を渡り、傘松公園の展望台とバスで行く伊根の舟屋を回って、18:09の特急で帰る日帰りルートマップ。バスと船の時刻、乗り遅れたときの次の便、お昼と晩ごはんの場所つき。A day trip from Kyoto with real timetables: cross Amanohashidate by boat, see it from Kasamatsu Park, and ride the bus to the boathouses of Ine.">', h)
 h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1天橋立・伊根\2', h)
 h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Amanohashidate &amp; Ine\2', h)
 h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都発 From Kyoto MAP\2', h)
 a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
-# CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100}', h)
+# CSS / JS の ?v= は、テンプレートの数字に 101 を足す（このマップだけ直したら、この数字を1つ上げる）。元は 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
+h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 101}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 /* 天橋立・伊根: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */
