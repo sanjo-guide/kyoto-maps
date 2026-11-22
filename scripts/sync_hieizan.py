@@ -1,131 +1,53 @@
 #!/usr/bin/env python3
 """ルート型のテンプレート（eizan-line/）の index.html・css・app.js を hieizan/ に写し、比叡山延暦寺と坂本用の差分をかけ直す。
-（sync_ohara.py と同じ差分。data.plan.defaultMode がないので「全部回る」で開く）
 
 使い方: python3 scripts/sync_hieizan.py
-- かけ直す差分:
-  - データのパス、保存キー（kyoto-maps-hieizan-…）、タイトルと説明文
-  - 写真ごとのクレジット表示（data の photos の要素を {"file", "credit": {"author", "license", "page"}} にすると、
-    ネットから借りた写真の上に撮影者とライセンスを出す）
-  - info.verified が false のスポットは「公式サイトで確認しました」ではなく「要確認」の一文を出す
-  - 地図を開いたときは data.focus の範囲（歩くエリア）だけを映す。「全体を表示」ボタンでは全部
-  - 最初から「選んで回る」で開く（data.plan.defaultMode が 'pick' のとき。一度切り替えたらその選択を覚える）
-  - 番号だけの #16 のリンクも、そのままの番号で開く（叡山電鉄の旧番号の読み替えはしない）
-- hieizan/js/i18n.js は比叡山専用なので触らない。テンプレートに新しい文言キーが増えたら、i18n.js に手で足す
-- テンプレートの作りが変わって置き換え先が見つからないと、途中で止まる（そのときはこのスクリプトを直す）
+- 差分は東山マップと同じ（コースの切り替え・最初から「選んで回る」・写真のクレジット・要確認の一文・最初に映す範囲など）。
+  中身は scripts/sync_higashiyama.py にあり、ここではこのマップの名前と番号だけを渡して、そのファイルを実行する
+- コースは2つ（2026-11-22）：late＝山を越える（hieizan.json。坂本から上って八瀬へ下りる。山内のバスが走る3月20日〜12月6日）、
+  early＝冬：坂本から往復（hieizan-early.json）。early / late はコース切り替えの仕組みの名前を借りているだけで、どちらも三条京阪9:01発。
+  どちらも scripts/build_hieizan_data.py が作る。ボタンの文言は hieizan/js/i18n.js の courseEarly・courseLate
+- このマップだけの差分（sync_higashiyama.py を実行したあとにかける）:
+  - 一覧の上のボタンは「山を越える」を先（左）に
+  - コースを選んだことがない人には、日付で最初のコースを決める：12月7日〜3月19日は冬のコース
+    （2026年の山内シャトルバスの運行期間 3/20〜12/6 から。2027年の期間が発表されたら WINTER_FROM / WINTER_TO を直す）
+- 「行った」印・選んだ場所の保存キーは、コースごとに kyoto-maps-hieizan-…-early / -late（前のキーとは別になる）
+- hieizan/js/i18n.js はこのマップ専用なので触らない
+- このマップだけ更新したときは、data_v（データ）と bump（css・js）の数字を上げる
 """
-import os, re, shutil
+import os, runpy
+
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-s = open(f'{R}/eizan-line/js/app.js', encoding='utf-8').read()
+WINTER_FROM, WINTER_TO = 1207, 319   # 月×100＋日
 
-def rep(a, b, n=1):
-    global s
-    assert s.count(a) == n, (a[:80], s.count(a))
-    s = s.replace(a, b)
+CFG = dict(
+    id='hieizan', i18n='HIEIZAN_I18N', count=11, data_v=2, bump=101,
+    head='京都から日帰り 比叡山延暦寺と坂本',
+    title='京都から日帰り 比叡山延暦寺と坂本 Mt. Hiei MAP',
+    desc='三条京阪9:01の電車で坂本へ。日吉大社から日本一長いケーブルカーで延暦寺の東塔へ上がり、峰道でお昼、横川・西塔を山の上のバスで回って、ロープウェイで京都側の八瀬へ下りる1日ルートマップ。冬は坂本から往復するコースも。乗り遅れたときの次の便、最後のバス、夜の過ごし方まで。A day trip from Kyoto over Mt. Hiei: Sakamoto and Hiyoshi Taisha, the Sakamoto Cable up to Enryaku-ji, lunch at Minemichi, Yokawa and Saito by the mountain bus, and down to Yase by ropeway, with a winter course up and back from Sakamoto, fallback times and the last buses.',
+    main='比叡山延暦寺と坂本', alt='Mt. Hiei & Sakamoto', sub='京都から日帰り Mt. Hiei MAP')
+runpy.run_path(os.path.join(R, 'scripts', 'sync_higashiyama.py'), init_globals={'CFG': CFG})
 
-s = s.replace(s.split('(function () {')[0], """/* 京都から日帰り 比叡山延暦寺と坂本 — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/hieizan.json（写真は ../images/hieizan/）. Texts: js/i18n.js
-   eizan-line/js/app.js の複製。違いは scripts/sync_hieizan.py の説明を参照
-   （テンプレートを更新したら python3 scripts/sync_hieizan.py で写し直す） */
-""", 1)
-assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
-s = s.replace("window.EIZAN_I18N", "window.HIEIZAN_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-hieizan-")
-s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 11;", s)
-m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/hieizan.json?v=1')")
 
-# 最初から「選んで回る」
-rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
-    "mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';")
+def fix(path, pairs):
+    s = open(path, encoding='utf-8').read()
+    for a, b in pairs:
+        assert s.count(a) == 1, (path, a[:80], s.count(a))
+        s = s.replace(a, b)
+    open(path, 'w', encoding='utf-8').write(s)
 
-# 番号だけのリンク
-rep("""    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（スタート前の2か所を含む）なので 2 を引いて開く
-    var m = location.hash.match(/^#spot-(\\d+)$/), old = location.hash.match(/^#(\\d+)$/);
-    var no = m ? Number(m[1]) : old ? Number(old[1]) - 2 : 0;""",
-"""    // #spot-16 の形。番号だけの #16 でも同じスポットを開く
-    var m = location.hash.match(/^#spot-(\\d+)$/) || location.hash.match(/^#(\\d+)$/);
-    var no = m ? Number(m[1]) : 0;""")
 
-# 写真ごとのクレジット
-rep("  function photoUrl(f) { return data.photoBase + f; }",
-"""  // a photo is a file name, or {file, credit: {author, license, page}} for a photo taken from the web
-  function photoFile(p) { return typeof p === 'string' ? p : p.file; }
-  function photoUrl(p) { return data.photoBase + photoFile(p); }
-  function creditHtml(p) {
-    var c = p && p.credit;
-    if (!c) return '';
-    return '<a href="' + esc(c.page) + '" target="_blank" rel="noopener noreferrer">' + esc(T().photoBy) + esc(c.author) + ' / ' + esc(c.license) + '</a>';
-  }
-  function showCredit(el, p) {
-    if (!el) return;
-    var h = creditHtml(p);
-    el.innerHTML = h;
-    el.hidden = !h;
-  }""")
-rep("""        }).join('') + '</div>' + badge(s.no) +""",
-"""        }).join('') + '</div>' + badge(s.no) +
-        '<span class="l-cr"' + (creditHtml(s.photos[0]) ? '' : ' hidden') + '>' + creditHtml(s.photos[0]) + '</span>' +""")
-rep("""        var box = sl.parentNode, c = box.querySelector('.l-count');
-        if (c) c.textContent = (i + 1) + ' / ' + n;""",
-"""        var box = sl.parentNode, c = box.querySelector('.l-count');
-        if (c) c.textContent = (i + 1) + ' / ' + n;
-        var sp = byNo[Number(sl.dataset.open)];
-        if (sp) showCredit(box.querySelector('.l-cr'), sp.photos[i]);""")
-rep("""    $('slide-next').disabled = i >= n - 1;
-  }""", """    $('slide-next').disabled = i >= n - 1;
-    if (activeNo && byNo[activeNo]) showCredit($('ph-credit'), byNo[activeNo].photos[i]);
-  }""")
-rep("""    $('detail-scroll').scrollTop = 0;
-    setActive(no);""", """    $('detail-scroll').scrollTop = 0;
-    setActive(no);
-    showCredit($('ph-credit'), s.photos[0]);""")
-rep("""    [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
-      img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
-    });
-  }""", """    [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
-      img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
-    });
-    if (activeNo === s.no) updateCounter();   // photo credit in the current language
-  }""")
-
-# 要確認
-rep("""    if (rows.length) html += '<p class="checked">' + esc(fill(t.checked, { d: t.checkedDate })) + '</p>';""",
-"""    if (rows.length) html += '<p class="checked">' + esc(fill(inf.verified === false ? t.unchecked : t.checked, { d: t.checkedDate })) + '</p>';""")
-
-# 最初に映す範囲
-rep("""  function fitAll() {
-    var r = routeSpots();""", """  // 地図を開いたときは歩くエリア（data.focus）だけを映す。「全体を表示」ボタン（e がある）では全部
-  function fitAll(e) {
-    var r = routeSpots(), f = !e && data.focus;
-    if (f) r = r.filter(function (x) { return x.no >= f.first && x.no <= f.last; });""")
-app_js = s
-
-# index.html
-h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
-h = re.sub(r'<title>.*?</title>', '<title>京都から日帰り 比叡山延暦寺と坂本 Mt. Hiei MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="京都からJRで16分の坂本から、日本一長いケーブルカーで比叡山へ。石垣の町・日吉大社・延暦寺の東塔・西塔・横川を回り、京都側の八瀬へ下りる1日ルートマップ。Mt. Hiei from Kyoto: Sakamoto, Hiyoshi Taisha and the three areas of Enryaku-ji, up by one cable car and down by another.">', h)
-h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1比叡山延暦寺と坂本\2', h)
-h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Mt. Hiei & Sakamoto\2', h)
-h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都から日帰り Mt. Hiei MAP\2', h)
-a = '<span class="ph-area" id="ph-area"></span>'
-assert h.count(a) == 1
-h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
-# CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-EXTRA = {'css/style.css': 0, 'js/i18n.js': 0, 'js/app.js': 0}  # このマップだけ更新したときに上げる分
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
-
-css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
-/* 比叡山: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */
-.l-cr, .ph-credit { position: absolute; z-index: 1; max-width: calc(100% - 120px); font-size: 10.5px; line-height: 1.35; color: #fff; background: rgba(18,22,20,.62); padding: 3px 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.l-cr a, .ph-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
-.l-cr { left: 10px; bottom: 10px; }
-.ph-credit { right: 10px; top: 10px; }
-.l-cr[hidden], .ph-credit[hidden] { display: none; }
-"""
-
-# ここまで来たら全部書き込む
-os.makedirs(f'{R}/hieizan/js', exist_ok=True); os.makedirs(f'{R}/hieizan/css', exist_ok=True)
-open(f'{R}/hieizan/css/style.css', 'w', encoding='utf-8').write(css)
-open(f'{R}/hieizan/js/app.js', 'w', encoding='utf-8').write(app_js)
-open(f'{R}/hieizan/index.html', 'w', encoding='utf-8').write(h)
-print('synced')
+fix(f'{R}/hieizan/js/app.js', [(
+    "  if (course.id !== 'early') course.id = 'late';",
+    f"""  // コースを選んだことがない人には、日付で最初のコースを決める（12月7日〜3月19日は山内のバスが走らないので冬のコース。scripts/sync_hieizan.py）
+  if (!course.id) {{
+    var today = new Date(), md = (today.getMonth() + 1) * 100 + today.getDate();
+    course.id = md >= {WINTER_FROM} || md <= {WINTER_TO} ? 'early' : 'late';
+  }}
+  if (course.id !== 'early') course.id = 'late';""")])
+fix(f'{R}/hieizan/index.html', [(
+    '      <button type="button" data-course="early" data-t="courseEarly">早朝に出発</button>\n'
+    '      <button type="button" data-course="late" data-t="courseLate">9〜10時に出発</button>\n',
+    '      <button type="button" data-course="late" data-t="courseLate">山を越える</button>\n'
+    '      <button type="button" data-course="early" data-t="courseEarly">冬：坂本から往復</button>\n')])
+print('hieizan: winter default and button order applied')
