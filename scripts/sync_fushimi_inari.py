@@ -10,7 +10,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='fushimi-inari', i18n='FUSHIMI_INARI_I18N', count=7, data_v=1, bump=100,
+    id='fushimi-inari', i18n='FUSHIMI_INARI_I18N', count=7, data_v=2, bump=101,
     head='京都 伏見稲荷から七条へ（伏見稲荷・東福寺・泉涌寺・三十三間堂・梅湯）',
     title='京都 伏見稲荷から七条へ｜千本鳥居・東福寺・銭湯とビール Fushimi Inari MAP',
     desc='朝6時の伏見稲荷から、東福寺、泉涌寺、三十三間堂へ。夕方は高瀬川ぞいの銭湯とクラフトビール。早朝に出るコースと9〜10時に出るコースを選べる1日ルートマップ。A one-day route in Kyoto from Fushimi Inari at 6 am to Tofuku-ji, Sennyu-ji and Sanjusangen-do, ending with a public bath and craft beer by the Takase River.',
