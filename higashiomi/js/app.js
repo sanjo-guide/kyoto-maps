@@ -39,10 +39,22 @@
   course.file = 'higashiomi' + (course.id === 'sanzan' ? '-sanzan' : '') + '.json';
   // 「行った」印・回り方・選んだ場所はコースごとに別に保存する（番号がコースで変わるため）
   KEY_VISITED += '-' + course.id; KEY_MODE += '-' + course.id; KEY_PICKS += '-' + course.id;
+  // シャトルバスが終わったあと（scripts/sync_higashiomi.py の TAXI_FROM・WINTER_FROM）は、湖東三山のデータと紹介ページを替える
+  var season = todayJST() >= '2026-12-07' ? 'winter' : todayJST() >= '2026-11-30' ? 'taxi' : '';
+  var sanzanOff = !!season && course.id === 'sanzan';
+  if (sanzanOff) {
+    course.file = 'higashiomi-sanzan-' + season + '.json';
+    KEY_VISITED += '-off'; KEY_MODE += '-off'; KEY_PICKS += '-off';
+  }
   // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
   Object.keys(I18N).forEach(function (l) {
     var o = I18N[l].introFor && I18N[l].introFor[course.id];
     if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+    if (season && I18N[l].courseSanzanTaxi) I18N[l].courseSanzan = I18N[l].courseSanzanTaxi;
+    (sanzanOff ? (season === 'winter' ? ['sanzanTaxi', 'sanzanWinter'] : ['sanzanTaxi']) : []).forEach(function (name) {
+      var w = I18N[l].introFor && I18N[l].introFor[name];
+      if (w) Object.keys(w).forEach(function (k) { I18N[l].intro[k] = w[k]; });
+    });
   });
 
   /* ---------- helpers ---------- */
@@ -879,7 +891,7 @@
     route();
   }
 
-  fetch('../data/routes/' + course.file + '?v=5')
+  fetch('../data/routes/' + course.file + '?v=6')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

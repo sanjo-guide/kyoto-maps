@@ -1,0 +1,1264 @@
+{
+ "id": "higashiomi",
+ "course": "sanzan",
+ "_note": "京都から日帰り 湖東の紅葉、コース「湖東三山」の11月30日から（紅葉シャトルバスが終わったあと。scripts/sync_higashiomi.py の日付で読み分ける）。京都駅9:34（土日祝9:37）→河瀬10:34（10:32）→愛のりタクシー10:51→西明寺11:08（お昼）→12:56→金剛輪寺13:03→14:42→稲枝15:54→16:13の電車で京都駅17:06。番号の順はシャトルバスの日と違う（保存キーに -off が付く）。百済寺は別の日に。12月6日までの分で、教林坊の夜が寄り道に入る。このファイルは scripts/build_higashiomi_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "area": {
+    "ja": "河瀬・西明寺",
+    "en": "Kawase & Saimyoji"
+   },
+   "title": {
+    "ja": "乗合タクシーで国宝の本堂へ",
+    "en": "A shared taxi to a National Treasure hall"
+   }
+  },
+  {
+   "first": 3,
+   "last": 3,
+   "area": {
+    "ja": "金剛輪寺",
+    "en": "Kongorinji"
+   },
+   "title": {
+    "ja": "千体地蔵の参道と、午後の本堂",
+    "en": "A thousand Jizo and an afternoon at the hall"
+   }
+  },
+  {
+   "first": 4,
+   "last": 4,
+   "area": {
+    "ja": "別の日に：百済寺",
+    "en": "Another day: Hyakusaiji"
+   },
+   "title": {
+    "ja": "苔の参道は午後の半日で",
+    "en": "The mossy approach, as a half day"
+   }
+  },
+  {
+   "first": 5,
+   "last": 5,
+   "area": {
+    "ja": "寄り道：教林坊",
+    "en": "Option: Kyorinbo"
+   },
+   "title": {
+    "ja": "帰りに夜のライトアップ",
+    "en": "An evening illumination on the way home"
+   }
+  }
+ ],
+ "photoBase": "../images/higashiomi/",
+ "plan": {
+  "_note": "「選んで回る」の設定。河瀬駅はいつも入る。defaultPicks は乗合タクシーの時間割どおりの2か所（西明寺→金剛輪寺）。百済寺は別の日に、教林坊（12/6まで）は寄り道。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "defaultPicks": [
+   2,
+   3
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 1,
+    "rule": {
+     "any": [
+      3
+     ],
+     "none": [
+      2
+     ]
+    },
+    "text": {
+     "ja": "西明寺に寄らない日は、河瀬ではなく稲枝へ。京都駅9:34発（土日祝9:37発）で稲枝10:31（10:29）着、990円。10:51発の愛のりタクシーで金剛輪寺に12:03着（800円）。お昼は持っていきます。",
+     "en": "Skipping Saimyoji? Go to Inae instead of Kawase: the 9:34 from Kyoto Station (9:37 at weekends) arrives 10:31 (10:29), ¥990. The 10:51 Ainori Taxi reaches Kongorinji at 12:03 (¥800). Bring lunch."
+    }
+   },
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      3,
+      5
+     ]
+    },
+    "text": {
+     "ja": "金剛輪寺に寄らない日は、西明寺14:12発の愛のりタクシーで河瀬駅14:29着、14:41発の電車で京都駅15:37着（990円）。",
+     "en": "Skipping Kongorinji? The 14:12 Ainori Taxi from Saimyoji reaches Kawase at 14:29; the 14:41 train reaches Kyoto Station at 15:37 (¥990)."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "百済寺は、西明寺・金剛輪寺の時間割には入りません。別の日に、京都駅13:00発で出かけてください。",
+     "en": "Hyakusaiji doesn’t fit into the Saimyoji and Kongorinji timetable. Go on another day, on the 13:00 from Kyoto Station."
+    }
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "andAny": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "金剛輪寺からのタクシーは15:42発（稲枝16:54着）で予約し、17:13発の電車で安土へ。安土駅のタクシーは17:20に迎えに来てもらうよう予約しておきます。",
+     "en": "Book the 15:42 taxi from Kongorinji (Inae 16:54), then take the 17:13 train to Azuchi. Book a taxi to meet you at Azuchi at 17:20."
+    }
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "andAny": [
+      2
+     ],
+     "none": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "金剛輪寺に寄らない日は、西明寺16:12発の愛のりタクシーで河瀬駅16:29着、17:10発の電車で安土17:20着（240円）。",
+     "en": "Skipping Kongorinji? The 16:12 Ainori Taxi from Saimyoji reaches Kawase at 16:29; the 17:10 train reaches Azuchi at 17:20 (¥240)."
+    }
+   }
+  ]
+ },
+ "sources": [
+  {
+   "what": "教林坊：秋の公開 11月1日〜12月15日 毎日、9:30〜16:30（ライトアップ期間は8:30から）、大人1,000円・小中学生300円。ライトアップ 令和8年11月14日〜12月6日 17:30〜19:30（19時受付終了）。予約の記載なし（団体バスだけ事前連絡）。三脚・一脚・長時間の撮影目的の入場は不可",
+   "url": "https://kyourinbo.jimdofree.com/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "教林坊 アクセス：JR安土駅よりタクシー約10分（2,500円前後）・徒歩約60分。普通車100台",
+   "url": "https://kyourinbo.jimdofree.com/ホーム/アクセス-駐車場ご案内/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "タクシー会社：永源寺タクシー 0748-27-1151、近江タクシー湖東営業所 0748-37-0106、滋賀第一交通 近江八幡営業所 0748-37-4000（料金の目安の記載なし）",
+   "url": "https://www.higashiomi.net/guide/access.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月25日：19:28→近江八幡19:37新快速→20:12（770円）、次19:50→20:36",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=19&m1=2&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月28日：19:28→近江八幡19:37新快速→20:12（770円）、次19:55→20:41",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=19&m1=2&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 12月5日：19:28→20:12（770円）、次19:55→20:41",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=19&m1=2&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月25日：22:33→23:20、23:04→23:50、最終23:23→0:12",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=22&m1=2&m2=8&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月28日：22:33→23:20、23:04→23:50、最終23:23→0:12",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=22&m1=2&m2=8&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→三条京阪 11月25日：地下鉄20:15→20:32（烏丸御池で乗り換え・260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&y=2026&m=11&d=25&hh=20&m1=1&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→河瀬 11月30日：9:34普通→10:34（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B2%B3%E7%80%AC&y=2026&m=11&d=30&hh=10&m1=5&m2=1&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→河瀬 12月5日：9:37普通→10:32（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B2%B3%E7%80%AC&y=2026&m=12&d=05&hh=10&m1=5&m2=1&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→河瀬 12月6日：9:37普通→10:32（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B2%B3%E7%80%AC&y=2026&m=12&d=06&hh=10&m1=5&m2=1&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→河瀬 12月28日：9:34普通→10:34（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B2%B3%E7%80%AC&y=2026&m=12&d=28&hh=10&m1=5&m2=1&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→京都 11月30日：9:09→9:25（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=30&hh=09&m1=0&m2=3&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→京都 12月5日：9:07→9:21（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=09&m1=0&m2=3&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→京都 11月30日：16:13→17:06、17:13→18:06（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=30&hh=15&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→京都 12月5日：16:13→17:06、17:13→18:06（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=15&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→京都 12月28日：16:13→17:06、17:13→18:06（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=28&hh=15&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→京都 11月30日：18:11→19:06（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=30&hh=17&m1=5&m2=6&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→京都 12月5日：18:11→19:06（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=17&m1=5&m2=6&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→稲枝 11月30日：9:34→10:31（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E7%A8%B2%E6%9E%9D&y=2026&m=11&d=30&hh=10&m1=5&m2=1&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→稲枝 12月5日：9:37→10:29（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E7%A8%B2%E6%9E%9D&y=2026&m=12&d=05&hh=10&m1=5&m2=1&type=4&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 河瀬→京都 11月30日：14:41→15:37（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B2%B3%E7%80%AC&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=30&hh=14&m1=3&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 河瀬→京都 12月5日：14:41→15:37（990円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B2%B3%E7%80%AC&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=14&m1=3&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 河瀬→安土 11月30日：17:10→17:20（240円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B2%B3%E7%80%AC&to=%E5%AE%89%E5%9C%9F&y=2026&m=11&d=30&hh=16&m1=3&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 河瀬→安土 12月5日：17:10→17:20（240円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B2%B3%E7%80%AC&to=%E5%AE%89%E5%9C%9F&y=2026&m=12&d=05&hh=16&m1=3&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→安土 11月30日：17:13→17:20（200円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E5%AE%89%E5%9C%9F&y=2026&m=11&d=30&hh=16&m1=5&m2=6&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 稲枝→安土 12月5日：17:13→17:20（200円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%A8%B2%E6%9E%9D&to=%E5%AE%89%E5%9C%9F&y=2026&m=12&d=05&hh=16&m1=5&m2=6&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 11月30日：18:58→近江八幡19:06新快速→19:42（770円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=30&hh=18&m1=4&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 安土→京都 12月5日：18:58→近江八幡19:06新快速→19:42（770円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%AE%89%E5%9C%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=18&m1=4&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→百済寺本坊前 11月30日：13:00→近江八幡13:34/13:44→八日市14:04、バス14:18→14:47（1,340円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E7%99%BE%E6%B8%88%E5%AF%BA%E6%9C%AC%E5%9D%8A%E5%89%8D&y=2026&m=11&d=30&hh=12&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→百済寺本坊前 12月5日：13:00→14:47（1,340円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E7%99%BE%E6%B8%88%E5%AF%BA%E6%9C%AC%E5%9D%8A%E5%89%8D&y=2026&m=12&d=05&hh=12&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→百済寺本坊前 12月28日：13:00→14:47（1,340円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E7%99%BE%E6%B8%88%E5%AF%BA%E6%9C%AC%E5%9D%8A%E5%89%8D&y=2026&m=12&d=28&hh=12&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 百済寺本坊前→京都 12月5日：17:54→19:42（1,340円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%99%BE%E6%B8%88%E5%AF%BA%E6%9C%AC%E5%9D%8A%E5%89%8D&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=05&hh=17&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 百済寺本坊前→京都 12月28日：17:54→19:42（1,340円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%99%BE%E6%B8%88%E5%AF%BA%E6%9C%AC%E5%9D%8A%E5%89%8D&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=28&hh=17&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "湖東三山の2026年のチラシ（近江鉄道のページのPDF）：西明寺 入山料800円・8:30〜16:30（閉門17:00）、宝冠毘沙門天 初公開 10月1日〜12月13日、本堂後陣仏像群特別拝観 11/14〜30。金剛輪寺 800円・8:30〜16:30（閉門17:00）、秘仏大黒天 10月31日〜12月13日、三重塔大日如来開扉 11/14〜29（好天時のみ）。百済寺 600円。千成亭ぎゅ〜じあむ 10:00〜16:00・月火定休（11月は無休）。京阪バス定期観光（京都駅八条口発、湖東三山・永源寺・昼食、11/14〜12/6 大人14,000円、12/7〜12/13 9,900円）",
+   "url": "https://www.ohmitetudo.co.jp/file/bus-icoico-event-kotosanzanshuttlebus2026-chirashi.pdf.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "西明寺 拝観のご案内：8:30〜17:00（最終受付は閉門30分前）、料金表 大人800円・中人500円・小人300円（令和5年4月より変更）、本堂後陣仏像群特別拝観料1,000円、境内での持ち込み飲食禁止",
+   "url": "https://saimyouji.com/information/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休",
+   "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_koura_0319fix.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（同じC区間400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休",
+   "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_aisyo_0319fix.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "西明寺のアクセス：愛のりタクシー 河瀬駅東口から800円、西明寺→金剛輪寺の発時刻（毎時56分）",
+   "url": "https://saimyouji.com/access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "百済寺の交通案内：八日市駅からタクシー約10分、ちょこっとバス約30分",
+   "url": "http://hyakusaiji.jp/info_access/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "金剛輪寺：8:30〜16:30（17:00閉山）、大人800円・中学生300円・小学生200円。華楽坊は5名以上の予約から。愛のりタクシー 稲枝駅→金剛輪寺800円、金剛輪寺発10:42〜16:42 毎時42分",
+   "url": "https://kongourinji.jp/access",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "百済寺：8:30〜17:00（受付16:30まで）、大人600円・中学生300円・小学生200円。令和8年秋季ライトアップ 11月14日〜30日、平日17時〜最終受付19時・閉門19時30分、土日祝17時〜最終受付20時30分・閉門21時",
+   "url": "http://hyakusaiji.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江牛一筋＠千成亭ぎゅ〜じあむ：甲良町池寺1-5（西明寺門前）、営業時間11:00〜15:00、定休日 月曜・火曜",
+   "url": "https://gyuseum.jp/",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "kawaseeki",
+   "name": {
+    "ja": "京都から河瀬駅へ（乗合タクシーのりば）",
+    "en": "Kyoto to Kawase Station (shared taxi stop)"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "京都駅9:34発（土日祝9:37発）の普通電車で河瀬へ。東口10:51発の予約制の乗合タクシーで西明寺へ向かいます。",
+    "en": "Take the 9:34 local from Kyoto Station (9:37 at weekends and holidays) to Kawase, then the bookable 10:51 shared taxi from the east exit to Saimyoji."
+   },
+   "lat": 35.22518,
+   "lng": 136.225,
+   "caution": {
+    "ja": "要予約・現金のみ",
+    "en": "Booking required · cash only"
+   },
+   "text": {
+    "ja": "京都から河瀬駅へ\n\n2026年の紅葉シャトルバスは11月29日で終わりました。11月30日からは、予約制の乗合タクシー「愛のりタクシー」で、湖東三山のうち西明寺と金剛輪寺の2つを回ります。\n\n平日は京都駅9:34発の普通電車「米原」行きで、河瀬（かわせ）に10:34着。土日祝は9:37発で10:32着。乗り換えなしで990円です。東口10:51発の愛のりタクシーで、西明寺に11:08ごろ着きます（800円）。写真は途中で通る近江八幡駅です。\n\nこの日に乗るタクシーは3回。①河瀬駅東口10:51 → 西明寺11:08（800円）、②西明寺12:56 → 金剛輪寺13:03（400円）、③金剛輪寺14:42 → 稲枝（いなえ）駅15:54（800円）。相乗りなので、着く時刻は多少前後します。\n\n予約は近江タクシー彦根営業所 0749-22-1111へ、乗る1週間前から1時間前までに。「愛のりタクシーお願いします」と伝えて、3回分をまとめて頼みます。予約のない便は走りません。支払いは降りるときに現金で（カード・ICカードは使えません）。2人以上でまとめて予約して同じ停留所から乗ると、運賃は半額になります。Web予約もありますが、利用者登録が必要です。\n\n三条のあたりからは、地下鉄で京都駅へ（烏丸御池で乗り換え、約15分・260円）。平日は三条京阪9:09発、土日祝は9:07発なら間に合います。\n\nおすすめ出発時間：京都駅 9:34（土日祝は9:37）",
+    "en": "Kyoto to Kawase Station\n\nThe 2026 autumn shuttle ended on 29 November. From 30 November you visit two of the three Koto Sanzan temples, Saimyoji and Kongorinji, by the bookable “Ainori Taxi” shared taxi.\n\nOn weekdays, take the 9:34 local for Maibara from Kyoto Station, reaching Kawase at 10:34. At weekends and holidays, take the 9:37, arriving at 10:32. It runs direct, ¥990. The 10:51 Ainori Taxi from the east exit reaches Saimyoji around 11:08 (¥800). The photo is Omi-Hachiman Station, which you pass on the way.\n\nYou take three taxis: (1) Kawase east exit 10:51 → Saimyoji 11:08 (¥800), (2) Saimyoji 12:56 → Kongorinji 13:03 (¥400), (3) Kongorinji 14:42 → Inae Station 15:54 (¥800). Rides are shared, so arrival times vary a little.\n\nBook with Ohmi Taxi Hikone, 0749-22-1111, from a week to an hour before each ride. Ask for “Ainori Taxi” and book all three at once; a run with no booking doesn’t operate. Pay in cash as you get off (no cards or IC cards). Two or more people booked together from the same stop pay half fare. Web booking needs user registration.\n\nFrom around Sanjo, take the subway to Kyoto Station (change at Karasuma Oike; about 15 minutes, ¥260). The 9:09 from Sanjo Keihan on weekdays, or the 9:07 at weekends and holidays, gets you there in time.\n\nRecommended departure: Kyoto Station 9:34 (9:37 at weekends and holidays)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "河瀬駅 東口",
+      "en": "Kawase Station (east exit)"
+     },
+     "lat": 35.22518,
+     "lng": 136.225,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E7%80%AC%E9%A7%85%20%E6%9D%B1%E5%8F%A3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "愛のりタクシーの時刻表（彦根市）",
+      "en": "Ainori Taxi timetables (Hikone City, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html",
+      "en": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "愛のりタクシーの予約のしかた（彦根市）",
+      "en": "How to book the Ainori Taxi (Hikone City, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.hikone.lg.jp/kakuka/toshi_seisaku/5/2_3/28164.html",
+      "en": "https://www.city.hikone.lg.jp/kakuka/toshi_seisaku/5/2_3/28164.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "湖東三山観光振興協議会",
+      "en": "Koto Sanzan tourism council (Japanese)"
+     },
+     "url": {
+      "ja": "https://kotousanzan.jp/",
+      "en": "https://kotousanzan.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html",
+     "head": {
+      "ja": "3回とも予約・現金だけ",
+      "en": "Book all three rides · cash only"
+     },
+     "text": {
+      "ja": "乗合タクシーは、予約がないと来ません。3回分を1時間前までに、近江タクシー彦根営業所 0749-22-1111へ。支払いは現金だけです。",
+      "en": "The shared taxi only comes if booked. Book all three rides at least 1 hour ahead with Ohmi Taxi Hikone, 0749-22-1111. Cash only."
+     }
+    },
+    {
+     "from": null,
+     "to": "2027-01-03",
+     "url": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html",
+     "head": {
+      "ja": "12月29日〜1月3日は運休",
+      "en": "No service 29 Dec – 3 Jan"
+     },
+     "text": {
+      "ja": "愛のりタクシーは12月29日〜1月3日は走りません。この期間は、この時間割では回れません。",
+      "en": "The Ainori Taxi doesn’t run from 29 December to 3 January, so this timetable doesn’t work on those days."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "平日：京都駅 9:34 普通 → 河瀬 10:34。土日祝：京都駅 9:37 → 河瀬 10:32。990円",
+       "en": "Weekdays: Kyoto Station 9:34 local → Kawase 10:34. Weekends: Kyoto Station 9:37 → Kawase 10:32. ¥990"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "taxi",
+      "text": {
+       "ja": "愛のりタクシー：河瀬駅東口 10:51 → 西明寺 11:08（800円）。予約 0749-22-1111、1週間前〜1時間前",
+       "en": "Ainori Taxi: Kawase east exit 10:51 → Saimyoji 11:08 (¥800). Book on 0749-22-1111, from a week to 1 hour ahead"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "三条京阪 → 京都駅：地下鉄（烏丸御池で乗り換え）約15分・260円",
+       "en": "Sanjo Keihan → Kyoto Station: subway (change at Karasuma Oike), about 15 min, ¥260"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "電車は乗換案内（2026年11月30日、12月5日・6日・28日のダイヤ）、愛のりタクシーは彦根市の時刻表（2026年4月改正）で、2026年11月22日に確認しました。",
+     "en": "Trains checked on a route planner (30 Nov and 5, 6, 28 Dec 2026), the Ainori Taxi on Hikone City’s timetable (revised April 2026), 22 Nov 2026."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "omihachimaneki-1.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "saimyoji",
+   "name": {
+    "ja": "西明寺（湖東三山）",
+    "en": "Saimyoji Temple (Koto Sanzan)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "湖東三山のいちばん北。鎌倉時代の本堂と三重塔は、どちらも国宝。門前で近江牛のお昼にして（月・火は休み）、乗合タクシーで金剛輪寺へ。",
+    "en": "The northernmost Koto Sanzan temple, with a Kamakura-period main hall and pagoda that are both National Treasures. Omi beef by the gate (closed Mon–Tue), then the shared taxi to Kongorinji."
+   },
+   "lat": 35.18334,
+   "lng": 136.28475,
+   "text": {
+    "ja": "西明寺（さいみょうじ）\n\n湖東三山のいちばん北にある天台宗のお寺です。鎌倉時代の本堂と三重塔は、どちらも国宝。杉木立の中に、ひわだぶきの屋根が2つ並びます。本坊の庭「蓬莱庭（ほうらいてい）」から本堂までは石段を上ります。\n\n河瀬駅からの愛のりタクシーで11:08ごろ着。停留所は名勝庭園の前の受付です。1時間ほどお参りしたら、お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、月・火は休み。公式サイト）。\n\n境内は持ち込みの飲食ができません。月・火に行くなら、京都駅を出る前に食べるか、持ってきたものを境内の外で。早く終わったら、11:56発のタクシー（金剛輪寺12:03着）にもできます。予約のときに決めてください。\n\n12:56発の愛のりタクシーで金剛輪寺へ（13:03着・400円）。\n\nおすすめ訪問時間：11:08〜12:56（お昼を含む）",
+    "en": "Saimyoji Temple\n\nA Tendai temple, the northernmost of the Koto Sanzan. Its Kamakura-period main hall and three-storied pagoda are both National Treasures, their cypress-bark roofs side by side among tall cedars. From the garden of the main residence, Horai-tei, stone steps lead up to the main hall.\n\nThe Ainori Taxi from Kawase arrives around 11:08; the stop is the reception in front of the garden. Give the temple about an hour, then have lunch at “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, closed Mondays and Tuesdays; official site).\n\nYou can’t eat or drink your own food in the grounds. On a Monday or Tuesday, eat before you leave Kyoto or outside the grounds. If you need less time, there is an 11:56 taxi (Kongorinji 12:03); decide when you book.\n\nTake the 12:56 Ainori Taxi to Kongorinji (13:03, ¥400).\n\nRecommended visit time: 11:08–12:56 (with lunch)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "西明寺",
+      "en": "Saimyoji"
+     },
+     "lat": 35.18334,
+     "lng": 136.28475,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E6%98%8E%E5%AF%BA%20%E7%94%B2%E8%89%AF%E7%94%BA%E6%B1%A0%E5%AF%BA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "西明寺 公式サイト（拝観のご案内）",
+      "en": "Saimyoji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://saimyouji.com/information/",
+      "en": "https://saimyouji.com/information/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "近江牛一筋＠千成亭ぎゅ〜じあむ",
+      "en": "Sennaritei Gyuseum (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://gyuseum.jp/",
+      "en": "https://gyuseum.jp/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "愛のりタクシーの時刻表（彦根市）",
+      "en": "Ainori Taxi timetables (Hikone City, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html",
+      "en": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-11-30",
+     "url": "https://gyuseum.jp/",
+     "head": {
+      "ja": "11月30日のお昼は電話で確認",
+      "en": "Lunch on 30 Nov: phone ahead"
+     },
+     "text": {
+      "ja": "11月30日は月曜です。千成亭ぎゅ〜じあむは公式サイトでは月・火が定休、湖東三山のチラシでは11月は無休なので、電話（0749-29-9090）で確かめてください。境内は持ち込みの飲食ができません。",
+      "en": "30 November is a Monday. Sennaritei Gyuseum’s website lists Mondays and Tuesdays as closed, while the Koto Sanzan leaflet says it opens every day in November, so phone ahead (0749-29-9090). No food or drink of your own in the grounds."
+     }
+    },
+    {
+     "from": "2026-12-01",
+     "to": null,
+     "url": "https://gyuseum.jp/",
+     "head": {
+      "ja": "門前のお昼は月・火が休み",
+      "en": "Lunch by the gate: closed Mon–Tue"
+     },
+     "text": {
+      "ja": "千成亭ぎゅ〜じあむは月・火が定休です。境内は持ち込みの飲食ができません。",
+      "en": "Sennaritei Gyuseum closes on Mondays and Tuesdays. No food or drink of your own in the grounds."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:30〜17:00（受付は16:30まで）",
+       "en": "8:30–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋：本堂後陣の仏像群の特別拝観 11月30日まで（1,000円）",
+       "en": "Autumn 2026: statues behind the altar until 30 Nov (¥1,000)"
+      },
+      "until": "2026-11-30",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋：宝冠毘沙門天像の公開 12月13日まで",
+       "en": "Autumn 2026: crowned Bishamonten on show until 13 Dec"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "入山料 大人800円、中学生500円、小学生300円",
+       "en": "¥800 adults, ¥500 junior high, ¥300 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（月・火定休）",
+       "en": "Lunch: Sennaritei Gyuseum 11:00–15:00 (closed Mon–Tue)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "taxi",
+      "text": {
+       "ja": "愛のりタクシー：西明寺 12:56 → 金剛輪寺 13:03（400円）。河瀬駅へ戻る便は毎時12分発 → 29分着（800円、16:12発まで）",
+       "en": "Ainori Taxi: Saimyoji 12:56 → Kongorinji 13:03 (¥400). Back to Kawase at :12, arriving :29 (¥800; until 16:12)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "西明寺と千成亭ぎゅ〜じあむの公式サイト、湖東三山の2026年のチラシ、愛のりタクシーは彦根市の時刻表（2026年4月改正）で、2026年11月22日に確認しました。",
+     "en": "Checked on the Saimyoji and Gyuseum websites, the 2026 Koto Sanzan leaflet, and the Ainori Taxi on Hikone City’s timetable (revised April 2026), 22 Nov 2026."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "saimyoji-1.jpg",
+     "credit": {
+      "author": "Maechan0360",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASaimyo-Ji_01.jpg"
+     }
+    },
+    {
+     "file": "saimyoji-2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASaimyoji_Kora_Shiga_pref11bs4592.jpg"
+     }
+    },
+    {
+     "file": "saimyoji-3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASaimyoji_Kora_Shiga_pref15n3900.jpg"
+     }
+    },
+    {
+     "file": "saimyoji-4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASaimyoji_Kora_Shiga_pref14n3900.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "kongorinji",
+   "name": {
+    "ja": "金剛輪寺（湖東三山）",
+    "en": "Kongorinji Temple (Koto Sanzan)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "千体のお地蔵さまが並ぶ参道を上ると、国宝の本堂のまわりに「血染めのもみじ」と呼ばれる木々。14:42の乗合タクシーまでゆっくり。",
+    "en": "An approach lined with a thousand Jizo statues climbs to a National Treasure main hall among the “blood-dyed” maples. Take your time until the 14:42 shared taxi."
+   },
+   "lat": 35.16128,
+   "lng": 136.28304,
+   "caution": {
+    "ja": "受付は16:30まで",
+    "en": "Last entry 16:30"
+   },
+   "text": {
+    "ja": "金剛輪寺（こんごうりんじ）\n\n湖東三山のまん中にある天台宗のお寺です。総門から本堂までは上りの参道で、両わきに千体のお地蔵さまが並びます。上りきると二天門、その奥に鎌倉時代の本堂（国宝）と三重塔。本堂のまわりと庭のもみじは、色の深さから「血染めのもみじ」と呼ばれています（公式サイトより）。写真は2022年11月17日のものです。\n\n西明寺からの愛のりタクシーで13:03ごろ着。総門から本堂までは上りの参道です。本堂と三重塔、下りてきて本坊明壽院の庭まで、帰りのタクシーまで1時間40分ほどあります。\n\n帰りは金剛輪寺14:42発の愛のりタクシーで稲枝（いなえ）駅へ（15:54着・800円）。各地の停留所を回る路線なので、時刻表では1時間12分かかります。16:13発の電車で京都駅に17:06着（990円）。\n\nもっとゆっくりするなら、15:42発で稲枝16:54着、17:13発の電車で京都駅18:06着。16:42発なら稲枝17:54着、18:11発で京都駅19:06着です。予約のときに決めてください。京都に戻って晩ごはんに。三条・木屋町・先斗町のあたりへは、京都駅から地下鉄で約15分です。\n\nおすすめ訪問時間：13:03〜14:42",
+    "en": "Kongorinji Temple\n\nA Tendai temple, the middle one of the Koto Sanzan. From the outer gate an uphill approach is lined on both sides with a thousand Jizo statues. At the top is the Niten-mon gate, and beyond it the Kamakura-period main hall (a National Treasure) and a three-storied pagoda. The maples around the hall and in the garden are called “blood-dyed maples” for their deep colour (temple website). The photos are from 17 November 2022.\n\nThe Ainori Taxi from Saimyoji arrives around 13:03. It is uphill from the outer gate. You have about 1 hour 40 minutes for the main hall, the pagoda and, on the way down, the garden of Myojuin.\n\nLeave on the 14:42 Ainori Taxi to Inae Station (15:54, ¥800). The route winds between stops and takes 1 hour 12 minutes by the timetable. The 16:13 train reaches Kyoto Station at 17:06 (¥990).\n\nFor more time, the 15:42 taxi reaches Inae at 16:54 for the 17:13 train (Kyoto Station 18:06), and the 16:42 reaches Inae at 17:54 for the 18:11 (Kyoto Station 19:06). Decide when you book. Have dinner back in Kyoto; Sanjo, Kiyamachi and Pontocho are about 15 minutes from Kyoto Station by subway.\n\nRecommended visit time: 13:03–14:42"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "金剛輪寺",
+      "en": "Kongorinji"
+     },
+     "lat": 35.16128,
+     "lng": 136.28304,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E5%89%9B%E8%BC%AA%E5%AF%BA%20%E6%84%9B%E8%8D%98%E7%94%BA%E6%9D%BE%E5%B0%BE%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "稲枝駅",
+      "en": "Inae Station"
+     },
+     "lat": 35.20332,
+     "lng": 136.19454,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%A8%B2%E6%9E%9D%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "金剛輪寺 公式サイト（参拝・境内）",
+      "en": "Kongorinji (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://kongourinji.jp/precinct",
+      "en": "https://kongourinji.jp/precinct"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "乗合タクシーの時刻（金剛輪寺 交通）",
+      "en": "Shared taxi times (Kongorinji access page, Japanese)"
+     },
+     "url": {
+      "ja": "https://kongourinji.jp/access",
+      "en": "https://kongourinji.jp/access"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "愛のりタクシーの時刻表（彦根市）",
+      "en": "Ainori Taxi timetables (Hikone City, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html",
+      "en": "https://www.city.hikone.lg.jp/kurashi/kotsu_doro/3/6022.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:30〜16:30（閉山17:00）",
+       "en": "8:30–16:30 (grounds close 17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋：秘仏 大黒天の公開 12月13日まで",
+       "en": "Autumn 2026: hidden Daikokuten on show until 13 Dec"
+      },
+      "until": "2026-12-13",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人800円、中学生300円、小学生200円",
+       "en": "¥800 adults, ¥300 junior high, ¥200 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "taxi",
+      "text": {
+       "ja": "愛のりタクシー：金剛輪寺 14:42 → 稲枝駅 15:54（800円）。15:42発 → 16:54、16:42発 → 17:54",
+       "en": "Ainori Taxi: Kongorinji 14:42 → Inae Station 15:54 (¥800). 15:42 → 16:54, 16:42 → 17:54"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "稲枝 16:13 → 京都駅 17:06、990円。17:13発 → 18:06、18:11発 → 19:06",
+       "en": "Inae 16:13 → Kyoto Station 17:06, ¥990. 17:13 → 18:06, 18:11 → 19:06"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "時間・料金は金剛輪寺の公式サイト（参拝・境内）、特別公開は湖東三山の2026年のチラシ、愛のりタクシーは彦根市の時刻表（2026年4月改正）、電車は乗換案内で、2026年11月22日に確認しました。境内の食事処「華楽坊」は5名以上の予約制です（公式サイト）。",
+     "en": "Hours and fees from the Kongorinji website, special openings from the 2026 Koto Sanzan leaflet, the Ainori Taxi on Hikone City’s timetable (revised April 2026), trains on a route planner, 22 Nov 2026. The temple restaurant, Karakubo, takes bookings for 5 or more only (website)."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    {
+     "file": "kongorinji-1.jpg",
+     "credit": {
+      "author": "先従隗始",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASh%C5%8Dh%C5%8Dzan_Kong%C5%8Drin-ji_20221117_61.jpg"
+     }
+    },
+    {
+     "file": "kongorinji-2.jpg",
+     "credit": {
+      "author": "先従隗始",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASh%C5%8Dh%C5%8Dzan_Kong%C5%8Drin-ji_20221117_46.jpg"
+     }
+    },
+    {
+     "file": "kongorinji-3.jpg",
+     "credit": {
+      "author": "先従隗始",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASh%C5%8Dh%C5%8Dzan_Kong%C5%8Drin-ji_20221117_02.jpg"
+     }
+    },
+    {
+     "file": "kongorinji-4.jpg",
+     "credit": {
+      "author": "先従隗始",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File%3ASh%C5%8Dh%C5%8Dzan_Kong%C5%8Drin-ji_20221117_60.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "hyakusaiji",
+   "name": {
+    "ja": "百済寺（湖東三山）",
+    "en": "Hyakusaiji Temple (Koto Sanzan)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "苔むした石垣と杉の参道を上る、近江で最も古いお寺のひとつ。乗合タクシーの路線にないので、別の日に。最初は外してあります。",
+    "en": "One of the oldest temples in Omi, up a cedar-lined approach between mossy walls. It is off the shared-taxi route, so save it for another day. Not selected at first."
+   },
+   "lat": 35.12683,
+   "lng": 136.29151,
+   "text": {
+    "ja": "百済寺（ひゃくさいじ）\n\n湖東三山のいちばん南。聖徳太子が百済の人のために建てたと伝わる、近江で最も古いお寺のひとつです。苔むした石垣にはさまれた参道を上り、大きなわらじが下がる仁王門をくぐって本堂へ。本坊・喜見院（きけんいん）の池泉回遊式の庭は「天下遠望の名園」と呼ばれ、上の遠望台から湖東の平野が見渡せます。\n\n愛のりタクシーの路線にないので、西明寺・金剛輪寺の時間割には入っていません。別の日に、午後から出かけて行けます。\n\n京都駅13:00発の新快速で近江八幡へ（13:34着）。13:44発の近江鉄道で八日市14:04着、14:18発のちょこっとバス（愛東線・北回り）で百済寺本坊前に14:47着（京都駅から1,340円）。八日市駅からタクシーなら約10分です（百済寺の公式サイト）。\n\n拝観は17:00まで（受付16:30まで）。帰りのバスは17:54発で京都駅19:42着（1,340円）。門が閉まってからバスまで1時間近くあり、外は暗くなるので、早めに戻るならタクシーを呼んで八日市駅へ。写真は2025年8月の新緑のころのものです。\n\nおすすめ訪問時間：別の日の14:47〜17:00",
+    "en": "Hyakusaiji Temple\n\nThe southernmost of the Koto Sanzan, said to have been founded by Prince Shotoku for people from the kingdom of Baekje and one of the oldest temples in Omi. Climb the approach between mossy stone walls, pass the Nio gate hung with giant straw sandals, and go up to the main hall. The pond garden of the main residence, Kikenin, is known as the garden with a view over the land, and the lookout above it takes in the plain east of the lake.\n\nIt is off the Ainori Taxi route, so it isn’t on the Saimyoji and Kongorinji timetable. You can visit on another day, leaving at lunchtime.\n\nTake the 13:00 Special Rapid from Kyoto Station to Omi-Hachiman (13:34), the 13:44 Ohmi Railway to Yokaichi (14:04) and the 14:18 Chokotto Bus (Aito Line, northern loop) to Hyakusaiji Honbo-mae (14:47), ¥1,340 from Kyoto Station. By taxi it is about 10 minutes from Yokaichi Station (temple website).\n\nThe temple closes at 17:00 (last entry 16:30). The bus back leaves at 17:54, reaching Kyoto Station at 19:42 (¥1,340). That means nearly an hour’s wait in the dark after the gate closes, so to leave sooner, call a taxi to Yokaichi Station. The photos are from August 2025, in summer green.\n\nRecommended visit time: 14:47–17:00, on another day"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "百済寺",
+      "en": "Hyakusaiji"
+     },
+     "lat": 35.12683,
+     "lng": 136.29151,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%99%BE%E6%B8%88%E5%AF%BA%20%E6%9D%B1%E8%BF%91%E6%B1%9F%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "百済寺 公式サイト",
+      "en": "Hyakusaiji (official, Japanese)"
+     },
+     "url": {
+      "ja": "http://hyakusaiji.jp/",
+      "en": "http://hyakusaiji.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "百済寺 交通案内",
+      "en": "Hyakusaiji access (Japanese)"
+     },
+     "url": {
+      "ja": "http://hyakusaiji.jp/info_access/",
+      "en": "http://hyakusaiji.jp/info_access/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "東近江市観光協会（タクシー会社の一覧）",
+      "en": "Higashiomi tourism: taxi companies (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.higashiomi.net/guide/access.html",
+      "en": "https://www.higashiomi.net/guide/access.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "http://hyakusaiji.jp/info_access/",
+     "head": {
+      "ja": "西明寺・金剛輪寺とは別の日に",
+      "en": "On a different day from the other two"
+     },
+     "text": {
+      "ja": "百済寺は愛のりタクシーの路線にありません。行き方は下の説明を見てください。",
+      "en": "Hyakusaiji isn’t on the Ainori Taxi route. See below for how to get there."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "8:30〜17:00（受付は16:30まで）",
+       "en": "8:30–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋のライトアップ：11月30日まで 17時から（30日は受付19:00まで・閉門19:30）",
+       "en": "Autumn 2026 illumination: until 30 Nov from 17:00 (on the 30th last entry 19:00, closes 19:30)"
+      },
+      "until": "2026-11-30",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人600円、中学生300円、小学生200円",
+       "en": "¥600 adults, ¥300 junior high, ¥200 elementary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都駅 13:00 → 近江八幡 13:44 近江鉄道 → 八日市 14:18 ちょこっとバス → 百済寺本坊前 14:47（1,340円）",
+       "en": "Kyoto Station 13:00 → Omi-Hachiman 13:44 Ohmi Railway → Yokaichi 14:18 Chokotto Bus → Hyakusaiji Honbo-mae 14:47 (¥1,340)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "帰り：百済寺本坊前 17:54 → 京都駅 19:42（1,340円）",
+       "en": "Back: Hyakusaiji Honbo-mae 17:54 → Kyoto Station 19:42 (¥1,340)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・料金とタクシーの目安は百済寺の公式サイト、電車とバスは乗換案内（2026年11月30日、12月2日・5日・6日・28日）で、2026年11月22日に確認しました。",
+     "en": "Hours, fees and the taxi estimate from the Hyakusaiji website; trains and buses on a route planner (30 Nov and 2, 5, 6, 28 Dec 2026), 22 Nov 2026."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "乗合タクシーでは行けない",
+    "en": "Not on the shared-taxi route"
+   },
+   "photos": [
+    "hyakusaiji-1.jpg",
+    "hyakusaiji-2.jpg",
+    "hyakusaiji-3.jpg",
+    "hyakusaiji-4.jpg",
+    "hyakusaiji-5.jpg",
+    "hyakusaiji-6.jpg",
+    "hyakusaiji-7.jpg",
+    "hyakusaiji-8.jpg",
+    "hyakusaiji-9.jpg"
+   ]
+  },
+  {
+   "no": 5,
+   "id": "kyorinbo",
+   "name": {
+    "ja": "教林坊（夜のライトアップ）",
+    "en": "Kyorinbo (evening illumination)"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "春と秋だけ公開される、竹林と石の庭の小さなお寺。金剛輪寺を15:42に出て、稲枝から電車で安土へ、タクシーで夜の庭へ。最初は外してあります。",
+    "en": "A small temple of bamboo and stone gardens, open only in spring and autumn. Leave Kongorinji at 15:42, take the train from Inae to Azuchi, then a taxi. Not selected at first."
+   },
+   "lat": 35.13898,
+   "lng": 136.16383,
+   "caution": {
+    "ja": "駅からタクシー・12月6日まで",
+    "en": "Taxi from the station · until 6 Dec"
+   },
+   "text": {
+    "ja": "教林坊（きょうりんぼう）\n\n観音正寺のある繖山（きぬがさやま）のふもと、安土町石寺の山あいにある小さなお寺です。ふだんは公開されておらず、春と秋の特別公開のときだけ入れます。竹林の小道を抜けると、苔と巨石の庭。書院の丸窓や三日月の窓から見る庭も絵のようです。写真は2026年11月17日の夜のライトアップです。\n\n金剛輪寺のあとに寄るなら、帰りの愛のりタクシーを15:42発で予約します。稲枝駅16:54着、17:13発の電車で安土へ（17:20着・200円）。北口からタクシーで約10分、17:35ごろ着きます。安土駅のタクシーは前もって予約し、帰りの迎えも18:40ごろに頼んでおきましょう。\n\n帰りは安土18:58発の電車に乗り、次の近江八幡で19:06発の新快速に乗り換えて、京都駅に19:42着（770円）。ゆっくりするなら安土19:28発で京都駅20:12着です。教林坊のタクシー代が往復で5,000円前後かかるので、最初は外してあります。\n\n三脚・一脚は使えません。写真を撮るための長い滞在も断られています（公式サイト）。\n\nタクシーは、東近江市観光協会の一覧にある滋賀第一交通 近江八幡営業所（0748-37-4000）など。\n\nおすすめ訪問時間：17:35〜18:40",
+    "en": "Kyorinbo\n\nA small temple tucked in the hills of Ishidera, Azuchi, at the foot of Mt. Kinugasa. It is usually closed and opens only for special spring and autumn openings. A path through bamboo leads to a garden of moss and huge rocks, framed by the round and crescent-moon windows of the study hall. The photos show the illumination on 17 November 2026.\n\nTo add it after Kongorinji, book the 15:42 Ainori Taxi instead. It reaches Inae at 16:54; take the 17:13 train to Azuchi (17:20, ¥200). A taxi from the north exit takes about 10 minutes, so you arrive around 17:35. Book the Azuchi taxi ahead, with a pick-up around 18:40.\n\nHead home on the 18:58 train from Azuchi and change one stop later at Omi-Hachiman to the 19:06 Special Rapid: Kyoto Station at 19:42, ¥770. For longer, the 19:28 from Azuchi arrives at 20:12. The Kyorinbo taxis cost around ¥5,000 there and back, so it isn’t selected at first.\n\nTripods and monopods are not allowed, and long stays just to take photos are discouraged (official website).\n\nFor taxis, the Higashiomi tourism association lists Shiga Daiichi Kotsu, Omi-Hachiman office (0748-37-4000), among others.\n\nRecommended visit time: 17:35–18:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "教林坊",
+      "en": "Kyorinbo"
+     },
+     "lat": 35.13898,
+     "lng": 136.16383,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%95%99%E6%9E%97%E5%9D%8A%20%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E5%B8%82%E5%AE%89%E5%9C%9F%E7%94%BA%E7%9F%B3%E5%AF%BA1145"
+    },
+    {
+     "label": {
+      "ja": "安土駅",
+      "en": "Azuchi Station"
+     },
+     "lat": 35.1429,
+     "lng": 136.1379,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%AE%89%E5%9C%9F%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "教林坊 公式サイト",
+      "en": "Kyorinbo (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://kyourinbo.jimdofree.com/",
+      "en": "https://kyourinbo.jimdofree.com/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "東近江市観光協会（タクシー会社の一覧）",
+      "en": "Higashiomi tourism: taxi companies (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.higashiomi.net/guide/access.html",
+      "en": "https://www.higashiomi.net/guide/access.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": "2026-12-06",
+     "url": "https://kyourinbo.jimdofree.com/",
+     "head": {
+      "ja": "ライトアップは12月6日まで",
+      "en": "Illumination until 6 Dec"
+     },
+     "text": {
+      "ja": "2026年の夜のライトアップは12月6日（日）まで、17:30〜19:30（受付は19:00まで）。予約の案内はなく、拝観料は大人1,000円です。安土駅から歩くと約60分かかるので、行きも帰りもタクシーで。駅前にタクシーが待っているとは限らないので、前もって予約し、帰りの迎えの時間も決めておいてください。",
+      "en": "The 2026 evening illumination runs until Sunday 6 December, 17:30–19:30 (last entry 19:00). No booking is mentioned; adults ¥1,000. Azuchi Station is about 60 minutes away on foot, so take a taxi both ways. Taxis don’t always wait at the station: book ahead and arrange your pick-up time."
+     }
+    },
+    {
+     "from": "2026-12-07",
+     "to": "2026-12-15",
+     "url": "https://kyourinbo.jimdofree.com/",
+     "head": {
+      "ja": "秋の公開は12月15日まで",
+      "en": "Autumn opening until 15 Dec"
+     },
+     "text": {
+      "ja": "ライトアップは12月6日で終わりました。昼の公開は12月15日まで、9:30〜16:30です。そのあとは次の春まで公開されません（春と秋だけの公開）。",
+      "en": "The illumination ended on 6 December. Daytime opening continues until 15 December, 9:30–16:30; after that the temple is closed until spring (it opens only in spring and autumn)."
+     }
+    },
+    {
+     "from": "2026-12-16",
+     "to": null,
+     "url": "https://kyourinbo.jimdofree.com/",
+     "head": {
+      "ja": "今は公開していません",
+      "en": "Not open now"
+     },
+     "text": {
+      "ja": "教林坊は春と秋の特別公開のときだけ入れます。2026年秋の公開は12月15日で終わりました。次の公開日は公式サイトで確かめてください。",
+      "en": "Kyorinbo opens only for special spring and autumn openings. The autumn 2026 opening ended on 15 December; check the official website for the next dates."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2026年秋の公開：11月1日〜12月15日の毎日 9:30〜16:30（ライトアップの期間は8:30から）",
+       "en": "Autumn 2026 opening: daily 1 Nov – 15 Dec, 9:30–16:30 (from 8:30 during the illumination)"
+      },
+      "until": "2026-12-15",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ライトアップ：12月6日まで 17:30〜19:30（受付は19:00まで）",
+       "en": "Illumination: until 6 Dec, 17:30–19:30 (last entry 19:00)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,000円、小中学生300円（11月1日〜12月15日）",
+       "en": "¥1,000 adults, ¥300 children (1 Nov – 15 Dec)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "taxi",
+      "text": {
+       "ja": "JR安土駅の北口からタクシーで約10分・2,500円前後（教林坊の公式サイトの目安）",
+       "en": "About 10 min by taxi from the north exit of JR Azuchi Station, around ¥2,500 (the temple’s own estimate)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "行き：稲枝 17:13 → 安土 17:20（200円）",
+       "en": "There: Inae 17:13 → Azuchi 17:20 (¥200)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：安土 18:58 → 近江八幡 19:06 新快速 → 京都駅 19:42、770円。19:28発なら20:12",
+       "en": "Back: Azuchi 18:58 → Omi-Hachiman 19:06 Special Rapid → Kyoto Station 19:42, ¥770. The 19:28 arrives 20:12"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻・料金は教林坊の公式サイト（公開日・ライトアップ・アクセスのページ）と乗換案内で、2026年11月22日に確認しました。",
+     "en": "Hours and fees checked on the Kyorinbo website (opening, illumination and access pages); trains on a route planner, 22 Nov 2026."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "kyorinbo-1.jpg",
+    "kyorinbo-2.jpg",
+    "kyorinbo-3.jpg",
+    "kyorinbo-4.jpg",
+    "kyorinbo-5.jpg",
+    "kyorinbo-6.jpg",
+    "kyorinbo-7.jpg",
+    "kyorinbo-8.jpg"
+   ]
+  }
+ ]
+}

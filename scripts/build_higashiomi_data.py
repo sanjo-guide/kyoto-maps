@@ -6,7 +6,11 @@
     京都駅10:00発 → 近江八幡で近江鉄道 → 太郎坊宮 → 八日市からバスで永源寺（遅めのお昼）→ 近江八幡・安土 → タクシーで教林坊のライトアップ → 京都駅20:12
 - data/routes/higashiomi-sanzan.json ＝ コース「湖東三山」（sanzan）
     京都駅8:37発（土日祝8:30）→ 彦根駅10:00の紅葉シャトルバス → 西明寺（門前でお昼）→ 百済寺 → 金剛輪寺 → 彦根17:30 → 京都駅18:42
-    11/30からは注意書きと行が愛のりタクシーの案内に替わる（京都駅9:34・土日祝9:37 → 河瀬10:51のタクシー → 西明寺 → 金剛輪寺 → 稲枝 → 京都駅）
+    11月29日まで読まれる。11/30からは次の2つに自動で替わる（どの日にどれを読むかは scripts/sync_higashiomi.py の TAXI_FROM・WINTER_FROM）
+- data/routes/higashiomi-sanzan-taxi.json   ＝ 湖東三山の 11/30〜12/6（乗合タクシーの時間割）
+    京都駅9:34発（土日祝9:37）→ 河瀬10:51のタクシー → 西明寺（お昼）→ 12:56のタクシー → 金剛輪寺 → 14:42のタクシー → 稲枝16:13 → 京都駅17:06
+    最初に選ばれるのは西明寺と金剛輪寺。百済寺（別の日に行く）と教林坊の夜は外してある
+- data/routes/higashiomi-sanzan-winter.json ＝ 湖東三山の 12/7から。taxi から教林坊を抜いたもの（ライトアップが終わり、昼の公開にも間に合わない）
     教林坊は「選んで回る」で足せる（最初は外してある）
 - 文章・料金・時刻はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
 - 写真は images/higashiomi/<スポットのid>-<番号>.jpg を番号の順に全部使う（湖東三山コースの1番だけ omihachimaneki-1.jpg を1枚）
@@ -471,6 +475,214 @@ B_PLAN = lambda NO: {
     ]}
 
 
+# =====================================================================
+# コース2の 11/30 から（乗合タクシーの時間割）。12/7 からは教林坊を抜く
+# =====================================================================
+def from_b(pid, **new):
+    """コース2の同じスポットをもとに、書いた項目だけ差し替える"""
+    d = dict(next(x for x in B if x["id"] == pid))
+    d.update(new)
+    return d
+
+
+def about(pid, lang):
+    """コース2の本文の最初の2段（名前と、お寺そのものの説明）"""
+    return "\n\n".join(next(x for x in B if x["id"] == pid)["text"][lang].split("\n\n")[:2]) + "\n\n"
+
+
+AINORI = link("timetable", "愛のりタクシーの時刻表（彦根市）", "Ainori Taxi timetables (Hikone City, Japanese)", AINORI_URL)
+AINORI_HOW = link("info", "愛のりタクシーの予約のしかた（彦根市）", "How to book the Ainori Taxi (Hikone City, Japanese)", "https://www.city.hikone.lg.jp/kakuka/toshi_seisaku/5/2_3/28164.html")
+TAXI_TIP_JA = "愛のりタクシーは彦根市の時刻表（2026年4月改正）"
+TAXI_TIP_EN = "the Ainori Taxi on Hikone City’s timetable (revised April 2026)"
+YEAR_END = notice("12月29日〜1月3日は運休", "No service 29 Dec – 3 Jan",
+                  "愛のりタクシーは12月29日〜1月3日は走りません。この期間は、この時間割では回れません。",
+                  "The Ainori Taxi doesn’t run from 29 December to 3 January, so this timetable doesn’t work on those days.",
+                  url=AINORI_URL, to="2027-01-03")
+
+C = [
+    dict(id="kawaseeki", _photos=["omihachimaneki-1.jpg"],
+         name=T("京都から河瀬駅へ（乗合タクシーのりば）", "Kyoto to Kawase Station (shared taxi stop)"), kind=T("駅（スタート）", "Station (start)"),
+         blurb=T("京都駅9:34発（土日祝9:37発）の普通電車で河瀬へ。東口10:51発の予約制の乗合タクシーで西明寺へ向かいます。",
+                 "Take the 9:34 local from Kyoto Station (9:37 at weekends and holidays) to Kawase, then the bookable 10:51 shared taxi from the east exit to Saimyoji."),
+         lat=35.22518, lng=136.22500, cash=True, caution=T("要予約・現金のみ", "Booking required · cash only"),
+         text=T("京都から河瀬駅へ\n\n"
+                "2026年の紅葉シャトルバスは11月29日で終わりました。11月30日からは、予約制の乗合タクシー「愛のりタクシー」で、湖東三山のうち西明寺と金剛輪寺の2つを回ります。\n\n"
+                "平日は京都駅9:34発の普通電車「米原」行きで、河瀬（かわせ）に10:34着。土日祝は9:37発で10:32着。乗り換えなしで990円です。東口10:51発の愛のりタクシーで、西明寺に11:08ごろ着きます（800円）。写真は途中で通る近江八幡駅です。\n\n"
+                "この日に乗るタクシーは3回。①河瀬駅東口10:51 → 西明寺11:08（800円）、②西明寺12:56 → 金剛輪寺13:03（400円）、③金剛輪寺14:42 → 稲枝（いなえ）駅15:54（800円）。相乗りなので、着く時刻は多少前後します。\n\n"
+                "予約は近江タクシー彦根営業所 0749-22-1111へ、乗る1週間前から1時間前までに。「愛のりタクシーお願いします」と伝えて、3回分をまとめて頼みます。予約のない便は走りません。支払いは降りるときに現金で（カード・ICカードは使えません）。2人以上でまとめて予約して同じ停留所から乗ると、運賃は半額になります。Web予約もありますが、利用者登録が必要です。\n\n"
+                "三条のあたりからは、地下鉄で京都駅へ（烏丸御池で乗り換え、約15分・260円）。平日は三条京阪9:09発、土日祝は9:07発なら間に合います。\n\n"
+                "おすすめ出発時間：京都駅 9:34（土日祝は9:37）",
+                "Kyoto to Kawase Station\n\n"
+                "The 2026 autumn shuttle ended on 29 November. From 30 November you visit two of the three Koto Sanzan temples, Saimyoji and Kongorinji, by the bookable “Ainori Taxi” shared taxi.\n\n"
+                "On weekdays, take the 9:34 local for Maibara from Kyoto Station, reaching Kawase at 10:34. At weekends and holidays, take the 9:37, arriving at 10:32. It runs direct, ¥990. The 10:51 Ainori Taxi from the east exit reaches Saimyoji around 11:08 (¥800). The photo is Omi-Hachiman Station, which you pass on the way.\n\n"
+                "You take three taxis: (1) Kawase east exit 10:51 → Saimyoji 11:08 (¥800), (2) Saimyoji 12:56 → Kongorinji 13:03 (¥400), (3) Kongorinji 14:42 → Inae Station 15:54 (¥800). Rides are shared, so arrival times vary a little.\n\n"
+                "Book with Ohmi Taxi Hikone, 0749-22-1111, from a week to an hour before each ride. Ask for “Ainori Taxi” and book all three at once; a run with no booking doesn’t operate. Pay in cash as you get off (no cards or IC cards). Two or more people booked together from the same stop pay half fare. Web booking needs user registration.\n\n"
+                "From around Sanjo, take the subway to Kyoto Station (change at Karasuma Oike; about 15 minutes, ¥260). The 9:09 from Sanjo Keihan on weekdays, or the 9:07 at weekends and holidays, gets you there in time.\n\n"
+                "Recommended departure: Kyoto Station 9:34 (9:37 at weekends and holidays)"),
+         gmaps=[gm("河瀬駅 東口", "Kawase Station (east exit)", 35.22518, 136.22500, "河瀬駅 東口")],
+         links=[AINORI, AINORI_HOW, KOTOSANZAN, YAHOO],
+         notices=[notice("3回とも予約・現金だけ", "Book all three rides · cash only",
+                         "乗合タクシーは、予約がないと来ません。3回分を1時間前までに、近江タクシー彦根営業所 0749-22-1111へ。支払いは現金だけです。",
+                         "The shared taxi only comes if booked. Book all three rides at least 1 hour ahead with Ohmi Taxi Hikone, 0749-22-1111. Cash only.",
+                         url=AINORI_URL),
+                  YEAR_END],
+         info=info([row("train", "平日：京都駅 9:34 普通 → 河瀬 10:34。土日祝：京都駅 9:37 → 河瀬 10:32。990円",
+                        "Weekdays: Kyoto Station 9:34 local → Kawase 10:34. Weekends: Kyoto Station 9:37 → Kawase 10:32. ¥990"),
+                    row("taxi", "愛のりタクシー：河瀬駅東口 10:51 → 西明寺 11:08（800円）。予約 0749-22-1111、1週間前〜1時間前",
+                        "Ainori Taxi: Kawase east exit 10:51 → Saimyoji 11:08 (¥800). Book on 0749-22-1111, from a week to 1 hour ahead"),
+                    row("train", "三条京阪 → 京都駅：地下鉄（烏丸御池で乗り換え）約15分・260円", "Sanjo Keihan → Kyoto Station: subway (change at Karasuma Oike), about 15 min, ¥260")],
+                   cash=True,
+                   tip=T("電車は乗換案内（2026年11月30日、12月5日・6日・28日のダイヤ）、" + TAXI_TIP_JA + "で、2026年11月22日に確認しました。",
+                         "Trains checked on a route planner (30 Nov and 5, 6, 28 Dec 2026), " + TAXI_TIP_EN + ", 22 Nov 2026."))),
+    from_b("saimyoji",
+           blurb=T("湖東三山のいちばん北。鎌倉時代の本堂と三重塔は、どちらも国宝。門前で近江牛のお昼にして（月・火は休み）、乗合タクシーで金剛輪寺へ。",
+                   "The northernmost Koto Sanzan temple, with a Kamakura-period main hall and pagoda that are both National Treasures. Omi beef by the gate (closed Mon–Tue), then the shared taxi to Kongorinji."),
+           text=T(about("saimyoji", "ja") +
+                  "河瀬駅からの愛のりタクシーで11:08ごろ着。停留所は名勝庭園の前の受付です。1時間ほどお参りしたら、お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、月・火は休み。公式サイト）。\n\n"
+                  "境内は持ち込みの飲食ができません。月・火に行くなら、京都駅を出る前に食べるか、持ってきたものを境内の外で。早く終わったら、11:56発のタクシー（金剛輪寺12:03着）にもできます。予約のときに決めてください。\n\n"
+                  "12:56発の愛のりタクシーで金剛輪寺へ（13:03着・400円）。\n\n"
+                  "おすすめ訪問時間：11:08〜12:56（お昼を含む）",
+                  about("saimyoji", "en") +
+                  "The Ainori Taxi from Kawase arrives around 11:08; the stop is the reception in front of the garden. Give the temple about an hour, then have lunch at “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, closed Mondays and Tuesdays; official site).\n\n"
+                  "You can’t eat or drink your own food in the grounds. On a Monday or Tuesday, eat before you leave Kyoto or outside the grounds. If you need less time, there is an 11:56 taxi (Kongorinji 12:03); decide when you book.\n\n"
+                  "Take the 12:56 Ainori Taxi to Kongorinji (13:03, ¥400).\n\n"
+                  "Recommended visit time: 11:08–12:56 (with lunch)"),
+           links=[link("official", "西明寺 公式サイト（拝観のご案内）", "Saimyoji (official, Japanese)", "https://saimyouji.com/information/"),
+                  link("official", "近江牛一筋＠千成亭ぎゅ〜じあむ", "Sennaritei Gyuseum (official, Japanese)", "https://gyuseum.jp/"), AINORI],
+           notices=[notice("11月30日のお昼は電話で確認", "Lunch on 30 Nov: phone ahead",
+                           "11月30日は月曜です。千成亭ぎゅ〜じあむは公式サイトでは月・火が定休、湖東三山のチラシでは11月は無休なので、電話（0749-29-9090）で確かめてください。境内は持ち込みの飲食ができません。",
+                           "30 November is a Monday. Sennaritei Gyuseum’s website lists Mondays and Tuesdays as closed, while the Koto Sanzan leaflet says it opens every day in November, so phone ahead (0749-29-9090). No food or drink of your own in the grounds.",
+                           url="https://gyuseum.jp/", to="2026-11-30"),
+                    notice("門前のお昼は月・火が休み", "Lunch by the gate: closed Mon–Tue",
+                           "千成亭ぎゅ〜じあむは月・火が定休です。境内は持ち込みの飲食ができません。",
+                           "Sennaritei Gyuseum closes on Mondays and Tuesdays. No food or drink of your own in the grounds.",
+                           url="https://gyuseum.jp/", frm="2026-12-01")],
+           info=info([row("hours", "8:30〜17:00（受付は16:30まで）", "8:30–17:00 (last entry 16:30)"),
+                      row("hours", "2026年秋：本堂後陣の仏像群の特別拝観 11月30日まで（1,000円）", "Autumn 2026: statues behind the altar until 30 Nov (¥1,000)", until="2026-11-30"),
+                      row("hours", "2026年秋：宝冠毘沙門天像の公開 12月13日まで", "Autumn 2026: crowned Bishamonten on show until 13 Dec", until=SPECIAL_END),
+                      row("fee", "入山料 大人800円、中学生500円、小学生300円", "¥800 adults, ¥500 junior high, ¥300 elementary"),
+                      row("hours", "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（月・火定休）", "Lunch: Sennaritei Gyuseum 11:00–15:00 (closed Mon–Tue)"),
+                      row("taxi", "愛のりタクシー：西明寺 12:56 → 金剛輪寺 13:03（400円）。河瀬駅へ戻る便は毎時12分発 → 29分着（800円、16:12発まで）",
+                          "Ainori Taxi: Saimyoji 12:56 → Kongorinji 13:03 (¥400). Back to Kawase at :12, arriving :29 (¥800; until 16:12)")],
+                     cash=True,
+                     tip=T("西明寺と千成亭ぎゅ〜じあむの公式サイト、湖東三山の2026年のチラシ、" + TAXI_TIP_JA + "で、2026年11月22日に確認しました。",
+                           "Checked on the Saimyoji and Gyuseum websites, the 2026 Koto Sanzan leaflet, and " + TAXI_TIP_EN + ", 22 Nov 2026."))),
+    from_b("kongorinji",
+           blurb=T("千体のお地蔵さまが並ぶ参道を上ると、国宝の本堂のまわりに「血染めのもみじ」と呼ばれる木々。14:42の乗合タクシーまでゆっくり。",
+                   "An approach lined with a thousand Jizo statues climbs to a National Treasure main hall among the “blood-dyed” maples. Take your time until the 14:42 shared taxi."),
+           text=T(about("kongorinji", "ja") +
+                  "西明寺からの愛のりタクシーで13:03ごろ着。総門から本堂までは上りの参道です。本堂と三重塔、下りてきて本坊明壽院の庭まで、帰りのタクシーまで1時間40分ほどあります。\n\n"
+                  "帰りは金剛輪寺14:42発の愛のりタクシーで稲枝（いなえ）駅へ（15:54着・800円）。各地の停留所を回る路線なので、時刻表では1時間12分かかります。16:13発の電車で京都駅に17:06着（990円）。\n\n"
+                  "もっとゆっくりするなら、15:42発で稲枝16:54着、17:13発の電車で京都駅18:06着。16:42発なら稲枝17:54着、18:11発で京都駅19:06着です。予約のときに決めてください。京都に戻って晩ごはんに。三条・木屋町・先斗町のあたりへは、京都駅から地下鉄で約15分です。\n\n"
+                  "おすすめ訪問時間：13:03〜14:42",
+                  about("kongorinji", "en") +
+                  "The Ainori Taxi from Saimyoji arrives around 13:03. It is uphill from the outer gate. You have about 1 hour 40 minutes for the main hall, the pagoda and, on the way down, the garden of Myojuin.\n\n"
+                  "Leave on the 14:42 Ainori Taxi to Inae Station (15:54, ¥800). The route winds between stops and takes 1 hour 12 minutes by the timetable. The 16:13 train reaches Kyoto Station at 17:06 (¥990).\n\n"
+                  "For more time, the 15:42 taxi reaches Inae at 16:54 for the 17:13 train (Kyoto Station 18:06), and the 16:42 reaches Inae at 17:54 for the 18:11 (Kyoto Station 19:06). Decide when you book. Have dinner back in Kyoto; Sanjo, Kiyamachi and Pontocho are about 15 minutes from Kyoto Station by subway.\n\n"
+                  "Recommended visit time: 13:03–14:42"),
+           gmaps=[gm("金剛輪寺", "Kongorinji", 35.16128, 136.28304, "金剛輪寺 愛荘町松尾寺"), gm("稲枝駅", "Inae Station", 35.20332, 136.19454, "稲枝駅")],
+           links=[link("official", "金剛輪寺 公式サイト（参拝・境内）", "Kongorinji (official, Japanese)", "https://kongourinji.jp/precinct"),
+                  link("info", "乗合タクシーの時刻（金剛輪寺 交通）", "Shared taxi times (Kongorinji access page, Japanese)", "https://kongourinji.jp/access"), AINORI, YAHOO],
+           notices=[],
+           info=info([row("hours", "8:30〜16:30（閉山17:00）", "8:30–16:30 (grounds close 17:00)"),
+                      row("hours", "2026年秋：秘仏 大黒天の公開 12月13日まで", "Autumn 2026: hidden Daikokuten on show until 13 Dec", until=SPECIAL_END),
+                      row("fee", "大人800円、中学生300円、小学生200円", "¥800 adults, ¥300 junior high, ¥200 elementary"),
+                      row("taxi", "愛のりタクシー：金剛輪寺 14:42 → 稲枝駅 15:54（800円）。15:42発 → 16:54、16:42発 → 17:54",
+                          "Ainori Taxi: Kongorinji 14:42 → Inae Station 15:54 (¥800). 15:42 → 16:54, 16:42 → 17:54"),
+                      row("train", "稲枝 16:13 → 京都駅 17:06、990円。17:13発 → 18:06、18:11発 → 19:06", "Inae 16:13 → Kyoto Station 17:06, ¥990. 17:13 → 18:06, 18:11 → 19:06")],
+                     cash=True,
+                     tip=T("時間・料金は金剛輪寺の公式サイト（参拝・境内）、特別公開は湖東三山の2026年のチラシ、" + TAXI_TIP_JA + "、電車は乗換案内で、2026年11月22日に確認しました。境内の食事処「華楽坊」は5名以上の予約制です（公式サイト）。",
+                           "Hours and fees from the Kongorinji website, special openings from the 2026 Koto Sanzan leaflet, " + TAXI_TIP_EN + ", trains on a route planner, 22 Nov 2026. The temple restaurant, Karakubo, takes bookings for 5 or more only (website)."))),
+    from_b("hyakusaiji", caution=T("乗合タクシーでは行けない", "Not on the shared-taxi route"),
+           blurb=T("苔むした石垣と杉の参道を上る、近江で最も古いお寺のひとつ。乗合タクシーの路線にないので、別の日に。最初は外してあります。",
+                   "One of the oldest temples in Omi, up a cedar-lined approach between mossy walls. It is off the shared-taxi route, so save it for another day. Not selected at first."),
+           text=T(about("hyakusaiji", "ja") +
+                  "愛のりタクシーの路線にないので、西明寺・金剛輪寺の時間割には入っていません。別の日に、午後から出かけて行けます。\n\n"
+                  "京都駅13:00発の新快速で近江八幡へ（13:34着）。13:44発の近江鉄道で八日市14:04着、14:18発のちょこっとバス（愛東線・北回り）で百済寺本坊前に14:47着（京都駅から1,340円）。八日市駅からタクシーなら約10分です（百済寺の公式サイト）。\n\n"
+                  "拝観は17:00まで（受付16:30まで）。帰りのバスは17:54発で京都駅19:42着（1,340円）。門が閉まってからバスまで1時間近くあり、外は暗くなるので、早めに戻るならタクシーを呼んで八日市駅へ。写真は2025年8月の新緑のころのものです。\n\n"
+                  "おすすめ訪問時間：別の日の14:47〜17:00",
+                  about("hyakusaiji", "en") +
+                  "It is off the Ainori Taxi route, so it isn’t on the Saimyoji and Kongorinji timetable. You can visit on another day, leaving at lunchtime.\n\n"
+                  "Take the 13:00 Special Rapid from Kyoto Station to Omi-Hachiman (13:34), the 13:44 Ohmi Railway to Yokaichi (14:04) and the 14:18 Chokotto Bus (Aito Line, northern loop) to Hyakusaiji Honbo-mae (14:47), ¥1,340 from Kyoto Station. By taxi it is about 10 minutes from Yokaichi Station (temple website).\n\n"
+                  "The temple closes at 17:00 (last entry 16:30). The bus back leaves at 17:54, reaching Kyoto Station at 19:42 (¥1,340). That means nearly an hour’s wait in the dark after the gate closes, so to leave sooner, call a taxi to Yokaichi Station. The photos are from August 2025, in summer green.\n\n"
+                  "Recommended visit time: 14:47–17:00, on another day"),
+           links=[link("official", "百済寺 公式サイト", "Hyakusaiji (official, Japanese)", "http://hyakusaiji.jp/"),
+                  link("info", "百済寺 交通案内", "Hyakusaiji access (Japanese)", "http://hyakusaiji.jp/info_access/"), TAXI_LIST, YAHOO],
+           notices=[notice("西明寺・金剛輪寺とは別の日に", "On a different day from the other two",
+                           "百済寺は愛のりタクシーの路線にありません。行き方は下の説明を見てください。",
+                           "Hyakusaiji isn’t on the Ainori Taxi route. See below for how to get there.",
+                           url="http://hyakusaiji.jp/info_access/")],
+           info=info([row("hours", "8:30〜17:00（受付は16:30まで）", "8:30–17:00 (last entry 16:30)"),
+                      row("hours", "2026年秋のライトアップ：11月30日まで 17時から（30日は受付19:00まで・閉門19:30）",
+                          "Autumn 2026 illumination: until 30 Nov from 17:00 (on the 30th last entry 19:00, closes 19:30)", until=HYAKU_LU_END),
+                      row("fee", "大人600円、中学生300円、小学生200円", "¥600 adults, ¥300 junior high, ¥200 elementary"),
+                      row("train", "京都駅 13:00 → 近江八幡 13:44 近江鉄道 → 八日市 14:18 ちょこっとバス → 百済寺本坊前 14:47（1,340円）",
+                          "Kyoto Station 13:00 → Omi-Hachiman 13:44 Ohmi Railway → Yokaichi 14:18 Chokotto Bus → Hyakusaiji Honbo-mae 14:47 (¥1,340)"),
+                      row("bus", "帰り：百済寺本坊前 17:54 → 京都駅 19:42（1,340円）", "Back: Hyakusaiji Honbo-mae 17:54 → Kyoto Station 19:42 (¥1,340)")],
+                     tip=T("時間・料金とタクシーの目安は百済寺の公式サイト、電車とバスは乗換案内（2026年11月30日、12月2日・5日・6日・28日）で、2026年11月22日に確認しました。",
+                           "Hours, fees and the taxi estimate from the Hyakusaiji website; trains and buses on a route planner (30 Nov and 2, 5, 6, 28 Dec 2026), 22 Nov 2026."))),
+    from_b("kyorinbo",
+           blurb=T("春と秋だけ公開される、竹林と石の庭の小さなお寺。金剛輪寺を15:42に出て、稲枝から電車で安土へ、タクシーで夜の庭へ。最初は外してあります。",
+                   "A small temple of bamboo and stone gardens, open only in spring and autumn. Leave Kongorinji at 15:42, take the train from Inae to Azuchi, then a taxi. Not selected at first."),
+           text=T(about("kyorinbo", "ja") +
+                  "金剛輪寺のあとに寄るなら、帰りの愛のりタクシーを15:42発で予約します。稲枝駅16:54着、17:13発の電車で安土へ（17:20着・200円）。北口からタクシーで約10分、17:35ごろ着きます。安土駅のタクシーは前もって予約し、帰りの迎えも18:40ごろに頼んでおきましょう。\n\n"
+                  "帰りは安土18:58発の電車に乗り、次の近江八幡で19:06発の新快速に乗り換えて、京都駅に19:42着（770円）。ゆっくりするなら安土19:28発で京都駅20:12着です。教林坊のタクシー代が往復で5,000円前後かかるので、最初は外してあります。\n\n"
+                  + KYORIN_EXTRA_JA + "\n\nおすすめ訪問時間：17:35〜18:40",
+                  about("kyorinbo", "en") +
+                  "To add it after Kongorinji, book the 15:42 Ainori Taxi instead. It reaches Inae at 16:54; take the 17:13 train to Azuchi (17:20, ¥200). A taxi from the north exit takes about 10 minutes, so you arrive around 17:35. Book the Azuchi taxi ahead, with a pick-up around 18:40.\n\n"
+                  "Head home on the 18:58 train from Azuchi and change one stop later at Omi-Hachiman to the 19:06 Special Rapid: Kyoto Station at 19:42, ¥770. For longer, the 19:28 from Azuchi arrives at 20:12. The Kyorinbo taxis cost around ¥5,000 there and back, so it isn’t selected at first.\n\n"
+                  + KYORIN_EXTRA_EN + "\n\nRecommended visit time: 17:35–18:40"),
+           notices=KYORIN_NOTICES,
+           info=info(KYORIN_ROWS + [
+               row("train", "行き：稲枝 17:13 → 安土 17:20（200円）", "There: Inae 17:13 → Azuchi 17:20 (¥200)"),
+               row("train", "帰り：安土 18:58 → 近江八幡 19:06 新快速 → 京都駅 19:42、770円。19:28発なら20:12",
+                   "Back: Azuchi 18:58 → Omi-Hachiman 19:06 Special Rapid → Kyoto Station 19:42, ¥770. The 19:28 arrives 20:12")],
+               tip=KYORIN_TIP)),
+]
+
+
+def C_PLAN(NO):
+    night = "kyorinbo" in NO
+    extra = [NO["kyorinbo"]] if night else []
+    hints = [
+        H(NO, "kawaseeki", {"any": [NO["kongorinji"]], "none": [NO["saimyoji"]]},
+          "西明寺に寄らない日は、河瀬ではなく稲枝へ。京都駅9:34発（土日祝9:37発）で稲枝10:31（10:29）着、990円。10:51発の愛のりタクシーで金剛輪寺に12:03着（800円）。お昼は持っていきます。",
+          "Skipping Saimyoji? Go to Inae instead of Kawase: the 9:34 from Kyoto Station (9:37 at weekends) arrives 10:31 (10:29), ¥990. The 10:51 Ainori Taxi reaches Kongorinji at 12:03 (¥800). Bring lunch."),
+        H(NO, "saimyoji", {"any": [NO["saimyoji"]], "none": [NO["kongorinji"]] + extra},
+          "金剛輪寺に寄らない日は、西明寺14:12発の愛のりタクシーで河瀬駅14:29着、14:41発の電車で京都駅15:37着（990円）。",
+          "Skipping Kongorinji? The 14:12 Ainori Taxi from Saimyoji reaches Kawase at 14:29; the 14:41 train reaches Kyoto Station at 15:37 (¥990)."),
+        H(NO, "hyakusaiji", {"any": [NO["hyakusaiji"]]},
+          "百済寺は、西明寺・金剛輪寺の時間割には入りません。別の日に、京都駅13:00発で出かけてください。",
+          "Hyakusaiji doesn’t fit into the Saimyoji and Kongorinji timetable. Go on another day, on the 13:00 from Kyoto Station."),
+    ]
+    if night:
+        hints += [
+            H(NO, "kyorinbo", {"any": [NO["kyorinbo"]], "andAny": [NO["kongorinji"]]},
+              "金剛輪寺からのタクシーは15:42発（稲枝16:54着）で予約し、17:13発の電車で安土へ。安土駅のタクシーは17:20に迎えに来てもらうよう予約しておきます。",
+              "Book the 15:42 taxi from Kongorinji (Inae 16:54), then take the 17:13 train to Azuchi. Book a taxi to meet you at Azuchi at 17:20."),
+            H(NO, "kyorinbo", {"any": [NO["kyorinbo"]], "andAny": [NO["saimyoji"]], "none": [NO["kongorinji"]]},
+              "金剛輪寺に寄らない日は、西明寺16:12発の愛のりタクシーで河瀬駅16:29着、17:10発の電車で安土17:20着（240円）。",
+              "Skipping Kongorinji? The 16:12 Ainori Taxi from Saimyoji reaches Kawase at 16:29; the 17:10 train reaches Azuchi at 17:20 (¥240)."),
+        ]
+    return {
+        "_note": "「選んで回る」の設定。河瀬駅はいつも入る。defaultPicks は乗合タクシーの時間割どおりの2か所（西明寺→金剛輪寺）。百済寺は別の日に、教林坊（12/6まで）は寄り道。",
+        "defaultMode": "pick",
+        "picks": [NO["saimyoji"], NO["kongorinji"], NO["hyakusaiji"]] + extra,
+        "defaultPicks": [NO["saimyoji"], NO["kongorinji"]],
+        "auto": {str(NO["kawaseeki"]): {"always": True}},
+        "hints": hints,
+    }
+
+
+def C_SECTIONS(NO):
+    out = [{"first": 1, "last": NO["saimyoji"], "area": T("河瀬・西明寺", "Kawase & Saimyoji"), "title": T("乗合タクシーで国宝の本堂へ", "A shared taxi to a National Treasure hall")},
+           {"first": NO["kongorinji"], "last": NO["kongorinji"], "area": T("金剛輪寺", "Kongorinji"), "title": T("千体地蔵の参道と、午後の本堂", "A thousand Jizo and an afternoon at the hall")},
+           {"first": NO["hyakusaiji"], "last": NO["hyakusaiji"], "area": T("別の日に：百済寺", "Another day: Hyakusaiji"), "title": T("苔の参道は午後の半日で", "The mossy approach, as a half day")}]
+    if "kyorinbo" in NO:
+        out.append({"first": NO["kyorinbo"], "last": NO["kyorinbo"], "area": T("寄り道：教林坊", "Option: Kyorinbo"), "title": T("帰りに夜のライトアップ", "An evening illumination on the way home")})
+    return out
+
+
 def H(NO, spot, rule, ja, en, frm=None, to=None):
     h = {"spot": NO[spot], "rule": rule, "text": T(ja, en)}
     if frm:
@@ -567,6 +779,34 @@ SOURCES_B = [
     {"what": "百済寺：8:30〜17:00（受付16:30まで）、大人600円・中学生300円・小学生200円。令和8年秋季ライトアップ 11月14日〜30日、平日17時〜最終受付19時・閉門19時30分、土日祝17時〜最終受付20時30分・閉門21時", "url": "http://hyakusaiji.jp/", "checked": CHECKED},
     {"what": "近江牛一筋＠千成亭ぎゅ〜じあむ：甲良町池寺1-5（西明寺門前）、営業時間11:00〜15:00、定休日 月曜・火曜", "url": "https://gyuseum.jp/", "checked": CHECKED},
 ]
+SOURCES_C = [
+    yt("京都", "河瀬", "1130", "1051", "9:34普通→10:34（990円）", 4),
+    yt("京都", "河瀬", "1205", "1051", "9:37普通→10:32（990円）", 4),
+    yt("京都", "河瀬", "1206", "1051", "9:37普通→10:32（990円）", 4),
+    yt("京都", "河瀬", "1228", "1051", "9:34普通→10:34（990円）", 4),
+    yt("三条京阪", "京都", "1130", "0903", "9:09→9:25（260円）"),
+    yt("三条京阪", "京都", "1205", "0903", "9:07→9:21（260円）"),
+    yt("稲枝", "京都", "1130", "1555", "16:13→17:06、17:13→18:06（990円）"),
+    yt("稲枝", "京都", "1205", "1555", "16:13→17:06、17:13→18:06（990円）"),
+    yt("稲枝", "京都", "1228", "1555", "16:13→17:06、17:13→18:06（990円）"),
+    yt("稲枝", "京都", "1130", "1756", "18:11→19:06（990円）"),
+    yt("稲枝", "京都", "1205", "1756", "18:11→19:06（990円）"),
+    yt("京都", "稲枝", "1130", "1051", "9:34→10:31（990円）", 4),
+    yt("京都", "稲枝", "1205", "1051", "9:37→10:29（990円）", 4),
+    yt("河瀬", "京都", "1130", "1430", "14:41→15:37（990円）"),
+    yt("河瀬", "京都", "1205", "1430", "14:41→15:37（990円）"),
+    yt("河瀬", "安土", "1130", "1630", "17:10→17:20（240円）"),
+    yt("河瀬", "安土", "1205", "1630", "17:10→17:20（240円）"),
+    yt("稲枝", "安土", "1130", "1656", "17:13→17:20（200円）"),
+    yt("稲枝", "安土", "1205", "1656", "17:13→17:20（200円）"),
+    yt("安土", "京都", "1130", "1845", "18:58→近江八幡19:06新快速→19:42（770円）"),
+    yt("安土", "京都", "1205", "1845", "18:58→近江八幡19:06新快速→19:42（770円）"),
+    yt("京都", "百済寺本坊前", "1130", "1255", "13:00→近江八幡13:34/13:44→八日市14:04、バス14:18→14:47（1,340円）"),
+    yt("京都", "百済寺本坊前", "1205", "1255", "13:00→14:47（1,340円）"),
+    yt("京都", "百済寺本坊前", "1228", "1255", "13:00→14:47（1,340円）"),
+    yt("百済寺本坊前", "京都", "1205", "1700", "17:54→19:42（1,340円）"),
+    yt("百済寺本坊前", "京都", "1228", "1700", "17:54→19:42（1,340円）"),
+] + [x for x in SOURCES_B if "transit.yahoo.co.jp" not in x["url"] and "シャトルバス" not in x["what"]]
 
 
 def build(defs, plan_fn, course, out, sections, note, sources, focus=None):
@@ -607,3 +847,10 @@ build(B, B_PLAN, "sanzan", "higashiomi-sanzan.json",
       "京都から日帰り 湖東の紅葉、コース「湖東三山」（8時台に出発。紅葉シャトルバスの運行日 2026年11月19日〜29日向け）。京都駅8:37（土日祝8:30）→彦根9:31（9:20）→シャトルバス10:00→西明寺10:32（門前の千成亭ぎゅ〜じあむでお昼）→12:32のバスで百済寺13:10→15:20のバスで金剛輪寺15:43→16:43のバスで彦根17:30→17:52の新快速で京都駅18:42。11/30からは注意書きが京都駅9:34（9:37）→河瀬→愛のりタクシー→稲枝→京都駅の案内になる。教林坊は寄り道（最初は外す）。"
       "西明寺と金剛輪寺の写真は Wikimedia Commons（photos の要素が {file, credit}）、百済寺は2025年8月12日の Toshi の写真。1番の写真は近江八幡駅（途中で通る駅）。このファイルは scripts/build_higashiomi_data.py で作る。",
       SOURCES_B)
+C_NOTE = ("京都から日帰り 湖東の紅葉、コース「湖東三山」の11月30日から（紅葉シャトルバスが終わったあと。scripts/sync_higashiomi.py の日付で読み分ける）。"
+          "京都駅9:34（土日祝9:37）→河瀬10:34（10:32）→愛のりタクシー10:51→西明寺11:08（お昼）→12:56→金剛輪寺13:03→14:42→稲枝15:54→16:13の電車で京都駅17:06。"
+          "番号の順はシャトルバスの日と違う（保存キーに -off が付く）。百済寺は別の日に。")
+build(C, C_PLAN, "sanzan", "higashiomi-sanzan-taxi.json", C_SECTIONS,
+      C_NOTE + "12月6日までの分で、教林坊の夜が寄り道に入る。このファイルは scripts/build_higashiomi_data.py で作る。", SOURCES_C)
+build([x for x in C if x["id"] != "kyorinbo"], C_PLAN, "sanzan", "higashiomi-sanzan-winter.json", C_SECTIONS,
+      C_NOTE + "12月7日からの分で、教林坊はない（ライトアップが終わり、昼の公開16:30までにも着けない）。このファイルは scripts/build_higashiomi_data.py で作る。", SOURCES_C)
