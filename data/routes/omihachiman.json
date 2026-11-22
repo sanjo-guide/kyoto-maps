@@ -1438,7 +1438,7 @@
    "no": 13,
    "id": "tiffany",
    "name": {
-    "ja": "特選近江牛レストラン ティファニー",
+    "ja": "特選近江牛肉レストラン ティファニー",
     "en": "Tiffany (Omi beef restaurant)"
    },
    "kind": {
@@ -1446,23 +1446,19 @@
     "en": "Dinner (Omi beef)"
    },
    "blurb": {
-    "ja": "駅の北口から歩いて3分、お肉屋さん「カネ吉山本」の近江牛レストラン。火曜休み。ランチで行くのもあり。",
-    "en": "Three minutes from the North Exit: the Omi-beef restaurant of butcher Kanekichi Yamamoto. Closed Tuesdays. Lunch works too."
+    "ja": "八日市のおばあちゃんが「この辺の人はティファニーが一番いいと評判」と教えてくれた、地元目線のおすすめ。駅の北口から歩いて3分の近江牛レストラン。火曜休み。ランチで行くのもあり。",
+    "en": "A local tip: a grandmother in Yokaichi told Toshi that people around here rate Tiffany the best. An Omi-beef restaurant three minutes from the North Exit. Closed Tuesdays. Lunch works too."
    },
    "lat": 35.123885,
    "lng": 136.100791,
    "photos": [
-    "13-1.jpg",
-    "13-2.jpg",
-    "13-3.jpg",
-    "13-4.jpg",
-    "13-5.jpg",
-    "13-6.jpg",
-    "13-7.jpg"
+    "tiffany-1.jpg",
+    "tiffany-3.jpg",
+    "tiffany-2.jpg"
    ],
    "text": {
-    "ja": "特選近江牛レストラン ティファニー\n\nディナーのコースは9,000円から、ランチは3,850円からでした（2026年3月・2024年11月の店頭のメニュー）。\n\n1階のお肉屋さんでは、近江牛のコロッケなどのお惣菜も買えます。電車を待つあいだのおやつにも。\n\nラ コリーナからのバスで駅に着くのが17:00すぎ（土日祝は17:15〜17:30ごろ）。ディナーは17:00から、ラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。新快速は19:06と19:37にあり、京都駅に19:42か20:12に着きます。\n\nおすすめ訪問時間：17:15〜19:00",
-    "en": "Tiffany\n\nDinner courses started at ¥9,000 and lunch at ¥3,850 (menus at the door, March 2026 and November 2024).\n\nThe butcher’s shop downstairs sells Omi-beef croquettes and other deli food, good for a snack while you wait for the train.\n\nThe bus from La Collina reaches the station just after 17:00 (about 17:15–17:30 on weekends and holidays). Dinner starts at 17:00, with last orders at 20:00. The station is a short walk away afterwards: Special Rapids leave at 19:06 and 19:37, reaching Kyoto Station at 19:42 or 20:12.\n\nRecommended visit time: 17:15–19:00"
+    "ja": "特選近江牛肉レストラン ティファニー\n\n八日市のおばあちゃんが「この辺の人はティファニーが一番いいと評判」と教えてくれたお店です。地元の人の目線のおすすめとして載せています。\n\nお肉屋さん「カネ吉山本 本店」と同じ建物です。1階がお肉屋さんで、レストランはその上。建物の左にある階段から上がります。\n\nディナーのコースは9,000円から（2026年3月の店頭のメニュー）、ランチは3,850円から（2025年2月の店頭のメニュー）でした。どちらも税込みです。ランチの受付は11:00から始まります（2026年4月の店頭の案内）。\n\nラ コリーナからのバスで駅に着くのが17:00すぎ（土日祝は17:15〜17:30ごろ）。ディナーは17:00から、ラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。新快速は19:06と19:37にあり、京都駅に19:42か20:12に着きます。\n\nおすすめ訪問時間：17:15〜19:00",
+    "en": "Tiffany\n\nA grandmother in Yokaichi told Toshi that people around here rate Tiffany the best. That local recommendation is why it is on this map.\n\nIt shares a building with the Kanekichi Yamamoto butcher’s main shop. The butcher is on the ground floor and the restaurant is above it, up the stairs on the left of the building.\n\nDinner courses started at ¥9,000 (menu at the door, March 2026) and lunch at ¥3,850 (menu at the door, February 2025), tax included. Sign-in for lunch opens at 11:00 (notice at the door, April 2026).\n\nThe bus from La Collina reaches the station just after 17:00 (about 17:15–17:30 on weekends and holidays). Dinner starts at 17:00, with last orders at 20:00. The station is a short walk away afterwards: Special Rapids leave at 19:06 and 19:37, reaching Kyoto Station at 19:42 or 20:12.\n\nRecommended visit time: 17:15–19:00"
    },
    "gmaps": [
     {
@@ -1485,6 +1481,17 @@
      "url": {
       "ja": "https://oumigyuu.co.jp/pages/store-information",
       "en": "https://oumigyuu.co.jp/pages/store-information"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "お店と料理の写真（ティファニー公式Instagram）",
+      "en": "Photos of the restaurant and food (Tiffany’s official Instagram)"
+     },
+     "url": {
+      "ja": "https://www.instagram.com/tiffany_oumi/",
+      "en": "https://www.instagram.com/tiffany_oumi/"
      }
     }
    ],
@@ -1514,7 +1521,7 @@
      "ja": "予約は 050-1784-1825 へ。",
      "en": "Reservations: 050-1784-1825."
     },
-    "checked": "2026-11-20"
+    "checked": "2026-11-22"
    },
    "notices": []
   },

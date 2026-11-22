@@ -120,7 +120,7 @@ window.OMI_I18N = {
           { time: '12:20', area: '日牟禮八幡宮', title: '八幡宮と、近江牛のお昼（2軒から1つ）', text: '山を下りて日牟禮八幡宮へ。12:45ごろから近江牛のお昼。焼肉丼の久ぼ多屋か、すき焼きのまるたけ近江西川か、どちらか1つを一覧で選んでください。', note: '久ぼ多屋は木曜、まるたけは火曜休み', photo: ['marutake', 0] },
           { time: '13:50', area: '八幡堀', title: '蔵のビアハウスと町歩き', text: '白壁の蔵のビアハウスでクラフトビールを1杯。そのあとは新町通りや堀ぞいの石畳をのんびり。舟に乗るならこの時間に。', note: 'ビアハウスは火曜休み', photo: ['beer', 0] },
           { time: '15:30', area: '北之庄', title: '歩いてラ コリーナへ', text: '北へ歩いて20〜25分。草屋根の建物と焼きたてバームクーヘン。帰りは平日16:44、土日祝16:57のバスで駅へ。', note: '平日は16:44の次が17:42', photo: ['collina', 0] },
-          { time: '17:36', area: '近江八幡駅', title: '京都で晩ごはん、または近江八幡で', text: '17:36の新快速で京都駅に18:12。街なかで21〜22時まで。近江八幡で食べるなら駅前のティファニーへ。金曜・土曜は八幡堀のビアハウスも20:00まで。', note: 'ティファニーは火曜休み', photo: ['tiffany', 0] }
+          { time: '17:36', area: '近江八幡駅', title: '京都で晩ごはん、または近江八幡で', text: '17:36の新快速で京都駅に18:12。街なかで21〜22時まで。近江八幡で食べるなら、八日市のおばあちゃんが地元で一番の評判と教えてくれた駅前のティファニーへ。金曜・土曜は八幡堀のビアハウスも20:00まで。', note: 'ティファニーは火曜休み', photo: ['tiffany', 0] }
         ],
         dealsLead: '京都駅から近江八幡を回って京都駅へ帰ると、電車・バス・ロープウェーで大人1人 2,980円です（ラ コリーナまで歩いた場合。瑞龍寺の拝観料などは別）。',
         deals: [
@@ -273,7 +273,7 @@ window.OMI_I18N = {
           { time: '12:20', area: 'Himure Hachimangu', title: 'Shrine, then Omi beef for lunch (pick one)', text: 'Down to Himure Hachimangu Shrine, then Omi beef from about 12:45: a beef rice bowl at Kubotaya or sukiyaki at Marutake Ohmi Nishikawa. Pick one of the two in the list.', note: 'Kubotaya closed Thu, Marutake closed Tue', photo: ['marutake', 0] },
           { time: '13:50', area: 'Hachimanbori', title: 'Craft beer and an old-town stroll', text: 'A beer in a white storehouse, then a slow walk along Shinmachi Street and the canal paths. This is the time for the boat, too.', note: 'Beer house closed Tue', photo: ['beer', 0] },
           { time: '15:30', area: 'Kitanosho', title: 'Walk to La Collina', text: 'A 20–25 minute walk north. Grass roofs and fresh baumkuchen; bus to the station at 16:44 on weekdays, 16:57 on weekends and holidays.', note: 'Weekdays: after 16:44 the next bus is 17:42', photo: ['collina', 0] },
-          { time: '17:36', area: 'Omi-Hachiman Sta.', title: 'Dinner in Kyoto, or here', text: 'The 17:36 Special Rapid gets you to Kyoto Station at 18:12, with the evening in town until 21:00–22:00. Eating here? Tiffany is by the station, and on Fridays and Saturdays the beer house stays open until 20:00.', note: 'Tiffany closed Tue', photo: ['tiffany', 0] }
+          { time: '17:36', area: 'Omi-Hachiman Sta.', title: 'Dinner in Kyoto, or here', text: 'The 17:36 Special Rapid gets you to Kyoto Station at 18:12, with the evening in town until 21:00–22:00. Eating here? Tiffany, by the station, is the one a grandmother in Yokaichi said locals rate best. On Fridays and Saturdays the beer house stays open until 20:00.', note: 'Tiffany closed Tue', photo: ['tiffany', 0] }
         ],
         dealsLead: 'Kyoto Station to Omihachiman and back, with the buses and the ropeway, costs ¥2,980 per adult (walking to La Collina; temple admission etc. extra).',
         deals: [
