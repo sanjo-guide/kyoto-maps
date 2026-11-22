@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://tiles.openfreemap.org; worker-src 'self' blob:; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>京都 大原 Ohara MAP</title>
-<meta name="description" content="京都駅からバスで約1時間の山里、大原。三千院の苔の庭、宝泉院の額縁庭園、寂光院を歩いて回る1日ルートマップ。Ohara, north of Kyoto: Sanzen-in, Hosen-in and Jakko-in on foot.">
+<title>京都 大原｜三千院・宝泉院・寂光院 Ohara MAP</title>
+<meta name="description" content="三条から京都バスで約45分の山里、大原。三千院の開門に合わせるコースと、先に寂光院へ行って三千院を午後に回す9〜10時発コースを選べる1日ルートマップ。お昼の時間、帰りのバス、街なかに戻ってからの夜も。Ohara, north of Kyoto, by bus from Sanjo: a course timed for Sanzen-in’s opening, or a 9–10 o’clock course that saves Sanzen-in for the afternoon, with lunch timing, buses back and the evening in town.">
 <meta name="theme-color" content="#F2F0EA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../vendor/maplibre/maplibre-gl.css">
-<link rel="stylesheet" href="css/style.css?v=119">
+<link rel="stylesheet" href="css/style.css?v=120">
 <meta name="robots" content="noimageindex">
 <script src="../assets/protect.js?v=1" defer></script>
 </head>
@@ -95,6 +95,12 @@
       <span data-t="spot1Howto">このマップの使い方を見る</span>
     </button>
     <!-- 「全部回る」か「選んで回る」か -->
+    <p class="sw-label" data-t="swCourse">出発時間</p>
+    <div class="modesw coursesw" role="group" data-t-aria="courseAria" aria-label="出発時間">
+      <button type="button" data-course="early" data-t="courseEarly">早朝に出発</button>
+      <button type="button" data-course="late" data-t="courseLate">9〜10時に出発</button>
+    </div>
+    <p class="sw-label" data-t="swMode">回り方</p>
     <div class="modesw" role="group" data-t-aria="modeAria" aria-label="回り方">
       <button type="button" data-mode="all" data-t="modeAll">全部回る</button>
       <button type="button" data-mode="pick" data-t="modePick">選んで回る</button>
@@ -181,7 +187,7 @@
 <script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
 <script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
 <script src="../assets/basemap.js?v=3"></script>
-<script src="js/i18n.js?v=119"></script>
-<script src="js/app.js?v=123"></script>
+<script src="js/i18n.js?v=120"></script>
+<script src="js/app.js?v=124"></script>
 </body>
 </html>
