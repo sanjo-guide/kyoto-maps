@@ -226,7 +226,7 @@ AFTER_LATE = T(
     "帰りと、夜\n"
     "金閣寺道から市バス59系統で河原町三条へ約30分・230円（平日16:35発→17:05着。日中は15〜20分おき。59系統の最終は20:39発）。三条大橋のまわりの木屋町通（きやまちどおり）と先斗町（ぽんとちょう）には、遅くまで開いている店が並びます。閉まる時間とラストオーダーは店ごとに違うので、入る前に表の案内で確かめてください。店を決めておきたい人は、叡山電鉄のマップの24〜26番も見てください。\n\n"
     "12月6日までは、金閣寺のかわりに、しょうざんの夜の紅葉ライトアップ（17:30〜20:00）もあります。このスポットの「お知らせ」を見てください。\n\n"
-    "船岡温泉（ふなおかおんせん）は、今宮神社の南、船岡山のふもとの古い銭湯です。公式サイトが見つからず、営業時間・料金・タトゥーの扱いは確かめられていません（要確認）。行くなら、千本鞍馬口のバス停から歩いて6分ほど（地図で見た目安）。",
+    "船岡温泉（ふなおかおんせん）は、今宮神社の南、船岡山のふもとの古い銭湯です。Toshiも入りに行く銭湯で、タトゥーがあっても入れるはずです（念のため入口で確かめてください）。公式サイトが見つからず、営業時間と料金は確かめられていません（要確認）。行くなら、千本鞍馬口のバス停から歩いて6分ほど（地図で見た目安）。",
     "Lunch at Shozan (around 13:30)\n\n"
     "From Koetsuji, walk south down the old Takagamine road to the west gate of Shozan Resort Kyoto (about 15 minutes; map estimate). Its restaurants sit inside a large Japanese garden (Shozan website):\n"
     "• Wakadori (chicken and Japanese): lunch 11:30–14:30 (last orders 14:00). Closing days are on its online calendar.\n"
@@ -238,7 +238,7 @@ AFTER_LATE = T(
     "Back to town, and the evening\n"
     "City bus 59 from Kinkakuji-michi to Kawaramachi-Sanjo takes about 30 minutes, ¥230 (weekdays 16:35 → 17:05; every 15–20 minutes in the daytime; the last 59 leaves at 20:39). Around Sanjo Ohashi bridge, Kiyamachi-dori and Pontocho are lined with places that stay open late. Closing times and last orders differ, so check the sign at the door. If you’d rather have a place picked out, see stops 24–26 on the Eizan Railway map.\n\n"
     "Until 6 December there is also Shozan’s evening autumn light-up (17:30–20:00) instead of Kinkaku-ji: see the notes at the top of this spot.\n\n"
-    "Funaoka Onsen, south of Imamiya at the foot of Funaokayama hill, is an old public bath. No official website could be found, so its hours, price and tattoo rules are unconfirmed (please check). It’s about 6 minutes’ walk from the Senbon-Kuramaguchi bus stop (map estimate).")
+    "Funaoka Onsen, south of Imamiya at the foot of Funaokayama hill, is an old public bath. Toshi bathes here himself, and tattoos should be fine (ask at the entrance to be sure). No official website could be found, so its hours and price are unconfirmed (please check). It’s about 6 minutes’ walk from the Senbon-Kuramaguchi bus stop (map estimate).")
 
 AFTER_EARLY = T(
     "大徳寺へ歩いて（11:45ごろ）\n\n"
@@ -252,7 +252,7 @@ AFTER_EARLY = T(
     "12月6日までは、金閣寺から歩いて25分ほど（地図で見た目安）上ると、しょうざんの庭園（昼は17:00まで）と、夜の紅葉ライトアップ（17:30〜20:00）。このスポットの「お知らせ」を見てください。\n\n"
     "帰りと、夜\n"
     "金閣寺道から市バス59系統で河原町三条へ約30分・230円（日中は15〜20分おき。最終は20:39発）。三条大橋のまわりの木屋町通と先斗町には、遅くまで開いている店が並びます。閉まる時間とラストオーダーは店ごとに違うので、入る前に表の案内で確かめてください。叡山電鉄のマップの24〜26番も見てください。\n\n"
-    "船岡温泉は、大徳寺の南西、船岡山のふもとの古い銭湯です。公式サイトが見つからず、営業時間・料金・タトゥーの扱いは確かめられていません（要確認）。",
+    "船岡温泉は、大徳寺の南西、船岡山のふもとの古い銭湯です。Toshiも入りに行く銭湯で、タトゥーがあっても入れるはずです（念のため入口で確かめてください）。公式サイトが見つからず、営業時間と料金は確かめられていません（要確認）。",
     "Walk to Daitoku-ji (around 11:45)\n\n"
     "About 10 minutes’ walk south of Imamiya Shrine lies Daitoku-ji, a precinct of sub-temples behind earthen walls.\n"
     "• Obai-in: autumn special opening 9 October – 6 December 2026, 10:00–15:45 (last entry), ¥1,000, cash only (Kyoto Shunju). Its garden is said to be the work of Sen no Rikyu.\n"
@@ -264,7 +264,7 @@ AFTER_EARLY = T(
     "Until 6 December, a walk of about 25 minutes uphill from Kinkaku-ji (map estimate) brings you to Shozan’s garden (daytime until 17:00) and its evening autumn light-up (17:30–20:00): see the notes at the top of this spot.\n\n"
     "Back to town, and the evening\n"
     "City bus 59 from Kinkakuji-michi to Kawaramachi-Sanjo takes about 30 minutes, ¥230 (every 15–20 minutes in the daytime; the last at 20:39). Around Sanjo Ohashi bridge, Kiyamachi-dori and Pontocho are lined with places that stay open late. Closing times and last orders differ, so check the sign at the door. See also stops 24–26 on the Eizan Railway map.\n\n"
-    "Funaoka Onsen, south-west of Daitoku-ji at the foot of Funaokayama hill, is an old public bath. No official website could be found, so its hours, price and tattoo rules are unconfirmed (please check).")
+    "Funaoka Onsen, south-west of Daitoku-ji at the foot of Funaokayama hill, is an old public bath. Toshi bathes here himself, and tattoos should be fine (ask at the entrance to be sure). No official website could be found, so its hours and price are unconfirmed (please check).")
 
 LINKS_LATE = [link("official", "しょうざん 日本庭園", "Shozan Japanese garden (Japanese)", SHOZAN_GARDEN),
               link("official", "しょうざん わかどり", "Shozan: Wakadori (Japanese)", SHOZAN_WAKADORI),
