@@ -19,10 +19,10 @@ import os, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = (dict(
-    id='omihachiman', i18n='OMI_I18N', count=14, data_v=4, bump=101,
-    head='近江八幡（京都の三条から日帰り・彦根城にも）',
+    id='omihachiman', i18n='OMI_I18N', count=14, data_v=5, bump=102, keyv='-b',
+    head='近江八幡（京都駅から日帰り・彦根城にも）',
     title='近江八幡｜京都から日帰り（彦根城にも）',
-    desc='京都の三条から地下鉄とJRで約1時間。八幡堀、八幡山ロープウェーと琵琶湖の眺め、近江牛のランチ、蔵のクラフトビール、夕方のラ コリーナ。夜は京都に戻るか近江八幡で晩ごはん。彦根城にも行くコースに切り替えられる、時刻つきの1日マップ。A timed day trip from central Kyoto to Omihachiman: canal, ropeway and Lake Biwa views, Omi beef, craft beer and La Collina, with a second course that adds Hikone Castle.',
+    desc='京都駅から新快速で乗り換えなし35分。八幡堀、八幡山ロープウェーと琵琶湖の眺め、近江牛のお昼（すき焼きか焼肉丼）、蔵のクラフトビール、夕方のラ コリーナ。夜は京都に戻るか近江八幡で晩ごはん。彦根城にも行くコースに切り替えられる、時刻つきの1日マップ。A timed day trip from Kyoto Station to Omihachiman: canal, ropeway and Lake Biwa views, an Omi-beef lunch, craft beer and La Collina, with a second course that adds Hikone Castle.',
     main='近江八幡', alt='Omihachiman', sub='京都発 From Kyoto MAP'))
 runpy.run_path(os.path.join(R, 'scripts', 'sync_higashiyama.py'), init_globals={'CFG': CFG})
 

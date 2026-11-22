@@ -57,7 +57,7 @@
  },
  "photoBase": "../images/omihachiman/",
  "plan": {
-  "_note": "「選んで回る」の設定。defaultPicks は時間割どおりの組み合わせ（八幡堀→八幡山→日牟禮八幡宮→お昼→1杯→彦根城→玄宮園）。駅は必ず入り、ロープウェーは山頂か瑞龍寺を選ぶと入る。",
+  "_note": "「選んで回る」の設定。defaultPicks は時間割どおりの組み合わせ（八幡堀→八幡山→日牟禮八幡宮→1杯→彦根城→玄宮園。お昼の2軒はゲストが1つ選ぶ）。駅は必ず入り、ロープウェーは山頂か瑞龍寺を選ぶと入る。",
   "defaultMode": "pick",
   "picks": [
    3,
@@ -77,7 +77,6 @@
    3,
    5,
    7,
-   8,
    10,
    15,
    16
@@ -164,12 +163,87 @@
      "ja": "彦根へ行く日は、八幡山とラ コリーナの両方は入りません。どちらか1つにしてください。",
      "en": "A Hikone day has no room for both Mt. Hachiman and La Collina. Please choose one."
     }
+   },
+   {
+    "spot": 7,
+    "rule": {
+     "any": [
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      15,
+      16,
+      17
+     ],
+     "none": [
+      8,
+      9
+     ]
+    },
+    "text": {
+     "ja": "近江牛のお昼のお店がまだ選ばれていません。久ぼ多屋（8番）か、まるたけ近江西川（9番）のどちらか1つを「行きたい」にしてください。",
+     "en": "You haven’t picked a lunch place yet. Choose one: Kubotaya (stop 8) or Marutake Ohmi Nishikawa (stop 9)."
+    }
+   },
+   {
+    "spot": 8,
+    "rule": {
+     "any": [
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      15,
+      16,
+      17
+     ],
+     "none": [
+      8,
+      9
+     ]
+    },
+    "text": {
+     "ja": "近江牛のお昼のお店がまだ選ばれていません。久ぼ多屋（8番）か、まるたけ近江西川（9番）のどちらか1つを「行きたい」にしてください。",
+     "en": "You haven’t picked a lunch place yet. Choose one: Kubotaya (stop 8) or Marutake Ohmi Nishikawa (stop 9)."
+    }
+   },
+   {
+    "spot": 9,
+    "rule": {
+     "any": [
+      3,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      15,
+      16,
+      17
+     ],
+     "none": [
+      8,
+      9
+     ]
+    },
+    "text": {
+     "ja": "近江牛のお昼のお店がまだ選ばれていません。久ぼ多屋（8番）か、まるたけ近江西川（9番）のどちらか1つを「行きたい」にしてください。",
+     "en": "You haven’t picked a lunch place yet. Choose one: Kubotaya (stop 8) or Marutake Ohmi Nishikawa (stop 9)."
+    }
    }
   ]
  },
  "sources": [
   {
-   "what": "三条京阪→近江八幡（地下鉄東西線で山科、JR琵琶湖線に乗り換え、260円＋590円）。2026年11月25日（水）：三条京阪9:44→山科9:53、山科10:06 新快速 近江塩津行→近江八幡10:35。11月28日（土）・29日（日）：9:43→9:52、10:05→10:34。京都市役所前は平日9:42発。びわ湖浜大津行きは京阪山科着で390円。京都駅からは10:00発の同じ新快速で680円",
+   "what": "京都→近江八幡：2026年11月25日（水）京都10:00 新快速 近江塩津行（2番線）→近江八幡10:35、680円。11月28日（土）京都10:00→近江八幡10:34。三条京阪→京都（地下鉄、烏丸御池で乗り換え、260円）：11月25日 9:30→9:47、11月28日 9:32→9:45。山科で乗り換える場合：三条京阪9:44→山科9:53、山科10:06→近江八幡10:35（土日祝は9:43→9:52、10:05→10:34）、260円＋590円。びわ湖浜大津行きは京阪山科着で390円",
    "url": "https://transit.yahoo.co.jp/",
    "checked": "2026-11-22"
   },
@@ -209,17 +283,32 @@
    "checked": "2026-11-22"
   },
   {
+   "what": "びわ湖観光 水郷めぐり定期船：要予約、10:30・13:30・15:30発（約1時間）、大人2,200円（小人半額）、1人から乗船可、四季を通じて営業。15:30発は12月〜3月下旬運休。運航状況の表では2026年11月26日（木）が休み",
+   "url": "https://www.suigou.com/smp/ship.php",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江八幡市観光物産協会：水郷めぐり各社の比較（和船観光協同組合・水郷のさと まるやまの定期船は4月〜11月末、島真珠水郷観光船部は3月中旬〜11月末、びわ湖観光は通年で15:30発は冬期欠航）。びわ湖観光へは近江八幡駅から近江鉄道バス長命寺行きで「水茎焼陶芸の里」下車すぐ（https://www.omi8.com/spot/detail_1140.html）",
+   "url": "https://www.omi8.com/stories/suigo",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "水郷のさと まるやま：定期船（手こぎ）は4月〜11月、10:00・13:10・15:00、大人2,200円（2027年1月1日から2,300円）、当面は予約制。冬（12〜3月）は貸切船だけ（要予約、水曜と年末年始は休み）",
+   "url": "http://www.za.ztv.ne.jp/tekogi.maruyama/1Service.html",
+   "checked": "2026-11-22"
+  },
+  {
    "what": "ラ コリーナ近江八幡：9:00〜18:00、フードコンテナ10:00〜17:00。2026年11月19日のお知らせ「連休中のご来店について」（土日祝は駐車場の出入りに時間、公共交通機関で）。混雑予想は11月22日（日）が全時間帯「大混雑」",
    "url": "https://taneya.jp/la_collina/congestion/",
    "checked": "2026-11-22"
   },
   {
-   "what": "近江八幡→京都方面の新快速：16〜19時台は毎時6分・36分ごろ（19時台は平日・土日祝とも19:06・19:37）、平日20:06・20:37、土日祝20:13・20:33、21:13、21:53。2026年11月25日（水）：17:36→山科18:07、地下鉄18:20→三条京阪18:29。18:06→山科18:37、地下鉄18:51→三条京阪19:00。19:37→三条京阪20:32。21:53→三条京阪22:50",
+   "what": "近江八幡→京都の新快速（680円）：16〜19時台は毎時6分・36分ごろ（19時台は平日・土日祝とも19:06・19:37）、平日20:06・20:37、土日祝20:13・20:33、21:13、21:53。京都着：17:36→18:12、18:06→18:42、19:06→19:42、19:37→20:12、平日20:06→20:42、土日祝20:13→20:47、21:53→22:28（2026年11月25日（水）・28日（土））。京都→三条京阪（地下鉄260円）は約15分（11月25日 18:23→18:36）",
    "url": "https://transit.yahoo.co.jp/timetable/25495/1591",
    "checked": "2026-11-22"
   },
   {
-   "what": "近江八幡→彦根：14:34 新快速 近江塩津行→14:48（420円）、14:52 普通→15:12、15:04 新快速 長浜行→15:18。彦根→京都方面の新快速は毎時22分・52分ごろ。2026年11月25日（水）：彦根17:52→近江八幡18:06。彦根17:22→山科18:07（990円）、地下鉄18:20→三条京阪18:29。彦根20:59→三条京阪21:58、21:19→22:36。11月29日（日）：17:52→三条京阪18:55",
+   "what": "近江八幡→彦根：14:34 新快速 近江塩津行→14:48（420円）、14:52 普通→15:12、15:04 新快速 長浜行→15:18。彦根→京都の新快速は毎時22分・52分ごろ（1,170円）。2026年11月25日（水）・29日（日）：彦根17:22→京都18:12、17:52→京都18:42（近江八幡18:06）、20:59→京都21:48、21:39→京都22:28",
    "url": "https://transit.yahoo.co.jp/timetable/25558/1591",
    "checked": "2026-11-22"
   },
@@ -252,8 +341,8 @@
     "en": "Train (start)"
    },
    "blurb": {
-    "ja": "三条のあたりからは、地下鉄で山科（やましな）へ出てJRの新快速に乗り換えるのが早くて安い行き方。京都駅からなら乗り換えなしです。",
-    "en": "From around Sanjo, the quick, cheap way is the subway to Yamashina and a JR Special Rapid from there. From Kyoto Station it’s a direct train."
+    "ja": "京都駅10:00発の新快速「近江塩津」行きで、乗り換えなし35分。三条のあたりからは、地下鉄で京都駅へ（約15分）。",
+    "en": "The 10:00 Special Rapid for Omi-Shiotsu from Kyoto Station gets you there direct in 35 minutes. From around Sanjo, take the subway to Kyoto Station first (about 15 minutes)."
    },
    "lat": 34.98535,
    "lng": 135.758766,
@@ -267,8 +356,8 @@
     "01-7.jpg"
    ],
    "text": {
-    "ja": "京都から近江八幡へ\n\n三条のあたりからは、京都駅へ出るより、地下鉄東西線で山科（やましな）へ出てJRに乗り換えるほうが早くて安く着きます。三条京阪9:44発（土日祝は9:43発）の「六地蔵（ろくじぞう）」行きに乗り、山科で10:06発（土日祝は10:05発）の新快速「近江塩津（おうみしおつ）」行きに乗り換えて、近江八幡に10:35（土日祝は10:34）着。地下鉄260円＋JR 590円で、850円です。京都市役所前からは、同じ電車がその2分ほど前に出ます（運賃は同じ）。\n\n地下鉄は「六地蔵」行きに乗ってください。「びわ湖浜大津」行きは途中から京阪の線に入って京阪山科駅に着き、運賃が130円高くなります。\n\n京都駅から乗るなら、10:00発の新快速「近江塩津」行き（上と同じ電車）で乗り換えなし、680円。写真は京都駅です。\n\n近江八幡まで乗り換えなしで行く新快速は、昼間は1時間に1本です。「野洲（やす）」行きと「草津」行きの新快速は手前が終点なので、乗るとホームで次の普通電車を待つことになります。「湖西線（こせいせん）経由」は別の線を通るので、乗らないでください。\n\nおすすめ出発時間：三条京阪 9:44（土日祝は9:43）",
-    "en": "Kyoto to Omihachiman\n\nFrom around Sanjo it’s quicker and cheaper to take the Tozai subway line to Yamashina and change to JR there than to go via Kyoto Station. Take the 9:44 from Sanjo Keihan (9:43 on weekends and holidays) bound for Rokujizo, then at Yamashina the 10:06 Special Rapid (10:05 on weekends and holidays) bound for Omi-Shiotsu. You reach Omi-Hachiman at 10:35 (10:34). Subway ¥260 + JR ¥590 = ¥850. From Kyoto Shiyakusho-mae the same subway train leaves about 2 minutes earlier (same fare).\n\nMake sure the subway train says Rokujizo. Trains for Biwako-Hamaotsu switch to the Keihan line, arrive at Keihan Yamashina Station and cost ¥130 more.\n\nStarting from Kyoto Station? The 10:00 Special Rapid for Omi-Shiotsu (the same train) goes direct for ¥680. The photos show Kyoto Station.\n\nIn the daytime only one Special Rapid an hour runs through to Omi-Hachiman. Special Rapids for Yasu or Kusatsu stop short, and you end up waiting on the platform for the next local train. Don’t board anything marked “via Kosei Line”: it takes a different line.\n\nRecommended departure time: 9:44 from Sanjo Keihan (9:43 on weekends and holidays)"
+    "ja": "京都から近江八幡へ\n\n京都駅10:00発の新快速「近江塩津（おうみしおつ）」行きに乗れば、乗り換えなしで近江八幡に10:35（土日祝は10:34）着。680円です。乗換案内では、JRの2番のりばから出ます（当日は駅の案内板で確かめてください）。写真は京都駅です。\n\n三条のあたりからは、地下鉄で京都駅へ。三条京阪から東西線に乗り、烏丸御池（からすまおいけ）で烏丸線の「竹田」方面に乗り換えて、約15分・260円。平日は三条京阪9:30発（京都9:47着）、土日祝は9:32発（9:45着）なら間に合います。\n\n三条からなら、地下鉄東西線で山科（やましな）へ出て、同じ新快速に乗り換える行き方もあります（三条京阪9:44発、土日祝は9:43発。山科10:06発、土日祝は10:05発。地下鉄260円＋JR 590円）。このときは「六地蔵（ろくじぞう）」行きに乗ってください。「びわ湖浜大津」行きは京阪山科駅に着き、運賃も130円高くなります。\n\n近江八幡まで乗り換えなしで行く新快速は、昼間は1時間に1本です。「野洲（やす）」行きと「草津」行きの新快速は手前が終点なので、乗るとホームで次の普通電車を待つことになります。「湖西線（こせいせん）経由」は別の線を通るので、乗らないでください。\n\nおすすめ出発時間：京都駅 10:00",
+    "en": "Kyoto to Omihachiman\n\nTake the 10:00 Special Rapid for Omi-Shiotsu from Kyoto Station: it runs direct to Omi-Hachiman, arriving at 10:35 (10:34 on weekends and holidays), for ¥680. Route planners show it leaving from JR platform 2 (check the departure boards on the day). The photos show Kyoto Station.\n\nFrom around Sanjo, take the subway to Kyoto Station: the Tozai Line from Sanjo Keihan, changing at Karasuma Oike to the Karasuma Line towards Takeda. About 15 minutes, ¥260. The 9:30 from Sanjo Keihan on weekdays (Kyoto 9:47) or the 9:32 on weekends and holidays (Kyoto 9:45) gets you there in time.\n\nFrom Sanjo you can also take the Tozai Line to Yamashina and board the same Special Rapid there (9:44 from Sanjo Keihan, 9:43 on weekends and holidays; Yamashina 10:06, 10:05 on weekends and holidays; subway ¥260 + JR ¥590). If you do, make sure the subway train says Rokujizo: trains for Biwako-Hamaotsu end up at Keihan Yamashina Station and cost ¥130 more.\n\nIn the daytime only one Special Rapid an hour runs through to Omi-Hachiman. Special Rapids for Yasu or Kusatsu stop short, and you end up waiting on the platform for the next local train. Don’t board anything marked “via Kosei Line”: it takes a different line.\n\nRecommended departure time: 10:00 from Kyoto Station"
    },
    "gmaps": [
     {
@@ -317,8 +406,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "三条京阪→山科 地下鉄9分・260円、山科→近江八幡 新快速で約30分・590円（合わせて850円）",
-       "en": "Sanjo Keihan → Yamashina: subway, 9 min, ¥260. Yamashina → Omi-Hachiman: about 30 min by Special Rapid, ¥590 (¥850 in all)"
+       "ja": "京都→近江八幡 新快速で35分・680円（10:00発、10:35着。土日祝は10:34着）",
+       "en": "Kyoto → Omi-Hachiman: 35 min by Special Rapid, ¥680 (10:00, arriving 10:35; 10:34 on weekends and holidays)"
       },
       "until": null,
       "from": null
@@ -326,8 +415,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "京都駅→近江八幡 新快速で約35分・680円",
-       "en": "Kyoto Station → Omi-Hachiman: about 35 min by Special Rapid, ¥680"
+       "ja": "三条京阪→京都 地下鉄（烏丸御池で乗り換え）約15分・260円",
+       "en": "Sanjo Keihan → Kyoto Station: subway (change at Karasuma Oike), about 15 min, ¥260"
       },
       "until": null,
       "from": null
@@ -456,8 +545,8 @@
     "03-10.jpg"
    ],
    "text": {
-    "ja": "八幡堀（はちまんぼり）\n\n八幡山に城を築いた豊臣秀次（とよとみひでつぐ）が造らせた堀です。バス停から歩いてすぐ。白雲橋（はくうんばし）のあたりから堀ぞいの石畳の道に下りると、時代劇に出てくるような景色です。散策は無料です。\n\n着いたらまず、ここをひと回り。彦根へ行く日は午後にゆっくり歩く時間がないので、石畳の道はこのときに歩いておきましょう。\n\n舟で回る「八幡堀めぐり」は10:00〜16:00、大人1,500円、約30分。彦根へ行く日に乗るなら、八幡山に上るのをやめて、この時間に。予約なしで乗れるのは2人以上から。1人のときは乗り場で聞いてみてください。\n\n夜は白雲橋から新町浜までがライトアップされます（点灯の時間は公式の案内に書かれていません）。冬は17時ごろには暗くなります。\n\nおすすめ訪問時間：10:55〜11:10",
-    "en": "Hachimanbori Canal\n\nThe canal was dug when Toyotomi Hidetsugu built his castle on Mt. Hachiman. A short walk from the bus stop. Go down to the stone path along the water near Hakuun Bridge and you’re in a period drama. Walking here is free.\n\nTake a turn around it when you arrive. On a Hikone day there is no time for a slow walk in the afternoon, so do the stone path now.\n\nThe Hachimanbori boat tour runs 10:00–16:00: ¥1,500 per adult, about 30 minutes. To fit it into a Hikone day, take it now and skip Mt. Hachiman. Walk-ups are for two or more people; if you’re alone, ask at the landing.\n\nAt night the stretch from Hakuun Bridge to Shinmachi-hama is lit up (the official information gives no times). In winter it is dark by about 17:00.\n\nRecommended visit time: 10:55–11:10"
+    "ja": "八幡堀（はちまんぼり）\n\n八幡山に城を築いた豊臣秀次（とよとみひでつぐ）が造らせた堀です。バス停から歩いてすぐ。白雲橋（はくうんばし）のあたりから堀ぞいの石畳の道に下りると、時代劇に出てくるような景色です。散策は無料です。\n\n着いたらまず、ここをひと回り。彦根へ行く日は午後にゆっくり歩く時間がないので、石畳の道はこのときに歩いておきましょう。\n\n舟で回る「八幡堀めぐり」は10:00〜16:00、大人1,500円、約30分。彦根へ行く日に乗るなら、八幡山に上るのをやめて、この時間に。予約なしで乗れるのは2人以上から。1人のときは乗り場で聞いてみてください。\n\n町の北の水郷（すいごう）を回る「水郷めぐり」の舟は、彦根へ行く日は時間が合いません。冬も乗れる会社（びわ湖観光）は「近江八幡で1日」コースのこのページで紹介しています。\n\n夜は白雲橋から新町浜までがライトアップされます（点灯の時間は公式の案内に書かれていません）。冬は17時ごろには暗くなります。\n\nおすすめ訪問時間：10:55〜11:10",
+    "en": "Hachimanbori Canal\n\nThe canal was dug when Toyotomi Hidetsugu built his castle on Mt. Hachiman. A short walk from the bus stop. Go down to the stone path along the water near Hakuun Bridge and you’re in a period drama. Walking here is free.\n\nTake a turn around it when you arrive. On a Hikone day there is no time for a slow walk in the afternoon, so do the stone path now.\n\nThe Hachimanbori boat tour runs 10:00–16:00: ¥1,500 per adult, about 30 minutes. To fit it into a Hikone day, take it now and skip Mt. Hachiman. Walk-ups are for two or more people; if you’re alone, ask at the landing.\n\nThe marsh boat tours north of town (suigo-meguri) don’t fit into a Hikone day. The “Omihachiman all day” course has details of the company that also runs in winter (Biwako Kanko).\n\nAt night the stretch from Hakuun Bridge to Shinmachi-hama is lit up (the official information gives no times). In winter it is dark by about 17:00.\n\nRecommended visit time: 10:55–11:10"
    },
    "gmaps": [
     {
@@ -501,6 +590,15 @@
       "text": {
        "ja": "散策は無料。八幡堀めぐり（舟）は大人1,500円・約30分（10:00〜16:00）",
        "en": "Walking is free. Boat tour: ¥1,500 per adult, about 30 min (10:00–16:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "水郷めぐり（びわ湖観光の定期船・冬も運航）大人2,200円・約1時間・要予約",
+       "en": "Marsh boat tour (Biwako Kanko scheduled boats, also in winter): ¥2,200 per adult, about 1 hr, booking required"
       },
       "until": null,
       "from": null
@@ -917,8 +1015,8 @@
     "en": "Lunch (Omi beef)"
    },
    "blurb": {
-    "ja": "八幡堀のそば、赤い丸い塔が目印の近江牛のお店。焼肉丼からステーキの御膳まで。木曜休み。",
-    "en": "Omi beef by the canal; look for the round red tower. From beef rice bowls to steak sets. Closed Thursdays."
+    "ja": "お昼は、ここか「まるたけ近江西川」のどちらか1つ。赤い丸い塔が目印の近江牛のお店で、焼肉丼からステーキの御膳まで。木曜休み。",
+    "en": "Lunch is here or at Marutake Ohmi Nishikawa: pick one. Omi beef by the canal, under the round red tower; beef rice bowls to steak sets. Closed Thursdays."
    },
    "lat": 35.138966,
    "lng": 136.092224,
@@ -1020,8 +1118,8 @@
     "en": "Lunch (Omi beef)"
    },
    "blurb": {
-    "ja": "お肉屋さんがやっている近江牛のレストラン。すきやき丼は1,540円。1階でカツサンドも買えます。火曜休み。",
-    "en": "A butcher’s own Omi-beef restaurant. Sukiyaki rice bowl ¥1,540; katsu sandwiches to take away downstairs. Closed Tuesdays."
+    "ja": "お昼は、ここか「久ぼ多屋」のどちらか1つ。お肉屋さんがやっている近江牛のお店で、すきやき丼は1,540円。火曜休み。",
+    "en": "Lunch is here or at Kubotaya: pick one. A butcher’s own Omi-beef restaurant; sukiyaki rice bowl ¥1,540. Closed Tuesdays."
    },
    "lat": 35.13892,
    "lng": 136.091977,
@@ -1490,8 +1588,8 @@
     "15-5.jpg"
    ],
    "text": {
-    "ja": "彦根駅（ひこねえき）\n\n近江八幡14:34発の新快速「近江塩津」行きで14:48着、420円。彦根城までは西口から歩いて約15分です。\n\n彦根城と玄宮園の入場は16:30まで、閉まるのは17:00です。着いたら寄り道せずにお城へ向かってください。\n\n帰りは17:52発の新快速に乗ると、山科で地下鉄に乗り換えて三条京阪に19:00ごろ着きます（JR 990円＋地下鉄260円）。京都駅までなら乗り換えなしで約50分、1,170円。新快速は彦根を毎時22分・52分ごろに出ます（20時台からは時刻が変わります）。遅くなる日も、21:19発の電車（三条京阪に22:36着）までには乗ってください。\n\nおすすめ移動時間：14:48着",
-    "en": "Hikone Station\n\nThe 14:34 Special Rapid for Omi-Shiotsu from Omi-Hachiman arrives at 14:48 (¥420). The castle is about 15 minutes’ walk from the West Exit.\n\nLast entry to the castle and Genkyuen is 16:30, and both close at 17:00, so head straight for the castle.\n\nGoing back, the 17:52 Special Rapid and a change to the subway at Yamashina get you to Sanjo Keihan at about 19:00 (JR ¥990 + subway ¥260). To Kyoto Station it is about 50 minutes direct, ¥1,170. Special Rapids leave Hikone at about 22 and 52 minutes past the hour (the pattern changes from the 20:00s). However late you stay, be on the 21:19 train at the latest (Sanjo Keihan 22:36).\n\nRecommended travel time: arrive 14:48"
+    "ja": "彦根駅（ひこねえき）\n\n近江八幡14:34発の新快速「近江塩津」行きで14:48着、420円。彦根城までは西口から歩いて約15分です。\n\n彦根城と玄宮園の入場は16:30まで、閉まるのは17:00です。着いたら寄り道せずにお城へ向かってください。\n\n帰りは17:52発の新快速で、乗り換えなしで京都駅に18:42着、1,170円。新快速は彦根を毎時22分・52分ごろに出ます（20時台からは時刻が変わります）。遅くなる日は、20:59発（京都21:48着）か21:39発（京都22:28着）の新快速で。\n\nおすすめ移動時間：14:48着",
+    "en": "Hikone Station\n\nThe 14:34 Special Rapid for Omi-Shiotsu from Omi-Hachiman arrives at 14:48 (¥420). The castle is about 15 minutes’ walk from the West Exit.\n\nLast entry to the castle and Genkyuen is 16:30, and both close at 17:00, so head straight for the castle.\n\nGoing back, the 17:52 Special Rapid runs direct to Kyoto Station, arriving at 18:42 (¥1,170). Special Rapids leave Hikone at about 22 and 52 minutes past the hour (the pattern changes from the 20:00s). Staying later? Take the 20:59 (Kyoto 21:48) or the 21:39 (Kyoto 22:28) Special Rapid.\n\nRecommended travel time: arrive 14:48"
    },
    "gmaps": [
     {
@@ -1542,8 +1640,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "彦根→山科 新快速で約45分・990円、山科→三条京阪 地下鉄9分・260円（京都駅までは約50分・1,170円）",
-       "en": "Hikone → Yamashina: about 45 min by Special Rapid, ¥990. Yamashina → Sanjo Keihan: subway, 9 min, ¥260 (Kyoto Station: about 50 min, ¥1,170)"
+       "ja": "彦根→京都 新快速で約50分・1,170円",
+       "en": "Hikone → Kyoto: about 50 min by Special Rapid, ¥1,170"
       },
       "until": null,
       "from": null
@@ -1683,8 +1781,8 @@
     "17-10.jpg"
    ],
    "text": {
-    "ja": "玄宮園（げんきゅうえん）\n\n彦根城の券で入れます（玄宮園だけなら400円）。入場は16:30まで、17:00に閉まります。池のまわりを歩いて、ゆっくり一周できます。\n\n夜の写真は、秋のライトアップのとき（2025年11月）です。毎年の期間は彦根観光協会のサイトで確認してください。\n\n帰りは彦根駅まで歩いて約20分。17:52発の新快速で、三条京阪に19:00ごろ着きます。晩ごはんは京都に戻ってからか、途中の近江八幡で降りてティファニー（17番）で。\n\nおすすめ訪問時間：16:20〜17:00",
-    "en": "Genkyuen Garden\n\nThe castle ticket covers it (garden only: ¥400). Last entry is 16:30 and it closes at 17:00. A path takes you all the way round the pond.\n\nThe night photos are from the autumn illumination (November 2025); check the Hikone tourism website for each year’s dates.\n\nHikone Station is about 20 minutes’ walk. The 17:52 Special Rapid gets you to Sanjo Keihan at about 19:00. Have dinner back in Kyoto, or get off at Omi-Hachiman on the way for Tiffany (stop 17).\n\nRecommended visit time: 16:20–17:00"
+    "ja": "玄宮園（げんきゅうえん）\n\n彦根城の券で入れます（玄宮園だけなら400円）。入場は16:30まで、17:00に閉まります。池のまわりを歩いて、ゆっくり一周できます。\n\n夜の写真は、秋のライトアップのとき（2025年11月）です。毎年の期間は彦根観光協会のサイトで確認してください。\n\n帰りは彦根駅まで歩いて約20分。17:52発の新快速で、京都駅に18:42着です。晩ごはんは京都に戻ってからか、途中の近江八幡で降りてティファニー（17番）で。\n\nおすすめ訪問時間：16:20〜17:00",
+    "en": "Genkyuen Garden\n\nThe castle ticket covers it (garden only: ¥400). Last entry is 16:30 and it closes at 17:00. A path takes you all the way round the pond.\n\nThe night photos are from the autumn illumination (November 2025); check the Hikone tourism website for each year’s dates.\n\nHikone Station is about 20 minutes’ walk. The 17:52 Special Rapid gets you to Kyoto Station at 18:42. Have dinner back in Kyoto, or get off at Omi-Hachiman on the way for Tiffany (stop 17).\n\nRecommended visit time: 16:20–17:00"
    },
    "gmaps": [
     {
@@ -1752,8 +1850,8 @@
      "to": "2026-11-29",
      "url": "https://www.hikoneshi.com/event/article/c/kinshu",
      "text": {
-      "ja": "2026年11月29日まで、夜に「錦秋の玄宮園ライトアップ」があります（18:00〜21:00、入場は20:30まで、大人900円）。昼の券では入れません。当日券は会場の入口で、現金かPayPayで。見て帰るなら、彦根20:59発の電車で三条京阪に21:58着です。",
-      "en": "Until Nov 29, 2026, the garden is lit up at night (18:00–21:00, last entry 20:30, ¥900). Daytime tickets are not valid. Buy a ticket at the entrance with cash or PayPay. Going back afterwards, the 20:59 train from Hikone reaches Sanjo Keihan at 21:58."
+      "ja": "2026年11月29日まで、夜に「錦秋の玄宮園ライトアップ」があります（18:00〜21:00、入場は20:30まで、大人900円）。昼の券では入れません。当日券は会場の入口で、現金かPayPayで。見て帰るなら、彦根20:59発の新快速で京都駅に21:48着です。",
+      "en": "Until Nov 29, 2026, the garden is lit up at night (18:00–21:00, last entry 20:30, ¥900). Daytime tickets are not valid. Buy a ticket at the entrance with cash or PayPay. Going back afterwards, the 20:59 Special Rapid from Hikone reaches Kyoto Station at 21:48."
      }
     }
    ]
@@ -1785,8 +1883,8 @@
     "13-7.jpg"
    ],
    "text": {
-    "ja": "特選近江牛レストラン ティファニー\n\nディナーのコースは9,000円から、ランチは3,850円からでした（2026年3月・2024年11月の店頭のメニュー）。\n\n1階のお肉屋さんでは、近江牛のコロッケなどのお惣菜も買えます。電車を待つあいだのおやつにも。\n\n彦根の帰りに、近江八幡で途中下車して晩ごはんにする場合です。彦根17:52発の新快速で近江八幡に18:06着。ディナーのラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。20:06（土日祝は20:13）の新快速に乗ると、山科で地下鉄に乗り換えて三条京阪に21:00ごろ着きます。\n\nおすすめ訪問時間：18:15〜19:45",
-    "en": "Tiffany\n\nDinner courses started at ¥9,000 and lunch at ¥3,850 (menus at the door, March 2026 and November 2024).\n\nThe butcher’s shop downstairs sells Omi-beef croquettes and other deli food, good for a snack while you wait for the train.\n\nThis is for breaking the journey back from Hikone for dinner. The 17:52 Special Rapid from Hikone reaches Omi-Hachiman at 18:06. Last orders for dinner are at 20:00. The station is a short walk away afterwards: take the 20:06 Special Rapid (20:13 on weekends and holidays), change to the subway at Yamashina, and you are back at Sanjo Keihan at about 21:00.\n\nRecommended visit time: 18:15–19:45"
+    "ja": "特選近江牛レストラン ティファニー\n\nディナーのコースは9,000円から、ランチは3,850円からでした（2026年3月・2024年11月の店頭のメニュー）。\n\n1階のお肉屋さんでは、近江牛のコロッケなどのお惣菜も買えます。電車を待つあいだのおやつにも。\n\n彦根の帰りに、近江八幡で途中下車して晩ごはんにする場合です。彦根17:52発の新快速で近江八幡に18:06着。ディナーのラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。20:06（土日祝は20:13）の新快速に乗ると、京都駅に20:42（土日祝は20:47）着です。\n\nおすすめ訪問時間：18:15〜19:45",
+    "en": "Tiffany\n\nDinner courses started at ¥9,000 and lunch at ¥3,850 (menus at the door, March 2026 and November 2024).\n\nThe butcher’s shop downstairs sells Omi-beef croquettes and other deli food, good for a snack while you wait for the train.\n\nThis is for breaking the journey back from Hikone for dinner. The 17:52 Special Rapid from Hikone reaches Omi-Hachiman at 18:06. Last orders for dinner are at 20:00. The station is a short walk away afterwards: the 20:06 Special Rapid (20:13 on weekends and holidays) reaches Kyoto Station at 20:42 (20:47).\n\nRecommended visit time: 18:15–19:45"
    },
    "gmaps": [
     {

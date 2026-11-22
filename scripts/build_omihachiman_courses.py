@@ -44,6 +44,9 @@ SWAP = [
     ('hori', ('舟で回る', 'The Hachimanbori boat tour'), {
         'ja': '舟で回る「八幡堀めぐり」は10:00〜16:00、大人1,500円、約30分。彦根へ行く日に乗るなら、八幡山に上るのをやめて、この時間に。予約なしで乗れるのは2人以上から。1人のときは乗り場で聞いてみてください。',
         'en': 'The Hachimanbori boat tour runs 10:00–16:00: ¥1,500 per adult, about 30 minutes. To fit it into a Hikone day, take it now and skip Mt. Hachiman. Walk-ups are for two or more people; if you’re alone, ask at the landing.'}),
+    ('hori', ('町の北の水郷', 'Most companies run their scheduled'), {
+        'ja': '町の北の水郷（すいごう）を回る「水郷めぐり」の舟は、彦根へ行く日は時間が合いません。冬も乗れる会社（びわ湖観光）は「近江八幡で1日」コースのこのページで紹介しています。',
+        'en': 'The marsh boat tours north of town (suigo-meguri) don’t fit into a Hikone day. The “Omihachiman all day” course has details of the company that also runs in winter (Biwako Kanko).'}),
     ('summit', ('山頂の駅から西の丸跡', 'The West Bailey ruins'), {
         'ja': '山頂の駅から西の丸跡まで歩いて約3分。琵琶湖と対岸の山々が見えるのは、この西の丸跡のあたりです。反対側からは、近江八幡の町や田んぼ、西の湖（にしのこ）まで見えます。山の上をぐるっと回る遊歩道は1周約30分。彦根へ行く日は、12:00ごろのロープウェーで下りてください。',
         'en': 'The West Bailey ruins are about 3 minutes’ walk from the top station; this is where you look out over Lake Biwa to the mountains beyond. The other side looks over the town, the rice fields and Lake Nishinoko. The path around the summit takes about 30 minutes. On a Hikone day, take the ropeway down at about 12:00.'}),
@@ -54,8 +57,8 @@ SWAP = [
         'ja': 'ビールを飲まない人は、お昼のあとの時間をこの通りで。バス停「八幡堀八幡山ロープウェー口」へは歩いて5分ほどです。13:55（土日祝は14:00）のバスで駅へ戻ります。',
         'en': 'Not having a beer? Spend the time after lunch on this street instead. The “Hachimanbori Hachimanyama Ropeway-guchi” bus stop is about 5 minutes’ walk; take the 13:55 bus (14:00 on weekends and holidays) back to the station.'}),
     ('tiffany', ('ラ コリーナからのバスで', 'The bus from La Collina'), {
-        'ja': '彦根の帰りに、近江八幡で途中下車して晩ごはんにする場合です。彦根17:52発の新快速で近江八幡に18:06着。ディナーのラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。20:06（土日祝は20:13）の新快速に乗ると、山科で地下鉄に乗り換えて三条京阪に21:00ごろ着きます。',
-        'en': 'This is for breaking the journey back from Hikone for dinner. The 17:52 Special Rapid from Hikone reaches Omi-Hachiman at 18:06. Last orders for dinner are at 20:00. The station is a short walk away afterwards: take the 20:06 Special Rapid (20:13 on weekends and holidays), change to the subway at Yamashina, and you are back at Sanjo Keihan at about 21:00.'}),
+        'ja': '彦根の帰りに、近江八幡で途中下車して晩ごはんにする場合です。彦根17:52発の新快速で近江八幡に18:06着。ディナーのラストオーダーは20:00です。食事のあとは駅まで歩いてすぐ。20:06（土日祝は20:13）の新快速に乗ると、京都駅に20:42（土日祝は20:47）着です。',
+        'en': 'This is for breaking the journey back from Hikone for dinner. The 17:52 Special Rapid from Hikone reaches Omi-Hachiman at 18:06. Last orders for dinner are at 20:00. The station is a short walk away afterwards: the 20:06 Special Rapid (20:13 on weekends and holidays) reaches Kyoto Station at 20:42 (20:47).'}),
 ]
 
 # 丸ごと入れ替えるスポット（名前・種類・一覧の短い紹介・文章・時刻の行など）
@@ -114,8 +117,11 @@ SECTIONS = [(('start', 'omi-sta'), 0), (('hori', 'zuiryuji'), 1), (('himure', 'm
             (('goal', 'hikone-sta'), 4), (('castle', 'genkyuen'), 5), (('tiffany', 'tiffany'), 6)]
 
 PICKS = ['hori', 'summit', 'zuiryuji', 'himure', 'kubotaya', 'marutake', 'beer', 'shinmachi', 'collina', 'castle', 'genkyuen', 'tiffany']
-DEFAULT_PICKS = ['hori', 'summit', 'himure', 'kubotaya', 'beer', 'castle', 'genkyuen']
+# お昼の2軒（kubotaya・marutake）は最初は選ばない。ゲストがどちらか1つを選ぶ（2026-11-22 オーナーの答え）
+DEFAULT_PICKS = ['hori', 'summit', 'himure', 'beer', 'castle', 'genkyuen']
 ONE_LUNCH = {'ja': '久ぼ多屋とまるたけ近江西川はすぐ近く。ランチはどちらか1軒で十分です。', 'en': 'Kubotaya and Marutake are next door to each other; one lunch is plenty.'}
+NO_LUNCH = {'ja': '近江牛のお昼のお店がまだ選ばれていません。久ぼ多屋（8番）か、まるたけ近江西川（9番）のどちらか1つを「行きたい」にしてください。',
+            'en': 'You haven’t picked a lunch place yet. Choose one: Kubotaya (stop 8) or Marutake Ohmi Nishikawa (stop 9).'}
 BOTH = {'ja': '彦根へ行く日は、八幡山とラ コリーナの両方は入りません。どちらか1つにしてください。',
         'en': 'A Hikone day has no room for both Mt. Hachiman and La Collina. Please choose one.'}
 
@@ -185,7 +191,7 @@ def main():
         'focus': {'first': no['omi-sta'], 'last': no['goal']},
         'photoBase': base['photoBase'],
         'plan': {
-            '_note': '「選んで回る」の設定。defaultPicks は時間割どおりの組み合わせ（八幡堀→八幡山→日牟禮八幡宮→お昼→1杯→彦根城→玄宮園）。駅は必ず入り、ロープウェーは山頂か瑞龍寺を選ぶと入る。',
+            '_note': '「選んで回る」の設定。defaultPicks は時間割どおりの組み合わせ（八幡堀→八幡山→日牟禮八幡宮→1杯→彦根城→玄宮園。お昼の2軒はゲストが1つ選ぶ）。駅は必ず入り、ロープウェーは山頂か瑞龍寺を選ぶと入る。',
             'defaultMode': 'pick',
             'picks': [no[x] for x in PICKS],
             'defaultPicks': [no[x] for x in DEFAULT_PICKS],
@@ -196,7 +202,8 @@ def main():
                 {'spot': no['marutake'], 'rule': {'any': [no['marutake']], 'andAny': [no['kubotaya']]}, 'text': ONE_LUNCH},
                 {'spot': no['collina'], 'rule': {'any': [no['collina']], 'andAny': [no['summit'], no['zuiryuji']]}, 'text': BOTH},
                 {'spot': no['ropeway'], 'rule': {'any': [no['summit'], no['zuiryuji']], 'andAny': [no['collina']]}, 'text': BOTH},
-            ],
+            ] + [{'spot': no[x], 'rule': {'any': [no[y] for y in PICKS if y not in ('kubotaya', 'marutake')], 'none': [no['kubotaya'], no['marutake']]}, 'text': NO_LUNCH}
+                 for x in ('himure', 'kubotaya', 'marutake')],
         },
         'sources': base['sources'],
         'spots': spots,
