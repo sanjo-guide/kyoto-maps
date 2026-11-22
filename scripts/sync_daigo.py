@@ -2,7 +2,8 @@
 """ルート型のテンプレート（eizan-line/）の index.html・css・app.js を daigo/ に写し、醍醐用の差分をかけ直す。
 （sync_higashiyama.py と同じ差分。data.plan がないので切り替えボタンは出ない）
 
-使い方: python3 scripts/sync_daigo.py
+使い方: python3 scripts/sync_daigo.py  （データは python3 scripts/build_daigo_data.py で先に作る）
+- コースの切り替えは作っていない（2026-11-22 の見直しで判断。夜の受付と回る順はだれでも同じで、昼の過ごし方は1番のスポットの文章で案内）
 - かけ直す差分:
   - データのパス、保存キー（kyoto-maps-daigo-…）、タイトルと説明文
   - 写真ごとのクレジット表示（data の photos の要素を {"file", "credit": {"author", "license", "page"}} にすると、
@@ -32,7 +33,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.DAIGO_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-daigo-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 3;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/daigo.json?v=2')")
+s = s.replace(m.group(0), "fetch('../data/routes/daigo.json?v=3')")
 
 # 最初から「選んで回る」
 rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
@@ -103,7 +104,7 @@ app_js = s
 # index.html
 h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
 h = re.sub(r'<title>.*?</title>', '<title>京都 醍醐寺の夜の紅葉 Daigoji MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="秋の夜だけ公開される醍醐寺の伽藍。照らされた五重塔と、池に映る弁天堂のもみじ。秋期夜間拝観のルートマップ。Daigoji at night in autumn: the lit pagoda and the Benten hall mirrored in its pond.">', h)
+h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="秋の夜だけ公開される醍醐寺の伽藍。照らされた五重塔と、池に映る弁天堂のもみじ。三条から地下鉄で行って戻る、秋期夜間拝観のルートマップ。昼から来る人の過ごし方も。Daigoji at night in autumn: the lit pagoda and the Benten hall mirrored in its pond, by subway from Sanjo and back, with ideas for the afternoon before.">', h)
 h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1醍醐寺の夜の紅葉\2', h)
 h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Daigoji by night\2', h)
 h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都 Daigoji MAP\2', h)
@@ -111,7 +112,7 @@ a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-EXTRA = {'css/style.css': 0, 'js/i18n.js': 2, 'js/app.js': 1}  # このマップだけ更新したときに上げる分（使い方の直しで i18n +1、2026-11-20 点検の修正で i18n・app.js +1）
+EXTRA = {'css/style.css': 0, 'js/i18n.js': 3, 'js/app.js': 2}  # このマップだけ更新したときに上げる分（使い方の直しで i18n +1、2026-11-20 点検の修正で i18n・app.js +1、2026-11-22 の見直しで i18n・app.js +1）
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """

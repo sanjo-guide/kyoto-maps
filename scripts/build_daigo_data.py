@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 """京都 醍醐寺の紅葉ライトアップ（秋期夜間拝観）のデータ（data/routes/daigo.json）を書き出す。
 
-使い方: python3 scripts/build_daigo_data.py
+使い方: python3 scripts/build_daigo_data.py  （そのあと python3 scripts/sync_daigo.py）
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
-- 写真は images/daigo/<スポットのid>-<番号>.jpg を番号の順に全部使う
+- 写真は images/daigo/<スポットのid>-<番号>.jpg を番号の順に全部使う（足していない）
+- 2026-11-22 オーナーの基準で見直した（ゲストが実際に回れる1日）:
+  - 起点は京都の中心・三条のあたり。京都市役所前17:19／三条京阪17:21の地下鉄東西線（六地蔵行き）で醍醐17:39着→歩いて約10分→
+    18:00の受付開始の少し前に三宝院の受付へ→仁王門→五重塔・金堂→弁天堂→醍醐20:35発で三条京阪20:53着→街なかで晩ごはん
+  - 夜だけでは1日にならないので、1番のスポットに「昼から来る人」の過ごし方（昼の醍醐寺・宇治・伏見稲荷・東山からの来かた、
+    17〜18時の過ごし方）を文章で書いた。写真のない場所はスポットにしていない
+  - コースの切り替えは作っていない（夜の受付と回る順はだれでも同じで、昼の過ごし方は人によって違うため）
+  - 2026-12-07 からは、どのスポットにも「今年は終わりました。昼の醍醐寺は…」のお知らせが出る（ENDED）。
+    夜間拝観の行（rows）は until=2026-12-06 で消える
+- 時刻・料金の出典は SOURCES（データの sources に入る）
 """
 import json, os, re, urllib.parse
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = f"{R}/images/daigo"
 OUT = f"{R}/data/routes/daigo.json"
-CHECKED = "2026-11-20"
+CHECKED = "2026-11-22"
+END = "2026-12-06"          # 2026年の秋期夜間拝観の最終日
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -30,12 +40,16 @@ def link(kind, ja, en, url_ja, url_en=None):
     return {"kind": kind, "label": T(ja, en), "url": {"ja": url_ja, "en": url_en or url_ja}}
 
 
-def row(kind, ja, en, until=None):
-    return {"kind": kind, "text": T(ja, en), "until": until, "from": None}
+def row(kind, ja, en, until=None, frm=None):
+    return {"kind": kind, "text": T(ja, en), "until": until, "from": frm}
 
 
-def info(rows, tip=None, verified=True):
-    d = {"rows": rows, "cash": False, "tip": tip, "checked": CHECKED}
+def notice(head_ja, head_en, ja, en, url=None, frm=None, to=None):
+    return {"from": frm, "to": to, "url": url, "head": T(head_ja, head_en), "text": T(ja, en)}
+
+
+def info(rows, source, tip=None, verified=True):
+    d = {"rows": rows, "cash": False, "tip": tip, "checked": CHECKED, "source": source}
     if not verified:
         d["verified"] = False
     return d
@@ -45,74 +59,199 @@ def photos(pid):
     return [f"{pid}-{i}.jpg" for i in sorted(PICKS[pid])]
 
 
+NIGHT_URL = "https://www.daigoji.or.jp/event/detail7.html"
+TIME_URL = "https://www.daigoji.or.jp/guide/time.html"
+YAHOO = "https://transit.yahoo.co.jp/"
+NAVI_PLAN = "https://ja.kyoto.travel/event/single.php?event_id=13326"
+SHOJIN = "https://tabichat.jp/engine/hotels/ekoin/plans/8841/be2d04c72f8ad89f95ea"
+SHOP = "https://www.daigoji.or.jp/shop/jyuan.html"
+MOMIJI = "https://ja.kyoto.travel/flower/momiji/"
 
+OFFICIAL = link("official", "醍醐寺 秋期夜間拝観（公式）", "Daigoji autumn evening opening (official, Japanese)", NIGHT_URL)
+GUIDE = link("official", "醍醐寺 拝観時間・料金", "Daigoji hours and fees (official, Japanese)", TIME_URL)
+TIMETABLE = link("timetable", "乗換案内（Yahoo!路線情報）", "Route planner (Yahoo! Japan)", YAHOO)
+PLAN = link("info", "夜間拝観の事前予約（京都観光Navi・1,400円）", "Advance evening ticket, ¥1,400 (Kyoto City tourism site, Japanese)", NAVI_PLAN)
+UJI = link("info", "宇治と伏見のマップ", "Uji & Fushimi map", "../uji/#list")
+INARI = link("info", "伏見稲荷のマップ（伏見稲荷・東福寺）", "Fushimi Inari map (Fushimi Inari, Tofukuji)", "../fushimi-inari/#list")
+HIGASHI = link("info", "東山のマップ（南禅寺・永観堂）", "Higashiyama map (Nanzenji, Eikando)", "../higashiyama/#list")
+EIZAN = link("info", "叡山電鉄のマップ（夜の祇園四条・先斗町は24〜26番）", "Eizan Railway map (evening stops 24–26)", "../eizan-line/#list")
 
-JR = link("timetable", "乗換案内（Yahoo!路線情報）", "Route planner (Yahoo! Japan)", "https://transit.yahoo.co.jp/")
-OFFICIAL = link("official", "醍醐寺 秋期夜間拝観（公式）", "Daigoji autumn evening opening (official, Japanese)", "https://www.daigoji.or.jp/event/detail7.html")
-NIGHT = row("hours", "2026年秋期夜間拝観：11月20日〜12月6日 18:00〜20:50（受付20:10まで）。昼とは入れ替え制", "Autumn 2026 evening opening: 20 Nov – 6 Dec, 18:00–20:50 (last entry 20:10); separate from the daytime", until="2026-12-06")
+NIGHT = row("hours", "2026年秋期夜間拝観：11月20日〜12月6日 18:00〜20:50（受付は20:10まで）。昼とは完全入れ替え制",
+            "Autumn 2026 evening opening: 20 Nov – 6 Dec, 18:00–20:50 (last entry 20:10). Completely separate from the daytime visit", until=END)
+NIGHT_FEE = row("fee", "夜間拝観 1,500円（中学生以上）。京都観光Naviの事前予約は1,400円（カード払い・申し込み後のキャンセル不可）",
+                "Evening ticket ¥1,500 (junior high and up). Booked in advance on the Kyoto City tourism site: ¥1,400 (card payment, no cancellations)", until=END)
+
 # 夜間拝観が終わった次の日から出すお知らせ（全スポット共通）
-ENDED = {"from": "2026-12-07", "to": None, "url": "https://www.daigoji.or.jp/event/detail7.html",
-         "head": T("2026年の夜間拝観は終わりました", "The 2026 evening opening has ended"),
-         "text": T("2026年の秋期夜間拝観は12月6日で終わりました。次の秋の日程は醍醐寺の公式サイトで確かめてください。昼の拝観は9:00から（12月第1日曜の翌日〜2月末は16:30まで、受付は30分前まで）。",
-                   "The autumn 2026 evening opening ended on 6 December. Check the Daigoji website for next autumn’s dates. Daytime visits start at 9:00 (until 16:30 from the day after the first Sunday of December to the end of February; last entry 30 min before closing).")}
+ENDED = notice("2026年の夜間拝観は終わりました", "The 2026 evening opening has ended",
+               "2026年の秋期夜間拝観は12月6日で終わりました。次の秋の日程は、醍醐寺の公式サイトで確かめてください。\n"
+               "昼の醍醐寺は、12月7日から2月末までは9:00〜16:30（受付は16:00まで）。三宝院・霊宝館・伽藍の3か所共通券が大人1,500円です。"
+               "伽藍の五重塔と弁天堂は昼も見られます。山の上の上醍醐は、登山道にがけ崩れの危険があり、当面は入山禁止です。"
+               "三条京阪から地下鉄東西線の六地蔵行きで醍醐まで約18分・290円、駅から歩いて約10分。",
+               "The autumn 2026 evening opening ended on 6 December. Check the Daigoji website for next autumn’s dates.\n"
+               "By day, Daigoji is open 9:00–16:30 from 7 December to the end of February (last entry 16:00). A combined ticket for the Sanboin, the Reihokan museum and the main precinct is ¥1,500. The pagoda and the Benten hall are in the main precinct, so you can still see them by day. Kami-Daigo on the mountain is closed for now because of landslide risk on the trail. "
+               "From Sanjo-Keihan take the Tozai subway (for Rokujizo) to Daigo, about 18 minutes, ¥290, then about 10 minutes on foot.",
+               url=TIME_URL, frm="2026-12-07")
+SEASON = notice("紅葉の見ごろは例年11月中旬〜下旬", "Autumn leaves: usually mid to late November",
+                "京都観光Navi（京都市）の紅葉だよりでは、醍醐寺の例年の見ごろは11月中旬〜下旬です。年によって前後します。写真は2024年11月24日の夜間拝観で撮ったものです。",
+                "Kyoto City’s autumn-leaf report gives Daigoji’s usual peak as mid to late November; it shifts from year to year. My photos are from the evening opening on 24 November 2024.",
+                url=MOMIJI, frm="2026-11-01", to=END)
+
+# 1番のスポット：行き方・受付・昼から来る人
+DAYTIME = T(
+    "昼から来る人は\n\n"
+    "夜間拝観は18時から。昼の拝観とは完全に入れ替えで、昼の券では夜に入れず、夜の券では18時前に入れません。17時に昼の拝観が終わってから、18時に夜が始まるまでの1時間をどう過ごすかを決めておくと楽です。\n\n"
+    "1. 昼の醍醐寺を先に見る\n"
+    "昼の拝観は9:00〜17:00（受付は16:30まで）。三宝院（さんぼういん）の庭園、寺宝を集めた霊宝館（れいほうかん）、伽藍（がらん）の3か所で、醍醐寺の案内では1か所約30分、3か所で約1時間半です。"
+    "伽藍は夜にも入るので、昼は三宝院と霊宝館の2か所券（1,000円）にして、伽藍は夜に見る手もあります。3か所共通券は1,500円。山の上の上醍醐（かみだいご）は、登山道にがけ崩れの危険があり、当面は入山禁止です。\n"
+    "三条京阪から13時ごろの地下鉄に乗ると、13時半すぎに三宝院の受付に着きます（例：平日13:04発→醍醐13:21着）。ひと休みは、醍醐寺の茶寮 宇治和束園（うじわづかえん。抹茶とお菓子。11:00〜16:00、火・水曜休み）で。16時に閉まるので、早めに。\n\n"
+    "2. 宇治・伏見稲荷・東山を回ってから来る\n"
+    "どこも醍醐まで20〜30分ほど。17時すぎの電車に乗れば、18時の受付に間に合います（時刻は2026年11月28日・土曜の例）。\n"
+    "・宇治（同じサイトの「宇治と伏見」のマップの1〜8番）：京阪宇治 17:07発（中書島行き）→六地蔵で地下鉄に乗り換え→醍醐 17:35着、460円。JR宇治から奈良線で六地蔵へ出ても同じくらい（17:10発→17:35着、400円）。\n"
+    "・伏見稲荷・東福寺（「伏見稲荷」のマップ）：JR稲荷 17:08発の奈良線→六地蔵で乗り換え→醍醐 17:26着、420円。\n"
+    "・南禅寺・永観堂（「東山」のマップ）：地下鉄の蹴上（けあげ）駅から六地蔵行きで乗り換えなし。17:25発→醍醐 17:39着、290円。\n\n"
+    "17〜18時の過ごし方\n"
+    "醍醐寺のホームページから予約できる「秋の特別精進料理」（高野山 恵光院が出す二段折）には、霊宝館のカフェで17時・18時から食べる枠があります。17時以降の枠には夜間拝観の券がついて、5,500円（前払い）。"
+    "予約していないなら、地下鉄の醍醐駅のすぐ前に商業施設（パセオ・ダイゴロー）があり、飲食店も入っています。ただ、店ごとの時間は公式の案内で確かめられていません（要確認）。晩ごはんは、夜間拝観のあと三条に戻ってからでも間に合います。",
+    "If you’re coming in the afternoon\n\n"
+    "The evening opening starts at 18:00 and is completely separate from the daytime visit: a day ticket won’t get you in at night, and an evening ticket won’t get you in before 18:00. The day visit ends at 17:00, so it helps to plan that hour in between.\n\n"
+    "1. See Daigoji by day first\n"
+    "Daytime hours are 9:00–17:00 (last entry 16:30). There are three areas: the Sanboin and its garden, the Reihokan treasure museum, and the main precinct (Garan); the temple suggests about 30 minutes each, about 90 minutes for all three. "
+    "Since the evening visit is in the main precinct, you could buy the two-site ticket for the Sanboin and the Reihokan (¥1,000) and leave the precinct for the night. The three-site ticket is ¥1,500. Kami-Daigo on the mountain is closed for now because of landslide risk on the trail.\n"
+    "A subway from Sanjo-Keihan around 13:00 gets you to the Sanboin reception a little after 13:30 (e.g. weekdays 13:04 → Daigo 13:21). For a break, the temple’s tea room Uji Wazukaen serves matcha and sweets (11:00–16:00, closed Tuesday and Wednesday). It closes at 16:00, so don’t leave it late.\n\n"
+    "2. Come on from Uji, Fushimi Inari or Higashiyama\n"
+    "Each is 20–30 minutes from Daigo. A train just after 17:00 gets you there for the 18:00 opening (times below are for Saturday 28 November 2026).\n"
+    "• Uji (stops 1–8 on this site’s Uji & Fushimi map): Keihan Uji 17:07 (for Chushojima) → change to the subway at Rokujizo → Daigo 17:35, ¥460. Going from JR Uji on the Nara line to Rokujizo takes about the same (17:10 → 17:35, ¥400).\n"
+    "• Fushimi Inari and Tofukuji (Fushimi Inari map): JR Inari 17:08 on the Nara line → change at Rokujizo → Daigo 17:26, ¥420.\n"
+    "• Nanzenji and Eikando (Higashiyama map): from Keage subway station, a train for Rokujizo runs straight through. 17:25 → Daigo 17:39, ¥290.\n\n"
+    "Between 17:00 and 18:00\n"
+    "The “autumn shojin meal” you can book from the Daigoji website (a two-tier box from Ekoin, a temple lodging on Mt Koya) has 17:00 and 18:00 sittings at the café by the Reihokan. Sittings from 17:00 include the evening ticket: ¥5,500, paid in advance. "
+    "Without a booking, there’s a shopping centre (Paseo Daigoro) right by Daigo subway station with places to eat, but I couldn’t confirm the opening hours of each place on an official page (please check). You can also wait and have dinner back in Sanjo after the evening visit.")
+
+AFTER = T(
+    "帰りと、街なかの夜\n\n"
+    "閉まるのは20:50。弁天堂から醍醐駅までは、歩いて20〜25分ほどみてください（地図で見た目安。境内は足元が暗いところがあります）。"
+    "醍醐駅から三条京阪へは、20:35、20:45、20:58、21:08、21:19、21:28発…（17〜18分・290円。太秦天神川行きはどれも三条京阪・京都市役所前に停まります）。最終は23:32発（三条京阪23:49着）なので、急がなくて大丈夫です。\n\n"
+    "三条京阪のまわりの木屋町通（きやまちどおり）と先斗町（ぽんとちょう）には、遅くまで開いている店が並びます。21時すぎに着いても晩ごはんにできます。閉まる時間とラストオーダーは店ごとに違うので、入る前に表の案内で確かめてください。店を決めておきたい人は、叡山電鉄のマップの24〜26番（祇園四条・ともしび3rd・先斗町）も見てください。",
+    "Getting back, and the evening in town\n\n"
+    "The precinct closes at 20:50. Allow 20–25 minutes on foot from the Benten hall to Daigo Station (a map estimate; some paths in the grounds are dark). "
+    "Trains from Daigo to Sanjo-Keihan leave at 20:35, 20:45, 20:58, 21:08, 21:19, 21:28 and so on (17–18 minutes, ¥290; every train for Uzumasa-Tenjingawa stops at Sanjo-Keihan and Kyoto Shiyakusho-mae). The last one is 23:32 (Sanjo-Keihan 23:49), so there’s no need to rush.\n\n"
+    "Around Sanjo-Keihan, Kiyamachi-dori and Pontocho are lined with places that stay open late, so dinner after 21:00 is fine. Closing times and last orders differ, so check the sign at the door. If you’d rather have a place picked out, see stops 24–26 (Gion-Shijo, Tomoshibi 3rd, Pontocho) on the Eizan Railway map.")
+
 S = [
-    dict(id="niomon", name=T("総門・仁王門", "Somon & Niomon gates"), kind=T("門", "Gates"),
+    dict(id="niomon", name=T("総門・仁王門", "Somon & Niomon gates"), kind=T("受付・門", "Entrance & gates"),
+         caution=T("受付は三宝院の拝観受付で18:00〜20:10。昼の券では入れません（完全入れ替え）",
+                   "Tickets at the Sanboin reception, 18:00–20:10. Day tickets aren’t valid (fully separate from the day)"),
          blurb=T("夜の拝観は、三宝院の受付から。ライトアップされた参道の先に、大きな仁王門が浮かびます。",
                  "The evening visit starts at the Sanboin reception; the great Nio gate glows at the end of the lit avenue."),
          lat=34.95150, lng=135.82002,
-         text=T("総門（そうもん）・仁王門（におうもん）\n\n地下鉄東西線の醍醐駅から歩いて約10分（京都駅からJRと地下鉄で約25分・440円）。総門を入り、三宝院の受付で夜間拝観の券を買って、桜の馬場の参道を仁王門へ進みます。\n\n"
-                "2026年の秋期夜間拝観は11月20日〜12月6日の18:00〜20:50（受付は20:10まで）。昼の拝観とは入れ替えなので、昼から続けては入れません。券は醍醐寺の公式サイトから先に買うこともできます。紅葉の見ごろは例年11月中旬〜下旬です（京都観光Naviの紅葉だより）。写真は2024年11月24日の夜間拝観です。\n\nおすすめ訪問時間：18:00〜18:20",
-                "Somon & Niomon gates\n\nAbout 10 minutes on foot from Daigo Station on the Tozai subway line (about 25 min from Kyoto Station by JR and subway, ¥440). Enter the Somon gate, buy an evening ticket at the Sanboin reception, and follow the approach to the Nio gate.\n\n"
-                "The autumn 2026 evening opening runs from 20 November to 6 December, 18:00–20:50 (last entry 20:10). It’s separate from the daytime visit, so you can’t stay on from the day. Tickets can also be bought in advance through the temple website. The leaves usually peak in mid to late November (Kyoto City’s autumn-leaf report). Photos from the evening opening on 24 November 2024.\n\nRecommended visit time: 18:00–18:20"),
-         gmaps=[gm("醍醐寺 仁王門", "Daigoji Niomon", 34.95150, 135.82002, "醍醐寺 仁王門"), gm("地下鉄 醍醐駅", "Daigo Station", 34.95049, 135.81066, "地下鉄 醍醐駅")],
-         links=[OFFICIAL, JR],
-         info=info([NIGHT, row("fee", "夜間拝観 1,500円（中学生以上）", "Evening opening ¥1,500 (junior high and up)", until="2026-12-06"),
-                    row("train", "京都駅 → 山科（地下鉄東西線に乗り換え）→ 醍醐 約25分・440円", "Kyoto → Yamashina (change to Tozai line) → Daigo, about 25 min, ¥440")],
-                   tip=T("醍醐寺の公式サイトと乗換案内で確認しました。", "Checked on the temple website and a route planner."))),
+         text=T("総門（そうもん）・仁王門（におうもん）\n\n"
+                "三条から地下鉄東西線で乗り換えなし。京都市役所前17:19、三条京阪17:21発の「六地蔵行き」に乗ると、醍醐に17:39に着きます（18分・290円。平日も土日も同じ時刻）。三条京阪では「びわ湖浜大津行き」も来ますが、こちらは途中で分かれるので乗らないでください。1本あとは17:27・17:28発→17:47着。\n\n"
+                "醍醐駅の2番出口から、三宝院の拝観受付まで歩いて約10分（醍醐寺の案内）。17時50分ごろに受付に着いて、18:00の受付開始を待つ形です。声明（しょうみょう）のある日は18:30から金堂で始まるので、18時台の前半に入っておくと間に合います。受付は20:10までですが、弁天堂までゆっくり見るなら、遅くとも19時半には受付を。\n\n"
+                "券は当日、三宝院の拝観受付で買えます（1,500円、中学生以上）。京都観光Naviで先に買うと1,400円ですが、カード払いで、申し込んだあとのキャンセルはできません。夜の拝観は伽藍（金堂・五重塔・林泉・無量寿苑）だけで、三宝院と霊宝館には入れません。\n\n"
+                "受付で券を買ったら、桜の馬場の参道を仁王門へ。照らされた門の先に、夜の伽藍が続きます。境内は足元の暗いところや段差があるので、歩きやすい靴で。夜は冷えるので上着も。\n\n"
+                + DAYTIME["ja"] + "\n\nおすすめ到着時間：17:50（受付は18:00から）。仁王門 18:05〜18:20",
+                "Somon & Niomon gates\n\n"
+                "From Sanjo it’s one subway ride on the Tozai line. Take the train for Rokujizo from Kyoto Shiyakusho-mae at 17:19 or Sanjo-Keihan at 17:21 and you reach Daigo at 17:39 (18 minutes, ¥290; the same times on weekdays and weekends). Trains for Biwako-Hamaotsu also stop at Sanjo-Keihan, but they branch off on the way, so don’t take them. The next is 17:27/17:28 → 17:47.\n\n"
+                "From exit 2 of Daigo Station it’s about 10 minutes on foot to the Sanboin reception (the temple’s access page). You’ll arrive around 17:50 and wait for tickets to go on sale at 18:00. On chanting days the first shomyo starts at 18:30 in the main hall, so go in early in the 18:00 hour. Last entry is 20:10, but to see everything at an easy pace as far as the Benten hall, be at the reception by 19:30.\n\n"
+                "Tickets are sold on the day at the Sanboin reception (¥1,500, junior high and up). Bought in advance on the Kyoto City tourism site they cost ¥1,400, paid by card, with no cancellations. The evening visit covers only the main precinct (main hall, pagoda, the Rinsen pond garden and Muryoju-en); the Sanboin and the Reihokan are closed at night.\n\n"
+                "With your ticket, follow the cherry-lined approach to the Nio gate; beyond the lit gate the precinct goes on into the dark. Some paths are dark or have steps, so wear comfortable shoes, and bring a jacket for the cold.\n\n"
+                + DAYTIME["en"] + "\n\nRecommended arrival time: 17:50 (tickets from 18:00). Nio gate 18:05–18:20"),
+         gmaps=[gm("醍醐寺 三宝院（拝観受付）", "Daigoji Sanboin (reception)", 34.95213, 135.81951, "醍醐寺 三宝院"),
+                gm("醍醐寺 仁王門", "Daigoji Niomon", 34.95150, 135.82002, "醍醐寺 仁王門"),
+                gm("地下鉄 醍醐駅", "Daigo Station", 34.95049, 135.81066, "地下鉄 醍醐駅")],
+         links=[OFFICIAL, PLAN, GUIDE, TIMETABLE, UJI, INARI, HIGASHI,
+                link("info", "秋の特別精進料理（予約）", "Autumn shojin meal (booking, Japanese)", SHOJIN),
+                link("official", "茶寮 宇治和束園（醍醐寺の案内）", "Uji Wazukaen tea room (temple page, Japanese)", SHOP)],
+         notices=[SEASON],
+         rows=[NIGHT, NIGHT_FEE,
+               row("train", "行き：京都市役所前 17:19／三条京阪 17:21発（六地蔵行き）→ 醍醐 17:39着・290円。次は17:27／17:28発 → 17:47着",
+                   "Out: Kyoto Shiyakusho-mae 17:19 / Sanjo-Keihan 17:21 (for Rokujizo) → Daigo 17:39, ¥290. Next: 17:27 / 17:28 → 17:47", until=END),
+               row("hours", "醍醐駅の2番出口から三宝院の受付まで、歩いて約10分", "About 10 minutes on foot from exit 2 of Daigo Station to the Sanboin reception"),
+               row("hours", "昼の拝観 9:00〜17:00（12月7日から2月末は16:30まで。受付は30分前まで）",
+                   "Daytime 9:00–17:00 (until 16:30 from 7 December to the end of February; last entry 30 minutes before)"),
+               row("fee", "昼：3か所共通券 大人1,500円、2か所 1,000円、1か所 600円（3月20日〜4月第3日曜は3か所1,800円、1か所800円）",
+                   "Daytime: 3-site ticket ¥1,500, 2 sites ¥1,000, 1 site ¥600 (20 March to the 3rd Sunday of April: 3 sites ¥1,800, 1 site ¥800)"),
+               row("hours", "茶寮 宇治和束園 11:00〜16:00（火・水曜休み）", "Uji Wazukaen tea room 11:00–16:00 (closed Tue & Wed)")],
+         tip=T("夜間拝観と昼の拝観は醍醐寺の公式サイト、事前予約は京都観光Navi、電車は乗換案内（Yahoo!路線情報）で11月22日に確認しました。醍醐駅前の店の時間と、醍醐コミュニティバスの時刻は確かめられていません（駅から歩いて約10分なので、夜は歩くのがわかりやすいです）。",
+               "The evening and daytime openings were checked on the temple website, the advance ticket on the Kyoto City tourism site, and trains on a route planner (Yahoo! Japan), on 22 November. I couldn’t confirm the hours of the places by Daigo Station or the Daigo community bus times (it’s only about 10 minutes on foot from the station, so walking is simplest at night)."),
+         source="醍醐寺 公式サイト（秋期夜間拝観・チラシ、拝観時間/料金、交通案内、FAQ、食事・売店、トップのお知らせ）、京都観光Navi（事前予約プラン）、高野山 恵光院の予約ページ（醍醐寺のトップからリンク）、乗換案内 Yahoo!路線情報。2026-11-22に確認"),
     dict(id="goju", name=T("五重塔と金堂", "Five-storey pagoda & main hall"), kind=T("国宝", "National Treasures"),
+         caution=T("声明は11/21・22・23、12/5・6の夜だけ（金堂、18:30と20:00から）", "Chanting only on 21, 22, 23 Nov and 5, 6 Dec (main hall, from 18:30 and 20:00)"),
          blurb=T("京都でいちばん古い木造建築の五重塔が、暗い空に白く浮かびます。まわりのもみじも照らされて。",
                  "Kyoto’s oldest wooden building, the five-storey pagoda, glows against the night sky among lit maples."),
          lat=34.95093, lng=135.82281,
          text=T("五重塔（ごじゅうのとう）と金堂（こんどう）\n\n仁王門をくぐると、国宝の金堂と五重塔。五重塔は平安時代（951年）に建てられ、京都府で最も古い木造建築です。夜は塔ともみじが照らされ、昼とはまったく違う姿に。\n\n"
-                "日によっては金堂で声明（しょうみょう）の公演もあります（2026年は11月21・22・23日、12月5・6日。声明は18:30〜18:50と20:00〜20:20、不動堂前の護摩は19:15〜19:30。公式サイトには「午後7時より」とも書かれているので、当日の案内で確かめてください）。夜間拝観に入った人は、だれでも金堂に入って聞けます。\n\nおすすめ訪問時間：18:20〜18:50",
+                "日によっては金堂で声明（しょうみょう）の公演もあります（2026年は11月21・22・23日、12月5・6日。声明は18:30〜18:50と20:00〜20:20、不動堂前の護摩は19:15〜19:30。公式サイトには「午後7時より」とも書かれているので、当日の案内で確かめてください）。夜間拝観に入った人は、だれでも金堂に入って聞けます。\n\n"
+                "声明のある日は、18:30の声明を聞いてから弁天堂へ。20:00の回まで残るなら、帰りの電車は20:58発ごろにずらします。\n\nおすすめ訪問時間：18:20〜18:50",
                 "Five-storey pagoda & main hall\n\nThrough the Nio gate stand the National Treasure main hall and five-storey pagoda. Built in 951 in the Heian period, the pagoda is the oldest wooden building in Kyoto Prefecture. Lit at night with the maples around it, it looks nothing like it does by day.\n\n"
-                "On some evenings there are shomyo (Buddhist chant) performances in the main hall (2026: 21, 22, 23 Nov and 5, 6 Dec; chanting 18:30–18:50 and 20:00–20:20, and a fire ritual in front of the Fudo hall 19:15–19:30; the website also says “from 7 pm”, so check the notice on the day). Anyone with an evening ticket can go into the hall and listen.\n\nRecommended visit time: 18:20–18:50"),
+                "On some evenings there are shomyo (Buddhist chant) performances in the main hall (2026: 21, 22, 23 Nov and 5, 6 Dec; chanting 18:30–18:50 and 20:00–20:20, and a fire ritual in front of the Fudo hall 19:15–19:30; the website also says “from 7 pm”, so check the notice on the day). Anyone with an evening ticket can go into the hall and listen.\n\n"
+                "On chanting days, hear the 18:30 session, then go on to the Benten hall. If you stay for the 20:00 session, aim for the 20:58 train home instead.\n\nRecommended visit time: 18:20–18:50"),
          gmaps=[gm("醍醐寺 五重塔", "Daigoji pagoda", 34.95093, 135.82281, "醍醐寺 五重塔")],
          links=[OFFICIAL],
-         info=info([NIGHT], tip=T("醍醐寺の公式サイトで確認しました。", "Checked on the temple website."))),
+         rows=[NIGHT,
+               row("hours", "声明 18:30〜18:50・20:00〜20:20（金堂）、護摩 19:15〜19:30（不動堂前）。11月21・22・23日、12月5・6日",
+                   "Chanting 18:30–18:50 and 20:00–20:20 (main hall); fire ritual 19:15–19:30 (Fudo hall). 21, 22, 23 Nov and 5, 6 Dec", until=END)],
+         tip=T("醍醐寺の公式サイトで11月22日に確認しました。", "Checked on the temple website on 22 November."),
+         source="醍醐寺 公式サイト（秋期夜間拝観：醍醐寺声明公演）2026-11-22に確認"),
     dict(id="benten", name=T("弁天堂と弁天池", "Bentendo & its pond"), kind=T("池・お堂", "Pond & hall"),
+         caution=T("閉まるのは20:50。弁天堂から醍醐駅まで歩いて20〜25分", "Closes at 20:50. 20–25 minutes on foot from here to Daigo Station"),
          blurb=T("夜間拝観のいちばんの見どころ。朱の弁天堂と橋、照らされたもみじが、池の水面に鏡のように映ります。",
                  "The evening’s highlight: the vermilion Benten hall and bridge and the lit maples, mirrored in the pond."),
          lat=34.95088, lng=135.82432,
-         text=T("弁天堂（べんてんどう）と弁天池\n\n伽藍のいちばん奥、池のほとりに建つ朱色の弁天堂。ライトアップされたもみじと朱の橋が、風のない夜は池に鏡のように映ります。池の正面、橋とお堂が両方入る場所がいちばん混みます（写真2・3枚目）。夜は冷えるので上着を。\n\n"
-                "昼に来るなら、三宝院の庭園・霊宝館・伽藍の3か所共通券（1,500円）があります。山の上の上醍醐は、がけ崩れの危険のため当面入山できません。\n\nおすすめ訪問時間：18:50〜19:40",
-                "Bentendo and its pond\n\nAt the far end of the precinct, the vermilion Benten hall stands by a pond. On a still night, the lit maples and the red bridge are mirrored in the water. The busiest spot is straight across the pond, where the bridge and hall both fit in the frame (photos 2 and 3). Evenings are cold, so bring a jacket.\n\n"
-                "By day, a combined ticket for the Sanboin garden, the Reihokan museum and the main precinct costs ¥1,500. Kami-Daigo on the mountain is closed for now because of landslide risk.\n\nRecommended visit time: 18:50–19:40"),
-         gmaps=[gm("醍醐寺 弁天堂", "Daigoji Bentendo", 34.95088, 135.82432, "醍醐寺 弁天堂")],
-         links=[OFFICIAL, link("official", "醍醐寺 拝観案内", "Daigoji visiting info (official, Japanese)", "https://www.daigoji.or.jp/guide/time.html")],
-         info=info([NIGHT, row("hours", "昼の拝観 9:00〜17:00（12月第1日曜の翌日から2月末は16:30まで、受付は30分前まで）", "Daytime 9:00–17:00 (16:30 from the day after the first Sunday of December to the end of February; last entry 30 min before)"),
-                    row("fee", "昼：3か所共通券 大人1,500円、2か所 1,000円、1か所 600円（春期の3月20日〜4月第3日曜は3か所1,800円、1か所800円）", "Daytime: 3-site ticket ¥1,500, 2 sites ¥1,000, 1 site ¥600 (in spring, 20 Mar to the 3rd Sunday of April: 3 sites ¥1,800, 1 site ¥800)")],
-                   tip=T("醍醐寺の公式サイトで確認しました。", "Checked on the temple website."))),
+         text=T("弁天堂（べんてんどう）と弁天池\n\n伽藍のいちばん奥、林泉（りんせん）と呼ばれる池のほとりに建つ朱色の弁天堂。ライトアップされたもみじと朱の橋が、風のない夜は池に鏡のように映ります。池の正面、橋とお堂が両方入る場所がいちばん混みます（写真2・3枚目）。\n\n"
+                "ここでゆっくりしたら、来た道を戻って総門へ。帰りに五重塔をもう一度見上げていくのもおすすめです。\n\n"
+                + AFTER["ja"] + "\n\nおすすめ訪問時間：18:50〜19:50。醍醐駅 20:35発 → 三条京阪 20:53着",
+                "Bentendo and its pond\n\nAt the far end of the precinct, the vermilion Benten hall stands by the pond garden known as Rinsen. On a still night, the lit maples and the red bridge are mirrored in the water. The busiest spot is straight across the pond, where the bridge and hall both fit in the frame (photos 2 and 3).\n\n"
+                "When you’re done, walk back the way you came to the Somon gate, with one more look up at the pagoda on the way.\n\n"
+                + AFTER["en"] + "\n\nRecommended visit time: 18:50–19:50. Daigo 20:35 → Sanjo-Keihan 20:53"),
+         gmaps=[gm("醍醐寺 弁天堂", "Daigoji Bentendo", 34.95088, 135.82432, "醍醐寺 弁天堂"),
+                gm("地下鉄 醍醐駅", "Daigo Station", 34.95049, 135.81066, "地下鉄 醍醐駅")],
+         links=[OFFICIAL, TIMETABLE, EIZAN],
+         rows=[NIGHT,
+               row("train", "帰り：醍醐 20:35、20:45、20:58、21:08、21:19、21:28発 → 三条京阪 17〜18分・290円（平日も土日も同じ時刻）",
+                   "Back: Daigo 20:35, 20:45, 20:58, 21:08, 21:19, 21:28 → Sanjo-Keihan in 17–18 min, ¥290 (same times every day of the week)", until=END),
+               row("train", "最終：醍醐 23:32発 → 三条京阪 23:49着、京都市役所前 23:51着", "Last train: Daigo 23:32 → Sanjo-Keihan 23:49, Kyoto Shiyakusho-mae 23:51")],
+         tip=T("夜間拝観は醍醐寺の公式サイト、電車は乗換案内（Yahoo!路線情報、2026年11月27日・28日の時刻）で11月22日に確認しました。弁天堂から駅までの時間は地図で見た目安です。",
+               "The evening opening was checked on the temple website and the trains on a route planner (Yahoo! Japan, times for 27 and 28 November 2026), on 22 November. The walking time from the Benten hall to the station is a map estimate."),
+         source="醍醐寺 公式サイト（秋期夜間拝観）、乗換案内 Yahoo!路線情報（醍醐→三条京阪・京都市役所前、2026-11-27・28の時刻）。2026-11-22に確認"),
+]
+
+SOURCES = [
+    {"what": "醍醐寺 秋期夜間拝観：令和8年11月20日（金）〜12月6日（日）、午後6時〜午後8時50分（受付終了午後8時10分）、昼夜完全入替制、受付場所 三宝院拝観受付、拝観料1,500円（中学生以上）・団体20名以上1,200円。声明公演 11/21・22・23・12/5・6、声明18:30〜18:50・20:00〜20:20、護摩19:15〜19:30（「午後7時より国宝・金堂で開催」とも記載）", "url": NIGHT_URL, "checked": CHECKED},
+    {"what": "醍醐寺 夜間拝観チラシ（2026）：拝観場所 醍醐寺 伽藍（金堂・五重塔・林泉・無量寿苑）※夜間照明、※昼夜入替制", "url": "https://www.daigoji.or.jp/event/pdf/night_v_2026.pdf", "checked": CHECKED},
+    {"what": "京都観光Navi 事前予約プラン：オンライン事前予約割引料金 一般1,400円（通常1,500円）、18:00以降の入場、クレジットカード決済・申込後のキャンセル不可。地下鉄東西線「醍醐駅」下車 徒歩約10分（京都観光Naviのイベントページでは徒歩12分）", "url": NAVI_PLAN, "checked": CHECKED},
+    {"what": "醍醐寺 拝観時間/料金：夏期（3/1〜12月第1日曜）9:00〜17:00、冬期（12月第1日曜の翌日〜2月末）9:00〜16:30、閉門30分前で受付終了。通常期 3か所共通券 大人1,500円・中高生1,000円、2か所1,000円、1か所600円、三宝院御殿特別拝観500円。春期（3/20〜4月第3日曜）3か所1,800円・1か所800円。拝観券は三宝院拝観受付で", "url": TIME_URL, "checked": CHECKED},
+    {"what": "醍醐寺 トップのお知らせ：登山道で一部がけ崩れの危険があり、当面の間、上醍醐への入山は禁止", "url": "https://www.daigoji.or.jp/", "checked": CHECKED},
+    {"what": "醍醐寺 FAQ：下醍醐（三宝院・伽藍・霊宝館）の拝観は各所約30分、3か所で約1時間半。拝観の予約は不要", "url": "https://www.daigoji.or.jp/faq/index.html", "checked": CHECKED},
+    {"what": "醍醐寺 交通案内：地下鉄東西線「醍醐駅」②番出口より徒歩約10分。醍醐寺 食事・売店：茶寮 宇治和束園 11時〜16時 火・水定休、フレンチカフェ ル・クロ スゥ ル スリジェは2026年10月31日で閉店（2027年1月リニューアル予定）、恩賜館は通常営業なし", "url": SHOP, "checked": CHECKED},
+    {"what": "秋の特別精進料理（高野山 恵光院、醍醐寺のトップからリンク）：三宝院大広間7,000円（11〜15時の部）／霊宝館カフェ5,500円（11〜18時の部）、拝観料込み。17時以降の予約は夜間拝観券つき、事前決済のみ", "url": SHOJIN, "checked": CHECKED},
+    {"what": "地下鉄東西線（乗換案内、2026-11-27金・11-28土とも同じ）：京都市役所前17:19・三条京阪17:21（六地蔵行）→醍醐17:39、京都市役所前17:27・三条京阪17:28→17:47、290円。三条京阪17:16はびわ湖浜大津行（東山で乗り換え）。平日 三条京阪13:04→醍醐13:21", "url": YAHOO, "checked": CHECKED},
+    {"what": "帰り（乗換案内、2026-11-27・28とも同じ）：醍醐20:35→三条京阪20:53、20:45→21:03、20:58→21:15、21:08→21:25、21:19→21:36、21:28→21:45（太秦天神川行）、290円。最終 醍醐23:32→三条京阪23:49・京都市役所前23:51", "url": YAHOO, "checked": CHECKED},
+    {"what": "ほかの場所から（乗換案内、2026-11-28土）：京阪宇治17:07→六地蔵17:31→醍醐17:35 460円、JR宇治17:10→醍醐17:35 400円、JR稲荷17:08→醍醐17:26 420円、蹴上17:25→醍醐17:39 290円", "url": YAHOO, "checked": CHECKED},
+    {"what": "紅葉の見ごろ（例年）：醍醐寺 11月中旬〜下旬（京都観光Navi 紅葉だより）", "url": MOMIJI, "checked": CHECKED},
 ]
 
 spots = []
 for i, s in enumerate(S, 1):
     s = dict(s)
     out = {"no": i, "id": s.pop("id")}
+    rows, tip, source = s.pop("rows"), s.pop("tip"), s.pop("source")
     out.update(s)
+    out["info"] = info(rows, source, tip=tip)
     out["photos"] = photos(out["id"])
     out.setdefault("notices", [])
-    out["notices"].append(ENDED)
+    out["notices"] = out["notices"] + [ENDED]
     spots.append(out)
-NO = {s["id"]: s["no"] for s in spots}
 
 data = {
     "id": "daigo",
-    "_note": "京都 醍醐寺の紅葉ライトアップ（秋期夜間拝観）のルート（daigo/ のページ専用。形は eizan-line.json と同じ）。総門・仁王門→五重塔・金堂→弁天堂。"
+    "_note": "京都 醍醐寺の紅葉ライトアップ（秋期夜間拝観）のルート（daigo/ のページ専用。形は eizan-line.json と同じ）。三条から地下鉄で醍醐へ→総門・仁王門→五重塔・金堂→弁天堂→三条に戻って晩ごはん。"
+             "昼から来る人の過ごし方は1番のスポットの文章に。2026-12-07からは全スポットに「今年は終わりました」のお知らせが出る。"
              "写真は Toshi の写真ライブラリから選んだもの（2024年11月24日の夜間拝観、Nikon D7000 と iPhone。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。"
-             "info.checked は事実情報を確認した日（醍醐寺の公式サイト、電車は乗換案内）。このファイルは scripts/build_daigo_data.py で作る。",
-    "sections": [{"first": 1, "last": 3, "day": 0}],
+             "info.source は確認した出典、info.checked は確認日、sources は時刻・料金の出典の一覧。このファイルは scripts/build_daigo_data.py で作る（直接直さない）。",
+    "sections": [{"first": 1, "last": 1, "day": 1}, {"first": 2, "last": 2, "day": 2}, {"first": 3, "last": 3, "day": 3}],
     "photoBase": "../images/daigo/",
+    "sources": SOURCES,
     "spots": spots,
 }
 json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
