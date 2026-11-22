@@ -1,7 +1,9 @@
 /* Page texts in Japanese and English.
-   Toshi 個人のマップ。JRバスで高雄へ、高雄橋と清滝川、神護寺、西明寺、高山寺を歩く京都の北西の紅葉ルート（高山寺はオーナーが行っていない場所。写真は Wikimedia Commons）。
-   Photos are [spot number, photo index] from data/routes/takao.json.
-   時刻・料金は2026年11月21日に確認（各寺とJRバスの公式サイト、京都観光Naviの紅葉だより）。 */
+   Toshi 個人のマップ。三条から地下鉄とJRバスで高雄へ。コースは2つ（神護寺の開門に合わせる／9〜10時に出発）。
+   intro は「9〜10時に出発」の内容で、introFor.early が app.js で上書きされる（scripts/sync_takao.py）。
+   （高山寺はオーナーが行っていない場所。写真は Wikimedia Commons）。
+   Photos are [spot id, photo index] from data/routes/takao.json（コースで番号が変わるので id で指定）。
+   時刻・料金は2026年11月22日に確認（JRバスと京都市交通局の時刻表、各寺の公式サイト、高雄保勝会、乗換案内）。 */
 window.TAKAO_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -15,7 +17,7 @@ window.TAKAO_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '受付が早く終わる神護寺を先に回ってから、清滝川沿いに西明寺、国道を歩いて高山寺へ行く順番です。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '上のボタンで出発時間を選ぶと、回る順番と時間が変わります。開門に合わせるコースは神護寺が先、9〜10時発のコースは栂ノ尾の高山寺から谷を下って、神護寺は午後です。点線は順番を示す線で、実際の道ではありません。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -34,12 +36,12 @@ window.TAKAO_I18N = {
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
     fee: '料金',
-    train: '電車',
+    train: 'バス・電車',
     closed: '休み',
     cash: '現金を用意してください',
     checked: '{d}に公式サイトや時刻表で確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月21日',
+    checkedDate: '2026年11月22日',
     noticeHead: 'お知らせ',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -55,7 +57,12 @@ window.TAKAO_I18N = {
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。時間は全部回る場合の目安です。',
+    pickNote: '行きたい場所の「行きたい」を押してください。時間は全部回る場合の目安です。1か所だけの日の帰り方は、各スポットの「あなたのルートでは」に出ます。',
+    swCourse: "出発時間",
+    courseAria: "出発時間",
+    courseEarly: "神護寺の開門に合わせる\n二条駅前 7:36発",
+    courseLate: "9〜10時に出発\n高山寺から谷を下る",
+    swMode: "回り方",
     pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（全員共通の場所を含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から、行きたい場所を選んでください。',
     pickAll: 'すべて選ぶ',
@@ -68,97 +75,114 @@ window.TAKAO_I18N = {
     hintHead: 'あなたのルートでは',
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
-      "h1": "谷じゅうがもみじに染まる、京都の北西の山寺へ。",
-      "lead": "紅葉の見ごろは例年11月上旬〜下旬です（京都観光Naviの紅葉だより）。京都駅からJRバスで約1時間。清滝川の谷へ下りて朱の高雄橋を渡り、もみじに囲まれた長い石段を上って神護寺へ。川沿いを歩いて指月橋の先の西明寺、国道を歩いて世界遺産の高山寺まで行きます。",
+      "h1": "清滝川の谷の、3つの山寺へ。お昼は茶屋で、夜は街なかで。",
+      "lead": "高雄（たかお）・槇尾（まきのお）・栂尾（とがのお）は、京都の北西の清滝川の谷にある「三尾（さんび）」です。三条から地下鉄で二条へ出て、JRバスで約40分。9〜10時に出る日は、バスの終点の栂ノ尾まで乗って高山寺から歩き始め、門前の茶屋で早めのお昼。川沿いに西明寺、高雄橋を渡って、午後に神護寺の石段を上ります。15時台のバスで戻り、12月6日までは北野天満宮のもみじ苑に寄り道も。朝早く出られる人は、上のボタンで「神護寺の開門に合わせる」コースに切り替えてください。写真は2024年11月19日に撮ったものです（高山寺は Wikimedia Commons）。",
       "favLabel": "いちばんの見どころ",
       "favName": "神護寺",
-      "favText": "もみじに囲まれた石段と、楼門の先の広い境内。",
+      "favText": "もみじに囲まれた長い石段と、楼門の先の広い境内。16時に閉まるので、このコースでは14時すぎに。",
       "favPhoto": [
-        2,
+        "jingoji",
         1
       ],
-      "whoHead": "こんな人におすすめ",
+      "whoHead": "行く前に知っておくこと",
       "who": [
-        "山寺のもみじを、半日かけて歩きたい人に",
-        "京都駅前からJRバスで約55分（230円）",
-        "神護寺は石段が長く、受付は16:00まで。歩きやすい靴で",
-        "紅葉の週末はバスが混むので、朝の早い便で（臨時便が出ることも）",
-        "お昼は高雄橋や参道の茶屋で",
-        "高山寺の石水院は1,000円。秋は入山料500円が別にかかります"
+        "三条から地下鉄東西線で二条へ（6〜8分・220円）、二条駅前からJRバス（230円）。JRバスは三条を通りません",
+        "紅葉の週末はバスが混みます。座って行きたい人は、始発の京都駅前から",
+        "お昼の店は谷の茶屋だけ。11時半ごろに入ると楽です。高雄は日が暮れると店が閉まります",
+        "神護寺は9:00〜16:00。高雄バス停から石段を上って約20分。歩きやすい靴で",
+        "拝観料：神護寺1,000円、西明寺700円、高山寺の石水院1,000円（秋は入山料500円が別に）",
+        "帰りのJRバスの最終は高雄20:06発。市バス8系統の四条烏丸行きは20:16発が最後",
+        "山あいなので、上着を1枚多く"
       ],
-      "dayHead": "1日の流れ（目安）",
+      "dayHead": "1日の流れ（9〜10時に出発）",
       "from": "",
       "day": [
         {
-          "time": "9:35",
-          "area": "高雄",
-          "title": "清滝川と神護寺",
-          "text": "高雄橋を渡って、もみじの石段を神護寺へ。金堂のまわりは一面の赤。",
-          "photo": [
-            2,
-            0
-          ]
-        },
-        {
-          "time": "11:35",
-          "area": "槇尾",
-          "title": "指月橋と西明寺",
-          "text": "清滝川沿いの道を歩いて西明寺へ。朱の橋と、表門ごしの本堂を。",
-          "photo": [
-            3,
-            0
-          ]
-        },
-        {
-          "time": "12:35",
+          "time": "10:26",
           "area": "栂尾",
-          "title": "世界遺産の高山寺",
-          "text": "国道を歩いて約15分。国宝の石水院の縁側から、川の向こうの山を眺めます。帰りは栂ノ尾からJRバスで。（写真：663highland / CC BY 2.5）",
-          "note": "京都駅前に14:31着",
+          "title": "終点の栂ノ尾から、高山寺へ",
+          "text": "二条駅前9:46発のJRバスで終点へ。石水院の縁側に座って、門前の茶屋で11時半前に早めのお昼。（写真：663highland / CC BY 2.5）",
           "photo": [
-            4,
+            "kosanji",
             0
+          ]
+        },
+        {
+          "time": "12:30",
+          "area": "槇尾",
+          "title": "指月橋を渡って西明寺",
+          "text": "国道を歩いて15分。朱の橋と、表門ごしの本堂。",
+          "photo": [
+            "saimyoji",
+            0
+          ]
+        },
+        {
+          "time": "13:35",
+          "area": "高雄",
+          "title": "高雄橋から、神護寺の石段へ",
+          "text": "川沿いの道を下って高雄橋へ。もみじの石段を上って、14時すぎに神護寺。16時に閉まります。",
+          "photo": [
+            "jingoji",
+            0
+          ]
+        },
+        {
+          "time": "15:36",
+          "area": "帰り → 北野・三条",
+          "title": "バスで戻って、夜は街なかで",
+          "text": "12月6日までは北野白梅町で降りて北野天満宮のもみじ苑へ（夜はライトアップ）。そのまま二条駅前まで乗れば、地下鉄で三条へ。晩ごはんは先斗町・木屋町で、21〜22時ごろまで。",
+          "note": "高雄15:36発 → 北野白梅町16:03着・二条駅前16:15着",
+          "photo": [
+            "kiyotaki",
+            2
           ]
         }
       ],
       "timeSuffix": "〜",
-      "dealsHead": "交通費のめやす",
-      "dealsLead": "JRバスは京都駅前〜高雄・槇ノ尾・栂ノ尾が230円均一（地下鉄・バス一日券も使えます）。拝観料（神護寺1,000円、高山寺の石水院1,000円と秋の入山料500円など）は別です。",
+      "dealsHead": "交通費と拝観料のめやす",
+      "dealsLead": "三条から地下鉄東西線（京都市役所前・三条京阪〜二条、220円）とJRバスで往復すると900円。寄り道でバスに乗る回数が増えるなら、地下鉄・バス1日券（1,100円。JRバスは京都駅前〜栂ノ尾で使えます）も。拝観料は別で、3つのお寺を回ると秋は3,200円です。",
       "deals": [
         {
           "name": "JRバス 高雄・京北線",
           "price": "230円",
-          "text": "京都駅前〜栂ノ尾は230円均一。京都駅前8:30発→高雄9:24着。帰りは栂ノ尾13:34発→京都駅前14:31着。",
+          "text": "京都駅前〜栂ノ尾は230円均一。二条駅前9:46発→栂ノ尾10:26着。帰りの最終は高雄20:06発。",
           "url": "https://www.nishinihonjrbus.co.jp/route/kyoto/"
         },
         {
           "name": "神護寺",
           "price": "1,000円",
-          "text": "9:00〜16:00、年中無休（2024年7月から1,000円）。",
+          "text": "9:00〜16:00、年中無休（中学生以上。2024年7月から）。",
           "url": "http://jingoji.or.jp/"
+        },
+        {
+          "name": "西明寺",
+          "price": "700円",
+          "text": "9:00〜17:00（受付は16:30まで）。中・高生500円。",
+          "url": "https://www.saimyoji.or.jp/"
         },
         {
           "name": "高山寺",
           "price": "1,000円（秋は＋500円）",
-          "text": "石水院1,000円。秋は別に入山料500円（期間は要確認）。8:30〜17:00。",
+          "text": "石水院1,000円。秋（2026年は12月上旬まで）は入山料500円が別に。8:30〜17:00。",
           "url": "https://kosanji.com/"
         }
       ],
-      "dealsNote": "大人の運賃・料金です。2026年11月21日に確認しました（各寺とJRバスの公式サイト、京都観光Naviの紅葉だより）。",
+      "dealsNote": "大人の運賃・料金です。2026年11月22日に確認しました（JRバスと京都市交通局の時刻表・運賃表、各寺の公式サイト、乗換案内）。",
       "dealsMore": "公式サイトで見る",
       "howHead": "このマップの使い方",
       "how": [
         {
-          "title": "番号の順に",
-          "text": "1から4の順に回ると、高雄橋から神護寺へ上り、清滝川沿いに西明寺、国道を歩いて高山寺へ行くルートになります。"
+          "title": "出発時間を選ぶ",
+          "text": "一覧の上のボタンで「神護寺の開門に合わせる」（二条駅前7:36発）と「9〜10時に出発」（9:46発）を切り替えます。回る順番と時間が変わります。"
         },
         {
-          "title": "番号をタップ",
-          "text": "地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。"
+          "title": "番号の順に",
+          "text": "1から4の順に回ると、時間割どおりの1日になります。最後のスポットに、帰りのバス、寄り道、街なかの夜を書いています。"
         },
         {
           "title": "行かない場所は外せます",
-          "text": "「選んで回る」に切り替えると、行きたい場所だけを選べます。"
+          "text": "「選んで回る」に切り替えると、行きたい場所だけを選べます。外したときの帰り方も出ます。"
         },
         {
           "title": "Googleマップでルート検索",
@@ -167,6 +191,56 @@ window.TAKAO_I18N = {
       ],
       "cta": "地図を見る",
       "footer1": "Toshiが実際に歩いて作った、オリジナルマップです（高山寺は、公式サイトの情報と Wikimedia Commons の写真で紹介しています）。"
+    },
+    introFor: {
+      early: {
+        "lead": "朝7:36に二条駅前を出るJRバスで高雄へ。茶屋が開く前の高雄橋を渡って、9時の開門と同時に神護寺へ入ります。石段の茶屋でもみじ餅とお抹茶のひと休み。川沿いに西明寺へ歩いて、槇ノ尾で12時前にお昼。午後は高山寺の石水院に座って、14:34のバスで戻ります。帰りに仁和寺や北野天満宮へ寄っても、夜は街なかでゆっくりできます。写真は2024年11月19日に撮ったものです（高山寺は Wikimedia Commons）。",
+        "favText": "9:00の開門に合わせて行くと、人が増える前に金堂の石段の上から境内を見下ろせます。",
+        "dayHead": "1日の流れ（神護寺の開門に合わせる）",
+        "day": [
+          {
+            "time": "8:14",
+            "area": "高雄",
+            "title": "朝の高雄橋から、開門の神護寺へ",
+            "text": "二条駅前7:36発のJRバスで高雄へ。朝ごはんは出る前に。高雄橋を渡り、石段を上って9時に神護寺。",
+            "photo": [
+              "jingoji",
+              1
+            ]
+          },
+          {
+            "time": "10:15",
+            "area": "高雄 → 槇尾",
+            "title": "茶屋でひと休みして、西明寺",
+            "text": "石段の茶屋でもみじ餅とお抹茶。清滝川沿いを歩いて西明寺へ。12時前に槇ノ尾でお昼。",
+            "photo": [
+              "saimyoji",
+              0
+            ]
+          },
+          {
+            "time": "12:55",
+            "area": "栂尾",
+            "title": "高山寺の石水院",
+            "text": "縁側から一歩下がって畳に座ると、柱が額縁になります。帰りは栂ノ尾で始まる14:34のバスで。（写真：663highland / CC BY 2.5）",
+            "photo": [
+              "kosanji",
+              0
+            ]
+          },
+          {
+            "time": "14:34",
+            "area": "帰り → 仁和寺・北野・三条",
+            "title": "寄り道してから、夜は街なかで",
+            "text": "御室仁和寺14:52着で仁和寺へ。12月6日までは嵐電で北野白梅町へ出て、北野天満宮のもみじ苑も。まっすぐ帰るなら二条駅前15:15着。晩ごはんは先斗町・木屋町で。",
+            "note": "栂ノ尾14:34発 → 御室仁和寺14:52着・二条駅前15:15着",
+            "photo": [
+              "kiyotaki",
+              2
+            ]
+          }
+        ]
+      }
     }
   },
   en: {
@@ -181,7 +255,7 @@ window.TAKAO_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'Jingoji closes early, so go there first, then walk along the Kiyotaki river to Saimyoji and up the road to Kosanji. The dotted line shows the order, not the actual path.',
+    listNote: 'Choose your start time with the buttons above: the order and the times change. The opening course does Jingoji first; the 9–10 course starts at Kosanji in Toganoo, works down the valley and leaves Jingoji for the afternoon. The dotted line shows the order, not the actual path.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -200,12 +274,12 @@ window.TAKAO_I18N = {
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
     fee: 'Fee',
-    train: 'Train',
+    train: 'Bus & train',
     closed: 'Closed',
     cash: 'Bring cash',
     checked: 'Checked on official websites and timetables on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 21, 2026',
+    checkedDate: 'Nov 22, 2026',
     noticeHead: 'Note',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -221,7 +295,12 @@ window.TAKAO_I18N = {
     modeAria: 'How to go',
     modeAll: 'Full route',
     modePick: 'Choose stops',
-    pickNote: 'Tap “Want to go” on the places you like. Times are for the full route.',
+    pickNote: 'Tap “Want to go” on the places you like. Times are for the full route. If you pick only one place, “On your route” at that spot tells you how to get back.',
+    swCourse: "Start time",
+    courseAria: "Start time",
+    courseEarly: "Jingoji at opening\n7:36 from Nijo",
+    courseLate: "Leave at 9–10\nKosanji first, downhill",
+    swMode: "Stops",
     pickCount: '{n} places chosen · {t} stops in your route (incl. the shared ones)',
     pickEmpty: 'Nothing chosen yet. Pick the places you want from the list below.',
     pickAll: 'Choose all',
@@ -234,97 +313,114 @@ window.TAKAO_I18N = {
     hintHead: 'On your route',
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
-      "h1": "Mountain temples in a valley full of maples, north-west of Kyoto.",
-      "lead": "The leaves usually peak from early to late November (Kyoto City’s autumn-leaf report). About an hour from Kyoto Station by JR Bus. Drop into the Kiyotaki valley, cross the vermilion Takao bridge and climb the maple-lined stairs to Jingoji, follow the riverside path to Saimyoji past the Shigetsu bridge, then walk up the road to Kosanji, a World Heritage temple.",
+      "h1": "Three mountain temples in the Kiyotaki valley. Lunch at a teahouse, evening in town.",
+      "lead": "Takao, Makinoo and Toganoo, the “three o’s” of north-west Kyoto, line the Kiyotaki valley. From Sanjo, take the subway to Nijo and then the JR Bus, about 40 minutes. Leaving at 9–10, ride to Toganoo at the end of the line, start at Kosanji and have an early lunch at a teahouse by its gate. Follow the river to Saimyoji, cross the Takao bridge and climb to Jingoji in the afternoon. Head back on a bus in the 15:00 hour; until 6 December you can stop at Kitano Tenmangu’s maple garden. If you can start early, switch to the “Jingoji at opening” course with the buttons above. My photos were taken on 19 November 2024 (Kosanji’s are from Wikimedia Commons).",
       "favLabel": "Highlight",
       "favName": "Jingoji",
-      "favText": "Maple-lined stairs and the wide precinct beyond the gate.",
+      "favText": "The long maple-lined stairway and the wide precinct beyond the gate. It closes at 16:00; on this course you arrive just after 14:00.",
       "favPhoto": [
-        2,
+        "jingoji",
         1
       ],
-      "whoHead": "Who it’s for",
+      "whoHead": "Good to know before you go",
       "who": [
-        "For half a day on foot among mountain-temple maples",
-        "About 55 min from Kyoto Station by JR Bus (¥230)",
-        "Jingoji has long stairs and last entry at 16:00: wear comfortable shoes",
-        "Buses are crowded at autumn weekends, so go early (extra buses may run)",
-        "Lunch at the teahouses by Takao bridge or on the way up to Jingoji",
-        "Kosanji’s Sekisuiin is ¥1,000, plus a ¥500 entry fee in autumn"
+        "Tozai subway from Sanjo to Nijo (6–8 min, ¥220), then JR Bus from Nijo-eki-mae (¥230). JR Bus doesn’t run through Sanjo",
+        "Buses are crowded on autumn weekends. For a seat, board at the first stop, Kyoto Station",
+        "Lunch means the valley’s teahouses. Around 11:30 is easiest. Takao shuts down after dark",
+        "Jingoji is open 9:00–16:00, about 20 minutes up the steps from the Takao stop. Wear comfortable shoes",
+        "Entry: Jingoji ¥1,000, Saimyoji ¥700, Kosanji’s Sekisuiin ¥1,000 (plus ¥500 in autumn)",
+        "Last JR Bus back leaves Takao at 20:06; the last city bus 8 to Shijo-Karasuma at 20:16",
+        "It’s a mountain valley: bring an extra layer"
       ],
-      "dayHead": "One day, roughly like this",
+      "dayHead": "One day, roughly like this (leaving at 9–10)",
       "from": "From",
       "day": [
         {
-          "time": "9:35",
-          "area": "Takao",
-          "title": "The Kiyotaki gorge and Jingoji",
-          "text": "Cross Takao bridge and climb the maple stairs to Jingoji, all red around the main hall.",
-          "photo": [
-            2,
-            0
-          ]
-        },
-        {
-          "time": "11:35",
-          "area": "Makinoo",
-          "title": "Shigetsu bridge and Saimyoji",
-          "text": "Walk the riverside path to Saimyoji: the red bridge, and the main hall seen through the gate.",
-          "photo": [
-            3,
-            0
-          ]
-        },
-        {
-          "time": "12:35",
+          "time": "10:26",
           "area": "Toganoo",
-          "title": "Kosanji, a World Heritage temple",
-          "text": "About 15 minutes up the road. From the veranda of Sekisuiin, a National Treasure, look out to the hill across the river. JR Bus home from Toganoo. (Photo: 663highland / CC BY 2.5)",
-          "note": "Kyoto Station 14:31",
+          "title": "From the end of the line to Kosanji",
+          "text": "The 9:46 JR Bus from Nijo-eki-mae to the last stop. Sit on Sekisuiin’s veranda, then an early lunch at a teahouse by the gate before 11:30. (Photo: 663highland / CC BY 2.5)",
           "photo": [
-            4,
+            "kosanji",
             0
+          ]
+        },
+        {
+          "time": "12:30",
+          "area": "Makinoo",
+          "title": "Across the Shigetsu bridge to Saimyoji",
+          "text": "15 minutes down the road. The red bridge, and the main hall framed by the gate.",
+          "photo": [
+            "saimyoji",
+            0
+          ]
+        },
+        {
+          "time": "13:35",
+          "area": "Takao",
+          "title": "From Takao bridge up to Jingoji",
+          "text": "Follow the river down to Takao bridge and climb the maple stairs to reach Jingoji just after 14:00. It closes at 16:00.",
+          "photo": [
+            "jingoji",
+            0
+          ]
+        },
+        {
+          "time": "15:36",
+          "area": "Back → Kitano, Sanjo",
+          "title": "Back by bus, evening in town",
+          "text": "Until 6 December, get off at Kitano-Hakubaicho for Kitano Tenmangu’s maple garden (lit up after dark). Or ride on to Nijo-eki-mae and take the subway to Sanjo. Dinner in Pontocho or Kiyamachi, until 21:00 or 22:00.",
+          "note": "Takao 15:36 → Kitano-Hakubaicho 16:03, Nijo-eki-mae 16:15",
+          "photo": [
+            "kiyotaki",
+            2
           ]
         }
       ],
       "timeSuffix": "",
-      "dealsHead": "Fares",
-      "dealsLead": "JR Bus from Kyoto Station to Takao, Makinoo and Toganoo is a flat ¥230 (the subway & bus day pass is valid). Admission (Jingoji ¥1,000; Kosanji’s Sekisuiin ¥1,000 plus ¥500 in autumn, etc.) is extra.",
+      "dealsHead": "Fares and entry fees",
+      "dealsLead": "A return trip from Sanjo by the Tozai subway (to Nijo, ¥220) and JR Bus is ¥900. If side trips add more bus rides, the Subway & Bus 1-day Pass (¥1,100; valid on JR Bus between Kyoto Station and Toganoo) may pay off. Temple entry is extra: ¥3,200 for all three in autumn.",
       "deals": [
         {
           "name": "JR Bus Takao–Keihoku line",
           "price": "¥230",
-          "text": "Flat ¥230 from Kyoto Station to Toganoo. Kyoto Station 8:30 → Takao 9:24. Back: Toganoo 13:34 → Kyoto Station 14:31.",
+          "text": "Flat ¥230 from Kyoto Station to Toganoo. Nijo-eki-mae 9:46 → Toganoo 10:26. Last bus back leaves Takao at 20:06.",
           "url": "https://www.nishinihonjrbus.co.jp/route/kyoto/"
         },
         {
           "name": "Jingoji",
           "price": "¥1,000",
-          "text": "9:00–16:00, open daily (¥1,000 since July 2024).",
+          "text": "9:00–16:00, open daily (junior high and up; since July 2024).",
           "url": "http://jingoji.or.jp/"
+        },
+        {
+          "name": "Saimyoji",
+          "price": "¥700",
+          "text": "9:00–17:00 (last entry 16:30). Junior high and high school ¥500.",
+          "url": "https://www.saimyoji.or.jp/"
         },
         {
           "name": "Kosanji",
           "price": "¥1,000 (+¥500 in autumn)",
-          "text": "Sekisuiin ¥1,000. In autumn, a separate ¥500 entry fee (dates: please check). 8:30–17:00.",
+          "text": "Sekisuiin ¥1,000. In autumn (until early December in 2026) a separate ¥500 entry fee. 8:30–17:00.",
           "url": "https://kosanji.com/"
         }
       ],
-      "dealsNote": "Adult fares and fees, checked on Nov 21, 2026 (temple and JR Bus websites, Kyoto City’s autumn-leaf report).",
+      "dealsNote": "Adult fares and fees, checked on Nov 22, 2026 (JR Bus and Kyoto City bus timetables and fare tables, temple websites, a route planner).",
       "dealsMore": "See official site",
       "howHead": "How to use this map",
       "how": [
         {
-          "title": "In number order",
-          "text": "Follow 1 to 4: from Takao bridge up to Jingoji, along the Kiyotaki river to Saimyoji, then up the road to Kosanji."
+          "title": "Pick a start time",
+          "text": "Use the buttons above the list to switch between “Jingoji at opening” (7:36 from Nijo-eki-mae) and “Leave at 9–10” (9:46). The order and times change."
         },
         {
-          "title": "Tap a number",
-          "text": "Tap a number on the map, or open the list, to see photos, tips, fees and suggested times."
+          "title": "In number order",
+          "text": "Follow 1 to 4 for the day as timed. The last spot covers the bus back, stops on the way home and the evening in town."
         },
         {
           "title": "Skip what you like",
-          "text": "Switch to “Choose stops” to pick only the places you want."
+          "text": "Switch to “Choose stops” to pick only the places you want; it also tells you how to get back."
         },
         {
           "title": "Get directions",
@@ -333,6 +429,56 @@ window.TAKAO_I18N = {
       ],
       "cta": "Open the map",
       "footer1": "An original map, hand-walked by Toshi (Kosanji is introduced from its official website, with photos from Wikimedia Commons)."
+    },
+    introFor: {
+      early: {
+        "lead": "Take the 7:36 JR Bus from Nijo-eki-mae to Takao. Cross the Takao bridge before the teahouses open and walk into Jingoji as it opens at 9:00. Rest with momiji-mochi and matcha at a teahouse on the steps, walk along the river to Saimyoji and have lunch at Makinoo before noon. In the afternoon sit at Kosanji’s Sekisuiin, then take the 14:34 bus back. Stop at Ninna-ji or Kitano Tenmangu on the way and still have an easy evening in town. My photos were taken on 19 November 2024 (Kosanji’s are from Wikimedia Commons).",
+        "favText": "Arrive for the 9:00 opening and you can look down over the precinct from the top of the main hall’s steps before it fills up.",
+        "dayHead": "One day, roughly like this (Jingoji at opening)",
+        "day": [
+          {
+            "time": "8:14",
+            "area": "Takao",
+            "title": "Takao bridge in the morning, Jingoji at opening",
+            "text": "The 7:36 JR Bus from Nijo-eki-mae to Takao. Have breakfast before you go. Cross the bridge and climb the steps to be at Jingoji at 9:00.",
+            "photo": [
+              "jingoji",
+              1
+            ]
+          },
+          {
+            "time": "10:15",
+            "area": "Takao → Makinoo",
+            "title": "A teahouse break, then Saimyoji",
+            "text": "Momiji-mochi and matcha at a teahouse on the steps, then along the river to Saimyoji. Lunch at Makinoo before noon.",
+            "photo": [
+              "saimyoji",
+              0
+            ]
+          },
+          {
+            "time": "12:55",
+            "area": "Toganoo",
+            "title": "Sekisuiin at Kosanji",
+            "text": "Sit on the tatami a step back from the veranda and the pillars frame the view. Go back on the 14:34, which starts at Toganoo. (Photo: 663highland / CC BY 2.5)",
+            "photo": [
+              "kosanji",
+              0
+            ]
+          },
+          {
+            "time": "14:34",
+            "area": "Back → Ninna-ji, Kitano, Sanjo",
+            "title": "A stop on the way, then the evening in town",
+            "text": "Omuro-Ninnaji at 14:52 for Ninna-ji. Until 6 December, take the Randen tram to Kitano-Hakubaicho for Kitano Tenmangu’s maple garden too. Straight back, you reach Nijo-eki-mae at 15:15. Dinner in Pontocho or Kiyamachi.",
+            "note": "Toganoo 14:34 → Omuro-Ninnaji 14:52, Nijo-eki-mae 15:15",
+            "photo": [
+              "kiyotaki",
+              2
+            ]
+          }
+        ]
+      }
     }
   }
 };
