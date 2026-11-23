@@ -217,8 +217,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "京都河原町→嵐山 大人240円・子ども120円（桂で乗り換え）。交通系ICカードも使えます",
-       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240, children ¥120 (change at Katsura). IC cards accepted"
+       "ja": "京都河原町→嵐山 大人240円（桂で乗り換え）。交通系ICカードも使えます",
+       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240 (change at Katsura). IC cards accepted"
       },
       "until": null,
       "from": null
@@ -357,8 +357,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "京都河原町→嵐山 大人240円・子ども120円（桂で乗り換え）。交通系ICカードも使えます",
-       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240, children ¥120 (change at Katsura). IC cards accepted"
+       "ja": "京都河原町→嵐山 大人240円（桂で乗り換え）。交通系ICカードも使えます",
+       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240 (change at Katsura). IC cards accepted"
       },
       "until": null,
       "from": null
@@ -668,6 +668,17 @@
       "ja": "https://ayuchaya-hiranoya.com/menu/",
       "en": "https://ayuchaya-hiranoya.com/menu/"
      }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "鮎茶屋 平野屋（お知らせ・定休日）",
+      "en": "Hiranoya (news & closing days, Japanese)"
+     },
+     "url": {
+      "ja": "https://ayuchaya-hiranoya.com/info/",
+      "en": "https://ayuchaya-hiranoya.com/info/"
+     }
     }
    ],
    "info": {
@@ -687,8 +698,8 @@
      "ja": "平野屋の営業時間は、公式サイトのお品書きのページでは確認できませんでした（要確認）。休みの日は公式サイトのお知らせに載っています。",
      "en": "Hiranoya’s opening hours aren’t on its menu page (unconfirmed). Closed days are posted in the news on its website."
     },
-    "checked": "2026-11-22",
-    "source": "鮎茶屋 平野屋 公式サイト（お品書き）。営業時間は載っていない"
+    "checked": "2026-11-23",
+    "source": "鮎茶屋 平野屋 公式サイト（お品書き・お知らせ・近隣と交通、2026-11-23）。営業時間はどのページにも載っていない。定休日は月ごとに「お知らせ」に載る"
    },
    "notices": []
   },
@@ -1029,8 +1040,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "大人500円、小・中・高校生100円。祇王寺・大覚寺の共通券1,000円（要確認）",
-       "en": "Adults ¥500, students ¥100. Joint ticket with Daikaku-ji ¥1,000 (unconfirmed)"
+       "ja": "拝観料：公式サイトで確かめられませんでした（要確認）",
+       "en": "Admission: couldn’t be confirmed on an official website (please check)"
       },
       "until": null,
       "from": null
@@ -1038,9 +1049,9 @@
     ],
     "cash": false,
     "tip": null,
-    "checked": "2026-11-22",
+    "checked": "2026-11-23",
     "verified": false,
-    "source": "時間と休みは京都観光Navi（京都市公式）。拝観料は祇王寺の公式サイトが503で開けず未確認（2026-11-22）"
+    "source": "時間と休みは京都観光Navi（京都市公式）。拝観料は祇王寺の公式サイトがメンテナンス中（PHPの脆弱性のため一時停止、2026-11-23 も503）で未確認。京都観光Navi（日本語・英語）にも料金の記載なし。大覚寺の公式サイトも503で共通券も未確認"
    },
    "notices": []
   },
@@ -1330,8 +1341,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "1,000円（お抹茶とお菓子つき）（要確認）",
-       "en": "¥1,000 including matcha and a sweet (unconfirmed)"
+       "ja": "入園料：公式の情報で確かめられませんでした（要確認）",
+       "en": "Admission: couldn’t be confirmed from official information (please check)"
       },
       "until": null,
       "from": null
@@ -1339,9 +1350,9 @@
     ],
     "cash": false,
     "tip": null,
-    "checked": "2026-11-22",
+    "checked": "2026-11-23",
     "verified": false,
-    "source": "時間と休みは京都観光Navi（京都市公式）。入園料は公式の情報が見つからず未確認（2026-11-22）"
+    "source": "時間と休みは京都観光Navi（京都市公式）。公式サイトはなく、京都観光Navi にも入園料の記載なし。2026-11-23 に調べ直しても公式の情報は見つからず未確認"
    },
    "notices": []
   },
@@ -1616,8 +1627,8 @@
     "15-9.jpg"
    ],
    "text": {
-    "ja": "嵯峨野湯（さがのゆ）\n\n昔の銭湯の建物を生かしたカフェで、パスタなどの食事、ケーキ、コーヒーがあります。嵐電の嵐電嵯峨駅のすぐそば、JR嵯峨嵐山駅からも歩いてすぐです。\n\n営業時間とラストオーダーは、お店の公式サイトでは確かめられませんでした（下の時間は食べログに載っているもの）。行く日の営業は、Googleマップなどで見てから。\n\n天龍寺の総門から歩いて6分ほど。ここから渡月橋までは10分ほどです。\n\nおすすめ訪問時間：15:35〜16:15",
-    "en": "Sagano-yu\n\nA café in an old public bathhouse building, serving pasta and other meals, cakes and coffee. It’s right by Randen-Saga Station and a short walk from JR Saga-Arashiyama Station.\n\nThe opening hours and last order couldn’t be confirmed on the café’s own website (the hours below are from Tabelog). Check Google Maps or similar on the day.\n\nAbout 6 minutes on foot from Tenryu-ji’s main gate, and about 10 minutes from here to Togetsukyo Bridge.\n\nRecommended visit time: 15:35–16:15"
+    "ja": "嵯峨野湯（さがのゆ）\n\n昔の銭湯の建物を生かしたカフェで、パスタなどの食事、ケーキ、コーヒーがあります。嵐電の嵐電嵯峨駅のすぐそば、JR嵯峨嵐山駅からも歩いてすぐです。\n\n営業時間は11:00〜19:00（ラストオーダー18:00）。お店の公式サイトには、都合で時間が変わることがあると書かれています。休みの日は載っていません。\n\n天龍寺の総門から歩いて6分ほど。ここから渡月橋までは10分ほどです。\n\nおすすめ訪問時間：15:35〜16:15",
+    "en": "Sagano-yu\n\nA café in an old public bathhouse building, serving pasta and other meals, cakes and coffee. It’s right by Randen-Saga Station and a short walk from JR Saga-Arashiyama Station.\n\nOpen 11:00–19:00 (last order 18:00). The café’s website says hours may change, and it doesn’t list closing days.\n\nAbout 6 minutes on foot from Tenryu-ji’s main gate, and about 10 minutes from here to Togetsukyo Bridge.\n\nRecommended visit time: 15:35–16:15"
    },
    "gmaps": [
     {
@@ -1632,9 +1643,20 @@
    ],
    "links": [
     {
+     "kind": "official",
+     "label": {
+      "ja": "嵯峨野湯 公式サイト（About Us：営業時間）",
+      "en": "Sagano-yu official site (About Us: hours)"
+     },
+     "url": {
+      "ja": "https://www.sagano-yu.com/about",
+      "en": "https://www.sagano-yu.com/about"
+     }
+    },
+    {
      "kind": "info",
      "label": {
-      "ja": "食べログ：嵯峨野湯（店舗の公式情報）",
+      "ja": "食べログ：嵯峨野湯",
       "en": "Tabelog: Sagano-yu (Japanese)"
      },
      "url": {
@@ -1648,8 +1670,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "11:00〜19:00（ラストオーダー18:00）（要確認）",
-       "en": "11:00–19:00, last order 18:00 (unconfirmed)"
+       "ja": "11:00〜19:00（ラストオーダー18:00）。都合で変わることあり",
+       "en": "11:00–19:00, last order 18:00 (may change)"
       },
       "until": null,
       "from": null
@@ -1657,8 +1679,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "クレジットカード（VISA・Master）が使えます。電子マネー・QRコード決済は使えません（要確認）",
-       "en": "Visa and Mastercard accepted; no e-money or QR payments (unconfirmed)"
+       "ja": "支払い：食べログではカード（VISA・Master）可、電子マネー・QRコード決済は不可（お店の公式の案内なし。要確認）",
+       "en": "Payment: Tabelog lists Visa and Mastercard, no e-money or QR payments (not on the café’s own site; please check)"
       },
       "until": null,
       "from": null
@@ -1666,29 +1688,10 @@
     ],
     "cash": false,
     "tip": null,
-    "checked": "2026-11-20",
-    "verified": false,
-    "source": "食べログの店舗情報（2026-11-20）。公式サイト（sagano-yu.com）は通販のページだけで営業時間が載っていない（2026-11-22）"
+    "checked": "2026-11-23",
+    "source": "営業時間は公式サイトの About Us（https://www.sagano-yu.com/about、2026-11-23）。休みの日は記載なし。支払い方法は食べログの店舗情報（公式サイトの支払い方法は通販のもの）"
    },
-   "notices": [
-    {
-     "from": null,
-     "to": null,
-     "url": null,
-     "head": {
-      "ja": "営業時間は要確認",
-      "en": "Opening hours unconfirmed"
-     },
-     "text": {
-      "ja": "お店の公式サイトで営業時間と休みを確かめられませんでした。行く日に開いているか、先に調べてください。",
-      "en": "The opening hours and closed days couldn’t be confirmed on the café’s own website. Check that it’s open on the day you go."
-     }
-    }
-   ],
-   "caution": {
-    "ja": "営業時間は要確認",
-    "en": "Opening hours unconfirmed"
-   }
+   "notices": []
   },
   {
    "no": 17,
@@ -1988,8 +1991,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "京都河原町→嵐山 大人240円・子ども120円（桂で乗り換え）。交通系ICカードも使えます",
-       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240, children ¥120 (change at Katsura). IC cards accepted"
+       "ja": "京都河原町→嵐山 大人240円（桂で乗り換え）。交通系ICカードも使えます",
+       "en": "Kyoto-kawaramachi → Arashiyama: adults ¥240 (change at Katsura). IC cards accepted"
       },
       "until": null,
       "from": null
@@ -2040,29 +2043,49 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "鮎茶屋 平野屋：公式サイトのトップとお品書きに営業時間・定休日の記載なし（要確認）",
-   "url": "https://ayuchaya-hiranoya.com/",
-   "checked": "2026-11-22"
+   "what": "鮎茶屋 平野屋：公式サイトのトップ・お品書き・お知らせ・近隣と交通のどこにも営業時間の記載なし（要確認）。定休日は月ごとに「お知らせ」に載る（11月は4日・10日・15日）。志んこ・柚子しぐれ・桜餅はいずれもセットで1,200円（税込、お品書き）",
+   "url": "https://ayuchaya-hiranoya.com/info/",
+   "checked": "2026-11-23"
   },
   {
-   "what": "仙翁：カレー5種（欧風ビーフ・ローストスパイスビーフ・バターチキン・キーマ・チキン）各税込1,300円、パスタ1,300円、ケーキ800円、コーヒー550円〜、1人1品、現金のみ（店内の掲示「We only accept cash」）。オーナーが2025-10-10に撮った店頭のメニューと店内の写真から。公式サイト・公式SNSは見つからず（食べログにある旧ホームページのURLは404）",
+   "what": "嵯峨野湯：営業時間 11:00〜19:00（ラストオーダー18:00）、諸事情により時間変更の場合あり（公式サイトの About Us）。定休日の記載なし。About Us の「お支払い方法」は通販のもので、店の支払い方法は食べログの情報（カード VISA・Master 可、電子マネー・QR不可。要確認）",
+   "url": "https://www.sagano-yu.com/about",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "祇王寺：拝観料は未確認（要確認）。公式サイト（giouji.or.jp）は「PHPの重大な脆弱性に関する注意喚起を受け一時停止」のメンテナンス表示で503。京都観光Navi（日本語・英語）は時間と休みだけで料金の記載なし。大覚寺の公式サイトも503で、共通券も未確認",
+   "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=258",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "地下鉄・バス1日券：大人1,100円。地下鉄・市バス・京都バス（一部路線を除く）などが1日乗り放題、阪急電車は対象外（京都観光Navi の乗車券のページ）",
+   "url": "https://ja.kyoto.travel/feature/traffic/ticket.php",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "大河内山荘庭園：入園料は未確認（要確認）。公式サイトはなく、京都観光Navi は 9:00〜17:00（最終入場16:30）・年中無休だけで料金の記載なし",
+   "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=8&tourism_id=693",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "仙翁：カレー5種（欧風ビーフ・ローストスパイスビーフ・バターチキン・キーマ・チキン）各税込1,300円、パスタ1,300円、ケーキ800円、コーヒー550円〜、1人1品、現金のみ（店内の掲示「We only accept cash」）。オーナーが2025-10-10に撮った店頭のメニューと店内の写真から。公式サイト・公式SNSは見つからず（食べログにある旧ホームページのURLは404。2026-11-23 に調べ直しても見つからず）",
    "url": null,
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "仙翁（読みはセンオウ）：9:00〜15:30、木曜休み。食べログの情報（お店の公式情報ではない。要確認）。食べログは「カード可・電子マネー可」としているが、店内の掲示（2025年10月）は現金のみ",
    "url": "https://tabelog.com/kyoto/A2601/A260403/26021386/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
-   "what": "茶房さがの：ビーフカレー900円、エビピラフ900円、スパゲティ750〜1,000円、ミックスサンド、甘味。オーナーが2024-07-30に撮った店頭のメニューの写真から（値段は変わっている可能性あり）。営業時間・定休日は食べログにも記載なし（要確認）。食べログではカード・電子マネー・QR決済とも不可",
+   "what": "茶房さがの：ビーフカレー900円、エビピラフ900円、スパゲティ750〜1,000円、ミックスサンド、甘味。オーナーが2024-07-30に撮った店頭のメニューの写真から（値段は変わっている可能性あり）。営業時間・定休日は食べログにも記載なし（要確認）。食べログではカード・電子マネー・QR決済とも不可。公式サイト・公式SNSは見つからず（2026-11-23）",
    "url": "https://tabelog.com/kyoto/A2601/A260403/26009893/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
-   "what": "寿楽庵（ジュラクアン）：11時〜17時、不定休、わらびもち・お薄セット730円。じゃらんの情報（お店の公式情報ではない。要確認）。公式サイト・公式SNSは見つからず、食事のメニューと支払い方法は未確認",
+   "what": "寿楽庵（ジュラクアン）：11時〜17時、不定休、わらびもち・お薄セット730円。じゃらんの情報（お店の公式情報ではない。要確認）。公式サイト・公式SNSは見つからず、食事のメニューと支払い方法は未確認（2026-11-23 に調べ直しても公式の情報なし）",
    "url": "https://www.jalan.net/gourmet/grm_guide000000177770/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "3軒の位置はオーナーが Googleマップで調べたもの（仙翁 35.02318, 135.66871／茶房さがの 35.02337, 135.66875／寿楽庵 35.02467, 135.66844）。化野念仏寺→仙翁 約10分、仙翁→祇王寺 約5分、仙翁→渡月橋 約30分は地図上の距離からのめやす",
