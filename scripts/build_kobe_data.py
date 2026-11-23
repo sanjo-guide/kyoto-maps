@@ -69,6 +69,8 @@ TRAIN_TIP = T("時刻と運賃は乗換案内（2026年11月28日・土曜のダ
               "Times and fares checked on a route planner (Saturday 28 November 2026 timetable). Weekday trains differ by a few minutes; please check again before you travel.")
 MOUNTAIN = "https://www.city.kobe.lg.jp/a17526/kanko/leisure/mountain/index.html"
 HERB = "https://www.kobeherb.com/infomation/hours_fare/"
+HERB_XMAS = "https://www.kobeherb.com/wordpress/wp-content/uploads/2026/10/88c4a0e9134729b7d5970905bd992b92.pdf"
+LUMI_TICKET = "https://kobe-luminarie.jp/ticket/"
 CITYHALL = "https://www.city.kobe.lg.jp/a28956/shise/about/building/index.html"
 
 S = [
@@ -172,8 +174,8 @@ S = [
                  "A small counter under the tracks right by Hankyu Kobe-Sannomiya: thick pork cutlets simmered with egg over rice, fuel for the waterfall steps this afternoon."),
          lat=34.69228, lng=135.19180,
          notices=[notice("入る前に", "Before you go in",
-                         "入口の券売機で食券を買う店です。とんかつが売り切れると、その日は早く閉まります。閉店の時刻と定休日は公式のページに書かれていないので、閉まっていたら駅のまわりで別の店を探してください。",
-                         "You buy a meal ticket from the machine at the door. When the cutlets sell out, the shop closes early for the day. The official page gives no closing time or closed days, so if it is shut, look for somewhere else around the station.")],
+                         "入口の券売機で食券を買う店です。とんかつが売り切れると、その日は早く閉まります。閉店の時刻・定休日・支払い方法は公式のページに書かれていません。現金を用意して、閉まっていたら駅のまわりで別の店を探してください。",
+                         "You buy a meal ticket from the machine at the door. When the cutlets sell out, the shop closes early for the day. The official page gives no closing time, closed days or payment methods, so bring cash, and if it is shut, look for somewhere else around the station.")],
          text=T("かつ丼 七兵衛（ひちべい）\n\n"
                 "北野坂を下りきって、阪急の神戸三宮駅の西口へ。出てすぐ、JRの高架下にある小さなお店です。看板は「かつ丼 七兵衛」（運営会社のページでは「とんかつ七兵衛 神戸本店」）。\n\n"
                 "入口の券売機で食券を買い、カウンターで食べます。店の前に写真つきのメニューが出ています（2枚目の写真）。分厚いかつを玉子でとじたかつ丼は、ボリュームたっぷり。ソースカツ丼やみそカツめしもあります。\n\n"
@@ -188,8 +190,8 @@ S = [
                 "Recommended visit time: 12:20–13:00"),
          gmaps=[gm("とんかつ七兵衛", "Tonkatsu Hichibei", 34.69228, 135.19180, "とんかつ七兵衛 三宮")],
          links=[link("official", "とんかつ七兵衛（運営会社のページ）", "Tonkatsu Hichibei (operator page, Japanese)", "http://www.rb-syuhari.com/hichibe.html")],
-         info=info([row("hours", "11:30〜（とんかつが売り切れたら閉店）。閉店時刻と定休日は公式のページに書かれていません（要確認）",
-                        "From 11:30 (closes when the cutlets sell out). Closing time and closed days are not given on the official page (please check)")],
+         info=info([row("hours", "11:30〜（とんかつが売り切れたら閉店）。閉店時刻・定休日・支払い方法は公式のページに書かれていません（要確認）",
+                        "From 11:30 (closes when the cutlets sell out). Closing time, closed days and payment methods are not given on the official page (please check)")],
                    tip=T("店名と開店時間、メニューは運営会社のページで確認しました。2024年2月に撮った店頭の案内には「11:10〜22:00、15:00〜17:00も開いてます」とありました。今は変わっているかもしれません。",
                          "Name, opening time and menu checked on the operator’s page. A sign at the door in February 2024 said 11:10–22:00, “open 15:00–17:00 too”; that may have changed."),
                    source=["有限会社アール・アンド・ビー守破離 とんかつ七兵衛 http://www.rb-syuhari.com/hichibe.html", "店頭の案内（Toshi の写真、2024年2月）"])),
@@ -237,15 +239,16 @@ S = [
                     row("hours", "階段が苦手な人は、駅の近くから出るロープウェイでハーブ園へ：9:30〜、下りの最終17:15（冬の時間）",
                         "Rather skip the steps? The ropeway to the Herb Gardens leaves from near the station: from 9:30, last car down 17:15 (winter hours)",
                         until="2027-03-12", frm="2026-12-29"),
-                    row("fee", "ロープウェイ 往復2,500円（通常の料金）。11月7日〜12月28日はクリスマスの特別料金なので、公式サイトで確認を（要確認）",
-                        "Ropeway ¥2,500 return (standard fare). From 7 November to 28 December a special Christmas fare applies: please check the official site",
+                    row("fee", "ロープウェイ（ハーブ園の入園料込み）：12月28日まではクリスマスシーズンの特別料金で、大人 往復3,300円・片道2,700円。17時以降の割引料金はありません",
+                        "Ropeway incl. Herb Gardens admission: Christmas-season fare until 28 December, adults ¥3,300 return, ¥2,700 one way. No after-17:00 discount in this period",
                         until="2026-12-28"),
-                    row("fee", "ロープウェイ 往復2,500円", "Ropeway ¥2,500 return", until="2027-03-12", frm="2026-12-29"),
+                    row("fee", "ロープウェイ（ハーブ園の入園料込み）往復2,500円", "Ropeway incl. Herb Gardens admission ¥2,500 return", until="2027-03-12", frm="2026-12-29"),
                     row("closed", "ロープウェイとハーブ園は2027年1月23日〜2月19日、点検で休み（予定）", "Ropeway and gardens closed for maintenance 23 January – 19 February 2027 (planned)", until="2027-02-19")],
                    tip=T("滝は神戸観光局（Feel KOBE）、通行止めは神戸市、ロープウェイは布引ハーブ園の公式サイト、地下鉄は乗換案内で確認しました。",
                          "Falls checked on Feel KOBE, the closure on the Kobe City site, the ropeway on the Herb Gardens website and the subway on a route planner."),
                    source=["Feel KOBE 布引の滝 https://www.feel-kobe.jp/facilities/0000000093/", "神戸市 六甲山系登山道通行止（通行注意）状況（2026-11-09 版）" + " " + MOUNTAIN,
-                           "神戸布引ハーブ園／ロープウェイ 営業時間・料金 " + HERB, SRC_PLANNER])),
+                           "神戸布引ハーブ園／ロープウェイ 営業時間・料金 " + HERB,
+                           "神戸布引ハーブ園／ロープウェイ 2026年クリスマスシーズン料金表（PDF、2026-11-24 確認） " + HERB_XMAS, SRC_PLANNER])),
     # 6 ---------------------------------------------------------------------
     dict(id="meriken", name=T("メリケンパーク・神戸ポートタワー", "Meriken Park & Kobe Port Tower"), kind=T("港・展望タワー・夜景", "Harbour, tower & night view"),
          caution=T("ポートタワーは日時指定のチケット", "Port Tower needs a timed ticket"),
@@ -257,9 +260,11 @@ S = [
                          "The observation floors need a timed ticket. Same-day tickets are sold at the ground-floor counter only if that time slot has space. If you want to be up there at dusk, buy on the official site beforehand. The rooftop deck can close in rain or strong wind.",
                          url="https://www.kobe-port-tower.com/ticket/"),
                   notice("神戸ルミナリエ（2027年1月29日〜2月7日）", "Kobe Luminarie (29 January – 7 February 2027)",
-                         "点灯は薄暮から21:30まで。会場はメリケンパーク・東遊園地・旧居留地で、メリケンパークのメイン作品を見るには日時指定の特別鑑賞券がいります（料金は公式サイトで）。このスポットの5〜7枚目の写真は、2025年1月のルミナリエです。",
-                         "Lit from dusk to 21:30 at Meriken Park, Higashi Yuenchi and the old foreign settlement. The main work in Meriken Park needs a timed special ticket (price on the official site). Photos 5–7 here are from the Luminarie in January 2025.",
-                         to="2027-02-07", url="https://www.kobe-luminarie.jp/")],
+                         "点灯は薄暮から21:30まで。会場はメリケンパーク・東遊園地・旧居留地で、メリケンパークのメイン作品の有料エリアは日時指定のチケット制です。"
+                         "前売券は平日500円・土日750円、当日券は平日1,000円・土日1,500円（小学生以下は無料）。当日券は15:00からメリケンパークの会場でも売っています。このスポットの5〜7枚目の写真は、2025年1月のルミナリエです。",
+                         "Lit from dusk to 21:30 at Meriken Park, Higashi Yuenchi and the old foreign settlement. The paid area around the main work in Meriken Park needs a timed ticket: "
+                         "¥500 weekdays / ¥750 weekends in advance, ¥1,000 / ¥1,500 on the day (free for elementary school age and under). Same-day tickets are also sold at the Meriken Park venue from 15:00. Photos 5–7 here are from the Luminarie in January 2025.",
+                         to="2027-02-07", url=LUMI_TICKET)],
          text=T("メリケンパーク・神戸ポートタワー\n\n"
                 "【南京町を抜けて港へ】三宮に戻ったら（14:52着）、センター街のアーケードを西へ歩いて約20分。大丸の先に、南京町（なんきんまち）の東の門があります。"
                 "屋台の豚まんや小籠包をつまみながら通り抜けましょう。豚まんの「老祥記（ろうしょうき）」は18:30までですが、売り切れると早く閉まります。南京町から海へまっすぐ歩いて10分ちょっとで、メリケンパークです。\n\n"
@@ -303,6 +308,9 @@ S = [
                     row("hours", "神戸市役所1号館 24階展望ロビー：平日9:00〜22:00、土日祝10:00〜22:00、無料。12月29日〜1月3日と設備点検の日（2026年12月20日）は休み",
                         "Kobe City Hall Bldg 1, 24F observation lobby: weekdays 9:00–22:00, weekends & holidays 10:00–22:00, free. Closed 29 Dec – 3 Jan and on inspection days (20 December 2026)"),
                     row("hours", "神戸ルミナリエ：2027年1月29日〜2月7日、点灯は薄暮〜21:30", "Kobe Luminarie: 29 Jan – 7 Feb 2027, lit from dusk to 21:30", until="2027-02-07"),
+                    row("fee", "ルミナリエの有料エリア（メリケンパーク、日時指定）：前売 平日500円・土日750円、当日 平日1,000円・土日1,500円。小学生以下は無料",
+                        "Luminarie paid area (Meriken Park, timed): advance ¥500 weekdays / ¥750 weekends; on the day ¥1,000 / ¥1,500. Free for elementary school age and under",
+                        until="2027-02-07"),
                     row("train", "大阪・梅田へ：JR神戸21:13発（新快速）→ 大阪21:39着・460円。阪急なら高速神戸21:10発（特急）→ 大阪梅田21:42着・470円",
                         "To Osaka/Umeda: JR Kobe 21:13 (Special Rapid) → Osaka 21:39, ¥460. By Hankyu: Kosoku-Kobe 21:10 (limited express) → Osaka-Umeda 21:42, ¥470"),
                     row("train", "難波へ：高速神戸21:05発（阪神の直通特急）→ 尼崎で乗り換え → 大阪難波21:56着・560円。高速神戸駅はJR神戸駅のすぐ先です",
@@ -315,7 +323,8 @@ S = [
                          "Port Tower, Nankinmachi, Roshoki, Harborland umie and the Luminarie checked on their websites, the lobby on the Kobe City site, trains on a route planner (Saturday timetable)."),
                    source=["神戸ポートタワー 公式サイト https://www.kobe-port-tower.com/", "南京町商店街振興組合 https://www.nankinmachi.or.jp/", "老祥記 https://roushouki.com/shop/",
                            "神戸ハーバーランドumie 営業時間 https://umie.jp/static-pages/opening-hours", "神戸市 庁舎案内（1号館24階展望ロビー、2026-11-10 更新）" + " " + CITYHALL,
-                           "神戸ルミナリエ 公式サイト https://www.kobe-luminarie.jp/", SRC_PLANNER])),
+                           "神戸ルミナリエ 公式サイト https://www.kobe-luminarie.jp/",
+                           "第32回神戸ルミナリエ チケット（有料エリアの料金、2026-11-24 確認） " + LUMI_TICKET, SRC_PLANNER])),
 ]
 
 spots = []

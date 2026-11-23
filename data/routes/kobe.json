@@ -537,8 +537,8 @@
       "en": "Before you go in"
      },
      "text": {
-      "ja": "入口の券売機で食券を買う店です。とんかつが売り切れると、その日は早く閉まります。閉店の時刻と定休日は公式のページに書かれていないので、閉まっていたら駅のまわりで別の店を探してください。",
-      "en": "You buy a meal ticket from the machine at the door. When the cutlets sell out, the shop closes early for the day. The official page gives no closing time or closed days, so if it is shut, look for somewhere else around the station."
+      "ja": "入口の券売機で食券を買う店です。とんかつが売り切れると、その日は早く閉まります。閉店の時刻・定休日・支払い方法は公式のページに書かれていません。現金を用意して、閉まっていたら駅のまわりで別の店を探してください。",
+      "en": "You buy a meal ticket from the machine at the door. When the cutlets sell out, the shop closes early for the day. The official page gives no closing time, closed days or payment methods, so bring cash, and if it is shut, look for somewhere else around the station."
      },
      "from": null,
      "to": null
@@ -577,8 +577,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "11:30〜（とんかつが売り切れたら閉店）。閉店時刻と定休日は公式のページに書かれていません（要確認）",
-       "en": "From 11:30 (closes when the cutlets sell out). Closing time and closed days are not given on the official page (please check)"
+       "ja": "11:30〜（とんかつが売り切れたら閉店）。閉店時刻・定休日・支払い方法は公式のページに書かれていません（要確認）",
+       "en": "From 11:30 (closes when the cutlets sell out). Closing time, closed days and payment methods are not given on the official page (please check)"
       },
       "until": null,
       "from": null
@@ -766,8 +766,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "ロープウェイ 往復2,500円（通常の料金）。11月7日〜12月28日はクリスマスの特別料金なので、公式サイトで確認を（要確認）",
-       "en": "Ropeway ¥2,500 return (standard fare). From 7 November to 28 December a special Christmas fare applies: please check the official site"
+       "ja": "ロープウェイ（ハーブ園の入園料込み）：12月28日まではクリスマスシーズンの特別料金で、大人 往復3,300円・片道2,700円。17時以降の割引料金はありません",
+       "en": "Ropeway incl. Herb Gardens admission: Christmas-season fare until 28 December, adults ¥3,300 return, ¥2,700 one way. No after-17:00 discount in this period"
       },
       "until": "2026-12-28",
       "from": null
@@ -775,8 +775,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "ロープウェイ 往復2,500円",
-       "en": "Ropeway ¥2,500 return"
+       "ja": "ロープウェイ（ハーブ園の入園料込み）往復2,500円",
+       "en": "Ropeway incl. Herb Gardens admission ¥2,500 return"
       },
       "until": "2027-03-12",
       "from": "2026-12-29"
@@ -801,6 +801,7 @@
      "Feel KOBE 布引の滝 https://www.feel-kobe.jp/facilities/0000000093/",
      "神戸市 六甲山系登山道通行止（通行注意）状況（2026-11-09 版） https://www.city.kobe.lg.jp/a17526/kanko/leisure/mountain/index.html",
      "神戸布引ハーブ園／ロープウェイ 営業時間・料金 https://www.kobeherb.com/infomation/hours_fare/",
+     "神戸布引ハーブ園／ロープウェイ 2026年クリスマスシーズン料金表（PDF、2026-11-24 確認） https://www.kobeherb.com/wordpress/wp-content/uploads/2026/10/88c4a0e9134729b7d5970905bd992b92.pdf",
      "乗換案内（Yahoo!路線情報）2026-11-28（土）のダイヤ。行きは 11-26（木）も"
     ]
    },
@@ -857,12 +858,12 @@
       "en": "Kobe Luminarie (29 January – 7 February 2027)"
      },
      "text": {
-      "ja": "点灯は薄暮から21:30まで。会場はメリケンパーク・東遊園地・旧居留地で、メリケンパークのメイン作品を見るには日時指定の特別鑑賞券がいります（料金は公式サイトで）。このスポットの5〜7枚目の写真は、2025年1月のルミナリエです。",
-      "en": "Lit from dusk to 21:30 at Meriken Park, Higashi Yuenchi and the old foreign settlement. The main work in Meriken Park needs a timed special ticket (price on the official site). Photos 5–7 here are from the Luminarie in January 2025."
+      "ja": "点灯は薄暮から21:30まで。会場はメリケンパーク・東遊園地・旧居留地で、メリケンパークのメイン作品の有料エリアは日時指定のチケット制です。前売券は平日500円・土日750円、当日券は平日1,000円・土日1,500円（小学生以下は無料）。当日券は15:00からメリケンパークの会場でも売っています。このスポットの5〜7枚目の写真は、2025年1月のルミナリエです。",
+      "en": "Lit from dusk to 21:30 at Meriken Park, Higashi Yuenchi and the old foreign settlement. The paid area around the main work in Meriken Park needs a timed ticket: ¥500 weekdays / ¥750 weekends in advance, ¥1,000 / ¥1,500 on the day (free for elementary school age and under). Same-day tickets are also sold at the Meriken Park venue from 15:00. Photos 5–7 here are from the Luminarie in January 2025."
      },
      "from": null,
      "to": "2027-02-07",
-     "url": "https://www.kobe-luminarie.jp/"
+     "url": "https://kobe-luminarie.jp/ticket/"
     }
    ],
    "text": {
@@ -1061,6 +1062,15 @@
       "from": null
      },
      {
+      "kind": "fee",
+      "text": {
+       "ja": "ルミナリエの有料エリア（メリケンパーク、日時指定）：前売 平日500円・土日750円、当日 平日1,000円・土日1,500円。小学生以下は無料",
+       "en": "Luminarie paid area (Meriken Park, timed): advance ¥500 weekdays / ¥750 weekends; on the day ¥1,000 / ¥1,500. Free for elementary school age and under"
+      },
+      "until": "2027-02-07",
+      "from": null
+     },
+     {
       "kind": "train",
       "text": {
        "ja": "大阪・梅田へ：JR神戸21:13発（新快速）→ 大阪21:39着・460円。阪急なら高速神戸21:10発（特急）→ 大阪梅田21:42着・470円",
@@ -1110,6 +1120,7 @@
      "神戸ハーバーランドumie 営業時間 https://umie.jp/static-pages/opening-hours",
      "神戸市 庁舎案内（1号館24階展望ロビー、2026-11-10 更新） https://www.city.kobe.lg.jp/a28956/shise/about/building/index.html",
      "神戸ルミナリエ 公式サイト https://www.kobe-luminarie.jp/",
+     "第32回神戸ルミナリエ チケット（有料エリアの料金、2026-11-24 確認） https://kobe-luminarie.jp/ticket/",
      "乗換案内（Yahoo!路線情報）2026-11-28（土）のダイヤ。行きは 11-26（木）も"
     ]
    },
