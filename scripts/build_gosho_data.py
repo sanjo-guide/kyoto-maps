@@ -24,7 +24,7 @@ import copy, json, os, re, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAP_ID = "gosho"
 IMG = f"{R}/images/{MAP_ID}"
-D21, D22 = "2026-11-21", "2026-11-22"   # 確認日（21日に確認して22日は見直していないものは D21）
+D21, D22, D24 = "2026-11-21", "2026-11-22", "2026-11-24"   # 確認日（21日に確認して22日は見直していないものは D21。24日は「要確認」の調べ直し）
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -98,11 +98,11 @@ BASE = dict(
         blurb=T("徳川家康が建て、慶喜が大政奉還を告げた城。国宝の二の丸御殿は、金のふすま絵と、歩くと鳴るうぐいす張りの廊下。開城は8:45、入城は16:00まで。",
                 "Built by Tokugawa Ieyasu; here the last shogun announced the return of power to the emperor. The National Treasure Ninomaru Palace has gold-leaf screens and “nightingale” floors. Opens 8:45; last entry 16:00."),
         lat=35.01353, lng=135.74972,
-        body=T("1603年に徳川家康が建てた城で、1867年に15代将軍の慶喜が大政奉還を告げた場所でもあります。東大手門から入り、金の飾りの唐門（からもん）をくぐると、国宝の二の丸御殿。部屋が奥へ奥へと続き、狩野派の虎や松のふすま絵が並びます。廊下は歩くとキュッキュッと鳴る「うぐいす張り」。御殿の中は靴を脱いで上がり、撮影はできません。冬は床が冷たいので厚手の靴下を。\n\n"
+        body=T("1603年に徳川家康が建てた城で、1867年に15代将軍の慶喜が大政奉還を告げた場所でもあります。東大手門から入り、金の飾りの唐門（からもん）をくぐると、国宝の二の丸御殿。部屋が奥へ奥へと続き、狩野派の虎や松のふすま絵が並びます。廊下は歩くとキュッキュッと鳴る「うぐいす張り」。御殿には靴を脱いで上がります。二の丸御殿と本丸御殿の中は、写真も動画も撮影禁止です（外の観覧ルートでは撮れます。一脚・三脚は使えません）。冬は床が冷たいので厚手の靴下を。\n\n"
                "回る順番は、二の丸御殿（40〜50分）→二の丸庭園→内堀を渡って本丸→天守閣跡の石垣の上→北側の清流園を通って出口へ。全部で1時間半〜2時間です。天守閣跡に上ると、本丸御殿の屋根と京都の町が見渡せます。\n\n"
                "入城券と二の丸御殿のセットで1,300円。本丸御殿（2024年に修理が終わって公開）は別に1,000円で、日時を決めたWEBチケットの事前予約が要ります（来城日の30日前から）。\n\n"
                "夜の写真は2016年8月と2017年4月の夜のライトアップのときのもの。夜の公開は年によって内容も期間も変わるので、公式サイトで確認してください。",
-               "Tokugawa Ieyasu built the castle in 1603, and in 1867 the 15th shogun, Yoshinobu, announced here that he was returning power to the emperor. Enter by the East Gate, pass under the gold-fitted Karamon gate, and you reach the Ninomaru Palace, a National Treasure. Room leads on to room, lined with Kano-school tigers and pines on gold leaf. The corridor floors chirp underfoot (“nightingale floors”). You take your shoes off to go in, and photography is not allowed inside. The floors are cold in winter: wear thick socks.\n\n"
+               "Tokugawa Ieyasu built the castle in 1603, and in 1867 the 15th shogun, Yoshinobu, announced here that he was returning power to the emperor. Enter by the East Gate, pass under the gold-fitted Karamon gate, and you reach the Ninomaru Palace, a National Treasure. Room leads on to room, lined with Kano-school tigers and pines on gold leaf. The corridor floors chirp underfoot (“nightingale floors”). You take your shoes off to go in. No photos or video inside the Ninomaru or Honmaru Palace (you may take pictures along the outdoor route, but no monopods or tripods). The floors are cold in winter: wear thick socks.\n\n"
                "A good order: the Ninomaru Palace (40–50 minutes) → the Ninomaru garden → across the inner moat to the Honmaru → up the stone base of the old keep → out through the Seiryu-en garden on the north side. Allow an hour and a half to two hours. From the keep base you look over the Honmaru Palace roofs and the city.\n\n"
                "Castle entry with the Ninomaru Palace is ¥1,300. The Honmaru Palace (reopened in 2024 after repairs) costs another ¥1,000 and needs a timed web ticket booked in advance (on sale from 30 days before).\n\n"
                "The night photos are from evening illuminations in August 2016 and April 2017. Evening openings change from year to year, so check the official website."),
@@ -119,18 +119,20 @@ BASE = dict(
                         "The Ninomaru Palace is closed on Tuesdays in January, July, August and December (the next day if Tuesday is a holiday), on 26–28 December and on 1–3 January. The castle grounds are open, but you would miss the main sight: choose another day. The whole castle is closed on 29–31 December.",
                         url=NIJO + "guide/annai/", frm="2026-11-25", to="2027-01-31"),
                  notice("二の丸御殿の中は撮影禁止。本丸御殿は事前予約制", "No photos inside the Ninomaru Palace; the Honmaru Palace is by advance booking",
-                        "二の丸御殿は靴を脱いで上がります。本丸御殿（別に1,000円）はWEBチケットで日時を予約した人だけ入れます。予約がなくても、本丸の庭と天守閣跡には入城券で入れます。",
-                        "You take your shoes off in the Ninomaru Palace. The Honmaru Palace (¥1,000 extra) is only for visitors with a timed web ticket. Without one you can still walk the Honmaru garden and climb the keep base on the ordinary ticket.",
-                        url=NIJO + "admission/")],
+                        "二の丸御殿と本丸御殿の中は、写真も動画も撮影禁止です。御殿には靴を脱いで上がります（はき間違いが心配なら、係の人に持ち歩き用の靴袋をもらえます）。本丸御殿（別に1,000円）はWEBチケットで日時を予約した人だけ入れ、中では靴下が必要です。予約がなくても、本丸の庭と天守閣跡には入城券で入れます。",
+                        "No photos or video inside the Ninomaru or Honmaru Palace. You take your shoes off to go in (if you worry about mix-ups, ask the staff for a bag to carry your shoes). The Honmaru Palace (¥1,000 extra) is only for visitors with a timed web ticket, and socks must be worn inside. Without a ticket you can still walk the Honmaru garden and climb the keep base on the ordinary ticket.",
+                        url=NIJO + "guide/caution/")],
         rows=[row("hours", "開城 8:45、入城は16:00まで（閉城17:00）。二の丸御殿の受付は8:45〜16:10、本丸御殿（要予約）は9:30〜16:00",
                   "Opens 8:45; last entry 16:00 (closes 17:00). Ninomaru Palace entry 8:45–16:10; Honmaru Palace (booking required) 9:30–16:00"),
               row("closed", "休城は12月29〜31日。二の丸御殿は1月・7月・8月・12月の火曜（祝日なら翌日）と12月26〜28日、1月1〜3日は入れません。本丸御殿は毎月第3月曜とその翌日（祝日なら開く）も休み",
                   "Castle closed 29–31 December. The Ninomaru Palace is also closed on Tuesdays in January, July, August and December (next day if a holiday), 26–28 December and 1–3 January. The Honmaru Palace is also closed on the third Monday of each month and the day after (open if a holiday)"),
               row("fee", "入城＋二の丸御殿 一般1,300円（入城だけなら800円、中高生400円、小学生300円）。本丸御殿は別に一般1,000円・中高生300円・小学生200円（要予約）",
                   "Castle + Ninomaru Palace ¥1,300 (castle only ¥800; ages 12–18 ¥400, 6–12 ¥300). Honmaru Palace extra: ¥1,000, ages 12–18 ¥300, 6–12 ¥200 (booking required)"),
+              row("fee", "支払い（券売所・総合案内所）：現金、クレジットカード、交通系ICカードなどの電子マネー、QRコード決済（PayPay・Alipay・WeChat Pay など）。一部のカード・決済は自動券売機だけ",
+                  "Payment at the ticket office and information centre: cash, credit cards, e-money including transport IC cards, and QR payments (PayPay, Alipay, WeChat Pay and others). Some cards and apps only at the ticket machines"),
               row("train", "地下鉄東西線 二条城前駅の1番出口から東大手門まで歩いて約5分。京都市役所前から4分・220円、三条京阪から6分・220円（数分おき）",
                   "About 5 min on foot from exit 1 of Nijojo-mae station (Tozai subway line) to the East Gate. From Kyoto Shiyakusho-mae 4 min, ¥220; from Sanjo Keihan 6 min, ¥220 (every few minutes)")],
-        source="二条城の公式サイト（開城時間・休城日等、料金、12月6日のお知らせ）、乗換案内（2026年11月28日のダイヤ）",
+        source="二条城の公式サイト（開城時間・休城日等、料金、12月6日のお知らせ）、乗換案内（2026年11月28日のダイヤ）。支払い方法は https://nijo-jocastle.city.kyoto.lg.jp/admission/ticket/ 、撮影・靴の決まりは https://nijo-jocastle.city.kyoto.lg.jp/guide/caution/ と https://nijo-jocastle.city.kyoto.lg.jp/admission/honmaru/ （2026-11-24）",
         tip=T("二条城の公式サイトと乗換案内（2026年11月28日・土曜の時刻）で確認しました。地下鉄一日券か地下鉄・バス一日券を当日の券売所で見せると、入城料800円が700円になります（公式サイト。WEBチケットでは割引になりません）。京都駅からは地下鉄烏丸線で烏丸御池へ、東西線に乗り換えて約15分・260円です。唐門・二の丸御殿・二の丸庭園・本丸の昼の写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
               "Checked on the castle website and Yahoo! Transit (times for Saturday 28 November 2026). Show a subway or subway & bus one-day pass at the ticket office and the ¥800 entry fee becomes ¥700 (castle website; not available with web tickets). From Kyoto Station: Karasuma subway line to Karasuma-Oike, change to the Tozai line, about 15 minutes, ¥260. The daytime photos of the Karamon gate, Ninomaru Palace, garden and Honmaru are from Wikimedia Commons (author and license shown on each photo).")),
     shinsenen=dict(
@@ -148,7 +150,7 @@ BASE = dict(
         links=[link("official", "神泉苑 公式サイト", "Shinsen-en (official, Japanese)", "http://www.shinsenen.org/")],
         rows=[row("hours", "境内の参拝 6:30〜20:00", "Grounds open 6:30–20:00"), row("fee", "無料", "Free"),
               row("train", "地下鉄東西線 二条城前駅から歩いて約2分（神泉苑の案内）", "About 2 min on foot from Nijojo-mae station, Tozai subway line (temple’s access page)")],
-        source="神泉苑の公式サイト", checked=D21,
+        source="神泉苑の公式サイト（交通案内 http://www.shinsenen.org/access.html 、2026-11-24 に参拝時間を再確認）", checked=D24,
         tip=T("神泉苑の公式サイトで確認しました。二条城からの歩く時間は OpenStreetMap で測った目安です。" + WEBPHOTO_JA,
               "Checked on the temple website. The walking time from the castle is an estimate measured on OpenStreetMap. " + WEBPHOTO_EN)),
     seimei=dict(
@@ -162,12 +164,16 @@ BASE = dict(
                "The plaque on the first torii carries not the shrine’s name but a golden five-pointed star, the shrine’s crest. Inside are the Seimei well, said to have sprung up by Seimei’s power; a bronze peach you stroke to rub off bad luck; and the railing posts of the old Ichijo Modoribashi bridge with a stone figure of his spirit servant. It’s a small precinct: 20 minutes is enough."),
         gmaps=[gm("晴明神社", "Seimei Shrine", 35.02776, 135.75114, "晴明神社 京都")],
         links=[link("official", "晴明神社 公式サイト", "Seimei Shrine (official, Japanese)", "https://www.seimeijinja.jp/"),
-               link("timetable", "市バスの時刻表（京都市交通局）", "City bus timetables (Kyoto City, Japanese)", "https://www.city.kyoto.lg.jp/kotsu/")],
+               link("timetable", "市バス9系統の時刻表（京都市交通局）", "Bus 9 timetables (Kyoto City, Japanese)", "https://www2.city.kyoto.lg.jp/kotsu/busdia/keitou/kto/00900.htm"),
+               link("timetable", "市バス12系統の時刻表（京都市交通局）", "Bus 12 timetables (Kyoto City, Japanese)", "https://www2.city.kyoto.lg.jp/kotsu/busdia/keitou/kto/01200.htm")],
         rows=[row("hours", "9:00〜17:00（授与所は16:30まで）", "9:00–17:00 (amulet counter until 16:30)"), row("closed", "無休", "Open every day"), row("fee", "無料", "Free"),
-              row("bus", "市バス9・12系統「一条戻橋・晴明神社前」すぐ・230円。バスの時刻は要確認", "City bus 9 or 12 to “Ichijo-modoribashi / Seimei-jinja-mae”, right outside, ¥230. Bus times: please check")],
-        source="晴明神社の公式サイト（時間・バスの系統）。バスの時刻は未確認", checked=D21,
-        tip=T("晴明神社の公式サイトで確認しました（バスの系統も公式サイトの案内）。バスの時刻は確認していません。歩く時間と距離は OpenStreetMap で測った目安です。" + WEBPHOTO_JA,
-              "Checked on the shrine website (bus numbers are from its access page). Bus times were not checked. Walking times and distances are estimates measured on OpenStreetMap. " + WEBPHOTO_EN)),
+              row("bus", "市バス9・12系統「一条戻橋・晴明神社前」すぐ・230円。二条城前のバス停（堀川通）から7分。昼間（10〜15時台）は、9系統がほぼ10分おき、12系統が12〜16分おき（平日・土日祝とも）",
+                  "City bus 9 or 12 to “Ichijo-modoribashi / Seimei-jinja-mae”, right outside, ¥230. 7 min from the Nijojo-mae stop on Horikawa-dori. In the daytime (10:00–16:00) route 9 runs about every 10 minutes and route 12 every 12–16 minutes (weekdays and weekends)")],
+        source="晴明神社の公式サイト（https://www.seimeijinja.jp/access/ 、参拝時間とバス、2026-11-24）。バスの時刻は京都市交通局の停留所別時刻表（2026年3月20日改正。"
+               "二条城前 北行き https://www2.city.kyoto.lg.jp/kotsu/busdia/hyperdia/18540001.htm ・18540002.htm 、一条戻橋・晴明神社前 南行き 18030001.htm ・18030002.htm 、北行き 18040001.htm ・18040002.htm 、2026-11-24）。"
+               "運賃は京都市交通局「定期券以外の運賃（市バス）」https://www.city.kyoto.lg.jp/kotsu/page/0000240682.html （2026-11-24）", checked=D24,
+        tip=T("晴明神社の公式サイトと、京都市交通局の停留所別の時刻表・運賃のページで確認しました（11月24日）。歩く時間と距離は OpenStreetMap で測った目安です。" + WEBPHOTO_JA,
+              "Checked on the shrine website and the Kyoto City Transportation Bureau’s stop timetables and fare page (24 November). Walking times and distances are estimates measured on OpenStreetMap. " + WEBPHOTO_EN)),
     gyoen=dict(
         name=T("京都御苑：梅林・桃林と蛤御門", "Imperial Palace Park: plum & peach groves, Hamaguri gate"), kind=T("公園", "Park"), web="extra",
         blurb=T("御所を囲む、24時間入れる無料の公園。西側に、しだれ桜・桃林・梅林と、弾の跡が残る蛤御門。",
@@ -201,18 +207,19 @@ BASE = dict(
         body=T("1331年から明治のはじめまで、天皇が住んでいた場所です。今の建物は1855年に、平安時代の様式で建て直されたもの。予約はいらず、無料で入れます。入口は西側の清所門（せいしょもん）で、入るときに手荷物検査があります。小さな荷物は、入ってすぐの参観者休所のロッカーに預けられます。\n\n"
                "順路は約50分。御車寄（おくるまよせ）、朱色の回廊と承明門（じょうめいもん）、その奥に即位の礼が行われた紫宸殿（ししんでん）。写真2枚目のように、承明門の柱のあいだから紫宸殿を正面に見られます。続いて清涼殿、池に欅橋がかかる御池庭（おいけにわ）、御常御殿と御内庭へ。建物の中には入れず、外から見ます。\n\n"
                "職員の案内（無料・予約なし、約50分）は英語と中国語が10:00・14:00、日本語が9:30・10:30・13:30・14:30。開始時間までに参観者休所へ。時間が合わなければ、無料の音声ガイドアプリ（6言語）を先にスマホに入れておくと便利です。\n\n"
-               "お昼は、清所門から歩いて3分の中立売（なかだちうり）休憩所で。レストラン「檜垣（ひがき）」は8:00〜18:30（ラストオーダー18:00）で、年末年始のほかは休みなし。無料で座れる休憩スペースと売店（9:00〜16:30）もあります。御苑の中に食事ができる場所は少ないので、ここで食べるのがいちばん楽です。\n\n"
+               "お昼は、清所門から歩いて3分の中立売（なかだちうり）休憩所で。レストラン「檜垣（ひがき）」は8:00〜18:30（ラストオーダー18:00）で、年末年始のほかは休みなし。京都ちらし寿司膳や鯛胡麻味噌茶漬け膳が2,000円、牛すじカレーのセットが1,500円、コーヒーが700円（税込、休憩所の公式サイトのメニュー）。無料で座れる休憩スペースと売店（9:00〜16:30）もあります。御苑の中に食事ができる場所は少ないので、ここで食べるのがいちばん楽です。\n\n"
                "写真は2024年1月6日と11月6日。",
                "The emperors lived here from 1331 until the start of the Meiji era. The present buildings were rebuilt in 1855 in the style of the Heian period. No booking, no charge. The entrance is the Seishomon gate on the west side; bags are checked as you go in. Small bags can go in the lockers in the visitors’ rest house just inside.\n\n"
                "The route takes about 50 minutes: the Okurumayose carriage porch, the vermilion corridors and Jomeimon gate, and beyond them the Shishinden, the hall of enthronements. As in photo 2, you can look straight at the Shishinden between the pillars of the Jomeimon. Then come the Seiryoden, the Oikeniwa pond garden with its Keyaki bridge, and the Otsunegoten with its inner garden. You see the buildings from outside; you can’t go in.\n\n"
                "Free staff-guided tours (no booking, about 50 minutes): English and Chinese at 10:00 and 14:00; Japanese at 9:30, 10:30, 13:30 and 14:30. Be at the visitors’ rest house by the start time. If the times don’t suit, install the free audio-guide app (six languages) on your phone beforehand.\n\n"
-               "For lunch, the Nakadachiuri rest house is 3 minutes’ walk from the Seishomon gate. Its restaurant, Higaki, is open 8:00–18:30 (last order 18:00) every day except the New Year holidays, and there is a free seating area and a shop (9:00–16:30). There are few places to eat inside the park, so this is the easy choice.\n\n"
+               "For lunch, the Nakadachiuri rest house is 3 minutes’ walk from the Seishomon gate. Its restaurant, Higaki, is open 8:00–18:30 (last order 18:00) every day except the New Year holidays. A Kyoto chirashi-zushi set or a sea-bream sesame-miso chazuke set is ¥2,000, a beef-tendon curry set ¥1,500, coffee ¥700 (tax included; menu on the rest house’s website). There is also a free seating area and a shop (9:00–16:30). There are few places to eat inside the park, so this is the easy choice.\n\n"
                "Photos: 6 January and 6 November 2024."),
         gmaps=[gm("清所門（京都御所の入口）", "Seishomon gate (Palace entrance)", 35.02583, 135.76102, "京都御所 清所門"),
                gm("中立売休憩所（お昼）", "Nakadachiuri rest house (lunch)", 35.0256, 135.7599, "京都御苑 中立売休憩所")],
         links=[link("official", "京都御所（宮内庁）", "Kyoto Imperial Palace (Imperial Household Agency)", KUNAI, KUNAI + "en"),
                link("info", "参観要領・カレンダー", "Visiting guide & calendar", KUNAI + "visit", KUNAI + "en/visit"),
-               link("info", "中立売休憩所（国民公園協会）", "Nakadachiuri rest house (Japanese)", GYOEN + "place/rest/")],
+               link("info", "中立売休憩所（国民公園協会）", "Nakadachiuri rest house (Japanese)", GYOEN + "place/rest/"),
+               link("info", "檜垣のメニュー（中立売休憩所 公式）", "Higaki menu (rest house website, Japanese)", "https://nakadachiuri.jp/restaurant/")],
         notices=[notice("月曜休み。冬は15:20までに入場。飲食とスーツケースは不可", "Closed Mondays; in winter enter by 15:20. No food, no suitcases",
                         "京都御所の公開は、月曜（祝日のときは翌日）と12月28日〜1月4日が休みです。行事で休む日もあるので、行く前に宮内庁の参観カレンダーを見てください。入場は10〜2月が15:20まで、3月と9月が15:50まで、4〜8月が16:20まで。中で食事はできず、スーツケースなどの大きな荷物とペットは持ち込めません。",
                         "The Palace is closed on Mondays (the next day if Monday is a holiday) and from 28 December to 4 January, and sometimes for court events, so check the Imperial Household Agency’s calendar first. Last entry is 15:20 from October to February, 15:50 in March and September, and 16:20 from April to August. You can’t eat inside, and suitcases, other large bags and pets are not allowed.",
@@ -224,9 +231,10 @@ BASE = dict(
               row("train", "地下鉄烏丸線 今出川駅3番出口から歩いて約5分（丸太町駅からは御苑の中を歩いて約20分）", "About 5 min on foot from exit 3 of Imadegawa station, Karasuma subway line (about 20 min through the park from Marutamachi)"),
               row("hours", "中立売休憩所：レストラン「檜垣」8:00〜18:30（ラストオーダー18:00）、売店9:00〜16:30。年末年始のほかは無休",
                   "Nakadachiuri rest house: Higaki restaurant 8:00–18:30 (last order 18:00), shop 9:00–16:30; open daily except the New Year holidays")],
-        source="宮内庁の京都御所のサイト（参観要領・よくあるご質問）、国民公園協会の京都御苑のサイト（食事・お土産）",
-        tip=T("宮内庁の京都御所のサイト（参観要領・よくあるご質問）と、国民公園協会の京都御苑のサイトで確認しました。檜垣のメニューと値段は確認していません。",
-              "Checked on the Imperial Household Agency’s Kyoto Imperial Palace website (visiting guide and FAQ) and the park foundation’s website. Higaki’s menu and prices were not checked.")),
+        source="宮内庁の京都御所のサイト（参観要領・よくあるご質問）、国民公園協会の京都御苑のサイト（食事・お土産 https://fng.or.jp/kyoto/place/rest/ 、2026-11-24 に再確認）。"
+               "檜垣のメニューと値段は中立売休憩所の公式サイト（グランドメニュー https://nakadachiuri.jp/restaurant/ 、2026-11-24）",
+        tip=T("宮内庁の京都御所のサイト（参観要領・よくあるご質問）と、国民公園協会の京都御苑のサイトで確認しました。檜垣のメニューと値段は、中立売休憩所の公式サイト（11月24日）で確認しました。",
+              "Checked on the Imperial Household Agency’s Kyoto Imperial Palace website (visiting guide and FAQ) and the park foundation’s website. Higaki’s menu and prices are from the rest house’s official website (24 November).")),
     kitagyoen=dict(
         name=T("京都御苑の北側：紅葉・近衞邸跡のしだれ桜", "North side of the park: maples & the Konoe weeping cherries"), kind=T("公園", "Park"), web=None,
         blurb=T("御所の北は人が少なくて静か。秋は乾御門のあたりのもみじとイチョウ、春は近衞邸跡のしだれ桜、冬は雪の松林。和菓子屋のカフェがある休憩所も。",
@@ -261,25 +269,29 @@ BASE = dict(
         lat=35.02454, lng=135.76733,
         body=T("御苑の東側の清和院御門（せいわいんごもん）を出てすぐ北。明治18年に、明治維新に尽くした三條實萬（さねつむ）・實美（さねとみ）の親子をまつって建てられた神社です。萩の名所で、9月下旬に萩まつりがあります。\n\n"
                "手水舎の水は「染井（そめい）」。京都三名水のうち、今も湧いているただ一つの井戸です。蛇口から自由に汲めて、口にふくむとやわらかい水です（蛇口が開いているのは6:00〜18:30ごろ）。空のペットボトルを持って行くと、持ち帰れます。\n\n"
-               "境内の古い茶室は、今はコーヒースタンド「Coffee Base NASHINOKI」。染井の水でいれたコーヒーが飲めます（写真6・7枚目。営業の日と時間は要確認）。\n\n"
+               "境内の古い茶室は、今はコーヒースタンド「Coffee Base NASHINOKI」。染井の水でいれたコーヒーが飲めます（写真6・7枚目。10:00〜17:00と店の公式Instagramにあります。休みの日は案内によって違うので要確認）。\n\n"
                "写真は2026年5月18日、青もみじの時期です。",
                "Just north of the Seiwain gate on the east side of the park. The shrine was founded in 1885 for Sanjo Sanetsumu and his son Sanetomi, court nobles who worked for the Meiji Restoration. It is known for bush clover, with a festival in late September.\n\n"
                "The water at the purification basin is Somei, the only one of Kyoto’s three famous wells that still flows. Anyone may fill a bottle from the taps; the water tastes soft (taps are open from about 6:00 to 18:30). Bring an empty bottle and take some with you.\n\n"
-               "The old tea room in the grounds is now a coffee stand, Coffee Base NASHINOKI, brewing with Somei water (photos 6 and 7; opening days and hours: please check).\n\n"
+               "The old tea room in the grounds is now a coffee stand, Coffee Base NASHINOKI, brewing with Somei water (photos 6 and 7; 10:00–17:00 according to the shop’s official Instagram; closing days differ between sources, so please check).\n\n"
                "Photos: 18 May 2026, with the maples in fresh green."),
         gmaps=[gm("梨木神社", "Nashinoki Shrine", 35.02454, 135.76733, "梨木神社 京都"),
                gm("一保堂茶舗 京都本店（寺町二条）", "Ippodo Tea, Kyoto main store (Teramachi Nijo)", 35.01437, 135.76745, "一保堂茶舗 京都本店")],
         links=[link("official", "梨木神社 公式サイト", "Nashinoki Shrine (official, Japanese)", "https://www.nashinoki.jp/"),
+               link("info", "Coffee Base NASHINOKI（公式Instagram）", "Coffee Base NASHINOKI (official Instagram)", "https://www.instagram.com/coffeebase.nashinoki/"),
                link("info", "一保堂茶舗 京都本店（公式）", "Ippodo Tea, Kyoto main store (official)", IPPODO)],
         rows=[row("hours", "開門7:30、閉門16:30。授与所は9:00〜16:30（12:15〜13:15は休み）", "Gates 7:30–16:30; amulet counter 9:00–16:30 (closed 12:15–13:15)"),
               row("fee", "無料", "Free"),
               row("hours", "染井の水の蛇口は6:00〜18:30ごろ", "Somei water taps: about 6:00–18:30"),
-              row("hours", "Coffee Base NASHINOKI の営業時間は公式の情報で確認できていません（要確認）", "Coffee Base NASHINOKI’s hours could not be confirmed from an official source (please check)"),
+              row("hours", "Coffee Base NASHINOKI：10:00〜17:00（店の公式Instagram）。休みの日は、以前の案内（水曜休み）と今の案内で違うので要確認。神社の門は16:30に閉まります",
+                  "Coffee Base NASHINOKI: 10:00–17:00 (the shop’s official Instagram). Closing days differ between an older notice (Wednesdays) and the current profile, so please check. The shrine gates close at 16:30"),
               row("hours", "寺町通の一保堂茶舗 京都本店：店も喫茶室「嘉木」も10:00〜17:00（喫茶室のラストオーダー16:30）。第2水曜休み",
                   "Ippodo Tea main store on Teramachi-dori: shop and Kaboku tearoom 10:00–17:00 (tearoom last order 16:30); closed on the second Wednesday of the month")],
-        source="梨木神社の公式サイト（2026-11-21）、一保堂茶舗の公式サイト（京都本店、2026-11-22）",
-        tip=T("梨木神社の公式サイト（11月21日）と一保堂茶舗の公式サイト（11月22日）で確認しました。寺町通を歩く時間は OpenStreetMap で測った目安です。",
-              "Checked on the shrine website (21 November) and the Ippodo website (22 November). Walking times along Teramachi-dori are estimates measured on OpenStreetMap.")),
+        source="梨木神社の公式サイト（https://www.nashinoki.jp/ と「染井の水」のページ、2026-11-24 に再確認）、一保堂茶舗の公式サイト（京都本店、2026-11-22）、"
+               "Coffee Base NASHINOKI の公式Instagram https://www.instagram.com/coffeebase.nashinoki/ のプロフィール（2026-11-24。運営会社の2022年の開店のお知らせ https://www.kanondo.coffee/blog/coffeebasenashinoki では水曜定休だったが、今のプロフィールは無休）",
+        checked=D24,
+        tip=T("梨木神社の公式サイト（11月24日）、一保堂茶舗の公式サイト（11月22日）、Coffee Base NASHINOKI の公式Instagram（11月24日）で確認しました。寺町通を歩く時間は OpenStreetMap で測った目安です。",
+              "Checked on the shrine website (24 November), the Ippodo website (22 November) and Coffee Base NASHINOKI’s official Instagram (24 November). Walking times along Teramachi-dori are estimates measured on OpenStreetMap.")),
     sento=dict(
         name=T("京都仙洞御所", "Sento Imperial Palace"), kind=T("庭園（要申し込み）", "Garden (application needed)"), web="first",
         blurb=T("退位した天皇の御所の庭。二つの池と、丸い石を敷きつめた洲浜を、職員の案内で約1時間歩きます。申し込みが必要、18歳以上・無料。",
@@ -335,12 +347,12 @@ BASE = dict(
                 "“Kyoto’s kitchen”, a 390-metre covered market. Many shops close early, so come by 17:00. Then dinner in Pontocho or Kiyamachi and a walk back to Sanjo."),
         lat=35.00502, lng=135.76557,
         body=T("錦市場は、高倉通から寺町通まで東西390mのアーケードです。魚屋、漬物屋、だし巻き卵、湯葉、串にさした焼き魚や天ぷら。少しずつ買って食べるのが楽しい場所ですが、食べながら歩くのは商店街がやめてほしいと呼びかけています。買ったものは、その店の前か店の中で食べてください。イートインの席がある店も多いです。\n\n"
-               "営業時間は店ごとにちがい、夕方は早く閉まる店が多いです。17時までに着くと安心です。昼どきはとても混みます。\n\n"
+               "営業時間は店ごとにちがいます。商店街の公式サイトのお店紹介を見ると、17:00〜18:00に閉まる店が多く、もっと早く閉まる店もあります。17時までに着くと安心です。水曜休みの店が多く、1月1〜3日は閉まっている店が多いです。昼どきはとても混みます。\n\n"
                "東の端は錦天満宮（にしきてんまんぐう）。繁華街の真ん中の小さな神社で、20:00まで開いています。\n\n"
                "ここから夜の街なかへ。新京極を抜けて東へ7分歩くと、鴨川と先斗町（ぽんとちょう）です。先斗町は四条通から三条通まで南北に続く、人がすれちがうのがやっとの細い路地。両側に料理屋や居酒屋、バーが並び、北へ歩けばそのまま三条に出ます。1本西の木屋町通（きやまちどおり）は高瀬川ぞいの飲み屋街で、気軽な店はこちらに多いです。晩ごはんを食べて、もう1軒寄って、21〜22時ごろまで過ごせます。閉まる時間とラストオーダーは店ごとにちがうので、入る前に表の案内で確かめてください。席料（お通し）がつく店もあります。\n\n"
                "写真1枚目は2025年11月。",
                "Nishiki Market is a covered arcade running 390 m east to west from Takakura-dori to Teramachi-dori: fishmongers, pickle shops, rolled omelette, yuba, grilled fish and tempura on skewers. Buying a little here and there is the fun of it, but the market association asks people not to eat while walking. Eat what you buy in front of the shop or inside it; many shops have a few seats.\n\n"
-               "Hours differ from shop to shop and many close early in the evening. Arrive by 17:00 to be safe. It gets very crowded around lunchtime.\n\n"
+               "Hours differ from shop to shop. Going by the shop pages on the market’s website, many close between 17:00 and 18:00 and some earlier. Arrive by 17:00 to be safe. Many shops close on Wednesdays, and many are closed on 1–3 January. It gets very crowded around lunchtime.\n\n"
                "At the east end is Nishiki Tenmangu, a small shrine in the middle of the shopping streets, open until 20:00.\n\n"
                "From here, the evening. Go through Shinkyogoku and 7 minutes east you reach the Kamo river and Pontocho, a lane barely wide enough for two people to pass, running north from Shijo-dori to Sanjo-dori. It is lined with restaurants, izakaya and bars, and if you walk north you come out at Sanjo. One street west, Kiyamachi-dori follows the Takase canal and has more casual places. Have dinner, stop somewhere for one more drink, and you can easily stay out until 21:00 or 22:00. Closing times and last orders differ, so check the sign outside before you go in. Some places add a small seating charge (otoshi).\n\n"
                "Photo 1 is from November 2025."),
@@ -350,18 +362,21 @@ BASE = dict(
                gm("木屋町通（三条）", "Kiyamachi-dori (at Sanjo)", 35.00885, 135.77035, "三条木屋町")],
         links=[link("official", "錦市場商店街 公式サイト", "Nishiki Market (official, Japanese)", "https://www.kyoto-nishiki.or.jp/"),
                link("info", "お願いとご案内（食べ歩きについて）", "Requests to visitors (about eating while walking, Japanese)", "https://www.kyoto-nishiki.or.jp/manner/"),
+               link("info", "錦市場マップ（店ごとの時間）", "Nishiki Market map (hours of each shop, Japanese)", "https://www.kyoto-nishiki.or.jp/map/"),
                link("info", "錦天満宮 公式サイト", "Nishiki Tenmangu (official, Japanese)", "https://nishikitenmangu.or.jp/")],
         notices=[notice("夕方は早く閉まる店が多い。食べながら歩かない", "Many shops close early; don’t eat while walking",
-                        "営業時間と休みは店ごとにちがいます。17時までに着くのがおすすめ。買ったものは、その店の前か中で食べてください。",
-                        "Hours and closing days differ from shop to shop. Try to arrive by 17:00. Eat what you buy in front of or inside the shop.",
+                        "営業時間と休みは店ごとにちがい、17:00〜18:00に閉まる店が多く、水曜休みの店が多いです。17時までに着くのがおすすめ。買ったものは、その店の前か中で食べてください。",
+                        "Hours and closing days differ from shop to shop; many close between 17:00 and 18:00, and many close on Wednesdays. Try to arrive by 17:00. Eat what you buy in front of or inside the shop.",
                         url="https://www.kyoto-nishiki.or.jp/manner/")],
-        rows=[row("hours", "錦市場の営業時間と休みは店ごとにちがいます（要確認）", "Nishiki Market: hours and closing days differ from shop to shop (please check)"),
+        rows=[row("hours", "錦市場の営業時間と休みは店ごとにちがいます。商店街の公式サイトのお店紹介では、17:00〜18:00に閉まる店が多い。水曜休みの店が多く、1月1〜3日は閉まっている店が多い（商店街のよくある質問）",
+                  "Nishiki Market: hours and closing days differ from shop to shop. On the market’s shop pages, many close between 17:00 and 18:00. Many close on Wednesdays, and many are closed on 1–3 January (market FAQ)"),
               row("hours", "錦天満宮 8:00〜20:00", "Nishiki Tenmangu 8:00–20:00"),
               row("fee", "食べながら歩かない。買った店の前か店の中で食べる（商店街のお願い）", "Don’t eat while walking: eat in front of or inside the shop where you bought it (market’s request)"),
               row("train", "地下鉄烏丸線 四条駅・阪急 烏丸駅から歩いて約5分。三条からは寺町通か新京極を南へ歩いて約10分", "About 5 min on foot from Shijo (Karasuma subway line) or Hankyu Karasuma station; about 10 min on foot south from Sanjo along Teramachi-dori or Shinkyogoku")],
-        source="錦市場商店街の公式サイト（長さ390m、食べ歩きについてのお願い）、錦天満宮の公式サイト（開門8時・閉門20時）", verified=False,
-        tip=T("錦市場商店街と錦天満宮の公式サイトで確認しました。店ごとの営業時間、「17時まで」というめやす、先斗町・木屋町の店の時間は公式の情報では確認できていません。歩く時間は OpenStreetMap で測った目安です。アーケードの写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-              "Checked on the websites of the market association and Nishiki Tenmangu. Individual shop hours, the “by 17:00” rule of thumb and the hours of places in Pontocho and Kiyamachi could not be confirmed from official sources. Walking times are estimates measured on OpenStreetMap. The arcade photos are from Wikimedia Commons (author and license shown on each photo).")),
+        source="錦市場商店街の公式サイト（長さ390m、食べ歩きについてのお願い。店ごとの営業時間は錦市場マップ https://www.kyoto-nishiki.or.jp/map/ からたどれる各店のページ、休みの傾向は https://www.kyoto-nishiki.or.jp/contact/ のよくある質問、2026-11-24）、"
+               "錦天満宮の公式サイト（https://nishikitenmangu.or.jp/ 、開門8時・閉門20時、2026-11-24）", checked=D24,
+        tip=T("錦市場商店街と錦天満宮の公式サイトで確認しました（11月24日）。商店街のお店紹介で営業時間が載っている約110軒のうち、4分の3ほどが18:00までに閉まります。先斗町・木屋町は店ごとに時間がちがうので、入る前に表の案内で確かめてください。歩く時間は OpenStreetMap で測った目安です。アーケードの写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+              "Checked on the websites of the market association and Nishiki Tenmangu (24 November). Of the roughly 110 shops whose hours are listed on the market’s shop pages, about three quarters close by 18:00. In Pontocho and Kiyamachi hours vary by place, so check the sign outside before you go in. Walking times are estimates measured on OpenStreetMap. The arcade photos are from Wikimedia Commons (author and license shown on each photo).")),
 )
 
 HEAD = {'nijojo': ('二条城（にじょうじょう）', 'Nijo Castle'), 'shinsenen': ('神泉苑（しんせんえん）', 'Shinsen-en'), 'seimei': ('晴明神社（せいめいじんじゃ）', 'Seimei Shrine'), 'gyoen': ('京都御苑（きょうとぎょえん）', 'Kyoto Imperial Palace Park (Kyoto Gyoen)'), 'gosho': ('京都御所（きょうとごしょ）', 'Kyoto Imperial Palace (Kyoto Gosho)'), 'kitagyoen': ('京都御苑の北側', 'North side of the park'), 'nashinoki': ('梨木神社（なしのきじんじゃ）', 'Nashinoki Shrine'), 'sento': ('京都仙洞御所（きょうとせんとうごしょ）', 'Sento Imperial Palace (Kyoto Sento Gosho)'), 'manga': ('京都国際マンガミュージアム', 'Kyoto International Manga Museum'), 'nishiki': ('錦市場（にしきいちば）と夜の街なか', 'Nishiki Market and the evening in town')}
@@ -404,9 +419,9 @@ COURSES = [
                "Take the 14:00 subway from Marutamachi, change at the next stop, Karasuma-Oike, to the Tozai line (for Uzumasa-Tenjingawa) and you reach Nijojo-mae at 14:12 (¥220; the train before is 13:53 → 14:04. Saturday times; trains run every few minutes).")),
             ("seimei", VIS, "13:40〜14:00（寄る日は、梅林・桃林を短くします）", "13:40–14:00 (if you go, shorten the plum and peach groves)",
              T("このコースでは寄り道です。蛤御門を見たら、1つ北の中立売御門から御苑を出て、中立売通を西へまっすぐ歩いて約15分（約1.1km）。\n\n"
-               "お参りのあと二条城へは、堀川通を南へ歩いて約25分（約1.5km）。「一条戻橋・晴明神社前」から市バス9・12系統に乗れば「二条城前」まで行けます（230円。時刻は要確認）。",
+               "お参りのあと二条城へは、堀川通を南へ歩いて約25分（約1.5km）。バスなら「一条戻橋・晴明神社前」から市バス9系統（京都駅行き）か12系統（三条京阪行き）で「二条城前」まで7分・230円。14:03発の9系統に乗ると14:10に着きます（平日・土日祝とも。9系統はほぼ10分おき、12系統は12〜16分おき）。",
                "A side stop on this course. After the Hamaguri gate, leave the park by the next gate north, the Nakadachiuri gate, and walk straight west along Nakadachiuri-dori for about 15 minutes (about 1.1 km).\n\n"
-               "From the shrine to Nijo Castle, walk about 25 minutes (about 1.5 km) south down Horikawa-dori, or take city bus 9 or 12 from “Ichijo-modoribashi / Seimei-jinja-mae” to “Nijojo-mae” (¥230; times: please check).")),
+               "From the shrine to Nijo Castle, walk about 25 minutes (about 1.5 km) south down Horikawa-dori. Or take city bus 9 (for Kyoto Station) or 12 (for Sanjo Keihan) from “Ichijo-modoribashi / Seimei-jinja-mae” to “Nijojo-mae”: 7 minutes, ¥230. The 14:03 bus 9 arrives at 14:10 (weekdays and weekends; bus 9 runs about every 10 minutes, bus 12 every 12–16).")),
             ("manga", VIS, "13:50〜14:40（寄る日は、二条城に15時ごろ）", "13:50–14:40 (if you go, you reach Nijo Castle at about 15:00)",
              T("このコースでは寄り道です。丸太町から地下鉄で1駅の烏丸御池で降りて、2番出口から歩いて2分。ここに50分いると、二条城に着くのは15時ごろになります。二の丸御殿の受付は16:10までなので、15:00までにはここを出てください。雨の日は、御苑を短くしてここで長めに休むのもいい使い方です。",
                "A side stop on this course. Get off the subway at Karasuma-Oike, one stop from Marutamachi, and walk 2 minutes from exit 2. Spend 50 minutes here and you reach Nijo Castle at about 15:00. Entry to the Ninomaru Palace ends at 16:10, so leave here by 15:00 at the latest. On a rainy day, cutting the park short and resting longer here works well.")),
@@ -462,10 +477,10 @@ COURSES = [
                "二条城前10:58発の地下鉄（東西線）に乗り、次の烏丸御池で烏丸線（国際会館行き）に乗り換えて1駅、丸太町に11:10に着きます（220円。次は11:06発→11:16着）。",
                "Leave the castle by the East Gate, follow the moat south and walk west along Oshikoji-dori: about 7 minutes. Afterwards it’s about 4 minutes on foot to Nijojo-mae station.\n\n"
                "Take the 10:58 subway (Tozai line) from Nijojo-mae, change at the next stop, Karasuma-Oike, to the Karasuma line (for Kokusaikaikan) and go one stop to Marutamachi, arriving 11:10 (¥220; the next is 11:06 → 11:16).")),
-            ("seimei", VIS, "11:10〜11:30（寄る日は、梅林・桃林を御所のあとに）", "11:10–11:30 (if you go, see the plum and peach groves after the Palace)",
-             T("このコースでは寄り道です。二条城前のバス停から堀川通を北へ、市バス9・12系統で「一条戻橋・晴明神社前」へ（230円。時刻は要確認）。歩くと約25分です。\n\n"
+            ("seimei", VIS, "11:15〜11:35（寄る日は、梅林・桃林を御所のあとに）", "11:15–11:35 (if you go, see the plum and peach groves after the Palace)",
+             T("このコースでは寄り道です。神泉苑から堀川通の「二条城前」のバス停へ歩き、市バス12系統（金閣寺・立命館大学行き）11:05発か9系統（西賀茂車庫行き）11:09発で「一条戻橋・晴明神社前」へ。7分・230円で、11:12か11:16に着きます（平日・土日祝とも）。歩くと約25分です。\n\n"
                "ここから京都御苑へは、中立売通を東へまっすぐ歩いて約15分（約1.1km）で中立売御門。そのまま進むと京都御所の入口の清所門です。4番の梅林・桃林と蛤御門は、御所とお昼のあとに回ってください。",
-               "A side stop on this course. From the Nijojo-mae bus stop take city bus 9 or 12 north along Horikawa-dori to “Ichijo-modoribashi / Seimei-jinja-mae” (¥230; times: please check). On foot it takes about 25 minutes.\n\n"
+               "A side stop on this course. From Shinsen-en walk to the Nijojo-mae bus stop on Horikawa-dori and take city bus 12 (for Kinkakuji / Ritsumeikan Univ.) at 11:05 or bus 9 (for Nishigamo Shako) at 11:09 to “Ichijo-modoribashi / Seimei-jinja-mae”: 7 minutes, ¥230, arriving 11:12 or 11:16 (weekdays and weekends). On foot it takes about 25 minutes.\n\n"
                "From here walk straight east along Nakadachiuri-dori for about 15 minutes (1.1 km) to the Nakadachiuri gate of the Imperial Palace Park; keep going and you reach the Seishomon gate, the entrance to the Palace. See the plum and peach groves and the Hamaguri gate (No. 4) after the Palace and lunch.")),
             ("gyoen", VIS, "11:20〜11:50", "11:20–11:50",
              T("丸太町駅の1番出口から北へ歩いて約5分で、御苑の南西の角です。出水の小川、桃林、梅林と、西側を北へ歩いて蛤御門へ。門を見たら、北東へ約6分で京都御所の入口・清所門です。",
