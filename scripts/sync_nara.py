@@ -13,7 +13,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='nara', i18n='NARA_I18N', count=12, data_v=3, bump=102,
+    id='nara', i18n='NARA_I18N', count=12, data_v=4, bump=103,
     head='京都・大阪から日帰り 奈良',
     title='京都・大阪から日帰り 奈良｜東大寺・春日大社・ならまち Nara MAP',
     desc='京都・大阪から近鉄で奈良へ。大仏殿の開門に合わせる早朝コースと、昼の混雑を避けて夕方に大仏殿・夕暮れの二月堂へ行く9〜10時発コースを選べる1日ルートマップ。興福寺、春日大社、ならまち、酒蔵「春鹿」のきき酒も。A day in Nara on foot from Kyoto or Osaka: an early course timed for the opening of the Great Buddha Hall, or a 9–10 o’clock course that saves Todaiji for late afternoon and Nigatsudo for dusk.',

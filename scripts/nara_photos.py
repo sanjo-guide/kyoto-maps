@@ -29,7 +29,9 @@ PHOTOS = {
     "heijo": [W("heijo-w1.jpg", "663highland", "CC BY-SA 4.0", "File:181103 Heijo Palace Daigokuden Nara Japan03bs.jpg"),
               W("heijo-w2.jpg", "Cun Cun", "CC BY-SA 4.0", "File:Suzakumon in Heijo Palace.jpg"),
               W("heijo-w3.jpg", "663highland", "CC BY-SA 4.0", "File:181103 Heijo Palace Daigokuden Nara Japan06s3.jpg")],
-    "horyuji": [W("horyuji-w1.jpg", "ONO Masanobu", "CC0", "File:Horyu-ji Kondo and Five-story Pagoda 2022.jpg"),
-                W("horyuji-w2.jpg", "lumoplank", "CC0", "File:Nara - Nara7620.jpg"),
-                W("horyuji-w3.jpg", "Bigjap", "CC BY-SA 3.0", "File:HORYUJI-1999-2.jpg")],
+    # 法隆寺：公式サイトの「境内における禁止事項」に撮影が入っているので、三十三間堂と同じく境内の外（南大門の前の広場と道）から撮った写真だけ。
+    # 2026-11-23 に、境内（西院伽藍の中）で撮られた horyuji-w1〜w3.jpg を外した（ファイルは images/nara/ に残してある）
+    "horyuji": [W("horyuji-w4.jpg", "663highland", "CC BY 2.5", "File:Horyu-ji01s3200.jpg"),
+                W("horyuji-w5.jpg", "Daderot", "CC0", "File:Nandaimon - Hōryū-ji - Ikaruga, Nara, Japan - DSC07553.jpg"),
+                W("horyuji-w6.jpg", "Nodaunji", "CC BY-SA 4.0", "File:奈良自転車道 終点付近.jpg")],
 }
