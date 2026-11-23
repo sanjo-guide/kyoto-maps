@@ -33,7 +33,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.DAIGO_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-daigo-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 3;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/daigo.json?v=3')")
+s = s.replace(m.group(0), "fetch('../data/routes/daigo.json?v=4')")
 
 # 最初から「選んで回る」
 rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
@@ -112,7 +112,7 @@ a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-EXTRA = {'css/style.css': 0, 'js/i18n.js': 3, 'js/app.js': 2}  # このマップだけ更新したときに上げる分（使い方の直しで i18n +1、2026-11-20 点検の修正で i18n・app.js +1、2026-11-22 の見直しで i18n・app.js +1）
+EXTRA = {'css/style.css': 0, 'js/i18n.js': 3, 'js/app.js': 3}  # このマップだけ更新したときに上げる分（使い方の直しで i18n +1、2026-11-20 点検の修正で i18n・app.js +1、2026-11-22 の見直しで i18n・app.js +1、2026-11-24 の要確認の見直しで app.js +1）
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
