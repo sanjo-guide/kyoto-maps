@@ -447,6 +447,15 @@
       "from": null
      },
      {
+      "kind": "hours",
+      "text": {
+       "ja": "明石海峡大橋のライトアップ：日没〜23:00（土日祝と特定の日は24:00まで）。毎正時と毎時30分に5分間、色が変わります",
+       "en": "Akashi Kaikyo Bridge light-up: sunset to 23:00 (to 24:00 on weekends, holidays and some special days). The colours change for 5 minutes on the hour and at half past"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "train",
       "text": {
        "ja": "須磨浦公園11:26発 → 舞子公園11:40着・250円。舞子公園12:08発（直通特急）→ 山陽明石12:12着・250円",
@@ -458,12 +467,13 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "プロムナードの時間・休み・料金は舞子公園の公式サイト、電車は乗換案内で確認しました。プロムナードの支払い方法と、橋のライトアップの時間は確認できていません。",
-     "en": "Promenade hours, closing days and fees from the Maiko Park website; trains on a route planner. Payment methods at the promenade and the bridge’s light-up times could not be confirmed."
+     "ja": "プロムナードの時間・休み・料金は舞子公園の公式サイト、橋のライトアップは本四高速（JB本四高速）の公式サイト、電車は乗換案内で確認しました。プロムナードの支払い方法は公式サイトに書かれていません。",
+     "en": "Promenade hours, closing days and fees from the Maiko Park website; the bridge light-up from the bridge operator (JB Honshi) website; trains on a route planner. The promenade’s payment methods are not given on its website."
     },
     "checked": "2026-11-22",
     "source": [
      "https://hyogo-maikopark.jp/facility/f01/",
+     "本四高速 明石海峡大橋ライトアップスケジュール（2026-11-24 確認） https://www.jb-honshi.co.jp/customer_index/kanko_event/lightup/lightup-akashi.html",
      "乗換案内（Yahoo!路線情報）2026-11-28（土）のダイヤ（朝の姫路行きは 11-26（木）も）"
     ]
    },
@@ -1059,8 +1069,8 @@
     "en": "Half a day. Ropeway closed 5 Feb – 28 Oct 2027"
    },
    "text": {
-    "ja": "書写山 圓教寺（しょしゃざん えんぎょうじ）\n\nこのコースの時間割には入りません。9〜10時に出て書写山へ行くなら、須磨と明石をやめて、大阪9:30発の新快速で姫路へ直行します（10:33着・1,460円）。先に駅北口の10番のりばからバスで書写山へ行き、姫路駅に戻ってから15時ごろにお城へ（入城は16:00まで）。バスの時刻は乗換案内で確かめてください。\n\n姫路の町の北西、書写山の上にある天台宗のお寺です。西国三十三所の27番札所。ふもとからロープウェイで約4分上り、観音像が並ぶ参道を歩きます。\n\n最初に着くのが、崖に張り出すように建つ摩尼殿（まにでん）。そこから歩いて5〜6分の「三之堂（みつのどう）」は、大講堂・食堂（じきどう）・常行堂の3つのお堂が広場を囲む場所で、映画「ラスト サムライ」の撮影にも使われました（書写山ロープウェイの公式サイトより）。\n\n山上駅から摩尼殿までは約1km、歩いて15〜20分。志納所の前から摩尼殿の下まで、お寺のマイクロバス（往復500円）もあります。摩尼殿・三之堂・奥之院を回って約2時間が、お寺の案内している目安です。山道なので歩きやすい靴で。\n\nバスとロープウェイは、姫路駅前の神姫バス案内所で売っているセット券（1,700円）が、別々に払うより140円安くなります。姫路駅に着いたときに買っておきましょう。\n\nおすすめ訪問時間：寄り道（往復のバスを入れて約4時間）",
-    "en": "Mt. Shosha Engyo-ji\n\nThis does not fit the course as timed. To see Mt. Shosha on a 9–10 o’clock start, skip Suma and Akashi and go straight to Himeji on the 9:30 Special Rapid from Osaka (10:33, ¥1,460). Take the bus from stop 10 at the north exit to Mt. Shosha first, then come back and enter the castle around 15:00 (last entry 16:00). Check bus times on a route planner.\n\nA Tendai temple on top of Mt. Shosha, north-west of Himeji, and No. 27 on the Saigoku Kannon pilgrimage. A ropeway takes about 4 minutes from the foot; from there you walk an approach lined with Kannon statues.\n\nFirst comes Mani-den, built out over a cliff. Five or six minutes further on are the Mitsu-no-do, three halls (the lecture hall, the long Jikido and the Jogyodo) around a courtyard, where scenes of “The Last Samurai” were filmed (according to the ropeway’s website).\n\nFrom the top station to Mani-den is about 1 km, 15–20 minutes on foot. The temple also runs a minibus from the entrance to just below Mani-den (¥500 return). The temple suggests about 2 hours for Mani-den, the three halls and the inner sanctuary. It’s a mountain path, so wear good shoes.\n\nThe bus-and-ropeway set ticket (¥1,700), sold at the Shinki Bus office in front of Himeji Station, is ¥140 cheaper than paying separately. Buy it when you arrive at the station.\n\nRecommended visit time: Detour (about 4 hours including the buses)"
+    "ja": "書写山 圓教寺（しょしゃざん えんぎょうじ）\n\nこのコースの時間割には入りません。9〜10時に出て書写山へ行くなら、須磨と明石をやめて、大阪9:30発の新快速で姫路へ直行します（10:33着・1,460円）。駅北口の10番のりば10:55発のバスで書写山ロープウェイへ（11:27着、平日は11:25着・320円）。11:30のロープウェイで上り、お寺を2時間ほど回ります。13:45ごろのロープウェイで下りて、14:11発のバスに乗り、「姫路城大手門前」で降ります（14:33着）。そのままお城へ入れば、入城の16:00に十分間に合います。お昼を食べる時間がとりにくいので、姫路駅に着いたら、降りたホームのえきそばで早めに済ませておくと楽です。\n\n姫路の町の北西、書写山の上にある天台宗のお寺です。西国三十三所の27番札所。ふもとからロープウェイで約4分上り、観音像が並ぶ参道を歩きます。\n\n最初に着くのが、崖に張り出すように建つ摩尼殿（まにでん）。そこから歩いて5〜6分の「三之堂（みつのどう）」は、大講堂・食堂（じきどう）・常行堂の3つのお堂が広場を囲む場所で、映画「ラスト サムライ」の撮影にも使われました（書写山ロープウェイの公式サイトより）。\n\n山上駅から摩尼殿までは約1km、歩いて15〜20分。志納所の前から摩尼殿の下まで、お寺のマイクロバス（往復500円）もあります。摩尼殿・三之堂・奥之院を回って約2時間が、お寺の案内している目安です。山道なので歩きやすい靴で。\n\nバスとロープウェイは、姫路駅前の神姫バス案内所で売っているセット券（1,700円）が、別々に払うより140円安くなります。姫路駅に着いたときに買っておきましょう。\n\nおすすめ訪問時間：寄り道（往復のバスを入れて約4時間）",
+    "en": "Mt. Shosha Engyo-ji\n\nThis does not fit the course as timed. To see Mt. Shosha on a 9–10 o’clock start, skip Suma and Akashi and go straight to Himeji on the 9:30 Special Rapid from Osaka (10:33, ¥1,460). Take the 10:55 bus from stop 10 at the north exit to Shoshazan Ropeway (11:27, or 11:25 on weekdays; ¥320). Ride the 11:30 ropeway up and allow about two hours at the temple. Come down around 13:45, take the 14:11 bus and get off at “Himeji-jo Otemon-mae” (14:33). Walk straight into the castle, well before the 16:00 last entry. There is little time for lunch, so an early bowl of ekisoba on the platform when you arrive at Himeji makes it easier.\n\nA Tendai temple on top of Mt. Shosha, north-west of Himeji, and No. 27 on the Saigoku Kannon pilgrimage. A ropeway takes about 4 minutes from the foot; from there you walk an approach lined with Kannon statues.\n\nFirst comes Mani-den, built out over a cliff. Five or six minutes further on are the Mitsu-no-do, three halls (the lecture hall, the long Jikido and the Jogyodo) around a courtyard, where scenes of “The Last Samurai” were filmed (according to the ropeway’s website).\n\nFrom the top station to Mani-den is about 1 km, 15–20 minutes on foot. The temple also runs a minibus from the entrance to just below Mani-den (¥500 return). The temple suggests about 2 hours for Mani-den, the three halls and the inner sanctuary. It’s a mountain path, so wear good shoes.\n\nThe bus-and-ropeway set ticket (¥1,700), sold at the Shinki Bus office in front of Himeji Station, is ¥140 cheaper than paying separately. Buy it when you arrive at the station.\n\nRecommended visit time: Detour (about 4 hours including the buses)"
    },
    "gmaps": [
     {
@@ -1147,6 +1157,24 @@
       "from": null
      },
      {
+      "kind": "hours",
+      "text": {
+       "ja": "山上のマイクロバス（志納所前〜摩尼殿下）：8:55から。最終は、10月11日〜2月末が志納所前15:55発・摩尼殿下16:05発、3月1日〜10月10日が16:38発・16:45発。混むと早発・遅発あり",
+       "en": "Minibus on the mountain (temple entrance ↔ below Mani-den): from 8:55. Last runs 11 Oct – end of Feb: 15:55 up, 16:05 back down; 1 Mar – 10 Oct: 16:38 and 16:45. Times can shift when busy"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "納経（御朱印）の受付 9:00〜16:30",
+       "en": "Pilgrim stamp (goshuin) desk 9:00–16:30"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "fee",
       "text": {
        "ja": "ロープウェイ 往復1,200円・片道700円（小人は半額）。圓教寺の志納金 中学生以上800円・小学生500円。山上のマイクロバス 往復500円",
@@ -1172,18 +1200,38 @@
       },
       "until": null,
       "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "行き：姫路駅北口10番のりば 10:55発（神姫バス）→ 書写山ロープウェイ 11:27着（平日11:25着）・320円",
+       "en": "Getting there: Himeji Station north exit, stop 10, 10:55 (Shinki bus) → Shoshazan Ropeway 11:27 (weekdays 11:25), ¥320"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：書写山ロープウェイ14:11発（バス）→ 姫路城大手門前14:33着（土曜・木曜とも）。乗り遅れたら次は14:31発（14:53着）",
+       "en": "Back: Shoshazan Ropeway 14:11 (bus) → Himeji-jo Otemon-mae 14:33 (same on Saturdays and Thursdays). If you miss it, the next is 14:31 (arr. 14:53)"
+      },
+      "until": null,
+      "from": null
      }
     ],
     "cash": false,
     "tip": {
-     "ja": "2026年11月21日に確認しました。ロープウェイの時刻・料金とセット券は書写山ロープウェイの公式サイト、志納金とマイクロバスは圓教寺の公式サイト、バスと電車は乗換案内（2026年11月の土曜のダイヤ）から。圓教寺の拝観時間は公式サイトに書かれていないので、ロープウェイの時間に合わせてください（要確認）。",
-     "en": "Checked on 21 November 2026: ropeway times, fares and the set ticket on the ropeway’s website; admission and the minibus on the temple’s website; buses and trains on a route planner (Saturday timetable, November 2026). The temple’s own opening hours are not given on its website, so plan around the ropeway (please check)."
+     "ja": "2026年11月24日に確認しました。ロープウェイの時刻・料金とセット券は書写山ロープウェイの公式サイト、志納金・マイクロバス・納経の時間は圓教寺の公式サイト、バスと電車は乗換案内（2026年11月の土曜と木曜のダイヤ）から。圓教寺の拝観時間は公式サイトに書かれていないので、ロープウェイとマイクロバスの最終に合わせてください（要確認）。",
+     "en": "Checked on 24 November 2026: ropeway times, fares and the set ticket on the ropeway’s website; admission, the minibus and the goshuin desk hours on the temple’s website; buses and trains on a route planner (Saturday and Thursday timetables, November 2026). The temple’s own opening hours are not given on its website, so plan around the last ropeway and minibus (please check)."
     },
-    "checked": "2026-11-21",
+    "checked": "2026-11-24",
     "source": [
      "https://www.mt-shosha.info/category/charge/index.html",
+     "https://www.mt-shosha.info/category/access/index.html",
      "http://www.shosha.or.jp/access/",
-     "乗換案内（Yahoo!路線情報）2026年11月の土曜のダイヤ"
+     "圓教寺 公式サイト トップ（ロープウェイ運休中の参拝・納経の受付時間） http://www.shosha.or.jp/",
+     "乗換案内（Yahoo!路線情報）2026-11-28（土）・11-26（木）のダイヤ"
     ]
    },
    "photos": [
