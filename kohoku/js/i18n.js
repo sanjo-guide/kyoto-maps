@@ -1,7 +1,11 @@
 /* Page texts in Japanese and English.
-   Toshi 個人のマップ。京都から湖西線でマキノへ、海津大崎の桜並木を歩いて大崎寺・大浦へ、午後は長浜（長浜城・慶雲館・長浜鉄道スクエア・黒壁スクエア）を回る春の日帰りルート。竹生島はオーナーが行っていない場所で、写真は Wikimedia Commons。
-   Photos are [spot number, photo index] from data/routes/kohoku.json.
-   時刻・料金は2026年11月21日に確認（びわ湖高島観光協会・長浜の各施設・琵琶湖汽船の公式サイト、電車は乗換案内）。 */
+   Toshi 個人のマップ。京都駅から JR 湖西線でマキノへ、海津大崎の桜を歩く春の日帰り。竹生島はオーナーが行っていない場所で、写真は Wikimedia Commons。
+   コースは4つ（一覧の上のボタン）：late＝9:45ごろ発・桜並木を往復→夕方の長浜（kohoku.json）、through＝永原まで歩き通す（kohoku-through.json）、
+   early＝7:00発・朝の桜→午後の長浜（kohoku-early.json）、island＝7:00発・朝の桜→竹生島（kohoku-island.json）。
+   intro は共通の項目で、コースで変わる項目（h1・lead・who・dayHead・day）は introFor[コース] が app.js で上書きされる（scripts/sync_kohoku.py）。
+   off〜 は春以外に開いたときに出る一文（日付は scripts/sync_kohoku.py の SEASON_FROM／SEASON_TO）。
+   紹介ページの写真は [スポットの id, 写真の番号]（コースで番号が変わるため）。
+   時刻・料金は2026年11月22日に確認。スポットごとの時刻と文章は scripts/build_kohoku_data.py。 */
 window.KOHOKU_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -15,14 +19,28 @@ window.KOHOKU_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '前半はマキノから湖岸を東へ歩く海津大崎、後半は長浜の町歩きです。竹生島へは船で渡ります（大浦とは同じ日に回れません）。行かない場所は「選んで回る」で外せます。点線は順番を示す線で、実際の道ではありません。',
+    swCourse: '出発時間・歩く距離',
+    courseAria: '出発時間・歩く距離',
+    courseLate: '9:45ごろ発\n桜並木→夕方の長浜',
+    courseThrough: '9:45ごろ発\n永原まで歩き通す',
+    courseEarly: '7:00発\n朝の桜→昼の長浜',
+    courseIsland: '7:00発\n朝の桜→竹生島',
+    swMode: '回り方',
+    listNote: '京都駅発の時間割です。コースを変えると、場所・時刻・番号が変わります。点線は順番を示す線で、実際の道ではありません。',
+    offKicker: '春のマップです（桜は例年4月上旬〜中旬）',
+    offHow: 'いまは桜の時期ではありません',
+    offHowText: '春のマップです。桜クルーズ・交通規制・仮設トイレは今はありません。春の日程は2026年の実績、電車は2026年11月の時刻なので、来春は要確認。 ',
+    offLead: '4月上旬〜中旬に使う春のマップです。いまは桜も春の臨時便・交通規制もありません。 ',
+    offNote: '春のマップです。いまは桜の時期ではなく、春の臨時便・交通規制もありません。来春の時刻・日程は要確認。 ',
+    offHead: '春のマップです',
+    offText: '桜は例年4月上旬〜中旬。いまは桜クルーズ・交通規制・仮設トイレはありません。春の日程は2026年の実績、電車は2026年11月の時刻です。来春は要確認。',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
     seeDetails: '詳しく見る',
     prevPhoto: '前の写真',
     nextPhoto: '次の写真',
-    suggested: 'おすすめの時間：',
+    suggested: 'めやすの時間：',
     suggestedLabel: 'めやすの時間',
     gmapsOne: 'Googleマップで開く',
     gmapsMany: 'Googleマップ：',
@@ -35,11 +53,17 @@ window.KOHOKU_I18N = {
     hours: '時間',
     fee: '料金',
     train: '電車',
+    bus: 'バス',
+    boat: '船',
+    bike: '自転車',
+    walk: '歩く',
+    toilet: 'トイレ',
+    food: '食事',
     closed: '休み',
     cash: '現金を用意してください',
-    checked: '{d}に公式サイトや乗換案内で確認しました。変わることがあるので、行く前に公式サイトも見てください。',
+    checked: '{d}に公式サイトや乗換案内で確認しました（「要確認」と書いたものは除きます）。来春は変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月21日',
+    checkedDate: '2026年11月22日',
     noticeHead: 'お知らせ',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -55,135 +79,129 @@ window.KOHOKU_I18N = {
     modeAria: '回り方',
     modeAll: '全部回る',
     modePick: '選んで回る',
-    pickNote: '行きたい場所の「行きたい」を押してください。マキノ駅と長浜駅は、選んだ場所に合わせて自動で入ります。時間は竹生島に寄らない場合の目安です（竹生島は船の時刻に合わせます。大浦とは同じ日に回れません）。',
-    pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（全員共通の場所を含む）',
+    pickNote: '行かない場所の「行く」を押すと外れます。駅は、選んだ場所に合わせて自動で入ります。時間は全部回る場合の目安です。',
+    pickCount: '選んだ場所 {n}か所 ・ ルート全体 {t}か所（駅を含む）',
     pickEmpty: 'まだ選んでいません。下の一覧から、行きたい場所を選んでください。',
     pickAll: 'すべて選ぶ',
     pickNone: 'すべて外す',
     pickOff: '行きたい',
     pickOn: '行く',
-    autoTag: '全員共通',
+    autoTag: '自動で入る',
     autoOff: '今回は通りません',
     seasonHead: '季節営業の可能性',
     hintHead: 'あなたのルートでは',
     intro: {
-      "kicker": "Toshiが歩いて作った日帰りルート",
-      "h1": "湖に枝をのばす桜の道を、どこまでも。",
-      "lead": "春の桜のマップです。海津大崎の桜の見ごろは例年4月上旬〜中旬（びわ湖高島観光協会。満開は2024年が4月8日、2025年が4月12日）。京都から湖西線でマキノへ。琵琶湖の岸に約4km続く桜並木を歩いて、大崎寺へ。元気があれば大浦の入り江まで歩くか、船で竹生島へ。午後は秀吉の城下町・長浜で、お城と古い町並みを。",
-      "favLabel": "いちばんの見どころ",
-      "favName": "海津大崎の桜並木",
-      "favText": "約800本の桜が、湖岸に約4km続きます。",
-      "favPhoto": [
-        3,
-        0
+      kicker: '京都駅から日帰り、春のマップ',
+      h1: '湖へ枝をのばす桜の道を歩く。',
+      lead: '',
+      favLabel: 'いちばんの見どころ',
+      favName: '海津大崎の桜並木',
+      favText: '約800本の桜が、湖岸に約4km。',
+      favPhoto: ['sakura', 0],
+      whoHead: '出かける前に',
+      who: [],
+      dayHead: '1日の流れ',
+      from: '',
+      day: [],
+      timeSuffix: '〜',
+      dealsHead: '交通費と最終',
+      dealsLead: '片道ずつの運賃です。竹生島の船と入館料は別です。',
+      deals: [
+        { name: 'JR 京都→マキノ', price: '1,170円', text: '湖西線の新快速で約1時間10分。三条京阪からは地下鉄で山科へ出て1,430円。強風で止まることがあるので、出る前に運行情報を。', url: 'https://trafficinfo.westjr.co.jp/kinki.html' },
+        { name: 'JR マキノ→長浜', price: '680円', text: '近江塩津で乗り換えて36分、昼すぎから16時台までは毎時51分発。永原からは510円で、毎時56分発。', url: 'https://transit.yahoo.co.jp/' },
+        { name: 'JR 長浜→京都', price: '1,340円', text: '最終は22:15発（米原乗り換え）→京都23:50着。乗り換えなしと三条京阪へ出られる最後は21:17発。マキノから京都への最終は22:10発→23:19着。', url: 'https://transit.yahoo.co.jp/' },
+        { name: 'コミュニティバス', price: '1回220円', text: '海津大崎口→マキノ駅8分（★の便）。1時間に1本ほどで、13時台は★がありません。時刻は2026年春の連絡表。来春は要確認。', url: 'https://takashima-kanko.jp/sakura/' },
+        { name: '竹生島 びわ湖横断の船', price: '3,600円', text: '今津港→竹生島→長浜港。入島料600円は現金で別。2027年4月からの時刻と料金は未発表です。', url: 'https://www.biwakokisen.co.jp/cruise/chikubu/price_time/' }
       ],
-      "whoHead": "こんな人におすすめ",
-      "who": [
-        "湖と桜の景色を、ゆっくり歩いて楽しみたい人に",
-        "京都からマキノまで約1時間10分（1,170円）",
-        "海津大崎の桜は例年4月上旬〜中旬。見ごろの土日は交通規制あり",
-        "マキノ駅で9:00から自転車を借りられます（1日1,000円・高島市内だけ）",
-        "大崎寺から大浦・永原駅までは歩いて約2時間。無理せずマキノに戻っても",
-        "長浜に着く14時半ごろまでお昼の時間はとっていません",
-        "竹生島へは今津港13:10発の船で（3,600円＋入島料600円）。大浦とは同じ日に回れません"
+      dealsNote: '大人の金額です。2026年11月22日に公式サイトと乗換案内で確認しました。電車は2026年11月のダイヤ、バスと春の日程は2026年春の実績です。来春は要確認。',
+      dealsMore: '公式サイト・時刻表で見る',
+      howHead: 'このマップの使い方',
+      how: [
+        { title: 'まずコースを選ぶ', text: '「一覧」の上のボタンで4つから選びます。9:45ごろ発は桜並木の往復か歩き通し、7:00発は午後に長浜の町か竹生島。1日に全部は回りません。' },
+        { title: '食べ物とトイレは先に', text: 'お昼と飲み物は京都駅で買い、トイレはマキノ駅で。桜並木の仮設トイレは花見の時期だけです。' },
+        { title: '番号をタップ', text: '地図の番号か「一覧」を押すと、その場所の時間割、乗り遅れたときの次の便、料金と休みが見られます。' },
+        { title: '行かない場所は外せる', text: '「選んで回る」に切り替えて「行く」を押すと外れます。行き方が変わる組み合わせには一言が出ます。' }
       ],
-      "dayHead": "1日の流れ（目安）",
-      "from": "",
-      "day": [
-        {
-          "time": "8:12",
-          "area": "マキノ → 海津",
-          "title": "白い砂浜と石積みの町",
-          "text": "マキノ駅から知内浜へ。湖岸の石積みが続く海津の町を歩いて、桜並木の入口へ。",
-          "photo": [
-            1,
-            0
-          ]
-        },
-        {
-          "time": "9:50",
-          "area": "海津大崎",
-          "title": "約4kmの桜並木",
-          "text": "湖に枝をのばす桜の道を、大崎寺まで。桜クルーズの船が着く港も。",
-          "photo": [
-            3,
-            1
-          ]
-        },
-        {
-          "time": "12:40",
-          "area": "大浦 → 永原",
-          "title": "静かな奥びわ湖の桜",
-          "text": "湖岸の道をさらに東へ、大浦の入り江へ。永原駅から長浜へ向かいます。",
-          "photo": [
-            5,
-            0
-          ]
-        },
-        {
-          "time": "14:35",
-          "area": "長浜",
-          "title": "秀吉の城下町",
-          "text": "長浜城と豊公園の桜、慶雲館、旧長浜駅舎を見て、黒壁スクエアの古い町並みへ。",
-          "note": "京都着は19:12",
-          "photo": [
-            11,
-            0
-          ]
-        }
-      ],
-      "timeSuffix": "〜",
-      "dealsHead": "交通費のめやす",
-      "dealsLead": "電車は京都→マキノが1,170円、永原→長浜が510円（マキノからなら680円）、長浜→京都が1,340円。合わせて約3,000円です。入館料と竹生島の船は別です。",
-      "deals": [
-        {
-          "name": "JR（京都→マキノ）",
-          "price": "片道1,170円",
-          "text": "京都7:00発→近江今津で乗り換え→マキノ8:12着。新快速なら乗り換えなしで約1時間15分。",
-          "url": "https://transit.yahoo.co.jp/"
-        },
-        {
-          "name": "びわ湖高島レンタサイクル",
-          "price": "1日1,000円",
-          "text": "マキノ駅の観光案内所で普通自転車を。9:00〜17:00、台数に限りあり。2027年5月9日までは予約できません。高島市内だけで使えます（大浦は長浜市）。",
-          "url": "https://takashima-kanko.jp/guide/rentalcycle.html"
-        },
-        {
-          "name": "琵琶湖汽船 竹生島クルーズ",
-          "price": "3,600円〜",
-          "text": "今津港→竹生島→長浜港のびわ湖横断が3,600円、長浜港からの往復が3,800円。入島料600円は別。2027年4月からの時刻と料金は未発表。",
-          "url": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/"
-        },
-        {
-          "name": "JR（長浜→京都）",
-          "price": "1,340円",
-          "text": "新快速で乗り換えなし、約1時間15分。長浜17:57発→京都19:12着、次は18:28発→京都19:42着。",
-          "url": "https://transit.yahoo.co.jp/"
-        }
-      ],
-      "dealsNote": "大人の運賃・料金です。2026年11月21日に確認しました（びわ湖高島観光協会・長浜の各施設・琵琶湖汽船の公式サイト、電車は乗換案内）。春はダイヤが変わっていることがあります。",
-      "dealsMore": "公式サイトで見る",
-      "howHead": "このマップの使い方",
-      "how": [
-        {
-          "title": "最初は「選んで回る」",
-          "text": "行きたい場所だけを選ぶと、駅とルートが自動で決まります。全部回るなら「すべて選ぶ」を。"
-        },
-        {
-          "title": "前半は海津、後半は長浜",
-          "text": "海津大崎だけ、長浜だけの日帰りにもできます。選んだ組み合わせに合わせて、帰り方の一言が出ます。"
-        },
-        {
-          "title": "番号をタップ",
-          "text": "地図の番号か「一覧」をタップすると、写真・説明・料金・電車の時刻・おすすめの時間が見られます。"
-        },
-        {
-          "title": "Googleマップでルート検索",
-          "text": "各スポットの「Googleマップで開く」から、そのままルート検索できます。"
-        }
-      ],
-      "cta": "地図を見る",
-      "footer1": "Toshiが実際に歩いて作った、オリジナルマップです（竹生島は、公式サイトの情報と Wikimedia Commons の写真で紹介しています）。"
+      cta: '地図を見る',
+      footer1: '海津大崎と長浜は Toshi が歩いて撮った写真、時間割は公式の情報と乗換案内から組みました。竹生島は公式サイトの情報と Wikimedia Commons の写真で紹介しています。'
+    },
+    introFor: {
+      late: {
+        h1: '昼は湖の桜、夕方は長浜。',
+        lead: '京都駅9:45発でマキノへ。持ってきたお昼を浜で食べ、海津大崎の桜並木を大崎寺まで往復します。夕方は長浜へ渡って、豊公園の桜と晩ごはんまで。',
+        who: [
+          'はじめての海津大崎に。歩くのは桜の区間で約9km',
+          '店が少ないので、お昼は京都駅で買って行く',
+          '長浜城など施設の受付（16:30）には間に合わない',
+          '見ごろの土日は交通規制（2026年は4月4日・5日の予定だった）',
+          '長浜の晩ごはんの店は火曜休み'
+        ],
+        dayHead: '1日の流れ（京都駅9:45ごろ発）',
+        day: [
+          { time: '9:45', area: '京都駅 → マキノ', title: 'お昼を買って湖西線へ', text: '新快速で10:50着。駅でトイレを済ませ、11:20からサニービーチで早めのお昼。', note: '平日は9:48発', photo: ['makino', 0] },
+          { time: '12:20', area: '海津', title: '石積みの町', text: '浜から湖岸を35分。石垣を見て、並木の入口へ。', photo: ['kaizu', 0] },
+          { time: '12:45', area: '海津大崎', title: '桜並木を大崎寺まで', text: '片道約2kmを1時間かけて。14:20に引き返し、15:51の電車へ。', photo: ['sakura', 0] },
+          { time: '16:35', area: '長浜', title: '黒壁と豊公園', text: 'ガラス館は17:00まで。そのあと桜の公園と夕方の湖岸へ。', photo: ['nagahamajo', 0] },
+          { time: '18:30', area: '長浜 → 京都', title: '駅の近くで晩ごはん', text: '長濱浪漫ビールで食べて、20:36発で京都21:48着。京都駅で食べるなら18:57発までに。', note: '火曜休み', photo: ['nagahamaeki', 0] }
+        ]
+      },
+      through: {
+        h1: '岬を回って、永原まで歩き通す。',
+        lead: '京都駅9:45発でマキノへ。桜並木を抜け、4つのトンネルをくぐって大浦、永原駅まで約11.5km。夕方は電車で長浜へ回ります。',
+        who: [
+          '長く歩ける人に。約11.5km、途中にバスはありません',
+          '大崎寺を13:45までに出られなければ引き返す',
+          '県道は道幅が狭い。雨や強風の日はやめる',
+          'お昼と飲み物は京都駅で。大崎寺から先の店・トイレは要確認',
+          '乗り遅れても永原16:56発がある'
+        ],
+        dayHead: '1日の流れ（京都駅9:45ごろ発・歩き通し）',
+        day: [
+          { time: '9:45', area: '京都駅 → マキノ', title: '食べ物を持って湖西線へ', text: '10:50着。トイレを済ませ、11:05に海津へ歩きはじめます。', note: '平日は9:48発', photo: ['makino', 0] },
+          { time: '11:35', area: '海津', title: '石積みの浜でお昼', text: '25分休んで、12:00に並木へ。', photo: ['kaizu', 0] },
+          { time: '12:05', area: '海津大崎', title: '桜並木と大崎寺', text: '大崎寺でトイレと休憩。13:20に岬の先へ。', photo: ['sakura', 0] },
+          { time: '14:55', area: '大浦 → 永原', title: '入り江の集落から駅へ', text: '約6kmを歩いて大浦へ。永原駅15:56発で長浜16:27着。', photo: ['oura', 0] },
+          { time: '16:35', area: '長浜', title: '黒壁、豊公園、晩ごはん', text: '町と公園を歩き、駅の近くで食べて20:36発。京都21:48着。', note: '店は火曜休み', photo: ['nagahamajo', 0] }
+        ]
+      },
+      early: {
+        h1: '朝の桜と、午後の城下町。',
+        lead: '京都駅7:00発で、人と車が増える前の海津大崎へ。お昼に長浜へ渡り、黒壁、鉄道スクエア、慶雲館、長浜城と豊公園。晩ごはんは京都に戻ってから。',
+        who: [
+          '混む前に桜を見て、長浜の施設にも入りたい人に',
+          '朝ごはんは買って行き、海津の浜で食べる',
+          '長浜城は月曜休み、各施設の受付は16:30まで',
+          '慶雲館は3月11日〜下旬が休館',
+          '京都に19:42着。21〜22時ごろまで街なかで'
+        ],
+        dayHead: '1日の流れ（京都駅7:00発）',
+        day: [
+          { time: '7:00', area: '京都駅 → マキノ', title: '朝ごはんを持って湖西線へ', text: '近江今津で乗り換えて8:12着。海津へ30分歩き、浜で朝ごはん。', photo: ['makino', 0] },
+          { time: '9:10', area: '海津大崎', title: '混む前の桜並木', text: '大崎寺まで歩いて10:25に引き返し、マキノ11:51発。', photo: ['sakura', 0] },
+          { time: '12:35', area: '長浜', title: 'お昼と黒壁', text: '駅から4分の長濱浪漫ビールでお昼。午後は北国街道とガラス館へ。', note: '火曜休み', photo: ['kurokabe', 0] },
+          { time: '14:40', area: '長浜駅の西側', title: '駅舎、庭、お城と桜', text: '鉄道スクエア、慶雲館、16:05に長浜城。夕方まで豊公園。', note: 'お城は月曜休み', photo: ['nagahamajo', 0] },
+          { time: '18:28', area: '長浜 → 京都', title: '京都で晩ごはん', text: '19:42着。駅ビルの京都拉麺小路（LO21:30）か、三条へ出て街なかで。', photo: ['nagahamaeki', 0] }
+        ]
+      },
+      island: {
+        h1: '朝の桜から、船で竹生島へ。',
+        lead: '京都駅7:00発で海津大崎の桜を歩き、今津港13:10の船で竹生島へ。長浜港に着いたら、お城と豊公園、晩ごはんまで。長浜の町歩きは短めです。',
+        who: [
+          '桜と竹生島を1日で見たい人に。船は前日までに予約を',
+          'マキノ11:47発を逃すと船に間に合わない',
+          '島の入島料600円は現金。石段165段',
+          '強風の日は欠航することがある',
+          '2027年4月の船の時刻は未発表（書いた時刻は2026年4月）'
+        ],
+        dayHead: '1日の流れ（京都駅7:00発・竹生島）',
+        day: [
+          { time: '7:00', area: '京都駅 → マキノ', title: '朝ごはんを持って湖西線へ', text: '近江今津で乗り換えて8:12着。海津の浜で朝ごはん。', photo: ['makino', 0] },
+          { time: '9:10', area: '海津大崎', title: '混む前の桜並木', text: '10:20に引き返し、マキノ11:47発で近江今津へ。駅のまわりか持参でお昼。', photo: ['sakura', 0] },
+          { time: '13:10', area: '今津港 → 竹生島', title: '船で島へ', text: '島に95分。15:10の船で長浜港15:45着。', note: '要予約', photo: ['chikubushima', 0] },
+          { time: '16:00', area: '長浜', title: '天守と桜、北国街道', text: '天守は16:30までに入る。豊公園のあと、閉館後の黒壁の町並みへ。', note: 'お城は月曜休み', photo: ['nagahamajo', 0] },
+          { time: '18:00', area: '長浜 → 京都', title: '駅の近くで晩ごはん', text: '長濱浪漫ビールで食べて、19:57発。京都21:12着。', note: '火曜休み', photo: ['nagahamaeki', 0] }
+        ]
+      }
     }
   },
   en: {
@@ -198,14 +216,28 @@ window.KOHOKU_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'First Kaizu-Osaki, walking east along the lake from Makino; then a stroll around Nagahama. Chikubushima is reached by boat (not on the same day as Oura). Use “Choose stops” to drop places you’ll skip. The dotted line shows the order, not the actual path.',
+    swCourse: 'Start time and walking distance',
+    courseAria: 'Start time and walking distance',
+    courseLate: 'From 9:45\nAvenue, then town',
+    courseThrough: 'From 9:45\nWalk to Nagahara',
+    courseEarly: 'From 7:00\nBlossom, then town',
+    courseIsland: 'From 7:00\nBlossom, then island',
+    swMode: 'How to go',
+    listNote: 'Timed from Kyoto Station. Switching course changes the places, times and numbers. The dotted line shows the order, not the actual path.',
+    offKicker: 'A spring map (blossom early to mid April)',
+    offHow: 'It isn’t cherry season now',
+    offHowText: 'This is a spring map. There are no cherry cruises, traffic restrictions or temporary toilets now. Spring dates are from 2026 and train times from November 2026, so check for next spring. ',
+    offLead: 'A spring map for early to mid April. There is no blossom now, and no seasonal boats or restrictions. ',
+    offNote: 'A spring map: it isn’t blossom season, and no seasonal boats or restrictions are running. Check next spring’s times and dates. ',
+    offHead: 'A spring map',
+    offText: 'Blossom is usually early to mid April. There are no cherry cruises, traffic restrictions or temporary toilets now. Spring dates are from 2026, train times from November 2026. Please check for next spring.',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
     seeDetails: 'See details',
     prevPhoto: 'Previous photo',
     nextPhoto: 'Next photo',
-    suggested: 'Suggested time: ',
+    suggested: 'Rough time: ',
     suggestedLabel: 'Rough time',
     gmapsOne: 'Open in Google Maps',
     gmapsMany: 'Google Maps: ',
@@ -218,11 +250,17 @@ window.KOHOKU_I18N = {
     hours: 'Hours',
     fee: 'Fee',
     train: 'Train',
+    bus: 'Bus',
+    boat: 'Boat',
+    bike: 'Bike',
+    walk: 'Walk',
+    toilet: 'Toilet',
+    food: 'Food',
     closed: 'Closed',
     cash: 'Bring cash',
-    checked: 'Checked on official websites and a route planner on {d}. Details can change, so please check before you go.',
+    checked: 'Checked on official websites and a route planner on {d}, except where marked “please check”. Details may change by spring, so check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 21, 2026',
+    checkedDate: 'Nov 22, 2026',
     noticeHead: 'Note',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -238,135 +276,129 @@ window.KOHOKU_I18N = {
     modeAria: 'How to go',
     modeAll: 'Full route',
     modePick: 'Choose stops',
-    pickNote: 'Tap “Want to go” on the places you like. Makino and Nagahama stations join your route automatically. Times assume you skip Chikubushima (the island follows the boat times, and can’t be combined with Oura).',
-    pickCount: '{n} places chosen · {t} stops in your route (incl. the shared ones)',
+    pickNote: 'Tap “Going” to drop a place. Stations follow the places you choose. Times assume the full route.',
+    pickCount: '{n} places chosen · {t} stops in your route (incl. stations)',
     pickEmpty: 'Nothing chosen yet. Pick the places you want from the list below.',
     pickAll: 'Choose all',
     pickNone: 'Clear all',
     pickOff: 'Want to go',
     pickOn: 'Going',
-    autoTag: 'Everyone',
+    autoTag: 'Automatic',
     autoOff: 'Not on your route',
     seasonHead: 'Possibly seasonal',
     hintHead: 'On your route',
     intro: {
-      "kicker": "A day trip, hand-walked by Toshi",
-      "h1": "A road of cherries reaching out over the lake.",
-      "lead": "A spring cherry-blossom map. The Kaizu-Osaki cherries usually peak in early to mid April (Takashima tourism association; full bloom was 8 April in 2024 and 12 April in 2025). Take the Kosei Line from Kyoto to Makino and walk the 4 km cherry avenue along Lake Biwa to Osakiji. Then either walk on to the coves of Oura or take a boat to Chikubushima; in the afternoon, the castle and old streets of Hideyoshi’s town, Nagahama.",
-      "favLabel": "Highlight",
-      "favName": "Kaizu-Osaki cherry avenue",
-      "favText": "About 800 cherry trees along 4 km of lakeshore.",
-      "favPhoto": [
-        3,
-        0
+      kicker: 'A spring day trip from Kyoto Station',
+      h1: 'A road of cherries over the lake.',
+      lead: '',
+      favLabel: 'Highlight',
+      favName: 'Kaizu-Osaki cherry avenue',
+      favText: 'About 800 cherry trees along 4 km of shore.',
+      favPhoto: ['sakura', 0],
+      whoHead: 'Before you go',
+      who: [],
+      dayHead: 'One day, roughly',
+      from: 'From',
+      day: [],
+      timeSuffix: '',
+      dealsHead: 'Fares and last trains',
+      dealsLead: 'One-way fares. The island boat and admissions are extra.',
+      deals: [
+        { name: 'JR Kyoto → Makino', price: '¥1,170', text: 'About 1 h 10 min by Kosei Line Special Rapid. ¥1,430 from Sanjo-Keihan via Yamashina. Wind can stop the line, so check service status first.', url: 'https://trafficinfo.westjr.co.jp/kinki.html' },
+        { name: 'JR Makino → Nagahama', price: '¥680', text: '36 min, changing at Omi-Shiotsu; at :51 each hour from midday until the 16:00 hour. ¥510 from Nagahara, at :56.', url: 'https://transit.yahoo.co.jp/' },
+        { name: 'JR Nagahama → Kyoto', price: '¥1,340', text: 'Last train 22:15 via Maibara (Kyoto 23:50). The 21:17 is the last direct train and the last for Sanjo-Keihan. Last from Makino to Kyoto: 22:10 (23:19).', url: 'https://transit.yahoo.co.jp/' },
+        { name: 'Community bus', price: '¥220 a ride', text: 'Kaizu-Osaki-guchi → Makino Station in 8 min on ★ runs, about hourly but none in the 13:00 hour. Times from spring 2026; check for next spring.', url: 'https://takashima-kanko.jp/sakura/' },
+        { name: 'Chikubushima lake crossing', price: '¥3,600', text: 'Imazu → island → Nagahama. The ¥600 island fee is extra, in cash. Times and fares from April 2027 are not yet announced.', url: 'https://www.biwakokisen.co.jp/cruise/chikubu/price_time/' }
       ],
-      "whoHead": "Who it’s for",
-      "who": [
-        "For a long, slow walk among lake views and cherries",
-        "Kyoto to Makino in about 1 h 10 min (¥1,170)",
-        "Kaizu-Osaki blooms in early to mid April; peak weekends have traffic restrictions",
-        "Bikes for rent at Makino Station from 9:00 (¥1,000 a day, Takashima city only)",
-        "Osakiji to Oura and Nagahara Station is about 2 hours on foot; or head back to Makino",
-        "No lunch stop is planned before you reach Nagahama around 14:30",
-        "Chikubushima: 13:10 boat from Imazu (¥3,600 plus ¥600 island fee); not on the same day as Oura"
+      dealsNote: 'Adult prices, checked on official sites and a route planner on Nov 22, 2026. Trains use the November 2026 timetable; buses and spring dates are from spring 2026. Please check for next spring.',
+      dealsMore: 'Official site or timetable',
+      howHead: 'How to use this map',
+      how: [
+        { title: 'Choose a course first', text: 'Use the four buttons above the list. The 9:45 courses walk the avenue there and back or right through; the 7:00 courses add the town or Chikubushima. Nobody does it all in one day.' },
+        { title: 'Food and toilets first', text: 'Buy lunch and drinks at Kyoto Station and use the toilet at Makino. Toilets on the avenue are temporary, in season only.' },
+        { title: 'Tap a number', text: 'A number on the map or in the list opens that stop’s timetable, the next train if you miss one, fees and closing days.' },
+        { title: 'Drop what you’ll skip', text: 'Switch to “Choose stops” and tap “Going”. A note appears where that changes how you travel.' }
       ],
-      "dayHead": "One day, roughly like this",
-      "from": "From",
-      "day": [
-        {
-          "time": "8:12",
-          "area": "Makino → Kaizu",
-          "title": "White sand and a stone-walled village",
-          "text": "From Makino Station to Chinai beach, then through Kaizu along its stone embankment to the start of the avenue.",
-          "photo": [
-            1,
-            0
-          ]
-        },
-        {
-          "time": "9:50",
-          "area": "Kaizu-Osaki",
-          "title": "Four kilometres of cherries",
-          "text": "Walk the cherry road over the water to Osakiji, where the cherry cruises call.",
-          "photo": [
-            3,
-            1
-          ]
-        },
-        {
-          "time": "12:40",
-          "area": "Oura → Nagahara",
-          "title": "Quiet cherries at the top of the lake",
-          "text": "Carry on east to the coves of Oura, then take the train from Nagahara to Nagahama.",
-          "photo": [
-            5,
-            0
-          ]
-        },
-        {
-          "time": "14:35",
-          "area": "Nagahama",
-          "title": "Hideyoshi’s castle town",
-          "text": "Nagahama Castle and Hoko Park’s cherries, Keiunkan and the old station, then the old streets of Kurokabe Square.",
-          "note": "Arrive Kyoto 19:12",
-          "photo": [
-            11,
-            0
-          ]
-        }
-      ],
-      "timeSuffix": "",
-      "dealsHead": "Fares",
-      "dealsLead": "Trains: Kyoto → Makino ¥1,170, Nagahara → Nagahama ¥510 (¥680 from Makino), Nagahama → Kyoto ¥1,340: about ¥3,000 in all. Admission and the Chikubushima boat are extra.",
-      "deals": [
-        {
-          "name": "JR (Kyoto → Makino)",
-          "price": "¥1,170 one way",
-          "text": "Kyoto 7:00 → change at Omi-Imazu → Makino 8:12. Direct Special Rapid about 1 h 15 min.",
-          "url": "https://transit.yahoo.co.jp/"
-        },
-        {
-          "name": "Takashima rental bikes",
-          "price": "¥1,000 a day",
-          "text": "Ordinary bicycles at the tourist office in Makino Station, 9:00–17:00, limited numbers. No bookings until 9 May 2027. For use within Takashima city only (Oura is in Nagahama city).",
-          "url": "https://takashima-kanko.jp/guide/rentalcycle.html"
-        },
-        {
-          "name": "Biwako Kisen Chikubushima cruise",
-          "price": "from ¥3,600",
-          "text": "Imazu → island → Nagahama crossing ¥3,600; round trip from Nagahama ¥3,800. The ¥600 island fee is extra. Times and fares from April 2027 not yet announced.",
-          "url": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/"
-        },
-        {
-          "name": "JR (Nagahama → Kyoto)",
-          "price": "¥1,340",
-          "text": "Special Rapid, direct, about 1 h 15 min. Nagahama 17:57 → Kyoto 19:12; next 18:28 → Kyoto 19:42.",
-          "url": "https://transit.yahoo.co.jp/"
-        }
-      ],
-      "dealsNote": "Adult fares and fees, checked on Nov 21, 2026 (Takashima tourism and Nagahama venues’ and Biwako Kisen’s official sites; trains on a route planner). Timetables may change by spring.",
-      "dealsMore": "See official site",
-      "howHead": "How to use this map",
-      "how": [
-        {
-          "title": "Starts in “Choose stops”",
-          "text": "Pick only the places you want; stations and the route follow automatically. To see everything, tap “Choose all”."
-        },
-        {
-          "title": "Kaizu first, Nagahama after",
-          "text": "You can also make it a Kaizu-only or Nagahama-only day; a note on getting home matches what you pick."
-        },
-        {
-          "title": "Tap a number",
-          "text": "Tap a number on the map, or open the list, to see photos, tips, fees, train times and suggested times."
-        },
-        {
-          "title": "Get directions",
-          "text": "Use “Open in Google Maps” at each spot for directions."
-        }
-      ],
-      "cta": "Open the map",
-      "footer1": "An original map, hand-walked by Toshi (Chikubushima is introduced from official websites, with photos from Wikimedia Commons)."
+      cta: 'Open the map',
+      footer1: 'The Kaizu-Osaki and Nagahama photos are from Toshi’s own walks; the timetable is built from official information and a route planner. Chikubushima is introduced from official websites, with photos from Wikimedia Commons.'
+    },
+    introFor: {
+      late: {
+        h1: 'Lakeside blossom by day, Nagahama at dusk.',
+        lead: 'Take the 9:45 from Kyoto Station to Makino, eat your packed lunch on the beach and walk the Kaizu-Osaki avenue to Osakiji and back. Cross to Nagahama for the park’s blossom and dinner.',
+        who: [
+          'For a first visit: about 9 km on foot around the blossom',
+          'Few shops, so buy lunch at Kyoto Station',
+          'Too late for the castle and museums (last entry 16:30)',
+          'Peak weekends have traffic restrictions (planned for 4–5 April in 2026)',
+          'The Nagahama dinner stop closes on Tuesdays'
+        ],
+        dayHead: 'The day (about 9:45 from Kyoto Station)',
+        day: [
+          { time: '9:45', area: 'Kyoto → Makino', title: 'Buy lunch, take the Kosei Line', text: 'Arrive 10:50. Use the toilet and eat early on Sunny Beach from 11:20.', note: 'Weekdays 9:48', photo: ['makino', 0] },
+          { time: '12:20', area: 'Kaizu', title: 'The stone-walled village', text: '35 minutes along the shore. See the wall, then on to the avenue.', photo: ['kaizu', 0] },
+          { time: '12:45', area: 'Kaizu-Osaki', title: 'The avenue to Osakiji', text: 'An hour for the 2 km. Turn back at 14:20 for the 15:51 train.', photo: ['sakura', 0] },
+          { time: '16:35', area: 'Nagahama', title: 'Kurokabe and Hoko Park', text: 'The Glass House closes at 17:00. Then blossom and the shore at dusk.', photo: ['nagahamajo', 0] },
+          { time: '18:30', area: 'Nagahama → Kyoto', title: 'Dinner by the station', text: 'Eat at Roman Beer and take the 20:36 (Kyoto 21:48). To eat in Kyoto, leave by the 18:57.', note: 'Closed Tue', photo: ['nagahamaeki', 0] }
+        ]
+      },
+      through: {
+        h1: 'Around the headland to Nagahara on foot.',
+        lead: 'Take the 9:45 from Kyoto Station to Makino and walk about 11.5 km through the avenue and four tunnels to Oura and Nagahara Station. Finish in Nagahama by train.',
+        who: [
+          'For strong walkers: about 11.5 km, with no bus on the way',
+          'Turn back if you can’t leave Osakiji by 13:45',
+          'The road is narrow; don’t go in rain or strong wind',
+          'Pack food and drink; shops and toilets beyond Osakiji unconfirmed',
+          'If you miss your train there is a 16:56 from Nagahara'
+        ],
+        dayHead: 'The day (about 9:45, walking through)',
+        day: [
+          { time: '9:45', area: 'Kyoto → Makino', title: 'Pack food, take the Kosei Line', text: 'Arrive 10:50. Use the toilet and set off for Kaizu at 11:05.', note: 'Weekdays 9:48', photo: ['makino', 0] },
+          { time: '11:35', area: 'Kaizu', title: 'Lunch below the stone wall', text: 'Rest 25 minutes and leave at 12:00.', photo: ['kaizu', 0] },
+          { time: '12:05', area: 'Kaizu-Osaki', title: 'The avenue and Osakiji', text: 'Toilet and a rest at the temple; on around the headland at 13:20.', photo: ['sakura', 0] },
+          { time: '14:55', area: 'Oura → Nagahara', title: 'A village on a cove', text: 'About 6 km to Oura, then the 15:56 from Nagahara (Nagahama 16:27).', photo: ['oura', 0] },
+          { time: '16:35', area: 'Nagahama', title: 'Town, park, dinner', text: 'Streets and park, dinner by the station and the 20:36 (Kyoto 21:48).', note: 'Dinner closed Tue', photo: ['nagahamajo', 0] }
+        ]
+      },
+      early: {
+        h1: 'Morning blossom, afternoon castle town.',
+        lead: 'Take the 7:00 from Kyoto Station to see the avenue before it fills up. Cross to Nagahama for lunch, Kurokabe, the Railway Square, Keiunkan, the castle and Hoko Park, and have dinner back in Kyoto.',
+        who: [
+          'For blossom before the crowds and time inside Nagahama’s sights',
+          'Bring breakfast to eat by the lake in Kaizu',
+          'Castle closed Mondays; last entries 16:30',
+          'Keiunkan is closed from 11 March to late March',
+          'Back in Kyoto at 19:42, for an evening until 21:00–22:00'
+        ],
+        dayHead: 'The day (7:00 from Kyoto Station)',
+        day: [
+          { time: '7:00', area: 'Kyoto → Makino', title: 'Breakfast in your bag', text: 'Change at Omi-Imazu, arrive 8:12. Walk 30 minutes to Kaizu and eat by the lake.', photo: ['makino', 0] },
+          { time: '9:10', area: 'Kaizu-Osaki', title: 'The avenue before the crowds', text: 'Walk to Osakiji, turn back at 10:25 for the 11:51 from Makino.', photo: ['sakura', 0] },
+          { time: '12:35', area: 'Nagahama', title: 'Lunch and Kurokabe', text: 'Lunch at Roman Beer, 4 minutes from the station, then the old street and Glass House.', note: 'Closed Tue', photo: ['kurokabe', 0] },
+          { time: '14:40', area: 'West of the station', title: 'Old station, garden, castle', text: 'Railway Square, Keiunkan, the castle at 16:05, the park until evening.', note: 'Castle closed Mon', photo: ['nagahamajo', 0] },
+          { time: '18:28', area: 'Nagahama → Kyoto', title: 'Dinner in Kyoto', text: 'Arrive 19:42. Ramen Koji in the station building (LO 21:30), or on to Sanjo.', photo: ['nagahamaeki', 0] }
+        ]
+      },
+      island: {
+        h1: 'Morning blossom, then a boat to the island.',
+        lead: 'Take the 7:00 from Kyoto Station, walk the avenue and catch the 13:10 boat from Imazu to Chikubushima. Land in Nagahama for the castle, park and dinner, with a shorter look at the town.',
+        who: [
+          'For blossom and Chikubushima in one day; book the boat a day ahead',
+          'Miss the 11:47 from Makino and you miss the boat',
+          '¥600 island fee in cash; 165 stone steps',
+          'Boats may be cancelled in strong wind',
+          'April 2027 boat times aren’t announced (these are April 2026 times)'
+        ],
+        dayHead: 'The day (7:00, with Chikubushima)',
+        day: [
+          { time: '7:00', area: 'Kyoto → Makino', title: 'Breakfast in your bag', text: 'Change at Omi-Imazu, arrive 8:12. Breakfast by the lake in Kaizu.', photo: ['makino', 0] },
+          { time: '9:10', area: 'Kaizu-Osaki', title: 'The avenue before the crowds', text: 'Turn back at 10:20 for the 11:47 to Omi-Imazu. Lunch near the station or from your bag.', photo: ['sakura', 0] },
+          { time: '13:10', area: 'Imazu → Chikubushima', title: 'Across the water', text: '95 minutes on the island. The 15:10 boat lands at Nagahama at 15:45.', note: 'Book ahead', photo: ['chikubushima', 0] },
+          { time: '16:00', area: 'Nagahama', title: 'Keep, blossom, old street', text: 'Into the keep by 16:30, the park, then Kurokabe’s streets after closing.', note: 'Castle closed Mon', photo: ['nagahamajo', 0] },
+          { time: '18:00', area: 'Nagahama → Kyoto', title: 'Dinner by the station', text: 'Eat at Roman Beer and take the 19:57 (Kyoto 21:12).', note: 'Closed Tue', photo: ['nagahamaeki', 0] }
+        ]
+      }
     }
   }
 };

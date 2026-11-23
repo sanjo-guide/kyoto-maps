@@ -1,0 +1,1506 @@
+{
+ "id": "kohoku",
+ "course": "island",
+ "_note": "京都から日帰り 海津大崎の桜と長浜（kohoku/ のページ専用。形は eizan-line.json と同じ）。このファイルは scripts/build_kohoku_data.py が作るので、直接直さない。起点は京都駅（JR 湖西線）。春の日程は2026年春の実績、電車は2026年11月のダイヤ。写真は Toshi の写真ライブラリから（海津大崎は2025年4月12日と2026年4月3日、長浜は2025年1月13〜14日）。竹生島はオーナーが行っていない場所で、写真は Wikimedia Commons。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 4,
+   "area": {
+    "ja": "マキノ・海津大崎",
+    "en": "Makino & Kaizu-Osaki"
+   },
+   "title": {
+    "ja": "混む前の桜並木を朝に歩く",
+    "en": "The avenue before it fills up"
+   }
+  },
+  {
+   "first": 5,
+   "last": 5,
+   "area": {
+    "ja": "今津港 → 竹生島",
+    "en": "Imazu → Chikubushima"
+   },
+   "title": {
+    "ja": "13:10の船で湖を渡る",
+    "en": "The 13:10 boat across the lake"
+   }
+  },
+  {
+   "first": 6,
+   "last": 8,
+   "area": {
+    "ja": "長浜",
+    "en": "Nagahama"
+   },
+   "title": {
+    "ja": "天守と桜、夜の長浜",
+    "en": "Castle, blossom and evening"
+   }
+  }
+ ],
+ "plan": {
+  "_note": "「選んで回る」の設定。時期と体力でコースを分けたので、最初は「全部回る」。駅は選んだ場所に合わせて自動で入る。",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "auto": {
+   "1": {
+    "any": [
+     2,
+     3,
+     4
+    ]
+   },
+   "8": {
+    "any": [
+     5,
+     7,
+     6
+    ]
+   }
+  },
+  "hints": [
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      2,
+      3,
+      4
+     ],
+     "none": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "竹生島をやめる日は「朝の桜と午後の長浜」のコースに切り替えると、時間割が合います。",
+     "en": "Skipping the island? Switch to the morning-blossom and Nagahama course for times that fit."
+    },
+    "from": null,
+    "to": null
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      2,
+      3,
+      4
+     ]
+    },
+    "text": {
+     "ja": "海津大崎に寄らない日は、京都10:45発の新快速で近江今津11:34着（990円）。13:10の船に間に合います。",
+     "en": "Skipping Kaizu-Osaki: the 10:45 Special Rapid from Kyoto reaches Omi-Imazu at 11:34 (¥990), in time for the 13:10 boat."
+    },
+    "from": null,
+    "to": null
+   }
+  ]
+ },
+ "photoBase": "../images/kohoku/",
+ "sources": [
+  {
+   "what": "JR 京都→マキノ（平日 11-25）：9:48→10:50・1,170円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=25&hh=09&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 京都→マキノ（土 11-28。日 11-29も同じ）：9:45→10:50・1,170円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=28&hh=09&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 京都→マキノ（10:40以降。平日・土日とも）：10:45→11:50、11:45→12:50",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=28&hh=10&m1=4&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 京都→マキノ（平日）：7:00→近江今津7:59着・8:04発→8:12、次8:19→9:30",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=25&hh=06&m1=5&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 京都→マキノ（土。日も同じ）：7:00→8:12、次8:15→9:30",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=28&hh=06&m1=5&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三条京阪→マキノ（平日）：9:37→山科9:46着・9:54発→10:50、1,430円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=25&hh=09&m1=1&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三条京阪→マキノ（土。日も同じ）：9:28→山科9:38着・9:51発→10:50、1,430円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=28&hh=09&m1=1&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "三条京阪→マキノ（早朝。平日・土日とも）：6:39→山科6:48着・7:05発→8:12、1,430円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=25&hh=06&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR マキノ→長浜（平日・土日とも）：11:51→近江塩津12:01着・12:06発→12:27、次12:51→13:27、680円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%83%9E%E3%82%AD%E3%83%8E&to=%E9%95%B7%E6%B5%9C&y=2026&m=11&d=25&hh=11&m1=4&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR マキノ→長浜（平日・土日とも）：15:51→近江塩津16:01着・16:06発→16:27、次16:51→17:27、17:50→18:27",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%83%9E%E3%82%AD%E3%83%8E&to=%E9%95%B7%E6%B5%9C&y=2026&m=11&d=25&hh=15&m1=2&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 永原→長浜（平日・土日とも）：15:56→近江塩津16:01着・16:06発→16:27、次16:56→17:27、510円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E5%8E%9F&to=%E9%95%B7%E6%B5%9C&y=2026&m=11&d=25&hh=15&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR マキノ→近江今津（平日・土日とも）：11:47→11:58、次12:47→12:58、200円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%83%9E%E3%82%AD%E3%83%8E&to=%E8%BF%91%E6%B1%9F%E4%BB%8A%E6%B4%A5&y=2026&m=11&d=25&hh=11&m1=4&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 近江今津→長浜（平日・土日とも）：13:43→14:27、770円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E4%BB%8A%E6%B4%A5&to=%E9%95%B7%E6%B5%9C&y=2026&m=11&d=25&hh=13&m1=1&m2=5&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 京都→近江今津（平日・土日とも）：10:45→11:34、990円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E8%BF%91%E6%B1%9F%E4%BB%8A%E6%B4%A5&y=2026&m=11&d=25&hh=10&m1=4&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 京都→長浜（平日・土日とも）：10:00→11:10、1,340円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E9%95%B7%E6%B5%9C&y=2026&m=11&d=25&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR マキノ→京都（平日・土日とも）：15:47→16:57、16:47→17:57、1,170円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%83%9E%E3%82%AD%E3%83%8E&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=15&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 永原→京都（平日・土日とも）：16:42→17:57、1,340円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E5%8E%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 長浜→京都：17:57→19:12、18:28→19:42、18:57→20:12（平日・土日とも）、1,340円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=17&m1=5&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 長浜→京都（平日）：19:28→20:42、19:57→21:12、20:36→米原20:45着・20:54発→21:48",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=19&m1=2&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "JR 長浜→京都（土。日も同じ）：19:28→20:47、19:57→21:07、20:36→21:48",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=28&hh=19&m1=2&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "最終 長浜→京都（平日・土日とも）：22:15→米原22:25着・22:42発→23:50。乗り換えなしは21:17→22:28",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=12&m1=0&m2=0&type=2&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "最終 長浜→三条京阪（平日・土日とも）：21:17→山科22:22着・22:41発→22:50、1,430円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&y=2026&m=11&d=25&hh=12&m1=0&m2=0&type=2&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "最終 マキノ→京都（平日・土日とも）：22:10→23:19",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%83%9E%E3%82%AD%E3%83%8E&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=12&m1=0&m2=0&type=2&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "最終 永原→京都（平日・土日とも）：22:04→23:19",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E5%8E%9F&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=25&hh=12&m1=0&m2=0&type=2&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "湖西線：風速が基準に達すると運転見合わせ",
+   "url": "https://www.westjr.co.jp/company/action/service/safety_transport/storm/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "海津大崎：約4km・約800本、満開 2024-04-08・2025-04-12、京都市内より1週間ほど遅い",
+   "url": "https://takashima-kanko.jp/sakura/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "交通規制（2026年の予定）：4月4日・5日 9:30〜17:00、東行きの一方通行。集落内は自転車を押す",
+   "url": "https://takashima-kanko.jp/sakura/regulation.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "トイレは駅前に公共トイレ。ライトアップは協会・行政では予定なし。トンネル4つ",
+   "url": "https://takashima-kanko.jp/sakura/faq.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "2026年春の地図：駅→並木口 約2km30分、並木口→大崎寺 約2km30分、仮設トイレ、湖岸遊歩道約2km、臨時売店・シャトルバスなし",
+   "url": "https://takashima-kanko.jp/sakura/2026map.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "バス平日（2026年春）：海津大崎口★10:31・11:31・12:31・14:31・15:31・16:31・17:31→駅まで8分、220円",
+   "url": "https://takashima-kanko.jp/sakura/2026bus.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "バス土休日（2026年春）：海津大崎口★10:31・11:31・12:31・14:31・15:31・17:31→駅まで8分、220円",
+   "url": "https://takashima-kanko.jp/sakura/2026bus_h.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "規制日のバス（2026年4月4日・5日）：国境線は海津1区に止まらず海津大崎口に停車",
+   "url": "https://takashima-kanko.jp/sakura/2026bus_kisei.pdf",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "レンタサイクル：9:00〜17:00・1,000円、2026-11-14〜2027-05-09 予約不可、高島市内だけ、身分証",
+   "url": "https://takashima-kanko.jp/guide/rentalcycle.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "大崎寺：第一トンネルの手前の石段の上、阿弥陀堂の血天井",
+   "url": "https://takashima-kanko.jp/spot/2018/06/post_71.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "海津の石積み：約1.2km、重要文化的景観",
+   "url": "https://takashima-kanko.jp/spot/2018/06/post_170.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "桜クルーズ（2026年春の実績）：4月15日で終了、4,500円、予約優先",
+   "url": "https://www.biwakokisen.co.jp/season_event/5972/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "竹生島びわ湖横断：13:10→島13:35着・15:10発→長浜港15:45、3,600円。5便目は4月25日から",
+   "url": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "入島料600円・小人300円は現金。ネット予約は前日15:00まで。島に休憩所と土産物屋2軒",
+   "url": "https://www.biwakokisen.co.jp/cruise/chikubu/faq/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "竹生島：石段165段",
+   "url": "https://www.biwakokisen.co.jp/cruise/chikubu/flow/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "今津港：駅から徒歩5分、売店なし、トイレあり",
+   "url": "https://www.biwakokisen.co.jp/access/imazu/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "宝厳寺：9:30〜16:30（船の時刻に基づく）",
+   "url": "https://www.chikubushima.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "永原駅：係員7:30〜16:30、10:40〜12:00不在、ICOCA可、コインロッカー",
+   "url": "https://www.city.nagahama.lg.jp/0000001880.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "長浜城：9:00〜17:00、受付16:30、月曜休み、500円・200円、展示品は撮影禁止",
+   "url": "https://nagahama-rekihaku.jp/info/open",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "豊公園：約600本、24時間、無料",
+   "url": "https://kitabiwako.jp/spot/spot_2292",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "豊公園の桜（2026年春の実績）：4月3日満開、4月13日でぼんぼり終了",
+   "url": "https://www.city.nagahama.lg.jp/0000016592.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "慶雲館：9:30〜17:00、入館16:30、300円・150円",
+   "url": "https://kitabiwako.jp/keiunkan/guidance.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "慶雲館の休館：2026-12-01〜2027-01-09、3月11日〜下旬",
+   "url": "https://kitabiwako.jp/spot/spot_1703",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "長浜盆梅展：9:00〜17:00、入館16:30、大人1,000円",
+   "url": "https://bonbai.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "長浜鉄道スクエア：9:30〜17:00、入館16:30、500円・200円、12/29〜1/3休み",
+   "url": "https://kitabiwako.jp/tetsudou/guidance.html",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "黒壁ガラス館：10:00〜17:00（3月31日は16:00まで）、定休日なし",
+   "url": "https://www.kurokabe.co.jp/shopping/glasshouse/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "長濱浪漫ビール：平日11:30〜15:00（LO14:30）・17:00〜21:00（LO20:15）、土日祝11:30〜21:00、予約は前日まで",
+   "url": "https://www.romanbeer.com/restaurant/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "長濱浪漫ビール：火曜定休（2026年3月27日のお知らせ）",
+   "url": "https://www.romanbeer.com/news/20260327_id2704/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "京都拉麺小路：11:00〜22:00（LO21:30）",
+   "url": "https://www.kyoto-station-building.co.jp/ramen_koji/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "祝日（11-23）の主な便：京都9:45→マキノ10:50",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E3%83%9E%E3%82%AD%E3%83%8E&y=2026&m=11&d=23&hh=09&m1=3&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "祝日（11-23）の主な便：長浜19:28→京都20:47、19:57→21:07、20:36→21:48",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=23&hh=19&m1=2&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "makino",
+   "name": {
+    "ja": "マキノ駅・マキノサニービーチ",
+    "en": "Makino Station & Makino Sunny Beach"
+   },
+   "kind": {
+    "ja": "駅・浜辺",
+    "en": "Station & beach"
+   },
+   "blurb": {
+    "ja": "京都駅から湖西線で。トイレを済ませ、食べ物を持って歩きはじめます。",
+    "en": "The Kosei Line from Kyoto Station. Use the toilet, and set off with your food."
+   },
+   "lat": 35.45351,
+   "lng": 136.06021,
+   "text": {
+    "ja": "マキノ駅とマキノサニービーチ（知内浜・ちないはま）\n\n京都駅7:00発の近江今津行きに乗ります。近江今津7:59着、8:04発に乗り換えてマキノ8:12着。朝ごはんと飲み物は京都駅で乗る前に（早い時間なので、前の日に買っておくと確実です）。\n\n8:20に歩きはじめ、浜には寄らずに海津へ（30分）。乗り遅れたら8:15発（平日8:19発）でマキノ9:30着。次のコース（9:45ごろ発）に近い動きになります。\n\n京都駅には、湖西線経由と琵琶湖線経由の新快速があります。乗るのは湖西線。乗った車両がマキノまで行くかどうかも、ホームの表示と放送で確かめてください。\n\n三条のあたりからは、三条京阪から地下鉄東西線で山科へ出て、同じ電車に乗れます（マキノまで1,430円）。\n\nサニービーチは駅から歩いて約15分の、松と白砂の浜。湖の向こうに、これから歩く海津大崎の岬が見えます。\n\nおすすめ訪問時間：8:12〜8:20",
+    "en": "Makino Station and Makino Sunny Beach (Chinai beach)\n\nTake the 7:00 from Kyoto bound for Omi-Imazu (7:59), change to the 8:04 and reach Makino at 8:12. Get breakfast and drinks before boarding (safer bought the night before at that hour).\n\nSet off at 8:20 straight for Kaizu, skipping the beach (30 minutes). If you miss the train, the 8:15 (weekdays 8:19) reaches Makino at 9:30; your day will then be closer to the 9:45 courses.\n\nKyoto Station has Special Rapids on both the Kosei and Biwako lines: you want the Kosei Line. Check the signs and announcements that your carriage goes as far as Makino.\n\nFrom around Sanjo, take the Tozai subway from Sanjo-Keihan to Yamashina and board the same train there (¥1,430 to Makino).\n\nSunny Beach, a pine-lined white-sand shore, is about 15 minutes on foot from the station. Across the water is the headland of Kaizu-Osaki.\n\nRecommended visit time: 8:12–8:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JRマキノ駅",
+      "en": "JR Makino Station"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E3%83%9E%E3%82%AD%E3%83%8E%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "マキノサニービーチ",
+      "en": "Makino Sunny Beach"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%82%AD%E3%83%8E%E3%82%B5%E3%83%8B%E3%83%BC%E3%83%93%E3%83%BC%E3%83%81"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "JR西日本の運行情報（近畿）",
+      "en": "JR West service status, Kinki area (Japanese)"
+     },
+     "url": {
+      "ja": "https://trafficinfo.westjr.co.jp/kinki.html",
+      "en": "https://trafficinfo.westjr.co.jp/kinki.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "海津大崎の桜（開花状況・地図・バス）",
+      "en": "Kaizu-Osaki cherries: bloom, maps and buses (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/",
+      "en": "https://takashima-kanko.jp/sakura/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "お花見マップ（2026年春。トイレの場所）",
+      "en": "Blossom map with toilets, spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/2026map.pdf",
+      "en": "https://takashima-kanko.jp/sakura/2026map.pdf"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "びわ湖高島レンタサイクル",
+      "en": "Takashima rental bicycles (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/guide/rentalcycle.html",
+      "en": "https://takashima-kanko.jp/guide/rentalcycle.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "行き：京都7:00発→近江今津7:59着・8:04発→マキノ8:12着。次は8:15発（平日8:19発）→9:30着",
+       "en": "Out: Kyoto 7:00 → Omi-Imazu 7:59, change for the 8:04 → Makino 8:12. Next 8:15 (weekdays 8:19) → 9:30"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "三条京阪から：6:39発→山科7:05発→近江今津で乗り換え→マキノ8:12着",
+       "en": "From Sanjo-Keihan: 6:39 → Yamashina 7:05 → change at Omi-Imazu → Makino 8:12"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "京都→マキノ 1,170円（三条京阪から山科乗り換えで1,430円）",
+       "en": "Kyoto → Makino ¥1,170 (¥1,430 from Sanjo-Keihan via Yamashina)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bike",
+      "text": {
+       "ja": "駅の観光案内所 9:00〜17:00、普通自転車1日1,000円。台数に限りがあり、2027年5月9日までは予約不可。身分証が必要。高島市の中だけで、大浦・永原（長浜市）へは乗っていけません",
+       "en": "Station tourist office 9:00–17:00, ordinary bicycle ¥1,000 a day. Limited numbers, no bookings until 9 May 2027, ID needed. Takashima city only, so not to Oura or Nagahara (Nagahama city)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "マキノ→京都の最終：22:10発→23:19着。18時台からは本数が減ります",
+       "en": "Last train Makino → Kyoto: 22:10 → 23:19. Fewer trains from 18:00"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "電車は乗換案内で、2026年11月25日（水）・28日（土）・29日（日）と、主な便は23日（祝）も確かめた時刻です。3月にダイヤ改正があることが多いので、来春は要確認。",
+     "en": "Trains checked on a route planner for Wed 25, Sat 28 and Sun 29 November 2026, and the main trains also for Mon 23 (a holiday). Timetables often change in March, so please check for next spring."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "7:00発。船は前日までに予約",
+    "en": "7:00 start; book the boat a day ahead"
+   },
+   "photos": [
+    "makino-1.jpg",
+    "makino-2.jpg",
+    "makino-3.jpg",
+    "makino-4.jpg"
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://takashima-kanko.jp/sakura/2026map.pdf",
+     "head": {
+      "ja": "お昼は京都で買い、トイレはマキノ駅で",
+      "en": "Buy lunch in Kyoto; use the toilet at Makino Station"
+     },
+     "text": {
+      "ja": "駅から先は店が少なく、2026年春は駅前の臨時売店もありませんでした。食べ物と飲み物は電車に乗る前に。常設の公共トイレは駅前で、桜並木の入口と大崎寺の近くは花見の時期だけの仮設です（2026年春の地図）。",
+      "en": "There are few shops beyond the station, and the seasonal stall didn’t run in spring 2026. Buy food and drink before boarding. The permanent public toilet is at the station; those at the avenue entrance and near Osakiji are temporary, in season only (2026 map)."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://trafficinfo.westjr.co.jp/kinki.html",
+     "head": {
+      "ja": "湖西線は強風で止まることがあります",
+      "en": "Strong winds can stop the Kosei Line"
+     },
+     "text": {
+      "ja": "家を出る前に運行情報を。マキノを通る区間が止まっている日は海津大崎をやめて、京都10:00発の琵琶湖線の新快速で長浜へ（11:10着・1,340円）。豊公園も桜の名所です。",
+      "en": "Check service status before setting out. If the section through Makino is stopped, skip Kaizu-Osaki and take the 10:00 Biwako Line Special Rapid from Kyoto to Nagahama (11:10, ¥1,340): Hoko Park is a cherry spot too."
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "kaizu",
+   "name": {
+    "ja": "海津の石積み",
+    "en": "Kaizu stone embankment"
+   },
+   "kind": {
+    "ja": "町並み",
+    "en": "Old lakeside village"
+   },
+   "blurb": {
+    "ja": "湖の波から家を守るために積まれた、江戸時代の石垣が続く湖岸の集落。桜並木の手前です。",
+    "en": "A lakeside village behind an Edo-period wall built against the waves, just before the cherry avenue."
+   },
+   "lat": 35.464,
+   "lng": 136.0789,
+   "text": {
+    "ja": "海津（かいづ）の石積み\n\n8:50に着いて、浜で朝ごはん。9:05に出れば、並木の入口はすぐです。\n\n北国へ向かう道と湖の舟運で栄えた港町に、波よけの石垣が約1.2km残っています。海津・西浜・知内の水辺景観として、国の重要文化的景観に選ばれています。\n\n石積みは湖の側から見るものです。通りの家の間から浜へ下りると、写真のように見えます。人が暮らしている集落なので、家の敷地には入らないでください。\n\nおすすめ訪問時間：8:50〜9:05",
+    "en": "Kaizu stone embankment\n\nArrive at 8:50 and have breakfast by the lake. Leave at 9:05; the avenue starts just beyond.\n\nAbout 1.2 km of wave-breaking stone wall remains in this old port on the road north. With Nishihama and Chinai, it is a nationally designated Important Cultural Landscape.\n\nThe wall is seen from the lake side: go down to the shore between the houses. People live here, so please keep off private property.\n\nRecommended visit time: 8:50–9:05"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "海津の石積み",
+      "en": "Kaizu stone embankment"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E6%B4%A5%E3%81%AE%E7%9F%B3%E7%A9%8D%E3%81%BF%20%E9%AB%98%E5%B3%B6%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "海津の石積み（びわ湖高島観光協会）",
+      "en": "Kaizu stone embankment (Takashima tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/spot/2018/06/post_170.html",
+      "en": "https://takashima-kanko.jp/spot/2018/06/post_170.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "マキノ駅からまっすぐ約2km・30分。サニービーチからは約2.3km・35分",
+       "en": "About 2 km / 30 min straight from Makino Station; 2.3 km / 35 min from Sunny Beach"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "びわ湖高島観光協会のページで確認しました。時間は、少しゆっくり歩いた場合です。",
+     "en": "Checked on the Takashima tourism association’s pages. Times assume an easy pace."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "kaizu-1.jpg",
+    "kaizu-2.jpg",
+    "kaizu-3.jpg",
+    "kaizu-4.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "sakura",
+   "name": {
+    "ja": "海津大崎の桜並木",
+    "en": "Kaizu-Osaki cherry avenue"
+   },
+   "kind": {
+    "ja": "桜並木",
+    "en": "Cherry avenue"
+   },
+   "blurb": {
+    "ja": "湖岸に約4km、ソメイヨシノが約800本。大崎寺までの2kmは、湖ぎわの遊歩道も歩けます。",
+    "en": "About 800 cherry trees along 4 km of shore. For the 2 km to Osakiji there is also a lakeside footpath."
+   },
+   "lat": 35.45414,
+   "lng": 136.08334,
+   "text": {
+    "ja": "海津大崎（かいづおおさき）の桜並木\n\n9:10から50分かけて大崎寺へ。2026年の交通規制は9:30からでした。人と車が増える前に写真を。\n\n並木の入口から大崎寺までは約2km。ふつうに歩いて30分、写真を撮りながらだと50分〜1時間です。車道のほかに、湖ぎわに歩行者だけの道（近江湖の辺の道）があります。湖へ枝をのばす桜と、沖の竹生島が見えます。\n\n例年4月はじめに咲きはじめ、5〜6日で満開になります。京都市内より1週間ほど遅めです。満開は2024年が4月8日、2025年が4月12日。年で動くので、観光協会の開花状況を見てから日を決めてください。ライトアップは、観光協会や市では行っていません。\n\nおすすめ訪問時間：9:10〜10:00",
+    "en": "Kaizu-Osaki cherry avenue\n\nWalk to Osakiji from 9:10, taking 50 minutes. The 2026 restrictions began at 9:30, so take photos before people and cars build up.\n\nFrom the entrance to Osakiji is about 2 km: 30 minutes walking, 50–60 with photo stops. Besides the road there is a pedestrian-only path at the water’s edge, with branches over the lake and Chikubu Island offshore.\n\nThe trees usually open in early April and peak 5–6 days later, about a week after Kyoto city. Full bloom was 8 April in 2024 and 12 April in 2025. It moves each year, so check the tourism association’s bloom report before choosing a day. Neither the association nor the city runs a light-up.\n\nRecommended visit time: 9:10–10:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "海津大崎の桜並木",
+      "en": "Kaizu-Osaki cherry avenue"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E6%B4%A5%E5%A4%A7%E5%B4%8E%20%E6%A1%9C%E4%B8%A6%E6%9C%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "海津大崎の桜（開花状況・地図・バス）",
+      "en": "Kaizu-Osaki cherries: bloom, maps and buses (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/",
+      "en": "https://takashima-kanko.jp/sakura/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "交通規制の案内（2026年春の実績）",
+      "en": "Traffic restrictions, as held in spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/regulation.html",
+      "en": "https://takashima-kanko.jp/sakura/regulation.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "お花見マップ（2026年春。トイレの場所）",
+      "en": "Blossom map with toilets, spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/2026map.pdf",
+      "en": "https://takashima-kanko.jp/sakura/2026map.pdf"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "並木の入口→大崎寺 約2km・30分（写真を撮りながら50分〜1時間）",
+       "en": "Avenue entrance → Osakiji: about 2 km, 30 min (50–60 with photos)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "toilet",
+      "text": {
+       "ja": "花見の時期だけ、入口と大崎寺の近くに仮設（2026年春の地図。来春は要確認）。混むのでマキノ駅で先に",
+       "en": "Temporary, in season only, at the entrance and near Osakiji (2026 map; check for next spring). They get busy, so use Makino Station first"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "びわ湖高島観光協会の開花情報・2026年春のお花見マップ・よくある質問で確認しました。",
+     "en": "Checked on the Takashima tourism association’s bloom report, 2026 map and FAQ."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "2026年の規制は9:30から",
+    "en": "2026 restrictions began at 9:30"
+   },
+   "photos": [
+    "sakura-1.jpg",
+    "sakura-2.jpg",
+    "sakura-3.jpg",
+    "sakura-4.jpg",
+    "sakura-5.jpg",
+    "sakura-6.jpg",
+    "sakura-7.jpg"
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://takashima-kanko.jp/sakura/regulation.html",
+     "head": {
+      "ja": "見ごろの土日は交通規制（2026年春の実績）",
+      "en": "Traffic restrictions on peak weekends (as held in 2026)"
+     },
+     "text": {
+      "ja": "2026年は4月4日・5日の9:30〜17:00に、車は東向きの一方通行の予定でした。海津の集落の中は自転車を押して歩きます。国境線のバスは海津1区に止まらず、海津大崎口に止まりました。来春の日程は要確認。",
+      "en": "In 2026 cars were to go eastbound only on 4–5 April, 9:30–17:00. Bicycles must be pushed through Kaizu village, and Kokkyo line buses stopped at Kaizu-Osaki-guchi instead of Kaizu 1-ku. Please check next spring’s dates."
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "osakiji",
+   "name": {
+    "ja": "大崎寺・海津大崎港",
+    "en": "Osakiji Temple & Kaizu-Osaki pier"
+   },
+   "kind": {
+    "ja": "寺・船着き場",
+    "en": "Temple & pier"
+   },
+   "blurb": {
+    "ja": "第一トンネルの手前、石段の上のお寺。ここで引き返すか、先へ歩くかを決めます。",
+    "en": "Up the steps before the first tunnel. This is where you turn back or walk on."
+   },
+   "lat": 35.45021,
+   "lng": 136.08711,
+   "text": {
+    "ja": "大崎寺（おおさきじ）と海津大崎港\n\n10:20に引き返して、マキノ駅へ約1時間（11:20ごろ着）。11:47発の新快速で近江今津11:58着（200円）。お昼は駅のまわりで12:40まで（店の時間は要確認。心配なら朝に2食分買っておく）。港へは歩いて5分です。\n\n次の12:47発→12:58着では乗船手続きの時間が足りないので、11:47発に乗り遅れそうなら竹生島はやめて、12:51発で長浜へ（13:27着）。\n\n「大崎観音」と呼ばれる、奈良時代に開かれたと伝わるお寺です。県道の第一トンネルの手前の石段を上ると、本堂の前から湖が見渡せます。本堂の右手の阿弥陀堂は、安土城の材を使ったという「血天井」で知られています。\n\n歩くのをへらしたいときは、海津大崎口のバス停（大崎寺から約2.4km・35分）から、コミュニティバスでマキノ駅へ8分・220円。★印の便でないと遠回りです。\n\n2026年春は、今津港と長浜港から桜クルーズの船も出ました（4月15日で終了、予約優先、4,500円）。写真の船と看板は、春に撮ったものです。今は運航していません。来春は要確認。\n\nおすすめ訪問時間：10:00〜10:20",
+    "en": "Osakiji Temple and Kaizu-Osaki pier\n\nTurn back at 10:20: about an hour to Makino Station (11:20). The 11:47 Special Rapid reaches Omi-Imazu at 11:58 (¥200). Lunch near the station until 12:40 (check shop hours, or buy two meals in the morning). The port is 5 minutes’ walk.\n\nThe next train (12:47 → 12:58) leaves too little time to check in, so if you’ll miss the 11:47, drop the island and take the 12:51 to Nagahama (13:27).\n\nKnown as “Osaki Kannon” and said to date from the Nara period. Climb the steps before the first road tunnel for a wide view of the lake from the main hall. The Amida hall to its right is known for a “bloody ceiling” said to be made of timber from Azuchi Castle.\n\nTo walk less, take the community bus from Kaizu-Osaki-guchi (2.4 km, 35 minutes from the temple) to Makino Station: 8 minutes, ¥220. Use a run marked ★; the others go the long way.\n\nIn spring 2026 cherry cruises also ran from Imazu and Nagahama (until 15 April, booking preferred, ¥4,500); the boat and signboard in the photos are from past springs. They aren’t running now; check for next spring.\n\nRecommended visit time: 10:00–10:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大崎寺",
+      "en": "Osakiji"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%B4%8E%E5%AF%BA%20%E9%AB%98%E5%B3%B6%E5%B8%82%E3%83%9E%E3%82%AD%E3%83%8E%E7%94%BA%E6%B5%B7%E6%B4%A5"
+    },
+    {
+     "label": {
+      "ja": "海津大崎口のバス停",
+      "en": "Kaizu-Osaki-guchi bus stop"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%B7%E6%B4%A5%E5%A4%A7%E5%B4%8E%E5%8F%A3%20%E3%83%90%E3%82%B9%E5%81%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "大崎寺（びわ湖高島観光協会）",
+      "en": "Osakiji (Takashima tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/spot/2018/06/post_71.html",
+      "en": "https://takashima-kanko.jp/spot/2018/06/post_71.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "バス連絡表・平日（2026年春）",
+      "en": "Bus connections, weekdays, spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/2026bus.pdf",
+      "en": "https://takashima-kanko.jp/sakura/2026bus.pdf"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "バス連絡表・土休日（2026年春）",
+      "en": "Bus connections, weekends, spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://takashima-kanko.jp/sakura/2026bus_h.pdf",
+      "en": "https://takashima-kanko.jp/sakura/2026bus_h.pdf"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "桜クルーズ（2026年春の実績・終了）",
+      "en": "Cherry cruise, spring 2026, ended (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biwakokisen.co.jp/season_event/5972/",
+      "en": "https://www.biwakokisen.co.jp/season_event/5972/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "マキノ11:47発→近江今津11:58着・200円。船をやめる場合はマキノ12:51発→長浜13:27着・680円",
+       "en": "Makino 11:47 → Omi-Imazu 11:58, ¥200. Without the boat: Makino 12:51 → Nagahama 13:27, ¥680"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "大崎寺→マキノ駅 約3.8km・1時間",
+       "en": "Osakiji → Makino Station: about 3.8 km, 1 hour"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "海津大崎口→マキノ駅（2026年春の★の便。平日・土休日とも）10:31・11:31・12:31・14:31・15:31・17:31発、8分・220円。13時台に★はありません",
+       "en": "Kaizu-Osaki-guchi → Makino Station, ★ runs in spring 2026, weekdays and weekends: 10:31, 11:31, 12:31, 14:31, 15:31, 17:31; 8 min, ¥220. No ★ bus in the 13:00 hour"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大崎寺の拝観料・時間は要確認",
+       "en": "Osakiji admission and hours: please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "バスはびわ湖高島観光協会の2026年春の連絡表（平日用・土休日用）で確認。来春は要確認です。",
+     "en": "Buses checked on the association’s spring 2026 weekday and weekend timetables; please check for next spring."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "マキノ11:47発を逃すと船に乗れない",
+    "en": "Miss the 11:47 and you miss the boat"
+   },
+   "photos": [
+    "osakiji-1.jpg",
+    "osakiji-2.jpg",
+    "osakiji-3.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 5,
+   "id": "chikubushima",
+   "name": {
+    "ja": "竹生島（宝厳寺・都久夫須麻神社）",
+    "en": "Chikubushima (Hogonji & Tsukubusuma Shrine)"
+   },
+   "kind": {
+    "ja": "島・寺と神社",
+    "en": "Island temple & shrine"
+   },
+   "blurb": {
+    "ja": "今津港から船で渡る、宝厳寺と都久夫須麻神社の島。入島料は現金です。",
+    "en": "The island of Hogonji and Tsukubusuma Shrine, by boat from Imazu. The island fee is cash only."
+   },
+   "lat": 35.4211,
+   "lng": 136.14338,
+   "text": {
+    "ja": "竹生島（ちくぶしま）\n\n12:50までに今津港で手続きし、13:10発。島に13:35着、95分いて15:10発、長浜港15:45着。15:10の船に必ず乗ってください（2026年4月の時刻では、横断航路の最後の便です）。\n\n琵琶湖の北に浮かぶ小さな島です。港の先で入島料を払い、165段の石段を上ると、西国三十三所の第三十番札所・宝厳寺（ほうごんじ）。国宝の唐門、重要文化財の観音堂と舟廊下（ふなろうか）を通って、都久夫須麻神社（つくぶすまじんじゃ）へ抜けます。\n\n今津港の乗り場に売店はありません。島には休憩所と土産物屋が2軒ありますが、食事はあてにせず、船に持って乗れます。港にはトイレがあります。\n\nおすすめ訪問時間：12:50〜15:45",
+    "en": "Chikubushima\n\nCheck in at Imazu port by 12:50 for the 13:10. Reach the island at 13:35, stay 95 minutes and leave at 15:10 for Nagahama port at 15:45. Don’t miss the 15:10: on April 2026 times it’s the crossing’s last boat.\n\nA small island in the north of Lake Biwa. Pay the fee beyond the pier and climb 165 steps to Hogonji, temple 30 of the Saigoku pilgrimage. The Karamon gate (National Treasure), Kannon hall and Funa-roka corridor (Important Cultural Properties) lead through to Tsukubusuma Shrine.\n\nImazu pier has no shop. The island has two rest-and-souvenir shops, but don’t count on a meal; you may take food on the boat. The port has toilets.\n\nRecommended visit time: 12:50–15:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "今津港（琵琶湖汽船）",
+      "en": "Imazu port"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BB%8A%E6%B4%A5%E6%B8%AF%20%E7%90%B5%E7%90%B6%E6%B9%96%E6%B1%BD%E8%88%B9"
+    },
+    {
+     "label": {
+      "ja": "竹生島",
+      "en": "Chikubushima"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E7%94%9F%E5%B3%B6%20%E5%AE%9D%E5%8E%B3%E5%AF%BA"
+    },
+    {
+     "label": {
+      "ja": "長浜港（琵琶湖汽船）",
+      "en": "Nagahama port"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E6%B5%9C%E6%B8%AF%20%E7%90%B5%E7%90%B6%E6%B9%96%E6%B1%BD%E8%88%B9"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "琵琶湖汽船 竹生島（時刻・料金・予約）",
+      "en": "Biwako Kisen Chikubushima: times, fares and booking (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/",
+      "en": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "乗船のよくある質問（支払い・予約）",
+      "en": "Boat FAQ: payment and booking (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biwakokisen.co.jp/cruise/chikubu/faq/",
+      "en": "https://www.biwakokisen.co.jp/cruise/chikubu/faq/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "竹生島 宝厳寺 公式サイト",
+      "en": "Hogonji, Chikubushima (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.chikubushima.jp/",
+      "en": "https://www.chikubushima.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "boat",
+      "text": {
+       "ja": "びわ湖横断（2026年4月は毎日）：今津港9:30・10:45・12:00・13:10発→長浜港11:30・12:55・14:20・15:45着。4月24日までは13:10が最後の便",
+       "en": "Lake crossing, daily in April 2026: Imazu 9:30, 10:45, 12:00, 13:10 → Nagahama 11:30, 12:55, 14:20, 15:45. Until 24 April the 13:10 was the last"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "船 大人3,600円・小学生1,800円。入島料 中学生以上600円・小人300円",
+       "en": "Boat ¥3,600, primary school ¥1,800. Island fee ¥600 (junior high and up), children ¥300"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "宝厳寺 9:30〜16:30（船の時刻に合わせて）",
+       "en": "Hogonji 9:30–16:30 (in line with the boats)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "船と入島料は琵琶湖汽船、お寺は宝厳寺の公式サイトで確認しました。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Boat and fee checked with Biwako Kisen, the temple on Hogonji’s website. Photos are from Wikimedia Commons (author and license shown on each)."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "予約を。入島料は現金。強風で欠航",
+    "en": "Book; cash island fee; wind may cancel"
+   },
+   "photos": [
+    {
+     "file": "chikubushima-1.jpg",
+     "credit": {
+      "author": "HAL-Guandu",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Chikubushima-2016-07-21.jpg"
+     }
+    },
+    {
+     "file": "chikubushima-2.jpg",
+     "credit": {
+      "author": "Saigen Jiro",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tsukubusuma-jinja_honden-1.jpg"
+     }
+    },
+    {
+     "file": "chikubushima-3.jpg",
+     "credit": {
+      "author": "Brakeet",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Chikubu_Island_DSCN1995.jpg"
+     }
+    },
+    {
+     "file": "chikubushima-4.jpg",
+     "credit": {
+      "author": "Brakeet",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Chikubu_Island_DSCN2013.jpg"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.biwakokisen.co.jp/cruise/chikubu/faq/",
+     "head": {
+      "ja": "予約を。入島料600円は現金だけ",
+      "en": "Book ahead; the ¥600 island fee is cash only"
+     },
+     "text": {
+      "ja": "桜の時期の満席に備えて、前日15:00までにネットで予約を。船代はカードやICも使えますが、島の入島料は現金です。",
+      "en": "Book online by 15:00 the day before in case it fills up in blossom season. The boat takes cards and IC, but the island fee is cash."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/",
+     "head": {
+      "ja": "強風の日は欠航・着けないことも",
+      "en": "Cancellations in strong wind"
+     },
+     "text": {
+      "ja": "朝に琵琶湖汽船の運航状況を確かめ、欠航なら近江今津13:43発の電車で長浜へ（14:27着・770円）。",
+      "en": "Check the operator that morning. If cancelled, take the 13:43 train from Omi-Imazu to Nagahama (14:27, ¥770)."
+     }
+    },
+    {
+     "from": null,
+     "to": "2027-03-31",
+     "url": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/",
+     "head": {
+      "ja": "2027年4月の船は未発表",
+      "en": "April 2027 boats not yet announced"
+     },
+     "text": {
+      "ja": "ここに書いた時刻と料金は、2026年4月〜2027年3月の時刻表です。来春は要確認。",
+      "en": "The times and fares here are from the April 2026 – March 2027 timetable. Please check for next spring."
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "nagahamajo",
+   "name": {
+    "ja": "豊公園・長浜城",
+    "en": "Hoko Park & Nagahama Castle"
+   },
+   "kind": {
+    "ja": "桜の公園・城",
+    "en": "Cherry park & castle"
+   },
+   "blurb": {
+    "ja": "湖のほとりに約600本の桜。公園はいつでも入れて、天守は16:30までの受付です。",
+    "en": "Some 600 cherry trees by the lake. The park is always open; the castle’s last entry is 16:30."
+   },
+   "lat": 35.37766,
+   "lng": 136.26128,
+   "text": {
+    "ja": "豊公園（ほうこうえん）と長浜城（ながはまじょう）\n\n長浜港から歩いて15分で16:00着。先に天守へ（受付16:30まで）、そのあと公園の桜と湖岸を17:15ごろまで。月曜や船が遅れた日は公園だけにします。\n\n秀吉が初めて持った城の跡で、今の天守は昭和58年に再建された長浜城歴史博物館です。最上階からは琵琶湖と竹生島、足もとに公園の桜が見えます。\n\n豊公園は日本さくら名所100選。2026年は4月3日に満開で、海津大崎と同じ日に見られるかどうかは年によります。咲いている間は臨時の明かり（ぼんぼり）がつきます（2026年は4月13日で終了。点灯の時間と来春の予定は要確認）。夕方は湖岸へ出てみてください。写真は2025年1月のもので、桜は写っていません。\n\nおすすめ訪問時間：16:00〜17:15",
+    "en": "Hoko Park and Nagahama Castle\n\n15 minutes’ walk from the port, arriving 16:00. Do the keep first (last entry 16:30), then blossom and shore until about 17:15. On Mondays, or if the boat is late, just the park.\n\nThe site of Hideyoshi’s first castle. The keep, rebuilt in 1983, is the Nagahama Castle History Museum, with Lake Biwa and Chikubu Island from the top and the park’s blossom below.\n\nHoko Park is one of Japan’s 100 best cherry spots. Full bloom was 3 April in 2026; whether it coincides with Kaizu-Osaki varies by year. Temporary lanterns are lit during the bloom (until 13 April in 2026; hours and next spring’s plans: please check). Go out to the shore in the evening. The photos are from January 2025, before the blossom.\n\nRecommended visit time: 16:00–17:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "豊公園",
+      "en": "Hoko Park"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%B1%8A%E5%85%AC%E5%9C%92%20%E9%95%B7%E6%B5%9C"
+    },
+    {
+     "label": {
+      "ja": "長浜城歴史博物館",
+      "en": "Nagahama Castle History Museum"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E6%B5%9C%E5%9F%8E%E6%AD%B4%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "長浜城歴史博物館（時間・休み・料金）",
+      "en": "Nagahama Castle History Museum: hours and fees (Japanese)"
+     },
+     "url": {
+      "ja": "https://nagahama-rekihaku.jp/info/open",
+      "en": "https://nagahama-rekihaku.jp/info/open"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "豊公園（長浜観光協会）",
+      "en": "Hoko Park (Nagahama tourism, Japanese)"
+     },
+     "url": {
+      "ja": "https://kitabiwako.jp/spot/spot_2292",
+      "en": "https://kitabiwako.jp/spot/spot_2292"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "豊公園の桜（2026年春の実績）",
+      "en": "Hoko Park blossom, spring 2026 (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.nagahama.lg.jp/0000016592.html",
+      "en": "https://www.city.nagahama.lg.jp/0000016592.html"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "公園は24時間。長浜城 9:00〜17:00（受付16:30まで）",
+       "en": "Park open 24 hours. Castle 9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "公園は無料。長浜城 大人500円、小中学生200円（企画展で変わることがあります）",
+       "en": "Park free. Castle ¥500 adults, ¥200 children (may change during special exhibitions)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "長浜城は月曜（祝日なら次の平日）、12月27日〜1月2日、展示替えの日。展示品は撮影禁止",
+       "en": "Castle closed Mondays (next weekday if a holiday), 27 Dec – 2 Jan and changeover days. No photographing exhibits"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "長浜城歴史博物館・長浜市・長浜観光協会のページで確認しました。",
+     "en": "Checked on the museum, Nagahama city and tourism association pages."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "天守は月曜休み、受付16:30まで",
+    "en": "Castle closed Mondays; last entry 16:30"
+   },
+   "photos": [
+    "nagahamajo-1.jpg",
+    "nagahamajo-2.jpg",
+    "nagahamajo-3.jpg"
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://nagahama-rekihaku.jp/info/open",
+     "head": {
+      "ja": "長浜城は月曜休み",
+      "en": "The castle is closed on Mondays"
+     },
+     "text": {
+      "ja": "祝日なら開いて、次の平日が休みです。休みの日は公園の桜と湖岸をゆっくり。",
+      "en": "It opens on holiday Mondays and closes the next weekday. On closed days, take your time in the park and by the lake."
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "kurokabe",
+   "name": {
+    "ja": "黒壁スクエア",
+    "en": "Kurokabe Square"
+   },
+   "kind": {
+    "ja": "古い町並み・ガラス",
+    "en": "Old streets & glass"
+   },
+   "blurb": {
+    "ja": "明治の銀行を生かしたガラス館と、北国街道の古い町家。ガラス館は17:00までです。",
+    "en": "A glass house in a Meiji bank, among old townhouses on the Hokkoku-kaido. It closes at 17:00."
+   },
+   "lat": 35.38068,
+   "lng": 136.26708,
+   "text": {
+    "ja": "黒壁（くろかべ）スクエア\n\nガラス館は閉まったあとなので、外観と北国街道の町並みだけ。ガラス館に入りたければ、長浜港から先にこちらへ（16:10ごろ着）。天守は外れます。\n\n明治33年に建てられた銀行が、今の黒壁一號館（黒壁ガラス館）です。北国街道（ほっこくかいどう）沿いに、町家を使ったガラスの店やギャラリーが並びます。\n\n表通りだけでなく、町の中を流れる米川や、大通寺の表参道の路地へも。長浜駅の東口から歩いて5〜6分です。\n\nおすすめ訪問時間：17:30〜17:55",
+    "en": "Kurokabe Square\n\nThe Glass House has closed, so it’s the façade and old street only. To go inside, come here first from the port (about 16:10) and skip the keep.\n\nThe 1900 bank is now Kurokabe No. 1, the Glass House. Glass shops and galleries fill the townhouses along the Hokkoku-kaido.\n\nStep off the main street to the little Yone river and the lanes on the approach to Daitsuji. It’s 5–6 minutes from the east exit of Nagahama Station.\n\nRecommended visit time: 17:30–17:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "黒壁ガラス館",
+      "en": "Kurokabe Glass House"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E5%A3%81%E3%82%AC%E3%83%A9%E3%82%B9%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "黒壁ガラス館（時間・休み）",
+      "en": "Kurokabe Glass House: hours (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kurokabe.co.jp/shopping/glasshouse/",
+      "en": "https://www.kurokabe.co.jp/shopping/glasshouse/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "黒壁ガラス館 10:00〜17:00（2026年3月31日は16:00まで）。ほかの店は要確認",
+       "en": "Glass House 10:00–17:00 (until 16:00 on 31 Mar 2026). Other shops: please check"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "黒壁ガラス館は定休日なし",
+       "en": "Glass House: no regular closing day"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "黒壁の公式サイトで確認しました。",
+     "en": "Checked on the Kurokabe website."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "ガラス館は閉館後。町並みだけ",
+    "en": "Glass House closed by then; streets only"
+   },
+   "photos": [
+    "kurokabe-1.jpg",
+    "kurokabe-2.jpg",
+    "kurokabe-3.jpg",
+    "kurokabe-4.jpg",
+    "kurokabe-7.jpg",
+    "kurokabe-8.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 8,
+   "id": "nagahamaeki",
+   "name": {
+    "ja": "JR長浜駅（帰り）",
+    "en": "JR Nagahama Station (heading home)"
+   },
+   "kind": {
+    "ja": "駅・夜",
+    "en": "Station & evening"
+   },
+   "blurb": {
+    "ja": "京都まで新快速で約1時間15分。夜は本数が減ります。",
+    "en": "About 1 h 15 min to Kyoto by Special Rapid. Fewer trains at night."
+   },
+   "lat": 35.37845,
+   "lng": 136.26532,
+   "text": {
+    "ja": "JR長浜駅（ながはまえき）から京都へ\n\n晩ごはんは駅から4分の長濱浪漫ビールで18:00〜19:40。19:57発で京都21:12着（土日祝21:07着）。乗り遅れたら20:36発→21:48着、21:17発→22:28着。\n\n帰りは琵琶湖線です。京都駅のほか、山科で地下鉄東西線に乗り換えれば三条京阪へ出られます（1,430円）。\n\nおすすめ訪問時間：18:00〜19:57",
+    "en": "JR Nagahama Station, back to Kyoto\n\nDinner 18:00–19:40 at Nagahama Roman Beer, 4 minutes from the station. The 19:57 reaches Kyoto at 21:12 (21:07 on weekends and holidays). If you miss it: 20:36 → 21:48, 21:17 → 22:28.\n\nHome is by the Biwako Line: to Kyoto Station, or change at Yamashina to the Tozai subway for Sanjo-Keihan (¥1,430).\n\nRecommended visit time: 18:00–19:57"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR長浜駅",
+      "en": "JR Nagahama Station"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E9%95%B7%E6%B5%9C%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "長濱浪漫ビール",
+      "en": "Nagahama Roman Beer"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%95%B7%E6%BF%B1%E6%B5%AA%E6%BC%AB%E3%83%93%E3%83%BC%E3%83%AB%20%E9%95%B7%E6%B5%9C%E5%B8%82%E6%9C%9D%E6%97%A5%E7%94%BA14-1"
+    },
+    {
+     "label": {
+      "ja": "京都拉麺小路",
+      "en": "Kyoto Ramen Koji"
+     },
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E6%8B%89%E9%BA%BA%E5%B0%8F%E8%B7%AF%20%E4%BA%AC%E9%83%BD%E9%A7%85%E3%83%93%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "JR西日本の運行情報（近畿）",
+      "en": "JR West service status, Kinki area (Japanese)"
+     },
+     "url": {
+      "ja": "https://trafficinfo.westjr.co.jp/kinki.html",
+      "en": "https://trafficinfo.westjr.co.jp/kinki.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "長濱浪漫ビール（時間・営業日・予約）",
+      "en": "Nagahama Roman Beer: hours, open days and booking (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.romanbeer.com/restaurant/",
+      "en": "https://www.romanbeer.com/restaurant/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "京都拉麺小路（京都駅ビル10階）",
+      "en": "Kyoto Ramen Koji, Kyoto Station Building 10F (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kyoto-station-building.co.jp/ramen_koji/",
+      "en": "https://www.kyoto-station-building.co.jp/ramen_koji/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "food",
+      "text": {
+       "ja": "長濱浪漫ビール：平日11:30〜15:00（LO14:30）・17:00〜21:00（LO20:15）、土日祝11:30〜21:00（LO20:15）。火曜休み（営業日カレンダーで確認）",
+       "en": "Nagahama Roman Beer: weekdays 11:30–15:00 (LO 14:30) and 17:00–21:00 (LO 20:15); weekends and holidays 11:30–21:00 (LO 20:15). Closed Tuesdays (check its calendar)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "food",
+      "text": {
+       "ja": "京都拉麺小路（京都駅ビル10階）：11:00〜22:00（LO21:30）",
+       "en": "Kyoto Ramen Koji (Station Building 10F): 11:00–22:00 (LO 21:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "長浜→京都：17:57→19:12、18:28→19:42、18:57→20:12、19:28→20:42（土日祝20:47）、19:57→21:12（土日祝21:07）、20:36→21:48（米原で乗り換え）、21:17→22:28、最終22:15→23:50",
+       "en": "Nagahama → Kyoto: 17:57→19:12, 18:28→19:42, 18:57→20:12, 19:28→20:42 (weekends and holidays 20:47), 19:57→21:12 (21:07), 20:36→21:48 (change at Maibara), 21:17→22:28, last 22:15→23:50"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "長浜→京都 1,340円",
+       "en": "Nagahama → Kyoto ¥1,340"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "電車は乗換案内で、2026年11月25日（水）・28日（土）・29日（日）と、主な便は23日（祝）も確かめた時刻です。3月にダイヤ改正があることが多いので、来春は要確認。",
+     "en": "Trains checked on a route planner for Wed 25, Sat 28 and Sun 29 November 2026, and the main trains also for Mon 23 (a holiday). Timetables often change in March, so please check for next spring."
+    },
+    "checked": "2026-11-22"
+   },
+   "caution": {
+    "ja": "晩ごはんの店は火曜休み。終電22:15（米原乗り換え）",
+    "en": "Dinner stop closed Tuesdays; last train 22:15 via Maibara"
+   },
+   "photos": [
+    "nagahamaeki-1.jpg",
+    "nagahamaeki-2.jpg"
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://www.romanbeer.com/restaurant/",
+     "head": {
+      "ja": "長濱浪漫ビールは火曜休み、予約は前日まで",
+      "en": "Roman Beer: closed Tuesdays; book by the day before"
+     },
+     "text": {
+      "ja": "当日の予約は受けていません。火曜や満席なら、長浜18:28か18:57の電車で帰って京都駅で晩ごはんを（京都拉麺小路はLO21:30）。",
+      "en": "No same-day bookings. On a Tuesday, or if it’s full, take the 18:28 or 18:57 and eat at Kyoto Station (Ramen Koji last order 21:30)."
+     }
+    },
+    {
+     "from": null,
+     "to": null,
+     "url": null,
+     "head": {
+      "ja": "長浜→京都の最終は22:15",
+      "en": "Last train from Nagahama to Kyoto: 22:15"
+     },
+     "text": {
+      "ja": "22:15発は米原で乗り換えて京都23:50着。乗り換えなしの最後は21:17発→22:28着です。三条京阪へ電車で帰るなら21:17発が最後（山科で地下鉄に乗り換えて22:50着）。2026年11月のダイヤです。",
+      "en": "The 22:15 changes at Maibara and reaches Kyoto at 23:50. The last direct train is the 21:17 (22:28). For Sanjo-Keihan by train, the 21:17 is the last (subway from Yamashina, arriving 22:50). November 2026 timetable."
+     }
+    }
+   ]
+  }
+ ]
+}
