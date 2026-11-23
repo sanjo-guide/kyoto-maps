@@ -1,11 +1,13 @@
 /* Page texts in Japanese and English.
    Toshi 個人のマップ。京都から京阪で大津へ。琵琶湖疏水と三井寺（園城寺）の桜のライトアップを歩く、春の夜のルート。
    Photos are [spot number, photo index] from data/routes/miidera.json.
-   時刻・料金は2026年11月20日に確認（三井寺・大津市・びわ湖大津観光協会の公式サイト、電車は乗換案内）。 */
+   三条17:16発 → 18:00の受付 → 大門・金堂・三重塔・観音堂 → 帰りに疏水 → 20:39発で三条へ。時刻を直すときは scripts/build_miidera_data.py も。
+   春の日程・料金は2026年春の実績、電車は2026年11月のダイヤ。2026年11月23日に確認（出典は data の sources）。
+   off… の文言は、春以外に開いたときに出る（scripts/sync_miidera.py）。 */
 window.MIIDERA_I18N = {
   ja: {
     htmlLang: 'ja',
-    docTitle: '京都から日帰り 三井寺の夜桜 Miidera MAP',
+    docTitle: '京都から春の夜に 三井寺の夜桜 Miidera MAP',
     titleMain: '三井寺の夜桜',
     titleSub: 'Miidera by night',
     howto: '使い方',
@@ -15,7 +17,12 @@ window.MIIDERA_I18N = {
     menu: 'メニュー',
     list: '一覧',
     listHead: 'スポット一覧',
-    listNote: '夕方に京都を出て、疏水の夜桜から三井寺の境内を歩く順番です。点線は順番を示す線で、実際の道ではありません。',
+    listNote: '三条京阪17:16発で18:00の受付へ。疏水の桜は、暗くなってから帰り道に見ます。昼から来る人の過ごし方は1番に。点線は順番を示す線で、実際の道ではありません。',
+    offKicker: '春の夜だけのマップ（いまは季節外）',
+    offLead: 'いまは春のライトアップをしていません。日程・料金は2026年春の実績、電車は2026年11月の時刻で、来春は要確認です。',
+    offNote: '春の夜だけのマップです。いまは春のライトアップをしていません（来春の日程は未発表・要確認）。',
+    offHow: '春のライトアップは、いまはやっていません',
+    offHowText: '2026年の回は4月12日で終わりました。来春の日程・料金は未発表なので要確認。春に行くときは、',
     back: '一覧',
     close: '閉じる',
     showAll: '全体を表示',
@@ -35,11 +42,13 @@ window.MIIDERA_I18N = {
     hours: '時間',
     fee: '料金',
     train: '電車',
+    day: '昼の拝観',
+    meal: '食事',
     closed: '休み',
     cash: '現金を用意してください',
     checked: '{d}に公式サイトや乗換案内で確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月20日',
+    checkedDate: '2026年11月23日',
     noticeHead: 'お知らせ',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -67,85 +76,136 @@ window.MIIDERA_I18N = {
     seasonHead: '季節営業の可能性',
     hintHead: 'あなたのルートでは',
     intro: {
-      "kicker": "Toshiが歩いて作った日帰りルート",
-      "h1": "水面に映る夜桜と、照らされた国宝の金堂。",
-      "lead": "京都から電車で30分の大津。明治の琵琶湖疏水の両岸に続く桜並木と、千本を超える桜が咲く三井寺（園城寺）は、春の約3週間だけ夜にライトアップされます。疏水の夜桜を見てから三井寺の大門をくぐり、国宝の金堂、三井の晩鐘、三重塔、高台の観音堂へ。",
+      "kicker": "Toshiが歩いて作った春の夜のルート",
+      "h1": "照らされた国宝の金堂と、帰り道の疏水の桜。",
+      "lead": "三条から電車で30分の大津。三井寺（園城寺）と琵琶湖疏水の桜は、春の約3週間だけ夜に照らされます（2026年は3月25日〜4月12日。来春は要確認）。18:00に大門をくぐり、金堂、三重塔、高台の観音堂へ。疏水は暗くなってから帰りに見て、21時すぎに三条へ戻ります。",
       "favLabel": "いちばんの見どころ",
       "favName": "琵琶湖疏水の夜桜",
-      "favText": "照らされた桜並木が、疏水の水面に映ります。",
+      "favText": "暗くなった水路の両岸に、照らされた桜が続きます。",
       "favPhoto": [
-        1,
+        5,
         0
       ],
-      "whoHead": "こんな人におすすめ",
+      "whoHead": "行く前に",
       "who": [
-        "京都の混雑を離れて、夜桜をゆっくり見たい人に",
-        "三条京阪から京阪で約30分（520円）",
-        "2026年のライトアップは3月25日〜4月12日、18:00〜21:30（受付21:00まで）",
-        "2027年の日程は、三井寺の発表を確認してください",
-        "夜は冷えるので上着を"
+        "三条京阪から「びわ湖浜大津」行きで約30分・520円。「六地蔵」行きは大津へ行きません",
+        "夜の拝観は2026年春の実績で1,500円。昼の800円とは別です（来春は要確認）",
+        "昼から来る人は1番へ。坂本・昼の三井寺・疏水船と、大谷のうなぎ屋で早めの晩ごはん",
+        "三条に戻るのは21時すぎ。夕方に出る人は、軽く食べてから",
+        "暗い石段があります。歩きやすい靴と上着で"
       ],
-      "dayHead": "1日の流れ（目安）",
+      "dayHead": "夜の流れ（目安）",
       "from": "",
       "day": [
         {
-          "time": "18:05",
-          "area": "大津",
-          "title": "琵琶湖疏水の夜桜",
-          "text": "京阪三井寺駅を出てすぐ。照らされた桜並木が、疏水の水面に映ります。",
+          "time": "17:16",
+          "area": "三条 → 大津",
+          "title": "地下鉄から京阪京津線へ",
+          "text": "三条京阪17:16発の「びわ湖浜大津」行き。終点で乗り換えて三井寺17:46着（土日祝17:42着）。疏水に沿って大門へ。",
+          "note": "520円",
+          "photo": [
+            5,
+            2
+          ]
+        },
+        {
+          "time": "18:00",
+          "area": "三井寺",
+          "title": "大門で夜の受付",
+          "text": "昼とは別料金。千本を超える桜の境内へ。",
+          "note": "受付21:00まで",
           "photo": [
             1,
             0
           ]
         },
         {
-          "time": "18:30",
+          "time": "18:20",
           "area": "三井寺",
-          "title": "大門から金堂・三重塔・観音堂へ",
-          "text": "大門で夜の拝観の受付。国宝の金堂と三井の晩鐘、三重塔、高台の観音堂から大津の夜景。",
-          "note": "京都へ約30分",
+          "title": "金堂で暗くなるのを待つ",
+          "text": "日没は18:12〜18:26ごろ。暗くなると参道の桜がピンクや紫に変わります。",
+          "note": "",
           "photo": [
-            3,
+            2,
+            4
+          ]
+        },
+        {
+          "time": "18:55",
+          "area": "三井寺",
+          "title": "三重塔から観音堂の夜景へ",
+          "text": "塔の影を見てから南へ。19:15に観音堂、19:40には下りはじめます。",
+          "note": "石段あり",
+          "photo": [
+            4,
             0
+          ]
+        },
+        {
+          "time": "20:00",
+          "area": "帰り道",
+          "title": "暗くなった疏水の桜",
+          "text": "大津閘門から第一トンネルへ続く並木。無料で、点灯は21:30まで（2026年春）。",
+          "note": "駅へ5分",
+          "photo": [
+            5,
+            0
+          ]
+        },
+        {
+          "time": "20:39",
+          "area": "大津 → 三条",
+          "title": "三条に戻って夜の続き",
+          "text": "三条京阪21:08着（土日祝21:07着）。祇園白川か円山公園の夜桜（2026年春は22:00まで。期間は短め）か、木屋町・先斗町で晩ごはん。",
+          "note": "最終23:17発",
+          "photo": [
+            5,
+            1
           ]
         }
       ],
-      "timeSuffix": "〜",
-      "dealsHead": "交通費のめやす",
-      "dealsLead": "電車は三条京阪→三井寺が520円、京都駅からならJRと京阪で440円。三井寺の夜の拝観は1,500円、疏水の桜は無料です。",
+      "timeSuffix": "",
+      "dealsHead": "交通費・拝観料のめやす",
+      "dealsLead": "三条京阪から片道520円。拝観料は2026年春の実績で、来春は要確認です。",
       "deals": [
         {
-          "name": "三井寺 春のライトアップ",
+          "name": "三井寺 春のライトアップ（2026年春の実績）",
           "price": "1,500円",
-          "text": "2026年は3月25日〜4月12日、18:00〜21:30（受付21:00まで）。小中高生700円。",
+          "text": "2026年は3月25日〜4月12日、18:00〜21:30（受付21:00まで）。小中高生700円。来春は要確認。",
           "url": "https://miidera1200.jp/2026lightup-spring/"
         },
         {
-          "name": "京阪（三条京阪→三井寺）",
+          "name": "三条京阪 → 三井寺",
           "price": "520円",
-          "text": "びわ湖浜大津で石山坂本線に乗り換え、約30分。京都駅からはJR湖西線で大津京、京阪に乗り換えて440円。",
-          "url": "https://transit.yahoo.co.jp/"
+          "text": "びわ湖浜大津で乗り換え。京都市役所前からは540円、京都駅からはJRと京阪で440円。",
+          "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%B8%89%E4%BA%95%E5%AF%BA&y=2026&m=12&d=02&hh=17&m1=1&m2=5&type=1&ticket=normal&expkind=1&ws=3&s=0"
+        },
+        {
+          "name": "琵琶湖疏水の夜桜（2026年春の実績）",
+          "price": "無料",
+          "text": "2026年は3月25日〜4月12日、18:00〜21:30点灯。来春は要確認。",
+          "url": "https://otsu.or.jp/tripideas/otsu-sakura/"
         }
       ],
-      "dealsNote": "大人の運賃・料金です。2026年11月20日に確認しました（三井寺・大津市・びわ湖大津観光協会の公式サイト、電車は乗換案内）。",
-      "dealsMore": "公式サイトで見る",
+      "dealsNote": "大人の運賃・料金です。2026年11月23日に確認しました（春の分は2026年の実績、電車は2026年11月のダイヤ）。",
+      "dealsMore": "詳しく見る",
       "howHead": "このマップの使い方",
       "how": [
         {
-          "title": "番号の順に",
-          "text": "1から5の順に回ると、琵琶湖疏水の夜桜から三井寺の大門へ入り、金堂・三重塔・観音堂と歩くルートになります。ライトアップは春の約3週間だけ。"
+          "title": "三条京阪17:16発で",
+          "text": "三条京阪17:16発の「びわ湖浜大津」行きに乗れば、18:00の夜の受付に間に合います。1から5の順に、お寺が先、疏水は暗くなった帰り道に。"
+        },
+        {
+          "title": "受付は21:00、点灯は21:30まで",
+          "text": "2026年春の実績です（来春は要確認）。全部見るなら19:30までに大門へ。帰りは20:39発が基本で、最終は23:17発。"
+        },
+        {
+          "title": "昼から来る人は1番へ",
+          "text": "9時台に出て坂本と昼の三井寺を回る時間割、疏水船、早めの晩ごはんが書いてあります。"
         },
         {
           "title": "番号をタップ",
-          "text": "地図の番号か「一覧」をタップすると、写真・説明・料金・おすすめの時間が見られます。"
-        },
-        {
-          "title": "夜の受付は21:00まで",
-          "text": "ライトアップは18:00から。三井寺の夜の受付は21:00で終わります（拝観は21:30まで）。疏水の桜は無料で見られます。"
-        },
-        {
-          "title": "Googleマップでルート検索",
-          "text": "各スポットの「Googleマップで開く」から、そのままルート検索できます。"
+          "text": "地図か「一覧」の番号で、注意・時間・料金。「Googleマップで開く」からルート検索もできます。"
         }
       ],
       "cta": "地図を見る",
@@ -154,7 +214,7 @@ window.MIIDERA_I18N = {
   },
   en: {
     htmlLang: 'en',
-    docTitle: 'Day trip from Kyoto: Miidera by night MAP',
+    docTitle: 'A spring evening from Kyoto: Miidera by night MAP',
     titleMain: 'Miidera by night',
     titleSub: '三井寺の夜桜',
     howto: 'How to use',
@@ -164,7 +224,12 @@ window.MIIDERA_I18N = {
     menu: 'Menu',
     list: 'Spots',
     listHead: 'All spots',
-    listNote: 'Leave Kyoto in the late afternoon: the canal cherries first, then the Miidera precinct. The dotted line shows the order, not the actual path.',
+    listNote: 'The 17:16 from Sanjo Keihan for 18:00 entry, and the canal cherries after dark on the way back. If you come earlier in the day, see stop 1. The dotted line shows the order, not the actual path.',
+    offKicker: 'Spring evenings only (out of season now)',
+    offLead: 'The spring light-up isn’t on now. Dates and fees are from spring 2026 and train times from November 2026, so please check for next spring. ',
+    offNote: 'A map for spring evenings only: the spring light-up isn’t on now, and next spring’s dates haven’t been announced. ',
+    offHow: 'The spring light-up isn’t on now',
+    offHowText: 'The 2026 run ended on 12 April, and next spring’s dates and fees are still to be announced. For spring, the plan is this. ',
     back: 'List',
     close: 'Close',
     showAll: 'Show all',
@@ -184,11 +249,13 @@ window.MIIDERA_I18N = {
     hours: 'Hours',
     fee: 'Fee',
     train: 'Train',
+    day: 'Daytime',
+    meal: 'Meals',
     closed: 'Closed',
     cash: 'Bring cash',
     checked: 'Checked on official websites and a route planner on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 20, 2026',
+    checkedDate: 'Nov 23, 2026',
     noticeHead: 'Note',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -216,85 +283,136 @@ window.MIIDERA_I18N = {
     seasonHead: 'Possibly seasonal',
     hintHead: 'On your route',
     intro: {
-      "kicker": "A day route hand-walked by Toshi",
-      "h1": "Cherries mirrored in the canal, and a lit National Treasure hall.",
-      "lead": "Otsu is 30 minutes from Kyoto by train. The cherry avenue along the Meiji-era Lake Biwa Canal and Miidera (Onjoji), with more than a thousand cherry trees, are lit up at night for only about three weeks each spring. See the canal first, then walk in through Miidera’s great gate to the National Treasure main hall, the Evening Bell of Mii, the pagoda and the Kannon hall on the hill.",
+      "kicker": "A spring evening route, hand-walked by Toshi",
+      "h1": "A lit National Treasure hall, and canal cherries on the way back.",
+      "lead": "Otsu is 30 minutes by train from Sanjo. The cherries at Miidera (Onjoji) and along the Lake Biwa Canal are lit for only about three weeks each spring (25 March – 12 April in 2026; please check for next spring). Enter at 18:00 for the main hall, the pagoda and the Kannon hall on the hill, see the canal after dark on the way back, and be in Sanjo just after 21:00.",
       "favLabel": "Highlight",
       "favName": "The canal cherries at night",
-      "favText": "The lit cherry avenue reflected in the canal.",
+      "favText": "Lit cherries along both banks of the dark waterway.",
       "favPhoto": [
-        1,
+        5,
         0
       ],
-      "whoHead": "Who it’s for",
+      "whoHead": "Before you go",
       "who": [
-        "For night cherries away from the Kyoto crowds",
-        "About 30 min from Sanjo Keihan by Keihan (¥520)",
-        "2026 illumination: 25 Mar – 12 Apr, 18:00–21:30 (last entry 21:00)",
-        "Check Miidera’s announcement for the 2027 dates",
-        "Bring a jacket; evenings are cold"
+        "About 30 min and ¥520 from Sanjo Keihan on a train for Biwako-Hamaotsu. Trains for Rokujizo don’t go to Otsu",
+        "The evening ticket was ¥1,500 in spring 2026, separate from the ¥800 day ticket (please check for next spring)",
+        "Coming earlier? See stop 1: Sakamoto, Miidera by day, the canal boat and an early eel dinner at Otani",
+        "You’re back in Sanjo after 21:00, so have a snack if you set out in the evening",
+        "There are dark stone steps: wear good shoes and bring a jacket"
       ],
-      "dayHead": "One day, roughly like this",
-      "from": "From",
+      "dayHead": "The evening, roughly like this",
+      "from": "",
       "day": [
         {
-          "time": "18:05",
-          "area": "Otsu",
-          "title": "Cherries on the Lake Biwa Canal",
-          "text": "Right outside Keihan Miidera Station: the lit cherry avenue reflected in the canal.",
+          "time": "17:16",
+          "area": "Sanjo → Otsu",
+          "title": "Subway straight onto the Keishin line",
+          "text": "The 17:16 from Sanjo Keihan for Biwako-Hamaotsu. Change there for Miidera at 17:46 (17:42 weekends and holidays), then follow the canal to the Daimon.",
+          "note": "¥520",
+          "photo": [
+            5,
+            2
+          ]
+        },
+        {
+          "time": "18:00",
+          "area": "Miidera",
+          "title": "Evening entry at the Daimon",
+          "text": "A separate ticket from the daytime, into grounds with over a thousand cherry trees.",
+          "note": "Last entry 21:00",
           "photo": [
             1,
             0
           ]
         },
         {
-          "time": "18:30",
+          "time": "18:20",
           "area": "Miidera",
-          "title": "Through the great gate to the main hall, pagoda and Kannon hall",
-          "text": "Evening entry at the Daimon. The National Treasure main hall, the Evening Bell of Mii, the pagoda and the night view of Otsu from the Kannon hall.",
-          "note": "About 30 min back to Kyoto",
+          "title": "Wait for dark at the main hall",
+          "text": "Sunset is around 18:12–18:26. As it gets dark the avenue turns pink and violet.",
+          "note": "",
           "photo": [
-            3,
+            2,
+            4
+          ]
+        },
+        {
+          "time": "18:55",
+          "area": "Miidera",
+          "title": "The pagoda, then the view from the Kannon hall",
+          "text": "See the pagoda’s silhouette, then head south: Kannon hall at 19:15, start down by 19:40.",
+          "note": "Steps",
+          "photo": [
+            4,
             0
+          ]
+        },
+        {
+          "time": "20:00",
+          "area": "On the way back",
+          "title": "The canal in the dark",
+          "text": "The avenue from the Otsu lock to the first tunnel. Free, lit until 21:30 (spring 2026).",
+          "note": "5 min to train",
+          "photo": [
+            5,
+            0
+          ]
+        },
+        {
+          "time": "20:39",
+          "area": "Otsu → Sanjo",
+          "title": "The rest of the night in Sanjo",
+          "text": "Sanjo Keihan 21:08 (21:07 weekends and holidays). Night cherries at Gion Shirakawa or Maruyama Park (until 22:00 in spring 2026, for a shorter season), or dinner around Kiyamachi and Pontocho.",
+          "note": "Last 23:17",
+          "photo": [
+            5,
+            1
           ]
         }
       ],
       "timeSuffix": "",
-      "dealsHead": "Fares",
-      "dealsLead": "Trains: Sanjo Keihan → Miidera ¥520, or ¥440 from Kyoto Station by JR and Keihan. Miidera’s evening visit is ¥1,500; the canal cherries are free.",
+      "dealsHead": "Fares and fees",
+      "dealsLead": "¥520 each way from Sanjo Keihan. Admission is as in spring 2026; please check for next spring.",
       "deals": [
         {
-          "name": "Miidera spring illumination",
+          "name": "Miidera spring illumination (spring 2026)",
           "price": "¥1,500",
-          "text": "25 Mar – 12 Apr 2026, 18:00–21:30 (last entry 21:00). ¥700 for school pupils.",
+          "text": "25 Mar – 12 Apr 2026, 18:00–21:30 (last entry 21:00). ¥700 for school pupils. Please check for next spring.",
           "url": "https://miidera1200.jp/2026lightup-spring/"
         },
         {
-          "name": "Keihan (Sanjo Keihan → Miidera)",
+          "name": "Sanjo Keihan → Miidera",
           "price": "¥520",
-          "text": "Change at Biwako-Hamaotsu to the Ishiyama-Sakamoto line, about 30 min. From Kyoto Station: JR Kosei line to Otsukyo, then Keihan, ¥440.",
-          "url": "https://transit.yahoo.co.jp/"
+          "text": "Change at Biwako-Hamaotsu. ¥540 from Kyoto Shiyakusho-mae, ¥440 from Kyoto Station by JR and Keihan.",
+          "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%B8%89%E4%BA%95%E5%AF%BA&y=2026&m=12&d=02&hh=17&m1=1&m2=5&type=1&ticket=normal&expkind=1&ws=3&s=0"
+        },
+        {
+          "name": "Canal cherries (spring 2026)",
+          "price": "Free",
+          "text": "Lit 18:00–21:30, 25 Mar – 12 Apr 2026. Please check for next spring.",
+          "url": "https://otsu.or.jp/tripideas/otsu-sakura/"
         }
       ],
-      "dealsNote": "Adult fares and fees, checked on Nov 20, 2026 (Miidera, Otsu City and Otsu tourism websites; trains on a route planner).",
-      "dealsMore": "See official site",
+      "dealsNote": "Adult fares and fees, checked on Nov 23, 2026 (spring details as held in 2026; trains on the November 2026 timetable).",
+      "dealsMore": "Details",
       "howHead": "How to use this map",
       "how": [
         {
-          "title": "In number order",
-          "text": "Follow 1 to 5: the canal cherries, then in through Miidera’s great gate to the main hall, the pagoda and the Kannon hall. The illumination runs for only about three weeks in spring."
+          "title": "Take the 17:16 from Sanjo Keihan",
+          "text": "Take the 17:16 from Sanjo Keihan for Biwako-Hamaotsu to make 18:00 entry. Follow 1 to 5: the temple first, the canal after dark on your way back."
+        },
+        {
+          "title": "Entry until 21:00, lights until 21:30",
+          "text": "As in spring 2026 (please check for next spring). Be at the Daimon by 19:30 to see it all. The 20:39 is the train back; the last is 23:17."
+        },
+        {
+          "title": "Coming earlier? See stop 1",
+          "text": "A timetable for leaving around 9:30 via Sakamoto and Miidera by day, the canal boat, and an early dinner."
         },
         {
           "title": "Tap a number",
-          "text": "Tap a number on the map, or open the list, to see photos, tips, fees and suggested times."
-        },
-        {
-          "title": "Last entry 21:00",
-          "text": "The illumination starts at 18:00. Miidera’s last evening entry is 21:00 (grounds close 21:30). The canal cherries are free."
-        },
-        {
-          "title": "Get directions",
-          "text": "Use “Open in Google Maps” at each spot for directions."
+          "text": "On the map or in the list, for warnings, times and fees. “Open in Google Maps” gives directions."
         }
       ],
       "cta": "Open the map",

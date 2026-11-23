@@ -22,7 +22,7 @@
   var WIDE = window.matchMedia('(min-width: 900px)');
   var I18N = window.MIIDERA_I18N;
   // 2026-11-20 に番号を振り直した（出町柳スタート）ので、「行った」印は新しいキーで保存し直す
-  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-miidera-intro-seen', KEY_VISITED = 'kyoto-maps-miidera-visited-v2';
+  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-miidera-intro-seen', KEY_VISITED = 'kyoto-maps-miidera-visited-v3';
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
@@ -59,6 +59,20 @@
 
   function todayJST() { return new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10); }
   function inRange(from, to) { var d = todayJST(); return (!from || d >= from) && (!to || d <= to); }
+  var md = todayJST().slice(5);     // 月-日
+  var offSeason = md < '03-20' || md > '04-15';
+  if (offSeason) {
+    ['ja', 'en'].forEach(function (l) {
+      var t = I18N[l];
+      t.intro.kicker = t.offKicker;
+      // 使い方の1つ目は、開いて最初に見える場所
+      t.intro.how[0].title = t.offHow;
+      t.intro.how[0].text = t.offHowText + t.intro.how[0].text;
+      t.intro.lead = t.offLead + t.intro.lead;
+      t.listNote = t.offNote + t.listNote;
+    });
+    document.body.classList.add('off-season');
+  }
   function fill(str, map) { return str.replace(/\{(\w+)\}/g, function (m, k) { return map[k]; }); }
   function loadVisited() {
     try { (JSON.parse(load(KEY_VISITED) || '[]') || []).forEach(function (n) { visited[n] = true; }); } catch (e) {}
@@ -537,7 +551,7 @@
     renderVisitBtn(s);
     renderPickBtn(s);
 
-    var notices = (s.notices || []).filter(function (n) { return inRange(n.from, n.to); });
+    var notices = (s.notices || []).filter(function (n) { return inRange(n.from, n.to) && (!n.offSeason || offSeason); });
     $('d-notices').innerHTML = notices.map(function (n) {
       return '<div class="notice">' + ICON.warn + '<div><b>' + esc(n.head ? n.head[lang] : t.noticeHead) + '</b><p>' + esc(n.text[lang]) + '</p>' +
         (n.url ? '<a href="' + esc(n.url) + '" target="_blank" rel="noopener noreferrer">' + esc(t.more) + '</a>' : '') + '</div></div>';
@@ -847,7 +861,7 @@
     route();
   }
 
-  fetch('../data/routes/miidera.json?v=3')
+  fetch('../data/routes/miidera.json?v=4')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

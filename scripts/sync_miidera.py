@@ -2,9 +2,14 @@
 """ルート型のテンプレート（eizan-line/）の index.html・css・app.js を miidera/ に写し、三井寺用の差分をかけ直す。
 （sync_higashiyama.py と同じ差分。data.plan がないので切り替えボタンは出ない）
 
-使い方: python3 scripts/sync_miidera.py
+使い方: python3 scripts/sync_miidera.py  （データは python3 scripts/build_miidera_data.py で先に作る）
+- コースの切り替えは作っていない（2026-11-23 の見直しで判断。夜の受付と回る順はだれでも同じ。昼から来る人は1番の文章で案内）
 - かけ直す差分:
   - データのパス、保存キー（kyoto-maps-miidera-…）、タイトルと説明文
+  - 2026-11-23 に疏水を最後に回して番号が変わったので、「行った」印の保存キーは -v3
+  - 春以外（SEASON_FROM〜SEASON_TO の外。月-日で毎年同じ）に開くと、「春のライトアップは、いまはやっていません」を
+    使い方・紹介ページ・一覧（i18n.js の offKicker・offHow・offHowText・offLead・offNote）と
+    スポットのいちばん上（data の notices の offSeason: true）に出す
   - 写真ごとのクレジット表示（data の photos の要素を {"file", "credit": {"author", "license", "page"}} にすると、
     ネットから借りた写真の上に撮影者とライセンスを出す）
   - info.verified が false のスポットは「公式サイトで確認しました」ではなく「要確認」の一文を出す
@@ -15,6 +20,7 @@
 - テンプレートの作りが変わって置き換え先が見つからないと、途中で止まる（そのときはこのスクリプトを直す）
 """
 import os, re, shutil
+SEASON_FROM, SEASON_TO = '03-20', '04-15'  # この外では「いまはやっていません」。次の日程が出たら合わせる
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 s = open(f'{R}/eizan-line/js/app.js', encoding='utf-8').read()
 
@@ -32,7 +38,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.MIIDERA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-miidera-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 5;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/miidera.json?v=3')")
+s = s.replace(m.group(0), "fetch('../data/routes/miidera.json?v=4')")
 
 # 最初から「選んで回る」
 rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
@@ -98,20 +104,43 @@ rep("""  function fitAll() {
   function fitAll(e) {
     var r = routeSpots(), f = !e && data.focus;
     if (f) r = r.filter(function (x) { return x.no >= f.first && x.no <= f.last; });""")
+# 番号が変わったので「行った」印は新しいキー
+rep("'kyoto-maps-miidera-visited-v2'", "'kyoto-maps-miidera-visited-v3'")
+
+# 春以外は「いまはやっていません」を先に出す
+rep('''  function inRange(from, to) { var d = todayJST(); return (!from || d >= from) && (!to || d <= to); }''',
+f'''  function inRange(from, to) {{ var d = todayJST(); return (!from || d >= from) && (!to || d <= to); }}
+  var md = todayJST().slice(5);     // 月-日
+  var offSeason = md < '{SEASON_FROM}' || md > '{SEASON_TO}';
+  if (offSeason) {{
+    ['ja', 'en'].forEach(function (l) {{
+      var t = I18N[l];
+      t.intro.kicker = t.offKicker;
+      // 使い方の1つ目は、開いて最初に見える場所
+      t.intro.how[0].title = t.offHow;
+      t.intro.how[0].text = t.offHowText + t.intro.how[0].text;
+      t.intro.lead = t.offLead + t.intro.lead;
+      t.listNote = t.offNote + t.listNote;
+    }});
+    document.body.classList.add('off-season');
+  }}''')
+rep("(s.notices || []).filter(function (n) { return inRange(n.from, n.to); })",
+    "(s.notices || []).filter(function (n) { return inRange(n.from, n.to) && (!n.offSeason || offSeason); })")
 app_js = s
 
 # index.html
 h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
-h = re.sub(r'<title>.*?</title>', '<title>京都から日帰り 三井寺の夜桜 Miidera MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="京都から電車で30分、大津の三井寺（園城寺）と琵琶湖疏水の桜のライトアップを歩く春の夜のルートマップ。Cherry blossoms lit up at night at Miidera and the Lake Biwa Canal in Otsu, 30 minutes from Kyoto.">', h)
+h = re.sub(r'<title>.*?</title>', '<title>京都から春の夜に 三井寺の夜桜 Miidera MAP</title>', h)
+h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="春の夜のマップ。京都の三条から電車で30分、大津の三井寺（園城寺）と琵琶湖疏水の夜桜。夜の受付に合わせた時間割、帰りの電車と最終、昼から来る人の過ごし方。A spring evening map: night cherries at Miidera and the Lake Biwa Canal in Otsu, 30 minutes from Sanjo in Kyoto, with a timetable, the trains back and ideas for coming earlier in the day.">', h)
 h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1三井寺の夜桜\2', h)
 h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Miidera by night\2', h)
-h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都から日帰り Miidera MAP\2', h)
+h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1春の夜 Miidera MAP\2', h)
 a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100}', h)
+EXTRA = {'css/style.css': 1, 'js/i18n.js': 1, 'js/app.js': 1}  # このマップだけ更新したときに上げる分（2026-11-23 の見直しで +1）
+h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 /* 三井寺: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */
@@ -120,6 +149,8 @@ css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 .l-cr { left: 10px; bottom: 10px; }
 .ph-credit { right: 10px; top: 10px; }
 .l-cr[hidden], .ph-credit[hidden] { display: none; }
+/* 三井寺: 春以外は一覧の一文を目立たせる */
+.off-season .list-note { padding: 8px 10px; background: var(--warn-soft); color: #4A3209; }
 """
 
 # ここまで来たら全部書き込む
