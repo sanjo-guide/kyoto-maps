@@ -1,7 +1,7 @@
 {
  "id": "kinosaki",
  "course": "late",
- "_note": "京都から日帰り 城崎温泉（＋竹田城跡）のルート（kinosaki/ のページ専用。形は eizan-line.json と同じ）。城崎温泉だけのコース（late。最初に開く）。京都7:32→城崎温泉9:52。地蔵湯→大谿川→一の湯→お昼→御所の湯→ロープウェイ14:10→鴻の湯、そのあと15時に開くまんだら湯・柳湯か早めの晩ごはん、18:53発で京都21:20着（16:31発で19:07着も）。2026-11-22 に「ゲストが実際に回れる1日」として見直し、竹田城跡あり／なしを2つのコース（一覧の上のボタン）に分けた。三条のあたりから京都駅までの行き方、乗り遅れたときの次の便、お昼と晩ごはん、外湯の休みの曜日を足した。写真は Toshi の写真ライブラリから選んだもの（城崎・竹田の2023〜2026年の写真。長辺1600px・位置情報なし）。京都駅の写真は城崎温泉駅で撮った特急の車両。外湯は建物の外の写真だけ。温泉寺とロープウェイは Toshi がまだ行っていない場所で、写真は Wikimedia Commons（photos の要素が {file, credit}）、文章は公式サイトの情報だけ。GUBIGABU は公式サイトで時間を確かめて店名を出した店（Toshi が行ったとは書いていない）。竹田のお昼の店は公式で時間を確かめられず、店名を出していない。info.checked は事実情報を確認した日（外湯は城崎温泉観光協会、タトゥーは Visit Kinosaki、竹田城跡は朝来市の公式ホームページ、天空バスは全但バスのサイト（2026年9〜11月のダイヤ。12月以降は未発表）、ロープウェイは公式サイトと観光協会のお知らせ、電車と地下鉄の時刻と運賃は乗換案内、京都駅の店は天橋立マップのために同じ日に確認したもの）。focus は地図を開いたときに映す範囲（京都と竹田は離れているので入れない）。このファイルは scripts/build_kinosaki_data.py で作る。",
+ "_note": "京都から日帰り 城崎温泉（＋竹田城跡）のルート（kinosaki/ のページ専用。形は eizan-line.json と同じ）。城崎温泉だけのコース（late。最初に開く）。京都7:32→城崎温泉9:52。地蔵湯→大谿川→一の湯→お昼→御所の湯→ロープウェイ14:10→鴻の湯、そのあと15時に開くまんだら湯・柳湯か早めの晩ごはん、18:53発で京都21:20着（16:31発で19:07着も）。2026-11-22 に「ゲストが実際に回れる1日」として見直し、竹田城跡あり／なしを2つのコース（一覧の上のボタン）に分けた。三条のあたりから京都駅までの行き方、乗り遅れたときの次の便、お昼と晩ごはん、外湯の休みの曜日を足した。写真は Toshi の写真ライブラリから選んだもの（城崎・竹田の2023〜2026年の写真。長辺1600px・位置情報なし）。京都駅の写真は城崎温泉駅で撮った特急の車両。外湯は建物の外の写真だけ。温泉寺とロープウェイは Toshi がまだ行っていない場所で、写真は Wikimedia Commons（photos の要素が {file, credit}）、文章は公式サイトの情報だけ。GUBIGABU は公式サイトで時間を確かめて店名を出した店（Toshi が行ったとは書いていない）。竹田のお昼の店は公式で時間を確かめられず、店名を出していない。info.checked は事実情報を確認した日（外湯は城崎温泉観光協会、タトゥーは Visit Kinosaki、竹田城跡は朝来市の公式ホームページ、天空バスは全但バスのサイト（2026年9〜11月のダイヤ。12月以降は11月24日の時点で未発表）、温泉寺は温泉寺の公式サイトと Visit Kinosaki、ロープウェイは公式サイトと観光協会のお知らせ、外湯の支払いは Visit Kinosaki のよくある質問、電車と地下鉄の時刻と運賃は乗換案内、京都駅の店は天橋立マップのために同じ日に確認したもの）。focus は地図を開いたときに映す範囲（京都と竹田は離れているので入れない）。このファイルは scripts/build_kinosaki_data.py で作る。",
  "sections": [
   {
    "first": 1,
@@ -249,6 +249,17 @@
      }
     },
     {
+     "kind": "info",
+     "label": {
+      "ja": "Visit Kinosaki よくある質問（支払い・タトゥー。英語）",
+      "en": "Visit Kinosaki FAQ (payment, tattoos)"
+     },
+     "url": {
+      "ja": "https://visitkinosaki.com/plan/visitor-info/faq/",
+      "en": "https://visitkinosaki.com/plan/visitor-info/faq/"
+     }
+    },
+    {
      "kind": "timetable",
      "label": {
       "ja": "JRおでかけネット（時刻表）",
@@ -301,10 +312,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "外湯の時間・休み・料金は城崎温泉観光協会のサイト、タトゥーの扱いは公式観光サイト Visit Kinosaki で確認しました。祝日や年末年始は休みが変わることがあります。",
-     "en": "Hours, closed days and prices checked on the Kinosaki Onsen Tourism Association website; the tattoo policy on Visit Kinosaki. Closed days can shift around holidays and New Year."
+     "ja": "外湯の時間・休み・料金は城崎温泉観光協会のサイト、タトゥーの扱いと支払い（現金だけの所が多い）は公式観光サイト Visit Kinosaki で確認しました。休みの日が祝日に重なったときの扱いは公式サイトに書かれていません（要確認）。年末年始の営業は観光協会のお知らせに出ます（2026〜27年の分は11月24日の時点で未発表）。",
+     "en": "Hours, closed days and prices checked on the Kinosaki Onsen Tourism Association website; the tattoo policy and payment (many places cash-only) on Visit Kinosaki. The official pages don’t say what happens when a closed day falls on a public holiday (please check). New Year opening is announced in the association’s news (not yet published for 2026–27 on 24 November)."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "station-1.jpg",
@@ -396,10 +407,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe."
+     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "jizo-1.jpg",
@@ -563,10 +574,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe."
+     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "ichi-1.jpg",
@@ -659,10 +670,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe."
+     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "gosho-1.jpg",
@@ -695,8 +706,8 @@
    "lat": 35.62524,
    "lng": 134.80382,
    "text": {
-    "ja": "温泉寺（おんせんじ）と城崎温泉ロープウェイ\n\n鴻の湯のとなりの薬師公園に乗り場があります。毎時10分・30分・50分発で、山頂駅まで約7分。展望台から温泉街の屋根と円山川、その先の海まで見えます。山頂にカフェがあります。\n\n11月1日〜1月31日は、上りの最終が16:30、下りの最終が16:50です（ふだんは16:50と17:10）。第2・第4木曜は休み。\n\n途中の温泉寺駅の前が温泉寺の本堂。約1300年前に城崎温泉を開いた道智上人（どうちしょうにん）のお寺で、昔は城崎に着いたらまずここにお参りしてから外湯に入ったそうです（温泉寺の公式サイトより）。下りの便を温泉寺駅で降りて、お参りしてから次の便で下ります。\n\n御所の湯を出て14:10の便で山頂へ。山頂で30分、温泉寺で20〜30分、15:30ごろに下りて、となりの鴻の湯へ。\n\n山頂駅から温泉寺駅までを歩く道は山道です。下駄では歩けません。\n\nおすすめ訪問時間：14:10〜15:30",
-    "en": "Onsen-ji Temple and the Kinosaki Ropeway\n\nThe station is in Yakushi Park, next to Kou-no-yu. Cars leave at :10, :30 and :50 and take about 7 minutes to the top, where the lookout shows the roofs of the town, the Maruyama River and the sea beyond. There is a café at the top.\n\nFrom 1 November to 31 January the last car up is at 16:30 and the last one down at 16:50 (normally 16:50 and 17:10). Closed on the 2nd and 4th Thursdays.\n\nThe middle station, Onsenji, is in front of the temple’s main hall. Onsen-ji is the temple of Dochi Shonin, the monk who founded Kinosaki Onsen about 1,300 years ago; visitors used to pray here first before going to the baths (from the temple’s website). On the way down, get off at Onsenji station, visit, and take the next car.\n\nFrom Gosho-no-yu, take the 14:10 car to the top. Allow 30 minutes at the summit and 20–30 at the temple, coming down around 15:30, then Kou-no-yu next door.\n\nThe path between the top station and Onsenji station is a mountain trail: not for geta.\n\nRecommended visit time: 14:10〜15:30"
+    "ja": "温泉寺（おんせんじ）と城崎温泉ロープウェイ\n\n鴻の湯のとなりの薬師公園に乗り場があります。毎時10分・30分・50分発で、山頂駅まで約7分。展望台から温泉街の屋根と円山川、その先の海まで見えます。山頂にカフェがあります。\n\n11月1日〜1月31日は、上りの最終が16:30、下りの最終が16:50です（ふだんは16:50と17:10）。第2・第4木曜は休み。\n\n途中の温泉寺駅の前が温泉寺の本堂。約1300年前に城崎温泉を開いた道智上人（どうちしょうにん）のお寺で、昔は城崎に着いたらまずここにお参りしてから外湯に入ったそうです（温泉寺の公式サイトより）。下りの便を温泉寺駅で降りて、お参りしてから次の便で下ります。\n\n御所の湯を出て14:10の便で山頂へ。山頂で30分、温泉寺で20〜30分、15:30ごろに下りて、となりの鴻の湯へ。\n\n山頂駅から温泉寺駅までの遊歩道は山道で、温泉寺の参道は石段が続きます。下駄やヒールの靴では気をつけてください（ロープウェイ公式サイトの注意）。\n\nおすすめ訪問時間：14:10〜15:30",
+    "en": "Onsen-ji Temple and the Kinosaki Ropeway\n\nThe station is in Yakushi Park, next to Kou-no-yu. Cars leave at :10, :30 and :50 and take about 7 minutes to the top, where the lookout shows the roofs of the town, the Maruyama River and the sea beyond. There is a café at the top.\n\nFrom 1 November to 31 January the last car up is at 16:30 and the last one down at 16:50 (normally 16:50 and 17:10). Closed on the 2nd and 4th Thursdays.\n\nThe middle station, Onsenji, is in front of the temple’s main hall. Onsen-ji is the temple of Dochi Shonin, the monk who founded Kinosaki Onsen about 1,300 years ago; visitors used to pray here first before going to the baths (from the temple’s website). On the way down, get off at Onsenji station, visit, and take the next car.\n\nFrom Gosho-no-yu, take the 14:10 car to the top. Allow 30 minutes at the summit and 20–30 at the temple, coming down around 15:30, then Kou-no-yu next door.\n\nThe path between the top station and Onsenji station is a mountain trail, and the temple approach has many stone steps. Take care in geta or heels (a warning on the ropeway’s official site).\n\nRecommended visit time: 14:10〜15:30"
    },
    "gmaps": [
     {
@@ -739,6 +750,17 @@
      "url": {
       "ja": "http://www.kinosaki-onsenji.jp/visit/seeing.html",
       "en": "http://www.kinosaki-onsenji.jp/visit/seeing.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "Visit Kinosaki（温泉寺。英語）",
+      "en": "Visit Kinosaki: Onsen-ji"
+     },
+     "url": {
+      "ja": "https://visitkinosaki.com/things-to-do/onsen-ji-temple/",
+      "en": "https://visitkinosaki.com/things-to-do/onsen-ji-temple/"
      }
     }
    ],
@@ -800,10 +822,10 @@
      }
     ],
     "cash": false,
-    "checked": "2026-11-22",
+    "checked": "2026-11-24",
     "tip": {
-     "ja": "ロープウェイの時刻・料金・休みは公式サイトと、城崎温泉観光協会の「冬期営業時間のお知らせ」（2026年10月20日）から。温泉寺の時間は温泉寺の公式サイトからですが、案内が古いので変わっているかもしれません（要確認）。",
-     "en": "Ropeway times, fares and closed days are from its official site and the tourism association’s winter-hours notice (20 October 2026). Onsen-ji’s hours are from the temple’s website, which is old, so they may have changed (please check)."
+     "ja": "ロープウェイの時刻・料金・休みは公式サイトと、城崎温泉観光協会の「冬期営業時間のお知らせ」（2026年10月20日）から。温泉寺の拝観時間と拝観料は、温泉寺の公式サイトと公式観光サイト Visit Kinosaki（2025年4月更新）で確かめました。",
+     "en": "Ropeway times, fares and closed days are from its official site and the tourism association’s winter-hours notice (20 October 2026). Onsen-ji’s hours and fee are from the temple’s website and Visit Kinosaki, the official tourism site (updated April 2025)."
     }
    },
    "photos": [
@@ -923,10 +945,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe."
+     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "kou-1.jpg"
@@ -1014,10 +1036,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe."
+     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "mandara-1.jpg",
@@ -1106,10 +1128,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe."
+     "ja": "タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+     "en": "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "yanagi-1.jpg",
@@ -1204,7 +1226,7 @@
      "ja": "GUBIGABU の時間と休みは公式サイトで確認しました。",
      "en": "GUBIGABU’s hours and closed days checked on its official site."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "night-1.jpg",
