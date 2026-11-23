@@ -5,6 +5,7 @@
    intro はどちらのコースにも共通の項目で、コースで変わる項目は introFor[コース] が app.js で上書きされる（scripts/sync_higashiomi.py）。
    湖東三山は日付でも変わる：11/30から introFor.sanzanTaxi、12/7からはさらに introFor.sanzanWinter（教林坊なし）が上書きされ、
    コースのボタンの文字も courseSanzanTaxi になる（日付は scripts/sync_higashiomi.py の TAXI_FROM・WINTER_FROM）。
+   太郎坊宮・永源寺は12/7から introFor.eigenjiWinter が上書きされる（教林坊なし、京都駅18:12着）。
    写真は [スポットの id, 写真の番号]（コースで番号が変わるため）。
    西明寺と金剛輪寺は Toshi がまだ行っていない場所（写真は Wikimedia Commons、情報は公式サイトと湖東三山のチラシ）。
    時刻・料金は2026年11月22日に確認（各寺社の公式サイト・湖東三山のチラシ・近江鉄道、電車とバスは乗換案内。出典はデータの sources）。 */
@@ -165,6 +166,41 @@ window.HIGASHIOMI_I18N = {
           { title: 'コースを選ぶ', text: '一覧の上のボタンで「太郎坊宮・永源寺」か「湖東三山」を選びます。コースによって、時間割と番号が変わります。' },
           { title: '行きたい場所を入れ替える', text: '最初は三山が選んであります。教林坊を足すと、帰りに夜のライトアップへ寄る行き方が出ます。' },
           { title: '番号をタップ', text: '写真・説明・料金・シャトルバスの時刻が見られます。入口で困ること（現金だけ・予約・受付の時間）は、いちばん上の注意に。' },
+          { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。' }
+        ]
+      },
+      eigenjiWinter: {
+        h1: '742段の石段の上の神社から、渓谷の禅寺へ。',
+        lead: '京都駅を10:00の新快速で出て、近江鉄道で太郎坊宮へ。とがった山の中腹の神社から近江の平野を見下ろしたら、バスで愛知川の渓谷の永源寺へ。持ってきたお昼を食べて、拝観は閉まる16:00まで。京都駅に18:12に戻って、夜は街なかで。',
+        favText: '渓谷に建つ禅寺の、大きな山門と法堂。',
+        favPhoto: ['eigenji', 3],
+        who: [
+          '京都駅10:00発の新快速と近江鉄道で、太郎坊宮前に10:57（1,070円）。三条のあたりからは、地下鉄で京都駅まで約15分',
+          '太郎坊宮は742段の石段。歩きやすい靴で',
+          '紅葉の時期のあと、永源寺のまわりで食事の店が開いているかは要確認。お昼は京都駅で買って持っていく',
+          '永源寺の拝観は16:00まで',
+          '教林坊の夜のライトアップは12月6日で終わったので、このコースには入っていません',
+          '近江鉄道は2026年3月から ICOCA などの交通系ICカードで乗れる',
+          '湖東三山のうち西明寺・金剛輪寺は、上の「湖東三山」のコースで（予約制の乗合タクシー）'
+        ],
+        day: [
+          { time: '10:00', area: '京都駅 → 近江八幡', title: 'JRの新快速で近江八幡へ', text: '京都駅10:00発の新快速「近江塩津」行きで、乗り換えなし。近江八幡に10:35（土日祝10:34）。10:42の近江鉄道に乗り換えて、太郎坊宮前に10:57。', photo: ['omihachimaneki', 1] },
+          { time: '11:15', area: '太郎坊宮', title: '石段を登って、勝運の神社へ', text: '742段の石段と夫婦岩を通って本殿へ。近江の平野が見渡せます。12:41か12:59の電車で八日市へ。', photo: ['taroubou', 5] },
+          { time: '13:45', area: '永源寺', title: 'お昼のあと、山門と法堂へ', text: '八日市13:15のバスで永源寺へ。持ってきたお昼を食べてから、閉まる16:00までゆっくりお参り。', photo: ['eigenji', 1] },
+          { time: '16:24', area: '永源寺 → 京都駅', title: 'バスと近江鉄道、新快速で京都へ', text: '永源寺前16:24（土日祝16:25）のバス、八日市17:09の近江鉄道、近江八幡17:36の新快速と乗り継ぎます。', photo: ['eigenji', 3] },
+          { time: '18:12', area: '京都駅', title: '京都に戻って、夜は街なか', text: '京都駅18:12着。三条・木屋町・先斗町へは地下鉄で約15分、18:30ごろから21〜22時まで晩ごはんを楽しめます。', photo: ['eigenji', 9] }
+        ],
+        dealsLead: '京都駅から回って京都駅へ帰ると、電車とバスは合わせて3,710円（京都駅→太郎坊宮前1,070円、太郎坊宮前→八日市160円、八日市→永源寺前のバス670円、永源寺前→京都駅1,810円）。永源寺の参拝志納料600円は別です。',
+        deals: [
+          { name: '京都駅 → 太郎坊宮前', price: '1,070円', text: 'JR680円＋近江鉄道390円。三条のあたりからは、地下鉄で京都駅まで260円（烏丸御池で乗り換え）。', url: 'https://transit.yahoo.co.jp/' },
+          { name: '八日市駅 → 永源寺前（近江鉄道バス）', price: '670円', text: '八日市駅1番のりば13:15発。', url: 'https://www.ohmitetudo.co.jp/bus/access/eigenji/' },
+          { name: '永源寺前 → 京都駅', price: '1,810円', text: 'バス670円＋近江鉄道460円＋JR680円。永源寺前16:24（土日祝16:25）発。', url: 'https://transit.yahoo.co.jp/' }
+        ],
+        dealsNote: '大人の運賃・料金です。2026年11月22日に、永源寺の公式サイト、電車とバスは乗換案内（12月のダイヤ）で確認しました。',
+        how: [
+          { title: 'コースを選ぶ', text: '一覧の上のボタンで「太郎坊宮・永源寺」か「湖東三山」を選びます。コースによって、時間割と番号が変わります。' },
+          { title: '行きたい場所を入れ替える', text: '最初は太郎坊宮と永源寺が選んであります。どちらかを外すと、行き方などの一言が出ます。' },
+          { title: '番号をタップ', text: '写真・説明・料金・電車とバスの時刻が見られます。入口で困ること（お昼・閉まる時間）は、いちばん上の注意に。' },
           { title: 'Googleマップでルート検索', text: '各スポットの「Googleマップで開く」から、そのままルート検索できます。' }
         ]
       },
@@ -371,6 +407,41 @@ window.HIGASHIOMI_I18N = {
           { title: 'Choose a course', text: 'Use the buttons above the list to pick “Taroubou-gu & Eigenji” or “Koto Sanzan temples”. The timetable and numbering change with the course.' },
           { title: 'Swap places in and out', text: 'The three temples are selected at first. Add Kyorinbo to see how to stop at its evening illumination on the way home.' },
           { title: 'Tap a number', text: 'See photos, tips, fees and shuttle times. Anything that could stop you at the door (cash only, booking, last entry) is in the note at the top.' },
+          { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions.' }
+        ]
+      },
+      eigenjiWinter: {
+        h1: 'From a shrine above 742 stone steps to a Zen temple in the valley.',
+        lead: 'Leave Kyoto Station on the 10:00 Special Rapid and change to the Ohmi Railway for Taroubou-gu, a shrine halfway up a pointed peak with the Omi plain below. Then a bus into the Echigawa valley to Eigenji: eat the lunch you brought and visit until it closes at 16:00. Back at Kyoto Station at 18:12 for an evening in town.',
+        favText: 'A great gate and lecture hall in a river valley.',
+        favPhoto: ['eigenji', 3],
+        who: [
+          'The 10:00 Special Rapid from Kyoto Station and the Ohmi Railway get you to Taroubougu-mae at 10:57 (¥1,070). From around Sanjo, the subway to Kyoto Station takes about 15 minutes',
+          'Taroubou-gu means 742 stone steps; wear good shoes',
+          'Places to eat around Eigenji after the leaf season are not confirmed. Buy lunch at Kyoto Station and bring it',
+          'Eigenji closes at 16:00',
+          'The Kyorinbo evening illumination ended on 6 December, so it isn’t on this course',
+          'Since March 2026 the Ohmi Railway takes ICOCA and other transport IC cards',
+          'For Saimyoji and Kongorinji, switch to the “Koto Sanzan” course above (bookable shared taxi)'
+        ],
+        day: [
+          { time: '10:00', area: 'Kyoto Sta. → Omi-Hachiman', title: 'JR Special Rapid to Omi-Hachiman', text: 'The 10:00 Special Rapid for Omi-Shiotsu goes direct: Omi-Hachiman at 10:35 (10:34 at weekends). Change to the 10:42 Ohmi Railway; Taroubougu-mae at 10:57.', photo: ['omihachimaneki', 1] },
+          { time: '11:15', area: 'Taroubou-gu', title: 'Up the steps to the shrine of victory', text: '742 steps and the Meoto-iwa rocks to the main hall, with the Omi plain below. Take the 12:41 or 12:59 train to Yokaichi.', photo: ['taroubou', 5] },
+          { time: '13:45', area: 'Eigenji', title: 'Lunch, then the gate and lecture hall', text: 'The 13:15 bus from Yokaichi. Eat the lunch you brought, then take your time until the temple closes at 16:00.', photo: ['eigenji', 1] },
+          { time: '16:24', area: 'Eigenji → Kyoto Sta.', title: 'Bus, Ohmi Railway and Special Rapid', text: 'The 16:24 bus (16:25 at weekends) from Eigenji-mae connects with the 17:09 Ohmi Railway from Yokaichi and the 17:36 Special Rapid from Omi-Hachiman.', photo: ['eigenji', 3] },
+          { time: '18:12', area: 'Kyoto Sta.', title: 'An evening in town', text: 'Kyoto Station at 18:12. Sanjo, Kiyamachi and Pontocho are about 15 min by subway, so dinner can run from about 18:30 until 21:00–22:00.', photo: ['eigenji', 9] }
+        ],
+        dealsLead: 'From Kyoto Station and back, trains and buses come to ¥3,710 (Kyoto Station → Taroubougu-mae ¥1,070, Taroubougu-mae → Yokaichi ¥160, bus to Eigenji ¥670, Eigenji-mae → Kyoto Station ¥1,810). Eigenji admission of ¥600 is extra.',
+        deals: [
+          { name: 'Kyoto Station → Taroubougu-mae', price: '¥1,070', text: 'JR ¥680 + Ohmi Railway ¥390. From around Sanjo, the subway to Kyoto Station is ¥260 (change at Karasuma Oike).', url: 'https://transit.yahoo.co.jp/' },
+          { name: 'Yokaichi → Eigenji-mae (Ohmi bus)', price: '¥670', text: '13:15 from stop 1 at Yokaichi Station.', url: 'https://www.ohmitetudo.co.jp/bus/access/eigenji/' },
+          { name: 'Eigenji-mae → Kyoto Station', price: '¥1,810', text: 'Bus ¥670 + Ohmi Railway ¥460 + JR ¥680. Leave Eigenji-mae at 16:24 (16:25 at weekends).', url: 'https://transit.yahoo.co.jp/' }
+        ],
+        dealsNote: 'Adult fares and fees, checked on Nov 22, 2026 (the Eigenji website, and a route planner for December trains and buses).',
+        how: [
+          { title: 'Choose a course', text: 'Use the buttons above the list to pick “Taroubou-gu & Eigenji” or “Koto Sanzan temples”. The timetable and numbering change with the course.' },
+          { title: 'Swap places in and out', text: 'Taroubou-gu and Eigenji are selected at first. Drop one and a note on getting around appears.' },
+          { title: 'Tap a number', text: 'See photos, tips, fees and train and bus times. Anything that could stop you at the door (lunch, closing time) is in the note at the top.' },
           { title: 'Get directions', text: 'Use “Open in Google Maps” at each spot for directions.' }
         ]
       },

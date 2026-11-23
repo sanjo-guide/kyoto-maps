@@ -15,6 +15,10 @@
   11/30からは番号の順が変わるので、「行った」印・回り方・選んだ場所の保存キーに -off を付ける（シャトルバスの日の選択を持ちこさない）。
   コースのボタンの文字は、どちらのコースを開いていても courseSanzanTaxi に替わる。
   次の秋のシャトルバスが決まったら、ここの日付と build・i18n.js を直す
+- 太郎坊宮・永源寺も日付で替わる:
+    12/6まで             data/routes/higashiomi.json           教林坊のライトアップまで
+    WINTER_FROM（12/7）から  higashiomi-eigenji-winter.json 教林坊なしで京都駅18:12着。紹介ページは introFor.eigenjiWinter を上書き
+  番号1〜4は同じなので「行った」印はそのまま。回り方・選んだ場所の保存キーにだけ -off を付ける
 - 「行った」印・選んだ場所の保存キーは、コースごとに kyoto-maps-higashiomi-…-eigenji / -sanzan
   （2026-11-22 にコースを分けて番号が変わったので、前のキーとは別になる）
 - higashiomi/js/i18n.js はこのマップ専用なので触らない。テンプレートに新しい文言キーが増えたら、i18n.js に手で足す
@@ -23,13 +27,13 @@
 import os, runpy
 
 TAXI_FROM = '2026-11-30'     # シャトルバスが終わった次の日
-WINTER_FROM = '2026-12-07'   # 教林坊のライトアップが終わった次の日
+WINTER_FROM = '2026-12-07'   # 教林坊のライトアップが終わった次の日（両方のコース）
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = (dict(
-    id='higashiomi', i18n='HIGASHIOMI_I18N', count=5, data_v=6, bump=105,
+    id='higashiomi', i18n='HIGASHIOMI_I18N', count=5, data_v=7, bump=106,
     head='湖東の紅葉（太郎坊宮・永源寺・湖東三山・教林坊）',
     title='京都から日帰り 湖東の紅葉｜太郎坊宮・永源寺・湖東三山・教林坊 Higashiomi MAP',
-    desc='京都駅から日帰りで湖東の紅葉へ。太郎坊宮と永源寺を回って教林坊の夜のライトアップで締めるコースと、彦根からの紅葉シャトルバス（2026年11月29日まで。その後は乗合タクシーで西明寺と金剛輪寺）で湖東三山を回るコースを選べる、時刻つきの1日マップ。A timed day trip from Kyoto Station to the autumn leaves east of Lake Biwa: Taroubou-gu, Eigenji and the Kyorinbo illumination, or the Koto Sanzan temples by shuttle bus from Hikone (until 29 Nov 2026; shared taxi to two of them afterwards).',
+    desc='京都駅から日帰りで湖東の紅葉へ。太郎坊宮と永源寺を回って教林坊の夜のライトアップ（2026年12月6日まで）で締めるコースと、彦根からの紅葉シャトルバス（2026年11月29日まで。その後は乗合タクシーで西明寺と金剛輪寺）で湖東三山を回るコースを選べる、時刻つきの1日マップ。A timed day trip from Kyoto Station to the autumn leaves east of Lake Biwa: Taroubou-gu, Eigenji and the Kyorinbo illumination (until 6 Dec 2026), or the Koto Sanzan temples by shuttle bus from Hikone (until 29 Nov 2026; shared taxi to two of them afterwards).',
     main='湖東の紅葉', alt='Autumn in Higashiomi', sub='京都から日帰り Higashiomi MAP'))
 runpy.run_path(os.path.join(R, 'scripts', 'sync_higashiyama.py'), init_globals={'CFG': CFG})
 
@@ -57,19 +61,22 @@ patch(f'{R}/higashiomi/js/app.js', [
     ("  course.file = 'higashiomi' + (course.id === 'early' ? '-early' : '') + '.json';", "  course.file = 'higashiomi' + (course.id === 'sanzan' ? '-sanzan' : '') + '.json';"),
     # 11/30からの湖東三山（日付で替わる）
     ("  // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする\n",
-     f"""  // シャトルバスが終わったあと（scripts/sync_higashiomi.py の TAXI_FROM・WINTER_FROM）は、湖東三山のデータと紹介ページを替える
+     f"""  // シャトルバス・教林坊のライトアップが終わったあと（scripts/sync_higashiomi.py の TAXI_FROM・WINTER_FROM）は、データと紹介ページを替える
   var season = todayJST() >= '{WINTER_FROM}' ? 'winter' : todayJST() >= '{TAXI_FROM}' ? 'taxi' : '';
-  var sanzanOff = !!season && course.id === 'sanzan';
+  var sanzanOff = !!season && course.id === 'sanzan', eigenjiOff = season === 'winter' && course.id === 'eigenji';
   if (sanzanOff) {{
     course.file = 'higashiomi-sanzan-' + season + '.json';
     KEY_VISITED += '-off'; KEY_MODE += '-off'; KEY_PICKS += '-off';
+  }} else if (eigenjiOff) {{
+    course.file = 'higashiomi-eigenji-winter.json';
+    KEY_MODE += '-off'; KEY_PICKS += '-off';
   }}
   // 紹介ページ: i18n.js の introFor[コース] に書いてある項目で intro を上書きする
 """),
     ("    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });\n",
      """    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
     if (season && I18N[l].courseSanzanTaxi) I18N[l].courseSanzan = I18N[l].courseSanzanTaxi;
-    (sanzanOff ? (season === 'winter' ? ['sanzanTaxi', 'sanzanWinter'] : ['sanzanTaxi']) : []).forEach(function (name) {
+    (sanzanOff ? (season === 'winter' ? ['sanzanTaxi', 'sanzanWinter'] : ['sanzanTaxi']) : eigenjiOff ? ['eigenjiWinter'] : []).forEach(function (name) {
       var w = I18N[l].introFor && I18N[l].introFor[name];
       if (w) Object.keys(w).forEach(function (k) { I18N[l].intro[k] = w[k]; });
     });

@@ -1,0 +1,670 @@
+{
+ "id": "higashiomi",
+ "course": "eigenji",
+ "_note": "京都から日帰り 湖東の紅葉、コース「太郎坊宮・永源寺」の12月7日から（教林坊のライトアップが終わったあと。scripts/sync_higashiomi.py の WINTER_FROM で読み分ける）。京都駅10:00→太郎坊宮前10:57→太郎坊宮→八日市13:15のバスで永源寺（お昼は持参）→16:24（土日祝16:25）のバス→近江八幡17:36の新快速→京都駅18:12→夜は街なか。番号1〜4は12月6日までと同じ。このファイルは scripts/build_higashiomi_data.py で作る。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "area": {
+    "ja": "近江八幡・太郎坊宮",
+    "en": "Omi-Hachiman & Taroubou-gu"
+   },
+   "title": {
+    "ja": "742段の石段の上へ",
+    "en": "Up 742 stone steps"
+   }
+  },
+  {
+   "first": 4,
+   "last": 4,
+   "area": {
+    "ja": "永源寺",
+    "en": "Eigenji"
+   },
+   "title": {
+    "ja": "渓谷の禅寺で16:00まで",
+    "en": "A valley Zen temple until 16:00"
+   }
+  }
+ ],
+ "photoBase": "../images/higashiomi/",
+ "plan": {
+  "_note": "「選んで回る」の設定。近江八幡駅はいつも入る。太郎坊宮前駅は太郎坊宮を選ぶと入る。defaultPicks は12/7からの時間割どおりの2か所（全部）。",
+  "defaultMode": "pick",
+  "picks": [
+   3,
+   4
+  ],
+  "defaultPicks": [
+   3,
+   4
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "2": {
+    "any": [
+     3
+    ]
+   }
+  },
+  "hints": [
+   {
+    "spot": 1,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "太郎坊宮に寄らない日は、京都駅10:00発の新快速で近江八幡へ。10:42発の近江鉄道を八日市（ようかいち）まで乗り、駅の1番のりば11:15発のバスで永源寺前に11:44（土日祝11:43）着。京都駅から1,810円です。拝観は16:00までなので、ゆっくり回れます。",
+     "en": "Skipping Taroubou-gu? Take the 10:00 Special Rapid from Kyoto Station to Omi-Hachiman, the 10:42 Ohmi Railway to Yokaichi and the 11:15 bus from stop 1, reaching Eigenji-mae at 11:44 (11:43 at weekends), ¥1,810 from Kyoto Station. The temple is open until 16:00, so take your time."
+    }
+   },
+   {
+    "spot": 3,
+    "rule": {
+     "any": [
+      3
+     ],
+     "none": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "永源寺に行かない日は、太郎坊宮のあと近江鉄道で近江八幡へ戻り、八幡堀のあたりを歩いてお昼に（近江八幡のマップを見てください）。帰りは近江八幡17:36発の新快速で京都駅に18:12着（680円）。",
+     "en": "Not going to Eigenji? After the shrine, take the Ohmi Railway back to Omi-Hachiman, walk the canal district and have lunch there (see our Omihachiman map). The 17:36 Special Rapid from Omi-Hachiman reaches Kyoto Station at 18:12 (¥680)."
+    }
+   }
+  ]
+ },
+ "sources": [
+  {
+   "what": "乗換案内 京都→太郎坊宮前 12月7日：10:00→近江八幡10:35/10:42→10:57（1,070円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&y=2026&m=12&d=07&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→太郎坊宮前 12月12日：10:00→近江八幡10:34/10:42→10:57（1,070円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&y=2026&m=12&d=12&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→太郎坊宮前 12月13日：10:00→10:57（1,070円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&y=2026&m=12&d=13&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→京都 12月7日：9:30→9:47（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=07&hh=09&m1=2&m2=9&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→京都 12月12日：9:32→9:45（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=12&hh=09&m1=3&m2=1&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→近江八幡 12月7日：9:44→山科10:06→10:35（850円）。びわ湖浜大津行は980円",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&y=2026&m=12&d=07&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 三条京阪→近江八幡 12月12日：9:43→山科10:05→10:34（850円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&to=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&y=2026&m=12&d=12&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 太郎坊宮前→八日市 12月7日：12:41→12:45、12:59→13:04（160円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&to=%E5%85%AB%E6%97%A5%E5%B8%82&y=2026&m=12&d=07&hh=12&m1=3&m2=8&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 太郎坊宮前→八日市 12月12日：12:41→12:45、12:59→13:04（160円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D&to=%E5%85%AB%E6%97%A5%E5%B8%82&y=2026&m=12&d=12&hh=12&m1=3&m2=8&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 八日市→永源寺前 12月7日：バス13:15→13:44（670円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%85%AB%E6%97%A5%E5%B8%82&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=12&d=07&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 八日市→永源寺前 12月12日：バス13:15→13:43（670円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%85%AB%E6%97%A5%E5%B8%82&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=12&d=12&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 八日市→永源寺前 12月13日：バス13:15→13:43（670円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%85%AB%E6%97%A5%E5%B8%82&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=12&d=13&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 八日市→永源寺前 12月30日：バス13:15→13:43（670円）。年末は土日祝の時刻",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%85%AB%E6%97%A5%E5%B8%82&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=12&d=30&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→永源寺前 12月7日：10:00→八日市駅11:15のバス→11:44（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=12&d=07&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→永源寺前 12月12日：10:00→八日市駅11:15のバス→11:43（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&y=2026&m=12&d=12&hh=09&m1=5&m2=5&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 12月7日：16:24→16:59、八日市17:09→近江八幡17:28/17:36→18:12（1,810円）。15:56発でも18:12",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=07&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 12月12日：16:25→17:00、八日市17:09→近江八幡17:28/17:36→18:12（1,810円）。15:56発でも18:12",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=12&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 12月13日：16:25→18:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=13&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 12月30日：16:25→18:12（1,810円）。年末は土日祝の時刻",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=30&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 12月31日：16:25→18:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=31&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 1月1日：16:25→18:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2027&m=01&d=01&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 永源寺前→京都 1月13日：16:24→18:12（1,810円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B0%B8%E6%BA%90%E5%AF%BA%E5%89%8D%2F%E8%BF%91%E6%B1%9F%E9%89%84%E9%81%93%E3%83%90%E3%82%B9%E6%B9%96%E5%9B%BD%E3%83%90%E3%82%B9&to=%E4%BA%AC%E9%83%BD&y=2027&m=01&d=13&hh=15&m1=5&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 近江八幡→京都 12月7日：17:36新快速→18:12（680円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=07&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 近江八幡→京都 12月12日：17:36新快速→18:12（680円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1&to=%E4%BA%AC%E9%83%BD&y=2026&m=12&d=12&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→三条京阪 12月7日：地下鉄18:13→18:28（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&y=2026&m=12&d=07&hh=18&m1=1&m2=2&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "乗換案内 京都→三条京阪 12月12日：地下鉄18:15→18:28（260円）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%AC%E9%83%BD&to=%E4%B8%89%E6%9D%A1%E4%BA%AC%E9%98%AA&y=2026&m=12&d=12&hh=18&m1=1&m2=2&type=1&ticket=ic&expkind=1&userpass=1&ws=3&s=0&al=0&shin=0&ex=0&hb=1&lb=1&sr=1",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江鉄道バス 永源寺線（2024年4月1日改正の時刻表PDF）：八日市駅→永源寺 平日 …11:15・12:15・13:15・13:40・14:40… 土日祝 …11:15・12:15・13:15・14:15… 永源寺→八日市駅 平日 …15:26・15:56・16:24・16:54・17:22・17:54・18:24・18:54・19:27・19:52・20:27、土日祝 …15:26・15:56・16:25・16:55・17:25・18:16・19:16。八日市駅1番のりば、運賃670円。乗換案内の11月25日・28日の結果と一致",
+   "url": "https://www.ohmitetudo.co.jp/bus/access/eigenji/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "太郎坊宮：参拝24時間、社務受付9:00〜17:00（ご祈祷等16:00まで）、拝観料・駐車料不要、約740段（ふもとから本殿まで742段、第一駐車場から約260段）。アクセス：太郎坊宮前駅から徒歩約20分",
+   "url": "https://tarobo.or.jp/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "永源寺 よくある質問：参拝時間 9:00〜16:00（11月は観楓期のため変更）、参拝志納料 大人600円・中学生200円・小学生以下無料。紅葉は11月上旬〜下旬、中旬がピーク",
+   "url": "https://eigenji-t.jp/contact/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "永源寺 お知らせ：ライトアップ11月14日〜28日（11/13）。山門・法堂の特別拝観 10:00・11:30・14:00、1,500円（入山志納料込）（11/18）。ライトアップは20時まで（11/20金・11/21土）。食事処「音無瀬」とキッチンカー「ブランブル」開店、うどん・そば・ぜんざい・甘酒・パフェ・クレープ（11/15、時間の記載なし）",
+   "url": "https://eigenji-t.jp/haikan/",
+   "checked": "2026-11-22"
+  },
+  {
+   "what": "近江鉄道線でICOCAなどが使える（2026年3月1日から、全線）",
+   "url": "https://www.ohmitetudo.co.jp/railway/icoca-2025/",
+   "checked": "2026-11-22"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "omihachimaneki",
+   "name": {
+    "ja": "京都から近江八幡へ（近江鉄道に乗り換え）",
+    "en": "Kyoto to Omi-Hachiman (change to the Ohmi Railway)"
+   },
+   "kind": {
+    "ja": "駅（スタート）",
+    "en": "Station (start)"
+   },
+   "blurb": {
+    "ja": "京都駅10:00発の新快速で近江八幡へ35分。同じ駅で近江鉄道に乗り換えて、太郎坊宮前に10:57。三条のあたりからは、地下鉄で京都駅へ（約15分）。",
+    "en": "The 10:00 Special Rapid from Kyoto Station takes 35 minutes to Omi-Hachiman. Change there to the Ohmi Railway for Taroubougu-mae (10:57). From around Sanjo, take the subway to Kyoto Station first (about 15 minutes)."
+   },
+   "lat": 35.1228,
+   "lng": 136.1028,
+   "text": {
+    "ja": "京都から近江八幡へ\n\n京都駅10:00発の新快速「近江塩津（おうみしおつ）」行きに乗れば、乗り換えなしで近江八幡に10:35（土日祝は10:34）着。680円です。\n\n近江八幡で近江鉄道の八日市線（ようかいちせん）に乗り換え（7分）。10:42発の電車で、太郎坊宮前（たろうぼうぐうまえ）に10:57に着きます。390円で、京都駅から合わせて1,070円。近江鉄道は2026年3月からICOCAなどの交通系ICカードで乗れます。\n\n三条のあたりからは、地下鉄で京都駅へ（烏丸御池（からすまおいけ）で乗り換え、約15分・260円）。平日は三条京阪9:30発、土日祝は9:32発なら間に合います。\n\n三条からは、地下鉄「六地蔵（ろくじぞう）」行きで山科（やましな）へ出て、同じ新快速に乗ることもできます（三条京阪9:44発、土日祝9:43発。近江八幡まで850円）。「びわ湖浜大津」行きは京阪山科駅に着き、運賃も130円高くなります。\n\n紅葉の時期のあと、永源寺のまわりで開いている食事の店は確かめられませんでした（要確認）。永源寺に着くのは14時ごろなので、お昼は京都駅で買って持っていくと安心です。\n\nおすすめ出発時間：京都駅 10:00",
+    "en": "Kyoto to Omi-Hachiman\n\nTake the 10:00 Special Rapid for Omi-Shiotsu from Kyoto Station. It runs direct to Omi-Hachiman, arriving at 10:35 (10:34 at weekends and holidays), for ¥680.\n\nAt Omi-Hachiman, change to the Ohmi Railway Yokaichi Line (7 minutes). The 10:42 train reaches Taroubougu-mae at 10:57 for ¥390, so ¥1,070 from Kyoto Station. Since March 2026 you can ride the Ohmi Railway with ICOCA and other transport IC cards.\n\nFrom around Sanjo, take the subway to Kyoto Station (change at Karasuma Oike; about 15 minutes, ¥260). The 9:30 from Sanjo Keihan on weekdays, or the 9:32 at weekends and holidays, gets you there in time.\n\nFrom Sanjo you can also ride a Rokujizo-bound subway to Yamashina and board the same Special Rapid (Sanjo Keihan 9:44, or 9:43 at weekends and holidays; ¥850 to Omi-Hachiman). Subways for Biwako-Hamaotsu stop at Keihan Yamashina instead and cost ¥130 more.\n\nWe couldn’t confirm any place to eat around Eigenji after the leaf season (please check). You get there around 14:00, so buy lunch at Kyoto Station and bring it along.\n\nRecommended departure: Kyoto Station 10:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "近江八幡駅",
+      "en": "Omi-Hachiman Station"
+     },
+     "lat": 35.1228,
+     "lng": 136.1028,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%BF%91%E6%B1%9F%E5%85%AB%E5%B9%A1%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "近江鉄道線のICOCA",
+      "en": "ICOCA on the Ohmi Railway (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.ohmitetudo.co.jp/railway/icoca-2025/",
+      "en": "https://www.ohmitetudo.co.jp/railway/icoca-2025/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "京都駅 10:00 新快速 → 近江八幡 10:35（土日祝10:34）→ 近江鉄道 10:42 → 太郎坊宮前 10:57。1,070円（JR680円＋近江鉄道390円）",
+       "en": "Kyoto Station 10:00 Special Rapid → Omi-Hachiman 10:35 (weekends 10:34) → Ohmi Railway 10:42 → Taroubougu-mae 10:57. ¥1,070 (JR ¥680 + Ohmi Railway ¥390)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "三条京阪 → 京都駅：地下鉄（烏丸御池で乗り換え）約15分・260円",
+       "en": "Sanjo Keihan → Kyoto Station: subway (change at Karasuma Oike), about 15 min, ¥260"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "乗換案内（2026年12月7日・12日・13日のダイヤ）で確認しました。",
+     "en": "Checked on a route planner (7, 12 and 13 Dec 2026 timetables)."
+    },
+    "checked": "2026-11-22"
+   },
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://eigenji-t.jp/haikan/",
+     "head": {
+      "ja": "お昼は持っていく",
+      "en": "Bring lunch"
+     },
+     "text": {
+      "ja": "永源寺の食事処とキッチンカーは紅葉の時期の案内で、そのあとも開いているかは確かめられませんでした（要確認）。お昼は京都駅で買っておくと安心です。",
+      "en": "Eigenji’s eatery and food truck were announced for the leaf season, and we couldn’t confirm they open after it (please check). Buy lunch at Kyoto Station to be safe."
+     }
+    }
+   ],
+   "photos": [
+    "omihachimaneki-1.jpg",
+    "omihachimaneki-2.jpg",
+    "omihachimaneki-3.jpg"
+   ]
+  },
+  {
+   "no": 2,
+   "id": "taroubouekimae",
+   "name": {
+    "ja": "近江鉄道 太郎坊宮前駅",
+    "en": "Ohmi Railway Taroubougu-mae Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "駅を出ると、正面にとがった形の太郎坊山（赤神山）。田んぼの中の道を、山のふもとまで歩いて約20分。",
+    "en": "Out of the station, the pointed peak of Mt. Taroubou (Akagami-yama) is right ahead. About 20 minutes on foot through the fields to the foot of the mountain."
+   },
+   "lat": 35.10853,
+   "lng": 136.18378,
+   "text": {
+    "ja": "近江鉄道 太郎坊宮前駅（たろうぼうぐうまええき）\n\n小さな無人駅です。駅から太郎坊宮までは歩いて約20分（太郎坊宮の公式サイト）。田んぼの向こうに、岩がむき出しになったとがった山が見えてきます。大きな鳥居をくぐって、参道を山の方へ。\n\n帰りの電車（八日市方面）は1時間に2本、昼は毎時41分と59分ごろです。12:41か12:59の電車で八日市へ行けば、どちらも13:15の永源寺行きのバスに間に合います。\n\nおすすめ到着時間：10:57",
+    "en": "Ohmi Railway Taroubougu-mae Station\n\nA small unstaffed station. The shrine is about 20 minutes on foot (shrine website). Across the rice fields rises a sharp, rocky peak. Pass under the big torii and follow the approach towards the mountain.\n\nTrains on to Yokaichi run twice an hour, around :41 and :59 past the hour at midday. The 12:41 and the 12:59 both connect with the 13:15 bus to Eigenji.\n\nRecommended arrival: 10:57"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "太郎坊宮前駅",
+      "en": "Taroubougu-mae Station"
+     },
+     "lat": 35.10853,
+     "lng": 136.18378,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%E5%89%8D%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "近江八幡 → 太郎坊宮前 15分・390円。太郎坊宮前 → 八日市 4〜5分・160円（昼は毎時41分・59分ごろ）",
+       "en": "Omi-Hachiman → Taroubougu-mae 15 min, ¥390. Taroubougu-mae → Yokaichi 4–5 min, ¥160 (around :41 and :59 at midday)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "乗換案内（2026年12月7日・12日・13日のダイヤ）で確認しました。",
+     "en": "Checked on a route planner (7, 12 and 13 Dec 2026 timetables)."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "taroubouekimae-1.jpg",
+    "taroubouekimae-2.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 3,
+   "id": "taroubou",
+   "name": {
+    "ja": "太郎坊宮（阿賀神社）",
+    "en": "Taroubou-gu (Aga Shrine)"
+   },
+   "kind": {
+    "ja": "神社",
+    "en": "Shrine"
+   },
+   "blurb": {
+    "ja": "742段の石段を登った先に、近江の平野を見渡す本殿。大きな岩が割れた「夫婦岩」の間を通ってお参りします。",
+    "en": "Climb 742 stone steps to a main hall above the Omi plain. You reach it by squeezing between the split “Meoto-iwa” rocks."
+   },
+   "lat": 35.11819,
+   "lng": 136.18244,
+   "text": {
+    "ja": "太郎坊宮（たろうぼうぐう）阿賀神社（あがじんじゃ）\n\n赤神山の中腹にある、勝運の神様の神社です。ふもとから本殿までは742段の石段。赤い鳥居が続く参道や、木の格子に囲まれた長い石段があり、紅葉の時期はもみじのトンネルになります。\n\n本殿の手前には、大きな岩が二つに割れた「夫婦岩（めおといわ）」。すき間を通ってお参りします。本殿の前からは、八日市の町と近江の平野が遠くまで見渡せます。\n\n石段は急な所もあるので、歩きやすい靴で。上り下りと駅までの道で1時間半あまり見ておくと、あわてずに済みます。参拝はいつでもでき、拝観料はいりません。お守りの授与などの受付は9:00〜17:00です。\n\n駅に戻ったら、12:41か12:59の電車で八日市（ようかいち）へ。\n\nおすすめ訪問時間：11:15〜12:35",
+    "en": "Taroubou-gu (Aga Shrine)\n\nA shrine to the god of victory, halfway up Mt. Akagami. From the foot of the mountain it is 742 stone steps to the main hall, past red torii and a long stairway enclosed in wooden lattice; in autumn it becomes a tunnel of maples.\n\nJust below the main hall are the Meoto-iwa, a huge boulder split in two; you pass through the gap to pray. From the hall you can see over Yokaichi and far across the Omi plain.\n\nSome steps are steep, so wear good shoes. Allow a good hour and a half for the climb and the walk to and from the station. The shrine is open at all times and free; the office (amulets and so on) is open 9:00–17:00.\n\nBack at the station, take the 12:41 or 12:59 train to Yokaichi.\n\nRecommended visit time: 11:15–12:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "太郎坊宮",
+      "en": "Taroubou-gu"
+     },
+     "lat": 35.11819,
+     "lng": 136.18244,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%AA%E9%83%8E%E5%9D%8A%E5%AE%AE%20%E9%98%BF%E8%B3%80%E7%A5%9E%E7%A4%BE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "太郎坊宮 公式サイト",
+      "en": "Taroubou-gu (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://tarobo.or.jp/",
+      "en": "https://tarobo.or.jp/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "参拝はいつでも（24時間）。社務の受付 9:00〜17:00（ご祈祷などは16:00まで）",
+       "en": "Open 24 hours. Shrine office 9:00–17:00 (prayers until 16:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料（拝観料・駐車料なし）",
+       "en": "Free (no admission or parking fee)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ふもとから本殿まで742段。車なら山上の第一駐車場から約260段です（太郎坊宮の公式サイト、2026年11月22日に確認）。",
+     "en": "742 steps from the foot of the mountain; about 260 from the upper car park (shrine website, checked 22 Nov 2026)."
+    },
+    "checked": "2026-11-22"
+   },
+   "photos": [
+    "taroubou-1.jpg",
+    "taroubou-2.jpg",
+    "taroubou-3.jpg",
+    "taroubou-4.jpg",
+    "taroubou-5.jpg",
+    "taroubou-6.jpg",
+    "taroubou-7.jpg"
+   ],
+   "notices": []
+  },
+  {
+   "no": 4,
+   "id": "eigenji",
+   "name": {
+    "ja": "永源寺",
+    "en": "Eigenji Temple"
+   },
+   "kind": {
+    "ja": "寺",
+    "en": "Temple"
+   },
+   "blurb": {
+    "ja": "愛知川の渓谷にある禅寺。大きな山門と法堂を、閉まる16:00までゆっくり。写真は11月の紅葉とライトアップのころのものです。",
+    "en": "A Zen temple in the Echigawa valley. Take your time at the great gate and lecture hall until it closes at 16:00. The photos show the November leaves and illumination."
+   },
+   "lat": 35.08058,
+   "lng": 136.31999,
+   "text": {
+    "ja": "永源寺（えいげんじ）\n\n鈴鹿の山あいを流れる愛知川（えちがわ）のほとりにある、臨済宗永源寺派の大本山です。旦度橋（たんどばし）を渡り、石段を上ると大きな山門。その先の法堂や方丈のまわりを、たくさんのもみじが囲んでいます。紅葉は11月上旬から下旬で、中旬が色づきのピーク（永源寺の案内）。\n\n八日市駅の1番のりばから13:15発の近江鉄道バス（永源寺車庫行き）に乗り、「永源寺前」に13:44（土日祝は13:43）着（670円）。着いたら、持ってきたお昼を食べてからお参りを。紅葉の時期に開く食事処とキッチンカーが、そのあとも開いているかは確かめられませんでした（要確認）。\n\n拝観は9:00〜16:00（永源寺の案内。11月だけ時間が変わる）。夜のライトアップは11月28日で終わりました。写真は11月の紅葉とライトアップのころのものです。\n\n帰りは永源寺前16:24発（土日祝は16:25発）のバスで八日市駅へ（16:59着、土日祝17:00着）。17:09発の近江鉄道で近江八幡17:28着、17:36発の新快速で京都駅に18:12着です（合わせて1,810円）。早く見終わって15:56発のバスに乗っても、八日市で待って同じ電車になります。年末年始（12月30日〜1月3日）のバスは土日祝の時刻です（乗換案内）。\n\n晩ごはんは京都に戻ってから、21〜22時まで。三条・木屋町・先斗町（ぽんとちょう）のあたりは遅くまで開いている店が多く、京都駅から地下鉄で約15分（260円）。18:30ごろには着けます。\n\nおすすめ訪問時間：13:45〜16:00",
+    "en": "Eigenji Temple\n\nHead temple of the Eigenji school of Rinzai Zen, on the Echigawa river in the Suzuka hills. Cross the Tando bridge and climb to the great gate; beyond, the lecture hall and abbot’s quarters are wrapped in maples. The leaves turn from early to late November, peaking in mid-November (temple FAQ).\n\nTake the 13:15 Ohmi bus (for Eigenji Shako) from stop 1 at Yokaichi Station and get off at “Eigenji-mae” at 13:44 (13:43 at weekends and holidays; ¥670). Eat the lunch you brought, then visit. We couldn’t confirm that the leaf-season eatery and food truck stay open afterwards (please check).\n\nThe temple is open 9:00–16:00 (temple FAQ; only November differs). The evening illumination ended on 28 November. The photos show the November leaves and illumination.\n\nLeave on the 16:24 bus from Eigenji-mae (16:25 at weekends and holidays) to Yokaichi (16:59, or 17:00). The 17:09 Ohmi Railway reaches Omi-Hachiman at 17:28, and the 17:36 Special Rapid reaches Kyoto Station at 18:12 (¥1,810 in all). If you finish early and take the 15:56 bus, you wait at Yokaichi for the same train. Over New Year (30 Dec – 3 Jan) buses follow the weekend timetable (route planner).\n\nDinner back in Kyoto can run to 21:00–22:00. Many places around Sanjo, Kiyamachi and Pontocho stay open late; they are about 15 minutes from Kyoto Station by subway (¥260), so you can be there by about 18:30.\n\nRecommended visit time: 13:45–16:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "永源寺",
+      "en": "Eigenji"
+     },
+     "lat": 35.08058,
+     "lng": 136.31999,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B8%E6%BA%90%E5%AF%BA%20%E6%9D%B1%E8%BF%91%E6%B1%9F%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "永源寺 公式サイト（よくある質問：時間・料金）",
+      "en": "Eigenji (official FAQ: hours and fees, Japanese)"
+     },
+     "url": {
+      "ja": "https://eigenji-t.jp/contact/",
+      "en": "https://eigenji-t.jp/contact/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "永源寺 公式サイト（お知らせ）",
+      "en": "Eigenji (official news, Japanese)"
+     },
+     "url": {
+      "ja": "https://eigenji-t.jp/haikan/",
+      "en": "https://eigenji-t.jp/haikan/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "近江鉄道バス 永源寺へのアクセス（時刻表）",
+      "en": "Ohmi bus to Eigenji (timetable, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.ohmitetudo.co.jp/bus/access/eigenji/",
+      "en": "https://www.ohmitetudo.co.jp/bus/access/eigenji/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "乗換案内（Yahoo!路線情報）",
+      "en": "Route planner (Yahoo! Japan)"
+     },
+     "url": {
+      "ja": "https://transit.yahoo.co.jp/",
+      "en": "https://transit.yahoo.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": null,
+     "to": null,
+     "url": "https://eigenji-t.jp/contact/",
+     "head": {
+      "ja": "拝観は16:00まで",
+      "en": "Closes at 16:00"
+     },
+     "text": {
+      "ja": "永源寺の拝観は9:00〜16:00です（11月だけ時間が変わる）。夜のライトアップはありません。",
+      "en": "Eigenji is open 9:00–16:00 (only November differs). There is no evening illumination."
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜16:00（11月だけ時間が変わる）",
+       "en": "9:00–16:00 (only November differs)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "お昼：食事処・キッチンカーの紅葉の時期のあとの営業は要確認。持っていくと安心",
+       "en": "Lunch: eatery and food truck not confirmed open after the leaf season; bring your own"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "参拝志納料 大人600円、中学生200円、小学生以下無料",
+       "en": "Admission ¥600 adults, ¥200 junior high, free for younger children"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "八日市駅1番のりば 13:15 → 永源寺前 13:44（土日祝13:43）、670円。帰りは永源寺前 16:24（土日祝16:25）→ 八日市駅 16:59（17:00）",
+       "en": "Yokaichi stop 1 13:15 → Eigenji-mae 13:44 (weekends 13:43), ¥670. Back: Eigenji-mae 16:24 (weekends 16:25) → Yokaichi 16:59 (17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "八日市 17:09 近江鉄道 → 近江八幡 17:36 新快速 → 京都駅 18:12（バスから合わせて1,810円）",
+       "en": "Yokaichi 17:09 Ohmi Railway → Omi-Hachiman 17:36 Special Rapid → Kyoto Station 18:12 (¥1,810 incl. the bus)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・参拝志納料は永源寺の公式サイト（よくある質問）、食事処は永源寺のお知らせ（2026年11月15日）、バスと電車は乗換案内（2026年12月7日・12日・13日・30日・31日、2027年1月1日・13日）で、2026年11月22日に確認しました。",
+     "en": "Hours and admission from the temple FAQ, the eatery from the temple news (15 Nov 2026), buses and trains on a route planner (7, 12, 13, 30, 31 Dec 2026 and 1, 13 Jan 2027). Checked 22 Nov 2026."
+    },
+    "checked": "2026-11-22",
+    "verified": false
+   },
+   "caution": {
+    "ja": "拝観は16:00まで・お昼は持参",
+    "en": "Closes 16:00 · bring lunch"
+   },
+   "photos": [
+    "eigenji-1.jpg",
+    "eigenji-2.jpg",
+    "eigenji-3.jpg",
+    "eigenji-4.jpg",
+    "eigenji-5.jpg",
+    "eigenji-6.jpg",
+    "eigenji-7.jpg",
+    "eigenji-8.jpg",
+    "eigenji-9.jpg",
+    "eigenji-10.jpg"
+   ]
+  }
+ ]
+}

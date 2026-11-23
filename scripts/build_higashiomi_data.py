@@ -4,6 +4,9 @@
 使い方: python3 scripts/build_higashiomi_data.py   → そのあと python3 scripts/sync_higashiomi.py
 - data/routes/higashiomi.json        ＝ コース「太郎坊宮・永源寺」（eigenji。最初に開く）
     京都駅10:00発 → 近江八幡で近江鉄道 → 太郎坊宮 → 八日市からバスで永源寺（遅めのお昼）→ 近江八幡・安土 → タクシーで教林坊のライトアップ → 京都駅20:12
+    12月6日まで読まれる。12/7からは次のものに自動で替わる（日付は scripts/sync_higashiomi.py の WINTER_FROM）
+- data/routes/higashiomi-eigenji-winter.json ＝ 太郎坊宮・永源寺の 12/7から（教林坊なし。番号1〜4は同じ）
+    京都駅10:00発 → 太郎坊宮 → 永源寺（お昼は持っていく・拝観16:00まで）→ 永源寺前16:24発（土日祝16:25）→ 京都駅18:12 → 夜は街なか
 - data/routes/higashiomi-sanzan.json ＝ コース「湖東三山」（sanzan）
     京都駅8:37発（土日祝8:30）→ 彦根駅10:00の紅葉シャトルバス → 西明寺（門前でお昼）→ 百済寺 → 金剛輪寺 → 彦根17:30 → 京都駅18:42
     11月29日まで読まれる。11/30からは次の2つに自動で替わる（どの日にどれを読むかは scripts/sync_higashiomi.py の TAXI_FROM・WINTER_FROM）
@@ -683,6 +686,91 @@ def C_SECTIONS(NO):
     return out
 
 
+# =====================================================================
+# コース1の 12/7 から（教林坊なし。永源寺から京都へ帰る）
+# =====================================================================
+def from_a(pid, **new):
+    """コース1の同じスポットをもとに、書いた項目だけ差し替える"""
+    d = dict(next(x for x in A if x["id"] == pid))
+    d.update(new)
+    return d
+
+
+def paras(pid, lang):
+    """コース1の本文を段ごとに分けたもの"""
+    return next(x for x in A if x["id"] == pid)["text"][lang].split("\n\n")
+
+
+W_START_JA, W_START_EN = paras("omihachimaneki", "ja"), paras("omihachimaneki", "en")
+W_TIP = T("乗換案内（2026年12月7日・12日・13日のダイヤ）で確認しました。", "Checked on a route planner (7, 12 and 13 Dec 2026 timetables).")
+W = [
+    from_a("omihachimaneki",
+           text=T("\n\n".join(W_START_JA[:-2] + ["紅葉の時期のあと、永源寺のまわりで開いている食事の店は確かめられませんでした（要確認）。永源寺に着くのは14時ごろなので、お昼は京都駅で買って持っていくと安心です。"] + W_START_JA[-1:]),
+                  "\n\n".join(W_START_EN[:-2] + ["We couldn’t confirm any place to eat around Eigenji after the leaf season (please check). You get there around 14:00, so buy lunch at Kyoto Station and bring it along."] + W_START_EN[-1:])),
+           notices=[notice("お昼は持っていく", "Bring lunch",
+                           "永源寺の食事処とキッチンカーは紅葉の時期の案内で、そのあとも開いているかは確かめられませんでした（要確認）。お昼は京都駅で買っておくと安心です。",
+                           "Eigenji’s eatery and food truck were announced for the leaf season, and we couldn’t confirm they open after it (please check). Buy lunch at Kyoto Station to be safe.",
+                           url="https://eigenji-t.jp/haikan/")],
+           info=info([row("train", "京都駅 10:00 新快速 → 近江八幡 10:35（土日祝10:34）→ 近江鉄道 10:42 → 太郎坊宮前 10:57。1,070円（JR680円＋近江鉄道390円）",
+                          "Kyoto Station 10:00 Special Rapid → Omi-Hachiman 10:35 (weekends 10:34) → Ohmi Railway 10:42 → Taroubougu-mae 10:57. ¥1,070 (JR ¥680 + Ohmi Railway ¥390)"),
+                      row("train", "三条京阪 → 京都駅：地下鉄（烏丸御池で乗り換え）約15分・260円", "Sanjo Keihan → Kyoto Station: subway (change at Karasuma Oike), about 15 min, ¥260")],
+                     tip=W_TIP)),
+    from_a("taroubouekimae",
+           info=info([row("train", "近江八幡 → 太郎坊宮前 15分・390円。太郎坊宮前 → 八日市 4〜5分・160円（昼は毎時41分・59分ごろ）",
+                          "Omi-Hachiman → Taroubougu-mae 15 min, ¥390. Taroubougu-mae → Yokaichi 4–5 min, ¥160 (around :41 and :59 at midday)")],
+                     tip=W_TIP)),
+    from_a("taroubou",
+           blurb=T("742段の石段を登った先に、近江の平野を見渡す本殿。大きな岩が割れた「夫婦岩」の間を通ってお参りします。",
+                   "Climb 742 stone steps to a main hall above the Omi plain. You reach it by squeezing between the split “Meoto-iwa” rocks.")),
+    from_a("eigenji", caution=T("拝観は16:00まで・お昼は持参", "Closes 16:00 · bring lunch"),
+           blurb=T("愛知川の渓谷にある禅寺。大きな山門と法堂を、閉まる16:00までゆっくり。写真は11月の紅葉とライトアップのころのものです。",
+                   "A Zen temple in the Echigawa valley. Take your time at the great gate and lecture hall until it closes at 16:00. The photos show the November leaves and illumination."),
+           text=T("\n\n".join(paras("eigenji", "ja")[:2]) + "\n\n"
+                  "八日市駅の1番のりばから13:15発の近江鉄道バス（永源寺車庫行き）に乗り、「永源寺前」に13:44（土日祝は13:43）着（670円）。着いたら、持ってきたお昼を食べてからお参りを。紅葉の時期に開く食事処とキッチンカーが、そのあとも開いているかは確かめられませんでした（要確認）。\n\n"
+                  "拝観は9:00〜16:00（永源寺の案内。11月だけ時間が変わる）。夜のライトアップは11月28日で終わりました。写真は11月の紅葉とライトアップのころのものです。\n\n"
+                  "帰りは永源寺前16:24発（土日祝は16:25発）のバスで八日市駅へ（16:59着、土日祝17:00着）。17:09発の近江鉄道で近江八幡17:28着、17:36発の新快速で京都駅に18:12着です（合わせて1,810円）。早く見終わって15:56発のバスに乗っても、八日市で待って同じ電車になります。年末年始（12月30日〜1月3日）のバスは土日祝の時刻です（乗換案内）。\n\n"
+                  "晩ごはんは京都に戻ってから、21〜22時まで。三条・木屋町・先斗町（ぽんとちょう）のあたりは遅くまで開いている店が多く、京都駅から地下鉄で約15分（260円）。18:30ごろには着けます。\n\n"
+                  "おすすめ訪問時間：13:45〜16:00",
+                  "\n\n".join(paras("eigenji", "en")[:2]) + "\n\n"
+                  "Take the 13:15 Ohmi bus (for Eigenji Shako) from stop 1 at Yokaichi Station and get off at “Eigenji-mae” at 13:44 (13:43 at weekends and holidays; ¥670). Eat the lunch you brought, then visit. We couldn’t confirm that the leaf-season eatery and food truck stay open afterwards (please check).\n\n"
+                  "The temple is open 9:00–16:00 (temple FAQ; only November differs). The evening illumination ended on 28 November. The photos show the November leaves and illumination.\n\n"
+                  "Leave on the 16:24 bus from Eigenji-mae (16:25 at weekends and holidays) to Yokaichi (16:59, or 17:00). The 17:09 Ohmi Railway reaches Omi-Hachiman at 17:28, and the 17:36 Special Rapid reaches Kyoto Station at 18:12 (¥1,810 in all). If you finish early and take the 15:56 bus, you wait at Yokaichi for the same train. Over New Year (30 Dec – 3 Jan) buses follow the weekend timetable (route planner).\n\n"
+                  "Dinner back in Kyoto can run to 21:00–22:00. Many places around Sanjo, Kiyamachi and Pontocho stay open late; they are about 15 minutes from Kyoto Station by subway (¥260), so you can be there by about 18:30.\n\n"
+                  "Recommended visit time: 13:45–16:00"),
+           links=[link("official", "永源寺 公式サイト（よくある質問：時間・料金）", "Eigenji (official FAQ: hours and fees, Japanese)", "https://eigenji-t.jp/contact/"),
+                  link("official", "永源寺 公式サイト（お知らせ）", "Eigenji (official news, Japanese)", "https://eigenji-t.jp/haikan/"), EIGENJI_BUS, YAHOO],
+           notices=[notice("拝観は16:00まで", "Closes at 16:00",
+                           "永源寺の拝観は9:00〜16:00です（11月だけ時間が変わる）。夜のライトアップはありません。",
+                           "Eigenji is open 9:00–16:00 (only November differs). There is no evening illumination.",
+                           url="https://eigenji-t.jp/contact/")],
+           info=info([row("hours", "9:00〜16:00（11月だけ時間が変わる）", "9:00–16:00 (only November differs)"),
+                      row("hours", "お昼：食事処・キッチンカーの紅葉の時期のあとの営業は要確認。持っていくと安心", "Lunch: eatery and food truck not confirmed open after the leaf season; bring your own"),
+                      row("fee", "参拝志納料 大人600円、中学生200円、小学生以下無料", "Admission ¥600 adults, ¥200 junior high, free for younger children"),
+                      row("bus", "八日市駅1番のりば 13:15 → 永源寺前 13:44（土日祝13:43）、670円。帰りは永源寺前 16:24（土日祝16:25）→ 八日市駅 16:59（17:00）",
+                          "Yokaichi stop 1 13:15 → Eigenji-mae 13:44 (weekends 13:43), ¥670. Back: Eigenji-mae 16:24 (weekends 16:25) → Yokaichi 16:59 (17:00)"),
+                      row("train", "八日市 17:09 近江鉄道 → 近江八幡 17:36 新快速 → 京都駅 18:12（バスから合わせて1,810円）",
+                          "Yokaichi 17:09 Ohmi Railway → Omi-Hachiman 17:36 Special Rapid → Kyoto Station 18:12 (¥1,810 incl. the bus)")],
+                     tip=T("時間・参拝志納料は永源寺の公式サイト（よくある質問）、食事処は永源寺のお知らせ（2026年11月15日）、バスと電車は乗換案内（2026年12月7日・12日・13日・30日・31日、2027年1月1日・13日）で、2026年11月22日に確認しました。",
+                           "Hours and admission from the temple FAQ, the eatery from the temple news (15 Nov 2026), buses and trains on a route planner (7, 12, 13, 30, 31 Dec 2026 and 1, 13 Jan 2027). Checked 22 Nov 2026."),
+                     verified=False)),
+]
+
+W_PLAN = lambda NO: {
+    "_note": "「選んで回る」の設定。近江八幡駅はいつも入る。太郎坊宮前駅は太郎坊宮を選ぶと入る。defaultPicks は12/7からの時間割どおりの2か所（全部）。",
+    "defaultMode": "pick",
+    "picks": [NO["taroubou"], NO["eigenji"]],
+    "defaultPicks": [NO["taroubou"], NO["eigenji"]],
+    "auto": {str(NO["omihachimaneki"]): {"always": True}, str(NO["taroubouekimae"]): {"any": [NO["taroubou"]]}},
+    "hints": [
+        H(NO, "omihachimaneki", {"any": [NO["eigenji"]], "none": [NO["taroubou"]]},
+          "太郎坊宮に寄らない日は、京都駅10:00発の新快速で近江八幡へ。10:42発の近江鉄道を八日市（ようかいち）まで乗り、駅の1番のりば11:15発のバスで永源寺前に11:44（土日祝11:43）着。京都駅から1,810円です。拝観は16:00までなので、ゆっくり回れます。",
+          "Skipping Taroubou-gu? Take the 10:00 Special Rapid from Kyoto Station to Omi-Hachiman, the 10:42 Ohmi Railway to Yokaichi and the 11:15 bus from stop 1, reaching Eigenji-mae at 11:44 (11:43 at weekends), ¥1,810 from Kyoto Station. The temple is open until 16:00, so take your time."),
+        H(NO, "taroubou", {"any": [NO["taroubou"]], "none": [NO["eigenji"]]},
+          "永源寺に行かない日は、太郎坊宮のあと近江鉄道で近江八幡へ戻り、八幡堀のあたりを歩いてお昼に（近江八幡のマップを見てください）。帰りは近江八幡17:36発の新快速で京都駅に18:12着（680円）。",
+          "Not going to Eigenji? After the shrine, take the Ohmi Railway back to Omi-Hachiman, walk the canal district and have lunch there (see our Omihachiman map). The 17:36 Special Rapid from Omi-Hachiman reaches Kyoto Station at 18:12 (¥680)."),
+    ]}
+
+
 def H(NO, spot, rule, ja, en, frm=None, to=None):
     h = {"spot": NO[spot], "rule": rule, "text": T(ja, en)}
     if frm:
@@ -692,9 +780,9 @@ def H(NO, spot, rule, ja, en, frm=None, to=None):
     return h
 
 
-def yt(a, b, md, hm, found, typ=1):
+def yt(a, b, md, hm, found, typ=1, year=2026):
     """乗換案内の検索結果（条件つきの URL）と、そこで見た数字"""
-    q = {"from": a, "to": b, "y": 2026, "m": md[:2], "d": md[2:], "hh": hm[:2], "m1": hm[2], "m2": hm[3], "type": typ, "ticket": "ic",
+    q = {"from": a, "to": b, "y": year, "m": md[:2], "d": md[2:], "hh": hm[:2], "m1": hm[2], "m2": hm[3], "type": typ, "ticket": "ic",
          "expkind": 1, "userpass": 1, "ws": 3, "s": 0, "al": 0, "shin": 0, "ex": 0, "hb": 1, "lb": 1, "sr": 1}   # hb・lb・sr＝高速バス・路線バス・船も出す（バスの区間に要る）
     return {"what": f"乗換案内 {a.split('/')[0]}→{b.split('/')[0]} {int(md[:2])}月{int(md[2:])}日：{found}",
             "url": "https://transit.yahoo.co.jp/search/result?" + urllib.parse.urlencode(q), "checked": CHECKED}
@@ -807,9 +895,37 @@ SOURCES_C = [
     yt("百済寺本坊前", "京都", "1205", "1700", "17:54→19:42（1,340円）"),
     yt("百済寺本坊前", "京都", "1228", "1700", "17:54→19:42（1,340円）"),
 ] + [x for x in SOURCES_B if "transit.yahoo.co.jp" not in x["url"] and "シャトルバス" not in x["what"]]
+SOURCES_W = [
+    yt("京都", "太郎坊宮前", "1207", "0955", "10:00→近江八幡10:35/10:42→10:57（1,070円）"),
+    yt("京都", "太郎坊宮前", "1212", "0955", "10:00→近江八幡10:34/10:42→10:57（1,070円）"),
+    yt("京都", "太郎坊宮前", "1213", "0955", "10:00→10:57（1,070円）"),
+    yt("三条京阪", "京都", "1207", "0929", "9:30→9:47（260円）"),
+    yt("三条京阪", "京都", "1212", "0931", "9:32→9:45（260円）"),
+    yt("三条京阪", "近江八幡", "1207", "0940", "9:44→山科10:06→10:35（850円）。びわ湖浜大津行は980円"),
+    yt("三条京阪", "近江八幡", "1212", "0940", "9:43→山科10:05→10:34（850円）"),
+    yt("太郎坊宮前", "八日市", "1207", "1238", "12:41→12:45、12:59→13:04（160円）"),
+    yt("太郎坊宮前", "八日市", "1212", "1238", "12:41→12:45、12:59→13:04（160円）"),
+    yt("八日市", EIGENJI_STOP, "1207", "1300", "バス13:15→13:44（670円）"),
+    yt("八日市", EIGENJI_STOP, "1212", "1300", "バス13:15→13:43（670円）"),
+    yt("八日市", EIGENJI_STOP, "1213", "1300", "バス13:15→13:43（670円）"),
+    yt("八日市", EIGENJI_STOP, "1230", "1300", "バス13:15→13:43（670円）。年末は土日祝の時刻"),
+    yt("京都", EIGENJI_STOP, "1207", "0955", "10:00→八日市駅11:15のバス→11:44（1,810円）"),
+    yt("京都", EIGENJI_STOP, "1212", "0955", "10:00→八日市駅11:15のバス→11:43（1,810円）"),
+    yt(EIGENJI_STOP, "京都", "1207", "1550", "16:24→16:59、八日市17:09→近江八幡17:28/17:36→18:12（1,810円）。15:56発でも18:12"),
+    yt(EIGENJI_STOP, "京都", "1212", "1550", "16:25→17:00、八日市17:09→近江八幡17:28/17:36→18:12（1,810円）。15:56発でも18:12"),
+    yt(EIGENJI_STOP, "京都", "1213", "1550", "16:25→18:12（1,810円）"),
+    yt(EIGENJI_STOP, "京都", "1230", "1550", "16:25→18:12（1,810円）。年末は土日祝の時刻"),
+    yt(EIGENJI_STOP, "京都", "1231", "1550", "16:25→18:12（1,810円）"),
+    yt(EIGENJI_STOP, "京都", "0101", "1550", "16:25→18:12（1,810円）", year=2027),
+    yt(EIGENJI_STOP, "京都", "0113", "1550", "16:24→18:12（1,810円）", year=2027),
+    yt("近江八幡", "京都", "1207", "1730", "17:36新快速→18:12（680円）"),
+    yt("近江八幡", "京都", "1212", "1730", "17:36新快速→18:12（680円）"),
+    yt("京都", "三条京阪", "1207", "1812", "地下鉄18:13→18:28（260円）"),
+    yt("京都", "三条京阪", "1212", "1812", "地下鉄18:15→18:28（260円）"),
+] + [x for x in SOURCES_A if "transit.yahoo.co.jp" not in x["url"] and "ティファニー" not in x["what"]]
 
 
-def build(defs, plan_fn, course, out, sections, note, sources, focus=None):
+def build(defs, plan_fn, course, out, sections, note, sources, focus=None, common=None):
     spots = []
     for i, s in enumerate(defs, 1):
         s = dict(s)
@@ -826,7 +942,7 @@ def build(defs, plan_fn, course, out, sections, note, sources, focus=None):
     NO = {s["id"]: s["no"] for s in spots}
     data = {"id": "higashiomi", "course": course, "_note": note,
             "sections": sections(NO), "photoBase": "../images/higashiomi/",
-            "plan": plan_fn(NO), "sources": SOURCES_COMMON + sources, "spots": spots}
+            "plan": plan_fn(NO), "sources": (SOURCES_COMMON if common is None else common) + sources, "spots": spots}
     if focus:
         data["focus"] = focus(NO)
     json.dump(data, open(f"{R}/data/routes/{out}", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -854,3 +970,10 @@ build(C, C_PLAN, "sanzan", "higashiomi-sanzan-taxi.json", C_SECTIONS,
       C_NOTE + "12月6日までの分で、教林坊の夜が寄り道に入る。このファイルは scripts/build_higashiomi_data.py で作る。", SOURCES_C)
 build([x for x in C if x["id"] != "kyorinbo"], C_PLAN, "sanzan", "higashiomi-sanzan-winter.json", C_SECTIONS,
       C_NOTE + "12月7日からの分で、教林坊はない（ライトアップが終わり、昼の公開16:30までにも着けない）。このファイルは scripts/build_higashiomi_data.py で作る。", SOURCES_C)
+build(W, W_PLAN, "eigenji", "higashiomi-eigenji-winter.json",
+      lambda NO: [{"first": 1, "last": NO["taroubou"], "area": T("近江八幡・太郎坊宮", "Omi-Hachiman & Taroubou-gu"), "title": T("742段の石段の上へ", "Up 742 stone steps")},
+                  {"first": NO["eigenji"], "last": NO["eigenji"], "area": T("永源寺", "Eigenji"), "title": T("渓谷の禅寺で16:00まで", "A valley Zen temple until 16:00")}],
+      "京都から日帰り 湖東の紅葉、コース「太郎坊宮・永源寺」の12月7日から（教林坊のライトアップが終わったあと。scripts/sync_higashiomi.py の WINTER_FROM で読み分ける）。"
+      "京都駅10:00→太郎坊宮前10:57→太郎坊宮→八日市13:15のバスで永源寺（お昼は持参）→16:24（土日祝16:25）のバス→近江八幡17:36の新快速→京都駅18:12→夜は街なか。"
+      "番号1〜4は12月6日までと同じ。このファイルは scripts/build_higashiomi_data.py で作る。",
+      SOURCES_W, common=[])
