@@ -20,7 +20,8 @@ import copy, json, os, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAP_ID = "nara"
 IMG = f"{R}/images/{MAP_ID}"
-D21, D22 = "2026-11-21", "2026-11-22"   # 確認日（21日に確認して22日は見直していないものは D21）
+D21, D22, D23 = "2026-11-21", "2026-11-22", "2026-11-23"   # 確認日（23日は「要確認」と21日確認分の見直し）
+NAVI = "https://navi.narakotsu.co.jp/"   # 奈良交通「奈良バスなびweb」（時刻・運賃検索）
 
 
 def T(ja, en):
@@ -102,11 +103,11 @@ BASE = dict(
                    "From Kyoto: Karasuma Oike → Kintetsu-Nara ¥1,020 (via Takeda) / ¥980 via Kyoto Station / ¥1,000 from Keihan Sanjo. Kintetsu limited express +¥520"),
                row("fee", "大阪から：大阪難波→近鉄奈良 680円（梅田からは地下鉄240円を足して920円）",
                    "From Osaka: Osaka-Namba → Kintetsu-Nara ¥680 (¥920 from Umeda, with ¥240 for the subway)"),
-               row("fee", "法隆寺や平城宮跡までバス・近鉄で回る日は「奈良世界遺産フリーきっぷ 奈良・斑鳩1日コース」（京都から1,800円。21日に確認）もあります。歩いて回るだけなら普通のきっぷで十分です",
-                   "If you add Horyuji or the Heijo Palace site by bus and Kintetsu, there is the Nara World Heritage Free Ticket (Nara–Ikaruga 1-day, ¥1,800 from Kyoto; checked on the 21st). For the walking route alone, ordinary tickets are enough")],
+               row("fee", "法隆寺や平城宮跡までバス・近鉄で回る日は「奈良世界遺産フリーきっぷ 奈良・斑鳩1日コース」（京都・大阪難波から1,800円。特急料金は別）もあります。歩いて回るだけなら普通のきっぷで十分です",
+                   "If you add Horyuji or the Heijo Palace site by bus and Kintetsu, there is the Nara World Heritage Free Ticket (Nara–Ikaruga 1-day, ¥1,800 from Kyoto or Osaka-Namba; limited express charge extra). For the walking route alone, ordinary tickets are enough")],
         _tip=T("時刻と運賃は乗換案内で確認しました（2026年11月28日・土曜のダイヤ。平日は数分ちがいます）。時刻は曜日とダイヤ改正で変わるので、乗る前にもう一度確かめてください。JRの時刻と運賃は11月21日に確認。写真は近鉄奈良駅のホームで撮った京都行きの特急（2021年）と、JR奈良駅の京都行き（2022年）です。",
                "Times and fares checked on a route planner (timetable for Saturday 28 November 2026; weekdays differ by a few minutes). They change by day and with timetable revisions, so check again before you travel. JR times and fare checked on 21 November. The photos show Kyoto-bound limited expresses at Kintetsu-Nara (2021) and a Kyoto-bound train at JR Nara (2022)."),
-        _source="乗換案内（Yahoo!路線情報）2026-11-22。きっぷは近鉄の公式サイト（2026-11-21）"),
+        _source="乗換案内（Yahoo!路線情報）2026-11-22。フリーきっぷは近鉄の公式サイト https://www.kintetsu.co.jp/senden/Railway/Ticket/sekaiisan/nara_nishi.html （2026-11-23）"),
     kofukuji=dict(
         name=T("興福寺", "Kofukuji Temple"), kind=T("寺（世界遺産）", "Temple (World Heritage)"),
         blurb=T("駅から5分。阿修羅像のいる国宝館は9:00から。五重塔は修理中で、覆いの中です。拝観料は現金だけ。",
@@ -126,13 +127,14 @@ BASE = dict(
         gmaps=[gm("興福寺 国宝館", "Kofukuji National Treasure Hall", 34.68353, 135.83253, "興福寺 国宝館"),
                gm("猿沢池", "Sarusawa Pond", 34.68144, 135.83095, "猿沢池")],
         links=[link("official", "興福寺 拝観案内", "Kofukuji visitor information (Japanese)", "https://www.kohfukuji.com/info/info-guide/"),
-               link("info", "五重塔の保存修理（奈良県）", "Pagoda repair work (Nara Prefecture, Japanese)", "https://www.pref.nara.jp/62140.htm")],
+               link("info", "五重塔の保存修理（奈良県）", "Pagoda repair work (Nara Prefecture, Japanese)", "https://www.pref.nara.lg.jp/n037/62140.html")],
         info=info([row("hours", "国宝館・中金堂・東金堂 9:00〜17:00（受付は16:45まで）、休みなし。境内は自由", "National Treasure Hall, Central Golden Hall, Eastern Golden Hall 9:00–17:00 (last entry 16:45), open daily. Grounds always open"),
                    row("fee", "国宝館 900円、中金堂 500円、東金堂 500円（現金のみ）", "National Treasure Hall ¥900, Central Golden Hall ¥500, Eastern Golden Hall ¥500 (cash only)"),
-                   row("fee", "11月30日まで：東金堂の後堂の特別公開中（東金堂＋後堂 1,000円、4か所共通券 2,000円・販売は16:00まで）", "Until 30 November: special opening of the rear hall of the Eastern Golden Hall (hall + rear hall ¥1,000; 4-site combined ticket ¥2,000, sold until 16:00)", until="2026-11-30")],
-                  "興福寺 公式サイト（拝観案内）、奈良県（五重塔の保存修理）。2026-11-21に確認", cash=True, checked=D21,
-                  tip=T("時間と料金は興福寺の公式サイト、五重塔の工事は奈良県のページで確認しました（11月21日）。12月以降の共通券の料金は確認できていません（要確認）。",
-                        "Hours and fees checked on Kofukuji’s website, the pagoda work on Nara Prefecture’s page (21 November). The combined-ticket price from December could not be confirmed (please check)."))),
+                   row("fee", "11月30日まで：東金堂の後堂の特別公開中（東金堂＋後堂 1,000円、4か所共通券 2,000円・販売は16:00まで。16時からは1か所ずつの券だけ）", "Until 30 November: special opening of the rear hall of the Eastern Golden Hall (hall + rear hall ¥1,000; 4-site combined ticket ¥2,000, sold until 16:00; after 16:00 single tickets only)", until="2026-11-30"),
+                   row("fee", "12月からの共通券は、公式サイトにまだ出ていません（要確認）。1か所ずつの券は上の料金", "A combined ticket from December is not yet listed on the website (please check). Single tickets are as above", frm="2026-12-01")],
+                  "興福寺 公式サイト https://www.kohfukuji.com/info/info-guide/ 、奈良県（五重塔の保存修理）https://www.pref.nara.lg.jp/n037/62140.html 。2026-11-23に確認。12月からの共通券は記載なし", cash=True, checked=D23,
+                  tip=T("時間と料金は興福寺の公式サイト、五重塔の工事（2034年3月まで）は奈良県のページで確認しました（11月23日）。12月からの共通券は公式サイトにまだ出ていません（要確認）。",
+                        "Hours and fees checked on Kofukuji’s website, the pagoda work (until March 2034) on Nara Prefecture’s page (23 November). A combined ticket from December is not yet listed on the website (please check)."))),
     shika=dict(
         name=T("奈良公園の鹿", "The deer of Nara Park"), kind=T("公園・鹿", "Park & deer"),
         blurb=T("鹿せんべいは買ったらすぐあげる。なくなったら両手を開いて見せる。人の少ない芝生であげると落ち着いて楽しめます。",
@@ -140,7 +142,7 @@ BASE = dict(
         caution=T("鹿は野生。せんべいは買ったらすぐあげる（じらすとかまれます）", "The deer are wild. Hand crackers over at once (tease and you get nipped)"),
         lat=34.68412, lng=135.83450,
         body=T("奈良公園（ならこうえん）の鹿\n\n県庁の向かいの芝生（登大路園地）から東大寺の南大門、春日大社の参道まで、道ばたにも芝生にも鹿がいます。1,000頭を超える鹿は国の天然記念物で、飼われているのではなく野生です。\n\n"
-               "鹿せんべいは、道ばたの売り場で買えます（2019年から10枚200円。今の値段は売り場で確かめてください。小銭を用意）。あげ方のコツは奈良県の案内のとおりです。\n\n"
+               "鹿せんべいは、道ばたの売り場で買えます（値段は公式のページでは確かめられませんでした。売り場で確かめてください。小銭を用意）。あげ方のコツは奈良県の案内のとおりです。\n\n"
                "・買ったらすぐにあげる。じらすと、服やお尻をかまれます\n"
                "・なくなったら、両手を開いて「もうないよ」と見せる。これで離れていきます\n"
                "・鹿せんべい以外の食べ物はあげない（おなかを壊します）\n"
@@ -151,7 +153,7 @@ BASE = dict(
                "南大門の前は鹿も人もいちばん多く、せんべいを持った瞬間に囲まれます。落ち着いてあげたいなら、県庁の向かいの登大路園地か、春日大社へ向かう参道わきの芝生（飛火野・とびひの）が静かです。公園にごみ箱はないので、包み紙は持ち帰ります（せんべいを束ねている紙は鹿が食べられます）。\n\n"
                "奈良国立博物館は、仏像館が改修で2028年春ごろまで休館中。今は青銅器館で仏像の名品を少しだけ見られます。",
                "The deer of Nara Park\n\nFrom the lawn opposite the prefectural office (Noborioji Park) to Todaiji’s Great South Gate and the approach to Kasuga Taisha, deer are on the paths and on the grass. There are over a thousand; they are a protected natural monument and wild, not kept.\n\n"
-               "Deer crackers (shika-senbei) are sold at stands along the way (¥200 for ten since 2019; check the price at the stand, and have coins ready). Nara Prefecture’s own advice on feeding:\n\n"
+               "Deer crackers (shika-senbei) are sold at stands along the way (we could not confirm the price on an official page; check it at the stand, and have coins ready). Nara Prefecture’s own advice on feeding:\n\n"
                "• Hand them over as soon as you buy them. Tease, and you get nipped on the clothes or the backside\n"
                "• When you run out, show both open hands. The deer understand and walk away\n"
                "• Never give any other food; it makes them ill\n"
@@ -167,10 +169,10 @@ BASE = dict(
                link("official", "奈良の鹿愛護会", "Nara Deer Preservation Foundation (Japanese)", "https://naradeer.com/"),
                link("official", "奈良国立博物館", "Nara National Museum", "https://www.narahaku.go.jp/", "https://www.narahaku.go.jp/english/")],
         info=info([row("hours", "公園は出入り自由", "The park is always open"),
-                   row("fee", "鹿せんべい：10枚200円（2019年の改定時の値段。今の値段は要確認）", "Deer crackers: ¥200 for ten (the price set in 2019; please check the current price)")],
-                  "奈良県「奈良公園クイックガイド」、奈良の鹿愛護会。2026-11-21に確認。鹿せんべいの今の値段・売り場の開く時間は未確認", cash=True, verified=False, checked=D21,
-                  tip=T("鹿との接し方は奈良県の「奈良公園クイックガイド」と奈良の鹿愛護会のページで確認しました（11月21日）。鹿せんべいの今の値段、支払い方法、売り場が朝何時から開くかは、公式のページでは確認できませんでした。写真は2022年12月。",
-                        "The advice on deer is from Nara Prefecture’s Nara Park Quick Guide and the Nara Deer Preservation Foundation (21 November). The current cracker price, payment methods and what time the stands open in the morning could not be confirmed on an official page. Photos: December 2022."))),
+                   row("fee", "鹿せんべい：値段は公式で確かめられませんでした（要確認）。売り場で確かめてください", "Deer crackers: we could not confirm the price on an official page (please check at the stand)")],
+                  "奈良県「奈良公園クイックガイド」https://www.pref.nara.lg.jp/site/park/1003.html （2026-09-11更新）、奈良の鹿愛護会 https://naradeer.com/ 。2026-11-23に確認。鹿せんべいの値段・支払い方法・売り場の開く時間はどちらにも記載なし", cash=True, verified=False, checked=D23,
+                  tip=T("鹿との接し方は奈良県の「奈良公園クイックガイド」と奈良の鹿愛護会のページで確認しました（11月23日）。鹿せんべいの値段、支払い方法、売り場が朝何時から開くかは、どちらのページにも書かれていません。写真は2022年12月。",
+                        "The advice on deer is from Nara Prefecture’s Nara Park Quick Guide and the Nara Deer Preservation Foundation (23 November). Neither page gives the cracker price, payment methods or what time the stands open in the morning. Photos: December 2022."))),
     isuien=dict(
         name=T("依水園・吉城園", "Isuien & Yoshikien gardens"), kind=T("日本庭園・寄り道", "Japanese gardens, side stop"),
         blurb=T("東大寺のすぐ手前にある、隣り合う2つの庭。依水園は火曜休みで入園は16:00まで。吉城園は無料です。",
@@ -187,13 +189,13 @@ BASE = dict(
                "Autumn colours in both: mid-November to early December."),
         gmaps=[gm("依水園", "Isuien", 34.68547, 135.83792, "依水園 奈良"), gm("吉城園", "Yoshikien", 34.68510, 135.83721, "吉城園 奈良")],
         links=[link("official", "依水園・寧楽美術館", "Isuien Garden & Neiraku Museum", "https://isuien.or.jp/"),
-               link("official", "吉城園（奈良県）", "Yoshikien (Nara Prefecture, Japanese)", "https://www.pref.nara.jp/39910.htm")],
+               link("official", "吉城園（奈良県）", "Yoshikien (Nara Prefecture, Japanese)", "https://www.pref.nara.lg.jp/n113/39910.html")],
         info=info([row("hours", "依水園 9:30〜16:30（入園は16:00まで）", "Isuien 9:30–16:30 (last entry 16:00)"),
                    row("closed", "依水園：火曜（祝日なら開園して次の平日が休み）、9月下旬と12月末〜1月中旬の庭園整備期間", "Isuien: Tuesdays (open if a holiday, closed the next weekday); maintenance periods in late September and from late December to mid-January"),
                    row("fee", "依水園 1,200円（寧楽美術館を含む）", "Isuien ¥1,200 (includes the Neiraku Museum)"),
                    row("hours", "吉城園 9:00〜17:00（入園は16:30まで）、無料。2月24日〜28日は休み", "Yoshikien 9:00–17:00 (last entry 16:30), free. Closed 24–28 February")],
-                  "依水園 公式サイト、奈良県（吉城園）。2026-11-21に確認", checked=D21,
-                  tip=T("依水園は公式サイト、吉城園は奈良県のページで確認しました（11月21日）。", "Isuien checked on its website; Yoshikien on Nara Prefecture’s page (21 November)."))),
+                  "依水園 公式サイト https://isuien.or.jp/access 、奈良県（吉城園）https://www.pref.nara.lg.jp/n113/39910.html 。2026-11-23に確認", checked=D23,
+                  tip=T("依水園は公式サイト、吉城園は奈良県のページで確認しました（11月23日）。", "Isuien checked on its website; Yoshikien on Nara Prefecture’s page (23 November)."))),
     todaiji=dict(
         name=T("東大寺 南大門・大仏殿", "Todaiji: Great South Gate & Great Buddha Hall"), kind=T("寺（世界遺産）", "Temple (World Heritage)"),
         blurb=T("大仏殿は11〜3月が8:00、4〜10月が7:30に開きます。団体が多いのは昼。開門すぐか、閉まる1時間前に。拝観料は現金だけ。",
@@ -231,9 +233,9 @@ BASE = dict(
         links=[link("official", "東大寺 二月堂", "Todaiji: Nigatsudo (Japanese)", "https://www.todaiji.or.jp/information/nigatsudo/")],
         info=info([row("hours", "二月堂は24時間お参りできます（夜は静かに。三脚は使えません）", "Nigatsudo can be visited 24 hours a day (quietly at night; no tripods)"),
                    row("fee", "三月堂（法華堂）は8:30〜16:00・800円（現金のみ）", "Sangatsudo (Hokkedo): 8:30–16:00, ¥800 (cash only)")],
-                  "東大寺 公式サイト（二月堂、拝観時間・拝観料）。2026-11-22に確認。休憩所の時間は未確認",
-                  tip=T("東大寺の公式サイトで確認しました。休憩所の開いている時間は確認できていません（要確認）。日の入りは11月下旬〜12月が17時前、6月は19時すぎです。",
-                        "Checked on Todaiji’s website. The opening hours of the rest house could not be confirmed (please check). Sunset is before 17:00 from late November through December, after 19:00 in June."))),
+                  "東大寺 公式サイト（二月堂 https://www.todaiji.or.jp/information/nigatsudo/ 、拝観時間・拝観料）。2026-11-22に確認、二月堂は2026-11-23に再確認。休憩所は公式サイトに記載なし",
+                  tip=T("東大寺の公式サイトで確認しました。休憩所の開いている時間は、公式サイトに書かれていません（要確認）。日の入りは11月下旬〜12月が17時前、6月は19時すぎです。",
+                        "Checked on Todaiji’s website. The website does not give the opening hours of the rest house (please check). Sunset is before 17:00 from late November through December, after 19:00 in June."))),
     wakakusa=dict(
         name=T("若草山", "Mt. Wakakusa"), kind=T("芝生の山・展望・寄り道", "Grassy hill & view, side stop"),
         blurb=T("二月堂と春日大社のあいだ。芝生の斜面を20分上ると、奈良の町が全部見えます。9:00〜17:00、冬は入れません。",
@@ -256,8 +258,8 @@ BASE = dict(
                         frm="2026-12-14", to="2027-03-19")],
         info=info([row("hours", "3月第3土曜〜12月第2日曜の9:00〜17:00（2026年は12月13日まで）", "Third Saturday of March to second Sunday of December, 9:00–17:00 (until 13 December in 2026)"),
                    row("fee", "150円（3歳〜小学生80円）", "¥150 (¥80 for ages 3 to primary school)")],
-                  "奈良県「奈良公園クイックガイド」。2026-11-21に確認", cash=True, checked=D21,
-                  tip=T("奈良県の「奈良公園クイックガイド」で確認しました（11月21日）。上る時間は目安です。", "Checked on Nara Prefecture’s Nara Park Quick Guide (21 November). Climbing times are rough guides."))),
+                  "奈良県「奈良公園クイックガイド」https://www.pref.nara.lg.jp/site/park/2585.html （2026-02-27更新）。2026-11-23に確認。日付はページの「3月第3土曜〜12月第2日曜」から", cash=True, checked=D23,
+                  tip=T("奈良県の「奈良公園クイックガイド」で確認しました（11月23日）。上る時間は目安です。", "Checked on Nara Prefecture’s Nara Park Quick Guide (23 November). Climbing times are rough guides."))),
     kasuga=dict(
         name=T("春日大社", "Kasuga Taisha Shrine"), kind=T("神社（世界遺産）", "Shrine (World Heritage)"),
         blurb=T("森の中の朱色の社殿と、約3,000基の灯籠。奥の特別参拝（700円）は9:00〜16:00。毎月1・11・21日の午前など、入れない時間があります。",
@@ -280,10 +282,10 @@ BASE = dict(
         info=info([row("hours", "お参り：3〜10月 6:30〜17:30、11〜2月 7:00〜17:00", "Shrine: March–October 6:30–17:30, November–February 7:00–17:00"),
                    row("hours", "御本殿特別参拝 9:00〜16:00（毎月1・11・21日の午前など、入れない日・時間があります）", "Inner area (special visit) 9:00–16:00 (closed on the mornings of the 1st, 11th and 21st and at some other times)"),
                    row("fee", "お参りは無料。御本殿特別参拝 700円、国宝殿（10:00〜17:00）700円", "Praying is free. Inner area ¥700; Kasuga Taisha Museum (10:00–17:00) ¥700"),
-                   row("hours", "春日荷茶屋 10:30〜16:30（ラストオーダー16:00）。休みは不定で、月ごとに公式サイトに出ます（2026年11月は10日・17日）。万葉粥 1,200円（11月21日に確認）",
-                       "Kasuga Ninaijaya 10:30–16:30 (last orders 16:00). Irregular closing days, listed monthly on the website (10 and 17 November 2026). Man’yo-gayu ¥1,200 (checked 21 November)")],
-                  "春日大社 公式サイト（参拝案内、春日荷茶屋）。2026-11-22に確認。万葉粥の値段は2026-11-21。荷茶屋の支払い方法は未確認",
-                  tip=T("春日大社の公式サイトで確認しました。荷茶屋の支払い方法は確認できていません（要確認）。4枚目の鳥居の写真は2022年12月。", "Checked on Kasuga Taisha’s website. Payment methods at the teahouse could not be confirmed (please check). The fourth photo (the torii): December 2022."))),
+                   row("hours", "春日荷茶屋 10:30〜16:30（ラストオーダー16:00）。休みは不定で、月ごとに公式サイトに出ます（2026年11月は10日・17日）。万葉粥 1,200円（季節の野菜は月ごとに変わります）",
+                       "Kasuga Ninaijaya 10:30–16:30 (last orders 16:00). Irregular closing days, listed monthly on the website (10 and 17 November 2026). Man’yo-gayu ¥1,200 (the vegetables change every month)")],
+                  "春日大社 公式サイト（参拝案内、春日荷茶屋 https://www.kasugataisha.or.jp/ninaijyaya/ 、お品書き https://www.kasugataisha.or.jp/ninaijyaya/menu/ ）。2026-11-22に確認、荷茶屋は2026-11-23に再確認。荷茶屋の支払い方法は記載なし",
+                  tip=T("春日大社の公式サイトで確認しました。荷茶屋の支払い方法は公式サイトに書かれていません（要確認）。4枚目の鳥居の写真は2022年12月。", "Checked on Kasuga Taisha’s website. The website does not say how you can pay at the teahouse (please check). The fourth photo (the torii): December 2022."))),
     naramachi=dict(
         name=T("ならまち", "Naramachi"), kind=T("古い町並み・食事", "Old town & food"),
         blurb=T("格子の町家が残る、元興寺のまわりの古い町。お昼も、夜の一杯もここで。火曜・水曜は休む店が多めです。",
@@ -295,7 +297,7 @@ BASE = dict(
                "食べる・飲む（どれも公式サイトで時間を確かめた店です）：\n"
                "・鹿の舟「竈（かまど）」：食堂。11:00〜16:00、水曜休み。\n"
                "・粟（あわ）ならまち店：大和野菜の料理。完全予約制です。昼は11:30〜14:30（入店は13:00まで）、夜は17:30〜21:00（入店は19:00まで）、火曜休み。昼3,800円から、夜4,800円から。カードも使えます。\n"
-               "・なら泉勇斎（ならいずみゆうさい）：奈良の地酒の店。カウンターで有料の試飲ができます。11:00〜20:00、木曜休み。夕方、駅へ戻る前の一杯に。\n"
+               "・なら泉勇斎（ならいずみゆうさい）：奈良の地酒の店。カウンターで有料の試飲ができます（1杯50mlで200円から）。11:00〜20:00、木曜休み。臨時休業や早じまいの日は公式サイトのお知らせに出ます。夕方、駅へ戻る前の一杯に。\n"
                "・中谷堂（なかたにどう）：三条通の角。つきたてのよもぎ餅。10:00〜19:00。\n\n"
                "予約なしで入るなら、町家のカフェや食事の店は元興寺の北と西の通りに集まっています。ランチが14時ごろで終わる店に注意。駅前のアーケード（東向商店街・もちいどのセンター街）は、昼から夜まで開いている店が多いです。\n\n"
                "近鉄奈良駅へは、もちいどのセンター街のアーケードを北へ抜けて歩いて約15分。",
@@ -305,7 +307,7 @@ BASE = dict(
                "Eating and drinking (hours of all of these were checked on their own websites):\n"
                "• Shika-no-Fune “Kamado”: a canteen. 11:00–16:00, closed Wednesdays.\n"
                "• Awa Naramachi: dishes built on traditional Yamato vegetables. Reservation only. Lunch 11:30–14:30 (last seating 13:00), dinner 17:30–21:00 (last seating 19:00), closed Tuesdays. Lunch from ¥3,800, dinner from ¥4,800. Cards accepted.\n"
-               "• Nara Izumi Yusai: a shop for Nara’s local sake, with paid tastings at the counter. 11:00–20:00, closed Thursdays. Good for a glass before you walk back to the station.\n"
+               "• Nara Izumi Yusai: a shop for Nara’s local sake, with paid tastings at the counter (from ¥200 for a 50 ml glass). 11:00–20:00, closed Thursdays. Extra closing days and early closings are posted on its website. Good for a glass before you walk back to the station.\n"
                "• Nakatanidou: on the corner of Sanjo-dori. Freshly pounded mugwort rice cakes. 10:00–19:00.\n\n"
                "Without a booking, cafés and restaurants in old townhouses are clustered on the streets north and west of Gangoji. Watch out for places whose lunch ends around 14:00. The covered arcades by the station (Higashimuki and Mochiidono) have many places open from lunch into the evening.\n\n"
                "To Kintetsu-Nara Station, walk north through the Mochiidono arcade: about 15 minutes."),
@@ -318,15 +320,16 @@ BASE = dict(
                link("official", "粟 ならまち店（予約）", "Awa Naramachi (reservations, Japanese)", "https://www.kiyosumi.jp/naramachiten"),
                link("official", "なら泉勇斎", "Nara Izumi Yusai (Japanese)", "https://naraizumi.jp/"),
                link("official", "中谷堂", "Nakatanidou (Japanese)", "https://nakatanidou.jp/shop")],
-        info=info([row("hours", "元興寺 9:00〜17:00（入門は16:30まで）、700円", "Gangoji 9:00–17:00 (last entry 16:30), ¥700"),
+        info=info([row("hours", "元興寺 9:00〜17:00（入門は16:30まで）、700円（秋の特別展の期間は800円。2026年は10月24日〜11月15日）", "Gangoji 9:00–17:00 (last entry 16:30), ¥700 (¥800 during the autumn special exhibition; 24 October – 15 November in 2026)"),
                    row("hours", "ならまち格子の家 9:00〜17:00、無料。月曜休み（祝日なら翌日）、祝日の翌日、12月26日〜1月5日も休み", "Naramachi Koshi-no-Ie 9:00–17:00, free. Closed Mondays (next day if a holiday), the day after a holiday, and 26 December – 5 January"),
                    row("hours", "鹿の舟：繭（観光案内所）9:00〜17:00・無休／竈（食堂）11:00〜16:00・水曜休み／囀（喫茶）11:30〜17:00・火水休み", "Shika-no-Fune: Mayu (tourist information) 9:00–17:00 daily / Kamado (canteen) 11:00–16:00, closed Wed / Saezuri (tea room) 11:30–17:00, closed Tue & Wed"),
                    row("hours", "粟 ならまち店：完全予約制。昼 11:30〜14:30（入店13:00まで）、夜 17:30〜21:00（入店19:00まで）、火曜休み", "Awa Naramachi: reservation only. Lunch 11:30–14:30 (last seating 13:00), dinner 17:30–21:00 (last seating 19:00), closed Tuesdays"),
-                   row("hours", "なら泉勇斎 11:00〜20:00、木曜休み。試飲は有料（料金は要確認）", "Nara Izumi Yusai 11:00–20:00, closed Thursdays. Paid tastings (prices: please check)"),
-                   row("hours", "中谷堂 10:00〜19:00（売り切れで早じまいあり）。よもぎ餅3個600円（11月21日に確認）", "Nakatanidou 10:00–19:00 (may close early when sold out). Mugwort rice cakes ¥600 for three (checked 21 November)")],
-                  "鹿の舟・粟 ならまち店・なら泉勇斎の公式サイト（2026-11-22）、元興寺・奈良市（格子の家）・中谷堂の公式サイト（2026-11-21）",
-                  tip=T("それぞれの公式サイト（格子の家は奈良市）で確認しました。鹿の舟・粟・なら泉勇斎は11月22日、元興寺・格子の家・中谷堂は11月21日。鹿の舟は月ごとの休みのお知らせが公式サイトに出ます。中谷堂の休みは決まっていません（お店のSNSで告知）。",
-                        "Checked on each official website (Koshi-no-Ie on Nara City’s page): Shika-no-Fune, Awa and Nara Izumi Yusai on 22 November; Gangoji, Koshi-no-Ie and Nakatanidou on 21 November. Shika-no-Fune posts its monthly closing days on its website. Nakatanidou has no fixed closing day (announced on its social media)."))),
+                   row("hours", "なら泉勇斎 11:00〜20:00、木曜休み（臨時休業あり）。試飲は1杯50mlで200円から", "Nara Izumi Yusai 11:00–20:00, closed Thursdays (and some other days). Tastings from ¥200 for a 50 ml glass"),
+                   row("hours", "中谷堂 10:00〜19:00（売り切れで早じまいあり）。よもぎ餅3個入り600円", "Nakatanidou 10:00–19:00 (may close early when sold out). Mugwort rice cakes ¥600 for a pack of three")],
+                  "鹿の舟・粟 ならまち店の公式サイト（2026-11-22）。2026-11-23に確認：元興寺 https://gangoji-tera.or.jp/about/ と秋季特別展 https://gangoji-tera.or.jp/news/detail.php?no=MzQ1 、奈良市（格子の家）https://www.city.nara.lg.jp/site/shisetsu/6242.html 、なら泉勇斎 https://www.naraizumi.jp/about/ ・https://www.naraizumi.jp/news/ 、中谷堂 https://nakatanidou.jp/shop ・https://nakatanidou.jp/item",
+                  checked=D22,
+                  tip=T("それぞれの公式サイト（格子の家は奈良市）で確認しました。鹿の舟・粟は11月22日、元興寺・格子の家・なら泉勇斎・中谷堂は11月23日。鹿の舟は月ごとの休みのお知らせが公式サイトに出ます。中谷堂の休みは決まっていません（お店のSNSで告知）。",
+                        "Checked on each official website (Koshi-no-Ie on Nara City’s page): Shika-no-Fune and Awa on 22 November; Gangoji, Koshi-no-Ie, Nara Izumi Yusai and Nakatanidou on 23 November. Shika-no-Fune posts its monthly closing days on its website. Nakatanidou has no fixed closing day (announced on its social media)."))),
     harushika=dict(
         name=T("春鹿（今西清兵衛商店）", "Harushika sake brewery (Imanishi Seibei Shoten)"), kind=T("酒蔵・きき酒", "Sake brewery & tasting"),
         blurb=T("ならまちの東の端にある、日本酒「春鹿」の蔵元。700円で5種類のきき酒。受付は10:00〜16:30、火曜休み。",
@@ -334,26 +337,27 @@ BASE = dict(
         caution=T("火曜休み・きき酒の受付は16:30まで・20歳から。運転する人は不可", "Closed Tuesdays · tasting reception until 16:30 · age 20 and over, not for drivers"),
         lat=34.67720, lng=135.83440,
         body=T("春鹿（はるしか）今西清兵衛商店（いまにしせいべえしょうてん）\n\n日本酒「春鹿」の蔵元です。元興寺から東へ歩いて約5分。杉玉（すぎたま）の下がる、格子の古い建物が入口です。\n\n"
-               "きき酒は1人700円で、5種類を1杯ずつ。受付は10:00から16:30まで。お酒とグラスは季節で変わります（公式サイトより）。公式サイトで予約を受けているのは4〜8人の組だけです（10:00と11:00の回）。1〜3人は店で直接受付を。\n\n"
+               "きき酒は1人700円で、5種類を1杯ずつ。受付は10:00から16:30まで。お酒とグラスは季節で変わります（公式サイトより）。予約はいりません。受付時間内なら、レジで受け付けて順に案内されます（混んでいると待つことがあります）。4〜8人の組は、10:00と11:00の回を電話・メールで予約することもできます。蔵でイベントのある日や時間は、きき酒ができないことがあります。\n\n"
                "お酒は20歳から。車や自転車を運転する人は、きき酒はできません。\n\n"
                "支払い方法は公式サイトに書かれていません（要確認）。現金を用意しておくと安心です。\n\n"
                "蔵の中の見学は、毎年2月ごろの期間限定です。\n\n"
                "写真は2022年12月。そのときの店内の案内では、きき酒のあとにグラスを持ち帰れました（今も同じかは要確認）。",
                "Harushika (Imanishi Seibei Shoten)\n\nThe brewery of Harushika sake, about 5 minutes’ walk east of Gangoji. Look for the old latticed building with a cedar ball hanging over the door.\n\n"
-               "The tasting is ¥700 per person for one cup each of five kinds. Reception runs from 10:00 to 16:30. The sakes and the glass change with the season (from the official website). The website takes bookings only for groups of 4–8 (at 10:00 and 11:00). If you are 1–3 people, ask at the shop.\n\n"
+               "The tasting is ¥700 per person for one cup each of five kinds. Reception runs from 10:00 to 16:30. The sakes and the glass change with the season (from the official website). No booking is needed: within reception hours you sign in at the till and are shown in in turn (there may be a wait when busy). Groups of 4–8 can also book the 10:00 or 11:00 slot by phone or email. On days or at times when the brewery holds an event, tastings may not be available.\n\n"
                "You must be 20 or over. If you are driving or cycling, you can’t do the tasting.\n\n"
                "The website does not say how you can pay (unconfirmed). Have cash ready to be safe.\n\n"
                "Tours of the brewery itself run only for a limited period around February each year.\n\n"
                "The photos are from December 2022. The notice in the shop then said you could take your tasting glass home (please check whether that still applies)."),
         gmaps=[gm("今西清兵衛商店（春鹿）", "Imanishi Seibei Shoten (Harushika)", 34.67720, 135.83440, "今西清兵衛商店 春鹿")],
         links=[link("official", "春鹿 蔵元見学・きき酒", "Harushika brewery tasting (Japanese)", "https://www.harushika.com/visit-brewery/")],
-        info=info([row("hours", "店 9:00〜17:00。きき酒の受付 10:00〜16:30", "Shop 9:00–17:00. Tasting reception 10:00–16:30"),
-                   row("closed", "火曜（祝日なら翌日）、お盆、年末年始など", "Tuesdays (next day if a holiday), mid-August, New Year and some other days"),
-                   row("fee", "きき酒 700円（5種類）。支払い方法は要確認", "Tasting ¥700 (five kinds). Payment methods: please check"),
-                   row("bus", "歩きたくないとき：近鉄奈良駅・JR奈良駅から天理行きのバスで約10分「福智院町」下車、歩いて3分（運賃は要確認）", "If you’d rather not walk: bus bound for Tenri from Kintetsu-Nara or JR Nara, about 10 min to Fukuchiin-cho, then 3 min on foot (fare: please check)")],
-                  "春鹿（今西清兵衛商店）公式サイト「蔵元見学・きき酒」。2026-11-22に確認。支払い方法とグラスの持ち帰りは記載なし（要確認）",
-                  tip=T("春鹿の公式サイトで確認しました。年末年始の休みの日付は公式サイトに出ていません（要確認）。支払い方法も書かれていません。",
-                        "Checked on Harushika’s website. The exact New Year closing dates are not given there (please check), and neither are payment methods."))),
+        info=info([row("hours", "きき酒の受付 10:00〜16:30。予約なしで入れます（4〜8人の組は10:00・11:00の回を予約も可）", "Tasting reception 10:00–16:30. No booking needed (groups of 4–8 can also book the 10:00 or 11:00 slot)"),
+                   row("closed", "火曜（祝日なら翌日）、お盆、年末年始など。臨時休業もあります。年末年始の日付は公式サイトに出ていません（要確認）", "Tuesdays (next day if a holiday), mid-August, New Year and some other days, plus occasional extra closures. The New Year dates are not on the website (please check)"),
+                   row("fee", "きき酒 700円（5種類）。支払い方法は公式サイトに書かれていません（要確認）", "Tasting ¥700 (five kinds). Payment methods are not on the website (please check)"),
+                   row("bus", "歩きたくないとき：奈良交通バスで「福智院町」下車、歩いて3分。近鉄奈良駅（のりば3）から4分、JR奈良駅（東口1）から8分、どちらも250円。天理駅行きなど", "If you’d rather not walk: Nara Kotsu bus to Fukuchiin-cho, then 3 min on foot. 4 min from Kintetsu-Nara (stop 3) or 8 min from JR Nara (east exit stop 1), ¥250 either way; buses for Tenri and others")],
+                  "春鹿（今西清兵衛商店）公式サイト「酒蔵SHOP」https://www.harushika.com/visit-brewery/ と「きき酒のご案内」https://www.harushika.com/news/185/ 、バスは奈良交通「奈良バスなびweb」" + NAVI + " 。2026-11-23に確認。支払い方法・グラスの持ち帰り・年末年始の日付は記載なし（要確認）",
+                  checked=D23,
+                  tip=T("春鹿の公式サイトと奈良交通の「奈良バスなび」で確認しました（11月23日。バスは11月28日・土曜のダイヤ）。年末年始の休みの日付、支払い方法、グラスの持ち帰りは公式サイトに書かれていません（要確認）。",
+                        "Checked on Harushika’s website and Nara Kotsu’s bus planner (23 November; bus times for Saturday 28 November). The New Year closing dates, payment methods and whether you can keep the glass are not given on the website (please check)."))),
     heijo=dict(
         name=T("平城宮跡", "Heijo Palace Site"), kind=T("都の跡（世界遺産）・寄り道", "Palace site (World Heritage), side trip"),
         blurb=T("1300年前の都の中心。広い野原に朱雀門と大極殿が復元されています。帰りの電車で途中下車して寄れます。無料。建物は入場16:00まで、月曜休み。",
@@ -374,14 +378,14 @@ BASE = dict(
                    row("closed", "大極殿・朱雀門：月曜（祝日なら次の平日）、12月29日〜1月3日。いざない館：2・4・7・11月の第2月曜、12月29日〜1月1日", "Daigokuden and Suzaku Gate: Mondays (next weekday if a holiday), 29 Dec – 3 Jan. Izanai-kan: 2nd Monday of Feb, Apr, Jul and Nov; 29 Dec – 1 Jan"),
                    row("fee", "無料", "Free"),
                    row("train", "近鉄奈良 → 大和西大寺 約5分。南口から大極殿・朱雀門ひろばへ歩いて約20分", "Kintetsu-Nara → Yamato-Saidaiji about 5 min. About 20 min on foot from the south exit to the Daigokuden or Suzaku Gate Square"),
-                   row("bus", "朱雀門ひろば前 → 近鉄奈良駅 約16分、JR奈良駅西口 約10分（奈良交通バス。運賃は要確認）", "Suzakumon Hiroba-mae → Kintetsu-Nara Station about 16 min, JR Nara Station west exit about 10 min (Nara Kotsu bus; fare: please check)")],
-                  "平城宮跡歴史公園 公式サイト（2026-11-21）、乗換案内", checked=D21,
-                  tip=T("平城宮跡歴史公園の公式サイトと乗換案内で確認しました（11月21日）。", "Checked on the Heijo Palace Site Historical Park website and a route planner (21 November)."))),
+                   row("bus", "朱雀門ひろば前（のりば2）→ JR奈良駅西口 13分、近鉄奈良駅 20分、250円（奈良交通バス。夕方は平日・土曜とも30分おき：16:36・17:06・17:36発）", "Suzakumon Hiroba-mae (stop 2) → JR Nara Station west exit 13 min, Kintetsu-Nara Station 20 min, ¥250 (Nara Kotsu bus; in the late afternoon every 30 minutes on weekdays and Saturdays: 16:36, 17:06, 17:36)")],
+                  "平城宮跡歴史公園 公式サイト https://www.heijo-park.jp/information/facility/ ・https://www.heijo-park.jp/information/access/ 、バスは奈良交通「奈良バスなびweb」" + NAVI + " （2026年11月25日・28日のダイヤ）。2026-11-23に確認", checked=D23,
+                  tip=T("平城宮跡歴史公園の公式サイトと奈良交通の「奈良バスなび」で確認しました（11月23日）。", "Checked on the Heijo Palace Site Historical Park website and Nara Kotsu’s bus planner (23 November)."))),
     horyuji=dict(
         name=T("法隆寺", "Horyuji Temple"), kind=T("寺（世界遺産）・別に半日", "Temple (World Heritage), needs half a day"),
         blurb=T("世界でいちばん古い木造建築。奈良公園から電車と徒歩で約50分かかるので、同じ日に入れるなら何かを外します。拝観料は現金だけ。",
                 "The oldest wooden buildings in the world. It’s about 50 minutes from Nara Park by train and on foot, so fitting it into the same day means dropping something. Cash only."),
-        caution=T("奈良公園と同じ日に全部は回れません・現金のみ", "Doesn’t fit with the whole Nara Park route in one day · cash only"),
+        caution=T("奈良公園と同じ日に全部は回れません・現金のみ・境内は撮影禁止", "Doesn’t fit with the whole Nara Park route in one day · cash only · no photography in the grounds"),
         lat=34.61470, lng=135.73420,
         body=T("法隆寺（ほうりゅうじ）\n\n聖徳太子が建てたお寺で、金堂と五重塔は7世紀のもの。世界でいちばん古い木造建築です。興福寺の五重塔が見られない今、五重塔を見たい人にはここをすすめます。\n\n"
                "奈良公園のルートを全部歩いた日に法隆寺まで行くのは無理があります。JR奈良駅から大和路快速で11分、法隆寺駅から歩いて約20分（バスなら約8分）。近鉄奈良駅からJR奈良駅までも歩いて15分あり、片道で約50分みてください。中を見るのに1時間半はかかります。\n\n"
@@ -394,13 +398,17 @@ BASE = dict(
         gmaps=[gm("法隆寺", "Horyuji", 34.61470, 135.73420, "法隆寺"), gm("JR法隆寺駅", "JR Horyuji Station", 34.60180, 135.73967, "JR法隆寺駅"),
                gm("JR奈良駅", "JR Nara Station", 34.68088, 135.81993, "JR奈良駅")],
         links=[link("official", "法隆寺 拝観案内", "Horyuji visitor information (Japanese)", "https://www.horyuji.or.jp/annai/"), YAHOO],
+        notices=[notice("境内は撮影禁止", "No photography in the grounds",
+                        "法隆寺の公式サイトの「境内における禁止事項」に、写真・動画の撮影と写生が入っています。",
+                        "The temple’s list of prohibited acts in its grounds includes taking photos or videos and sketching.",
+                        url="https://www.horyuji.or.jp/annai/")],
         info=info([row("hours", "2月22日〜11月3日 8:00〜17:00、11月4日〜2月21日 8:00〜16:30（受付は30分前まで）", "22 Feb – 3 Nov 8:00–17:00; 4 Nov – 21 Feb 8:00–16:30 (tickets until 30 minutes before closing)"),
                    row("fee", "2,000円（中学生1,700円、小学生1,000円）。西院伽藍・大宝蔵院・東院伽藍の共通。現金のみ", "¥2,000 (junior high ¥1,700, primary ¥1,000) for the Western Precinct, Gallery of Temple Treasures and Eastern Precinct. Cash only"),
                    row("train", "JR奈良 → 法隆寺 大和路快速で11分・240円（日中は約15分おき）", "JR Nara → Horyuji 11 min by Yamatoji Rapid, ¥240 (about every 15 minutes in the daytime)"),
-                   row("bus", "法隆寺駅 南口 → 法隆寺参道 約8分（奈良交通バス72番。運賃は要確認）。歩くと約20分", "Horyuji Station south exit → Horyuji Sando about 8 min (Nara Kotsu bus 72; fare: please check). About 20 min on foot")],
-                  "法隆寺 公式サイト（2025年3月改定の料金）、乗換案内、斑鳩町（バス）。2026-11-21に確認", cash=True, checked=D21,
-                  tip=T("時間と料金は法隆寺の公式サイト（2025年3月改定）、電車は乗換案内、バスの時間は斑鳩町のページで確認しました（11月21日）。",
-                        "Hours and fees checked on Horyuji’s website (revised March 2025); trains on a route planner; bus time on Ikaruga Town’s page (21 November)."))),
+                   row("bus", "法隆寺駅（のりば2）→ 法隆寺参道 8分・220円（奈良交通バス72番。土曜の昼は12:20・12:44・13:02発など）。歩くと約20分", "Horyuji Station (stop 2) → Horyuji Sando 8 min, ¥220 (Nara Kotsu bus 72; on Saturdays around noon at 12:20, 12:44, 13:02 and so on). About 20 min on foot")],
+                  "法隆寺 公式サイト https://www.horyuji.or.jp/annai/ （2025年3月改定の料金・境内の禁止事項）、乗換案内（JR奈良→法隆寺 2026年11月28日 12:00発 240円）、奈良交通「奈良バスなびweb」" + NAVI + " 。2026-11-23に確認", cash=True, checked=D23,
+                  tip=T("時間と料金は法隆寺の公式サイト（2025年3月改定）、電車は乗換案内、バスは奈良交通の「奈良バスなび」で確認しました（11月23日）。",
+                        "Hours and fees checked on Horyuji’s website (revised March 2025); trains on a route planner; buses on Nara Kotsu’s bus planner (23 November)."))),
 )
 
 VIS, ARR = ("おすすめ訪問時間", "Recommended visit time"), ("おすすめ到着時間", "Recommended arrival time")
