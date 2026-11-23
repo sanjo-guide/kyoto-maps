@@ -17,6 +17,7 @@ import json, os, re, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = f"{R}/images/kinkakuji"
 CHECKED = "2026-11-22"
+TODAY = "2026-11-24"  # 「要確認」の調べ直しをした日（平野神社・大徳寺・北野天満宮・金閣寺・市バス運賃）
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -48,8 +49,8 @@ def row(kind, ja, en, until=None):
     return {"kind": kind, "text": T(ja, en), "until": until, "from": None}
 
 
-def info(rows, tip=None):
-    return {"rows": rows, "cash": False, "tip": tip, "checked": CHECKED}
+def info(rows, tip=None, checked=None):
+    return {"rows": rows, "cash": False, "tip": tip, "checked": checked or CHECKED}
 
 
 def notice(head_ja, head_en, ja, en, url=None, to=None):
@@ -70,6 +71,14 @@ RANDEN_URL = "https://www.keifuku.co.jp/randen_timetable.php"
 TOYOUKE_URL = "http://www.toyoukeya.co.jp/"
 IZUSEN_URL = "https://kyoto-izusen.com/html2/restrant_daijiin.html"
 DAISEN_URL = "https://daisen-in.net/"
+IZUSEN_PRICE_URL = "https://kyoto-izusen.com/wordpress/info/daijiin/4676/"
+HIRANO_HOURS_URL = "https://ja.kyoto.travel/tourism/article/asakanko-yorukanko/post/single.php?id=85"
+HIRANO_LIGHTUP_URL = "https://ja.kyoto.travel/event/single.php?event_id=4083"
+KINKAKU_FAQ_URL = "https://www.shokoku-ji.jp/kinkakuji/faq/"
+KITANO_FAQ_URL = "https://kitanotenmangu.or.jp/faq/"
+BUS_FARE_URL = "https://www.city.kyoto.lg.jp/kotsu/page/0000240682.html"
+SHUNJU = {"oubaiin": "https://kyotoshunju.com/temple/daitokuji-oubaiin/", "kohrinin": "https://kyotoshunju.com/temple/daitokuji-kohrinin/",
+          "jukoin": "https://kyotoshunju.com/temple/daitokuji-jukoin2026/", "sokenin": "https://kyotoshunju.com/temple/daitokuji-sokenin/"}
 RANDEN_ROW = row("train", "嵐電（北野白梅町〜御室仁和寺）約5分・250円（どこまで乗っても同じ）。日中は毎時03・13・23・33・43・53分発。運賃は降りるときに現金かICカードで",
                  "Randen tram (Kitano-Hakubaicho – Omuro-Ninnaji): about 5 min, flat ¥250. In the daytime, trams leave at :03, :13, :23, :33, :43 and :53. Pay as you get off, cash or IC card")
 
@@ -143,13 +152,19 @@ S = {
         notices=[notice("お守りとご朱印は現金で", "Amulets and goshuin: cash",
                         "拝観料は現金のほか、キャッシュレス決済（おまいりPay）でも払えます。お守りなどの授与品とご朱印は、キャッシュレスの対象外です（公式サイト）。",
                         "Admission can be paid in cash or by cashless payment (Omairi Pay). Amulets and goshuin stamps are not covered by cashless payment (official website).",
-                        "https://www.shokoku-ji.jp/kinkakuji/access/")],
+                        "https://www.shokoku-ji.jp/kinkakuji/access/"),
+                 notice("撮影は個人で楽しむスナップだけ", "Photos: personal snapshots only",
+                        "境内の撮影は、個人で楽しむ範囲の小型カメラでのスナップに限られています。SNSなどで公開するための撮影、団体写真、動画の配信、ドローンは断られています（公式サイトのよくある質問）。",
+                        "Inside the grounds, only snapshots with a small camera for personal enjoyment are allowed. Photos taken to publish (including on social media), group photos, live-streaming and drones are not (official FAQ).",
+                        KINKAKU_FAQ_URL)],
         gmaps=[gm("金閣寺", "Kinkaku-ji", 35.03937, 135.72924, "金閣寺 鹿苑寺")],
         links=[link("official", "金閣寺 公式サイト（アクセス・参拝料金）", "Kinkaku-ji (official)", "https://www.shokoku-ji.jp/kinkakuji/access/", "https://www.shokoku-ji.jp/en/kinkakuji/"),
                link("timetable", "市バス時刻表（京都市交通局）", "Kyoto city bus timetables (Japanese)", BUS_URL)],
-        info=info([row("hours", "9:00〜17:00（年中無休）", "9:00–17:00, open every day"),
+        info=info([row("hours", "9:00〜17:00（年中無休）。受付の締め切り時刻は公式サイトに書かれていません（要確認）",
+                       "9:00–17:00, open every day. The official website doesn’t give a last-entry time (please check)"),
                    row("fee", "大人（高校生以上）500円、小・中学生300円", "Adults (high school and up) ¥500; elementary and junior high ¥300")],
-                  tip=T("市バス「金閣寺道」（12・59・204・205系統など）から歩きます。", "Walk from the “Kinkakuji-michi” city bus stop (buses 12, 59, 204, 205 and others).")),
+                  tip=T("市バス「金閣寺道」（12・59・204・205系統など）から歩きます。", "Walk from the “Kinkakuji-michi” city bus stop (buses 12, 59, 204, 205 and others)."),
+                  checked=TODAY),
     ),
     "daitokuji": dict(
         name=T("大徳寺", "Daitoku-ji Temple"), kind=T("お寺", "Temple"),
@@ -158,19 +173,21 @@ S = {
         lat=35.04279, lng=135.74655,
         body=T("大徳寺（だいとくじ）\n\n臨済宗大徳寺派の大本山。広い境内に、土塀に囲まれた塔頭（小さなお寺）が並び、松と石畳の道を歩くだけでも気持ちのいい場所です。"
                "朱色の三門（金毛閣）は、千利休ゆかりの門として知られています。最後の写真は、塔頭のひとつ黄梅院（おうばいいん）の門。門の中に青もみじと苔の庭が見えます。\n\n"
-               "庭を公開している塔頭もありますが、公開日・時間・拝観料はそれぞれちがいます。入る前に、門の前の案内を見てください。",
+               "庭を公開している塔頭もありますが、公開日・時間・拝観料はそれぞれちがいます。入る前に、門の前の案内を見てください。"
+               "時期によって、ふだん閉じている塔頭の特別公開もあります。",
                "Daitoku-ji Temple\n\nHead temple of the Daitoku-ji school of Rinzai Zen. Its grounds are lined with walled sub-temples, and simply walking the pine-shaded stone paths is a pleasure. "
                "The vermilion Sanmon gate (Kinmokaku) is famous for its links to the tea master Sen no Rikyu. The last photo is the gate of Obai-in, one of the sub-temples, with green maples and moss inside.\n\n"
-               "Some sub-temples open their gardens, but days, hours and fees differ for each. Check the sign at the gate before you go in."),
+               "Some sub-temples open their gardens, but days, hours and fees differ for each. Check the sign at the gate before you go in. "
+               "At some times of year, sub-temples that are normally closed hold special openings."),
         way={
             "early": T("金閣寺道からバスで約6分、10:10ごろ着きます。まず石畳の道を歩いて、三門へ。\n\n"
                        "ひと休みするなら大仙院（だいせんいん）。枯山水の庭を見たあと、お抹茶（500円）が飲めます。拝観は大人500円、ふだんは9:00〜16:30。法要などで昼に閉まる日や早く閉まる日があるので、公式サイトのカレンダーでその日の時間を見てください。\n\n"
-                       "お昼は11:15ごろ、境内にある「泉仙（いずせん）大慈院店」の精進料理はどうでしょう。11:00〜16:00（ラストオーダー）、休みは12月28〜31日だけ。公式サイトのお品書きでは「あやめ」4,500円からです（「お料理は一例」とあるので、値段は店で確かめてください）。6人以上は予約が必要です。"
+                       "お昼は11:15ごろ、境内にある「泉仙（いずせん）大慈院店」の精進料理はどうでしょう。11:00〜16:00（ラストオーダー）、休みは12月28〜31日だけ。精進料理は「あやめ」4,500円、「ゆり」5,500円、「ぼたん」6,500円です（税込。2026年9月1日からの値段）。6人以上は予約が必要です。"
                        "もっと手軽に食べたい人向けの店は、昼の営業を公式サイトで確かめられたところがなく、名前は出していません。\n\n"
                        "食べ終わったら、「大徳寺前」12:19発の市バス205系統（金閣寺・西大路四条行き）で「北野白梅町」へ（12:30着、230円）。嵐電の北野白梅町駅から12:43発に乗ると、御室仁和寺駅に12:48に着きます。205系統は7〜8分おき、嵐電は10分おきなので、乗りおくれても次ですぐ行けます。",
                        "About 6 minutes by bus from Kinkakuji-michi, arriving around 10:10. Walk the stone paths to the Sanmon gate first.\n\n"
                        "For a rest, try Daisen-in: after its dry landscape garden you can have a bowl of matcha (¥500). Admission is ¥500 for adults, and it is normally open 9:00–16:30. On some days it closes over midday or early for ceremonies, so check that day’s hours on the calendar on its website.\n\n"
-                       "For lunch at about 11:15, there’s Izusen Daiji-in, a Buddhist vegetarian restaurant inside the temple grounds. It’s open 11:00–16:00 (last order) and closed only 28–31 December. Its online menu starts at ¥4,500 for the “Ayame” set (the site calls the menu an example, so check prices at the door). Groups of six or more must book. "
+                       "For lunch at about 11:15, there’s Izusen Daiji-in, a Buddhist vegetarian restaurant inside the temple grounds. It’s open 11:00–16:00 (last order) and closed only 28–31 December. The set meals are “Ayame” ¥4,500, “Yuri” ¥5,500 and “Botan” ¥6,500 (tax included; prices from 1 September 2026). Groups of six or more must book. "
                        "I couldn’t confirm on an official website a cheaper place nearby that is open for lunch, so I don’t name one.\n\n"
                        "After lunch take city bus 205 (for Kinkaku-ji and Nishioji-Shijo) from “Daitokuji-mae” at 12:19 to “Kitano-Hakubaicho” (arrives 12:30, ¥230). The 12:43 Randen tram from Kitano-Hakubaicho station gets to Omuro-Ninnaji at 12:48. Bus 205 runs every 7–8 minutes and the tram every 10, so if you miss one the next is close behind."),
         },
@@ -183,12 +200,23 @@ S = {
         links=[link("info", "臨黄ネット（大徳寺の案内）", "Rinzai-Obaku Zen (Daitoku-ji, Japanese)", "https://www.rinnou.net/cont_03/07daitoku/"),
                link("official", "大仙院 公式サイト（日ごとの拝観時間）", "Daisen-in (official, Japanese)", DAISEN_URL),
                link("official", "泉仙 大慈院店 公式サイト", "Izusen Daiji-in (official, Japanese)", IZUSEN_URL),
+               link("info", "黄梅院の特別公開（京都春秋）", "Obai-in special opening (Kyoto Shunju, Japanese)", SHUNJU["oubaiin"]),
                link("timetable", "市バス時刻表（京都市交通局）", "Kyoto city bus timetables (Japanese)", BUS_URL)],
         info=info([row("hours", "大仙院 9:00〜16:30（日によって変わります）。泉仙 大慈院店 11:00〜16:00（ラストオーダー）", "Daisen-in 9:00–16:30 (varies by day). Izusen Daiji-in 11:00–16:00 (last order)"),
-                   row("fee", "大仙院 大人500円、小・中学生300円、お抹茶500円。泉仙 大慈院店の精進料理は4,500円から", "Daisen-in: adults ¥500, elementary and junior high ¥300, matcha ¥500. Izusen Daiji-in: set meals from ¥4,500"),
-                   row("closed", "大仙院は年中無休。泉仙 大慈院店は12月28〜31日", "Daisen-in: open all year. Izusen Daiji-in: closed 28–31 December")],
-                  tip=T("大仙院と泉仙の公式サイトで確認しました。ほかの塔頭の公開日・料金は確認できていません（要確認）。",
-                        "Checked on the Daisen-in and Izusen websites. Opening days and fees of the other sub-temples could not be confirmed.")),
+                   row("fee", "大仙院 大人500円、小・中学生300円、お抹茶500円。泉仙 大慈院店の精進料理 4,500円・5,500円・6,500円（税込）",
+                       "Daisen-in: adults ¥500, elementary and junior high ¥300, matcha ¥500. Izusen Daiji-in set meals: ¥4,500, ¥5,500, ¥6,500 (tax included)"),
+                   row("closed", "大仙院は年中無休。泉仙 大慈院店は12月28〜31日", "Daisen-in: open all year. Izusen Daiji-in: closed 28–31 December"),
+                   row("hours", "秋の特別公開・総見院（2026年11月30日まで）10:00〜16:00受付終了、大人800円、現金のみ",
+                       "Autumn special opening, Soken-in (until 30 Nov 2026): 10:00–16:00 last entry, adults ¥800, cash only", until="2026-11-30"),
+                   row("hours", "秋の特別公開・黄梅院（2026年12月6日まで）10:00〜15:45受付終了、大人1,000円、現金のみ",
+                       "Autumn special opening, Obai-in (until 6 Dec 2026): 10:00–15:45 last entry, adults ¥1,000, cash only", until="2026-12-06"),
+                   row("hours", "秋の特別公開・聚光院（2026年12月6日まで）9:30〜15:30受付終了、大人1,000円、現金のみ。未就学児は入れません。11月27〜29日は休み。境内は撮影禁止",
+                       "Autumn special opening, Juko-in (until 6 Dec 2026): 9:30–15:30 last entry, adults ¥1,000, cash only. No preschool children. Closed 27–29 Nov. No photography", until="2026-12-06"),
+                   row("hours", "秋の特別公開・興臨院（2026年12月15日まで）10:00〜16:30受付終了（12月1日からは16:00）、大人800円、現金のみ。庭園以外は撮影禁止",
+                       "Autumn special opening, Korin-in (until 15 Dec 2026): 10:00–16:30 last entry (16:00 from 1 Dec), adults ¥800, cash only. Photography in the garden only", until="2026-12-15")],
+                  tip=T("大仙院と泉仙は公式サイト、秋の特別公開は主催の京都春秋の案内で確認しました（法要で休む日が増えることがあります）。ほかの塔頭の公開日・料金は公式で確かめられませんでした（要確認）。",
+                        "Daisen-in and Izusen were checked on their websites, and the autumn special openings on the organiser Kyoto Shunju’s pages (extra closures for ceremonies are possible). Opening days and fees of the other sub-temples could not be confirmed officially (please check)."),
+                  checked=TODAY),
     ),
     "ninnaji": dict(
         name=T("仁和寺", "Ninna-ji Temple"), kind=T("お寺", "Temple"),
@@ -234,11 +262,13 @@ S = {
                 "About 400 cherry trees of some 60 kinds, known for blossoms at night. In cherry season, come at dusk."),
         lat=35.03238, lng=135.73248,
         body=T("平野神社（ひらのじんじゃ）\n\n平安時代から桜が植えられてきた神社で、今は約60種・400本の桜があります。江戸時代から「平野の夜桜」として知られる花見の名所です。\n\n"
-               "3月中ごろの早咲きの桜から4月下旬の八重桜まで、長い期間いろいろな桜が楽しめます。写真は2025年4月5日の夕方〜夜。桜の時期は境内の桜苑が有料になることがあります（料金・時間は要確認）。"
-               "桜の時期以外は静かな神社で、20〜30分あれば回れます。門が開いている時間は、公式サイトに書かれていません（要確認）。",
+               "3月中ごろの早咲きの桜から4月下旬の八重桜まで、長い期間いろいろな桜が楽しめます。写真は2025年4月5日の夕方〜夜。"
+               "2026年の春は3月28日〜4月12日に夜桜のライトアップ（日没〜21:00ごろ、桜苑500円）がありました。来春の日程と料金はまだ発表されていません（要確認）。\n\n"
+               "参拝は6:00〜17:00（京都市観光協会の京都観光Navi、2026年6月時点）。桜の時期以外は静かな神社で、20〜30分あれば回れます。",
                "Hirano Shrine\n\nCherry trees have been planted here since the Heian period; today there are about 400 trees of some 60 kinds, and “Hirano’s night cherries” have been famous since the Edo period.\n\n"
-               "From early blossoms in mid-March to double-flowered ones in late April, something is in bloom for a long season. The photos were taken at dusk on 5 April 2025. In cherry season the shrine’s cherry garden may charge for entry (check fees and hours). "
-               "Outside cherry season it’s a quiet shrine that takes 20–30 minutes. The gate hours are not given on the official website (please check)."),
+               "From early blossoms in mid-March to double-flowered ones in late April, something is in bloom for a long season. The photos were taken at dusk on 5 April 2025. "
+               "In spring 2026 the blossoms were lit up from 28 March to 12 April (sunset to about 21:00; cherry garden ¥500). Next spring’s dates and fee have not been announced yet (please check).\n\n"
+               "Open for worship 6:00–17:00 (Kyoto City Tourism Association’s Kyoto Navi, as of June 2026). Outside cherry season it’s a quiet shrine that takes 20–30 minutes."),
         way={
             "early": T("嵐電の北野白梅町駅から、北へ歩いて約7分。15:00ごろ出て、北野天満宮へは南東へ歩いてすぐです。",
                        "About 7 minutes’ walk north of Randen’s Kitano-Hakubaicho station. Leave at about 15:00; Kitano Tenmangu is a short walk to the southeast."),
@@ -249,9 +279,15 @@ S = {
         notices=[],
         gmaps=[gm("平野神社", "Hirano Shrine", 35.03238, 135.73248, "平野神社 京都市北区")],
         links=[link("official", "平野神社 公式サイト（平野神社の桜）", "Hirano Shrine (official)", "https://www.hiranojinja.com/home/cherry"),
+               link("info", "京都観光Navi（早朝から参拝できる社寺）", "Kyoto Navi: temples and shrines open early (Japanese)", HIRANO_HOURS_URL),
                link("timetable", "嵐電 時刻表（京福電気鉄道）", "Randen tram timetables (Japanese)", RANDEN_URL)],
-        info=info([RANDEN_ROW], tip=T("嵐電は京福電気鉄道の公式サイトで確認しました。平野神社の門の時間と桜苑の料金は、公式サイトでは確認できていません（要確認）。",
-                                      "The tram was checked on the Keifuku Electric Railroad website. The shrine’s gate hours and cherry-garden fee could not be confirmed on its website.")),
+        info=info([row("hours", "参拝 6:00〜17:00（授与所 9:00〜17:00）", "Open 6:00–17:00 (amulet counter 9:00–17:00)"),
+                   row("fee", "2026年春の夜桜ライトアップ（3月28日〜4月12日、日没〜21:00ごろ）は桜苑500円。2027年の日程・料金は未発表（要確認）",
+                       "During the spring 2026 light-up (28 Mar – 12 Apr, sunset to about 21:00) the cherry garden was ¥500. Dates and fee for 2027 not yet announced (please check)"),
+                   RANDEN_ROW],
+                  tip=T("参拝時間と2026年春のライトアップは、京都市観光協会の京都観光Naviで確認しました（平野神社の公式サイトには書かれていません）。嵐電は京福電気鉄道の公式サイトで確認しました。",
+                        "Hours and the spring 2026 light-up were checked on Kyoto Navi, the Kyoto City Tourism Association’s site (the shrine’s own website doesn’t list them). The tram was checked on the Keifuku Electric Railroad website."),
+                  checked=TODAY),
     ),
     "kitano": dict(
         name=T("北野天満宮", "Kitano Tenmangu Shrine"), kind=T("神社", "Shrine"),
@@ -287,9 +323,9 @@ S = {
         time={"early": ("15:10〜16:30（秋はライトアップの時間も）", "15:10–16:30 (plus the light-up hours in autumn)"), "late": ("10:00〜10:55、お昼 11:00〜11:50", "10:00–10:55, lunch 11:00–11:50")},
         caution=T("閉門の時間は時期で変わります。毎月25日は縁日", "Closing time varies by season · market day on the 25th"),
         notices=[notice("閉門の時間は時期で変わります", "Closing time varies",
-                        "開門は7:00。もみじ苑のライトアップ期間（2026年は12月6日まで）は20:00に閉まります。公式サイトの「よくある質問」には17:00とあるので、それ以外の時期は17:00と考えて、行く前に公式サイトで確かめてください。本殿の前の三光門は、閉門の30分前に閉まります。",
-                        "The gates open at 7:00. During the maple garden light-up (until 6 December in 2026) they close at 20:00. The FAQ on the official website says 17:00, so at other times assume 17:00 and check the website before you go. The Sanko-mon gate in front of the main hall shuts 30 minutes before closing.",
-                        "https://kitanotenmangu.or.jp/"),
+                        "開門は7:00。もみじ苑のライトアップ期間（2026年は12月6日まで）は20:00ごろまで開いています（公式サイトのトップは「7時〜20時」）。ふだんの閉門は17:00です（公式サイトの「よくある質問」。京都観光Naviも同じ）。お正月や催しの日は変わることがあるので、行く前に公式サイトで確かめてください。本殿の前の三光門は、閉門の30分前に閉まります。",
+                        "The gates open at 7:00. During the maple garden light-up (until 6 December in 2026) they stay open until about 20:00 (the website’s top page says 7:00–20:00). Normally they close at 17:00 (the website’s FAQ; Kyoto Navi says the same). Times can change at New Year and on event days, so check the website before you go. The Sanko-mon gate in front of the main hall shuts 30 minutes before closing.",
+                        KITANO_FAQ_URL),
                  notice("毎月25日は縁日です", "The 25th is market day",
                         "「天神さんの日」。参道に一日じゅう露店が並び、日没からは境内がライトアップされます（公式サイト）。にぎやかな日なので、時間に余裕を見てください。",
                         "On “Tenjin-san’s day” stalls line the approach all day, and the grounds are lit up from sunset (official website). It’s a lively day, so allow extra time.",
@@ -298,14 +334,16 @@ S = {
         links=[link("official", "北野天満宮 公式サイト", "Kitano Tenmangu (official, Japanese)", "https://kitanotenmangu.or.jp/"),
                link("timetable", "市バス時刻表（京都市交通局）", "Kyoto city bus timetables (Japanese)", BUS_URL)],
         late_links=[link("official", "とようけ茶屋（とようけ屋山本 公式サイト）", "Toyouke-jaya (official, Japanese)", TOYOUKE_URL)],
-        info=info([row("hours", "開門 7:00。閉門はライトアップ期間は20:00、それ以外は17:00（公式サイトのよくある質問）", "Gates open 7:00; close 20:00 during the light-up, otherwise 17:00 (per the official FAQ)"),
+        info=info([row("hours", "開門 7:00。閉門はライトアップ期間は20:00ごろ、ふだんは17:00（公式サイトのよくある質問）。三光門は閉門の30分前まで",
+                       "Gates open 7:00; close about 20:00 during the light-up, otherwise 17:00 (official FAQ). Sanko-mon gate shuts 30 min before closing"),
                    row("hours", "もみじ苑（2026年10月31日〜12月6日）9:00〜16:00（受付15:40まで）。ライトアップ（11月13日〜12月6日）は20:00まで（受付19:40まで）",
                        "Maple garden (31 Oct – 6 Dec 2026) 9:00–16:00 (last entry 15:40); until 20:00 during the light-up, 13 Nov – 6 Dec (last entry 19:40)", until="2026-12-06"),
                    row("fee", "もみじ苑 大人（中学生以上）1,500円、小学生700円", "Maple garden: ¥1,500 (junior high and up), ¥700 (elementary)", until="2026-12-06"),
                    row("fee", "もみじ苑（秋）と梅苑（春）は有料です。公開の時期と料金は公式サイトで発表されます",
                        "The maple garden (autumn) and plum garden (spring) charge entry; dates and fees are announced on the website")],
                   tip=T("市バス10・50・51・55・203系統「北野天満宮前」下車すぐ。嵐電の北野白梅町駅から歩いて約5分。",
-                        "Right by the “Kitano Tenmangu-mae” stop (buses 10, 50, 51, 55, 203). About 5 minutes’ walk from Randen’s Kitano-Hakubaicho station.")),
+                        "Right by the “Kitano Tenmangu-mae” stop (buses 10, 50, 51, 55, 203). About 5 minutes’ walk from Randen’s Kitano-Hakubaicho station."),
+                  checked=TODAY),
     ),
 }
 
@@ -317,17 +355,27 @@ LATE_KITANO_ROWS = [
 
 SOURCES = [
     {"what": "龍安寺の拝観時間（3月1日〜11月30日 8:00〜17:00、12月1日〜2月末 8:30〜16:30）と拝観料（公式サイトのトップ）", "url": "http://www.ryoanji.jp/smph/", "checked": CHECKED},
-    {"what": "金閣寺の参拝時間（9:00〜17:00・年中無休）、参拝料金、支払い方法（現金とおまいりPay。授与品とご朱印は対象外）、最寄りのバス停（公式サイト）。最終の受付時刻は記載なし", "url": "https://www.shokoku-ji.jp/kinkakuji/access/", "checked": CHECKED},
+    {"what": "金閣寺の参拝時間（9:00〜17:00・年中無休）、参拝料金、支払い方法（現金とおまいりPay。授与品とご朱印は対象外）、最寄りのバス停（公式サイト）。最終の受付時刻はこのページにも、よくある質問にも記載なし（要確認）", "url": "https://www.shokoku-ji.jp/kinkakuji/access/", "checked": TODAY},
+    {"what": "金閣寺のよくある質問：開門時間 9:00〜17:00。境内の写真・動画の撮影は、個人で楽しむ範囲での小型カメラによるスナップ撮影に限る。第三者に公表する目的（SNS等を含む）・営利目的の撮影、団体写真、動画の配信、ドローンは禁止", "url": KINKAKU_FAQ_URL, "checked": TODAY},
     {"what": "仁和寺の拝観料と交通（公式サイト「拝観・交通案内」）、御所庭園 9:00〜17:00・16:30受付終了（公式サイトのトップ）、12〜2月は9:00〜16:30・受付は閉まる30分前まで・桜の時期以外は境内無料（公式サイトの英語ページ）、お弁当は霊宝館向かい広場・堂内は撮影不可・拝観は約1時間（よくある質問）", "url": "https://ninnaji.jp/visit/", "checked": CHECKED},
-    {"what": "北野天満宮の開門時間（トップは7時〜20時、よくある質問は7:00〜17:00。三光門は閉門30分前）、もみじ苑の期間・時間・料金・三脚不可（トップ）、毎月25日のご縁日（年中行事）、バスの系統と北野白梅町駅から徒歩5分（アクセス）", "url": "https://kitanotenmangu.or.jp/", "checked": CHECKED},
-    {"what": "平野神社：北野白梅町駅から北へ徒歩7分（公式サイトの交通案内）。開門・閉門の時間と桜苑の料金は公式サイトに記載なし（要確認）", "url": "https://www.hiranojinja.com/home/otoiawase", "checked": CHECKED},
+    {"what": "北野天満宮：トップは「開門時間 7時〜20時」「授与所 9時〜19時30分」（もみじ苑のライトアップ期間中に確認）。もみじ苑 令和8年10月31日〜12月6日 9時〜16時（最終受付15時40分）、ライトアップ 11月13日〜12月6日 日没〜20時（最終受付19時40分）、大人（中学生以上）1500円・小人（小学生）700円、三脚不可（トップ）。毎月25日のご縁日（年中行事）、バスの系統と北野白梅町駅から徒歩5分（アクセス）", "url": "https://kitanotenmangu.or.jp/", "checked": TODAY},
+    {"what": "北野天満宮のよくある質問：「開門時間は現在、7:00〜17:00」、御本殿前三光門は閉門の30分前に閉門、正月期間や催し等で開閉門時間が変わる場合あり、休みなし、授与所9:00〜16:30", "url": KITANO_FAQ_URL, "checked": TODAY},
+    {"what": "京都観光Navi「早朝から参拝・拝観できる京都の社寺」（京都市観光協会、2026年6月現在の情報）：北野天満宮 参拝7:00〜17:00・本殿前での参拝は16:30まで。平野神社 開門6:00、参拝・拝観6:00〜17:00、授与所9:00〜17:00", "url": HIRANO_HOURS_URL, "checked": TODAY},
+    {"what": "平野神社：北野白梅町駅から北へ徒歩7分（公式サイトの交通案内）。開門・閉門の時間と桜苑の料金は、公式サイト（トップ・お知らせ・お問合せ・交通案内・平野神社の桜・English page）には記載なし", "url": "https://www.hiranojinja.com/home/otoiawase", "checked": TODAY},
+    {"what": "平野神社の桜ライトアップ（京都観光Navi、終了済みのイベント）：2026年3月28日〜4月12日、日没から21:00頃、「桜苑500円、フリーパス1000円」、問い合わせは平野神社。2027年の日程・料金は未発表", "url": HIRANO_LIGHTUP_URL, "checked": TODAY},
     {"what": "大仙院：通年9:00〜16:30（臨時の変更あり。日ごとの時間はトップのカレンダー）、大人500円・小人300円・お抹茶500円、年中無休（公式サイト）", "url": "https://daisen-in.net/fee_information/", "checked": CHECKED},
-    {"what": "泉仙 大慈院店：大徳寺の境内、11:00〜16:00（L.O.）、年中無休（12/28〜31は休み）、6名以上は予約、あやめ4,500円から（「お料理は一例」と注記あり）（公式サイト）", "url": IZUSEN_URL, "checked": CHECKED},
+    {"what": "泉仙 大慈院店：大徳寺の境内、11:00〜16:00（L.O.）、年中無休（12/28〜31は休み）、6名以上は予約（公式サイトの店舗案内）", "url": IZUSEN_URL, "checked": TODAY},
+    {"what": "泉仙 大慈院店の値段：2026年9月1日ご提供分から あやめ4,500円・ゆり5,500円・ぼたん6,500円（すべて税込）（公式サイトのお知らせ「お値上げのおしらせ(9/1より全店)」）", "url": IZUSEN_PRICE_URL, "checked": TODAY},
+    {"what": "大徳寺 総見院 秋の特別公開（主催 京都春秋）：2026年10月10日〜11月30日、10:00〜16:00（受付終了）、大人800円・中高生400円・小学生以下無料、現金のみ、休止日あり", "url": SHUNJU["sokenin"], "checked": TODAY},
+    {"what": "大徳寺 黄梅院 秋の特別公開（主催 京都春秋）：2026年10月9日〜12月6日、10:00〜15:45（受付終了）、大人1000円・中高生500円・小学生以下無料、現金のみ。静止画の撮影は可（人物・自撮り棒・三脚などは不可）", "url": SHUNJU["oubaiin"], "checked": TODAY},
+    {"what": "大徳寺 聚光院 開創460年 特別公開（主催 京都春秋）：2026年9月18日〜12月6日、9:30〜15:30（受付終了）、大人1000円・小中高生500円、現金のみ、未就学児は拝観不可、11月27日〜29日など休止、境内は撮影禁止", "url": SHUNJU["jukoin"], "checked": TODAY},
+    {"what": "大徳寺 興臨院 秋の特別公開（主催 京都春秋）：2026年10月3日〜12月15日、10:00〜16:30（受付終了。12月1日以降は16:00）、大人800円・中高生400円・小学生300円、現金のみ、境内は庭園以外撮影禁止。大仙院以外で通年公開の塔頭（龍源院・瑞峯院など）は公式の案内を見つけられず（要確認）", "url": SHUNJU["kohrinin"], "checked": TODAY},
     {"what": "とようけ茶屋：飲食11:00〜14:30（ラストオーダー14:00）、定休日は木曜・金曜（25日と祝日は営業）、年末年始は2026年12月31日〜2027年1月3日休み、北野天満宮前・昼だけの店・湯豆腐／とようけ丼／生ゆば丼／生麩丼（とようけ屋山本の公式サイト）", "url": TOYOUKE_URL, "checked": CHECKED},
     {"what": "市バス59系統（2026年3月20日改正）：河原町三条 7:11発→龍安寺前 平日7:44・土休日7:43。冬は平日7:43発→8:21着、土休日7:34発→8:06着。龍安寺前→金閣寺道は平日8:43・土休日8:53発、15時台は13・28・43・58分発。金閣寺道→河原町三条は平日16:35→17:05・16:50→17:20、土休日16:40→17:10・17:00→17:30（京都市交通局の停留所ごとの時刻表）", "url": BUS_URL, "checked": CHECKED},
     {"what": "市バス205系統（2026年3月20日改正）：金閣寺道→大徳寺前 約6分（10時ごろは7〜9分おき）、大徳寺前12:19発→北野白梅町12:30。市バス10系統：河原町三条9:31発→北野天満宮前9:57、北野天満宮前→河原町三条は約25分（17時台10・30・50分、18時台は平日10・30・50分・土休日15・45分、河原町三条まで行く最終は21:34発）（京都市交通局の停留所ごとの時刻表）", "url": BUS_URL, "checked": CHECKED},
     {"what": "嵐電：均一運賃250円、現金か交通系ICカード、降りるときに払う（京福電気鉄道の公式サイト「ご利用方法」）。北野白梅町・御室仁和寺とも日中は毎時03・13・23・33・43・53分発、所要約5分（駅ごとの時刻表）", "url": RANDEN_URL, "checked": CHECKED},
-    {"what": "市バスの運賃（均一区間230円）は2026年11月20日に京都市交通局で確認したもの。金閣寺の混む時間帯（10〜15時ごろ）は公式の資料では確認できず、文章では「言われている」と書いた。歩く時間（龍安寺〜金閣寺20〜25分、仁和寺〜龍安寺約15分、上七軒10分ほど）はめやす", "url": "https://www.city.kyoto.lg.jp/kotsu/", "checked": CHECKED},
+    {"what": "市バスの普通運賃（均一運賃区間）大人230円・小児120円、交通系ICカード可（京都市交通局「定期券以外の運賃（市バス）」、ページの更新日2026年11月10日）", "url": BUS_FARE_URL, "checked": TODAY},
+    {"what": "金閣寺の混む時間帯（10〜15時ごろ）は公式の資料では確認できず、文章では「言われている」と書いた。歩く時間（龍安寺〜金閣寺20〜25分、仁和寺〜龍安寺約15分、上七軒10分ほど）はめやす", "url": "https://www.city.kyoto.lg.jp/kotsu/", "checked": CHECKED},
 ]
 
 TIME_HEAD = T("おすすめ訪問時間：", "Recommended visit time: ")

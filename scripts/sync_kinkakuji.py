@@ -36,7 +36,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.KINKAKUJI_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-kinkakuji-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 6;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/' + course.file + '?v=4')")
+s = s.replace(m.group(0), "fetch('../data/routes/' + course.file + '?v=5')")
 # 2026-11-22 にスポットの順番を変えたので、「行った」印と選んだ場所は新しいキーで保存し直す
 assert s.count("'kyoto-maps-kinkakuji-visited-v2'") == 1 and s.count("'kyoto-maps-kinkakuji-picks'") == 1
 s = s.replace("'kyoto-maps-kinkakuji-visited-v2'", "'kyoto-maps-kinkakuji-visited-v3'").replace("'kyoto-maps-kinkakuji-picks'", "'kyoto-maps-kinkakuji-picks-v2'")
@@ -182,8 +182,8 @@ h = h.replace(_m.group(0),
   '    </div>\n'
   '    <p class="sw-label" data-t="swMode">回り方</p>\n' + _m.group(0))
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-# このマップだけ更新したときは EXTRA の数字を上げる（2026-11-20：i18n.js とデータを直したので i18n・app を +1。2026-11-22：コースの切り替えで全部 +1）
-EXTRA = {'css/style.css': 1, 'js/i18n.js': 2, 'js/app.js': 2}
+# このマップだけ更新したときは EXTRA の数字を上げる（2026-11-20：i18n.js とデータを直したので i18n・app を +1。2026-11-22：コースの切り替えで全部 +1。2026-11-24：要確認の調べ直しでデータを直したので app を +1）
+EXTRA = {'css/style.css': 1, 'js/i18n.js': 2, 'js/app.js': 3}
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """

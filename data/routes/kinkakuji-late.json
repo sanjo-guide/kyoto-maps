@@ -44,9 +44,14 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "金閣寺の参拝時間（9:00〜17:00・年中無休）、参拝料金、支払い方法（現金とおまいりPay。授与品とご朱印は対象外）、最寄りのバス停（公式サイト）。最終の受付時刻は記載なし",
+   "what": "金閣寺の参拝時間（9:00〜17:00・年中無休）、参拝料金、支払い方法（現金とおまいりPay。授与品とご朱印は対象外）、最寄りのバス停（公式サイト）。最終の受付時刻はこのページにも、よくある質問にも記載なし（要確認）",
    "url": "https://www.shokoku-ji.jp/kinkakuji/access/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "金閣寺のよくある質問：開門時間 9:00〜17:00。境内の写真・動画の撮影は、個人で楽しむ範囲での小型カメラによるスナップ撮影に限る。第三者に公表する目的（SNS等を含む）・営利目的の撮影、団体写真、動画の配信、ドローンは禁止",
+   "url": "https://www.shokoku-ji.jp/kinkakuji/faq/",
+   "checked": "2026-11-24"
   },
   {
    "what": "仁和寺の拝観料と交通（公式サイト「拝観・交通案内」）、御所庭園 9:00〜17:00・16:30受付終了（公式サイトのトップ）、12〜2月は9:00〜16:30・受付は閉まる30分前まで・桜の時期以外は境内無料（公式サイトの英語ページ）、お弁当は霊宝館向かい広場・堂内は撮影不可・拝観は約1時間（よくある質問）",
@@ -54,14 +59,29 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "北野天満宮の開門時間（トップは7時〜20時、よくある質問は7:00〜17:00。三光門は閉門30分前）、もみじ苑の期間・時間・料金・三脚不可（トップ）、毎月25日のご縁日（年中行事）、バスの系統と北野白梅町駅から徒歩5分（アクセス）",
+   "what": "北野天満宮：トップは「開門時間 7時〜20時」「授与所 9時〜19時30分」（もみじ苑のライトアップ期間中に確認）。もみじ苑 令和8年10月31日〜12月6日 9時〜16時（最終受付15時40分）、ライトアップ 11月13日〜12月6日 日没〜20時（最終受付19時40分）、大人（中学生以上）1500円・小人（小学生）700円、三脚不可（トップ）。毎月25日のご縁日（年中行事）、バスの系統と北野白梅町駅から徒歩5分（アクセス）",
    "url": "https://kitanotenmangu.or.jp/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-24"
   },
   {
-   "what": "平野神社：北野白梅町駅から北へ徒歩7分（公式サイトの交通案内）。開門・閉門の時間と桜苑の料金は公式サイトに記載なし（要確認）",
+   "what": "北野天満宮のよくある質問：「開門時間は現在、7:00〜17:00」、御本殿前三光門は閉門の30分前に閉門、正月期間や催し等で開閉門時間が変わる場合あり、休みなし、授与所9:00〜16:30",
+   "url": "https://kitanotenmangu.or.jp/faq/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "京都観光Navi「早朝から参拝・拝観できる京都の社寺」（京都市観光協会、2026年6月現在の情報）：北野天満宮 参拝7:00〜17:00・本殿前での参拝は16:30まで。平野神社 開門6:00、参拝・拝観6:00〜17:00、授与所9:00〜17:00",
+   "url": "https://ja.kyoto.travel/tourism/article/asakanko-yorukanko/post/single.php?id=85",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "平野神社：北野白梅町駅から北へ徒歩7分（公式サイトの交通案内）。開門・閉門の時間と桜苑の料金は、公式サイト（トップ・お知らせ・お問合せ・交通案内・平野神社の桜・English page）には記載なし",
    "url": "https://www.hiranojinja.com/home/otoiawase",
-   "checked": "2026-11-22"
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "平野神社の桜ライトアップ（京都観光Navi、終了済みのイベント）：2026年3月28日〜4月12日、日没から21:00頃、「桜苑500円、フリーパス1000円」、問い合わせは平野神社。2027年の日程・料金は未発表",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=4083",
+   "checked": "2026-11-24"
   },
   {
    "what": "大仙院：通年9:00〜16:30（臨時の変更あり。日ごとの時間はトップのカレンダー）、大人500円・小人300円・お抹茶500円、年中無休（公式サイト）",
@@ -69,9 +89,34 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "泉仙 大慈院店：大徳寺の境内、11:00〜16:00（L.O.）、年中無休（12/28〜31は休み）、6名以上は予約、あやめ4,500円から（「お料理は一例」と注記あり）（公式サイト）",
+   "what": "泉仙 大慈院店：大徳寺の境内、11:00〜16:00（L.O.）、年中無休（12/28〜31は休み）、6名以上は予約（公式サイトの店舗案内）",
    "url": "https://kyoto-izusen.com/html2/restrant_daijiin.html",
-   "checked": "2026-11-22"
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "泉仙 大慈院店の値段：2026年9月1日ご提供分から あやめ4,500円・ゆり5,500円・ぼたん6,500円（すべて税込）（公式サイトのお知らせ「お値上げのおしらせ(9/1より全店)」）",
+   "url": "https://kyoto-izusen.com/wordpress/info/daijiin/4676/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "大徳寺 総見院 秋の特別公開（主催 京都春秋）：2026年10月10日〜11月30日、10:00〜16:00（受付終了）、大人800円・中高生400円・小学生以下無料、現金のみ、休止日あり",
+   "url": "https://kyotoshunju.com/temple/daitokuji-sokenin/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "大徳寺 黄梅院 秋の特別公開（主催 京都春秋）：2026年10月9日〜12月6日、10:00〜15:45（受付終了）、大人1000円・中高生500円・小学生以下無料、現金のみ。静止画の撮影は可（人物・自撮り棒・三脚などは不可）",
+   "url": "https://kyotoshunju.com/temple/daitokuji-oubaiin/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "大徳寺 聚光院 開創460年 特別公開（主催 京都春秋）：2026年9月18日〜12月6日、9:30〜15:30（受付終了）、大人1000円・小中高生500円、現金のみ、未就学児は拝観不可、11月27日〜29日など休止、境内は撮影禁止",
+   "url": "https://kyotoshunju.com/temple/daitokuji-jukoin2026/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "大徳寺 興臨院 秋の特別公開（主催 京都春秋）：2026年10月3日〜12月15日、10:00〜16:30（受付終了。12月1日以降は16:00）、大人800円・中高生400円・小学生300円、現金のみ、境内は庭園以外撮影禁止。大仙院以外で通年公開の塔頭（龍源院・瑞峯院など）は公式の案内を見つけられず（要確認）",
+   "url": "https://kyotoshunju.com/temple/daitokuji-kohrinin/",
+   "checked": "2026-11-24"
   },
   {
    "what": "とようけ茶屋：飲食11:00〜14:30（ラストオーダー14:00）、定休日は木曜・金曜（25日と祝日は営業）、年末年始は2026年12月31日〜2027年1月3日休み、北野天満宮前・昼だけの店・湯豆腐／とようけ丼／生ゆば丼／生麩丼（とようけ屋山本の公式サイト）",
@@ -94,7 +139,12 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "市バスの運賃（均一区間230円）は2026年11月20日に京都市交通局で確認したもの。金閣寺の混む時間帯（10〜15時ごろ）は公式の資料では確認できず、文章では「言われている」と書いた。歩く時間（龍安寺〜金閣寺20〜25分、仁和寺〜龍安寺約15分、上七軒10分ほど）はめやす",
+   "what": "市バスの普通運賃（均一運賃区間）大人230円・小児120円、交通系ICカード可（京都市交通局「定期券以外の運賃（市バス）」、ページの更新日2026年11月10日）",
+   "url": "https://www.city.kyoto.lg.jp/kotsu/page/0000240682.html",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "金閣寺の混む時間帯（10〜15時ごろ）は公式の資料では確認できず、文章では「言われている」と書いた。歩く時間（龍安寺〜金閣寺20〜25分、仁和寺〜龍安寺約15分、上七軒10分ほど）はめやす",
    "url": "https://www.city.kyoto.lg.jp/kotsu/",
    "checked": "2026-11-22"
   }
@@ -172,8 +222,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "開門 7:00。閉門はライトアップ期間は20:00、それ以外は17:00（公式サイトのよくある質問）",
-       "en": "Gates open 7:00; close 20:00 during the light-up, otherwise 17:00 (per the official FAQ)"
+       "ja": "開門 7:00。閉門はライトアップ期間は20:00ごろ、ふだんは17:00（公式サイトのよくある質問）。三光門は閉門の30分前まで",
+       "en": "Gates open 7:00; close about 20:00 during the light-up, otherwise 17:00 (official FAQ). Sanko-mon gate shuts 30 min before closing"
       },
       "until": null,
       "from": null
@@ -229,7 +279,7 @@
      "ja": "市バス10・50・51・55・203系統「北野天満宮前」下車すぐ。嵐電の北野白梅町駅から歩いて約5分。",
      "en": "Right by the “Kitano Tenmangu-mae” stop (buses 10, 50, 51, 55, 203). About 5 minutes’ walk from Randen’s Kitano-Hakubaicho station."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "kitano-1.jpg",
@@ -250,10 +300,10 @@
       "en": "Closing time varies"
      },
      "text": {
-      "ja": "開門は7:00。もみじ苑のライトアップ期間（2026年は12月6日まで）は20:00に閉まります。公式サイトの「よくある質問」には17:00とあるので、それ以外の時期は17:00と考えて、行く前に公式サイトで確かめてください。本殿の前の三光門は、閉門の30分前に閉まります。",
-      "en": "The gates open at 7:00. During the maple garden light-up (until 6 December in 2026) they close at 20:00. The FAQ on the official website says 17:00, so at other times assume 17:00 and check the website before you go. The Sanko-mon gate in front of the main hall shuts 30 minutes before closing."
+      "ja": "開門は7:00。もみじ苑のライトアップ期間（2026年は12月6日まで）は20:00ごろまで開いています（公式サイトのトップは「7時〜20時」）。ふだんの閉門は17:00です（公式サイトの「よくある質問」。京都観光Naviも同じ）。お正月や催しの日は変わることがあるので、行く前に公式サイトで確かめてください。本殿の前の三光門は、閉門の30分前に閉まります。",
+      "en": "The gates open at 7:00. During the maple garden light-up (until 6 December in 2026) they stay open until about 20:00 (the website’s top page says 7:00–20:00). Normally they close at 17:00 (the website’s FAQ; Kyoto Navi says the same). Times can change at New Year and on event days, so check the website before you go. The Sanko-mon gate in front of the main hall shuts 30 minutes before closing."
      },
-     "url": "https://kitanotenmangu.or.jp/"
+     "url": "https://kitanotenmangu.or.jp/faq/"
     },
     {
      "head": {
@@ -290,8 +340,8 @@
    "lat": 35.03238,
    "lng": 135.73248,
    "text": {
-    "ja": "平野神社（ひらのじんじゃ）\n\n平安時代から桜が植えられてきた神社で、今は約60種・400本の桜があります。江戸時代から「平野の夜桜」として知られる花見の名所です。\n\n3月中ごろの早咲きの桜から4月下旬の八重桜まで、長い期間いろいろな桜が楽しめます。写真は2025年4月5日の夕方〜夜。桜の時期は境内の桜苑が有料になることがあります（料金・時間は要確認）。桜の時期以外は静かな神社で、20〜30分あれば回れます。門が開いている時間は、公式サイトに書かれていません（要確認）。\n\nお昼のあと、北野天満宮から北西へ歩いてすぐ。12:25ごろ出て、嵐電の北野白梅町駅まで南へ歩いて約7分。12:33発の嵐電で御室仁和寺へ向かいます（10分おきなので、乗りおくれても次ですぐ行けます）。\n\nおすすめ訪問時間：12:00〜12:25",
-    "en": "Hirano Shrine\n\nCherry trees have been planted here since the Heian period; today there are about 400 trees of some 60 kinds, and “Hirano’s night cherries” have been famous since the Edo period.\n\nFrom early blossoms in mid-March to double-flowered ones in late April, something is in bloom for a long season. The photos were taken at dusk on 5 April 2025. In cherry season the shrine’s cherry garden may charge for entry (check fees and hours). Outside cherry season it’s a quiet shrine that takes 20–30 minutes. The gate hours are not given on the official website (please check).\n\nAfter lunch, a short walk northwest of Kitano Tenmangu. Leave at about 12:25 and walk about 7 minutes south to Randen’s Kitano-Hakubaicho station for the 12:33 tram to Omuro-Ninnaji (they run every 10 minutes, so the next one is never far off).\n\nRecommended visit time: 12:00–12:25"
+    "ja": "平野神社（ひらのじんじゃ）\n\n平安時代から桜が植えられてきた神社で、今は約60種・400本の桜があります。江戸時代から「平野の夜桜」として知られる花見の名所です。\n\n3月中ごろの早咲きの桜から4月下旬の八重桜まで、長い期間いろいろな桜が楽しめます。写真は2025年4月5日の夕方〜夜。2026年の春は3月28日〜4月12日に夜桜のライトアップ（日没〜21:00ごろ、桜苑500円）がありました。来春の日程と料金はまだ発表されていません（要確認）。\n\n参拝は6:00〜17:00（京都市観光協会の京都観光Navi、2026年6月時点）。桜の時期以外は静かな神社で、20〜30分あれば回れます。\n\nお昼のあと、北野天満宮から北西へ歩いてすぐ。12:25ごろ出て、嵐電の北野白梅町駅まで南へ歩いて約7分。12:33発の嵐電で御室仁和寺へ向かいます（10分おきなので、乗りおくれても次ですぐ行けます）。\n\nおすすめ訪問時間：12:00〜12:25",
+    "en": "Hirano Shrine\n\nCherry trees have been planted here since the Heian period; today there are about 400 trees of some 60 kinds, and “Hirano’s night cherries” have been famous since the Edo period.\n\nFrom early blossoms in mid-March to double-flowered ones in late April, something is in bloom for a long season. The photos were taken at dusk on 5 April 2025. In spring 2026 the blossoms were lit up from 28 March to 12 April (sunset to about 21:00; cherry garden ¥500). Next spring’s dates and fee have not been announced yet (please check).\n\nOpen for worship 6:00–17:00 (Kyoto City Tourism Association’s Kyoto Navi, as of June 2026). Outside cherry season it’s a quiet shrine that takes 20–30 minutes.\n\nAfter lunch, a short walk northwest of Kitano Tenmangu. Leave at about 12:25 and walk about 7 minutes south to Randen’s Kitano-Hakubaicho station for the 12:33 tram to Omuro-Ninnaji (they run every 10 minutes, so the next one is never far off).\n\nRecommended visit time: 12:00–12:25"
    },
    "gmaps": [
     {
@@ -317,6 +367,17 @@
      }
     },
     {
+     "kind": "info",
+     "label": {
+      "ja": "京都観光Navi（早朝から参拝できる社寺）",
+      "en": "Kyoto Navi: temples and shrines open early (Japanese)"
+     },
+     "url": {
+      "ja": "https://ja.kyoto.travel/tourism/article/asakanko-yorukanko/post/single.php?id=85",
+      "en": "https://ja.kyoto.travel/tourism/article/asakanko-yorukanko/post/single.php?id=85"
+     }
+    },
+    {
      "kind": "timetable",
      "label": {
       "ja": "嵐電 時刻表（京福電気鉄道）",
@@ -331,6 +392,24 @@
    "info": {
     "rows": [
      {
+      "kind": "hours",
+      "text": {
+       "ja": "参拝 6:00〜17:00（授与所 9:00〜17:00）",
+       "en": "Open 6:00–17:00 (amulet counter 9:00–17:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "2026年春の夜桜ライトアップ（3月28日〜4月12日、日没〜21:00ごろ）は桜苑500円。2027年の日程・料金は未発表（要確認）",
+       "en": "During the spring 2026 light-up (28 Mar – 12 Apr, sunset to about 21:00) the cherry garden was ¥500. Dates and fee for 2027 not yet announced (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "train",
       "text": {
        "ja": "嵐電（北野白梅町〜御室仁和寺）約5分・250円（どこまで乗っても同じ）。日中は毎時03・13・23・33・43・53分発。運賃は降りるときに現金かICカードで",
@@ -342,10 +421,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "嵐電は京福電気鉄道の公式サイトで確認しました。平野神社の門の時間と桜苑の料金は、公式サイトでは確認できていません（要確認）。",
-     "en": "The tram was checked on the Keifuku Electric Railroad website. The shrine’s gate hours and cherry-garden fee could not be confirmed on its website."
+     "ja": "参拝時間と2026年春のライトアップは、京都市観光協会の京都観光Naviで確認しました（平野神社の公式サイトには書かれていません）。嵐電は京福電気鉄道の公式サイトで確認しました。",
+     "en": "Hours and the spring 2026 light-up were checked on Kyoto Navi, the Kyoto City Tourism Association’s site (the shrine’s own website doesn’t list them). The tram was checked on the Keifuku Electric Railroad website."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "hirano-1.jpg",
@@ -658,8 +737,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "9:00〜17:00（年中無休）",
-       "en": "9:00–17:00, open every day"
+       "ja": "9:00〜17:00（年中無休）。受付の締め切り時刻は公式サイトに書かれていません（要確認）",
+       "en": "9:00–17:00, open every day. The official website doesn’t give a last-entry time (please check)"
       },
       "until": null,
       "from": null
@@ -679,7 +758,7 @@
      "ja": "市バス「金閣寺道」（12・59・204・205系統など）から歩きます。",
      "en": "Walk from the “Kinkakuji-michi” city bus stop (buses 12, 59, 204, 205 and others)."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-24"
    },
    "photos": [
     "kinkakuji-1.jpg",
@@ -703,6 +782,17 @@
       "en": "Admission can be paid in cash or by cashless payment (Omairi Pay). Amulets and goshuin stamps are not covered by cashless payment (official website)."
      },
      "url": "https://www.shokoku-ji.jp/kinkakuji/access/"
+    },
+    {
+     "head": {
+      "ja": "撮影は個人で楽しむスナップだけ",
+      "en": "Photos: personal snapshots only"
+     },
+     "text": {
+      "ja": "境内の撮影は、個人で楽しむ範囲の小型カメラでのスナップに限られています。SNSなどで公開するための撮影、団体写真、動画の配信、ドローンは断られています（公式サイトのよくある質問）。",
+      "en": "Inside the grounds, only snapshots with a small camera for personal enjoyment are allowed. Photos taken to publish (including on social media), group photos, live-streaming and drones are not (official FAQ)."
+     },
+     "url": "https://www.shokoku-ji.jp/kinkakuji/faq/"
     }
    ]
   }
