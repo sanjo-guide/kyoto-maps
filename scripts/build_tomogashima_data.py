@@ -8,7 +8,10 @@
 - 文章・料金・時間はこのファイルに書いてある。直したらこのスクリプトを実行し直す（データを直接直さない）
 - スポットの文章は「名前 → コースごとの行き方（pre）→ 共通の説明（body）→ コースごとの次へ（post）→ おすすめ訪問時間」の順に組み立てる
 - 確認した出典（2026-11-22）:
-  - 船：友ヶ島汽船の公式サイト（時刻表・運航日・整理券・運賃は画像。運航連絡はトップページ）。支払い方法と整理券を配りはじめる時刻は書かれていない（要確認）
+  - 船：友ヶ島汽船の公式サイト（時刻表・運航日・整理券・運賃は画像。運航連絡はトップページ）。支払い方法と整理券を配りはじめる時刻は書かれていない（要確認。2026-11-24 に和歌山市のページも含めて再確認）
+  - 運航連絡が出る時刻は公式に書かれていない。2026-11-24 に公式サイトの記事の日時（wp-json）を見て、8月中旬〜11月はどの日も前の晩か当日6:30までに出ていたことを確認して書いた
+  - 「朝8時以降なら電話で」は出どころが見つからなかったので 2026-11-24 に消した（和歌山市のページは「当日、友ヶ島汽船に問い合わせ」だけ）
+  - 2026-11-24 の調べ直し：いなさ・ひいなの湯・加太海月・休暇村・最終電車（RECHECKED のスポットの source に直接のURL）
   - 島の中：和歌山市の公式サイト「友ヶ島」（トイレ4か所、飲み物は野奈浦広場のまわりだけ、水道なし、ごみ持ち帰り、名所探訪コース3.3km、深蛇池・虎島は見学不可）
   - 電車：乗換案内（Yahoo!路線情報）2026-11-26（木）と 11-28（土）のダイヤ
   - 淡嶋神社：kada.jp/awashima（参拝9〜17時）。活魚料理いなさ：inasa.net。ひいなの湯：hiina.com。休暇村紀州加太：qkamura.or.jp/kada。加太海月：kada-kaigetsu.com
@@ -51,8 +54,8 @@ def notice(hja, hen, ja, en, url=None):
     return d
 
 
-def info(rows, tip=None, verified=True, cash=False, source=None):
-    d = {"rows": rows, "cash": cash, "tip": tip, "checked": CHECKED, "source": source or []}
+def info(rows, tip=None, verified=True, cash=False, source=None, checked=None):
+    d = {"rows": rows, "cash": cash, "tip": tip, "checked": checked or CHECKED, "source": source or []}
     if not verified:
         d["verified"] = False
     return d
@@ -69,9 +72,16 @@ CITY = link("info", "和歌山市「友ヶ島」（島の地図・通れない�
 PLANNER = link("timetable", "乗換案内（Yahoo!路線情報）", "Route planner (Yahoo! Japan)", "https://transit.yahoo.co.jp/")
 MEDETAI = link("timetable", "めでたいでんしゃ（南海電鉄・運行ダイヤ）", "Medetai Densha: which train runs when (Nankai, Japanese)", "https://www.nankai.co.jp/kada/medetai.html")
 OSAKA_MAP = link("info", "夜のなんば：大阪マップ（法善寺横丁・道頓堀）", "Evening in Namba: the Osaka map (Hozenji Yokocho, Dotonbori)", "../osaka/")
-SRC_KISEN = "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡）"
+RECHECKED = "2026-11-24"   # 「要確認」の調べ直しをした日（港・淡嶋神社・加太駅のスポット）
+SRC_KISEN = ("友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡。2026-11-24 再確認："
+             "https://tomogashimakisen.com/main/ ・ https://tomogashimakisen.com/main/%e9%81%8b%e8%88%aa%e6%99%82%e5%88%bb-copy ・ "
+             "https://tomogashimakisen.com/main/%e6%97%85%e5%ae%a2%e9%81%8b%e8%b3%83 ・ 運航連絡の記事の日時 https://tomogashimakisen.com/main/category/operation-contact）")
+SRC_CITY_ACCESS = ("和歌山市 公式サイト「友ヶ島へのアクセス」（当日の朝に運航を判断・電話 073-459-1333・整理券は第2便から・定員100名。2026-11-24 確認："
+                   "https://www.city.wakayama.wakayama.jp/kankou/kankouspot/1027585/1027593.html）")
 SRC_CITY = "和歌山市 公式サイト「友ヶ島」（散策コース・施設・注意・通行止め）"
 SRC_PLANNER = "乗換案内（Yahoo!路線情報）2026-11-26（木）・11-28（土）のダイヤ"
+SRC_LAST = ("最終の電車：乗換案内（Yahoo!路線情報 https://transit.yahoo.co.jp/ 、2026-11-24 に 11-26（木）・11-28（土）の「終電」で検索）。"
+            "加太→なんば 木22:45発→0:39着・土22:51発→0:39着／加太→梅田(地下鉄) 木22:13発→0:19着・土21:53発→23:46着／加太→三条(京阪) 木21:25発・土21:27発→0:22着")
 TRAIN_TIP = T("電車の時刻と運賃は乗換案内（2026年11月26日・木曜と28日・土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
               "Train times and fares checked on a route planner (timetables for Thu 26 and Sat 28 Nov 2026). Please check again before you travel.")
 ISLAND_TIP = T("歩く時間は、和歌山市の「名所探訪コース」（3.3km、歩くだけで1時間20分）をもとに、少しゆったりめにしてあります。",
@@ -95,10 +105,10 @@ S = dict(
         gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
         links=[KISEN, PLANNER, MEDETAI],
         notices=[notice("出かける前に：今日、船は出ますか", "Before you leave: are the boats running today?",
-                        "友ヶ島汽船は風と波でよく欠航します。2026年11月16日〜21日の6日間で、船が出たのは17日だけでした（18日は水曜の運休、ほかの4日は強風・荒天で全便欠航）。出るかどうかはその日の朝に決まり、友ヶ島汽船の公式サイトの「運航連絡」に出ます。何時に出るかは決まっていません。和歌山市の案内では、朝8時以降なら電話（073-459-1333、日本語）でも確かめられます。",
-                        "The Tomogashima boats are often cancelled for wind and waves. In the six days from 16 to 21 November 2026 they ran on the 17th only (the 18th was the regular Wednesday off; the other four days were cancelled for strong wind or rough weather). The decision is made that morning and posted under “運航連絡” on the ferry’s website, at no fixed time. Wakayama City says you can also phone after 8:00 (073-459-1333, Japanese).",
+                        "友ヶ島汽船は風と波でよく欠航します。2026年11月14日〜23日の10日間で、船が出たのは14日・17日・23日の3日だけでした（18日は水曜の運休、ほかの6日は強風・荒天で全便欠航）。出るかどうかは当日の朝に決まり（和歌山市の案内）、友ヶ島汽船の公式サイトの「運航連絡」に出ます。何時に出すとは書かれていませんが、2026年8月中旬〜11月の運航連絡は、どの日も前の晩か当日の朝6:30までに載っていました。電話でも聞けます（073-459-1333、日本語。受付時間は書かれていません）。",
+                        "The Tomogashima boats are often cancelled for wind and waves. In the ten days from 14 to 23 November 2026 they ran on just three (the 14th, 17th and 23rd; the 18th was the regular Wednesday off, and the other six days were cancelled for strong wind or rough weather). The decision is made that morning (Wakayama City) and posted under “運航連絡” on the ferry’s website. No time is given, but from mid-August to November 2026 every notice was up by 6:30 that morning, sometimes the night before. You can also phone (073-459-1333, Japanese; phone hours not stated).",
                         KISEN_URL)],
-        tip=TRAIN_TIP, source=[SRC_PLANNER, "南海電鉄 公式サイト（特急サザン・めでたいでんしゃ）", SRC_KISEN]),
+        tip=TRAIN_TIP, checked=RECHECKED, source=[SRC_PLANNER, "南海電鉄 公式サイト（特急サザン・めでたいでんしゃ）", SRC_KISEN, SRC_CITY_ACCESS]),
     port=dict(
         name=T("加太港（友ヶ島汽船乗り場）", "Kada Port (Tomogashima ferry)"), kind=T("船乗り場", "Ferry pier"),
         title=T("加太港（かだこう）の友ヶ島汽船乗り場", "Kada Port: the Tomogashima Kisen ferry"),
@@ -115,8 +125,8 @@ S = dict(
         gmaps=[gm("友ヶ島汽船 乗り場", "Tomogashima Kisen pier", 34.27549, 135.07041, "友ヶ島汽船 加太")],
         links=[KISEN, CITY],
         notices=[notice("船が出ない日", "Days with no boats",
-                        "3月〜12月は水曜が運休（祝日は運航）。1月〜2月は土・日・祝日だけ。12月29日〜1月3日は運休。そのほかの日も、風や波で欠航します。風が強くなる日は帰りの最終便が早まることがあります。",
-                        "March to December: no boats on Wednesdays (they run if it is a public holiday). January and February: Saturdays, Sundays and holidays only. None from 29 December to 3 January. On any other day they can be cancelled for wind or waves, and on windy days the last boat back may leave early.",
+                        "3月〜12月は水曜が運休（祝日は運航）。1月〜2月は土・日・祝日だけ。12月29日〜1月3日は運休。そのほかの日も、風や波で欠航します。風が強くなる日は帰りの最終便が早まることがあり、「午前2便のみ運航（友ヶ島発最終便12時30分）」という日もあります（2026年10月13日・11月5日）。",
+                        "March to December: no boats on Wednesdays (they run if it is a public holiday). January and February: Saturdays, Sundays and holidays only. None from 29 December to 3 January. On any other day they can be cancelled for wind or waves. On windy days the last boat back may leave early, and some days only the two morning boats run, with the last boat leaving the island at 12:30 (13 Oct and 5 Nov 2026).",
                         KISEN_URL)],
         rows=[row("hours", "加太港発 9:00・11:00・13:00・16:00／友ヶ島発 9:30・11:30・13:30・16:30（3月〜12月と、1〜2月の土日祝）。臨時便：4月29日〜5月5日・7月20日〜8月31日",
                   "From Kada 9:00, 11:00, 13:00, 16:00 / from the island 9:30, 11:30, 13:30, 16:30 (Mar–Dec, and weekends and holidays in Jan–Feb). Extra boats 29 Apr – 5 May and 20 Jul – 31 Aug"),
@@ -124,8 +134,9 @@ S = dict(
                   "Wednesdays in Mar–Dec (except public holidays). Weekdays in Jan–Feb. 29 Dec – 3 Jan. Cancelled in bad weather"),
               row("fee", "往復 大人2,800円・こども1,250円（2026年7月1日から）。支払い方法は要確認", "Return: adults ¥2,800, children ¥1,250 (from 1 Jul 2026). Payment methods unconfirmed")],
         cash=True,
-        tip=T("運航日・時刻・運賃・整理券は友ヶ島汽船の公式サイトで確認しました。電話番号は和歌山市の公式サイトから。", "Days, times, fares and numbered tickets checked on the Tomogashima Kisen website; the phone number is from the Wakayama City website."),
-        source=[SRC_KISEN, "和歌山市 公式サイト（友ヶ島汽船の電話番号・朝8時以降の問い合わせ）"]),
+        tip=T("運航日・時刻・運賃・整理券は友ヶ島汽船の公式サイトで確認しました。電話番号は和歌山市の公式サイトから。支払い方法と整理券を配りはじめる時刻は、どちらのサイトにも書かれていません。",
+              "Days, times, fares and numbered tickets checked on the Tomogashima Kisen website; the phone number is from the Wakayama City website. Neither site says how you can pay or when numbered tickets start being handed out."),
+        checked=RECHECKED, source=[SRC_KISEN, SRC_CITY_ACCESS]),
     nonaura=dict(
         name=T("友ヶ島 野奈浦桟橋", "Nonaura Pier, Tomogashima"), kind=T("船着き場", "Pier"),
         title=T("友ヶ島 野奈浦桟橋（のなうらさんばし）", "Nonaura Pier, Tomogashima"),
@@ -216,26 +227,33 @@ S = dict(
         gmaps=[gm("淡嶋神社", "Awashima Shrine", 34.27360, 135.06671, "淡嶋神社 和歌山市加太")],
         rows=[row("hours", "参拝 9:00〜17:00", "Open 9:00–17:00")],
         tip=T("参拝時間は淡嶋神社の公式ページ、お店と温泉の時間はそれぞれの公式サイトで確認しました。", "Shrine hours checked on the shrine’s official page; restaurant and bath hours on their own websites."),
-        source=["淡嶋神社 公式ページ（kada.jp/awashima）", "活魚料理 いなさ（inasa.net）", "加太淡嶋温泉 大阪屋 ひいなの湯（hiina.com）", "休暇村紀州加太（qkamura.or.jp/kada）", "シーサイドホテル加太海月（kada-kaigetsu.com）"]),
+        checked=RECHECKED,
+        source=["淡嶋神社 公式ページ（kada.jp/awashima）",
+                "活魚料理 いなさ（2026-11-24 確認 https://www.inasa.net/index.html ：11:00〜15:00・LO14:30、夜は要予約、火・水曜休み、祝日の連休は要問合せ。支払い方法の記載なし）",
+                "加太淡嶋温泉 大阪屋 ひいなの湯（2026-11-24 確認 https://www.hiina.com/spa/ ・ https://www.hiina.com/faq/ ：11:00〜19:00、土日祝・休前日・混雑時は15:00まで、1,200円。最終受付とタトゥーの記載なし）",
+                "休暇村紀州加太（2026-11-24 確認 https://www.qkamura.or.jp/kada/oneday/ ：12:00〜15:50・15:00札止め・1,500円・刺青タトゥー不可）",
+                "シーサイドホテル加太海月（2026-11-24 確認 https://kada-kaigetsu.com/day_use/ ：11:00〜15:00・最終受付14:30・1,200円・精算は現金かカード。タトゥーの記載なし）",
+                "いなさの位置：国土地理院の住所検索（加太196番地）と OpenStreetMap。友ヶ島汽船の乗り場から直線で約170m"]),
     kadaeki2=dict(
         name=T("南海 加太駅（帰り）", "Nankai Kada Station (return)"), kind=T("駅（ゴール）", "Station (finish)"),
         title=T("南海 加太駅（帰り）", "Nankai Kada Station (return)"),
         lat=34.27507, lng=135.08070,
-        body=T("加太で夜に開いている店は、公式サイトで時間を確かめられたところがありません。晩ごはんはなんばに戻ってからにしています。なんば駅から法善寺横丁と道頓堀までは歩いて5分ほど。店は大阪マップにまとめてあります。\n\n"
-               "遅くなっても、加太22:13発に乗ればなんばに23:53に着きます（木曜のダイヤ）。京都へ帰る人は、なんばを23時までに出てください（淀屋橋23:33発の京阪特急で三条0:22着、阪急は大阪梅田23:45発で京都河原町0:34着）。",
-               "No place in Kada could be confirmed open in the evening on an official website, so dinner in this plan is back in Namba. Hozenji Yokocho and Dotonbori are about 5 minutes’ walk from Namba Station; the Osaka map lists where to eat.\n\n"
-               "If you run late, the 22:13 from Kada still reaches Namba at 23:53 (Thursday timetable). For Kyoto, leave Namba by 23:00 (Keihan limited express from Yodoyabashi at 23:33, Sanjo 0:22; or Hankyu from Osaka-Umeda at 23:45, Kyoto-Kawaramachi 0:34)."),
+        body=T("加太の「活魚料理 いなさ」は、夜は予約制です（公式サイト）。予約なしで入れる晩ごはんの店は公式サイトで確かめられなかったので、晩ごはんはなんばに戻ってからにしています。なんば駅から法善寺横丁と道頓堀までは歩いて5分ほど。店は大阪マップにまとめてあります。\n\n"
+               "遅くなっても、木曜なら加太22:13発でなんば23:53着、御堂筋線の最終（なんば0:10発）で梅田0:19着。土曜は、梅田まで地下鉄で帰れる最後が加太21:53発（梅田23:46着）です。なんばまでの最終は加太22:45発（土曜22:51発）で、なんば0:39着。京都へ帰る人は、加太21:25発（土曜21:27発）が最後で、淀屋橋23:33発の京阪特急で三条0:22着です。",
+               "Inasa in Kada takes dinner guests by reservation only (official site). No place you can simply walk into for dinner could be confirmed on an official website, so dinner in this plan is back in Namba. Hozenji Yokocho and Dotonbori are about 5 minutes’ walk from Namba Station; the Osaka map lists where to eat.\n\n"
+               "If you run late: on Thursdays the 22:13 from Kada reaches Namba at 23:53, in time for the last Midosuji Line train (Namba 0:10, Umeda 0:19). On Saturdays the last train from Kada that connects with the subway to Umeda is the 21:53 (Umeda 23:46). The last train to Namba leaves Kada at 22:45 (22:51 on Saturdays) and arrives at 0:39. For Kyoto, the last is the 21:25 from Kada (21:27 on Saturdays), connecting with the 23:33 Keihan limited express from Yodoyabashi to Sanjo (0:22)."),
         gmaps=[gm("南海 加太駅", "Nankai Kada Station", 34.27507, 135.08070, "南海 加太駅")],
-        links=[PLANNER, OSAKA_MAP], tip=TRAIN_TIP, source=[SRC_PLANNER]),
+        links=[PLANNER, OSAKA_MAP], tip=TRAIN_TIP, checked=RECHECKED,
+        source=[SRC_PLANNER, SRC_LAST, "活魚料理 いなさ（2026-11-24 確認 https://www.inasa.net/index.html ：夜の営業は要予約）"]),
 )
 
 # 加太のお昼・温泉（淡嶋神社のスポットの中で紹介する。どれも公式サイトで確認、タトゥーは書いてあるものだけ）
-LUNCH = T("お昼：加太の鯛を出す「活魚料理 いなさ」は11:00〜15:00（オーダーストップ14:30）、火・水曜休み。現金だけかどうかは公式サイトに書かれていません。",
-          "Lunch: Inasa, which serves Kada sea bream, opens 11:00–15:00 (last orders 14:30), closed Tuesdays and Wednesdays. Its website does not say whether it is cash only.")
-BATHS = T("温泉：神社のすぐそばの旅館・大阪屋の「ひいなの湯」は日帰り入浴11:00〜19:00（土日祝と混む日は15:00まで）、1,200円・フェイスタオルつき。タトゥーの決まりは公式サイトに書かれていないので、入る前に受付で聞いてください（要確認）。"
-          "休暇村紀州加太の「天空の湯」は12:00〜15:50（受付15:00まで）・1,500円ですが、タトゥーのある人は入れません（公式サイト）。シーサイドホテル加太海月は11:00〜15:00（受付14:30まで）・1,200円、タトゥーは要確認。",
-          "Baths: Hiina-no-yu at the Osakaya inn, right by the shrine, takes day visitors 11:00–19:00 (until 15:00 on weekends, holidays and busy days), ¥1,200 with a small towel. Its website says nothing about tattoos, so ask at the desk first (unconfirmed). "
-          "Tenku-no-yu at Kyukamura Kishu-Kada is 12:00–15:50 (entry until 15:00), ¥1,500, but does not admit guests with tattoos (official site). Seaside Hotel Kada Kaigetsu is 11:00–15:00 (entry until 14:30), ¥1,200; tattoo policy unconfirmed.")
+LUNCH = T("お昼：加太の鯛を出す「活魚料理 いなさ」は11:00〜15:00（オーダーストップ14:30）、火・水曜休み（祝日が続く日は店に問い合わせ）。支払い方法は公式サイトに書かれていません（要確認）。",
+          "Lunch: Inasa, which serves Kada sea bream, opens 11:00–15:00 (last orders 14:30), closed Tuesdays and Wednesdays (ask the restaurant about holiday weekends). Its website does not say how you can pay (unconfirmed).")
+BATHS = T("温泉：神社のすぐそばの旅館・大阪屋の「ひいなの湯」は日帰り入浴11:00〜19:00（土日祝・休前日と混む日は15:00まで）、1,200円・フェイスタオルつき。最終受付の時刻とタトゥーの決まりは公式サイトに書かれていないので、入る前に受付で聞いてください（要確認）。"
+          "休暇村紀州加太の「天空の湯」は12:00〜15:50（受付15:00まで）・1,500円ですが、タトゥーのある人は入れません（公式サイト）。シーサイドホテル加太海月は11:00〜15:00（受付14:30まで）・1,200円・バスタオルつき、支払いは現金かカード。タトゥーは公式サイトに書かれていません（要確認）。",
+          "Baths: Hiina-no-yu at the Osakaya inn, right by the shrine, takes day visitors 11:00–19:00 (until 15:00 on weekends, holidays, the day before a holiday and busy days), ¥1,200 with a small towel. Its website gives neither a last entry time nor a tattoo policy, so ask at the desk first (unconfirmed). "
+          "Tenku-no-yu at Kyukamura Kishu-Kada is 12:00–15:50 (entry until 15:00), ¥1,500, but does not admit guests with tattoos (official site). Seaside Hotel Kada Kaigetsu is 11:00–15:00 (entry until 14:30), ¥1,200 with a bath towel, cash or card; its website says nothing about tattoos (unconfirmed).")
 AW_LINKS = [link("official", "淡嶋神社", "Awashima Shrine (Japanese)", "https://www.kada.jp/awashima/"),
             link("official", "活魚料理 いなさ（11:00〜15:00、火・水曜休み）", "Inasa restaurant (11:00–15:00, closed Tue & Wed; Japanese)", "http://www.inasa.net/index.html"),
             link("official", "ひいなの湯（日帰り入浴）", "Hiina-no-yu day bathing (Japanese)", "https://www.hiina.com/spa/"),
@@ -246,10 +264,10 @@ KYOTO_OUT_LATE = row("train", "京都から：三条6:48発（京阪）→ 淀�
                      "From Kyoto: Sanjo 6:48 (Keihan) → Yodoyabashi 7:50 → (Midosuji Line) → Namba 8:03 → Southern 5 at 8:14. Sanjo → Kada ¥1,690. Saturdays: the 6:58 limited express from Sanjo makes the same Southern 5 (Namba 8:15)")
 KYOTO_OUT_EARLY = row("train", "京都から：三条5:04発（京阪・始発）→ 北浜6:14着 →（堺筋線）→ 天下茶屋6:34着 → 6:42発の南海の急行 → 和歌山市7:47着・7:55発 → 加太8:19着。1,700円・乗り換え3回",
                       "From Kyoto: Sanjo 5:04 (the first Keihan train) → Kitahama 6:14 → (Sakaisuji Line) → Tengachaya 6:34 → Nankai express 6:42 → Wakayamashi 7:47 / 7:55 → Kada 8:19. ¥1,700, three changes")
-KYOTO_BACK = row("train", "京都へ帰る人：加太17:27発 → なんば18:59着 →（御堂筋線）→ 淀屋橋 →（京阪）→ 三条20:20ごろ。最後は、なんば23:09発 → 淀屋橋23:33発の京阪特急 → 三条0:22着",
-                 "Back to Kyoto: Kada 17:27 → Namba 18:59 → (Midosuji Line) → Yodoyabashi → (Keihan) → Sanjo about 20:20. The last connection: Namba 23:09 → Keihan limited express from Yodoyabashi 23:33 → Sanjo 0:22")
-LAST_ROW = row("train", "遅い電車：加太22:13発 → なんば23:53着（木曜）。土曜は22:25発 → 0:02着。なんば→梅田は御堂筋線で8分・240円",
-               "Late trains: Kada 22:13 → Namba 23:53 (Thursday); Saturday 22:25 → 0:02. Namba → Umeda is 8 min on the Midosuji Line (¥240)")
+KYOTO_BACK = row("train", "京都へ帰る人：加太17:27発 → なんば18:59着 →（御堂筋線）→ 淀屋橋 →（京阪）→ 三条20:20ごろ。最後は、加太21:25発（土曜21:27発）→ 淀屋橋23:33発の京阪特急 → 三条0:22着",
+                 "Back to Kyoto: Kada 17:27 → Namba 18:59 → (Midosuji Line) → Yodoyabashi → (Keihan) → Sanjo about 20:20. The last connection: Kada 21:25 (21:27 on Saturdays) → Keihan limited express from Yodoyabashi 23:33 → Sanjo 0:22")
+LAST_ROW = row("train", "遅い電車：木曜は加太22:13発 → なんば23:53着 →（御堂筋線の最終 0:10発）→ 梅田0:19着。土曜に梅田まで地下鉄で帰れる最後は加太21:53発 → 梅田23:46着。なんばまでの最終は加太22:45発（土曜22:51発）→ なんば0:39着（御堂筋線の梅田行きは終わっています）",
+               "Late trains: on Thursdays, Kada 22:13 → Namba 23:53 → (last Midosuji Line train, 0:10) → Umeda 0:19. On Saturdays the last that connects with the subway to Umeda is Kada 21:53 → Umeda 23:46. The last train to Namba: Kada 22:45 (22:51 on Saturdays) → Namba 0:39 (the last Midosuji Line train to Umeda has gone)")
 
 # ---------------------------------------------------------------------------
 # コース
@@ -285,14 +303,14 @@ LATE = dict(
                     "A shrine known for its doll memorials: a 20-minute visit between getting your ticket and boarding."),
             pre=T("港から歩いて5分。帰りの船が加太に着くのは16:50で、神社は17:00に閉まります。このコースでは、行きの船に乗る前にお参りしておきます。",
                   "Five minutes’ walk from the port. The boat back reaches Kada at 16:50 and the shrine closes at 17:00, so on this course you visit before the outbound boat."),
-            post=T("船で戻ったあとの加太：11月下旬の日の入りは16:50ごろで、船を降りるころに日が沈みます（1月中旬は17:10ごろ、3月下旬は18:15ごろ）。\n\n" + BATHS["ja"] + "\n\n平日なら、16:30の船で戻ってから「ひいなの湯」に入れます。",
-                   "Kada after the boat back: in late November the sun sets at about 16:50, just as you step off the boat (about 17:10 in mid-January, 18:15 in late March).\n\n" + BATHS["en"] + "\n\nOn weekdays you can still use Hiina-no-yu after the 16:30 boat."),
+            post=T("船で戻ったあとの加太：11月下旬の日の入りは16:50ごろで、船を降りるころに日が沈みます（1月中旬は17:10ごろ、3月下旬は18:15ごろ）。\n\n" + BATHS["ja"] + "\n\n平日（休前日をのぞく）なら、16:30の船で戻ってから「ひいなの湯」に入れます。",
+                   "Kada after the boat back: in late November the sun sets at about 16:50, just as you step off the boat (about 17:10 in mid-January, 18:15 in late March).\n\n" + BATHS["en"] + "\n\nOn weekdays (other than the day before a holiday) you can still use Hiina-no-yu after the 16:30 boat."),
             time=T("10:22〜10:42", "10:22–10:42"), rows=[]),
         nonaura=dict(
             pre=T("11:00の船で、11:20に着きます。", "The 11:00 boat lands at 11:20."),
-            post=T("帰りは16:30発の最終便です。着いたらすぐ、乗り場かカフェで「今日の最終便は何時ですか」と確かめてください。風の強い日は15:30に早まることがあり、その日は下の時間を1時間ずつ前に詰めます。最終便を逃すと、その日のうちに島を出る船はありません。\n\n"
+            post=T("帰りは16:30発の最終便です。着いたらすぐ、乗り場かカフェで「今日の最終便は何時ですか」と確かめてください。風の強い日は15:30に早まることがあり、その日は下の時間を1時間ずつ前に詰めます。「午前2便のみ運航」の日は12:30が最終で、島にいられるのは1時間ほどです（第3砲台跡まで往復すると間に合わないことがあります）。最終便を逃すと、その日のうちに島を出る船はありません。\n\n"
                    "時間割：11:35に出発 → 第3砲台跡 → 展望台でお昼 → 孝助松海岸 → 灯台 → 第2砲台跡を15:15に出る → 15:40に桟橋。カフェは16:00までなので、冷たいものはそれまでに。16:10には乗り場に並びます。",
-                   "You go back on the last boat, the 16:30. As soon as you land, ask at the pier or the cafe what time today’s last boat leaves. On windy days it can be brought forward to 15:30; if so, move everything below an hour earlier. Miss the last boat and there is no other boat off the island that day.\n\n"
+                   "You go back on the last boat, the 16:30. As soon as you land, ask at the pier or the cafe what time today’s last boat leaves. On windy days it can be brought forward to 15:30; if so, move everything below an hour earlier. On days when only the two morning boats run, the last leaves at 12:30 and you have about an hour on the island (not always enough for the round trip to the No. 3 Battery). Miss the last boat and there is no other boat off the island that day.\n\n"
                    "Timetable: set off at 11:35 → No. 3 Battery → lunch at the lookout → Kosukematsu beach → lighthouse → leave the No. 2 Battery at 15:15 → pier at 15:40. The cafe closes at 16:00, so have your cold drink before then, and queue at the pier by 16:10."),
             time=T("11:20着〜11:35出発（帰りは16:30の船）", "arrive 11:20, set off 11:35 (16:30 boat back)"),
             rows=[row("hours", "らぴゅカフェ 9:30〜16:00（船が出る日だけ。天気で変わる）", "Rapyu Cafe 9:30–16:00 (only on days the boats run; changes with the weather)")]),
@@ -332,9 +350,9 @@ EARLY = dict(
             blurb=T("なんば6:38発の急行で、加太に8:19着（土曜は6:24発・7:59着）。朝ごはんと飲み物は、乗る前になんばで。",
                     "The 6:38 express from Namba gets you to Kada at 8:19 (Saturdays 6:24, arriving 7:59). Buy breakfast and drinks in Namba first."),
             pre=T("なんば6:38発の急行で和歌山市へ（7:47着）、7:55発の加太線に乗り換えて、加太に8:19に着きます。土曜は、なんば6:24発の区間急行で紀ノ川7:35着、7:38発に乗り換えて加太7:59着（次の6:40発の空港急行だと、泉佐野と紀ノ川で乗り換えて8:21着）。梅田のあたりのホテルは6:00ごろ、難波のあたりなら6:20ごろに出ます。\n\n"
-                  "この時間は、まだ今日の運航連絡が出ていないことがあります。電車の中と加太駅でもう一度、公式サイトを見てください。",
+                  "公式サイトの運航連絡は、2026年8月中旬〜11月はどの日も前の晩か当日の朝6:30までに出ていました。ホテルを出る前に見て、電車の中と加太駅でもう一度確かめてください。",
                   "Take the 6:38 express from Namba to Wakayamashi (7:47), change to the 7:55 Kada Line train and arrive at 8:19. On Saturdays: the 6:24 semi-express from Namba to Kinokawa (7:35), change to the 7:38 and arrive at 7:59 (the next train, the 6:40 airport express, means changing at Izumisano and Kinokawa and arrives 8:21). Leave a hotel around Umeda at about 6:00, or one around Namba at about 6:20.\n\n"
-                  "At this hour today’s operating notice may not be up yet. Look at the ferry’s website again on the train and at Kada Station."),
+                  "From mid-August to November 2026 the ferry’s operating notice was always up by 6:30 that morning, sometimes the night before. Check it before you leave the hotel, and again on the train and at Kada Station."),
             post=T("駅から加太港の友ヶ島汽船乗り場までは、歩いて15〜20分です。", "The ferry pier at Kada Port is 15 to 20 minutes’ walk."),
             time=T("8:19着（土曜は7:59着）", "arrive 8:19 (7:59 on Saturdays)"),
             rows=[row("train", "なんば6:38発（急行）→ 和歌山市7:47着・7:55発（加太線）→ 加太8:19着。土曜：なんば6:24発（区間急行）→ 紀ノ川7:35着・7:38発 → 加太7:59着",
@@ -371,8 +389,8 @@ EARLY = dict(
         awashima=dict(
             blurb=T("13:50に港に戻ったら、加太でお昼、淡嶋神社、温泉。神社は17:00まで。",
                     "Back at the port at 13:50: lunch in Kada, Awashima Shrine and a bath. The shrine closes at 17:00."),
-            pre=T("13:30の船は加太港に13:50に着きます。先にお昼、そのあと神社（港から歩いて5分）、時間があれば温泉の順です。\n\n" + LUNCH["ja"] + "港に着いてからオーダーストップまで40分しかないので、船を降りたらまっすぐ向かいます（場所はGoogleマップで「活魚料理 いなさ」）。火曜と、間に合わなかった日は、神社の参道の店でつぼ焼きを。",
-                  "The 13:30 boat reaches Kada Port at 13:50. Lunch first, then the shrine (5 minutes’ walk from the port), then a bath if there is time.\n\n" + LUNCH["en"] + " You have only 40 minutes between landing and last orders, so head straight there off the boat (search “活魚料理 いなさ” in Google Maps). On Tuesdays, or if you are too late, have grilled turban shells at the stalls on the shrine approach."),
+            pre=T("13:30の船は加太港に13:50に着きます。先にお昼、そのあと神社（港から歩いて5分）、時間があれば温泉の順です。\n\n" + LUNCH["ja"] + "港に着いてからオーダーストップまで40分しかないので、船を降りたらまっすぐ向かいます。店は港の乗り場から淡嶋神社の方へ200mほど（Googleマップで「活魚料理 いなさ」）。火曜と、間に合わなかった日は、神社の参道の店でつぼ焼きを。",
+                  "The 13:30 boat reaches Kada Port at 13:50. Lunch first, then the shrine (5 minutes’ walk from the port), then a bath if there is time.\n\n" + LUNCH["en"] + " You have only 40 minutes between landing and last orders, so head straight there off the boat: it is about 200 m from the pier towards Awashima Shrine (search “活魚料理 いなさ” in Google Maps). On Tuesdays, or if you are too late, have grilled turban shells at the stalls on the shrine approach."),
             post=T(BATHS["ja"] + "\n\n土日祝は3つとも受付が15:00ごろまでなので、温泉に入りたい日は、船を降りたら先に温泉へ。",
                    BATHS["en"] + "\n\nOn weekends and holidays all three stop taking bathers at about 15:00, so if you want a bath, go there first off the boat."),
             time=T("お昼13:55〜14:40、神社14:45〜15:10", "lunch 13:55–14:40, shrine 14:45–15:10"), rows=[]),
@@ -393,7 +411,7 @@ NOTE_HEAD = ("友ヶ島・加太の日帰りルート（tomogashima/ のペー�
 NOTE_TAIL = (" 写真は Toshi の写真ライブラリから（加太は2022年7月8日、友ヶ島と淡嶋神社は2023年6月20日。Nikon D7000 の写真は島にGPSの写真が2枚しかないので、道しるべの看板と撮影時刻の順で場所を決めた。"
              "1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。port-1.jpg は、窓に貼ってあった選挙のポスターが写らないように上の部分だけを切り出した。"
              "info.source は確認した出典、info.checked は確認日。入口で困ること（欠航・運休日・現金・水道なし・参拝時間）は caution と head つきの notices。"
-             "友ヶ島汽船の支払い方法、整理券を配りはじめる時刻、ひいなの湯と加太海月のタトゥーの決まりは公式サイトに書かれておらず、文章の中で「要確認」としている。"
+             "友ヶ島汽船の支払い方法、整理券を配りはじめる時刻、ひいなの湯の最終受付、ひいなの湯と加太海月のタトゥーの決まり、いなさの支払い方法は公式サイトに書かれておらず、文章の中で「要確認」としている（2026-11-24 再確認）。"
              "店名を出しているのは公式サイトで営業時間を確かめた店だけ（いなさ・ひいなの湯・休暇村紀州加太・加太海月・らぴゅカフェ）。"
              "各スポットの「おすすめ訪問時間」は11月下旬・木曜のダイヤの時間割。このファイルは scripts/build_tomogashima_data.py で作る（直接直さない）。")
 
@@ -416,7 +434,7 @@ def build(c):
         out["text"] = text
         out["gmaps"] = b["gmaps"]
         out["links"] = b["links"]
-        out["info"] = info(o.get("rows", []) + b.get("rows", []), tip=b["tip"], cash=b.get("cash", False), source=b.get("source"))
+        out["info"] = info(o.get("rows", []) + b.get("rows", []), tip=b["tip"], cash=b.get("cash", False), source=b.get("source"), checked=b.get("checked"))
         out["photos"] = photos(sid)
         out["notices"] = b.get("notices", [])
         spots.append(out)

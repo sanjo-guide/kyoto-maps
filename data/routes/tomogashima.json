@@ -1,7 +1,7 @@
 {
  "id": "tomogashima",
  "course": "late",
- "_note": "友ヶ島・加太の日帰りルート（tomogashima/ のページ専用。形は eizan-line.json と同じ）。起点は大阪の梅田〜難波のあたりのホテル。一覧の上のボタンで行きの船を選び、コースごとに別のファイルを読む（tomogashima.json＝11:00の船で渡って16:30の船で戻る、tomogashima-early.json＝9:00の船で渡って13:30の船で戻り、午後は加太）。このファイル：tomogashima.json。 写真は Toshi の写真ライブラリから（加太は2022年7月8日、友ヶ島と淡嶋神社は2023年6月20日。Nikon D7000 の写真は島にGPSの写真が2枚しかないので、道しるべの看板と撮影時刻の順で場所を決めた。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。port-1.jpg は、窓に貼ってあった選挙のポスターが写らないように上の部分だけを切り出した。info.source は確認した出典、info.checked は確認日。入口で困ること（欠航・運休日・現金・水道なし・参拝時間）は caution と head つきの notices。友ヶ島汽船の支払い方法、整理券を配りはじめる時刻、ひいなの湯と加太海月のタトゥーの決まりは公式サイトに書かれておらず、文章の中で「要確認」としている。店名を出しているのは公式サイトで営業時間を確かめた店だけ（いなさ・ひいなの湯・休暇村紀州加太・加太海月・らぴゅカフェ）。各スポットの「おすすめ訪問時間」は11月下旬・木曜のダイヤの時間割。このファイルは scripts/build_tomogashima_data.py で作る（直接直さない）。",
+ "_note": "友ヶ島・加太の日帰りルート（tomogashima/ のページ専用。形は eizan-line.json と同じ）。起点は大阪の梅田〜難波のあたりのホテル。一覧の上のボタンで行きの船を選び、コースごとに別のファイルを読む（tomogashima.json＝11:00の船で渡って16:30の船で戻る、tomogashima-early.json＝9:00の船で渡って13:30の船で戻り、午後は加太）。このファイル：tomogashima.json。 写真は Toshi の写真ライブラリから（加太は2022年7月8日、友ヶ島と淡嶋神社は2023年6月20日。Nikon D7000 の写真は島にGPSの写真が2枚しかないので、道しるべの看板と撮影時刻の順で場所を決めた。1か所10枚以内・横の写真だけ・長辺1600px・位置情報なし）。port-1.jpg は、窓に貼ってあった選挙のポスターが写らないように上の部分だけを切り出した。info.source は確認した出典、info.checked は確認日。入口で困ること（欠航・運休日・現金・水道なし・参拝時間）は caution と head つきの notices。友ヶ島汽船の支払い方法、整理券を配りはじめる時刻、ひいなの湯の最終受付、ひいなの湯と加太海月のタトゥーの決まり、いなさの支払い方法は公式サイトに書かれておらず、文章の中で「要確認」としている（2026-11-24 再確認）。店名を出しているのは公式サイトで営業時間を確かめた店だけ（いなさ・ひいなの湯・休暇村紀州加太・加太海月・らぴゅカフェ）。各スポットの「おすすめ訪問時間」は11月下旬・木曜のダイヤの時間割。このファイルは scripts/build_tomogashima_data.py で作る（直接直さない）。",
  "sections": [
   {
    "first": 1,
@@ -190,11 +190,12 @@
      "ja": "電車の時刻と運賃は乗換案内（2026年11月26日・木曜と28日・土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
      "en": "Train times and fares checked on a route planner (timetables for Thu 26 and Sat 28 Nov 2026). Please check again before you travel."
     },
-    "checked": "2026-11-22",
+    "checked": "2026-11-24",
     "source": [
      "乗換案内（Yahoo!路線情報）2026-11-26（木）・11-28（土）のダイヤ",
      "南海電鉄 公式サイト（特急サザン・めでたいでんしゃ）",
-     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡）"
+     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡。2026-11-24 再確認：https://tomogashimakisen.com/main/ ・ https://tomogashimakisen.com/main/%e9%81%8b%e8%88%aa%e6%99%82%e5%88%bb-copy ・ https://tomogashimakisen.com/main/%e6%97%85%e5%ae%a2%e9%81%8b%e8%b3%83 ・ 運航連絡の記事の日時 https://tomogashimakisen.com/main/category/operation-contact）",
+     "和歌山市 公式サイト「友ヶ島へのアクセス」（当日の朝に運航を判断・電話 073-459-1333・整理券は第2便から・定員100名。2026-11-24 確認：https://www.city.wakayama.wakayama.jp/kankou/kankouspot/1027585/1027593.html）"
     ]
    },
    "photos": [
@@ -210,8 +211,8 @@
       "en": "Before you leave: are the boats running today?"
      },
      "text": {
-      "ja": "友ヶ島汽船は風と波でよく欠航します。2026年11月16日〜21日の6日間で、船が出たのは17日だけでした（18日は水曜の運休、ほかの4日は強風・荒天で全便欠航）。出るかどうかはその日の朝に決まり、友ヶ島汽船の公式サイトの「運航連絡」に出ます。何時に出るかは決まっていません。和歌山市の案内では、朝8時以降なら電話（073-459-1333、日本語）でも確かめられます。",
-      "en": "The Tomogashima boats are often cancelled for wind and waves. In the six days from 16 to 21 November 2026 they ran on the 17th only (the 18th was the regular Wednesday off; the other four days were cancelled for strong wind or rough weather). The decision is made that morning and posted under “運航連絡” on the ferry’s website, at no fixed time. Wakayama City says you can also phone after 8:00 (073-459-1333, Japanese)."
+      "ja": "友ヶ島汽船は風と波でよく欠航します。2026年11月14日〜23日の10日間で、船が出たのは14日・17日・23日の3日だけでした（18日は水曜の運休、ほかの6日は強風・荒天で全便欠航）。出るかどうかは当日の朝に決まり（和歌山市の案内）、友ヶ島汽船の公式サイトの「運航連絡」に出ます。何時に出すとは書かれていませんが、2026年8月中旬〜11月の運航連絡は、どの日も前の晩か当日の朝6:30までに載っていました。電話でも聞けます（073-459-1333、日本語。受付時間は書かれていません）。",
+      "en": "The Tomogashima boats are often cancelled for wind and waves. In the ten days from 14 to 23 November 2026 they ran on just three (the 14th, 17th and 23rd; the 18th was the regular Wednesday off, and the other six days were cancelled for strong wind or rough weather). The decision is made that morning (Wakayama City) and posted under “運航連絡” on the ferry’s website. No time is given, but from mid-August to November 2026 every notice was up by 6:30 that morning, sometimes the night before. You can also phone (073-459-1333, Japanese; phone hours not stated)."
      },
      "url": "https://tomogashimakisen.com/main/"
     }
@@ -309,13 +310,13 @@
     ],
     "cash": true,
     "tip": {
-     "ja": "運航日・時刻・運賃・整理券は友ヶ島汽船の公式サイトで確認しました。電話番号は和歌山市の公式サイトから。",
-     "en": "Days, times, fares and numbered tickets checked on the Tomogashima Kisen website; the phone number is from the Wakayama City website."
+     "ja": "運航日・時刻・運賃・整理券は友ヶ島汽船の公式サイトで確認しました。電話番号は和歌山市の公式サイトから。支払い方法と整理券を配りはじめる時刻は、どちらのサイトにも書かれていません。",
+     "en": "Days, times, fares and numbered tickets checked on the Tomogashima Kisen website; the phone number is from the Wakayama City website. Neither site says how you can pay or when numbered tickets start being handed out."
     },
-    "checked": "2026-11-22",
+    "checked": "2026-11-24",
     "source": [
-     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡）",
-     "和歌山市 公式サイト（友ヶ島汽船の電話番号・朝8時以降の問い合わせ）"
+     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡。2026-11-24 再確認：https://tomogashimakisen.com/main/ ・ https://tomogashimakisen.com/main/%e9%81%8b%e8%88%aa%e6%99%82%e5%88%bb-copy ・ https://tomogashimakisen.com/main/%e6%97%85%e5%ae%a2%e9%81%8b%e8%b3%83 ・ 運航連絡の記事の日時 https://tomogashimakisen.com/main/category/operation-contact）",
+     "和歌山市 公式サイト「友ヶ島へのアクセス」（当日の朝に運航を判断・電話 073-459-1333・整理券は第2便から・定員100名。2026-11-24 確認：https://www.city.wakayama.wakayama.jp/kankou/kankouspot/1027585/1027593.html）"
     ]
    },
    "photos": [
@@ -332,8 +333,8 @@
       "en": "Days with no boats"
      },
      "text": {
-      "ja": "3月〜12月は水曜が運休（祝日は運航）。1月〜2月は土・日・祝日だけ。12月29日〜1月3日は運休。そのほかの日も、風や波で欠航します。風が強くなる日は帰りの最終便が早まることがあります。",
-      "en": "March to December: no boats on Wednesdays (they run if it is a public holiday). January and February: Saturdays, Sundays and holidays only. None from 29 December to 3 January. On any other day they can be cancelled for wind or waves, and on windy days the last boat back may leave early."
+      "ja": "3月〜12月は水曜が運休（祝日は運航）。1月〜2月は土・日・祝日だけ。12月29日〜1月3日は運休。そのほかの日も、風や波で欠航します。風が強くなる日は帰りの最終便が早まることがあり、「午前2便のみ運航（友ヶ島発最終便12時30分）」という日もあります（2026年10月13日・11月5日）。",
+      "en": "March to December: no boats on Wednesdays (they run if it is a public holiday). January and February: Saturdays, Sundays and holidays only. None from 29 December to 3 January. On any other day they can be cancelled for wind or waves. On windy days the last boat back may leave early, and some days only the two morning boats run, with the last boat leaving the island at 12:30 (13 Oct and 5 Nov 2026)."
      },
      "url": "https://tomogashimakisen.com/main/"
     }
@@ -361,8 +362,8 @@
     "en": "Open 9:00–17:00"
    },
    "text": {
-    "ja": "淡嶋神社（あわしまじんじゃ）\n\n港から歩いて5分。帰りの船が加太に着くのは16:50で、神社は17:00に閉まります。このコースでは、行きの船に乗る前にお参りしておきます。\n\n人形供養で知られる神社です。社殿のまわりに、全国から納められた人形がびっしり並んでいます。毎年3月3日には、ひな人形を小舟にのせて海へ流す「雛流し」があります。参拝は9:00〜17:00。\n\n参道には、つぼ焼きやよもぎ餅を売るみやげ物屋が3軒あります（雨の日は休むことがあります）。\n\n船で戻ったあとの加太：11月下旬の日の入りは16:50ごろで、船を降りるころに日が沈みます（1月中旬は17:10ごろ、3月下旬は18:15ごろ）。\n\n温泉：神社のすぐそばの旅館・大阪屋の「ひいなの湯」は日帰り入浴11:00〜19:00（土日祝と混む日は15:00まで）、1,200円・フェイスタオルつき。タトゥーの決まりは公式サイトに書かれていないので、入る前に受付で聞いてください（要確認）。休暇村紀州加太の「天空の湯」は12:00〜15:50（受付15:00まで）・1,500円ですが、タトゥーのある人は入れません（公式サイト）。シーサイドホテル加太海月は11:00〜15:00（受付14:30まで）・1,200円、タトゥーは要確認。\n\n平日なら、16:30の船で戻ってから「ひいなの湯」に入れます。\n\nおすすめ訪問時間：10:22〜10:42",
-    "en": "Awashima Shrine\n\nFive minutes’ walk from the port. The boat back reaches Kada at 16:50 and the shrine closes at 17:00, so on this course you visit before the outbound boat.\n\nA shrine known for its memorial services for dolls: dolls sent from all over Japan stand packed around the hall. Every 3 March, in the “Hina-nagashi”, Girls’ Day dolls are set adrift on the sea in little boats. Open 9:00–17:00.\n\nThree souvenir stalls on the approach sell grilled turban shells and yomogi rice cakes (they may close on rainy days).\n\nKada after the boat back: in late November the sun sets at about 16:50, just as you step off the boat (about 17:10 in mid-January, 18:15 in late March).\n\nBaths: Hiina-no-yu at the Osakaya inn, right by the shrine, takes day visitors 11:00–19:00 (until 15:00 on weekends, holidays and busy days), ¥1,200 with a small towel. Its website says nothing about tattoos, so ask at the desk first (unconfirmed). Tenku-no-yu at Kyukamura Kishu-Kada is 12:00–15:50 (entry until 15:00), ¥1,500, but does not admit guests with tattoos (official site). Seaside Hotel Kada Kaigetsu is 11:00–15:00 (entry until 14:30), ¥1,200; tattoo policy unconfirmed.\n\nOn weekdays you can still use Hiina-no-yu after the 16:30 boat.\n\nRecommended visit time: 10:22–10:42"
+    "ja": "淡嶋神社（あわしまじんじゃ）\n\n港から歩いて5分。帰りの船が加太に着くのは16:50で、神社は17:00に閉まります。このコースでは、行きの船に乗る前にお参りしておきます。\n\n人形供養で知られる神社です。社殿のまわりに、全国から納められた人形がびっしり並んでいます。毎年3月3日には、ひな人形を小舟にのせて海へ流す「雛流し」があります。参拝は9:00〜17:00。\n\n参道には、つぼ焼きやよもぎ餅を売るみやげ物屋が3軒あります（雨の日は休むことがあります）。\n\n船で戻ったあとの加太：11月下旬の日の入りは16:50ごろで、船を降りるころに日が沈みます（1月中旬は17:10ごろ、3月下旬は18:15ごろ）。\n\n温泉：神社のすぐそばの旅館・大阪屋の「ひいなの湯」は日帰り入浴11:00〜19:00（土日祝・休前日と混む日は15:00まで）、1,200円・フェイスタオルつき。最終受付の時刻とタトゥーの決まりは公式サイトに書かれていないので、入る前に受付で聞いてください（要確認）。休暇村紀州加太の「天空の湯」は12:00〜15:50（受付15:00まで）・1,500円ですが、タトゥーのある人は入れません（公式サイト）。シーサイドホテル加太海月は11:00〜15:00（受付14:30まで）・1,200円・バスタオルつき、支払いは現金かカード。タトゥーは公式サイトに書かれていません（要確認）。\n\n平日（休前日をのぞく）なら、16:30の船で戻ってから「ひいなの湯」に入れます。\n\nおすすめ訪問時間：10:22〜10:42",
+    "en": "Awashima Shrine\n\nFive minutes’ walk from the port. The boat back reaches Kada at 16:50 and the shrine closes at 17:00, so on this course you visit before the outbound boat.\n\nA shrine known for its memorial services for dolls: dolls sent from all over Japan stand packed around the hall. Every 3 March, in the “Hina-nagashi”, Girls’ Day dolls are set adrift on the sea in little boats. Open 9:00–17:00.\n\nThree souvenir stalls on the approach sell grilled turban shells and yomogi rice cakes (they may close on rainy days).\n\nKada after the boat back: in late November the sun sets at about 16:50, just as you step off the boat (about 17:10 in mid-January, 18:15 in late March).\n\nBaths: Hiina-no-yu at the Osakaya inn, right by the shrine, takes day visitors 11:00–19:00 (until 15:00 on weekends, holidays, the day before a holiday and busy days), ¥1,200 with a small towel. Its website gives neither a last entry time nor a tattoo policy, so ask at the desk first (unconfirmed). Tenku-no-yu at Kyukamura Kishu-Kada is 12:00–15:50 (entry until 15:00), ¥1,500, but does not admit guests with tattoos (official site). Seaside Hotel Kada Kaigetsu is 11:00–15:00 (entry until 14:30), ¥1,200 with a bath towel, cash or card; its website says nothing about tattoos (unconfirmed).\n\nOn weekdays (other than the day before a holiday) you can still use Hiina-no-yu after the 16:30 boat.\n\nRecommended visit time: 10:22–10:42"
    },
    "gmaps": [
     {
@@ -438,13 +439,14 @@
      "ja": "参拝時間は淡嶋神社の公式ページ、お店と温泉の時間はそれぞれの公式サイトで確認しました。",
      "en": "Shrine hours checked on the shrine’s official page; restaurant and bath hours on their own websites."
     },
-    "checked": "2026-11-22",
+    "checked": "2026-11-24",
     "source": [
      "淡嶋神社 公式ページ（kada.jp/awashima）",
-     "活魚料理 いなさ（inasa.net）",
-     "加太淡嶋温泉 大阪屋 ひいなの湯（hiina.com）",
-     "休暇村紀州加太（qkamura.or.jp/kada）",
-     "シーサイドホテル加太海月（kada-kaigetsu.com）"
+     "活魚料理 いなさ（2026-11-24 確認 https://www.inasa.net/index.html ：11:00〜15:00・LO14:30、夜は要予約、火・水曜休み、祝日の連休は要問合せ。支払い方法の記載なし）",
+     "加太淡嶋温泉 大阪屋 ひいなの湯（2026-11-24 確認 https://www.hiina.com/spa/ ・ https://www.hiina.com/faq/ ：11:00〜19:00、土日祝・休前日・混雑時は15:00まで、1,200円。最終受付とタトゥーの記載なし）",
+     "休暇村紀州加太（2026-11-24 確認 https://www.qkamura.or.jp/kada/oneday/ ：12:00〜15:50・15:00札止め・1,500円・刺青タトゥー不可）",
+     "シーサイドホテル加太海月（2026-11-24 確認 https://kada-kaigetsu.com/day_use/ ：11:00〜15:00・最終受付14:30・1,200円・精算は現金かカード。タトゥーの記載なし）",
+     "いなさの位置：国土地理院の住所検索（加太196番地）と OpenStreetMap。友ヶ島汽船の乗り場から直線で約170m"
     ]
    },
    "photos": [
@@ -474,8 +476,8 @@
     "en": "No drinking water on the island. Drinks are sold only around the pier"
    },
    "text": {
-    "ja": "友ヶ島 野奈浦桟橋（のなうらさんばし）\n\n11:00の船で、11:20に着きます。\n\n友ヶ島は紀淡海峡に浮かぶ無人島の集まりで、船が着くのはいちばん大きな沖ノ島です。明治時代に大阪湾を守る要塞が造られ、レンガの砲台跡が森の中に残っています。\n\n桟橋のそばに友ヶ島案内センターとトイレ、「らぴゅカフェ」があります。カフェは9:30〜16:00、船が出る日だけ（天気で時間が変わります）。飲み物・ソフトクリーム・軽食があり、島で飲み物を買えるのはこのあたりだけです。島に水道はなく、井戸の水は沸かしても飲めません。1人1リットルは持って歩きましょう。\n\nトイレは島に4か所：ここ（野奈浦広場）、第3砲台跡の下、池尻広場、南垂水広場。ごみは全部持ち帰ります。道は舗装のない山道で、雨のあとは荒れています。歩きやすい靴で。砲台跡の中は暗いので、スマホのライトを使います。\n\n深蛇池（しんじゃいけ）と虎島へは、いまは行けません（和歌山市、2026年8月の案内）。\n\n帰りは16:30発の最終便です。着いたらすぐ、乗り場かカフェで「今日の最終便は何時ですか」と確かめてください。風の強い日は15:30に早まることがあり、その日は下の時間を1時間ずつ前に詰めます。最終便を逃すと、その日のうちに島を出る船はありません。\n\n時間割：11:35に出発 → 第3砲台跡 → 展望台でお昼 → 孝助松海岸 → 灯台 → 第2砲台跡を15:15に出る → 15:40に桟橋。カフェは16:00までなので、冷たいものはそれまでに。16:10には乗り場に並びます。\n\nおすすめ到着時間：11:20着〜11:35出発（帰りは16:30の船）",
-    "en": "Nonaura Pier, Tomogashima\n\nThe 11:00 boat lands at 11:20.\n\nTomogashima is a group of uninhabited islands in the Kitan Strait; boats land on the largest, Okinoshima. In the Meiji era it was fortified to guard Osaka Bay, and brick gun batteries still stand in the woods.\n\nBy the pier are the information centre, toilets and the Rapyu Cafe. The cafe opens 9:30–16:00, only on days the boats run (hours change with the weather), with drinks, soft-serve and light meals. This is the only place on the island where drinks are sold. There is no tap water, and the well water is not drinkable even boiled: carry a litre each.\n\nThere are four toilets on the island: here (Nonaura Square), below the No. 3 Battery, Ikejiri Square and Minami-tarumi Square. Take all your rubbish back with you. The trails are unpaved and rough after rain: wear proper shoes. The batteries are dark inside, so use your phone torch.\n\nShinja-ike pond and Torajima are closed for now (Wakayama City notice, August 2026).\n\nYou go back on the last boat, the 16:30. As soon as you land, ask at the pier or the cafe what time today’s last boat leaves. On windy days it can be brought forward to 15:30; if so, move everything below an hour earlier. Miss the last boat and there is no other boat off the island that day.\n\nTimetable: set off at 11:35 → No. 3 Battery → lunch at the lookout → Kosukematsu beach → lighthouse → leave the No. 2 Battery at 15:15 → pier at 15:40. The cafe closes at 16:00, so have your cold drink before then, and queue at the pier by 16:10.\n\nRecommended arrival: arrive 11:20, set off 11:35 (16:30 boat back)"
+    "ja": "友ヶ島 野奈浦桟橋（のなうらさんばし）\n\n11:00の船で、11:20に着きます。\n\n友ヶ島は紀淡海峡に浮かぶ無人島の集まりで、船が着くのはいちばん大きな沖ノ島です。明治時代に大阪湾を守る要塞が造られ、レンガの砲台跡が森の中に残っています。\n\n桟橋のそばに友ヶ島案内センターとトイレ、「らぴゅカフェ」があります。カフェは9:30〜16:00、船が出る日だけ（天気で時間が変わります）。飲み物・ソフトクリーム・軽食があり、島で飲み物を買えるのはこのあたりだけです。島に水道はなく、井戸の水は沸かしても飲めません。1人1リットルは持って歩きましょう。\n\nトイレは島に4か所：ここ（野奈浦広場）、第3砲台跡の下、池尻広場、南垂水広場。ごみは全部持ち帰ります。道は舗装のない山道で、雨のあとは荒れています。歩きやすい靴で。砲台跡の中は暗いので、スマホのライトを使います。\n\n深蛇池（しんじゃいけ）と虎島へは、いまは行けません（和歌山市、2026年8月の案内）。\n\n帰りは16:30発の最終便です。着いたらすぐ、乗り場かカフェで「今日の最終便は何時ですか」と確かめてください。風の強い日は15:30に早まることがあり、その日は下の時間を1時間ずつ前に詰めます。「午前2便のみ運航」の日は12:30が最終で、島にいられるのは1時間ほどです（第3砲台跡まで往復すると間に合わないことがあります）。最終便を逃すと、その日のうちに島を出る船はありません。\n\n時間割：11:35に出発 → 第3砲台跡 → 展望台でお昼 → 孝助松海岸 → 灯台 → 第2砲台跡を15:15に出る → 15:40に桟橋。カフェは16:00までなので、冷たいものはそれまでに。16:10には乗り場に並びます。\n\nおすすめ到着時間：11:20着〜11:35出発（帰りは16:30の船）",
+    "en": "Nonaura Pier, Tomogashima\n\nThe 11:00 boat lands at 11:20.\n\nTomogashima is a group of uninhabited islands in the Kitan Strait; boats land on the largest, Okinoshima. In the Meiji era it was fortified to guard Osaka Bay, and brick gun batteries still stand in the woods.\n\nBy the pier are the information centre, toilets and the Rapyu Cafe. The cafe opens 9:30–16:00, only on days the boats run (hours change with the weather), with drinks, soft-serve and light meals. This is the only place on the island where drinks are sold. There is no tap water, and the well water is not drinkable even boiled: carry a litre each.\n\nThere are four toilets on the island: here (Nonaura Square), below the No. 3 Battery, Ikejiri Square and Minami-tarumi Square. Take all your rubbish back with you. The trails are unpaved and rough after rain: wear proper shoes. The batteries are dark inside, so use your phone torch.\n\nShinja-ike pond and Torajima are closed for now (Wakayama City notice, August 2026).\n\nYou go back on the last boat, the 16:30. As soon as you land, ask at the pier or the cafe what time today’s last boat leaves. On windy days it can be brought forward to 15:30; if so, move everything below an hour earlier. On days when only the two morning boats run, the last leaves at 12:30 and you have about an hour on the island (not always enough for the round trip to the No. 3 Battery). Miss the last boat and there is no other boat off the island that day.\n\nTimetable: set off at 11:35 → No. 3 Battery → lunch at the lookout → Kosukematsu beach → lighthouse → leave the No. 2 Battery at 15:15 → pier at 15:40. The cafe closes at 16:00, so have your cold drink before then, and queue at the pier by 16:10.\n\nRecommended arrival: arrive 11:20, set off 11:35 (16:30 boat back)"
    },
    "gmaps": [
     {
@@ -544,7 +546,7 @@
     "source": [
      "和歌山市 公式サイト「友ヶ島」（散策コース・施設・注意・通行止め）",
      "らぴゅカフェ（tomogashimakisen.com/cafe/）",
-     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡）"
+     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡。2026-11-24 再確認：https://tomogashimakisen.com/main/ ・ https://tomogashimakisen.com/main/%e9%81%8b%e8%88%aa%e6%99%82%e5%88%bb-copy ・ https://tomogashimakisen.com/main/%e6%97%85%e5%ae%a2%e9%81%8b%e8%b3%83 ・ 運航連絡の記事の日時 https://tomogashimakisen.com/main/category/operation-contact）"
     ]
    },
    "photos": [
@@ -888,7 +890,7 @@
     "checked": "2026-11-22",
     "source": [
      "和歌山市 公式サイト「友ヶ島」（散策コース・施設・注意・通行止め）",
-     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡）"
+     "友ヶ島汽船 公式サイト（運航時刻・運航日・当日乗船整理券・旅客運賃・運航連絡。2026-11-24 再確認：https://tomogashimakisen.com/main/ ・ https://tomogashimakisen.com/main/%e9%81%8b%e8%88%aa%e6%99%82%e5%88%bb-copy ・ https://tomogashimakisen.com/main/%e6%97%85%e5%ae%a2%e9%81%8b%e8%b3%83 ・ 運航連絡の記事の日時 https://tomogashimakisen.com/main/category/operation-contact）"
     ]
    },
    "photos": [
@@ -921,8 +923,8 @@
    "lat": 34.27507,
    "lng": 135.0807,
    "text": {
-    "ja": "南海 加太駅（帰り）\n\n16:30の船は加太港に16:50に着きます。港から駅まで歩いて15〜20分。17:27発に乗ると、和歌山市で特急サザン50号に乗り換えて、なんばに18:59に着きます。平日に「ひいなの湯」に入るなら、18:24発（土曜は18:20発）でなんば20:00ごろ。\n\n加太で夜に開いている店は、公式サイトで時間を確かめられたところがありません。晩ごはんはなんばに戻ってからにしています。なんば駅から法善寺横丁と道頓堀までは歩いて5分ほど。店は大阪マップにまとめてあります。\n\n遅くなっても、加太22:13発に乗ればなんばに23:53に着きます（木曜のダイヤ）。京都へ帰る人は、なんばを23時までに出てください（淀屋橋23:33発の京阪特急で三条0:22着、阪急は大阪梅田23:45発で京都河原町0:34着）。\n\nおすすめ出発時間：17:27発（なんば18:59着）",
-    "en": "Nankai Kada Station (return)\n\nThe 16:30 boat reaches Kada Port at 16:50, and the station is 15 to 20 minutes’ walk. The 17:27 connects at Wakayamashi with Southern 50 and reaches Namba at 18:59. If you take a bath at Hiina-no-yu on a weekday, the 18:24 (18:20 on Saturdays) gets you to Namba at about 20:00.\n\nNo place in Kada could be confirmed open in the evening on an official website, so dinner in this plan is back in Namba. Hozenji Yokocho and Dotonbori are about 5 minutes’ walk from Namba Station; the Osaka map lists where to eat.\n\nIf you run late, the 22:13 from Kada still reaches Namba at 23:53 (Thursday timetable). For Kyoto, leave Namba by 23:00 (Keihan limited express from Yodoyabashi at 23:33, Sanjo 0:22; or Hankyu from Osaka-Umeda at 23:45, Kyoto-Kawaramachi 0:34).\n\nRecommended departure time: depart 17:27 (Namba 18:59)"
+    "ja": "南海 加太駅（帰り）\n\n16:30の船は加太港に16:50に着きます。港から駅まで歩いて15〜20分。17:27発に乗ると、和歌山市で特急サザン50号に乗り換えて、なんばに18:59に着きます。平日に「ひいなの湯」に入るなら、18:24発（土曜は18:20発）でなんば20:00ごろ。\n\n加太の「活魚料理 いなさ」は、夜は予約制です（公式サイト）。予約なしで入れる晩ごはんの店は公式サイトで確かめられなかったので、晩ごはんはなんばに戻ってからにしています。なんば駅から法善寺横丁と道頓堀までは歩いて5分ほど。店は大阪マップにまとめてあります。\n\n遅くなっても、木曜なら加太22:13発でなんば23:53着、御堂筋線の最終（なんば0:10発）で梅田0:19着。土曜は、梅田まで地下鉄で帰れる最後が加太21:53発（梅田23:46着）です。なんばまでの最終は加太22:45発（土曜22:51発）で、なんば0:39着。京都へ帰る人は、加太21:25発（土曜21:27発）が最後で、淀屋橋23:33発の京阪特急で三条0:22着です。\n\nおすすめ出発時間：17:27発（なんば18:59着）",
+    "en": "Nankai Kada Station (return)\n\nThe 16:30 boat reaches Kada Port at 16:50, and the station is 15 to 20 minutes’ walk. The 17:27 connects at Wakayamashi with Southern 50 and reaches Namba at 18:59. If you take a bath at Hiina-no-yu on a weekday, the 18:24 (18:20 on Saturdays) gets you to Namba at about 20:00.\n\nInasa in Kada takes dinner guests by reservation only (official site). No place you can simply walk into for dinner could be confirmed on an official website, so dinner in this plan is back in Namba. Hozenji Yokocho and Dotonbori are about 5 minutes’ walk from Namba Station; the Osaka map lists where to eat.\n\nIf you run late: on Thursdays the 22:13 from Kada reaches Namba at 23:53, in time for the last Midosuji Line train (Namba 0:10, Umeda 0:19). On Saturdays the last train from Kada that connects with the subway to Umeda is the 21:53 (Umeda 23:46). The last train to Namba leaves Kada at 22:45 (22:51 on Saturdays) and arrives at 0:39. For Kyoto, the last is the 21:25 from Kada (21:27 on Saturdays), connecting with the 23:33 Keihan limited express from Yodoyabashi to Sanjo (0:22).\n\nRecommended departure time: depart 17:27 (Namba 18:59)"
    },
    "gmaps": [
     {
@@ -973,8 +975,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "遅い電車：加太22:13発 → なんば23:53着（木曜）。土曜は22:25発 → 0:02着。なんば→梅田は御堂筋線で8分・240円",
-       "en": "Late trains: Kada 22:13 → Namba 23:53 (Thursday); Saturday 22:25 → 0:02. Namba → Umeda is 8 min on the Midosuji Line (¥240)"
+       "ja": "遅い電車：木曜は加太22:13発 → なんば23:53着 →（御堂筋線の最終 0:10発）→ 梅田0:19着。土曜に梅田まで地下鉄で帰れる最後は加太21:53発 → 梅田23:46着。なんばまでの最終は加太22:45発（土曜22:51発）→ なんば0:39着（御堂筋線の梅田行きは終わっています）",
+       "en": "Late trains: on Thursdays, Kada 22:13 → Namba 23:53 → (last Midosuji Line train, 0:10) → Umeda 0:19. On Saturdays the last that connects with the subway to Umeda is Kada 21:53 → Umeda 23:46. The last train to Namba: Kada 22:45 (22:51 on Saturdays) → Namba 0:39 (the last Midosuji Line train to Umeda has gone)"
       },
       "until": null,
       "from": null
@@ -982,8 +984,8 @@
      {
       "kind": "train",
       "text": {
-       "ja": "京都へ帰る人：加太17:27発 → なんば18:59着 →（御堂筋線）→ 淀屋橋 →（京阪）→ 三条20:20ごろ。最後は、なんば23:09発 → 淀屋橋23:33発の京阪特急 → 三条0:22着",
-       "en": "Back to Kyoto: Kada 17:27 → Namba 18:59 → (Midosuji Line) → Yodoyabashi → (Keihan) → Sanjo about 20:20. The last connection: Namba 23:09 → Keihan limited express from Yodoyabashi 23:33 → Sanjo 0:22"
+       "ja": "京都へ帰る人：加太17:27発 → なんば18:59着 →（御堂筋線）→ 淀屋橋 →（京阪）→ 三条20:20ごろ。最後は、加太21:25発（土曜21:27発）→ 淀屋橋23:33発の京阪特急 → 三条0:22着",
+       "en": "Back to Kyoto: Kada 17:27 → Namba 18:59 → (Midosuji Line) → Yodoyabashi → (Keihan) → Sanjo about 20:20. The last connection: Kada 21:25 (21:27 on Saturdays) → Keihan limited express from Yodoyabashi 23:33 → Sanjo 0:22"
       },
       "until": null,
       "from": null
@@ -994,9 +996,11 @@
      "ja": "電車の時刻と運賃は乗換案内（2026年11月26日・木曜と28日・土曜のダイヤ）で確認しました。乗る前にもう一度確かめてください。",
      "en": "Train times and fares checked on a route planner (timetables for Thu 26 and Sat 28 Nov 2026). Please check again before you travel."
     },
-    "checked": "2026-11-22",
+    "checked": "2026-11-24",
     "source": [
-     "乗換案内（Yahoo!路線情報）2026-11-26（木）・11-28（土）のダイヤ"
+     "乗換案内（Yahoo!路線情報）2026-11-26（木）・11-28（土）のダイヤ",
+     "最終の電車：乗換案内（Yahoo!路線情報 https://transit.yahoo.co.jp/ 、2026-11-24 に 11-26（木）・11-28（土）の「終電」で検索）。加太→なんば 木22:45発→0:39着・土22:51発→0:39着／加太→梅田(地下鉄) 木22:13発→0:19着・土21:53発→23:46着／加太→三条(京阪) 木21:25発・土21:27発→0:22着",
+     "活魚料理 いなさ（2026-11-24 確認 https://www.inasa.net/index.html ：夜の営業は要予約）"
     ]
    },
    "photos": [
