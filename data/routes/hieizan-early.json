@@ -210,8 +210,8 @@
       "en": "In winter the mountain bus doesn’t run: go up and down by the Sakamoto Cable"
      },
      "text": {
-      "ja": "12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
-      "en": "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\nThe Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\nIt is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only."
+      "ja": "12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n年末年始に、比叡山頂と東塔のあいだだけシャトルバスが臨時で走った年もあります（2022年度は12月5日〜1月3日。西塔・横川へは行きませんでした）。この冬の運行は、11月23日の時点で発表されていません（要確認）。\n\n山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
+      "en": "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\nThe Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\nIn some years a special shuttle bus has run over New Year between the summit and Todo only (5 December to 3 January in the 2022 season; it did not go to Saito or Yokawa). Nothing had been announced for this winter on 23 November (please check).\n\nIt is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only."
      }
     }
    ],
@@ -342,8 +342,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "参拝は無料。時計館宝物館は 9:30〜16:30（入館16:00まで）、料金は要確認",
-       "en": "Free. Clock museum 9:30–16:30 (last entry 16:00); its fee: please check"
+       "ja": "参拝は無料。時計館宝物館は 9:30〜16:30（入館16:00まで）、大人300円・小中学生150円。祝日以外の月曜は休館",
+       "en": "Free. Clock museum 9:30–16:30 (last entry 16:00), ¥300; elementary and junior high ¥150. Closed on Mondays unless a public holiday"
       },
       "until": null,
       "from": null
@@ -369,8 +369,8 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "参拝時間は近江神宮の公式サイト（2026年11月21日）、電車は乗換案内（11月24日・28日の時刻）で確認しました。駅から歩く時間は地図で測った目安です。",
-     "en": "Hours from the shrine’s website (21 November 2026); trains from a route planner (24 and 28 November). The walking time from the station is measured on a map."
+     "ja": "参拝時間と時計館宝物館は近江神宮の公式サイト（2026年11月23日）、電車は乗換案内（11月24日・28日の時刻）で確認しました。駅から歩く時間は地図で測った目安です。",
+     "en": "Hours and the clock museum from the shrine’s website (23 November 2026); trains from a route planner (24 and 28 November). The walking time from the station is measured on a map."
     },
     "checked": "2026-11-22"
    },
@@ -515,8 +515,8 @@
    "lat": 35.07172,
    "lng": 135.86215,
    "text": {
-    "ja": "日吉大社（ひよしたいしゃ）\n\n比叡山のふもとに約2,100年前からあると伝わる神社で、延暦寺ができてからは、その守り神とされてきました。京都から見て北東（鬼門）にあたるので、都の魔よけの神社でもあります。\n\n赤い鳥居をくぐって受付を過ぎ、石の橋（大宮橋）を渡って森の中を上ります。順番は、\n\n・山王鳥居（さんのうとりい）：鳥居の上に山の形の屋根がのった、ここだけの形（写真3枚目）。\n・西本宮（にしほんぐう）：楼門をくぐると国宝の本殿。屋根のうしろがすぱっと切れたような「日吉造（ひえづくり）」という形です。楼門の軒下の四すみで、猿の彫刻が屋根を支えています。探してみてください。\n・東本宮（ひがしほんぐう）：歩いて5分ほど。こちらの本殿も国宝です。\n\n猿は日吉大社の神さまの使いで、「神猿（まさる）」と呼ばれます。「魔が去る」「勝る」にかけた縁起もので、お守りにもなっています。\n\n約3,000本のもみじがあり、見ごろは例年11月の中ごろから下旬です。私が行った2016年11月13日は、赤鳥居のまわりがもう真っ赤でした（写真2枚目）。\n\n西本宮と東本宮を回って40〜50分。出たら、日吉馬場を駅のほうへ10分ほど下って、お昼にします。\n\nお昼：手打蕎麦 鶴屋喜八（つるやきはち）\n生源寺（しょうげんじ）の前の、延暦寺に代々そばを納めてきた店です。11:00〜16:00（ラストオーダー15:30）。休みは公式サイトに日付の一覧があり、今年の残りは12月21日です（一覧に年が書かれていないので、1月からの休みは要確認）。\n\n食べたら、坂をもう一度上ってケーブル坂本駅へ（歩いて約20分）。12:30発の坂本ケーブルに乗ります。\n\nおすすめ訪問時間：10:25〜11:10（お昼 11:20〜12:00）",
-    "en": "Hiyoshi Taisha\n\nA shrine said to have stood at the foot of Mt. Hiei for about 2,100 years, and regarded as the guardian of Enryaku-ji since the temple was founded. It lies north-east of Kyoto, the unlucky direction, so it also guarded the capital.\n\nGo under the red torii, past the ticket booth, over the stone Omiya bridge and up through the woods. In order:\n\n• Sanno torii: a torii with a gable on top, a shape found only here (photo 3).\n• Nishi Hongu (west shrine): through the two-storey gate is the main hall, a National Treasure, in the Hie style, with a roof that looks cut off square at the back. Under the four corners of the gate’s eaves, carved monkeys hold up the roof. See if you can find them.\n• Higashi Hongu (east shrine): about 5 minutes’ walk. Its main hall is a National Treasure too.\n\nThe monkey is the messenger of the shrine’s gods and is called masaru, a lucky pun on “evil leaves” and “to excel”. You will see it on the charms.\n\nThere are about 3,000 maples, usually at their best from mid to late November. When I went on 13 November 2016 the ones round the red torii were already deep red (photo 2).\n\nAllow 40–50 minutes for the west and east shrines. Then walk about 10 minutes back down the avenue towards the station for lunch.\n\nLunch: Tsuruya Kihachi soba\nIn front of Shogen-ji, a soba maker that has supplied Enryaku-ji for generations. 11:00–16:00 (last orders 15:30). Its website lists closing dates; the next is 21 December (the list gives no year, so check the dates from January).\n\nAfter lunch, walk back up to Cable Sakamoto station (about 20 minutes) for the 12:30 Sakamoto Cable.\n\nRecommended visit time: 10:25–11:10 (lunch 11:20–12:00)"
+    "ja": "日吉大社（ひよしたいしゃ）\n\n比叡山のふもとに約2,100年前からあると伝わる神社で、延暦寺ができてからは、その守り神とされてきました。京都から見て北東（鬼門）にあたるので、都の魔よけの神社でもあります。\n\n赤い鳥居をくぐって受付を過ぎ、石の橋（大宮橋）を渡って森の中を上ります。順番は、\n\n・山王鳥居（さんのうとりい）：鳥居の上に山の形の屋根がのった、ここだけの形（写真3枚目）。\n・西本宮（にしほんぐう）：楼門をくぐると国宝の本殿。屋根のうしろがすぱっと切れたような「日吉造（ひえづくり）」という形です。楼門の軒下の四すみで、猿の彫刻が屋根を支えています。探してみてください。\n・東本宮（ひがしほんぐう）：歩いて5分ほど。こちらの本殿も国宝です。\n\n猿は日吉大社の神さまの使いで、「神猿（まさる）」と呼ばれます。「魔が去る」「勝る」にかけた縁起もので、お守りにもなっています。\n\n約3,000本のもみじがあり、見ごろは例年11月の中ごろから下旬です。私が行った2016年11月13日は、赤鳥居のまわりがもう真っ赤でした（写真2枚目）。\n\n西本宮と東本宮を回って40〜50分。出たら、日吉馬場を駅のほうへ10分ほど下って、お昼にします。\n\nお昼：手打蕎麦 鶴屋喜八（つるやきはち）\n生源寺（しょうげんじ）の前の、延暦寺に代々そばを納めてきた店です。11:00〜16:00（ラストオーダー15:30）。休みは公式サイトに日付の一覧があり、12月は21日です。1月からの休みはまだ載っていません（要確認）。一覧にない休みの日もあるので、行く前に公式サイトかInstagramで確かめてください。\n\n食べたら、坂をもう一度上ってケーブル坂本駅へ（歩いて約20分）。12:30発の坂本ケーブルに乗ります。\n\nおすすめ訪問時間：10:25〜11:10（お昼 11:20〜12:00）",
+    "en": "Hiyoshi Taisha\n\nA shrine said to have stood at the foot of Mt. Hiei for about 2,100 years, and regarded as the guardian of Enryaku-ji since the temple was founded. It lies north-east of Kyoto, the unlucky direction, so it also guarded the capital.\n\nGo under the red torii, past the ticket booth, over the stone Omiya bridge and up through the woods. In order:\n\n• Sanno torii: a torii with a gable on top, a shape found only here (photo 3).\n• Nishi Hongu (west shrine): through the two-storey gate is the main hall, a National Treasure, in the Hie style, with a roof that looks cut off square at the back. Under the four corners of the gate’s eaves, carved monkeys hold up the roof. See if you can find them.\n• Higashi Hongu (east shrine): about 5 minutes’ walk. Its main hall is a National Treasure too.\n\nThe monkey is the messenger of the shrine’s gods and is called masaru, a lucky pun on “evil leaves” and “to excel”. You will see it on the charms.\n\nThere are about 3,000 maples, usually at their best from mid to late November. When I went on 13 November 2016 the ones round the red torii were already deep red (photo 2).\n\nAllow 40–50 minutes for the west and east shrines. Then walk about 10 minutes back down the avenue towards the station for lunch.\n\nLunch: Tsuruya Kihachi soba\nIn front of Shogen-ji, a soba maker that has supplied Enryaku-ji for generations. 11:00–16:00 (last orders 15:30). Its website lists closing dates: in December it is the 21st. Dates from January are not listed yet (please check), and there are closing days missing from the list, so check its website or Instagram before you go.\n\nAfter lunch, walk back up to Cable Sakamoto station (about 20 minutes) for the 12:30 Sakamoto Cable.\n\nRecommended visit time: 10:25–11:10 (lunch 11:20–12:00)"
    },
    "gmaps": [
     {
@@ -605,8 +605,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "手打蕎麦 鶴屋喜八：11:00〜16:00（ラストオーダー15:30）。定休日は公式サイトの日付の一覧（今年の残りは12月21日。年の書いていない一覧なので、1月からは要確認）",
-       "en": "Tsuruya Kihachi soba: 11:00–16:00 (last orders 15:30). Closing dates are listed on its website (next: 21 Dec; the list gives no year, so check dates from January)"
+       "ja": "手打蕎麦 鶴屋喜八：11:00〜16:00（ラストオーダー15:30）。定休日は公式サイトの日付の一覧で、12月は21日。1月からはまだ載っていない（要確認）。一覧にない休みもあるので、公式サイトかInstagramで確かめて",
+       "en": "Tsuruya Kihachi soba: 11:00–16:00 (last orders 15:30). Closing dates are listed on its website: 21 December; dates from January not listed yet (please check). Some closing days are missing from the list, so check its website or Instagram"
       },
       "until": null,
       "from": null
@@ -614,8 +614,8 @@
     ],
     "cash": true,
     "tip": {
-     "ja": "日吉大社の公式サイトで確認しました（時間と料金は2026年11月22日、ライトアップは11月21日）。鶴屋喜八は店の公式サイト（11月22日）。写真2枚目は私の写真（2016年11月）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-     "en": "Checked on the shrine’s website (hours and fees on 22 November 2026, the light-up on 21 November). Tsuruya Kihachi on its own website (22 November). Photo 2 is mine (November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."
+     "ja": "日吉大社の公式サイトで確認しました（時間と料金は2026年11月22日、ライトアップは11月23日）。鶴屋喜八は店の公式サイト（11月23日）。写真2枚目は私の写真（2016年11月）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on the shrine’s website (hours and fees on 22 November 2026, the light-up on 23 November). Tsuruya Kihachi on its own website (23 November). Photo 2 is mine (November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."
     },
     "checked": "2026-11-22"
    },
@@ -913,8 +913,8 @@
       "en": "In winter the mountain bus doesn’t run: go up and down by the Sakamoto Cable"
      },
      "text": {
-      "ja": "12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
-      "en": "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\nThe Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\nIt is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only."
+      "ja": "12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n年末年始に、比叡山頂と東塔のあいだだけシャトルバスが臨時で走った年もあります（2022年度は12月5日〜1月3日。西塔・横川へは行きませんでした）。この冬の運行は、11月23日の時点で発表されていません（要確認）。\n\n山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
+      "en": "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\nThe Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\nIn some years a special shuttle bus has run over New Year between the summit and Todo only (5 December to 3 January in the 2022 season; it did not go to Saito or Yokawa). Nothing had been announced for this winter on 23 November (please check).\n\nIt is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only."
      }
     }
    ],
@@ -968,8 +968,8 @@
     ],
     "cash": true,
     "tip": {
-     "ja": "延暦寺の公式サイト（巡拝時間・料金は2026年11月22日、根本中堂の改修と見学会は11月21日）、比叡茶寮は比叡山ドライブウェイの公式サイト、バスは比叡山・びわ湖DMOの時刻表（PDF）で確認しました。写真1・6〜8枚目は私の写真（2016年11月13日）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-     "en": "Checked on Enryaku-ji’s website (hours and fees on 22 November 2026; the repair and tours on 21 November), the Hieizan Driveway company’s site for the tea corner, and the DMO timetable (PDF) for the bus. Photos 1 and 6–8 are mine (13 November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."
+     "ja": "延暦寺の公式サイト（巡拝時間・料金は2026年11月22日、根本中堂の改修と見学会は11月23日）、比叡茶寮は比叡山ドライブウェイの公式サイト、バスは比叡山・びわ湖DMOの時刻表（PDF）で確認しました。写真1・6〜8枚目は私の写真（2016年11月13日）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Checked on Enryaku-ji’s website (hours and fees on 22 November 2026; the repair and tours on 23 November), the Hieizan Driveway company’s site for the tea corner, and the DMO timetable (PDF) for the bus. Photos 1 and 6–8 are mine (13 November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."
     },
     "checked": "2026-11-22"
    },
@@ -1088,8 +1088,8 @@
       "en": "In winter the mountain bus doesn’t run: go up and down by the Sakamoto Cable"
      },
      "text": {
-      "ja": "12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
-      "en": "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\nThe Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\nIt is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only."
+      "ja": "12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n年末年始に、比叡山頂と東塔のあいだだけシャトルバスが臨時で走った年もあります（2022年度は12月5日〜1月3日。西塔・横川へは行きませんでした）。この冬の運行は、11月23日の時点で発表されていません（要確認）。\n\n山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
+      "en": "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\nThe Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\nIn some years a special shuttle bus has run over New Year between the summit and Todo only (5 December to 3 January in the 2022 season; it did not go to Saito or Yokawa). Nothing had been announced for this winter on 23 November (please check).\n\nIt is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only."
      }
     }
    ],
@@ -1302,8 +1302,8 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "電車は乗換案内（2026年12月15日（火）・19日（土）の時刻）で確認しました。滋賀院門跡は2026年11月21日に確認した内容です。先斗町の店の営業時間は、1軒ずつは確かめていません。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-     "en": "Trains were checked on a route planner for 15 and 19 December 2026. Shiga-in Monzeki was checked on 21 November 2026. Opening hours of individual places in Pontocho were not checked. Photos are from Wikimedia Commons (author and license shown on each photo)."
+     "ja": "電車は乗換案内（2026年12月15日（火）・19日（土）の時刻）で確認しました。滋賀院門跡は比叡山・びわ湖DMOのサイトで確認しました（2026年11月23日）。先斗町の店の営業時間は、1軒ずつは確かめていません。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Trains were checked on a route planner for 15 and 19 December 2026. Shiga-in Monzeki was checked on the DMO website on 23 November 2026. Opening hours of individual places in Pontocho were not checked. Photos are from Wikimedia Commons (author and license shown on each photo)."
     },
     "checked": "2026-11-22"
    },
@@ -1371,19 +1371,34 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "叡山ケーブル・ロープウェイの時刻表（平日・休日とも最終はケーブル18:15・ロープウェイ18:00で下りのみ）。比叡山頂駅〜比叡山頂バス停は徒歩約10分、八瀬比叡山口駅〜ケーブル八瀬は徒歩約5分、京都バス八瀬駅前〜ケーブル八瀬駅は徒歩約5分。2026年12月7日以降の運行は掲載なし。支払い方法（ICカードなど）の記載なし",
+   "what": "叡山ケーブル・ロープウェイの時刻表（平日・休日とも最終はケーブル18:15・ロープウェイ18:00で下りのみ）。比叡山頂駅〜比叡山頂バス停は徒歩約10分、八瀬比叡山口駅〜ケーブル八瀬は徒歩約5分、京都バス八瀬駅前〜ケーブル八瀬駅は徒歩約5分。時刻表は画像で、期間の記載なし（期間は比叡山・びわ湖DMOの時刻表 PDF による）。2026年12月7日以降の運行・冬期運休の掲載なし（11月23日に見直し）",
    "url": "https://www.keifuku.co.jp/cms/eizan_timetable/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
-   "what": "前の冬：叡山ケーブル・ロープウェイは2026年1月5日〜3月19日が冬期運休、3月20日から運行（京福電鉄 2025年12月12日のニュースリリース）",
+   "what": "叡山ケーブル・ロープウェイ よくあるご質問「PASMO、SuicaなどのICカードが使えますか？」→ 現金のみでのお支払い",
+   "url": "https://www.keifuku.co.jp/cms/eizan_howto/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "12月7日以降の叡山ケーブル・ロープウェイ、比叡山内シャトルバスの運行：京福電鉄のニュースリリース・叡山ケーブル・ロープウェイのお知らせ、比叡山・びわ湖DMOの交通案内とお知らせのどれにも、11月23日の時点で掲載なし（DMOの時刻表は2026年3月20日〜12月6日の1つだけ）",
+   "url": "https://www.hieizan.gr.jp/timetable/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "前の冬：叡山ケーブル・ロープウェイは2026年1月5日〜3月19日が冬期運休、3月20日から運行（京福電鉄 2025年12月12日のニュースリリース。同じ発表で、100周年ヘッドマークのケーブルカーの運行期間は2025年12月20日〜2026年1月4日、3月20日〜12月19日とされている）",
    "url": "https://www.keifuku.co.jp/cms/wp-content/uploads/7e3d683b72027669a0c8e4f49216f2ca.pdf",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
-   "what": "叡山ケーブル600円・ロープウェイ400円（片道）。支払い方法の記載なし",
+   "what": "2022年度の冬：比叡山内シャトルバスを2022年12月5日〜2023年1月3日に毎日運行（比叡山頂〜東塔〜延暦寺バスセンターだけ。西塔・峰道・横川へは行かない）、1月4日〜3月17日は運休",
+   "url": "https://www.hieizan.gr.jp/news/20221206-1887.html",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "叡山ケーブル600円・ロープウェイ400円（片道）。支払い方法の記載なし（現金のみは よくあるご質問）",
    "url": "https://www.keifuku.co.jp/cms/eizan_ticket/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "坂本ケーブル：3〜11月 8:00〜17:30、12〜2月 8:30〜17:00、毎時0分・30分発（上り下り同時）、約11分。片道960円・往復1,830円",
@@ -1431,9 +1446,24 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "手打蕎麦 鶴屋喜八：11:00〜16:00（L.O.15:30）。定休日の一覧（年の表示なし）1/26・2/16・3/23・4/20・5/25・6/29・7/27・8/24・25・10/26・12/21。大津市坂本4-11-40（生源寺の前）",
+   "what": "手打蕎麦 鶴屋喜八：11:00〜16:00（L.O.15:30）。定休日の一覧（年の表示なし。日付はどれも2026年の月曜）1/26・2/16・3/23・4/20・5/25・6/29・7/27・8/24・25・10/26・12/21。大津市坂本4-11-40（生源寺の前）。2027年の定休日の掲載はなし（11月23日）。一覧にない9月28日も「本来定休日」とお知らせ（2026年9月26日）。定休日・臨時休業はホームページかInstagramで知らせる（団体予約のページ）",
    "url": "https://www.tsurukisoba.com/",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "鶴屋喜八【9月28日 特別営業のお知らせ】「9月28日は本来定休日ですが…特別営業」",
+   "url": "https://www.tsurukisoba.com/info/1267/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "近江神宮 時計館宝物館：9:30〜16:30（祝日以外の月曜は休館）、入館料 大人300円（団体210円）・小中学生150円（団体100円）、幼児無料。特別展のときは変わる場合あり",
+   "url": "https://oumijingu.org/pages/98/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "近江神宮：参拝時間 6:00〜18:00、時計館宝物館 9:30〜16:30（入館16:00まで）",
+   "url": "https://oumijingu.org/",
+   "checked": "2026-11-23"
   },
   {
    "what": "比叡山フリーパス 3,500円（出町柳駅・坂本観光案内所で、2026年3月20日〜12月6日）：叡山電車 出町柳〜八瀬比叡山口、叡山ケーブル・ロープウェイ、比叡山内シャトルバス、坂本ケーブル、江若バス（ケーブル坂本駅〜比叡山坂本駅）が乗り降り自由",
@@ -1461,9 +1491,39 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "根本中堂の大改修（堂内は2026年1月から約2年間拝観できない、萬拝堂、修学ステージ、十二神将）・現場見学会（11月28日が最後）は2026-11-21 に確認した内容。坂本観光案内所 9:00〜17:00、滋賀院門跡 9:00〜16:00・500円、日吉大社のライトアップも同じ日",
+   "what": "根本中堂：2026年1月から約2年間、堂内の拝観を停止。御前立の薬師如来と不滅の法灯は萬拝堂に特別奉安。十二神将は国宝殿で2027年12月まで（予定、国宝殿拝観料が別）。修学ステージは2026年11月まで、2026年12月から解体工事に着手しステージは閉鎖",
+   "url": "https://www.hieizan.or.jp/news/post-2222/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "修学ステージ「令和8年度12月頃まで見学可能（予定）」「解体工事が始まるため、令和8年12月頃までの予定」（改修のあらまし）",
+   "url": "https://www.hieizan.or.jp/renovation/overview.html",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "根本中堂改修現場見学会：10月10日、11月7日・14日・21日・28日（土）10:00・11:00・14:00、各回90名先着。素屋根解体に伴い本年の開催で最後",
    "url": "https://www.hieizan.or.jp/experience/renovation.html",
-   "checked": "2026-11-21"
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "国宝殿 臨時休館：10月8日・9日、11月6日、12月8日（展示替え）",
+   "url": "https://www.hieizan.or.jp/news/post-2209/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "坂本観光案内所（坂本観光協会、大津市坂本6-1-13）：9時〜17時（12/29〜1/3は休み）",
+   "url": "https://hieizansakamoto.jp/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "滋賀院門跡：9:00〜16:00、大人500円",
+   "url": "https://www.hieizan.gr.jp/sakamoto/shigainmonzeki",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "日吉大社 もみじまつり11月1日〜12月6日、ライトアップ11月14日〜12月6日 17:00〜20:00（赤鳥居〜西本宮楼門）、夜間の入苑料・駐車場は無料",
+   "url": "https://hiyoshitaisha.jp/news/2026/1022-1.html",
+   "checked": "2026-11-23"
   }
  ]
 }

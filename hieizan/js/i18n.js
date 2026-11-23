@@ -90,10 +90,10 @@ window.HIEIZAN_I18N = {
         { name: '延暦寺 巡拝料', price: '1,000円', text: '東塔・西塔・横川の3エリア共通。9:00〜16:00、巡拝受付は15:45まで（西塔・横川は12〜2月 9:30から）。', url: 'https://www.hieizan.or.jp/tickets/' },
         { name: '坂本ケーブル', price: '960円', text: '片道。往復は1,830円。毎時0分・30分発、約11分。1年中動きます（12〜2月は8:30〜17:00）。ICカード・クレジットカード可。', url: 'https://sakamoto-cable.jp/guide/' },
         { name: '比叡山内バス1日乗車券', price: '1,200円', text: '山の上のシャトルバス（比叡山頂〜東塔〜西塔〜峰道〜横川）が乗り放題。バスの車内か延暦寺バスセンターの売店で。12月6日まで。', url: 'https://www.hieizan.gr.jp/ticket/' },
-        { name: '叡山ロープウェイ＋ケーブル', price: '1,000円', text: 'ロープウェイ400円＋ケーブル600円（片道）。ICカードが使えるかは要確認。12月7日以降の運行は未発表。', url: 'https://www.keifuku.co.jp/cms/eizan_ticket/' },
+        { name: '叡山ロープウェイ＋ケーブル', price: '1,000円', text: 'ロープウェイ400円＋ケーブル600円（片道）。現金のみ（ICカードは使えません）。12月7日以降の運行はまだ発表されていません（要確認）。', url: 'https://www.keifuku.co.jp/cms/eizan_ticket/' },
         { name: '比叡山フリーパス', price: '3,500円', text: '坂本ケーブル・山の上のシャトルバス・叡山ロープウェイとケーブル・叡山電車（出町柳まで）・坂本の江若バスが1日乗り放題。坂本観光案内所か出町柳駅で。12月6日まで。巡拝料は別。', url: 'https://eizandensha.co.jp/good-value/' }
       ],
-      dealsNote: '大人の運賃・料金です。2026年11月22日に確認しました（延暦寺・坂本ケーブル・京福電鉄・叡山電車の公式サイト、比叡山・びわ湖DMOの時刻表とチケット一覧、乗換案内）。パスと1日券の2027年の値段と期間は、春の発表を確認してください。',
+      dealsNote: '大人の運賃・料金です。2026年11月22〜23日に確認しました（延暦寺・坂本ケーブル・京福電鉄・叡山電車の公式サイト、比叡山・びわ湖DMOの時刻表とチケット一覧、乗換案内）。パスと1日券の2027年の値段と期間は、春の発表を確認してください。',
       dealsMore: '公式サイトで見る',
       howHead: 'このマップの使い方',
       how: [
@@ -237,10 +237,10 @@ window.HIEIZAN_I18N = {
         { name: 'Enryaku-ji admission', price: '¥1,000', text: 'One ticket for Todo, Saito and Yokawa. 9:00–16:00, last entry 15:45 (Saito and Yokawa from 9:30, Dec–Feb).', url: 'https://www.hieizan.or.jp/tickets/' },
         { name: 'Sakamoto Cable', price: '¥960', text: 'One way; ¥1,830 return. On the hour and half hour, about 11 minutes. Runs all year (8:30–17:00, Dec–Feb). IC cards and credit cards accepted.', url: 'https://sakamoto-cable.jp/guide/' },
         { name: 'Mountain shuttle bus day ticket', price: '¥1,200', text: 'Unlimited rides between the summit, Todo, Saito, Minemichi and Yokawa. Sold on the bus and at the Bus Center shop. Until 6 December.', url: 'https://www.hieizan.gr.jp/ticket/' },
-        { name: 'Eizan Ropeway + Cable', price: '¥1,000', text: 'Ropeway ¥400 + cable car ¥600, one way. Whether IC cards work: please check. Service after 6 December not yet announced.', url: 'https://www.keifuku.co.jp/cms/eizan_ticket/' },
+        { name: 'Eizan Ropeway + Cable', price: '¥1,000', text: 'Ropeway ¥400 + cable car ¥600, one way. Cash only (no IC cards). Service after 6 December not yet announced (please check).', url: 'https://www.keifuku.co.jp/cms/eizan_ticket/' },
         { name: 'Hieizan Free Pass', price: '¥3,500', text: 'One day on the Sakamoto Cable, mountain shuttle bus, Eizan Ropeway and Cable, Eizan railway to Demachiyanagi and the Sakamoto bus. From the Sakamoto tourist office or Demachiyanagi station. Until 6 December. Admission not included.', url: 'https://eizandensha.co.jp/good-value/' }
       ],
-      dealsNote: 'Adult fares and fees, checked on Nov 22, 2026 (Enryaku-ji, Sakamoto Cable, Keifuku and Eizan railway websites; the Hieizan-Biwako DMO timetable and ticket list; route planner). For 2027 pass prices and dates, check the spring announcements.',
+      dealsNote: 'Adult fares and fees, checked on Nov 22–23, 2026 (Enryaku-ji, Sakamoto Cable, Keifuku and Eizan railway websites; the Hieizan-Biwako DMO timetable and ticket list; route planner). For 2027 pass prices and dates, check the spring announcements.',
       dealsMore: 'See official site',
       howHead: 'How to use this map',
       how: [

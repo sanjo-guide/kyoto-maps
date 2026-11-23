@@ -19,7 +19,10 @@
 - 季節で変わるもの（2026年11月22日に確認）:
   比叡山内シャトルバスは 2026年3月20日〜12月6日（比叡山・びわ湖DMOの時刻表）。叡山ケーブル・ロープウェイの時刻表は平日12/4・土休日12/6まで。
   12月7日以降の叡山ケーブル・ロープウェイの運行は未発表（前の冬は2026年1月5日〜3月19日が運休）。2027年の再開日も未発表
-  根本中堂は2026年1月から約2年間、堂内に入れない（2026-11-21 に確認した内容のまま）
+  根本中堂は2026年1月から約2年間、堂内に入れない
+- 2026-11-23「要確認」の調べ直し：叡山ケーブル・ロープウェイは現金のみ（京福電鉄のよくある質問）、時計館宝物館の料金と月曜休館（近江神宮）、
+  根本中堂・修学ステージ・滋賀院門跡・坂本観光案内所を確かめ直した。12月7日以降の叡山ケーブル・ロープウェイとシャトルバスの運行、
+  2027年の再開日、鶴屋喜八の1月からの定休日はまだ公式に出ていないので要確認のまま（冬のコースへの切り替え 12/7〜3/19 も変えていない）
 """
 import json, os, urllib.parse
 
@@ -145,11 +148,18 @@ SOURCES = [
              "叡山電車 八瀬比叡山口発 平日10〜16時台 0・15・30・45分、17時台 0・14・26・43・55分／土休日17時台 0・15・30・45分（紅葉シーズンは変更あり）、280円",
      "url": DMO_TT, "checked": CHECKED},
     {"what": "叡山ケーブル・ロープウェイの時刻表（平日・休日とも最終はケーブル18:15・ロープウェイ18:00で下りのみ）。比叡山頂駅〜比叡山頂バス停は徒歩約10分、八瀬比叡山口駅〜ケーブル八瀬は徒歩約5分、京都バス八瀬駅前〜ケーブル八瀬駅は徒歩約5分。"
-             "2026年12月7日以降の運行は掲載なし。支払い方法（ICカードなど）の記載なし",
-     "url": "https://www.keifuku.co.jp/cms/eizan_timetable/", "checked": CHECKED},
-    {"what": "前の冬：叡山ケーブル・ロープウェイは2026年1月5日〜3月19日が冬期運休、3月20日から運行（京福電鉄 2025年12月12日のニュースリリース）",
-     "url": "https://www.keifuku.co.jp/cms/wp-content/uploads/7e3d683b72027669a0c8e4f49216f2ca.pdf", "checked": CHECKED},
-    {"what": "叡山ケーブル600円・ロープウェイ400円（片道）。支払い方法の記載なし", "url": "https://www.keifuku.co.jp/cms/eizan_ticket/", "checked": CHECKED},
+             "時刻表は画像で、期間の記載なし（期間は比叡山・びわ湖DMOの時刻表 PDF による）。2026年12月7日以降の運行・冬期運休の掲載なし（11月23日に見直し）",
+     "url": "https://www.keifuku.co.jp/cms/eizan_timetable/", "checked": "2026-11-23"},
+    {"what": "叡山ケーブル・ロープウェイ よくあるご質問「PASMO、SuicaなどのICカードが使えますか？」→ 現金のみでのお支払い",
+     "url": "https://www.keifuku.co.jp/cms/eizan_howto/", "checked": "2026-11-23"},
+    {"what": "12月7日以降の叡山ケーブル・ロープウェイ、比叡山内シャトルバスの運行：京福電鉄のニュースリリース・叡山ケーブル・ロープウェイのお知らせ、比叡山・びわ湖DMOの交通案内とお知らせのどれにも、11月23日の時点で掲載なし（DMOの時刻表は2026年3月20日〜12月6日の1つだけ）",
+     "url": "https://www.hieizan.gr.jp/timetable/", "checked": "2026-11-23"},
+    {"what": "前の冬：叡山ケーブル・ロープウェイは2026年1月5日〜3月19日が冬期運休、3月20日から運行（京福電鉄 2025年12月12日のニュースリリース。"
+             "同じ発表で、100周年ヘッドマークのケーブルカーの運行期間は2025年12月20日〜2026年1月4日、3月20日〜12月19日とされている）",
+     "url": "https://www.keifuku.co.jp/cms/wp-content/uploads/7e3d683b72027669a0c8e4f49216f2ca.pdf", "checked": "2026-11-23"},
+    {"what": "2022年度の冬：比叡山内シャトルバスを2022年12月5日〜2023年1月3日に毎日運行（比叡山頂〜東塔〜延暦寺バスセンターだけ。西塔・峰道・横川へは行かない）、1月4日〜3月17日は運休",
+     "url": "https://www.hieizan.gr.jp/news/20221206-1887.html", "checked": "2026-11-23"},
+    {"what": "叡山ケーブル600円・ロープウェイ400円（片道）。支払い方法の記載なし（現金のみは よくあるご質問）", "url": "https://www.keifuku.co.jp/cms/eizan_ticket/", "checked": "2026-11-23"},
     {"what": "坂本ケーブル：3〜11月 8:00〜17:30、12〜2月 8:30〜17:00、毎時0分・30分発（上り下り同時）、約11分。片道960円・往復1,830円",
      "url": "https://sakamoto-cable.jp/guide/", "checked": CHECKED},
     {"what": "坂本ケーブル：交通系ICカード・クレジットカード・QR決済のマークあり（トップページ）", "url": "https://sakamoto-cable.jp/", "checked": CHECKED},
@@ -161,7 +171,13 @@ SOURCES = [
     {"what": "旧竹林院：9:00〜17:00（受付16:30まで）、大人330円、月曜（祝日なら翌日）・祝日の翌日・年末休み", "url": "https://www.hieizan.gr.jp/sakamoto/kyuchikurin-in", "checked": CHECKED},
     {"what": "比叡山峰道レストラン：10:00〜17:00（ラストオーダー16:30）、シャトルバス「峰道」下車すぐ。比叡山そば1,000円、平和丼1,400円など", "url": "https://www.hieizan.co.jp/gourmet/minemichi/", "checked": CHECKED},
     {"what": "比叡茶寮 根本中堂前店：9:00〜16:30（売店は17:00まで）。甘味と飲みもの", "url": "https://www.hieizan.co.jp/gourmet/tea_tyubai/", "checked": CHECKED},
-    {"what": "手打蕎麦 鶴屋喜八：11:00〜16:00（L.O.15:30）。定休日の一覧（年の表示なし）1/26・2/16・3/23・4/20・5/25・6/29・7/27・8/24・25・10/26・12/21。大津市坂本4-11-40（生源寺の前）", "url": "https://www.tsurukisoba.com/", "checked": CHECKED},
+    {"what": "手打蕎麦 鶴屋喜八：11:00〜16:00（L.O.15:30）。定休日の一覧（年の表示なし。日付はどれも2026年の月曜）1/26・2/16・3/23・4/20・5/25・6/29・7/27・8/24・25・10/26・12/21。大津市坂本4-11-40（生源寺の前）。"
+             "2027年の定休日の掲載はなし（11月23日）。一覧にない9月28日も「本来定休日」とお知らせ（2026年9月26日）。定休日・臨時休業はホームページかInstagramで知らせる（団体予約のページ）",
+     "url": "https://www.tsurukisoba.com/", "checked": "2026-11-23"},
+    {"what": "鶴屋喜八【9月28日 特別営業のお知らせ】「9月28日は本来定休日ですが…特別営業」", "url": "https://www.tsurukisoba.com/info/1267/", "checked": "2026-11-23"},
+    {"what": "近江神宮 時計館宝物館：9:30〜16:30（祝日以外の月曜は休館）、入館料 大人300円（団体210円）・小中学生150円（団体100円）、幼児無料。特別展のときは変わる場合あり",
+     "url": "https://oumijingu.org/pages/98/", "checked": "2026-11-23"},
+    {"what": "近江神宮：参拝時間 6:00〜18:00、時計館宝物館 9:30〜16:30（入館16:00まで）", "url": "https://oumijingu.org/", "checked": "2026-11-23"},
     {"what": "比叡山フリーパス 3,500円（出町柳駅・坂本観光案内所で、2026年3月20日〜12月6日）：叡山電車 出町柳〜八瀬比叡山口、叡山ケーブル・ロープウェイ、比叡山内シャトルバス、坂本ケーブル、江若バス（ケーブル坂本駅〜比叡山坂本駅）が乗り降り自由",
      "url": "https://eizandensha.co.jp/good-value/", "checked": CHECKED},
     {"what": "比叡山内バス1日乗車券 1,200円（シャトルバス車内・延暦寺バスセンター売店・出町柳駅、2026年3月20日〜12月6日、発売当日限り）", "url": "https://www.hieizan.gr.jp/ticket/", "checked": CHECKED},
@@ -171,8 +187,17 @@ SOURCES = [
      "url": YAHOO, "checked": CHECKED},
     {"what": "冬の帰り：坂本比叡山口→三条京阪 平日 17:11発（京阪、びわ湖浜大津で乗り換え）→17:55着・620円、比叡山坂本（JR、歩いて10分）17:01発→山科→三条京阪17:29着・17:32発→18:07着・500円。"
              "土曜 16:51発→17:34着、17:12発→17:55着（京阪）、JR17:13発→17:44着（2026年12月15日・19日で検索）", "url": YAHOO, "checked": CHECKED},
-    {"what": "根本中堂の大改修（堂内は2026年1月から約2年間拝観できない、萬拝堂、修学ステージ、十二神将）・現場見学会（11月28日が最後）は2026-11-21 に確認した内容。坂本観光案内所 9:00〜17:00、滋賀院門跡 9:00〜16:00・500円、日吉大社のライトアップも同じ日",
-     "url": "https://www.hieizan.or.jp/experience/renovation.html", "checked": "2026-11-21"},
+    {"what": "根本中堂：2026年1月から約2年間、堂内の拝観を停止。御前立の薬師如来と不滅の法灯は萬拝堂に特別奉安。十二神将は国宝殿で2027年12月まで（予定、国宝殿拝観料が別）。"
+             "修学ステージは2026年11月まで、2026年12月から解体工事に着手しステージは閉鎖",
+     "url": "https://www.hieizan.or.jp/news/post-2222/", "checked": "2026-11-23"},
+    {"what": "修学ステージ「令和8年度12月頃まで見学可能（予定）」「解体工事が始まるため、令和8年12月頃までの予定」（改修のあらまし）", "url": "https://www.hieizan.or.jp/renovation/overview.html", "checked": "2026-11-23"},
+    {"what": "根本中堂改修現場見学会：10月10日、11月7日・14日・21日・28日（土）10:00・11:00・14:00、各回90名先着。素屋根解体に伴い本年の開催で最後",
+     "url": "https://www.hieizan.or.jp/experience/renovation.html", "checked": "2026-11-23"},
+    {"what": "国宝殿 臨時休館：10月8日・9日、11月6日、12月8日（展示替え）", "url": "https://www.hieizan.or.jp/news/post-2209/", "checked": "2026-11-23"},
+    {"what": "坂本観光案内所（坂本観光協会、大津市坂本6-1-13）：9時〜17時（12/29〜1/3は休み）", "url": "https://hieizansakamoto.jp/", "checked": "2026-11-23"},
+    {"what": "滋賀院門跡：9:00〜16:00、大人500円", "url": "https://www.hieizan.gr.jp/sakamoto/shigainmonzeki", "checked": "2026-11-23"},
+    {"what": "日吉大社 もみじまつり11月1日〜12月6日、ライトアップ11月14日〜12月6日 17:00〜20:00（赤鳥居〜西本宮楼門）、夜間の入苑料・駐車場は無料",
+     "url": "https://hiyoshitaisha.jp/news/2026/1022-1.html", "checked": "2026-11-23"},
 ]
 
 # ---------- お知らせ
@@ -180,18 +205,20 @@ SEASON = {"from": None, "to": None, "url": DMO_TT,
           "head": T("山を越えられるのは12月6日まで（2026年）。12月7日からは「冬：坂本から往復」のコースで",
                     "The crossing works until 6 December (2026). From 7 December use the “Winter: up and back from Sakamoto” course"),
           "text": T("このコースは、山の上のシャトルバス（東塔・西塔・峰道・横川・比叡山頂を結ぶバス）が走る日だけ回れます。2026年は3月20日〜12月6日です。\n\n"
-                    "12月7日からはシャトルバスが運休し、横川と比叡山頂へはバスで行けません。京都側の叡山ケーブル・ロープウェイの時刻表も、平日は12月4日、土日祝は12月6日までのものしか出ていません。それより後の運行は、11月22日の時点で公式サイトに出ていません（要確認。前の冬は2026年1月5日〜3月19日が運休でした）。\n\n"
+                    "12月7日からはシャトルバスが運休し、横川と比叡山頂へはバスで行けません。京都側の叡山ケーブル・ロープウェイの時刻表も、平日は12月4日、土日祝は12月6日までのものしか出ていません。それより後の運行は、11月23日の時点で公式サイトに出ていません（要確認。前の冬は2026年1月5日〜3月19日が運休でした）。\n\n"
                     "冬は一覧の上のボタンで「冬：坂本から往復」に切り替えてください。坂本ケーブルは1年中動いています（12〜2月は8:30〜17:00）。2027年の運行開始日はまだ発表されていません（要確認）。",
                     "This course only works on days when the shuttle bus on the mountain runs (linking Todo, Saito, Minemichi, Yokawa and the summit). In 2026 that is 20 March to 6 December.\n\n"
-                    "From 7 December the shuttle bus stops, so Yokawa and the summit are out of reach by bus. The published timetable for the Kyoto-side Eizan Cable and Ropeway also runs only to 4 December on weekdays and 6 December at weekends; nothing later had been announced on 22 November (please check; last winter they were closed from 5 January to 19 March 2026).\n\n"
+                    "From 7 December the shuttle bus stops, so Yokawa and the summit are out of reach by bus. The published timetable for the Kyoto-side Eizan Cable and Ropeway also runs only to 4 December on weekdays and 6 December at weekends; nothing later had been announced on 23 November (please check; last winter they were closed from 5 January to 19 March 2026).\n\n"
                     "In winter, switch to “Winter: up and back from Sakamoto” with the buttons above the list. The Sakamoto Cable runs all year (8:30–17:00 from December to February). The 2027 start date has not been announced yet (please check).")}
 WINTER = {"from": None, "to": None, "url": "https://sakamoto-cable.jp/guide/",
           "head": T("冬は山の上のバスが走りません。坂本ケーブルで上り下りします", "In winter the mountain bus doesn’t run: go up and down by the Sakamoto Cable"),
           "text": T("12月7日から春（2026年は3月20日に再開）までは、山の上のシャトルバスが運休します。横川と比叡山頂へは行けないと考えてください。西塔へは東塔から歩いて行けます（片道20〜40分）。\n\n"
                     "坂本ケーブルは1年中動きます。12〜2月は8:30〜17:00（毎時0分・30分発）、3月は8:00〜17:30。下りの最終に乗り遅れると、歩いて下りる道しかありません。\n\n"
+                    "年末年始に、比叡山頂と東塔のあいだだけシャトルバスが臨時で走った年もあります（2022年度は12月5日〜1月3日。西塔・横川へは行きませんでした）。この冬の運行は、11月23日の時点で発表されていません（要確認）。\n\n"
                     "山の上は京都の町よりずっと寒く、雪が積もる日があります。手袋と滑りにくい靴を。雪の日は西塔へ歩かず、東塔だけにしてください。",
                     "From 7 December until spring (in 2026 it restarted on 20 March) the shuttle bus on the mountain does not run, so treat Yokawa and the summit as out of reach. You can walk from Todo to Saito (20–40 minutes each way).\n\n"
                     "The Sakamoto Cable runs all year: 8:30–17:00 from December to February (on the hour and half hour), 8:00–17:30 in March. Miss the last car down and the only way is on foot.\n\n"
+                    "In some years a special shuttle bus has run over New Year between the summit and Todo only (5 December to 3 January in the 2022 season; it did not go to Saito or Yokawa). Nothing had been announced for this winter on 23 November (please check).\n\n"
                     "It is much colder up there than in Kyoto, and snow settles on some days. Bring gloves and shoes with grip. On a snowy day, skip the walk to Saito and see Todo only.")}
 CHUDO = {"from": None, "to": None, "url": "https://www.hieizan.or.jp/renovation/",
          "head": T("根本中堂は大改修中。2026年1月から約2年間、お堂の中には入れません", "Konpon Chudo is under major repair: the interior is closed for about two years from January 2026"),
@@ -298,13 +325,14 @@ def build(W):
         gmaps=[gm("近江神宮", "Omi Jingu", 35.03244, 135.85131, "近江神宮 大津市"), gm("近江神宮前駅", "Omijingu-mae Station", 35.02817, 135.85574, "近江神宮前駅")],
         links=[link("official", "近江神宮 公式サイト", "Omi Jingu (official, Japanese)", "https://oumijingu.org/"), ROUTE],
         info=info([row("hours", "参拝 6:00〜18:00", "Open for worship 6:00–18:00"),
-                   row("fee", "参拝は無料。時計館宝物館は 9:30〜16:30（入館16:00まで）、料金は要確認", "Free. Clock museum 9:30–16:30 (last entry 16:00); its fee: please check"),
+                   row("fee", "参拝は無料。時計館宝物館は 9:30〜16:30（入館16:00まで）、大人300円・小中学生150円。祝日以外の月曜は休館",
+                       "Free. Clock museum 9:30–16:30 (last entry 16:00), ¥300; elementary and junior high ¥150. Closed on Mondays unless a public holiday"),
                    row("train", "三条京阪 → 近江神宮前：平日 7:55発 → 8:26着／土曜 8:03発 → 8:33着（びわ湖浜大津で乗り換え、520円）",
                        "Sanjo-Keihan → Omijingu-mae: weekdays 7:55 → 8:26 / Saturdays 8:03 → 8:33 (change at Biwako-Hamaotsu, ¥520)"),
                    row("train", "近江神宮前 → 坂本比叡山口（9分・200円）：平日 9:14、9:24発／土曜 9:13、9:32発",
                        "Omijingu-mae → Sakamoto-hieizanguchi (9 min, ¥200): weekdays 9:14, 9:24 / Saturdays 9:13, 9:32")],
-                  tip=T("参拝時間は近江神宮の公式サイト（2026年11月21日）、電車は乗換案内（11月24日・28日の時刻）で確認しました。駅から歩く時間は地図で測った目安です。",
-                        "Hours from the shrine’s website (21 November 2026); trains from a route planner (24 and 28 November). The walking time from the station is measured on a map.")))
+                  tip=T("参拝時間と時計館宝物館は近江神宮の公式サイト（2026年11月23日）、電車は乗換案内（11月24日・28日の時刻）で確認しました。駅から歩く時間は地図で測った目安です。",
+                        "Hours and the clock museum from the shrine’s website (23 November 2026); trains from a route planner (24 and 28 November). The walking time from the station is measured on a map.")))
 
     # ---------- 坂本の町（山を越える日は朝、冬は帰りに）
     sakamoto_common_ja = ("道の両側の石垣を見てください。大きさも形もちがう自然の石を、削らずに組み合わせて積んであります。坂本にいた石工の集団「穴太衆（あのうしゅう）」の仕事で、戦国時代には城の石垣にも使われた積み方です。\n\n"
@@ -347,8 +375,8 @@ def build(W):
                        row("train", "JR：比叡山坂本 → 山科 → 三条京阪（500円）：平日 17:01発 → 17:29着、17:32発 → 18:07着／土曜 17:13発 → 17:44着",
                            "JR: Hieizan-Sakamoto → Yamashina → Sanjo-Keihan (¥500): weekdays 17:01 → 17:29, 17:32 → 18:07 / Saturdays 17:13 → 17:44"),
                        row("fee", "滋賀院門跡 9:00〜16:00、500円", "Shiga-in Monzeki 9:00–16:00, ¥500")],
-                      tip=T("電車は乗換案内（2026年12月15日（火）・19日（土）の時刻）で確認しました。滋賀院門跡は2026年11月21日に確認した内容です。先斗町の店の営業時間は、1軒ずつは確かめていません。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                            "Trains were checked on a route planner for 15 and 19 December 2026. Shiga-in Monzeki was checked on 21 November 2026. Opening hours of individual places in Pontocho were not checked. Photos are from Wikimedia Commons (author and license shown on each photo).")))
+                      tip=T("電車は乗換案内（2026年12月15日（火）・19日（土）の時刻）で確認しました。滋賀院門跡は比叡山・びわ湖DMOのサイトで確認しました（2026年11月23日）。先斗町の店の営業時間は、1軒ずつは確かめていません。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                            "Trains were checked on a route planner for 15 and 19 December 2026. Shiga-in Monzeki was checked on the DMO website on 23 November 2026. Opening hours of individual places in Pontocho were not checked. Photos are from Wikimedia Commons (author and license shown on each photo).")))
     else:
         S["sakamoto"] = dict(
             name=T("坂本の町（穴太衆積みの石垣）", "Sakamoto: the stone-wall town"), kind=T("門前町", "Temple town"),
@@ -357,13 +385,13 @@ def build(W):
             lat=35.07090, lng=135.86900,
             text=T("坂本の町（穴太衆積み＝あのうしゅうづみ の石垣）\n\n"
                    "坂本比叡山口駅を出て、山のほうへ。日吉大社へまっすぐ上る広い参道が「日吉馬場（ひよしばんば）」です。日吉大社の入口まで歩いて約10分。\n\n"
-                   "駅前の坂本観光案内所（9:00〜17:00）で地図がもらえます。ここで「比叡山フリーパス」（3,500円。2026年は12月6日まで）を買っておくと、このあと乗る坂本ケーブル・山の上のシャトルバス・叡山ロープウェイとケーブル・叡山電車に、切符を買わずに乗れます。このコースどおりに1回ずつ払うと3,440円なので、差は60円。京都側のロープウェイとケーブルでICカードが使えるかは公式サイトに書かれていないので（要確認）、パスがあると安心です。\n\n"
+                   "駅前の坂本観光案内所（9:00〜17:00）で地図がもらえます。ここで「比叡山フリーパス」（3,500円。2026年は12月6日まで）を買っておくと、このあと乗る坂本ケーブル・山の上のシャトルバス・叡山ロープウェイとケーブル・叡山電車に、切符を買わずに乗れます。このコースどおりに1回ずつ払うと3,440円なので、差は60円。京都側の叡山ロープウェイとケーブルは現金のみで、ICカードが使えないので、パスがあると切符を買う手間がはぶけます。\n\n"
                    + sakamoto_common_ja + "\n\n"
                    "坂本でそばを食べるなら、駅の近く、生源寺（しょうげんじ）の前に手打蕎麦 鶴屋喜八があります（11:00〜16:00）。山を越える日は朝に通るだけなので、冬のコースのお昼にしています。"
                    + time_ja("9:42〜10:00"),
                    "Sakamoto: the stone-wall town\n\n"
                    "From Sakamoto-hieizanguchi station, head towards the mountain. The wide avenue running straight up to Hiyoshi Taisha is the Hiyoshi-baba; the shrine entrance is about 10 minutes’ walk.\n\n"
-                   "The Sakamoto tourist information office by the station (9:00–17:00) has maps. Buy the Hieizan Free Pass here (¥3,500, on sale until 6 December in 2026) and you can ride the Sakamoto Cable, the mountain shuttle bus, the Eizan Ropeway and Cable and the Eizan railway without buying tickets. Paying each fare on this course comes to ¥3,440, so the difference is ¥60. The official sites don’t say whether IC cards work on the Kyoto-side ropeway and cable car (please check), so the pass saves worry.\n\n"
+                   "The Sakamoto tourist information office by the station (9:00–17:00) has maps. Buy the Hieizan Free Pass here (¥3,500, on sale until 6 December in 2026) and you can ride the Sakamoto Cable, the mountain shuttle bus, the Eizan Ropeway and Cable and the Eizan railway without buying tickets. Paying each fare on this course comes to ¥3,440, so the difference is ¥60. The Kyoto-side Eizan Ropeway and Cable take cash only (no IC cards), so the pass saves buying tickets there.\n\n"
                    + sakamoto_common_en + "\n\n"
                    "For soba in Sakamoto, Tsuruya Kihachi is near the station, in front of Shogen-ji (11:00–16:00). On this course you only pass in the morning; it is the lunch stop on the winter course."
                    + time_en("9:42–10:00")),
@@ -376,8 +404,8 @@ def build(W):
                        row("fee", "比叡山フリーパス 3,500円：坂本ケーブル・山内シャトルバス・叡山ロープウェイとケーブル・叡山電車（八瀬比叡山口〜出町柳）・江若バス（ケーブル坂本駅〜比叡山坂本駅）が1日乗り降り自由。坂本観光案内所か出町柳駅で（ネット販売なし）",
                            "Hieizan Free Pass ¥3,500: one day on the Sakamoto Cable, mountain shuttle bus, Eizan Ropeway and Cable, Eizan railway (Yase-Hieizanguchi–Demachiyanagi) and the Kojak bus (Cable Sakamoto–Hieizan-Sakamoto). From the Sakamoto tourist office or Demachiyanagi station (not online)", until="2026-12-06"),
                        row("fee", "滋賀院門跡 9:00〜16:00、500円", "Shiga-in Monzeki 9:00–16:00, ¥500")],
-                      tip=T("フリーパスは叡山電車の公式サイト（2026年11月22日）、案内所と滋賀院門跡は坂本観光協会・比叡山びわ湖DMOのサイト（11月21日）で確認しました。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                            "The Free Pass was checked on the Eizan railway website (22 November 2026); the tourist office and Shiga-in on the Sakamoto tourist association and DMO websites (21 November). Photos are from Wikimedia Commons (author and license shown on each photo).")))
+                      tip=T("フリーパスは叡山電車の公式サイト（2026年11月22日）、案内所と滋賀院門跡は坂本観光協会・比叡山びわ湖DMOのサイト（11月23日）、叡山ロープウェイとケーブルの払い方は京福電鉄のよくある質問（11月23日）で確認しました。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                            "The Free Pass was checked on the Eizan railway website (22 November 2026); the tourist office and Shiga-in on the Sakamoto tourist association and DMO websites, and payment on the Eizan Ropeway and Cable on Keifuku’s FAQ (23 November). Photos are from Wikimedia Commons (author and license shown on each photo).")))
 
     # ---------- 旧竹林院
     S["chikurin"] = dict(
@@ -428,11 +456,11 @@ def build(W):
     if W:
         h_ja = ("西本宮と東本宮を回って40〜50分。出たら、日吉馬場を駅のほうへ10分ほど下って、お昼にします。\n\n"
                 "お昼：手打蕎麦 鶴屋喜八（つるやきはち）\n"
-                "生源寺（しょうげんじ）の前の、延暦寺に代々そばを納めてきた店です。11:00〜16:00（ラストオーダー15:30）。休みは公式サイトに日付の一覧があり、今年の残りは12月21日です（一覧に年が書かれていないので、1月からの休みは要確認）。\n\n"
+                "生源寺（しょうげんじ）の前の、延暦寺に代々そばを納めてきた店です。11:00〜16:00（ラストオーダー15:30）。休みは公式サイトに日付の一覧があり、12月は21日です。1月からの休みはまだ載っていません（要確認）。一覧にない休みの日もあるので、行く前に公式サイトかInstagramで確かめてください。\n\n"
                 "食べたら、坂をもう一度上ってケーブル坂本駅へ（歩いて約20分）。12:30発の坂本ケーブルに乗ります。")
         h_en = ("Allow 40–50 minutes for the west and east shrines. Then walk about 10 minutes back down the avenue towards the station for lunch.\n\n"
                 "Lunch: Tsuruya Kihachi soba\n"
-                "In front of Shogen-ji, a soba maker that has supplied Enryaku-ji for generations. 11:00–16:00 (last orders 15:30). Its website lists closing dates; the next is 21 December (the list gives no year, so check the dates from January).\n\n"
+                "In front of Shogen-ji, a soba maker that has supplied Enryaku-ji for generations. 11:00–16:00 (last orders 15:30). Its website lists closing dates: in December it is the 21st. Dates from January are not listed yet (please check), and there are closing days missing from the list, so check its website or Instagram before you go.\n\n"
                 "After lunch, walk back up to Cable Sakamoto station (about 20 minutes) for the 12:30 Sakamoto Cable.")
         h_time = ("10:25〜11:10（お昼 11:20〜12:00）", "10:25–11:10 (lunch 11:20–12:00)")
     else:
@@ -454,10 +482,10 @@ def build(W):
         info=info([row("hours", "参拝 9:00〜16:00（門は10〜3月 7:00、4〜9月 6:00に開きます）", "Visiting hours 9:00–16:00 (gates open at 7:00 Oct–Mar, 6:00 Apr–Sep)"),
                    row("fee", "大人500円、中学生・高校生300円、小学生以下は無料", "¥500; junior high and high school ¥300; elementary and under free"),
                    row("hours", "もみじ祭 2026年11月1日〜12月6日。ライトアップは11月14日〜12月6日の17:00〜20:00（赤鳥居〜西本宮楼門。夜は無料）", "Maple festival 1 Nov–6 Dec 2026. Light-up 14 Nov–6 Dec, 17:00–20:00 (red torii to the west shrine gate; free at night)", until="2026-12-06")]
-                  + ([row("hours", "手打蕎麦 鶴屋喜八：11:00〜16:00（ラストオーダー15:30）。定休日は公式サイトの日付の一覧（今年の残りは12月21日。年の書いていない一覧なので、1月からは要確認）",
-                          "Tsuruya Kihachi soba: 11:00–16:00 (last orders 15:30). Closing dates are listed on its website (next: 21 Dec; the list gives no year, so check dates from January)")] if W else []),
-                  tip=T("日吉大社の公式サイトで確認しました（時間と料金は2026年11月22日、ライトアップは11月21日）。" + ("鶴屋喜八は店の公式サイト（11月22日）。" if W else "") + "写真2枚目は私の写真（2016年11月）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                        "Checked on the shrine’s website (hours and fees on 22 November 2026, the light-up on 21 November). " + ("Tsuruya Kihachi on its own website (22 November). " if W else "") + "Photo 2 is mine (November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."), cash=True))
+                  + ([row("hours", "手打蕎麦 鶴屋喜八：11:00〜16:00（ラストオーダー15:30）。定休日は公式サイトの日付の一覧で、12月は21日。1月からはまだ載っていない（要確認）。一覧にない休みもあるので、公式サイトかInstagramで確かめて",
+                          "Tsuruya Kihachi soba: 11:00–16:00 (last orders 15:30). Closing dates are listed on its website: 21 December; dates from January not listed yet (please check). Some closing days are missing from the list, so check its website or Instagram")] if W else []),
+                  tip=T("日吉大社の公式サイトで確認しました（時間と料金は2026年11月22日、ライトアップは11月23日）。" + ("鶴屋喜八は店の公式サイト（11月23日）。" if W else "") + "写真2枚目は私の写真（2016年11月）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                        "Checked on the shrine’s website (hours and fees on 22 November 2026, the light-up on 23 November). " + ("Tsuruya Kihachi on its own website (23 November). " if W else "") + "Photo 2 is mine (November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."), cash=True))
 
     # ---------- 坂本ケーブル
     if W:
@@ -542,8 +570,8 @@ def build(W):
                    row("hours", "比叡茶寮 根本中堂前店 9:00〜16:30（甘味と飲みもの。売店は17:00まで）", "Hiei Saryo tea corner by the Konpon Chudo 9:00–16:30 (sweets and drinks; the shop until 17:00)")]
                   + ([] if W else [row("train", "シャトルバス：延暦寺バスセンター → 西塔 → 峰道 → 横川。12:38発 → 峰道12:45着、13:08発 → 峰道13:15着（毎日。2026年3月20日〜12月6日の時刻）。バスセンター→峰道390円、1日乗車券1,200円",
                                        "Shuttle bus: Enryakuji Bus Center → Saito → Minemichi → Yokawa. 12:38 → Minemichi 12:45, 13:08 → Minemichi 13:15 (daily; timetable for 20 Mar–6 Dec 2026). Bus Center → Minemichi ¥390; day ticket ¥1,200")]),
-                  tip=T("延暦寺の公式サイト（巡拝時間・料金は2026年11月22日、根本中堂の改修と見学会は11月21日）、比叡茶寮は比叡山ドライブウェイの公式サイト、バスは比叡山・びわ湖DMOの時刻表（PDF）で確認しました。写真1・6〜8枚目は私の写真（2016年11月13日）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                        "Checked on Enryaku-ji’s website (hours and fees on 22 November 2026; the repair and tours on 21 November), the Hieizan Driveway company’s site for the tea corner, and the DMO timetable (PDF) for the bus. Photos 1 and 6–8 are mine (13 November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."), cash=True))
+                  tip=T("延暦寺の公式サイト（巡拝時間・料金は2026年11月22日、根本中堂の改修と見学会は11月23日）、比叡茶寮は比叡山ドライブウェイの公式サイト、バスは比叡山・びわ湖DMOの時刻表（PDF）で確認しました。写真1・6〜8枚目は私の写真（2016年11月13日）、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                        "Checked on Enryaku-ji’s website (hours and fees on 22 November 2026; the repair and tours on 23 November), the Hieizan Driveway company’s site for the tea corner, and the DMO timetable (PDF) for the bus. Photos 1 and 6–8 are mine (13 November 2016); the others are from Wikimedia Commons (author and license shown on each photo)."), cash=True))
 
     # ---------- 横川（山を越える日だけ）
     if not W:
@@ -651,7 +679,7 @@ def build(W):
                    "・歩いて1分で乗り換え。\n"
                    "・ケーブルカー：ケーブル比叡駅 → ケーブル八瀬駅 9分・600円。高低差561mは日本一で、かなり急です。下りは先頭に立つと、線路が落ちていくように見えます。\n\n"
                    "平日はケーブルが30分おき（毎時0分・30分）なので、16:15発のロープウェイ → 16:30発のケーブルで、八瀬16:39着。乗り遅れたら16:45発 → 17:00発で17:09着。土日祝はどちらも15分おきです。下りの最終は、ロープウェイ18:00発・ケーブル18:15発。\n\n"
-                   "ICカードが使えるかは、公式サイトに書かれていません（要確認）。フリーパスがない人は、現金を1,000円用意しておくと安心です。\n\n"
+                   "叡山ロープウェイとケーブルは現金のみで、ICカードは使えません。フリーパスがない人は、現金を1,000円用意しておいてください。\n\n"
                    "ロープウェイに乗らず、バスで三条へ直接帰ることもできます。比叡山頂16:05発の比叡山ドライブバスで三条京阪17:00着（840円、毎日）。\n\n"
                    "ガーデンミュージアム比叡は、モネなど印象派の絵をテーマにした庭園です（12月6日まで、水曜休み。秋は10:00〜17:00、入園16:30まで。11月24日からは600円）。このコースでは時間がありません。寄るなら横川を外してください。\n\n"
                    "2026年は12月6日（日）までのコースです（ケーブル・ロープウェイの平日の時刻表は12月4日まで）。"
@@ -664,7 +692,7 @@ def build(W):
                    "• One minute’s walk to change.\n"
                    "• Cable car: Cable Hiei → Cable Yase, 9 minutes, ¥600. Its 561 m drop is the greatest of any cable car in Japan, and it is steep. Going down, stand at the front and the track seems to fall away.\n\n"
                    "On weekdays the cable car runs every 30 minutes (on the hour and half hour), so the 16:15 ropeway connects with the 16:30 cable car, reaching Yase at 16:39. Miss it and the 16:45 and 17:00 get you there at 17:09. At weekends and on holidays both run every 15 minutes. Last runs down: ropeway 18:00, cable car 18:15.\n\n"
-                   "The official sites don’t say whether IC cards are accepted (please check). Without the Free Pass, have ¥1,000 in cash ready to be safe.\n\n"
+                   "The Eizan Ropeway and Cable take cash only; IC cards are not accepted. Without the Free Pass, have ¥1,000 in cash ready.\n\n"
                    "You can also skip the ropeway and take a bus straight to Sanjo: the 16:05 Hieizan Drive Bus from the summit reaches Sanjo-Keihan at 17:00 (¥840, daily).\n\n"
                    "The Garden Museum Hiei is a garden themed on Monet and the Impressionists (until 6 December, closed Wednesdays; 10:00–17:00 in autumn, last entry 16:30; ¥600 from 24 November). There is no time for it on this course: drop Yokawa if you want it.\n\n"
                    "In 2026 this course runs until Sunday 6 December (the weekday timetable for the cable car and ropeway ends on 4 December)."
@@ -675,12 +703,12 @@ def build(W):
             notices=[SEASON],
             info=info([row("train", "ロープウェイ（比叡山頂発）：9時台 15・30・45分、10〜17時台 15分おき、最終18:00。ケーブル（ケーブル比叡発）：平日 毎時0・30分、土日祝 15分おき、最終18:15。時刻表は平日12月4日・土日祝12月6日まで",
                            "Ropeway (from the summit): at :15, :30, :45 in the 9 o’clock hour, then every 15 min, last 18:00. Cable car (from Cable Hiei): weekdays :00 and :30; weekends and holidays every 15 min; last 18:15. Timetable valid to 4 Dec (weekdays) and 6 Dec (weekends)"),
-                       row("fee", "ロープウェイ 片道400円、ケーブル 片道600円。ICカードが使えるかは要確認", "Ropeway ¥400, cable car ¥600, one way. IC cards: please check"),
+                       row("fee", "ロープウェイ 片道400円、ケーブル 片道600円。現金のみ（ICカードは使えません）", "Ropeway ¥400, cable car ¥600, one way. Cash only (no IC cards)"),
                        row("hours", "比叡山頂バス停 → ロープウェイ比叡山頂駅：歩いて約10分（京福電鉄の案内）", "Hiei-sancho bus stop → ropeway summit station: about 10 min on foot (operator’s guide)"),
                        row("train", "バスで三条へ：比叡山ドライブバス 比叡山頂15:05発 → 三条京阪16:01着、16:05発 → 17:00着（毎日、840円）", "By bus to Sanjo: Hieizan Drive Bus from the summit 15:05 → Sanjo-Keihan 16:01, 16:05 → 17:00 (daily, ¥840)"),
                        row("fee", "ガーデンミュージアム比叡：大人1,200円（11月24日〜12月6日は600円）、水曜休み、12月6日まで", "Garden Museum Hiei: ¥1,200 (¥600 from 24 Nov to 6 Dec); closed Wednesdays; open until 6 December", until="2026-12-06")],
-                      tip=T("京福電鉄（叡山ケーブル・ロープウェイ）の公式サイト、比叡山・びわ湖DMOの時刻表（PDF、2026年3月20日〜12月6日）とガーデンミュージアム比叡の案内で確認しました（2026年11月22日）。写真1枚目は私の写真、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                            "Checked on the Keifuku (Eizan Cable & Ropeway) website, the DMO timetable (PDF, 20 March–6 December 2026) and the Garden Museum page on 22 November 2026. Photo 1 is mine; the others are from Wikimedia Commons (author and license shown on each photo)."), cash=True))
+                      tip=T("京福電鉄（叡山ケーブル・ロープウェイ）の公式サイト（払い方はよくある質問、11月23日）、比叡山・びわ湖DMOの時刻表（PDF、2026年3月20日〜12月6日）とガーデンミュージアム比叡の案内で確認しました（2026年11月22日）。写真1枚目は私の写真、ほかは Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                            "Checked on the Keifuku (Eizan Cable & Ropeway) website (payment on its FAQ, 23 November), the DMO timetable (PDF, 20 March–6 December 2026) and the Garden Museum page on 22 November 2026. Photo 1 is mine; the others are from Wikimedia Commons (author and license shown on each photo)."), cash=True))
 
         # ---------- 八瀬と帰り・夜
         S["yase"] = dict(
