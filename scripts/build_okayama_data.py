@@ -85,6 +85,12 @@ U = dict(
     boat_faq="https://kankou-kurashiki.jp/wp-content/uploads/2026/07/0a31b13f80349a6fcc7616b8c89f4fef.pdf",
     lights="https://www.kurashiki-tabi.jp/see/201/", nightmap="https://www.kurashiki-tabi.jp/feature/yorumeguri-map/",
     hotel_rest="https://www.kurashiki-kokusai-hotel.co.jp/restaurants",
+    wisteria="https://www.kurashiki-kokusai-hotel.co.jp/restaurants/wisteria",
+    ohara_list="https://www.ohara.or.jp/calendar/",
+    kurabo="https://www.kurabo.co.jp/kurabo_kinenkan/",
+    kura_map="https://eki.jr-odekake.net/premises?id=0650612",
+    faq_stop="https://support-faq.westjr.co.jp/westjr/faq/show/1461?site_domain=default",
+    faq_parallel="https://support-faq.westjr.co.jp/westjr/faq/show/1403?site_domain=default",
     miyake="https://miyakeshouten.com/time/", azuma="http://azumazushi.ecgo.jp/page0111.html",
     sunste="https://sun-ste.com/okayama-ichibangai/information/",
     nekonote="https://www.okayama-kanko.jp/spot/detail_10022.html",
@@ -104,8 +110,12 @@ U = dict(
     sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s3411.html",
 )
 
-# 出典。what＝何を確かめたか、saw＝そのページで見た内容
-SOURCES = [dict(what=a, url=b, saw=c, checked=CHECKED) for a, b, c in [
+# 出典。what＝何を確かめたか、saw＝そのページで見た内容。RECHECKED は 2026-11-23 の「要確認」の見直しで開き直したもの
+TODAY = "2026-11-23"
+RECHECKED = {"ウイステリア・バー", "ウイステリア", "三宅商店", "吾妻寿司", "さんすて岡山", "四季彩", "大原美術館",
+             "大原美術館 開館情報一覧", "倉紡記念館", "倉敷駅の構内図", "途中下車（JR西日本）", "新幹線経由の乗車券と在来線（JR西日本）",
+             "岡山駅のロッカー", "岡山駅の設備", "倉敷駅の設備"}
+SOURCES = [dict(what=a, url=b, saw=c, checked=TODAY if a in RECHECKED else CHECKED) for a, b, c in [
     ("京都→岡山 平日", q("京都", "岡山", "25", "09:20"), "のぞみ9号 9:25→10:25、自由席7,140円（乗車券3,740円＋3,400円）"),
     ("京都→岡山 土曜", q("京都", "岡山", "28", "09:20"), "のぞみ9号 9:25→10:25、自由席7,140円"),
     ("京都→岡山 日曜", q("京都", "岡山", "29", "09:20"), "のぞみ9号 9:25→10:25"),
@@ -195,9 +205,9 @@ SOURCES = [dict(what=a, url=b, saw=c, checked=CHECKED) for a, b, c in [
     ("特大荷物と自由席", U["baggage_west"], "Oversized baggage is not allowed in non-reserved seats"),
     ("のぞみ全席指定の期間", U["reserved"], "11/21〜23、12/25〜1/5、1/9〜11、3/20〜22"),
     ("ねこのてステーション", U["nekonote"], "新幹線改札口すぐ。預かり8:00〜20:00・600円/800円、宿への配達は13:30まで受付・1,500円"),
-    ("岡山駅のロッカー", U["locker"], "H：2F新幹線改札外、0:00〜24:00、ICカード専用、大8・中45・小56。料金の記載なし"),
+    ("岡山駅のロッカー", U["locker"], "H：2F新幹線改札外、0:00〜24:00、ICカード専用、大8・中45・小56。A：さんすて南館2F 6:00〜24:00。料金の記載なし"),
     ("岡山駅の設備", U["sta_oka"], "コインロッカーあり"),
-    ("倉敷駅の設備", U["sta_kura"], "コインロッカーあり。場所・料金の記載なし"),
+    ("倉敷駅の設備", U["sta_kura"], "コインロッカーあり。料金の記載なし"),
     ("倉敷駅前観光案内所", U["info_eki"], "西ビル2階、ロッカー9:00〜17:00・当日のみ"),
     ("倉敷館観光案内所", U["info_kan"], "9:00〜18:00、ロッカー9:00〜17:00・当日のみ"),
     ("倉敷市観光休憩所", U["info_rest"], "ロッカー9:00〜17:00。過ぎると翌日まで出せない"),
@@ -209,7 +219,7 @@ SOURCES = [dict(what=a, url=b, saw=c, checked=CHECKED) for a, b, c in [
     ("後楽園", U["garden"], "10/1〜3/19 8:00〜17:00（入園16:45）、3/20〜9/30 7:30〜18:00（17:45）、500円、無休"),
     ("後楽園 アクセス", U["garden_access"], "城下から徒歩10分、岡山駅から徒歩25分"),
     ("幻想庭園", U["garden_event"], "秋は11/20〜29 17:00〜20:30（入園20:00まで）"),
-    ("四季彩", U["shikisai"], "後楽園外苑、食事11:00〜14:30、年中無休"),
+    ("四季彩", U["shikisai"], "後楽園外苑、お食事11:00〜14:30、カフェ14:30〜16:00、夜は完全予約制（6名から）、年中無休"),
     ("路面電車", U["tram"], "160円、1日券400円、交通系IC可"),
     ("路面電車 MOMO", U["tram_top"], "検査のため運休中"),
     ("大原美術館", U["ohara"], "3〜11月9:00〜17:00（入館16:30）、12〜2月〜15:00（14:30）、月曜休み（祝日は開館）、2,000円、撮影不可"),
@@ -218,10 +228,16 @@ SOURCES = [dict(what=a, url=b, saw=c, checked=CHECKED) for a, b, c in [
     ("川舟 よくある質問", U["boat_faq"], "当日券は午前中に売り切れることも。12:00・12:30便は当日券のみ。夏は15:30便以降運休の可能性"),
     ("夜間景観照明", U["lights"], "10〜3月は日没〜21:00、4〜9月は日没〜22:00"),
     ("夜めぐりマップ", U["nightmap"], "夜の230店舗を掲載"),
-    ("ウイステリア・バー", U["hotel_rest"], "夜17:00〜21:00（L.O.20:00）。バー18:00〜24:00、日月休み"),
+    ("ウイステリア・バー", U["hotel_rest"], "ウイステリア ディナー17:00〜21:00（L.O.20:00）。バー レジーナ18:00〜24:00（L.O.23:00）、日月休み"),
+    ("ウイステリア", U["wisteria"], "ディナータイム17:00〜21:00（L.O.20:00）、ディナーコース6,160円〜、料金に10%のサービス料"),
     ("三宅商店", U["miyake"], "平日11:30、土11:00、日8:30〜17:00（L.O.16:30）、年中無休"),
-    ("吾妻寿司", U["azuma"], "さんすて岡山2F、11:00〜22:00（L.O.21:00）、年中無休"),
-    ("さんすて岡山", U["sunste"], "レストラン11:00〜22:00"),
+    ("吾妻寿司", U["azuma"], "さんすて岡山2F、11:00〜22:00（L.O.21:00）、年中無休、ネタ・シャリがなくなり次第終了の場合あり"),
+    ("さんすて岡山", U["sunste"], "レストラン11:00〜22:00。旅弁当 駅弁にぎわい（南館2F）7:00〜20:30。ロッカーは一番街B1F、さんすて南館1F・2F（料金の記載なし）"),
+    ("大原美術館 開館情報一覧", U["ohara_list"], "12/21〜25・28休館、12/29〜31は9:00〜15:00開館、1/1は本館のみ、1/12〜15休館"),
+    ("倉紡記念館", U["kurabo"], "10:00〜16:00（入館15:45まで）、年中無休、一般300円・学生250円、小学生未満無料"),
+    ("倉敷駅の構内図", U["kura_map"], "2024年4月1日時点の図。コインロッカーは2階の改札外（北口寄り）と1階の南口の西側（レンタカーのそば）。料金の記載なし"),
+    ("途中下車（JR西日本）", U["faq_stop"], "普通乗車券は後戻りしない限り何回でも途中下車可。100キロまでの乗車券と特急券は不可"),
+    ("新幹線経由の乗車券と在来線（JR西日本）", U["faq_parallel"], "東京〜熱海・新下関〜博多以外は、新幹線経由の普通乗車券で並行する在来線（山陽本線）に乗れる"),
     ("吉備津神社", U["kibitsu"], "5:00〜18:00、御守は16時ごろまで、鳴釜神事9:00〜14:00・金曜休み、駅から徒歩約10分"),
     ("阿智神社", U["achi"], "参拝は終日可、授与所9:00〜17:00"),
     ("日の入り（岡山）", U["sun"], "11月22日16:56、28日16:54"),
@@ -277,9 +293,9 @@ N_SWAP = notice(
     U["ohara"])
 N_OHARA_DATES = notice(
     "この冬、月曜のほかに休む日", "Extra closures this winter",
-    "開館カレンダーでは2026年12月21〜25日・28日、2027年1月12〜15日も休館、元日は本館だけの開館です。年末の29〜31日は、カレンダー（開館）と公式ページの上の表示（休館）が食い違っています（要確認）。",
-    "The calendar also shows closures on 21–25 and 28 December 2026 and 12–15 January 2027, with only the Main Gallery open on New Year’s Day. For 29–31 December the calendar (open) and the website header (closed) disagree, so check first.",
-    U["ohara_cal"], to="2027-01-15")
+    "2026年12月21〜25日・28日、2027年1月12〜15日も休館です。年末の12月29〜31日と1月2・3日は開館（9:00〜15:00、入館14:30まで）、元日は本館だけの開館です。",
+    "The museum is also closed on 21–25 and 28 December 2026 and 12–15 January 2027. It opens 9:00–15:00 (last entry 14:30) on 29–31 December and 2–3 January; on New Year’s Day only the Main Gallery opens.",
+    U["ohara_list"], to="2027-01-15")
 
 # ---------------------------------------------------------------------------
 # スポットの共通部分
@@ -316,9 +332,9 @@ S = dict(
         links=[NEKO, LOCKER, link("info", "岡山観光WEB", "Okayama Prefecture tourism website", "https://www.okayama-kanko.jp/", "https://www.okayama-japan.jp/en/")],
         rows=[row("hours", "ねこのてステーション：一時預かり8:00〜20:00、宿への配達の受付8:00〜13:30", "Nekonote Station: storage 8:00–20:00; hotel delivery accepted 8:00–13:30"),
               row("fee", "一時預かり600円（120cm・15kgまで）、800円（160cm・25kgまで）。宿への配達1,500円", "Storage ¥600 (up to 120 cm, 15 kg) or ¥800 (160 cm, 25 kg). Hotel delivery ¥1,500"),
-              row("fee", "コインロッカーの料金は確認できませんでした（要確認）", "Locker prices could not be confirmed (please check)")],
-        tip=T("手荷物は岡山県の観光サイト、ロッカーの場所と時間はJRの駅ページからリンクされている空き状況の地図で確認しました。",
-              "Luggage services from the prefecture’s tourism site; locker locations and hours from the availability map linked from JR’s station page.")),
+              row("fee", "コインロッカーの料金は、JRの駅ページ・空き状況の地図・さんすて岡山のどこにも載っていません（要確認）", "Locker prices are not given on JR’s station page, the availability map or the station mall’s site (please check)")],
+        tip=T("手荷物は岡山県の観光サイト、ロッカーの場所と時間はJRの駅ページからリンクされている空き状況の地図と、さんすて岡山の営業案内で確認しました。",
+              "Luggage services from the prefecture’s tourism site; locker locations and hours from the availability map linked from JR’s station page and the station mall’s information page.")),
 
     tram=dict(
         name=T("路面電車（岡山駅前 → 城下）", "Tram: Okayama-ekimae → Shiroshita"), kind=T("路面電車", "Tram"),
@@ -436,15 +452,15 @@ S = dict(
         blurb=T("岡山から16〜18分・330円。南口から美観地区まで歩いて10〜15分です。", "16–18 minutes from Okayama, ¥330. The old quarter is 10–15 minutes on foot from the south exit."),
         lat=34.60085, lng=133.76610,
         body=T("南口へ出ます。美観地区への道は、まっすぐ南への倉敷中央通りか、左手から続くアーケードの商店街。雨の日は商店街が楽です。\n\n"
-               "荷物は駅のコインロッカーか（場所と料金は要確認）、南口の西ビル2階の倉敷駅前観光案内所、美観地区の倉敷館・観光休憩所のロッカーへ。案内所と休憩所のロッカーは9:00〜17:00の当日かぎりです。17:00を過ぎる日は駅のほうに預けてください。",
+               "荷物は駅のコインロッカーか、南口の西ビル2階の倉敷駅前観光案内所、美観地区の倉敷館・観光休憩所のロッカーへ。駅のロッカーは、JRの構内図では2階の改札の外（北口寄り）と、1階の南口の西側（駅レンタカーのそば）にあります（料金と使える時間は要確認）。案内所と休憩所のロッカーは9:00〜17:00の当日かぎりです。17:00を過ぎる日は駅のほうに預けてください。",
                "Use the south exit. Either follow Chuo-dori straight south, or the covered arcades from the left of the square, which are easier in rain.\n\n"
-               "Bags go in the station lockers (location and price not confirmed), or in lockers at the tourist office on 2F of the West Building by the south exit, at Kurashiki-kan or at the rest house in the old quarter. Those three are same-day, 9:00–17:00 only. If you’ll be later than 17:00, use the station."),
+               "Bags go in the station lockers, or in lockers at the tourist office on 2F of the West Building by the south exit, at Kurashiki-kan or at the rest house in the old quarter. JR’s station map shows station lockers on 2F outside the ticket gates (towards the north exit) and on 1F at the west end of the south side, by the rent-a-car office (prices and hours not confirmed). The other three are same-day, 9:00–17:00 only. If you’ll be later than 17:00, use the station."),
         gmaps=[gm("倉敷駅 南口", "Kurashiki Station, south exit", 34.60085, 133.76610, "倉敷駅 南口"), gm("倉敷駅前観光案内所", "Kurashiki station-front tourist office", 34.60090, 133.76570, "倉敷駅前観光案内所")],
-        links=[link("info", "倉敷駅前観光案内所", "Station-front tourist office (Japanese)", U["info_eki"]), KTABI, JR],
+        links=[link("info", "倉敷駅前観光案内所", "Station-front tourist office (Japanese)", U["info_eki"]), link("info", "倉敷駅の構内図（JR西日本）", "Kurashiki Station map (JR West, Japanese)", U["kura_map"]), KTABI, JR],
         rows=[row("hours", "倉敷駅前観光案内所9:00〜18:00（12月29日〜1月1日休み）。ロッカーは9:00〜17:00", "Station-front office 9:00–18:00 (closed 29 Dec–1 Jan); its lockers 9:00–17:00"),
-              row("fee", "倉敷駅のロッカーの場所と料金は要確認", "Location and price of the station lockers: please check")],
-        tip=T("倉敷観光コンベンションビューロー、JRの駅ページ、乗換案内で確認しました。写真は Wikimedia Commons から。",
-              "Checked with the Kurashiki visitors bureau, JR’s station page and a route planner. The photo is from Wikimedia Commons.")),
+              row("fee", "倉敷駅のコインロッカー：2階の改札の外（北口寄り）と1階の南口の西側。料金と使える時間は公式で確かめられませんでした（要確認）", "Kurashiki Station lockers: 2F outside the gates (north side) and 1F west end of the south side. Prices and hours could not be confirmed (please check)")],
+        tip=T("倉敷観光コンベンションビューロー、JRの駅ページと構内図（2024年4月1日時点）、乗換案内で確認しました。写真は Wikimedia Commons から。",
+              "Checked with the Kurashiki visitors bureau, JR’s station page and station map (as of 1 April 2024) and a route planner. The photo is from Wikimedia Commons.")),
 
     ohara=dict(
         name=T("大原美術館", "Ohara Museum of Art"), kind=T("美術館", "Art museum"),
@@ -459,11 +475,11 @@ S = dict(
                "One ticket covers the Main Gallery, the Craft and Asian Art Gallery and the Kojima Torajiro Memorial Hall; unused halls can be visited another day. The Annex is closed long-term. With an hour, see the Main Gallery; with 30 minutes more, add the galleries in the old rice storehouses.\n\n"
                "Bags are looked after free next to the ticket office."),
         gmaps=[gm("大原美術館 本館", "Ohara Museum of Art, Main Gallery", 34.59603, 133.77044, "大原美術館")],
-        links=[link("official", "大原美術館 公式サイト", "Ohara Museum of Art (official)", U["ohara"], "https://www.ohara.or.jp/en/"), link("info", "開館カレンダー（PDF）", "Opening calendar (PDF, Japanese)", U["ohara_cal"])],
+        links=[link("official", "大原美術館 公式サイト", "Ohara Museum of Art (official)", U["ohara"], "https://www.ohara.or.jp/en/"), link("info", "開館情報一覧", "Opening days (Japanese)", U["ohara_list"]), link("info", "開館カレンダー（PDF）", "Opening calendar (PDF, Japanese)", U["ohara_cal"])],
         rows=[row("hours", "3〜11月 9:00〜17:00（入館16:30まで）／12〜2月 9:00〜15:00（入館14:30まで）。児島虎次郎記念館は10:00〜16:00（冬は15:00まで）", "Mar–Nov 9:00–17:00 (last entry 16:30) / Dec–Feb 9:00–15:00 (last entry 14:30). Kojima hall 10:00–16:00 (15:00 in winter)"),
               row("closed", "月曜（祝日・振替休日は開館。8月は無休）。臨時休館あり", "Mondays (open on holidays; none in August). Occasional extra closures"),
               row("fee", "一般2,000円、18歳未満の小〜高校生500円。現金・カード・電子マネー・QR決済可", "¥2,000; school pupils under 18 ¥500. Cash, cards, e-money and QR accepted")],
-        tip=T("大原美術館の公式サイトと2026年度の開館カレンダーで確認しました。写真は Wikimedia Commons から。", "Checked on the museum’s website and 2026 calendar. Photos are from Wikimedia Commons.")),
+        tip=T("大原美術館の公式サイト（入館案内・開館情報一覧）と2026年度の開館カレンダーで確認しました。写真は Wikimedia Commons から。", "Checked on the museum’s website (visitor information and opening days) and 2026 calendar. Photos are from Wikimedia Commons.")),
 
     bikan=dict(
         name=T("倉敷川と白壁の町並み", "Kurashiki canal and the white-walled quarter"), kind=T("町並み", "Old quarter"),
@@ -518,14 +534,17 @@ S = dict(
                 "A Meiji cotton mill turned hotel. The ivy-walled courtyard is open to non-guests."),
         lat=34.59470, lng=133.77350,
         body=T("1889年にできた倉敷紡績所の最初の工場です。外壁と骨組みを残して、建築家・浦辺鎮太郎（うらべしずたろう）がホテルに作りかえました。\n\n"
-               "見るのは中庭。つたは夏に緑、秋に赤、冬は葉が落ちます。西の門から入って東の門へ抜けると、本町通りへの近道です。倉紡記念館の時間と料金は確認できませんでした（要確認）。",
+               "見るのは中庭。つたは夏に緑、秋に赤、冬は葉が落ちます。西の門から入って東の門へ抜けると、本町通りへの近道です。\n\n"
+               "敷地の中の「倉紡記念館」は、倉敷紡績の歩みを見せる資料館です。10:00〜16:00（入館15:45まで）、年中無休、一般300円。",
                "The first mill of the Kurashiki Spinning Works, built in 1889. The architect Urabe Shizutaro turned it into a hotel, keeping walls and frame.\n\n"
-               "The courtyard is the thing to see: ivy green in summer, red in autumn, bare in winter. In by the west gate and out by the east is a short cut to Honmachi. Hours and fee of the Kurabo Memorial Hall could not be confirmed (please check)."),
+               "The courtyard is the thing to see: ivy green in summer, red in autumn, bare in winter. In by the west gate and out by the east is a short cut to Honmachi.\n\n"
+               "The Kurabo Memorial Hall in the grounds tells the spinning company’s story: 10:00–16:00 (last entry 15:45), every day, ¥300."),
         gmaps=[gm("倉敷アイビースクエア", "Kurashiki Ivy Square", 34.59470, 133.77350, "倉敷アイビースクエア")],
-        links=[link("official", "倉敷アイビースクエア 公式サイト", "Kurashiki Ivy Square (official)", U["ivy"])],
-        rows=[row("hours", "中庭は自由に歩けます", "The courtyard is free to walk through"),
-              row("fee", "倉紡記念館の時間と料金は要確認", "Kurabo Memorial Hall hours and fee: please check")],
-        tip=T("建物の歴史は公式サイトで確認しました。写真は Wikimedia Commons から。", "The history is from the official website. Photos are from Wikimedia Commons.")),
+        links=[link("official", "倉敷アイビースクエア 公式サイト", "Kurashiki Ivy Square (official)", U["ivy"]),
+               link("official", "倉紡記念館（倉敷紡績）", "Kurabo Memorial Hall (Japanese)", U["kurabo"])],
+        rows=[row("hours", "中庭は自由に歩けます。倉紡記念館：10:00〜16:00（入館15:45まで）、年中無休", "The courtyard is free to walk through. Kurabo Memorial Hall: 10:00–16:00 (last entry 15:45), every day"),
+              row("fee", "倉紡記念館：一般300円、学生250円、小学生未満無料", "Kurabo Memorial Hall: ¥300, students ¥250, under school age free")],
+        tip=T("建物の歴史は公式サイト、倉紡記念館は倉敷紡績の公式ページで確認しました。写真は Wikimedia Commons から。", "The history is from the official website; the memorial hall from Kurabo’s own page. Photos are from Wikimedia Commons.")),
 
     achi=dict(
         name=T("阿智神社", "Achi Shrine"), kind=T("神社（町を見下ろす丘）", "Shrine on the hill"),
@@ -555,7 +574,7 @@ S = dict(
                "Miyake Shoten is a townhouse cafe on Honmachi with vegetable curry and seasonal parfaits. It opens at 11:30 on weekdays, 11:00 on Saturdays and 8:30 on Sundays, until 17:00 (last order 16:30), every day."),
         gmaps=[gm("本町通り", "Honmachi street", 34.59640, 133.77400, "倉敷市本町 本町通り"), gm("東町", "Higashimachi", 34.59672, 133.77706, "倉敷市東町"), gm("三宅商店", "Miyake Shoten", 34.59640, 133.77290, "三宅商店 倉敷市本町")],
         links=[link("official", "三宅商店 営業時間", "Miyake Shoten hours (Japanese)", U["miyake"]), KTABI],
-        rows=[row("hours", "通りは自由に歩けます。ほかの店の時間と休みは店ごと（要確認）", "Free to walk. Other shops’ hours and closing days vary (please check)"),
+        rows=[row("hours", "通りは自由に歩けます。ほかの店の時間と休みは店ごとに違います", "Free to walk. Other shops’ hours and closing days vary"),
               row("hours", "三宅商店：平日11:30、土11:00、日8:30〜17:00（L.O.16:30）、年中無休", "Miyake Shoten: from 11:30 weekdays, 11:00 Sat, 8:30 Sun, to 17:00 (last order 16:30), every day")],
         tip=T("三宅商店は公式サイトで確認しました。通りの説明は倉敷観光WEBによります。写真は Wikimedia Commons から。", "Miyake Shoten was checked on its website. The street description draws on the Kurashiki tourism website. Photos are from Wikimedia Commons.")),
 
@@ -591,10 +610,10 @@ STAY = dict(
             caution=T("2日目が月曜なら、2日を入れ替え（大原美術館が休み）", "If day 2 is a Monday, swap the days (Ohara Museum closed)"),
             notices=[N_SWAP, N_BAGS_STAY, N_RESERVED, N_BIG, N_NIGHT_STAY,
                      notice("2日目に広島へ進む人のきっぷ", "Tickets if you go on to Hiroshima",
-                            "京都・新大阪→広島の乗車券は3日間有効で、岡山で途中下車できます。特急券は岡山で区切って2枚。倉敷・吉備津へ往復する分の扱いは、買うときに窓口で確かめてください（要確認）。スマートEXは途中下車できないので、区間ごとに予約します。",
-                            "A fare ticket from Kyoto or Shin-Osaka to Hiroshima is valid three days and allows a stopover at Okayama. Buy two express tickets, split there. Ask at the counter how the side trips to Kurashiki and Kibitsu are charged (not confirmed). smartEX allows no stopovers, so book each section.",
-                            U["stopover"])],
-            links=[JR, STOPOVER, EX],
+                            "京都・新大阪→広島の乗車券は3日間有効で、岡山で途中下車できます。特急券は岡山で区切って2枚。乗車券は後戻りする向きには使えないので、岡山から倉敷・吉備津へ往復する分は別に買います（片道で岡山〜倉敷330円、岡山〜吉備津210円）。スマートEXは途中下車できないので、区間ごとに予約します。",
+                            "A fare ticket from Kyoto or Shin-Osaka to Hiroshima is valid three days and allows a stopover at Okayama. Buy two express tickets, split there. A fare ticket can’t be used to travel back the way you came, so buy separate tickets for the return trips from Okayama to Kurashiki and Kibitsu (one way: ¥330 to Kurashiki, ¥210 to Kibitsu). smartEX allows no stopovers, so book each section.",
+                            U["faq_stop"])],
+            links=[JR, link("info", "途中下車の決まり（JR西日本）", "Stopover rules (JR West, Japanese)", U["faq_stop"]), STOPOVER, EX],
             time=(DEP, "1日目 9:25発（京都駅に9:10ごろ）", "day 1, the 9:25 train (be at Kyoto Station by about 9:10)")),
         okayamaeki=dict(
             caution=T("宿への荷物の配達は13:30まで受付", "Hotel bag delivery: hand in by 13:30"),
@@ -614,7 +633,10 @@ STAY = dict(
                   "The 15:04 Sanyo line train from Okayama arrives at 15:20. Drop in at your hotel, then Ivy Square and Achi Shrine while it is light."),
             rows=[row("train", "岡山15:04 → 倉敷15:20（平日・土・日とも）。330円", "Okayama 15:04 → Kurashiki 15:20 (weekdays and weekends). ¥330")],
             time=(MOV, "1日目 15:04〜15:20", "day 1, 15:04–15:20")),
-        ivy=dict(time=(VIS, "1日目 16:00〜16:20", "day 1, 16:00–16:20")),
+        ivy=dict(
+            pre=T("この時間には倉紡記念館は閉まっています（入館15:45まで）。入りたい人は2日目の朝、美術館のあとに。",
+                  "By this time the Kurabo Memorial Hall has closed (last entry 15:45). To go in, fit it in after the museum on day 2."),
+            time=(VIS, "1日目 16:00〜16:20", "day 1, 16:00–16:20")),
         achi=dict(
             pre=T("日の入りの前に上ります。11月下旬の日の入りは16:55ごろ。", "Climb before sunset, which is at about 16:55 in late November."),
             time=(VIS, "1日目 16:30〜16:50", "day 1, 16:30–16:50")),
@@ -777,7 +799,8 @@ def spot(C, no, sid):
         out["caution"] = caution
     out.update(lat=b["lat"], lng=b["lng"], text=text, gmaps=b["gmaps"] + o.get("gmaps_add", []),
                links=o.get("links", b.get("links", [JR])) + o.get("links_add", []), notices=o.get("notices", []),
-               info={"rows": o.get("rows", []) + b["rows"], "cash": False, "tip": b["tip"], "checked": CHECKED},
+               info={"rows": o.get("rows", []) + b["rows"], "cash": False, "tip": b["tip"],
+                     "checked": TODAY if sid in ("ivy", "ohara") else CHECKED},  # 2026-11-23 に表の中身を全部確かめ直した場所
                photos=PHOTOS[sid])
     assert out["photos"], sid
     for p in out["photos"]:

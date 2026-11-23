@@ -826,20 +826,20 @@
   {
    "what": "岡山駅のロッカー",
    "url": "https://www.akilocker.biz/mobile/map.html?locationId=JR_OKAYAMA&mapId=M51001&lang=1",
-   "saw": "H：2F新幹線改札外、0:00〜24:00、ICカード専用、大8・中45・小56。料金の記載なし",
-   "checked": "2026-11-22"
+   "saw": "H：2F新幹線改札外、0:00〜24:00、ICカード専用、大8・中45・小56。A：さんすて南館2F 6:00〜24:00。料金の記載なし",
+   "checked": "2026-11-23"
   },
   {
    "what": "岡山駅の設備",
    "url": "https://eki.jr-odekake.net/top?id=0650608",
    "saw": "コインロッカーあり",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "倉敷駅の設備",
    "url": "https://eki.jr-odekake.net/top?id=0650612",
-   "saw": "コインロッカーあり。場所・料金の記載なし",
-   "checked": "2026-11-22"
+   "saw": "コインロッカーあり。料金の記載なし",
+   "checked": "2026-11-23"
   },
   {
    "what": "倉敷駅前観光案内所",
@@ -910,8 +910,8 @@
   {
    "what": "四季彩",
    "url": "https://korakuen-shikisai.jp/",
-   "saw": "後楽園外苑、食事11:00〜14:30、年中無休",
-   "checked": "2026-11-22"
+   "saw": "後楽園外苑、お食事11:00〜14:30、カフェ14:30〜16:00、夜は完全予約制（6名から）、年中無休",
+   "checked": "2026-11-23"
   },
   {
    "what": "路面電車",
@@ -929,7 +929,7 @@
    "what": "大原美術館",
    "url": "https://www.ohara.or.jp/visitor_info/",
    "saw": "3〜11月9:00〜17:00（入館16:30）、12〜2月〜15:00（14:30）、月曜休み（祝日は開館）、2,000円、撮影不可",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "大原美術館 カレンダー",
@@ -964,26 +964,62 @@
   {
    "what": "ウイステリア・バー",
    "url": "https://www.kurashiki-kokusai-hotel.co.jp/restaurants",
-   "saw": "夜17:00〜21:00（L.O.20:00）。バー18:00〜24:00、日月休み",
-   "checked": "2026-11-22"
+   "saw": "ウイステリア ディナー17:00〜21:00（L.O.20:00）。バー レジーナ18:00〜24:00（L.O.23:00）、日月休み",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "ウイステリア",
+   "url": "https://www.kurashiki-kokusai-hotel.co.jp/restaurants/wisteria",
+   "saw": "ディナータイム17:00〜21:00（L.O.20:00）、ディナーコース6,160円〜、料金に10%のサービス料",
+   "checked": "2026-11-23"
   },
   {
    "what": "三宅商店",
    "url": "https://miyakeshouten.com/time/",
    "saw": "平日11:30、土11:00、日8:30〜17:00（L.O.16:30）、年中無休",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "吾妻寿司",
    "url": "http://azumazushi.ecgo.jp/page0111.html",
-   "saw": "さんすて岡山2F、11:00〜22:00（L.O.21:00）、年中無休",
-   "checked": "2026-11-22"
+   "saw": "さんすて岡山2F、11:00〜22:00（L.O.21:00）、年中無休、ネタ・シャリがなくなり次第終了の場合あり",
+   "checked": "2026-11-23"
   },
   {
    "what": "さんすて岡山",
    "url": "https://sun-ste.com/okayama-ichibangai/information/",
-   "saw": "レストラン11:00〜22:00",
-   "checked": "2026-11-22"
+   "saw": "レストラン11:00〜22:00。旅弁当 駅弁にぎわい（南館2F）7:00〜20:30。ロッカーは一番街B1F、さんすて南館1F・2F（料金の記載なし）",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "大原美術館 開館情報一覧",
+   "url": "https://www.ohara.or.jp/calendar/",
+   "saw": "12/21〜25・28休館、12/29〜31は9:00〜15:00開館、1/1は本館のみ、1/12〜15休館",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "倉紡記念館",
+   "url": "https://www.kurabo.co.jp/kurabo_kinenkan/",
+   "saw": "10:00〜16:00（入館15:45まで）、年中無休、一般300円・学生250円、小学生未満無料",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "倉敷駅の構内図",
+   "url": "https://eki.jr-odekake.net/premises?id=0650612",
+   "saw": "2024年4月1日時点の図。コインロッカーは2階の改札外（北口寄り）と1階の南口の西側（レンタカーのそば）。料金の記載なし",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "途中下車（JR西日本）",
+   "url": "https://support-faq.westjr.co.jp/westjr/faq/show/1461?site_domain=default",
+   "saw": "普通乗車券は後戻りしない限り何回でも途中下車可。100キロまでの乗車券と特急券は不可",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "新幹線経由の乗車券と在来線（JR西日本）",
+   "url": "https://support-faq.westjr.co.jp/westjr/faq/show/1403?site_domain=default",
+   "saw": "東京〜熱海・新下関〜博多以外は、新幹線経由の普通乗車券で並行する在来線（山陽本線）に乗れる",
+   "checked": "2026-11-23"
   },
   {
    "what": "吉備津神社",
@@ -1333,8 +1369,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "コインロッカーの料金は確認できませんでした（要確認）",
-       "en": "Locker prices could not be confirmed (please check)"
+       "ja": "コインロッカーの料金は、JRの駅ページ・空き状況の地図・さんすて岡山のどこにも載っていません（要確認）",
+       "en": "Locker prices are not given on JR’s station page, the availability map or the station mall’s site (please check)"
       },
       "until": null,
       "from": null
@@ -1342,8 +1378,8 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "手荷物は岡山県の観光サイト、ロッカーの場所と時間はJRの駅ページからリンクされている空き状況の地図で確認しました。",
-     "en": "Luggage services from the prefecture’s tourism site; locker locations and hours from the availability map linked from JR’s station page."
+     "ja": "手荷物は岡山県の観光サイト、ロッカーの場所と時間はJRの駅ページからリンクされている空き状況の地図と、さんすて岡山の営業案内で確認しました。",
+     "en": "Luggage services from the prefecture’s tourism site; locker locations and hours from the availability map linked from JR’s station page and the station mall’s information page."
     },
     "checked": "2026-11-22"
    },
@@ -1844,8 +1880,8 @@
    "lat": 34.60085,
    "lng": 133.7661,
    "text": {
-    "ja": "倉敷駅\n\nお城と後楽園のかわりに倉敷へ寄る場合です。岡山10:40発の伯備線で倉敷10:58着。帰りに岡山で乗り換えるなら、荷物は岡山駅に預けても取りに寄れます。福山で乗り換えるなら、荷物は倉敷まで持ってきてください。\n\n南口へ出ます。美観地区への道は、まっすぐ南への倉敷中央通りか、左手から続くアーケードの商店街。雨の日は商店街が楽です。\n\n荷物は駅のコインロッカーか（場所と料金は要確認）、南口の西ビル2階の倉敷駅前観光案内所、美観地区の倉敷館・観光休憩所のロッカーへ。案内所と休憩所のロッカーは9:00〜17:00の当日かぎりです。17:00を過ぎる日は駅のほうに預けてください。\n\nおすすめ移動時間：10:40〜10:58",
-    "en": "Kurashiki Station\n\nThis is for Kurashiki instead of the castle and garden. The 10:40 Hakubi line train from Okayama arrives at 10:58. If you will change at Okayama later you can leave bags there; if at Fukuyama, bring them to Kurashiki.\n\nUse the south exit. Either follow Chuo-dori straight south, or the covered arcades from the left of the square, which are easier in rain.\n\nBags go in the station lockers (location and price not confirmed), or in lockers at the tourist office on 2F of the West Building by the south exit, at Kurashiki-kan or at the rest house in the old quarter. Those three are same-day, 9:00–17:00 only. If you’ll be later than 17:00, use the station.\n\nRecommended travel time: 10:40–10:58"
+    "ja": "倉敷駅\n\nお城と後楽園のかわりに倉敷へ寄る場合です。岡山10:40発の伯備線で倉敷10:58着。帰りに岡山で乗り換えるなら、荷物は岡山駅に預けても取りに寄れます。福山で乗り換えるなら、荷物は倉敷まで持ってきてください。\n\n南口へ出ます。美観地区への道は、まっすぐ南への倉敷中央通りか、左手から続くアーケードの商店街。雨の日は商店街が楽です。\n\n荷物は駅のコインロッカーか、南口の西ビル2階の倉敷駅前観光案内所、美観地区の倉敷館・観光休憩所のロッカーへ。駅のロッカーは、JRの構内図では2階の改札の外（北口寄り）と、1階の南口の西側（駅レンタカーのそば）にあります（料金と使える時間は要確認）。案内所と休憩所のロッカーは9:00〜17:00の当日かぎりです。17:00を過ぎる日は駅のほうに預けてください。\n\nおすすめ移動時間：10:40〜10:58",
+    "en": "Kurashiki Station\n\nThis is for Kurashiki instead of the castle and garden. The 10:40 Hakubi line train from Okayama arrives at 10:58. If you will change at Okayama later you can leave bags there; if at Fukuyama, bring them to Kurashiki.\n\nUse the south exit. Either follow Chuo-dori straight south, or the covered arcades from the left of the square, which are easier in rain.\n\nBags go in the station lockers, or in lockers at the tourist office on 2F of the West Building by the south exit, at Kurashiki-kan or at the rest house in the old quarter. JR’s station map shows station lockers on 2F outside the ticket gates (towards the north exit) and on 1F at the west end of the south side, by the rent-a-car office (prices and hours not confirmed). The other three are same-day, 9:00–17:00 only. If you’ll be later than 17:00, use the station.\n\nRecommended travel time: 10:40–10:58"
    },
    "gmaps": [
     {
@@ -1877,6 +1913,17 @@
      "url": {
       "ja": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E9%A7%85%E5%89%8D%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/",
       "en": "https://kankou-kurashiki.jp/info/%E5%80%89%E6%95%B7%E9%A7%85%E5%89%8D%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "倉敷駅の構内図（JR西日本）",
+      "en": "Kurashiki Station map (JR West, Japanese)"
+     },
+     "url": {
+      "ja": "https://eki.jr-odekake.net/premises?id=0650612",
+      "en": "https://eki.jr-odekake.net/premises?id=0650612"
      }
     },
     {
@@ -1926,8 +1973,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "倉敷駅のロッカーの場所と料金は要確認",
-       "en": "Location and price of the station lockers: please check"
+       "ja": "倉敷駅のコインロッカー：2階の改札の外（北口寄り）と1階の南口の西側。料金と使える時間は公式で確かめられませんでした（要確認）",
+       "en": "Kurashiki Station lockers: 2F outside the gates (north side) and 1F west end of the south side. Prices and hours could not be confirmed (please check)"
       },
       "until": null,
       "from": null
@@ -1935,8 +1982,8 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "倉敷観光コンベンションビューロー、JRの駅ページ、乗換案内で確認しました。写真は Wikimedia Commons から。",
-     "en": "Checked with the Kurashiki visitors bureau, JR’s station page and a route planner. The photo is from Wikimedia Commons."
+     "ja": "倉敷観光コンベンションビューロー、JRの駅ページと構内図（2024年4月1日時点）、乗換案内で確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked with the Kurashiki visitors bureau, JR’s station page and station map (as of 1 April 2024) and a route planner. The photo is from Wikimedia Commons."
     },
     "checked": "2026-11-22"
    },
@@ -2002,6 +2049,17 @@
     {
      "kind": "info",
      "label": {
+      "ja": "開館情報一覧",
+      "en": "Opening days (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.ohara.or.jp/calendar/",
+      "en": "https://www.ohara.or.jp/calendar/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
       "ja": "開館カレンダー（PDF）",
       "en": "Opening calendar (PDF, Japanese)"
      },
@@ -2018,12 +2076,12 @@
       "en": "Extra closures this winter"
      },
      "text": {
-      "ja": "開館カレンダーでは2026年12月21〜25日・28日、2027年1月12〜15日も休館、元日は本館だけの開館です。年末の29〜31日は、カレンダー（開館）と公式ページの上の表示（休館）が食い違っています（要確認）。",
-      "en": "The calendar also shows closures on 21–25 and 28 December 2026 and 12–15 January 2027, with only the Main Gallery open on New Year’s Day. For 29–31 December the calendar (open) and the website header (closed) disagree, so check first."
+      "ja": "2026年12月21〜25日・28日、2027年1月12〜15日も休館です。年末の12月29〜31日と1月2・3日は開館（9:00〜15:00、入館14:30まで）、元日は本館だけの開館です。",
+      "en": "The museum is also closed on 21–25 and 28 December 2026 and 12–15 January 2027. It opens 9:00–15:00 (last entry 14:30) on 29–31 December and 2–3 January; on New Year’s Day only the Main Gallery opens."
      },
      "from": null,
      "to": "2027-01-15",
-     "url": "https://www.ohara.or.jp/cms/wp-content/themes/ohara/images/top/calendar_pdf/2026calendar.pdf"
+     "url": "https://www.ohara.or.jp/calendar/"
     }
    ],
    "info": {
@@ -2058,10 +2116,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "大原美術館の公式サイトと2026年度の開館カレンダーで確認しました。写真は Wikimedia Commons から。",
-     "en": "Checked on the museum’s website and 2026 calendar. Photos are from Wikimedia Commons."
+     "ja": "大原美術館の公式サイト（入館案内・開館情報一覧）と2026年度の開館カレンダーで確認しました。写真は Wikimedia Commons から。",
+     "en": "Checked on the museum’s website (visitor information and opening days) and 2026 calendar. Photos are from Wikimedia Commons."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-23"
    },
    "photos": [
     {
@@ -2170,8 +2228,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "通りは自由に歩けます。ほかの店の時間と休みは店ごと（要確認）",
-       "en": "Free to walk. Other shops’ hours and closing days vary (please check)"
+       "ja": "通りは自由に歩けます。ほかの店の時間と休みは店ごとに違います",
+       "en": "Free to walk. Other shops’ hours and closing days vary"
       },
       "until": null,
       "from": null
@@ -2550,8 +2608,8 @@
    "lat": 34.5947,
    "lng": 133.7735,
    "text": {
-    "ja": "倉敷アイビースクエア\n\n1889年にできた倉敷紡績所の最初の工場です。外壁と骨組みを残して、建築家・浦辺鎮太郎（うらべしずたろう）がホテルに作りかえました。\n\n見るのは中庭。つたは夏に緑、秋に赤、冬は葉が落ちます。西の門から入って東の門へ抜けると、本町通りへの近道です。倉紡記念館の時間と料金は確認できませんでした（要確認）。\n\nおすすめ訪問時間：14:00〜14:20（阿智神社のかわりに）",
-    "en": "Kurashiki Ivy Square\n\nThe first mill of the Kurashiki Spinning Works, built in 1889. The architect Urabe Shizutaro turned it into a hotel, keeping walls and frame.\n\nThe courtyard is the thing to see: ivy green in summer, red in autumn, bare in winter. In by the west gate and out by the east is a short cut to Honmachi. Hours and fee of the Kurabo Memorial Hall could not be confirmed (please check).\n\nRecommended visit time: 14:00–14:20 (instead of Achi Shrine)"
+    "ja": "倉敷アイビースクエア\n\n1889年にできた倉敷紡績所の最初の工場です。外壁と骨組みを残して、建築家・浦辺鎮太郎（うらべしずたろう）がホテルに作りかえました。\n\n見るのは中庭。つたは夏に緑、秋に赤、冬は葉が落ちます。西の門から入って東の門へ抜けると、本町通りへの近道です。\n\n敷地の中の「倉紡記念館」は、倉敷紡績の歩みを見せる資料館です。10:00〜16:00（入館15:45まで）、年中無休、一般300円。\n\nおすすめ訪問時間：14:00〜14:20（阿智神社のかわりに）",
+    "en": "Kurashiki Ivy Square\n\nThe first mill of the Kurashiki Spinning Works, built in 1889. The architect Urabe Shizutaro turned it into a hotel, keeping walls and frame.\n\nThe courtyard is the thing to see: ivy green in summer, red in autumn, bare in winter. In by the west gate and out by the east is a short cut to Honmachi.\n\nThe Kurabo Memorial Hall in the grounds tells the spinning company’s story: 10:00–16:00 (last entry 15:45), every day, ¥300.\n\nRecommended visit time: 14:00–14:20 (instead of Achi Shrine)"
    },
    "gmaps": [
     {
@@ -2575,6 +2633,17 @@
       "ja": "https://www.ivysquare.co.jp/history/",
       "en": "https://www.ivysquare.co.jp/history/"
      }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "倉紡記念館（倉敷紡績）",
+      "en": "Kurabo Memorial Hall (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kurabo.co.jp/kurabo_kinenkan/",
+      "en": "https://www.kurabo.co.jp/kurabo_kinenkan/"
+     }
     }
    ],
    "notices": [],
@@ -2583,8 +2652,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "中庭は自由に歩けます",
-       "en": "The courtyard is free to walk through"
+       "ja": "中庭は自由に歩けます。倉紡記念館：10:00〜16:00（入館15:45まで）、年中無休",
+       "en": "The courtyard is free to walk through. Kurabo Memorial Hall: 10:00–16:00 (last entry 15:45), every day"
       },
       "until": null,
       "from": null
@@ -2592,8 +2661,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "倉紡記念館の時間と料金は要確認",
-       "en": "Kurabo Memorial Hall hours and fee: please check"
+       "ja": "倉紡記念館：一般300円、学生250円、小学生未満無料",
+       "en": "Kurabo Memorial Hall: ¥300, students ¥250, under school age free"
       },
       "until": null,
       "from": null
@@ -2601,10 +2670,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "建物の歴史は公式サイトで確認しました。写真は Wikimedia Commons から。",
-     "en": "The history is from the official website. Photos are from Wikimedia Commons."
+     "ja": "建物の歴史は公式サイト、倉紡記念館は倉敷紡績の公式ページで確認しました。写真は Wikimedia Commons から。",
+     "en": "The history is from the official website; the memorial hall from Kurabo’s own page. Photos are from Wikimedia Commons."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-23"
    },
    "photos": [
     {
