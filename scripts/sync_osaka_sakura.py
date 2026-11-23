@@ -1,131 +1,90 @@
 #!/usr/bin/env python3
-"""ルート型のテンプレート（eizan-line/）の index.html・css・app.js を osaka-sakura/ に写し、大阪の桜用の差分をかけ直す。
-（sync_higashiyama.py と同じ差分。data.plan.defaultMode がないので「全部回る」で開く）
+"""ルート型のテンプレート（eizan-line/）の index.html・css・app.js を osaka-sakura/ に写し、差分をかけ直す。
 
-使い方: python3 scripts/sync_osaka_sakura.py
-- かけ直す差分:
-  - データのパス、保存キー（kyoto-maps-osaka-sakura-…）、タイトルと説明文
-  - 写真ごとのクレジット表示（data の photos の要素を {"file", "credit": {"author", "license", "page"}} にすると、
-    ネットから借りた写真の上に撮影者とライセンスを出す）
-  - info.verified が false のスポットは「公式サイトで確認しました」ではなく「要確認」の一文を出す
-  - 地図を開いたときは data.focus の範囲（歩くエリア）だけを映す。「全体を表示」ボタンでは全部
-  - 最初から「選んで回る」で開く（data.plan.defaultMode が 'pick' のとき。一度切り替えたらその選択を覚える）
-  - 番号だけの #16 のリンクも、そのままの番号で開く（叡山電鉄の旧番号の読み替えはしない）
+使い方: python3 scripts/sync_osaka_sakura.py  （データは先に python3 scripts/build_osaka_sakura_data.py で作る）
+- 共通の差分（コースの切り替え・写真のクレジット・要確認の一文など）は scripts/sync_higashiyama.py にあり、
+  ここではこのマップの名前と番号だけを渡して、そのファイルを実行する
+- コースは2つ（scripts/build_osaka_sakura_data.py が作る）:
+    late  （造幣局は午後の枠・最初に開く）= data/routes/osaka-sakura.json
+    early （造幣局は朝いちばんの枠）       = data/routes/osaka-sakura-early.json
+  ボタンは late を上に並べ替える
+- 春以外（SEASON_FROM〜SEASON_TO の外。月-日で見る）に開くと「春のマップ・いまはやっていない」の一文
+  （i18n.js の offKicker・offHow・offHowText・offLead・offNote）を使い方・紹介ページ・一覧に出す。
+  来春の日程が発表されたら、SEASON_FROM / SEASON_TO と build の notices の日付を直す
+- 2026-11-23 にコースを分けた。「行った」印・回り方・選んだ場所の保存キーはコースごとの名前
+  （kyoto-maps-osaka-sakura-visited-late など）になるので、前の印は引き継がれない
 - osaka-sakura/js/i18n.js はこのマップ専用なので触らない。テンプレートに新しい文言キーが増えたら、i18n.js に手で足す
-- テンプレートの作りが変わって置き換え先が見つからないと、途中で止まる（そのときはこのスクリプトを直す）
+- このマップだけ更新したときは、data_v（データ）と bump（css・js）の数字を上げる
+  （2026-11-22 までは css +100・i18n +101・app +100 だったので、bump は 102 から）
+- 置き換え先が見つからないと途中で止まる（そのときはこのスクリプトを直す）
 """
-import os, re, shutil
-R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-s = open(f'{R}/eizan-line/js/app.js', encoding='utf-8').read()
+import os, re, runpy
 
-def rep(a, b, n=1):
+SEASON_FROM, SEASON_TO = '04-01', '04-20'
+R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CFG = dict(
+    id='osaka-sakura', i18n='OSAKA_SAKURA_I18N', count=4, data_v=2, bump=102,
+    head='大阪 造幣局の桜の通り抜け（大阪城 西の丸庭園・毛馬桜之宮公園）',
+    title='大阪 造幣局の桜の通り抜け｜春のマップ Osaka Sakura MAP',
+    desc='春のマップ。4月中旬の約1週間だけ開く造幣局の桜の通り抜け（事前申込制）を、申し込んだ時間帯に合わせて。大阪城 西の丸庭園と玉造口の八重桜、大川沿いの毛馬桜之宮公園、夜は天満か道頓堀まで。梅田〜難波のホテルから。A spring map for the week in mid-April when the Japan Mint opens its cherry walk (booking required), built around your entry slot, with Osaka Castle, the Okawa riverside and an evening in Tenma or Dotonbori, starting from a hotel between Umeda and Namba.',
+    main='造幣局の桜の通り抜け', alt='Osaka Mint cherry walk', sub='大阪 Osaka Sakura MAP')
+runpy.run_path(os.path.join(R, 'scripts', 'sync_higashiyama.py'), init_globals={'CFG': CFG})
+
+s = ''
+
+
+def rep(a, b):
     global s
-    assert s.count(a) == n, (a[:80], s.count(a))
+    assert s.count(a) == 1, (a[:80], s.count(a))
     s = s.replace(a, b)
 
-s = s.replace(s.split('(function () {')[0], """/* 大阪 造幣局の桜の通り抜けと大阪城の桜 — map, list, spot detail, intro and language switch.
-   Data: ../data/routes/osaka-sakura.json（写真は ../images/osaka-sakura/）. Texts: js/i18n.js
-   eizan-line/js/app.js の複製。違いは scripts/sync_osaka_sakura.py の説明を参照
-   （テンプレートを更新したら python3 scripts/sync_osaka_sakura.py で写し直す） */
-""", 1)
-assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
-s = s.replace("window.EIZAN_I18N", "window.OSAKA_SAKURA_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-osaka-sakura-")
-s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 4;", s)
-m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/osaka-sakura.json?v=1')")
 
-# 最初から「選んで回る」
-rep("mode = load(KEY_MODE) === 'pick' && data.plan ? 'pick' : 'all';",
-    "mode = (load(KEY_MODE) || (data.plan && data.plan.defaultMode)) === 'pick' && data.plan ? 'pick' : 'all';")
+# app.js
+APP = f'{R}/osaka-sakura/js/app.js'
+s = open(APP, encoding='utf-8').read()
+rep("違いは scripts/sync_higashiyama.py の説明を参照",
+    "違いは scripts/sync_osaka_sakura.py と scripts/sync_higashiyama.py の説明を参照")
+rep("""  // コース: early（早朝に出発）か late（9〜10時に出発）。コースごとにデータファイルが別で、スポットの番号も変わる。
+""", """  // コース: late（造幣局は午後の枠）か early（朝いちばんの枠）。コースごとにデータファイルが別で、スポットの番号も変わる。
+""")
+rep("""  course.file = 'osaka-sakura' + (course.id === 'early' ? '-early' : '') + '.json';
+""", f"""  course.file = 'osaka-sakura' + (course.id === 'early' ? '-early' : '') + '.json';
+  var md = todayJST().slice(5);     // 月-日。通り抜けの時期以外は「春のマップ」の一文を出す
+  var offSeason = md < '{SEASON_FROM}' || md > '{SEASON_TO}';
+""")
+rep("""    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+  });
+""", """    if (o) Object.keys(o).forEach(function (k) { I18N[l].intro[k] = o[k]; });
+    // 通り抜けの時期以外は「春のマップ・いまはやっていない」の一文を先に出す
+    if (offSeason) {
+      I18N[l].intro.kicker = I18N[l].offKicker;
+      // 使い方の1つ目は、開いて最初に見える場所
+      I18N[l].intro.how[0].title = I18N[l].offHow;
+      I18N[l].intro.how[0].text = I18N[l].offHowText + I18N[l].intro.how[0].text;
+      I18N[l].intro.lead = I18N[l].offLead + I18N[l].intro.lead;
+      I18N[l].listNote = I18N[l].offNote + I18N[l].listNote;
+    }
+  });
+  if (offSeason) document.body.classList.add('off-season');
+""")
+open(APP, 'w', encoding='utf-8').write(s)
 
-# 番号だけのリンク
-rep("""    // #spot-16 が今の形式。以前配った #18 形式のリンクは旧番号（スタート前の2か所を含む）なので 2 を引いて開く
-    var m = location.hash.match(/^#spot-(\\d+)$/), old = location.hash.match(/^#(\\d+)$/);
-    var no = m ? Number(m[1]) : old ? Number(old[1]) - 2 : 0;""",
-"""    // #spot-16 の形。番号だけの #16 でも同じスポットを開く
-    var m = location.hash.match(/^#spot-(\\d+)$/) || location.hash.match(/^#(\\d+)$/);
-    var no = m ? Number(m[1]) : 0;""")
+# index.html（午後の枠のボタンを上に）
+PAGE = f'{R}/osaka-sakura/index.html'
+s = open(PAGE, encoding='utf-8').read()
+m = re.search(r'    <p class="sw-label" data-t="swCourse">.*?    </div>\n', s, re.S)
+assert m
+rep(m.group(0),
+    '    <p class="sw-label" data-t="swCourse">造幣局に入る時間帯</p>\n'
+    '    <div class="modesw coursesw" role="group" data-t-aria="courseAria" aria-label="造幣局に入る時間帯">\n'
+    '      <button type="button" data-course="late" data-t="courseLate">午後の枠（15時ごろ）\n9:30ごろ梅田・なんば発</button>\n'
+    '      <button type="button" data-course="early" data-t="courseEarly">朝いちばんの枠（平日10時・土日9時）\n9:15ごろ（土日8:20ごろ）発</button>\n'
+    '    </div>\n')
+open(PAGE, 'w', encoding='utf-8').write(s)
 
-# 写真ごとのクレジット
-rep("  function photoUrl(f) { return data.photoBase + f; }",
-"""  // a photo is a file name, or {file, credit: {author, license, page}} for a photo taken from the web
-  function photoFile(p) { return typeof p === 'string' ? p : p.file; }
-  function photoUrl(p) { return data.photoBase + photoFile(p); }
-  function creditHtml(p) {
-    var c = p && p.credit;
-    if (!c) return '';
-    return '<a href="' + esc(c.page) + '" target="_blank" rel="noopener noreferrer">' + esc(T().photoBy) + esc(c.author) + ' / ' + esc(c.license) + '</a>';
-  }
-  function showCredit(el, p) {
-    if (!el) return;
-    var h = creditHtml(p);
-    el.innerHTML = h;
-    el.hidden = !h;
-  }""")
-rep("""        }).join('') + '</div>' + badge(s.no) +""",
-"""        }).join('') + '</div>' + badge(s.no) +
-        '<span class="l-cr"' + (creditHtml(s.photos[0]) ? '' : ' hidden') + '>' + creditHtml(s.photos[0]) + '</span>' +""")
-rep("""        var box = sl.parentNode, c = box.querySelector('.l-count');
-        if (c) c.textContent = (i + 1) + ' / ' + n;""",
-"""        var box = sl.parentNode, c = box.querySelector('.l-count');
-        if (c) c.textContent = (i + 1) + ' / ' + n;
-        var sp = byNo[Number(sl.dataset.open)];
-        if (sp) showCredit(box.querySelector('.l-cr'), sp.photos[i]);""")
-rep("""    $('slide-next').disabled = i >= n - 1;
-  }""", """    $('slide-next').disabled = i >= n - 1;
-    if (activeNo && byNo[activeNo]) showCredit($('ph-credit'), byNo[activeNo].photos[i]);
-  }""")
-rep("""    $('detail-scroll').scrollTop = 0;
-    setActive(no);""", """    $('detail-scroll').scrollTop = 0;
-    setActive(no);
-    showCredit($('ph-credit'), s.photos[0]);""")
-rep("""    [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
-      img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
-    });
-  }""", """    [].forEach.call($('slides').querySelectorAll('img'), function (img, i) {
-      img.alt = s.name[lang] + ' (' + (i + 1) + '/' + s.photos.length + ')';
-    });
-    if (activeNo === s.no) updateCounter();   // photo credit in the current language
-  }""")
-
-# 要確認
-rep("""    if (rows.length) html += '<p class="checked">' + esc(fill(t.checked, { d: t.checkedDate })) + '</p>';""",
-"""    if (rows.length) html += '<p class="checked">' + esc(fill(inf.verified === false ? t.unchecked : t.checked, { d: t.checkedDate })) + '</p>';""")
-
-# 最初に映す範囲
-rep("""  function fitAll() {
-    var r = routeSpots();""", """  // 地図を開いたときは歩くエリア（data.focus）だけを映す。「全体を表示」ボタン（e がある）では全部
-  function fitAll(e) {
-    var r = routeSpots(), f = !e && data.focus;
-    if (f) r = r.filter(function (x) { return x.no >= f.first && x.no <= f.last; });""")
-app_js = s
-
-# index.html
-h = open(f'{R}/eizan-line/index.html', encoding='utf-8').read()
-h = re.sub(r'<title>.*?</title>', '<title>大阪 造幣局の桜の通り抜け Osaka Sakura MAP</title>', h)
-h = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="4月中旬の1週間だけ開く造幣局の桜の通り抜けと、大川沿いの毛馬桜之宮公園、大阪城 西の丸庭園の桜を歩く春のルートマップ。A mid-April walk in Osaka: the Japan Mint cherry-blossom walk, the Okawa riverside and Osaka Castle.">', h)
-h = re.sub(r'(<p class="t-main" id="t-main">).*?(</p>)', r'\1造幣局の桜の通り抜け\2', h)
-h = re.sub(r'(<p class="t-alt" id="t-alt">).*?(</p>)', r'\1Osaka Mint cherry walk\2', h)
-h = re.sub(r'(<p class="t-sub">)[^<]*(<span)', r'\1京都から日帰り Osaka MAP\2', h)
-a = '<span class="ph-area" id="ph-area"></span>'
-assert h.count(a) == 1
-h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
-# CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-EXTRA = {'css/style.css': 0, 'js/i18n.js': 1, 'js/app.js': 0}  # このマップだけ更新したときに上げる分（2026-11-20 点検の修正で app.js +1）
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
-
-css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
-/* 大阪の桜: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */
-.l-cr, .ph-credit { position: absolute; z-index: 1; max-width: calc(100% - 120px); font-size: 10.5px; line-height: 1.35; color: #fff; background: rgba(18,22,20,.62); padding: 3px 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.l-cr a, .ph-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
-.l-cr { left: 10px; bottom: 10px; }
-.ph-credit { right: 10px; top: 10px; }
-.l-cr[hidden], .ph-credit[hidden] { display: none; }
-"""
-
-# ここまで来たら全部書き込む
-os.makedirs(f'{R}/osaka-sakura/js', exist_ok=True); os.makedirs(f'{R}/osaka-sakura/css', exist_ok=True)
-open(f'{R}/osaka-sakura/css/style.css', 'w', encoding='utf-8').write(css)
-open(f'{R}/osaka-sakura/js/app.js', 'w', encoding='utf-8').write(app_js)
-open(f'{R}/osaka-sakura/index.html', 'w', encoding='utf-8').write(h)
-print('synced')
+# css
+CSS = f'{R}/osaka-sakura/css/style.css'
+open(CSS, 'a', encoding='utf-8').write("""/* 造幣局の桜: 季節外は一覧の一文を目立たせる */
+.off-season .list-note { padding: 8px 10px; background: var(--warn-soft); color: #4A3209; }
+""")
+print('patched osaka-sakura (2 courses, season)')
