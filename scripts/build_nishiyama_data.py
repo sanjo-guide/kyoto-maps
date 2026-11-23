@@ -19,6 +19,8 @@
 - 写真は images/nishiyama/<スポットのid>-<番号>.jpg を番号の順に全部使う（足していない）。
   嵐山・桂離宮・西芳寺・カフェは写真がないので、スポットにせず文章で案内する
 - 2026-11-22 オーナーの基準で作り直した（ゲストが実際に回れる1日。説法の回に合わせた2コース、午後のつなぎ、夜）
+- 2026-11-24 「要確認」を調べ直した（RECHECK）。京都バスの年末年始（12/29〜1/3は休日ダイヤ）を入れた。
+  お寺の支払い方法・鈴虫寺の受付開始と英語・苔乃茶屋・阪急の年末年始は、公式に記載・発表がなく要確認のまま
 """
 import copy, json, os, re, urllib.parse
 
@@ -26,6 +28,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAP_ID = "nishiyama"
 IMG = f"{R}/images/{MAP_ID}"
 CHECKED = "2026-11-22"
+RECHECK = "2026-11-24"   # 「要確認」を調べ直した日（スポットの _checked と、sources の一部）
 LAST_OPEN = "2026-12-13"   # 浄住寺の特別拝観・地蔵院の寺宝展の最終日
 OFF = "2026-12-14"
 
@@ -184,7 +187,8 @@ BASE = dict(
                row("fee", "庭園と神像館の共通券 大人500円、学生400円、子ども300円。お参りだけなら無料", "Gardens and statue hall ¥500 adults, ¥400 students, ¥300 children. Free just to visit the shrine")],
         _tip=T("庭園の時間と料金は松尾大社の公式サイト、境内の時間は京都観光Naviで確認しました。支払い方法は書かれていません（要確認）。",
                "Garden hours and fees from the shrine website, grounds hours from Kyoto Kanko Navi. Payment methods aren’t stated (please check)."),
-        _source="松尾大社 公式サイト（庭園拝観）、京都観光Navi 松尾大社（境内の時間）。2026-11-22に確認"),
+        _checked=RECHECK,
+        _source="松尾大社 公式サイト（庭園拝観ほか各ページ）、京都観光Navi 松尾大社（境内の時間）。2026-11-22に確認、2026-11-24に再確認（支払い方法はどのページにも記載なし）"),
     suzumushi=dict(
         name=T("鈴虫寺（華厳寺）", "Suzumushi-dera (Kegon-ji)"), kind=T("寺・説法", "Temple & talk"),
         blurb=T("一年中鈴虫が鳴く部屋で、お茶とお菓子と30分の説法。そのあと、京都の町を見下ろす庭へ。",
@@ -210,7 +214,8 @@ BASE = dict(
                row("fee", "大人500円、子ども（4歳〜中学生）300円。お茶とお菓子つき", "¥500 adults, ¥300 children aged 4 to junior high; tea and a sweet included")],
         _tip=T("鈴虫寺の公式サイト（拝観案内・はじめての方へ・混雑予想）で確認しました。支払い方法は書かれていません（要確認）。",
                "Checked on the temple website (visitor guide, first-visit page, crowd forecast). Payment methods aren’t stated (please check)."),
-        _source="鈴虫寺 公式サイト（拝観案内、初めてご参拝の方へ、混雑予想カレンダー）。2026-11-22に確認"),
+        _checked=RECHECK,
+        _source="鈴虫寺 公式サイト（拝観案内、初めてご参拝の方へ、混雑予想カレンダー）。2026-11-22に確認、2026-11-24に再確認（受付の開始時刻・支払い方法・英語の説明は、拝観案内・初めての方へ・説法・団体・アクセスのどのページにも記載なし）"),
     kokenochaya=dict(
         name=T("苔乃茶屋（お昼）", "Koke-no-chaya (lunch)"), kind=T("ランチ", "Lunch"),
         blurb=T("苔寺の門前の茶屋で、とろろそばか、にしんそば。",
@@ -243,7 +248,8 @@ BASE = dict(
         _rows=[row("hours", "要確認（2020年更新のグルメサイトでは9:30〜16:00、料理は15:30まで）", "Please check (a 2020 listing gives 9:30–16:00, food until 15:30)"),
                row("closed", "要確認", "Please check")],
         _tip=T("西芳寺の申し込み方は西芳寺と西芳会の公式サイトで確認しました。", "The Saihoji application details were checked on its official websites."),
-        _source="苔乃茶屋：公式サイトなし。ホットペッパーの店舗情報（2020-01-07更新）は参考（要確認）。西芳寺：公式サイトと into Saihoji。2026-11-22に確認"),
+        _checked=RECHECK,
+        _source="苔乃茶屋：公式サイト・公式SNSは見つからず（2026-11-24に再確認）。ホットペッパーの店舗情報（2020-01-07更新）は参考（要確認）。西芳寺：公式サイトと into Saihoji。2026-11-22に確認"),
     jizoin=dict(
         name=T("地蔵院（竹の寺）", "Jizoin (the Bamboo Temple)"), kind=T("寺", "Temple"),
         blurb=T("竹林の参道の先に、座って眺める苔の庭。ハートの形の窓でも知られる「竹の寺」です。",
@@ -263,7 +269,7 @@ BASE = dict(
                link("info", "地蔵院の拝観カレンダー", "Jizoin opening calendar (Japanese)", JIZO)],
         notices=[N_JIZO_OPEN, N_JIZO_DEC, N_JIZO_JAN],
         _cash=True,
-        _rows=[row("hours", "9:00〜16:00（最終受付15:40、方丈は15:50まで）", "9:00–16:00 (last entry 15:40; abbot’s hall until 15:50)"),
+        _rows=[row("hours", "9:00〜16:00（最終受付15:40、方丈は15:50まで）。公式サイトのトップには最終受付15:50とあり、早い方を書いています", "9:00–16:00 (last entry 15:40; abbot’s hall until 15:50). The front page of the temple website says last entry 15:50; the earlier time is given here"),
                row("closed", "12月13日までは無休（臨時休みを除く）", "Open daily until 13 December (barring special closures)", until=LAST_OPEN),
                row("closed", "2026年12月14日・17〜24日・29日", "14, 17–24 and 29 December 2026", until="2026-12-31", frm="2026-12-01"),
                row("closed", "2027年1月5〜8日・12〜15日・18日〜2月5日・2月8〜10日・14日", "5–8 and 12–15 January, 18 January – 5 February, 8–10 and 14 February 2027", until="2027-02-14", frm="2026-12-14"),
@@ -272,7 +278,8 @@ BASE = dict(
                row("fee", "大人1,000円、6〜17歳500円。日本に住んでいる人は当面、大人500円・小中高生300円（寺宝特別拝観の間は除く）", "¥1,000 adults, ¥500 aged 6–17. For now residents of Japan pay ¥500, pupils ¥300 (except during treasure displays)", frm=OFF)],
         _tip=T("地蔵院の公式サイト（参拝案内と拝観カレンダー）で確認しました。支払い方法は書かれていません（要確認）。",
                "Checked on the temple website (visitor guide and calendar). Payment methods aren’t stated (please check)."),
-        _source="地蔵院 公式サイト（参拝案内・アクセス、拝観カレンダー）。2026-11-22に確認。最終受付はトップに15:50、参拝案内に15:40とあり、早い方を書いた"),
+        _checked=RECHECK,
+        _source="地蔵院 公式サイト（参拝案内・アクセス、拝観カレンダー）。2026-11-22に確認、2026-11-24に再確認。最終受付は2026-11-24もトップに15:50、参拝案内に「15:40、方丈は15:50閉場」とあり、早い方を書いた。支払い方法の記載なし"),
     jojuji=dict(
         name=T("浄住寺", "Jojuji"), kind=T("寺（特別公開）", "Temple (special opening)"),
         blurb=T("長い石段と苔、亀甲竹の黄檗宗のお寺。特別公開のときだけ中に入れます。",
@@ -295,7 +302,8 @@ BASE = dict(
                row("fee", "大人1,000円、子ども500円。抹茶とお菓子は土日祝だけ・1,000円", "¥1,000 adults, ¥500 children. Matcha and a sweet at weekends and holidays only, ¥1,000", until=LAST_OPEN)],
         _tip=T("浄住寺の公式サイトと特別拝観のチラシで確認しました。支払い方法は書かれていません（要確認）。",
                "Checked on the temple website and its leaflet. Payment methods aren’t stated (please check)."),
-        _source="浄住寺 公式サイト（拝観について、特別拝観のPDF）。2026-11-22に確認"),
+        _checked=RECHECK,
+        _source="浄住寺 公式サイト（拝観について、特別拝観のPDF、英語のページ）。2026-11-22に確認、2026-11-24に再確認（支払い方法の記載なし）"),
 )
 
 VIS = ("おすすめ訪問時間", "Recommended visit time")
@@ -347,12 +355,12 @@ AFTER_EARLY = T(
 BACK_COMMON = [
     row("hours", "宝厳院の夜：17:30〜20:30（受付20:00まで）・1,000円、12月6日まで", "Hogon-in evenings: 17:30–20:30 (last entry 20:00), ¥1,000, until 6 Dec", until="2026-12-06"),
     row("train", "帰り：阪急嵐山17:33発（土日祝17:27発）→京都河原町17:57着（17:53着）・240円。最後は23:51発→0:19着", "Back: Hankyu Arashiyama 17:33 (weekends and holidays 17:27) → Kyoto-Kawaramachi 17:57 (17:53), ¥240. Last 23:51 → 0:19"),
-    row("train", "京都バス63系統で三条京阪前へ：苔寺・すず虫寺から約65分・230円。最終は平日19:50発→20:48着、土日祝19:42発→20:40着", "Kyoto Bus 63 to Sanjo-Keihan-mae: about 65 min from Kokedera-Suzumushidera, ¥230. Last: weekdays 19:50 → 20:48, weekends and holidays 19:42 → 20:40"),
+    row("train", "京都バス63系統で三条京阪前へ：苔寺・すず虫寺から約65分・230円。最終は平日19:50発→20:48着、土日祝19:42発→20:40着。12月29日〜1月3日は土日祝の時刻", "Kyoto Bus 63 to Sanjo-Keihan-mae: about 65 min from Kokedera-Suzumushidera, ¥230. Last: weekdays 19:50 → 20:48, weekends and holidays 19:42 → 20:40. 29 Dec – 3 Jan runs to the holiday timetable"),
 ]
 BACK_LATE = [row("train", "嵐山へ：松尾大社駅15:17発→嵐山15:19着・170円（毎日同じ）", "To Arashiyama: Matsuo-taisha 15:17 → Arashiyama 15:19, ¥170 (every day)")] + BACK_COMMON
 BACK_EARLY = [row("train", "嵐山へ：松尾大社駅14:05発→嵐山14:07着・170円。桂離宮へ：14:17発→桂14:22着・170円（どちらも毎日同じ）", "To Arashiyama: Matsuo-taisha 14:05 → 14:07, ¥170. For Katsura villa: 14:17 → Katsura 14:22, ¥170 (both every day)")] + BACK_COMMON
-TRANSIT_TIP = T("阪急は乗換案内（Yahoo!路線情報）で平日・土曜・日曜を、京都バスは公式の時刻表（2026年9月28日からのダイヤ）で確認しました。年末年始の運行は要確認です。歩く時間は地図で測って、少しゆったりめに書いています。",
-                "Hankyu was checked on a route planner for a weekday, a Saturday and a Sunday; Kyoto Bus on its official timetable (from 28 September 2026). Please check services over the New Year. Walking times are map estimates, rounded up a little.")
+TRANSIT_TIP = T("阪急は乗換案内（Yahoo!路線情報）で平日・土曜・日曜を、京都バスは公式の時刻表（2026年9月28日からのダイヤ）で確認しました。京都バスは12月29日〜1月3日と8月14〜16日は休日ダイヤです（公式の時刻表）。阪急の年末年始の運行は11月24日の時点で発表がなく、要確認です。歩く時間は地図で測って、少しゆったりめに書いています。",
+                "Hankyu was checked on a route planner for a weekday, a Saturday and a Sunday; Kyoto Bus on its official timetable (from 28 September 2026). Kyoto Bus runs its holiday timetable on 29 December – 3 January and 14–16 August (official timetable). Hankyu had not announced its New Year timetable as of 24 November, so please check. Walking times are map estimates, rounded up a little.")
 
 # ---------------------------------------------------------------------------
 # コースごとの並び順・時間・行き方
@@ -407,7 +415,7 @@ COURSES = [
         id="early", file="nishiyama-early.json",
         note="「鈴虫寺の最初の説法へ」コース。京都河原町8:01（土日祝8:00）の阪急で松尾大社駅→鈴虫寺9:00の説法→BAMBOO COFFEE でひと休み→地蔵院→浄住寺→苔乃茶屋でお昼→松尾大社→14:05の阪急で嵐山（モンキーパーク・天龍寺）か、申し込んだ人は桂離宮→夜は街なか。浄住寺の公開が終わった12月14日からは、お昼を早める。",
         rows=[row("train", "行き：京都河原町8:01発（土日祝8:00発）の阪急 → 桂で乗り換え → 松尾大社8:23着（土日祝8:20着）・240円、歩いて15〜20分", "Out: Hankyu from Kyoto-Kawaramachi 8:01 (8:00 at weekends and on holidays) → change at Katsura → Matsuo-taisha 8:23 (8:20), ¥240, then 15–20 min on foot"),
-              row("train", "乗り換えなし：三条京阪前7:15発（土日祝7:38発）の京都バス63系統 → 苔寺・すず虫寺8:07着（土日祝8:30着）・230円、歩いて5分", "No change: Kyoto Bus 63 from Sanjo-Keihan-mae 7:15 (7:38 at weekends and on holidays) → Kokedera-Suzumushidera 8:07 (8:30), ¥230, then 5 min on foot")],
+              row("train", "乗り換えなし：三条京阪前7:15発（土日祝7:38発。12月29日〜1月3日も）の京都バス63系統 → 苔寺・すず虫寺8:07着（土日祝8:30着）・230円、歩いて5分", "No change: Kyoto Bus 63 from Sanjo-Keihan-mae 7:15 (7:38 at weekends, on holidays and 29 Dec – 3 Jan) → Kokedera-Suzumushidera 8:07 (8:30), ¥230, then 5 min on foot")],
         order=[
             ("suzumushi", "8:45〜9:45（説法は9:00の回）", "8:45–9:45 (the 9:00 talk)",
              T("このコースは、最初の9:00の説法に入ります。松尾大社駅から鳥居の前を左（南）へ、山すその道を歩いて15〜20分。8:45ごろに門の前に着いて待ちます。バスは道が混むと遅れます。\n\n"
@@ -459,8 +467,8 @@ def yurl(frm, to, ymd, hm, typ=1):
     return "https://transit.yahoo.co.jp/search/result?" + urllib.parse.urlencode(q)
 
 
-def src(what, url):
-    return {"what": what, "url": url, "checked": CHECKED}
+def src(what, url, checked=CHECKED):
+    return {"what": what, "url": url, "checked": checked}
 
 
 SOURCES = [
@@ -482,23 +490,26 @@ SOURCES = [
     src("京都バス63系統 三条京阪前（2026-09-28からのダイヤ）：平日7:15発、土日祝7:38発", KBUS_SANJO),
     src("同じ便の停車時刻と運賃：平日7:15→松尾大社前8:02→苔寺・すず虫寺8:07、土日祝7:38→8:25→8:30、230円", "https://www.kyotobus.jp/assets/json/114_5/master/20260928/fare.json"),
     src("京都バス63系統 苔寺・すず虫寺発：平日12:58・14:28・最終19:50、土日祝13:01・14:31・最終19:42", KBUS),
+    src("京都バスの時刻表（苔寺・すず虫寺、三条京阪前）の注記：8月14日〜8月16日と12月29日〜1月3日は「休日ダイヤ」で運行", KBUS, RECHECK),
+    src("阪急の年末年始（2026〜2027年）の運行：阪急電鉄の公式サイトでは2026-11-24の時点で未発表（要確認）", "https://www.hankyu.co.jp/", RECHECK),
     src("同じ便の停車時刻と運賃：平日12:58→松尾大社前13:01→阪急嵐山駅前13:05、19:50→三条京阪前20:48。土日祝13:01→13:04→13:08、19:42→三条京阪前20:40。230円", "https://www.kyotobus.jp/assets/json/6109_1/master/20260928/fare.json"),
-    src("鈴虫寺：9:00〜17:00（入門16:30まで）、無休、大人500円・子ども300円、説法10回（9:00、9:50、10:40、11:30、12:20、13:10、14:00、14:50、15:40、16:20）。支払い方法・受付の開始時刻の記載なし", SUZU_GUIDE),
+    src("鈴虫寺：9:00〜17:00（入門16:30まで）、無休、大人500円・子ども300円、説法10回（9:00、9:50、10:40、11:30、12:20、13:10、14:00、14:50、15:40、16:20）。支払い方法・受付の開始時刻・英語の説明の記載なし（2026-11-24に再確認）", SUZU_GUIDE, RECHECK),
     src("鈴虫寺：石段80段、予約不要、約40分、1回約125名（最大約175名）、約1時間待つ場合あり", SUZU_HOWTO),
     src("鈴虫寺 混雑予想：終日混んでいる 11/22・23・28・29、比較的混雑 11/24〜27・30、12/5・6・26〜30。午後からは空いている場合あり", SUZU),
-    src("地蔵院：9:00〜16:00（最終受付15:40、方丈15:50）、木金休み（7・8月は月木）、大人1,000円（国内在住は当面500円、寺宝特別拝観の間は一律1,000円）、猪目窓は寺宝特別拝観の間は見られない", JIZO_ACCESS),
+    src("地蔵院：9:00〜16:00（最終受付15:40、方丈15:50閉場）、木金休み（7・8月は月木）、大人1,000円（国内在住は当面500円、寺宝特別拝観の間は一律1,000円）、猪目窓は寺宝特別拝観の間は見られない。支払い方法の記載なし（2026-11-24に再確認）", JIZO_ACCESS, RECHECK),
+    src("地蔵院 トップページ：拝観時間 9:00〜16:00（最終受付15:50）。参拝案内の15:40と食い違うため、早い方を書いた", JIZO, RECHECK),
     src("地蔵院 拝観カレンダー（トップに埋め込み）：寺宝特別公開10/31〜12/13。休観 2026-12/14・17〜24・29、2027-1/5〜8・12〜15・1/18〜2/5・2/8〜10・2/14、2/18からは木金", JIZO),
-    src("浄住寺：通常拝観なし。秋の特別拝観 2026-11/21〜12/13、9:30〜16:30（最終受付16:00）、1,000円・子ども500円、抹茶1,000円は土日祝のみ", JOJU),
+    src("浄住寺：通常拝観なし。秋の特別拝観 2026-11/21〜12/13、9:30〜16:30（最終受付16:00）、1,000円・子ども500円、抹茶1,000円は土日祝のみ。支払い方法の記載なし（2026-11-24に再確認）", JOJU, RECHECK),
     src("浄住寺 特別拝観のチラシ：期間・時間・料金は同じ。上桂駅から徒歩約10分（約800m）", "https://jojuji.org/r/admission/1.pdf"),
-    src("松尾大社：庭園・神像館 9:00〜16:00（日祝16:30）、大人500円・学生400円・子ども300円", MATSUO_GARDEN),
+    src("松尾大社：庭園・神像館 9:00〜16:00（日祝16:30）、大人500円・学生400円・子ども300円。支払い方法の記載なし（2026-11-24に再確認）", MATSUO_GARDEN, RECHECK),
     src("松尾大社：境内5:00〜18:00、無休（京都観光Navi）", MATSUO_NAVI),
     src("西芳寺 日々参拝：前日までの申込制、写経のあと庭園・約60分", SAIHO),
     src("西芳寺 オンライン：2か月前〜前日23:59、4,000円以上＋165円、カードのみ、2名まで、13歳以上、取消料は3日前から", SAIHO_ONLINE),
     src("西芳寺 往復はがき：2か月前〜1か月前消印、4,000円以上・当日現金のみ、時間指定不可（原則10〜12時ごろ）", SAIHO_CARD),
     src("西芳寺：日々参拝は2027-01-12〜02-26休止", SAIHO_REST),
-    src("BAMBOO COFFEE：9:30〜17:30、年中無休（不定休）、電子マネー・スマホ決済・カード・現金、バス停から0分", BAMBOO),
-    src("BAMBOO COFFEE：苔寺の休みに合わせて不定休（京都市「にしてらす」。閉店は17:00とあり公式と違う）", "https://nishiterrace.city.kyoto.lg.jp/shop/bamboo-coffee/"),
-    src("苔乃茶屋：公式サイトなし。グルメサイトの店舗情報（2020-01-07更新）9:30〜16:00（料理LO15:30）、カード・電子マネー不可。いまの時間は要確認", CHAYA),
+    src("BAMBOO COFFEE：9:30〜17:30、年中無休（不定休）、電子マネー・スマホ決済・カード・現金、バス停から0分（2026-11-24に再確認）", BAMBOO, RECHECK),
+    src("BAMBOO COFFEE：苔寺の休みに合わせて不定休（京都市「にしてらす」。閉店は17:00とあり公式の17:30と違う。2026-11-24も同じ。コースで使うのは朝と昼なので、閉店の時刻はページに出していない）", "https://nishiterrace.city.kyoto.lg.jp/shop/bamboo-coffee/", RECHECK),
+    src("苔乃茶屋：公式サイト・公式SNSなし（2026-11-24に再確認）。グルメサイトの店舗情報（2020-01-07更新）9:30〜16:00（料理LO15:30）、カード・電子マネー不可。いまの時間は要確認", CHAYA, RECHECK),
     src("天龍寺：庭園8:30〜17:00（受付16:50、北門も）、500円", TENRYU),
     src("宝厳院：夜間特別拝観 2026-11/13〜12/6、17:30〜20:30（受付20:00）、1,000円、昼夜入替", HOGON),
     src("嵐山モンキーパーク：9:00〜16:00（山頂16:30）、800円、現金のみ、1/1休み、阪急嵐山駅から7分", MONKEY),
@@ -520,7 +531,7 @@ def build(c):
     for sid, tj, te, go in order:
         b = copy.deepcopy(BASE[sid])
         body, rows, tip, source = b.pop("body"), b.pop("_rows"), b.pop("_tip"), b.pop("_source")
-        cash, verified = b.pop("_cash", False), b.pop("_verified", True)
+        cash, verified, checked = b.pop("_cash", False), b.pop("_verified", True), b.pop("_checked", CHECKED)
         first = NO[sid] == 1
         if first:
             rows = c["rows"] + rows
@@ -543,7 +554,7 @@ def build(c):
             b["links"].append(L_BAMBOO)
         if first or sid == last:
             tip = T(tip["ja"] + TRANSIT_TIP["ja"], tip["en"] + " " + TRANSIT_TIP["en"])
-        inf = {"rows": rows, "cash": cash, "tip": tip, "checked": CHECKED, "source": source}
+        inf = {"rows": rows, "cash": cash, "tip": tip, "checked": checked, "source": source}
         if not verified:
             inf["verified"] = False
         out = {"no": NO[sid], "id": sid}
