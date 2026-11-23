@@ -279,6 +279,15 @@
       },
       "until": null,
       "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "トイレ：大原バス停（大原バスターミナル）の中の京都市の公衆トイレ。6:30ごろ〜21:30ごろ（バスの運行時間に合わせて）",
+       "en": "Toilets: city public toilets inside the Ohara bus terminal, about 6:30–21:30 (matching the bus service)"
+      },
+      "until": null,
+      "from": null
      }
     ],
     "cash": false,
@@ -287,11 +296,11 @@
      "en": "Bus times and fares were checked on Kyoto Bus’s official timetable (the timetable revised on 28 September 2026 and the autumn timetable for 21 November–6 December). In autumn the times vary a little from day to day, and buses run late when the road is busy: check the official timetable before you go. Subway times and fares are from a route planner; the pass area is from Kyoto Bus’s official area map (checked on the 21st)."
     },
     "checked": "2026-11-22",
-    "source": "京都バス公式サイトの時刻表・運賃（2026-11-22）、乗換案内（Yahoo!路線情報）2026-11-22、1日券は京都バス公式サイト（2026-11-21）"
+    "source": "京都バス公式サイトの時刻表・運賃（2026-11-22）、乗換案内（Yahoo!路線情報）2026-11-22、1日券は京都バス公式サイト（2026-11-21）、トイレは京都市「(R1)大原の里公衆トイレ」https://www.city.kyoto.lg.jp/kankyo/page/0000331165.html（2026-11-24）"
    },
    "text": {
-    "ja": "大原（おおはら）バス停\n\n大原へ行く乗り物はバスだけです。京都の中心からは、京都バスの17系統「大原」行きが乗り換えなしで便利です。京都駅前を出て、四条河原町、三条京阪前、出町柳駅前の順に止まります。\n\n・三条京阪前から：40〜50分・570円。のりばは、三条大橋の東のたもとから川端通を北へ少し歩いた、川側の歩道です（下の「Googleマップで開く」で場所を確かめられます）。市バスののりばとは別の場所なので、「京都バス 17 大原」の表示を探してください。\n・四条河原町から：三条京阪前の8分前に出ます。590円。\n・出町柳駅前から：三条京阪前の9分後。490円。\n・京都駅前（C3のりば）から：約1時間・630円。始発なので、早めに並べば座れます。\n\nもう1つの行き方は、地下鉄烏丸線で国際会館駅へ行き（烏丸御池から14分・290円）、駅前から京都バス19系統などに乗る方法です。バスは約22分・400円。道が混む秋の週末は、こちらのほうが時間が読めます。\n\nどれも「地下鉄・バス1日券」（1,100円）で乗れます。三条京阪前から往復すると1,140円なので、1日券のほうが少し安く、夜に地下鉄や市バスにも乗れます。1日券は京都バスの車内では買えません。地下鉄の駅の券売機で先に買ってください。\n\nバスは後ろのドアから乗って、前から降ります。ICカード（ICOCA・Suicaなど）は、乗るときと降りるときの2回タッチ。現金は降りるときに運賃箱へ。大原バス停に京都バスの案内所があります。\n\n大原は町なかより寒く、拝観料は現金の所がほとんどです。上着を1枚多く、千円札と小銭を多めに。\n\n三千院が開く時間に合わせるバスです。三条京阪前7:57発（四条河原町からは7:49発）。平日は8:38、土日祝は国際会館駅前を回るので8:49に着きます。ここから参道を15分上ると、三千院の門に9時ごろ。三千院は11月が8:45、ほかの月は9:00に開きます。\n\n朝ごはんは食べてから乗ってください。大原で朝早く開いている食事の店は確かめられていません。三千院のあと、宝泉院のお抹茶とお菓子でひと休みして、11:30に早めのお昼にします。\n\n日曜だけの寄り道：1本早い7:19発（特16系統）に乗って、大原の2分手前の「野村別れ（里の駅大原）」で降りると（8:05着・550円）、里の駅 大原の朝市（6:00〜9:00）に間に合います。そこから三千院までは歩いて30分ほどです。\n\n帰りは14:27発のバスで、三条京阪前に15:10に着きます。\n\nおすすめ到着時間：8:38（平日）／8:49（土日祝）。三条京阪前 7:57発",
-    "en": "Ohara bus stop\n\nBuses are the only way to Ohara. From central Kyoto the simplest is Kyoto Bus 17, bound for Ohara, with no change. It starts at Kyoto Station and stops at Shijo-Kawaramachi, Sanjo-Keihan-mae and Demachiyanagi-ekimae, in that order.\n\n• From Sanjo-Keihan-mae: 40–50 minutes, ¥570. The stop is a short walk north along Kawabata-dori from the east end of Sanjo Ohashi bridge, on the river side of the road (check the spot with the Google Maps button below). It is not at the city-bus stops: look for the sign “Kyoto Bus 17 Ohara”.\n• From Shijo-Kawaramachi: leaves 8 minutes before Sanjo-Keihan-mae. ¥590.\n• From Demachiyanagi-ekimae: 9 minutes after Sanjo-Keihan-mae. ¥490.\n• From Kyoto Station (stop C3): about 1 hour, ¥630. It’s the first stop, so queue early and you get a seat.\n\nThe other way is the Karasuma subway line to Kokusaikaikan (14 minutes from Karasuma Oike, ¥290), then Kyoto Bus 19 and others from outside the station: about 22 minutes, ¥400. On autumn weekends, when the road jams, this way keeps better time.\n\nAll of these are covered by the Subway & Bus 1-day Pass (¥1,100). A return from Sanjo-Keihan-mae is ¥1,140, so the pass is slightly cheaper and also covers the subway and city buses in the evening. It isn’t sold on Kyoto Bus: buy it first from a ticket machine at a subway station.\n\nBoard at the rear door and get off at the front. With an IC card (ICOCA, Suica and so on), tap when you board and again when you get off. With cash, pay into the fare box as you leave. There is a Kyoto Bus information desk at the Ohara stop.\n\nOhara is colder than the city, and most temples take cash. Bring an extra layer, ¥1,000 notes and coins.\n\nThis bus is timed for Sanzen-in’s opening: the 7:57 from Sanjo-Keihan-mae (7:49 from Shijo-Kawaramachi). It arrives at 8:38 on weekdays and, running via Kokusaikaikan station, at 8:49 on weekends and holidays. Fifteen minutes up the lane puts you at Sanzen-in’s gate at about 9:00. The temple opens at 8:45 in November and 9:00 in other months.\n\nHave breakfast before you board: no place to eat in Ohara could be confirmed as open this early. After Sanzen-in, rest over the matcha and sweet at Hosen-in, then have an early lunch at 11:30.\n\nA Sunday-only extra: take the earlier 7:19 (bus Toku-16) and get off at Nomura-wakare (Sato-no-Eki Ohara), two minutes before Ohara (8:05, ¥550), in time for the morning market at Sato-no-Eki Ohara (6:00–9:00). From there it’s about 30 minutes on foot to Sanzen-in.\n\nYou go back on the 14:27 bus, reaching Sanjo-Keihan-mae at 15:10.\n\nRecommended arrival time: 8:38 (weekdays) / 8:49 (weekends and holidays): the 7:57 from Sanjo-Keihan-mae"
+    "ja": "大原（おおはら）バス停\n\n大原へ行く乗り物はバスだけです。京都の中心からは、京都バスの17系統「大原」行きが乗り換えなしで便利です。京都駅前を出て、四条河原町、三条京阪前、出町柳駅前の順に止まります。\n\n・三条京阪前から：40〜50分・570円。のりばは、三条大橋の東のたもとから川端通を北へ少し歩いた、川側の歩道です（下の「Googleマップで開く」で場所を確かめられます）。市バスののりばとは別の場所なので、「京都バス 17 大原」の表示を探してください。\n・四条河原町から：三条京阪前の8分前に出ます。590円。\n・出町柳駅前から：三条京阪前の9分後。490円。\n・京都駅前（C3のりば）から：約1時間・630円。始発なので、早めに並べば座れます。\n\nもう1つの行き方は、地下鉄烏丸線で国際会館駅へ行き（烏丸御池から14分・290円）、駅前から京都バス19系統などに乗る方法です。バスは約22分・400円。道が混む秋の週末は、こちらのほうが時間が読めます。\n\nどれも「地下鉄・バス1日券」（1,100円）で乗れます。三条京阪前から往復すると1,140円なので、1日券のほうが少し安く、夜に地下鉄や市バスにも乗れます。1日券は京都バスの車内では買えません。地下鉄の駅の券売機で先に買ってください。\n\nバスは後ろのドアから乗って、前から降ります。ICカード（ICOCA・Suicaなど）は、乗るときと降りるときの2回タッチ。現金は降りるときに運賃箱へ。\n\n大原バス停（京都バスの大原バスターミナル）の中に、京都市の公衆トイレがあります。開いているのはバスが走る時間に合わせて6:30ごろ〜21:30ごろ。多機能トイレもあります。\n\n大原は町なかより寒く、拝観料は現金の所がほとんどです。上着を1枚多く、千円札と小銭を多めに。\n\n三千院が開く時間に合わせるバスです。三条京阪前7:57発（四条河原町からは7:49発）。平日は8:38、土日祝は国際会館駅前を回るので8:49に着きます。ここから参道を15分上ると、三千院の門に9時ごろ。三千院は11月が8:45、ほかの月は9:00に開きます。\n\n朝ごはんは食べてから乗ってください。大原で朝早く開いている食事の店は、日曜の里の駅 大原（下）のほかは確かめられていません。三千院のあと、宝泉院のお抹茶とお菓子でひと休みして、11:30に早めのお昼にします。\n\n日曜だけの寄り道：1本早い7:19発（特16系統）に乗って、大原の2分手前の「野村別れ（里の駅大原）」で降りると（8:05着・550円）、里の駅 大原の朝市（6:00〜9:00）に間に合います。食堂の花むらさきも日曜は7:30〜9:00に開いていて、卵かけご飯（660円）で朝ごはんにできます。そこから三千院までは歩いて30分ほどです。\n\n帰りは14:27発のバスで、三条京阪前に15:10に着きます。\n\nおすすめ到着時間：8:38（平日）／8:49（土日祝）。三条京阪前 7:57発",
+    "en": "Ohara bus stop\n\nBuses are the only way to Ohara. From central Kyoto the simplest is Kyoto Bus 17, bound for Ohara, with no change. It starts at Kyoto Station and stops at Shijo-Kawaramachi, Sanjo-Keihan-mae and Demachiyanagi-ekimae, in that order.\n\n• From Sanjo-Keihan-mae: 40–50 minutes, ¥570. The stop is a short walk north along Kawabata-dori from the east end of Sanjo Ohashi bridge, on the river side of the road (check the spot with the Google Maps button below). It is not at the city-bus stops: look for the sign “Kyoto Bus 17 Ohara”.\n• From Shijo-Kawaramachi: leaves 8 minutes before Sanjo-Keihan-mae. ¥590.\n• From Demachiyanagi-ekimae: 9 minutes after Sanjo-Keihan-mae. ¥490.\n• From Kyoto Station (stop C3): about 1 hour, ¥630. It’s the first stop, so queue early and you get a seat.\n\nThe other way is the Karasuma subway line to Kokusaikaikan (14 minutes from Karasuma Oike, ¥290), then Kyoto Bus 19 and others from outside the station: about 22 minutes, ¥400. On autumn weekends, when the road jams, this way keeps better time.\n\nAll of these are covered by the Subway & Bus 1-day Pass (¥1,100). A return from Sanjo-Keihan-mae is ¥1,140, so the pass is slightly cheaper and also covers the subway and city buses in the evening. It isn’t sold on Kyoto Bus: buy it first from a ticket machine at a subway station.\n\nBoard at the rear door and get off at the front. With an IC card (ICOCA, Suica and so on), tap when you board and again when you get off. With cash, pay into the fare box as you leave.\n\nThere are public toilets run by the city inside the Ohara bus terminal, open from about 6:30 to about 21:30 to match the bus service, including an accessible toilet.\n\nOhara is colder than the city, and most temples take cash. Bring an extra layer, ¥1,000 notes and coins.\n\nThis bus is timed for Sanzen-in’s opening: the 7:57 from Sanjo-Keihan-mae (7:49 from Shijo-Kawaramachi). It arrives at 8:38 on weekdays and, running via Kokusaikaikan station, at 8:49 on weekends and holidays. Fifteen minutes up the lane puts you at Sanzen-in’s gate at about 9:00. The temple opens at 8:45 in November and 9:00 in other months.\n\nHave breakfast before you board: apart from Sato-no-Eki Ohara on Sundays (below), no place to eat in Ohara could be confirmed as open this early. After Sanzen-in, rest over the matcha and sweet at Hosen-in, then have an early lunch at 11:30.\n\nA Sunday-only extra: take the earlier 7:19 (bus Toku-16) and get off at Nomura-wakare (Sato-no-Eki Ohara), two minutes before Ohara (8:05, ¥550), in time for the morning market at Sato-no-Eki Ohara (6:00–9:00). On Sundays its diner, Hanamurasaki, also opens 7:30–9:00, so you can breakfast on tamago-kake-gohan (rice with raw egg, ¥660). From there it’s about 30 minutes on foot to Sanzen-in.\n\nYou go back on the 14:27 bus, reaching Sanjo-Keihan-mae at 15:10.\n\nRecommended arrival time: 8:38 (weekdays) / 8:49 (weekends and holidays): the 7:57 from Sanjo-Keihan-mae"
    },
    "photos": [
     "bus-1.jpg",
@@ -598,6 +607,32 @@
       "ja": "https://www.shourinin.com/",
       "en": "https://www.shourinin.com/"
      }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "勝林院（大原観光保勝会）",
+      "en": "Shorin-in (Ohara tourist association, Japanese)"
+     },
+     "url": {
+      "ja": "https://kyoto-ohara-kankouhosyoukai.net/detail/5522/",
+      "en": "https://kyoto-ohara-kankouhosyoukai.net/detail/5522/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "from": "2026-11-01",
+     "to": "2026-12-07",
+     "url": "https://ja.kyoto.travel/event/single.php?event_id=5013",
+     "head": {
+      "ja": "2026年は、秋の夜の拝観（夜灯り）はありません",
+      "en": "No autumn evening opening in 2026"
+     },
+     "text": {
+      "ja": "例年11月上旬〜12月上旬の宝泉院の夜の拝観は、2026年は開催中止と京都市観光協会の公式サイトに出ています（11月24日確認）。昼の拝観（9:00〜17:00）はふだんどおりです。",
+      "en": "Hosen-in’s evening opening, usually early November to early December, is cancelled for 2026 according to the Kyoto City Tourism Association’s official site (checked 24 November). Daytime visits (9:00–17:00) are as usual."
+     }
     }
    ],
    "info": {
@@ -630,10 +665,19 @@
       "from": null
      },
      {
+      "kind": "hours",
+      "text": {
+       "ja": "勝林院 9:00〜16:00（大原観光保勝会の案内）",
+       "en": "Shorin-in 9:00–16:00 (per the Ohara tourist association)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "fee",
       "text": {
-       "ja": "勝林院の拝観料と時間は公式サイトに書かれていません（要確認）",
-       "en": "Shorin-in’s fee and hours aren’t given on its website (please check)"
+       "ja": "勝林院の拝観料は、公式サイトにも保勝会の案内にも書かれていません（要確認）",
+       "en": "Shorin-in’s entry fee isn’t given on its website or by the tourist association (please check)"
       },
       "until": null,
       "from": null
@@ -641,15 +685,15 @@
     ],
     "cash": true,
     "tip": {
-     "ja": "宝泉院の公式サイトで確認しました（料金と夜の拝観のお知らせは11月22日）。写真1〜4枚目は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-     "en": "Checked on Hosen-in’s website (fees and the evening-opening news on 22 November). Photos 1–4 are from Wikimedia Commons (author and license shown on each photo)."
+     "ja": "宝泉院の時間と料金は宝泉院の公式サイト、2026年の夜の拝観の中止は京都市観光協会の公式サイト、勝林院の時間は大原観光保勝会のサイトで確認しました（11月24日）。勝林院の拝観料はどこにも書かれていません。写真1〜4枚目は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Hosen-in’s hours and fees are from its website, the cancellation of the 2026 evening opening from the Kyoto City Tourism Association’s official site, and Shorin-in’s hours from the Ohara tourist association’s site (all checked 24 November). Shorin-in’s fee isn’t published anywhere we could find. Photos 1–4 are from Wikimedia Commons (author and license shown on each photo)."
     },
-    "checked": "2026-11-22",
-    "source": "宝泉院 公式サイト（お知らせは2026-11-22、時間は2026-11-21に確認）"
+    "checked": "2026-11-24",
+    "source": "宝泉院 公式サイト（拝観について・お知らせ http://www.hosenin.net/haikan/ 2026-11-24）、京都観光Navi「秋の夜灯り 大原宝泉院」https://ja.kyoto.travel/event/single.php?event_id=5013（2026年度は開催中止。2026-11-24）、大原観光保勝会「勝林院」https://kyoto-ohara-kankouhosyoukai.net/detail/5522/（時間。2026-11-24）"
    },
    "text": {
-    "ja": "宝泉院（ほうせんいん）と勝林院（しょうりんいん）\n\n三千院の門を出て左（北）へ歩いて約5分。道の突き当たりに勝林院の大きな本堂があり、その左手が宝泉院です。\n\n宝泉院は、客殿に座って庭を見るお寺です。柱と柱のあいだを額縁に見立てるので「額縁庭園」と呼ばれます。西側は竹林ごしに大原の里、南側は樹齢700年の五葉松（ごようのまつ）。拝観料にお抹茶とお菓子がついていて、座っていられる時間に決まりはありません。歩きつかれた足を休めるのにちょうどいい場所です。\n\n公式サイトのすすめは、畳に座って見ること。縁側まで出ずに、部屋の奥に座ると、柱と鴨居がちょうど額縁になります（写真1・2枚目）。\n\n廊下の天井は「血天井」です。関ヶ原の戦いの前に伏見城で自刃した鳥居元忠たちの床板を、供養のために天井に張ったものです。\n\n勝林院は1013年に開かれた、声明（しょうみょう＝お経に節をつけて唱える仏教音楽）の道場です。1186年に法然がここで念仏の教えを論じた「大原問答」で知られます。今の本堂は1778年の再建（写真5枚目は2024年11月18日の夕方、門の外から）。\n\n宝泉院は、秋に夜の拝観（秋の夜灯り）をした年があります（2025年は11月8日〜12月7日）。2026年の案内は、11月22日の時点で公式サイトに出ていません。夜に行くつもりの人は、公式サイトで確かめてから。夜は大原から三条への直通バスがなく、国際会館駅前行き（最終21:01発）と地下鉄で帰ります。\n\n三千院の門を出て左（北）へ約5分。朝から歩いたあとの休憩にちょうどいい時間です。お抹茶とお菓子をいただきながら、額縁庭園をゆっくり。\n\nおすすめ訪問時間：10:25〜11:10",
-    "en": "Hosen-in and Shorin-in\n\nTurn left (north) out of Sanzen-in’s gate and walk about five minutes. The big hall at the end of the lane is Shorin-in; Hosen-in is to its left.\n\nHosen-in is a temple where you sit in the guest hall and look at the garden. The pillars work as picture frames, so it is known as the “framed garden”: to the west, the Ohara valley through a bamboo grove; to the south, a 700-year-old five-needle pine. Matcha and a sweet come with the entry fee, and you may sit as long as you like. It’s a good place to rest tired legs.\n\nThe temple’s advice is to view it sitting on the tatami. Stay back from the veranda, deep in the room, and the pillars and lintel become the frame (photos 1 and 2).\n\nThe corridor has a “blood ceiling”: floorboards from Fushimi Castle, where Torii Mototada and his men took their own lives before the battle of Sekigahara, set into the ceiling as a memorial.\n\nShorin-in, founded in 1013, is a training hall for shomyo, Buddhist chant. It is known for the Ohara Debate of 1186, when Honen argued the case for the nenbutsu here. The present hall dates from 1778 (photo 5: from outside the gate, late on 18 November 2024).\n\nIn some years Hosen-in opens in the evening in autumn (8 November–7 December in 2025). As of 22 November nothing for 2026 is posted on the official website, so check there before planning an evening visit. At night there is no direct bus to Sanjo: you take a bus to Kokusaikaikan station (the last leaves at 21:01) and the subway.\n\nTurn left (north) out of Sanzen-in’s gate, about 5 minutes. A well-timed rest after the morning’s walking: take your time over the matcha, the sweet and the framed garden.\n\nRecommended visit time: 10:25–11:10"
+    "ja": "宝泉院（ほうせんいん）と勝林院（しょうりんいん）\n\n三千院の門を出て左（北）へ歩いて約5分。道の突き当たりに勝林院の大きな本堂があり、その左手が宝泉院です。\n\n宝泉院は、客殿に座って庭を見るお寺です。柱と柱のあいだを額縁に見立てるので「額縁庭園」と呼ばれます。西側は竹林ごしに大原の里、南側は樹齢700年の五葉松（ごようのまつ）。拝観料にお抹茶とお菓子がついていて、座っていられる時間に決まりはありません。歩きつかれた足を休めるのにちょうどいい場所です。\n\n公式サイトのすすめは、畳に座って見ること。縁側まで出ずに、部屋の奥に座ると、柱と鴨居がちょうど額縁になります（写真1・2枚目）。\n\n廊下の天井は「血天井」です。関ヶ原の戦いの前に伏見城で自刃した鳥居元忠たちの床板を、供養のために天井に張ったものです。\n\n勝林院は1013年に開かれた、声明（しょうみょう＝お経に節をつけて唱える仏教音楽）の道場です。1186年に法然がここで念仏の教えを論じた「大原問答」で知られます。今の本堂は1778年の再建（写真5枚目は2024年11月18日の夕方、門の外から）。\n\n宝泉院の秋の夜の拝観（秋の夜灯り）は、2026年は開かれません（京都市観光協会の公式サイトの案内）。\n\n三千院の門を出て左（北）へ約5分。朝から歩いたあとの休憩にちょうどいい時間です。お抹茶とお菓子をいただきながら、額縁庭園をゆっくり。\n\nおすすめ訪問時間：10:25〜11:10",
+    "en": "Hosen-in and Shorin-in\n\nTurn left (north) out of Sanzen-in’s gate and walk about five minutes. The big hall at the end of the lane is Shorin-in; Hosen-in is to its left.\n\nHosen-in is a temple where you sit in the guest hall and look at the garden. The pillars work as picture frames, so it is known as the “framed garden”: to the west, the Ohara valley through a bamboo grove; to the south, a 700-year-old five-needle pine. Matcha and a sweet come with the entry fee, and you may sit as long as you like. It’s a good place to rest tired legs.\n\nThe temple’s advice is to view it sitting on the tatami. Stay back from the veranda, deep in the room, and the pillars and lintel become the frame (photos 1 and 2).\n\nThe corridor has a “blood ceiling”: floorboards from Fushimi Castle, where Torii Mototada and his men took their own lives before the battle of Sekigahara, set into the ceiling as a memorial.\n\nShorin-in, founded in 1013, is a training hall for shomyo, Buddhist chant. It is known for the Ohara Debate of 1186, when Honen argued the case for the nenbutsu here. The present hall dates from 1778 (photo 5: from outside the gate, late on 18 November 2024).\n\nHosen-in’s autumn evening opening (Aki no Yoakari) is not being held in 2026, according to the Kyoto City Tourism Association’s official site.\n\nTurn left (north) out of Sanzen-in’s gate, about 5 minutes. A well-timed rest after the morning’s walking: take your time over the matcha, the sweet and the framed garden.\n\nRecommended visit time: 10:25–11:10"
    },
    "photos": [
     {
@@ -685,8 +729,7 @@
      }
     },
     "shorinin-1.jpg"
-   ],
-   "notices": []
+   ]
   },
   {
    "no": 5,
@@ -848,6 +891,17 @@
     {
      "kind": "info",
      "label": {
+      "ja": "来迎院（大原観光保勝会）",
+      "en": "Raigo-in (Ohara tourist association, Japanese)"
+     },
+     "url": {
+      "ja": "https://kyoto-ohara-kankouhosyoukai.net/detail/5561/",
+      "en": "https://kyoto-ohara-kankouhosyoukai.net/detail/5561/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
       "ja": "京都大原観光保勝会",
       "en": "Kyoto Ohara tourist association (Japanese)"
      },
@@ -869,10 +923,19 @@
       "from": null
      },
      {
+      "kind": "hours",
+      "text": {
+       "ja": "来迎院 9:00〜17:00、休みなし",
+       "en": "Raigo-in 9:00–17:00, open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "fee",
       "text": {
-       "ja": "来迎院の拝観料は400円、時間は9:00〜17:00と紹介されていますが、公式サイトがなく確認できていません（要確認）",
-       "en": "Raigo-in is listed at ¥400, 9:00–17:00, but it has no official website and this could not be confirmed (please check)"
+       "ja": "来迎院 大人400円（5月1日〜30日と11月1日〜30日は宝物展のため500円）。子どもの料金は案内に書かれていません",
+       "en": "Raigo-in ¥400 for adults (¥500 from 1 to 30 May and 1 to 30 November, during the treasure exhibition). No child fee is given"
       },
       "until": null,
       "from": null
@@ -880,12 +943,11 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "滝の位置と道の距離は OpenStreetMap で測った目安です。来迎院の料金と時間は観光サイトの情報で、公式には確認できていません。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-     "en": "The position of the falls and the distances are estimates from OpenStreetMap. Raigo-in’s fee and hours come from travel sites and could not be confirmed officially. Photos are from Wikimedia Commons (author and license shown on each photo)."
+     "ja": "来迎院の時間と料金は、大原観光保勝会のサイトで確認しました（11月24日。来迎院には公式サイトがありません）。滝の位置と道の距離は OpenStreetMap で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Raigo-in’s hours and fee were checked on the Ohara tourist association’s site (24 November; the temple has no website of its own). The position of the falls and the distances are estimates from OpenStreetMap. Photos are from Wikimedia Commons (author and license shown on each photo)."
     },
-    "checked": "2026-11-21",
-    "source": "OpenStreetMap（道の距離）、観光サイト（来迎院。公式には未確認）。2026-11-21",
-    "verified": false
+    "checked": "2026-11-24",
+    "source": "大原観光保勝会「来迎院」https://kyoto-ohara-kankouhosyoukai.net/detail/5561/（2026-11-24。来迎院は公式サイトがない）、OpenStreetMap（道の距離。2026-11-21）"
    },
    "text": {
     "ja": "来迎院（らいごういん）と音無の滝（おとなしのたき）\n\n三千院の前の道を南の端まで戻り、呂川に沿って山のほうへ上ります。来迎院まで約300m、歩いて5〜10分。そこから山道をさらに約400m、10分ほどで音無の滝です。\n\n来迎院は、平安時代の終わりに良忍（りょうにん）が声明の道場として開いたお寺です。三千院のにぎわいがうそのように静かです。\n\n音無の滝は、岩の上を水がすべり落ちる滝です。良忍がここで声明の稽古をしていると、声と滝の音がひとつになって、滝の音が聞こえなくなった、と伝わります。\n\n来迎院までは舗装された坂道、その先は土の山道です。雨のあとはぬかるむので、すべりにくい靴で。滝までの道に店やトイレはありません。山あいは暗くなるのが早いので（11月下旬の日の入りは16:50ごろ）、明るいうちに戻ってください。\n\n歩くのを減らしたい日は、ここを外してください。\n\nこのコースでは寄り道です。寄るとお昼が12時すぎになり、店が混む時間に重なります。寂光院のあとのバスは14:57発（土日祝と12月4日までの平日）か15:27発に。\n\nおすすめ訪問時間：11:15〜12:05（寄る日は、お昼が12:15ごろ、寂光院が13:45〜14:30、バスは14:57発か15:27発）",
@@ -1001,8 +1063,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "芹生「ひな里」昼 11:30〜15:00（大原観光保勝会の案内。公式サイトに時間の記載なし＝要確認）",
-       "en": "Seryo “Hinasato” lunch 11:30–15:00 (per the tourist association; no hours on the official site: please check)"
+       "ja": "芹生「ひな里」昼 11:30〜15:00（大原観光保勝会の案内）。季節により利用できないことがあります（芹生の公式サイト）",
+       "en": "Seryo “Hinasato” lunch 11:30–15:00 (per the Ohara tourist association). It may not be available in some seasons (inn’s website)"
       },
       "until": null,
       "from": null
@@ -1019,8 +1081,17 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "里の駅 大原「花むらさき」ランチ11:00〜14:00、カフェ〜15:30。日曜の朝市 6:00〜9:00",
-       "en": "Sato-no-Eki Ohara “Hanamurasaki”: lunch 11:00–14:00, café until 15:30. Sunday morning market 6:00–9:00"
+       "ja": "里の駅 大原「花むらさき」ランチ11:00〜14:00、カフェ11:00〜15:30（ラストオーダー15:00）。日曜は7:30〜9:00に朝の営業（9:00〜11:00は休み）。日曜の朝市 6:00〜9:00",
+       "en": "Sato-no-Eki Ohara “Hanamurasaki”: lunch 11:00–14:00, café 11:00–15:30 (last orders 15:00). Sundays also 7:30–9:00 (closed 9:00–11:00). Sunday morning market 6:00–9:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "花むらさき：こだわりの親子丼1,320円、日替わり大原膳1,100円、日曜朝の卵かけご飯660円",
+       "en": "Hanamurasaki: oyakodon ¥1,320, daily Ohara set ¥1,100, Sunday-morning tamago-kake-gohan ¥660"
       },
       "until": null,
       "from": null
@@ -1028,8 +1099,17 @@
      {
       "kind": "closed",
       "text": {
-       "ja": "花むらさきは月曜休み（保勝会の案内。祝日のときは翌日。公式の営業カレンダーで確認を）",
-       "en": "Hanamurasaki is closed on Mondays (per the tourist association; the next day if a holiday. Check the official calendar)"
+       "ja": "花むらさきは月曜休み（祝日のときは翌日の火曜）",
+       "en": "Hanamurasaki is closed on Mondays (Tuesday if Monday is a holiday)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "トイレ：大原バス停の中（6:30ごろ〜21:30ごろ）と大原寂光院駐車場（いつでも）に京都市の公衆トイレ",
+       "en": "Toilets: city public toilets in the Ohara bus terminal (about 6:30–21:30) and at the Ohara Jakko-in car park (always open)"
       },
       "until": null,
       "from": null
@@ -1046,16 +1126,15 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "芹生の値段と里の駅の時間はそれぞれの公式サイト、芹生の昼の時間と里の駅の休みは大原観光保勝会のサイトで見たものです（11月22日）。花むらさきの日曜の朝の時間、値段は確認できていません。里の駅までの距離は地図で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-     "en": "Seryo’s prices and Sato-no-Eki’s hours are from their own websites; Seryo’s lunch hours and Sato-no-Eki’s closing day are from the Ohara tourist association’s site (22 November). Hanamurasaki’s Sunday morning hours and prices could not be confirmed. The distance to Sato-no-Eki is an estimate from the map. Photos are from Wikimedia Commons (author and license shown on each photo)."
+     "ja": "芹生の値段は芹生の公式サイト、昼の時間は大原観光保勝会のサイト、花むらさきの時間・値段・休みは里の駅大原の公式サイト、トイレは京都市のサイトで確認しました（11月24日）。里の駅までの距離は地図で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+     "en": "Seryo’s prices are from its website and its lunch hours from the Ohara tourist association’s site; Hanamurasaki’s hours, prices and closing day from Sato-no-Eki Ohara’s website; the toilets from Kyoto City’s site (all checked 24 November). The distance to Sato-no-Eki is an estimate from the map. Photos are from Wikimedia Commons (author and license shown on each photo)."
     },
-    "checked": "2026-11-22",
-    "source": "芹生 公式サイト、里の駅大原 公式サイト、大原観光保勝会、寂光院 公式サイト。2026-11-22",
-    "verified": false
+    "checked": "2026-11-24",
+    "source": "芹生 公式サイト（料理のご案内）https://www.seryo.co.jp/cuisine.html、大原観光保勝会「芹生」https://kyoto-ohara-kankouhosyoukai.net/detail/4712/（昼食プランの時間）、里の駅大原 公式サイト（店舗情報 https://www.satonoeki-ohara.com/access/、花むらさき https://www.satonoeki-ohara.com/hanamurasaki/、お知らせ「花むらさきの営業時間がかわります」https://www.satonoeki-ohara.com/blog/3396/、朝市 https://www.satonoeki-ohara.com/market/）、京都市「(R1)大原の里公衆トイレ」「(R2)寂光院公衆トイレ」https://www.city.kyoto.lg.jp/kankyo/page/0000331162.html、寂光院 公式サイト。2026-11-24"
    },
    "text": {
-    "ja": "お昼と、大原の里（さと）の道\n\nお昼は早めに\n大原の食事の店は、昼だけ開けて夕方前に閉まる所がほとんどです。秋の12時台は並ぶ店が多いので、11時半ごろに入ってしまうのがいちばん楽です。遅くとも14時までに。夜に開いている店はあまりないので、晩ごはんは街なかへ戻ってからにしてください。\n\n時間を確かめられた店\n・芹生（せりょう）のお食事処「ひな里」：三千院の門前、石段を下りたところの料理旅館です。三千草（みちくさ）弁当3,850円、湯豆腐膳3,300円（公式サイトの値段）。昼の時間は、大原観光保勝会の案内では11:30〜15:00。旅館の公式サイトには時間が書かれておらず、「季節により利用できないことがあります」とあるので、あてにする日は先に電話で確かめてください。\n・里の駅 大原の「花むらさき」：大原バス停から国道を南へ約1km、「野村別れ（里の駅大原）」バス停の近くにある農産物の直売所の食堂です。ランチは11:00〜14:00、カフェは15:30まで（公式サイトのお知らせ）。看板は親子丼。月曜休み（保勝会の案内。祝日のときは翌日）。日曜は朝6:00〜9:00に朝市があります。寂光院から歩くと25分ほどです。\n\nほかに、参道とバス停のまわりに、そば・うどん、定食、甘味の店があります。営業日と時間は店ごとに違い、ここでは確かめきれていません。行きたい店がある人は先に調べてください（大原観光保勝会のサイトに店の一覧があります）。\n\n里の道\n寂光院は、谷の反対側にあります。バス停から国道を渡らずに西へ下り、高野川（たかのがわ）を渡って、案内板にしたがって歩きます。寂光院の案内では約15分。ゆっくり歩いて20分。三千院の前からだと35分ほどです。\n\n道の両側は田んぼと畑で、しば漬に使う赤しその畑もあります（赤しそは夏）。三千院のあたりより人が少なく、山に囲まれた大原の里がよく見えます。\n\n畑や家の敷地には入らないでください。車も通る細い道なので、道の端を歩きましょう。\n\n宝泉院を出たら、三千院の門前か参道でお昼に。11:30なら、開いたばかりで入りやすい時間です。食べたら参道を下り（約15分）、バス停の前で国道を渡らずに西へ、里の道を寂光院へ（約20分）。\n\nおすすめ訪問時間：お昼 11:30〜12:25、里の道 12:25〜13:00",
-    "en": "Lunch and the valley walk\n\nEat early\nMost places to eat in Ohara open for lunch only and shut before evening. In autumn many have queues between 12:00 and 13:00, so the easiest plan is to sit down at about 11:30, and by 14:00 at the latest. Little is open at night, so have dinner back in the city.\n\nPlaces whose hours could be checked\n• Hinasato, the dining room of the inn Seryo: at the foot of the stone steps in front of Sanzen-in. Michikusa bento ¥3,850, yudofu set ¥3,300 (prices from the official website). The Ohara tourist association gives lunch as 11:30–15:00; the inn’s own website gives no hours and says it “may not be available in some seasons”, so phone ahead if you are counting on it.\n• Hanamurasaki at Sato-no-Eki Ohara: the diner of a farmers’ market about 1 km south of the Ohara bus stop along the main road, near the Nomura-wakare (Sato-no-Eki Ohara) stop. Lunch 11:00–14:00, café until 15:30 (notice on the official website). Known for oyakodon. Closed Mondays (per the tourist association; the next day if Monday is a holiday). On Sundays a morning market runs 6:00–9:00. About 25 minutes on foot from Jakko-in.\n\nAlong the lane and around the bus stop there are also soba and udon shops, set-meal places and sweet shops. Their days and hours differ and could not all be checked here: if you have one in mind, look it up first (the tourist association’s website lists them).\n\nThe valley walk\nJakko-in is on the other side of the valley. From the bus stop, without crossing the main road, head downhill to the west, cross the Takano river and follow the signs. The temple gives it as about 15 minutes; allow 20 at an easy pace. From Sanzen-in’s gate it is about 35.\n\nThe lane runs between rice fields and vegetable plots, some growing the red shiso used for shibazuke (in summer). There are fewer people than around Sanzen-in, and you get the open view of the valley ringed by hills.\n\nPlease keep out of the fields and private yards. Cars use this narrow lane too, so walk at the side.\n\nAfter Hosen-in, have lunch at Sanzen-in’s gate or on the lane. At 11:30 places have just opened and it’s easy to get a table. Then walk down the lane (about 15 minutes), and from the bus stop head west, without crossing the main road, along the valley lane to Jakko-in (about 20 minutes).\n\nRecommended visit time: Lunch 11:30–12:25, valley walk 12:25–13:00"
+    "ja": "お昼と、大原の里（さと）の道\n\nお昼は早めに\n大原の食事の店は、昼だけ開けて夕方前に閉まる所がほとんどです。秋の12時台は並ぶ店が多いので、11時半ごろに入ってしまうのがいちばん楽です。遅くとも14時までに。夜に開いている店はあまりないので、晩ごはんは街なかへ戻ってからにしてください。\n\n時間を確かめられた店\n・芹生（せりょう）のお食事処「ひな里」：三千院の門前、石段を下りたところの料理旅館です。三千草（みちくさ）弁当3,850円、湯豆腐膳3,300円（公式サイトの値段）。昼は11:30〜15:00（大原観光保勝会の案内）。旅館の公式サイトには「季節により利用できないことがあります」とあるので、あてにする日は先に電話（075-744-2301）で確かめてください。\n・里の駅 大原の「花むらさき」：大原バス停から国道を南へ約1km、「野村別れ（里の駅大原）」バス停の近くにある農産物の直売所の食堂です。ランチは11:00〜14:00、カフェは11:00〜15:30（ラストオーダー15:00）。看板の親子丼は1,320円、日替わりの大原膳は1,100円。月曜休み（祝日のときは翌日の火曜）。日曜は朝6:00〜9:00に朝市があり、食堂も7:30〜9:00に朝の営業をします（卵かけご飯660円とカフェ。9:00〜11:00は準備で休み）。寂光院から歩くと25分ほどです。\n\nトイレは、大原バス停の中と、寂光院の近くの駐車場（大原寂光院駐車場）に京都市の公衆トイレがあります。\n\nほかに、参道とバス停のまわりに、そば・うどん、定食、甘味の店があります。営業日と時間は店ごとに違い、ここでは確かめきれていません。行きたい店がある人は先に調べてください（大原観光保勝会のサイトに店の一覧があります）。\n\n里の道\n寂光院は、谷の反対側にあります。バス停から国道を渡らずに西へ下り、高野川（たかのがわ）を渡って、案内板にしたがって歩きます。寂光院の案内では約15分。ゆっくり歩いて20分。三千院の前からだと35分ほどです。\n\n道の両側は田んぼと畑で、しば漬に使う赤しその畑もあります（赤しそは夏）。三千院のあたりより人が少なく、山に囲まれた大原の里がよく見えます。\n\n畑や家の敷地には入らないでください。車も通る細い道なので、道の端を歩きましょう。\n\n宝泉院を出たら、三千院の門前か参道でお昼に。11:30なら、開いたばかりで入りやすい時間です。食べたら参道を下り（約15分）、バス停の前で国道を渡らずに西へ、里の道を寂光院へ（約20分）。\n\nおすすめ訪問時間：お昼 11:30〜12:25、里の道 12:25〜13:00",
+    "en": "Lunch and the valley walk\n\nEat early\nMost places to eat in Ohara open for lunch only and shut before evening. In autumn many have queues between 12:00 and 13:00, so the easiest plan is to sit down at about 11:30, and by 14:00 at the latest. Little is open at night, so have dinner back in the city.\n\nPlaces whose hours could be checked\n• Hinasato, the dining room of the inn Seryo: at the foot of the stone steps in front of Sanzen-in. Michikusa bento ¥3,850, yudofu set ¥3,300 (prices from the official website). Lunch is served 11:30–15:00 (per the Ohara tourist association). The inn’s website says it “may not be available in some seasons”, so phone ahead (075-744-2301) if you are counting on it.\n• Hanamurasaki at Sato-no-Eki Ohara: the diner of a farmers’ market about 1 km south of the Ohara bus stop along the main road, near the Nomura-wakare (Sato-no-Eki Ohara) stop. Lunch 11:00–14:00, café 11:00–15:30 (last orders 15:00). The house oyakodon is ¥1,320; the daily Ohara set ¥1,100. Closed Mondays (Tuesday if Monday is a holiday). On Sundays a morning market runs 6:00–9:00, and the diner opens early, 7:30–9:00, for tamago-kake-gohan (rice with raw egg, ¥660) and drinks; it then closes 9:00–11:00 to get ready. About 25 minutes on foot from Jakko-in.\n\nThere are city public toilets inside the Ohara bus terminal and at the Ohara Jakko-in car park near the temple.\n\nAlong the lane and around the bus stop there are also soba and udon shops, set-meal places and sweet shops. Their days and hours differ and could not all be checked here: if you have one in mind, look it up first (the tourist association’s website lists them).\n\nThe valley walk\nJakko-in is on the other side of the valley. From the bus stop, without crossing the main road, head downhill to the west, cross the Takano river and follow the signs. The temple gives it as about 15 minutes; allow 20 at an easy pace. From Sanzen-in’s gate it is about 35.\n\nThe lane runs between rice fields and vegetable plots, some growing the red shiso used for shibazuke (in summer). There are fewer people than around Sanzen-in, and you get the open view of the valley ringed by hills.\n\nPlease keep out of the fields and private yards. Cars use this narrow lane too, so walk at the side.\n\nAfter Hosen-in, have lunch at Sanzen-in’s gate or on the lane. At 11:30 places have just opened and it’s easy to get a table. Then walk down the lane (about 15 minutes), and from the bus stop head west, without crossing the main road, along the valley lane to Jakko-in (about 20 minutes).\n\nRecommended visit time: Lunch 11:30–12:25, valley walk 12:25–13:00"
    },
    "photos": [
     {

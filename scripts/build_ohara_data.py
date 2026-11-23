@@ -24,7 +24,7 @@ import copy, json, os, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAP_ID = "ohara"
 IMG = f"{R}/images/{MAP_ID}"
-D21, D22 = "2026-11-21", "2026-11-22"   # 確認日（21日に確認して22日は見直していないものは D21）
+D21, D22, D24 = "2026-11-21", "2026-11-22", "2026-11-24"   # 確認日（21日に確認して22日は見直していないものは D21。24日は「要確認」の調べ直し）
 
 
 def T(ja, en):
@@ -120,7 +120,8 @@ BASE = dict(
                "・京都駅前（C3のりば）から：約1時間・630円。始発なので、早めに並べば座れます。\n\n"
                "もう1つの行き方は、地下鉄烏丸線で国際会館駅へ行き（烏丸御池から14分・290円）、駅前から京都バス19系統などに乗る方法です。バスは約22分・400円。道が混む秋の週末は、こちらのほうが時間が読めます。\n\n"
                "どれも「地下鉄・バス1日券」（1,100円）で乗れます。三条京阪前から往復すると1,140円なので、1日券のほうが少し安く、夜に地下鉄や市バスにも乗れます。1日券は京都バスの車内では買えません。地下鉄の駅の券売機で先に買ってください。\n\n"
-               "バスは後ろのドアから乗って、前から降ります。ICカード（ICOCA・Suicaなど）は、乗るときと降りるときの2回タッチ。現金は降りるときに運賃箱へ。大原バス停に京都バスの案内所があります。\n\n"
+               "バスは後ろのドアから乗って、前から降ります。ICカード（ICOCA・Suicaなど）は、乗るときと降りるときの2回タッチ。現金は降りるときに運賃箱へ。\n\n"
+               "大原バス停（京都バスの大原バスターミナル）の中に、京都市の公衆トイレがあります。開いているのはバスが走る時間に合わせて6:30ごろ〜21:30ごろ。多機能トイレもあります。\n\n"
                "大原は町なかより寒く、拝観料は現金の所がほとんどです。上着を1枚多く、千円札と小銭を多めに。",
                "Ohara bus stop\n\nBuses are the only way to Ohara. From central Kyoto the simplest is Kyoto Bus 17, bound for Ohara, with no change. It starts at Kyoto Station and stops at Shijo-Kawaramachi, Sanjo-Keihan-mae and Demachiyanagi-ekimae, in that order.\n\n"
                "• From Sanjo-Keihan-mae: 40–50 minutes, ¥570. The stop is a short walk north along Kawabata-dori from the east end of Sanjo Ohashi bridge, on the river side of the road (check the spot with the Google Maps button below). It is not at the city-bus stops: look for the sign “Kyoto Bus 17 Ohara”.\n"
@@ -129,7 +130,8 @@ BASE = dict(
                "• From Kyoto Station (stop C3): about 1 hour, ¥630. It’s the first stop, so queue early and you get a seat.\n\n"
                "The other way is the Karasuma subway line to Kokusaikaikan (14 minutes from Karasuma Oike, ¥290), then Kyoto Bus 19 and others from outside the station: about 22 minutes, ¥400. On autumn weekends, when the road jams, this way keeps better time.\n\n"
                "All of these are covered by the Subway & Bus 1-day Pass (¥1,100). A return from Sanjo-Keihan-mae is ¥1,140, so the pass is slightly cheaper and also covers the subway and city buses in the evening. It isn’t sold on Kyoto Bus: buy it first from a ticket machine at a subway station.\n\n"
-               "Board at the rear door and get off at the front. With an IC card (ICOCA, Suica and so on), tap when you board and again when you get off. With cash, pay into the fare box as you leave. There is a Kyoto Bus information desk at the Ohara stop.\n\n"
+               "Board at the rear door and get off at the front. With an IC card (ICOCA, Suica and so on), tap when you board and again when you get off. With cash, pay into the fare box as you leave.\n\n"
+               "There are public toilets run by the city inside the Ohara bus terminal, open from about 6:30 to about 21:30 to match the bus service, including an accessible toilet.\n\n"
                "Ohara is colder than the city, and most temples take cash. Bring an extra layer, ¥1,000 notes and coins."),
         gmaps=[gm("大原バス停", "Ohara bus stop", 35.11975, 135.82898, "大原バス停 京都バス 左京区"),
                gm("三条京阪前（京都バスのりば）", "Sanjo-Keihan-mae (Kyoto Bus stop)", 35.009724, 135.772129, "三条京阪前 バス停 京都バス")],
@@ -138,10 +140,13 @@ BASE = dict(
         _rows=[row("fee", "大原まで：三条京阪前から570円、四条河原町から590円、出町柳駅前から490円、京都駅前から630円、国際会館駅前から400円",
                    "To Ohara: ¥570 from Sanjo-Keihan-mae, ¥590 from Shijo-Kawaramachi, ¥490 from Demachiyanagi-ekimae, ¥630 from Kyoto Station, ¥400 from Kokusaikaikan-ekimae"),
                row("fee", "地下鉄・バス1日券 1,100円（大原バス停まで使えます。その先の小出石方面は別料金）",
-                   "Subway & Bus 1-day Pass ¥1,100 (valid as far as the Ohara stop; beyond it, towards Kodeishi, costs extra)")],
+                   "Subway & Bus 1-day Pass ¥1,100 (valid as far as the Ohara stop; beyond it, towards Kodeishi, costs extra)"),
+               row("hours", "トイレ：大原バス停（大原バスターミナル）の中の京都市の公衆トイレ。6:30ごろ〜21:30ごろ（バスの運行時間に合わせて）",
+                   "Toilets: city public toilets inside the Ohara bus terminal, about 6:30–21:30 (matching the bus service)")],
         _tip=T("バスの時刻と運賃は、京都バスの公式サイトの時刻表で確認しました（2026年9月28日改正のダイヤと、11月21日〜12月6日の秋のダイヤ）。秋のあいだは日によって時刻が少し変わり、道が混むと遅れます。乗る前に公式の時刻表を見てください。地下鉄の時間と運賃は乗換案内、1日券の範囲は京都バスの公式サイトの区間図（21日に確認）です。",
                "Bus times and fares were checked on Kyoto Bus’s official timetable (the timetable revised on 28 September 2026 and the autumn timetable for 21 November–6 December). In autumn the times vary a little from day to day, and buses run late when the road is busy: check the official timetable before you go. Subway times and fares are from a route planner; the pass area is from Kyoto Bus’s official area map (checked on the 21st)."),
-        _source="京都バス公式サイトの時刻表・運賃（2026-11-22）、乗換案内（Yahoo!路線情報）2026-11-22、1日券は京都バス公式サイト（2026-11-21）"),
+        _source="京都バス公式サイトの時刻表・運賃（2026-11-22）、乗換案内（Yahoo!路線情報）2026-11-22、1日券は京都バス公式サイト（2026-11-21）、"
+                "トイレは京都市「(R1)大原の里公衆トイレ」https://www.city.kyoto.lg.jp/kankyo/page/0000331165.html（2026-11-24）"),
     sando=dict(
         name=T("三千院の参道（呂川沿い）", "The lane to Sanzen-in"), kind=T("参道", "Approach"),
         blurb=T("バス停から三千院まで、小さな川に沿って上る道。ゆっくり歩いて15分。しば漬の店や茶屋が並びます。",
@@ -208,22 +213,31 @@ BASE = dict(
                "公式サイトのすすめは、畳に座って見ること。縁側まで出ずに、部屋の奥に座ると、柱と鴨居がちょうど額縁になります（写真1・2枚目）。\n\n"
                "廊下の天井は「血天井」です。関ヶ原の戦いの前に伏見城で自刃した鳥居元忠たちの床板を、供養のために天井に張ったものです。\n\n"
                "勝林院は1013年に開かれた、声明（しょうみょう＝お経に節をつけて唱える仏教音楽）の道場です。1186年に法然がここで念仏の教えを論じた「大原問答」で知られます。今の本堂は1778年の再建（写真5枚目は2024年11月18日の夕方、門の外から）。\n\n"
-               "宝泉院は、秋に夜の拝観（秋の夜灯り）をした年があります（2025年は11月8日〜12月7日）。2026年の案内は、11月22日の時点で公式サイトに出ていません。夜に行くつもりの人は、公式サイトで確かめてから。夜は大原から三条への直通バスがなく、国際会館駅前行き（最終21:01発）と地下鉄で帰ります。",
+               "宝泉院の秋の夜の拝観（秋の夜灯り）は、2026年は開かれません（京都市観光協会の公式サイトの案内）。",
                "Hosen-in and Shorin-in\n\nTurn left (north) out of Sanzen-in’s gate and walk about five minutes. The big hall at the end of the lane is Shorin-in; Hosen-in is to its left.\n\n"
                "Hosen-in is a temple where you sit in the guest hall and look at the garden. The pillars work as picture frames, so it is known as the “framed garden”: to the west, the Ohara valley through a bamboo grove; to the south, a 700-year-old five-needle pine. Matcha and a sweet come with the entry fee, and you may sit as long as you like. It’s a good place to rest tired legs.\n\n"
                "The temple’s advice is to view it sitting on the tatami. Stay back from the veranda, deep in the room, and the pillars and lintel become the frame (photos 1 and 2).\n\n"
                "The corridor has a “blood ceiling”: floorboards from Fushimi Castle, where Torii Mototada and his men took their own lives before the battle of Sekigahara, set into the ceiling as a memorial.\n\n"
                "Shorin-in, founded in 1013, is a training hall for shomyo, Buddhist chant. It is known for the Ohara Debate of 1186, when Honen argued the case for the nenbutsu here. The present hall dates from 1778 (photo 5: from outside the gate, late on 18 November 2024).\n\n"
-               "In some years Hosen-in opens in the evening in autumn (8 November–7 December in 2025). As of 22 November nothing for 2026 is posted on the official website, so check there before planning an evening visit. At night there is no direct bus to Sanjo: you take a bus to Kokusaikaikan station (the last leaves at 21:01) and the subway."),
+               "Hosen-in’s autumn evening opening (Aki no Yoakari) is not being held in 2026, according to the Kyoto City Tourism Association’s official site."),
         gmaps=[gm("宝泉院", "Hosen-in", 35.12135, 135.83400, "宝泉院 大原 京都"), gm("勝林院", "Shorin-in", 35.12122, 135.83454, "勝林院 大原 京都")],
         links=[link("official", "宝泉院 公式サイト", "Hosen-in (official, Japanese)", "http://www.hosenin.net/"),
-               link("official", "勝林院 公式サイト", "Shorin-in (official, Japanese)", "https://www.shourinin.com/")],
+               link("official", "勝林院 公式サイト", "Shorin-in (official, Japanese)", "https://www.shourinin.com/"),
+               link("info", "勝林院（大原観光保勝会）", "Shorin-in (Ohara tourist association, Japanese)", "https://kyoto-ohara-kankouhosyoukai.net/detail/5522/")],
+        notices=[notice("2026年は、秋の夜の拝観（夜灯り）はありません", "No autumn evening opening in 2026",
+                        "例年11月上旬〜12月上旬の宝泉院の夜の拝観は、2026年は開催中止と京都市観光協会の公式サイトに出ています（11月24日確認）。昼の拝観（9:00〜17:00）はふだんどおりです。",
+                        "Hosen-in’s evening opening, usually early November to early December, is cancelled for 2026 according to the Kyoto City Tourism Association’s official site (checked 24 November). Daytime visits (9:00–17:00) are as usual.",
+                        url="https://ja.kyoto.travel/event/single.php?event_id=5013", frm="2026-11-01", to="2026-12-07")],
         info=info([row("hours", "宝泉院 9:00〜17:00（受付は16:30まで）", "Hosen-in 9:00–17:00 (last entry 16:30)"),
                    row("fee", "宝泉院 大人1,000円（お抹茶・お菓子つき。2026年4月10日から）、中学生・高校生900円、小学生800円", "Hosen-in ¥1,000 including matcha and a sweet (since 10 April 2026); junior high and high school ¥900; elementary ¥800"),
                    row("closed", "宝泉院は行事で休む日があります（公式サイトのお知らせ）", "Hosen-in sometimes closes for temple events (see the news on its website)"),
-                   row("fee", "勝林院の拝観料と時間は公式サイトに書かれていません（要確認）", "Shorin-in’s fee and hours aren’t given on its website (please check)")],
-                  "宝泉院 公式サイト（お知らせは2026-11-22、時間は2026-11-21に確認）", cash=True,
-                  tip=T("宝泉院の公式サイトで確認しました（料金と夜の拝観のお知らせは11月22日）。写真1〜4枚目は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。", "Checked on Hosen-in’s website (fees and the evening-opening news on 22 November). Photos 1–4 are from Wikimedia Commons (author and license shown on each photo)."))),
+                   row("hours", "勝林院 9:00〜16:00（大原観光保勝会の案内）", "Shorin-in 9:00–16:00 (per the Ohara tourist association)"),
+                   row("fee", "勝林院の拝観料は、公式サイトにも保勝会の案内にも書かれていません（要確認）", "Shorin-in’s entry fee isn’t given on its website or by the tourist association (please check)")],
+                  "宝泉院 公式サイト（拝観について・お知らせ http://www.hosenin.net/haikan/ 2026-11-24）、"
+                  "京都観光Navi「秋の夜灯り 大原宝泉院」https://ja.kyoto.travel/event/single.php?event_id=5013（2026年度は開催中止。2026-11-24）、"
+                  "大原観光保勝会「勝林院」https://kyoto-ohara-kankouhosyoukai.net/detail/5522/（時間。2026-11-24）", cash=True, checked=D24,
+                  tip=T("宝泉院の時間と料金は宝泉院の公式サイト、2026年の夜の拝観の中止は京都市観光協会の公式サイト、勝林院の時間は大原観光保勝会のサイトで確認しました（11月24日）。勝林院の拝観料はどこにも書かれていません。写真1〜4枚目は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                        "Hosen-in’s hours and fees are from its website, the cancellation of the 2026 evening opening from the Kyoto City Tourism Association’s official site, and Shorin-in’s hours from the Ohara tourist association’s site (all checked 24 November). Shorin-in’s fee isn’t published anywhere we could find. Photos 1–4 are from Wikimedia Commons (author and license shown on each photo)."))),
     jikkoin=dict(
         name=T("実光院", "Jikko-in"), kind=T("寺（庭と山野草）", "Temple (garden)"),
         blurb=T("秋から春まで咲く「不断桜」のある小さなお寺。客殿から池の庭を眺め、庭へ下りて歩けます。受付は15:30まで。",
@@ -262,12 +276,13 @@ BASE = dict(
                "The way is a paved slope as far as Raigo-in, then an earth path. It gets muddy after rain, so wear shoes with grip. There are no shops or toilets on the way. It gets dark early in the hills (sunset in late November is at about 16:50): be back while it’s light.\n\n"
                "To cut down on walking, leave this one out."),
         gmaps=[gm("音無の滝", "Otonashi falls", 35.12062, 135.83974, "音無の滝 大原 京都"), gm("来迎院", "Raigo-in", 35.11861, 135.83767, "来迎院 大原 京都")],
-        links=[HOSHO],
+        links=[link("info", "来迎院（大原観光保勝会）", "Raigo-in (Ohara tourist association, Japanese)", "https://kyoto-ohara-kankouhosyoukai.net/detail/5561/"), HOSHO],
         info=info([row("hours", "音無の滝は自由に見られます（山道。明るい時間に）", "The falls are free to visit (a hill path; go in daylight)"),
-                   row("fee", "来迎院の拝観料は400円、時間は9:00〜17:00と紹介されていますが、公式サイトがなく確認できていません（要確認）", "Raigo-in is listed at ¥400, 9:00–17:00, but it has no official website and this could not be confirmed (please check)")],
-                  "OpenStreetMap（道の距離）、観光サイト（来迎院。公式には未確認）。2026-11-21", checked=D21, verified=False,
-                  tip=T("滝の位置と道の距離は OpenStreetMap で測った目安です。来迎院の料金と時間は観光サイトの情報で、公式には確認できていません。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                        "The position of the falls and the distances are estimates from OpenStreetMap. Raigo-in’s fee and hours come from travel sites and could not be confirmed officially. Photos are from Wikimedia Commons (author and license shown on each photo)."))),
+                   row("hours", "来迎院 9:00〜17:00、休みなし", "Raigo-in 9:00–17:00, open every day"),
+                   row("fee", "来迎院 大人400円（5月1日〜30日と11月1日〜30日は宝物展のため500円）。子どもの料金は案内に書かれていません", "Raigo-in ¥400 for adults (¥500 from 1 to 30 May and 1 to 30 November, during the treasure exhibition). No child fee is given")],
+                  "大原観光保勝会「来迎院」https://kyoto-ohara-kankouhosyoukai.net/detail/5561/（2026-11-24。来迎院は公式サイトがない）、OpenStreetMap（道の距離。2026-11-21）", checked=D24,
+                  tip=T("来迎院の時間と料金は、大原観光保勝会のサイトで確認しました（11月24日。来迎院には公式サイトがありません）。滝の位置と道の距離は OpenStreetMap で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                        "Raigo-in’s hours and fee were checked on the Ohara tourist association’s site (24 November; the temple has no website of its own). The position of the falls and the distances are estimates from OpenStreetMap. Photos are from Wikimedia Commons (author and license shown on each photo)."))),
     sato=dict(
         name=T("お昼と、大原の里の道", "Lunch & the valley walk"), kind=T("お昼・里の道", "Lunch & village walk"),
         blurb=T("大原のお昼は早めに、14時までに。三千院の門前かバス停のまわりで食べて、田んぼと畑のあいだの道を歩きます。",
@@ -277,8 +292,9 @@ BASE = dict(
         body=T("お昼と、大原の里（さと）の道\n\n"
                "お昼は早めに\n大原の食事の店は、昼だけ開けて夕方前に閉まる所がほとんどです。秋の12時台は並ぶ店が多いので、11時半ごろに入ってしまうのがいちばん楽です。遅くとも14時までに。夜に開いている店はあまりないので、晩ごはんは街なかへ戻ってからにしてください。\n\n"
                "時間を確かめられた店\n"
-               "・芹生（せりょう）のお食事処「ひな里」：三千院の門前、石段を下りたところの料理旅館です。三千草（みちくさ）弁当3,850円、湯豆腐膳3,300円（公式サイトの値段）。昼の時間は、大原観光保勝会の案内では11:30〜15:00。旅館の公式サイトには時間が書かれておらず、「季節により利用できないことがあります」とあるので、あてにする日は先に電話で確かめてください。\n"
-               "・里の駅 大原の「花むらさき」：大原バス停から国道を南へ約1km、「野村別れ（里の駅大原）」バス停の近くにある農産物の直売所の食堂です。ランチは11:00〜14:00、カフェは15:30まで（公式サイトのお知らせ）。看板は親子丼。月曜休み（保勝会の案内。祝日のときは翌日）。日曜は朝6:00〜9:00に朝市があります。寂光院から歩くと25分ほどです。\n\n"
+               "・芹生（せりょう）のお食事処「ひな里」：三千院の門前、石段を下りたところの料理旅館です。三千草（みちくさ）弁当3,850円、湯豆腐膳3,300円（公式サイトの値段）。昼は11:30〜15:00（大原観光保勝会の案内）。旅館の公式サイトには「季節により利用できないことがあります」とあるので、あてにする日は先に電話（075-744-2301）で確かめてください。\n"
+               "・里の駅 大原の「花むらさき」：大原バス停から国道を南へ約1km、「野村別れ（里の駅大原）」バス停の近くにある農産物の直売所の食堂です。ランチは11:00〜14:00、カフェは11:00〜15:30（ラストオーダー15:00）。看板の親子丼は1,320円、日替わりの大原膳は1,100円。月曜休み（祝日のときは翌日の火曜）。日曜は朝6:00〜9:00に朝市があり、食堂も7:30〜9:00に朝の営業をします（卵かけご飯660円とカフェ。9:00〜11:00は準備で休み）。寂光院から歩くと25分ほどです。\n\n"
+               "トイレは、大原バス停の中と、寂光院の近くの駐車場（大原寂光院駐車場）に京都市の公衆トイレがあります。\n\n"
                "ほかに、参道とバス停のまわりに、そば・うどん、定食、甘味の店があります。営業日と時間は店ごとに違い、ここでは確かめきれていません。行きたい店がある人は先に調べてください（大原観光保勝会のサイトに店の一覧があります）。\n\n"
                "里の道\n寂光院は、谷の反対側にあります。バス停から国道を渡らずに西へ下り、高野川（たかのがわ）を渡って、案内板にしたがって歩きます。寂光院の案内では約15分。ゆっくり歩いて20分。三千院の前からだと35分ほどです。\n\n"
                "道の両側は田んぼと畑で、しば漬に使う赤しその畑もあります（赤しそは夏）。三千院のあたりより人が少なく、山に囲まれた大原の里がよく見えます。\n\n"
@@ -286,8 +302,9 @@ BASE = dict(
                "Lunch and the valley walk\n\n"
                "Eat early\nMost places to eat in Ohara open for lunch only and shut before evening. In autumn many have queues between 12:00 and 13:00, so the easiest plan is to sit down at about 11:30, and by 14:00 at the latest. Little is open at night, so have dinner back in the city.\n\n"
                "Places whose hours could be checked\n"
-               "• Hinasato, the dining room of the inn Seryo: at the foot of the stone steps in front of Sanzen-in. Michikusa bento ¥3,850, yudofu set ¥3,300 (prices from the official website). The Ohara tourist association gives lunch as 11:30–15:00; the inn’s own website gives no hours and says it “may not be available in some seasons”, so phone ahead if you are counting on it.\n"
-               "• Hanamurasaki at Sato-no-Eki Ohara: the diner of a farmers’ market about 1 km south of the Ohara bus stop along the main road, near the Nomura-wakare (Sato-no-Eki Ohara) stop. Lunch 11:00–14:00, café until 15:30 (notice on the official website). Known for oyakodon. Closed Mondays (per the tourist association; the next day if Monday is a holiday). On Sundays a morning market runs 6:00–9:00. About 25 minutes on foot from Jakko-in.\n\n"
+               "• Hinasato, the dining room of the inn Seryo: at the foot of the stone steps in front of Sanzen-in. Michikusa bento ¥3,850, yudofu set ¥3,300 (prices from the official website). Lunch is served 11:30–15:00 (per the Ohara tourist association). The inn’s website says it “may not be available in some seasons”, so phone ahead (075-744-2301) if you are counting on it.\n"
+               "• Hanamurasaki at Sato-no-Eki Ohara: the diner of a farmers’ market about 1 km south of the Ohara bus stop along the main road, near the Nomura-wakare (Sato-no-Eki Ohara) stop. Lunch 11:00–14:00, café 11:00–15:30 (last orders 15:00). The house oyakodon is ¥1,320; the daily Ohara set ¥1,100. Closed Mondays (Tuesday if Monday is a holiday). On Sundays a morning market runs 6:00–9:00, and the diner opens early, 7:30–9:00, for tamago-kake-gohan (rice with raw egg, ¥660) and drinks; it then closes 9:00–11:00 to get ready. About 25 minutes on foot from Jakko-in.\n\n"
+               "There are city public toilets inside the Ohara bus terminal and at the Ohara Jakko-in car park near the temple.\n\n"
                "Along the lane and around the bus stop there are also soba and udon shops, set-meal places and sweet shops. Their days and hours differ and could not all be checked here: if you have one in mind, look it up first (the tourist association’s website lists them).\n\n"
                "The valley walk\nJakko-in is on the other side of the valley. From the bus stop, without crossing the main road, head downhill to the west, cross the Takano river and follow the signs. The temple gives it as about 15 minutes; allow 20 at an easy pace. From Sanzen-in’s gate it is about 35.\n\n"
                "The lane runs between rice fields and vegetable plots, some growing the red shiso used for shibazuke (in summer). There are fewer people than around Sanzen-in, and you get the open view of the valley ringed by hills.\n\n"
@@ -298,14 +315,19 @@ BASE = dict(
         links=[link("official", "芹生 料理のご案内", "Seryo: dining (official, Japanese)", "https://www.seryo.co.jp/cuisine.html"),
                link("official", "里の駅 大原", "Sato-no-Eki Ohara (official, Japanese)", "http://www.satonoeki-ohara.com"),
                link("info", "大原観光保勝会「食べる」", "Ohara tourist association: places to eat (Japanese)", "https://kyoto-ohara-kankouhosyoukai.net/eat/")],
-        info=info([row("hours", "芹生「ひな里」昼 11:30〜15:00（大原観光保勝会の案内。公式サイトに時間の記載なし＝要確認）", "Seryo “Hinasato” lunch 11:30–15:00 (per the tourist association; no hours on the official site: please check)"),
+        info=info([row("hours", "芹生「ひな里」昼 11:30〜15:00（大原観光保勝会の案内）。季節により利用できないことがあります（芹生の公式サイト）", "Seryo “Hinasato” lunch 11:30–15:00 (per the Ohara tourist association). It may not be available in some seasons (inn’s website)"),
                    row("fee", "芹生「ひな里」三千草弁当3,850円、湯豆腐膳3,300円。京ゆば膳4,400円は要予約", "Seryo “Hinasato”: Michikusa bento ¥3,850, yudofu set ¥3,300. The yuba set (¥4,400) must be booked"),
-                   row("hours", "里の駅 大原「花むらさき」ランチ11:00〜14:00、カフェ〜15:30。日曜の朝市 6:00〜9:00", "Sato-no-Eki Ohara “Hanamurasaki”: lunch 11:00–14:00, café until 15:30. Sunday morning market 6:00–9:00"),
-                   row("closed", "花むらさきは月曜休み（保勝会の案内。祝日のときは翌日。公式の営業カレンダーで確認を）", "Hanamurasaki is closed on Mondays (per the tourist association; the next day if a holiday. Check the official calendar)"),
+                   row("hours", "里の駅 大原「花むらさき」ランチ11:00〜14:00、カフェ11:00〜15:30（ラストオーダー15:00）。日曜は7:30〜9:00に朝の営業（9:00〜11:00は休み）。日曜の朝市 6:00〜9:00", "Sato-no-Eki Ohara “Hanamurasaki”: lunch 11:00–14:00, café 11:00–15:30 (last orders 15:00). Sundays also 7:30–9:00 (closed 9:00–11:00). Sunday morning market 6:00–9:00"),
+                   row("fee", "花むらさき：こだわりの親子丼1,320円、日替わり大原膳1,100円、日曜朝の卵かけご飯660円", "Hanamurasaki: oyakodon ¥1,320, daily Ohara set ¥1,100, Sunday-morning tamago-kake-gohan ¥660"),
+                   row("closed", "花むらさきは月曜休み（祝日のときは翌日の火曜）", "Hanamurasaki is closed on Mondays (Tuesday if Monday is a holiday)"),
+                   row("hours", "トイレ：大原バス停の中（6:30ごろ〜21:30ごろ）と大原寂光院駐車場（いつでも）に京都市の公衆トイレ", "Toilets: city public toilets in the Ohara bus terminal (about 6:30–21:30) and at the Ohara Jakko-in car park (always open)"),
                    row("hours", "大原バス停から寂光院まで歩いて約15分（寂光院の案内）。このマップでは20分でみています", "About 15 min on foot from the Ohara bus stop to Jakko-in (temple’s access page). This map allows 20")],
-                  "芹生 公式サイト、里の駅大原 公式サイト、大原観光保勝会、寂光院 公式サイト。2026-11-22", verified=False,
-                  tip=T("芹生の値段と里の駅の時間はそれぞれの公式サイト、芹生の昼の時間と里の駅の休みは大原観光保勝会のサイトで見たものです（11月22日）。花むらさきの日曜の朝の時間、値段は確認できていません。里の駅までの距離は地図で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
-                        "Seryo’s prices and Sato-no-Eki’s hours are from their own websites; Seryo’s lunch hours and Sato-no-Eki’s closing day are from the Ohara tourist association’s site (22 November). Hanamurasaki’s Sunday morning hours and prices could not be confirmed. The distance to Sato-no-Eki is an estimate from the map. Photos are from Wikimedia Commons (author and license shown on each photo)."))),
+                  "芹生 公式サイト（料理のご案内）https://www.seryo.co.jp/cuisine.html、大原観光保勝会「芹生」https://kyoto-ohara-kankouhosyoukai.net/detail/4712/（昼食プランの時間）、"
+                  "里の駅大原 公式サイト（店舗情報 https://www.satonoeki-ohara.com/access/、花むらさき https://www.satonoeki-ohara.com/hanamurasaki/、"
+                  "お知らせ「花むらさきの営業時間がかわります」https://www.satonoeki-ohara.com/blog/3396/、朝市 https://www.satonoeki-ohara.com/market/）、"
+                  "京都市「(R1)大原の里公衆トイレ」「(R2)寂光院公衆トイレ」https://www.city.kyoto.lg.jp/kankyo/page/0000331162.html、寂光院 公式サイト。2026-11-24", checked=D24,
+                  tip=T("芹生の値段は芹生の公式サイト、昼の時間は大原観光保勝会のサイト、花むらさきの時間・値段・休みは里の駅大原の公式サイト、トイレは京都市のサイトで確認しました（11月24日）。里の駅までの距離は地図で測った目安です。写真は Wikimedia Commons から（撮影者とライセンスを写真の上に表示）。",
+                        "Seryo’s prices are from its website and its lunch hours from the Ohara tourist association’s site; Hanamurasaki’s hours, prices and closing day from Sato-no-Eki Ohara’s website; the toilets from Kyoto City’s site (all checked 24 November). The distance to Sato-no-Eki is an estimate from the map. Photos are from Wikimedia Commons (author and license shown on each photo)."))),
     jakkoin=dict(
         name=T("寂光院", "Jakko-in"), kind=T("尼寺（平家物語）", "Nunnery (Tale of the Heike)"),
         blurb=T("平家が滅びたあと、建礼門院が余生を送った尼寺。三千院より小さく、人も少ないお寺です。バス停から歩いて20分。",
@@ -461,12 +483,12 @@ COURSES = [
         order=[
             ("bus", ARR, "8:38（平日）／8:49（土日祝）。三条京阪前 7:57発", "8:38 (weekdays) / 8:49 (weekends and holidays): the 7:57 from Sanjo-Keihan-mae",
              T("三千院が開く時間に合わせるバスです。三条京阪前7:57発（四条河原町からは7:49発）。平日は8:38、土日祝は国際会館駅前を回るので8:49に着きます。ここから参道を15分上ると、三千院の門に9時ごろ。三千院は11月が8:45、ほかの月は9:00に開きます。\n\n"
-               "朝ごはんは食べてから乗ってください。大原で朝早く開いている食事の店は確かめられていません。三千院のあと、宝泉院のお抹茶とお菓子でひと休みして、11:30に早めのお昼にします。\n\n"
-               "日曜だけの寄り道：1本早い7:19発（特16系統）に乗って、大原の2分手前の「野村別れ（里の駅大原）」で降りると（8:05着・550円）、里の駅 大原の朝市（6:00〜9:00）に間に合います。そこから三千院までは歩いて30分ほどです。\n\n"
+               "朝ごはんは食べてから乗ってください。大原で朝早く開いている食事の店は、日曜の里の駅 大原（下）のほかは確かめられていません。三千院のあと、宝泉院のお抹茶とお菓子でひと休みして、11:30に早めのお昼にします。\n\n"
+               "日曜だけの寄り道：1本早い7:19発（特16系統）に乗って、大原の2分手前の「野村別れ（里の駅大原）」で降りると（8:05着・550円）、里の駅 大原の朝市（6:00〜9:00）に間に合います。食堂の花むらさきも日曜は7:30〜9:00に開いていて、卵かけご飯（660円）で朝ごはんにできます。そこから三千院までは歩いて30分ほどです。\n\n"
                "帰りは14:27発のバスで、三条京阪前に15:10に着きます。",
                "This bus is timed for Sanzen-in’s opening: the 7:57 from Sanjo-Keihan-mae (7:49 from Shijo-Kawaramachi). It arrives at 8:38 on weekdays and, running via Kokusaikaikan station, at 8:49 on weekends and holidays. Fifteen minutes up the lane puts you at Sanzen-in’s gate at about 9:00. The temple opens at 8:45 in November and 9:00 in other months.\n\n"
-               "Have breakfast before you board: no place to eat in Ohara could be confirmed as open this early. After Sanzen-in, rest over the matcha and sweet at Hosen-in, then have an early lunch at 11:30.\n\n"
-               "A Sunday-only extra: take the earlier 7:19 (bus Toku-16) and get off at Nomura-wakare (Sato-no-Eki Ohara), two minutes before Ohara (8:05, ¥550), in time for the morning market at Sato-no-Eki Ohara (6:00–9:00). From there it’s about 30 minutes on foot to Sanzen-in.\n\n"
+               "Have breakfast before you board: apart from Sato-no-Eki Ohara on Sundays (below), no place to eat in Ohara could be confirmed as open this early. After Sanzen-in, rest over the matcha and sweet at Hosen-in, then have an early lunch at 11:30.\n\n"
+               "A Sunday-only extra: take the earlier 7:19 (bus Toku-16) and get off at Nomura-wakare (Sato-no-Eki Ohara), two minutes before Ohara (8:05, ¥550), in time for the morning market at Sato-no-Eki Ohara (6:00–9:00). On Sundays its diner, Hanamurasaki, also opens 7:30–9:00, so you can breakfast on tamago-kake-gohan (rice with raw egg, ¥660). From there it’s about 30 minutes on foot to Sanzen-in.\n\n"
                "You go back on the 14:27 bus, reaching Sanjo-Keihan-mae at 15:10.")),
             ("sando", VIS, "8:40〜9:00（上るだけ。店は帰りに）", "8:40–9:00 (just the climb; shops later)",
              T("朝は店がまだ開いていないことが多いので、まっすぐ三千院へ上ります。買い物は三千院・宝泉院のあと、お昼の前後に。",
