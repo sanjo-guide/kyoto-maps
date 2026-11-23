@@ -16,7 +16,7 @@
 import os, runpy
 
 CFG = dict(
-    id='takagamine', i18n='TAKAGAMINE_I18N', count=4, data_v=4, bump=102,
+    id='takagamine', i18n='TAKAGAMINE_I18N', count=4, data_v=5, bump=103,
     head='京都 今宮神社と鷹峯（光悦寺・源光庵・常照寺）',
     title='京都 今宮神社と鷹峯｜あぶり餅・光悦寺・源光庵・常照寺 Takagamine MAP',
     desc='三条から市バスで京都の北へ。今宮神社のあぶり餅、鷹峯の光悦寺・源光庵・常照寺の紅葉。源光庵の開門に合わせるコースと9〜10時発のコースを選べるルートマップ。お昼の場所、大徳寺・しょうざん・金閣寺へのつなぎ方、帰りのバスと夜も。Imamiya Shrine’s aburi-mochi and the autumn temples of Takagamine, north Kyoto: a course timed for Genkoan’s 9:00 opening or a 9–10 o’clock course, with lunch, Daitoku-ji, Shozan and Kinkaku-ji, buses back and the evening in town.',

@@ -89,7 +89,7 @@ window.TAKAGAMINE_I18N = {
         "三条からは市バスで。四条河原町から46系統で今宮神社前まで約35分・230円",
         "あぶり餅の2軒は水曜休み（1日・15日・祝日なら翌日）。12月16日〜31日も休み",
         "光悦寺は紅葉の時期は8:30から・500円。毎年11月10日〜13日は拝観できません",
-        "源光庵は本堂に上がるので、靴を入れる袋を持って。拝観料は公式の案内になく要確認",
+        "源光庵は本堂に上がるので、靴を入れる袋を持って。拝観料は400円（紅葉の時期は500円）",
         "お昼はしょうざんのわかどりか楼蘭。ラストオーダーが14時なので、13時半までに",
         "鷹峯の3つのお寺は歩いて2〜5分ずつ。しょうざんへ15分、金閣寺へはそこから25分ほど歩きます",
         "帰りの市バス59系統（金閣寺道→河原町三条）の最終は20:39。12月6日まではしょうざんの夜のライトアップも"
@@ -142,7 +142,7 @@ window.TAKAGAMINE_I18N = {
       ],
       "timeSuffix": "〜",
       "dealsHead": "交通費と拝観料のめやす",
-      "dealsLead": "市バスは1回230円。9〜10時発のコースは46・6・59系統の3回で690円です。地下鉄も使う日や、寄り道でバスに乗る回数が増える日は、地下鉄・バス1日券（1,100円）も。拝観料（光悦寺500円・常照寺400円・金閣寺500円など）は別です。",
+      "dealsLead": "市バスは1回230円。9〜10時発のコースは46・6・59系統の3回で690円です。地下鉄も使う日や、寄り道でバスに乗る回数が増える日は、地下鉄・バス1日券（1,100円）も。拝観料（紅葉の時期の光悦寺・源光庵500円、常照寺400円、金閣寺500円など）は別です。",
       "deals": [
         {
           "name": "市バス",
@@ -157,6 +157,12 @@ window.TAKAGAMINE_I18N = {
           "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=279"
         },
         {
+          "name": "源光庵",
+          "price": "500円（紅葉の時期）",
+          "text": "ふだんは400円。9:00〜17:00（受付16:30まで）。法要の日は拝観を止めることあり。",
+          "url": "https://www.kyoto-kankou.or.jp/info_search/9493"
+        },
+        {
           "name": "常照寺",
           "price": "400円",
           "text": "8:30〜17:00。",
@@ -169,7 +175,7 @@ window.TAKAGAMINE_I18N = {
           "url": "https://www.shozan.co.jp/sansaku/index.html"
         }
       ],
-      "dealsNote": "大人の運賃・料金です。2026年11月22日に確認しました（京都市交通局の時刻表、各寺社・施設の公式サイト、京都観光Navi、乗換案内）。源光庵の拝観料は公式の案内に書かれていません（要確認）。",
+      "dealsNote": "大人の運賃・料金です。2026年11月22日・23日に確認しました（京都市交通局の時刻表、各寺社・施設の公式サイト、京都観光Navi、京都府観光連盟、乗換案内）。",
       "dealsMore": "公式サイトで見る",
       "howHead": "このマップの使い方",
       "how": [
@@ -333,7 +339,7 @@ window.TAKAGAMINE_I18N = {
         "From Sanjo it’s the city bus: no. 46 from Shijo-Kawaramachi to Imamiya-jinja-mae, about 35 min, ¥230",
         "Both aburi-mochi shops close on Wednesdays (Thursday if the 1st, 15th or a holiday) and 16–31 December",
         "Koetsuji opens at 8:30 and costs ¥500 in autumn; it is closed every year 10–13 November",
-        "At Genkoan you take your shoes off: bring a bag for them. Its admission isn’t published (please check)",
+        "At Genkoan you take your shoes off: bring a bag for them. Admission ¥400 (¥500 in autumn)",
         "Lunch at Shozan’s Wakadori or Louran. Last orders are at 14:00, so arrive by 13:30",
         "The three Takagamine temples are 2–5 min apart on foot; then 15 min to Shozan and about 25 more to Kinkaku-ji",
         "The last city bus 59 (Kinkakuji-michi → Kawaramachi-Sanjo) leaves at 20:39. Until 6 Dec, Shozan’s garden is lit up in the evening"
@@ -386,7 +392,7 @@ window.TAKAGAMINE_I18N = {
       ],
       "timeSuffix": "",
       "dealsHead": "Fares and entry fees",
-      "dealsLead": "City buses are ¥230 a ride; the 9–10 course uses three (46, 6 and 59): ¥690. If you also take the subway or add side trips, the Subway & Bus 1-day Pass (¥1,100) may pay off. Entry fees (Koetsuji ¥500, Joshoji ¥400, Kinkaku-ji ¥500, etc.) are extra.",
+      "dealsLead": "City buses are ¥230 a ride; the 9–10 course uses three (46, 6 and 59): ¥690. If you also take the subway or add side trips, the Subway & Bus 1-day Pass (¥1,100) may pay off. Entry fees (Koetsuji and Genkoan ¥500 in autumn, Joshoji ¥400, Kinkaku-ji ¥500, etc.) are extra.",
       "deals": [
         {
           "name": "City bus",
@@ -401,6 +407,12 @@ window.TAKAGAMINE_I18N = {
           "url": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=279"
         },
         {
+          "name": "Genkoan",
+          "price": "¥500 (autumn)",
+          "text": "Usually ¥400. 9:00–17:00 (last entry 16:30). Visits may stop on days of temple services.",
+          "url": "https://www.kyoto-kankou.or.jp/info_search/9493"
+        },
+        {
           "name": "Joshoji",
           "price": "¥400",
           "text": "8:30–17:00.",
@@ -413,7 +425,7 @@ window.TAKAGAMINE_I18N = {
           "url": "https://www.shozan.co.jp/sansaku/index.html"
         }
       ],
-      "dealsNote": "Adult fares and fees, checked on Nov 22, 2026 (Kyoto City bus timetables, temple and garden websites, Kyoto Kanko Navi, a route planner). Genkoan’s admission isn’t published (please check).",
+      "dealsNote": "Adult fares and fees, checked on 22–23 Nov 2026 (Kyoto City bus timetables, temple and garden websites, Kyoto Kanko Navi, Kyoto Prefecture tourism guide, a route planner).",
       "dealsMore": "See official site",
       "howHead": "How to use this map",
       "how": [

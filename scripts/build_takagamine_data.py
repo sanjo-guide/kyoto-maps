@@ -17,6 +17,7 @@
 - 出発地は京都の中心・三条のあたり（京都市役所前・三条・京都河原町）。宿の名前は書かない
 - 写真は images/takagamine/ にあるものだけ（足していない）。鷹峯は2025年11月4日、今宮神社は2026年5月15日
 - 大徳寺・しょうざん・金閣寺・船岡温泉は写真がないので、スポットにせず、最後のスポットの文章で案内する
+- 2026-11-23 要確認の調べ直し：一和の時間・源光庵の拝観料は京都府観光連盟、船岡温泉は京都府浴場組合（1010.kyoto）で確認
 - 2026-11-22 オーナーの基準で作り直した（ゲストが実際に回れる1日。開門コースと9〜10時発コース、お昼の場所と時間、帰りのバス、夜）
 """
 import copy, json, os, urllib.parse
@@ -47,8 +48,8 @@ def notice(head_ja, head_en, ja, en, url=None, frm=None, to=None):
     return {"from": frm, "to": to, "url": url, "head": T(head_ja, head_en), "text": T(ja, en)}
 
 
-def info(rows, source, tip=None, verified=True, cash=False):
-    d = {"rows": rows, "cash": cash, "tip": tip, "checked": CHECKED, "source": source}
+def info(rows, source, tip=None, verified=True, cash=False, checked=CHECKED):
+    d = {"rows": rows, "cash": cash, "tip": tip, "checked": checked, "source": source}
     if not verified:
         d["verified"] = False
     return d
@@ -72,6 +73,11 @@ NAVI_KOETSU = "https://ja.kyoto.travel/tourism/single01.php?category_id=7&touris
 MOMIJI = "https://ja.kyoto.travel/flower/momiji/"
 KANKO_ICHIWA = "https://www.kyoto-kankou.or.jp/info_search/680"
 KANKO_KAZARI = "https://www.kyoto-kankou.or.jp/info_search/681"
+KANKO_ABURI = "https://www.kyoto-kankou.or.jp/info_search/8455"
+KANKO_GENKOAN = "https://www.kyoto-kankou.or.jp/info_search/9493"
+SENTO_FUNAOKA = "https://1010.kyoto/spot/funaokaonsen/"
+SENTO_HOWTO = "https://1010.kyoto/how_to_use/"
+PREF_SENTO_FEE = "https://www.pref.kyoto.jp/seikatsu/news/press/2025/3/nyuyokuryoukintouseigaku.html"
 SHOZAN = "https://www.shozan.co.jp/"
 SHOZAN_GARDEN = "https://www.shozan.co.jp/sansaku/index.html"
 SHOZAN_LIGHT = "https://www.shozan.co.jp/topic/lightup.html"
@@ -119,27 +125,29 @@ BASE = dict(
                "朱色の楼門をくぐると、広い境内に本殿が建ちます。東門を出た参道では、「一和（いちわ。一文字屋和輔）」と「かざりや」の2軒が向かい合っています。"
                "竹ぐしに刺した小さなお餅を炭火であぶり、白みそのたれをからめた「あぶり餅」。一和は平安時代（長保2年＝1000年）から続く店です。"
                "1人前600円（京都府観光連盟の案内）。どちらに入っても同じ値段です。\n\n"
-               "かざりやは10:00〜17:00。一和の時間は公式の案内で確かめられませんでした（要確認）。2軒とも水曜休み（1日・15日・祝日が水曜日のときは翌日）、12月16日〜31日もお休みです。\n\n"
+               "2軒とも10:00〜17:00。水曜休み（1日・15日・祝日が水曜日のときは翌日）、12月16日〜31日もお休みです（京都府観光連盟の案内）。\n\n"
                "バス停は「今宮神社前」（市バス46系統）と、歩いて5〜7分の「佛教大学前」（6・北1・46系統。鷹峯行きはここから）。大徳寺は南へ歩いて10分ほどです。",
                "Imamiya Shrine and aburi-mochi\n\n"
                "Through the vermilion gate is a broad precinct and the main hall. On the lane outside the east gate, two teahouses face each other: Ichiwa (Ichimonjiya Wasuke) and Kazariya. "
                "Small bamboo-skewered rice cakes are toasted over charcoal and coated in sweet white-miso sauce; Ichiwa has been making them since the year 1000. "
                "¥600 a portion at either shop (Kyoto Prefecture tourism guide).\n\n"
-               "Kazariya is open 10:00–17:00; Ichiwa’s hours couldn’t be confirmed from an official source (please check). Both close on Wednesdays (on Thursday instead when the 1st, the 15th or a holiday falls on a Wednesday) and from 16 to 31 December.\n\n"
+               "Both are open 10:00–17:00 and close on Wednesdays (on Thursday instead when the 1st, the 15th or a holiday falls on a Wednesday) and from 16 to 31 December (Kyoto Prefecture tourism guide).\n\n"
                "Bus stops: “Imamiya-jinja-mae” (city bus 46), and “Bukkyo-daigaku-mae”, 5–7 minutes’ walk (buses 6, Kita-1 and 46; buses up to Takagamine leave from here). Daitoku-ji is about 10 minutes’ walk south."),
         gmaps=[gm("今宮神社", "Imamiya Shrine", 35.04560, 135.74213, "今宮神社 京都市北区"),
                gm("あぶり餅 かざりや", "Kazariya", 35.04521, 135.74279, "あぶり餅 かざりや"),
                gm("佛教大学前バス停", "Bukkyo-daigaku-mae bus stop", 35.04590, 135.73904, "佛教大学前 バス停 今宮通")],
         links=[link("official", "今宮神社 公式サイト（交通案内）", "Imamiya Shrine: access (official, Japanese)", "http://www.imamiyajinja.org/access/"),
+               link("info", "あぶり餅 2軒の時間と休み（京都府観光連盟）", "Both aburi-mochi shops: hours and closing days (Kyoto Prefecture tourism, Japanese)", KANKO_ABURI),
                link("info", "あぶり餅 一和（京都府観光連盟）", "Ichiwa aburi-mochi (Kyoto Prefecture tourism, Japanese)", KANKO_ICHIWA),
                link("info", "あぶり餅 かざりや（京都府観光連盟）", "Kazariya aburi-mochi (Kyoto Prefecture tourism, Japanese)", KANKO_KAZARI), CITYBUS],
         notices=[ABURI_YEAREND],
         _rows=[row("hours", "社務所（電話の受付）9:00〜17:00", "Shrine office (phone) 9:00–17:00"),
-               row("fee", "あぶり餅 1人前600円（かざりや 10:00〜17:00、一和の時間は要確認）", "Aburi-mochi ¥600 a portion (Kazariya 10:00–17:00; Ichiwa’s hours: please check)"),
+               row("fee", "あぶり餅 1人前600円（一和・かざりやとも10:00〜17:00）", "Aburi-mochi ¥600 a portion (Ichiwa and Kazariya both 10:00–17:00)"),
                row("closed", "あぶり餅の2軒：水曜（1日・15日・祝日なら翌日）、12月16日〜31日", "Both aburi-mochi shops: Wednesdays (Thursday if the 1st, 15th or a holiday), and 16–31 December")],
-        _tip=T("今宮神社の公式サイト（交通案内）と、京都府観光連盟の案内（あぶり餅の2軒）で確認しました（11月22日）。一和の営業時間は、公式の案内に書かれていません。",
-               "Checked on the shrine’s access page and the Kyoto Prefecture tourism guide for the two shops (22 November). Ichiwa’s opening hours aren’t given in any official source."),
-        _source="今宮神社 公式サイト（交通案内）、京都府観光連盟（あぶり餅 一和・かざりや）。2026-11-22に確認"),
+        _tip=T("今宮神社の公式サイト（交通案内）と、京都府観光連盟の案内（あぶり餅の2軒）で確認しました（11月23日）。",
+               "Checked on the shrine’s access page and the Kyoto Prefecture tourism guide for the two shops (23 November)."),
+        _source="今宮神社 公式サイト（交通案内）、京都府観光連盟（あぶり餅、あぶり餅 一和・かざりや）。2026-11-23に確認",
+        _checked="2026-11-23"),
     koetsuji=dict(
         name=T("光悦寺", "Koetsuji"), kind=T("寺", "Temple"),
         blurb=T("江戸時代の芸術家・本阿弥光悦が開いた芸術村の跡。もみじのトンネルの参道と、竹を組んだ「光悦垣」。",
@@ -167,26 +175,31 @@ BASE = dict(
         name=T("源光庵", "Genkoan"), kind=T("寺", "Temple"),
         blurb=T("丸窓のある山門と、本堂から眺める静かな庭。四角い「迷いの窓」と丸い「悟りの窓」で知られるお寺です。",
                 "A gate with a round window and a quiet garden seen from the main hall; famous for its square “Window of Confusion” and round “Window of Enlightenment”."),
-        caution=T("9:00〜17:00（受付16:30まで）。靴を入れる袋を持って。拝観料は要確認", "9:00–17:00 (last entry 16:30). Bring a bag for your shoes. Admission: please check"),
+        caution=T("9:00〜17:00（受付16:30まで）。大人400円（紅葉の時期は500円）。靴を入れる袋を持って", "9:00–17:00 (last entry 16:30). ¥400 (¥500 in autumn-leaf season). Bring a bag for your shoes"),
         lat=35.05484, lng=135.73182,
         body=T("源光庵（げんこうあん）\n\n"
                "「鷹峯源光庵前」バス停のすぐそば。丸い窓のある山門をくぐると、本堂の縁側から苔と植え込みの庭が眺められます。"
                "本堂の四角い「迷いの窓」と丸い「悟りの窓」は、人の一生と悟りの心を表すといわれ、紅葉の時期は窓の外が赤く染まります。窓の前は、人が少ない朝のうちが落ち着いて座れます。\n\n"
                "本堂の天井は、伏見城の遺構の「血天井」です。\n\n"
-               "本堂に上がるので、脱いだ靴を入れる袋を持っていきましょう（お寺のお願い）。お寺の行事があるときは、拝観を止めることがあります。拝観料は公式サイトに書かれていません（要確認）。2026年は11月14日〜12月6日、駐車場が使えません。",
+               "本堂に上がるので、脱いだ靴を入れる袋を持っていきましょう（お寺のお願い）。お寺の行事があるときは、拝観を止めることがあります。"
+               "拝観料は大人（中学生以上）400円、紅葉の時期は500円、小学生200円（京都府観光連盟の案内。お寺のサイトには書かれていません）。2026年は11月14日〜12月6日、駐車場が使えません。",
                "Genkoan\n\n"
                "Right by the “Takagamine-Genkoan-mae” bus stop. Through a gate with a round window, look out from the main hall’s veranda over a garden of moss and clipped shrubs. "
                "The hall’s square “Window of Confusion” and round “Window of Enlightenment” are said to stand for human life and an enlightened mind; in autumn the view through them turns red. Early in the day, with fewer people, you can sit in front of the windows in peace.\n\n"
                "The hall’s ceiling is the “blood ceiling”, a remnant of Fushimi Castle.\n\n"
-               "You take your shoes off for the hall, so bring a bag for them (the temple asks visitors to). Visits are suspended during temple events. Admission isn’t given on the temple website (please check). In 2026 the car park is closed from 14 November to 6 December."),
+               "You take your shoes off for the hall, so bring a bag for them (the temple asks visitors to). Visits are suspended during temple events. "
+               "Admission is ¥400 for adults (junior high and up), ¥500 in the autumn-leaf season, ¥200 for elementary pupils (Kyoto Prefecture tourism guide; the temple website doesn’t list it). In 2026 the car park is closed from 14 November to 6 December."),
         gmaps=[gm("源光庵", "Genkoan", 35.05484, 135.73182, "源光庵 鷹峯"),
                gm("鷹峯源光庵前バス停", "Takagamine-Genkoan-mae bus stop", 35.05432, 135.73237, "鷹峯源光庵前 バス停")],
         links=[link("official", "源光庵 公式サイト", "Genkoan (official, Japanese)", "https://genkouan.or.jp/"),
-               link("info", "源光庵のお知らせ", "Genkoan notices (Japanese)", "https://genkouan.or.jp/notice/")],
+               link("info", "源光庵のお知らせ", "Genkoan notices (Japanese)", "https://genkouan.or.jp/notice/"),
+               link("info", "源光庵（京都府観光連盟。拝観料）", "Genkoan (Kyoto Prefecture tourism: admission, Japanese)", KANKO_GENKOAN)],
         _rows=[row("hours", "9:00〜17:00（受付は16:30まで）。行事の日は拝観中止のことあり", "9:00–17:00 (last entry 16:30); closed during temple events"),
-               row("fee", "拝観料は公式の案内に書かれていません（要確認）", "Admission isn’t given in the official information (please check)")],
-        _tip=T("源光庵の公式サイト（拝観時間・お知らせ・アクセス）で確認しました（11月22日）。", "Checked on the temple website (hours, notices, access) on 22 November."),
-        _source="源光庵 公式サイト（拝観時間、お知らせ 2026-11-09「駐車場ご利用休止のご案内（11月14日～12月6日）」、靴袋のお願い、アクセス）。2026-11-22に確認"),
+               row("fee", "大人（中学生以上）400円（紅葉の時期は500円）、小学生200円", "¥400 adults (junior high and up; ¥500 in autumn-leaf season), ¥200 elementary")],
+        _tip=T("時間とお知らせは源光庵の公式サイト（11月22日）、拝観料は京都府観光連盟の案内（11月23日）で確認しました。お寺のサイトには拝観料が書かれていません。",
+               "Hours and notices checked on the temple website (22 November), admission on the Kyoto Prefecture tourism guide (23 November); the temple website doesn’t list the fee."),
+        _source="源光庵 公式サイト（拝観時間、お知らせ 2026-11-09「駐車場ご利用休止のご案内（11月14日～12月6日）」、靴袋のお願い、アクセス）2026-11-22に確認。拝観料は京都府観光連盟（源光庵）2026-11-23に確認",
+        _checked="2026-11-23"),
     joshoji=dict(
         name=T("常照寺", "Joshoji"), kind=T("寺", "Temple"),
         blurb=T("江戸時代の名妓・吉野太夫が寄進した朱の「吉野門」。丸い窓の茶室と、もみじの庭。",
@@ -226,7 +239,7 @@ AFTER_LATE = T(
     "帰りと、夜\n"
     "金閣寺道から市バス59系統で河原町三条へ約30分・230円（平日16:35発→17:05着。日中は15〜20分おき。59系統の最終は20:39発）。三条大橋のまわりの木屋町通（きやまちどおり）と先斗町（ぽんとちょう）には、遅くまで開いている店が並びます。閉まる時間とラストオーダーは店ごとに違うので、入る前に表の案内で確かめてください。店を決めておきたい人は、叡山電鉄のマップの24〜26番も見てください。\n\n"
     "12月6日までは、金閣寺のかわりに、しょうざんの夜の紅葉ライトアップ（17:30〜20:00）もあります。このスポットの「お知らせ」を見てください。\n\n"
-    "船岡温泉（ふなおかおんせん）は、今宮神社の南、船岡山のふもとの古い銭湯です。Toshiも入りに行く銭湯で、タトゥーがあっても入れるはずです（念のため入口で確かめてください）。公式サイトが見つからず、営業時間と料金は確かめられていません（要確認）。行くなら、千本鞍馬口のバス停から歩いて6分ほど（地図で見た目安）。",
+    "船岡温泉（ふなおかおんせん）は、今宮神社の南、船岡山のふもとの古い銭湯です。Toshiも入りに行く銭湯で、タトゥーがあっても入れるはずです（念のため入口で確かめてください）。京都府浴場組合のサイトでは、15:00〜23:30（日曜は8:00から）、火曜休み、大人550円（京都の銭湯は同じ料金）。組合の英語のページは時間と休みが違う書き方なので、行く前に電話（075-441-3735）で確かめると安心です。行くなら、千本鞍馬口のバス停から歩いて6分ほど（地図で見た目安）。",
     "Lunch at Shozan (around 13:30)\n\n"
     "From Koetsuji, walk south down the old Takagamine road to the west gate of Shozan Resort Kyoto (about 15 minutes; map estimate). Its restaurants sit inside a large Japanese garden (Shozan website):\n"
     "• Wakadori (chicken and Japanese): lunch 11:30–14:30 (last orders 14:00). Closing days are on its online calendar.\n"
@@ -238,7 +251,7 @@ AFTER_LATE = T(
     "Back to town, and the evening\n"
     "City bus 59 from Kinkakuji-michi to Kawaramachi-Sanjo takes about 30 minutes, ¥230 (weekdays 16:35 → 17:05; every 15–20 minutes in the daytime; the last 59 leaves at 20:39). Around Sanjo Ohashi bridge, Kiyamachi-dori and Pontocho are lined with places that stay open late. Closing times and last orders differ, so check the sign at the door. If you’d rather have a place picked out, see stops 24–26 on the Eizan Railway map.\n\n"
     "Until 6 December there is also Shozan’s evening autumn light-up (17:30–20:00) instead of Kinkaku-ji: see the notes at the top of this spot.\n\n"
-    "Funaoka Onsen, south of Imamiya at the foot of Funaokayama hill, is an old public bath. Toshi bathes here himself, and tattoos should be fine (ask at the entrance to be sure). No official website could be found, so its hours and price are unconfirmed (please check). It’s about 6 minutes’ walk from the Senbon-Kuramaguchi bus stop (map estimate).")
+    "Funaoka Onsen, south of Imamiya at the foot of Funaokayama hill, is an old public bath. Toshi bathes here himself, and tattoos should be fine (ask at the entrance to be sure). The Kyoto bathhouse association’s site gives 15:00–23:30 (from 8:00 on Sundays), closed on Tuesdays, ¥550 for adults (the standard Kyoto sento price). Its English page lists different hours (15:00–1:00, open every day), so it’s worth phoning ahead (075-441-3735). It’s about 6 minutes’ walk from the Senbon-Kuramaguchi bus stop (map estimate).")
 
 AFTER_EARLY = T(
     "大徳寺へ歩いて（11:45ごろ）\n\n"
@@ -252,7 +265,7 @@ AFTER_EARLY = T(
     "12月6日までは、金閣寺から歩いて25分ほど（地図で見た目安）上ると、しょうざんの庭園（昼は17:00まで）と、夜の紅葉ライトアップ（17:30〜20:00）。このスポットの「お知らせ」を見てください。\n\n"
     "帰りと、夜\n"
     "金閣寺道から市バス59系統で河原町三条へ約30分・230円（日中は15〜20分おき。最終は20:39発）。三条大橋のまわりの木屋町通と先斗町には、遅くまで開いている店が並びます。閉まる時間とラストオーダーは店ごとに違うので、入る前に表の案内で確かめてください。叡山電鉄のマップの24〜26番も見てください。\n\n"
-    "船岡温泉は、大徳寺の南西、船岡山のふもとの古い銭湯です。Toshiも入りに行く銭湯で、タトゥーがあっても入れるはずです（念のため入口で確かめてください）。公式サイトが見つからず、営業時間と料金は確かめられていません（要確認）。",
+    "船岡温泉は、大徳寺の南西、船岡山のふもとの古い銭湯です。Toshiも入りに行く銭湯で、タトゥーがあっても入れるはずです（念のため入口で確かめてください）。京都府浴場組合のサイトでは、15:00〜23:30（日曜は8:00から）、火曜休み、大人550円（京都の銭湯は同じ料金）。組合の英語のページは時間と休みが違う書き方なので、行く前に電話（075-441-3735）で確かめると安心です。",
     "Walk to Daitoku-ji (around 11:45)\n\n"
     "About 10 minutes’ walk south of Imamiya Shrine lies Daitoku-ji, a precinct of sub-temples behind earthen walls.\n"
     "• Obai-in: autumn special opening 9 October – 6 December 2026, 10:00–15:45 (last entry), ¥1,000, cash only (Kyoto Shunju). Its garden is said to be the work of Sen no Rikyu.\n"
@@ -264,7 +277,7 @@ AFTER_EARLY = T(
     "Until 6 December, a walk of about 25 minutes uphill from Kinkaku-ji (map estimate) brings you to Shozan’s garden (daytime until 17:00) and its evening autumn light-up (17:30–20:00): see the notes at the top of this spot.\n\n"
     "Back to town, and the evening\n"
     "City bus 59 from Kinkakuji-michi to Kawaramachi-Sanjo takes about 30 minutes, ¥230 (every 15–20 minutes in the daytime; the last at 20:39). Around Sanjo Ohashi bridge, Kiyamachi-dori and Pontocho are lined with places that stay open late. Closing times and last orders differ, so check the sign at the door. See also stops 24–26 on the Eizan Railway map.\n\n"
-    "Funaoka Onsen, south-west of Daitoku-ji at the foot of Funaokayama hill, is an old public bath. Toshi bathes here himself, and tattoos should be fine (ask at the entrance to be sure). No official website could be found, so its hours and price are unconfirmed (please check).")
+    "Funaoka Onsen, south-west of Daitoku-ji at the foot of Funaokayama hill, is an old public bath. Toshi bathes here himself, and tattoos should be fine (ask at the entrance to be sure). The Kyoto bathhouse association’s site gives 15:00–23:30 (from 8:00 on Sundays), closed on Tuesdays, ¥550 for adults (the standard Kyoto sento price). Its English page lists different hours (15:00–1:00, open every day), so it’s worth phoning ahead (075-441-3735).")
 
 LINKS_LATE = [link("official", "しょうざん 日本庭園", "Shozan Japanese garden (Japanese)", SHOZAN_GARDEN),
               link("official", "しょうざん わかどり", "Shozan: Wakadori (Japanese)", SHOZAN_WAKADORI),
@@ -400,9 +413,11 @@ SOURCES = [
     {"what": "乗換案内（Yahoo!路線情報、11月22日に検索）：平日 京都市役所前7:55→二条8:01、二条駅前8:10→鷹峯源光庵前8:32（450円）。土曜・日曜 京都市役所前8:01→二条8:07、二条駅前8:13→鷹峯源光庵前8:33。平日 北大路バスターミナル8:09（北1）→鷹峯源光庵前8:27。平日 四条河原町9:36（46系統）→今宮神社前10:11（230円）。平日 京都市役所前9:32、土曜9:31→二条駅前9:46→佛教大学前10:04。鷹峯源光庵前10:38（6系統）→佛教大学前10:46（平日・土曜）。金閣寺道16:35（59系統）→河原町三条17:05（平日）。土天井町21:30（北1）→北大路新町21:44・北大路バスターミナル21:47、北大路21:59の烏丸線→烏丸御池22:06、22:13の東西線→京都市役所前22:14（平日）", "url": "https://transit.yahoo.co.jp/", "checked": CHECKED},
     {"what": "今宮神社：所在地・TEL受付9:00〜17:00、市バス46番「今宮神社前」下車すぐ、船岡山から北へ徒歩7分、大徳寺バス停から北西へ徒歩13分（交通案内）", "url": "http://www.imamiyajinja.org/access/", "checked": CHECKED},
     {"what": "あぶり餅 一和：定休日 水曜（1日・15日・祝日が水曜の場合は翌日）、年末12/16〜12/31、1人前600円。営業時間の記載なし（京都府観光連盟）", "url": KANKO_ICHIWA, "checked": CHECKED},
+    {"what": "あぶり餅（2軒の案内）：一和 営業時間10時～17時、かざりや 営業時間10時～17時、どちらも定休日 水曜日（1日、15日、祝日が水曜日の場合は翌日）・年末、1人前600円（京都府観光連盟）", "url": KANKO_ABURI, "checked": "2026-11-23"},
     {"what": "あぶり餅 かざりや：10時〜17時、定休日 水曜（1日・15日・祝日が水曜の場合は翌日）、年末12/16〜12/31、1人前600円（京都府観光連盟）", "url": KANKO_KAZARI, "checked": CHECKED},
     {"what": "光悦寺：8:00〜17:00（紅葉時8:30〜17:00）、通常400円（紅葉時500円）、定休日11/10〜11/13、市バス「源光庵前」徒歩約3分、ホームページの記載なし（京都観光Navi）", "url": NAVI_KOETSU, "checked": CHECKED},
     {"what": "源光庵：9:00〜17:00（16:30受付終了）、行事の日は拝観中止あり、靴袋持参のお願い、駐車場休止11/14〜12/6（お知らせ2026-11-09）。拝観料の記載なし（公式サイト）", "url": "https://genkouan.or.jp/", "checked": CHECKED},
+    {"what": "源光庵の拝観料：大人400円（中学生以上）、紅葉時期は500円、子供200円（小学生）。9時～17時（16時30分受付終了）、定休日 無（土日祝など法要のある場合は一時拝観停止有り）（京都府観光連盟）。京都観光Navi（京都市）の源光庵のページには料金の記載なし", "url": KANKO_GENKOAN, "checked": "2026-11-23"},
     {"what": "常照寺：庭園と堂内の拝観 8:30〜17:00、拝観志納金 大人400円・小学生200円（トップ）。市バス6系統・北1系統「鷹峯源光庵前」徒歩2分（アクセス）", "url": "http://tsakae.justhpbs.jp/joshoji/toppage.html", "checked": CHECKED},
     {"what": "しょうざんリゾート京都：北庭 日本庭園 9:00〜17:00（閉門）無休、一般500円（お食事割引300円）（日本庭園のページの画像）。秋の紅葉ライトアップ 2026年10月31日〜12月6日 17:30〜20:00（最終受付19:30）、入園料800円（ライトアップのページの画像）。市バス北1・6系統「土天井町」徒歩約5分（交通アクセス）", "url": SHOZAN_GARDEN, "checked": CHECKED},
     {"what": "しょうざん わかどり：ランチ11:30〜14:30（LO14:00）、17:00〜22:00（LO21:30）、休業日はカレンダー。楼蘭：年中無休、ランチ 平日12:00〜14:30（LO14:00）・土日祝11:30〜14:30（LO14:30）、17:00〜21:00（LO20:30）", "url": SHOZAN_LOURAN, "checked": CHECKED},
@@ -412,7 +427,9 @@ SOURCES = [
     {"what": "金閣寺：参拝時間 9:00〜17:00 年中無休、大人（高校生以上）500円・小中学生300円、現金・おまいりPay（相国寺の公式サイト）", "url": KINKAKU, "checked": CHECKED},
     {"what": "紅葉の見ごろ（例年）：源光庵・しょうざんリゾート京都・大徳寺黄梅院 11月中旬〜下旬。大徳寺高桐院は当面拝観休止（京都観光Navi 紅葉だより、11月20日更新）", "url": MOMIJI, "checked": CHECKED},
     {"what": "地下鉄・バス1日券 大人1,100円（地下鉄・市バスなどが1日乗り放題）（京都観光Navi 交通のお得なチケット）", "url": "https://ja.kyoto.travel/feature/traffic/ticket.php", "checked": CHECKED},
-    {"what": "船岡温泉：公式サイト（funaokaonsen.net）はドメインが切れていて開けず、営業時間・料金は確認できない（要確認）", "url": None, "checked": CHECKED},
+    {"what": "船岡温泉：営業時間 15:00~23:30（日は8:00~23:30)、定休日 火曜日、北区紫野南舟岡町82-1、TEL 075-441-3735（京都府浴場組合「京都銭湯」の日本語のページ）。同じサイトの英語のページは「3 p.m. - 1 a.m.」「Opens every day」で食い違う。自前のサイト（funaokaonsen.net）はドメイン切れ", "url": SENTO_FUNAOKA, "checked": "2026-11-23"},
+    {"what": "京都の銭湯の入浴料金：1回 中学生以上550円・小学生200円・乳幼児100円（京都府浴場組合「銭湯の利用方法」）。京都府の統制額は2025年4月1日から大人550円（京都府の報道発表 2025-03-21）。2026年10月22日に府の審議会で改定の必要性を検討（2026-10-19の報道発表）、結果は未発表", "url": SENTO_HOWTO, "checked": "2026-11-23"},
+    {"what": "京都府公衆浴場入浴料金統制額の改定（2025年4月1日から 大人550円・中人200円・小人100円）", "url": PREF_SENTO_FEE, "checked": "2026-11-23"},
     {"what": "歩く時間（OpenStreetMap の道で測った目安）：鷹峯源光庵前〜光悦寺 約4分、光悦寺〜源光庵 約4分、源光庵〜常照寺 約2分、今宮神社〜佛教大学前 5〜7分、今宮神社〜大仙院 約9分、常照寺〜今宮神社 約25分、しょうざん〜金閣寺 約22分（文章では少しゆったりめに書いた）", "url": "https://www.openstreetmap.org/", "checked": CHECKED},
 ]
 
@@ -436,9 +453,10 @@ def build(c):
         if sid == last:
             rows = rows + c["back"]
         tip, source = b.pop("_tip"), b.pop("_source")
+        checked = b.pop("_checked", CHECKED)
         if sid == last or NO[sid] == 1:
             tip = T(tip["ja"] + BACK_TIP["ja"], tip["en"] + " " + BACK_TIP["en"])
-        b["info"] = info(rows, source, tip=tip)
+        b["info"] = info(rows, source, tip=tip, checked=checked)
         out = {"no": NO[sid], "id": sid}
         out.update(b)
         if NO[sid] == 1:
