@@ -253,8 +253,8 @@
     "03-10.jpg"
    ],
    "text": {
-    "ja": "勝尾寺（かつおうじ）\n\n入口から池にかかる橋をわたり、山門をくぐると、あちこちに小さな赤いダルマ。奉納されたダルマが山のように積まれた棚は、いちばんの撮影スポットです。多宝塔のある丘の上や本堂のまわりも、ゆっくり歩いてみてください。11月は池のまわりの紅葉もきれいです。\n\n勝尾寺から箕面大滝へはバスなどの交通手段がないので、歩いて行くのがおすすめです！ ほとんど下り坂で、歩く時間は合わせて約1時間10分です。途中の箕面ビジターセンターでひと休みし、杉の茶屋まで来れば、滝はもうすぐです。\n\n勝尾寺から箕面ビジターセンターまでは約1.8km、ゆっくり歩いて約40分です。\n\nお昼について：勝尾寺の中で食事ができるかどうかは、公式サイトに案内がなく、確認できていません（要確認）。箕面萱野駅で買ったお昼を、次のビジターセンターの広場で食べるのが確実です。\n\nおすすめ訪問時間：11:00〜12:30",
-    "en": "Katsuoji Temple\n\nCross the bridge over the pond, go through the main gate, and little red daruma start appearing everywhere. The shelves piled high with offered daruma are the best photo spot. Take your time on the hill with the pagoda and around the main hall, too. In November the maples around the pond turn red.\n\nThere’s no bus or other transport from Katsuoji Temple to Minoh Falls, so walk it! The trail is mostly downhill, and the walking takes about 1 hour 10 minutes in all. The Minoh Visitor Center on the way is a good place for a break. Once you reach Sugi no Chaya, a small shop, the waterfall is just a short walk away.\n\nFrom Katsuoji to the Minoh Visitor Center it is about 1.8 km, around 40 minutes at an easy pace.\n\nAbout lunch: the temple’s official website says nothing about a place to eat inside, so I could not confirm one (please check). The safe plan is to eat the lunch you bought at Minoh-Kayano at the Visitor Center, the next stop.\n\nRecommended visit time: 11:00–12:30"
+    "ja": "勝尾寺（かつおうじ）\n\n入口から池にかかる橋をわたり、山門をくぐると、あちこちに小さな赤いダルマ。奉納されたダルマが山のように積まれた棚は、いちばんの撮影スポットです。多宝塔のある丘の上や本堂のまわりも、ゆっくり歩いてみてください。11月は池のまわりの紅葉もきれいです。\n\n勝尾寺から箕面大滝へはバスなどの交通手段がないので、歩いて行くのがおすすめです！ ほとんど下り坂で、歩く時間は合わせて約1時間10分です。途中の箕面ビジターセンターでひと休みし、杉の茶屋まで来れば、滝はもうすぐです。\n\n勝尾寺から箕面ビジターセンターまでは約1.8km、ゆっくり歩いて約40分です。\n\nお昼について：公式サイトの境内マップには、食事のできるお店はのっていません。箕面萱野駅で買ったお昼を、次のビジターセンターの広場で食べましょう。\n\nおすすめ訪問時間：11:00〜12:30",
+    "en": "Katsuoji Temple\n\nCross the bridge over the pond, go through the main gate, and little red daruma start appearing everywhere. The shelves piled high with offered daruma are the best photo spot. Take your time on the hill with the pagoda and around the main hall, too. In November the maples around the pond turn red.\n\nThere’s no bus or other transport from Katsuoji Temple to Minoh Falls, so walk it! The trail is mostly downhill, and the walking takes about 1 hour 10 minutes in all. The Minoh Visitor Center on the way is a good place for a break. Once you reach Sugi no Chaya, a small shop, the waterfall is just a short walk away.\n\nFrom Katsuoji to the Minoh Visitor Center it is about 1.8 km, around 40 minutes at an easy pace.\n\nAbout lunch: the temple’s official precinct map shows no place to eat. Eat the lunch you bought at Minoh-Kayano at the Visitor Center, the next stop.\n\nRecommended visit time: 11:00–12:30"
    },
    "gmaps": [
     {
@@ -890,14 +890,14 @@
    "checked": "2026-11-21"
   },
   {
-   "what": "箕面温泉スパーガーデンの営業時間・入館料・タトゥーの決まり・アクセス（公式サイト。休館日とカバーシールの大きさ・値段は記載なし）",
+   "what": "箕面温泉スパーガーデンの営業時間・入館料・タトゥーの決まり（「入れ墨・タトゥーのある方（当館指定の有料カバーシール2枚以内で完全に覆える場合を除く）」）・アクセス（公式サイト。休館日、カバーシールの大きさ・値段、入湯税の金額は記載なし）",
    "url": "https://www.ooedoonsen.jp/minoh-spa/",
-   "checked": "2026-11-21"
+   "checked": "2026-11-24"
   },
   {
    "what": "チンクエピュウ テラス：1オーダー制・精算は現金のみ・11:30〜15:00（ラストオーダー14:30）・雨天休み",
    "url": "https://cinquepiu.jp/terrace/",
-   "checked": "2026-11-21"
+   "checked": "2026-11-24"
   },
   {
    "what": "みのおキューズモールの銀行（三井住友銀行 みのおキューズモール店・関西みらい銀行。アクセスのページの一覧に記載）",
@@ -910,14 +910,29 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "カバーシールの大きさ（6.5cm×10.5cm）は大江戸温泉物語グループの他施設のFAQの検索結果から。箕面温泉スパーガーデンのページには大きさ・値段の記載なし（要確認）",
-   "url": "https://www.ooedoonsen.jp/minoh-spa/",
-   "checked": "2026-11-21"
+   "what": "カバーシール：大江戸温泉物語グループ共通のよくある質問「【ご入浴】タトゥーを入れていますが、浴場は利用できますか」。10cm×14cmのカバーシール2枚で完全に覆える大きさなら利用可、1枚220円（税込）でフロントで販売、温浴施設も同じ条件で入館可（以前の6.5cm×10.5cmは誤り）",
+   "url": "https://faq.ooedoonsen.jp/45",
+   "checked": "2026-11-24"
   },
   {
-   "what": "勝尾寺の中の食事処：公式サイト（katsuo-ji-temple.or.jp のトップ・アクセス・おみやげ・境内マップ・お問い合わせ）に記載なし。おみやげのページは「準備中」。要確認",
-   "url": "https://katsuo-ji-temple.or.jp/facility/shop.php",
-   "checked": "2026-11-21"
+   "what": "箕面市の入湯税：日帰りで入湯するかた75円/日（宿泊200円）。12歳未満は課税されない（箕面市「入湯税」のページ、更新日2023年7月24日）",
+   "url": "https://www.city.minoh.lg.jp/zeimu/shiminzeikoukai/nyuutouzei.html",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "勝尾寺の中の食事処：公式サイトの境内マップ（1〜29の施設。無料休憩所・喫煙所などはあるが、食事処はない）とサイトマップの全ページに記載なし。おみやげのページは「準備中」",
+   "url": "https://katsuo-ji-temple.or.jp/seasons/map.php",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "杉の茶屋：箕面市観光協会のページは「定休日 不定休」だけで、営業時間の記載なし（要確認のまま）",
+   "url": "https://minohkankou.net/sights/1493/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "あほや 牧落店：公式サイト・公式SNSは見つからず、箕面市観光協会のサイトにも掲載なし（「あほや」で検索して0件）。営業時間は要確認のまま",
+   "url": "https://minohkankou.net/?s=%E3%81%82%E3%81%BB%E3%82%84",
+   "checked": "2026-11-24"
   },
   {
    "what": "阪急バス30系統 箕面萱野駅8番のりば発の時刻（2026年2月1日現在の時刻表。平日 毎時00・30分、土休日 9:00〜12:40は20分ごと・13:00〜15:00は30分ごと）",

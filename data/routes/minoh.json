@@ -753,8 +753,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "17時までに入る場合：大人 平日2,420円・土日祝2,860円・繁忙日3,190円、小学生1,320円、幼児770円、3歳未満は無料。17時以降に入ると大人2,090円。入湯税が別にかかります",
-       "en": "Entering before 17:00: adults ¥2,420 on weekdays, ¥2,860 on weekends and holidays, ¥3,190 on peak days; elementary school children ¥1,320; preschoolers ¥770; under 3 free. Entering after 17:00: adults ¥2,090. A bathing tax is charged on top"
+       "ja": "17時までに入る場合：大人 平日2,420円・土日祝2,860円・繁忙日3,190円、小学生1,320円、幼児770円、3歳未満は無料。17時以降に入ると大人2,090円。別に入湯税（日帰り75円、12歳未満はかかりません）",
+       "en": "Entering before 17:00: adults ¥2,420 on weekdays, ¥2,860 on weekends and holidays, ¥3,190 on peak days; elementary school children ¥1,320; preschoolers ¥770; under 3 free. Entering after 17:00: adults ¥2,090. Plus bathing tax (¥75 for a day visit; none for under 12)"
       },
       "until": null,
       "from": null
@@ -772,10 +772,10 @@
     "cash": false,
     "verified": true,
     "tip": {
-     "ja": "休館日、カバーシールの大きさと値段、入湯税の金額は公式サイトに書かれていません（要確認）。阪急箕面駅からは歩いて約5分。食べ物・飲み物の持ち込みはできません。中学生以下は保護者と一緒に、22:00まで。",
-     "en": "Closing days, the size and price of the cover stickers and the amount of the bathing tax are not on the official website (please check). It is about 5 minutes on foot from Hankyu Minoh Station. You can’t bring in food or drink. Children of junior-high age and under must be with a parent or guardian and leave by 22:00."
+     "ja": "休館日は公式サイトに書かれていません（要確認）。阪急箕面駅からは歩いて約5分。食べ物・飲み物の持ち込みはできません。中学生以下は保護者と一緒に、22:00まで。",
+     "en": "Closing days are not on the official website (please check). It is about 5 minutes on foot from Hankyu Minoh Station. You can’t bring in food or drink. Children of junior-high age and under must be with a parent or guardian and leave by 22:00."
     },
-    "checked": "2026-11-21"
+    "checked": "2026-11-24"
    },
    "notices": [
     {
@@ -787,8 +787,8 @@
       "en": "If you have tattoos"
      },
      "text": {
-      "ja": "入れ墨・タトゥーのある人は入れません。入れるのは、温泉が売っている専用のカバーシール（有料）2枚までで、タトゥーを完全に隠せる場合だけです（公式サイトで確認）。シール2枚で隠しきれない大きさ（腕全体、背中など）のタトゥーは入れません。シールの大きさと値段は、箕面の公式ページには書かれていません（要確認）。同じグループのほかの温泉の案内では、1枚が6.5cm×10.5cm。クレジットカード（5.4cm×8.6cm）より少し大きいくらいです。隠せない人は、一覧の上のボタンで「温泉に入らない」を選んでください。温泉を外した時間割に変わります。",
-      "en": "People with tattoos are not admitted. The only exception: your tattoos can be completely covered with no more than two of the paid cover stickers the onsen sells (confirmed on the official website). Anything too big for two stickers, such as a sleeve or a back piece, cannot enter. The sticker size and price are not on the Minoh page (please check). Other hot springs in the same group give the size as 6.5 cm × 10.5 cm each, a little larger than a credit card (5.4 cm × 8.6 cm). If you can’t cover yours, choose “No onsen” with the buttons at the top of the list: the timetable changes to one without the onsen."
+      "ja": "入れ墨・タトゥーのある人は入れません。入れるのは、温泉が売っている専用のカバーシール（有料）2枚までで、タトゥーを完全に隠せる場合だけです（公式サイトで確認）。シール2枚で隠しきれない大きさ（腕全体、背中など）のタトゥーは入れません。シールは1枚10cm×14cm（はがきより少し小さいくらい）で、1枚220円（税込）。フロントで売っています（大江戸温泉物語グループのよくある質問より）。隠せない人は、一覧の上のボタンで「温泉に入らない」を選んでください。温泉を外した時間割に変わります。",
+      "en": "People with tattoos are not admitted. The only exception: your tattoos can be completely covered with no more than two of the paid cover stickers the onsen sells (confirmed on the official website). Anything too big for two stickers, such as a sleeve or a back piece, cannot enter. Each sticker is 10 cm × 14 cm (a little smaller than a postcard) and costs ¥220 including tax, sold at the front desk (per the Ooedo Onsen Monogatari group FAQ). If you can’t cover yours, choose “No onsen” with the buttons at the top of the list: the timetable changes to one without the onsen."
      }
     }
    ],
@@ -1097,14 +1097,14 @@
    "checked": "2026-11-21"
   },
   {
-   "what": "箕面温泉スパーガーデンの営業時間・入館料・タトゥーの決まり・アクセス（公式サイト。休館日とカバーシールの大きさ・値段は記載なし）",
+   "what": "箕面温泉スパーガーデンの営業時間・入館料・タトゥーの決まり（「入れ墨・タトゥーのある方（当館指定の有料カバーシール2枚以内で完全に覆える場合を除く）」）・アクセス（公式サイト。休館日、カバーシールの大きさ・値段、入湯税の金額は記載なし）",
    "url": "https://www.ooedoonsen.jp/minoh-spa/",
-   "checked": "2026-11-21"
+   "checked": "2026-11-24"
   },
   {
    "what": "チンクエピュウ テラス：1オーダー制・精算は現金のみ・11:30〜15:00（ラストオーダー14:30）・雨天休み",
    "url": "https://cinquepiu.jp/terrace/",
-   "checked": "2026-11-21"
+   "checked": "2026-11-24"
   },
   {
    "what": "みのおキューズモールの銀行（三井住友銀行 みのおキューズモール店・関西みらい銀行。アクセスのページの一覧に記載）",
@@ -1117,14 +1117,29 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "カバーシールの大きさ（6.5cm×10.5cm）は大江戸温泉物語グループの他施設のFAQの検索結果から。箕面温泉スパーガーデンのページには大きさ・値段の記載なし（要確認）",
-   "url": "https://www.ooedoonsen.jp/minoh-spa/",
-   "checked": "2026-11-21"
+   "what": "カバーシール：大江戸温泉物語グループ共通のよくある質問「【ご入浴】タトゥーを入れていますが、浴場は利用できますか」。10cm×14cmのカバーシール2枚で完全に覆える大きさなら利用可、1枚220円（税込）でフロントで販売、温浴施設も同じ条件で入館可（以前の6.5cm×10.5cmは誤り）",
+   "url": "https://faq.ooedoonsen.jp/45",
+   "checked": "2026-11-24"
   },
   {
-   "what": "勝尾寺の中の食事処：公式サイト（katsuo-ji-temple.or.jp のトップ・アクセス・おみやげ・境内マップ・お問い合わせ）に記載なし。おみやげのページは「準備中」。要確認",
-   "url": "https://katsuo-ji-temple.or.jp/facility/shop.php",
-   "checked": "2026-11-21"
+   "what": "箕面市の入湯税：日帰りで入湯するかた75円/日（宿泊200円）。12歳未満は課税されない（箕面市「入湯税」のページ、更新日2023年7月24日）",
+   "url": "https://www.city.minoh.lg.jp/zeimu/shiminzeikoukai/nyuutouzei.html",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "勝尾寺の中の食事処：公式サイトの境内マップ（1〜29の施設。無料休憩所・喫煙所などはあるが、食事処はない）とサイトマップの全ページに記載なし。おみやげのページは「準備中」",
+   "url": "https://katsuo-ji-temple.or.jp/seasons/map.php",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "杉の茶屋：箕面市観光協会のページは「定休日 不定休」だけで、営業時間の記載なし（要確認のまま）",
+   "url": "https://minohkankou.net/sights/1493/",
+   "checked": "2026-11-24"
+  },
+  {
+   "what": "あほや 牧落店：公式サイト・公式SNSは見つからず、箕面市観光協会のサイトにも掲載なし（「あほや」で検索して0件）。営業時間は要確認のまま",
+   "url": "https://minohkankou.net/?s=%E3%81%82%E3%81%BB%E3%82%84",
+   "checked": "2026-11-24"
   },
   {
    "what": "阪急バス30系統 箕面萱野駅8番のりば発の時刻（2026年2月1日現在の時刻表。平日 毎時00・30分、土休日 9:00〜12:40は20分ごと・13:00〜15:00は30分ごと）",

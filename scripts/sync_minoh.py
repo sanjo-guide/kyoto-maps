@@ -24,7 +24,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s=s.replace("window.EIZAN_I18N","window.MINOH_I18N").replace("'kyoto-maps-eizan-","'kyoto-maps-minoh-")
 s=re.sub(r"t = spots\.length \|\| \d+;","t = spots.length || 12;",s)
 m=re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)",s); assert m
-s=s.replace(m.group(0),"fetch('../data/routes/' + course.file + '?v=9')")
+s=s.replace(m.group(0),"fetch('../data/routes/' + course.file + '?v=10')")
 def rep(a, b):
     global s
     assert s.count(a) == 1, (a[:80], s.count(a))
@@ -129,7 +129,7 @@ css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 """
 h = re.sub(r'(css/style\.css)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 1}', h)
 # このマップだけ i18n.js / app.js を直したときの番号（テンプレートの番号に足す）
-h = re.sub(r'(js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 4}', h)
+h = re.sub(r'(js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 5}', h)
 # ここまで来たら全部書き込む
 open(f'{R}/minoh/css/style.css', 'w', encoding='utf-8').write(css)
 open(f'{R}/minoh/js/app.js','w',encoding='utf-8').write(app_js)
