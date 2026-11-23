@@ -152,7 +152,7 @@ window.KOHOKU_I18N = {
           '長く歩ける人に。約11.5km、途中にバスはありません',
           '大崎寺を13:45までに出られなければ引き返す',
           '県道は道幅が狭い。雨や強風の日はやめる',
-          'お昼と飲み物は京都駅で。大崎寺から先の店・トイレは要確認',
+          'お昼と飲み物は京都駅で。大崎寺から先の店は要確認（トイレは大浦緑地公園に印。2017年の市の地図）',
           '乗り遅れても永原16:56発がある'
         ],
         dayHead: '1日の流れ（京都駅9:45ごろ発・歩き通し）',
@@ -196,7 +196,7 @@ window.KOHOKU_I18N = {
         dayHead: '1日の流れ（京都駅7:00発・竹生島）',
         day: [
           { time: '7:00', area: '京都駅 → マキノ', title: '朝ごはんを持って湖西線へ', text: '近江今津で乗り換えて8:12着。海津の浜で朝ごはん。', photo: ['makino', 0] },
-          { time: '9:10', area: '海津大崎', title: '混む前の桜並木', text: '10:20に引き返し、マキノ11:47発で近江今津へ。駅のまわりか持参でお昼。', photo: ['sakura', 0] },
+          { time: '9:10', area: '海津大崎', title: '混む前の桜並木', text: '10:20に引き返し、マキノ11:47発で近江今津へ。朝に買ったお昼を船の前に。', photo: ['sakura', 0] },
           { time: '13:10', area: '今津港 → 竹生島', title: '船で島へ', text: '島に95分。15:10の船で長浜港15:45着。', note: '要予約', photo: ['chikubushima', 0] },
           { time: '16:00', area: '長浜', title: '天守と桜、北国街道', text: '天守は16:30までに入る。豊公園のあと、閉館後の黒壁の町並みへ。', note: 'お城は月曜休み', photo: ['nagahamajo', 0] },
           { time: '18:00', area: '長浜 → 京都', title: '駅の近くで晩ごはん', text: '長濱浪漫ビールで食べて、19:57発。京都21:12着。', note: '火曜休み', photo: ['nagahamaeki', 0] }
@@ -349,7 +349,7 @@ window.KOHOKU_I18N = {
           'For strong walkers: about 11.5 km, with no bus on the way',
           'Turn back if you can’t leave Osakiji by 13:45',
           'The road is narrow; don’t go in rain or strong wind',
-          'Pack food and drink; shops and toilets beyond Osakiji unconfirmed',
+          'Pack food and drink; shops beyond Osakiji unconfirmed (a 2017 city map marks a toilet at Oura Ryokuchi Park)',
           'If you miss your train there is a 16:56 from Nagahara'
         ],
         dayHead: 'The day (about 9:45, walking through)',
@@ -393,7 +393,7 @@ window.KOHOKU_I18N = {
         dayHead: 'The day (7:00, with Chikubushima)',
         day: [
           { time: '7:00', area: 'Kyoto → Makino', title: 'Breakfast in your bag', text: 'Change at Omi-Imazu, arrive 8:12. Breakfast by the lake in Kaizu.', photo: ['makino', 0] },
-          { time: '9:10', area: 'Kaizu-Osaki', title: 'The avenue before the crowds', text: 'Turn back at 10:20 for the 11:47 to Omi-Imazu. Lunch near the station or from your bag.', photo: ['sakura', 0] },
+          { time: '9:10', area: 'Kaizu-Osaki', title: 'The avenue before the crowds', text: 'Turn back at 10:20 for the 11:47 to Omi-Imazu. Eat the lunch you bought in the morning before the boat.', photo: ['sakura', 0] },
           { time: '13:10', area: 'Imazu → Chikubushima', title: 'Across the water', text: '95 minutes on the island. The 15:10 boat lands at Nagahama at 15:45.', note: 'Book ahead', photo: ['chikubushima', 0] },
           { time: '16:00', area: 'Nagahama', title: 'Keep, blossom, old street', text: 'Into the keep by 16:30, the park, then Kurokabe’s streets after closing.', note: 'Castle closed Mon', photo: ['nagahamajo', 0] },
           { time: '18:00', area: 'Nagahama → Kyoto', title: 'Dinner by the station', text: 'Eat at Roman Beer and take the 19:57 (Kyoto 21:12).', note: 'Closed Tue', photo: ['nagahamaeki', 0] }

@@ -25,7 +25,7 @@ import os, re, runpy
 SEASON_FROM, SEASON_TO = '03-25', '04-20'
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='kohoku', i18n='KOHOKU_I18N', count=7, data_v=4, bump=102, keyv='-b',
+    id='kohoku', i18n='KOHOKU_I18N', count=7, data_v=5, bump=103, keyv='-b',
     head='京都から日帰り 海津大崎の桜と長浜（竹生島・大浦はコースを分けた）',
     title='京都から日帰り 海津大崎の桜と長浜｜春の4コース Kaizu-Osaki MAP',
     desc='春のマップ。京都駅からJR湖西線でマキノへ。琵琶湖岸に約4km続く海津大崎の桜並木を歩いて、夕方は長浜の豊公園と古い町並みへ。朝7時発の長浜・竹生島のコース、永原まで歩き通すコースも。時刻表、お昼、トイレ、最終の電車つき。A spring day trip from Kyoto Station: the cherry avenue of Kaizu-Osaki on Lake Biwa and an evening in Nagahama, with 7:00 courses for the town or Chikubushima, a long walk to Nagahara, train times, lunch and last trains.',

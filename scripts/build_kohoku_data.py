@@ -88,6 +88,9 @@ BUS_REG = SAKURA + "2026bus_kisei.pdf"
 CYCLE = TK + "/guide/rentalcycle.html"
 OSAKIJI = TK + "/spot/2018/06/post_71.html"
 ISHIZUMI = TK + "/spot/2018/06/post_170.html"
+OSAKIJI_PREF = "https://www.biwako-visitors.jp/spot/detail/676/"
+OKUBIWA_MAP = "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000005/5439/okubiwakomap.pdf"
+STATION_JR = "https://eki.jr-odekake.net/top?id=0611218"
 BOAT = "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/"
 BOAT_FAQ = "https://www.biwakokisen.co.jp/cruise/chikubu/faq/"
 BOAT_FLOW = "https://www.biwakokisen.co.jp/cruise/chikubu/flow/"
@@ -222,7 +225,8 @@ BASE = {
         rows=[row("walk", "大崎寺→マキノ駅 約3.8km・1時間", "Osakiji → Makino Station: about 3.8 km, 1 hour"),
               row("bus", "海津大崎口→マキノ駅（2026年春の★の便。平日・土休日とも）10:31・11:31・12:31・14:31・15:31・17:31発、8分・220円。13時台に★はありません",
                   "Kaizu-Osaki-guchi → Makino Station, ★ runs in spring 2026, weekdays and weekends: 10:31, 11:31, 12:31, 14:31, 15:31, 17:31; 8 min, ¥220. No ★ bus in the 13:00 hour"),
-              row("fee", "大崎寺の拝観料・時間は要確認", "Osakiji admission and hours: please check")],
+              row("fee", "大崎寺の拝観料・時間は、観光協会と滋賀県の観光サイトに記載がなく、公式で確かめられませんでした（要確認）",
+                  "Osakiji admission and hours aren’t listed by the tourism association or Shiga’s tourism site, so we couldn’t confirm them (please check)")],
         tip=T("バスはびわ湖高島観光協会の2026年春の連絡表（平日用・土休日用）で確認。来春は要確認です。", "Buses checked on the association’s spring 2026 weekday and weekend timetables; please check for next spring.")),
 
     "oura": dict(
@@ -231,18 +235,21 @@ BASE = {
         blurb=T("大崎の先、トンネルを抜けて入り江の集落へ。永原駅まで歩き通します。",
                 "Through the tunnels beyond Osaki to a village on a cove, and on to Nagahara Station."),
         lat=35.48641, lng=136.11764,
-        body=T("大崎寺から大浦までは約6km。4つのトンネルを含む県道は道幅が狭いので、車に気をつけて端を歩いてください。途中にバスはなく、店やトイレも確かめられていません（要確認）。\n\n"
+        body=T("大崎寺から大浦までは約6km。4つのトンネルを含む県道は道幅が狭いので、車に気をつけて端を歩いてください。途中にバスはありません。途中と大浦の店は、公式の案内で確かめられませんでした（要確認）。\n\n"
                "大浦から永原駅までは約1.6km・30分。駅は午後4時半で係員がいなくなりますが、ICOCAで乗れます。",
-               "Oura is about 6 km from Osakiji. The road, with four tunnels, is narrow, so keep to the side and watch for cars. There is no bus along it, and we couldn’t confirm any shops or toilets (please check).\n\n"
+               "Oura is about 6 km from Osakiji. The road, with four tunnels, is narrow, so keep to the side and watch for cars. There is no bus along it, and we couldn’t confirm any shops on the way or in Oura from official sources (please check).\n\n"
                "From Oura to Nagahara Station is about 1.6 km, 30 minutes. The station is unstaffed after 16:30, but takes ICOCA."),
-        gmaps=[gm("大浦", "Oura", "長浜市西浅井町大浦"), gm("JR永原駅", "JR Nagahara Station", "JR永原駅")],
-        links=[L_YAHOO, link("info", "永原駅の案内（長浜市）", "Nagahara Station (Nagahama city, Japanese)", STATIONS)],
+        gmaps=[gm("大浦", "Oura", "長浜市西浅井町大浦"), gm("大浦緑地公園", "Oura Ryokuchi Park", "大浦緑地公園 長浜市西浅井町"), gm("JR永原駅", "JR Nagahara Station", "JR永原駅")],
+        links=[L_YAHOO, link("info", "永原駅の案内（長浜市）", "Nagahara Station (Nagahama city, Japanese)", STATIONS),
+               link("info", "近江湖の辺の道 奥びわ湖のコースマップ（長浜市、2017年）", "Lakeside path map, Oku-Biwako (Nagahama city, 2017, Japanese)", OKUBIWA_MAP)],
         notices=[notice("途中でやめられない約6km", "6 km with no way out",
                         "大崎寺を出るのが13:45を過ぎたら、マキノ駅へ引き返してください（約1時間）。雨や強風の日も歩き通さないほうが安心です。",
                         "If it’s past 13:45 when you leave Osakiji, go back to Makino Station instead (about 1 hour). Don’t attempt it in rain or strong wind.")],
         rows=[row("train", "永原→長浜：15:56発→近江塩津で乗り換え→16:27着・510円。次は16:56発→17:27着", "Nagahara → Nagahama: 15:56 → change at Omi-Shiotsu → 16:27, ¥510. Next 16:56 → 17:27"),
               row("train", "永原→京都：16:42発→17:57着・1,340円。最終は22:04発→23:19着", "Nagahara → Kyoto: 16:42 → 17:57, ¥1,340. Last 22:04 → 23:19"),
-              row("hours", "永原駅の係員 7:30〜16:30（10:40〜12:00は不在）", "Nagahara Station staffed 7:30–16:30 (not 10:40–12:00)")],
+              row("hours", "永原駅の係員 7:30〜16:30（10:40〜12:00は不在）", "Nagahara Station staffed 7:30–16:30 (not 10:40–12:00)"),
+              row("toilet", "大浦緑地公園にトイレの印（長浜市の2017年の地図。今も使えるかは要確認）。永原駅のトイレは、JRと長浜市の駅の案内に記載がありません（要確認）",
+                  "A toilet is marked at Oura Ryokuchi Park (Nagahama city map, 2017; please check it’s still there). JR’s and the city’s station pages don’t mention a toilet at Nagahara (please check)")],
         tip=TRAIN_TIP),
 
     "chikubushima": dict(
@@ -326,7 +333,7 @@ BASE = {
                         "盆梅展の準備のため、2026年12月1日〜2027年1月9日は入れません。", "Closed 1 Dec 2026 – 9 Jan 2027 to prepare the bonsai show.",
                         url=KEIUN_OFF, to="2027-01-09"),
                  notice("3月11日から下旬までは休館", "Closed 11 to late March",
-                        "盆梅展の片づけのため休館。開く日は要確認。", "Closed after the bonsai show; please check the reopening date.",
+                        "盆梅展の片づけのため休館。2027年に開く日は未発表です（要確認）。", "Closed after the bonsai show; the 2027 reopening date isn’t out yet (please check).",
                         url=KEIUN_OFF, frm="2027-03-01", to="2027-03-31")],
         rows=[row("hours", "9:30〜17:00（入館16:30まで）", "9:30–17:00 (last entry 16:30)"),
               row("fee", "大人300円、小中学生150円", "¥300 adults, ¥150 children"),
@@ -341,9 +348,9 @@ BASE = {
                 "Some 600 cherry trees by the lake. The park is always open; the castle’s last entry is 16:30."),
         lat=35.37766, lng=136.26128,
         body=T("秀吉が初めて持った城の跡で、今の天守は昭和58年に再建された長浜城歴史博物館です。最上階からは琵琶湖と竹生島、足もとに公園の桜が見えます。\n\n"
-               "豊公園は日本さくら名所100選。2026年は4月3日に満開で、海津大崎と同じ日に見られるかどうかは年によります。咲いている間は臨時の明かり（ぼんぼり）がつきます（2026年は4月13日で終了。点灯の時間と来春の予定は要確認）。夕方は湖岸へ出てみてください。写真は2025年1月のもので、桜は写っていません。",
+               "豊公園は日本さくら名所100選。2026年は4月3日に満開で、海津大崎と同じ日に見られるかどうかは年によります。咲いている間は臨時の明かり（ぼんぼり）がつきます（2026年は4月13日で終了）。点灯の時間は市と観光協会の案内に書かれておらず、公式で確かめられませんでした（要確認）。来春の予定は未発表です。夕方は湖岸へ出てみてください。写真は2025年1月のもので、桜は写っていません。",
                "The site of Hideyoshi’s first castle. The keep, rebuilt in 1983, is the Nagahama Castle History Museum, with Lake Biwa and Chikubu Island from the top and the park’s blossom below.\n\n"
-               "Hoko Park is one of Japan’s 100 best cherry spots. Full bloom was 3 April in 2026; whether it coincides with Kaizu-Osaki varies by year. Temporary lanterns are lit during the bloom (until 13 April in 2026; hours and next spring’s plans: please check). Go out to the shore in the evening. The photos are from January 2025, before the blossom."),
+               "Hoko Park is one of Japan’s 100 best cherry spots. Full bloom was 3 April in 2026; whether it coincides with Kaizu-Osaki varies by year. Temporary lanterns are lit during the bloom (until 13 April in 2026). The city and tourism pages don’t give the hours, so we couldn’t confirm them (please check); next spring’s plans aren’t out yet. Go out to the shore in the evening. The photos are from January 2025, before the blossom."),
         gmaps=[gm("豊公園", "Hoko Park", "豊公園 長浜"), gm("長浜城歴史博物館", "Nagahama Castle History Museum", "長浜城歴史博物館")],
         links=[link("official", "長浜城歴史博物館（時間・休み・料金）", "Nagahama Castle History Museum: hours and fees (Japanese)", CASTLE),
                link("info", "豊公園（長浜観光協会）", "Hoko Park (Nagahama tourism, Japanese)", PARK),
@@ -567,15 +574,15 @@ COURSES = {
               (8, SEC_WEST("天守と桜、夜の長浜", "Castle, blossom and evening"))],
         spots=[
             dict(id="makino", when=("8:12〜8:20", "8:12–8:20"), go=EARLY_MAKINO,
-                 caution=T("7:00発。船は前日までに予約", "7:00 start; book the boat a day ahead"),
+                 caution=T("7:00発。お昼も京都で買う。船は前日までに予約", "7:00 start; buy lunch too; book the boat a day ahead"),
                  rows=[ROW_OUT_EARLY, ROW_SANJO_EARLY]),
             dict(id="kaizu", when=("8:50〜9:05", "8:50–9:05"), go=EARLY_KAIZU),
             dict(id="sakura", when=("9:10〜10:00", "9:10–10:00"), go=EARLY_SAKURA,
                  caution=T("2026年の規制は9:30から", "2026 restrictions began at 9:30")),
             dict(id="osakiji", when=("10:00〜10:20", "10:00–10:20"),
-                 go=T("10:20に引き返して、マキノ駅へ約1時間（11:20ごろ着）。11:47発の新快速で近江今津11:58着（200円）。お昼は駅のまわりで12:40まで（店の時間は要確認。心配なら朝に2食分買っておく）。港へは歩いて5分です。\n\n"
+                 go=T("10:20に引き返して、マキノ駅へ約1時間（11:20ごろ着）。11:47発の新快速で近江今津11:58着（200円）。お昼は朝に京都駅で一緒に買っておき、船の手続きまでの間に（駅のまわりの店は、公式の情報で時間を確かめられませんでした）。港へは歩いて5分、今津港に売店はありません。\n\n"
                       "次の12:47発→12:58着では乗船手続きの時間が足りないので、11:47発に乗り遅れそうなら竹生島はやめて、12:51発で長浜へ（13:27着）。",
-                      "Turn back at 10:20: about an hour to Makino Station (11:20). The 11:47 Special Rapid reaches Omi-Imazu at 11:58 (¥200). Lunch near the station until 12:40 (check shop hours, or buy two meals in the morning). The port is 5 minutes’ walk.\n\n"
+                      "Turn back at 10:20: about an hour to Makino Station (11:20). The 11:47 Special Rapid reaches Omi-Imazu at 11:58 (¥200). Buy lunch at Kyoto Station in the morning and eat it before checking in (we couldn’t confirm the hours of places near the station from official sources). The port is 5 minutes’ walk and has no shop.\n\n"
                       "The next train (12:47 → 12:58) leaves too little time to check in, so if you’ll miss the 11:47, drop the island and take the 12:51 to Nagahama (13:27)."),
                  caution=T("マキノ11:47発を逃すと船に乗れない", "Miss the 11:47 and you miss the boat"),
                  rows=[row("train", "マキノ11:47発→近江今津11:58着・200円。船をやめる場合はマキノ12:51発→長浜13:27着・680円", "Makino 11:47 → Omi-Imazu 11:58, ¥200. Without the boat: Makino 12:51 → Nagahama 13:27, ¥680")]),
@@ -667,7 +674,24 @@ SRC += [
     ("祝日（11-23）の主な便：京都9:45→マキノ10:50", yahoo("京都", "マキノ", 23, "09:30")),
     ("祝日（11-23）の主な便：長浜19:28→京都20:47、19:57→21:07、20:36→21:48", yahoo("長浜", "京都", 23, "19:20")),
 ]
-SOURCES = [{"what": w, "url": u, "checked": CHECKED} for w, u in SRC]
+RECHECKED = "2026-11-23"   # 「要確認」の調べ直しで、もう一度開いたページ
+SRC += [
+    ("大崎寺：観光協会のページに拝観料・時間の記載なし（電話 0740-28-1215 のみ）", OSAKIJI, RECHECKED),
+    ("大崎寺：滋賀県の観光サイトにも拝観料・時間の記載なし", OSAKIJI_PREF, RECHECKED),
+    ("2026年春の地図：仮設トイレは並木の入口と大崎寺の石段の近く、常設は駅前と道の駅マキノ追坂峠。大崎寺の料金・時間と、大浦方面の店の記載なし", MAP26, RECHECKED),
+    ("よくある質問：トイレはマキノ駅前の公共トイレ。店の記載なし", FAQ, RECHECKED),
+    ("近江湖の辺の道 奥びわ湖のコースマップ（長浜市北部振興局、平成29年3月）：大浦緑地公園にトイレの印", OKUBIWA_MAP, RECHECKED),
+    ("永原駅（長浜市）：トイレ・売店の記載なし", STATIONS, RECHECKED),
+    ("永原駅（JRおでかけネット）：ICOCA可、コインロッカーあり。トイレの記載なし", STATION_JR, RECHECKED),
+    ("豊公園の桜2026：4月13日でぼんぼり終了。点灯時間の記載なし", PARK_2026, RECHECKED),
+    ("豊公園（長浜観光協会）：「開花にあわせ数日間夜間ライトアップ」。時間の記載なし", PARK, RECHECKED),
+    ("慶雲館の休館：2026-12-01〜2027-01-09、3月11日〜下旬（再開日の記載なし）", KEIUN_OFF, RECHECKED),
+    ("竹生島びわ湖横断：時刻表は2026年4月1日〜2027年3月31日。2027年4月以降の記載なし", BOAT, RECHECKED),
+    ("長浜城：9:00〜17:00、受付16:30、月曜休み、500円・200円", CASTLE, RECHECKED),
+    ("長濱浪漫ビール：平日11:30〜15:00（LO14:30）・17:00〜21:00（LO20:15）、土日祝11:30〜21:00（LO20:15）、当日予約不可", ROMAN, RECHECKED),
+    ("長浜盆梅展2027：1月10日〜3月10日、9:00〜17:00、大人1,000円", BONBAI, RECHECKED),
+]
+SOURCES = [{"what": w, "url": u, "checked": (d[0] if d else CHECKED)} for w, u, *d in SRC]
 
 AUTO_IDS = ("makino", "nagahamaeki")     # 選んで回るとき、自動で入る駅
 EAST = ("kaizu", "sakura", "osakiji", "oura")

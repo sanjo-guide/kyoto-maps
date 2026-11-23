@@ -391,6 +391,76 @@
    "what": "祝日（11-23）の主な便：長浜19:28→京都20:47、19:57→21:07、20:36→21:48",
    "url": "https://transit.yahoo.co.jp/search/result?from=%E9%95%B7%E6%B5%9C&to=%E4%BA%AC%E9%83%BD&y=2026&m=11&d=23&hh=19&m1=2&m2=0&type=1&ticket=ic&expkind=1&ws=3&s=0&al=0&shin=0&ex=0&hb=0&lb=0&sr=0",
    "checked": "2026-11-22"
+  },
+  {
+   "what": "大崎寺：観光協会のページに拝観料・時間の記載なし（電話 0740-28-1215 のみ）",
+   "url": "https://takashima-kanko.jp/spot/2018/06/post_71.html",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "大崎寺：滋賀県の観光サイトにも拝観料・時間の記載なし",
+   "url": "https://www.biwako-visitors.jp/spot/detail/676/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "2026年春の地図：仮設トイレは並木の入口と大崎寺の石段の近く、常設は駅前と道の駅マキノ追坂峠。大崎寺の料金・時間と、大浦方面の店の記載なし",
+   "url": "https://takashima-kanko.jp/sakura/2026map.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "よくある質問：トイレはマキノ駅前の公共トイレ。店の記載なし",
+   "url": "https://takashima-kanko.jp/sakura/faq.html",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "近江湖の辺の道 奥びわ湖のコースマップ（長浜市北部振興局、平成29年3月）：大浦緑地公園にトイレの印",
+   "url": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000005/5439/okubiwakomap.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "永原駅（長浜市）：トイレ・売店の記載なし",
+   "url": "https://www.city.nagahama.lg.jp/0000001880.html",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "永原駅（JRおでかけネット）：ICOCA可、コインロッカーあり。トイレの記載なし",
+   "url": "https://eki.jr-odekake.net/top?id=0611218",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "豊公園の桜2026：4月13日でぼんぼり終了。点灯時間の記載なし",
+   "url": "https://www.city.nagahama.lg.jp/0000016592.html",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "豊公園（長浜観光協会）：「開花にあわせ数日間夜間ライトアップ」。時間の記載なし",
+   "url": "https://kitabiwako.jp/spot/spot_2292",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "慶雲館の休館：2026-12-01〜2027-01-09、3月11日〜下旬（再開日の記載なし）",
+   "url": "https://kitabiwako.jp/spot/spot_1703",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "竹生島びわ湖横断：時刻表は2026年4月1日〜2027年3月31日。2027年4月以降の記載なし",
+   "url": "https://www.biwakokisen.co.jp/cruise/chikubu/price_time/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "長浜城：9:00〜17:00、受付16:30、月曜休み、500円・200円",
+   "url": "https://nagahama-rekihaku.jp/info/open",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "長濱浪漫ビール：平日11:30〜15:00（LO14:30）・17:00〜21:00（LO20:15）、土日祝11:30〜21:00（LO20:15）、当日予約不可",
+   "url": "https://www.romanbeer.com/restaurant/",
+   "checked": "2026-11-23"
+  },
+  {
+   "what": "長浜盆梅展2027：1月10日〜3月10日、9:00〜17:00、大人1,000円",
+   "url": "https://bonbai.jp/",
+   "checked": "2026-11-23"
   }
  ],
  "spots": [
@@ -544,8 +614,8 @@
     "checked": "2026-11-22"
    },
    "caution": {
-    "ja": "7:00発。船は前日までに予約",
-    "en": "7:00 start; book the boat a day ahead"
+    "ja": "7:00発。お昼も京都で買う。船は前日までに予約",
+    "en": "7:00 start; buy lunch too; book the boat a day ahead"
    },
    "photos": [
     "makino-1.jpg",
@@ -792,8 +862,8 @@
    "lat": 35.45021,
    "lng": 136.08711,
    "text": {
-    "ja": "大崎寺（おおさきじ）と海津大崎港\n\n10:20に引き返して、マキノ駅へ約1時間（11:20ごろ着）。11:47発の新快速で近江今津11:58着（200円）。お昼は駅のまわりで12:40まで（店の時間は要確認。心配なら朝に2食分買っておく）。港へは歩いて5分です。\n\n次の12:47発→12:58着では乗船手続きの時間が足りないので、11:47発に乗り遅れそうなら竹生島はやめて、12:51発で長浜へ（13:27着）。\n\n「大崎観音」と呼ばれる、奈良時代に開かれたと伝わるお寺です。県道の第一トンネルの手前の石段を上ると、本堂の前から湖が見渡せます。本堂の右手の阿弥陀堂は、安土城の材を使ったという「血天井」で知られています。\n\n歩くのをへらしたいときは、海津大崎口のバス停（大崎寺から約2.4km・35分）から、コミュニティバスでマキノ駅へ8分・220円。★印の便でないと遠回りです。\n\n2026年春は、今津港と長浜港から桜クルーズの船も出ました（4月15日で終了、予約優先、4,500円）。写真の船と看板は、春に撮ったものです。今は運航していません。来春は要確認。\n\nおすすめ訪問時間：10:00〜10:20",
-    "en": "Osakiji Temple and Kaizu-Osaki pier\n\nTurn back at 10:20: about an hour to Makino Station (11:20). The 11:47 Special Rapid reaches Omi-Imazu at 11:58 (¥200). Lunch near the station until 12:40 (check shop hours, or buy two meals in the morning). The port is 5 minutes’ walk.\n\nThe next train (12:47 → 12:58) leaves too little time to check in, so if you’ll miss the 11:47, drop the island and take the 12:51 to Nagahama (13:27).\n\nKnown as “Osaki Kannon” and said to date from the Nara period. Climb the steps before the first road tunnel for a wide view of the lake from the main hall. The Amida hall to its right is known for a “bloody ceiling” said to be made of timber from Azuchi Castle.\n\nTo walk less, take the community bus from Kaizu-Osaki-guchi (2.4 km, 35 minutes from the temple) to Makino Station: 8 minutes, ¥220. Use a run marked ★; the others go the long way.\n\nIn spring 2026 cherry cruises also ran from Imazu and Nagahama (until 15 April, booking preferred, ¥4,500); the boat and signboard in the photos are from past springs. They aren’t running now; check for next spring.\n\nRecommended visit time: 10:00–10:20"
+    "ja": "大崎寺（おおさきじ）と海津大崎港\n\n10:20に引き返して、マキノ駅へ約1時間（11:20ごろ着）。11:47発の新快速で近江今津11:58着（200円）。お昼は朝に京都駅で一緒に買っておき、船の手続きまでの間に（駅のまわりの店は、公式の情報で時間を確かめられませんでした）。港へは歩いて5分、今津港に売店はありません。\n\n次の12:47発→12:58着では乗船手続きの時間が足りないので、11:47発に乗り遅れそうなら竹生島はやめて、12:51発で長浜へ（13:27着）。\n\n「大崎観音」と呼ばれる、奈良時代に開かれたと伝わるお寺です。県道の第一トンネルの手前の石段を上ると、本堂の前から湖が見渡せます。本堂の右手の阿弥陀堂は、安土城の材を使ったという「血天井」で知られています。\n\n歩くのをへらしたいときは、海津大崎口のバス停（大崎寺から約2.4km・35分）から、コミュニティバスでマキノ駅へ8分・220円。★印の便でないと遠回りです。\n\n2026年春は、今津港と長浜港から桜クルーズの船も出ました（4月15日で終了、予約優先、4,500円）。写真の船と看板は、春に撮ったものです。今は運航していません。来春は要確認。\n\nおすすめ訪問時間：10:00〜10:20",
+    "en": "Osakiji Temple and Kaizu-Osaki pier\n\nTurn back at 10:20: about an hour to Makino Station (11:20). The 11:47 Special Rapid reaches Omi-Imazu at 11:58 (¥200). Buy lunch at Kyoto Station in the morning and eat it before checking in (we couldn’t confirm the hours of places near the station from official sources). The port is 5 minutes’ walk and has no shop.\n\nThe next train (12:47 → 12:58) leaves too little time to check in, so if you’ll miss the 11:47, drop the island and take the 12:51 to Nagahama (13:27).\n\nKnown as “Osaki Kannon” and said to date from the Nara period. Climb the steps before the first road tunnel for a wide view of the lake from the main hall. The Amida hall to its right is known for a “bloody ceiling” said to be made of timber from Azuchi Castle.\n\nTo walk less, take the community bus from Kaizu-Osaki-guchi (2.4 km, 35 minutes from the temple) to Makino Station: 8 minutes, ¥220. Use a run marked ★; the others go the long way.\n\nIn spring 2026 cherry cruises also ran from Imazu and Nagahama (until 15 April, booking preferred, ¥4,500); the boat and signboard in the photos are from past springs. They aren’t running now; check for next spring.\n\nRecommended visit time: 10:00–10:20"
    },
    "gmaps": [
     {
@@ -889,8 +959,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "大崎寺の拝観料・時間は要確認",
-       "en": "Osakiji admission and hours: please check"
+       "ja": "大崎寺の拝観料・時間は、観光協会と滋賀県の観光サイトに記載がなく、公式で確かめられませんでした（要確認）",
+       "en": "Osakiji admission and hours aren’t listed by the tourism association or Shiga’s tourism site, so we couldn’t confirm them (please check)"
       },
       "until": null,
       "from": null
@@ -1128,8 +1198,8 @@
    "lat": 35.37766,
    "lng": 136.26128,
    "text": {
-    "ja": "豊公園（ほうこうえん）と長浜城（ながはまじょう）\n\n長浜港から歩いて15分で16:00着。先に天守へ（受付16:30まで）、そのあと公園の桜と湖岸を17:15ごろまで。月曜や船が遅れた日は公園だけにします。\n\n秀吉が初めて持った城の跡で、今の天守は昭和58年に再建された長浜城歴史博物館です。最上階からは琵琶湖と竹生島、足もとに公園の桜が見えます。\n\n豊公園は日本さくら名所100選。2026年は4月3日に満開で、海津大崎と同じ日に見られるかどうかは年によります。咲いている間は臨時の明かり（ぼんぼり）がつきます（2026年は4月13日で終了。点灯の時間と来春の予定は要確認）。夕方は湖岸へ出てみてください。写真は2025年1月のもので、桜は写っていません。\n\nおすすめ訪問時間：16:00〜17:15",
-    "en": "Hoko Park and Nagahama Castle\n\n15 minutes’ walk from the port, arriving 16:00. Do the keep first (last entry 16:30), then blossom and shore until about 17:15. On Mondays, or if the boat is late, just the park.\n\nThe site of Hideyoshi’s first castle. The keep, rebuilt in 1983, is the Nagahama Castle History Museum, with Lake Biwa and Chikubu Island from the top and the park’s blossom below.\n\nHoko Park is one of Japan’s 100 best cherry spots. Full bloom was 3 April in 2026; whether it coincides with Kaizu-Osaki varies by year. Temporary lanterns are lit during the bloom (until 13 April in 2026; hours and next spring’s plans: please check). Go out to the shore in the evening. The photos are from January 2025, before the blossom.\n\nRecommended visit time: 16:00–17:15"
+    "ja": "豊公園（ほうこうえん）と長浜城（ながはまじょう）\n\n長浜港から歩いて15分で16:00着。先に天守へ（受付16:30まで）、そのあと公園の桜と湖岸を17:15ごろまで。月曜や船が遅れた日は公園だけにします。\n\n秀吉が初めて持った城の跡で、今の天守は昭和58年に再建された長浜城歴史博物館です。最上階からは琵琶湖と竹生島、足もとに公園の桜が見えます。\n\n豊公園は日本さくら名所100選。2026年は4月3日に満開で、海津大崎と同じ日に見られるかどうかは年によります。咲いている間は臨時の明かり（ぼんぼり）がつきます（2026年は4月13日で終了）。点灯の時間は市と観光協会の案内に書かれておらず、公式で確かめられませんでした（要確認）。来春の予定は未発表です。夕方は湖岸へ出てみてください。写真は2025年1月のもので、桜は写っていません。\n\nおすすめ訪問時間：16:00〜17:15",
+    "en": "Hoko Park and Nagahama Castle\n\n15 minutes’ walk from the port, arriving 16:00. Do the keep first (last entry 16:30), then blossom and shore until about 17:15. On Mondays, or if the boat is late, just the park.\n\nThe site of Hideyoshi’s first castle. The keep, rebuilt in 1983, is the Nagahama Castle History Museum, with Lake Biwa and Chikubu Island from the top and the park’s blossom below.\n\nHoko Park is one of Japan’s 100 best cherry spots. Full bloom was 3 April in 2026; whether it coincides with Kaizu-Osaki varies by year. Temporary lanterns are lit during the bloom (until 13 April in 2026). The city and tourism pages don’t give the hours, so we couldn’t confirm them (please check); next spring’s plans aren’t out yet. Go out to the shore in the evening. The photos are from January 2025, before the blossom.\n\nRecommended visit time: 16:00–17:15"
    },
    "gmaps": [
     {
