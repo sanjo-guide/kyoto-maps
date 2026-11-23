@@ -1,7 +1,7 @@
 {
  "id": "uji",
  "course": "late",
- "_note": "京都 宇治と伏見の1日ルート（uji/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（uji.json＝9〜10時に出発、uji-early.json＝平等院の開門に合わせる）。出発は京都の中心・三条（京阪）。このファイル：「9〜10時に出発」コース。三条9:26発の京阪（中書島で乗り換え）→京阪宇治9:59。宇治橋→平等院（10:15〜11:45。まず内部拝観の券）→表参道でお昼と抹茶（11:45〜13:00）→塔の島・朝霧橋→宇治上神社→京阪宇治14:17発→中書島14:33→寺田屋→月桂冠大倉記念館（受付16:00まで）→十石舟（最終16:20）か川沿いの散歩→鳥せい本店（夜ごはん 17:20〜）→キザクラカッパカントリー（18:40〜）→伏見桃山20:12発→三条20:27。 興聖寺・三室戸寺・御香宮神社は寄り道（defaultPicks に入れていない）。写真は Toshi の写真ライブラリから（宇治は2017年6月・2017年9月の鵜飼・2025年2月、伏見は2025年2月、中書島駅は2026年5月。横の写真だけ、縦で撮った抹茶・きき酒・おちょこは横に切り抜き。長辺1600px・位置情報なし）。自分の写真がない場所（宇治橋・宇治上神社の建物・興聖寺・三室戸寺・京阪宇治駅・寺田屋・十石舟・御香宮神社・大鳥居など）は Wikimedia Commons の写真（photos の要素が {file, credit}。一覧は scripts/uji_web_credits.json）。info.source は確認した出典、info.checked は確認日（各公式サイト、電車は乗換案内）。verified: false は公式で確認できなかったもの（宇治上神社の時間・寺田屋・鳥せい本店・御香宮の石庭）。入口で困ること（現金不可・先着順・休み・受付の締め切り）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_uji_data.py で作る（直接直さない）。",
+ "_note": "京都 宇治と伏見の1日ルート（uji/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（uji.json＝9〜10時に出発、uji-early.json＝平等院の開門に合わせる）。出発は京都の中心・三条（京阪）。このファイル：「9〜10時に出発」コース。三条9:26発の京阪（中書島で乗り換え）→京阪宇治9:59。宇治橋→平等院（10:15〜11:45。まず内部拝観の券）→表参道でお昼と抹茶（11:45〜13:00）→塔の島・朝霧橋→宇治上神社→京阪宇治14:17発→中書島14:33→寺田屋→月桂冠大倉記念館（受付16:00まで）→十石舟（最終16:20）か川沿いの散歩→鳥せい本店（夜ごはん 17:20〜）→キザクラカッパカントリー（18:40〜）→伏見桃山20:12発→三条20:27。 興聖寺・三室戸寺・御香宮神社は寄り道（defaultPicks に入れていない）。写真は Toshi の写真ライブラリから（宇治は2017年6月・2017年9月の鵜飼・2025年2月、伏見は2025年2月、中書島駅は2026年5月。横の写真だけ、縦で撮った抹茶・きき酒・おちょこは横に切り抜き。長辺1600px・位置情報なし）。自分の写真がない場所（宇治橋・宇治上神社の建物・興聖寺・三室戸寺・京阪宇治駅・寺田屋・十石舟・御香宮神社・大鳥居など）は Wikimedia Commons の写真（photos の要素が {file, credit}。一覧は scripts/uji_web_credits.json）。info.source は確認した出典、info.checked は確認日（各公式サイト、電車は乗換案内）。verified: false は公式で確認できなかったもの（宇治上神社の時間・寺田屋・御香宮の石庭）。入口で困ること（現金不可・先着順・休み・受付の締め切り）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_uji_data.py で作る（直接直さない）。",
  "sections": [
   {
    "first": 1,
@@ -171,8 +171,8 @@
     "from": null,
     "to": null,
     "text": {
-     "ja": "月曜は、鳥せい本店が休みとの案内です（祝日は営業。要確認）。月曜はキザクラカッパカントリーへ（お昼はラストオーダー14:00、夜は17:00から）。寺田屋も月曜に不定休があります。",
-     "en": "Guides say Torisei is closed on Mondays (open on holidays; unconfirmed). On a Monday go to Kizakura Kappa Country instead (lunch last orders 14:00, dinner from 17:00). Teradaya also closes on some Mondays."
+     "ja": "月曜は鳥せい本店が休みです。月曜はキザクラカッパカントリーへ（お昼はラストオーダー14:00、夜は17:00から）。寺田屋も月曜に不定休があります。",
+     "en": "Torisei is closed on Mondays. On a Monday go to Kizakura Kappa Country instead (lunch last orders 14:00, dinner from 17:00). Teradaya also closes on some Mondays."
     }
    },
    {
@@ -185,8 +185,8 @@
     "from": null,
     "to": null,
     "text": {
-     "ja": "火曜は休みです（祝日のときは水曜）。火曜の夜は鳥せい本店へ（22:00までとの案内。要確認）。",
-     "en": "Closed on Tuesdays (Wednesday if Tuesday is a holiday). On a Tuesday evening go to Torisei instead (guides say open until 22:00; unconfirmed)."
+     "ja": "火曜は休みです（祝日のときは水曜）。火曜の夜は鳥せい本店へ（22:00まで、ラストオーダー21:30）。",
+     "en": "Closed on Tuesdays (Wednesday if Tuesday is a holiday). On a Tuesday evening go to Torisei instead (open until 22:00, last orders 21:30)."
     }
    }
   ]
@@ -281,7 +281,7 @@
      "en": "Train times and fares checked on a route planner (Saturday 28 November 2026 timetable). Weekday trains differ by a few minutes; please check again before you travel."
     },
     "checked": "2026-11-22",
-    "source": "Yahoo!路線情報（2026-11-28 土曜のダイヤ。平日は 2026-11-25 で確認）"
+    "source": "Yahoo!路線情報（2026-11-28 土曜のダイヤ。平日は 2026-11-25 で確認）。通圓の営業時間（10:30〜17:30、L.O.16:00、年中無休）は通圓 公式サイト https://tsuentea.com/ （2026-11-23）"
    },
    "text": {
     "ja": "京阪 宇治駅（けいはん うじえき）\n\n三条のあたりからは京阪電車がいちばん簡単です。三条駅で淀屋橋（よどやばし）方面行きに乗り、中書島（ちゅうしょじま）で宇治線に乗り換えて終点まで。運賃は400円です。丸いアーチを重ねたコンクリートの駅舎を出ると、目の前が宇治橋です。\n\n宇治には駅が2つあります。JRの宇治駅は川の向こうで、歩いて10分ほど離れています。京都駅の近くから来る人はJR奈良線で（京都9:34発のみやこ路快速で宇治9:51着、240円）。帰りにこのマップの順で伏見へ行くなら、乗るのは京阪のこの駅です。\n\n橋のたもとの「通圓（つうえん）」は、平安時代の終わりの創業と伝わるお茶屋さんです（10:30〜17:30）。午後、電車を待つあいだにお茶を買えます。\n\n三条9:26発の特急に乗り、中書島（9:39着）で向かいのホームの宇治行き（9:44発）に乗り換えて、宇治に9:59。平日は三条9:29発で9:58着です。\n\n午後は14:17発の中書島行きで伏見へ（14:33着・320円）。宇治線は10〜15分おきに出ています。\n\nおすすめ到着時間：9:59（三条 9:26発）",
@@ -464,8 +464,8 @@
       "en": "Interior tickets: first come, first served"
      },
      "text": {
-      "ja": "鳳凰堂の中に入るには、拝観券（700円）とは別に300円。庭園の中の受付で、9:10から時間指定の券を配ります。20分ごとに35人で、なくなり次第終わりです。写真より先に受付へ行ってください。",
-      "en": "Going inside the Phoenix Hall costs ¥300 on top of the ¥700 ticket. Timed tickets are handed out from 9:10 at a desk inside the garden: 35 people every 20 minutes, until they run out. Go to the desk before you take photos."
+      "ja": "鳳凰堂の中に入るには、拝観券（700円）とは別に300円（現金のみ）。庭園の中の受付で、9:10から時間指定の券を配ります。20分ごとに35人で、なくなり次第終わりです。写真より先に受付へ行ってください。表門の拝観券はカード・電子マネー・コード決済も使えます。",
+      "en": "Going inside the Phoenix Hall costs ¥300 (cash only) on top of the ¥700 ticket. Timed tickets are handed out from 9:10 at a desk inside the garden: 35 people every 20 minutes, until they run out. Go to the desk before you take photos. The main ticket can also be paid by card, e-money or QR code."
      }
     },
     {
@@ -477,8 +477,8 @@
       "en": "Autumn season (until 6 Dec)"
      },
      "text": {
-      "ja": "11月13日〜12月6日は混み合います。土日祝はミュージアムの映像展示が休みで、御朱印は1種類だけ。夜間特別拝観は2026年秋から休止しています。",
-      "en": "Very busy from 13 Nov to 6 Dec. On weekends and holidays the museum’s video room is closed and only one kind of goshuin is given. Evening openings have been suspended since autumn 2026."
+      "ja": "11月13日〜12月6日は混み合います。11月28日・29日はミュージアムの映像展示が休み、11月28日・29日と12月5日・6日は御朱印が「鳳凰堂」の1種類だけです。ミュージアムの遺物コーナーは12月6日まで休み。夜間特別拝観は2026年秋はありません。",
+      "en": "Very busy from 13 Nov to 6 Dec. On 28–29 Nov the museum’s video room is closed, and on 28–29 Nov and 5–6 Dec only the “Phoenix Hall” goshuin is given. The museum’s artefacts corner is closed until 6 Dec. There are no evening openings in autumn 2026."
      }
     }
    ],
@@ -523,15 +523,15 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "時間・料金・内部拝観の決まりは平等院の公式サイトで確認しました。京阪宇治駅から歩いて約10分、JR宇治駅からも約10分です。",
-     "en": "Hours, fees and the interior-visit rules checked on the official Byodoin website. About 10 minutes on foot from either Keihan Uji or JR Uji Station."
+     "ja": "時間・料金・内部拝観の決まりは平等院の公式サイトで確認しました。ふだんは再入場できませんが、内部拝観の券を持っていれば、表門の受付で見せて出入りできます（内部拝観のあとは不可）。京阪宇治駅から歩いて約10分、JR宇治駅からも約10分です。",
+     "en": "Hours, fees and the interior-visit rules checked on the official Byodoin website. Re-entry is normally not allowed, but with an interior ticket you can go out and back in by showing it at the gate (not after your interior visit). About 10 minutes on foot from either Keihan Uji or JR Uji Station."
     },
-    "checked": "2026-11-22",
-    "source": "平等院 公式サイト（拝観案内）https://www.byodoin.or.jp/guide/ を 2026-11-22 に確認。飲食・再入場・紅葉の時期のお知らせは 2026-11-21 に確認"
+    "checked": "2026-11-23",
+    "source": "平等院 公式サイト（拝観案内）https://www.byodoin.or.jp/guide/ 、よくある質問 https://www.byodoin.or.jp/faq/public/ と https://www.byodoin.or.jp/faq/internal-view/ （再入場・支払い）、お知らせ https://www.byodoin.or.jp/news/cat23/20261016/ （定員35人・内部拝観券での再入場）、https://www.byodoin.or.jp/news/1/post-83/ （飲食）、https://www.byodoin.or.jp/news/cat23/2022-1/ （紅葉の時期）、https://www.byodoin.or.jp/news/cat23/post-97/ （夜間拝観の休止）。2026-11-23 に確認"
    },
    "text": {
-    "ja": "平等院（びょうどういん）\n\n1053年に藤原頼通が建てた阿弥陀堂が、今も池の中の島に建っています。10円玉の表の絵がこの鳳凰堂、1万円札の裏の鳳凰は屋根の上の鳳凰です。\n\n【写真を撮る場所】池（阿字池）をはさんだ正面の岸です。鳳凰堂は東を向いているので、午前は正面に日が当たり、午後は逆光ぎみになります。風のない朝は池にお堂が映ります。1枚目の写真は2025年2月の午後2時半ごろ、正面の岸から撮りました。\n\nお堂の中では、高さ約2.8mの阿弥陀如来坐像と、壁にかかる雲中供養菩薩像を目の前で見られます（中は撮影禁止）。券の時間まではミュージアム鳳翔館（9:00〜）へ。鳳凰の本物と、雲中供養菩薩像を間近で見られます。\n\n境内は飲食禁止で、ふたのないテイクアウトのカップは持ち込めません。抹茶ラテを買うなら出てからに。境内の茶房「藤花（とうか）」は10:00〜16:30（ラストオーダー16:00）、月・火・水曜が休み（祝日は営業）です。\n\n【この時間に着く人へ】表門で拝観券を買ったら、まっすぐ庭園の中の「鳳凰堂内部拝観受付」へ。この時間だと、取れるのは何時間か先の回になることがあり、混む日は券がもうないこともあります。券の時間まで、庭園を一周してミュージアムを見て、それでも時間が余れば、いったん外へ出て表参道でお昼にして戻れます（内部拝観の券を持っていれば再入場できます）。\n\nお堂の中をどうしても見たい人は、一覧の上のボタンで「開門に合わせる」コースに切り替えてください。券がなくても、池の正面からの眺めとミュージアムで1時間は十分に楽しめます。\n\nおすすめ訪問時間：10:15〜11:45",
-    "en": "Byodoin\n\nThe Amida hall built by Fujiwara no Yorimichi in 1053 still stands on its island in the pond. It is the building on the ¥10 coin, and the phoenix on the back of the ¥10,000 note is the one on its roof.\n\nWhere to take the photo: from the bank straight across the pond. The hall faces east, so the front is sunlit in the morning and backlit in the afternoon. On a still morning it is mirrored in the water. My first photo was taken from that bank at about 2:30 pm in February 2025.\n\nInside you stand right in front of the 2.8-metre seated Amida and the small bodhisattvas on clouds along the walls (no photos inside). While you wait for your slot, see the Hoshokan museum (from 9:00): the original roof phoenixes and more of the cloud bodhisattvas up close.\n\nNo eating or drinking in the grounds, and open takeaway cups are not allowed in, so buy your matcha latte afterwards. The Toka tea room inside the grounds is open 10:00–16:30 (last orders 16:00), closed Monday to Wednesday (open on holidays).\n\nArriving at this hour: once you have your ticket at the main gate, go straight to the “Phoenix Hall interior” desk inside the garden. At this time your slot may be a few hours away, and on busy days the tickets may already be gone. Until your slot, walk round the garden and see the museum; if there is still time, you can go out for lunch on Omotesando and come back (re-entry is allowed with an interior ticket).\n\nIf seeing the interior matters to you, switch to the “At opening time” course with the buttons above the list. Even without a ticket, the view across the pond and the museum easily fill an hour.\n\nRecommended visit time: 10:15–11:45"
+    "ja": "平等院（びょうどういん）\n\n1053年に藤原頼通が建てた阿弥陀堂が、今も池の中の島に建っています。10円玉の表の絵がこの鳳凰堂、1万円札の裏の鳳凰は屋根の上の鳳凰です。\n\n【写真を撮る場所】池（阿字池）をはさんだ正面の岸です。鳳凰堂は東を向いているので、午前は正面に日が当たり、午後は逆光ぎみになります。風のない朝は池にお堂が映ります。1枚目の写真は2025年2月の午後2時半ごろ、正面の岸から撮りました。\n\nお堂の中では、高さ約2.8mの阿弥陀如来坐像と、壁にかかる雲中供養菩薩像を目の前で見られます（中は撮影禁止）。券の時間まではミュージアム鳳翔館（9:00〜）へ。鳳凰の本物と、雲中供養菩薩像を間近で見られます。\n\n境内は飲食禁止で、ふたのないテイクアウトのカップは持ち込めません。抹茶ラテを買うなら出てからに。境内の茶房「藤花（とうか）」は10:00〜16:30（ラストオーダー16:00）、月・火・水曜が休み（祝日は営業）です。\n\n【この時間に着く人へ】表門で拝観券を買ったら、まっすぐ庭園の中の「鳳凰堂内部拝観受付」へ。この時間だと、取れるのは何時間か先の回になることがあり、混む日は券がもうないこともあります。券の時間まで、庭園を一周してミュージアムを見て、それでも時間が余れば、いったん外へ出て表参道でお昼にして戻れます（内部拝観の券を表門の受付で見せれば再入場できます。お堂の中を見たあとは再入場できません）。\n\nお堂の中をどうしても見たい人は、一覧の上のボタンで「開門に合わせる」コースに切り替えてください。券がなくても、池の正面からの眺めとミュージアムで1時間は十分に楽しめます。\n\nおすすめ訪問時間：10:15〜11:45",
+    "en": "Byodoin\n\nThe Amida hall built by Fujiwara no Yorimichi in 1053 still stands on its island in the pond. It is the building on the ¥10 coin, and the phoenix on the back of the ¥10,000 note is the one on its roof.\n\nWhere to take the photo: from the bank straight across the pond. The hall faces east, so the front is sunlit in the morning and backlit in the afternoon. On a still morning it is mirrored in the water. My first photo was taken from that bank at about 2:30 pm in February 2025.\n\nInside you stand right in front of the 2.8-metre seated Amida and the small bodhisattvas on clouds along the walls (no photos inside). While you wait for your slot, see the Hoshokan museum (from 9:00): the original roof phoenixes and more of the cloud bodhisattvas up close.\n\nNo eating or drinking in the grounds, and open takeaway cups are not allowed in, so buy your matcha latte afterwards. The Toka tea room inside the grounds is open 10:00–16:30 (last orders 16:00), closed Monday to Wednesday (open on holidays).\n\nArriving at this hour: once you have your ticket at the main gate, go straight to the “Phoenix Hall interior” desk inside the garden. At this time your slot may be a few hours away, and on busy days the tickets may already be gone. Until your slot, walk round the garden and see the museum; if there is still time, you can go out for lunch on Omotesando and come back (show your interior ticket at the gate to re-enter; there is no re-entry after the interior visit).\n\nIf seeing the interior matters to you, switch to the “At opening time” course with the buttons above the list. Even without a ticket, the view across the pond and the museum easily fill an hour.\n\nRecommended visit time: 10:15–11:45"
    },
    "photos": [
     "byodoin-1.jpg",
@@ -627,6 +627,15 @@
      {
       "kind": "hours",
       "text": {
+       "ja": "中村藤吉 平等院店：12月31日は10:00〜16:00（カフェのラストオーダー15:00）",
+       "en": "Nakamura Tokichi Byodoin: 31 Dec 10:00–16:00 (café last orders 15:00)"
+      },
+      "until": "2026-12-31",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
        "ja": "スターバックス 京都宇治平等院表参道店：8:00〜20:00（不定休）",
        "en": "Starbucks Kyoto Uji Byodoin Omotesando: 8:00–20:00 (irregular closures)"
       },
@@ -636,11 +645,11 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "中村藤吉とスターバックスの公式サイトで確認しました。中村藤吉は、混む日はラストオーダーより早く受付が終わることがあります。カフェのメニューは公式サイトでは画像だけで、食事があるかどうかは確かめられませんでした。ほかの店の時間は店ごとに違います。",
-     "en": "Checked on the official Nakamura Tokichi and Starbucks sites. On busy days Nakamura Tokichi may stop taking guests before last orders. Its café menu is shown only as images on the official site, so I could not confirm whether it serves meals. Other shops keep their own hours."
+     "ja": "中村藤吉とスターバックスの公式サイトで確認しました。中村藤吉 平等院店はセルフ式のカフェで、公式サイトのメニュー（2026年11月）は抹茶のパフェやゼリイ、ソフトクリーム、お茶などの甘いものと飲み物だけです。食事は別の店で。混む日はラストオーダーより早く受付が終わることがあります。ほかの店の時間は店ごとに違います。",
+     "en": "Checked on the official Nakamura Tokichi and Starbucks sites. Nakamura Tokichi Byodoin is a self-service café; its official menu (November 2026) lists only sweets and drinks, such as matcha parfaits, jelly, soft-serve and tea, so eat your meal elsewhere. On busy days it may stop taking guests before last orders. Other shops keep their own hours."
     },
-    "checked": "2026-11-22",
-    "source": "中村藤吉 公式サイト https://tokichi.jp/pages/byodo-in-store-page 、スターバックス公式の店舗ページ https://store.starbucks.co.jp/detail-1443/ （どちらも 2026-11-22）"
+    "checked": "2026-11-23",
+    "source": "中村藤吉 公式サイト https://tokichi.jp/pages/byodo-in-store-page とメニュー https://tokichi.jp/blogs/menu/byodoin （2026-11-23）、スターバックス公式の店舗ページ https://store.starbucks.co.jp/detail-1443/ （2026-11-22）"
    },
    "text": {
     "ja": "平等院表参道（びょうどういんおもてさんどう）\n\n宇治橋のたもとから平等院の表門まで約200m。古いお茶屋さんや抹茶のお菓子の店が並び、店先でほうじ茶を炒る香りがします。店が開くのは10時ごろからです。\n\nひと休みは、通りの中ほどから宇治川のほうへ入った「中村藤吉（なかむらとうきち）平等院店」で。丸に十の字ののれんが目印です。カウンターで注文して自分で席へ運ぶ形で、窓の向こうは宇治川。写真の抹茶にソフトクリームをのせた一杯と、名物の生茶ゼリイを食べました（写真は2025年2月）。予約はできません。JR宇治駅の近くには本店もあります。\n\n通りの入口近くには、庭を眺められるスターバックス（京都宇治平等院表参道店）があります。8:00〜20:00で、この通りでは朝いちばんに開いている店です。\n\nこのコースでは、ここでお昼にします。通りに茶そばやにしんそばの店が何軒かあるので、空いている店に入ってください（店名は、営業時間を公式に確かめられなかったので書いていません）。\n\n食後に中村藤吉へ。昼すぎは列が長くなることがあります。並びたくない日は、入口のスターバックスか、宇治橋のたもとの通圓（10:30〜17:30、ラストオーダー16:00）へ。\n\nおすすめ訪問時間：11:45〜13:00",
@@ -736,11 +745,11 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "鵜飼の期間・時間・料金は宇治市観光協会の公式サイトで確認しました。雨や天ヶ瀬ダムの放流で川が増水した日は中止になります。",
-     "en": "Cormorant fishing dates, times and fares checked on the Uji tourist association website. It is cancelled in bad weather or when the Amagase dam releases water."
+     "ja": "鵜飼の期間・時間・料金は宇治市観光協会の公式サイトで確認しました。荒天の日や、天ヶ瀬ダムの放流で川が増水した日は中止になることがあります。",
+     "en": "Cormorant fishing dates, times and fares checked on the Uji tourist association website. It may be cancelled in stormy weather or when the Amagase dam releases water."
     },
-    "checked": "2026-11-21",
-    "source": "宇治市観光協会 https://www.kyoto-uji-kankou.or.jp/ukai.html （2026-11-21）"
+    "checked": "2026-11-23",
+    "source": "宇治市観光協会 https://www.kyoto-uji-kankou.or.jp/ukai.html （2026-11-23）"
    },
    "text": {
     "ja": "宇治川（うじがわ）の塔の島・橘島と朝霧橋（あさぎりばし）\n\n平等院の南門を出るか、表参道から川沿いの「あじろぎの道」を上流へ歩くと、朱色の小さな喜撰橋（きせんばし）があります。渡った先が塔の島。高さ約15mの十三重石塔は鎌倉時代のものです。隣の橘島へ進み、朱色の朝霧橋を渡ると、宇治神社の鳥居の前に出ます。\n\n宇治川は流れが速く、水の色が濃い川です。島の岸には屋形船が並びます。平等院の前の人の多さから、ここで急に静かになります。ベンチがあるので、座って川を見るのにいい場所です。\n\n【夏の夜の鵜飼】7月1日〜9月30日（水曜休み）は、喜撰橋のたもとから鵜飼の船が出ます。乗合船は予約なしの当日受付で、17:30ごろから受付、7・8月は19:00、9月は18:30に出船。かがり火のすぐ近くまで船を寄せてくれます。後半の写真は2017年9月に乗合船から撮りました。岸からも見えます。\n\n鵜飼まで見る日は、順番を逆にして伏見を午前に回り、午後に宇治へ来てください（月桂冠大倉記念館は9:30から）。ただし平等院の内部拝観の券は、午後だとなくなっていることがあります。\n\nおすすめ訪問時間：13:05〜13:25",
@@ -827,11 +836,11 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "時間と志納料は興聖寺の公式サイトで確認しました。京阪宇治駅からは歩いて約15分です。",
-     "en": "Hours and donation checked on the official Koshoji website. About 15 minutes on foot from Keihan Uji Station."
+     "ja": "時間と志納料は興聖寺の公式サイトで確認しました。公式サイトでは、京阪宇治駅から歩いて約20分です。",
+     "en": "Hours and donation checked on the official Koshoji website, which gives about 20 minutes on foot from Keihan Uji Station."
     },
-    "checked": "2026-11-21",
-    "source": "興聖寺 公式サイト https://www.uji-koushouji.jp/access/ （2026-11-21）"
+    "checked": "2026-11-23",
+    "source": "興聖寺 公式サイト https://www.uji-koushouji.jp/access/ （2026-11-23）"
    },
    "text": {
     "ja": "興聖寺（こうしょうじ）\n\n朝霧橋を渡ったら、川沿いを上流（右）へ歩いて約7分。石の門から本堂の前の竜宮造りの門まで、ゆるい上り坂が200mほど続きます。両側の水路を流れる水の音が琴の音に聞こえることから「琴坂（ことざか）」。両側はもみじで、新緑の5月と紅葉の11月下旬がとくにきれいです。\n\n道元が開いた曹洞宗の寺を、江戸時代のはじめにこの地に再興した禅寺で、今も修行の場です。琴坂を歩くだけなら無料。本堂や庭を見る場合は受付で志納料を納めます。\n\n平等院のまわりに比べて人が少ないので、静かな場所が好きな人に。見たら同じ道を戻って、宇治神社へ。\n\nおすすめ訪問時間：寄るなら約40分（13:30〜14:10ごろ）。そのぶん、あとの予定が40分ずつ遅くなります。",
@@ -885,8 +894,8 @@
     "en": "Shrines (World Heritage)"
    },
    "caution": {
-    "ja": "宇治上神社は16時ごろに閉まります（要確認）",
-    "en": "Ujigami Shrine closes around 16:00 (unconfirmed)"
+    "ja": "宇治上神社の閉門の時間は公式で確かめられませんでした（要確認）。夕方前に",
+    "en": "Ujigami Shrine’s closing time could not be confirmed officially (unconfirmed). Go before late afternoon"
    },
    "blurb": {
     "ja": "朝霧橋を渡ると宇治神社、その奥に世界遺産の宇治上神社。日本でいちばん古い神社の建物が、木立の中に残っています。",
@@ -932,8 +941,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "宇治上神社 9:00〜16:00ごろ（要確認）。宇治神社の境内は自由",
-       "en": "Ujigami Shrine about 9:00–16:00 (please check). Uji Shrine grounds are open"
+       "ja": "宇治上神社：公式で確かめられませんでした（要確認）。宇治神社の境内は自由",
+       "en": "Ujigami Shrine: could not be confirmed officially (unconfirmed). Uji Shrine grounds are open"
       },
       "until": null,
       "from": null
@@ -950,11 +959,11 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "宇治上神社の時間は公式の案内で確かめられませんでした（門が閉まるのは16:00とする案内と16:30とする案内があります）。午後遅くに行く日は気をつけてください。写真の鳥居と朱色の門は2017年6月。",
-     "en": "Ujigami Shrine’s hours could not be confirmed from an official source (guides give either 16:00 or 16:30 for closing), so don’t leave it too late. The torii and vermilion gate photos are from June 2017."
+     "ja": "宇治上神社の時間は公式の案内で確かめられませんでした（門が閉まる時間は案内によって違います）。午後遅くに行く日は、早めに着くか電話（0774-21-4634）で確かめてください。写真の鳥居と朱色の門は2017年6月。",
+     "en": "Ujigami Shrine’s hours could not be confirmed from an official source (guides disagree on the closing time), so arrive early or phone ahead (0774-21-4634) if you go late in the afternoon. The torii and vermilion gate photos are from June 2017."
     },
-    "checked": "2026-11-22",
-    "source": "宇治上神社の時間は公式の案内が見つからず、旅行ガイドの情報（閉門16:00とするものと16:30とするものがある。2026-11-22）",
+    "checked": "2026-11-23",
+    "source": "宇治上神社には公式サイトがなく、宇治市観光協会 https://www.kyoto-uji-kankou.or.jp/tourism.html にも時間の記載なし。旅行ガイドでは閉門の時間が分かれるので、時間はページに出さない。京都府の冊子 https://www.pref.kyoto.jp/kyotoyamashiro/pdf/p4_5.pdf は2014年ごろの古い冊子なので時間の出典にしない（拝観無料はこの冊子による）（2026-11-23）",
     "verified": false
    },
    "text": {
@@ -995,8 +1004,8 @@
     "en": "Flower temple (detour)"
    },
    "caution": {
-    "ja": "受付は15:10まで。花は4月下旬〜7月上旬",
-    "en": "Last entry 15:10. Flowers late April to early July"
+    "ja": "拝観は15:10まで。花は4月下旬〜7月上旬",
+    "en": "Open until 15:10. Flowers late April to early July"
    },
    "blurb": {
     "ja": "6月に2万株のあじさいが咲く花の寺。宇治上神社から歩いて25分ほどかかるので、花の時期に時間をとって。",
@@ -1042,8 +1051,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "8:30〜15:10（受付終了）",
-       "en": "8:30–15:10 (last entry)"
+       "ja": "8:30〜15:10（あじさい園の期間は16:00に完全閉門との案内）",
+       "en": "8:30–15:10 (during the hydrangea season the gate fully closes at 16:00)"
       },
       "until": null,
       "from": null
@@ -1051,8 +1060,8 @@
      {
       "kind": "closed",
       "text": {
-       "ja": "8月11日〜17日、12月29日〜31日",
-       "en": "11–17 August, 29–31 December"
+       "ja": "8月11日〜17日、12月29日〜31日。気象警報が出ている日も拝観できません",
+       "en": "11–17 August, 29–31 December, and whenever a weather warning is in force"
       },
       "until": null,
       "from": null
@@ -1081,12 +1090,12 @@
      "ja": "時間・料金・休みは三室戸寺の公式サイトで確認しました。花の見ごろは年によって前後します。",
      "en": "Hours, fees and closed days checked on the official Mimurotoji website. Flowering times vary from year to year."
     },
-    "checked": "2026-11-21",
-    "source": "三室戸寺 公式サイト https://www.mimurotoji.com/guide/index.html （2026-11-21）"
+    "checked": "2026-11-23",
+    "source": "三室戸寺 公式サイト https://www.mimurotoji.com/guide/index.html とあじさい園 https://www.mimurotoji.com/event/hydrangea.html （2026-11-23）。三室戸→中書島は乗換案内（2026-11-21）"
    },
    "text": {
-    "ja": "三室戸寺（みむろとじ）\n\n西国三十三所の第十番札所。山すその広い庭に、春はつつじ（4月下旬〜5月中旬）、6月はあじさい、夏は本堂の前の蓮と、花が続きます。いちばんの見ごろはあじさいで、杉木立の下に約2万株。公式サイトの2027年の案内では、あじさい園の公開は5月29日〜7月4日です。\n\n花のない時期は、正直なところ遠回りになります。行くなら4月下旬〜7月上旬に。\n\n宇治上神社からは、源氏物語ミュージアムの前を通って歩いて約25分。帰りは京阪の三室戸駅まで歩いて15分で、そこから中書島へ（14分・320円）。宇治駅へ戻る必要はありません。\n\n受付は15:10までと早く、6月の土日は混みます。境内は飲食禁止、三脚も使えません。\n\nおすすめ訪問時間：寄るなら歩きを入れて約1時間40分。このコースで寄ると受付の15:10に間に合わせるのがやっとで、伏見の記念館には入れなくなります。花の時期に行くなら「開門に合わせる」コースで。",
-    "en": "Mimurotoji\n\nTemple no. 10 of the Saigoku Kannon pilgrimage. Its big garden at the foot of the hills flowers in turn: azaleas (late April to mid May), hydrangeas in June, then lotuses in front of the main hall in summer. The hydrangeas are the highlight: about 20,000 plants under tall cedars. The official site lists the 2027 hydrangea garden as open 29 May – 4 July.\n\nOutside the flower seasons it is honestly a long detour; come between late April and early July.\n\nFrom Ujigami Shrine it is about 25 minutes on foot, past the Tale of Genji Museum. Afterwards walk 15 minutes to Keihan Mimuroto Station and ride to Chushojima (14 min, ¥320); no need to go back to Uji Station.\n\nLast entry is as early as 15:10, and June weekends are crowded. No eating or drinking, and no tripods.\n\nRecommended visit time: Allow about 1 h 40 min including the walk. On this course you would barely make the 15:10 last entry and would miss the museum in Fushimi; in the flower season, use the “At opening time” course."
+    "ja": "三室戸寺（みむろとじ）\n\n西国三十三所の第十番札所。山すその広い庭に、春はつつじ（4月下旬〜5月中旬）、6月はあじさい、夏は本堂の前の蓮と、花が続きます。いちばんの見ごろはあじさいで、杉木立の下に約2万株。公式サイトの2027年の案内では、あじさい園の公開は5月29日〜7月4日です。\n\n花のない時期は、正直なところ遠回りになります。行くなら4月下旬〜7月上旬に。\n\n宇治上神社からは、源氏物語ミュージアムの前を通って歩いて約25分。帰りは京阪の三室戸駅まで歩いて15分で、そこから中書島へ（14分・320円）。宇治駅へ戻る必要はありません。\n\n拝観時間は15:10までと早く、6月の土日は混みます。気象警報が出ている日は拝観できません。境内は飲食禁止、三脚も使えません。\n\nおすすめ訪問時間：寄るなら歩きを入れて約1時間40分。このコースで寄ると拝観時間の15:10に間に合わせるのがやっとで、伏見の記念館には入れなくなります。花の時期に行くなら「開門に合わせる」コースで。",
+    "en": "Mimurotoji\n\nTemple no. 10 of the Saigoku Kannon pilgrimage. Its big garden at the foot of the hills flowers in turn: azaleas (late April to mid May), hydrangeas in June, then lotuses in front of the main hall in summer. The hydrangeas are the highlight: about 20,000 plants under tall cedars. The official site lists the 2027 hydrangea garden as open 29 May – 4 July.\n\nOutside the flower seasons it is honestly a long detour; come between late April and early July.\n\nFrom Ujigami Shrine it is about 25 minutes on foot, past the Tale of Genji Museum. Afterwards walk 15 minutes to Keihan Mimuroto Station and ride to Chushojima (14 min, ¥320); no need to go back to Uji Station.\n\nVisiting hours end as early as 15:10, and June weekends are crowded. The temple closes to visitors when a weather warning is in force. No eating or drinking, and no tripods.\n\nRecommended visit time: Allow about 1 h 40 min including the walk. On this course you would barely make it before the 15:10 closing and would miss the museum in Fushimi; in the flower season, use the “At opening time” course."
    },
    "photos": [
     {
@@ -1187,8 +1196,8 @@
     "source": "Yahoo!路線情報（2026-11-28 土曜のダイヤ。平日は 2026-11-25 で確認）"
    },
    "text": {
-    "ja": "京阪 中書島駅（ちゅうしょじまえき）\n\n宇治線の終点で、京阪本線との乗り換え駅です。北口を出て、まっすぐ北へ歩くと酒蔵の町に入ります。\n\n伏見は、京都と大阪を結ぶ川の港として栄えた町です。地下水がよく、今も20近い蔵元が酒を造っています。歩くエリアは中書島駅から伏見桃山駅まで、南北に800mほど。帰りは北の伏見桃山駅から乗るので、ここへは戻りません。\n\n伏見だけに来る日は、三条から京阪の特急で中書島まで13分（320円）です。\n\nここからは受付の時間との勝負です。寺田屋（受付15:40まで・要確認）へ歩いて7分、そのあと月桂冠大倉記念館（受付16:00まで）へ3分。記念館は予約しておくと安心です。\n\nおすすめ到着時間：14:33",
-    "en": "Keihan Chushojima Station\n\nThe end of the Uji Line and the junction with the Keihan Main Line. Leave by the north exit and walk straight north into the brewery quarter.\n\nFushimi grew rich as the river port between Kyoto and Osaka. Its groundwater is good, and nearly twenty breweries still make sake here. The walking area runs about 800 metres north from Chushojima to Fushimi-Momoyama Station; you leave from the latter, so you won’t come back here.\n\nComing only to Fushimi? The Keihan limited express from Sanjo takes 13 minutes to Chushojima (¥320).\n\nFrom here you are racing the last-entry times: 7 minutes on foot to Teradaya (last entry 15:40, unconfirmed), then 3 minutes to the Gekkeikan museum (last entry 16:00). Booking the museum ahead is safest.\n\nRecommended arrival: 14:33"
+    "ja": "京阪 中書島駅（ちゅうしょじまえき）\n\n宇治線の終点で、京阪本線との乗り換え駅です。北口を出て、まっすぐ北へ歩くと酒蔵の町に入ります。\n\n伏見は、京都と大阪を結ぶ川の港として栄えた町です。地下水がよく、今も20近い蔵元が酒を造っています。歩くエリアは中書島駅から伏見桃山駅まで、南北に800mほど。帰りは北の伏見桃山駅から乗るので、ここへは戻りません。\n\n伏見だけに来る日は、三条から京阪の特急で中書島まで13分（320円）です。\n\nここからは受付の時間との勝負です。寺田屋（時間は公式で確かめられませんでした。要確認）へ歩いて7分、そのあと月桂冠大倉記念館（受付16:00まで）へ3分。記念館は予約しておくと安心です。\n\nおすすめ到着時間：14:33",
+    "en": "Keihan Chushojima Station\n\nThe end of the Uji Line and the junction with the Keihan Main Line. Leave by the north exit and walk straight north into the brewery quarter.\n\nFushimi grew rich as the river port between Kyoto and Osaka. Its groundwater is good, and nearly twenty breweries still make sake here. The walking area runs about 800 metres north from Chushojima to Fushimi-Momoyama Station; you leave from the latter, so you won’t come back here.\n\nComing only to Fushimi? The Keihan limited express from Sanjo takes 13 minutes to Chushojima (¥320).\n\nFrom here you are racing the last-entry times: 7 minutes on foot to Teradaya (hours could not be confirmed officially), then 3 minutes to the Gekkeikan museum (last entry 16:00). Booking the museum ahead is safest.\n\nRecommended arrival: 14:33"
    },
    "photos": [
     "chushojima-1.jpg"
@@ -1207,8 +1216,8 @@
     "en": "Historic inn"
    },
    "caution": {
-    "ja": "受付は15:40まで（要確認）。現金を用意",
-    "en": "Last entry 15:40 (unconfirmed). Bring cash"
+    "ja": "時間と料金は公式で確かめられませんでした（要確認）",
+    "en": "Hours and fee could not be confirmed officially (unconfirmed)"
    },
    "blurb": {
     "ja": "坂本龍馬が襲われた船宿。川べりに建つ2階建ての旅籠で、中を見学できます。",
@@ -1233,8 +1242,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "10:00〜16:00（受付15:40まで）",
-       "en": "10:00–16:00 (last entry 15:40)"
+       "ja": "公式で確かめられませんでした（要確認）",
+       "en": "Could not be confirmed officially (unconfirmed)"
       },
       "until": null,
       "from": null
@@ -1242,8 +1251,8 @@
      {
       "kind": "closed",
       "text": {
-       "ja": "月曜に不定休あり、1月1日〜3日",
-       "en": "Some Mondays, 1–3 January"
+       "ja": "月曜に休みがあるとの案内（要確認）",
+       "en": "Guides say it closes on some Mondays (unconfirmed)"
       },
       "until": null,
       "from": null
@@ -1251,8 +1260,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "大人400円",
-       "en": "Adults ¥400"
+       "ja": "公式で確かめられませんでした（要確認）",
+       "en": "Could not be confirmed officially (unconfirmed)"
       },
       "until": null,
       "from": null
@@ -1260,11 +1269,11 @@
     ],
     "cash": true,
     "tip": {
-     "ja": "寺田屋には公式サイトがなく、時間と料金は旅行ガイドの情報です。行く前に電話（075-622-0243）で確かめると安心です。中書島駅から歩いて約7分。",
-     "en": "Teradaya has no official website; hours and fee are from travel guides. Phone ahead (075-622-0243) to be sure. About 7 minutes on foot from Chushojima Station."
+     "ja": "寺田屋には公式サイトがなく、時間と料金を公式の案内で確かめられませんでした。夕方は早めに閉まるとの案内が多いので、伏見に着いたら先に寄り、行く前に電話（075-622-0243）で確かめると安心です。中書島駅から歩いて約7分。",
+     "en": "Teradaya has no official website, so its hours and fee could not be confirmed. Guides say it closes fairly early in the afternoon, so go there first when you reach Fushimi, and phone ahead (075-622-0243) to be sure. About 7 minutes on foot from Chushojima Station."
     },
-    "checked": "2026-11-21",
-    "source": "寺田屋には公式サイトがなく、旅行ガイドの情報（2026-11-21）",
+    "checked": "2026-11-23",
+    "source": "寺田屋には公式サイトがなく、時間と料金の公式の案内は見つからない。旅行ガイドどうしでも料金が分かれるので、時間と料金はページに出さない（2026-11-23）",
     "verified": false
    },
    "text": {
@@ -1438,8 +1447,8 @@
     "en": "Boats late March to early December only; none in winter"
    },
    "blurb": {
-    "ja": "柳と酒蔵の白壁の下を、小さな屋形船で50分。春から秋だけの運航です。冬は川沿いを歩きます。",
-    "en": "Fifty minutes in a small roofed boat under willows and white brewery walls. Spring to autumn only; in winter, walk the bank."
+    "ja": "柳と酒蔵の白壁の下を、小さな屋形船で約55分。春から秋だけの運航です。冬は川沿いを歩きます。",
+    "en": "About 55 minutes in a small roofed boat under willows and white brewery walls. Spring to autumn only; in winter, walk the bank."
    },
    "lat": 34.9285,
    "lng": 135.7613,
@@ -1511,8 +1520,17 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "2026年：3月20日〜12月6日、10:00〜16:20（11月25日〜12月6日は最終15:40）",
-       "en": "2026: 20 Mar – 6 Dec, 10:00–16:20 (last boat 15:40 from 25 Nov to 6 Dec)"
+       "ja": "2026年：3月20日〜12月6日（8月は1日〜11日だけ）",
+       "en": "2026: 20 Mar – 6 Dec (in August, only 1–11 Aug)"
+      },
+      "until": "2026-12-06",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "出航 10:00・10:20・10:40・11:00・11:20、13:00〜16:20の20分おき（11月25日〜12月6日は15:40が最終）。約55分",
+       "en": "Departures 10:00, 10:20, 10:40, 11:00, 11:20, then every 20 min from 13:00 to 16:20 (last boat 15:40 from 25 Nov to 6 Dec). About 55 min"
       },
       "until": "2026-12-06",
       "from": null
@@ -1529,8 +1547,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "大人（中学生以上）1,900円、小学生900円",
-       "en": "Adults (junior high and up) ¥1,900, elementary ¥900"
+       "ja": "大人（中学生以上）1,900円、小学生900円。乗り場で当日現金（3〜4月のネット予約はカード払い）",
+       "en": "Adults (junior high and up) ¥1,900, elementary ¥900. Cash at the landing on the day (March–April online bookings are paid by card)"
       },
       "until": null,
       "from": null
@@ -1538,15 +1556,15 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "運航日・時間・料金は京都市の観光サイト（京都観光Navi）と伏見観光協会のサイトで確認しました。便ごとの出航時刻と支払い方法はどちらにも書かれていないので、乗り場か予約ページで確かめてください（要確認）。天気や川の様子で変わることがあります。",
-     "en": "Dates, hours and fares checked on Kyoto City’s official travel guide and the Fushimi tourist association site. Neither lists the individual departure times or the payment methods, so check at the landing or on the booking page. Sailings can change with the weather and river conditions."
+     "ja": "運航日・出航時刻・料金・支払い方法は伏見観光協会のサイトで確認しました。予約なしで乗るときは、乗り場で当日現金で払います。出航時刻は天気や川の様子で変わることがあります。",
+     "en": "Dates, departure times, fares and payment checked on the Fushimi tourist association site. Without a booking you pay in cash at the landing on the day. Sailings can change with the weather and river conditions."
     },
-    "checked": "2026-11-22",
-    "source": "京都観光Navi https://ja.kyoto.travel/event/single.php?event_id=4100 と伏見観光協会 https://kyoto-fushimi.or.jp/fune （2026-11-22）。便ごとの出航時刻と支払い方法は、どちらにも書かれていない"
+    "checked": "2026-11-23",
+    "source": "伏見観光協会 今年の運航 https://kyoto-fushimi.or.jp/fune/unkou/ （運航期間・出航時刻・料金）、予約の前に https://kyoto-fushimi.or.jp/fune/reserve.php （支払い・受付・予約の締め切り）、十石舟 https://kyoto-fushimi.or.jp/fune （2026-11-23）。京都観光Navi https://ja.kyoto.travel/event/single.php?event_id=4100 （2026-11-22）"
    },
    "text": {
-    "ja": "十石舟（じっこくぶね）\n\n月桂冠大倉記念館の裏、川に下りた所が乗り場です。江戸時代に酒や米、旅人を運んだ舟を再現した20人乗りの屋形船で、柳の並ぶ宇治川派流を下り、三栖閘門（みすこうもん）でいったん降りて資料館を見てから戻ります。全部で約50分。舟の上では飲食できません。\n\n川から見上げる酒蔵の焼杉の壁と柳が、伏見でいちばん絵になる景色です。舟に乗らなくても、乗り場のあたりから弁天橋まで川沿いを歩けば同じ景色が見られます（歩くだけなら20分ほど）。桜の時期（3月末〜4月上旬）と、あじさいの6月がとくにきれいです。\n\n【乗り方】空席があれば予約なしで乗れます。受付は出航の15分前（3〜5月は20分前）まで。記念館に入る前に乗り場で空席を聞いて、便を決めておくと安心です。桜の時期や土日は、公式サイトからネット予約を。\n\n2026年は12月6日まで（11月25日からは最終便が15:40）。冬は川の工事のため運休で、例年3月下旬に再開します。\n\n記念館を出たら、すぐ裏の乗り場へ。この時間割で乗れるのは16:20の最終便です（11月24日まで）。記念館に入る前に乗り場で空席を聞いて、決めておいてください。\n\nおすすめ乗船時間：16:20〜17:10（最終便。11月24日までと春〜秋）。冬は川沿いを歩いて20分",
-    "en": "Jikkokubune\n\nThe landing is down on the canal behind the Gekkeikan museum. The 20-seat roofed boat recreates the craft that carried sake, rice and travellers in the Edo period. It glides down the willow-lined canal to the Misu lock gate, where you get off to see a small museum, then returns: about 50 minutes in all. No eating or drinking on board.\n\nThe charred-cedar brewery walls and willows seen from the water are Fushimi’s most photogenic view. Without the boat, you get the same view walking the bank from the landing to Benten Bridge (about 20 minutes just walking). It is at its best in cherry season (late March to early April) and with the hydrangeas in June.\n\nHow to ride: if there are seats you can board without a reservation. Check in at least 15 minutes before departure (20 minutes in March–May). It is safest to ask at the landing and fix your boat before you go into the museum. In cherry season and at weekends, book online on the official site.\n\nIn 2026 the boats run until 6 December (last boat 15:40 from 25 November). They stop in winter for river works and usually restart in late March.\n\nFrom the museum go straight to the landing behind it. On this timetable the boat you can make is the last one, at 16:20 (until 24 November). Ask about seats at the landing and fix it before you go into the museum.\n\nRecommended boat time: 16:20–17:10 (the last boat; until 24 Nov, and spring to autumn). In winter, a 20-minute walk along the bank"
+    "ja": "十石舟（じっこくぶね）\n\n月桂冠大倉記念館の裏、川に下りた所が乗り場です。江戸時代に酒や米、旅人を運んだ舟を再現した20人乗りの屋形船で、柳の並ぶ宇治川派流を下り、三栖閘門（みすこうもん）でいったん降りて資料館を見てから戻ります。全部で約55分。舟の上では飲食できません。\n\n川から見上げる酒蔵の焼杉の壁と柳が、伏見でいちばん絵になる景色です。舟に乗らなくても、乗り場のあたりから弁天橋まで川沿いを歩けば同じ景色が見られます（歩くだけなら20分ほど）。桜の時期（3月末〜4月上旬）と、あじさいの6月がとくにきれいです。\n\n【乗り方】空席があれば予約なしで乗れます。便は10:00〜11:20と13:00〜16:20の20分おきで、11:40〜12:40は出ません。受付は出航の15分前（3〜5月は20分前）まで。記念館に入る前に乗り場で空席を聞いて、便を決めておくと安心です。支払いは乗り場で現金。桜の時期や土日は、公式サイトからネット予約を（乗る日の2日前の0時まで。3〜4月の予約はカード払いだけで、30日前の22時から）。\n\n2026年は12月6日まで（11月25日からは最終便が15:40）。冬は川の工事のため運休で、例年3月下旬に再開します。\n\n記念館を出たら、すぐ裏の乗り場へ。この時間割で乗れるのは16:20の最終便です（11月24日まで。受付は16:05まで、3〜5月は16:00まで）。記念館に入る前に乗り場で空席を聞いて、決めておいてください。\n\nおすすめ乗船時間：16:20〜17:15（最終便。11月24日までと春〜秋）。冬は川沿いを歩いて20分",
+    "en": "Jikkokubune\n\nThe landing is down on the canal behind the Gekkeikan museum. The 20-seat roofed boat recreates the craft that carried sake, rice and travellers in the Edo period. It glides down the willow-lined canal to the Misu lock gate, where you get off to see a small museum, then returns: about 55 minutes in all. No eating or drinking on board.\n\nThe charred-cedar brewery walls and willows seen from the water are Fushimi’s most photogenic view. Without the boat, you get the same view walking the bank from the landing to Benten Bridge (about 20 minutes just walking). It is at its best in cherry season (late March to early April) and with the hydrangeas in June.\n\nHow to ride: if there are seats you can board without a reservation. Boats leave every 20 minutes from 10:00 to 11:20 and from 13:00 to 16:20; there are none from 11:40 to 12:40. Check in at least 15 minutes before departure (20 minutes in March–May). It is safest to ask at the landing and fix your boat before you go into the museum. Pay in cash at the landing. In cherry season and at weekends, book online on the official site (until midnight two days before; March–April bookings open 30 days ahead at 22:00 and are card-only).\n\nIn 2026 the boats run until 6 December (last boat 15:40 from 25 November). They stop in winter for river works and usually restart in late March.\n\nFrom the museum go straight to the landing behind it. On this timetable the boat you can make is the last one, at 16:20 (until 24 November; check in by 16:05, or 16:00 in March–May). Ask about seats at the landing and fix it before you go into the museum.\n\nRecommended boat time: 16:20–17:15 (the last boat; until 24 Nov, and spring to autumn). In winter, a 20-minute walk along the bank"
    },
    "photos": [
     {
@@ -1621,8 +1639,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "境内は自由。御香水を汲めるのは7:00〜19:00、社務所は9:00〜16:00。石庭の時間は要確認",
-       "en": "Grounds open. Spring water 7:00–19:00, shrine office 9:00–16:00. Stone garden hours: please check"
+       "ja": "境内は自由。御香水を汲めるのは7:00〜19:00、社務所は9:00〜16:00。石庭の時間は公式で確かめられませんでした（要確認）",
+       "en": "Grounds open. Spring water 7:00–19:00, shrine office 9:00–16:00. Stone garden hours could not be confirmed officially (unconfirmed)"
       },
       "until": null,
       "from": null
@@ -1630,8 +1648,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "境内は無料。石庭は有料（料金は要確認）",
-       "en": "Grounds free; fee for the stone garden (amount unconfirmed)"
+       "ja": "境内は無料。石庭の料金は公式で確かめられませんでした（要確認）",
+       "en": "Grounds free. The stone garden’s fee could not be confirmed officially (unconfirmed)"
       },
       "until": null,
       "from": null
@@ -1642,13 +1660,13 @@
      "ja": "御香水と社務所の時間は公式サイトで確認しました。石庭の料金と時間は公式サイトに書かれていませんでした。",
      "en": "Spring and office hours checked on the official website. The stone garden’s fee and hours are not given there."
     },
-    "checked": "2026-11-22",
-    "source": "御香宮神社 公式サイト https://gokounomiya.kyoto.jp/ （2026-11-22。御香水と社務所の時間、駅からの時間は記載あり。石庭の料金と時間は記載なし）",
+    "checked": "2026-11-23",
+    "source": "御香宮神社 公式サイト https://gokounomiya.kyoto.jp/ と境内案内 https://gokounomiya.kyoto.jp/grounds/grounds.html （2026-11-23。御香水と社務所の時間、駅からの時間は記載あり。石庭は境内図に名前があるだけで、料金と時間は記載なし）",
     "verified": false
    },
    "text": {
-    "ja": "御香宮神社（ごこうのみやじんじゃ）\n\n伏見桃山駅から大手筋を東へ、線路を2本越えて歩いて約6分。平安時代に境内から香りのよい水が湧いたことが名前の由来で、今も本殿の横に「御香水（ごこうすい）」が湧いています（水を汲めるのは7:00〜19:00）。伏見の酒がこの地下水で造られていることを、ここで実感できます。\n\n通りに面した表門は伏見城の大手門を移したもの。拝殿の正面の、極彩色の彫刻も見どころです。\n\n境内は自由に入れます。小堀遠州ゆかりの石庭は有料です（料金と時間は要確認。社務所の受付は9:00〜16:00）。舟に乗らない日や、時間が余ったときの寄り道に。冬は17時ごろには暗くなるので、その前に。\n\nおすすめ訪問時間：寄るなら約20分。十石舟に乗らない日は、川沿いを歩いたあとにここへ。",
-    "en": "Gokonomiya Shrine\n\nFrom Fushimi-Momoyama Station walk east along Otesuji, over two railway lines, for about 6 minutes. The name comes from a fragrant spring that appeared here in the Heian period, and the “Gokosui” water still flows beside the main hall (water can be drawn 7:00–19:00). Here you can see for yourself the groundwater Fushimi’s sake is made from.\n\nThe front gate on the street was moved from Fushimi Castle. The brightly painted carvings on the front of the worship hall are worth a look too.\n\nThe grounds are free to enter. The stone garden associated with Kobori Enshu has a fee (fee and hours unconfirmed; the shrine office is open 9:00–16:00). A good detour on days without the boat or when you have time left. In winter it is dark by about 17:00, so go before then.\n\nRecommended visit time: About 20 minutes if you stop by. On days without the boat, come here after the riverside walk."
+    "ja": "御香宮神社（ごこうのみやじんじゃ）\n\n伏見桃山駅から大手筋を東へ、線路を2本越えて歩いて約6分。平安時代に境内から香りのよい水が湧いたことが名前の由来で、今も本殿の横に「御香水（ごこうすい）」が湧いています（水を汲めるのは7:00〜19:00）。伏見の酒がこの地下水で造られていることを、ここで実感できます。\n\n通りに面した表門は伏見城の大手門を移したもの。拝殿の正面の、極彩色の彫刻も見どころです。\n\n境内は自由に入れます。社務所の裏には小堀遠州ゆかりと伝わる石庭があります（入れる時間と料金は公式で確かめられませんでした。要確認）。舟に乗らない日や、時間が余ったときの寄り道に。冬は17時ごろには暗くなるので、その前に。\n\nおすすめ訪問時間：寄るなら約20分。十石舟に乗らない日は、川沿いを歩いたあとにここへ。",
+    "en": "Gokonomiya Shrine\n\nFrom Fushimi-Momoyama Station walk east along Otesuji, over two railway lines, for about 6 minutes. The name comes from a fragrant spring that appeared here in the Heian period, and the “Gokosui” water still flows beside the main hall (water can be drawn 7:00–19:00). Here you can see for yourself the groundwater Fushimi’s sake is made from.\n\nThe front gate on the street was moved from Fushimi Castle. The brightly painted carvings on the front of the worship hall are worth a look too.\n\nThe grounds are free to enter. Behind the shrine office is a stone garden said to be linked to Kobori Enshu (its hours and fee could not be confirmed officially). A good detour on days without the boat or when you have time left. In winter it is dark by about 17:00, so go before then.\n\nRecommended visit time: About 20 minutes if you stop by. On days without the boat, come here after the riverside walk."
    },
    "photos": [
     {
@@ -1690,8 +1708,8 @@
     "en": "Chicken & brewery sake"
    },
    "caution": {
-    "ja": "月曜休み（祝日は営業）との案内。要確認",
-    "en": "Guides say closed Mondays (open on holidays); unconfirmed"
+    "ja": "月曜休み。電子マネーは使えません",
+    "en": "Closed Mondays. No e-money"
    },
    "blurb": {
     "ja": "蔵元「神聖」の酒蔵を使った鳥料理の店。鳥めしや焼き鳥と、蔵出しの生原酒を。",
@@ -1710,14 +1728,26 @@
      "url": "https://www.google.com/maps/search/?api=1&query=%E9%B3%A5%E3%81%9B%E3%81%84%E6%9C%AC%E5%BA%97%20%E4%BC%8F%E8%A6%8B"
     }
    ],
-   "links": [],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "鳥せい本店（公式）",
+      "en": "Torisei Honten (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.torisei.com/honten/",
+      "en": "https://www.torisei.com/honten/"
+     }
+    }
+   ],
    "info": {
     "rows": [
      {
       "kind": "hours",
       "text": {
-       "ja": "11:00〜22:00（ラストオーダー21:30）との案内（要確認）",
-       "en": "Guides give 11:00–22:00, last orders 21:30 (please check)"
+       "ja": "11:00〜22:00（ラストオーダー21:30）。昼から夜まで通しで営業",
+       "en": "11:00–22:00 (last orders 21:30), open straight through the afternoon"
       },
       "until": null,
       "from": null
@@ -1725,8 +1755,17 @@
      {
       "kind": "closed",
       "text": {
-       "ja": "月曜休み（祝日は営業）との案内（要確認）",
-       "en": "Guides say closed Mondays, open on holidays (please check)"
+       "ja": "月曜、12月31日〜1月3日",
+       "en": "Mondays, 31 December – 3 January"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "支払いはカード可（VISA・Master・JCB・AMEX・Diners）。電子マネーは使えません",
+       "en": "Payment: cards accepted (Visa, Mastercard, JCB, AMEX, Diners); no e-money"
       },
       "until": null,
       "from": null
@@ -1734,16 +1773,15 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "公式サイトでは本店の営業時間と休みを確かめられませんでした。上の時間はグルメサイトの情報です。月曜に行く日や、夜に行く日は電話（075-622-5533）で確かめてください。伏見桃山駅から歩いて約7分。",
-     "en": "I could not confirm the main shop’s hours or closed days on the official website; the times above come from restaurant guides. Phone first (075-622-5533) if you go on a Monday or in the evening. About 7 minutes on foot from Fushimi-Momoyama Station."
+     "ja": "時間・休み・支払いは鳥せいの公式サイトで確認しました。祝日の月曜に開くかどうかは公式サイトに書かれていないので、その日は電話（075-622-5533、営業時間内）で確かめてください。伏見桃山駅から歩いて約7分。",
+     "en": "Hours, closed days and payment checked on the official Torisei website. It does not say whether the shop opens on a Monday that is a public holiday; if so, phone first (075-622-5533, during opening hours). About 7 minutes on foot from Fushimi-Momoyama Station."
     },
-    "checked": "2026-11-22",
-    "source": "公式サイト（torisei.com）に本店の時間の記載が見つからず、グルメサイト（ヒトサラ・ぐるなび・るるぶ）の情報（2026-11-22）",
-    "verified": false
+    "checked": "2026-11-23",
+    "source": "鳥せい 公式サイト（本店のページ）https://www.torisei.com/honten/ （2026-11-23）"
    },
    "text": {
-    "ja": "鳥せい本店（とりせいほんてん）\n\n1677年創業の蔵元、山本本家（銘柄は「神聖」）の酒蔵を改装した鳥料理の店です。白い壁に「鳥せい」の看板、「蔵元直営」の紺ののれんが目印。中は太い梁の広い土間で、ひとりでも入りやすい店です。\n\nお昼は鳥めしや焼き鳥の御膳が手ごろ。写真は2025年2月のお昼に食べたものです。お酒が飲める人は、蔵元ならではの蔵出しの生原酒を一杯。\n\n店の横には、酒造りに使う伏見の名水「白菊水（しらぎくすい）」が湧いていて、地元の人が汲みに来ます。\n\nこのコースでは夜ごはんに。舟を降りたら、川沿いと竜馬通りを歩いて約10分。焼き鳥と鳥めしで、蔵出しの酒をもう一杯。昼から夜まで通しで開いているとの案内ですが、公式には確かめられていません（要確認）。\n\nおすすめ訪問時間：17:20〜18:30（舟に乗らない日は16:40ごろから）",
-    "en": "Torisei Honten\n\nA chicken restaurant in a converted storehouse of Yamamoto Honke, brewers of “Shinsei” sake since 1677. Look for the white wall with the 鳥せい sign and the navy curtain. Inside is a big earthen-floored hall under heavy beams, easy to enter alone.\n\nAt lunch the chicken-rice and yakitori sets are good value; my photo is a lunch from February 2025. If you drink, try a glass of the brewery’s unpasteurised sake.\n\nBeside the restaurant the Shiragiku spring, one of Fushimi’s brewing waters, flows freely; locals come to fill bottles.\n\nOn this course, dinner. From the boat it is about 10 minutes’ walk along the canal and Ryoma-dori. Yakitori and chicken rice with one more glass of brewery sake. Guides say it stays open from lunch through the evening, but I could not confirm that officially.\n\nRecommended visit time: 17:20–18:30 (from about 16:40 on days without the boat)"
+    "ja": "鳥せい本店（とりせいほんてん）\n\n1677年創業の蔵元、山本本家（銘柄は「神聖」）の酒蔵を改装した鳥料理の店です。白い壁に「鳥せい」の看板、「蔵元直営」の紺ののれんが目印。中は太い梁の広い土間で、ひとりでも入りやすい店です。\n\nお昼は鳥めしや焼き鳥の御膳が手ごろ。写真は2025年2月のお昼に食べたものです。お酒が飲める人は、蔵元ならではの蔵出しの生原酒を一杯。\n\n店の横には、酒造りに使う伏見の名水「白菊水（しらぎくすい）」が湧いていて、地元の人が汲みに来ます。\n\nこのコースでは夜ごはんに。舟を降りたら、川沿いと竜馬通りを歩いて約10分。焼き鳥と鳥めしで、蔵出しの酒をもう一杯。昼から夜まで通しで開いている店です（22:00まで、ラストオーダー21:30）。\n\nおすすめ訪問時間：17:25〜18:30（舟に乗らない日は16:40ごろから）",
+    "en": "Torisei Honten\n\nA chicken restaurant in a converted storehouse of Yamamoto Honke, brewers of “Shinsei” sake since 1677. Look for the white wall with the 鳥せい sign and the navy curtain. Inside is a big earthen-floored hall under heavy beams, easy to enter alone.\n\nAt lunch the chicken-rice and yakitori sets are good value; my photo is a lunch from February 2025. If you drink, try a glass of the brewery’s unpasteurised sake.\n\nBeside the restaurant the Shiragiku spring, one of Fushimi’s brewing waters, flows freely; locals come to fill bottles.\n\nOn this course, dinner. From the boat it is about 10 minutes’ walk along the canal and Ryoma-dori. Yakitori and chicken rice with one more glass of brewery sake. It stays open from lunch straight through the evening (until 22:00, last orders 21:30).\n\nRecommended visit time: 17:25–18:30 (from about 16:40 on days without the boat)"
    },
    "photos": [
     "torisei-1.jpg",
@@ -1808,10 +1846,19 @@
       "from": null
      },
      {
+      "kind": "hours",
+      "text": {
+       "ja": "売店（黄桜商店）10:00〜20:00。黄桜記念館・河童資料館 10:00〜16:00（無料）",
+       "en": "Shop (Kizakura Shoten) 10:00–20:00. Kizakura Memorial Hall and kappa gallery 10:00–16:00 (free)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
       "kind": "closed",
       "text": {
-       "ja": "火曜（祝日のときは水曜）、12月31日・1月1日",
-       "en": "Tuesdays (Wednesday if Tuesday is a holiday), 31 December and 1 January"
+       "ja": "火曜（祝日のときは水曜）、12月31日・1月1日（レストラン・売店・記念館とも）",
+       "en": "Tuesdays (Wednesday if Tuesday is a holiday), 31 December and 1 January (restaurant, shop and gallery)"
       },
       "until": null,
       "from": null
@@ -1819,11 +1866,11 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "レストランの時間と休みは黄桜の公式サイトで確認しました。売店とギャラリーの時間は確認できていません。",
-     "en": "Restaurant hours and closed days checked on the official Kizakura website. Shop and gallery hours are unconfirmed."
+     "ja": "レストラン・売店・記念館の時間と休みは黄桜の公式サイトで確認しました。",
+     "en": "Restaurant, shop and gallery hours and closed days checked on the official Kizakura website."
     },
-    "checked": "2026-11-22",
-    "source": "黄桜 公式サイト https://kizakura.co.jp/restaurant/country/ （2026-11-22）"
+    "checked": "2026-11-23",
+    "source": "黄桜 公式サイト https://kizakura.co.jp/restaurant/country/ （レストラン）、https://kizakura.co.jp/restaurant/country/shop/index.html （売店）、https://kizakura.co.jp/restaurant/country/memorial/index.html （記念館）（2026-11-23）"
    },
    "text": {
     "ja": "キザクラカッパカントリー\n\n黄桜（きざくら）の酒蔵を使った店で、レストラン「黄桜酒場」と売店、カッパの資料を集めたギャラリーがあります。黄桜は1995年に京都で最初の地ビールを造った蔵で、できたての京都麦酒を飲めるのがここです。売店には缶ビールや限定の酒が並びます（写真は2025年2月）。\n\nレストランは昼と夜に分かれていて、14:30〜17:00は閉まります。夜は17:00から21:30まで（ラストオーダー20:50）。きき酒のあと、日本酒はもう十分という人もビールなら、という店です。クレジットカードが使えます。鳥せい本店から歩いて2分。\n\n鳥せい本店から歩いて2分。締めに地ビールを一杯。鳥せいが混んでいる日や月曜は、夜ごはんもここで（17:00から）。20:00に出れば、伏見桃山駅まで歩いて7分ほどです。\n\nおすすめ訪問時間：18:40〜20:00",
@@ -1940,7 +1987,7 @@
      "en": "Train times and fares checked on a route planner (Saturday 28 November 2026 timetable). Weekday trains differ by a few minutes; please check again before you travel."
     },
     "checked": "2026-11-22",
-    "source": "Yahoo!路線情報（2026-11-28 土曜のダイヤ。平日は 2026-11-25 で確認）"
+    "source": "Yahoo!路線情報（2026-11-28 土曜のダイヤ。平日は 2026-11-25 で確認）。酒蔵Bar えんの営業時間（11:30〜18:00、水曜休み）は藤岡酒造 公式サイト https://www.sookuu.net/ （2026-11-23）"
    },
    "text": {
     "ja": "大手筋（おおてすじ）商店街と伏見桃山駅（ふしみももやまえき）\n\n酒蔵の町から北へ5分ほど歩くと、屋根のある大手筋商店街に出ます。地元の人の買い物の通りです。商店街を東へ抜けた所が京阪の伏見桃山駅。その先の赤い大鳥居をくぐると、すぐ近鉄の桃山御陵前駅です。\n\n・三条へ：京阪で。出町柳（でまちやなぎ）行きに乗り、次の丹波橋（たんばばし）で特急に乗り換えると約15分（320円）。乗り換えずに準急のまま行くと25分ほどです。\n・京都駅へ：近鉄の桃山御陵前から12分（300円）。\n\n【もう1軒】日本酒をもう少し、という人には藤岡酒造の「酒蔵Bar えん」（11:30〜18:00、水曜休み）。場所はGoogleマップで「藤岡酒造」と探してください。\n\n三条に戻ってから飲み直すなら、三条駅から鴨川を渡ってすぐの木屋町（きやまち）や先斗町（ぽんとちょう）に、遅くまで開いている店が並んでいます。\n\n20:12発に乗り、丹波橋で特急に乗り換えて三条に20:27。もう少し飲んで21:05発にしても、三条に21:21に着きます。\n\nおすすめ出発時間：20:12（三条に20:27）",

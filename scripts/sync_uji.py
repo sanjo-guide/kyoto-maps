@@ -13,7 +13,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='uji', i18n='UJI_I18N', count=16, data_v=2, bump=101,
+    id='uji', i18n='UJI_I18N', count=16, data_v=3, bump=102,
     head='京都 宇治と伏見',
     title='京都 宇治と伏見｜平等院・抹茶・酒蔵の町 Uji &amp; Fushimi MAP',
     desc='三条から京阪電車で宇治へ。平等院と抹茶、宇治川と宇治上神社を歩いて、午後は伏見の酒蔵の町で月桂冠大倉記念館のきき酒、十石舟、夜は蔵元の店と地ビール。平等院の開門に合わせるコースと9〜10時に出るコースを選べる1日ルートマップ。Uji and Fushimi in one day from central Kyoto: Byodoin, matcha and Ujigami Shrine, then sake tasting, a canal boat and dinner in the brewery town, with an opening-time course and a 9–10 o’clock course.',

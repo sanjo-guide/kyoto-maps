@@ -41,7 +41,7 @@ window.UJI_I18N = {
     cash: '現金を用意してください',
     checked: '{d}に公式サイトや乗換案内で確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月21日〜22日',
+    checkedDate: '2026年11月21日〜23日',
     noticeHead: 'お知らせ',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -91,7 +91,7 @@ window.UJI_I18N = {
         {
           "name": "平等院",
           "price": "700円＋300円",
-          "text": "庭園とミュージアムで700円。鳳凰堂の中に入るなら、庭園の中の受付で別に300円。",
+          "text": "庭園とミュージアムで700円。鳳凰堂の中に入るなら、庭園の中の受付で別に300円（現金のみ）。拝観券はカードや電子マネーも使えます。",
           "url": "https://www.byodoin.or.jp/guide/"
         },
         {
@@ -103,11 +103,11 @@ window.UJI_I18N = {
         {
           "name": "十石舟",
           "price": "1,900円",
-          "text": "約50分。空席があれば予約なしで乗れます。3月下旬〜12月上旬。",
+          "text": "約55分。空席があれば予約なしで乗れ、支払いは当日現金。3月下旬〜12月上旬。",
           "url": "https://kyoto-fushimi.or.jp/fune"
         }
       ],
-      "dealsNote": "大人の料金です。2026年11月22日に確認しました（各公式サイト、電車は乗換案内）。",
+      "dealsNote": "大人の料金です。2026年11月22日・23日に確認しました（各公式サイト、電車は乗換案内）。",
       "dealsMore": "公式サイトで見る",
       "howHead": "このマップの使い方",
       "how": [
@@ -140,7 +140,7 @@ window.UJI_I18N = {
           "平等院の鳳凰堂の中に入る券（300円）は先着順。この時間だと遠い回か、もうないことも。中を見たい人は「開門に合わせる」へ",
           "月桂冠大倉記念館は現金が使えません。受付は16:00まで。土日は公式サイトで予約を",
           "十石舟は3月下旬〜12月上旬だけ（2026年は12月6日まで）。冬は川沿いを歩きます",
-          "寺田屋の受付は15:40まで（要確認）。月曜は鳥せい本店、火曜はキザクラが休み",
+          "寺田屋の時間は公式で確かめられませんでした（要確認）。月曜は鳥せい本店、火曜はキザクラが休み",
           "お酒を飲むので、車や自転車では行かないこと"
         ],
         "dayHead": "1日の流れ（9〜10時に出発）",
@@ -178,7 +178,7 @@ window.UJI_I18N = {
             ]
           },
           {
-            "time": "17:20",
+            "time": "17:25",
             "area": "伏見の夜",
             "title": "蔵元の店で焼き鳥、締めに地ビール",
             "text": "鳥せい本店で夜ごはん、歩いて2分のキザクラカッパカントリーでビール。伏見桃山20:12発で、三条に20:27。",
@@ -198,7 +198,7 @@ window.UJI_I18N = {
           "平等院に入ったら、写真より先に内部拝観の受付へ（券は9:10から、最初の回は9:30）",
           "月桂冠大倉記念館は現金が使えません。受付は16:00まで。土日は公式サイトで予約を",
           "十石舟は3月下旬〜12月上旬だけ（2026年は12月6日まで。11月25日からは最終便15:40）",
-          "寺田屋の受付は15:40まで（要確認）。月曜は鳥せい本店、火曜はキザクラが休み",
+          "寺田屋の時間は公式で確かめられませんでした（要確認）。月曜は鳥せい本店、火曜はキザクラが休み",
           "お酒を飲むので、車や自転車では行かないこと。きき酒はお昼を食べてから"
         ],
         "dayHead": "1日の流れ（開門に合わせる）",
@@ -229,7 +229,7 @@ window.UJI_I18N = {
             "area": "伏見・寺田屋とお昼",
             "title": "龍馬の船宿と、蔵元の店のお昼",
             "text": "中書島駅から寺田屋へ。竜馬通りを歩いて、酒蔵を使った鳥せい本店で13:20からお昼。",
-            "note": "月曜は鳥せいが休み（要確認）",
+            "note": "月曜は鳥せいが休み",
             "photo": [
               "torisei",
               1
@@ -297,7 +297,7 @@ window.UJI_I18N = {
     cash: 'Bring cash',
     checked: 'Checked on official websites and a route planner on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 21–22, 2026',
+    checkedDate: 'Nov 21–23, 2026',
     noticeHead: 'Note',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -347,7 +347,7 @@ window.UJI_I18N = {
         {
           "name": "Byodoin",
           "price": "¥700 + ¥300",
-          "text": "¥700 for the garden and museum. To go inside the Phoenix Hall, pay ¥300 more at the desk in the garden.",
+          "text": "¥700 for the garden and museum. To go inside the Phoenix Hall, pay ¥300 more, in cash only, at the desk in the garden. The main ticket can be paid by card or e-money.",
           "url": "https://www.byodoin.or.jp/en/"
         },
         {
@@ -359,11 +359,11 @@ window.UJI_I18N = {
         {
           "name": "Jikkokubune boat",
           "price": "¥1,900",
-          "text": "About 50 minutes. No reservation needed if seats are free. Late March to early December.",
+          "text": "About 55 minutes. No reservation needed if seats are free; pay in cash on the day. Late March to early December.",
           "url": "https://kyoto-fushimi.or.jp/fune"
         }
       ],
-      "dealsNote": "Adult prices, checked on Nov 22, 2026 (official sites; trains on a route planner).",
+      "dealsNote": "Adult prices, checked on 22–23 Nov 2026 (official sites; trains on a route planner).",
       "dealsMore": "See official site",
       "howHead": "How to use this map",
       "how": [
@@ -396,7 +396,7 @@ window.UJI_I18N = {
           "Phoenix Hall interior tickets (¥300) are first come, first served. At this hour you may get a late slot or none; for the interior, use “At opening time”",
           "The Gekkeikan museum takes no cash. Last entry 16:00; book online for weekends",
           "The jikkokubune boats run late March to early December only (until 6 Dec in 2026). In winter, walk the bank",
-          "Teradaya’s last entry is 15:40 (unconfirmed). Torisei closes on Mondays, Kizakura on Tuesdays",
+          "Teradaya’s hours could not be confirmed officially (unconfirmed). Torisei closes on Mondays, Kizakura on Tuesdays",
           "You’ll be drinking: don’t come by car or bicycle"
         ],
         "dayHead": "One day, roughly like this (leaving at 9–10)",
@@ -434,7 +434,7 @@ window.UJI_I18N = {
             ]
           },
           {
-            "time": "17:20",
+            "time": "17:25",
             "area": "Fushimi in the evening",
             "title": "Yakitori at the brewery, then a craft beer",
             "text": "Dinner at Torisei, then a beer at Kizakura Kappa Country two minutes away. The 20:12 from Fushimi-Momoyama reaches Sanjo at 20:27.",
@@ -454,7 +454,7 @@ window.UJI_I18N = {
           "At Byodoin go to the interior-ticket desk before taking photos (tickets from 9:10, first visit 9:30)",
           "The Gekkeikan museum takes no cash. Last entry 16:00; book online for weekends",
           "The jikkokubune boats run late March to early December only (until 6 Dec in 2026; last boat 15:40 from 25 Nov)",
-          "Teradaya’s last entry is 15:40 (unconfirmed). Torisei closes on Mondays, Kizakura on Tuesdays",
+          "Teradaya’s hours could not be confirmed officially (unconfirmed). Torisei closes on Mondays, Kizakura on Tuesdays",
           "You’ll be drinking: don’t come by car or bicycle, and taste after lunch"
         ],
         "dayHead": "One day, roughly like this (at opening time)",
@@ -485,7 +485,7 @@ window.UJI_I18N = {
             "area": "Fushimi: Teradaya & lunch",
             "title": "Ryoma’s boat inn and a brewery lunch",
             "text": "From Chushojima Station to Teradaya, then up Ryoma-dori to lunch from 13:20 at Torisei, in a converted sake storehouse.",
-            "note": "Torisei closes on Mondays (unconfirmed)",
+            "note": "Torisei closes on Mondays",
             "photo": [
               "torisei",
               1
