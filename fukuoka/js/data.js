@@ -2421,10 +2421,10 @@ window.GUIDE = {
    },
    "body": {
     "ja": [
-     "町じゅうに掘割（ほりわり）と呼ばれる水路がめぐる、水の町です。太宰府とセットにしたお得な乗車券もあります（内容は要確認）。"
+     "町じゅうに掘割（ほりわり）と呼ばれる水路がめぐる、水の町です。西鉄の「太宰府・柳川観光きっぷ」は、福岡（天神）・薬院から太宰府と柳川を回る電車の往復と、川下りの乗船券（松月乗船場、受付は15:00まで）、クーポンがセットで、使い始めた日から2日間有効です（スマホで買うデジタル券。2026年11月24日に西鉄の公式サイトで確認）。"
     ],
     "en": [
-     "A town of water, criss-crossed by canals called horiwari. There are also discount train tickets that combine it with Dazaifu (check the details)."
+     "A town of water, criss-crossed by canals called horiwari. Nishitetsu’s Dazaifu & Yanagawa Sightseeing Ticket combines a round trip by train from Fukuoka (Tenjin) or Yakuin via Dazaifu and Yanagawa, a canal boat ride (from the Shogetsu landing, last boarding 15:00) and discount coupons; it is valid for 2 days from first use (a digital ticket bought on your phone; checked on Nishitetsu’s website on 24 Nov 2026)."
     ]
    }
   },
@@ -2653,11 +2653,11 @@ window.GUIDE = {
    "body": {
     "ja": [
      "関門海峡をはさんだ下関側、門司港から船で数分の魚市場です。ふく（ふぐ）の刺身など、新鮮な海の幸をその場で買って、海を見ながら食べられます。",
-     "週末のお昼には、お寿司などを売る屋台が市場の中にずらりと並びます（開催日は要確認）。"
+     "金・土・日・祝日は「活きいき馬関街（ばかんがい）」として、お寿司などを売る屋台が市場の中にずらりと並びます（金・土 8:00〜15:00、日・祝 7:00〜15:00。月〜木はありません。売り切れしだい終わることがあり、市場の休みの日もあります。2026年11月24日に唐戸市場の公式サイトで確認）。"
     ],
     "en": [
      "Shimonoseki’s fish market, just across the strait from Mojiko by ferry. You can buy fresh seafood such as fugu (pufferfish) sashimi and eat it right there by the sea.",
-     "Around lunchtime on weekends, stalls selling sushi and more fill the market floor (check the days before you go)."
+     "On Fridays, weekends and holidays, the Bakangai food event fills the market floor with stalls selling sushi and more (Fri & Sat 8:00–15:00, Sun & holidays 7:00–15:00; none Monday to Thursday; it can end early when food sells out, and the market has some closed days. Checked on the Karato Market website on 24 Nov 2026)."
     ]
    },
    "photos": [
@@ -3039,8 +3039,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "入園料・開園時間は公式サイトで確認してください（2026年11月20日の時点で、公式サイトでは最終入園16:00と案内されていました）。",
-    "en": "Check entry fees and hours on the official website (on 20 Nov 2026 it showed last entry at 16:00)."
+    "ja": "入園料は高校生以上800円、小・中学生300円。9月〜6月は9:00〜17:00（最終入園16:00、天守閣に上がれるのは16:30まで）、7・8月は19:00まで。休みは12月29日。平日の出入りは南口だけです。2026年11月24日に熊本城の公式サイトで確認。",
+    "en": "Entry ¥800 for high-school age and over, ¥300 for elementary and junior-high students. September to June 9:00–17:00 (last entry 16:00; the keep until 16:30); July and August until 19:00. Closed 29 December. On weekdays you can only enter and leave by the South Gate. Checked on the official Kumamoto Castle website on 24 Nov 2026."
    },
    "photos": [
     {
@@ -3274,8 +3274,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "石段は苔ですべりやすいので、歩きやすい靴で行ってください。南阿蘇鉄道の高森駅から神社までは車で約10分です（熊本県の観光サイトで確認）。神社へのバスは要確認。",
-    "en": "The mossy steps are slippery, so wear good shoes. The shrine is about 10 minutes by car from Takamori Station on the Minamiaso Railway (per Kumamoto Prefecture’s tourism site); check whether any bus goes there."
+    "ja": "石段は苔ですべりやすいので、歩きやすい靴で行ってください。南阿蘇鉄道の高森駅から神社までは車で約10分です（熊本県の観光サイトで確認）。バスなら高森駅前から九州産交バス（町内を回る路線）で「上色見熊野座神社入口」まで約15分・200円ですが、1日に数本だけなので、行きと帰りの時刻を乗換案内で先に確かめてください（2026年11月24日に乗換案内で確認）。",
+    "en": "The mossy steps are slippery, so wear good shoes. The shrine is about 10 minutes by car from Takamori Station on the Minamiaso Railway (per Kumamoto Prefecture’s tourism site). By bus, a Kyushu Sanko local loop bus runs from Takamori-ekimae to the “Kamishikimi Kumanoimasu Jinja Iriguchi” stop in about 15 minutes (¥200), but there are only a few a day, so look up both directions in a route planner first (checked on a route planner on 24 Nov 2026)."
    },
    "photos": [
     {
@@ -3384,7 +3384,12 @@ window.GUIDE = {
  },
  "sources": {
   "checked": "2026-11-20",
+  "_note": "2026-11-24 の見直し：太宰府・柳川観光きっぷの内容は西鉄の公式（/train/digitalkippu/・/train/qrkippu/。値段は本文に書かれていないので載せていない）。唐戸市場の活きいき馬関街は公式（/bakangai/ の開催時間の画像）。熊本城の入園料・時間は公式（castle.kumamoto-guide.jp/info/）。熊本駅前〜熊本城・市役所前の市電200円、熊本〜高森の高速バス1,180円、高森駅前〜上色見熊野座神社入口の九州産交バス200円は乗換案内（2026-11-24 検索）",
   "list": [
+   "https://www.nishitetsu.jp/train/digitalkippu/",
+   "https://www.nishitetsu.jp/train/qrkippu/",
+   "https://www.karatoichiba.com/bakangai/",
+   "https://castle.kumamoto-guide.jp/info/",
    "https://www.karatsu-kankou.jp/access/",
    "https://www.mlit.go.jp/common/001253355.pdf",
    "https://www.city.itoshima.lg.jp/s007/010/070/010/090/access.html",
