@@ -1618,8 +1618,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "【要確認】公式サイトにつながらず、料金と時間を公式には確かめられませんでした。観光案内サイトでは、入園料は大人300円、開園は西門が日の出ごろ〜日没ごろ（11月は6:30〜17:00、12月は7:00〜17:00）、東門は8:30〜17:00、休みは12月29〜31日、和船は3〜11月、とされています（2026年11月21日に確認）。行く前に玉藻公園管理事務所（087-851-1521）で確かめてください。",
-    "en": "Please check: the official website could not be reached, so fees and hours are not officially confirmed. Travel sites give entry as ¥300 for adults; the west gate open from around sunrise to sunset (6:30–17:00 in November, 7:00–17:00 in December), the east gate 8:30–17:00; closed 29–31 December; boat rides March to November (checked 21 Nov 2026). Confirm with the park office (087-851-1521) before you go."
+    "ja": "入園料は300円（18歳未満は無料）。西門は季節で変わり、11月は6:30〜17:00、12・1月は7:00〜17:00、2月は7:00〜17:30、3月は6:30〜18:00。東門は10〜3月が8:30〜17:00、4〜9月が7:00〜18:00。休みは12月29〜31日。2026年11月24日に香川県観光協会の公式サイト（うどん県旅ネット）で確認。【要確認】和船の運航期間（観光案内サイトでは3〜11月）は公式には確かめられませんでした。玉藻公園管理事務所は087-851-1521。",
+    "en": "Entry ¥300 (free under 18). The west gate’s hours change by season: 6:30–17:00 in November, 7:00–17:00 in December and January, 7:00–17:30 in February, 6:30–18:00 in March. The east gate is open 8:30–17:00 from October to March and 7:00–18:00 from April to September. Closed 29–31 December. Checked on the Kagawa Prefecture Tourism Association’s website on 24 Nov 2026. Please check: the boat-ride season (March to November according to a travel site) could not be confirmed officially. Park office: 087-851-1521."
    },
    "photos": [
     {
@@ -1714,8 +1714,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "JR屋島駅発のバスは毎日9:29・10:41・11:53・13:53・15:05・16:17。山上からJR屋島駅への最終は16:54発です（ことでん屋島駅までなら夜の便もあります）。高松駅（7番のりば）からの直通は土日祝・夏休み・冬休みだけで、9:43・11:13・14:03・17:12発、帰りは山上10:29・12:06・15:18・19:44発。2026年11月21日に、ことでんバスの時刻表と運賃表（2026年7月18日改正）で確認。【要確認】やしまーるは9:00〜17:00（金・土・祝前日は21:00まで）、火曜休み、入館無料とされていますが、屋島の公式サイトにつながらず確かめられませんでした。",
-    "en": "Buses leave JR Yashima Station daily at 9:29, 10:41, 11:53, 13:53, 15:05 and 16:17. The last bus from the top to JR Yashima Station is at 16:54 (later buses run as far as Kotoden-Yashima Station). The direct bus from Takamatsu Station (stop 7) runs only at weekends, on holidays and in the summer and winter holidays, at 9:43, 11:13, 14:03 and 17:12, returning from the top at 10:29, 12:06, 15:18 and 19:44. Checked against the Kotoden Bus timetable and fare table (revised 18 July 2026) on 21 Nov 2026. Please check: Yashimaru is reported as open 9:00–17:00 (to 21:00 on Fridays, Saturdays and days before holidays), closed Tuesdays, free entry, but the official Yashima website could not be reached to confirm."
+    "ja": "JR屋島駅発のバスは毎日9:29・10:41・11:53・13:53・15:05・16:17。山上からJR屋島駅への最終は16:54発です（ことでん屋島駅までなら夜の便もあります）。高松駅（7番のりば）からの直通は土日祝・夏休み・冬休みだけで、9:43・11:13・14:03・17:12発、帰りは山上10:29・12:06・15:18・19:44発。2026年11月21日に、ことでんバスの時刻表と運賃表（2026年7月18日改正）で確認。やしまーるは9:00〜17:00（金・土・祝前日は21:00まで）、火曜休み（祝日なら次の平日）、入館無料（パノラマアートの観覧は高校生以上1,000円）。2026年11月24日に香川県観光協会の公式サイト（うどん県旅ネット）で確認。",
+    "en": "Buses leave JR Yashima Station daily at 9:29, 10:41, 11:53, 13:53, 15:05 and 16:17. The last bus from the top to JR Yashima Station is at 16:54 (later buses run as far as Kotoden-Yashima Station). The direct bus from Takamatsu Station (stop 7) runs only at weekends, on holidays and in the summer and winter holidays, at 9:43, 11:13, 14:03 and 17:12, returning from the top at 10:29, 12:06, 15:18 and 19:44. Checked against the Kotoden Bus timetable and fare table (revised 18 July 2026) on 21 Nov 2026. Yashimaru is open 9:00–17:00 (to 21:00 on Fridays, Saturdays and days before holidays), closed Tuesdays (the next weekday if Tuesday is a holiday); entry is free (the panorama artwork costs ¥1,000 for high-school age and over). Checked on the Kagawa Prefecture Tourism Association’s website on 24 Nov 2026."
    },
    "photos": [
     {
@@ -1925,7 +1925,10 @@ window.GUIDE = {
  },
  "sources": {
   "checked": "2026-11-21",
+  "_note": "2026-11-24 の見直し：玉藻公園の入園料・開門時間と、やしまーるの時間・休み・料金は香川県観光協会の公式サイト（my-kagawa.jp/point/285・/point/4144）。施設そのものの公式サイト（玉藻公園・屋島）はこの日もつながらなかった。玉藻公園の和船の期間は kagawan.com の記載のままで要確認",
   "list": [
+   "https://www.my-kagawa.jp/point/285",
+   "https://www.my-kagawa.jp/point/4144",
    "https://www.matsuyamajo.jp/guide/",
    "https://dogo.jp/onsen/honkan",
    "https://www.hirome.co.jp/",
