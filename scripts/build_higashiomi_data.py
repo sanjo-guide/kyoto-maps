@@ -25,6 +25,7 @@ import json, os, re, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = f"{R}/images/higashiomi"
 CHECKED = "2026-11-22"
+RECHECKED = "2026-11-23"   # 要確認の調べ直し（永源寺の11月・千成亭ぎゅ〜じあむの定休日・愛のりタクシーの運賃）
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -48,8 +49,8 @@ def row(kind, ja, en, until=None, frm=None):
     return {"kind": kind, "text": T(ja, en), "until": until, "from": frm}
 
 
-def info(rows, tip=None, cash=False, verified=True):
-    d = {"rows": rows, "cash": cash, "tip": tip, "checked": CHECKED}
+def info(rows, tip=None, cash=False, verified=True, checked=None):
+    d = {"rows": rows, "cash": cash, "tip": tip, "checked": checked or CHECKED}
     if not verified:
         d["verified"] = False
     return d
@@ -77,6 +78,7 @@ SHUTTLE = link("timetable", "湖東三山 紅葉シャトルバス（近江鉄�
 SHUTTLE_BOOK = link("info", "シャトルバスのWeb予約（もみじきっぷ）", "Book the shuttle (Momiji Kippu, Japanese)", "https://kokokubus.rsvsys.jp/reservations/calendar?category=5")
 KOTOSANZAN = link("info", "湖東三山観光振興協議会", "Koto Sanzan tourism council (Japanese)", "https://kotousanzan.jp/")
 TAXI_LIST = link("info", "東近江市観光協会（タクシー会社の一覧）", "Higashiomi tourism: taxi companies (Japanese)", "https://www.higashiomi.net/guide/access.html")
+EIGENJI_AUTUMN = "https://www.higashiomi.net/media/event/a793"   # 東近江市観光協会：永源寺の秋（11月の参拝受付・ライトアップ・特別拝観・お茶席。チラシの画像つき）
 OMI_MAP = link("info", "近江八幡のマップ（晩ごはんのティファニーなど）", "Omihachiman map (dinner and more)", "../omihachiman/")
 
 # 期間（この日を過ぎると行が消える／注意が出る）
@@ -190,33 +192,38 @@ A = [
          lat=35.08058, lng=136.31999,
          text=T("永源寺（えいげんじ）\n\n"
                 "鈴鹿の山あいを流れる愛知川（えちがわ）のほとりにある、臨済宗永源寺派の大本山です。旦度橋（たんどばし）を渡り、石段を上ると大きな山門。その先の法堂や方丈のまわりを、たくさんのもみじが囲んでいます。紅葉は11月上旬から下旬で、中旬が色づきのピーク（永源寺の案内）。\n\n"
-                "八日市駅の1番のりばから13:15発の近江鉄道バス（永源寺車庫行き）に乗り、「永源寺前」に13:44（土日祝は13:43）着（670円）。着いたらまずお昼を。永源寺のお知らせでは、紅葉の時期は食事処とキッチンカーが開いていて、うどん・そば・ぜんざいなどがあります（営業時間は要確認）。門前の茶店では名物の永源寺こんにゃくも。\n\n"
-                "2026年秋は、ボランティアガイドの案内で山門と法堂に上がれる特別拝観が10:00・11:30・14:00にあります（1,500円・参拝志納料込み。11月18日の永源寺のお知らせ。いつまで行うか・申し込み方法は要確認）。11月18日のお知らせでは、山門の上から見るもみじが見ごろでした。14:00の回に間に合いますが、その前にお昼を食べる時間はありません。出るなら、持ってきたもので先に軽く食べておきましょう。\n\n"
-                "帰りは永源寺前16:24発（土日祝は16:25発）のバスで八日市へ。教林坊に行かない日は、夕方のライトアップ（2026年は11月28日まで、17時から）を見てから帰ることもできます。\n\n"
-                "おすすめ訪問時間：13:45〜16:20",
+                "八日市駅の1番のりばから13:15発の近江鉄道バス（永源寺車庫行き）に乗り、「永源寺前」に13:44（土日祝は13:43）着（670円）。着いたらまずお昼を。永源寺のお知らせでは、11月14日から食事処とキッチンカーが開いていて、うどん・そば・ぜんざいなどがあります（営業時間は要確認）。門前の茶店では名物の永源寺こんにゃくも。座って休むなら、含空院の庭を見る標月亭のお茶席も（11月30日まで、9:00〜17:00・一席700円。参拝志納料は別）。\n\n"
+                "拝観は、11月は8:00〜17:00。ライトアップの11月14日〜28日は夜まで開いています。12月は9:00〜16:00です。\n\n"
+                "帰りは永源寺前16:24発（土日祝は16:25発）のバスで八日市へ。教林坊に行かない日は、夕方のライトアップ（2026年は11月28日まで、17時から。金〜日と祝日は20:00、月〜木は18:30に閉門）を見てから帰ることもできます。\n\n"
+                "おすすめ訪問時間：13:45〜16:00",
                 "Eigenji Temple\n\n"
                 "Head temple of the Eigenji school of Rinzai Zen, on the Echigawa river in the Suzuka hills. Cross the Tando bridge and climb to the great gate; beyond, the lecture hall and abbot’s quarters are wrapped in maples. The leaves turn from early to late November, peaking in mid-November (temple FAQ).\n\n"
-                "Take the 13:15 Ohmi bus (for Eigenji Shako) from stop 1 at Yokaichi Station and get off at “Eigenji-mae” at 13:44 (13:43 at weekends and holidays; ¥670). Have lunch first. The temple’s news page says a seasonal eatery and a food truck are open in the leaf season, with udon, soba, zenzai and the like (hours not confirmed). Tea houses by the gate sell the local Eigenji konnyaku.\n\n"
-                "In autumn 2026, volunteer guides take visitors up into the great gate and lecture hall at 10:00, 11:30 and 14:00 (¥1,500 including admission; temple news of 18 Nov; end date and booking not confirmed). On 18 Nov the temple said the maples seen from the top of the gate were at their best. You can make the 14:00 tour, but there’s no time for lunch before it, so if you join, eat something you’ve brought beforehand.\n\n"
-                "Leave on the 16:24 bus from Eigenji-mae (16:25 at weekends and holidays). If you’re skipping Kyorinbo, you can stay for the evening illumination instead (until 28 Nov in 2026, from 17:00).\n\n"
-                "Recommended visit time: 13:45–16:20"),
+                "Take the 13:15 Ohmi bus (for Eigenji Shako) from stop 1 at Yokaichi Station and get off at “Eigenji-mae” at 13:44 (13:43 at weekends and holidays; ¥670). Have lunch first. The temple’s news page says an eatery and a food truck have been open since 14 November, with udon, soba, zenzai and the like (hours not confirmed). Tea houses by the gate sell the local Eigenji konnyaku. For a sit-down rest, the Hyogetsu-tei tea room looks onto the Gankuin garden (until 30 Nov, 9:00–17:00, ¥700 a seat, admission extra).\n\n"
+                "The temple is open 8:00–17:00 in November, and into the evening during the illumination (14–28 Nov). In December it is open 9:00–16:00.\n\n"
+                "Leave on the 16:24 bus from Eigenji-mae (16:25 at weekends and holidays). If you’re skipping Kyorinbo, you can stay for the evening illumination instead (until 28 Nov in 2026, from 17:00; the gate closes at 20:00 Friday to Sunday and on holidays, 18:30 Monday to Thursday).\n\n"
+                "Recommended visit time: 13:45–16:00"),
          gmaps=[gm("永源寺", "Eigenji", 35.08058, 136.31999, "永源寺 東近江市")],
-         links=[link("official", "永源寺 公式サイト（お知らせ）", "Eigenji (official news, Japanese)", "https://eigenji-t.jp/haikan/"), EIGENJI_BUS],
-         notices=[notice("11月は時間が変わります", "November hours differ",
-                         "ふだんの参拝時間は9:00〜16:00ですが、11月は紅葉の時期のため変わります（永源寺の案内）。2026年11月の時間は公式サイトで見つけられませんでした（要確認）。",
-                         "Usual hours are 9:00–16:00, but they change in November for the leaf season (temple FAQ). We couldn’t find the November 2026 hours on the website; please check.",
-                         url="https://eigenji-t.jp/contact/", to="2026-11-30")],
-         info=info([row("hours", "ふだんは9:00〜16:00。11月は変わる（2026年11月の時間は要確認）", "Usually 9:00–16:00; different in November (November 2026 hours not confirmed)"),
-                    row("hours", "2026年秋のライトアップ：11月14日〜28日 17時から（金・土は20時まで。ほかの日の終わりの時間は要確認）",
-                        "Autumn 2026 illumination: 14–28 Nov from 17:00 (until 20:00 on Fridays and Saturdays; other days not confirmed)", until=EIGENJI_LU_END),
-                    row("hours", "山門・法堂の特別拝観：10:00・11:30・14:00、1,500円（参拝志納料込み。期間は要確認）",
-                        "Gate and lecture-hall tour: 10:00, 11:30, 14:00, ¥1,500 incl. admission (end date not confirmed)", until="2026-11-30"),
+         links=[link("official", "永源寺 公式サイト（お知らせ）", "Eigenji (official news, Japanese)", "https://eigenji-t.jp/haikan/"),
+                link("info", "東近江市観光協会（永源寺の秋の拝観・特別拝観）", "Higashiomi tourism: Eigenji in autumn (Japanese)", EIGENJI_AUTUMN), EIGENJI_BUS],
+         notices=[notice("12月の拝観は16:00まで", "Closes at 16:00 in December",
+                         "12月の拝観は9:00〜16:00です。紅葉の時期の食事処とキッチンカーが12月も開いているかは確かめられませんでした（要確認）。お昼は持っていくと安心です。",
+                         "In December Eigenji is open 9:00–16:00. We couldn’t confirm that the leaf-season eatery and food truck open in December (please check), so bringing lunch is safer.",
+                         url="https://eigenji-t.jp/contact/", frm="2026-12-01")],
+         info=info([row("hours", "11月：8:00〜17:00（閉門）。11月14日〜28日はライトアップで夜まで", "November: 8:00–17:00 (gate closes); open into the evening 14–28 Nov for the illumination", until="2026-11-30"),
+                    row("hours", "2026年秋のライトアップ：11月14日〜28日 17:00から。金〜日・祝は20:00、月〜木は18:30に閉門",
+                        "Autumn 2026 illumination: 14–28 Nov from 17:00. Gate closes 20:00 Fri–Sun and holidays, 18:30 Mon–Thu", until=EIGENJI_LU_END),
+                    row("hours", "12月から：9:00〜16:00", "From December: 9:00–16:00", frm="2026-12-01"),
+                    row("hours", "山門・法堂の特別拝観（ボランティアガイドの案内）：11月23日まで 10:00・11:30・14:00、1,500円（参拝志納料込み）。集合は永源寺観光案内所、予約は 0748-27-2020",
+                        "Guided tour of the great gate and lecture hall: until 23 Nov, 10:00, 11:30, 14:00, ¥1,500 incl. admission. Meet at the Eigenji tourist information office; booking 0748-27-2020", until="2026-11-23"),
+                    row("hours", "含空院庭園と標月亭のお茶席：11月30日まで 9:00〜17:00（入場16:45まで）、一席700円（参拝志納料は別）",
+                        "Gankuin garden and Hyogetsu-tei tea room: until 30 Nov, 9:00–17:00 (last entry 16:45), ¥700 a seat (admission extra)", until="2026-11-30"),
+                    row("hours", "お昼：食事処とキッチンカー（11月14日から。営業時間は要確認）", "Lunch: eatery and food truck (open since 14 Nov; hours not confirmed)", until="2026-11-30"),
                     row("fee", "参拝志納料 大人600円、中学生200円、小学生以下無料", "Admission ¥600 adults, ¥200 junior high, free for younger children"),
                     row("bus", "八日市駅1番のりば 13:15 → 永源寺前 13:44（土日祝13:43）、670円。帰りは永源寺前 16:24（土日祝16:25）→ 八日市駅 16:59（17:00）",
                         "Yokaichi stop 1 13:15 → Eigenji-mae 13:44 (weekends 13:43), ¥670. Back: Eigenji-mae 16:24 (weekends 16:25) → Yokaichi 16:59 (17:00)")],
-                   tip=T("参拝志納料・紅葉の時期・11月の時間の変更は永源寺の公式サイト（よくある質問）、ライトアップと特別拝観は永源寺のお知らせ（2026年11月13日・18日・20日・21日）、バスは近江鉄道バスの時刻表と乗換案内で、2026年11月22日に確認しました。",
-                         "Admission, leaf season and the November change from the temple FAQ; illumination and tours from the temple news (13, 18, 20 and 21 Nov 2026); buses from Ohmi bus’s timetable and a route planner. Checked 22 Nov 2026."),
-                   verified=False)),
+                   tip=T("参拝志納料とふだんの時間は永源寺の公式サイト（よくある質問）、11月の時間・ライトアップ・特別拝観・お茶席は東近江市観光協会の案内とチラシ、永源寺のお知らせ（2026年11月15日・21日・23日）で、2026年11月23日に確認しました。食事処の営業時間はどこにも書かれていません。バスは近江鉄道バスの時刻表と乗換案内（11月22日）。",
+                         "Admission and usual hours from the temple FAQ; November hours, illumination, tour and tea room from the Higashiomi tourism association’s page and leaflet and the temple news (15, 21, 23 Nov 2026), checked 23 Nov 2026. The eatery’s hours aren’t published. Buses from Ohmi bus’s timetable and a route planner (22 Nov)."),
+                   verified=False, checked=RECHECKED)),
     dict(id="kyorinbo", name=T("教林坊（夜のライトアップ）", "Kyorinbo (evening illumination)"), kind=T("寺", "Temple"),
          blurb=T("春と秋だけ公開される、竹林と石の庭の小さなお寺。夜は、もみじと竹林がやわらかく照らされます。安土駅からタクシーで。",
                  "A small temple of bamboo and stone gardens, open only in spring and autumn. At night the maples and bamboo are softly lit. Taxi from Azuchi Station."),
@@ -343,13 +350,13 @@ B = [
          text=T("西明寺（さいみょうじ）\n\n"
                 "湖東三山のいちばん北にある天台宗のお寺です。鎌倉時代の本堂と三重塔は、どちらも国宝。杉木立の中に、ひわだぶきの屋根が2つ並びます。本坊の庭「蓬莱庭（ほうらいてい）」から本堂までは石段を上ります。\n\n"
                 "秋は境内の約1,000本のもみじが色づき、11月に満開になる「西明寺不断桜（ふだんざくら）」も咲くので、紅葉と桜が一度に見られます（湖東三山のチラシより）。2026年は、宝冠毘沙門天（ほうかんびしゃもんてん）像の初めての公開（12月13日まで）と、本堂の後ろの仏像群の特別拝観（11月30日まで・1,000円）があります。\n\n"
-                "シャトルバスで10:32に着いたら、1時間ほどお参りを。境内は持ち込みの飲食ができません。お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、公式サイト）。公式サイトでは月・火が定休、湖東三山のチラシには「11月は休まず営業」とあるので、月・火に行くなら電話（0749-29-9090）で確かめてください。もみじきっぷを見せると、ここで食事をした人はウーロン茶が1杯無料です。\n\n"
+                "シャトルバスで10:32に着いたら、1時間ほどお参りを。境内は持ち込みの飲食ができません。お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、ラストオーダー14:30。公式サイト）。定休日の月・火も紅葉シーズンは開いていて（公式サイト）、湖東三山のチラシでも11月は無休です。もみじきっぷを見せると、ここで食事をした人はウーロン茶が1杯無料です。\n\n"
                 "次のバスは西明寺12:32発。金剛輪寺（12:47）では降りずに、そのまま百済寺まで乗ります（13:10着・500円）。\n\n"
                 "おすすめ訪問時間：10:32〜12:30（お昼を含む）",
                 "Saimyoji Temple\n\n"
                 "A Tendai temple, the northernmost of the Koto Sanzan. Its Kamakura-period main hall and three-storied pagoda are both National Treasures, their cypress-bark roofs side by side among tall cedars. From the garden of the main residence, Horai-tei, stone steps lead up to the main hall.\n\n"
                 "In autumn about 1,000 maples colour the grounds, and the temple’s “fudan-zakura” cherry is in full bloom in November, so you see leaves and blossom together (Koto Sanzan leaflet). In 2026 the crowned Bishamonten statue is on show for the first time (until 13 Dec), and the statues behind the main altar can be seen (until 30 Nov, ¥1,000).\n\n"
-                "Arriving on the 10:32 shuttle, give the temple about an hour. You can’t eat or drink your own food in the grounds. For lunch, go to “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, official site). The site lists Mondays and Tuesdays as closed, while the Koto Sanzan leaflet says it is open every day in November, so phone ahead on a Monday or Tuesday (0749-29-9090). Show your Momiji Kippu with a meal there for a free oolong tea.\n\n"
+                "Arriving on the 10:32 shuttle, give the temple about an hour. You can’t eat or drink your own food in the grounds. For lunch, go to “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, last order 14:30; official site). Its usual Monday and Tuesday closing doesn’t apply in the autumn-leaf season (official site), and the Koto Sanzan leaflet says it is open every day in November. Show your Momiji Kippu with a meal there for a free oolong tea.\n\n"
                 "The next bus leaves Saimyoji at 12:32. Stay on past Kongorinji (12:47) all the way to Hyakusaiji (13:10, ¥500).\n\n"
                 "Recommended visit time: 10:32–12:30 (with lunch)"),
          gmaps=[gm("西明寺", "Saimyoji", 35.18334, 136.28475, "西明寺 甲良町池寺")],
@@ -360,14 +367,15 @@ B = [
                     row("hours", "2026年秋：宝冠毘沙門天像の公開 12月13日まで。本堂後陣の仏像群の特別拝観 11月30日まで（1,000円）",
                         "Autumn 2026: crowned Bishamonten until 13 Dec; statues behind the altar until 30 Nov (¥1,000)", until=SPECIAL_END),
                     row("fee", "入山料 大人800円、中学生500円、小学生300円", "¥800 adults, ¥500 junior high, ¥300 elementary"),
-                    row("hours", "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（月・火定休。11月は無休とチラシにあり、要確認）",
-                        "Lunch: Sennaritei Gyuseum 11:00–15:00 (closed Mon–Tue; the leaflet says open daily in November, so check)"),
+                    row("hours", "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（ラストオーダー14:30）。11月は無休（月・火の定休は紅葉シーズンを除く）",
+                        "Lunch: Sennaritei Gyuseum 11:00–15:00 (last order 14:30). Open daily in November (the Mon–Tue closing doesn’t apply in the leaf season)"),
                     row("bus", "西明寺 12:32 → 百済寺 13:10（500円）。彦根駅へ戻るバスは西明寺 13:43・14:43・15:53・16:53発（700円）",
                         "Saimyoji 12:32 → Hyakusaiji 13:10 (¥500). Back to Hikone from Saimyoji at 13:43, 14:43, 15:53, 16:53 (¥700)", until=SHUTTLE_END),
                     row("taxi", "愛のりタクシー：西明寺 12:56 → 金剛輪寺 13:03（400円）。河瀬駅へ戻る便は毎時12分発 → 29分着（800円、16:12発まで）",
                         "Ainori Taxi: Saimyoji 12:56 → Kongorinji 13:03 (¥400). Back to Kawase at :12, arriving :29 (¥800; until 16:12)", frm=AFTER_SHUTTLE)],
-                   tip=T("西明寺の公式サイト（拝観のご案内。入山料は「令和5年4月より変更」の料金表の金額）、" + FLYER_TIP_JA + "、千成亭ぎゅ〜じあむの公式サイトで、2026年11月22日に確認しました。",
-                         "Checked on the Saimyoji website (fees from its table, “changed April 2023”), " + FLYER_TIP_EN + ", and the Gyuseum website, 22 Nov 2026."))),
+                   tip=T("西明寺の公式サイト（拝観のご案内。入山料は「令和5年4月より変更」の料金表の金額）、" + FLYER_TIP_JA + "で2026年11月22日に、千成亭ぎゅ〜じあむの公式サイト（施設のご案内）で11月23日に確認しました。",
+                         "Checked on the Saimyoji website (fees from its table, “changed April 2023”) and " + FLYER_TIP_EN + " on 22 Nov 2026, and the Gyuseum website (facility guide) on 23 Nov."),
+                   checked=RECHECKED)),
     dict(id="hyakusaiji", name=T("百済寺（湖東三山）", "Hyakusaiji Temple (Koto Sanzan)"), kind=T("寺", "Temple"),
          blurb=T("苔むした石垣と杉の参道を上る、近江で最も古いお寺のひとつ。本坊の庭「天下遠望の名園」から、遠く琵琶湖の方まで。",
                  "One of the oldest temples in Omi: climb a cedar-lined approach between mossy stone walls. The garden looks out towards Lake Biwa."),
@@ -432,12 +440,12 @@ B = [
          text=T("教林坊（きょうりんぼう）\n\n"
                 "観音正寺のある繖山（きぬがさやま）のふもと、安土町石寺の山あいにある小さなお寺です。ふだんは公開されておらず、春と秋の特別公開のときだけ入れます。竹林の小道を抜けると、苔と巨石の庭。書院の丸窓や三日月の窓から見る庭も絵のようです。写真は2026年11月17日の夜のライトアップです。\n\n"
                 "湖東三山のあとに寄るなら、彦根駅17:30着のバスから、18:02発の普通電車（網干行き）で安土へ（18:19着・330円）。北口からタクシーで約10分、18:35ごろ着きます。受付は19:00まで。タクシーは前もって予約し、帰りの迎えも頼んでおきましょう。\n\n"
-                "帰りは安土19:28発の電車に乗り、次の近江八幡で19:37発の新快速に乗り換えて、京都駅に20:12着（770円）。次は安土19:50発で京都駅20:36着（土日祝は19:55発で20:41着）。朝8時台からの長い1日になり、タクシー代も往復で5,000円前後かかるので、最初は外してあります。\n\n"
+                "帰りは安土19:28発の電車に乗り、次の近江八幡で19:37発の新快速に乗り換えて、京都駅に20:12着（770円）。次は安土19:50発で京都駅20:36着（土日祝は19:55発で20:41着）。朝8時台からの長い1日になり、行きと帰りにタクシー代（片道2,500円前後、教林坊の公式サイトの目安）もかかるので、最初は外してあります。\n\n"
                 + KYORIN_EXTRA_JA + "\n\nおすすめ訪問時間：18:35〜19:10",
                 "Kyorinbo\n\n"
                 "A small temple tucked in the hills of Ishidera, Azuchi, at the foot of Mt. Kinugasa. It is usually closed and opens only for special spring and autumn openings. A path through bamboo leads to a garden of moss and huge rocks, framed by the round and crescent-moon windows of the study hall. The photos show the illumination on 17 November 2026.\n\n"
                 "To add it after the three temples, take the 18:02 local train (for Aboshi) from Hikone, after the bus gets in at 17:30, to Azuchi (18:19, ¥330). A taxi from the north exit takes about 10 minutes, so you arrive around 18:35; last entry is 19:00. Book the taxi ahead, including the pick-up back.\n\n"
-                "Head home on the 19:28 train from Azuchi and change one stop later at Omi-Hachiman to the 19:37 Special Rapid: Kyoto Station at 20:12, ¥770. The next is 19:50 → 20:36 (19:55 → 20:41 at weekends and holidays). It makes a long day from the 8 o’clock hour, and taxis cost around ¥5,000 there and back, so it isn’t selected at first.\n\n"
+                "Head home on the 19:28 train from Azuchi and change one stop later at Omi-Hachiman to the 19:37 Special Rapid: Kyoto Station at 20:12, ¥770. The next is 19:50 → 20:36 (19:55 → 20:41 at weekends and holidays). It makes a long day from the 8 o’clock hour, and you pay for a taxi each way (around ¥2,500 one way, the temple’s own estimate), so it isn’t selected at first.\n\n"
                 + KYORIN_EXTRA_EN + "\n\nRecommended visit time: 18:35–19:10"),
          gmaps=[gm("教林坊", "Kyorinbo", 35.13898, 136.16383, "教林坊 近江八幡市安土町石寺1145"), gm("安土駅", "Azuchi Station", 35.14290, 136.13790, "安土駅")],
          links=KYORIN_LINKS,
@@ -541,35 +549,34 @@ C = [
            blurb=T("湖東三山のいちばん北。鎌倉時代の本堂と三重塔は、どちらも国宝。門前で近江牛のお昼にして（月・火は休み）、乗合タクシーで金剛輪寺へ。",
                    "The northernmost Koto Sanzan temple, with a Kamakura-period main hall and pagoda that are both National Treasures. Omi beef by the gate (closed Mon–Tue), then the shared taxi to Kongorinji."),
            text=T(about("saimyoji", "ja") +
-                  "河瀬駅からの愛のりタクシーで11:08ごろ着。停留所は名勝庭園の前の受付です。1時間ほどお参りしたら、お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、月・火は休み。公式サイト）。\n\n"
-                  "境内は持ち込みの飲食ができません。月・火に行くなら、京都駅を出る前に食べるか、持ってきたものを境内の外で。早く終わったら、11:56発のタクシー（金剛輪寺12:03着）にもできます。予約のときに決めてください。\n\n"
+                  "河瀬駅からの愛のりタクシーで11:08ごろ着。停留所は名勝庭園の前の受付です。1時間ほどお参りしたら、お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、ラストオーダー14:30。公式サイト）。11月は無休です。12月は月・火が定休で、紅葉シーズンは開いていることもあるので（公式サイト）、月・火は電話（0749-29-9090）で確かめてください。\n\n"
+                  "境内は持ち込みの飲食ができません。休みの日は、京都駅を出る前に食べるか、持ってきたものを境内の外で。早く終わったら、11:56発のタクシー（金剛輪寺12:03着）にもできます。予約のときに決めてください。\n\n"
                   "12:56発の愛のりタクシーで金剛輪寺へ（13:03着・400円）。\n\n"
                   "おすすめ訪問時間：11:08〜12:56（お昼を含む）",
                   about("saimyoji", "en") +
-                  "The Ainori Taxi from Kawase arrives around 11:08; the stop is the reception in front of the garden. Give the temple about an hour, then have lunch at “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, closed Mondays and Tuesdays; official site).\n\n"
-                  "You can’t eat or drink your own food in the grounds. On a Monday or Tuesday, eat before you leave Kyoto or outside the grounds. If you need less time, there is an 11:56 taxi (Kongorinji 12:03); decide when you book.\n\n"
+                  "The Ainori Taxi from Kawase arrives around 11:08; the stop is the reception in front of the garden. Give the temple about an hour, then have lunch at “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, last order 14:30; official site). It is open every day in November. In December it usually closes on Mondays and Tuesdays, though it may open in the leaf season (official site), so phone ahead on those days (0749-29-9090).\n\n"
+                  "You can’t eat or drink your own food in the grounds. If it’s closed, eat before you leave Kyoto or outside the grounds. If you need less time, there is an 11:56 taxi (Kongorinji 12:03); decide when you book.\n\n"
                   "Take the 12:56 Ainori Taxi to Kongorinji (13:03, ¥400).\n\n"
                   "Recommended visit time: 11:08–12:56 (with lunch)"),
            links=[link("official", "西明寺 公式サイト（拝観のご案内）", "Saimyoji (official, Japanese)", "https://saimyouji.com/information/"),
                   link("official", "近江牛一筋＠千成亭ぎゅ〜じあむ", "Sennaritei Gyuseum (official, Japanese)", "https://gyuseum.jp/"), AINORI],
-           notices=[notice("11月30日のお昼は電話で確認", "Lunch on 30 Nov: phone ahead",
-                           "11月30日は月曜です。千成亭ぎゅ〜じあむは公式サイトでは月・火が定休、湖東三山のチラシでは11月は無休なので、電話（0749-29-9090）で確かめてください。境内は持ち込みの飲食ができません。",
-                           "30 November is a Monday. Sennaritei Gyuseum’s website lists Mondays and Tuesdays as closed, while the Koto Sanzan leaflet says it opens every day in November, so phone ahead (0749-29-9090). No food or drink of your own in the grounds.",
-                           url="https://gyuseum.jp/", to="2026-11-30"),
-                    notice("門前のお昼は月・火が休み", "Lunch by the gate: closed Mon–Tue",
-                           "千成亭ぎゅ〜じあむは月・火が定休です。境内は持ち込みの飲食ができません。",
-                           "Sennaritei Gyuseum closes on Mondays and Tuesdays. No food or drink of your own in the grounds.",
-                           url="https://gyuseum.jp/", frm="2026-12-01")],
+           notices=[notice("門前のお昼は12月の月・火に注意", "Lunch by the gate: Mondays and Tuesdays in December",
+                           "千成亭ぎゅ〜じあむの定休日は月・火です（紅葉シーズンを除く、と公式サイト）。11月は無休ですが、12月の月・火に行くなら電話（0749-29-9090）で確かめてください。境内は持ち込みの飲食ができません。",
+                           "Sennaritei Gyuseum usually closes on Mondays and Tuesdays, except in the leaf season (official site). It is open every day in November; for a Monday or Tuesday in December, phone ahead (0749-29-9090). No food or drink of your own in the grounds.",
+                           url="https://gyuseum.jp/guidance/")],
            info=info([row("hours", "8:30〜17:00（受付は16:30まで）", "8:30–17:00 (last entry 16:30)"),
                       row("hours", "2026年秋：本堂後陣の仏像群の特別拝観 11月30日まで（1,000円）", "Autumn 2026: statues behind the altar until 30 Nov (¥1,000)", until="2026-11-30"),
                       row("hours", "2026年秋：宝冠毘沙門天像の公開 12月13日まで", "Autumn 2026: crowned Bishamonten on show until 13 Dec", until=SPECIAL_END),
                       row("fee", "入山料 大人800円、中学生500円、小学生300円", "¥800 adults, ¥500 junior high, ¥300 elementary"),
-                      row("hours", "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（月・火定休）", "Lunch: Sennaritei Gyuseum 11:00–15:00 (closed Mon–Tue)"),
+                      row("hours", "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（ラストオーダー14:30）。11月は無休", "Lunch: Sennaritei Gyuseum 11:00–15:00 (last order 14:30). Open daily in November", until="2026-11-30"),
+                      row("hours", "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（ラストオーダー14:30）。月・火定休（紅葉シーズンを除く。12月の月・火は電話で確認）",
+                          "Lunch: Sennaritei Gyuseum 11:00–15:00 (last order 14:30). Closed Mon–Tue except in the leaf season (phone ahead on those days in December)", frm="2026-12-01"),
                       row("taxi", "愛のりタクシー：西明寺 12:56 → 金剛輪寺 13:03（400円）。河瀬駅へ戻る便は毎時12分発 → 29分着（800円、16:12発まで）",
                           "Ainori Taxi: Saimyoji 12:56 → Kongorinji 13:03 (¥400). Back to Kawase at :12, arriving :29 (¥800; until 16:12)")],
                      cash=True,
-                     tip=T("西明寺と千成亭ぎゅ〜じあむの公式サイト、湖東三山の2026年のチラシ、" + TAXI_TIP_JA + "で、2026年11月22日に確認しました。",
-                           "Checked on the Saimyoji and Gyuseum websites, the 2026 Koto Sanzan leaflet, and " + TAXI_TIP_EN + ", 22 Nov 2026."))),
+                     tip=T("西明寺の公式サイトと湖東三山の2026年のチラシは2026年11月22日に、千成亭ぎゅ〜じあむの公式サイト（施設のご案内）と、愛のりタクシーの時刻と運賃（彦根市の時刻表・2026年4月改正の料金表）は11月23日に確認しました。",
+                           "Saimyoji website and the 2026 Koto Sanzan leaflet checked 22 Nov 2026; the Gyuseum website (facility guide) and the Ainori Taxi times and fares (Hikone City timetable and fare table, revised April 2026) checked 23 Nov."),
+                     checked=RECHECKED)),
     from_b("kongorinji",
            blurb=T("千体のお地蔵さまが並ぶ参道を上ると、国宝の本堂のまわりに「血染めのもみじ」と呼ばれる木々。14:42の乗合タクシーまでゆっくり。",
                    "An approach lined with a thousand Jizo statues climbs to a National Treasure main hall among the “blood-dyed” maples. Take your time until the 14:42 shared taxi."),
@@ -629,11 +636,11 @@ C = [
                    "A small temple of bamboo and stone gardens, open only in spring and autumn. Leave Kongorinji at 15:42, take the train from Inae to Azuchi, then a taxi. Not selected at first."),
            text=T(about("kyorinbo", "ja") +
                   "金剛輪寺のあとに寄るなら、帰りの愛のりタクシーを15:42発で予約します。稲枝駅16:54着、17:13発の電車で安土へ（17:20着・200円）。北口からタクシーで約10分、17:35ごろ着きます。安土駅のタクシーは前もって予約し、帰りの迎えも18:40ごろに頼んでおきましょう。\n\n"
-                  "帰りは安土18:58発の電車に乗り、次の近江八幡で19:06発の新快速に乗り換えて、京都駅に19:42着（770円）。ゆっくりするなら安土19:28発で京都駅20:12着です。教林坊のタクシー代が往復で5,000円前後かかるので、最初は外してあります。\n\n"
+                  "帰りは安土18:58発の電車に乗り、次の近江八幡で19:06発の新快速に乗り換えて、京都駅に19:42着（770円）。ゆっくりするなら安土19:28発で京都駅20:12着です。行きと帰りにタクシー代（片道2,500円前後、教林坊の公式サイトの目安）がかかるので、最初は外してあります。\n\n"
                   + KYORIN_EXTRA_JA + "\n\nおすすめ訪問時間：17:35〜18:40",
                   about("kyorinbo", "en") +
                   "To add it after Kongorinji, book the 15:42 Ainori Taxi instead. It reaches Inae at 16:54; take the 17:13 train to Azuchi (17:20, ¥200). A taxi from the north exit takes about 10 minutes, so you arrive around 17:35. Book the Azuchi taxi ahead, with a pick-up around 18:40.\n\n"
-                  "Head home on the 18:58 train from Azuchi and change one stop later at Omi-Hachiman to the 19:06 Special Rapid: Kyoto Station at 19:42, ¥770. For longer, the 19:28 from Azuchi arrives at 20:12. The Kyorinbo taxis cost around ¥5,000 there and back, so it isn’t selected at first.\n\n"
+                  "Head home on the 18:58 train from Azuchi and change one stop later at Omi-Hachiman to the 19:06 Special Rapid: Kyoto Station at 19:42, ¥770. For longer, the 19:28 from Azuchi arrives at 20:12. You pay for a taxi each way (around ¥2,500 one way, the temple’s own estimate), so it isn’t selected at first.\n\n"
                   + KYORIN_EXTRA_EN + "\n\nRecommended visit time: 17:35–18:40"),
            notices=KYORIN_NOTICES,
            info=info(KYORIN_ROWS + [
@@ -824,7 +831,9 @@ SOURCES_A = [
     yt("近江八幡", "安土", "1128", "1705", "17:24→17:27（190円）"),
     {"what": "太郎坊宮：参拝24時間、社務受付9:00〜17:00（ご祈祷等16:00まで）、拝観料・駐車料不要、約740段（ふもとから本殿まで742段、第一駐車場から約260段）。アクセス：太郎坊宮前駅から徒歩約20分", "url": "https://tarobo.or.jp/", "checked": CHECKED},
     {"what": "永源寺 よくある質問：参拝時間 9:00〜16:00（11月は観楓期のため変更）、参拝志納料 大人600円・中学生200円・小学生以下無料。紅葉は11月上旬〜下旬、中旬がピーク", "url": "https://eigenji-t.jp/contact/", "checked": CHECKED},
-    {"what": "永源寺 お知らせ：ライトアップ11月14日〜28日（11/13）。山門・法堂の特別拝観 10:00・11:30・14:00、1,500円（入山志納料込）（11/18）。ライトアップは20時まで（11/20金・11/21土）。食事処「音無瀬」とキッチンカー「ブランブル」開店、うどん・そば・ぜんざい・甘酒・パフェ・クレープ（11/15、時間の記載なし）", "url": "https://eigenji-t.jp/haikan/", "checked": CHECKED},
+    {"what": "永源寺 お知らせ：山門・法堂の特別拝観 10:00・11:30・14:00、1,500円（入山志納料含）、問い合わせは永源寺前観光案内所 0748-27-2020（11/18）。ライトアップは20時まで（11/20金・11/21土）。11/21のお知らせにライトアップのチラシの画像（2026年 11月14日（土）〜11月28日（土）、月〜木曜日17:00〜18:30（閉門）、金〜日曜日17:00〜20:00（閉門）、大人600円・中学生200円）。11/23（月・祝）は祝日のため20時閉門。11/23のお知らせに「ライトアップ期間は29日（土）まで」とあるが、29日は日曜で、チラシ・観光協会の案内は28日（土）まで、11/29・30は8:00〜17:00なので28日にそろえた。食事処「音無瀬」とキッチンカー「ブランブル」が11/14に開店、うどん・そば・ぜんざい・甘酒・パフェ・クレープ（11/15、営業時間の記載なし）。参拝志納料 大人600円・中学生200円・団体500円・小学生以下無料（2026年4月2日のお知らせ）", "url": "https://eigenji-t.jp/haikan/", "checked": RECHECKED},
+    {"what": "東近江市観光協会「大本山永源寺 山門と法堂雲龍図 特別拝観2026」：特別拝観 令和8年11月7日（土）〜11月23日（月・祝）、10:00〜・11:30〜・14:00〜、集合は永源寺観光案内所（永源寺高野町52、0748-27-2020、予約は電話）、1,500円（参拝志納料含む・お茶席100円割引付き）。含空院庭園と標月亭お茶席 11月7日〜30日 9:00〜17:00（入場16:45まで）一席700円（参拝志納料は別）。ライトアップ 11月14日（土）〜28日（土）17:00〜20:00（閉門）、月〜木は18:30閉門。チラシ（裏面）の参拝受付：①11/1〜13 8:00〜17:00（閉門）②11/14〜28 8:00〜20:00（閉門。月〜木は18:30閉門）③11/29〜30 8:00〜17:00（閉門）", "url": EIGENJI_AUTUMN, "checked": RECHECKED},
+    {"what": "同じページのチラシ画像（裏面。参拝受付の時間・参拝志納料 大人600円）", "url": "https://www.higashiomi.net/dcms_media/image/sanmontokubetu26-2.jpg", "checked": RECHECKED},
     {"what": "近江鉄道線でICOCAなどが使える（2026年3月1日から、全線）", "url": "https://www.ohmitetudo.co.jp/railway/icoca-2025/", "checked": CHECKED},
     {"what": "ティファニー（近江八幡）：ディナー17:00〜20:00（L.O.）、火曜休み、駅の北口から歩いて3分（近江八幡マップのデータ、2026-11-20確認）", "url": "../omihachiman/", "checked": "2026-11-20"},
     yt("近江八幡", "京都", "1125", "2110", "21:13新快速→21:48（680円）"),
@@ -859,13 +868,14 @@ SOURCES_B = [
     yt("稲枝", "安土", "1205", "1656", "17:13→17:20（200円）"),
     {"what": "湖東三山シャトルバスの運賃表の画像（2026年度のページに掲載）：金剛輪寺-彦根駅800円、西明寺-百済寺500円", "url": "https://www.ohmitetudo.co.jp/bus/icoico/event/image/bus-icoico-kotousanzanshuttlebus2025-untin.png", "checked": CHECKED},
     {"what": "西明寺 拝観のご案内：8:30〜17:00（最終受付は閉門30分前）、料金表 大人800円・中人500円・小人300円（令和5年4月より変更）、本堂後陣仏像群特別拝観料1,000円、境内での持ち込み飲食禁止", "url": "https://saimyouji.com/information/", "checked": CHECKED},
-    {"what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休", "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_koura_0319fix.pdf", "checked": CHECKED},
-    {"what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（同じC区間400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休", "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_aisyo_0319fix.pdf", "checked": CHECKED},
+    {"what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休。料金表（区間A〜F）：河瀬駅東口（B）→西明寺前（F）800円。2人以上でまとめて予約し同じ停留所から乗ると半額（ふく割）", "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_koura_0319fix.pdf", "checked": RECHECKED},
+    {"what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（料金表：西明寺前・金剛輪寺ともC区間、C〜C 400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（稲枝駅はA区間、A〜C 800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休。支払いは現金と共通回数券のみ（カード・ICカード不可）", "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_aisyo_0319fix.pdf", "checked": RECHECKED},
     {"what": "西明寺のアクセス：愛のりタクシー 河瀬駅東口から800円、西明寺→金剛輪寺の発時刻（毎時56分）", "url": "https://saimyouji.com/access/", "checked": CHECKED},
     {"what": "百済寺の交通案内：八日市駅からタクシー約10分、ちょこっとバス約30分", "url": "http://hyakusaiji.jp/info_access/", "checked": CHECKED},
     {"what": "金剛輪寺：8:30〜16:30（17:00閉山）、大人800円・中学生300円・小学生200円。華楽坊は5名以上の予約から。愛のりタクシー 稲枝駅→金剛輪寺800円、金剛輪寺発10:42〜16:42 毎時42分", "url": "https://kongourinji.jp/access", "checked": CHECKED},
     {"what": "百済寺：8:30〜17:00（受付16:30まで）、大人600円・中学生300円・小学生200円。令和8年秋季ライトアップ 11月14日〜30日、平日17時〜最終受付19時・閉門19時30分、土日祝17時〜最終受付20時30分・閉門21時", "url": "http://hyakusaiji.jp/", "checked": CHECKED},
     {"what": "近江牛一筋＠千成亭ぎゅ〜じあむ：甲良町池寺1-5（西明寺門前）、営業時間11:00〜15:00、定休日 月曜・火曜", "url": "https://gyuseum.jp/", "checked": CHECKED},
+    {"what": "千成亭ぎゅ〜じあむ 施設のご案内：グルメコート・レストラン 11:00〜15:00（LO 14:30）、物産館 11:00〜15:00、定休日 毎週月・火曜日（紅葉シーズンを除く）。お知らせに2026年11月の営業の記載はなし（2024年11月7日に「11月は休まず営業」の記事）", "url": "https://gyuseum.jp/guidance/", "checked": RECHECKED},
 ]
 SOURCES_C = [
     yt("京都", "河瀬", "1130", "1051", "9:34普通→10:34（990円）", 4),

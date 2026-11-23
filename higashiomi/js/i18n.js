@@ -142,7 +142,7 @@ window.HIGASHIOMI_I18N = {
         who: [
           '京都駅を平日8:37・土日祝8:30の新快速で出て、彦根駅10:00のシャトルバスへ（乗り換えなし・1,170円）。三条のあたりからは、地下鉄で京都駅まで約15分',
           'シャトルバスは路線バスの車両で座れないことも。もみじきっぷ（2,500円・現金）を買う人は、彦根駅発の便を予約できる',
-          '西明寺の境内は持ち込みの飲食ができない。お昼は門前の千成亭ぎゅ〜じあむ（月・火は電話で確認）',
+          '西明寺の境内は持ち込みの飲食ができない。お昼は門前の千成亭ぎゅ〜じあむ（11月は無休、ラストオーダー14:30）',
           '金剛輪寺は受付16:30まで。百済寺からのバスで15:43に着いたら、まっすぐ本堂へ',
           'シャトルバスのない日（11月30日から）は、京都駅9:34（土日祝9:37）発で河瀬へ。予約制の乗合タクシー（現金のみ）で西明寺と金剛輪寺の2つを回る。時刻は1番の駅の注意に',
           '西明寺と金剛輪寺の写真は Wikimedia Commons から（Toshi はまだ行っていません）'
@@ -212,7 +212,7 @@ window.HIGASHIOMI_I18N = {
           '京都駅を平日9:34・土日祝9:37の普通電車で出て、河瀬へ（乗り換えなし・990円）。三条のあたりからは、地下鉄で京都駅まで約15分',
           '乗合タクシーは3回とも予約。乗る1週間前から1時間前までに、近江タクシー彦根営業所 0749-22-1111へ。支払いは現金だけ',
           '乗合タクシーは12月29日〜1月3日は運休',
-          '西明寺の境内は持ち込みの飲食ができない。門前の千成亭ぎゅ〜じあむは月・火が休み',
+          '西明寺の境内は持ち込みの飲食ができない。門前の千成亭ぎゅ〜じあむは11月は無休、12月は月・火が定休（紅葉シーズンを除く。月・火は電話で確認）',
           '金剛輪寺から稲枝駅までは、停留所を回るので1時間12分。遅い便にするなら予約のときに',
           '百済寺は乗合タクシーの路線にないので別の日に',
           '12月6日までは、帰りに教林坊の夜のライトアップにも寄れる。一覧で選ぶと行き方が出る',
@@ -220,7 +220,7 @@ window.HIGASHIOMI_I18N = {
         ],
         day: [
           { time: '9:34', area: '京都駅 → 河瀬', title: 'JRの普通電車で河瀬へ', text: '京都駅9:34発で、乗り換えなしで河瀬に10:34。土日祝は9:37発で10:32着。東口で乗合タクシーを待ちます。', photo: ['kawaseeki', 0] },
-          { time: '11:08', area: '西明寺', title: '国宝の本堂と三重塔、門前でお昼', text: '10:51発の乗合タクシーで西明寺へ。1時間ほどお参りして、門前で近江牛のお昼（月・火休み）。12:56のタクシーで金剛輪寺へ。', photo: ['saimyoji', 1] },
+          { time: '11:08', area: '西明寺', title: '国宝の本堂と三重塔、門前でお昼', text: '10:51発の乗合タクシーで西明寺へ。1時間ほどお参りして、門前で近江牛のお昼（12月の月・火は休みのことがあるので電話で確認）。12:56のタクシーで金剛輪寺へ。', photo: ['saimyoji', 1] },
           { time: '13:03', area: '金剛輪寺', title: '千体地蔵の参道と国宝の本堂', text: '上りの参道を本堂と三重塔へ。帰りのタクシーまで1時間40分ほど、ゆっくり回れます。', photo: ['kongorinji', 0] },
           { time: '14:42', area: '金剛輪寺 → 稲枝', title: '乗合タクシーで駅へ', text: '停留所を回って稲枝駅に15:54。16:13発の電車に乗ります。', photo: ['kongorinji', 1] },
           { time: '17:06', area: '京都駅', title: '京都に戻って晩ごはん', text: '街なかで21〜22時まで（三条・木屋町・先斗町へは地下鉄で約15分）。もっとゆっくりするなら、15:42のタクシーで京都駅18:06、16:42のタクシーで19:06。', photo: ['kongorinji', 2] }
@@ -243,7 +243,7 @@ window.HIGASHIOMI_I18N = {
           '京都駅を平日9:34・土日祝9:37の普通電車で出て、河瀬へ（乗り換えなし・990円）。三条のあたりからは、地下鉄で京都駅まで約15分',
           '乗合タクシーは3回とも予約。乗る1週間前から1時間前までに、近江タクシー彦根営業所 0749-22-1111へ。支払いは現金だけ',
           '乗合タクシーは12月29日〜1月3日は運休',
-          '西明寺の境内は持ち込みの飲食ができない。門前の千成亭ぎゅ〜じあむは月・火が休み',
+          '西明寺の境内は持ち込みの飲食ができない。門前の千成亭ぎゅ〜じあむは11月は無休、12月は月・火が定休（紅葉シーズンを除く。月・火は電話で確認）',
           '金剛輪寺から稲枝駅までは、停留所を回るので1時間12分。遅い便にするなら予約のときに',
           '百済寺は乗合タクシーの路線にないので別の日に',
           '西明寺と金剛輪寺の写真は Wikimedia Commons から（Toshi はまだ行っていません）'
@@ -383,7 +383,7 @@ window.HIGASHIOMI_I18N = {
         who: [
           'Take the direct Special Rapid from Kyoto Station at 8:37 (8:30 at weekends and holidays; ¥1,170) for the 10:00 shuttle from Hikone. From around Sanjo, the subway to Kyoto Station takes about 15 minutes',
           'The shuttle is an ordinary bus and you may have to stand. With a Momiji Kippu (¥2,500, cash) you can book buses from Hikone',
-          'No food or drink of your own at Saimyoji. Lunch is at Sennaritei Gyuseum by the gate (phone ahead on Mon/Tue)',
+          'No food or drink of your own at Saimyoji. Lunch is at Sennaritei Gyuseum by the gate (open every day in November; last order 14:30)',
           'Kongorinji’s last entry is 16:30. Arriving on the 15:43 bus, head straight up to the main hall',
           'On days without the shuttle (from 30 Nov), take the 9:34 from Kyoto Station (9:37 at weekends) to Kawase, then bookable shared taxis (cash only) to two temples, Saimyoji and Kongorinji. Times are in the note at stop 1',
           'The Saimyoji and Kongorinji photos are from Wikimedia Commons (Toshi hasn’t been yet)'
@@ -453,7 +453,7 @@ window.HIGASHIOMI_I18N = {
           'Take the direct local from Kyoto Station to Kawase at 9:34 (9:37 at weekends and holidays; ¥990). From around Sanjo, the subway to Kyoto Station takes about 15 minutes',
           'Book all three shared-taxi rides from a week to 1 hour ahead with Ohmi Taxi Hikone, 0749-22-1111. Cash only',
           'The shared taxi doesn’t run from 29 December to 3 January',
-          'No food or drink of your own at Saimyoji. Sennaritei Gyuseum by the gate closes on Mondays and Tuesdays',
+          'No food or drink of your own at Saimyoji. Sennaritei Gyuseum by the gate is open every day in November; in December it usually closes on Mondays and Tuesdays except in the leaf season, so phone ahead on those days',
           'Kongorinji to Inae Station takes 1 hour 12 minutes, winding between stops. For a later ride, decide when you book',
           'Hyakusaiji is off the shared-taxi route, so save it for another day',
           'Until 6 December you can add the Kyorinbo evening illumination on the way home: select it in the list for directions',
@@ -461,7 +461,7 @@ window.HIGASHIOMI_I18N = {
         ],
         day: [
           { time: '9:34', area: 'Kyoto Sta. → Kawase', title: 'JR local train to Kawase', text: 'The 9:34 from Kyoto Station runs direct, reaching Kawase at 10:34. At weekends and holidays, take the 9:37 (Kawase 10:32). Wait for the shared taxi at the east exit.', photo: ['kawaseeki', 0] },
-          { time: '11:08', area: 'Saimyoji', title: 'National Treasures, then lunch by the gate', text: 'The 10:51 shared taxi to Saimyoji. An hour at the temple and Omi beef for lunch (closed Mon–Tue), then the 12:56 taxi to Kongorinji.', photo: ['saimyoji', 1] },
+          { time: '11:08', area: 'Saimyoji', title: 'National Treasures, then lunch by the gate', text: 'The 10:51 shared taxi to Saimyoji. An hour at the temple and Omi beef for lunch (it may close on Mondays and Tuesdays in December; phone ahead), then the 12:56 taxi to Kongorinji.', photo: ['saimyoji', 1] },
           { time: '13:03', area: 'Kongorinji', title: 'A thousand Jizo and a National Treasure hall', text: 'Up the approach to the main hall and pagoda. You have about 1 hour 40 minutes before the taxi back.', photo: ['kongorinji', 0] },
           { time: '14:42', area: 'Kongorinji → Inae', title: 'Shared taxi to the station', text: 'It winds between stops, reaching Inae Station at 15:54. Take the 16:13 train.', photo: ['kongorinji', 1] },
           { time: '17:06', area: 'Kyoto Sta.', title: 'Dinner back in Kyoto', text: 'The evening in town can run to 21:00–22:00 (Sanjo, Kiyamachi and Pontocho are about 15 min by subway). For more time at the temple, the 15:42 taxi gets you back at 18:06, the 16:42 at 19:06.', photo: ['kongorinji', 2] }
@@ -484,7 +484,7 @@ window.HIGASHIOMI_I18N = {
           'Take the direct local from Kyoto Station to Kawase at 9:34 (9:37 at weekends and holidays; ¥990). From around Sanjo, the subway to Kyoto Station takes about 15 minutes',
           'Book all three shared-taxi rides from a week to 1 hour ahead with Ohmi Taxi Hikone, 0749-22-1111. Cash only',
           'The shared taxi doesn’t run from 29 December to 3 January',
-          'No food or drink of your own at Saimyoji. Sennaritei Gyuseum by the gate closes on Mondays and Tuesdays',
+          'No food or drink of your own at Saimyoji. Sennaritei Gyuseum by the gate is open every day in November; in December it usually closes on Mondays and Tuesdays except in the leaf season, so phone ahead on those days',
           'Kongorinji to Inae Station takes 1 hour 12 minutes, winding between stops. For a later ride, decide when you book',
           'Hyakusaiji is off the shared-taxi route, so save it for another day',
           'The Saimyoji and Kongorinji photos are from Wikimedia Commons (Toshi hasn’t been yet)'

@@ -349,14 +349,14 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休",
+   "what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休。料金表（区間A〜F）：河瀬駅東口（B）→西明寺前（F）800円。2人以上でまとめて予約し同じ停留所から乗ると半額（ふく割）",
    "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_koura_0319fix.pdf",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
-   "what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（同じC区間400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休",
+   "what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（料金表：西明寺前・金剛輪寺ともC区間、C〜C 400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（稲枝駅はA区間、A〜C 800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休。支払いは現金と共通回数券のみ（カード・ICカード不可）",
    "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_aisyo_0319fix.pdf",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "西明寺のアクセス：愛のりタクシー 河瀬駅東口から800円、西明寺→金剛輪寺の発時刻（毎時56分）",
@@ -382,6 +382,11 @@
    "what": "近江牛一筋＠千成亭ぎゅ〜じあむ：甲良町池寺1-5（西明寺門前）、営業時間11:00〜15:00、定休日 月曜・火曜",
    "url": "https://gyuseum.jp/",
    "checked": "2026-11-22"
+  },
+  {
+   "what": "千成亭ぎゅ〜じあむ 施設のご案内：グルメコート・レストラン 11:00〜15:00（LO 14:30）、物産館 11:00〜15:00、定休日 毎週月・火曜日（紅葉シーズンを除く）。お知らせに2026年11月の営業の記載はなし（2024年11月7日に「11月は休まず営業」の記事）",
+   "url": "https://gyuseum.jp/guidance/",
+   "checked": "2026-11-23"
   }
  ],
  "spots": [
@@ -577,8 +582,8 @@
    "lat": 35.18334,
    "lng": 136.28475,
    "text": {
-    "ja": "西明寺（さいみょうじ）\n\n湖東三山のいちばん北にある天台宗のお寺です。鎌倉時代の本堂と三重塔は、どちらも国宝。杉木立の中に、ひわだぶきの屋根が2つ並びます。本坊の庭「蓬莱庭（ほうらいてい）」から本堂までは石段を上ります。\n\n秋は境内の約1,000本のもみじが色づき、11月に満開になる「西明寺不断桜（ふだんざくら）」も咲くので、紅葉と桜が一度に見られます（湖東三山のチラシより）。2026年は、宝冠毘沙門天（ほうかんびしゃもんてん）像の初めての公開（12月13日まで）と、本堂の後ろの仏像群の特別拝観（11月30日まで・1,000円）があります。\n\nシャトルバスで10:32に着いたら、1時間ほどお参りを。境内は持ち込みの飲食ができません。お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、公式サイト）。公式サイトでは月・火が定休、湖東三山のチラシには「11月は休まず営業」とあるので、月・火に行くなら電話（0749-29-9090）で確かめてください。もみじきっぷを見せると、ここで食事をした人はウーロン茶が1杯無料です。\n\n次のバスは西明寺12:32発。金剛輪寺（12:47）では降りずに、そのまま百済寺まで乗ります（13:10着・500円）。\n\nおすすめ訪問時間：10:32〜12:30（お昼を含む）",
-    "en": "Saimyoji Temple\n\nA Tendai temple, the northernmost of the Koto Sanzan. Its Kamakura-period main hall and three-storied pagoda are both National Treasures, their cypress-bark roofs side by side among tall cedars. From the garden of the main residence, Horai-tei, stone steps lead up to the main hall.\n\nIn autumn about 1,000 maples colour the grounds, and the temple’s “fudan-zakura” cherry is in full bloom in November, so you see leaves and blossom together (Koto Sanzan leaflet). In 2026 the crowned Bishamonten statue is on show for the first time (until 13 Dec), and the statues behind the main altar can be seen (until 30 Nov, ¥1,000).\n\nArriving on the 10:32 shuttle, give the temple about an hour. You can’t eat or drink your own food in the grounds. For lunch, go to “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, official site). The site lists Mondays and Tuesdays as closed, while the Koto Sanzan leaflet says it is open every day in November, so phone ahead on a Monday or Tuesday (0749-29-9090). Show your Momiji Kippu with a meal there for a free oolong tea.\n\nThe next bus leaves Saimyoji at 12:32. Stay on past Kongorinji (12:47) all the way to Hyakusaiji (13:10, ¥500).\n\nRecommended visit time: 10:32–12:30 (with lunch)"
+    "ja": "西明寺（さいみょうじ）\n\n湖東三山のいちばん北にある天台宗のお寺です。鎌倉時代の本堂と三重塔は、どちらも国宝。杉木立の中に、ひわだぶきの屋根が2つ並びます。本坊の庭「蓬莱庭（ほうらいてい）」から本堂までは石段を上ります。\n\n秋は境内の約1,000本のもみじが色づき、11月に満開になる「西明寺不断桜（ふだんざくら）」も咲くので、紅葉と桜が一度に見られます（湖東三山のチラシより）。2026年は、宝冠毘沙門天（ほうかんびしゃもんてん）像の初めての公開（12月13日まで）と、本堂の後ろの仏像群の特別拝観（11月30日まで・1,000円）があります。\n\nシャトルバスで10:32に着いたら、1時間ほどお参りを。境内は持ち込みの飲食ができません。お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、ラストオーダー14:30。公式サイト）。定休日の月・火も紅葉シーズンは開いていて（公式サイト）、湖東三山のチラシでも11月は無休です。もみじきっぷを見せると、ここで食事をした人はウーロン茶が1杯無料です。\n\n次のバスは西明寺12:32発。金剛輪寺（12:47）では降りずに、そのまま百済寺まで乗ります（13:10着・500円）。\n\nおすすめ訪問時間：10:32〜12:30（お昼を含む）",
+    "en": "Saimyoji Temple\n\nA Tendai temple, the northernmost of the Koto Sanzan. Its Kamakura-period main hall and three-storied pagoda are both National Treasures, their cypress-bark roofs side by side among tall cedars. From the garden of the main residence, Horai-tei, stone steps lead up to the main hall.\n\nIn autumn about 1,000 maples colour the grounds, and the temple’s “fudan-zakura” cherry is in full bloom in November, so you see leaves and blossom together (Koto Sanzan leaflet). In 2026 the crowned Bishamonten statue is on show for the first time (until 13 Dec), and the statues behind the main altar can be seen (until 30 Nov, ¥1,000).\n\nArriving on the 10:32 shuttle, give the temple about an hour. You can’t eat or drink your own food in the grounds. For lunch, go to “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, last order 14:30; official site). Its usual Monday and Tuesday closing doesn’t apply in the autumn-leaf season (official site), and the Koto Sanzan leaflet says it is open every day in November. Show your Momiji Kippu with a meal there for a free oolong tea.\n\nThe next bus leaves Saimyoji at 12:32. Stay on past Kongorinji (12:47) all the way to Hyakusaiji (13:10, ¥500).\n\nRecommended visit time: 10:32–12:30 (with lunch)"
    },
    "gmaps": [
     {
@@ -673,8 +678,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（月・火定休。11月は無休とチラシにあり、要確認）",
-       "en": "Lunch: Sennaritei Gyuseum 11:00–15:00 (closed Mon–Tue; the leaflet says open daily in November, so check)"
+       "ja": "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（ラストオーダー14:30）。11月は無休（月・火の定休は紅葉シーズンを除く）",
+       "en": "Lunch: Sennaritei Gyuseum 11:00–15:00 (last order 14:30). Open daily in November (the Mon–Tue closing doesn’t apply in the leaf season)"
       },
       "until": null,
       "from": null
@@ -700,10 +705,10 @@
     ],
     "cash": false,
     "tip": {
-     "ja": "西明寺の公式サイト（拝観のご案内。入山料は「令和5年4月より変更」の料金表の金額）、湖東三山観光振興協議会の2026年のチラシ、近江鉄道のシャトルバスの案内（時刻表）、千成亭ぎゅ〜じあむの公式サイトで、2026年11月22日に確認しました。",
-     "en": "Checked on the Saimyoji website (fees from its table, “changed April 2023”), the 2026 Koto Sanzan leaflet and Ohmi Railway’s shuttle bus page (timetable), and the Gyuseum website, 22 Nov 2026."
+     "ja": "西明寺の公式サイト（拝観のご案内。入山料は「令和5年4月より変更」の料金表の金額）、湖東三山観光振興協議会の2026年のチラシ、近江鉄道のシャトルバスの案内（時刻表）で2026年11月22日に、千成亭ぎゅ〜じあむの公式サイト（施設のご案内）で11月23日に確認しました。",
+     "en": "Checked on the Saimyoji website (fees from its table, “changed April 2023”) and the 2026 Koto Sanzan leaflet and Ohmi Railway’s shuttle bus page (timetable) on 22 Nov 2026, and the Gyuseum website (facility guide) on 23 Nov."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-23"
    },
    "photos": [
     {
@@ -1096,8 +1101,8 @@
     "en": "Taxi from the station · until 6 Dec"
    },
    "text": {
-    "ja": "教林坊（きょうりんぼう）\n\n観音正寺のある繖山（きぬがさやま）のふもと、安土町石寺の山あいにある小さなお寺です。ふだんは公開されておらず、春と秋の特別公開のときだけ入れます。竹林の小道を抜けると、苔と巨石の庭。書院の丸窓や三日月の窓から見る庭も絵のようです。写真は2026年11月17日の夜のライトアップです。\n\n湖東三山のあとに寄るなら、彦根駅17:30着のバスから、18:02発の普通電車（網干行き）で安土へ（18:19着・330円）。北口からタクシーで約10分、18:35ごろ着きます。受付は19:00まで。タクシーは前もって予約し、帰りの迎えも頼んでおきましょう。\n\n帰りは安土19:28発の電車に乗り、次の近江八幡で19:37発の新快速に乗り換えて、京都駅に20:12着（770円）。次は安土19:50発で京都駅20:36着（土日祝は19:55発で20:41着）。朝8時台からの長い1日になり、タクシー代も往復で5,000円前後かかるので、最初は外してあります。\n\n三脚・一脚は使えません。写真を撮るための長い滞在も断られています（公式サイト）。\n\nタクシーは、東近江市観光協会の一覧にある滋賀第一交通 近江八幡営業所（0748-37-4000）など。\n\nおすすめ訪問時間：18:35〜19:10",
-    "en": "Kyorinbo\n\nA small temple tucked in the hills of Ishidera, Azuchi, at the foot of Mt. Kinugasa. It is usually closed and opens only for special spring and autumn openings. A path through bamboo leads to a garden of moss and huge rocks, framed by the round and crescent-moon windows of the study hall. The photos show the illumination on 17 November 2026.\n\nTo add it after the three temples, take the 18:02 local train (for Aboshi) from Hikone, after the bus gets in at 17:30, to Azuchi (18:19, ¥330). A taxi from the north exit takes about 10 minutes, so you arrive around 18:35; last entry is 19:00. Book the taxi ahead, including the pick-up back.\n\nHead home on the 19:28 train from Azuchi and change one stop later at Omi-Hachiman to the 19:37 Special Rapid: Kyoto Station at 20:12, ¥770. The next is 19:50 → 20:36 (19:55 → 20:41 at weekends and holidays). It makes a long day from the 8 o’clock hour, and taxis cost around ¥5,000 there and back, so it isn’t selected at first.\n\nTripods and monopods are not allowed, and long stays just to take photos are discouraged (official website).\n\nFor taxis, the Higashiomi tourism association lists Shiga Daiichi Kotsu, Omi-Hachiman office (0748-37-4000), among others.\n\nRecommended visit time: 18:35–19:10"
+    "ja": "教林坊（きょうりんぼう）\n\n観音正寺のある繖山（きぬがさやま）のふもと、安土町石寺の山あいにある小さなお寺です。ふだんは公開されておらず、春と秋の特別公開のときだけ入れます。竹林の小道を抜けると、苔と巨石の庭。書院の丸窓や三日月の窓から見る庭も絵のようです。写真は2026年11月17日の夜のライトアップです。\n\n湖東三山のあとに寄るなら、彦根駅17:30着のバスから、18:02発の普通電車（網干行き）で安土へ（18:19着・330円）。北口からタクシーで約10分、18:35ごろ着きます。受付は19:00まで。タクシーは前もって予約し、帰りの迎えも頼んでおきましょう。\n\n帰りは安土19:28発の電車に乗り、次の近江八幡で19:37発の新快速に乗り換えて、京都駅に20:12着（770円）。次は安土19:50発で京都駅20:36着（土日祝は19:55発で20:41着）。朝8時台からの長い1日になり、行きと帰りにタクシー代（片道2,500円前後、教林坊の公式サイトの目安）もかかるので、最初は外してあります。\n\n三脚・一脚は使えません。写真を撮るための長い滞在も断られています（公式サイト）。\n\nタクシーは、東近江市観光協会の一覧にある滋賀第一交通 近江八幡営業所（0748-37-4000）など。\n\nおすすめ訪問時間：18:35〜19:10",
+    "en": "Kyorinbo\n\nA small temple tucked in the hills of Ishidera, Azuchi, at the foot of Mt. Kinugasa. It is usually closed and opens only for special spring and autumn openings. A path through bamboo leads to a garden of moss and huge rocks, framed by the round and crescent-moon windows of the study hall. The photos show the illumination on 17 November 2026.\n\nTo add it after the three temples, take the 18:02 local train (for Aboshi) from Hikone, after the bus gets in at 17:30, to Azuchi (18:19, ¥330). A taxi from the north exit takes about 10 minutes, so you arrive around 18:35; last entry is 19:00. Book the taxi ahead, including the pick-up back.\n\nHead home on the 19:28 train from Azuchi and change one stop later at Omi-Hachiman to the 19:37 Special Rapid: Kyoto Station at 20:12, ¥770. The next is 19:50 → 20:36 (19:55 → 20:41 at weekends and holidays). It makes a long day from the 8 o’clock hour, and you pay for a taxi each way (around ¥2,500 one way, the temple’s own estimate), so it isn’t selected at first.\n\nTripods and monopods are not allowed, and long stays just to take photos are discouraged (official website).\n\nFor taxis, the Higashiomi tourism association lists Shiga Daiichi Kotsu, Omi-Hachiman office (0748-37-4000), among others.\n\nRecommended visit time: 18:35–19:10"
    },
    "gmaps": [
     {

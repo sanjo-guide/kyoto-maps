@@ -290,14 +290,14 @@
    "checked": "2026-11-22"
   },
   {
-   "what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休",
+   "what": "愛のりタクシーこうら 時刻表（彦根市、2026年4月1日改正）：河瀬駅東口 毎時51分→西明寺前 08分（西明寺へは15:51発まで）、800円。西明寺前 毎時12分→河瀬駅東口 29分（16:12発まで）。現金か回数券のみ。予約 0749-22-1111、1週間前〜1時間前（9時までの便は前日21時まで）。12/29〜1/3運休。料金表（区間A〜F）：河瀬駅東口（B）→西明寺前（F）800円。2人以上でまとめて予約し同じ停留所から乗ると半額（ふく割）",
    "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_koura_0319fix.pdf",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
-   "what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（同じC区間400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休",
+   "what": "愛のりタクシーあいしょう 金剛輪寺線 時刻表（彦根市、2026年4月のページ）：西明寺前12:56→金剛輪寺13:03（料金表：西明寺前・金剛輪寺ともC区間、C〜C 400円）。金剛輪寺14:42→稲枝駅15:54、15:42→16:54、16:42→17:54（稲枝駅はA区間、A〜C 800円）。同乗者で多少前後。毎日運行、12/29〜1/3運休。支払いは現金と共通回数券のみ（カード・ICカード不可）",
    "url": "https://www.city.hikone.lg.jp/material/files/group/128/2026_aisyo_0319fix.pdf",
-   "checked": "2026-11-22"
+   "checked": "2026-11-23"
   },
   {
    "what": "西明寺のアクセス：愛のりタクシー 河瀬駅東口から800円、西明寺→金剛輪寺の発時刻（毎時56分）",
@@ -323,6 +323,11 @@
    "what": "近江牛一筋＠千成亭ぎゅ〜じあむ：甲良町池寺1-5（西明寺門前）、営業時間11:00〜15:00、定休日 月曜・火曜",
    "url": "https://gyuseum.jp/",
    "checked": "2026-11-22"
+  },
+  {
+   "what": "千成亭ぎゅ〜じあむ 施設のご案内：グルメコート・レストラン 11:00〜15:00（LO 14:30）、物産館 11:00〜15:00、定休日 毎週月・火曜日（紅葉シーズンを除く）。お知らせに2026年11月の営業の記載はなし（2024年11月7日に「11月は休まず営業」の記事）",
+   "url": "https://gyuseum.jp/guidance/",
+   "checked": "2026-11-23"
   }
  ],
  "spots": [
@@ -495,8 +500,8 @@
    "lat": 35.18334,
    "lng": 136.28475,
    "text": {
-    "ja": "西明寺（さいみょうじ）\n\n湖東三山のいちばん北にある天台宗のお寺です。鎌倉時代の本堂と三重塔は、どちらも国宝。杉木立の中に、ひわだぶきの屋根が2つ並びます。本坊の庭「蓬莱庭（ほうらいてい）」から本堂までは石段を上ります。\n\n河瀬駅からの愛のりタクシーで11:08ごろ着。停留所は名勝庭園の前の受付です。1時間ほどお参りしたら、お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、月・火は休み。公式サイト）。\n\n境内は持ち込みの飲食ができません。月・火に行くなら、京都駅を出る前に食べるか、持ってきたものを境内の外で。早く終わったら、11:56発のタクシー（金剛輪寺12:03着）にもできます。予約のときに決めてください。\n\n12:56発の愛のりタクシーで金剛輪寺へ（13:03着・400円）。\n\nおすすめ訪問時間：11:08〜12:56（お昼を含む）",
-    "en": "Saimyoji Temple\n\nA Tendai temple, the northernmost of the Koto Sanzan. Its Kamakura-period main hall and three-storied pagoda are both National Treasures, their cypress-bark roofs side by side among tall cedars. From the garden of the main residence, Horai-tei, stone steps lead up to the main hall.\n\nThe Ainori Taxi from Kawase arrives around 11:08; the stop is the reception in front of the garden. Give the temple about an hour, then have lunch at “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, closed Mondays and Tuesdays; official site).\n\nYou can’t eat or drink your own food in the grounds. On a Monday or Tuesday, eat before you leave Kyoto or outside the grounds. If you need less time, there is an 11:56 taxi (Kongorinji 12:03); decide when you book.\n\nTake the 12:56 Ainori Taxi to Kongorinji (13:03, ¥400).\n\nRecommended visit time: 11:08–12:56 (with lunch)"
+    "ja": "西明寺（さいみょうじ）\n\n湖東三山のいちばん北にある天台宗のお寺です。鎌倉時代の本堂と三重塔は、どちらも国宝。杉木立の中に、ひわだぶきの屋根が2つ並びます。本坊の庭「蓬莱庭（ほうらいてい）」から本堂までは石段を上ります。\n\n河瀬駅からの愛のりタクシーで11:08ごろ着。停留所は名勝庭園の前の受付です。1時間ほどお参りしたら、お昼は門前の「近江牛一筋＠千成亭ぎゅ〜じあむ」で（11:00〜15:00、ラストオーダー14:30。公式サイト）。11月は無休です。12月は月・火が定休で、紅葉シーズンは開いていることもあるので（公式サイト）、月・火は電話（0749-29-9090）で確かめてください。\n\n境内は持ち込みの飲食ができません。休みの日は、京都駅を出る前に食べるか、持ってきたものを境内の外で。早く終わったら、11:56発のタクシー（金剛輪寺12:03着）にもできます。予約のときに決めてください。\n\n12:56発の愛のりタクシーで金剛輪寺へ（13:03着・400円）。\n\nおすすめ訪問時間：11:08〜12:56（お昼を含む）",
+    "en": "Saimyoji Temple\n\nA Tendai temple, the northernmost of the Koto Sanzan. Its Kamakura-period main hall and three-storied pagoda are both National Treasures, their cypress-bark roofs side by side among tall cedars. From the garden of the main residence, Horai-tei, stone steps lead up to the main hall.\n\nThe Ainori Taxi from Kawase arrives around 11:08; the stop is the reception in front of the garden. Give the temple about an hour, then have lunch at “Omi Beef Hitosuji @ Sennaritei Gyuseum” by the gate (11:00–15:00, last order 14:30; official site). It is open every day in November. In December it usually closes on Mondays and Tuesdays, though it may open in the leaf season (official site), so phone ahead on those days (0749-29-9090).\n\nYou can’t eat or drink your own food in the grounds. If it’s closed, eat before you leave Kyoto or outside the grounds. If you need less time, there is an 11:56 taxi (Kongorinji 12:03); decide when you book.\n\nTake the 12:56 Ainori Taxi to Kongorinji (13:03, ¥400).\n\nRecommended visit time: 11:08–12:56 (with lunch)"
    },
    "gmaps": [
     {
@@ -547,28 +552,15 @@
    "notices": [
     {
      "from": null,
-     "to": "2026-11-30",
-     "url": "https://gyuseum.jp/",
-     "head": {
-      "ja": "11月30日のお昼は電話で確認",
-      "en": "Lunch on 30 Nov: phone ahead"
-     },
-     "text": {
-      "ja": "11月30日は月曜です。千成亭ぎゅ〜じあむは公式サイトでは月・火が定休、湖東三山のチラシでは11月は無休なので、電話（0749-29-9090）で確かめてください。境内は持ち込みの飲食ができません。",
-      "en": "30 November is a Monday. Sennaritei Gyuseum’s website lists Mondays and Tuesdays as closed, while the Koto Sanzan leaflet says it opens every day in November, so phone ahead (0749-29-9090). No food or drink of your own in the grounds."
-     }
-    },
-    {
-     "from": "2026-12-01",
      "to": null,
-     "url": "https://gyuseum.jp/",
+     "url": "https://gyuseum.jp/guidance/",
      "head": {
-      "ja": "門前のお昼は月・火が休み",
-      "en": "Lunch by the gate: closed Mon–Tue"
+      "ja": "門前のお昼は12月の月・火に注意",
+      "en": "Lunch by the gate: Mondays and Tuesdays in December"
      },
      "text": {
-      "ja": "千成亭ぎゅ〜じあむは月・火が定休です。境内は持ち込みの飲食ができません。",
-      "en": "Sennaritei Gyuseum closes on Mondays and Tuesdays. No food or drink of your own in the grounds."
+      "ja": "千成亭ぎゅ〜じあむの定休日は月・火です（紅葉シーズンを除く、と公式サイト）。11月は無休ですが、12月の月・火に行くなら電話（0749-29-9090）で確かめてください。境内は持ち込みの飲食ができません。",
+      "en": "Sennaritei Gyuseum usually closes on Mondays and Tuesdays, except in the leaf season (official site). It is open every day in November; for a Monday or Tuesday in December, phone ahead (0749-29-9090). No food or drink of your own in the grounds."
      }
     }
    ],
@@ -613,11 +605,20 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（月・火定休）",
-       "en": "Lunch: Sennaritei Gyuseum 11:00–15:00 (closed Mon–Tue)"
+       "ja": "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（ラストオーダー14:30）。11月は無休",
+       "en": "Lunch: Sennaritei Gyuseum 11:00–15:00 (last order 14:30). Open daily in November"
+      },
+      "until": "2026-11-30",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "お昼：千成亭ぎゅ〜じあむ 11:00〜15:00（ラストオーダー14:30）。月・火定休（紅葉シーズンを除く。12月の月・火は電話で確認）",
+       "en": "Lunch: Sennaritei Gyuseum 11:00–15:00 (last order 14:30). Closed Mon–Tue except in the leaf season (phone ahead on those days in December)"
       },
       "until": null,
-      "from": null
+      "from": "2026-12-01"
      },
      {
       "kind": "taxi",
@@ -631,10 +632,10 @@
     ],
     "cash": true,
     "tip": {
-     "ja": "西明寺と千成亭ぎゅ〜じあむの公式サイト、湖東三山の2026年のチラシ、愛のりタクシーは彦根市の時刻表（2026年4月改正）で、2026年11月22日に確認しました。",
-     "en": "Checked on the Saimyoji and Gyuseum websites, the 2026 Koto Sanzan leaflet, and the Ainori Taxi on Hikone City’s timetable (revised April 2026), 22 Nov 2026."
+     "ja": "西明寺の公式サイトと湖東三山の2026年のチラシは2026年11月22日に、千成亭ぎゅ〜じあむの公式サイト（施設のご案内）と、愛のりタクシーの時刻と運賃（彦根市の時刻表・2026年4月改正の料金表）は11月23日に確認しました。",
+     "en": "Saimyoji website and the 2026 Koto Sanzan leaflet checked 22 Nov 2026; the Gyuseum website (facility guide) and the Ainori Taxi times and fares (Hikone City timetable and fare table, revised April 2026) checked 23 Nov."
     },
-    "checked": "2026-11-22"
+    "checked": "2026-11-23"
    },
    "photos": [
     {
