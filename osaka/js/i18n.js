@@ -101,13 +101,13 @@ window.OSAKA_I18N = {
           "name": "エンジョイエコカード（地下鉄1日乗車券）",
           "price": "平日820円・土日祝620円",
           "best": "どちらのコースもこれ",
-          "text": "地下鉄とシティバスが1日乗り放題。どちらのコースも地下鉄に5回ほど乗って1,000円を超えるので、平日でも元が取れます。見せると大阪城天守閣が120円引き、空中庭園展望台とハルカス300が10%引き。駅の券売機で買えます。",
+          "text": "地下鉄とシティバスが1日乗り放題。どちらのコースも地下鉄に5回ほど乗って1,000円を超えるので、平日でも元が取れます。見せると大阪城天守閣が120円引き、四天王寺の中心伽藍が100円引き、空中庭園展望台とハルカス300（当日料金）が10%引き。駅の券売機で買えます。",
           "url": "https://subway.osakametro.co.jp/guide/page/enjoy-eco.php"
         },
         {
           "name": "大阪周遊パス（1日）",
           "price": "3,500円",
-          "text": "地下鉄・バスと市内の私鉄が乗り放題で、大阪城天守閣（1,200円）や通天閣（1,500円）など約40か所が無料。ただし空中庭園展望台が無料なのは15時までの入場だけで、ハルカス300と海遊館は対象外です。天守閣と通天閣の両方に入り、ほかの無料の施設にも寄る日でないと元は取れません。スマホで買うQRコードの切符です。",
+          "text": "地下鉄・バスと市内の私鉄が乗り放題で、大阪城天守閣（1,200円）や通天閣（1,500円）など約40か所が無料。とんぼりリバークルーズも無料。ただし空中庭園展望台が無料なのは15時までの入場だけ（15時からは10%引き）で、ハルカス300と海遊館は対象外です。天守閣と通天閣の両方に入り、ほかの無料の施設にも寄る日でないと元は取れません。スマホで買うQRコードの切符です。",
           "url": "https://osaka-amazing-pass.com/"
         },
         {
@@ -117,7 +117,7 @@ window.OSAKA_I18N = {
           "url": "https://transit.yahoo.co.jp/"
         }
       ],
-      "dealsNote": "大人の運賃・料金です。2026年11月22日に確認しました（Osaka Metro と各施設の公式サイト、電車は乗換案内の土曜のダイヤ。大阪周遊パスとエンジョイエコカードの割引は11月21日の確認）。",
+      "dealsNote": "大人の運賃・料金です。2026年11月22日に確認しました（Osaka Metro と各施設の公式サイト、電車は乗換案内の土曜のダイヤ。大阪周遊パスとエンジョイエコカードの割引は11月23日に確かめ直し）。",
       "dealsMore": "公式サイトで見る",
       "howHead": "このマップの使い方",
       "how": [
@@ -376,13 +376,13 @@ window.OSAKA_I18N = {
           "name": "Enjoy Eco Card (subway 1-day ticket)",
           "price": "¥820 weekdays / ¥620 weekends & holidays",
           "best": "Best for both courses",
-          "text": "Unlimited subway and city buses for a day. Either course means about five subway rides, over ¥1,000 in single fares, so it pays even on weekdays. Showing it also takes ¥120 off the castle tower and 10% off the Sky Building observatory and Harukas 300. Sold at station ticket machines.",
+          "text": "Unlimited subway and city buses for a day. Either course means about five subway rides, over ¥1,000 in single fares, so it pays even on weekdays. Showing it also takes ¥120 off the castle tower, ¥100 off Shitennoji’s central precinct, and 10% off the Sky Building observatory and Harukas 300 (same-day price). Sold at station ticket machines.",
           "url": "https://subway.osakametro.co.jp/guide/page/enjoy-eco.php"
         },
         {
           "name": "Osaka Amazing Pass (1 day)",
           "price": "¥3,500",
-          "text": "Unlimited subway, buses and private railways in the city, plus free entry to about 40 places including the castle tower (¥1,200) and Tsutenkaku (¥1,500). But the Sky Building observatory is free only for entry until 15:00, and Harukas 300 and the aquarium are not included. It only pays if you go into both the castle tower and Tsutenkaku and use other free facilities too. It is a QR ticket bought on your phone.",
+          "text": "Unlimited subway, buses and private railways in the city, plus free entry to about 40 places including the castle tower (¥1,200) and Tsutenkaku (¥1,500). The Tombori River Cruise is free too. But the Sky Building observatory is free only for entry until 15:00 (10% off after that), and Harukas 300 and the aquarium are not included. It only pays if you go into both the castle tower and Tsutenkaku and use other free facilities too. It is a QR ticket bought on your phone.",
           "url": "https://osaka-amazing-pass.com/"
         },
         {
@@ -392,7 +392,7 @@ window.OSAKA_I18N = {
           "url": "https://transit.yahoo.co.jp/"
         }
       ],
-      "dealsNote": "Adult fares and fees, checked on Nov 22, 2026 (Osaka Metro and venue websites; trains on a route planner, Saturday timetable; the Osaka Amazing Pass and Enjoy Eco Card discounts were checked on Nov 21).",
+      "dealsNote": "Adult fares and fees, checked on Nov 22, 2026 (Osaka Metro and venue websites; trains on a route planner, Saturday timetable; the Osaka Amazing Pass and Enjoy Eco Card discounts were rechecked on Nov 23).",
       "dealsMore": "See official site",
       "howHead": "How to use this map",
       "how": [
