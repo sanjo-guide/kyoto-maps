@@ -1038,8 +1038,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "市場の営業時間は公式の情報で確認できませんでした（要確認）。",
-    "en": "I couldn’t confirm the market’s opening hours from an official source (please check)."
+    "ja": "にぎわい市場は8:00〜16:00（食堂のラストオーダーは15:30）、火曜休み。和歌山県の広報誌「県民の友」2024年11月号の案内で、2026年11月24日に確認。変わることがあるので、行く前に那智勝浦観光機構（0735-52-5311）で確かめると安心です。",
+    "en": "Nigiwai Market is open 8:00–16:00 (last food orders 15:30) and closed on Tuesdays, according to Wakayama Prefecture’s newsletter Kenmin no Tomo (Nov 2024 issue), checked on 24 Nov 2026. Hours can change, so it is worth confirming with the Nachikatsuura tourist office (0735-52-5311)."
    },
    "no": 5,
    "photos": [
@@ -1257,8 +1257,8 @@ window.GUIDE = {
    "ja": "熊野本宮（ほんぐう）・湯の峰温泉",
    "en": "Kumano Hongu and Yunomine Onsen",
    "time": {
-    "ja": "新宮駅から熊野御坊南海バスで約1時間10分（1,570円）、紀伊田辺駅から龍神バスで約1時間50分（1,980円）。バスは本数が少ないので要確認",
-    "en": "About 1 h 10 min by Kumano Gobo Nankai Bus from Shingu Station (¥1,570), or about 1 h 50 min by Ryujin Bus from Kii-Tanabe Station (¥1,980). Buses are few, so check times"
+    "ja": "新宮駅から熊野御坊南海バスで約1時間10分（1,570円）、紀伊田辺駅から龍神バスで約1時間50分（1,980円）。バスは1日に数本なので、乗る便を先に決めてください",
+    "en": "About 1 h 10 min by Kumano Gobo Nankai Bus from Shingu Station (¥1,570), or about 1 h 50 min by Ryujin Bus from Kii-Tanabe Station (¥1,980). There are only a few buses a day, so pick yours before you go"
    },
    "body": {
     "ja": [
@@ -1298,8 +1298,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "参拝は8:00〜17:00、境内は無料。2026年11月21日に公式サイトで確認。宝物殿の料金と時間は確認できませんでした（要確認）。",
-    "en": "Open for worship 8:00–17:00; free. Checked on the official website on 21 Nov 2026. I couldn’t confirm the treasure hall’s fee and hours (please check)."
+    "ja": "参拝は8:00〜17:00、境内は無料。宝物殿は土日祝だけ開いていて、9:00〜16:00（12:00〜13:30は閉館）、大人300円・小人100円。2026年11月24日に公式サイトで確認。",
+    "en": "Open for worship 8:00–17:00; free. The treasure hall opens only on Saturdays, Sundays and holidays, 9:00–16:00 (closed 12:00–13:30); ¥300 for adults, ¥100 for children. Checked on the official website on 24 Nov 2026."
    },
    "photos": [
     {
@@ -1640,7 +1640,12 @@ window.GUIDE = {
  },
  "sources": {
   "checked": "2026-11-20",
+  "_note": "2026-11-24 の見直し：熊野本宮大社の宝物殿は公式（hongutaisha.jp/tresure、ページの日付 2025-12-21）。勝浦漁港にぎわい市場の時間は和歌山県「県民の友」2024年11月号（市場の公式サイトは見つからず）。龍神バスの紀伊田辺駅〜湯の峰温泉 1,980円は龍神バスの運賃表（2024年4月1日改定）、所要は時刻表（2026年9月19日改正）。新宮駅〜湯の峰温泉 1,570円・約1時間10分は乗換案内（2026-11-24 検索、熊野御坊南海バス 川丈線）",
   "list": [
+   "https://www.hongutaisha.jp/tresure",
+   "https://www.pref.wakayama.lg.jp/bcms/prefg/000200/kenmin/web/202411/kiichan.html",
+   "https://www.ryujinbus.com/app/wp-content/uploads/2021/03/15c46585c57887ec38a9dcb1940ec9b5.pdf",
+   "https://www.ryujinbus.com/app/wp-content/uploads/2026/08/c1ee85a9862b640ff2a28ba70ba2b4dd-1.pdf",
    "https://sandanbeki.com/cave/",
    "https://kumanonachitaisha.or.jp/pavilion/waterfall/",
    "https://seigantoji.or.jp/services/",
