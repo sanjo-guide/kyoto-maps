@@ -754,8 +754,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "参拝は6:00〜19:00、無料。宝物殿（神祜殿）は8:30〜16:30（入館は16:00まで）、大人300円。全国の神様が集まる旧暦10月の神在祭（かみありさい）のころは、とても混みます（2026年は11月下旬）。出雲市駅からのバスは「正門前」で降りると大鳥居の前です（運賃は要確認）。2026年11月21日に出雲大社と出雲観光協会の公式サイトで確認。電車の時刻と運賃は乗換案内（2026年11月）。",
-    "en": "Open 6:00–19:00, free. Treasure hall (Shinko-den) 8:30–16:30 (last entry 16:00), ¥300 for adults. It gets very crowded around the Kamiari Festival in the 10th lunar month, when the gods of Japan are said to gather here (late November in 2026). The bus from Izumoshi Station stops at “Seimon-mae”, right by the big torii (fare: please check). Checked on the Izumo Taisha and Izumo Tourism Association websites on 21 Nov 2026; train times and fares from a route planner (Nov 2026)."
+    "ja": "参拝は6:00〜19:00、無料。宝物殿（神祜殿）は8:30〜16:30（入館は16:00まで）、大人300円。全国の神様が集まる旧暦10月の神在祭（かみありさい）のころは、とても混みます（2026年は11月下旬）。出雲市駅からのバス（一畑バス、約25〜35分・510円）は「正門前」で降りると大鳥居の前です。2026年11月21日に出雲大社と出雲観光協会の公式サイトで確認。電車の時刻と運賃、バスの運賃は乗換案内（2026年11月）。",
+    "en": "Open 6:00–19:00, free. Treasure hall (Shinko-den) 8:30–16:30 (last entry 16:00), ¥300 for adults. It gets very crowded around the Kamiari Festival in the 10th lunar month, when the gods of Japan are said to gather here (late November in 2026). The bus from Izumoshi Station (Ichibata Bus, about 25–35 min, ¥510) stops at “Seimon-mae”, right by the big torii. Checked on the Izumo Taisha and Izumo Tourism Association websites on 21 Nov 2026; train times and fares and the bus fare from a route planner (Nov 2026)."
    },
    "no": 2,
    "photos": [
