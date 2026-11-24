@@ -864,7 +864,7 @@
     route();
   }
 
-  fetch('data/' + course.file)
+  fetch('data/' + course.file + '?v=20261124c', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {
