@@ -48,6 +48,11 @@ section { margin-top: 34px; }
 .cmp th, .cmp td { border-bottom: 1px solid var(--rule); padding: 8px 8px; text-align: left; vertical-align: top; }
 .cmp thead th { background: var(--ink); color: var(--paper); font-weight: 700; font-size: 12.5px; letter-spacing: .04em; }
 .cmp td.c { white-space: nowrap; font-weight: 700; }
+.cmp tr.sub td { background: var(--green-soft); color: var(--green); font-weight: 700; font-size: 12.5px; letter-spacing: .06em; }
+.cmp .letter.g, .c-letter.g { background: var(--green); }
+.group { margin-top: 40px; padding: 10px 14px; background: var(--ink); color: var(--paper); }
+.group b { display: block; font-size: 17px; }
+.group span { font-size: 13px; opacity: .85; }
 .cmp .letter { display: inline-grid; place-items: center; width: 22px; height: 22px; background: var(--maple); color: #fff; font-family: var(--f-display); margin-right: 6px; font-size: 13px; }
 .stars { color: var(--maple); letter-spacing: 1px; white-space: nowrap; }
 
@@ -120,18 +125,18 @@ details.tl[open] summary::after { content: "－"; }
   <header class="title">
     <p class="brand">MOMIJI · 11.30</p>
     <h1>11月30日、紅葉どこ行く？</h1>
-    <p>今年最後の紅葉の日。30日に見頃のところから、電車とバスで行ける1日コースを5つ選びました。行きたいコースを教えてください。</p>
+    <p>今年最後の紅葉の日。30日に見頃のところから、電車とバスで行ける1日コースを8つ選びました。有名どころ5つと、人の少ない隠れた名所3つ。行きたいコースを教えてください。</p>
     <div class="meta"><span>11月30日（月）</span><span>阪急 烏丸 9:00ごろ出発</span><span>でんでん・タロちゃん・トシ</span></div>
   </header>
 
   <section aria-labelledby="h-how">
     <h2 class="h2" id="h-how">どうやって選んだか</h2>
-    <p class="lead">ウェザーニュースに載っている京都府・滋賀県の紅葉名所121か所の「いまの色づき」と「見頃・落葉はじめの予想日」（11月24日時点）を全部見て、30日にまだ落葉が始まっていない所、または30日までに見頃に入る所だけを残しました。30日は月曜日なので、平日ダイヤで動けて、月曜に休みでない所にしています。</p>
+    <p class="lead">ウェザーニュースに載っている京都府・滋賀県の紅葉名所121か所の「いまの色づき」と「見頃・落葉はじめの予想日」（11月24日時点）を全部見て、30日にまだ落葉が始まっていない所、または30日までに見頃に入る所だけを残しました。隠れた名所は、京都市の観光サイト「京都観光Navi」の紅葉だより（各お寺からの回答、11月24日更新）で、10月末からの色づきの進み方を78か所ぶん見て選んでいます。30日は月曜日なので、平日ダイヤで動けて、月曜に休みでない所にしています。</p>
     <p class="small">天気予報（24日時点）：30日の京都は晴れ、最高16℃・最低4〜5℃。27日（金）・28日（土）は雨の予報なので、落葉が少し早まるかもしれません。前日にもう一度確かめます。</p>
   </section>
 
   <section aria-labelledby="h-cmp">
-    <h2 class="h2" id="h-cmp">5つのコースをくらべる</h2>
+    <h2 class="h2" id="h-cmp">8つのコースをくらべる</h2>
     <div class="cmp-wrap">
       <table class="cmp">
         <thead><tr><th>コース</th><th>紅葉の確実さ</th><th>夜の紅葉</th><th>烏丸に帰る</th><th>交通費</th><th>拝観料のめやす</th></tr></thead>
@@ -141,11 +146,17 @@ details.tl[open] summary::after { content: "－"; }
           <tr><td class="c"><span class="letter">C</span>嵯峨野</td><td><span class="stars">★★☆</span></td><td>なし</td><td class="num">16:24</td><td class="num">470円</td><td>約1,800円＋要確認</td></tr>
           <tr><td class="c"><span class="letter">D</span>宇治</td><td><span class="stars">★★☆</span></td><td>なし</td><td class="num">16:15</td><td class="num">1,240円</td><td class="num">約2,200円</td></tr>
           <tr><td class="c"><span class="letter">E</span>滋賀（三井寺・彦根・教林坊）</td><td><span class="stars">★★★</span></td><td>教林坊</td><td class="num">20:22</td><td class="num">3,040円＋タクシー</td><td class="num">約2,800円</td></tr>
+          <tr class="sub"><td colspan="6">隠れた名所</td></tr>
+          <tr><td class="c"><span class="letter g">F</span>鹿ケ谷・岡崎の静かな寺</td><td><span class="stars">★★☆</span></td><td>金戒光明寺（残れば）</td><td class="num">16:49</td><td class="num">900円</td><td>約2,000円＋要確認</td></tr>
+          <tr><td class="c"><span class="letter g">G</span>西山の苔と竹の寺</td><td><span class="stars">★★★</span></td><td>嵐山の宝厳院</td><td class="num">19:19</td><td class="num">610円</td><td class="num">約4,000円</td></tr>
+          <tr><td class="c"><span class="letter g">H</span>洛中の非公開寺と糺の森</td><td><span class="stars">★★★</span></td><td>なし</td><td class="num">16:55</td><td class="num">1,240円</td><td>約1,800円＋要確認</td></tr>
         </tbody>
       </table>
     </div>
     <p class="small">交通費・拝観料は大人1人分（交通費はICカード）。時刻はYahoo!路線情報で「11月30日（月）」を指定して調べました。</p>
   </section>
+
+  <div class="group"><b>有名どころのコース（A〜E）</b><span>見頃の名所をまとめて。人は多め</span></div>
 
   <!-- A -->
   <article class="course" id="a" aria-labelledby="h-a">
@@ -374,7 +385,147 @@ details.tl[open] summary::after { content: "－"; }
     <div class="links"><a href="https://weathernews.jp/koyo/spot/26023/" target="_blank" rel="noopener">三井寺の紅葉情報</a><a href="https://weathernews.jp/koyo/spot/26021/" target="_blank" rel="noopener">教林坊の紅葉情報</a></div>
   </article>
 
-  <div class="ask"><b>どれにする？</b>行きたいコース（A〜E）を教えてね。決まったら、箕面のときみたいに地図つきのしおりにします。組み合わせを変えるのもOK。</div>
+
+  <div class="group"><b>隠れた名所のコース（F〜H）</b><span>人が少なく、見頃が遅めのお寺や庭。30日にちょうど合いやすい</span></div>
+
+  <!-- F -->
+  <article class="course" id="f" aria-labelledby="h-f">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter g">F</span><span class="c-kind">哲学の道の裏の、小さな寺</span></div>
+      <h3 id="h-f">鹿ケ谷・岡崎：白沙村荘 → 法然院 → 安楽寺 → 霊鑑寺 → 真如堂 → 金戒光明寺</h3>
+      <p>銀閣寺や永観堂のすぐそばなのに、ぐっと静かな山すその寺と庭。安楽寺と霊鑑寺はふだん入れない、秋だけの特別公開です。歩くのは哲学の道ぞいで平ら。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:15</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 16:49着</dd></div>
+      <div><dt>交通費</dt><dd class="num">900円</dd></div>
+      <div><dt>拝観料</dt><dd>約2,000円＋要確認</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/f-tetsugaku.jpg" alt="紅葉の哲学の道と疏水" loading="lazy"><figcaption>哲学の道。写真：Stephan Ridgway／<a href="https://commons.wikimedia.org/wiki/File%3APhilosophers_Walk%2C_Kyoto_%2849073313687%29.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY 2.0）</figcaption></figure>
+      <figure><img src="img/f-kurodani-5.jpg" alt="真っ赤なもみじの葉" loading="lazy"><figcaption>金戒光明寺のもみじ</figcaption></figure>
+      <figure><img src="img/f-kurodani-3.jpg" alt="ライトアップされた金戒光明寺の庭" loading="lazy"><figcaption>金戒光明寺の夜の庭</figcaption></figure>
+      <figure><img src="img/f-kurodani-4.jpg" alt="ライトアップされた竹林" loading="lazy"><figcaption>金戒光明寺の竹林（夜）</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>白沙村荘（橋本関雪記念館）</b><span class="chip peak">見頃</span><small>24日に見頃入り・年中無休</small></li>
+      <li><b>法然院</b><span class="chip edge">見頃の終わりかけかも</span><small>17日から見頃</small></li>
+      <li><b>安楽寺</b><span class="chip peak">見頃</span><small>24日に見頃入り・特別公開（12/6まで毎日）</small></li>
+      <li><b>霊鑑寺</b><span class="chip peak">見頃</span><small>20日に見頃入り・特別公開（12/6まで）</small></li>
+      <li><b>真如堂</b><span class="chip peak">見頃</span><small>20日に見頃入り</small></li>
+      <li><b>金戒光明寺</b><span class="chip edge">見頃の終わりかけかも</span><small>17日から見頃</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:15</time><span class="t">地下鉄で丸太町、<span class="ride">市バス204</span>で銀閣寺道 <span class="sub">9:46着・450円</span></span></li>
+        <li class="stay"><time>10:00</time><span class="t"><b>白沙村荘</b> <span class="sub">日本画家・橋本関雪の庭。10:00〜17:00。拝観料は要確認</span></span></li>
+        <li><time>10:50</time><span class="t">哲学の道を南へ。<b>法然院</b>の茅葺きの山門と白砂壇 <span class="sub">境内は無料</span></span></li>
+        <li class="stay"><time>11:20</time><span class="t"><b>安楽寺</b> 秋の特別公開 <span class="sub">9:30〜16:30。拝観料は要確認</span></span></li>
+        <li class="stay"><time>12:00</time><span class="t"><b>霊鑑寺</b> 秋の特別公開 <span class="sub">樹齢350年をこえるタカオカエデの庭。10:00〜16:30（受付16:00まで）。拝観料は要確認</span></span></li>
+        <li><time>12:45</time><span class="t">鹿ケ谷・哲学の道のあたりでお昼</span></li>
+        <li class="stay"><time>13:45</time><span class="t"><b>真如堂</b> <span class="sub">紅葉の時期は入山料500円、本堂・書院はさらに500円（8:30〜16:30）</span></span></li>
+        <li class="stay"><time>14:45</time><span class="t"><b>金戒光明寺</b>（くろ谷さん）秋の特別日中拝観 <span class="sub">御影堂・大方丈・庭園1,000円（最終入場16:00）</span></span></li>
+        <li><time>16:23</time><span class="t"><span class="ride">市バス204</span>岡崎道 → 丸太町、地下鉄 <span class="sub">16:49 烏丸着・450円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note ok">夜も見たければ、金戒光明寺の夜間特別拝観（12/6まで、17:30〜20:30、1,000円、予約なし）に残れます。</div>
+      <div class="note">法然院と金戒光明寺は17日から見頃なので、30日には散り始めているかもしれません。</div>
+    </div>
+    <div class="links"><a href="https://ja.kyoto.travel/flower/momiji/" target="_blank" rel="noopener">京都観光Navi 紅葉だより</a></div>
+  </article>
+
+  <!-- G -->
+  <article class="course" id="g" aria-labelledby="h-g">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter g">G</span><span class="c-kind">苔と竹と、夜の嵐山</span></div>
+      <h3 id="h-g">西山：浄住寺 → 地蔵院（竹の寺）→ 鈴虫寺 → 松尾大社 → 夜の宝厳院</h3>
+      <p>嵐山の南、松尾の山すそ。秋だけ公開の浄住寺の石段と、竹と苔の地蔵院は、見頃が11月下旬〜12月上旬と遅め。30日にちょうど合いやすいコース。トシの西山マップのルートです。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:10</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 19:19着</dd></div>
+      <div><dt>交通費</dt><dd class="num">610円</dd></div>
+      <div><dt>拝観料</dt><dd class="num">約4,000円</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/g-jojuji-1.jpg" alt="浄住寺の参道の石段" loading="lazy"><figcaption>浄住寺の参道（写真は紅葉の前）</figcaption></figure>
+      <figure><img src="img/g-jizoin-2.jpg" alt="地蔵院の山門" loading="lazy"><figcaption>地蔵院（竹の寺）の山門</figcaption></figure>
+      <figure><img src="img/g-jizoin-3.jpg" alt="地蔵院の竹林の参道" loading="lazy"><figcaption>地蔵院の竹林</figcaption></figure>
+      <figure><img src="img/g-suzumushi-1.jpg" alt="鈴虫寺から見る京都の街と紅葉" loading="lazy"><figcaption>鈴虫寺からの眺め</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>浄住寺</b><span class="chip soon">見頃入りまぢか</span><small>24日は3〜5分・例年の見頃は11月下旬・秋の特別拝観</small></li>
+      <li><b>地蔵院（竹の寺）</b><span class="chip soon">見頃入りまぢか</span><small>24日は3〜5分・例年の見頃は11月下旬〜12月上旬</small></li>
+      <li><b>宝厳院（夜）</b><span class="chip peak">見頃</span><small>落葉はじめ 12/11ごろ</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:10</time><span class="t">阪急で桂、嵐山線に乗りかえ <span class="sub">9:27 上桂着・200円。歩いて約15分</span></span></li>
+        <li class="stay"><time>9:45</time><span class="t"><b>浄住寺</b> 秋の特別拝観 <span class="sub">9:30〜16:30（最終受付16:00）・大人1,000円</span></span></li>
+        <li class="stay"><time>10:45</time><span class="t"><b>地蔵院（竹の寺）</b> <span class="sub">9:00〜16:00（最終受付15:40）・大人1,000円。12/13まで毎日開いています</span></span></li>
+        <li><time>11:45</time><span class="t">苔寺の門前でお昼</span></li>
+        <li class="stay"><time>12:45</time><span class="t"><b>鈴虫寺</b> <span class="sub">500円（お茶とお菓子つき）。お寺の予想では30日は「比較的混雑」、午後は空くこともある</span></span></li>
+        <li class="stay"><time>14:15</time><span class="t"><b>松尾大社</b> 庭園 <span class="sub">9:00〜16:00・500円（お参りだけなら無料）</span></span></li>
+        <li><time>15:17</time><span class="t">阪急 松尾大社 → 嵐山 <span class="sub">15:19着・170円。渡月橋のあたりを散歩</span></span></li>
+        <li class="night"><time>17:30</time><span class="t"><b>宝厳院</b> 夜間特別拝観 <span class="sub">17:30〜20:30（受付20:00まで）・1,000円。開門すぐは混みます</span></span></li>
+        <li><time>18:58</time><span class="t">阪急 嵐山 → 桂 → 烏丸 <span class="sub">19:19着・240円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note">地蔵院のハート形の窓（猪目窓）がある茶室は、12/13まで見られません。</div>
+      <div class="note ok">夜はなしで早く帰るなら、松尾大社から阪急で烏丸へ（桂で乗りかえ、約20分）。</div>
+    </div>
+    <div class="links"><a href="https://ja.kyoto.travel/flower/momiji/" target="_blank" rel="noopener">京都観光Navi 紅葉だより</a></div>
+  </article>
+
+  <!-- H -->
+  <article class="course" id="h" aria-labelledby="h-h">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter g">H</span><span class="c-kind">街なかの、秋だけ開く庭</span></div>
+      <h3 id="h-h">洛中：西陣興聖寺 → 大徳寺 黄梅院 → 下鴨神社・糺の森 → 旧三井家下鴨別邸 → 渉成園</h3>
+      <p>山まで行かずに、街の中の静かな紅葉を。ふだんは入れない「織部寺」の西陣興聖寺、見頃が遅い糺の森と旧三井家下鴨別邸、京都駅近くの東本願寺の庭。地下鉄とバスで近く、歩く量は少なめ。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:30</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 16:55着</dd></div>
+      <div><dt>交通費</dt><dd class="num">1,240円</dd></div>
+      <div><dt>拝観料</dt><dd>約1,800円＋要確認</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/h-daitokuji-3.jpg" alt="大徳寺の土塀の小道" loading="lazy"><figcaption>大徳寺の小道（写真は夏）</figcaption></figure>
+      <figure><img src="img/h-tadasu-05-1.jpg" alt="糺の森の参道" loading="lazy"><figcaption>糺の森（写真は夏）</figcaption></figure>
+      <figure><img src="img/h-shimogamo-06-2.jpg" alt="下鴨神社の楼門" loading="lazy"><figcaption>下鴨神社の楼門</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>西陣興聖寺（織部寺）</b><span class="chip soon">見頃入りまぢか</span><small>24日は3〜5分・秋の特別公開（12/13まで）</small></li>
+      <li><b>大徳寺 黄梅院</b><span class="chip edge">見頃の終わりかけかも</span><small>17日から見頃・特別公開（12/6まで）</small></li>
+      <li><b>下鴨神社・糺の森</b><span class="chip soon">見頃入りまぢか</span><small>24日は3〜5分・例年の見頃は12月上旬〜</small></li>
+      <li><b>旧三井家下鴨別邸</b><span class="chip soon">見頃入りまぢか</span><small>24日は3〜5分・例年の見頃は11月下旬〜12月中旬</small></li>
+      <li><b>渉成園</b><span class="chip peak">見頃</span><small>24日に見頃入り</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:30</time><span class="t">地下鉄烏丸線で鞍馬口 <span class="sub">9:42着・260円。歩いて約13分</span></span></li>
+        <li class="stay"><time>10:00</time><span class="t"><b>西陣興聖寺</b> 秋の特別公開 <span class="sub">古田織部ゆかりの「織部寺」。10:00〜16:30（受付16:00まで）。拝観料は要確認</span></span></li>
+        <li><time>11:17</time><span class="t"><span class="ride">市バス12</span>天神公園前 → 大徳寺前 <span class="sub">11:20着・230円</span></span></li>
+        <li class="stay"><time>11:25</time><span class="t"><b>大徳寺 黄梅院</b> 秋の特別公開 <span class="sub">千利休の作庭と伝わる庭。受付15:45まで・1,000円（現金のみ）。となりの興臨院（800円）も公開中</span></span></li>
+        <li><time>12:15</time><span class="t">大徳寺のあたりでお昼</span></li>
+        <li><time>12:49</time><span class="t"><span class="ride">市バス1</span>大徳寺前 → 下鴨神社前 <span class="sub">13:03着・230円</span></span></li>
+        <li class="stay"><time>13:05</time><span class="t"><b>下鴨神社・糺の森</b> <span class="sub">例年の見頃は12月上旬からと遅め。お参りは無料</span></span></li>
+        <li class="stay"><time>14:00</time><span class="t"><b>旧三井家下鴨別邸</b> <span class="sub">糺の森の南すぐ。9:00〜17:00（受付16:30まで）、水曜休み。拝観料は要確認</span></span></li>
+        <li><time>15:12</time><span class="t">京阪 出町柳 → 七条 <span class="sub">15:19着・300円。歩いて約10分</span></span></li>
+        <li class="stay"><time>15:35</time><span class="t"><b>渉成園</b>（東本願寺の庭） <span class="sub">9:00〜17:00。拝観料は要確認</span></span></li>
+        <li><time>16:50</time><span class="t">地下鉄 五条 → 四条 <span class="sub">16:55 烏丸着・220円</span></span></li>
+      </ol>
+    </details>
+    <div class="links"><a href="https://ja.kyoto.travel/flower/momiji/" target="_blank" rel="noopener">京都観光Navi 紅葉だより</a></div>
+  </article>
+
+  <div class="ask"><b>どれにする？</b>行きたいコース（A〜H）を教えてね。決まったら、箕面のときみたいに地図つきのしおりにします。組み合わせを変えるのもOK。</div>
 
   <section aria-labelledby="h-more">
     <h2 class="h2" id="h-more">ほかに30日に見頃の所（電車・バスで行ける）</h2>
@@ -385,6 +536,11 @@ details.tl[open] summary::after { content: "－"; }
       <li><b>毘沙門堂</b>（山科） <small>見頃、落葉はじめ12/6ごろ。山科駅から歩いて約20分</small></li>
       <li><b>二条城</b> <small>見頃、落葉はじめ12/6ごろ。夜のライトアップは12/5まで</small></li>
       <li><b>石清水八幡宮・一休寺</b> <small>26日・25日ごろ見頃入り</small></li>
+      <li><b>宝筐院</b>（嵯峨野） <small>小さな庭が紅葉でうまる隠れた寺。20日に見頃入り。9:00〜16:00。Cコースに足せます</small></li>
+      <li><b>曼殊院</b>（一乗寺） <small>24日に見頃入り。Bコースに足せます</small></li>
+      <li><b>城南宮</b>（伏見） <small>24日は3〜5分、例年の見頃は11月下旬〜12月上旬。地下鉄 竹田駅から歩いて約15分</small></li>
+      <li><b>光明寺</b>（長岡京） <small>参道のもみじのトンネル。24日に見頃入り、紅葉の特別入山は12/6まで。阪急長岡天神からバス</small></li>
+      <li><b>滋賀の静かな寺</b> <small>湖南三山（常楽寺・長寿寺・善水寺、国宝の本堂。落葉はじめ12/2ごろ、JR石部・甲西からコミュニティバス）、大池寺（甲賀・水口、12/8ごろ）、青岸寺（JR米原駅から歩いて約5分、25日ごろ見頃入り）</small></li>
     </ul>
     <p class="small">30日より前に散り始める予想の所（嵐山の全体・浄瑠璃寺・泉涌寺・日吉大社・将軍塚）と、すでに落葉中の所（神護寺・宝泉院・比叡山など）は外しました。</p>
   </section>
@@ -393,6 +549,7 @@ details.tl[open] summary::after { content: "－"; }
     <h2 class="h2" id="h-src">確かめたこと</h2>
     <ul class="src">
       <li>紅葉の状況と予想：<a href="https://weathernews.jp/koyo/area/kyoto/" target="_blank" rel="noopener">ウェザーニュース（京都府）</a>・<a href="https://weathernews.jp/koyo/area/shiga/" target="_blank" rel="noopener">（滋賀県）</a>、11月24日に確認</li>
+      <li>隠れた名所の色づき・公開日・時間：<a href="https://ja.kyoto.travel/flower/momiji/" target="_blank" rel="noopener">京都観光Navi 紅葉だより</a>（11月24日更新）。浄住寺・地蔵院・鈴虫寺・松尾大社・宝厳院・真如堂・金戒光明寺・大徳寺の時間と料金はトシのマップで確認した内容</li>
       <li>電車・バスの時刻と運賃：<a href="https://transit.yahoo.co.jp/" target="_blank" rel="noopener">Yahoo!路線情報</a>で「2026年11月30日（月）」を指定して検索</li>
       <li>拝観時間・拝観料：トシのマップで各寺社の公式サイトから確認した内容（祇王寺・大覚寺の拝観料は未確認）</li>
       <li>圓光寺の予約制：<a href="https://ja.kyoto.travel/event/single.php?event_id=7191" target="_blank" rel="noopener">京都観光Navi</a></li>
@@ -401,7 +558,7 @@ details.tl[open] summary::after { content: "－"; }
     </ul>
   </section>
 
-  <p class="foot">写真はトシ撮影（宇治の2枚を除く）。予想は変わることがあるので、29日にもう一度確かめます。</p>
+  <p class="foot">写真はトシ撮影（宇治の2枚と哲学の道の1枚を除く。作者とライセンスを各写真に記載）。予想は変わることがあるので、29日にもう一度確かめます。</p>
 </div>
 </body>
 </html>
