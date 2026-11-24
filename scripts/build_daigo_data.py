@@ -111,7 +111,7 @@ DAYTIME = T(
     "・南禅寺・永観堂（「東山」のマップ）：地下鉄の蹴上（けあげ）駅から六地蔵行きで乗り換えなし。17:25発→醍醐 17:39着、290円。\n\n"
     "17〜18時の過ごし方\n"
     "醍醐寺のホームページから予約できる「秋の特別精進料理」（高野山 恵光院が出す二段折）には、霊宝館のカフェで17時・18時から食べる枠があります。17時以降の枠には夜間拝観の券がついて、5,500円（前払い）。"
-    "予約していないなら、地下鉄の醍醐駅のすぐ前に商業施設（パセオ・ダイゴロー）があり、飲食店も入っています。ただ、店ごとの時間は公式の案内で確かめられていません（要確認）。晩ごはんは、夜間拝観のあと三条に戻ってからでも間に合います。",
+    "予約していないなら、地下鉄の醍醐駅のすぐそばに平和堂の「アル・プラザ醍醐」があり、店内にイートインスペースがあります（9:30〜20:30、2・3階は20:00まで。平和堂の店舗案内）。晩ごはんは、夜間拝観のあと三条に戻ってからでも間に合います。",
     "If you’re coming in the afternoon\n\n"
     "The evening opening starts at 18:00 and is completely separate from the daytime visit: a day ticket won’t get you in at night, and an evening ticket won’t get you in before 18:00. The day visit ends at 17:00, so it helps to plan that hour in between.\n\n"
     "1. See Daigoji by day first\n"
@@ -125,7 +125,7 @@ DAYTIME = T(
     "• Nanzenji and Eikando (Higashiyama map): from Keage subway station, a train for Rokujizo runs straight through. 17:25 → Daigo 17:39, ¥290.\n\n"
     "Between 17:00 and 18:00\n"
     "The “autumn shojin meal” you can book from the Daigoji website (a two-tier box from Ekoin, a temple lodging on Mt Koya) has 17:00 and 18:00 sittings at the café by the Reihokan. Sittings from 17:00 include the evening ticket: ¥5,500, paid in advance. "
-    "Without a booking, there’s a shopping centre (Paseo Daigoro) right by Daigo subway station with places to eat, but I couldn’t confirm the opening hours of each place on an official page (please check). You can also wait and have dinner back in Sanjo after the evening visit.")
+    "Without a booking, Heiwado’s Al Plaza Daigo store is right by Daigo subway station and has an eat-in space (9:30–20:30; the 2nd and 3rd floors close at 20:00, per the store’s page). You can also wait and have dinner back in Sanjo after the evening visit.")
 
 AFTER = T(
     "帰りと、街なかの夜\n\n"
@@ -147,13 +147,13 @@ S = [
          text=T("総門（そうもん）・仁王門（におうもん）\n\n"
                 "三条から地下鉄東西線で乗り換えなし。京都市役所前17:19、三条京阪17:21発の「六地蔵行き」に乗ると、醍醐に17:39に着きます（18分・290円。平日も土日も同じ時刻）。三条京阪では「びわ湖浜大津行き」も来ますが、こちらは途中で分かれるので乗らないでください。1本あとは17:27・17:28発→17:47着。\n\n"
                 "醍醐駅の2番出口から、三宝院の拝観受付まで歩いて約10分（醍醐寺の案内）。17時50分ごろに受付に着いて、18:00の受付開始を待つ形です。声明（しょうみょう）のある日は18:30から金堂で始まるので、18時台の前半に入っておくと間に合います。受付は20:10までですが、弁天堂までゆっくり見るなら、遅くとも19時半には受付を。\n\n"
-                "券は当日、三宝院の拝観受付で買えます（1,500円、中学生以上）。京都観光Naviで先に買うと1,400円ですが、カード払いで、申し込んだあとのキャンセルはできません。夜の拝観は伽藍（金堂・五重塔・林泉・無量寿苑）だけで、三宝院と霊宝館には入れません。\n\n"
+                "券は当日、三宝院の拝観受付で買えます（1,500円、中学生以上）。醍醐寺のよくある質問では、拝観料は現金のほか、クレジットカードや電子マネーなども使えます。京都観光Naviで先に買うと1,400円ですが、カード払いで、申し込んだあとのキャンセルはできません。夜の拝観は伽藍（金堂・五重塔・林泉・無量寿苑）だけで、三宝院と霊宝館には入れません。\n\n"
                 "受付で券を買ったら、桜の馬場の参道を仁王門へ。照らされた門の先に、夜の伽藍が続きます。境内は足元の暗いところや段差があるので、歩きやすい靴で。夜は冷えるので上着も。\n\n"
                 + DAYTIME["ja"] + "\n\nおすすめ到着時間：17:50（受付は18:00から）。仁王門 18:05〜18:20",
                 "Somon & Niomon gates\n\n"
                 "From Sanjo it’s one subway ride on the Tozai line. Take the train for Rokujizo from Kyoto Shiyakusho-mae at 17:19 or Sanjo-Keihan at 17:21 and you reach Daigo at 17:39 (18 minutes, ¥290; the same times on weekdays and weekends). Trains for Biwako-Hamaotsu also stop at Sanjo-Keihan, but they branch off on the way, so don’t take them. The next is 17:27/17:28 → 17:47.\n\n"
                 "From exit 2 of Daigo Station it’s about 10 minutes on foot to the Sanboin reception (the temple’s access page). You’ll arrive around 17:50 and wait for tickets to go on sale at 18:00. On chanting days the first shomyo starts at 18:30 in the main hall, so go in early in the 18:00 hour. Last entry is 20:10, but to see everything at an easy pace as far as the Benten hall, be at the reception by 19:30.\n\n"
-                "Tickets are sold on the day at the Sanboin reception (¥1,500, junior high and up). Bought in advance on the Kyoto City tourism site they cost ¥1,400, paid by card, with no cancellations. The evening visit covers only the main precinct (main hall, pagoda, the Rinsen pond garden and Muryoju-en); the Sanboin and the Reihokan are closed at night.\n\n"
+                "Tickets are sold on the day at the Sanboin reception (¥1,500, junior high and up). According to the temple’s FAQ, admission can be paid in cash or by credit card, e-money and so on. Bought in advance on the Kyoto City tourism site they cost ¥1,400, paid by card, with no cancellations. The evening visit covers only the main precinct (main hall, pagoda, the Rinsen pond garden and Muryoju-en); the Sanboin and the Reihokan are closed at night.\n\n"
                 "With your ticket, follow the cherry-lined approach to the Nio gate; beyond the lit gate the precinct goes on into the dark. Some paths are dark or have steps, so wear comfortable shoes, and bring a jacket for the cold.\n\n"
                 + DAYTIME["en"] + "\n\nRecommended arrival time: 17:50 (tickets from 18:00). Nio gate 18:05–18:20"),
          gmaps=[gm("醍醐寺 三宝院（拝観受付）", "Daigoji Sanboin (reception)", 34.95213, 135.81951, "醍醐寺 三宝院"),
@@ -172,9 +172,9 @@ S = [
                row("fee", "昼：3か所共通券 大人1,500円、2か所 1,000円、1か所 600円（3月20日〜4月第3日曜は3か所1,800円、1か所800円）",
                    "Daytime: 3-site ticket ¥1,500, 2 sites ¥1,000, 1 site ¥600 (20 March to the 3rd Sunday of April: 3 sites ¥1,800, 1 site ¥800)"),
                row("hours", "茶寮 宇治和束園 11:00〜16:00（火・水曜休み）", "Uji Wazukaen tea room 11:00–16:00 (closed Tue & Wed)")],
-         tip=T("夜間拝観と昼の拝観は醍醐寺の公式サイト、事前予約は京都観光Navi、電車は乗換案内（Yahoo!路線情報）で11月22日に確認しました。醍醐駅前の店の時間と、醍醐コミュニティバスの時刻は確かめられていません（駅から歩いて約10分なので、夜は歩くのがわかりやすいです）。",
-               "The evening and daytime openings were checked on the temple website, the advance ticket on the Kyoto City tourism site, and trains on a route planner (Yahoo! Japan), on 22 November. I couldn’t confirm the hours of the places by Daigo Station or the Daigo community bus times (it’s only about 10 minutes on foot from the station, so walking is simplest at night)."),
-         source="醍醐寺 公式サイト（秋期夜間拝観・チラシ、拝観時間/料金、交通案内、FAQ、食事・売店、トップのお知らせ）、京都観光Navi（事前予約プラン）、高野山 恵光院の予約ページ（醍醐寺のトップからリンク）、乗換案内 Yahoo!路線情報。2026-11-22に確認"),
+         tip=T("夜間拝観と昼の拝観は醍醐寺の公式サイト、事前予約は京都観光Navi、電車は乗換案内（Yahoo!路線情報）で11月22日に確認しました。駅前のアル・プラザ醍醐の時間は平和堂の店舗案内、支払い方法は醍醐寺のよくある質問で、11月24日に確認しました。駅からお寺へは歩いて約10分です（醍醐寺の交通案内）。",
+               "The evening and daytime openings were checked on the temple website, the advance ticket on the Kyoto City tourism site, and trains on a route planner (Yahoo! Japan), on 22 November. The hours of Al Plaza Daigo by the station (Heiwado’s store page) and how to pay (the temple’s FAQ) were checked on 24 November. It’s about 10 minutes on foot from the station to the temple (the temple’s access page)."),
+         source="醍醐寺 公式サイト（秋期夜間拝観・チラシ、拝観時間/料金、交通案内、FAQ、食事・売店、トップのお知らせ）、京都観光Navi（事前予約プラン）、高野山 恵光院の予約ページ（醍醐寺のトップからリンク）、乗換案内 Yahoo!路線情報。2026-11-22に確認。FAQの支払い方法と平和堂の店舗案内（アル・プラザ醍醐）は2026-11-24に確認。醍醐コミュニティバスは公式の時刻表を見つけられず（醍醐寺の交通案内にも記載なし）、ページから外した"),
     dict(id="goju", name=T("五重塔と金堂", "Five-storey pagoda & main hall"), kind=T("国宝", "National Treasures"),
          caution=T("声明は11/21・22・23、12/5・6の夜だけ（金堂、18:30と20:00から）", "Chanting only on 21, 22, 23 Nov and 5, 6 Dec (main hall, from 18:30 and 20:00)"),
          blurb=T("京都でいちばん古い木造建築の五重塔が、暗い空に白く浮かびます。まわりのもみじも照らされて。",
@@ -223,6 +223,8 @@ SOURCES = [
     {"what": "醍醐寺 拝観時間/料金：夏期（3/1〜12月第1日曜）9:00〜17:00、冬期（12月第1日曜の翌日〜2月末）9:00〜16:30、閉門30分前で受付終了。通常期 3か所共通券 大人1,500円・中高生1,000円、2か所1,000円、1か所600円、三宝院御殿特別拝観500円。春期（3/20〜4月第3日曜）3か所1,800円・1か所800円。拝観券は三宝院拝観受付で", "url": TIME_URL, "checked": CHECKED},
     {"what": "醍醐寺 トップのお知らせ：登山道で一部がけ崩れの危険があり、当面の間、上醍醐への入山は禁止", "url": "https://www.daigoji.or.jp/", "checked": CHECKED},
     {"what": "醍醐寺 FAQ：下醍醐（三宝院・伽藍・霊宝館）の拝観は各所約30分、3か所で約1時間半。拝観の予約は不要", "url": "https://www.daigoji.or.jp/faq/index.html", "checked": CHECKED},
+    {"what": "醍醐寺 FAQ：「拝観料はどのような方法で支払えますか？」→「現金のほか、クレジットカード、電子マネーなどが使用できます。」（夜間拝観のページには支払い方法の記載なし）", "url": "https://www.daigoji.or.jp/faq/index.html", "checked": "2026-11-24"},
+    {"what": "平和堂 店舗検索 アル・プラザ醍醐（京都市伏見区醍醐高畑町1-37）：営業時間 月〜日 9:30〜20:30（1F直営）、9:30〜20:00（2・3F）。サービス・設備にイートインスペース", "url": "https://shoplist.heiwado.jp/detail/130/", "checked": "2026-11-24"},
     {"what": "醍醐寺 交通案内：地下鉄東西線「醍醐駅」②番出口より徒歩約10分。醍醐寺 食事・売店：茶寮 宇治和束園 11時〜16時 火・水定休、フレンチカフェ ル・クロ スゥ ル スリジェは2026年10月31日で閉店（2027年1月リニューアル予定）、恩賜館は通常営業なし", "url": SHOP, "checked": CHECKED},
     {"what": "秋の特別精進料理（高野山 恵光院、醍醐寺のトップからリンク）：三宝院大広間7,000円（11〜15時の部）／霊宝館カフェ5,500円（11〜18時の部）、拝観料込み。17時以降の予約は夜間拝観券つき、事前決済のみ", "url": SHOJIN, "checked": CHECKED},
     {"what": "地下鉄東西線（乗換案内、2026-11-27金・11-28土とも同じ）：京都市役所前17:19・三条京阪17:21（六地蔵行）→醍醐17:39、京都市役所前17:27・三条京阪17:28→17:47、290円。三条京阪17:16はびわ湖浜大津行（東山で乗り換え）。平日 三条京阪13:04→醍醐13:21", "url": YAHOO, "checked": CHECKED},

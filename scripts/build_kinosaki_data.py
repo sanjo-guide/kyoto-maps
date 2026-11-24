@@ -16,6 +16,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = f"{R}/images/kinosaki"
 OUT = f"{R}/data/routes/kinosaki.json"
 CHECKED = "2026-11-22"
+CHECKED2 = "2026-11-24"  # 要確認の調べ直し（外湯・天空バス・竹田城跡・温泉寺とロープウェイ・GUBIGABU）をした日
 PICKS = {}
 for f in os.listdir(IMG):
     m = re.match(r"(.+)-(\d+)\.jpg$", f)
@@ -39,8 +40,8 @@ def row(kind, ja, en):
     return {"kind": kind, "text": T(ja, en), "until": None, "from": None}
 
 
-def info(rows, tip=None, verified=True):
-    d = {"rows": rows, "cash": False, "tip": tip, "checked": CHECKED}
+def info(rows, tip=None, verified=True, checked=CHECKED):
+    d = {"rows": rows, "cash": False, "tip": tip, "checked": checked}
     if not verified:
         d["verified"] = False
     return d
@@ -65,13 +66,14 @@ JR = link("timetable", "JRおでかけネット（時刻表）", "JR West timeta
 SPA = link("official", "城崎温泉観光協会（外湯の時間と休み）", "Visit Kinosaki: the bathhouses", "https://kinosaki-spa.gr.jp/about/spa/7onsen/",
            "https://visitkinosaki.com/about-kinosaki/the-7-mystic-onsen/")
 TATTOO = link("info", "Visit Kinosaki（タトゥーの案内。英語）", "Visit Kinosaki: tattoos at the bathhouses", "https://visitkinosaki.com/about-kinosaki/the-7-mystic-onsen/")
+FAQ = link("info", "Visit Kinosaki よくある質問（支払い・タトゥー。英語）", "Visit Kinosaki FAQ (payment, tattoos)", "https://visitkinosaki.com/plan/visitor-info/faq/")
 GUBI = link("official", "GUBIGABU（グビガブ）公式サイト", "GUBIGABU (official, Japanese)", "https://www.gubigabu.com/restaurant/")
 TRAIN_TIP = T("時刻と運賃は乗換案内で確認しました（2026年11月25日・28日の検索）。特急の指定席は日によって200円変わります。乗る前に確かめてください。",
               "Times and fares checked on a route planner (searches for 25 and 28 November 2026). Reserved-seat charges vary by ¥200 depending on the day. Check before you travel.")
 YUMEPA = row("fee", "1か所 大人800円。1日券「ゆめぱ」は1,500円で入り放題（外湯の窓口で買う）。2か所入るなら1日券",
              "¥800 per bath for adults. The “Yumepa” day pass is ¥1,500 for unlimited baths (buy it at any bathhouse counter): worth it from two baths")
-BATH_TIP = T("タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払い方法は公式サイトに書かれていないので、現金があると確実です。",
-             "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. The official pages don’t say how you can pay, so carry cash to be safe.")
+BATH_TIP = T("タトゥーがあっても入れます（城崎の公式観光サイト Visit Kinosaki の案内。隠す必要もなし）。男女別。タオルは持っていきましょう。支払いは現金を用意してください。Visit Kinosaki のよくある質問に、小さな店や外湯は現金だけの所が多い、とあります。",
+             "Tattoos are fine (stated on Visit Kinosaki, the town’s official tourism site; no need to cover them). Baths are separated by gender. Bring a towel. Bring cash: Visit Kinosaki’s FAQ says many small shops and public bathhouses are cash-only.")
 CLOSED_DAYS = T("休みの曜日：月＝地蔵湯、火＝鴻の湯、水＝一の湯・まんだら湯、木＝御所の湯・柳湯",
                 "Closed days: Mon Jizo-yu · Tue Kou-no-yu · Wed Ichi-no-yu, Mandara-yu · Thu Gosho-no-yu, Yanagi-yu")
 FARE_KINO = row("fee", "京都↔城崎温泉 片道5,370〜5,570円（乗車券2,640円＋指定席2,730〜2,930円。日によって変わります）",
@@ -86,7 +88,7 @@ SUBWAY_EN = ("From the Sanjo area, take the subway. The 6:57 from Karasuma Oike 
 
 def bath(hours_ja, hours_en, closed_ja, closed_en):
     return info([row("hours", hours_ja + "（受付は閉まる30分前まで）", hours_en + " (last entry 30 min before closing)"),
-                 row("closed", closed_ja, closed_en), YUMEPA], tip=BATH_TIP)
+                 row("closed", closed_ja, closed_en), YUMEPA], tip=BATH_TIP, checked=CHECKED2)
 
 
 def time_ja(t): return f"\n\nおすすめ訪問時間：{t}"
@@ -184,8 +186,8 @@ def build(E):
         info=dict(info([
             rowr("bus", "天空バス（9〜11月）：竹田駅10:05発 → 竹田城跡10:25着。帰りは竹田城跡12:15発 → 竹田駅12:30着（次は12:50発 → 13:05着）",
                  "Tenku Bus (Sep–Nov): Takeda Station 10:05 → castle stop 10:25. Back: castle stop 12:15 → Takeda Station 12:30 (next 12:50 → 13:05)", until="2026-11-30"),
-            rowr("bus", "天空バス：12月からの時刻は、2026年11月22日の時点で発表されていません（要確認）。全但バス 八鹿営業所 079-662-6151",
-                 "Tenku Bus: times from December had not been published as of 22 November 2026 (please check). Zentan Bus Yoka office: 079-662-6151", frm="2026-12-01"),
+            rowr("bus", "天空バス：12月からの時刻は、2026年11月24日の時点で発表されていません（要確認）。全但バス 八鹿営業所 079-662-6151",
+                 "Tenku Bus: times from December had not been published as of 24 November 2026 (please check). Zentan Bus Yoka office: 079-662-6151", frm="2026-12-01"),
             row("fee", "天空バス 片道300円。往復するなら1日フリー乗車券500円（最初に乗ったバスの中で買う）。現金のみ",
                 "Tenku Bus ¥300 each way; for a return trip buy the ¥500 1-day pass on your first bus. Cash only"),
             row("hours", "城跡：6月〜12月はじめ 5:00〜17:00、12月はじめ〜1月3日 10:00〜15:00、3月〜5月 8:00〜17:00（最後に登れるのは30分前）",
@@ -193,14 +195,14 @@ def build(E):
             row("closed", "1月4日〜2月末は冬の閉山。大雨・台風・雪の日は入れないことがあります", "Closed for winter 4 Jan – end of Feb; may close in heavy rain, typhoons or snow"),
             row("fee", "観覧料 大人（高校生以上）500円、中学生以下は無料。現金・クレジットカード・QR決済（交通系ICは不可）",
                 "Entry: adults (high school and up) ¥500; junior high and under free. Cash, credit cards or QR payment (no transit IC cards)")],
-            tip=T("天空バスは全但バスのサイト（2026年9〜11月のダイヤ）、城跡の時間・料金・登山道は朝来市の公式ホームページで確認しました。",
-                  "Tenku Bus checked on the Zentan Bus website (September–November 2026 timetable); hours, fees and trails on Asago City’s official site.")), cash=True),
+            tip=T("天空バスは全但バスのサイト（2026年9〜11月のダイヤ。12月からの分は11月24日の時点で未発表）、城跡の時間・料金・登山道は朝来市の公式ホームページで確認しました。",
+                  "Tenku Bus checked on the Zentan Bus website (September–November 2026 timetable; December times not yet published on 24 November); hours, fees and trails on Asago City’s official site."), checked=CHECKED2), cash=True),
         notices=[{"from": None, "to": "2026-11-30", "url": "https://www.city.asago.hyogo.jp/site/takeda/27510.html",
                   "text": T("駅裏登山道と表米神社登山道は閉鎖中（クマの出没に備えて）。天空バスかタクシーで上がってください。",
                             "The trails from behind the station and from Hyomai Shrine are closed (bear precautions). Go up by Tenku Bus or taxi.")},
                  {"from": "2026-12-01", "to": "2027-01-03", "url": "https://www.zentanbus.co.jp/local_bus/tenkubus/",
-                  "text": T("12月からの天空バスの時刻は未発表でした（2026年11月22日に確認）。このページのバスの時刻は11月までのものです。行く前に全但バスで確かめてください。城跡は12月はじめから10:00〜15:00になります。",
-                            "Tenku Bus times from December had not been published when checked on 22 November 2026. The bus times on this page are for November. Check with Zentan Bus before you go. From early December the ruins open 10:00–15:00.")},
+                  "text": T("12月からの天空バスの時刻は未発表でした（2026年11月24日に確認）。このページのバスの時刻は11月までのものです。行く前に全但バスで確かめてください。城跡は12月はじめから10:00〜15:00になります。",
+                            "Tenku Bus times from December had not been published when checked on 24 November 2026. The bus times on this page are for November. Check with Zentan Bus before you go. From early December the ruins open 10:00–15:00.")},
                  {"from": "2027-01-04", "to": "2027-02-28", "url": "https://www.city.asago.hyogo.jp/site/takeda/3090.html",
                   "text": T("竹田城跡は冬の閉山中です（1月4日〜2月末）。一覧の上のボタンで「城崎温泉だけ」に切り替えてください。",
                             "Takeda Castle is closed for winter (4 January – end of February). Switch to “Kinosaki only” with the buttons above the list.")}])
@@ -210,10 +212,10 @@ def build(E):
                 "Lunch in the castle town below the ruins, then the 13:34 train to Kinosaki Onsen."),
         caution=T("13:34発を逃すと次は15:23発（城崎17:40着）", "Miss the 13:34 and the next is 15:23 (Kinosaki 17:40)"),
         lat=35.29870, lng=134.83530,
-        text=T("竹田駅と寺町通り（たけだえき・てらまちどおり）\n\n12:30にバスで駅に戻ったら、まずお昼。竹田駅のまわりは店が少なく、昼だけの店や予約制の店もあります。営業時間を公式サイトで確かめられた店がなかったので、店名は書いていません（要確認）。京都駅でお昼を買ってきた人は、寺町通りのあたりで。\n\n"
+        text=T("竹田駅と寺町通り（たけだえき・てらまちどおり）\n\n12:30にバスで駅に戻ったら、まずお昼。竹田駅のまわりは店が少なく、昼だけの店や予約制の店もあります。営業時間を店の公式サイトで確かめられた店がなかったので、店名は書いていません（要確認。2026年11月24日）。京都駅でお昼を買ってきた人は、寺町通りのあたりで。\n\n"
                "寺町通りは駅のすぐ西。水路に沿ってお寺が並び、石の橋と白壁の家が続きます。\n\n"
                "城崎温泉へは13:34発の播但線で。和田山に13:40着、13:51発の山陰本線に乗り換えて城崎温泉14:35着（860円）。この電車は必ず乗ってください。次は15:23発で、城崎温泉に着くのは17:40。外湯は1つ入るのがやっとになります。\n\nおすすめ訪問時間：12:30〜13:30",
-               "Takeda Station and Teramachi-dori\n\nBack at the station by bus at 12:30, have lunch first. There are only a few places to eat around Takeda Station; some open only at lunchtime or by reservation. I couldn’t confirm any shop’s hours on an official page, so I name none (please check). If you brought lunch from Kyoto Station, eat it around Teramachi-dori.\n\n"
+               "Takeda Station and Teramachi-dori\n\nBack at the station by bus at 12:30, have lunch first. There are only a few places to eat around Takeda Station; some open only at lunchtime or by reservation. I couldn’t confirm any shop’s hours on the shop’s own website, so I name none (please check; as of 24 November 2026). If you brought lunch from Kyoto Station, eat it around Teramachi-dori.\n\n"
                "Teramachi-dori is just west of the station: temples in a row along a canal, with stone bridges and white-walled houses.\n\n"
                "For Kinosaki, take the 13:34 Bantan Line train: Wadayama 13:40, change to the 13:51 San’in Line train, Kinosaki Onsen 14:35 (¥860). Don’t miss this one. The next leaves at 15:23 and reaches Kinosaki at 17:40, with time for barely one bath.\n\nRecommended visit time: 12:30–13:30"),
         gmaps=[gm("JR竹田駅", "JR Takeda Station", 35.29910, 134.83590, "JR竹田駅 兵庫県朝来市"),
@@ -245,13 +247,13 @@ def build(E):
         caution=T("外湯は曜日ごとに休み。どこもタトゥーOK", "Each bath closes one day a week; tattoos OK at all"),
         lat=35.62398, lng=134.81331, text=T(st_ja, st_en),
         gmaps=[gm("城崎温泉駅", "Kinosaki Onsen Station", 35.62398, 134.81331, "城崎温泉駅")],
-        links=[SPA, TATTOO, JR],
+        links=[SPA, TATTOO, FAQ, JR],
         info=info([YUMEPA, row("closed", CLOSED_DAYS["ja"], CLOSED_DAYS["en"]),
                    row("hours", "地蔵湯・一の湯・御所の湯・鴻の湯 7:00〜23:00、柳湯・まんだら湯 15:00〜23:00",
                        "Jizo-yu, Ichi-no-yu, Gosho-no-yu, Kou-no-yu 7:00–23:00; Yanagi-yu, Mandara-yu 15:00–23:00"),
                    row("closed", "さとの湯は建て替えのため休み（2024年4月から。再開日は未発表）", "Sato-no-yu is closed for rebuilding (since April 2024; no reopening date announced)")],
-                  tip=T("外湯の時間・休み・料金は城崎温泉観光協会のサイト、タトゥーの扱いは公式観光サイト Visit Kinosaki で確認しました。祝日や年末年始は休みが変わることがあります。",
-                        "Hours, closed days and prices checked on the Kinosaki Onsen Tourism Association website; the tattoo policy on Visit Kinosaki. Closed days can shift around holidays and New Year.")))
+                  tip=T("外湯の時間・休み・料金は城崎温泉観光協会のサイト、タトゥーの扱いと支払い（現金だけの所が多い）は公式観光サイト Visit Kinosaki で確認しました。休みの日が祝日に重なったときの扱いは公式サイトに書かれていません（要確認）。年末年始の営業は観光協会のお知らせに出ます（2026〜27年の分は11月24日の時点で未発表）。",
+                        "Hours, closed days and prices checked on the Kinosaki Onsen Tourism Association website; the tattoo policy and payment (many places cash-only) on Visit Kinosaki. The official pages don’t say what happens when a closed day falls on a public holiday (please check). New Year opening is announced in the association’s news (not yet published for 2026–27 on 24 November)."), checked=CHECKED2))
 
     # ---------- 外湯
     S["jizo"] = dict(
@@ -366,18 +368,19 @@ def build(E):
                   "途中の温泉寺駅の前が温泉寺の本堂。約1300年前に城崎温泉を開いた道智上人（どうちしょうにん）のお寺で、昔は城崎に着いたらまずここにお参りしてから外湯に入ったそうです（温泉寺の公式サイトより）。下りの便を温泉寺駅で降りて、お参りしてから次の便で下ります。\n\n"
                   + ("この時間割では入っていません。行くなら、14:35に着いたら外湯より先にここへ（駅から歩いて約20分）。15:10の便で上がり、16:30ごろまでに下りて、となりの鴻の湯と、帰り道の御所の湯に入ると、外湯は2つです。\n\n" if E else
                      "御所の湯を出て14:10の便で山頂へ。山頂で30分、温泉寺で20〜30分、15:30ごろに下りて、となりの鴻の湯へ。\n\n")
-                  + "山頂駅から温泉寺駅までを歩く道は山道です。下駄では歩けません。",
+                  + "山頂駅から温泉寺駅までの遊歩道は山道で、温泉寺の参道は石段が続きます。下駄やヒールの靴では気をつけてください（ロープウェイ公式サイトの注意）。",
                   "Onsen-ji Temple and the Kinosaki Ropeway\n\nThe station is in Yakushi Park, next to Kou-no-yu. Cars leave at :10, :30 and :50 and take about 7 minutes to the top, where the lookout shows the roofs of the town, the Maruyama River and the sea beyond. There is a café at the top.\n\n"
                   "From 1 November to 31 January the last car up is at 16:30 and the last one down at 16:50 (normally 16:50 and 17:10). Closed on the 2nd and 4th Thursdays.\n\n"
                   "The middle station, Onsenji, is in front of the temple’s main hall. Onsen-ji is the temple of Dochi Shonin, the monk who founded Kinosaki Onsen about 1,300 years ago; visitors used to pray here first before going to the baths (from the temple’s website). On the way down, get off at Onsenji station, visit, and take the next car.\n\n"
                   + ("It’s not in this timetable. If you want it, come here before any bath when you arrive at 14:35 (about 20 minutes on foot from the station). Go up on the 15:10, be down by about 16:30, then bathe at Kou-no-yu next door and Gosho-no-yu on the way back: two baths.\n\n" if E else
                      "From Gosho-no-yu, take the 14:10 car to the top. Allow 30 minutes at the summit and 20–30 at the temple, coming down around 15:30, then Kou-no-yu next door.\n\n")
-                  + "The path between the top station and Onsenji station is a mountain trail: not for geta.",
+                  + "The path between the top station and Onsenji station is a mountain trail, and the temple approach has many stone steps. Take care in geta or heels (a warning on the ropeway’s official site).",
                   "14:10〜15:30", ("着いたら先に（15:10〜16:30）", "first thing on arrival (15:10–16:30)")),
         gmaps=[gm("城崎温泉ロープウェイ 山麓駅", "Kinosaki Ropeway (bottom station)", 35.62524, 134.80382, "城崎温泉ロープウェイ"),
                gm("温泉寺 本堂", "Onsen-ji main hall", 35.62424, 134.80051, "温泉寺 城崎 本堂")],
         links=[link("official", "城崎温泉ロープウェイ 公式サイト", "Kinosaki Ropeway (official, Japanese)", "https://www.kinosaki-ropeway.jp/ropeway"),
-               link("official", "温泉寺 公式サイト（拝観案内）", "Onsen-ji (official, Japanese)", "http://www.kinosaki-onsenji.jp/visit/seeing.html")],
+               link("official", "温泉寺 公式サイト（拝観案内）", "Onsen-ji (official, Japanese)", "http://www.kinosaki-onsenji.jp/visit/seeing.html"),
+               link("info", "Visit Kinosaki（温泉寺。英語）", "Visit Kinosaki: Onsen-ji", "https://visitkinosaki.com/things-to-do/onsen-ji-temple/")],
         info={"rows": [rowr("hours", "ロープウェイ（11月1日〜1月31日）始発9:10、毎時10・30・50分発（12:30発は日曜・祝日だけ）。上りの最終16:30、下りの最終16:50",
                             "Ropeway (1 Nov – 31 Jan): first car 9:10, then at :10, :30 and :50 (the 12:30 runs on Sundays and holidays only). Last car up 16:30, last down 16:50", until="2027-01-31"),
                        rowr("hours", "ロープウェイ 9:10〜17:10。毎時10・30・50分発（12:30発は日曜・祝日だけ）。上りの最終16:50、下りの最終17:10",
@@ -388,9 +391,9 @@ def build(E):
                        row("hours", "温泉寺 本堂の拝観 9:00〜17:00（ロープウェイが休みの日は閉まることがあります）",
                            "Onsen-ji main hall 9:00–17:00 (may close when the ropeway is not running)"),
                        row("fee", "温泉寺 本堂 300円", "Onsen-ji main hall ¥300")],
-              "cash": False, "checked": CHECKED,
-              "tip": T("ロープウェイの時刻・料金・休みは公式サイトと、城崎温泉観光協会の「冬期営業時間のお知らせ」（2026年10月20日）から。温泉寺の時間は温泉寺の公式サイトからですが、案内が古いので変わっているかもしれません（要確認）。",
-                       "Ropeway times, fares and closed days are from its official site and the tourism association’s winter-hours notice (20 October 2026). Onsen-ji’s hours are from the temple’s website, which is old, so they may have changed (please check).")},
+              "cash": False, "checked": CHECKED2,
+              "tip": T("ロープウェイの時刻・料金・休みは公式サイトと、城崎温泉観光協会の「冬期営業時間のお知らせ」（2026年10月20日）から。温泉寺の拝観時間と拝観料は、温泉寺の公式サイトと公式観光サイト Visit Kinosaki（2025年4月更新）で確かめました。",
+                       "Ropeway times, fares and closed days are from its official site and the tourism association’s winter-hours notice (20 October 2026). Onsen-ji’s hours and fee are from the temple’s website and Visit Kinosaki, the official tourism site (updated April 2025).")},
         _extra=[cc("onsenji-1.jpg", "663highland", "CC BY-SA 4.0", "File:Kinosaki ropeway01n2610.jpg"),
                 cc("onsenji-2.jpg", "663highland", "CC BY-SA 4.0", "File:241230 Kinosaki Ropeway Toyooka Hyogo pref Japan01s3.jpg"),
                 cc("onsenji-3.jpg", "663highland", "CC BY 2.5", "File:Onsenji02 1920.jpg"),
@@ -415,7 +418,7 @@ def build(E):
         gmaps=[gm("城崎温泉 大谿川", "Otani River, Kinosaki", 35.62600, 134.80850, "城崎温泉 大谿川")], links=[GUBI, SPA],
         info=info([row("hours", "GUBIGABU（グビガブ） 11:30〜22:00（ラストオーダー21:30）", "GUBIGABU 11:30–22:00 (last orders 21:30)"),
                    row("closed", "GUBIGABU 木曜・第3水曜", "GUBIGABU: Thursdays and the 3rd Wednesday")],
-                  tip=T("GUBIGABU の時間と休みは公式サイトで確認しました。", "GUBIGABU’s hours and closed days checked on its official site.")))
+                  tip=T("GUBIGABU の時間と休みは公式サイトで確認しました。", "GUBIGABU’s hours and closed days checked on its official site."), checked=CHECKED2))
     S["station2"] = dict(
         name=T("城崎温泉駅（帰り）", "Kinosaki Onsen Station (return)"), kind=T("駅（ゴール）", "Station (finish)"),
         blurb=T("18:53の特急で京都へ（福知山で乗り換え、21:20着）。早めなら16:31発で19:07着。",
@@ -501,8 +504,8 @@ def build(E):
                  "写真は Toshi の写真ライブラリから選んだもの（城崎・竹田の2023〜2026年の写真。長辺1600px・位置情報なし）。京都駅の写真は城崎温泉駅で撮った特急の車両。外湯は建物の外の写真だけ。"
                  "温泉寺とロープウェイは Toshi がまだ行っていない場所で、写真は Wikimedia Commons（photos の要素が {file, credit}）、文章は公式サイトの情報だけ。"
                  "GUBIGABU は公式サイトで時間を確かめて店名を出した店（Toshi が行ったとは書いていない）。竹田のお昼の店は公式で時間を確かめられず、店名を出していない。"
-                 "info.checked は事実情報を確認した日（外湯は城崎温泉観光協会、タトゥーは Visit Kinosaki、竹田城跡は朝来市の公式ホームページ、天空バスは全但バスのサイト（2026年9〜11月のダイヤ。12月以降は未発表）、"
-                 "ロープウェイは公式サイトと観光協会のお知らせ、電車と地下鉄の時刻と運賃は乗換案内、京都駅の店は天橋立マップのために同じ日に確認したもの）。"
+                 "info.checked は事実情報を確認した日（外湯は城崎温泉観光協会、タトゥーは Visit Kinosaki、竹田城跡は朝来市の公式ホームページ、天空バスは全但バスのサイト（2026年9〜11月のダイヤ。12月以降は11月24日の時点で未発表）、"
+                 "温泉寺は温泉寺の公式サイトと Visit Kinosaki、ロープウェイは公式サイトと観光協会のお知らせ、外湯の支払いは Visit Kinosaki のよくある質問、電車と地下鉄の時刻と運賃は乗換案内、京都駅の店は天橋立マップのために同じ日に確認したもの）。"
                  "focus は地図を開いたときに映す範囲（京都と竹田は離れているので入れない）。このファイルは scripts/build_kinosaki_data.py で作る。",
         "sections": sections,
         "focus": {"first": NO["station"], "last": NO["station2"]},

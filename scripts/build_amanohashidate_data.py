@@ -108,10 +108,10 @@ def build(course):
         "lat": 35.557585, "lng": 135.182426,
         "caution": T("バスはICOCAなどが使えません", "Buses don’t take ICOCA or other transit IC cards"),
         "text": T(
-            "天橋立駅（あまのはしだてえき）\n\n着いたら最初に「海の京都 天橋立・伊根フリーパス 1day」（大人3,550円）を買います。駅の観光案内所（駅の窓口でも）か、歩いて5分の天橋立桟橋で。\n\nこの1枚で、天橋立の観光船、傘松公園のケーブルカー・リフト、伊根へのバス、伊根湾めぐり遊覧船に乗れます。別々に買うと3,700〜4,000円なので150〜450円安く、乗り継ぎのたびに切符を買わなくてすみます。伊根へのバスは交通系ICカード（ICOCAなど）が使えないので、その点でも楽です。\n\n" +
+            "天橋立駅（あまのはしだてえき）\n\n着いたら最初に「海の京都 天橋立・伊根フリーパス 1day」（大人3,550円）を買います。天橋立駅の観光案内所で買えます（2024年8月に購入）。公式の販売場所の一覧では、駅の切符売り場（京都丹後鉄道の窓口）と、歩いて5分の天橋立桟橋の観光船乗り場です。\n\nこの1枚で、天橋立の観光船、傘松公園のケーブルカー・リフト、伊根へのバス、伊根湾めぐり遊覧船に乗れます。別々に買うと3,700〜4,000円なので150〜450円安く、乗り継ぎのたびに切符を買わなくてすみます。伊根へのバスは交通系ICカード（ICOCAなど）が使えないので、その点でも楽です。\n\n" +
             ("" if A else "土日祝に「伊根が先」で回る日は、ここのバス停から10:58発のバスでまっすぐ伊根へ行く方法もあります（4番に書いています）。\n\n") +
             "自転車で渡る人は、紹介ページの「交通費のめやす」も見てください。\n\nおすすめ訪問時間：10:39〜10:45",
-            "Amanohashidate Station\n\nFirst buy the “Kyoto by the Sea Amanohashidate & Ine Free Pass 1day” (¥3,550 per adult), at the station’s tourist office (or the ticket window) or at Amanohashidate pier, 5 minutes’ walk away.\n\nIt covers the Amanohashidate sightseeing boat, the Kasamatsu Park cable car and chairlift, the bus to Ine and the Ine Bay boat. Bought separately these cost ¥3,700–4,000, so you save ¥150–450 and don’t have to buy a ticket at every connection. The bus to Ine doesn’t take transit IC cards such as ICOCA, which is another reason to have it.\n\n" +
+            "Amanohashidate Station\n\nFirst buy the “Kyoto by the Sea Amanohashidate & Ine Free Pass 1day” (¥3,550 per adult), at the tourist information office in the station (bought there in August 2024). The official list of sales points gives the Kyoto Tango Railway ticket window in the station and the boat office on Amanohashidate pier, 5 minutes’ walk away.\n\nIt covers the Amanohashidate sightseeing boat, the Kasamatsu Park cable car and chairlift, the bus to Ine and the Ine Bay boat. Bought separately these cost ¥3,700–4,000, so you save ¥150–450 and don’t have to buy a ticket at every connection. The bus to Ine doesn’t take transit IC cards such as ICOCA, which is another reason to have it.\n\n" +
             ("" if A else "On weekends and holidays, if you do Ine first, you can also take the 10:58 bus from the stop here straight to Ine (see stop 4).\n\n") +
             "If you plan to cross by bike, see “Getting around: fares” on the intro page.\n\nRecommended visit time: 10:39–10:45"),
         "gmaps": [gm("天橋立駅", "Amanohashidate Station", 35.557585, 135.182426, "天橋立駅")],
@@ -124,7 +124,9 @@ def build(course):
                 "Amanohashidate & Ine Free Pass 1day: ¥3,550 adults, ¥1,780 children (valid on the day)"),
             row("pass", "乗れるもの：天橋立観光船（宮津桟橋〜天橋立桟橋〜一の宮桟橋）、ケーブルカー・リフト（往復）、丹海バス（宮津駅〜天橋立駅前〜天橋立ケーブル下〜伊根湾めぐり・日出〜伊根）、伊根湾めぐり遊覧船、京都丹後鉄道（特急は普通車自由席）",
                 "Covers: Amanohashidate sightseeing boat (Miyazu–Amanohashidate–Ichinomiya piers), cable car & chairlift (round trip), Tankai bus (Miyazu Sta.–Amanohashidate Sta.–Cable-shita–Ine-wan Meguri Hide–Ine), Ine Bay boat, Kyoto Tango Railway (non-reserved seats on expresses)"),
-        ], "丹後海陸交通 公式「お得なチケット」。2026-11-22に確認。公式の販売場所は京都丹後鉄道の有人駅・天橋立桟橋・宮津桟橋（駅の観光案内所は公式の一覧にない＝要確認）",
+            row("pass", "売っている場所：京都丹後鉄道の駅の窓口（駅員のいる駅）、天橋立桟橋の観光船乗り場、宮津桟橋",
+                "Sold at: Kyoto Tango Railway station ticket windows (staffed stations), the boat office on Amanohashidate pier, and Miyazu pier"),
+        ], "丹後海陸交通 公式「お得なチケット」（https://www.tankai.jp/tourist_tickets/）。2026-11-22・2026-11-24に確認。切符販売場所は「宮津案内所・宮津桟橋／旅客船営業所 天橋立桟橋／京都丹後鉄道（対象路線内の有人駅）」。駅の観光案内所は一覧になく、天橋立観光協会の「お得なチケット」（https://www.amanohashidate.jp/blog/ticket/）にもこのフリーパスは載っていない（2026-11-24確認）ので、案内所での販売は書かない",
             tip=T("京都からの特急はしだての料金は含まれません。",
                   "The Hashidate express from Kyoto isn’t covered.")),
     }
@@ -175,7 +177,7 @@ def build(course):
                 "Boat ¥800 one way, ¥1,300 round trip (covered by the free pass). Rental bike ¥500 for 2 hours (¥300 per extra hour)"),
         ] + ([] if A else [row("bus", "天橋立駅→天橋立ケーブル下→伊根湾めぐり・日出：10:58→11:24→11:53／11:42→12:08→12:37（毎日）。フリーパスで乗れます（なければケーブル下から200円、天橋立駅から400円）",
                                "Amanohashidate Sta. → Cable-shita → Ine-wan Meguri Hide: 10:58→11:24→11:53 / 11:42→12:08→12:37 (daily). Covered by the free pass (otherwise ¥200 from Cable-shita, ¥400 from the station)")]),
-            "丹後海陸交通 公式（天橋立観光船の時刻表・運賃・運航中止の基準、レンタサイクル、伊根・蒲入線の時刻表）。2026-11-22に確認。レンタサイクルの窓口の時間は公式サイトに記載なし（要確認）"),
+            "丹後海陸交通 公式（天橋立観光船の時刻表・運賃・運航中止の基準、レンタサイクル、伊根・蒲入線の時刻表）。2026-11-22に確認。レンタサイクル（https://www.tankai.jp/trip/bicycle/）は2026-11-24にも確認：天橋立桟橋・一の宮桟橋で貸出、2時間500円・1時間ごとに300円、予約不可、雨天は断ることあり、カード・電子マネー可（商品により不可）。窓口の時間は公式サイト・よくある質問・お得なチケットのどれにも記載なし（要確認）"),
     }
 
     S["kono"] = {
@@ -209,11 +211,11 @@ def build(course):
                     T("リフトは16:00まで。16:45の船に乗るなら16:30のケーブルカーで下ります", "Chairlift ends 16:00. For the 16:45 boat, take the 16:30 cable car down")),
         "text": T(
             "天橋立傘松公園（かさまつこうえん）\n\n籠神社のすぐ横の府中駅から、ケーブルカー（約4分、15分ごと）かリフト（約8分）で上ります。フリーパスで乗れます。ここからの天橋立は、龍が天に昇るように見える「昇龍観（しょうりゅうかん）」。股のぞき台で逆さまにのぞくと、橋が空に架かって見えます。\n\n" +
-            ("上りはケーブルカー、下りはリフトにすると、天橋立を正面に見ながら下りられます（切符は共通）。\n\nお昼はここで。展望レストラン「AmaTerrace（アマテラス）」の2階が食事（メニュー例は1,200円から）、ほかにカフェもあります。12時を過ぎると席が埋まりやすいので、上に着いたら先に食べるのがおすすめです。\n\n13:10ごろまでに下りて、「天橋立ケーブル下」バス停から13:29発のバスで伊根へ（伊根湾めぐり・日出に13:58着）。乗り遅れると次は14:24発（14:53着）で、伊根は15:00の遊覧船と舟屋の町を少し歩くだけになります。\n\nおすすめ訪問時間：11:45〜13:15" if A else
-             "16:00のケーブルカーで上ります。リフトは16:00で終わるので、上りも下りもケーブルカーです。上には30分ほど。16:30のケーブルカーで下りると、歩いて5分ほどの一の宮桟橋から16:45の船に乗れます。\n\n船に乗り遅れても、「天橋立ケーブル下」17:20発のバスで天橋立駅に17:47に着き、18:09の特急に間に合います（フリーパスで乗れます）。3〜10月は17:15の船もあります。\n\n展望レストラン「AmaTerrace（アマテラス）」にはカフェもあります。\n\nおすすめ訪問時間：16:00〜16:30"),
+            ("上りはケーブルカー、下りはリフトにすると、天橋立を正面に見ながら下りられます（切符は共通）。\n\nお昼はここで。展望施設「AmaTerrace（アマテラス）」に、レストラン「アマダイニング」（そば・うどん1,200円、海鮮丼2,500円など）とカフェ「アマカフェ」があります。12時を過ぎると席が埋まりやすいので、上に着いたら先に食べるのがおすすめです。\n\n13:10ごろまでに下りて、「天橋立ケーブル下」バス停から13:29発のバスで伊根へ（伊根湾めぐり・日出に13:58着）。乗り遅れると次は14:24発（14:53着）で、伊根は15:00の遊覧船と舟屋の町を少し歩くだけになります。\n\nおすすめ訪問時間：11:45〜13:15" if A else
+             "16:00のケーブルカーで上ります。リフトは16:00で終わるので、上りも下りもケーブルカーです。上には30分ほど。16:30のケーブルカーで下りると、歩いて5分ほどの一の宮桟橋から16:45の船に乗れます。\n\n船に乗り遅れても、「天橋立ケーブル下」17:20発のバスで天橋立駅に17:47に着き、18:09の特急に間に合います（フリーパスで乗れます）。3〜10月は17:15の船もあります。\n\n展望施設「AmaTerrace（アマテラス）」には、カフェ「アマカフェ」もあります。\n\nおすすめ訪問時間：16:00〜16:30"),
             "Amanohashidate Kasamatsu Park\n\nFrom Fuchu Station, right next to Kono Shrine, ride the cable car (about 4 min, every 15 min) or the chairlift (about 8 min) up the hill; both are covered by the free pass. From here Amanohashidate looks like a dragon rising into the sky, the “Shoryukan” view. Look at it upside down between your legs from the “matanozoki” stand and the sandbar seems to hang in the sky.\n\n" +
-            ("Go up by cable car and come down by chairlift, and you face Amanohashidate all the way down (same ticket).\n\nHave lunch here. The second floor of AmaTerrace, the viewing restaurant, serves meals (menu examples from ¥1,200), and there is a café as well. Seats tend to fill after noon, so eat as soon as you get to the top.\n\nBe down by about 13:10 and take the 13:29 bus to Ine from the “Amanohashidate Cable-shita” stop (Ine-wan Meguri Hide 13:58). If you miss it, the next is 14:24 (arr. 14:53), which leaves time only for the 15:00 boat and a short walk in the village.\n\nRecommended visit time: 11:45–13:15" if A else
-             "Take the 16:00 cable car up. The chairlift stops at 16:00, so it’s the cable car both ways. You get about 30 minutes at the top. The 16:30 cable car down gets you to Ichinomiya pier, about 5 minutes on foot, for the 16:45 boat.\n\nIf you miss the boat, the 17:20 bus from “Amanohashidate Cable-shita” reaches Amanohashidate Station at 17:47, in time for the 18:09 express (covered by the free pass). From March to October there is also a 17:15 boat.\n\nAmaTerrace, the viewing restaurant at the top, also has a café.\n\nRecommended visit time: 16:00–16:30")),
+            ("Go up by cable car and come down by chairlift, and you face Amanohashidate all the way down (same ticket).\n\nHave lunch here. AmaTerrace, the viewing building, has a restaurant, AmaDining (soba or udon ¥1,200, seafood rice bowl ¥2,500, for example), and a café, AmaCafe. Seats tend to fill after noon, so eat as soon as you get to the top.\n\nBe down by about 13:10 and take the 13:29 bus to Ine from the “Amanohashidate Cable-shita” stop (Ine-wan Meguri Hide 13:58). If you miss it, the next is 14:24 (arr. 14:53), which leaves time only for the 15:00 boat and a short walk in the village.\n\nRecommended visit time: 11:45–13:15" if A else
+             "Take the 16:00 cable car up. The chairlift stops at 16:00, so it’s the cable car both ways. You get about 30 minutes at the top. The 16:30 cable car down gets you to Ichinomiya pier, about 5 minutes on foot, for the 16:45 boat.\n\nIf you miss the boat, the 17:20 bus from “Amanohashidate Cable-shita” reaches Amanohashidate Station at 17:47, in time for the 18:09 express (covered by the free pass). From March to October there is also a 17:15 boat.\n\nAmaTerrace, the viewing building at the top, also has a café, AmaCafe.\n\nRecommended visit time: 16:00–16:30")),
         "gmaps": [gm("府中駅（ケーブルカー乗り場）", "Fuchu Station (cable car)", 35.58323, 135.1953, "天橋立ケーブルカー 府中駅")],
         "links": [
             link("official", "天橋立ケーブルカー・リフト（運行時間・運賃・乗り方）", "Cable car & lift: times and fares (Japanese)", "https://www.tankai.jp/trip/cable/"),
@@ -229,9 +231,9 @@ def build(course):
                   "Amanohashidate Cable-shita → Ine-wan Meguri Hide: 13:29→13:58, 14:24→14:53 (daily). Covered by the free pass (otherwise ¥200)")] if A else
              [row("bus", "天橋立ケーブル下→天橋立駅：17:20→17:47、18:27→18:54（毎日）。フリーパスで乗れます",
                   "Amanohashidate Cable-shita → Amanohashidate Sta.: 17:20→17:47, 18:27→18:54 (daily). Covered by the free pass")]),
-            "丹後海陸交通 公式（ケーブルカー・リフト、傘松公園、AmaTerrace、伊根・蒲入線の時刻表、12月18日休業のお知らせ）。2026-11-22に確認。AmaTerrace の食事の時間・ラストオーダーは公式サイトに記載なし（公園の営業 9:00〜18:00・季節で変動、とあるだけ＝要確認）",
-            tip=T("山の上の傘松駅では現金しか使えません。切符は下の府中駅で買うと、カードや電子マネーも使えます。AmaTerrace の食事のラストオーダーは公式サイトに載っていません（要確認）。",
-                  "Kasamatsu Station at the top takes cash only. Buy tickets at Fuchu Station at the bottom, where cards and e-money work. AmaTerrace’s last-order time isn’t given on the official site, so check on the day.")),
+            "丹後海陸交通 公式（ケーブルカー・リフト、傘松公園、AmaTerrace、伊根・蒲入線の時刻表、12月18日休業のお知らせ）。2026-11-22に確認。AmaTerrace（https://www.tankai.jp/trip/amaterrace/、2026-11-24に確認）：レストラン「アマダイニング」・カフェ「アマカフェ」・1Fにショップ（1Fは傘松公園のページ）。営業時間 9:00〜18:00（季節により変動）。メニュー例 傘松そば・うどん1,200円、おまかせ海鮮丼2,500円。キャッシュレス（クレジットカード・電子マネー・QRコード決済）可。食事の時間・ラストオーダーは記載なし＝要確認。前の版の「2階が食事」は公式で確かめられないので外した。ケーブルカー最終下り 3〜10月18:00・12〜1月17:00・2月と11月17:30、リフト16:00まで（よくある質問 https://www.tankai.jp/trip/faq）",
+            tip=T("山の上の傘松駅では現金しか使えません。切符は下の府中駅で買うと、カードや電子マネーも使えます。AmaTerrace の店ではカード・電子マネー・QRコード決済が使えます。食事のラストオーダーは公式サイトに載っていません（要確認）。",
+                  "Kasamatsu Station at the top takes cash only. Buy tickets at Fuchu Station at the bottom, where cards and e-money work. AmaTerrace takes cards, e-money and QR payments. Its last-order time isn’t given on the official site, so check on the day.")),
         "notices": [notice("12月18日は休み", "Closed on December 18",
                            "2026年12月18日（金）は工事のため、ケーブルカー・リフト・アマテラスがすべて休みです。",
                            "On Friday, Dec 18, 2026 the cable car, chairlift and AmaTerrace are all closed for construction work.",
@@ -287,8 +289,8 @@ def build(course):
         ],
     }
 
-    biyori_ja = "食事と休憩は、同じ平田にある観光交流施設「舟屋日和（ふなやびより）」が使いやすいです。INE CAFE（平日10:30〜17:00、土日祝は17:30まで）と、鮨割烹 海宮（わだつみ。昼は11:00〜14:30、ラストオーダー14:00）があり、どちらも水曜休み。ランチは数に限りがあり、休む日もあります。水曜に行く人は、伊根町観光協会のサイトの「食べる」で開いている店を確かめてください。"
-    biyori_en = "For food and a rest, Funaya Biyori, a visitor facility also in Hirata, is the easiest: INE CAFE (weekdays 10:30–17:00, until 17:30 on weekends and holidays) and the sushi restaurant Wadatsumi (lunch 11:00–14:30, last order 14:00). Both close on Wednesdays; lunch is limited in number and not served every day. If you go on a Wednesday, check the “Eat” page of the Ine Tourist Association for what’s open."
+    biyori_ja = "食事と休憩は、同じ平田にある観光交流施設「舟屋日和（ふなやびより）」が使いやすいです（「伊根」バス停から歩いて8分。舟屋日和の案内）。INE CAFE（平日10:30〜17:00、土日祝は17:30まで）と、鮨割烹 海宮（わだつみ。昼は11:00〜14:30、ラストオーダー14:00）があり、どちらも水曜休み。ランチは数に限りがあり、休む日もあります。水曜に行く人は、伊根町観光協会のサイトの「食べる」で開いている店を確かめてください。"
+    biyori_en = "For food and a rest, Funaya Biyori, a visitor facility also in Hirata, is the easiest (8 minutes on foot from the “Ine” bus stop, according to the facility): INE CAFE (weekdays 10:30–17:00, until 17:30 on weekends and holidays) and the sushi restaurant Wadatsumi (lunch 11:00–14:30, last order 14:00). Both close on Wednesdays; lunch is limited in number and not served every day. If you go on a Wednesday, check the “Eat” page of the Ine Tourist Association for what’s open."
     S["funaya"] = {
         "name": T("伊根の舟屋（伊根浦）", "Ine’s Funaya Boathouses"),
         "kind": T("町並み", "Historic district"),
@@ -304,11 +306,12 @@ def build(course):
         "text": T(
             "伊根の舟屋（ふなや）\n\n1階が海に開いた船のガレージ、2階が住まいの舟屋が、伊根湾にそって約230軒並びます。国の重要伝統的建造物群保存地区です。向井酒造のすぐ先が伊根浦公園と観光案内所で、「伊根」バス停もここです。\n\n" +
             ("向井酒造を出たら、伊根浦公園のあたりから舟屋を眺めます。14:00の船に乗れた日は30分ほど余裕があるので、舟屋日和でひと休みを。" + biyori_ja + "\n\n帰りは「伊根」16:00発のバスで「天橋立ケーブル下」へ（16:33着）。乗り遅れたら次は16:47発で、船には間に合いません。そのまま天橋立駅まで乗れば17:47に着き、18:09の特急に乗れます。その次の17:56発だと天橋立駅18:54着で、19:05の特急になります。\n\nおすすめ訪問時間：15:25〜15:55" if A else
-             "お昼ごはん：遊覧船を降りて平田まで歩くと12:45ごろ。" + biyori_ja + "\n\n食べたら向井酒造（6番）に寄り、伊根浦公園のあたりまで歩いて舟屋を眺めます。\n\n「伊根」15:08発のバスで「天橋立元伊勢籠神社」へ（15:39着）。乗り遅れたら次は16:00発（天橋立ケーブル下16:33着）。その場合は籠神社をやめて16:45のケーブルカーで傘松公園に上り、17:20のバスで天橋立駅へ戻ります（17:47着）。\n\nおすすめ訪問時間：12:45〜15:05（お昼ごはんを含む）"),
+             "お昼ごはん：遊覧船を降りて、湾ぞいの道を向井酒造の前を通って舟屋日和まで歩くと20分ほど（地図で見た目安）。12:45〜12:50ごろに着きます。" + biyori_ja + "\n\n食べたら向井酒造（6番）に寄り、伊根浦公園のあたりまで歩いて舟屋を眺めます。\n\n「伊根」15:08発のバスで「天橋立元伊勢籠神社」へ（15:39着）。乗り遅れたら次は16:00発（天橋立ケーブル下16:33着）。その場合は籠神社をやめて16:45のケーブルカーで傘松公園に上り、17:20のバスで天橋立駅へ戻ります（17:47着）。\n\nおすすめ訪問時間：12:45〜15:05（お昼ごはんを含む）"),
             "Ine’s Funaya\n\nAbout 230 funaya line Ine Bay: the ground floor is a garage that opens onto the sea for a boat, and people live upstairs. The village is a national Preservation District for Groups of Traditional Buildings. Just past Mukai Sake Brewery are Ine-ura Park and the tourist information center, where the “Ine” bus stop is.\n\n" +
             ("After the brewery, look out over the funaya from around Ine-ura Park. If you made the 14:00 boat you have about 30 minutes to spare for a break at Funaya Biyori. " + biyori_en + "\n\nGo back on the 16:00 bus from “Ine” to “Amanohashidate Cable-shita” (arr. 16:33). If you miss it, the next is 16:47, too late for the boat: stay on to Amanohashidate Station (17:47) for the 18:09 express. The one after, 17:56, reaches the station at 18:54, which means the 19:05 express.\n\nRecommended visit time: 15:25–15:55" if A else
-             "Lunch: walking to Hirata after the boat, you arrive around 12:45. " + biyori_en + "\n\nAfter eating, stop at Mukai Sake Brewery (stop 6) and walk on to Ine-ura Park for the view of the funaya.\n\nTake the 15:08 bus from “Ine” to “Amanohashidate Motoise Kono-jinja” (arr. 15:39). If you miss it, the next is 16:00 (Cable-shita 16:33): skip the shrine, take the 16:45 cable car up to Kasamatsu Park, and go back to Amanohashidate Station on the 17:20 bus (arr. 17:47).\n\nRecommended visit time: 12:45–15:05 (including lunch)")),
-        "gmaps": [gm("伊根浦公園", "Ine-ura Park", 35.675733, 135.287658, "伊根浦公園")],
+             "Lunch: from the boat, walk along the bay past Mukai Sake Brewery to Funaya Biyori, about 20 minutes (a map estimate); you arrive around 12:45–12:50. " + biyori_en + "\n\nAfter eating, stop at Mukai Sake Brewery (stop 6) and walk on to Ine-ura Park for the view of the funaya.\n\nTake the 15:08 bus from “Ine” to “Amanohashidate Motoise Kono-jinja” (arr. 15:39). If you miss it, the next is 16:00 (Cable-shita 16:33): skip the shrine, take the 16:45 cable car up to Kasamatsu Park, and go back to Amanohashidate Station on the 17:20 bus (arr. 17:47).\n\nRecommended visit time: 12:45–15:05 (including lunch)")),
+        "gmaps": [gm("伊根浦公園", "Ine-ura Park", 35.675733, 135.287658, "伊根浦公園"),
+                  gm("舟屋日和", "Funaya Biyori", 35.67384, 135.29075, "舟屋日和 伊根町平田")],
         "links": [
             link("info", "伊根町観光協会", "Ine Tourist Association", "https://www.ine-kankou.jp/"),
             link("official", "舟屋日和（INE CAFE・鮨割烹 海宮）", "Funaya Biyori: INE CAFE & Wadatsumi (Japanese)", "https://funayabiyori.com/food/"),
@@ -319,7 +322,7 @@ def build(course):
                           "Funaya Biyori: INE CAFE weekdays 10:30–17:00 (last order 16:30), until 17:30 on weekends and holidays. Wadatsumi 11:00–14:30 (last order 14:00) and 17:00–20:30"),
                       row("closed", "舟屋日和：水曜日（海宮はほかにも休みあり。ランチは不定休・数量限定）",
                           "Funaya Biyori: Wednesdays (Wadatsumi has other closed days; lunch is limited and not served every day)")],
-                     BUS_SRC + "。舟屋日和は公式サイト（funayabiyori.com/food/）、舟屋のマナーは伊根町観光協会。2026-11-22に確認。舟屋日和の正確な位置（平田）と歩く時間は地図で要確認",
+                     BUS_SRC + "。舟屋日和は公式サイト（https://funayabiyori.com/food/、2026-11-22・24に確認）：伊根町字平田593番地1、バス停「伊根」より徒歩8分（トップのアクセス）。地図の位置は公式サイトの Google map のリンク先（35.67384, 135.29075）。遊覧船乗り場から舟屋日和までの20分は地図で見た目安。舟屋のマナーは伊根町観光協会。2026-11-22に確認",
                      tip=T("バスはタッチ決済・QRコード決済も使えますが、交通系ICカード（ICOCAなど）は使えません。",
                            "The bus takes contactless credit cards and QR payments, but not transit IC cards like ICOCA.")),
     }
@@ -350,7 +353,7 @@ def build(course):
                 "If you miss the boat: Amanohashidate Cable-shita → Amanohashidate Sta. 16:33→17:00, 17:20→17:47, 18:27→18:54 (daily). Covered by the free pass"),
             row("fee", "観光船 片道800円（フリーパスで乗れます）。レンタサイクル2時間500円",
                 "Boat ¥800 one way (covered by the free pass). Rental bike ¥500 for 2 hours"),
-        ], "丹後海陸交通 公式（天橋立観光船・レンタサイクル・伊根・蒲入線の時刻表）。2026-11-22に確認。レンタサイクルの窓口の時間は記載なし（要確認）"),
+        ], "丹後海陸交通 公式（天橋立観光船・レンタサイクル・伊根・蒲入線の時刻表）。2026-11-22に確認。レンタサイクルの窓口の時間は公式サイト（https://www.tankai.jp/trip/bicycle/、よくある質問、お得なチケット）に記載なし（2026-11-24に再確認、要確認）"),
     }
 
     S["chienoyu"] = {

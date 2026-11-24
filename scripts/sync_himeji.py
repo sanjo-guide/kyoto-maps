@@ -14,7 +14,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='himeji', i18n='HIMEJI_I18N', count=7, data_v=4, bump=103,
+    id='himeji', i18n='HIMEJI_I18N', count=7, data_v=5, bump=104,
     head='姫路・明石・須磨 1日ルート（姫路城・好古園・明石の魚の棚・須磨浦山上遊園・舞子）',
     title='姫路・明石・須磨 1日ルート｜姫路城・明石焼・須磨浦 Himeji MAP',
     desc='大阪の梅田〜難波のホテルから1日で回る姫路・明石・須磨。姫路城の9:00の開城に合わせるコースと、9〜10時に出て午後にお城へ行くコースを選べるルートマップ。明石の魚の棚で明石焼、須磨浦のロープウェー、舞子の夕日、夜の姫路城まで。Himeji, Akashi and Suma in one day from a hotel between Umeda and Namba in Osaka: Himeji Castle at its 9:00 opening or in the afternoon, akashiyaki in Akashi, the Sumaura ropeway and sunset at the Akashi Kaikyo Bridge.',

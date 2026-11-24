@@ -2746,8 +2746,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "運行区間・運行期間・運賃は年によって変わります。2026年11月20日は公式サイトがメンテナンス中で確認できなかったので、乗る前に公式サイトで確かめてください（要確認）。",
-    "en": "The section in service, season and fares change from year to year. The official website was down for maintenance on 20 Nov 2026, so please check it before you go."
+    "ja": "運行区間・運行期間・運賃は年によって変わります。2026年11月20日と24日は公式サイトがメンテナンス中で確認できなかったので、乗る前に公式サイトで確かめてください（要確認）。",
+    "en": "The section in service, season and fares change from year to year. The official website was down for maintenance on 20 and 24 Nov 2026, so please check it before you go."
    },
    "photos": [
     {
@@ -2977,8 +2977,8 @@ window.GUIDE = {
     ]
    },
    "note": {
-    "ja": "アルペンルートは冬のあいだ運休します。運行期間・運賃・時刻は公式サイトで確認してください（要確認）。",
-    "en": "The Alpine Route is closed in winter. Check the season, fares and times on the official website."
+    "ja": "アルペンルートは冬のあいだ運休します。2026年の運行は11月30日までで、11月25日からは日帰りのみ（2026年11月24日に公式サイトのお知らせで確認）。次の運行期間・運賃・時刻はまだ確かめられないので、公式サイトで確認してください（要確認）。",
+    "en": "The Alpine Route is closed in winter. The 2026 season runs until 30 November, with day trips only from 25 November (checked in the official notices on 24 Nov 2026). Next season’s dates, fares and times could not be confirmed yet, so check the official website."
    },
    "photos": [
     {
@@ -3127,10 +3127,11 @@ window.GUIDE = {
  },
  "sources": {
   "checked": "2026-11-20",
-  "_note": "黒部・立山・加賀温泉の電車の時間と運賃は乗換案内（2026年11月20日）。黒部峡谷鉄道の運行区間・運賃は公式サイトがメンテナンス中で未確認。五箇山への世界遺産バス（新高岡〜相倉口、能作前に停車）は乗換案内（2026年11月25日の検索）、キャン・バスは公式サイト（2026年11月20日）",
+  "_note": "黒部・立山・加賀温泉の電車の時間と運賃は乗換案内（2026年11月20日）。黒部峡谷鉄道の運行区間・運賃は公式サイトがメンテナンス中で未確認（2026-11-24 も同じ。時刻はSNSで案内と表示）。立山黒部アルペンルートの2026年の運行終了（11/30、11/25から日帰りのみ）は公式のお知らせ（alpen-route.com/_wp/information/153643、2026-11-24 確認）。五箇山への世界遺産バス（新高岡〜相倉口、能作前に停車）は乗換案内（2026年11月25日の検索）、キャン・バスは公式サイト（2026年11月20日）",
   "list": [
    "https://transit.yahoo.co.jp/",
    "https://www.kurotetu.co.jp/",
+   "https://www.alpen-route.com/_wp/information/153643",
    "https://www.alpen-route.com/",
    "http://kaga-canbus.jp/",
    "https://shiro-niwa.pref.ishikawa.lg.jp/kenrokuen-garden/info.html",

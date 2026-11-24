@@ -180,15 +180,19 @@ S = dict(
               row("hours", "2026年11月21日〜23日は「書写山もみじまつり」。文化財の特別公開10:00〜16:00、紅葉のライトアップ17:00〜20:00（ロープウェイの下りは20:30まで）",
                   "21–23 Nov 2026: Shoshazan Momiji Festival. Special openings 10:00–16:00, autumn-leaf illumination 17:00–20:00 (ropeway down until 20:30)", until="2026-11-23"),
               row("closed", "ロープウェイは例年2月ごろ点検で運休。2027年は2月5日〜10月28日、改修工事で運休", "The ropeway closes for inspection around February each year; in 2027 it is closed 5 Feb – 28 Oct for renovation"),
+              row("hours", "山上のマイクロバス（志納所前〜摩尼殿下）：8:55から。最終は、10月11日〜2月末が志納所前15:55発・摩尼殿下16:05発、3月1日〜10月10日が16:38発・16:45発。混むと早発・遅発あり",
+                  "Minibus on the mountain (temple entrance ↔ below Mani-den): from 8:55. Last runs 11 Oct – end of Feb: 15:55 up, 16:05 back down; 1 Mar – 10 Oct: 16:38 and 16:45. Times can shift when busy"),
+              row("hours", "納経（御朱印）の受付 9:00〜16:30", "Pilgrim stamp (goshuin) desk 9:00–16:30"),
               row("fee", "ロープウェイ 往復1,200円・片道700円（小人は半額）。圓教寺の志納金 中学生以上800円・小学生500円。山上のマイクロバス 往復500円",
                   "Ropeway ¥1,200 return, ¥700 one way (children half). Temple admission ¥800 (junior high and up), ¥500 elementary. Minibus on the mountain ¥500 return"),
               row("fee", "書写山ロープウェイ＋バス往復セット乗車券 1,700円（姫路駅前の神姫バス案内所で販売。別々に払うと1,840円）",
                   "Ropeway + return bus set ticket ¥1,700, sold at the Shinki Bus office in front of Himeji Station (¥1,840 if paid separately)"),
               row("train", "神姫バス：姫路駅北口10番のりば → 書写山ロープウェイ 約25〜30分・320円", "Shinki bus: Himeji Station north exit, stop 10 → Shoshazan Ropeway, about 25–30 min, ¥320")],
-        checked="2026-11-21",
-        tip=T("2026年11月21日に確認しました。ロープウェイの時刻・料金とセット券は書写山ロープウェイの公式サイト、志納金とマイクロバスは圓教寺の公式サイト、バスと電車は乗換案内（2026年11月の土曜のダイヤ）から。圓教寺の拝観時間は公式サイトに書かれていないので、ロープウェイの時間に合わせてください（要確認）。",
-              "Checked on 21 November 2026: ropeway times, fares and the set ticket on the ropeway’s website; admission and the minibus on the temple’s website; buses and trains on a route planner (Saturday timetable, November 2026). The temple’s own opening hours are not given on its website, so plan around the ropeway (please check)."),
-        source=["https://www.mt-shosha.info/category/charge/index.html", "http://www.shosha.or.jp/access/", "乗換案内（Yahoo!路線情報）2026年11月の土曜のダイヤ"],
+        checked="2026-11-24",
+        tip=T("2026年11月24日に確認しました。ロープウェイの時刻・料金とセット券は書写山ロープウェイの公式サイト、志納金・マイクロバス・納経の時間は圓教寺の公式サイト、バスと電車は乗換案内（2026年11月の土曜と木曜のダイヤ）から。圓教寺の拝観時間は公式サイトに書かれていないので、ロープウェイとマイクロバスの最終に合わせてください（要確認）。",
+              "Checked on 24 November 2026: ropeway times, fares and the set ticket on the ropeway’s website; admission, the minibus and the goshuin desk hours on the temple’s website; buses and trains on a route planner (Saturday and Thursday timetables, November 2026). The temple’s own opening hours are not given on its website, so plan around the last ropeway and minibus (please check)."),
+        source=["https://www.mt-shosha.info/category/charge/index.html", "https://www.mt-shosha.info/category/access/index.html", "http://www.shosha.or.jp/access/",
+                "圓教寺 公式サイト トップ（ロープウェイ運休中の参拝・納経の受付時間） http://www.shosha.or.jp/", "乗換案内（Yahoo!路線情報）2026-11-28（土）・11-26（木）のダイヤ"],
         _extra=[cc("shosha-1.jpg", "663highland", "CC BY 2.5", "File:Engyoji01s4592.jpg"),
                 cc("shosha-2.jpg", "663highland", "CC BY 2.5", "File:Engyoji05s4592.jpg"),
                 cc("shosha-3.jpg", "663highland", "CC BY 2.5", "File:Engyoji45n4592.jpg"),
@@ -259,10 +263,12 @@ S = dict(
                link("official", "舞子海上プロムナード", "Maiko Marine Promenade (official, Japanese)", "https://hyogo-maikopark.jp/facility/f01/"), PLANNER],
         rows=[row("hours", "公園は出入り自由。舞子海上プロムナード 9:00〜18:00（入館は17:30まで。ゴールデンウィークと夏休みは19:00まで）", "The park is always open. Maiko Marine Promenade 9:00–18:00 (last entry 17:30; until 19:00 in Golden Week and the summer holidays)"),
               row("closed", "プロムナード：10〜3月は第2月曜（祝日なら翌日）、12月29日〜31日", "Promenade: 2nd Monday Oct–Mar (next day if a holiday), 29–31 Dec"),
-              row("fee", "プロムナード 大人 平日250円・土日祝300円（高校生以下は無料）", "Promenade ¥250 weekdays, ¥300 weekends and holidays (free for high school and under)")],
-        tip=T("プロムナードの時間・休み・料金は舞子公園の公式サイト、電車は乗換案内で確認しました。プロムナードの支払い方法と、橋のライトアップの時間は確認できていません。",
-              "Promenade hours, closing days and fees from the Maiko Park website; trains on a route planner. Payment methods at the promenade and the bridge’s light-up times could not be confirmed."),
-        source=["https://hyogo-maikopark.jp/facility/f01/", SRC_PLANNER]),
+              row("fee", "プロムナード 大人 平日250円・土日祝300円（高校生以下は無料）", "Promenade ¥250 weekdays, ¥300 weekends and holidays (free for high school and under)"),
+              row("hours", "明石海峡大橋のライトアップ：日没〜23:00（土日祝と特定の日は24:00まで）。毎正時と毎時30分に5分間、色が変わります",
+                  "Akashi Kaikyo Bridge light-up: sunset to 23:00 (to 24:00 on weekends, holidays and some special days). The colours change for 5 minutes on the hour and at half past")],
+        tip=T("プロムナードの時間・休み・料金は舞子公園の公式サイト、橋のライトアップは本四高速（JB本四高速）の公式サイト、電車は乗換案内で確認しました。プロムナードの支払い方法は公式サイトに書かれていません。",
+              "Promenade hours, closing days and fees from the Maiko Park website; the bridge light-up from the bridge operator (JB Honshi) website; trains on a route planner. The promenade’s payment methods are not given on its website."),
+        source=["https://hyogo-maikopark.jp/facility/f01/", "本四高速 明石海峡大橋ライトアップスケジュール（2026-11-24 確認） https://www.jb-honshi.co.jp/customer_index/kanko_event/lightup/lightup-akashi.html", SRC_PLANNER]),
 )
 
 TITLE = dict(
@@ -359,8 +365,18 @@ LATE = dict(
                       "Home: Himeji 19:26 (Special Rapid) → Osaka 20:28, ¥1,460; also 19:41, 20:16, 20:37. For Kyoto, 20:16 → 21:49, ¥2,210"),
                   row("train", "最後の新快速：姫路22:56発 → 大阪0:00着・京都0:30着。大阪までの最終は22:58発（0:46着）", "Last Special Rapid: Himeji 22:56 → Osaka 0:00, Kyoto 0:30. Last train to Osaka: 22:58 (arr. 0:46)")]),
         shosha=dict(
-            pre=T("このコースの時間割には入りません。9〜10時に出て書写山へ行くなら、須磨と明石をやめて、大阪9:30発の新快速で姫路へ直行します（10:33着・1,460円）。先に駅北口の10番のりばからバスで書写山へ行き、姫路駅に戻ってから15時ごろにお城へ（入城は16:00まで）。バスの時刻は乗換案内で確かめてください。",
-                  "This does not fit the course as timed. To see Mt. Shosha on a 9–10 o’clock start, skip Suma and Akashi and go straight to Himeji on the 9:30 Special Rapid from Osaka (10:33, ¥1,460). Take the bus from stop 10 at the north exit to Mt. Shosha first, then come back and enter the castle around 15:00 (last entry 16:00). Check bus times on a route planner."),
+            pre=T("このコースの時間割には入りません。9〜10時に出て書写山へ行くなら、須磨と明石をやめて、大阪9:30発の新快速で姫路へ直行します（10:33着・1,460円）。"
+                  "駅北口の10番のりば10:55発のバスで書写山ロープウェイへ（11:27着、平日は11:25着・320円）。11:30のロープウェイで上り、お寺を2時間ほど回ります。"
+                  "13:45ごろのロープウェイで下りて、14:11発のバスに乗り、「姫路城大手門前」で降ります（14:33着）。そのままお城へ入れば、入城の16:00に十分間に合います。"
+                  "お昼を食べる時間がとりにくいので、姫路駅に着いたら、降りたホームのえきそばで早めに済ませておくと楽です。",
+                  "This does not fit the course as timed. To see Mt. Shosha on a 9–10 o’clock start, skip Suma and Akashi and go straight to Himeji on the 9:30 Special Rapid from Osaka (10:33, ¥1,460). "
+                  "Take the 10:55 bus from stop 10 at the north exit to Shoshazan Ropeway (11:27, or 11:25 on weekdays; ¥320). Ride the 11:30 ropeway up and allow about two hours at the temple. "
+                  "Come down around 13:45, take the 14:11 bus and get off at “Himeji-jo Otemon-mae” (14:33). Walk straight into the castle, well before the 16:00 last entry. "
+                  "There is little time for lunch, so an early bowl of ekisoba on the platform when you arrive at Himeji makes it easier."),
+            rows=[row("train", "行き：姫路駅北口10番のりば 10:55発（神姫バス）→ 書写山ロープウェイ 11:27着（平日11:25着）・320円",
+                      "Getting there: Himeji Station north exit, stop 10, 10:55 (Shinki bus) → Shoshazan Ropeway 11:27 (weekdays 11:25), ¥320"),
+                  row("train", "帰り：書写山ロープウェイ14:11発（バス）→ 姫路城大手門前14:33着（土曜・木曜とも）。乗り遅れたら次は14:31発（14:53着）",
+                      "Back: Shoshazan Ropeway 14:11 (bus) → Himeji-jo Otemon-mae 14:33 (same on Saturdays and Thursdays). If you miss it, the next is 14:31 (arr. 14:53)")],
             time=T("寄り道（往復のバスを入れて約4時間）", "Detour (about 4 hours including the buses)")),
     ),
     hints=[
@@ -425,11 +441,11 @@ EARLY = dict(
         shosha=dict(
             pre=T("行くなら、明石・須磨・舞子の代わりに午後をまるごと使います。好古園を出たら、すぐ前のバス停「聴覚特別支援学校・好古園」から神姫バスで書写山ロープウェイへ（12:40発→13:07着・320円）。",
                   "If you go, it replaces Akashi, Suma and Maiko and takes the whole afternoon. After Kokoen, take the Shinki bus from the stop right outside (“Chokaku Tokubetsu Shien Gakko / Kokoen”) to Shoshazan Ropeway (12:40 → 13:07, ¥320)."),
-            post=T("帰りは書写山ロープウェイ16:32発のバスで姫路駅北口に17:02着。駅前で晩ごはんを食べて、明かりの入ったお城を大手前通りから眺めてから帰れます（ライトアップは日没〜24:00）。姫路17:11発の新快速なら大阪18:13着、そのあとも19:26発（20:28着）、20:16発（21:18着）などがあります（1,460円）。京都へは17:11発→18:44着（2,210円）。",
-                   "Coming back, the 16:32 bus reaches Himeji Station north exit at 17:02. Have dinner by the station and look up Otemae-dori at the lit castle before you go (lit from sunset to midnight). The 17:11 Special Rapid reaches Osaka at 18:13; later ones include 19:26 (20:28) and 20:16 (21:18); ¥1,460. For Kyoto, 17:11 → 18:44 (¥2,210)."),
+            post=T("帰りは書写山ロープウェイ16:32発のバスで姫路駅北口に17:02着（平日は17:05着）。駅前で晩ごはんを食べて、明かりの入ったお城を大手前通りから眺めてから帰れます（ライトアップは日没〜24:00）。姫路17:11発の新快速なら大阪18:13着、17:26発なら18:28着、そのあとも19:26発（20:28着）、20:16発（21:18着）などがあります（1,460円）。京都へは17:11発→18:44着（2,210円）。",
+                   "Coming back, the 16:32 bus reaches Himeji Station north exit at 17:02 (17:05 on weekdays). Have dinner by the station and look up Otemae-dori at the lit castle before you go (lit from sunset to midnight). The 17:11 Special Rapid reaches Osaka at 18:13 and the 17:26 at 18:28; later ones include 19:26 (20:28) and 20:16 (21:18); ¥1,460. For Kyoto, 17:11 → 18:44 (¥2,210)."),
             time=T("13:10〜16:30", "13:10–16:30"),
             rows=[row("train", "行き：聴覚特別支援学校・好古園 12:40発（神姫バス）→ 書写山ロープウェイ 13:07着・320円", "Getting there: Kokoen stop 12:40 (Shinki bus) → Shoshazan Ropeway 13:07, ¥320"),
-                  row("train", "帰り：書写山ロープウェイ16:32発（バス）→ 姫路駅北口17:02着、姫路17:11発（新快速）→ 大阪18:13着・1,460円", "Return: bus from Shoshazan Ropeway 16:32 → Himeji Station north exit 17:02; Himeji 17:11 (Special Rapid) → Osaka 18:13, ¥1,460")]),
+                  row("train", "帰り：書写山ロープウェイ16:32発（バス）→ 姫路駅北口17:02着（平日17:05着）、姫路17:11発か17:26発（新快速）→ 大阪18:13着・18:28着・1,460円", "Return: bus from Shoshazan Ropeway 16:32 → Himeji Station north exit 17:02 (weekdays 17:05); Himeji 17:11 or 17:26 (Special Rapid) → Osaka 18:13 / 18:28, ¥1,460")]),
         akashi=dict(
             pre=T("JR明石駅に12:50に着いて、南へ歩いて3分。13時ごろは昼網の魚が並んでいる時間です。先にたこ磯で遅めのお昼、そのあと市場を歩きます。",
                   "Arrive at JR Akashi at 12:50; the arcade is 3 minutes south. Around 13:00 the midday catch is on the stalls. Have a late lunch at Takoiso first, then walk the market."),

@@ -2,7 +2,8 @@
    Toshi 個人のマップ。京都7:32の特急で出発。コースは2つ（一覧の上のボタン）：late＝城崎温泉だけ（9:52着。最初に開く）、early＝竹田城跡に寄ってから城崎温泉（14:35着）。
    intro は共通の項目で、コースで変わる項目（h1・lead・who・day）は introFor[コース] が app.js で上書きされる（scripts/sync_kinosaki.py）。
    Photos are [spot id, photo index] from data/routes/kinosaki.json / kinosaki-early.json.
-   料金・時間は2026年11月22日に確認（外湯は城崎温泉観光協会、タトゥーは Visit Kinosaki、竹田城跡は朝来市の公式ホームページ、天空バスは全但バス、電車は乗換案内）。 */
+   料金・時間は2026年11月22日に確認（外湯は城崎温泉観光協会、タトゥーは Visit Kinosaki、竹田城跡は朝来市の公式ホームページ、天空バスは全但バス、電車は乗換案内）。
+   2026年11月24日に要確認を見直し（外湯の支払い＝Visit Kinosaki のよくある質問、温泉寺＝公式サイトと Visit Kinosaki、12月からの天空バスはまだ未発表）。 */
 window.KINOSAKI_I18N = {
   ja: {
     htmlLang: 'ja',
@@ -90,7 +91,7 @@ window.KINOSAKI_I18N = {
         { name: '外湯めぐり1日券「ゆめぱ」', price: '1,500円', text: '外湯の窓口で買えて、その日は入り放題。1か所だけなら800円なので、2か所入るなら1日券です。', url: 'https://kinosaki-spa.gr.jp/about/spa/7onsen/' },
         { name: '城崎温泉ロープウェイ', price: '往復1,200円', text: '山頂駅まで。11月1日〜1月31日は上りの最終16:30、下りの最終16:50。第2・第4木曜休み。', url: 'https://www.kinosaki-ropeway.jp/ropeway' },
         { name: '竹田城跡', price: '500円', text: '高校生以上。中学生以下は無料。1月4日〜2月末は冬の閉山で入れません。', url: 'https://www.city.asago.hyogo.jp/site/takeda/' },
-        { name: '天空バス（竹田駅↔竹田城跡）', price: '1日券500円', text: '片道300円なので、往復なら1日フリー乗車券。現金のみ。9〜11月は竹田駅10:05発、帰りは竹田城跡12:15発か12:50発。12月からの時刻は11月22日の時点で未発表です（要確認）。', url: 'https://www.zentanbus.co.jp/local_bus/tenkubus/' }
+        { name: '天空バス（竹田駅↔竹田城跡）', price: '1日券500円', text: '片道300円なので、往復なら1日フリー乗車券。現金のみ。9〜11月は竹田駅10:05発、帰りは竹田城跡12:15発か12:50発。12月からの時刻は11月24日の時点で未発表です（要確認）。', url: 'https://www.zentanbus.co.jp/local_bus/tenkubus/' }
       ],
       dealsNote: '大人の運賃・料金です。2026年11月22日に確認しました（電車は乗換案内、外湯は城崎温泉観光協会、ロープウェイは公式サイト、竹田城跡は朝来市の公式ホームページ、天空バスは全但バス）。',
       dealsMore: '公式サイトで見る',
@@ -330,7 +331,7 @@ window.KINOSAKI_I18N = {
         { name: '“Yumepa” onsen day pass', price: '¥1,500', text: 'Sold at the bathhouse counters; unlimited baths that day. A single bath is ¥800, so the pass pays from two baths.', url: 'https://visitkinosaki.com/about-kinosaki/the-7-mystic-onsen/' },
         { name: 'Kinosaki Ropeway', price: '¥1,200 return', text: 'To the top station. From 1 Nov to 31 Jan the last car up is 16:30 and the last down 16:50. Closed 2nd and 4th Thursdays.', url: 'https://www.kinosaki-ropeway.jp/ropeway' },
         { name: 'Takeda Castle Ruins', price: '¥500', text: 'High school and up; junior high and under free. Closed for winter 4 Jan – end of Feb.', url: 'https://www.city.asago.hyogo.jp/site/takeda/' },
-        { name: 'Tenku Bus (Takeda Station ↔ castle)', price: '¥500 day pass', text: '¥300 each way, so buy the 1-day pass for a return trip. Cash only. Sep–Nov: leaves Takeda Station at 10:05; back from the castle stop at 12:15 or 12:50. Times from December had not been published as of 22 Nov (please check).', url: 'https://www.zentanbus.co.jp/local_bus/tenkubus/' }
+        { name: 'Tenku Bus (Takeda Station ↔ castle)', price: '¥500 day pass', text: '¥300 each way, so buy the 1-day pass for a return trip. Cash only. Sep–Nov: leaves Takeda Station at 10:05; back from the castle stop at 12:15 or 12:50. Times from December had not been published as of 24 Nov (please check).', url: 'https://www.zentanbus.co.jp/local_bus/tenkubus/' }
       ],
       dealsNote: 'Adult prices, checked on Nov 22, 2026 (trains on a route planner, baths with the Kinosaki Onsen Tourism Association, the ropeway on its official site, the castle on Asago City’s official site, the Tenku Bus with Zentan Bus).',
       dealsMore: 'See official site',

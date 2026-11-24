@@ -830,8 +830,8 @@
      {
       "kind": "fee",
       "text": {
-       "ja": "大人550円、中学生400円（生徒手帳などを見せた場合）、小学生200円。京都府浴場組合の案内では、入浴料でその銭湯のお風呂に全部入れます（サウナに別の料金がかかるかは、梅湯の案内に書かれていないので要確認）。貸しタオル：フェイスタオル100円、バスタオルとのセット350円",
-       "en": "¥550 adults, ¥400 junior high (with a student ID), ¥200 elementary. The Kyoto bathhouse association says the bath fee covers all the baths in a bathhouse (Umeyu’s own page doesn’t say whether the sauna costs extra, so please check). Towel rental: face towel ¥100, set with bath towel ¥350"
+       "ja": "大人550円、中学生400円（生徒手帳などを見せた場合）、小学生200円。サウナも入浴料だけで入れます。貸しタオル：フェイスタオル100円、バスタオルとのセット350円",
+       "en": "¥550 adults, ¥400 junior high (with a student ID), ¥200 elementary. The sauna is included in the bath fee. Towel rental: face towel ¥100, set with bath towel ¥350"
       },
       "until": null,
       "from": null
@@ -857,8 +857,8 @@
      {
       "kind": "hours",
       "text": {
-       "ja": "入れ墨・タトゥーの扱いと最終受付は、公式サイトに記載がありません（要確認）",
-       "en": "Tattoo policy and last entry are not stated on the official site (unconfirmed)"
+       "ja": "タトゥーがあっても入れます。最終受付は公式サイトに記載がありません（要確認）",
+       "en": "Tattoos are fine. Last entry is not stated on the official site (unconfirmed)"
       },
       "until": null,
       "from": null
@@ -877,7 +877,7 @@
     "tip": null,
     "checked": "2026-11-23",
     "verified": false,
-    "source": "ゆとなみ社 公式サイトの梅湯のページ https://yutonamisha.com/sento/umeyu/（営業時間・定休日・料金・支払い「現金、paypay対応」・貸しタオル・アクセス。「お風呂の種類」にドライサウナ）。京都府浴場組合 https://1010.kyoto/spot/umeyu1/（梅湯は組合の銭湯。6:00〜26:00・木曜休み）と「銭湯の利用方法」https://1010.kyoto/how_to_use/（「この料金で、その銭湯内全てのお風呂に入れます」「中学生料金400円 身分証（生徒手帳等）提出の場合」「酔っている人は入れません」）。小学生以下の無料は京都府「子どもの入浴料金無料化事業」https://www.pref.kyoto.jp/seikatsu/nyuyokumuryo_kodomo.html（令和8年4月1日〜令和9年3月31日、組合加入の銭湯、大人18歳以上の同伴、QRコードで手続き）。以上 2026-11-23 確認。オーナーが撮った店頭の案内（2025-09-17）も「6:00〜26:00 定休日 木曜日」。タトゥーと最終受付は、ゆとなみ社のページ・「入浴のお約束」・組合のページのどれにも記載がなく未確認。位置は OpenStreetMap"
+    "source": "サウナが入浴料に含まれること・タトゥーがあっても入れることは、オーナーが実際に入った経験（2026-11-24 確認）。ゆとなみ社 公式サイトの梅湯のページ https://yutonamisha.com/sento/umeyu/（営業時間・定休日・料金・支払い「現金、paypay対応」・貸しタオル・アクセス。「お風呂の種類」にドライサウナ）。京都府浴場組合 https://1010.kyoto/spot/umeyu1/（梅湯は組合の銭湯。6:00〜26:00・木曜休み）と「銭湯の利用方法」https://1010.kyoto/how_to_use/（「この料金で、その銭湯内全てのお風呂に入れます」「中学生料金400円 身分証（生徒手帳等）提出の場合」「酔っている人は入れません」）。小学生以下の無料は京都府「子どもの入浴料金無料化事業」https://www.pref.kyoto.jp/seikatsu/nyuyokumuryo_kodomo.html（令和8年4月1日〜令和9年3月31日、組合加入の銭湯、大人18歳以上の同伴、QRコードで手続き）。以上 2026-11-23 確認。オーナーが撮った店頭の案内（2025-09-17）も「6:00〜26:00 定休日 木曜日」。タトゥーと最終受付は、ゆとなみ社のページ・「入浴のお約束」・組合のページのどれにも記載がなく未確認。位置は OpenStreetMap"
    },
    "caution": {
     "ja": "木曜休み。現金かPayPay",

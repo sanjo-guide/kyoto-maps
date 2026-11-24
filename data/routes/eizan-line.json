@@ -1294,21 +1294,22 @@
         ],
         "cash": false,
         "tip": null,
-        "checked": "2026-11-20"
+        "checked": "2026-11-24",
+        "source": "左源太 公式（https://ugenta.co.jp/sagenta）：予約不要・セルフサービス・席料お一人様700円・貴船川床最上流席1,500円（限定3席）、TEL 075-741-2244、公式インスタグラム @sagenta_kifune。営業期間・営業時間は記載なし。2026-11-24に確認"
       },
       "notices": [
         {
           "season": true,
           "from": null,
           "to": null,
-          "url": null,
+          "url": "https://www.instagram.com/sagenta_kifune/",
           "head": {
             "ja": "季節営業の可能性",
             "en": "Possibly seasonal"
           },
           "text": {
-            "ja": "夏の期間（川床の季節など）しか営業していない可能性があります。行く前に、営業日をGoogleマップなどで確認してください。",
-            "en": "This place may be open only in summer (for example, during the riverside-terrace season). Please check its opening days, for example on Google Maps, before you go."
+            "ja": "夏の期間（川床の季節など）しか営業していない可能性があります。お店の公式サイトに営業期間は載っていないので、行く前に公式インスタグラム（@sagenta_kifune）か電話（075-741-2244）で確かめてください。",
+            "en": "This place may be open only in summer (for example, during the riverside-terrace season). Its official website doesn’t give the opening season, so check its official Instagram (@sagenta_kifune) or call 075-741-2244 before you go."
           }
         }
       ],
@@ -1860,13 +1861,24 @@
         }
       ],
       "info": {
-        "rows": [],
+        "rows": [
+          {
+            "kind": "hours",
+            "text": {
+              "ja": "16:30〜25:00",
+              "en": "16:30–1:00"
+            },
+            "until": null,
+            "from": null
+          }
+        ],
         "cash": false,
         "tip": {
-          "ja": "営業時間・休みの日は要確認です。行く前にお店に確認してください。",
-          "en": "Opening hours and closing days are unconfirmed. Please check with the restaurant before you go."
+          "ja": "カード・電子マネー・QRコード決済が使えます。休みの日は運営会社の店舗案内に載っていません（要確認）。行く前にお店（050-5595-9648）に確かめてください。",
+          "en": "Cards, e-money and QR payments are accepted. Closing days aren’t listed on the operator’s shop page, so please check with the restaurant (050-5595-9648) before you go."
         },
-        "checked": "2026-11-20"
+        "checked": "2026-11-24",
+        "source": "運営会社 株式会社V.I.C. の店舗情報（https://vic-kyoto.com/shop）：隠れ酒場 ともしび3rd 京都市下京区西石垣通四条下る斎藤町123 RAKUAS木屋町 2F、営業時間 16:30〜25:00、電話 050-5595-9648、支払方法 カード可・電子マネー可・QRコード決済可。定休日の記載なし。2026-11-24に確認"
       },
       "notices": []
     },
