@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>11.30 紅葉、どこ行く？</title>
+<meta name="theme-color" content="#F2F0EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* 1列の冊子。5つのコースを同じ形のカードで並べて、比べやすくする */
+:root {
+  --paper: #F2F0EA; --card: #FFFFFF; --ink: #1B1F1D; --muted: #535D57; --rule: #DAD6CD;
+  --maple: #AE3A22; --maple-soft: #F6E4DF; --green: #2D5643; --green-soft: #E3ECE6; --gold: #8A6512; --gold-soft: #F5ECD6;
+  --f: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
+  --f-display: 'Marcellus', 'Optima', 'Palatino', serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f); font-size: 15.5px; line-height: 1.75; -webkit-text-size-adjust: 100%; }
+a { color: var(--green); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--maple); outline-offset: 2px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 56px; }
+h1, h2, h3 { margin: 0; line-height: 1.35; text-wrap: balance; }
+.num { font-variant-numeric: tabular-nums; }
+
+.hero { margin: 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px))); position: relative; }
+.hero img { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.brand { font-family: var(--f-display); letter-spacing: .18em; font-size: 13px; color: var(--muted); margin: 18px 0 2px; }
+.title h1 { font-size: clamp(28px, 7.4vw, 38px); font-weight: 700; letter-spacing: .02em; }
+.title p { margin: 8px 0 0; color: #33413A; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.meta span { border: 1.5px solid var(--ink); background: #fff; padding: 2px 10px; font-size: 13.5px; font-weight: 700; }
+
+section { margin-top: 34px; }
+.h2 { font-size: 16px; font-weight: 700; color: var(--green); letter-spacing: .06em; padding-bottom: 6px; border-bottom: 1px solid var(--ink); margin-bottom: 12px; }
+.lead { margin: 0; color: #33413A; }
+.small { font-size: 13px; color: var(--muted); line-height: 1.65; margin: 8px 0 0; }
+
+/* 比較表 */
+.cmp-wrap { overflow-x: auto; margin: 0 -4px; padding: 0 4px; }
+.cmp { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 13.5px; background: #fff; }
+.cmp th, .cmp td { border-bottom: 1px solid var(--rule); padding: 8px 8px; text-align: left; vertical-align: top; }
+.cmp thead th { background: var(--ink); color: var(--paper); font-weight: 700; font-size: 12.5px; letter-spacing: .04em; }
+.cmp td.c { white-space: nowrap; font-weight: 700; }
+.cmp .letter { display: inline-grid; place-items: center; width: 22px; height: 22px; background: var(--maple); color: #fff; font-family: var(--f-display); margin-right: 6px; font-size: 13px; }
+.stars { color: var(--maple); letter-spacing: 1px; white-space: nowrap; }
+
+/* コース */
+.course { background: var(--card); box-shadow: 0 1px 2px rgba(27,31,29,.06), 0 6px 18px rgba(27,31,29,.08); margin-top: 22px; }
+.c-head { padding: 16px 16px 4px; display: grid; gap: 6px; }
+.c-tag { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.c-letter { display: inline-grid; place-items: center; width: 34px; height: 34px; background: var(--maple); color: #fff; font-family: var(--f-display); font-size: 20px; }
+.c-kind { font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: .08em; }
+.c-head h3 { font-size: 21px; }
+.c-head p { margin: 0; color: #33413A; font-size: 14.5px; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; padding: 10px 16px 4px; margin: 0; font-size: 13.5px; }
+.facts div { display: grid; gap: 0; }
+.facts dt { color: var(--muted); font-size: 12px; }
+.facts dd { margin: 0; font-weight: 700; }
+
+.rail { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 12px 16px 8px; -webkit-overflow-scrolling: touch; }
+.rail figure { flex: 0 0 78%; max-width: 420px; margin: 0; scroll-snap-align: start; }
+.rail img { width: 100%; max-width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; background: #ddd; }
+.rail figcaption { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+.spots { list-style: none; margin: 4px 16px 0; padding: 0; display: grid; gap: 6px; }
+.spots li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 14px; }
+.spots b { font-size: 14.5px; }
+.chip { font-size: 12px; font-weight: 700; padding: 0 7px; white-space: nowrap; }
+.chip.peak { background: var(--maple-soft); color: var(--maple); }
+.chip.soon { background: var(--gold-soft); color: var(--gold); }
+.chip.edge { background: #ECECEA; color: #555; }
+.spots small { color: var(--muted); font-size: 12.5px; }
+
+details.tl { margin: 12px 16px 0; border-top: 1px solid var(--rule); }
+details.tl summary { cursor: pointer; list-style: none; padding: 12px 0; font-weight: 700; display: flex; justify-content: space-between; gap: 10px; }
+details.tl summary::-webkit-details-marker { display: none; }
+details.tl summary::after { content: "＋"; color: var(--green); }
+details.tl[open] summary::after { content: "－"; }
+.steps { list-style: none; margin: 0 0 12px; padding: 0; position: relative; }
+.steps::before { content: ""; position: absolute; left: 51px; top: 8px; bottom: 8px; width: 2px; background: var(--rule); }
+.steps li { display: grid; grid-template-columns: 44px 1fr; gap: 0 20px; padding: 5px 0; position: relative; font-size: 14px; }
+.steps li::after { content: ""; position: absolute; left: 47px; top: 12px; width: 10px; height: 10px; border-radius: 50%; background: #fff; border: 2px solid var(--green); }
+.steps li.stay::after { background: var(--maple); border-color: var(--maple); }
+.steps li.night::after { background: var(--gold); border-color: var(--gold); }
+.steps time { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.steps .t { min-width: 0; }
+.steps .sub { display: block; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.ride { display: inline-block; font-size: 11.5px; font-weight: 700; background: var(--green-soft); color: var(--green); padding: 0 6px; margin-right: 4px; }
+.notes { margin: 0 16px; padding: 10px 0 16px; display: grid; gap: 6px; }
+.note { font-size: 13.5px; padding: 8px 12px; background: var(--maple-soft); line-height: 1.6; }
+.note.ok { background: var(--green-soft); }
+.links { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13.5px; padding: 0 16px 16px; }
+
+.more { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-size: 14px; }
+.more li { background: #fff; padding: 8px 12px; }
+.more small { color: var(--muted); }
+.src { padding-left: 1.2em; margin: 0; font-size: 13px; color: var(--muted); display: grid; gap: 5px; }
+.foot { margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
+.ask { background: var(--ink); color: var(--paper); padding: 16px; margin-top: 30px; }
+.ask b { display: block; font-size: 16px; margin-bottom: 4px; }
+@media (min-width: 700px) {
+  .rail figure { flex-basis: 46%; }
+  .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero"><img src="img/a-tofukuji-1.jpg" alt="東福寺の通天橋から見た、谷を埋める紅葉"></div>
+
+  <header class="title">
+    <p class="brand">MOMIJI · 11.30</p>
+    <h1>11月30日、紅葉どこ行く？</h1>
+    <p>今年最後の紅葉の日。30日に見頃のところから、電車とバスで行ける1日コースを5つ選びました。行きたいコースを教えてください。</p>
+    <div class="meta"><span>11月30日（月）</span><span>阪急 烏丸 9:00ごろ出発</span><span>でんでん・タロちゃん・トシ</span></div>
+  </header>
+
+  <section aria-labelledby="h-how">
+    <h2 class="h2" id="h-how">どうやって選んだか</h2>
+    <p class="lead">ウェザーニュースに載っている京都府・滋賀県の紅葉名所121か所の「いまの色づき」と「見頃・落葉はじめの予想日」（11月24日時点）を全部見て、30日にまだ落葉が始まっていない所、または30日までに見頃に入る所だけを残しました。30日は月曜日なので、平日ダイヤで動けて、月曜に休みでない所にしています。</p>
+    <p class="small">天気予報（24日時点）：30日の京都は晴れ、最高16℃・最低4〜5℃。27日（金）・28日（土）は雨の予報なので、落葉が少し早まるかもしれません。前日にもう一度確かめます。</p>
+  </section>
+
+  <section aria-labelledby="h-cmp">
+    <h2 class="h2" id="h-cmp">5つのコースをくらべる</h2>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th>コース</th><th>紅葉の確実さ</th><th>夜の紅葉</th><th>烏丸に帰る</th><th>交通費</th><th>拝観料のめやす</th></tr></thead>
+        <tbody>
+          <tr><td class="c"><span class="letter">A</span>東山</td><td><span class="stars">★★★</span></td><td>永観堂（または清水寺の最終日）</td><td class="num">19:19</td><td class="num">860円</td><td class="num">約4,300円</td></tr>
+          <tr><td class="c"><span class="letter">B</span>一乗寺・鷹峯・北野</td><td><span class="stars">★★☆</span></td><td>北野天満宮もみじ苑</td><td class="num">18:36</td><td class="num">2,040円</td><td class="num">約4,600円</td></tr>
+          <tr><td class="c"><span class="letter">C</span>嵯峨野</td><td><span class="stars">★★☆</span></td><td>なし</td><td class="num">16:24</td><td class="num">470円</td><td>約1,800円＋要確認</td></tr>
+          <tr><td class="c"><span class="letter">D</span>宇治</td><td><span class="stars">★★☆</span></td><td>なし</td><td class="num">16:15</td><td class="num">1,240円</td><td class="num">約2,200円</td></tr>
+          <tr><td class="c"><span class="letter">E</span>滋賀（三井寺・彦根・教林坊）</td><td><span class="stars">★★★</span></td><td>教林坊</td><td class="num">20:22</td><td class="num">3,040円＋タクシー</td><td class="num">約2,800円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">交通費・拝観料は大人1人分（交通費はICカード）。時刻はYahoo!路線情報で「11月30日（月）」を指定して調べました。</p>
+  </section>
+
+  <!-- A -->
+  <article class="course" id="a" aria-labelledby="h-a">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter">A</span><span class="c-kind">いちばん確実・王道</span></div>
+      <h3 id="h-a">東山：東福寺 → 清水寺 → 高台寺 → 南禅寺 → 夜の永観堂</h3>
+      <p>京都の紅葉の代表をまとめて。どこも見頃のまっ最中か、見頃に入ったばかり。夜は永観堂のライトアップで締め。歩く距離は長め。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:06</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 19:19着</dd></div>
+      <div><dt>交通費</dt><dd class="num">860円</dd></div>
+      <div><dt>拝観料</dt><dd class="num">約4,300円</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/a-tofukuji-4.jpg" alt="紅葉の向こうに見える東福寺の通天橋" loading="lazy"><figcaption>東福寺・通天橋</figcaption></figure>
+      <figure><img src="img/a-kiyomizu-5.jpg" alt="紅葉に囲まれた清水寺の本堂" loading="lazy"><figcaption>清水寺</figcaption></figure>
+      <figure><img src="img/a-kodaiji-1.jpg" alt="高台寺の書院から見る紅葉の庭" loading="lazy"><figcaption>高台寺</figcaption></figure>
+      <figure><img src="img/a-nanzenji-1.jpg" alt="南禅寺の三門と紅葉" loading="lazy"><figcaption>南禅寺・三門</figcaption></figure>
+      <figure><img src="img/a-eikando-3.jpg" alt="ライトアップされた永観堂の紅葉" loading="lazy"><figcaption>永観堂の夜</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>東福寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/6ごろ</small></li>
+      <li><b>清水寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/5ごろ</small></li>
+      <li><b>高台寺・圓徳院</b><span class="chip soon">25日ごろ見頃入り</span><small>24日は5割</small></li>
+      <li><b>南禅寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/4ごろ</small></li>
+      <li><b>永観堂</b><span class="chip peak">見頃</span><small>落葉はじめ 12/5ごろ</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:06</time><span class="t">烏丸 → 地下鉄で京都駅、JR奈良線で東福寺 <span class="sub">9:25着・370円</span></span></li>
+        <li class="stay"><time>9:35</time><span class="t"><b>東福寺</b> 通天橋・開山堂 <span class="sub">秋は8:30から。通天橋1,000円（本坊庭園は別に600円）。とても混むので朝いちばんに</span></span></li>
+        <li><time>11:11</time><span class="t"><span class="ride">市バス207</span>東福寺 → 清水道 <span class="sub">11:21着・230円。坂を上って約15分</span></span></li>
+        <li class="stay"><time>11:40</time><span class="t"><b>清水寺</b> <span class="sub">拝観料500円（夜間拝観と同じ額の見込み）</span></span></li>
+        <li><time>12:40</time><span class="t">産寧坂・二年坂でお昼</span></li>
+        <li class="stay"><time>13:30</time><span class="t"><b>高台寺・圓徳院</b> <span class="sub">共通券1,200円。圓徳院は現金のみ</span></span></li>
+        <li><time>15:00</time><span class="t">円山公園・知恩院の前を歩いて南禅寺へ（約35分）</span></li>
+        <li class="stay"><time>15:40</time><span class="t"><b>南禅寺</b> 三門・水路閣 <span class="sub">境内は無料、三門600円（受付16:40まで）</span></span></li>
+        <li class="night"><time>17:30</time><span class="t"><b>永観堂 ライトアップ</b> <span class="sub">受付17:30〜20:30・1,000円。南禅寺から歩いて約5分</span></span></li>
+        <li><time>19:00</time><span class="t">蹴上 → 地下鉄東西線・烏丸線 → 四条 <span class="sub">19:19 烏丸着・260円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note ok">夜を清水寺にする案も：30日（月）は清水寺の秋の夜間特別拝観の最終日（17:30ごろ〜、受付21:00まで）。その場合は南禅寺・永観堂をやめて東山に残り、帰りは清水道 20:32発の市バス → 20:51 烏丸。</div>
+      <div class="note">東福寺の通天橋の上は、混むと立ち止まっての撮影を遠慮するよう案内されることがあります。</div>
+    </div>
+    <div class="links"><a href="https://weathernews.jp/koyo/spot/26111/" target="_blank" rel="noopener">東福寺の紅葉情報</a><a href="https://weathernews.jp/koyo/spot/26120/" target="_blank" rel="noopener">永観堂の紅葉情報</a></div>
+  </article>
+
+  <!-- B -->
+  <article class="course" id="b" aria-labelledby="h-b">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter">B</span><span class="c-kind">庭と額縁の紅葉</span></div>
+      <h3 id="h-b">一乗寺・鷹峯・北野：圓光寺 → 詩仙堂 → 源光庵 → 北野天満宮の夜</h3>
+      <p>座って眺める庭の紅葉が中心。人の多さは東山より控えめ。夕方は北野天満宮のもみじ苑のライトアップへ。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:14</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 18:36着</dd></div>
+      <div><dt>交通費</dt><dd class="num">2,040円</dd></div>
+      <div><dt>拝観料</dt><dd class="num">約4,600円</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/b-enkoji-1.jpg" alt="圓光寺の書院から見る庭" loading="lazy"><figcaption>圓光寺（写真は紅葉の前）</figcaption></figure>
+      <figure><img src="img/b-shisendo-1.jpg" alt="詩仙堂の白砂とさつきの庭" loading="lazy"><figcaption>詩仙堂（写真は紅葉の前）</figcaption></figure>
+      <figure><img src="img/b-genkoan-2.jpg" alt="源光庵の本堂と庭" loading="lazy"><figcaption>源光庵（写真は紅葉の前）</figcaption></figure>
+      <figure><img src="img/b-joshoji-2.jpg" alt="常照寺の池と色づき始めた木々" loading="lazy"><figcaption>常照寺</figcaption></figure>
+      <figure><img src="img/b-kitano-7.jpg" alt="ライトアップされた北野天満宮もみじ苑" loading="lazy"><figcaption>北野天満宮・もみじ苑の夜</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>圓光寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/5ごろ</small></li>
+      <li><b>詩仙堂</b><span class="chip peak">見頃</span><small>落葉はじめ 12/4ごろ</small></li>
+      <li><b>源光庵</b><span class="chip edge">見頃の終わりかけ</span><small>落葉はじめ 12/2ごろ</small></li>
+      <li><b>常照寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/11ごろ</small></li>
+      <li><b>北野天満宮 もみじ苑</b><span class="chip soon">25日ごろ見頃入り</span><small>24日は6割</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:14</time><span class="t">阪急で京都河原町 → 京阪 祇園四条 → 出町柳 → 叡電 <span class="sub">9:50 一乗寺着・630円</span></span></li>
+        <li class="stay"><time>10:05</time><span class="t"><b>圓光寺</b> <span class="sub">駅から歩いて約15分。紅葉特別拝観は日時指定の予約制（1,500円）。早めに3人分を予約</span></span></li>
+        <li class="stay"><time>11:05</time><span class="t"><b>詩仙堂</b> <span class="sub">すぐ近く。700円</span></span></li>
+        <li><time>12:00</time><span class="t">一乗寺でお昼（ラーメン屋さんが多い通り）</span></li>
+        <li><time>12:59</time><span class="t"><span class="ride">市バス北8</span>一乗寺下り松町 → 佛教大学前、<span class="ride">市バス6</span>→ 鷹峯源光庵前 <span class="sub">13:38着・460円</span></span></li>
+        <li class="stay"><time>13:40</time><span class="t"><b>源光庵</b>（「悟りの窓」「迷いの窓」）・<b>常照寺</b> <span class="sub">500円・400円</span></span></li>
+        <li><time>15:08</time><span class="t"><span class="ride">市バス6・50</span>→ 北野天満宮前 <span class="sub">15:33着・460円</span></span></li>
+        <li class="night"><time>16:40</time><span class="t"><b>もみじ苑</b> ライトアップ <span class="sub">日没（16:45ごろ）〜20:00、受付19:40まで。1,500円。それまで境内と上七軒を散歩</span></span></li>
+        <li><time>18:00</time><span class="t"><span class="ride">市バス203</span>→ 烏丸今出川、地下鉄で四条 <span class="sub">18:36 烏丸着・490円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note">圓光寺は予約しないと入れないことがあります（空きがあれば当日も可）。このコースに決まったら、すぐ予約します。</div>
+      <div class="note">源光庵は30日ごろが見頃の終わりかけ。散っていたら、鷹峯をやめて北野天満宮に早めに行く手もあります。</div>
+    </div>
+    <div class="links"><a href="https://www.enkouji.jp/" target="_blank" rel="noopener">圓光寺（予約）</a><a href="https://weathernews.jp/koyo/spot/26132/" target="_blank" rel="noopener">北野天満宮の紅葉情報</a></div>
+  </article>
+
+  <!-- C -->
+  <article class="course" id="c" aria-labelledby="h-c">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter">C</span><span class="c-kind">のんびり・近い</span></div>
+      <h3 id="h-c">嵯峨野：常寂光寺 → 二尊院 → 祇王寺 → 大覚寺</h3>
+      <p>山すその小さなお寺をゆっくり歩いて回る。嵐山の全体は30日ごろから散り始める予想ですが、ここで回るお寺はまだ見頃。夕方には帰れます。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:10</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 16:24着</dd></div>
+      <div><dt>交通費</dt><dd class="num">470円</dd></div>
+      <div><dt>拝観料</dt><dd>約1,800円＋要確認</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/c-jojakko-3.jpg" alt="常寂光寺の参道と仁王門" loading="lazy"><figcaption>常寂光寺（写真は紅葉の前）</figcaption></figure>
+      <figure><img src="img/c-nisonin-3.jpg" alt="二尊院の紅葉の馬場" loading="lazy"><figcaption>二尊院・紅葉の馬場</figcaption></figure>
+      <figure><img src="img/c-giouji-2.jpg" alt="祇王寺の苔の庭" loading="lazy"><figcaption>祇王寺の苔の庭</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>常寂光寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/10ごろ</small></li>
+      <li><b>二尊院</b><span class="chip peak">見頃</span><small>落葉はじめ 12/7ごろ</small></li>
+      <li><b>祇王寺</b><span class="chip soon">25日ごろ見頃入り</span><small>20日は6割</small></li>
+      <li><b>大覚寺</b><span class="chip soon">25日ごろ見頃入り</span><small>20日は4割</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:10</time><span class="t">阪急で桂、嵐山線に乗りかえ <span class="sub">9:33 嵐山着・240円</span></span></li>
+        <li><time>9:35</time><span class="t">渡月橋をわたり、竹林の小径を通って歩く（約30分）</span></li>
+        <li class="stay"><time>10:05</time><span class="t"><b>常寂光寺</b> <span class="sub">600円。30日は「本堂特別拝観」の最終日（+600円、予約不要）</span></span></li>
+        <li class="stay"><time>10:55</time><span class="t"><b>二尊院</b> <span class="sub">600円</span></span></li>
+        <li class="stay"><time>11:45</time><span class="t"><b>祇王寺</b> <span class="sub">苔の庭と紅葉。拝観料は要確認</span></span></li>
+        <li><time>12:30</time><span class="t">嵯峨野でお昼</span></li>
+        <li class="stay"><time>13:40</time><span class="t"><b>大覚寺</b> 大沢池 <span class="sub">歩いて約20分。拝観料は要確認</span></span></li>
+        <li><time>15:34</time><span class="t"><span class="ride">市バス91</span>大覚寺 → 四条烏丸 <span class="sub">16:19着・230円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note ok">夜も見たければ、宝厳院のライトアップ（12/6まで、17:30〜）を足せます（宝厳院は見頃、落葉はじめ12/11ごろ）。</div>
+    </div>
+    <div class="links"><a href="https://weathernews.jp/koyo/spot/26134/" target="_blank" rel="noopener">常寂光寺の紅葉情報</a><a href="https://weathernews.jp/koyo/spot/26161/" target="_blank" rel="noopener">大覚寺の紅葉情報</a></div>
+  </article>
+
+  <!-- D -->
+  <article class="course" id="d" aria-labelledby="h-d">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter">D</span><span class="c-kind">お茶の町をゆっくり</span></div>
+      <h3 id="h-d">宇治：平等院 → 宇治川 → 興聖寺の琴坂 → 三室戸寺</h3>
+      <p>川ぞいを歩いて、お茶とお寺の町を一日で。興聖寺の琴坂は30日ごろちょうど見頃に入る予想。夕方には帰れます。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:19</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 16:15着</dd></div>
+      <div><dt>交通費</dt><dd class="num">1,240円</dd></div>
+      <div><dt>拝観料</dt><dd class="num">約2,200円</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/d-byodoin-1.jpg" alt="池に映る平等院鳳凰堂" loading="lazy"><figcaption>平等院 鳳凰堂</figcaption></figure>
+      <figure><img src="img/d-koshoji-w1.jpg" alt="緑におおわれた興聖寺の琴坂と山門" loading="lazy"><figcaption>興聖寺の琴坂（夏）。写真：coniferconifer／<a href="https://commons.wikimedia.org/wiki/File:Gate,_K%C5%8Dsh%C5%8D-ji_temple,_Uji,_Kyoto_-_Jul_5,_2020.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY 2.0）</figcaption></figure>
+      <figure><img src="img/d-mimuroto-w3.jpg" alt="三室戸寺の本堂" loading="lazy"><figcaption>三室戸寺。写真：Hyppolyte de Saint-Rambert／<a href="https://commons.wikimedia.org/wiki/File:Mimuroto-ji_(UJI,_Kyoto)_hdsr_Temple_S5_54a.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY 4.0）</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>平等院</b><span class="chip peak">見頃</span><small>落葉はじめ 12/6ごろ</small></li>
+      <li><b>興聖寺（琴坂）</b><span class="chip soon">30日ごろ見頃入り</span><small>24日は3割</small></li>
+      <li><b>三室戸寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/12ごろ（情報は19日時点）</small></li>
+      <li><b>宇治川ライン</b><span class="chip peak">見頃</span><small>落葉はじめ 12/8ごろ</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:19</time><span class="t">阪急で京都河原町 → 京阪 祇園四条 → 中書島で宇治線 <span class="sub">9:58 宇治着・530円</span></span></li>
+        <li class="stay"><time>10:10</time><span class="t"><b>平等院</b> <span class="sub">700円。鳳凰堂の中は別に300円（現金・先着順、9:10から配布）</span></span></li>
+        <li><time>11:20</time><span class="t">宇治川の中の島を歩いて対岸へ</span></li>
+        <li class="stay"><time>11:40</time><span class="t"><b>興聖寺</b>・琴坂 <span class="sub">琴坂を歩くだけなら無料、拝観500円（受付10:00〜16:00）</span></span></li>
+        <li><time>12:30</time><span class="t">宇治でお昼（茶そば・抹茶スイーツ）</span></li>
+        <li><time>13:41</time><span class="t">京阪 宇治 → 三室戸（1駅）、歩いて約15分 <span class="sub">180円</span></span></li>
+        <li class="stay"><time>14:00</time><span class="t"><b>三室戸寺</b> <span class="sub">1,000円。受付は15:10ごろまでなので早めに</span></span></li>
+        <li><time>15:30</time><span class="t">三室戸 → 中書島 → 祇園四条 → 阪急 <span class="sub">16:15 烏丸着・530円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note">宇治市植物公園は月曜休園なので、このコースには入れていません。</div>
+    </div>
+    <div class="links"><a href="https://weathernews.jp/koyo/spot/26136/" target="_blank" rel="noopener">平等院の紅葉情報</a><a href="https://weathernews.jp/koyo/spot/26155/" target="_blank" rel="noopener">興聖寺の紅葉情報</a></div>
+  </article>
+
+  <!-- E -->
+  <article class="course" id="e" aria-labelledby="h-e">
+    <div class="c-head">
+      <div class="c-tag"><span class="c-letter">E</span><span class="c-kind">遠出・夜の茅葺き書院</span></div>
+      <h3 id="h-e">滋賀：三井寺 → 彦根城・玄宮園 → 夜の教林坊</h3>
+      <p>琵琶湖ぞいを電車で北へ。最後は安土の教林坊で、竹林と庭のライトアップ。3か所とも見頃。移動は長め、教林坊へはタクシー。</p>
+    </div>
+    <dl class="facts">
+      <div><dt>出発</dt><dd class="num">烏丸 9:06</dd></div>
+      <div><dt>帰り</dt><dd class="num">烏丸 20:22着</dd></div>
+      <div><dt>交通費</dt><dd>3,040円＋タクシー</dd></div>
+      <div><dt>拝観料</dt><dd class="num">約2,800円</dd></div>
+    </dl>
+    <div class="rail">
+      <figure><img src="img/e-kannondo-1.jpg" alt="三井寺の観音堂から見る大津の街" loading="lazy"><figcaption>三井寺・観音堂からの眺め（写真は春の夜）</figcaption></figure>
+      <figure><img src="img/e-hikone-16-1.jpg" alt="青空の下の彦根城天守" loading="lazy"><figcaption>彦根城</figcaption></figure>
+      <figure><img src="img/e-genkyuen-17-2.jpg" alt="玄宮園の池と松" loading="lazy"><figcaption>玄宮園</figcaption></figure>
+      <figure><img src="img/e-kyorinbo-1.jpg" alt="教林坊の丸窓から見るライトアップの庭" loading="lazy"><figcaption>教林坊の丸窓（夜）</figcaption></figure>
+      <figure><img src="img/e-kyorinbo-4.jpg" alt="ライトアップされた教林坊の木々" loading="lazy"><figcaption>教林坊のライトアップ</figcaption></figure>
+    </div>
+    <ul class="spots">
+      <li><b>三井寺</b><span class="chip peak">見頃</span><small>落葉はじめ 12/6ごろ</small></li>
+      <li><b>玄宮園</b><span class="chip soon">25日ごろ見頃入り</span><small>20日は5割</small></li>
+      <li><b>教林坊</b><span class="chip soon">25日ごろ見頃入り</span><small>23日は6割</small></li>
+    </ul>
+    <details class="tl">
+      <summary>1日の流れ</summary>
+      <ol class="steps">
+        <li><time>9:06</time><span class="t">地下鉄で京都、JRで大津京、京阪石山坂本線 <span class="sub">9:51 三井寺着・660円</span></span></li>
+        <li class="stay"><time>10:00</time><span class="t"><b>三井寺</b> <span class="sub">800円（9:00〜、受付16:00まで）。観音堂から大津の街と琵琶湖</span></span></li>
+        <li><time>12:32</time><span class="t">京阪で京阪膳所、JR琵琶湖線 <span class="sub">13:38 彦根着・1,060円。お昼は彦根で</span></span></li>
+        <li class="stay"><time>14:40</time><span class="t"><b>彦根城・玄宮園</b> <span class="sub">駅から歩いて約15分。1,000円（玄宮園も入れる）、入場16:30まで</span></span></li>
+        <li><time>17:04</time><span class="t">JR 彦根 → 安土 <span class="sub">17:20着・330円。北口からタクシー約10分（片道2,500円前後）</span></span></li>
+        <li class="night"><time>17:35</time><span class="t"><b>教林坊 ライトアップ</b> <span class="sub">17:30〜19:30（受付19:00まで）、1,000円</span></span></li>
+        <li><time>19:20</time><span class="t">タクシーで安土駅、JR琵琶湖線で京都、地下鉄 <span class="sub">20:22 烏丸着・990円</span></span></li>
+      </ol>
+    </details>
+    <div class="notes">
+      <div class="note">安土駅のタクシーは台数が少ないかもしれません。帰りの迎えも含めて予約しておくと安心です（往復で1台5,000円前後、3人で割って1人約1,700円）。</div>
+      <div class="note">湖東三山（西明寺・金剛輪寺・百済寺）も見頃ですが、紅葉シャトルバスが29日で終わるので、このコースには入れていません。</div>
+    </div>
+    <div class="links"><a href="https://weathernews.jp/koyo/spot/26023/" target="_blank" rel="noopener">三井寺の紅葉情報</a><a href="https://weathernews.jp/koyo/spot/26021/" target="_blank" rel="noopener">教林坊の紅葉情報</a></div>
+  </article>
+
+  <div class="ask"><b>どれにする？</b>行きたいコース（A〜E）を教えてね。決まったら、箕面のときみたいに地図つきのしおりにします。組み合わせを変えるのもOK。</div>
+
+  <section aria-labelledby="h-more">
+    <h2 class="h2" id="h-more">ほかに30日に見頃の所（電車・バスで行ける）</h2>
+    <ul class="more">
+      <li><b>醍醐寺・勧修寺・隨心院</b>（山科） <small>見頃。落葉はじめ 12/9・12/15ごろ、隨心院は26日ごろ見頃入り。地下鉄東西線で</small></li>
+      <li><b>東寺</b> <small>見頃、落葉はじめ12/13ごろ。夜のライトアップは12/13まで</small></li>
+      <li><b>京都府立植物園</b> <small>見頃、落葉はじめ12/9ごろ。地下鉄 北山駅すぐ</small></li>
+      <li><b>毘沙門堂</b>（山科） <small>見頃、落葉はじめ12/6ごろ。山科駅から歩いて約20分</small></li>
+      <li><b>二条城</b> <small>見頃、落葉はじめ12/6ごろ。夜のライトアップは12/5まで</small></li>
+      <li><b>石清水八幡宮・一休寺</b> <small>26日・25日ごろ見頃入り</small></li>
+    </ul>
+    <p class="small">30日より前に散り始める予想の所（嵐山の全体・浄瑠璃寺・泉涌寺・日吉大社・将軍塚）と、すでに落葉中の所（神護寺・宝泉院・比叡山など）は外しました。</p>
+  </section>
+
+  <section aria-labelledby="h-src">
+    <h2 class="h2" id="h-src">確かめたこと</h2>
+    <ul class="src">
+      <li>紅葉の状況と予想：<a href="https://weathernews.jp/koyo/area/kyoto/" target="_blank" rel="noopener">ウェザーニュース（京都府）</a>・<a href="https://weathernews.jp/koyo/area/shiga/" target="_blank" rel="noopener">（滋賀県）</a>、11月24日に確認</li>
+      <li>電車・バスの時刻と運賃：<a href="https://transit.yahoo.co.jp/" target="_blank" rel="noopener">Yahoo!路線情報</a>で「2026年11月30日（月）」を指定して検索</li>
+      <li>拝観時間・拝観料：トシのマップで各寺社の公式サイトから確認した内容（祇王寺・大覚寺の拝観料は未確認）</li>
+      <li>圓光寺の予約制：<a href="https://ja.kyoto.travel/event/single.php?event_id=7191" target="_blank" rel="noopener">京都観光Navi</a></li>
+      <li>湖東三山シャトルバス（11/19〜29）：<a href="https://www.ohmitetudo.co.jp/bus/icoico/event/kotosanzanshuttlebus2026/" target="_blank" rel="noopener">近江バス・湖国バス</a></li>
+      <li>天気：<a href="https://tenki.jp/forecast/6/29/6110/26100/10days.html" target="_blank" rel="noopener">tenki.jp</a>（11月24日時点の予報）</li>
+    </ul>
+  </section>
+
+  <p class="foot">写真はトシ撮影（宇治の2枚を除く）。予想は変わることがあるので、29日にもう一度確かめます。</p>
+</div>
+</body>
+</html>
