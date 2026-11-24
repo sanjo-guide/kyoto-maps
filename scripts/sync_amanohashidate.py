@@ -35,7 +35,7 @@ assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.AMANOHASHIDATE_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-amanohashidate-")
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 14;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
-s = s.replace(m.group(0), "fetch('../data/routes/amanohashidate.json?v=6')")
+s = s.replace(m.group(0), "fetch('../data/routes/amanohashidate.json?v=7')")
 
 
 # 番号だけのリンク
@@ -154,7 +154,7 @@ a = '<span class="ph-area" id="ph-area"></span>'
 assert h.count(a) == 1
 h = h.replace(a, a + '\n        <span class="ph-credit" id="ph-credit" hidden></span>')
 # CSS / JS の ?v= は、テンプレートの数字に 101 を足す（app.js は 2026-11-24 のデータ更新で 102）（このマップだけ直したら、この数字を1つ上げる）。元は 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
-h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + (102 if m.group(1) == "js/app.js" else 101)}', h)
+h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + (103 if m.group(1) == "js/app.js" else 101)}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """
 /* 天橋立・伊根: credit for photos taken from the web (Wikimedia Commons): author and license on the photo itself */
