@@ -53,12 +53,12 @@
    "first": 8,
    "last": 10,
    "title": {
-    "ja": "たこ焼きと地ビール、そして帰り",
-    "en": "Takoyaki, craft beer, then home"
+    "ja": "海鮮の晩ごはんと地ビール、そして帰り",
+    "en": "Seafood dinner, craft beer, then home"
    },
    "area": {
-    "ja": "牧落",
-    "en": "Makiochi"
+    "ja": "箕面・牧落",
+    "en": "Minoh & Makiochi"
    }
   }
  ],
@@ -643,8 +643,8 @@
     "08-10.jpg"
    ],
    "text": {
-    "ja": "阪急 箕面駅（みのおえき）\n\n滝道は、緑の中を川にそって続く、気持ちのいい散歩道です。このルートでは滝から下ってきて、ここで滝道は終わりです。\n\nこのあとのたこ焼き屋さん（次の8番）までは、歩いても行けます。そのまま電車で大阪梅田へ帰るなら、石橋阪大前駅で乗り換えて約30分です。\n\nきょうは18:05ごろ着。牧落へは箕面線で1駅2分（170円）。箕面発は18:08、18:18、18:28…と10分ごとです。\n\nおすすめ訪問時間：18:05",
-    "en": "Hankyu Minoh Station\n\nThe Takimichi is a lovely walk through the green along the river. On this route you come down from the falls, and the path ends here.\n\nYou can walk on to the takoyaki shop (stop 8). If you’d rather head straight back to Osaka-umeda, change trains at Ishibashi Handai-mae; it takes about 30 minutes.\n\nToday you reach the station at about 18:05. Makiochi is one stop on the Minoo Line (2 minutes, ¥170); trains leave at 18:08, 18:18, 18:28 and every 10 minutes.\n\nRecommended visit time: 18:05"
+    "ja": "阪急 箕面駅（みのおえき）\n\n滝道は、緑の中を川にそって続く、気持ちのいい散歩道です。このルートでは滝から下ってきて、ここで滝道は終わりです。\n\nこのあとの晩ごはん、海鮮処 ぎょぎょぎょ（次の8番）までは、駅から南へ歩いて約5分です。\n\nきょうは18:05ごろ着。そのまま歩いて、ぎょぎょぎょへ。\n\nおすすめ訪問時間：18:05",
+    "en": "Hankyu Minoh Station\n\nThe Takimichi is a lovely walk through the green along the river. On this route you come down from the falls, and the path ends here.\n\nDinner tonight is at Gyogyogyo (stop 8), about 5 minutes south of the station on foot.\n\nToday you reach the station at about 18:05; walk straight on to Gyogyogyo for dinner.\n\nRecommended visit time: 18:05"
    },
    "gmaps": [
     {
@@ -690,55 +690,101 @@
   },
   {
    "no": 8,
-   "id": "ahoya",
+   "id": "gyogyo",
    "name": {
-    "ja": "あほや 牧落店",
-    "en": "Ahoya Makiochi"
+    "ja": "海鮮処 鱻（ぎょぎょぎょ）",
+    "en": "Gyogyogyo (seafood)"
    },
    "kind": {
-    "ja": "たこ焼き",
-    "en": "Takoyaki"
+    "ja": "晩ごはん・海鮮",
+    "en": "Dinner · seafood"
    },
    "blurb": {
-    "ja": "Toshiがいちばん好きなたこ焼き屋さん！ 外はこんがり、中はとろとろ。店の前のベンチで焼きたてを。",
-    "en": "My favorite takoyaki shop! Crisp outside, soft and gooey inside. Eat them hot on the bench out front."
+    "ja": "きょうの晩ごはん。お魚ひとすじの和食店。",
+    "en": "Tonight’s dinner: a small Japanese restaurant all about fish."
    },
-   "lat": 34.825754,
-   "lng": 135.467113,
+   "lat": 34.832638,
+   "lng": 135.468674,
    "photos": [
-    "09-1.jpg",
-    "09-2.jpg",
-    "09-3.jpg",
-    "09-4.jpg",
-    "09-5.jpg",
-    "09-6.jpg",
-    "09-7.jpg",
-    "09-8.jpg"
+    "gyogyo.svg"
    ],
    "text": {
-    "ja": "あほや 牧落店（まきおちてん）\n\n大阪名物のたこ焼きをいろいろ食べてきた中で、ここが最高です。\n\nソース、ポン酢、しょうゆ、塩など、味を選べます。焼きたては熱いので気をつけて！\n\nたこ焼きは6個・8個・10個・12個から選べます。「あほや名物」と書いてある平たい「ぺちゃ焼」（写真の4枚目）もあります。\n\n営業時間は確認できていません。閉まっていたら、そのまま箕面ビールへ。牧落駅から歩いて約5分です。\n\nおすすめ訪問時間：18:30",
-    "en": "Ahoya Makiochi\n\nTakoyaki is Osaka’s specialty, and of all the places I’ve tried, this one is the best.\n\nYou can choose your topping: sauce, ponzu, soy sauce, salt and more. They come straight off the grill, so careful, they’re hot!\n\nTakoyaki come in 6, 8, 10 or 12. The flat “pecha-yaki” in the fourth photo is the shop’s own specialty.\n\nOpening hours not confirmed. If it is closed, go straight on to Minoh Beer. About 5 minutes on foot from Makiochi Station.\n\nRecommended visit time: 18:30"
+    "ja": "海鮮処 鱻（ぎょぎょぎょ）\n\n阪急箕面駅から歩いて約5分の、お魚ひとすじの和食店です。口コミでは、刺身の盛り合わせに、もう一品の魚を「煮る・揚げる・焼く」から選べる魚の定食が人気です。\n\nきょうの晩ごはんはここ。夜は17:00から（ラストオーダー21:00。古い案内では19:30）、水曜休み。小さなお店なので、3人で行くなら先に電話（070-1741-0804）で予約しておくと安心です。支払い方法は確認できていないので、現金も用意しておきましょう。\n\nここから箕面ビールまでは、歩いて約15〜20分です。\n\nおすすめ訪問時間：18:10〜19:15",
+    "en": "Gyogyogyo (海鮮処 鱻)\n\nA small Japanese restaurant all about fish, about 5 minutes on foot from Hankyu Minoh Station. Reviews praise the fish set meal: a sashimi platter plus one more fish, simmered, fried or grilled as you like.\n\nThis is tonight’s dinner. Evenings from 17:00 (last order 21:00; older listings say 19:30), closed on Wednesdays. It is small, so for three people it is safer to call ahead and book (070-1741-0804). Payment methods not confirmed: bring some cash.\n\nFrom here to Minoh Beer is about 15–20 minutes on foot.\n\nRecommended visit time: 18:10–19:15"
    },
    "gmaps": [
     {
      "label": {
-      "ja": "あほや 牧落店",
-      "en": "あほや 牧落店"
+      "ja": "海鮮処 ぎょぎょぎょ",
+      "en": "Gyogyogyo"
      },
-     "lat": 34.825754,
-     "lng": 135.467113,
-     "url": "https://maps.app.goo.gl/FuWz86rQ3YE8yoEr6"
+     "lat": 34.832638,
+     "lng": 135.468674,
+     "url": "https://maps.app.goo.gl/vt6Z78SRG5Rx8t598"
     }
    ],
-   "links": [],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "みのおどっとねっと：海鮮処 鱻 ぎょぎょぎょ（営業時間・電話）",
+      "en": "Minoh local news: Gyogyogyo (Japanese)"
+     },
+     "url": {
+      "ja": "https://news.minoh.net/chiisanaomiseouen/%E6%B5%B7%E9%AE%AE%E5%87%A6%E3%80%80%E9%B1%BB%E3%80%80%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87/",
+      "en": "https://news.minoh.net/chiisanaomiseouen/%E6%B5%B7%E9%AE%AE%E5%87%A6%E3%80%80%E9%B1%BB%E3%80%80%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ネット予約（AutoReserve）",
+      "en": "Book online (AutoReserve)"
+     },
+     "url": {
+      "ja": "https://autoreserve.com/ja/restaurants/337R28x8xvgKuYYsSG1v",
+      "en": "https://autoreserve.com/en/restaurants/337R28x8xvgKuYYsSG1v"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "公式Instagram",
+      "en": "Instagram"
+     },
+     "url": {
+      "ja": "https://www.instagram.com/gyogyogyo2020/",
+      "en": "https://www.instagram.com/gyogyogyo2020/"
+     }
+    }
+   ],
    "info": {
-    "rows": [],
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:00〜14:00（L.O.）、17:00〜21:00（L.O.）",
+       "en": "11:00–14:00 (last order), 17:00–21:00 (last order)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "水曜日",
+       "en": "Wednesdays"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
     "cash": false,
     "tip": {
-     "ja": "営業時間は要確認です（公式サイトがありません）。",
-     "en": "Opening hours not confirmed (there’s no official website)."
+     "ja": "電話 070-1741-0804。営業時間は2024年8月の案内です（古い案内では夜のラストオーダー19:30）。",
+     "en": "Phone 070-1741-0804. Hours as listed in Aug 2024 (an older listing gives 19:30 as the evening last order)."
     },
-    "checked": "2026-11-20"
+    "checked": "2026-11-24"
    },
    "notices": []
   },
@@ -772,8 +818,8 @@
     "10-10.jpg"
    ],
    "text": {
-    "ja": "箕面ビール WAREHOUSE\n\n箕面はゆずと桃が有名で、収穫の季節には、地元の果物を使ったビールも飲めます。地元の素材を大切にしている醸造所です。\n\n私のいちばんのお気に入りはW-IPA。いちばん有名なのはスタウトで、コーヒーのように香ばしくて深い味わいが最高です。ビールに合う料理もたくさんあります。\n\nグラスはパイント（473ml）とハーフパイント（270ml）。ハーフでいくつか飲み比べるのもおすすめです。\n\nきょうは火曜日なので21:00まで（ラストオーダー20:30）。20:15ごろにお店を出れば、牧落 20:30発に乗れます（駅まで歩いて約12分）。\n\nおすすめ訪問時間：19:00〜20:15",
-    "en": "Minoh Beer WAREHOUSE\n\nMinoh is famous for its yuzu and peaches, and in harvest season you can taste beers brewed with these local fruits. The brewery takes real pride in local produce.\n\nMy personal favorite is the W-IPA, but the most famous one here is the Stout: rich, roasted and almost coffee-like, and my pick if you only have one. There’s plenty of food to go with it.\n\nBeer comes by the pint (473 ml) or half pint (270 ml), so order halves and try a few.\n\nToday (Tuesday) it is open until 21:00 (last order 20:30). Leave at about 20:15 to catch the 20:30 from Makiochi (about 12 minutes on foot).\n\nRecommended visit time: 19:00–20:15"
+    "ja": "箕面ビール WAREHOUSE\n\n箕面はゆずと桃が有名で、収穫の季節には、地元の果物を使ったビールも飲めます。地元の素材を大切にしている醸造所です。\n\n私のいちばんのお気に入りはW-IPA。いちばん有名なのはスタウトで、コーヒーのように香ばしくて深い味わいが最高です。ビールに合う料理もたくさんあります。\n\nグラスはパイント（473ml）とハーフパイント（270ml）。ハーフでいくつか飲み比べるのもおすすめです。\n\nぎょぎょぎょから歩いて約15〜20分。きょうは火曜日なので21:00まで（ラストオーダー20:30）。20:15ごろにお店を出れば、牧落 20:30発に乗れます（駅まで歩いて約12分）。\n\nおすすめ訪問時間：19:35〜20:15",
+    "en": "Minoh Beer WAREHOUSE\n\nMinoh is famous for its yuzu and peaches, and in harvest season you can taste beers brewed with these local fruits. The brewery takes real pride in local produce.\n\nMy personal favorite is the W-IPA, but the most famous one here is the Stout: rich, roasted and almost coffee-like, and my pick if you only have one. There’s plenty of food to go with it.\n\nBeer comes by the pint (473 ml) or half pint (270 ml), so order halves and try a few.\n\nAbout 15–20 minutes on foot from Gyogyogyo. Today (Tuesday) it is open until 21:00 (last order 20:30). Leave at about 20:15 to catch the 20:30 from Makiochi (about 12 minutes on foot).\n\nRecommended visit time: 19:35–20:15"
    },
    "gmaps": [
     {
@@ -838,8 +884,8 @@
     "en": "Station (finish)"
    },
    "blurb": {
-    "ja": "ゴール。あほやと箕面ビールにいちばん近い駅。梅田へは石橋阪大前で乗り換えです。",
-    "en": "The finish, and the nearest station to Ahoya and Minoh Beer. For Umeda, change at Ishibashi Handai-mae."
+    "ja": "ゴール。箕面ビールにいちばん近い駅。梅田へは石橋阪大前で乗り換えです。",
+    "en": "The finish, and the nearest station to Minoh Beer. For Umeda, change at Ishibashi Handai-mae."
    },
    "lat": 34.823147,
    "lng": 135.465947,
@@ -950,11 +996,6 @@
   {
    "what": "杉の茶屋：箕面市観光協会のページは「定休日 不定休」だけで、営業時間の記載なし（要確認のまま）",
    "url": "https://minohkankou.net/sights/1493/",
-   "checked": "2026-11-24"
-  },
-  {
-   "what": "あほや 牧落店：公式サイト・公式SNSは見つからず、箕面市観光協会のサイトにも掲載なし（「あほや」で検索して0件）。営業時間は要確認のまま",
-   "url": "https://minohkankou.net/?s=%E3%81%82%E3%81%BB%E3%82%84",
    "checked": "2026-11-24"
   },
   {

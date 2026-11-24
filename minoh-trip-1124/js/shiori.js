@@ -17,7 +17,7 @@
   ja.intro = {
     kicker: '2026年11月24日（火）・平日ダイヤ',
     h1: '箕面 旅のしおり',
-    lead: 'でんでん・タロちゃん・トシの3人で。勝尾寺でダルマ、森の山道を歩いて箕面大滝のライトアップ、締めは牧落でたこ焼きと箕面ビール。',
+    lead: 'でんでん・タロちゃん・トシの3人で。勝尾寺でダルマ、森の山道を歩いて箕面大滝のライトアップ、締めは海鮮の晩ごはんと箕面ビール。',
     favLabel: 'いちばんの見どころ',
     favName: '勝尾寺',
     favText: 'お寺じゅうに、小さな赤い「勝ちダルマ」。',
@@ -46,31 +46,30 @@
       { time: '15:00', area: '森の山道', title: '明るいうちに森を歩いて滝へ', text: 'ビジターセンター（きょうは火曜で休館）まで約40分、もみじ広場で10分休んで、杉の茶屋まで約30分。', badge: 'ハイキングあり', note: '遅くても15:20に出発', photo: ['visitor', 2] },
       { time: '16:25', area: '箕面大滝', title: '明るい滝と、灯りのついた滝', text: '16:49の日の入りからライトアップ。17:15ごろまでゆっくり。野生のサルに食べ物を見せないで。', note: 'ライトアップ 日没〜21:30', photo: ['falls', 2] },
       { time: '17:15', area: '滝道', title: 'ライトアップの滝道を下る', text: '川ぞいの道を約40分。滝道ぞい・瀧安寺・西江寺も灯りがともります。18:05ごろ箕面駅。', photo: ['minoh-st', 4] },
-      { time: '18:08', area: '箕面 → 牧落', title: '箕面線で1駅', text: '2分・170円。10分ごとに出ています。歩いても行けます。', photo: ['makiochi', 0] },
-      { time: '18:30', area: '牧落', title: 'あほやでたこ焼き', text: '牧落駅から歩いて約5分。ソース、ポン酢、しょうゆ、塩。平たい「ぺちゃ焼」も。', note: '営業時間は未確認', photo: ['ahoya', 0] },
-      { time: '19:00', area: '牧落', title: '箕面ビールで乾杯', text: 'あほやから歩いて約10分。平日は21:00まで（ラストオーダー20:30）。W-IPAと名物のスタウトを。20:15ごろお店を出る。', photo: ['beer', 1] },
+      { time: '18:10', area: '箕面', title: '海鮮処 ぎょぎょぎょで晩ごはん', text: '箕面駅から南へ歩いて約5分。お魚ひとすじの和食店。刺身の盛り合わせに、もう一品の魚を煮る・揚げる・焼くから選べる定食が人気。19:15ごろまで。', note: '夜17:00〜・L.O.21:00・水曜休', photo: ['gyogyo', 0] },
+      { time: '19:35', area: '牧落', title: '箕面ビールで乾杯', text: 'ぎょぎょぎょから歩いて約15〜20分。平日は21:00まで（ラストオーダー20:30）。W-IPAと名物のスタウトを。20:15ごろお店を出る。', photo: ['beer', 1] },
       { time: '20:30', area: '牧落 → 烏丸', title: '阪急で京都へ', text: '石橋阪大前 20:40発の急行 → 十三 20:53発の準特急 → 21:33 烏丸着。1本遅れたら20:39発（21:43着）、20:52発（21:55着）。', photo: ['makiochi', 2] }
     ],
     planHead: '予定がずれたら',
     plans: [
       { title: '烏丸 12:02 に乗れなかった', sub: '次の特急でも勝尾寺には間に合います', html: '<p><b>12:22 烏丸発の特急</b>で高槻市へ、準急に乗りかえて南茨木 → 大阪モノレール → 千里中央で北大阪急行 → <b>13:19 箕面萱野着</b>。13:30のバスまで11分なので、8番のりばへ急いで。</p><p>間に合わなければ<b>14:00発</b>のバス（14:22 勝尾寺着）。勝尾寺は40〜50分にして、<b>15:15ごろには歩きはじめて</b>ください。</p>' },
-      { title: 'プランB：山道を歩かない', sub: '勝尾寺を15:20までに出られない・雨・疲れたとき', html: '<p>勝尾寺からバスで下りて、箕面駅から<b>ライトアップの滝道を上って</b>滝へ。滝道は明るく、人もいます。</p><ul><li><b>16:20</b> 勝尾寺発のバス（30系統・800円）→ 16:41 箕面萱野。勝尾寺発はほかに15:50、16:50、最終17:05。</li><li><b>17:00</b> 箕面萱野発（36系統・250円）→ 17:15 阪急箕面駅。15:50のバスなら16:30発（21系統）→ 16:45。</li><li><b>17:15</b> 滝道を上って約45分。18:00ごろ灯りのついた滝へ。</li><li><b>18:20</b> 下って19:00ごろ箕面駅 → 箕面線で牧落 → 箕面ビールへ直行（ラストオーダー20:30）。帰りは同じく牧落 20:30発。</li></ul><p class="sh-small">バス代が1人1,050円ふえます。</p>' },
+      { title: 'プランB：山道を歩かない', sub: '勝尾寺を15:20までに出られない・雨・疲れたとき', html: '<p>勝尾寺からバスで下りて、箕面駅から<b>ライトアップの滝道を上って</b>滝へ。滝道は明るく、人もいます。</p><ul><li><b>16:20</b> 勝尾寺発のバス（30系統・800円）→ 16:41 箕面萱野。勝尾寺発はほかに15:50、16:50、最終17:05。</li><li><b>17:00</b> 箕面萱野発（36系統・250円）→ 17:15 阪急箕面駅。15:50のバスなら16:30発（21系統）→ 16:45。</li><li><b>17:15</b> 滝道を上って約45分。18:00ごろ灯りのついた滝へ。</li><li><b>18:20</b> 下って19:00ごろ箕面駅 → 歩いて約5分のぎょぎょぎょで晩ごはん（ラストオーダー21:00）。箕面ビールはラストオーダー20:30なので、間に合わなければ晩ごはんのあと箕面駅から帰ります（石橋阪大前・十三で乗りかえ）。</li></ul><p class="sh-small">バス代が1人1,050円ふえます。</p>' },
       { title: '箕面ビールに入れなかった', sub: '帰りの電車はゆっくりでも大丈夫', html: '<p>牧落から烏丸へは 21:33発（22:43着）、21:45発（22:53着）、21:57発（23:05着）もあります。</p>' }
     ],
     whoHead: '持ち物',
     who: [
-      '交通系ICカード（ICOCAなど）に1人2,400円以上。勝尾寺行きのバスは現金不可、車内でチャージもできません',
-      '現金も少し（勝尾寺の入山料500円、たこ焼き用）',
+      '交通系ICカード（ICOCAなど）に1人2,200円以上。勝尾寺行きのバスは現金不可、車内でチャージもできません',
+      '現金も少し（勝尾寺の入山料500円、晩ごはん用）',
+      '晩ごはんのぎょぎょぎょは小さなお店。先に電話（070-1741-0804）で3人分を予約しておくと安心',
       '歩きやすい靴。山道は約1時間10分（ほとんど下り）',
       '上着。夕方の山と滝は冷えます',
       'スマホの充電・モバイルバッテリー。夜の滝道で写真を撮るとすぐ減ります'
     ],
     dealsHead: '交通費のめやす（1人・ICカード）',
-    dealsLead: '合計 2,340円（勝尾寺の入山料500円は別）。',
+    dealsLead: '合計 2,170円（勝尾寺の入山料500円は別）。',
     deals: [
       { name: '烏丸 → 箕面萱野（阪急・御堂筋線）', price: '890円', text: '淡路・南方で乗りかえ、西中島南方から御堂筋線。' },
       { name: '箕面萱野 → 勝尾寺（阪急バス）', price: '800円', text: '2026年10月から現金不可。ICカードかクレジットカードで買う専用乗車券。', url: 'https://www.hankyubus.co.jp/news/2026101.html' },
-      { name: '箕面 → 牧落（阪急箕面線）', price: '170円', text: '1駅2分。' },
       { name: '牧落 → 烏丸（阪急）', price: '480円', text: '石橋阪大前・十三で乗りかえ。' }
     ],
     dealsMore: '公式サイトで見る',
@@ -83,6 +82,7 @@
       '日の入り 16:49（大阪）：<a href="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s2711.html" target="_blank" rel="noopener">国立天文台 暦計算室</a>',
       'ビジターセンターは火曜休館：<a href="https://minohkankou.net/sights/319/" target="_blank" rel="noopener">箕面市観光協会</a>',
       '箕面ビールの営業時間：<a href="https://www.minoh-beer.jp/store/" target="_blank" rel="noopener">箕面ビール 店舗案内</a>',
+      '晩ごはんの海鮮処 ぎょぎょぎょ：<a href="https://news.minoh.net/chiisanaomiseouen/%E6%B5%B7%E9%AE%AE%E5%87%A6%E3%80%80%E9%B1%BB%E3%80%80%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87/" target="_blank" rel="noopener">みのおどっとねっと</a>（2024年8月の案内：夜17:00〜21:00 L.O.、水曜休）',
       '紅葉：ウェザーニュース「<a href="https://weathernews.jp/koyo/spot/26222/" target="_blank" rel="noopener">勝尾寺</a>」「<a href="https://weathernews.jp/koyo/spot/26202/" target="_blank" rel="noopener">明治の森箕面国定公園</a>」'
     ],
     howHead: 'このマップの使い方',
@@ -109,7 +109,7 @@
   en.intro = {
     kicker: 'Tuesday, Nov 24, 2026 · weekday timetable',
     h1: 'Minoh trip plan',
-    lead: 'Denden, Taro-chan and Toshi. Daruma at Katsuoji, a forest walk to Minoh Falls lit up at dusk, then takoyaki and Minoh Beer in Makiochi.',
+    lead: 'Denden, Taro-chan and Toshi. Daruma at Katsuoji, a forest walk to Minoh Falls lit up at dusk, then a seafood dinner and Minoh Beer.',
     favLabel: 'Don’t miss',
     favName: 'Katsuoji',
     favText: 'Little red “winning daruma” all over the temple.',
@@ -138,31 +138,30 @@
       { time: '15:00', area: 'Forest walk', title: 'Walk the forest in daylight', text: 'About 40 minutes to the Visitor Center (closed on Tuesdays), a 10-minute rest, then about 30 minutes to Sugi no Chaya.', badge: 'Includes a hike', note: 'Leave by 15:20 at the latest', photo: ['visitor', 2] },
       { time: '16:25', area: 'Minoh Falls', title: 'The falls by day and lit up', text: 'Lights come on at sunset (16:49). Stay until about 17:15. Don’t show food to the wild monkeys.', note: 'Lit sunset–21:30', photo: ['falls', 2] },
       { time: '17:15', area: 'Takimichi', title: 'Down the lit riverside path', text: 'About 40 minutes. The path, Ryuanji and Saikoji are lit. Minoh Station at about 18:05.', photo: ['minoh-st', 4] },
-      { time: '18:08', area: 'Minoh → Makiochi', title: 'One stop on the Minoo Line', text: '2 minutes, ¥170, every 10 minutes. You can also walk.', photo: ['makiochi', 0] },
-      { time: '18:30', area: 'Makiochi', title: 'Takoyaki at Ahoya', text: 'About 5 minutes from Makiochi Station. Sauce, ponzu, soy or salt, plus flat “pecha-yaki”.', note: 'Hours not confirmed', photo: ['ahoya', 0] },
-      { time: '19:00', area: 'Makiochi', title: 'Cheers at Minoh Beer', text: 'About 10 minutes from Ahoya. Open until 21:00 on weekdays (last order 20:30). Try the W-IPA and the famous Stout. Leave at about 20:15.', photo: ['beer', 1] },
+      { time: '18:10', area: 'Minoh', title: 'Seafood dinner at Gyogyogyo', text: 'About 5 minutes south of Minoh Station. A small restaurant all about fish: try the set with a sashimi platter plus one more fish, simmered, fried or grilled. Until about 19:15.', note: 'From 17:00 · last order 21:00 · closed Wed', photo: ['gyogyo', 0] },
+      { time: '19:35', area: 'Makiochi', title: 'Cheers at Minoh Beer', text: 'About 15–20 minutes on foot from Gyogyogyo. Open until 21:00 on weekdays (last order 20:30). Try the W-IPA and the famous Stout. Leave at about 20:15.', photo: ['beer', 1] },
       { time: '20:30', area: 'Makiochi → Karasuma', title: 'Hankyu back to Kyoto', text: '20:40 express from Ishibashi Handai-mae → 20:53 semi-limited express from Juso → Karasuma 21:33. Later trains: 20:39 (arr. 21:43), 20:52 (arr. 21:55).', photo: ['makiochi', 2] }
     ],
     planHead: 'If plans change',
     plans: [
       { title: 'Missed the 12:02 from Karasuma', sub: 'The next limited express still works', html: '<p>Take the <b>12:22 limited express</b> to Takatsuki-shi, change to a semi-express to Minami-Ibaraki, then the Osaka Monorail and the Kita-Osaka Kyuko from Senri-Chuo: <b>Minoh-Kayano 13:19</b>. Hurry to stand 8 for the 13:30 bus.</p><p>Otherwise take the <b>14:00 bus</b> (Katsuoji 14:22), keep Katsuoji to 40–50 minutes and <b>start walking by about 15:15</b>.</p>' },
-      { title: 'Plan B: skip the forest trail', sub: 'If we can’t leave Katsuoji by 15:20, it rains, or we’re tired', html: '<p>Take the bus down from Katsuoji, then walk <b>up the lit riverside path</b> from Minoh Station to the falls.</p><ul><li><b>16:20</b> bus from Katsuoji (route 30, ¥800) → Minoh-Kayano 16:41. Other buses: 15:50, 16:50, last 17:05.</li><li><b>17:00</b> from Minoh-Kayano (route 36, ¥250) → Hankyu Minoh Station 17:15. After the 15:50 bus: 16:30 (route 21) → 16:45.</li><li><b>17:15</b> walk up about 45 minutes: the lit falls at about 18:00.</li><li><b>18:20</b> walk down, Minoh Station about 19:00 → Makiochi → straight to Minoh Beer (last order 20:30). Home on the 20:30 from Makiochi.</li></ul><p class="sh-small">Buses cost ¥1,050 more per person.</p>' },
+      { title: 'Plan B: skip the forest trail', sub: 'If we can’t leave Katsuoji by 15:20, it rains, or we’re tired', html: '<p>Take the bus down from Katsuoji, then walk <b>up the lit riverside path</b> from Minoh Station to the falls.</p><ul><li><b>16:20</b> bus from Katsuoji (route 30, ¥800) → Minoh-Kayano 16:41. Other buses: 15:50, 16:50, last 17:05.</li><li><b>17:00</b> from Minoh-Kayano (route 36, ¥250) → Hankyu Minoh Station 17:15. After the 15:50 bus: 16:30 (route 21) → 16:45.</li><li><b>17:15</b> walk up about 45 minutes: the lit falls at about 18:00.</li><li><b>18:20</b> walk down to Minoh Station (about 19:00), then dinner at Gyogyogyo, 5 minutes away (last order 21:00). Minoh Beer takes last orders at 20:30, so if it’s too late, go home from Minoh Station after dinner (change at Ishibashi Handai-mae and Juso).</li></ul><p class="sh-small">Buses cost ¥1,050 more per person.</p>' },
       { title: 'Couldn’t get into Minoh Beer', sub: 'There are later trains home', html: '<p>Makiochi to Karasuma also at 21:33 (arr. 22:43), 21:45 (arr. 22:53) and 21:57 (arr. 23:05).</p>' }
     ],
     whoHead: 'Bring',
     who: [
-      'An IC card (ICOCA etc.) with at least ¥2,400. The Katsuoji bus takes no cash, and you can’t top up on board',
-      'Some cash (Katsuoji ¥500, takoyaki)',
+      'An IC card (ICOCA etc.) with at least ¥2,200. The Katsuoji bus takes no cash, and you can’t top up on board',
+      'Some cash (Katsuoji ¥500, dinner)',
+      'Gyogyogyo is small: call ahead to book for three (070-1741-0804)',
       'Comfortable shoes: about 1 hour 10 minutes on the trail, mostly downhill',
       'A jacket: the hills and the falls get cold in the evening',
       'A charged phone or power bank: night photos drain it fast'
     ],
     dealsHead: 'Fares (per person, IC card)',
-    dealsLead: '¥2,340 in total (plus ¥500 for Katsuoji).',
+    dealsLead: '¥2,170 in total (plus ¥500 for Katsuoji).',
     deals: [
       { name: 'Karasuma → Minoh-Kayano (Hankyu, Midosuji Line)', price: '¥890', text: 'Change at Awaji and Minamikata; Midosuji Line from Nishinakajima-Minamigata.' },
       { name: 'Minoh-Kayano → Katsuoji (Hankyu Bus)', price: '¥800', text: 'No cash since Oct 2026. IC card, or a ticket bought by credit card at the stand.', url: 'https://www.hankyubus.co.jp/news/2026101.html' },
-      { name: 'Minoh → Makiochi (Hankyu Minoo Line)', price: '¥170', text: 'One stop, 2 minutes.' },
       { name: 'Makiochi → Karasuma (Hankyu)', price: '¥480', text: 'Change at Ishibashi Handai-mae and Juso.' }
     ],
     dealsMore: 'Official site',
@@ -175,6 +174,7 @@
       'Sunset 16:49 (Osaka): <a href="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s2711.html" target="_blank" rel="noopener">National Astronomical Observatory of Japan</a>',
       'Visitor Center closed on Tuesdays: <a href="https://minohkankou.net/sights/319/" target="_blank" rel="noopener">Minoh Tourism Association</a>',
       'Minoh Beer hours: <a href="https://www.minoh-beer.jp/store/" target="_blank" rel="noopener">Minoh Beer stores</a>',
+      'Dinner at Gyogyogyo: <a href="https://news.minoh.net/chiisanaomiseouen/%E6%B5%B7%E9%AE%AE%E5%87%A6%E3%80%80%E9%B1%BB%E3%80%80%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87%E3%81%8E%E3%82%87/" target="_blank" rel="noopener">Minoh local news</a> (Aug 2024: evenings 17:00–21:00 last order, closed Wed)',
       'Autumn leaves: Weathernews (<a href="https://weathernews.jp/koyo/spot/26222/" target="_blank" rel="noopener">Katsuoji</a>, <a href="https://weathernews.jp/koyo/spot/26202/" target="_blank" rel="noopener">Minoh Park</a>)'
     ],
     howHead: 'How to use this map',
