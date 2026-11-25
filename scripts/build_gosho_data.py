@@ -341,6 +341,8 @@ BASE = dict(
               row("train", "地下鉄 烏丸御池駅2番出口から歩いて2分。丸太町からも二条城前からも1駅・220円", "2 min on foot from exit 2 of Karasuma-Oike subway station; one stop from either Marutamachi or Nijojo-mae, ¥220")],
         source="京都国際マンガミュージアムの公式サイト、乗換案内", checked=D21,
         tip=T("京都国際マンガミュージアムの公式サイトと乗換案内で確認しました。" + WEBPHOTO_JA, "Checked on the museum website and Yahoo! Transit. " + WEBPHOTO_EN)),
+    # 錦市場の写真: nishiki-1・2 は Toshi の写真（2025-11-04）。nishiki-3〜6 も Toshi の写真で、夜の先斗町（2024-08-27）、昼の先斗町（2024-08-12）、
+    # 鴨川の床（2016-06-23）、木屋町・高瀬川の桜（2019-04-06）。アーケードと漬物屋は Wikimedia Commons（2026-11-26 に見直し）
     nishiki=dict(
         name=T("錦市場から、夜の先斗町・木屋町へ", "Nishiki Market, then Pontocho and Kiyamachi by night"), kind=T("市場・夜の街なか", "Market & evening in town"), web="extra",
         blurb=T("「京の台所」と呼ばれる390mのアーケード。夕方は早く閉まる店が多いので17時までに。そのあとは先斗町・木屋町で晩ごはん、三条へ歩いて帰ります。",

@@ -1687,6 +1687,11 @@
    },
    "photos": [
     "nishiki-1.jpg",
+    "nishiki-2.jpg",
+    "nishiki-3.jpg",
+    "nishiki-4.jpg",
+    "nishiki-5.jpg",
+    "nishiki-6.jpg",
     {
      "file": "nishiki-w1.jpg",
      "credit": {
@@ -1701,14 +1706,6 @@
       "author": "collinox",
       "license": "CC BY 2.0",
       "page": "https://commons.wikimedia.org/wiki/File:Tsukemono_shop_by_collinox_in_Nishiki_Ichiba%2C_Kyoto.jpg"
-     }
-    },
-    {
-     "file": "nishiki-w3.jpg",
-     "credit": {
-      "author": "Hyppolyte de Saint-Rambert",
-      "license": "CC BY-SA 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:Nishiki_market_Kyoto_hdsr_2019_06_02_9999_31.jpg"
      }
     }
    ]

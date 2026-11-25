@@ -76,7 +76,7 @@ def cc(file, author, license, title):
 # スポットごとの、コースで変わらない内容
 # ---------------------------------------------------------------------------
 BASE = dict(
-    # 銀閣寺は Toshi がまだ行っていない場所。文章は公式サイトの情報だけで書き、写真は Wikimedia Commons（_extra）。2026-11-21 追加
+    # 銀閣寺は 2026-11-21 追加。文章は公式サイトの情報で書いた。写真は哲学の道が Toshi の写真、銀閣寺の境内が Wikimedia Commons（_extra）
     kiyomizu=dict(
         name=T("清水寺", "Kiyomizu-dera"), kind=T("お寺", "Temple"),
         blurb=T("崖にせり出した「清水の舞台」から京都の町を一望。朝6:00に開きます。",
@@ -210,10 +210,10 @@ BASE = dict(
                   tip=T("土曜・休日は105系統（三条京阪前・四条河原町・京都駅行き）も出ます。100系統（祇園・清水道・京都駅行き、土曜・休日だけ）は三条・四条河原町を通りません。同じのりばの204系統は円町行きなので乗らないでください。",
                         "On Saturdays, Sundays and holidays route 105 (Sanjo-Keihan-mae, Shijo-Kawaramachi, Kyoto Station) also runs. Route 100 (Gion, Kiyomizu-michi, Kyoto Station; weekends and holidays only) does not pass Sanjo or Shijo-Kawaramachi. Route 204 from the same pole goes to Enmachi, so don’t take it."),
                   checked=RECHECKED),
+        # 哲学の道の写真（ginkakuji-5〜7）は Toshi が 2024-12-11 に撮った紅葉（法然院の近く）。銀閣寺の境内は Wikimedia Commons のまま
+        #（手持ちの2018-10-22の写真は空が白く飛び、人も多いので、Commons の2枚のほうが良い。2026-11-26 に見比べた）
         _extra=[cc("ginkakuji-1.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Fall1.jpg"),
-                cc("ginkakuji-2.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Sand Garden.jpg"),
-                cc("ginkakuji-3.jpg", "Stephan Ridgway", "CC BY 2.0", "File:Philosophers Walk, Kyoto (49073313687).jpg"),
-                cc("ginkakuji-4.jpg", "Yiannis Theologos Michellis", "CC0", "File:Japan Spring Down the Philosopher's Path (14164491752).jpg")]),
+                cc("ginkakuji-2.jpg", "Jmhullot", "CC BY 3.0", "File:Ginkakuji Sand Garden.jpg")]),
     kurodani=dict(
         name=T("金戒光明寺（くろ谷さん）", "Konkai Komyo-ji (Kurodani)"), kind=T("お寺", "Temple"),
         blurb=T("京都の人が「くろ谷さん」と呼ぶ大きなお寺。石段の上の山門が目印です。秋の夜は庭のライトアップがあります。",
@@ -457,7 +457,7 @@ COURSES = [
 ]
 
 NOTE_HEAD = "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル："
-NOTE_TAIL = " 「哲学の道と銀閣寺」・無鄰菴・真如堂は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。"
+NOTE_TAIL = " 無鄰菴・真如堂は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。銀閣寺の境内と青蓮院の一部の写真も Wikimedia Commons（哲学の道の写真は Toshi の写真）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。"
 
 
 def build(c):

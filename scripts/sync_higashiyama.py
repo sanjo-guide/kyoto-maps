@@ -24,7 +24,7 @@ import os, re, shutil
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 HIGASHIYAMA = dict(
-    id='higashiyama', i18n='HIGASHIYAMA_I18N', count=12, data_v=8, bump=105, keyv='-b',   # keyv: 2026-11-22 に3か所足して番号が変わった
+    id='higashiyama', i18n='HIGASHIYAMA_I18N', count=12, data_v=9, bump=106, keyv='-b',   # keyv: 2026-11-22 に3か所足して番号が変わった
     head='京都 東山（清水寺〜南禅寺〜銀閣寺）',
     title='京都 東山｜清水寺・南禅寺・銀閣寺 Higashiyama MAP',
     desc='朝6時の清水寺から、高台寺、八坂神社、青蓮院、南禅寺、永観堂、真如堂、銀閣寺へ。早朝に出るコースと9〜10時に出るコースを選べる、京都・東山の1日ルートマップ。A one-day route through Higashiyama, Kyoto, from Kiyomizu-dera at its 6:00 opening to Nanzen-ji and Ginkaku-ji, with an early-start and a 9–10 o’clock course.',

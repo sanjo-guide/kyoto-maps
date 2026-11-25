@@ -31,7 +31,7 @@ window.HIGASHIYAMA_I18N = {
     copy: 'このスポットのリンクをコピー',
     copied: 'コピーしました',
     spot1Howto: 'このマップの使い方を見る',
-    credit: "写真・文章：Toshi（哲学の道・銀閣寺、無鄰菴、真如堂と、青蓮院の一部の写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
+    credit: "写真・文章：Toshi（銀閣寺、無鄰菴、真如堂と、青蓮院の一部の写真は Wikimedia Commons より。撮影者とライセンスを各写真に表示しています）<br>地図：OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
     photoBy: '写真：',
     loadError: '地図データを読み込めませんでした。再読み込みしてください。',
     hours: '時間',
@@ -338,7 +338,7 @@ window.HIGASHIYAMA_I18N = {
             "note": "真如堂の受付は15:45まで",
             "photo": [
               "ginkakuji",
-              0
+              3
             ]
           },
           {
@@ -397,7 +397,7 @@ window.HIGASHIYAMA_I18N = {
     copy: 'Copy link to this spot',
     copied: 'Link copied',
     spot1Howto: 'How to use this map',
-    credit: "Photos &amp; text: Toshi (the photos of the Philosopher’s Path and Ginkaku-ji, Murin-an and Shinnyo-do, and some of Shoren-in, are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
+    credit: "Photos &amp; text: Toshi (the photos of Ginkaku-ji, Murin-an and Shinnyo-do, and some of Shoren-in, are from Wikimedia Commons; the author and license are shown on each photo)<br>Map: OpenFreeMap / © OpenMapTiles / © OpenStreetMap contributors",
     photoBy: 'Photo: ',
     loadError: 'Could not load the map data. Please reload.',
     hours: 'Hours',
@@ -704,7 +704,7 @@ window.HIGASHIYAMA_I18N = {
             "note": "Shinnyo-do: last entry 15:45",
             "photo": [
               "ginkakuji",
-              0
+              3
             ]
           },
           {

@@ -1,7 +1,7 @@
 {
  "id": "higashiyama",
  "course": "late",
- "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル：「9〜10時に出発」コース。三条を9:15ごろ出て、京阪で清水五条へ。清水寺→産寧坂・二年坂→八坂の塔→（お昼）→高台寺→八坂神社→南禅寺→哲学の道と銀閣寺まで歩き、市バスで戻る（18時ごろ）。青蓮院・無鄰菴・永観堂・真如堂・金戒光明寺は時間割の外で、足したときの回り方は各スポットの文章と hints。 「哲学の道と銀閣寺」・無鄰菴・真如堂は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。",
+ "_note": "京都・東山の1日ルート（higashiyama/ のページ専用。形は eizan-line.json と同じ）。一覧の上のボタンで2つのコースを切り替え、コースごとに別のファイルを読む（higashiyama.json＝9〜10時に出発、higashiyama-early.json＝早朝に出発）。このファイル：「9〜10時に出発」コース。三条を9:15ごろ出て、京阪で清水五条へ。清水寺→産寧坂・二年坂→八坂の塔→（お昼）→高台寺→八坂神社→南禅寺→哲学の道と銀閣寺まで歩き、市バスで戻る（18時ごろ）。青蓮院・無鄰菴・永観堂・真如堂・金戒光明寺は時間割の外で、足したときの回り方は各スポットの文章と hints。 無鄰菴・真如堂は Toshi がまだ行っていない場所（写真は Wikimedia Commons で photos の要素が {file, credit}、文章は公式サイトの情報だけ）。銀閣寺の境内と青蓮院の一部の写真も Wikimedia Commons（哲学の道の写真は Toshi の写真）。 写真は Toshi の写真ライブラリから選んだもの（長辺1600px・位置情報なし）。info.source は確認した出典、info.checked は確認日、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。入口で困ること（休み・撮影禁止・入口の場所）は caution と head つきの notices。plan.defaultPicks は最初から選ばれている場所で、各スポットの「おすすめ◯◯時間」はこの組み合わせの時間割。このファイルは scripts/build_higashiyama_data.py で作る（直接直さない）。",
  "sections": [
   {
    "first": 1,
@@ -1462,6 +1462,9 @@
     "en": "Philosopher’s Path and Ginkaku-ji\n\nThe Philosopher’s Path follows the Lake Biwa Canal for about 1.5 km, from Nyakuoji bridge just north of Eikan-do to Ginkakuji bridge. It is lined with cherry trees in spring and coloured leaves in autumn.\n\nGinkaku-ji, officially Jisho-ji, began as the mountain villa of Ashikaga Yoshimasa, the eighth Muromachi shogun. Just inside are the Ginshadan, a terrace of raked white sand, and the cone-shaped Kogetsudai; behind them stands the Kannon hall, the Silver Pavilion (a National Treasure). The route climbs to a lookout over the grounds and the city. Allow about 30 minutes (from the official website).\n\nYou can pay the admission in cash or cashless.\n\nAbout 40 minutes on foot from Nanzen-ji, past Eikan-do and along the Philosopher’s Path.\n\nAfterwards walk down the approach to the “Ginkakuji-michi” stop for a city bus back toward Shijo-Kawaramachi or Sanjo (¥230). Allow until about 18:00 to get back.\n\nRecommended visit time: 16:05–16:40 (closes at 17:00; 16:30 from December to February)"
    },
    "photos": [
+    "ginkakuji-5.jpg",
+    "ginkakuji-6.jpg",
+    "ginkakuji-7.jpg",
     {
      "file": "ginkakuji-1.jpg",
      "credit": {
@@ -1476,22 +1479,6 @@
       "author": "Jmhullot",
       "license": "CC BY 3.0",
       "page": "https://commons.wikimedia.org/wiki/File%3AGinkakuji_Sand_Garden.jpg"
-     }
-    },
-    {
-     "file": "ginkakuji-3.jpg",
-     "credit": {
-      "author": "Stephan Ridgway",
-      "license": "CC BY 2.0",
-      "page": "https://commons.wikimedia.org/wiki/File%3APhilosophers_Walk%2C_Kyoto_%2849073313687%29.jpg"
-     }
-    },
-    {
-     "file": "ginkakuji-4.jpg",
-     "credit": {
-      "author": "Yiannis Theologos Michellis",
-      "license": "CC0",
-      "page": "https://commons.wikimedia.org/wiki/File%3AJapan_Spring_Down_the_Philosopher%27s_Path_%2814164491752%29.jpg"
      }
     }
    ],
