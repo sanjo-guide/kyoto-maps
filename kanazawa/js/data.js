@@ -326,60 +326,94 @@ window.GUIDE = {
    },
    "photos": [
     {
-     "f": "web-kenrokuen-1.jpg",
+     "f": "kenrokuen-1.jpg",
      "cap": {
-      "ja": "徽軫灯籠と虹橋",
-      "en": "The Kotoji lantern and Nijibashi bridge"
+      "ja": "霞ヶ池（かすみがいけ）と徽軫灯籠（2026年3月）",
+      "en": "Kasumigaike Pond and the Kotoji lantern (March 2026)"
      },
      "w": 1280,
-     "h": 960,
-     "credit": {
-      "author": "そらみみ",
-      "license": "CC BY-SA 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:Kotoji_Toro_and_Nijibashi_Bridge_in_Kenroku_Garden.JPG"
-     }
+     "h": 848
     },
     {
-     "f": "web-kenrokuen-2.jpg",
+     "f": "kenrokuen-2.jpg",
      "cap": {
-      "ja": "松の雪吊り",
-      "en": "Yukizuri ropes on the pines"
+      "ja": "紅葉の時期の徽軫灯籠（2025年11月）",
+      "en": "The Kotoji lantern in autumn (November 2025)"
      },
      "w": 1280,
-     "h": 960,
-     "credit": {
-      "author": "Ltd.super Express bound for E235",
-      "license": "CC BY-SA 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:%E5%85%BC%E5%85%AD%E5%9C%92_%E3%80%9C%E9%9B%AA%E8%A7%A3%E3%81%91%E5%BE%8C%E3%81%AE%E9%9B%AA%E5%90%8A%E3%82%8A%E3%80%9C.jpg"
-     }
+     "h": 848
     },
     {
-     "f": "web-kenrokuen-3.jpg",
+     "f": "kenrokuen-3.jpg",
      "cap": {
-      "ja": "雪吊りのライトアップ",
-      "en": "The yukizuri lit up at night"
+      "ja": "紅葉の霞ヶ池（2025年11月）",
+      "en": "Kasumigaike Pond in autumn (November 2025)"
      },
      "w": 1280,
-     "h": 853,
-     "credit": {
-      "author": "Suicasmo",
-      "license": "CC BY-SA 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:Kenroku-en_20170131-3.jpg"
-     }
+     "h": 848
     },
     {
-     "f": "web-kenrokuen-4.jpg",
+     "f": "kenrokuen-4.jpg",
      "cap": {
-      "ja": "噴水と雪吊り",
-      "en": "The fountain and yukizuri"
+      "ja": "霞ヶ池のほとりの雪吊り（3月）",
+      "en": "Yukizuri ropes by Kasumigaike Pond (March)"
      },
      "w": 1280,
-     "h": 960,
-     "credit": {
-      "author": "そらみみ",
-      "license": "CC BY-SA 4.0",
-      "page": "https://commons.wikimedia.org/wiki/File:Fountain_and_Yukizuri_of_Kenroku_Garden.JPG"
-     }
+     "h": 848
+    },
+    {
+     "f": "kenrokuen-5.jpg",
+     "cap": {
+      "ja": "紅葉（11月）",
+      "en": "Autumn leaves (November)"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "kenrokuen-6.jpg",
+     "cap": {
+      "ja": "瓢池（ひさごいけ）",
+      "en": "Hisago-ike Pond"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "kenrokuen-7.jpg",
+     "cap": {
+      "ja": "翠滝（みどりたき）と海石塔（かいせきとう）",
+      "en": "Midori-taki waterfall and the Kaiseki stone pagoda"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "kenrokuen-8.jpg",
+     "cap": {
+      "ja": "梅林（3月）",
+      "en": "The plum grove (March)"
+     },
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "f": "kenrokuen-9.jpg",
+     "cap": {
+      "ja": "時雨亭（しぐれてい）の座敷から見た庭",
+      "en": "The garden from the rooms of Shigure-tei"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "kenrokuen-10.jpg",
+     "cap": {
+      "ja": "時雨亭のお抹茶と生菓子",
+      "en": "Matcha and a sweet at Shigure-tei"
+     },
+     "w": 1280,
+     "h": 720
     }
    ],
    "no": 4
@@ -415,74 +449,76 @@ window.GUIDE = {
    },
    "photos": [
     {
-     "f": "web-kanazawajo-1.jpg",
+     "f": "kanazawajo-1.jpg",
+     "cap": {
+      "ja": "五十間長屋と菱櫓（3月）",
+      "en": "The Gojikken Nagaya and Hishi Yagura (March)"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "kanazawajo-2.jpg",
      "cap": {
       "ja": "石川門",
-      "en": "Ishikawa-mon gate"
+      "en": "The Ishikawa-mon gate"
      },
      "w": 1280,
-     "h": 853,
-     "credit": {
-      "author": "Fg2",
-      "license": "Public domain",
-      "page": "https://commons.wikimedia.org/wiki/File:Kanazawa-M-5932.jpg"
-     }
+     "h": 848
     },
     {
-     "f": "web-kanazawajo-2.jpg",
+     "f": "kanazawajo-3.jpg",
      "cap": {
-      "ja": "五十間長屋と菱櫓",
-      "en": "Gojikken Nagaya and Hishi Yagura"
+      "ja": "五十間長屋の中",
+      "en": "Inside the Gojikken Nagaya"
      },
      "w": 1280,
-     "h": 720,
-     "credit": {
-      "author": "Drivephotographer",
-      "license": "CC0",
-      "page": "https://commons.wikimedia.org/wiki/File:Kanazawa_castle.jpg"
-     }
+     "h": 720
     },
     {
-     "f": "web-kanazawajo-3.jpg",
+     "f": "kanazawajo-4.jpg",
      "cap": {
-      "ja": "玉泉院丸庭園",
-      "en": "Gyokuseninmaru Garden"
+      "ja": "鶴の丸休憩館から見た五十間長屋",
+      "en": "The Gojikken Nagaya from the Tsurunomaru rest house"
      },
      "w": 1280,
-     "h": 960,
-     "credit": {
-      "author": "Abasaa",
-      "license": "Public domain",
-      "page": "https://commons.wikimedia.org/wiki/File:Gyokusen_Inmaru_Garden.JPG"
-     }
+     "h": 720
     },
     {
-     "f": "web-kanazawajo-4.jpg",
+     "f": "kanazawajo-5.jpg",
      "cap": {
-      "ja": "夜の玉泉院丸庭園",
-      "en": "Gyokuseninmaru Garden at night"
+      "ja": "鼠多門（ねずみたもん）と鼠多門橋",
+      "en": "The Nezumita-mon gate and bridge"
      },
      "w": 1280,
-     "h": 960,
-     "credit": {
-      "author": "Okochuke",
-      "license": "CC BY-SA 3.0",
-      "page": "https://commons.wikimedia.org/wiki/File:Gyokuseninmaru_Garden_(118911057).jpeg"
-     }
+     "h": 848
     },
     {
-     "f": "web-kanazawajo-5.jpg",
+     "f": "kanazawajo-6.jpg",
      "cap": {
-      "ja": "橋爪門",
-      "en": "Hashizume-mon gate"
+      "ja": "玉泉院丸庭園（3月）",
+      "en": "Gyokuseninmaru Garden (March)"
      },
      "w": 1280,
-     "h": 853,
-     "credit": {
-      "author": "Balon Greyjoy",
-      "license": "CC0",
-      "page": "https://commons.wikimedia.org/wiki/File:20190705_Kanazawa_Castle-19.jpg"
-     }
+     "h": 848
+    },
+    {
+     "f": "kanazawajo-7.jpg",
+     "cap": {
+      "ja": "上から見た玉泉院丸庭園",
+      "en": "Gyokuseninmaru Garden from above"
+     },
+     "w": 1280,
+     "h": 848
+    },
+    {
+     "f": "kanazawajo-8.jpg",
+     "cap": {
+      "ja": "玉泉庵（ぎょくせんあん）から見た庭",
+      "en": "The garden from Gyokusen-an"
+     },
+     "w": 1280,
+     "h": 848
     }
    ],
    "no": 5
