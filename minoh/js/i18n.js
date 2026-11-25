@@ -43,7 +43,7 @@ window.MINOH_I18N = {
     cash: '現金を用意してください',
     checked: '{d}に公式サイトで確認しました。変わることがあるので、行く前に公式サイトも見てください。',
     unchecked: '{d}の時点で、公式サイトでは確認できなかった情報です（要確認）。行く前に最新の情報を確かめてください。',
-    checkedDate: '2026年11月20日〜24日',
+    checkedDate: '2026年11月20日〜25日',
     noticeHead: 'この時期の注意',
     more: '詳しく',
     linkKinds: { official: '公式サイト', timetable: '時刻表', info: '案内' },
@@ -122,7 +122,7 @@ window.MINOH_I18N = {
           yes: ['タトゥーがある人は注意：箕面温泉は、専用のカバーシール2枚までで完全に隠せる場合だけ入れます。隠せない人は「温泉に入らない」を選んでください'],
           no: ['箕面温泉には入らない流れです。そのぶん滝と滝道でゆっくりできます（タトゥーがあって温泉に入れない人もこちら）']
         },
-        end: ['締めくくりはたこ焼きと地ビール。箕面ビールは木曜休み']
+        end: ['締めくくりはたこ焼きと地ビール、シメにラーメン。途中で、日本のミスタードーナツの1号店にも寄ります。箕面ビールは木曜休み']
       },
       dayHead: { early: '1日の流れ（早めに出発・温泉に入る）', 'early-noonsen': '1日の流れ（早めに出発・温泉なし）', late: '1日の流れ（ゆっくり出発・温泉に入る）', 'late-noonsen': '1日の流れ（ゆっくり出発・温泉なし）' },
       day: {
@@ -138,9 +138,9 @@ window.MINOH_I18N = {
         onsenL: { time: '14:40', area: '滝道・箕面温泉', title: '滝道を下って温泉へ', text: '川ぞいの滝道を約40分。15:25ごろ、展望エレベーターで上がる日帰り温泉へ。17:05まで。', note: 'タトゥーはシール2枚で隠せる場合だけ', photo: ['onsen', 0] },
         strollE: { time: '14:50', area: '滝道・箕面駅', title: 'ランチのあとは滝道でのんびり', text: '駅までは歩いて10分ほど。瀧安寺にお参りしたり、もみじの天ぷらを買ったり、昆虫館に寄ったり。16:10ごろ箕面駅へ。', photo: ['minoh-st', 0] },
         strollL: { time: '15:00', area: '滝道・箕面駅', title: '滝道をゆっくり下る', text: '歩くだけなら約40分の道を、1時間10分かけて。お店をのぞいたり、瀧安寺にお参りしたり。16:10ごろ箕面駅へ。', photo: ['minoh-st', 0] },
-        endE: { time: '17:20', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、17:45ごろから箕面ビールの直営店で乾杯。牧落駅を19:15ごろ。', note: '箕面ビールは木曜休み・日曜は20時まで', photo: ['ahoya', 0] },
-        endL: { time: '17:40', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、18:05ごろから箕面ビールの直営店で乾杯。牧落駅を19:30ごろ。', note: '箕面ビールは木曜休み・日曜は20時まで', photo: ['ahoya', 0] },
-        endNo: { time: '16:30', area: '牧落', title: 'たこ焼きと地ビール', text: 'Toshiがいちばん好きなたこ焼き屋さんと、17:00ごろから箕面ビールの直営店で乾杯。牧落駅を18:30ごろ。', note: '箕面ビールは木曜休み・日曜は20時まで', photo: ['ahoya', 0] }
+        endE: { time: '17:05', area: '箕面・牧落', title: 'ドーナツ、たこ焼き、地ビール', text: 'ミスタードーナツの1号店でひと休みして、Toshiがいちばん好きなたこ焼き屋さんへ。18:05ごろから箕面ビールの直営店で乾杯、シメは黒兵衛のラーメン。牧落駅を20:10ごろ。', note: '箕面ビールは木曜休み（木曜は黒兵衛で晩ごはんを）・日曜は20時まで', photo: ['ahoya', 0] },
+        endL: { time: '17:25', area: '箕面・牧落', title: 'ドーナツ、たこ焼き、地ビール', text: 'ミスタードーナツの1号店でひと休みして、Toshiがいちばん好きなたこ焼き屋さんへ。18:25ごろから箕面ビールの直営店で乾杯、シメは黒兵衛のラーメン。牧落駅を20:30ごろ。', note: '箕面ビールは木曜休み（木曜は黒兵衛で晩ごはんを）・日曜は20時まで', photo: ['ahoya', 0] },
+        endNo: { time: '16:15', area: '箕面・牧落', title: 'ドーナツ、たこ焼き、地ビール', text: 'ミスタードーナツの1号店でひと休みして、Toshiがいちばん好きなたこ焼き屋さんへ。17:15ごろから箕面ビールの直営店で乾杯、シメは黒兵衛のラーメン。牧落駅を19:20ごろ。', note: '箕面ビールは木曜休み（木曜は黒兵衛で晩ごはんを）・日曜は20時まで', photo: ['ahoya', 0] }
       },
       howPick: { title: '出発時間と温泉を選ぶ', text: '「一覧」のいちばん上に、ボタンが2段あります。上は出発時間（「早めに出発」＝梅田を8:30までに出て川のテラスでランチ／「ゆっくり出発」＝10時ごろ出る、テラスのランチはなし）。下は箕面温泉に入るかどうか。タトゥーがあって温泉に入れない人は「温泉に入らない」を。押すと、番号と時間が変わります。' },
       howRest: [
@@ -187,7 +187,7 @@ window.MINOH_I18N = {
     cash: 'Bring cash',
     checked: 'Checked on the official website on {d}. Details can change, so please check before you go.',
     unchecked: 'Could not be confirmed on an official website as of {d}. Please check the latest information before you go.',
-    checkedDate: 'Nov 20–24, 2026',
+    checkedDate: 'Nov 20–25, 2026',
     noticeHead: 'Right now',
     more: 'Details',
     linkKinds: { official: 'Official site', timetable: 'Timetable', info: 'Info' },
@@ -266,7 +266,7 @@ window.MINOH_I18N = {
           yes: ['Tattoos? Minoh Onsen lets you in only if no more than two of its cover stickers hide them completely. If they can’t, choose “No onsen”'],
           no: ['This version skips Minoh Onsen, so you get more time at the falls and on the river path (also the one to pick if your tattoos keep you out of the bath)']
         },
-        end: ['Ends with takoyaki and local craft beer. Minoh Beer is closed on Thursdays']
+        end: ['Ends with takoyaki, local craft beer and a bowl of ramen, with a stop at Japan’s first Mister Donut on the way. Minoh Beer is closed on Thursdays']
       },
       dayHead: { early: 'One day, roughly like this (early start, with onsen)', 'early-noonsen': 'One day, roughly like this (early start, no onsen)', late: 'One day, roughly like this (late start, with onsen)', 'late-noonsen': 'One day, roughly like this (late start, no onsen)' },
       day: {
@@ -282,9 +282,9 @@ window.MINOH_I18N = {
         onsenL: { time: '14:40', area: 'Takimichi & Minoh Onsen', title: 'Down the river path to a hot spring', text: 'About 40 minutes down the riverside path. At about 15:25, take the viewing elevator up to the day-use hot spring. Until 17:05.', note: 'Tattoos: only if two stickers cover them', photo: ['onsen', 0] },
         strollE: { time: '14:50', area: 'Takimichi & Minoh Station', title: 'A slow hour on the river path', text: 'The station is only about 10 minutes’ walk away. Visit Ryuanji Temple, buy momiji tempura, or drop into the Insect Museum. Reach Minoh Station at about 16:10.', photo: ['minoh-st', 0] },
         strollL: { time: '15:00', area: 'Takimichi & Minoh Station', title: 'Take the river path slowly', text: 'The walk alone is about 40 minutes; give it 1 hour 10 minutes. Look into the shops and visit Ryuanji Temple. Reach Minoh Station at about 16:10.', photo: ['minoh-st', 0] },
-        endE: { time: '17:20', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom from about 17:45. Train home from Makiochi at about 19:15.', note: 'Minoh Beer: closed Thursdays, shuts at 20:00 on Sundays', photo: ['ahoya', 0] },
-        endL: { time: '17:40', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom from about 18:05. Train home from Makiochi at about 19:30.', note: 'Minoh Beer: closed Thursdays, shuts at 20:00 on Sundays', photo: ['ahoya', 0] },
-        endNo: { time: '16:30', area: 'Makiochi', title: 'Takoyaki & craft beer', text: 'My favorite takoyaki shop, then a toast at the Minoh Beer taproom from about 17:00. Train home from Makiochi at about 18:30.', note: 'Minoh Beer: closed Thursdays, shuts at 20:00 on Sundays', photo: ['ahoya', 0] }
+        endE: { time: '17:05', area: 'Minoh & Makiochi', title: 'Donuts, takoyaki & craft beer', text: 'A break at Japan’s first Mister Donut, then my favorite takoyaki shop. A toast at the Minoh Beer taproom from about 18:05, and ramen at Kurobee to finish. Train home from Makiochi at about 20:10.', note: 'Minoh Beer: closed Thursdays (have dinner at Kurobee instead), shuts at 20:00 on Sundays', photo: ['ahoya', 0] },
+        endL: { time: '17:25', area: 'Minoh & Makiochi', title: 'Donuts, takoyaki & craft beer', text: 'A break at Japan’s first Mister Donut, then my favorite takoyaki shop. A toast at the Minoh Beer taproom from about 18:25, and ramen at Kurobee to finish. Train home from Makiochi at about 20:30.', note: 'Minoh Beer: closed Thursdays (have dinner at Kurobee instead), shuts at 20:00 on Sundays', photo: ['ahoya', 0] },
+        endNo: { time: '16:15', area: 'Minoh & Makiochi', title: 'Donuts, takoyaki & craft beer', text: 'A break at Japan’s first Mister Donut, then my favorite takoyaki shop. A toast at the Minoh Beer taproom from about 17:15, and ramen at Kurobee to finish. Train home from Makiochi at about 19:20.', note: 'Minoh Beer: closed Thursdays (have dinner at Kurobee instead), shuts at 20:00 on Sundays', photo: ['ahoya', 0] }
       },
       howPick: { title: 'Choose your start time and the onsen', text: 'At the top of the “Spots” list there are two rows of buttons. The first is your start time: “Early start” (leave Umeda by 8:30, lunch on the river terrace) or “Late start” (leave around 10:00, no terrace lunch). The second is whether you go to Minoh Onsen. If tattoos keep you out of the bath, choose “No onsen”. The numbers and times change when you tap.' },
       howRest: [
@@ -306,7 +306,7 @@ window.MINOH_I18N = {
     'late': ['busL', 'templeL', 'walkL', 'onsenL', 'endL'],
     'late-noonsen': ['busL', 'templeL', 'walkLNo', 'strollL', 'endNo']
   };
-  var COUNT = { 'early': 12, 'early-noonsen': 11, 'late': 11, 'late-noonsen': 10 };
+  var COUNT = { 'early': 14, 'early-noonsen': 13, 'late': 13, 'late-noonsen': 12 };
   Object.keys(window.MINOH_I18N).forEach(function (l) {
     var t = window.MINOH_I18N[l], p = t.introParts;
     t.introFor = {};

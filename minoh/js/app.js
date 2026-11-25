@@ -22,7 +22,7 @@
   var WIDE = window.matchMedia('(min-width: 900px)');
   var I18N = window.MINOH_I18N;
   // 2026-11-20 に番号を振り直した（出町柳スタート）ので、「行った」印は新しいキーで保存し直す
-  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-minoh-intro-seen', KEY_VISITED = 'kyoto-maps-minoh-visited-v2';
+  var KEY_LANG = 'kyoto-maps-lang', KEY_SEEN = 'kyoto-maps-minoh-intro-seen', KEY_VISITED = 'kyoto-maps-minoh-visited-v3';
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $('panel'), viewList = $('view-list'), viewDetail = $('view-detail'), intro = $('intro');
@@ -858,7 +858,7 @@
     route();
   }
 
-  fetch('../data/routes/' + course.file + '?v=10')
+  fetch('../data/routes/' + course.file + '?v=11')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

@@ -29,7 +29,7 @@
   },
   {
    "first": 9,
-   "last": 11,
+   "last": 13,
    "day": 5
   }
  ],
@@ -707,8 +707,8 @@
     "08-10.jpg"
    ],
    "text": {
-    "ja": "阪急 箕面駅（みのおえき）\n\n滝道は、緑の中を川にそって続く、気持ちのいい散歩道です。このルートでは滝から下ってきて、ここで滝道は終わりです。\n\nこのあとのたこ焼き屋さん（次の9番）までは、歩いても行けます。そのまま電車で大阪梅田へ帰るなら、石橋阪大前駅で乗り換えて約30分です。\n\nおすすめ訪問時間：16:10",
-    "en": "Hankyu Minoh Station\n\nThe Takimichi is a lovely walk through the green along the river. On this route you come down from the falls, and the path ends here.\n\nYou can walk on to the takoyaki shop (stop 9). If you’d rather head straight back to Osaka-umeda, change trains at Ishibashi Handai-mae; it takes about 30 minutes.\n\nRecommended visit time: 16:10"
+    "ja": "阪急 箕面駅（みのおえき）\n\n滝道は、緑の中を川にそって続く、気持ちのいい散歩道です。このルートでは滝から下ってきて、ここで滝道は終わりです。\n\nこのあとは、ミスタードーナツの1号店（次の9番）に寄って、たこ焼き屋さんまで歩きます（駅から約15分）。そのまま電車で大阪梅田へ帰るなら、石橋阪大前駅で乗り換えて約30分です。\n\nおすすめ訪問時間：16:10",
+    "en": "Hankyu Minoh Station\n\nThe Takimichi is a lovely walk through the green along the river. On this route you come down from the falls, and the path ends here.\n\nFrom here you walk past Japan’s first Mister Donut (stop 9) to the takoyaki shop (about 15 minutes from the station). If you’d rather head straight back to Osaka-umeda, change trains at Ishibashi Handai-mae; it takes about 30 minutes.\n\nRecommended visit time: 16:10"
    },
    "gmaps": [
     {
@@ -754,6 +754,86 @@
   },
   {
    "no": 9,
+   "id": "misdo",
+   "name": {
+    "ja": "ミスタードーナツ 箕面ショップ",
+    "en": "Mister Donut Minoh Shop"
+   },
+   "kind": {
+    "ja": "ドーナツ・カフェ",
+    "en": "Donuts & café"
+   },
+   "blurb": {
+    "ja": "1971年に開いた、日本のミスタードーナツの1号店。店内に、1号店ができたころの写真の展示があります。",
+    "en": "Japan’s very first Mister Donut, opened in 1971. Inside, the walls show photos from the shop’s early days."
+   },
+   "lat": 34.8327,
+   "lng": 135.4693,
+   "photos": [
+    "misdo-1.jpg",
+    "misdo-2.jpg",
+    "misdo-3.jpg",
+    "misdo-4.jpg",
+    "misdo-5.jpg",
+    "misdo-6.jpg"
+   ],
+   "text": {
+    "ja": "ミスタードーナツ 箕面ショップ\n\n1971年4月、日本のミスタードーナツの1号店として、ここ箕面に開いたお店です。2020年に、創業当時をイメージした白とオレンジの店に改装されました。店内の壁には、1号店ができたころの写真や、ドーナツを1つずつ手で作っていたころの話が展示されています。\n\n箕面駅から歩いて約5分。たこ焼き屋さん（次の10番）へ向かう道の途中にあります。コーヒーとドーナツでひと休みしたり、おみやげに買ったり。たこ焼き屋さんまでは、ここから歩いて約12分です。\n\nおすすめ訪問時間：16:15〜16:35",
+    "en": "Mister Donut Minoh Shop\n\nThis is where Mister Donut opened its very first shop in Japan, in April 1971. In 2020 it was redone in white and orange, the look of those early days. On the walls inside are photos from when the shop opened and the story of the days when every donut was made by hand.\n\nIt is about 5 minutes’ walk from Minoh Station, on the way to the takoyaki shop (stop 10). Stop for coffee and a donut, or pick some up to take home. From here the takoyaki shop is about 12 minutes on foot.\n\nRecommended visit time: 16:15–16:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ミスタードーナツ 箕面ショップ",
+      "en": "Mister Donut Minoh Shop"
+     },
+     "lat": 34.8327,
+     "lng": 135.4693,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%9F%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%89%E3%83%BC%E3%83%8A%E3%83%84%20%E7%AE%95%E9%9D%A2%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ミスタードーナツ 箕面ショップ（公式の店舗ページ）",
+      "en": "Mister Donut Minoh Shop: official shop page (Japanese)"
+     },
+     "url": {
+      "ja": "https://md.mapion.co.jp/b/misterdonut/info/0001/",
+      "en": "https://md.mapion.co.jp/b/misterdonut/info/0001/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜20:00",
+       "en": "9:00–20:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "クレジットカード、交通系ICカード、PayPay などが使えます",
+       "en": "Credit cards, transport IC cards, PayPay and more are accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-25"
+   },
+   "notices": []
+  },
+  {
+   "no": 10,
    "id": "ahoya",
    "name": {
     "ja": "あほや 牧落店",
@@ -780,8 +860,8 @@
     "09-8.jpg"
    ],
    "text": {
-    "ja": "あほや 牧落店（まきおちてん）\n\n大阪名物のたこ焼きをいろいろ食べてきた中で、ここが最高です。\n\nソース、ポン酢、しょうゆ、塩など、味を選べます。焼きたては熱いので気をつけて！\n\nたこ焼きは6個・8個・10個・12個から選べます。「あほや名物」と書いてある平たい「ぺちゃ焼」（写真の4枚目）もあります。\n\nおすすめ訪問時間：16:30",
-    "en": "Ahoya Makiochi\n\nTakoyaki is Osaka’s specialty, and of all the places I’ve tried, this one is the best.\n\nYou can choose your topping: sauce, ponzu, soy sauce, salt and more. They come straight off the grill, so careful, they’re hot!\n\nTakoyaki come in 6, 8, 10 or 12. The flat “pecha-yaki” in the fourth photo is the shop’s own specialty.\n\nRecommended visit time: 16:30"
+    "ja": "あほや 牧落店（まきおちてん）\n\n大阪名物のたこ焼きをいろいろ食べてきた中で、ここが最高です。\n\nソース、ポン酢、しょうゆ、塩など、味を選べます。焼きたては熱いので気をつけて！\n\nたこ焼きは6個・8個・10個・12個から選べます。「あほや名物」と書いてある平たい「ぺちゃ焼」（写真の4枚目）もあります。\n\nおすすめ訪問時間：16:50",
+    "en": "Ahoya Makiochi\n\nTakoyaki is Osaka’s specialty, and of all the places I’ve tried, this one is the best.\n\nYou can choose your topping: sauce, ponzu, soy sauce, salt and more. They come straight off the grill, so careful, they’re hot!\n\nTakoyaki come in 6, 8, 10 or 12. The flat “pecha-yaki” in the fourth photo is the shop’s own specialty.\n\nRecommended visit time: 16:50"
    },
    "gmaps": [
     {
@@ -807,7 +887,7 @@
    "notices": []
   },
   {
-   "no": 10,
+   "no": 11,
    "id": "beer",
    "name": {
     "ja": "箕面ビール WAREHOUSE",
@@ -836,8 +916,8 @@
     "10-10.jpg"
    ],
    "text": {
-    "ja": "箕面ビール WAREHOUSE\n\n箕面はゆずと桃が有名で、収穫の季節には、地元の果物を使ったビールも飲めます。地元の素材を大切にしている醸造所です。\n\n私のいちばんのお気に入りはW-IPA。いちばん有名なのはスタウトで、コーヒーのように香ばしくて深い味わいが最高です。ビールに合う料理もたくさんあります。\n\nグラスはパイント（473ml）とハーフパイント（270ml）。ハーフでいくつか飲み比べるのもおすすめです。\n\n木曜日はお休みです。木曜に行く人は、たこ焼きのあと牧落駅から帰りましょう。日曜は20:00に閉まります（ラストオーダー19:30）。\n\nおすすめ訪問時間：17:00〜",
-    "en": "Minoh Beer WAREHOUSE\n\nMinoh is famous for its yuzu and peaches, and in harvest season you can taste beers brewed with these local fruits. The brewery takes real pride in local produce.\n\nMy personal favorite is the W-IPA, but the most famous one here is the Stout: rich, roasted and almost coffee-like, and my pick if you only have one. There’s plenty of food to go with it.\n\nBeer comes by the pint (473 ml) or half pint (270 ml), so order halves and try a few.\n\nIt is closed on Thursdays: if you come on a Thursday, head home from Makiochi Station after the takoyaki. On Sundays it closes at 20:00 (last order 19:30).\n\nRecommended visit time: 17:00–"
+    "ja": "箕面ビール WAREHOUSE\n\n箕面はゆずと桃が有名で、収穫の季節には、地元の果物を使ったビールも飲めます。地元の素材を大切にしている醸造所です。\n\n私のいちばんのお気に入りはW-IPA。いちばん有名なのはスタウトで、コーヒーのように香ばしくて深い味わいが最高です。ビールに合う料理もたくさんあります。\n\nグラスはパイント（473ml）とハーフパイント（270ml）。ハーフでいくつか飲み比べるのもおすすめです。\n\n木曜日はお休みです。木曜に行く人は、たこ焼きのあと、すぐ近くの黒兵衛のラーメンを晩ごはんにしましょう。日曜は20:00に閉まります（ラストオーダー19:30）。\n\nおすすめ訪問時間：17:15〜",
+    "en": "Minoh Beer WAREHOUSE\n\nMinoh is famous for its yuzu and peaches, and in harvest season you can taste beers brewed with these local fruits. The brewery takes real pride in local produce.\n\nMy personal favorite is the W-IPA, but the most famous one here is the Stout: rich, roasted and almost coffee-like, and my pick if you only have one. There’s plenty of food to go with it.\n\nBeer comes by the pint (473 ml) or half pint (270 ml), so order halves and try a few.\n\nIt is closed on Thursdays: if you come on a Thursday, have dinner at Kurobee, the ramen shop just nearby, after the takoyaki. On Sundays it closes at 20:00 (last order 19:30).\n\nRecommended visit time: 17:15–"
    },
    "gmaps": [
     {
@@ -891,7 +971,88 @@
    "notices": []
   },
   {
-   "no": 11,
+   "no": 12,
+   "id": "kurobee",
+   "name": {
+    "ja": "黒兵衛 箕面総本店",
+    "en": "Kurobee Minoh (ramen)"
+   },
+   "kind": {
+    "ja": "ラーメン",
+    "en": "Ramen"
+   },
+   "blurb": {
+    "ja": "とんこつラーメンのお店。麺の硬さを選べて、店の真ん中の「食べ放題コーナー」の薬味は自由に取れます。",
+    "en": "A tonkotsu (pork-broth) ramen shop. Choose how firm you want your noodles, and help yourself to the free toppings in the middle of the shop."
+   },
+   "lat": 34.825,
+   "lng": 135.47168,
+   "photos": [
+    "kurobee-1.jpg",
+    "kurobee-2.jpg",
+    "kurobee-3.jpg",
+    "kurobee-4.jpg",
+    "kurobee-5.jpg",
+    "kurobee-6.jpg"
+   ],
+   "text": {
+    "ja": "黒兵衛 箕面総本店（くろべえ みのおそうほんてん）\n\nとんこつラーメンのお店です。麺の硬さは、やわらかい「バリやわ」から、ほとんどゆでない「湯気通し」まで選べます（店のおすすめは「ふつう」）。店の真ん中に「食べ放題コーナー」があって、薬味を自由に取れます。餃子や小さな丼もあります。\n\n箕面ビールのあとのシメに。木曜（箕面ビールのお休みの日）は、たこ焼きのあと、ここで晩ごはんにしましょう。\n\nここから牧落駅（次の13番）までは、歩いて約10分です。\n\nおすすめ訪問時間：18:30〜",
+    "en": "Kurobee Minoh (ramen)\n\nA tonkotsu ramen shop. You choose how firm your noodles are, from very soft (“bari-yawa”) to barely cooked (“yuge-dooshi”); the shop recommends “futsu”, regular. In the middle of the shop is a self-service corner of free toppings. They also have gyoza and small rice bowls.\n\nCome here to finish the night after Minoh Beer. On Thursdays, when Minoh Beer is closed, make this your dinner after the takoyaki.\n\nMakiochi Station (stop 13) is about 10 minutes’ walk from here.\n\nRecommended visit time: 18:30–"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "黒兵衛 箕面総本店",
+      "en": "Kurobee Minoh"
+     },
+     "lat": 34.825,
+     "lng": 135.47168,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E5%85%B5%E8%A1%9B%20%E7%AE%95%E9%9D%A2%E7%B7%8F%E6%9C%AC%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "黒兵衛 箕面総本店（Retty）",
+      "en": "Kurobee Minoh on Retty (Japanese)"
+     },
+     "url": {
+      "ja": "https://retty.me/restaurant/100000064015/",
+      "en": "https://retty.me/restaurant/100000064015/"
+     }
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "公式の情報がなく要確認です（グルメサイトのRettyでは11:00〜翌1:30・無休）",
+       "en": "No official information, please check (the Retty listing says 11:00–1:30 at night, open every day)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "グルメサイトでは、クレジットカードは使えず、PayPayは使える、となっています（要確認）",
+       "en": "The Retty listing says no credit cards, PayPay accepted (please check)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": null,
+    "checked": "2026-11-25",
+    "verified": false
+   },
+   "notices": []
+  },
+  {
+   "no": 13,
    "id": "makiochi",
    "name": {
     "ja": "牧落駅",
@@ -913,8 +1074,8 @@
     "11-3.jpg"
    ],
    "text": {
-    "ja": "阪急 牧落駅（まきおちえき）\n\n大阪梅田までは、乗り換えを入れて約25〜30分です。\n\nおすすめ出発時間：18:30〜",
-    "en": "Hankyu Makiochi Station\n\nIt takes about 25–30 minutes to Osaka-umeda, including the change.\n\nRecommended departure time: 18:30–"
+    "ja": "阪急 牧落駅（まきおちえき）\n\n大阪梅田までは、乗り換えを入れて約25〜30分です。\n\nおすすめ出発時間：19:20〜",
+    "en": "Hankyu Makiochi Station\n\nIt takes about 25–30 minutes to Osaka-umeda, including the change.\n\nRecommended departure time: 19:20–"
    },
    "gmaps": [
     {
@@ -1025,6 +1186,26 @@
    "what": "阪急バス30系統 箕面萱野駅8番のりば発の時刻（2026年2月1日現在の時刻表。平日 毎時00・30分、土休日 9:00〜12:40は20分ごと・13:00〜15:00は30分ごと）",
    "url": "https://transfer-cloud.navitime.biz/hankyubus/courses/timetables?busstop=00021386&timetable-id=202106",
    "checked": "2026-11-21"
+  },
+  {
+   "what": "ミスタードーナツ 箕面ショップ：営業時間9:00〜20:00、住所 箕面6丁目1番30、クレジットカード・交通系電子マネー・PayPayなど可（ミスタードーナツ公式の店舗検索）",
+   "url": "https://md.mapion.co.jp/b/misterdonut/info/0001/",
+   "checked": "2026-11-25"
+  },
+  {
+   "what": "ミスタードーナツの1号店：1971年4月、大阪府箕面市に第1号店をオープン（ダスキン公式の沿革）",
+   "url": "https://www.duskin.co.jp/company/history/",
+   "checked": "2026-11-25"
+  },
+  {
+   "what": "箕面ショップが日本の1号店で、2020年1月に創業当時の白とオレンジの姿に改装、店内に当時の写真を展示（トラベル Watch 2020-01-24）",
+   "url": "https://travel.watch.impress.co.jp/docs/news/1231168.html",
+   "checked": "2026-11-25"
+  },
+  {
+   "what": "黒兵衛 箕面総本店：公式サイト（kurobee.info）は中身のないページで、営業時間は確認できず。Retty では 11:00〜翌1:30・無休・カード不可・PayPay可・牧落3-13-13（要確認のまま）。麺の硬さの表と「食べ放題コーナー」は店内の掲示（2026-11-24 の写真）",
+   "url": "https://retty.me/restaurant/100000064015/",
+   "checked": "2026-11-25"
   }
  ]
 }

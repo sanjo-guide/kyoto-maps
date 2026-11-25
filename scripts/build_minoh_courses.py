@@ -29,8 +29,9 @@ IDS = {
     '箕面萱野駅': 'kayano', '箕面萱野駅 バスのりば': 'bus', '勝尾寺': 'katsuoji', '箕面ビジターセンター': 'visitor',
     '杉の茶屋': 'sugi', '箕面大滝': 'falls', 'チンクエピュウ': 'cinque', '箕面温泉スパーガーデン': 'onsen',
     '箕面駅': 'minoh-st', 'あほや 牧落店': 'ahoya', '箕面ビール WAREHOUSE': 'beer', '牧落駅': 'makiochi',
+    'ミスタードーナツ 箕面ショップ': 'misdo', '黒兵衛 箕面総本店': 'kurobee',
 }
-ORDER = ['kayano', 'bus', 'katsuoji', 'visitor', 'sugi', 'falls', 'cinque', 'onsen', 'minoh-st', 'ahoya', 'beer', 'makiochi']
+ORDER = ['kayano', 'bus', 'katsuoji', 'visitor', 'sugi', 'falls', 'cinque', 'onsen', 'minoh-st', 'misdo', 'ahoya', 'beer', 'kurobee', 'makiochi']
 
 # めやすの時間（各スポットの文章のいちばん下の行）。(日本語の見出し, 日本語, 英語の見出し, 英語)
 ARR, DEP, VIS = ('おすすめ到着時間', 'Recommended arrival time'), ('おすすめ出発時間', 'Recommended departure time'), ('おすすめ訪問時間', 'Recommended visit time')
@@ -45,9 +46,11 @@ TIMES = {
         'cinque': (VIS, '13:50〜14:50', '13:50–14:50'),
         'onsen': (VIS, '15:05〜16:45', '15:05–16:45'),
         'minoh-st': (VIS, '17:00', '17:00'),
-        'ahoya': (VIS, '17:20', '17:20'),
-        'beer': (VIS, '17:45〜', '17:45–'),
-        'makiochi': (DEP, '19:15〜', '19:15–'),
+        'misdo': (VIS, '17:05〜17:25', '17:05–17:25'),
+        'ahoya': (VIS, '17:40', '17:40'),
+        'beer': (VIS, '18:05〜', '18:05–'),
+        'kurobee': (VIS, '19:20〜', '19:20–'),
+        'makiochi': (DEP, '20:10〜', '20:10–'),
     },
     'early-noonsen': {
         'kayano': (ARR, '9:00前', 'just before 9:00'),
@@ -58,9 +61,11 @@ TIMES = {
         'falls': (VIS, '12:35〜13:10', '12:35–13:10'),
         'cinque': (VIS, '13:50〜14:50', '13:50–14:50'),
         'minoh-st': (VIS, '16:10', '16:10'),
-        'ahoya': (VIS, '16:30', '16:30'),
-        'beer': (VIS, '17:00〜', '17:00–'),
-        'makiochi': (DEP, '18:30〜', '18:30–'),
+        'misdo': (VIS, '16:15〜16:35', '16:15–16:35'),
+        'ahoya': (VIS, '16:50', '16:50'),
+        'beer': (VIS, '17:15〜', '17:15–'),
+        'kurobee': (VIS, '18:30〜', '18:30–'),
+        'makiochi': (DEP, '19:20〜', '19:20–'),
     },
     'late': {
         'kayano': (ARR, '10:30ごろ', 'about 10:30'),
@@ -71,9 +76,11 @@ TIMES = {
         'falls': (VIS, '14:05〜14:40', '14:05–14:40'),
         'onsen': (VIS, '15:25〜17:05', '15:25–17:05'),
         'minoh-st': (VIS, '17:20', '17:20'),
-        'ahoya': (VIS, '17:40', '17:40'),
-        'beer': (VIS, '18:05〜', '18:05–'),
-        'makiochi': (DEP, '19:30〜', '19:30–'),
+        'misdo': (VIS, '17:25〜17:45', '17:25–17:45'),
+        'ahoya': (VIS, '18:00', '18:00'),
+        'beer': (VIS, '18:25〜', '18:25–'),
+        'kurobee': (VIS, '19:40〜', '19:40–'),
+        'makiochi': (DEP, '20:30〜', '20:30–'),
     },
     'late-noonsen': {
         'kayano': (ARR, '10:30ごろ', 'about 10:30'),
@@ -83,18 +90,20 @@ TIMES = {
         'sugi': (VIS, '14:10', '14:10'),
         'falls': (VIS, '14:15〜15:00', '14:15–15:00'),
         'minoh-st': (VIS, '16:10', '16:10'),
-        'ahoya': (VIS, '16:30', '16:30'),
-        'beer': (VIS, '17:00〜', '17:00–'),
-        'makiochi': (DEP, '18:30〜', '18:30–'),
+        'misdo': (VIS, '16:15〜16:35', '16:15–16:35'),
+        'ahoya': (VIS, '16:50', '16:50'),
+        'beer': (VIS, '17:15〜', '17:15–'),
+        'kurobee': (VIS, '18:30〜', '18:30–'),
+        'makiochi': (DEP, '19:20〜', '19:20–'),
     },
 }
 
 # 一覧の見出し（紹介ページの「1日の流れ」の何番目か）。コースごとに i18n.js の day の並びと合わせる
 SECTIONS = {
-    'early': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('cinque',), 3), (('onsen', 'minoh-st'), 4), (('ahoya', 'beer', 'makiochi'), 5)],
-    'early-noonsen': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('cinque',), 3), (('minoh-st',), 4), (('ahoya', 'beer', 'makiochi'), 5)],
-    'late': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('onsen', 'minoh-st'), 3), (('ahoya', 'beer', 'makiochi'), 4)],
-    'late-noonsen': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('minoh-st',), 3), (('ahoya', 'beer', 'makiochi'), 4)],
+    'early': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('cinque',), 3), (('onsen', 'minoh-st'), 4), (('misdo', 'ahoya', 'beer', 'kurobee', 'makiochi'), 5)],
+    'early-noonsen': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('cinque',), 3), (('minoh-st',), 4), (('misdo', 'ahoya', 'beer', 'kurobee', 'makiochi'), 5)],
+    'late': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('onsen', 'minoh-st'), 3), (('misdo', 'ahoya', 'beer', 'kurobee', 'makiochi'), 4)],
+    'late-noonsen': [(('kayano', 'bus'), 0), (('katsuoji',), 1), (('visitor', 'sugi', 'falls'), 2), (('minoh-st',), 3), (('misdo', 'ahoya', 'beer', 'kurobee', 'makiochi'), 4)],
 }
 
 # コースで変わる段落。段落の書き出し（starts）で見つけて、丸ごと入れ替える
@@ -128,8 +137,8 @@ ADD = [
      'タトゥーのある人へ：入れ墨・タトゥーのある人は入れません。温泉が売っている専用のカバーシール2枚までで完全に隠せる場合だけ入れます。隠せない人は、一覧の上のボタンで「温泉に入らない」を選んでください。',
      'If you have tattoos: people with tattoos are not admitted, unless the tattoos can be completely covered with no more than two of the cover stickers the onsen sells. If you can’t cover them, choose “No onsen” with the buttons at the top of the list.'),
     ('beer', (None, None),
-     '木曜日はお休みです。木曜に行く人は、たこ焼きのあと牧落駅から帰りましょう。日曜は20:00に閉まります（ラストオーダー19:30）。',
-     'It is closed on Thursdays: if you come on a Thursday, head home from Makiochi Station after the takoyaki. On Sundays it closes at 20:00 (last order 19:30).'),
+     '木曜日はお休みです。木曜に行く人は、たこ焼きのあと、すぐ近くの黒兵衛のラーメンを晩ごはんにしましょう。日曜は20:00に閉まります（ラストオーダー19:30）。',
+     'It is closed on Thursdays: if you come on a Thursday, have dinner at Kurobee, the ramen shop just nearby, after the takoyaki. On Sundays it closes at 20:00 (last order 19:30).'),
     # 早めに出発
     ('falls', ('early', None),
      '早めに出発のコースでは、13:10ごろに滝を出ます。川のテラスのチンクエピュウまで、滝道を下って35〜40分です。',
@@ -225,6 +234,10 @@ SOURCES = [
     {'what': '杉の茶屋：箕面市観光協会のページは「定休日 不定休」だけで、営業時間の記載なし（要確認のまま）', 'url': 'https://minohkankou.net/sights/1493/', 'checked': '2026-11-24'},
     {'what': 'あほや 牧落店：公式サイト・公式SNSは見つからず、箕面市観光協会のサイトにも掲載なし（「あほや」で検索して0件）。営業時間は要確認のまま', 'url': 'https://minohkankou.net/?s=%E3%81%82%E3%81%BB%E3%82%84', 'checked': '2026-11-24'},
     {'what': '阪急バス30系統 箕面萱野駅8番のりば発の時刻（2026年2月1日現在の時刻表。平日 毎時00・30分、土休日 9:00〜12:40は20分ごと・13:00〜15:00は30分ごと）', 'url': 'https://transfer-cloud.navitime.biz/hankyubus/courses/timetables?busstop=00021386&timetable-id=202106', 'checked': '2026-11-21'},
+    {'what': 'ミスタードーナツ 箕面ショップ：営業時間9:00〜20:00、住所 箕面6丁目1番30、クレジットカード・交通系電子マネー・PayPayなど可（ミスタードーナツ公式の店舗検索）', 'url': 'https://md.mapion.co.jp/b/misterdonut/info/0001/', 'checked': '2026-11-25'},
+    {'what': 'ミスタードーナツの1号店：1971年4月、大阪府箕面市に第1号店をオープン（ダスキン公式の沿革）', 'url': 'https://www.duskin.co.jp/company/history/', 'checked': '2026-11-25'},
+    {'what': '箕面ショップが日本の1号店で、2020年1月に創業当時の白とオレンジの姿に改装、店内に当時の写真を展示（トラベル Watch 2020-01-24）', 'url': 'https://travel.watch.impress.co.jp/docs/news/1231168.html', 'checked': '2026-11-25'},
+    {'what': '黒兵衛 箕面総本店：公式サイト（kurobee.info）は中身のないページで、営業時間は確認できず。Retty では 11:00〜翌1:30・無休・カード不可・PayPay可・牧落3-13-13（要確認のまま）。麺の硬さの表と「食べ放題コーナー」は店内の掲示（2026-11-24 の写真）', 'url': 'https://retty.me/restaurant/100000064015/', 'checked': '2026-11-25'},
 ]
 
 TIME_LINE = {'ja': re.compile(r'^おすすめ(?:訪問|出発|到着)時間\s*[：:]'), 'en': re.compile(r'^Recommended (?:visit|departure|arrival) time\s*:')}
@@ -260,8 +273,9 @@ def set_text(spot, cid, start, onsen, no_of):
         # 文章の中の「次の◯番」は、そのコースの番号に直す
         if sid == 'kayano':
             t = re.sub(r'（次の\d+番）', f"（次の{no_of['bus']}番）", t); t = re.sub(r'\(stop \d+\)', f"(stop {no_of['bus']})", t)
-        if sid == 'minoh-st':
-            t = re.sub(r'（次の\d+番）', f"（次の{no_of['ahoya']}番）", t); t = re.sub(r'\(stop \d+\)', f"(stop {no_of['ahoya']})", t)
+        if sid in ('minoh-st', 'misdo', 'kurobee'):
+            nxt = no_of[{'minoh-st': 'misdo', 'misdo': 'ahoya', 'kurobee': 'makiochi'}[sid]]
+            t = re.sub(r'（次の\d+番）', f"（次の{nxt}番）", t); t = re.sub(r'\(stop \d+\)', f"(stop {nxt})", t)
         if sid == 'falls':
             t = t.replace('約40分（約2.7km）', '約40分（約2.8km）').replace('about 40 minutes (about 2.7 km)', 'about 40 minutes (about 2.8 km)')
         spot['text'][l] = t
