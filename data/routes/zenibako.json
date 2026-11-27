@@ -1,0 +1,1542 @@
+{
+ "id": "zenibako",
+ "_note": "銭函と朝里（zenibako/ のページ専用。形は eizan-line.json と同じ）。札幌10:00発→銭函→朝里→朝里川温泉→小樽で晩ごはん→札幌。コースは1つ、最初は「全部回る」。写真はすべて Wikimedia Commons（一覧は scripts/zenibako_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_zenibako_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "area": {
+    "ja": "札幌",
+    "en": "Sapporo"
+   },
+   "title": {
+    "ja": "札幌から快速で21分",
+    "en": "21 minutes from Sapporo by rapid train"
+   }
+  },
+  {
+   "first": 2,
+   "last": 4,
+   "area": {
+    "ja": "銭函",
+    "en": "Zenibako"
+   },
+   "title": {
+    "ja": "午前：駅と丘の神社、海の前でお昼",
+    "en": "Morning: the station, the hilltop shrine, lunch by the sea"
+   }
+  },
+  {
+   "first": 5,
+   "last": 6,
+   "area": {
+    "ja": "朝里",
+    "en": "Asari"
+   },
+   "title": {
+    "ja": "午後：海べりの駅から、谷の温泉へ",
+    "en": "Afternoon: from the seaside station up to the hot spring"
+   }
+  },
+  {
+   "first": 7,
+   "last": 8,
+   "area": {
+    "ja": "小樽",
+    "en": "Otaru"
+   },
+   "title": {
+    "ja": "夜：運河沿いでビールと晩ごはん、札幌へ",
+    "en": "Evening: beer and dinner by the canal, then Sapporo"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 8
+ },
+ "plan": {
+  "_note": "札幌駅・銭函駅・小樽駅はいつも入る。最初は「全部回る」（時間割どおり）。",
+  "picks": [
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "2": {
+    "always": true
+   },
+   "8": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "温泉に入らない日は、朝里14:30発の快速エアポートで小樽へ（14:41着）。小樽の町を歩いてから、晩ごはんの小樽倉庫No.1へ。",
+     "en": "Skipping the hot spring? Take the 14:30 Rapid Airport from Asari to Otaru (arr. 14:41), explore the town, then go on to Otaru Soko No.1 for dinner."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "none": [
+      7
+     ]
+    },
+    "text": {
+     "ja": "晩ごはんを札幌で食べる日は、17:56のバスを小樽築港駅で降りて（18:14着、土曜は18:13）、18:36の快速エアポートで札幌19:07着。",
+     "en": "Eating in Sapporo tonight? Get off the 17:56 bus at Otaru-Chikko Station (18:14; 18:13 on Saturdays) and take the 18:36 Rapid Airport to Sapporo (19:07)."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/zenibako/",
+ "sources": [
+  {
+   "what": "札幌→銭函 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E9%8A%AD%E5%87%BD&y=2026&m=12&d=03&hh=09&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "9:16→9:42、9:25→9:56、快速エアポート35号 10:00→10:21、IC・きっぷとも470円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→銭函 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E9%8A%AD%E5%87%BD&y=2026&m=12&d=05&hh=09&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "9:16→9:42、9:25→9:56、10:00→10:21（快速エアポート35号）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→銭函 10時台 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E9%8A%AD%E5%87%BD&y=2026&m=12&d=03&hh=09&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "10:00→10:21、10:06→10:33",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大通→さっぽろ 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%A4%A7%E9%80%9A",
+   "saw": "地下鉄南北線 乗車2分、210円（9:43発で札幌9:52、歩く時間を含む）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "すすきの→さっぽろ 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE",
+   "saw": "乗車4分、210円（9:41発で札幌9:52）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "すすきの→さっぽろ 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=09&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE",
+   "saw": "9:42発で札幌9:53、210円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "銭函→朝里 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%9D%E9%87%8C&y=2026&m=12&d=03&hh=12&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E9%8A%AD%E5%87%BD",
+   "saw": "12:55→13:03、快速エアポート71号 13:22→13:30、13:54→14:02、310円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "銭函→朝里 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%9D%E9%87%8C&y=2026&m=12&d=05&hh=12&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E9%8A%AD%E5%87%BD",
+   "saw": "12:55→13:03、13:22→13:30、13:54→14:02",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "銭函→朝里 午後",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%9D%E9%87%8C%E5%B7%9D%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=14&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E9%8A%AD%E5%87%BD",
+   "saw": "快速エアポート83号 銭函14:22→朝里14:30（その先のバスは乗換案内に出ない）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "朝里→小樽 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=03&hh=14&m1=0&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%9D%E9%87%8C",
+   "saw": "快速エアポート83号 14:30→14:41、15:03→15:14、310円（12/5も同じ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 朝里町（朝里川温泉行き）",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300020&course=0005601306&stopNo=16",
+   "saw": "2026年4月1日改定。平日 12:27 13:27 14:27 15:28 16:28、土曜・日祝 12:27 13:27 14:27 15:27 16:27",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 14:05の便 平日",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803d0029&datetime=2026-11-25T14%3A05%3A00&node=00300075&course=0005601306&stop-no=1",
+   "saw": "小樽駅前14:05→小樽築港駅14:20→朝里町14:27→温泉南14:39→朝里川温泉14:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 14:05の便 土曜",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803d0018&datetime=2026-11-28T14%3A05%3A00&node=00300075&course=0005601306&stop-no=1",
+   "saw": "朝里町14:27→温泉南14:39",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 温泉南（小樽駅前行き）",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300083&course=0005604150&stopNo=3",
+   "saw": "2026年4月1日改定。平日・土曜・日祝 15:56 17:01 17:56 18:51 19:51 20:51（最終）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 温泉南17:56の便 平日",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803e002e&datetime=2026-11-25T17%3A56%3A00&node=00300083&course=0005604150&stop-no=3",
+   "saw": "朝里町18:07→小樽築港駅18:14→小樽駅前18:32",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 温泉南17:56の便 土曜",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803e001c&datetime=2026-11-28T17%3A56%3A00&node=00300083&course=0005604150&stop-no=3",
+   "saw": "朝里町18:06→小樽築港駅18:13→小樽駅前18:29",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 温泉南19:51の便 平日",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803e0030&datetime=2026-11-25T19%3A51%3A00&node=00300083&course=0005604150&stop-no=3",
+   "saw": "小樽築港駅20:08→小樽駅前20:23",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 温泉南20:51の便（最終）",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803e0031&datetime=2026-11-25T20%3A51%3A00&node=00300083&course=0005604150&stop-no=3",
+   "saw": "平日 小樽築港駅21:08→小樽駅前21:23",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス13番 温泉南20:51の便 土曜",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusRouteTimetable?operation=803e001f&datetime=2026-11-28T20%3A51%3A00&node=00300083&course=0005604150&stop-no=3",
+   "saw": "小樽築港駅21:07→小樽駅前21:21",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス 小樽駅前（朝里川温泉行き）",
+   "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300075&course=0005601306&stopNo=1",
+   "saw": "13番 平日 13:05 14:05 15:05、土曜 13:05 14:05 15:05",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス よくある質問",
+   "url": "https://www.chuo-bus.co.jp/support/faq/",
+   "saw": "全国相互利用の交通系ICカード（10種類）が使える。現金はおつりが出ない。車内の両替機は千円札・硬貨のみ（5千円・1万円・2千円札は不可）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽築港→札幌 夕方 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=18&m1=1&m2=4&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B0%8F%E6%A8%BD%E7%AF%89%E6%B8%AF",
+   "saw": "18:15→18:56、快速エアポート166号 18:36→19:07（12/5も同じ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽築港→札幌 夜 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=20&m1=1&m2=2&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B0%8F%E6%A8%BD%E7%AF%89%E6%B8%AF",
+   "saw": "20:28→21:11、20:44→21:23、800円（12/5も同じ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽築港→札幌 最終のバスのあと",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=21&m1=1&m2=2&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B0%8F%E6%A8%BD%E7%AF%89%E6%B8%AF",
+   "saw": "21:22→22:03、21:43→22:24（12/5も同じ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 夜 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=20&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B0%8F%E6%A8%BD",
+   "saw": "20:57→21:44、21:16→22:03、800円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 夜 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=20&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B0%8F%E6%A8%BD",
+   "saw": "20:57→21:44、21:16→22:03、21:37→22:24",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 最終 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%B0%8F%E6%A8%BD",
+   "saw": "最終23:08→23:53（12/5も同じ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "JR北海道 北海道レールパス",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "JR北海道の全線（新幹線を除く）の特急・快速・普通の普通車に乗れる",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "JR北海道 札幌〜小樽のきっぷ",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/regular/index.html",
+   "saw": "札幌〜小樽 自由席800円・指定席1,800円。自由席はICカードだけで乗れる",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽ビール 銭函醸造所 見学",
+   "url": "https://otarubeer.com/jp/Ppage_id=353.html",
+   "saw": "要予約（1週間前まで、電話 平日9:00〜17:00）。2〜20名、1人2,200円の1コース、開始11:00・15:00。銭函駅から徒歩20分。所要時間の記載は今のコースにはない",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽ビール 小樽倉庫No.1",
+   "url": "https://otarubeer.com/jp/Ppage_id=357.html",
+   "saw": "11:00〜22:00（料理L.O.21:00・飲み物L.O.21:30）、不定休。木・土は2時間飲み放題2,600円・予約不要。セルフ見学は無料・試飲なし。銭函醸造所は業務用の樽と瓶ビールの醸造所",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "しろくまコーヒー",
+   "url": "https://shirokumacoffee.com/",
+   "saw": "今月の営業時間9:00〜16:30（L.O.16:30）。パリドッグ・ホットサンドなど。銭函駅の目の前。英語のページあり",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "しろくまコーヒー メニュー",
+   "url": "https://shirokumacoffee.com/cafemenu/",
+   "saw": "パリドッグ、サバサンド、ホットサンド各種（値段の記載なし）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "手打ちそば 春別",
+   "url": "https://teuchisoba-syunbetsu.jimdofree.com/",
+   "saw": "11:00〜19:00（売切次第終了）、定休日 金曜日、小樽市銭函3丁目186-27、銭函駅から車で6分。幌加内産そば粉、つぶこん",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "徳光珈琲 銭函店",
+   "url": "https://tokumitsu-coffee.com/shop",
+   "saw": "10:00〜17:00（L.O.16:30）、定休日 日・月・第2・4火曜日、小樽市銭函2丁目2-8",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊足神社（北海道神社庁）",
+   "url": "https://hokkaidojinjacho.jp/%e8%b1%8a%e8%b6%b3%e7%a5%9e%e7%a4%be/",
+   "saw": "小樽市銭函2丁目9番10号。例祭日6月25日。安永9年（1780）、松前の商人阿部屋伝次郎が銭函村以北の鎮守として豊受大神を勧請",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊足神社（小樽観光協会 月刊小樽自身2021年7月号）",
+   "url": "https://otaru.gr.jp/citizen/otarujishin-202107",
+   "saw": "銭函駅裏側の高台、白っぽい鳥居。日露戦争でロシア軍が爆破した機雷の残骸が浜で見つかり展示。2月の「雪あかりの路」の会場",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽市内 神社の例大祭 令和8年度",
+   "url": "https://otaru.gr.jp/citizen/2026-shrine-festival",
+   "saw": "豊足神社 6月27日（土）〜28日（日）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽観光協会のコラム（銭函〜朝里）",
+   "url": "https://otaru.gr.jp/column/sengoku_ryoutarou",
+   "saw": "銭函駅は昭和6年の駅舎、銭箱が置かれたホーム、ゼニキューブ（ZとNに見えるイス）。銭函から張碓・朝里の海岸。札幌方面から小樽へ進むと銭函から海が見える。海の向こうに浜益から増毛の山々",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽市 海水浴場 令和8年度",
+   "url": "https://www.city.otaru.lg.jp/docs/2020100901012/",
+   "saw": "銭函海水浴場7/4〜8/24（JR銭函駅から徒歩10分）、おたるドリームビーチ6/26〜8/31。朝里は今年度の5か所に入っていない",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "朝里川温泉ホテル",
+   "url": "https://asarigawaonsenhotel.com/",
+   "saw": "日帰り入浴11:00〜20:00（最終受付19:30）、大人850円、土日祝・年末年始1,000円。フェイスタオル販売200円・バスタオルレンタル200円。家族風呂（貸切・要予約）60分3,000円、日帰りは11:00〜20:00（最終受付19:00）、3名から追加料金。サウナは日帰り20:00まで。中央バス13番で小樽築港駅から15分、温泉南から徒歩2分、大人410円。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "朝里川温泉ホテル（英語）",
+   "url": "https://asarigawaonsenhotel.com/en/",
+   "saw": "Day trip bathing 11:00-20:00 (last entry 19:30)、Family Bath need reservation、タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）12月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+   "saw": "12/1 15:43、12/15 15:43、12/31 15:51",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）6月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0106.html",
+   "saw": "6/15 19:00、6/21 19:02",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "星置の滝（札幌市手稲区）",
+   "url": "https://www.city.sapporo.jp/teine/midokoro/midokoro1.html",
+   "saw": "崩落の恐れがあるため、当面の間通行止め（ページの更新日2023年1月18日）→ 入れていない",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "北海道ワイン おたるワインギャラリー",
+   "url": "https://www.hokkaidowine.com/tours/",
+   "saw": "9:00〜17:00 年中無休（年末年始を除く）。バスの直行便・経由便はなく、徒歩での来場は安全上すすめない。南小樽駅からタクシー約3,750円 → 入れていない",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "JR北海道 運行情報",
+   "url": "https://www3.jrhokkaido.co.jp/webunkou/",
+   "saw": "運行情報のページ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "銭函駅（Wikipedia）",
+   "url": "https://ja.wikipedia.org/wiki/%E9%8A%AD%E5%87%BD%E9%A7%85",
+   "saw": "1880年（明治13年）11月28日 手宮〜札幌の開業とともに正式開業、北海道で最初の駅の1つ。1931年12月 現行駅舎。ニシン漁による地名",
+   "checked": "2026-11-26"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "sapporo",
+   "name": {
+    "ja": "札幌駅（出発）",
+    "en": "Sapporo Station (start)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "10:00の快速エアポート（小樽行き）で、銭函に10:21。",
+    "en": "The 10:00 Rapid Airport for Otaru reaches Zenibako at 10:21."
+   },
+   "lat": 43.06862,
+   "lng": 141.35073,
+   "text": {
+    "ja": "札幌駅（出発）\n\n小樽行きの快速エアポートに乗って21分。ひとつ前の9:25発の普通（9:56着）でも、次の10:06発の普通（10:33着）でもかまいません。快速エアポートは指定席の車両だけ別料金で、ほかは自由席です。\n\n大通・すすきののホテルからは、地下鉄南北線でさっぽろ駅まで2〜4分（210円）。地下鉄を降りてからJRの改札まで少し歩くので、9:35ごろにホテルを出れば間に合います。\n\n大きな荷物はホテルに預けて出てください。JRは交通系ICカード（Kitaca・Suicaなど）でそのまま乗れ、北海道レールパスでも乗れます。\n\nおすすめ出発時間：10:00発（ホテルは9:35ごろ出る）",
+    "en": "Sapporo Station (start)\n\nTake the Rapid Airport bound for Otaru: 21 minutes to Zenibako. The local trains just before and after work too (9:25, arriving 9:56; 10:06, arriving 10:33). On the Rapid Airport only the reserved car costs extra; the rest of the train is unreserved.\n\nFrom hotels around Odori or Susukino, the Namboku subway line reaches Sapporo Station in 2–4 minutes (¥210). Allow a few minutes to walk from the subway to the JR gates: leaving your hotel at about 9:35 is enough.\n\nLeave big bags at your hotel. You can ride JR with an IC card (Kitaca, Suica and others) or the Hokkaido Rail Pass.\n\nRecommended departure time: 10:00 (leave your hotel at about 9:35)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR札幌駅",
+      "en": "JR Sapporo Station"
+     },
+     "lat": 43.06862,
+     "lng": 141.35073,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9C%AD%E5%B9%8C%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "北海道レールパス（JR北海道）",
+      "en": "Hokkaido Rail Pass (JR Hokkaido)"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬（12〜3月）：雪の日はJRが遅れることがあります",
+      "en": "Winter (Dec–Mar): snow can delay trains"
+     },
+     "text": {
+      "ja": "大雪や強い風の日は、JRが遅れたり止まったりすることがあります。出る前と、帰る前に、JR北海道の運行情報を見てください。",
+      "en": "Heavy snow or strong wind can delay or stop JR trains. Check JR Hokkaido’s service status before you set out and before you head back."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www3.jrhokkaido.co.jp/webunkou/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "札幌10:00 → 銭函10:21（快速エアポート35号・小樽行き。平日・土曜とも）。470円",
+       "en": "Sapporo 10:00 → Zenibako 10:21 (Rapid Airport 35 for Otaru; weekdays and Saturdays). ¥470"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "前後の電車：9:25発（9:56着）、10:06発（10:33着）。どちらも普通",
+       "en": "Trains either side: 9:25 (arr. 9:56) and 10:06 (arr. 10:33), both local"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄南北線：大通・すすきの → さっぽろ 2〜4分・210円",
+       "en": "Namboku subway: Odori or Susukino → Sapporo, 2–4 min, ¥210"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "pay",
+      "text": {
+       "ja": "JRは交通系ICカード（自由席）と北海道レールパスで乗れます",
+       "en": "JR: IC cards (unreserved seats) and the Hokkaido Rail Pass are accepted"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で2026年12月3日（木）・5日（土）を確認しました。JR北海道は2027年3月にダイヤ改正の予定なので、春からは時刻が変わることがあります。",
+     "en": "Times and fares checked in a route planner for Thu 3 and Sat 5 December 2026. JR Hokkaido usually revises its timetable in March, so times may change from spring 2027."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "sapporo-w1.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Station_in_November_2025.jpg"
+     }
+    },
+    {
+     "file": "sapporo-w2.jpg",
+     "credit": {
+      "author": "RJD",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR-Sapporo-Station.West-side01.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "zenibako",
+   "name": {
+    "ja": "JR銭函駅",
+    "en": "Zenibako Station"
+   },
+   "kind": {
+    "ja": "駅・町",
+    "en": "Station & town"
+   },
+   "blurb": {
+    "ja": "1880年からある駅。1931年（昭和6年）の駅舎と、ホームの「銭函」。",
+    "en": "A station since 1880, with a 1931 station house and a money box on the platform."
+   },
+   "lat": 43.14348,
+   "lng": 141.15972,
+   "text": {
+    "ja": "JR銭函駅\n\n銭函（ぜにばこ）の名前は、ニシンがよくとれたころ、どの家にも銭の箱が積まれていたから、と言われています。駅は1880年、北海道で最初の鉄道（小樽の手宮〜札幌）が通ったときからの駅で、いまの駅舎は1931年（昭和6年）に建てられたものです。\n\nホームには名前にちなんだ「銭函」が飾ってあります。駅の中の椅子「ゼニキューブ」は、見る向きでZとNの字に見える形です。\n\n駅のそばには、徳光珈琲の銭函店もあります（10:00〜17:00、日・月・第2・4火曜休み）。\n\nビールが好きな人へ：駅から歩いて20分ほどの小樽ビール銭函醸造所は、予約制で見学できます（上のお知らせ）。11:00の回に入る日は、駅から醸造所へ行き、お昼は近くの手打ちそば 春別（4番の中で紹介）へ。駅に戻って浜と神社を見て、14:22の電車で朝里へ。温泉へのバスは15:28（土日祝は15:27）になります。見学の所要時間は公式サイトに書かれていないので、予約のときに確かめてください。\n\nおすすめ訪問時間：10:21〜10:35",
+    "en": "Zenibako Station\n\nZenibako means “money box”: the story goes that in the herring-fishing days every household had boxes of cash piled up. The station opened in 1880 with Hokkaido’s first railway (Temiya in Otaru to Sapporo), and the present station house was built in 1931.\n\nA wooden money box hangs on the platform, and the “Zeni Cube” seats inside the station look like a Z or an N depending on where you stand.\n\nTokumitsu Coffee also has a Zenibako shop near the station (10:00–17:00, closed Sun, Mon and the 2nd and 4th Tue).\n\nFor beer lovers: the Otaru Beer Zenibako brewery, about 20 minutes’ walk away, runs tours by reservation (see the notice above). On the 11:00 tour, walk from the station to the brewery and have lunch at Shunbetsu soba nearby (in no. 4). Then come back for the beach and the shrine and take the 14:22 to Asari; the bus to the hot spring is then the 15:28 (15:27 on weekends and holidays). The tour length is not given on the website, so ask when you book.\n\nRecommended visit time: 10:21–10:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR銭函駅",
+      "en": "JR Zenibako Station"
+     },
+     "lat": 43.14348,
+     "lng": 141.15972,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E9%8A%AD%E5%87%BD%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "小樽ビール 銭函醸造所（見学は予約制）",
+      "en": "Otaru Beer Zenibako brewery (tours by booking)"
+     },
+     "lat": 43.14087,
+     "lng": 141.17383,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E3%83%93%E3%83%BC%E3%83%AB%20%E9%8A%AD%E5%87%BD%E9%86%B8%E9%80%A0%E6%89%80"
+    },
+    {
+     "label": {
+      "ja": "徳光珈琲 銭函店",
+      "en": "Tokumitsu Coffee Zenibako"
+     },
+     "lat": 43.14343,
+     "lng": 141.16063,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%BE%B3%E5%85%89%E7%8F%88%E7%90%B2%20%E9%8A%AD%E5%87%BD%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "銭函と朝里の海（小樽観光協会のコラム）",
+      "en": "Zenibako and Asari coast (Otaru Tourism Association, Japanese)"
+     },
+     "url": {
+      "ja": "https://otaru.gr.jp/column/sengoku_ryoutarou",
+      "en": "https://otaru.gr.jp/column/sengoku_ryoutarou"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "小樽ビール 銭函醸造所 見学",
+      "en": "Otaru Beer Zenibako brewery tours (Japanese)"
+     },
+     "url": {
+      "ja": "https://otarubeer.com/jp/Ppage_id=353.html",
+      "en": "https://otarubeer.com/jp/Ppage_id=353.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "徳光珈琲 店舗案内",
+      "en": "Tokumitsu Coffee shops (Japanese)"
+     },
+     "url": {
+      "ja": "https://tokumitsu-coffee.com/shop",
+      "en": "https://tokumitsu-coffee.com/shop"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "醸造所の見学は、1週間前までに電話で予約",
+      "en": "Brewery tours: book by phone a week ahead"
+     },
+     "text": {
+      "ja": "小樽ビール銭函醸造所の見学（試飲つき・1人2,200円、11:00か15:00の開始、2〜20人）は、1週間前までの電話予約（平日9:00〜17:00、日本語）だけです。予約なしでは入れません。",
+      "en": "The Otaru Beer Zenibako brewery tour (with tasting, ¥2,200 per person, starting at 11:00 or 15:00, groups of 2–20) is by phone booking only, at least a week ahead (weekdays 9:00–17:00, in Japanese). There are no walk-ins."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://otarubeer.com/jp/Ppage_id=353.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "徳光珈琲 銭函店：10:00〜17:00（L.O.16:30）、日・月・第2・4火曜休み",
+       "en": "Tokumitsu Coffee Zenibako: 10:00–17:00 (last order 16:30), closed Sun, Mon, 2nd and 4th Tue"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "reserve",
+      "text": {
+       "ja": "醸造所の見学：1週間前までに電話予約（平日9:00〜17:00）。11:00か15:00の開始、2〜20人、1人2,200円",
+       "en": "Brewery tour: phone at least a week ahead (weekdays 9:00–17:00). Starts 11:00 or 15:00, 2–20 people, ¥2,200 each"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "駅舎と「銭函」は小樽観光協会のコラム、開業の年はWikipedia（銭函駅）から。店の時間と醸造所の見学は、それぞれの公式サイトで2026年11月26日に確認しました。",
+     "en": "Station house and money box from an Otaru Tourism Association column; opening year from Wikipedia (Zenibako Station). Shop hours and the brewery tour checked on each official website on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "zenibako-w1.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Hakodate-Main-Line_Zenibako_Station_building.jpg"
+     }
+    },
+    {
+     "file": "zenibako-w2.jpg",
+     "credit": {
+      "author": "Keiichi Yasu",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Zenibako_%2846347171404%29.jpg"
+     }
+    },
+    {
+     "file": "zenibako-w3.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Zenibako_%282017-05-28%29.jpg"
+     }
+    },
+    {
+     "file": "zenibako-w4.jpg",
+     "credit": {
+      "author": "Keiichi Yasu",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%AD%E5%87%BD%E9%A7%85%E5%89%8D_%2846157369205%29.jpg"
+     }
+    },
+    {
+     "file": "zenibako-w5.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%AD%E5%87%BD%E9%A7%85%E4%BB%98%E8%BF%91%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio_%282%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "toyotari",
+   "name": {
+    "ja": "豊足神社（とよたりじんじゃ）",
+    "en": "Toyotari Shrine"
+   },
+   "kind": {
+    "ja": "神社・高台",
+    "en": "Hilltop shrine"
+   },
+   "blurb": {
+    "ja": "駅の裏の高台。白っぽい鳥居と、浜で見つかった日露戦争の機雷。",
+    "en": "On the hill behind the station: a pale torii and a Russo-Japanese War mine found on the beach."
+   },
+   "caution": {
+    "ja": "冬は坂と石段が凍ります",
+    "en": "Slope and steps are icy in winter"
+   },
+   "lat": 43.14271,
+   "lng": 141.16074,
+   "text": {
+    "ja": "豊足神社（とよたりじんじゃ）\n\n駅の裏から坂を上って5分。1780年、石狩川と近くの海の鮭漁を任された松前の商人が、銭函から北の漁場の守り神として祀ったのが始まりです。\n\n白っぽい鳥居が目印です。境内の忠魂碑のわきには、日露戦争のときにロシア軍が爆破した機雷の残骸が置かれています。この浜で見つかったものです。\n\n例大祭は6月下旬（2026年は6月27・28日）。\n\nおすすめ訪問時間：10:40〜11:05",
+    "en": "Toyotari Shrine\n\nA five-minute climb from behind the station. In 1780 a merchant from Matsumae, put in charge of salmon fishing on the Ishikari River and nearby coast, enshrined a guardian deity here for the fishing grounds north of Zenibako.\n\nLook for the pale torii gate. Beside the war memorial in the grounds lie the remains of a mine that Russian forces blew up during the Russo-Japanese War; it was found on this beach.\n\nThe annual festival is in late June (27–28 June in 2026).\n\nRecommended visit time: 10:40–11:05"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "豊足神社",
+      "en": "Toyotari Shrine"
+     },
+     "lat": 43.14271,
+     "lng": 141.16074,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%B1%8A%E8%B6%B3%E7%A5%9E%E7%A4%BE%20%E5%B0%8F%E6%A8%BD%E5%B8%82%E9%8A%AD%E5%87%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "豊足神社（北海道神社庁）",
+      "en": "Toyotari Shrine (Hokkaido Association of Shinto Shrines, Japanese)"
+     },
+     "url": {
+      "ja": "https://hokkaidojinjacho.jp/%e8%b1%8a%e8%b6%b3%e7%a5%9e%e7%a4%be/",
+      "en": "https://hokkaidojinjacho.jp/%e8%b1%8a%e8%b6%b3%e7%a5%9e%e7%a4%be/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "小樽の神社（小樽観光協会）",
+      "en": "Otaru’s shrines (Otaru Tourism Association, Japanese)"
+     },
+     "url": {
+      "ja": "https://otaru.gr.jp/citizen/otarujishin-202107",
+      "en": "https://otaru.gr.jp/citizen/otarujishin-202107"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬（12〜3月）：凍った道と早い日の入り",
+      "en": "Winter (Dec–Mar): icy paths, early sunset"
+     },
+     "text": {
+      "ja": "歩道は雪が踏み固められて凍ります。底がすべりにくい靴で。12月の日の入りは15:45ごろ（札幌）なので、外を歩くところは午前と、お昼すぎの朝里までにしてあります。",
+      "en": "Pavements turn to packed ice. Wear shoes with grippy soles. In December the sun sets at about 15:45 (Sapporo), so the outdoor parts of this day are in the morning and early afternoon."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "銭函駅から歩いて5分（上り坂と石段）",
+       "en": "5 minutes on foot from the station (uphill, with steps)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "由緒は北海道神社庁、機雷のことは小樽観光協会の記事（2021年7月）、例大祭の日は小樽観光協会の令和8年度の一覧から。",
+     "en": "History from the Hokkaido Association of Shinto Shrines; the mine from an Otaru Tourism Association article (July 2021); festival dates from its 2026 list."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "toyotari-w1.jpg",
+     "credit": {
+      "author": "禁樹なずな",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Toyotari_Shrine.JPG"
+     }
+    },
+    {
+     "file": "toyotari-w2.jpg",
+     "credit": {
+      "author": "禁樹なずな",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Chukon-hi_at_Toyotari_Shrine.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "hama",
+   "name": {
+    "ja": "銭函の浜と、海の前でお昼",
+    "en": "Zenibako beach, and lunch by the sea"
+   },
+   "kind": {
+    "ja": "海・お昼",
+    "en": "Beach & lunch"
+   },
+   "blurb": {
+    "ja": "駅の目の前が石狩湾。浜を歩いて、海の見えるカフェでお昼。",
+    "en": "Ishikari Bay is right outside the station: walk the beach, then lunch with a sea view."
+   },
+   "lat": 43.14402,
+   "lng": 141.16009,
+   "text": {
+    "ja": "銭函の浜と、海の前でお昼\n\n駅から海の側へ出ると、すぐ浜です。晴れた日は、湾の向こうに浜益（はまます）から増毛（ましけ）の山並みが見え、冬は雪をかぶっています。\n\nお昼は、浜の目の前のしろくまコーヒーで。バゲットにチーズとソーセージをはさんだパリドッグや、ホットサンドがあります。窓から海が見えて、冬は雪と海がいっしょに見えます。営業時間は月によって変わります（2026年11月は9:00〜16:30）。英語のページもあります。\n\nしっかり食べたい人は、駅から東へ歩いて22分の手打ちそば 春別へ。幌加内（ほろかない）産のそば粉の手打ちそばと、つぶ貝を昆布で巻いて揚げた「つぶこん」が名物です（11:00〜19:00、売り切れまで。金曜休み）。13:22の電車に乗るなら、12:50ごろに店を出ます。\n\nおすすめ訪問時間：11:10〜13:15（お昼を含む）",
+    "en": "Zenibako beach, and lunch by the sea\n\nStep out of the station on the sea side and you are on the beach. On a clear day the mountains from Hamamasu to Mashike line the far side of the bay, snow-capped in winter.\n\nFor lunch, Shirokuma Coffee sits right on the beach: a “Paris dog” (baguette with cheese and sausage) or a toasted sandwich, with the sea out of the window — and in winter, snow and sea together. Opening hours change by the month (9:00–16:30 in November 2026). The website has an English page.\n\nFor a proper meal, walk 22 minutes east to Shunbetsu for handmade soba from Horokanai buckwheat, and its signature “tsubukon”, sea snail wrapped in kelp and fried (11:00–19:00 or until sold out, closed Fridays). Leave by about 12:50 to make the 13:22 train.\n\nRecommended visit time: 11:10–13:15 (including lunch)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "しろくまコーヒー",
+      "en": "Shirokuma Coffee"
+     },
+     "lat": 43.14402,
+     "lng": 141.16009,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%97%E3%82%8D%E3%81%8F%E3%81%BE%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%20%E9%8A%AD%E5%87%BD"
+    },
+    {
+     "label": {
+      "ja": "手打ちそば 春別",
+      "en": "Shunbetsu (soba)"
+     },
+     "lat": 43.14386,
+     "lng": 141.17655,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%89%8B%E6%89%93%E3%81%A1%E3%81%9D%E3%81%B0%20%E6%98%A5%E5%88%A5%20%E9%8A%AD%E5%87%BD"
+    },
+    {
+     "label": {
+      "ja": "銭函の浜（駅の海側）",
+      "en": "Zenibako beach (sea side of the station)"
+     },
+     "lat": 43.1444,
+     "lng": 141.1608,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%8A%AD%E5%87%BD%E6%B5%B7%E5%B2%B8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "しろくまコーヒー",
+      "en": "Shirokuma Coffee (English)"
+     },
+     "url": {
+      "ja": "https://shirokumacoffee.com/",
+      "en": "https://shirokumacoffee.com/en/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "手打ちそば 春別",
+      "en": "Shunbetsu soba (Japanese)"
+     },
+     "url": {
+      "ja": "https://teuchisoba-syunbetsu.jimdofree.com/",
+      "en": "https://teuchisoba-syunbetsu.jimdofree.com/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "小樽市の海水浴場",
+      "en": "Otaru City beaches (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.otaru.lg.jp/docs/2020100901012/",
+      "en": "https://www.city.otaru.lg.jp/docs/2020100901012/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬の浜は、波打ち際に近づかない",
+      "en": "On the winter beach, keep back from the waves"
+     },
+     "text": {
+      "ja": "風の強い日は波が高く、雪が横から吹きつけます。浜は短めにして、しろくまコーヒーの窓から海を見るのでも十分です。",
+      "en": "On windy days the waves run high and snow blows sideways. Keep the beach walk short; the view from the windows of Shirokuma Coffee is just as good."
+     },
+     "from": null,
+     "to": null
+    },
+    {
+     "head": {
+      "ja": "夏（7〜8月）は海水浴場が開きます",
+      "en": "In summer (Jul–Aug) the beaches open"
+     },
+     "text": {
+      "ja": "2026年は、駅から東へ歩いて10分の銭函海水浴場が7月4日〜8月24日、その先のおたるドリームビーチが6月26日〜8月31日でした。泳ぐのは、監視員のいる遊泳区域の中だけで。来年の期間は小樽市の発表で確かめてください。",
+      "en": "In 2026 Zenibako beach, ten minutes’ walk east of the station, was open for swimming 4 July–24 August, and Otaru Dream Beach further on 26 June–31 August. Swim only inside the marked, lifeguarded area. Check Otaru City’s page for next year’s dates."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.city.otaru.lg.jp/docs/2020100901012/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "しろくまコーヒー：2026年11月は9:00〜16:30（L.O.16:30）。月によって変わり、休みの日は公式サイトで",
+       "en": "Shirokuma Coffee: 9:00–16:30 in November 2026 (last order 16:30). Hours change by the month; see the website for closed days"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "手打ちそば 春別：11:00〜19:00（売り切れ次第終了）、金曜休み",
+       "en": "Shunbetsu: 11:00–19:00 (closes when sold out), closed Fridays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "海水浴場：2026年は銭函が7月4日〜8月24日、おたるドリームビーチが6月26日〜8月31日",
+       "en": "Swimming beaches in 2026: Zenibako 4 Jul–24 Aug, Otaru Dream Beach 26 Jun–31 Aug"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "店の時間は各店の公式サイト、海水浴場は小樽市の令和8年度の案内、山の見え方は小樽観光協会のコラムから（2026年11月26日に確認）。",
+     "en": "Shop hours from each shop’s website, beach dates from Otaru City’s 2026 page, the mountain view from an Otaru Tourism Association column (checked 26 November 2026)."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "hama-w1.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%AD%E5%87%BD%E9%A7%85%E4%BB%98%E8%BF%91%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio_%283%29.jpg"
+     }
+    },
+    {
+     "file": "hama-w2.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%AD%E5%87%BD%E9%A7%85%E4%BB%98%E8%BF%91%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "hama-w3.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%AD%E5%87%BD%E9%A7%85%E4%BB%98%E8%BF%91%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio_%281%29.jpg"
+     }
+    },
+    {
+     "file": "hama-w4.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%AD%E5%87%BD%E9%A7%85%E4%BB%98%E8%BF%91%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio_%284%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "asari",
+   "name": {
+    "ja": "朝里駅と、海べりの線路",
+    "en": "Asari Station and the line by the sea"
+   },
+   "kind": {
+    "ja": "駅・海",
+    "en": "Station & shore"
+   },
+   "blurb": {
+    "ja": "銭函から8分。線路のすぐ横が海の、小さな駅。",
+    "en": "Eight minutes from Zenibako: a small station with the sea right beside the tracks."
+   },
+   "lat": 43.17691,
+   "lng": 141.06369,
+   "text": {
+    "ja": "朝里駅と、海べりの線路\n\n銭函13:22発の快速エアポートで8分。銭函を出ると、張碓（はりうす）のあたりから線路のすぐ横が海になります。札幌の側から乗るときは、進行方向の右側の窓に（帰りの小樽から札幌へは左側）。\n\n朝里（あさり）の駅のまわりは石の浜で、海のすぐそばを電車が走り抜けます。浜からホームの電車と海をいっしょに眺めて、14:05ごろにバス停「朝里町」へ（歩いて15分）。14:27発の中央バス13番「朝里川温泉」行きに乗ります。\n\nバスはJRではないので、北海道レールパスでは乗れません。ICカードか、くずした現金で（上のお知らせ）。\n\nおすすめ訪問時間：13:30〜14:27（バスまで）",
+    "en": "Asari Station and the line by the sea\n\nThe 13:22 Rapid Airport from Zenibako takes eight minutes. Past Zenibako, from around Hariusu, the sea runs right beside the line: coming from the Sapporo side, sit on the right (on the way back from Otaru to Sapporo, the left).\n\nAsari Station sits on a stony shore, and the trains run along the water’s edge. Watch them pass from the beach, then at about 14:05 walk to the Asarimachi bus stop (15 minutes) for the 14:27 Chuo Bus no. 13 to Asarigawa Onsen.\n\nThe bus is not JR, so the Hokkaido Rail Pass does not cover it. Use an IC card or small change (see the notice).\n\nRecommended visit time: 13:30–14:27 (until the bus)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR朝里駅",
+      "en": "JR Asari Station"
+     },
+     "lat": 43.17691,
+     "lng": 141.06369,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9C%9D%E9%87%8C%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "バス停 朝里町（朝里川温泉行き）",
+      "en": "Asarimachi bus stop (for Asarigawa Onsen)"
+     },
+     "lat": 43.17571,
+     "lng": 141.05816,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%9D%E9%87%8C%E7%94%BA%20%E3%83%90%E3%82%B9%E5%81%9C%20%E5%B0%8F%E6%A8%BD"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "中央バス13番 朝里町の時刻表",
+      "en": "Bus no. 13 timetable at Asarimachi (Japanese)"
+     },
+     "url": {
+      "ja": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300020&course=0005601306&stopNo=16",
+      "en": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300020&course=0005601306&stopNo=16"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "北海道中央バス よくある質問（運賃の払い方）",
+      "en": "Chuo Bus FAQ: paying the fare (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.chuo-bus.co.jp/support/faq/",
+      "en": "https://www.chuo-bus.co.jp/support/faq/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "バスの運賃：ICカードか、くずした現金で",
+      "en": "Bus fare: IC card or small change"
+     },
+     "text": {
+      "ja": "中央バスは、Kitaca・Suicaなどの交通系ICカード（10種類）が使えます。現金のときはおつりが出ません。車内の両替機で千円札と硬貨はくずせますが、5千円札・1万円札は使えません。運賃は降りるときに払います。北海道レールパスでは乗れません（JRではないため）。",
+      "en": "Chuo Bus takes IC cards such as Kitaca and Suica. If you pay cash, no change is given: the on-board machine changes ¥1,000 notes and coins, but not ¥5,000 or ¥10,000 notes. Pay as you get off. The Hokkaido Rail Pass is not valid (this is not a JR bus)."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.chuo-bus.co.jp/support/faq/"
+    },
+    {
+     "head": {
+      "ja": "冬（12〜3月）：バスは雪で遅れることがあります",
+      "en": "Winter (Dec–Mar): buses can run late in snow"
+     },
+     "text": {
+      "ja": "バス停で待つ時間に備えて、帽子と手袋を。乗り遅れたら次は15:28（土日祝は15:27）です。",
+      "en": "Bring a hat and gloves for the wait at the stop. If you miss it, the next bus is 15:28 (15:27 on weekends and holidays)."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300020&course=0005601306&stopNo=16"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "銭函13:22 → 朝里13:30（快速エアポート71号。平日・土曜とも）。310円。前の電車は12:55発（13:03着）",
+       "en": "Zenibako 13:22 → Asari 13:30 (Rapid Airport 71; weekdays and Saturdays). ¥310. The train before: 12:55 (arr. 13:03)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "朝里町14:27 → 温泉南14:39（中央バス13番・朝里川温泉行き。平日・土曜とも）。次は15:28（土日祝15:27）",
+       "en": "Asarimachi 14:27 → Onsen-minami 14:39 (Chuo Bus no. 13 for Asarigawa Onsen; weekdays and Saturdays). Next: 15:28 (15:27 weekends and holidays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "バスの運賃は要確認（小樽築港駅から温泉南までは410円と、朝里川温泉ホテルの案内）",
+       "en": "Bus fare not confirmed (¥410 from Otaru-Chikko Station to Onsen-minami, according to Asarigawa Onsen Hotel)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "電車は乗換案内（2026年12月3日・5日）、バスは北海道中央バスの公式時刻表（2026年4月1日改定）で確認しました。海の見える側は、線路と海岸の位置（地図）から。",
+     "en": "Trains from a route planner (3 and 5 December 2026); buses from Chuo Bus’s official timetable (revised 1 April 2026). The sea side of the train is worked out from the line and the coast on the map."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "asari-w1.jpg",
+     "credit": {
+      "author": "Takeshi Aida",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_733-3000_%E5%87%BD%E9%A4%A8%E6%9C%AC%E7%B7%9A_%E6%9C%9D%E9%87%8C%E9%A7%85_%2820251030%29.jpg"
+     }
+    },
+    {
+     "file": "asari-w2.jpg",
+     "credit": {
+      "author": "Takeshi Aida",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_721-0_%E5%87%BD%E9%A4%A8%E6%9C%AC%E7%B7%9A_%E6%9C%9D%E9%87%8C%E9%A7%85_%2820251030%29.jpg"
+     }
+    },
+    {
+     "file": "asari-w3.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Hakodate-Main-Line_Asari_Station_building.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "onsen",
+   "name": {
+    "ja": "朝里川温泉（朝里川温泉ホテルの日帰り入浴）",
+    "en": "Asarigawa Onsen (day bathing at Asarigawa Onsen Hotel)"
+   },
+   "kind": {
+    "ja": "温泉",
+    "en": "Hot spring"
+   },
+   "blurb": {
+    "ja": "谷あいの温泉街で、露天風呂とサウナ。17:56のバスまで。",
+    "en": "A hot-spring village up the valley: outdoor bath and sauna until the 17:56 bus."
+   },
+   "caution": {
+    "ja": "タトゥーの決まりは公式に書かれていません（要確認）",
+    "en": "No published tattoo policy (please check)"
+   },
+   "lat": 43.14193,
+   "lng": 141.04058,
+   "text": {
+    "ja": "朝里川温泉（朝里川温泉ホテルの日帰り入浴）\n\n朝里川（あさりがわ）の谷をバスで12分上ると、温泉街です。「温泉南」で降りて歩いて2分の朝里川温泉ホテルは、日帰りで大浴場と露天風呂、セルフロウリュのできるフィンランド式サウナに入れます。休憩所もあります。\n\nはじめての人へ：湯船に入る前に体を洗い、タオルはお湯に入れません。水着は着ずに入ります。浴場の中では写真を撮りません。\n\n帰りは温泉南17:56発のバスで小樽駅前へ（18:32着、土曜は18:29着）。夜まで入るなら、19:51か20:51（最終）のバスで小樽築港駅へ出て、JRで札幌へ（小樽築港20:28発→札幌21:11、21:22発→22:03）。その場合、晩ごはんは札幌で。\n\nおすすめ訪問時間：14:45〜17:50",
+    "en": "Asarigawa Onsen (day bathing at Asarigawa Onsen Hotel)\n\nThe bus climbs the Asari River valley for 12 minutes to the hot-spring village. Asarigawa Onsen Hotel, two minutes on foot from the Onsen-minami stop, lets day visitors use its large bath, outdoor bath and a Finnish sauna where you pour water on the stones yourself. There is a rest area too.\n\nFirst time in a Japanese bath? Wash before you get in, keep your towel out of the water, bathe without a swimsuit, and take no photos inside.\n\nHead back on the 17:56 bus from Onsen-minami to Otaru Station (arr. 18:32; 18:29 on Saturdays). To stay into the evening, take the 19:51 or the last 20:51 bus to Otaru-Chikko Station and the train to Sapporo (20:28 → 21:11, or 21:22 → 22:03), and have dinner in Sapporo.\n\nRecommended visit time: 14:45–17:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "朝里川温泉ホテル",
+      "en": "Asarigawa Onsen Hotel"
+     },
+     "lat": 43.14193,
+     "lng": 141.04058,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%9D%E9%87%8C%E5%B7%9D%E6%B8%A9%E6%B3%89%E3%83%9B%E3%83%86%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "朝里川温泉ホテル（日帰り入浴）",
+      "en": "Asarigawa Onsen Hotel (English)"
+     },
+     "url": {
+      "ja": "https://asarigawaonsenhotel.com/",
+      "en": "https://asarigawaonsenhotel.com/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "中央バス13番 温泉南の時刻表（小樽駅前行き）",
+      "en": "Bus no. 13 timetable at Onsen-minami (Japanese)"
+     },
+     "url": {
+      "ja": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300083&course=0005604150&stopNo=3",
+      "en": "https://transfer.navitime.biz/chuo-bus/pc/diagram/BusDiagram?orvCode=00300083&course=0005604150&stopNo=3"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "タトゥー：公式に決まりが書かれていません",
+      "en": "Tattoos: no policy is published"
+     },
+     "text": {
+      "ja": "朝里川温泉ホテルの公式サイトには、タトゥーの決まりが書かれていません（要確認）。貸切の家族風呂（60分3,000円・要予約）があるので、タトゥーのある人は、予約のときに使えるかを聞いてから行くのが確実です。",
+      "en": "Asarigawa Onsen Hotel does not publish a tattoo policy on its website, so please check. It has a private family bath (¥3,000 for 60 minutes, booking required): if you have tattoos, the safest plan is to book it and ask when you do."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://asarigawaonsenhotel.com/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "日帰り入浴：11:00〜20:00（受付は19:30まで）",
+       "en": "Day bathing: 11:00–20:00 (last entry 19:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人850円、土日祝・年末年始は1,000円。フェイスタオル200円、バスタオル（貸し出し）200円",
+       "en": "Adults ¥850; ¥1,000 on weekends, holidays and over New Year. Face towel ¥200, bath towel rental ¥200"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "tattoo",
+      "text": {
+       "ja": "公式サイトに記載なし（要確認）。貸切の家族風呂：60分3,000円・要予約（日帰りは11:00〜20:00、受付19:00まで。3人目から追加料金）",
+       "en": "Not stated on the website (please check). Private family bath: ¥3,000 for 60 min, booking required (day visitors 11:00–20:00, last entry 19:00; extra charge from the 3rd person)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "帰り：温泉南17:56 → 小樽築港駅18:14 → 小樽駅前18:32（土曜は18:13・18:29）。そのあとは18:51・19:51・20:51（最終）",
+       "en": "Back: Onsen-minami 17:56 → Otaru-Chikko Sta. 18:14 → Otaru Sta. 18:32 (Sat 18:13, 18:29). Later buses 18:51, 19:51, 20:51 (last)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と料金は朝里川温泉ホテルの公式サイト、バスは北海道中央バスの公式時刻表（2026年4月1日改定）で、2026年11月26日に確認しました。",
+     "en": "Hours and prices from the hotel’s website and buses from Chuo Bus’s official timetable (revised 1 April 2026), checked on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "onsen-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:130824_Asarigawa_Onsen_Otaru_Hokkaido_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "onsen-w2.jpg",
+     "credit": {
+      "author": "RJD",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asarigawa-Onsen-Hotel01.JPG"
+     }
+    },
+    {
+     "file": "onsen-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:130824_Asarigawa_Onsen_Otaru_Hokkaido_Japan06s3.jpg"
+     }
+    },
+    {
+     "file": "onsen-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:130824_Asarigawa_Onsen_Otaru_Hokkaido_Japan04s3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "soko",
+   "name": {
+    "ja": "小樽倉庫No.1（晩ごはん）",
+    "en": "Otaru Soko No.1 (dinner)"
+   },
+   "kind": {
+    "ja": "ビール・晩ごはん",
+    "en": "Beer & dinner"
+   },
+   "blurb": {
+    "ja": "運河沿いの石の倉庫の中に醸造所。小樽ビールと晩ごはん。",
+    "en": "A brewery inside a stone warehouse by the canal: Otaru Beer and dinner."
+   },
+   "caution": {
+    "ja": "不定休",
+    "en": "Closes on irregular days"
+   },
+   "lat": 43.19903,
+   "lng": 141.00269,
+   "text": {
+    "ja": "小樽倉庫No.1（晩ごはん）\n\n小樽駅前でバスを降りて、海のほうへ歩いて15分。運河沿いの倉庫の中に醸造所があるビアパブです。小樽ビールの醸造所は2つあり、朝に通った銭函のほうは樽と瓶のビールを造る醸造所、ここは店のまん中の仕込み釜がいまも使われています。2階の回廊の窓から発酵タンクがのぞけ、見学は無料・予約なし（試飲なし）。\n\n木曜と土曜は「プロスト」の日で、2時間のビール飲み放題が2,600円（予約なし）。席の予約は電話で（0134-21-2323）。\n\n料理のラストオーダーは21:00。20:35ごろ店を出れば、小樽20:57発の電車に乗れます。ゆっくりするなら21:16発で。\n\nおすすめ訪問時間：18:50〜20:35",
+    "en": "Otaru Soko No.1 (dinner)\n\nGet off the bus at Otaru Station and walk 15 minutes towards the sea. This beer pub has its brewery inside a canal-side warehouse. Otaru Beer has two breweries: the Zenibako one you passed this morning makes kegs and bottles, while here the brew kettle in the middle of the pub is still in use. You can look into the fermentation tanks from the upstairs gallery; the self-guided visit is free, with no booking (no tasting).\n\nThursdays and Saturdays are “Prost” days: two hours of all-you-can-drink beer for ¥2,600, no booking needed. To book a table, phone 0134-21-2323 (Japanese).\n\nFood last orders are at 21:00. Leave at about 20:35 for the 20:57 train from Otaru, or stay on for the 21:16.\n\nRecommended visit time: 18:50–20:35"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "小樽倉庫No.1",
+      "en": "Otaru Soko No.1"
+     },
+     "lat": 43.19903,
+     "lng": 141.00269,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E5%80%89%E5%BA%ABNo.1%20%E5%B0%8F%E6%A8%BD%E3%83%93%E3%83%BC%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "小樽ビール 小樽倉庫No.1",
+      "en": "Otaru Beer: Otaru Soko No.1 (Japanese)"
+     },
+     "url": {
+      "ja": "https://otarubeer.com/jp/Ppage_id=357.html",
+      "en": "https://otarubeer.com/jp/Ppage_id=357.html"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "11:00〜22:00（料理L.O.21:00、飲み物L.O.21:30）。不定休",
+       "en": "11:00–22:00 (food last order 21:00, drinks 21:30). Closes on irregular days"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "木・土の飲み放題：2時間2,600円（予約不要）。見学は無料",
+       "en": "Thu and Sat all-you-can-drink: ¥2,600 for 2 hours (no booking). Brewery visit free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "小樽駅から歩いて15分",
+       "en": "15 minutes on foot from Otaru Station"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と料金は小樽ビールの公式サイトで2026年11月26日に確認しました。季節やイベントで時間が変わることがあります。",
+     "en": "Hours and prices from Otaru Beer’s website, checked on 26 November 2026. They can change with the season or events."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "soko-w1.jpg",
+     "credit": {
+      "author": "Braveheart",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Beer_Brewery_01.jpg"
+     }
+    },
+    {
+     "file": "soko-w2.jpg",
+     "credit": {
+      "author": "Braveheart",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Beer_Brewery_02.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "kaeri",
+   "name": {
+    "ja": "小樽駅から札幌へ",
+    "en": "Otaru Station, back to Sapporo"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "20:57発で札幌21:44。最終は23:08発。",
+    "en": "The 20:57 reaches Sapporo at 21:44; the last train is 23:08."
+   },
+   "lat": 43.19745,
+   "lng": 140.9941,
+   "text": {
+    "ja": "小樽駅から札幌へ\n\n小樽20:57発で札幌21:44着（800円）。次は21:16発（22:03着）。札幌への最終は23:08発（23:53着）です。\n\n札幌駅から大通・すすきのへは地下鉄南北線で。\n\nおすすめ出発時間：20:57発",
+    "en": "Otaru Station, back to Sapporo\n\nThe 20:57 from Otaru reaches Sapporo at 21:44 (¥800); the next is the 21:16 (22:03). The last train to Sapporo leaves at 23:08 (arr. 23:53).\n\nFrom Sapporo Station, the Namboku subway runs to Odori and Susukino.\n\nRecommended departure time: the 20:57"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR小樽駅",
+      "en": "JR Otaru Station"
+     },
+     "lat": 43.19745,
+     "lng": 140.9941,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%B0%8F%E6%A8%BD%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬（12〜3月）：雪の日はJRが遅れることがあります",
+      "en": "Winter (Dec–Mar): snow can delay trains"
+     },
+     "text": {
+      "ja": "大雪や強い風の日は、JRが遅れたり止まったりすることがあります。出る前と、帰る前に、JR北海道の運行情報を見てください。",
+      "en": "Heavy snow or strong wind can delay or stop JR trains. Check JR Hokkaido’s service status before you set out and before you head back."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www3.jrhokkaido.co.jp/webunkou/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "小樽20:57 → 札幌21:44、21:16 → 22:03（平日・土曜とも）。800円",
+       "en": "Otaru 20:57 → Sapporo 21:44, 21:16 → 22:03 (weekdays and Saturdays). ¥800"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "最終：小樽23:08 → 札幌23:53",
+       "en": "Last train: Otaru 23:08 → Sapporo 23:53"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で2026年12月3日（木）・5日（土）を確認しました。",
+     "en": "Times and fares checked in a route planner for Thu 3 and Sat 5 December 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "kaeri-w1.jpg",
+     "credit": {
+      "author": "皓月旗",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Station_20220626.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w2.jpg",
+     "credit": {
+      "author": "SElefant",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR-H_Otaru_Station_by_night.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w3.jpg",
+     "credit": {
+      "author": "inunami",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_20221231195146_%2852655860438%29.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}

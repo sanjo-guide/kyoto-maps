@@ -1,0 +1,1835 @@
+{
+ "id": "sapporo-onsen",
+ "course": "noboribetsu",
+ "_note": "札幌から日帰り 温泉めぐり（sapporo-onsen/ のページ専用。形は eizan-line.json と同じ）。登別。特急北斗→道南バス→極楽通りでお昼と閻魔堂→泉源公園→地獄谷→大湯沼と天然足湯（冬はクマ牧場）→日帰り入浴→晩ごはん→札幌。写真は今は Wikimedia Commons だけ（一覧は scripts/sapporo_onsen_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_sapporo_onsen_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "area": {
+    "ja": "札幌から",
+    "en": "From Sapporo"
+   },
+   "title": {
+    "ja": "特急で1時間14分、バスで19分",
+    "en": "74 minutes by train, 19 by bus"
+   }
+  },
+  {
+   "first": 2,
+   "last": 3,
+   "area": {
+    "ja": "極楽通り",
+    "en": "Gokuraku-dori"
+   },
+   "title": {
+    "ja": "お昼と閻魔堂、間欠泉",
+    "en": "Lunch, Enma-do and the geyser"
+   }
+  },
+  {
+   "first": 4,
+   "last": 6,
+   "area": {
+    "ja": "地獄谷と山",
+    "en": "Jigokudani and the hills"
+   },
+   "title": {
+    "ja": "地獄谷から大湯沼へ。冬はクマ牧場",
+    "en": "Jigokudani to Oyunuma; Bear Park in winter"
+   }
+  },
+  {
+   "first": 7,
+   "last": 8,
+   "area": {
+    "ja": "お風呂と晩ごはん",
+    "en": "Bath and dinner"
+   },
+   "title": {
+    "ja": "札幌に21:41（最後は22:41）",
+    "en": "Sapporo by 21:41 (last 22:41)"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 8
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。札幌からの行き（と登別の帰り）は自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   5,
+   7
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "8": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "andAny": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "大湯沼の遊歩道とクマ牧場の両方は、お風呂の時間がなくなります（冬はクマ牧場の最終入園が15:50）。どちらか1つに。",
+     "en": "The Oyunuma trail and the Bear Park together leave no time for a bath (winter last entry at the Bear Park is 15:50). Pick one."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "none": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "クマ牧場は地獄谷のあと14:00ごろに。ロープウェイの山麓駅は、バスターミナルから歩いて5分ほどです。",
+     "en": "Go to the Bear Park after Jigokudani, at about 14:00. The ropeway base station is about 5 minutes’ walk from the bus terminal."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/sapporo-onsen/",
+ "sources": [
+  {
+   "what": "地下鉄＋12番バス 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA&y=2026&m=12&d=03&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "さっぽろ9:52→真駒内10:10、真駒内駅10:20発12H→定山渓湯の町11:01、290円＋750円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "地下鉄＋12番バス 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA&y=2026&m=12&d=05&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "さっぽろ9:51→真駒内10:09、10:20発12H→定山渓湯の町11:03",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "かっぱライナー号（冬ダイヤ）",
+   "url": "http://www.jotetsu.co.jp/bus/news/ash96e0000003ig7.html",
+   "saw": "2026/10/1〜2027/3/31、11往復。札幌駅9:35→定山渓湯の町10:31。帰りは湯の町17:15→札幌駅18:19（豊平峡温泉17:00発）が最終",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "かっぱライナー号（予約・運賃）",
+   "url": "https://www.jotetsu.co.jp/bus/kappa_liner/index.html",
+   "saw": "全便予約制、1か月前〜前日17:00、空席があれば予約なしでも乗車可。札幌駅〜豊平峡温泉・定山渓車庫前1,700円（ネット割1,460円）。車内は現金（千円札・硬貨）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌駅のじょうてつバス時刻表",
+   "url": "https://www.jotetsu.co.jp/bus/times/260401/sapporoeki-26.pdf",
+   "saw": "札幌駅から定山渓への快速は朝と9:00の1本だけ。「予約制かっぱライナー号または地下鉄南北線真駒内駅より12J・12Hを」",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "12月のダイヤ改正",
+   "url": "http://www.jotetsu.co.jp/bus/news/ash96e0000003lq0.html",
+   "saw": "2026年12月はダイヤ改正の予定なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "交通系ICカード（じょうてつバス）",
+   "url": "https://www.jotetsu.co.jp/bus/guide/qlqoi2000000005z.html",
+   "saw": "Kitaca・Suicaなど10種類が札幌市内全路線で使える（札幌国際スキー場線を除く）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山渓湯の町の時刻表",
+   "url": "https://www.jotetsu.co.jp/bus/times/260401/jyouzankeiyunomati.pdf",
+   "saw": "豊平峡温泉行き 平日14:34・15:32・16:32、土日祝14:33・15:29。札幌駅行き快速8 平日20:53・土日祝20:45（12/31〜1/3運休）。真駒内駅行き12 最終21:50",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉の時刻表",
+   "url": "https://www.jotetsu.co.jp/bus/times/260401/houheikyouonsen.pdf",
+   "saw": "真駒内駅行き12 平日・土日祝とも17:30・18:30・20:00が夕方以降（土日祝の18:30は1/1運休、20:00は12/31〜1/3運休）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→豊平峡温泉",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=14&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "14:34→14:50、200円（土曜は14:33発）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 18:30 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=03&hh=18&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "18:30→真駒内→すすきの19:51、850円＋290円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 18:30 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=05&hh=18&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "すすきの19:51",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=03&hh=19&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "20:00→真駒内20:51→すすきの21:12",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=05&hh=19&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "20:00→すすきの21:20",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→湯の町",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA&y=2026&m=12&d=03&hh=18&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "18:30→18:41、200円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→札幌駅 快速8 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=20&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "20:53→札幌駅（JR駅に22:13）、1,000円。次は21:50の12番（乗り換え1回）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→札幌駅 快速8 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=20&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "20:45→札幌駅22:00（JR駅に22:04）、1,000円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→すすきの 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=05&hh=21&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "21:50→すすきの22:58、1,040円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "二見の足湯",
+   "url": "https://jozankei.jp/oneday/hutami-footbat/",
+   "saw": "9:00〜21:00、無料、年中無休、無人、定員15名、タオル自販機300円、湯の町バス停から徒歩3分",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "二見公園の工事",
+   "url": "https://jozankei.jp/news/futami-park-notice/",
+   "saw": "2026/9/24〜2027年3月末、二見公園は立入禁止。二見吊橋へは行ける。迂回路は10/1から、冬は閉鎖",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "二見公園（冬）",
+   "url": "https://jozankei.jp/en/spot/1269/",
+   "saw": "冬季は積雪のため二見吊橋まで行けません",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "岩戸観音堂",
+   "url": "https://jozankei.jp/en/spot/179/",
+   "saw": "7:00〜20:00、365日、参拝無料、洞窟は大人300円・子ども100円、約120mに観音像33体、1936年建立",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山源泉公園",
+   "url": "https://jozankei.jp/oneday/jozan-gensen-park/",
+   "saw": "通年 7:00〜21:00、無料、月見橋のたもと",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "おんたまの湯",
+   "url": "https://jozankei.jp/oneday/ontama/",
+   "saw": "約20分で温泉卵。卵は対岸の定山渓物産館で3個＋ネット180円。カラスに注意",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山渓物産館",
+   "url": "https://jozankei.jp/store/bussankan/",
+   "saw": "8:00〜21:00、不定休、湯の町バス停すぐ、温泉卵セット180円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "食堂いち",
+   "url": "https://jozankei.jp/store/ichi/",
+   "saw": "11:00〜15:00、火曜休み（祝日・お盆・GW・正月は除く）、定食7種類、定山渓大橋バス停から徒歩5分",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "生そば紅葉亭",
+   "url": "https://jozankei.jp/store/koyotei/",
+   "saw": "11:00〜17:00（そばがなくなり次第終了）、水・木曜休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ラーメン可楽",
+   "url": "https://jozankei.jp/store/karaku/",
+   "saw": "昼11:00〜15:00、夜18:00〜23:00（火曜は夜なし）、水曜・第2第4火曜休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "喫茶＆軽食フランセ",
+   "url": "https://jozankei.jp/store/france/",
+   "saw": "10:30〜17:00（L.O.16:30）、カツカレー",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "松尾ジンギスカン",
+   "url": "https://jozankei.jp/store/matsuo-jingisukan/",
+   "saw": "17:00〜22:00（L.O.21:30）、昼は土日だけ11:30〜15:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "食堂こんの",
+   "url": "https://jozankei.jp/store/konno/",
+   "saw": "11:30〜14:00、18:00〜0:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "居酒屋北のかっぱ",
+   "url": "https://jozankei.jp/store/kita-no-kappa/",
+   "saw": "18:00〜24:00、水・日曜休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉",
+   "url": "https://hoheikyo.co.jp/",
+   "saw": "入浴10:00〜22:30（最終受付21:45）、インド料理11:00〜21:00（L.O.）、和食11:00〜14:00・17:00〜20:00（L.O.）、年中無休、現金・カード・QR決済",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉（温泉）",
+   "url": "https://hoheikyo.co.jp/onsen/",
+   "saw": "大人1,300円・子ども600円、タオル220円・バスタオル500円（販売）、ボディソープ・リンスインシャンプーあり、家族風呂なし、露天は日替わりで男女入れ替え。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉の料理",
+   "url": "https://jozankei.jp/store/hoheikyo-onsen/",
+   "saw": "チキンカリー1,200円、ラムカリー1,400円など",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡ダム",
+   "url": "https://jozankei.jp/en/spot/hoheikyo-dam/",
+   "saw": "期間5/2〜11/3、8:45〜16:00、大人1,000円（電気バス）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "新・雪灯路2027",
+   "url": "https://jozankei.jp/event/yukitouro2027/",
+   "saw": "2027/1/20〜2/28、18:00〜21:30（最終入場21:15）、無料。定山渓神社は宿泊者限定。中止は当日14:00ごろ告知",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ホテルミリオーネ 日帰り入浴",
+   "url": "https://www.milione.jp/spa/daytrip/",
+   "saw": "入れ墨・タトゥー・疑似シール・ペインティングは入場・入浴お断り",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "鹿の湯 日帰り入浴",
+   "url": "https://shikanoyu.co.jp/shikanoyu/spa/day",
+   "saw": "刺青・タトゥーの入浴お断り",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "旅籠屋 定山渓商店",
+   "url": "https://jyozankei-shoten.com/onsen/",
+   "saw": "日帰り13:30〜18:00・1,200円、刺青・タトゥーはご遠慮",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "休日ビルヂング",
+   "url": "https://www.kyuujitsu.com/faq/",
+   "saw": "刺繍やタトゥーは入館お断り（シール・ペイントも含む）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山渓ビューホテル",
+   "url": "https://en.jozankeiview.com/faq/",
+   "saw": "tattoos, temporary tattoos or body paint: cannot use baths or pools",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日帰り入浴の一覧（定山渓）",
+   "url": "https://jozankei.jp/oneday/",
+   "saw": "13施設と無料の足湯5か所",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→登別 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BB%E5%88%A5&y=2026&m=12&d=03&hh=09&m1=2&m2=2&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急北斗8号 9:45→10:59、乗車券2,530円＋指定席2,360円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→登別 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BB%E5%88%A5&y=2026&m=12&d=05&hh=09&m1=2&m2=2&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急北斗8号 9:45→10:59",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→登別温泉 すずらん",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=09&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急すずらん4号 9:21→登別10:39、バス10:44→登別温泉11:05、450円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別温泉地区バス時刻表",
+   "url": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/09/2_R8.10.1_noboribetsu.pdf",
+   "saw": "登別駅前→登別温泉 10:44・11:00・11:13（11:32着）・11:45。登別温泉→登別駅前 17:13・18:00（18:15着）・19:10（19:22着）・20:35（20:47着）。前ドアは一律450円先払い、中ドアは整理券・後払い",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "高速おんせん号",
+   "url": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/10/R8.12_onsen_airport.pdf",
+   "saw": "札幌駅前13:40→登別温泉15:20、登別温泉9:30→札幌駅前11:15の1往復。予約制、12〜3月は3,800円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=17&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗15号 17:34→18:47",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 18:40 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=18&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "すずらん11号 18:40→19:58",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 18:40 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=18&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "すずらん11号 18:40→19:58",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 夜 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=19&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗19号 20:26→21:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 夜 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=19&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗19号 20:26→21:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 最後 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=20&m1=4&m2=7&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗21号 21:21→22:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 最後 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=20&m1=4&m2=7&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗21号 21:21→22:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "北海道レールパス・エリアパス",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "特急は全席指定。エリアパス（札幌・小樽・登別・新千歳空港、4日間）は10,000円（購入は事前）・11,000円（駅）。他社のバスは対象外",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別の手荷物預かり",
+   "url": "https://noboribetsu-spa.jp/usefulinfo/tenimotsu/",
+   "saw": "9:00〜16:30（窓口17:00まで）、1個500〜700円、日本語・英語・中国語・韓国語",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "地獄谷",
+   "url": "https://noboribetsu-spa.jp/spot/spot0034/",
+   "saw": "無料、直径約450m、1日約1万トン、パークサービスセンターから展望台まで車いす用スロープ（最大8%）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "鉄泉池",
+   "url": "https://noboribetsu-spa.jp/spot/spot0059/",
+   "saw": "地獄谷のほぼ中央の小さな間欠泉、無料",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大湯沼",
+   "url": "https://noboribetsu-spa.jp/modelcourse/120min/%e5%9c%b0%e7%8d%84%e6%ba%80%e5%96%ab%e3%82%b3%e3%83%bc%e3%82%b9/",
+   "saw": "周囲約1kmのひょうたん型の沼、沼底から約130℃の硫黄泉",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大湯沼川天然足湯",
+   "url": "https://noboribetsu-spa.jp/spot/spot0068/",
+   "saw": "無料、大湯沼川探勝歩道、大正地獄のすぐ近く",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大湯沼川天然足湯（冬）",
+   "url": "https://www.visit-hokkaido.jp/spot/detail_11428.html",
+   "saw": "冬季は遊歩道の通行止めあり",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "泉源公園の間欠泉",
+   "url": "https://noboribetsu-spa.jp/spot/spot0079/",
+   "saw": "約3時間の間隔、無料",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "閻魔堂",
+   "url": "https://noboribetsu-spa.jp/spot/spot0103/",
+   "saw": "からくり山車 10:00・11:00・13:00・15:00・17:00・20:00・21:00、無料、天候により閉めることあり",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "味の大王 登別温泉店",
+   "url": "https://noboribetsu-spa.jp/spot/spot0189/",
+   "saw": "11:30〜15:00、火曜休み、地獄ラーメン",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ラーメン天鳳",
+   "url": "https://noboribetsu-spa.jp/spot/spot0206/",
+   "saw": "11:30〜14:00／18:00〜23:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "温泉市場",
+   "url": "https://noboribetsu-spa.jp/spot/spot0169/",
+   "saw": "10:30〜21:00（お食事コーナー11:00〜21:00）、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "adex BAKERY&CAFE",
+   "url": "https://noboribetsu-spa.jp/spot/spot0228/",
+   "saw": "8:00〜22:00、定休日なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "炭火焼＆ラーメンいせくら",
+   "url": "https://noboribetsu-spa.jp/spot/spot0190/",
+   "saw": "18:00〜1:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "のぼりべつクマ牧場",
+   "url": "https://bearpark.jp/information/",
+   "saw": "大人3,200円（ロープウェイ往復込み）、10/21〜4/20は9:30〜16:30（最終入園15:50）、4/21〜10/20は9:00〜17:00（16:20）、見学60〜90分、ロッカー300円・200円、カード・交通系IC・QR可、雪の日も入園可",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "クマ牧場の休み",
+   "url": "https://bearpark.jp/",
+   "saw": "2027/4/5〜4/23はロープウェイ点検で休園",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "夢元さぎり湯",
+   "url": "https://sagiriyu-noboribetsu.com/",
+   "saw": "9:00〜21:00（最終受付20:30）、大人500円・子ども180円、1日710円。フェイスタオルなしは入浴不可（2025/12/16）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "夢元さぎり湯 ご利用案内",
+   "url": "https://sagiriyu-noboribetsu.com/goriyou/",
+   "saw": "タオル・シャンプーは持参が前提。さぎり湯タオル400円、貸しバスタオル200円、シャンプー・ボディソープ各80円。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "夢元さぎり湯（観光協会）",
+   "url": "https://noboribetsu-spa.jp/oneday/oneday020/",
+   "saw": "大人550円・子ども180円、露天風呂・貸切風呂なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "第一滝本館 日帰り入浴",
+   "url": "https://takimotokan.co.jp/ja/day_spa/",
+   "saw": "9:00〜18:00（最終退館21:00）、大人2,500円・子ども1,500円、バスタオル・フェイスタオル込み、温水プール込み、2027/4/5〜15休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "第一滝本館 よくある質問",
+   "url": "https://takimotokan.co.jp/ja/faq/",
+   "saw": "予約不要、基本無休、各種カード・PayPayなど可。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別万世閣 日帰り入浴",
+   "url": "https://www.noboribetsu-manseikaku.jp/spa/daytrip/",
+   "saw": "入れ墨・タトゥー・疑似シール・ペインティングは入場・入浴お断り",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日帰り入浴の一覧（登別）",
+   "url": "https://noboribetsu-spa.jp/oneday/",
+   "saw": "第一滝本館・グランドホテル・石水亭・万世閣・ゆもと登別・はなや・さぎり湯ほか",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+   "saw": "12月1日15:43、12月21日15:45",
+   "checked": "2026-11-26"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "nstart",
+   "name": {
+    "ja": "札幌駅から特急で登別へ",
+    "en": "Sapporo to Noboribetsu"
+   },
+   "kind": {
+    "ja": "出発・特急とバス",
+    "en": "Start: express & bus"
+   },
+   "blurb": {
+    "ja": "札幌9:45発の特急北斗で登別10:59着。駅前から道南バスで登別温泉へ。",
+    "en": "The 9:45 Hokuto from Sapporo reaches Noboribetsu at 10:59; a Donan bus takes you up to the onsen town."
+   },
+   "caution": {
+    "ja": "特急は全席指定。バスは現金450円",
+    "en": "All limited-express seats reserved; bus ¥450 cash"
+   },
+   "lat": 43.06866,
+   "lng": 141.35079,
+   "text": {
+    "ja": "札幌駅から特急で登別へ\n\n登別（のぼりべつ）温泉は、札幌から南へ約110km、太平洋に近い山の中の温泉街です。\n\n行き：JR札幌駅9:45発の特急北斗8号（函館行き）で、登別10:59着（平日・土日とも）。運賃は乗車券2,530円と指定席2,360円で4,890円（2026年12月3日・5日の額）。北海道の特急はすべての席が指定席なので、乗る前に指定席をとります。\n\n登別駅前から、道南バスの登別温泉行き11:13発に乗り、終点の登別温泉ターミナルで降ります。11:32着、450円。このバスは中ドアから乗って整理券を取り、降りるときに払います。現金の小銭を用意してください（交通系ICカードが使えるかは要確認）。ひとつ早い特急すずらん4号（札幌9:21発、登別10:39着）なら、10:44発のバスで登別温泉11:05着です。\n\nレールパス：北海道レールパスと「札幌−登別エリアパス」（どちらも日本以外のパスポートを持つ人向け）で、特急の指定席に乗れます。エリアパスは4日間で10,000円（事前に買う場合）、駅で買うと11,000円。道南バスはパスの対象外です。\n\n札幌から登別温泉へ直行する高速おんせん号（予約制）は、札幌駅前13:40発の1日1本だけなので、日帰りには向きません。\n\n荷物：登別温泉の手荷物預かり（登別国際観光コンベンション協会、1個500〜700円、英語も可）は16:30（窓口17:00）までなので、夜まで残る日は、大きな荷物は札幌のホテルに置いてきてください。\n\nおすすめ出発時間：9:45発（札幌駅に9:30ごろ）",
+    "en": "Sapporo to Noboribetsu\n\nNoboribetsu Onsen is a hot-spring town in the hills near the Pacific, about 110 km south of Sapporo.\n\nGetting there: the limited express Hokuto 8 (for Hakodate) leaves JR Sapporo Station at 9:45 and reaches Noboribetsu at 10:59, weekdays and weekends. The fare is ¥2,530 plus ¥2,360 for the reserved seat, ¥4,890 in total (prices for 3 and 5 December 2026). Every seat on Hokkaido’s limited expresses is reserved, so get a seat reservation before you board.\n\nFrom the station, take the Donan bus for Noboribetsu Onsen at 11:13 to the last stop, Noboribetsu Onsen Terminal: arrives 11:32, ¥450. On this bus you board by the middle door, take a numbered ticket and pay when you get off. Have coins ready (IC cards not confirmed). One train earlier, the Suzuran 4 (Sapporo 9:21, Noboribetsu 10:39), connects with the 10:44 bus (Noboribetsu Onsen 11:05).\n\nRail passes: the Hokkaido Rail Pass and the Sapporo–Noboribetsu Area Pass (both for holders of non-Japanese passports) cover reserved seats on limited expresses. The Area Pass costs ¥10,000 for 4 days if bought in advance, ¥11,000 at the station. Donan buses are not covered.\n\nThe direct Onsen-go highway bus (reservation) leaves Sapporo only once a day, at 13:40, so it does not suit a day trip.\n\nLuggage: the left-luggage desk in Noboribetsu Onsen (tourism association, ¥500–700 per item, English spoken) closes at 16:30 (counter 17:00). If you stay into the evening, leave big bags at your Sapporo hotel.\n\nRecommended departure time: the 9:45 (be at Sapporo Station by about 9:30)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR札幌駅",
+      "en": "JR Sapporo Station"
+     },
+     "lat": 43.06866,
+     "lng": 141.35079,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9C%AD%E5%B9%8C%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "JR登別駅",
+      "en": "JR Noboribetsu Station"
+     },
+     "lat": 42.45201,
+     "lng": 141.1808,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E7%99%BB%E5%88%A5%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道（列車の時刻・運賃）",
+      "en": "JR Hokkaido"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/",
+      "en": "https://www.jrhokkaido.co.jp/global/index.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "北海道レールパス・札幌−登別エリアパス",
+      "en": "Hokkaido Rail Pass and Sapporo–Noboribetsu Area Pass"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道南バス 登別温泉地区の時刻表（PDF）",
+      "en": "Donan Bus: Noboribetsu Onsen timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/09/2_R8.10.1_noboribetsu.pdf",
+      "en": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/09/2_R8.10.1_noboribetsu.pdf"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "登別温泉の手荷物預かり",
+      "en": "Left luggage in Noboribetsu Onsen (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/usefulinfo/tenimotsu/",
+      "en": "https://noboribetsu-spa.jp/usefulinfo/tenimotsu/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2026-11-15",
+     "to": "2027-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2027-11-15",
+     "to": "2028-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2028-11-15",
+     "to": "2029-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "札幌9:45（北斗8号）→ 登別10:59。すずらん4号なら9:21 → 10:39（平日・土日とも）",
+       "en": "Sapporo 9:45 (Hokuto 8) → Noboribetsu 10:59; or Suzuran 4, 9:21 → 10:39 (every day)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "札幌〜登別 4,890円（乗車券2,530円＋指定席2,360円。12月3日・5日の額）",
+       "en": "Sapporo–Noboribetsu ¥4,890 (fare ¥2,530 + reserved seat ¥2,360, on 3 and 5 Dec)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "登別駅前11:13 → 登別温泉11:32（10:44 → 11:05も）、450円・現金",
+       "en": "Noboribetsu Station 11:13 → Noboribetsu Onsen 11:32 (also 10:44 → 11:05), ¥450 cash"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "列車は乗換案内（2026年12月3日・5日のダイヤ。JR北海道は2027年3月にダイヤ改正の予定）、バスは道南バスの公式の時刻表（2026年10月1日改正）、パスはJR北海道の英語のページで確認しました。",
+     "en": "Trains from a route planner (timetable for 3 and 5 December 2026; JR Hokkaido is expected to revise it in March 2027), buses from Donan Bus’s timetable (revised 1 October 2026), passes from JR Hokkaido’s English pages."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "nstart-w1.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Series_Kiha261-1000_Hokuto-4.jpg"
+     }
+    },
+    {
+     "file": "nstart-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:131102_Donan_bus_Noboribetsu_Onsen_bus_terminal_Noboribetsu_Hokkaido_Japan01s3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "nlunch",
+   "name": {
+    "ja": "極楽通りと閻魔堂",
+    "en": "Gokuraku-dori & Enma-do"
+   },
+   "kind": {
+    "ja": "お昼・からくり",
+    "en": "Lunch & Enma show"
+   },
+   "blurb": {
+    "ja": "温泉街のまん中の坂道でお昼。食べたら、閻魔堂の閻魔大王のからくりを13:00の回で。",
+    "en": "Lunch on the main street, then the mechanical King of Hell at Enma-do at 13:00."
+   },
+   "lat": 42.493,
+   "lng": 141.1435,
+   "text": {
+    "ja": "極楽通りと閻魔堂\n\nバスを降りたら、温泉街のまん中の坂道「極楽通り」を地獄谷のほうへ上ります。お昼の例です（支払い方法・英語のメニューは要確認）。\n\n・味の大王 登別温泉店：辛さに挑戦する「地獄ラーメン」。11:30〜15:00、火曜休み。\n・ラーメン天鳳：長く煮たみそのスープのラーメン。シカ肉・クマ肉の煮込みも。11:30〜14:00、不定休。\n・温泉市場：登別の近海の魚介を刺身や炭焼きで。食事は11:00〜21:00、不定休。\n・adex BAKERY&CAFE：毎日焼くパンのカフェ。8:00〜22:00、無休。\n\n閻魔堂（えんまどう）：極楽通りの上のほうにあるお堂で、中の「閻魔大王からくり山車」が10:00・11:00・13:00・15:00・17:00・20:00・21:00に動きます。無料。天気によってお堂を閉めることがあります。食べ終わったら13:00の回へ。\n\nおすすめ訪問時間：11:35〜13:05（閻魔堂は13:00の回）",
+    "en": "Gokuraku-dori & Enma-do\n\nFrom the bus, walk up Gokuraku-dori, the sloping main street, towards Jigokudani. Some lunch options (payment methods and English menus not confirmed):\n\n• Aji no Daio: “hell ramen” with a heat level you choose. 11:30–15:00, closed Tuesdays.\n• Ramen 天鳳: ramen in a long-simmered miso broth, plus venison and bear stew. 11:30–14:00, irregular closures.\n• Onsen Ichiba: local seafood as sashimi or charcoal-grilled. Meals 11:00–21:00, irregular closures.\n• adex Bakery & Café: bread baked daily. 8:00–22:00, open every day.\n\nEnma-do: a small hall near the top of Gokuraku-dori. The mechanical float of Enma, King of Hell, inside performs at 10:00, 11:00, 13:00, 15:00, 17:00, 20:00 and 21:00. Free. The hall may close in bad weather. After lunch, catch the 13:00 show.\n\nRecommended visit time: 11:35–13:05 (Enma-do at 13:00)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "味の大王 登別温泉店",
+      "en": "Aji no Daio Noboribetsu Onsen"
+     },
+     "lat": 42.493,
+     "lng": 141.1432,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%91%B3%E3%81%AE%E5%A4%A7%E7%8E%8B%20%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89%E5%BA%97"
+    },
+    {
+     "label": {
+      "ja": "ラーメン天鳳",
+      "en": "Ramen 天鳳"
+     },
+     "lat": 42.493,
+     "lng": 141.1435,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E5%A4%A9%E9%B3%B3%20%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89"
+    },
+    {
+     "label": {
+      "ja": "温泉市場",
+      "en": "Onsen Ichiba"
+     },
+     "lat": 42.4932,
+     "lng": 141.1435,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B8%A9%E6%B3%89%E5%B8%82%E5%A0%B4%20%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89"
+    },
+    {
+     "label": {
+      "ja": "adex BAKERY&CAFE",
+      "en": "adex Bakery & Café"
+     },
+     "lat": 42.4925,
+     "lng": 141.143,
+     "url": "https://www.google.com/maps/search/?api=1&query=adex%20BAKERY%26CAFE%20%E7%99%BB%E5%88%A5"
+    },
+    {
+     "label": {
+      "ja": "閻魔堂",
+      "en": "Enma-do"
+     },
+     "lat": 42.49414,
+     "lng": 141.14389,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%96%BB%E9%AD%94%E5%A0%82%20%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "閻魔堂",
+      "en": "Enma-do (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0103/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0103/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "味の大王 登別温泉店",
+      "en": "Aji no Daio (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0189/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0189/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ラーメン天鳳",
+      "en": "Ramen 天鳳 (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0206/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0206/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "温泉市場",
+      "en": "Onsen Ichiba (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0169/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0169/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "adex BAKERY&CAFE",
+      "en": "adex Bakery & Café (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0228/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0228/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "food",
+      "text": {
+       "ja": "味の大王 11:30〜15:00（火休）／天鳳 11:30〜14:00／温泉市場 11:00〜21:00／adex 8:00〜22:00",
+       "en": "Aji no Daio 11:30–15:00 (closed Tue) / 天鳳 11:30–14:00 / Onsen Ichiba 11:00–21:00 / adex 8:00–22:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "閻魔堂のからくり：10:00・11:00・13:00・15:00・17:00・20:00・21:00（無料）",
+       "en": "Enma-do shows: 10:00, 11:00, 13:00, 15:00, 17:00, 20:00, 21:00 (free)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "お店の時間と閻魔堂は、登別国際観光コンベンション協会の紹介ページで2026年11月26日に確認しました。臨時の休みは店に確かめてください。",
+     "en": "Shop hours and Enma-do from the Noboribetsu tourism association’s pages, checked on 26 November 2026. Ask shops about irregular closures."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "nlunch-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetsu_%26_Usuzan_-_Noboribetsu7146.jpg"
+     }
+    },
+    {
+     "file": "nlunch-w2.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetu_Yukakejizo%EF%BC%8F%E7%99%BB%E5%88%A5%E3%83%BB%E6%B9%AF%E3%81%8B%E3%81%91%E5%9C%B0%E8%94%B5_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "nlunch-w3.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetu_Oni%EF%BC%8F%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89%E8%A1%97%E3%83%BB%E9%9D%92%E9%AC%BC%E8%B5%A4%E9%AC%BC_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "sengen",
+   "name": {
+    "ja": "泉源公園の間欠泉",
+    "en": "Sengen Park geyser"
+   },
+   "kind": {
+    "ja": "間欠泉",
+    "en": "Geyser"
+   },
+   "blurb": {
+    "ja": "地獄谷から流れてくる湯の川ぞいの小さな公園。約3時間おきに、音を立てて湯が噴き上がります。",
+    "en": "A small park on the hot stream from Jigokudani, where a geyser roars up about every three hours."
+   },
+   "lat": 42.49489,
+   "lng": 141.14367,
+   "text": {
+    "ja": "泉源公園の間欠泉\n\n極楽通りのいちばん上、地獄谷へ向かう坂の入口にあります。地獄谷から流れる温泉の川を使った間欠泉で、約3時間おきに大きな音と湯気を上げて噴き出します。無料。噴く時間に当たらなくても、湯けむりは見られます。ここから地獄谷までは坂を上って約10分。\n\nおすすめ訪問時間：13:05〜13:15",
+    "en": "Sengen Park geyser\n\nAt the top of Gokuraku-dori, where the road climbs to Jigokudani. The geyser is fed by the hot stream from the valley and erupts with a roar and a cloud of steam about every three hours. Free. Even if you miss an eruption, the steam is there. Jigokudani is about 10 minutes uphill from here.\n\nRecommended visit time: 13:05–13:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "泉源公園",
+      "en": "Sengen Park"
+     },
+     "lat": 42.49489,
+     "lng": 141.14367,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B3%89%E6%BA%90%E5%85%AC%E5%9C%92%20%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "泉源公園の間欠泉",
+      "en": "Sengen Park geyser (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0079/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0079/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "登別国際観光コンベンション協会",
+      "en": "Noboribetsu tourism association"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/",
+      "en": "https://noboribetsu-spa.jp/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "登別国際観光コンベンション協会のページで2026年11月26日に確認しました。",
+     "en": "Checked on the Noboribetsu tourism association’s page on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "sengen-w1.jpg",
+     "credit": {
+      "author": "Wpcpey",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%B3%89%E6%BA%90%E5%85%AC%E5%9C%92_201406.JPG"
+     }
+    },
+    {
+     "file": "sengen-w2.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Spa_Noboribetu%EF%BC%8F%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89%E8%A1%97%E3%83%BB%E9%96%93%E6%AC%A0%E6%B3%89_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "jigoku",
+   "name": {
+    "ja": "地獄谷",
+    "en": "Jigokudani (Hell Valley)"
+   },
+   "kind": {
+    "ja": "火口の谷",
+    "en": "Volcanic valley"
+   },
+   "blurb": {
+    "ja": "直径約450mの火口のあと。谷のあちこちから湯気が上がり、木道で中ほどの鉄泉池まで歩けます。無料。",
+    "en": "An old crater about 450 m across, steaming all over. A boardwalk leads into the middle to Tessen-ike. Free."
+   },
+   "lat": 42.49816,
+   "lng": 141.14964,
+   "text": {
+    "ja": "地獄谷\n\n直径約450mの爆裂火口のあとで、谷のあちこちから湯気と温泉が噴き出し、1日に約1万トンの湯が湧いています。入場は無料。\n\n入口のパークサービスセンターから展望台までは、車いす用のスロープ（勾配は最大8%）。展望台から木道を下ると、谷のほぼ中央の鉄泉池（てっせんいけ）という小さな間欠泉まで行けます。\n\n冬：木道と坂は凍ります。滑りにくい靴で、手すりを持って歩いてください。\n\nおすすめ訪問時間：13:25〜14:00",
+    "en": "Jigokudani (Hell Valley)\n\nAn explosion crater about 450 m across: from all over the valley, steam and hot water burst out, some 10,000 tonnes of it a day. Entry is free.\n\nA wheelchair slope (up to 8% gradient) runs from the Park Service Center at the entrance to the viewpoint. From there a boardwalk drops into the valley to Tessen-ike, a small geyser near its centre.\n\nWinter: the boardwalk and slopes ice over. Wear shoes with grip and hold the handrails.\n\nRecommended visit time: 13:25–14:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "地獄谷 展望台",
+      "en": "Jigokudani viewpoint"
+     },
+     "lat": 42.497,
+     "lng": 141.148,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%99%BB%E5%88%A5%E5%9C%B0%E7%8D%84%E8%B0%B7%20%E5%B1%95%E6%9C%9B%E5%8F%B0"
+    },
+    {
+     "label": {
+      "ja": "鉄泉池",
+      "en": "Tessen-ike"
+     },
+     "lat": 42.49816,
+     "lng": 141.14964,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%89%84%E6%B3%89%E6%B1%A0%20%E7%99%BB%E5%88%A5"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "地獄谷（登別国際観光コンベンション協会）",
+      "en": "Jigokudani (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0034/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0034/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "登別国際観光コンベンション協会",
+      "en": "Noboribetsu tourism association"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/",
+      "en": "https://noboribetsu-spa.jp/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2026-11-15",
+     "to": "2027-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2027-11-15",
+     "to": "2028-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2028-11-15",
+     "to": "2029-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "登別国際観光コンベンション協会のページ（地獄谷・鉄泉池）で2026年11月26日に確認しました。",
+     "en": "Checked on the Noboribetsu tourism association’s pages on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "jigoku-w1.jpg",
+     "credit": {
+      "author": "Kentaro Ohno",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hell_Valley_%28Jigokudani%29_-_22567574857.jpg"
+     }
+    },
+    {
+     "file": "jigoku-w2.jpg",
+     "credit": {
+      "author": "Benny Ang",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jigokudani_%2837826664214%29.jpg"
+     }
+    },
+    {
+     "file": "jigoku-w3.jpg",
+     "credit": {
+      "author": "Wpcpey",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetsu_Jigokudani_%28Hell_valley%29_Tessen_Pond_201406.jpg"
+     }
+    },
+    {
+     "file": "jigoku-w4.jpg",
+     "credit": {
+      "author": "Kentaro Ohno",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hell_Valley_%28Jigokudani%29_-_22798377090.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "oyunuma",
+   "name": {
+    "ja": "大湯沼と天然足湯",
+    "en": "Oyunuma & natural foot bath"
+   },
+   "kind": {
+    "ja": "沼・天然の足湯",
+    "en": "Pond & foot bath"
+   },
+   "blurb": {
+    "ja": "地獄谷の奥の遊歩道で大湯沼へ。下りの途中、温泉の川に足を入れる無料の天然足湯。",
+    "en": "A trail beyond Jigokudani to the steaming Oyunuma pond, then down to a free foot bath in a hot river."
+   },
+   "caution": {
+    "ja": "冬は遊歩道が通行止めになることがあります（期間は要確認）",
+    "en": "Trails may close in winter (dates not confirmed)"
+   },
+   "lat": 42.50099,
+   "lng": 141.14737,
+   "text": {
+    "ja": "大湯沼と天然足湯\n\n地獄谷から遊歩道を上って大湯沼展望台へ（約1.3km、上り坂）。大湯沼は、日和山（ひよりやま）の水蒸気爆発でできた火口のあとの、周囲約1kmのひょうたん形の沼。沼の底から約130℃の硫黄泉が噴き出しています。\n\n展望台から大湯沼川探勝歩道を下ると、大正地獄のすぐ近くに「大湯沼川天然足湯」。大湯沼からあふれた湯が流れる川に、そのまま足を入れます。無料で、入る条件は書かれていないので、タトゥーがあっても入れます。足をふくタオルを持っていきましょう。足湯から温泉街までは、歩いて約1.5km・25分ほど。全部で約3.3km、ゆっくり歩いて1時間半を見てください。\n\n冬：遊歩道は冬に通行止めになることがあります（北海道観光機構の案内。期間は出ていません）。通れない日は、かわりにロープウェイでクマ牧場へ（「選んで回る」で入れ替え）。道の状況は登別国際観光コンベンション協会へ（0143-84-3311）。\n\nおすすめ訪問時間：14:00〜15:30",
+    "en": "Oyunuma & natural foot bath\n\nFrom Jigokudani a trail climbs to the Oyunuma viewpoint (about 1.3 km, uphill). Oyunuma, a crater left by a steam explosion of Mt Hiyori, is a gourd-shaped pond about 1 km round, with sulphurous water at around 130°C gushing up from the bottom.\n\nFrom the viewpoint, the Oyunuma river trail goes down past Taisho Jigoku to the natural foot bath, where the overflow from the pond runs as a hot river and you put your feet straight in. It is free and lists no conditions, so tattoos are not an issue. Bring a towel. From the foot bath it is about 1.5 km, 25 minutes, back to town. Allow about 1½ hours for the whole 3.3 km at an easy pace.\n\nWinter: the trails can close in winter (per the Hokkaido Tourism Organization; no dates given). If they are closed, take the ropeway to the Bear Park instead (swap it in with “Choose stops”). For trail conditions, call the tourism association (0143-84-3311).\n\nRecommended visit time: 14:00–15:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大湯沼展望台",
+      "en": "Oyunuma viewpoint"
+     },
+     "lat": 42.50099,
+     "lng": 141.14737,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%B9%AF%E6%B2%BC%E5%B1%95%E6%9C%9B%E5%8F%B0%20%E7%99%BB%E5%88%A5"
+    },
+    {
+     "label": {
+      "ja": "大湯沼川天然足湯",
+      "en": "Oyunuma river natural foot bath"
+     },
+     "lat": 42.5021,
+     "lng": 141.14333,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%B9%AF%E6%B2%BC%E5%B7%9D%E5%A4%A9%E7%84%B6%E8%B6%B3%E6%B9%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "大湯沼川天然足湯",
+      "en": "Natural foot bath (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0068/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0068/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "大湯沼（モデルコース）",
+      "en": "Oyunuma (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/modelcourse/120min/%e5%9c%b0%e7%8d%84%e6%ba%80%e5%96%ab%e3%82%b3%e3%83%bc%e3%82%b9/",
+      "en": "https://noboribetsu-spa.jp/modelcourse/120min/%e5%9c%b0%e7%8d%84%e6%ba%80%e5%96%ab%e3%82%b3%e3%83%bc%e3%82%b9/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "冬の遊歩道（北海道観光機構）",
+      "en": "Winter trail note (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.visit-hokkaido.jp/spot/detail_11428.html",
+      "en": "https://www.visit-hokkaido.jp/spot/detail_11428.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬は遊歩道が通行止めのことがあります",
+      "en": "Winter trail closures"
+     },
+     "text": {
+      "ja": "大湯沼・天然足湯への遊歩道は、冬に通行止めになることがあります。行く前に登別国際観光コンベンション協会（0143-84-3311）か、地獄谷の入口のパークサービスセンターで確かめてください。通れない日は、クマ牧場へ。",
+      "en": "The trails to Oyunuma and the foot bath can close in winter. Check with the tourism association (0143-84-3311) or the Park Service Center at the Jigokudani entrance first. If they are closed, go to the Bear Park instead."
+     },
+     "from": "2026-11-15",
+     "to": "2027-04-15",
+     "url": "https://www.visit-hokkaido.jp/spot/detail_11428.html"
+    },
+    {
+     "head": {
+      "ja": "冬は遊歩道が通行止めのことがあります",
+      "en": "Winter trail closures"
+     },
+     "text": {
+      "ja": "大湯沼・天然足湯への遊歩道は、冬に通行止めになることがあります。行く前に登別国際観光コンベンション協会（0143-84-3311）か、地獄谷の入口のパークサービスセンターで確かめてください。通れない日は、クマ牧場へ。",
+      "en": "The trails to Oyunuma and the foot bath can close in winter. Check with the tourism association (0143-84-3311) or the Park Service Center at the Jigokudani entrance first. If they are closed, go to the Bear Park instead."
+     },
+     "from": "2027-11-15",
+     "to": "2028-04-15",
+     "url": "https://www.visit-hokkaido.jp/spot/detail_11428.html"
+    },
+    {
+     "head": {
+      "ja": "冬は遊歩道が通行止めのことがあります",
+      "en": "Winter trail closures"
+     },
+     "text": {
+      "ja": "大湯沼・天然足湯への遊歩道は、冬に通行止めになることがあります。行く前に登別国際観光コンベンション協会（0143-84-3311）か、地獄谷の入口のパークサービスセンターで確かめてください。通れない日は、クマ牧場へ。",
+      "en": "The trails to Oyunuma and the foot bath can close in winter. Check with the tourism association (0143-84-3311) or the Park Service Center at the Jigokudani entrance first. If they are closed, go to the Bear Park instead."
+     },
+     "from": "2028-11-15",
+     "to": "2029-04-15",
+     "url": "https://www.visit-hokkaido.jp/spot/detail_11428.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "冬は遊歩道の通行止めあり（期間は要確認）",
+       "en": "Trails may close in winter (dates not confirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "登別国際観光コンベンション協会のページ（大湯沼・天然足湯・モデルコース）と北海道観光機構のページで確認しました。距離は地図で測ったもので、時間はゆとりを足した目安です。",
+     "en": "From the Noboribetsu tourism association’s pages and the Hokkaido Tourism Organization’s page. Distances measured on a map; times include some slack."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "oyunuma-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetsu_%26_Usuzan_-_Noboribetsu7129.jpg"
+     }
+    },
+    {
+     "file": "oyunuma-w2.jpg",
+     "credit": {
+      "author": "Calistemon",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Oyunuma_Pond%2C_Noboribetsu_Onsen%2C_Hokkaido%2C_April_2023_01.jpg"
+     }
+    },
+    {
+     "file": "oyunuma-w3.jpg",
+     "credit": {
+      "author": "XT",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:NoboribetsuOnsen-Ashiyu.JPG"
+     }
+    },
+    {
+     "file": "oyunuma-w4.jpg",
+     "credit": {
+      "author": "欅",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Oyunuma_river.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "bear",
+   "name": {
+    "ja": "のぼりべつクマ牧場",
+    "en": "Noboribetsu Bear Park"
+   },
+   "kind": {
+    "ja": "ロープウェイ・クマ",
+    "en": "Ropeway & bears"
+   },
+   "blurb": {
+    "ja": "ロープウェイで約7分、山の上でヒグマを近くで見ます。雪の日も開いています。冬は最終入園15:50。",
+    "en": "A 7-minute ropeway ride up to see brown bears close by. Open in snow. Winter last entry 15:50."
+   },
+   "caution": {
+    "ja": "冬（10月21日〜4月20日）は最終入園15:50",
+    "en": "Winter (21 Oct–20 Apr) last entry 15:50"
+   },
+   "lat": 42.49309,
+   "lng": 141.14434,
+   "text": {
+    "ja": "のぼりべつクマ牧場\n\n温泉街の中ほどにあるロープウェイの山麓駅（バスターミナルから歩いて5分ほど）から、山頂駅まで片道約7分。入園料にロープウェイの往復が入っていて、大人3,200円・子ども1,600円（4歳〜小学生）。見学は60〜90分。\n\n10月21日〜4月20日は9:30〜16:30（最終入園15:50）、4月21日〜10月20日は9:00〜17:00（最終入園16:20）。雪の日も入れます。支払いは現金・クレジットカード・交通系ICカード・QRコード決済など。山麓駅の正面入口の右にコインロッカー（300円・200円）があります。\n\n大湯沼の遊歩道のかわりに入れる場所です。両方は時間が足りません。2027年4月5日〜23日はロープウェイの点検で休みです。\n\nおすすめ訪問時間：14:00〜15:40（大湯沼のかわり）",
+    "en": "Noboribetsu Bear Park\n\nThe ropeway from the base station in the middle of town (about 5 minutes’ walk from the bus terminal) takes about 7 minutes to the top. Admission includes the return ride: adults ¥3,200, children ¥1,600 (age 4 to primary school). Allow 60–90 minutes.\n\nOpen 9:30–16:30 from 21 October to 20 April (last entry 15:50), 9:00–17:00 from 21 April to 20 October (last entry 16:20). Open in snow. Cash, credit cards, IC cards and QR payments. Coin lockers (¥300 and ¥200) are to the right of the base station’s main entrance.\n\nThis replaces the Oyunuma trail; there is not time for both. Closed 5–23 April 2027 for ropeway inspection.\n\nRecommended visit time: 14:00–15:40 (instead of Oyunuma)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "のぼりべつクマ牧場 ロープウェイ山麓駅",
+      "en": "Bear Park ropeway base station"
+     },
+     "lat": 42.49309,
+     "lng": 141.14434,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%AE%E3%81%BC%E3%82%8A%E3%81%B9%E3%81%A4%E3%82%AF%E3%83%9E%E7%89%A7%E5%A0%B4%20%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E5%B1%B1%E9%BA%93%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "のぼりべつクマ牧場 ご利用案内",
+      "en": "Noboribetsu Bear Park: visitor info"
+     },
+     "url": {
+      "ja": "https://bearpark.jp/information/",
+      "en": "https://bearpark.jp/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10月21日〜4月20日 9:30〜16:30（最終入園15:50）／4月21日〜10月20日 9:00〜17:00（16:20）",
+       "en": "21 Oct–20 Apr 9:30–16:30 (last entry 15:50) / 21 Apr–20 Oct 9:00–17:00 (16:20)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人3,200円・子ども1,600円（ロープウェイ往復込み）。カード・交通系IC可",
+       "en": "Adults ¥3,200, children ¥1,600 (return ropeway included). Cards and IC OK"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "2027年4月5日〜23日（ロープウェイ点検）",
+       "en": "5–23 April 2027 (ropeway inspection)"
+      },
+      "until": "2027-04-23",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "のぼりべつクマ牧場の公式サイト（ご利用案内・お知らせ）で2026年11月26日に確認しました。",
+     "en": "Checked on the Bear Park’s website on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "bear-w1.jpg",
+     "credit": {
+      "author": "Ted Chi",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E3%81%AE%E3%81%BC%E3%82%8A%E3%81%B9%E3%81%A4%E3%82%AF%E3%83%9E%E7%89%A7%E5%A0%B412_Noboribetsu_bear_park.jpg"
+     }
+    },
+    {
+     "file": "bear-w2.jpg",
+     "credit": {
+      "author": "Kinden K",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E3%81%AE%E3%81%BC%E3%82%8A%E3%81%B9%E3%81%A4%E3%82%AF%E3%83%9E%E7%89%A7%E5%A0%B43.jpg"
+     }
+    },
+    {
+     "file": "bear-w3.jpg",
+     "credit": {
+      "author": "Kinden K",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E3%81%AE%E3%81%BC%E3%82%8A%E3%81%B9%E3%81%A4%E3%82%AF%E3%83%9E%E7%89%A7%E5%A0%B41.jpg"
+     }
+    },
+    {
+     "file": "bear-w4.jpg",
+     "credit": {
+      "author": "ノーマルエディタ",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetsu_Bear_Park_ropeway_entrance_2025.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "bath",
+   "name": {
+    "ja": "夢元さぎり湯・第一滝本館",
+    "en": "Sagiriyu or Takimotokan"
+   },
+   "kind": {
+    "ja": "日帰り入浴",
+    "en": "Day bath"
+   },
+   "blurb": {
+    "ja": "地元の人も通う温泉銭湯か、地獄谷の下の大きな旅館の大浴場。どちらもタトゥーの決まりは公式に記載なし。",
+    "en": "A local hot-spring bathhouse, or the big baths of a large inn below Jigokudani. Neither states a tattoo rule."
+   },
+   "caution": {
+    "ja": "タトゥー：どちらも公式に記載なし（要確認）。登別万世閣は不可",
+    "en": "Tattoos: not stated at either (please check); Manseikaku refuses"
+   },
+   "lat": 42.49223,
+   "lng": 141.14301,
+   "text": {
+    "ja": "夢元さぎり湯・第一滝本館\n\nタトゥー：夢元さぎり湯・第一滝本館とも、公式サイトにタトゥーの決まりは書かれていません。行く前に電話で確かめてください（さぎり湯 0143-84-2050）。登別万世閣は、公式サイトでタトゥー（タトゥーシールやペイントも）の入浴を断っています。入れないときは、大湯沼川の天然足湯（無料）へ。\n\n・夢元さぎり湯：温泉街のまん中の温泉銭湯で、硫黄泉と鉄泉の2種類。9:00〜21:00（最終受付20:30）、大人500円・子ども180円（公式サイト。観光協会のページは550円なので、変わっているかもしれません）。休憩室も使える1日券は710円。銭湯なので、タオル・シャンプー・ボディソープは持っていくのが前提です。中でも買えます（さぎり湯タオル400円、貸しバスタオル200円、シャンプー・ボディソープ各80円）。フェイスタオルがないと入れません。露天風呂・貸切風呂はありません。\n\n・第一滝本館：地獄谷のすぐ下の大きな旅館の大浴場。日帰りは9:00〜18:00に入って、21:00までに出ます。大人2,500円・子ども1,500円で、バスタオルとフェイスタオルが入っています。温水プールも使えます（水着は有料で貸し出し）。予約はいりません。カード・PayPayなどが使えます。2027年4月5日〜15日は日帰り入浴が休み。\n\nおすすめ訪問時間：15:40〜17:30",
+    "en": "Sagiriyu or Takimotokan\n\nTattoos: neither Sagiriyu nor Dai-ichi Takimotokan says anything about tattoos on its website, so phone before you go (Sagiriyu 0143-84-2050). Noboribetsu Manseikaku refuses tattoos (tattoo stickers and body paint included) on its website. If you cannot bathe, use the free natural foot bath on the Oyunuma river.\n\n• Sagiriyu: a hot-spring bathhouse in the middle of town with two kinds of water, sulphur and iron. 9:00–21:00 (last entry 20:30), adults ¥500, children ¥180 (per its website; the tourism association lists ¥550, so the price may have changed). A day ticket with the rest room is ¥710. As a public bathhouse it expects you to bring a towel, shampoo and soap; you can also buy them there (Sagiriyu towel ¥400, bath towel rental ¥200, shampoo or body soap ¥80 each). You will not be let in without a small towel. No outdoor or private baths.\n\n• Dai-ichi Takimotokan: the big baths of a large inn just below Jigokudani. Day visitors enter 9:00–18:00 and leave by 21:00. Adults ¥2,500, children ¥1,500, bath and face towels included. The heated pool is included too (swimsuit rental extra). No booking needed. Cards, PayPay and more accepted. No day bathing 5–15 April 2027.\n\nRecommended visit time: 15:40–17:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "夢元さぎり湯",
+      "en": "Sagiriyu"
+     },
+     "lat": 42.49223,
+     "lng": 141.14301,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A2%E5%85%83%E3%81%95%E3%81%8E%E3%82%8A%E6%B9%AF"
+    },
+    {
+     "label": {
+      "ja": "第一滝本館",
+      "en": "Dai-ichi Takimotokan"
+     },
+     "lat": 42.49518,
+     "lng": 141.14484,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AC%AC%E4%B8%80%E6%BB%9D%E6%9C%AC%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "夢元さぎり湯 公式サイト",
+      "en": "Sagiriyu (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://sagiriyu-noboribetsu.com/",
+      "en": "https://sagiriyu-noboribetsu.com/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "第一滝本館 日帰り入浴",
+      "en": "Dai-ichi Takimotokan day bathing"
+     },
+     "url": {
+      "ja": "https://takimotokan.co.jp/ja/day_spa/",
+      "en": "https://takimotokan.co.jp/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "登別の日帰り入浴の一覧",
+      "en": "Day baths in Noboribetsu (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/oneday/",
+      "en": "https://noboribetsu-spa.jp/oneday/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "タトゥーがある人へ",
+      "en": "If you have tattoos"
+     },
+     "text": {
+      "ja": "登別万世閣は、公式サイトでタトゥー（タトゥーシールやペイントも）の入浴を断っています。夢元さぎり湯と第一滝本館は、公式サイトにタトゥーの決まりが書かれていません（要確認）。行く前に電話で確かめてください（さぎり湯 0143-84-2050）。大湯沼川の天然足湯は無料で、入る条件の記載はありません。",
+      "en": "Noboribetsu Manseikaku refuses bathers with tattoos (tattoo stickers and body paint included) on its website. Sagiriyu and Dai-ichi Takimotokan say nothing about tattoos on their websites, so phone before you go (Sagiriyu 0143-84-2050). The natural foot bath on the Oyunuma river is free and lists no conditions."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.noboribetsu-manseikaku.jp/spa/daytrip/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "tattoo",
+      "text": {
+       "ja": "さぎり湯・第一滝本館：公式に記載なし（要確認）／登別万世閣：不可",
+       "en": "Sagiriyu, Takimotokan: not stated (please check) / Manseikaku: refused"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "さぎり湯 9:00〜21:00（最終受付20:30）／第一滝本館 9:00〜18:00に入館、21:00までに退館",
+       "en": "Sagiriyu 9:00–21:00 (last entry 20:30) / Takimotokan enter 9:00–18:00, leave by 21:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "さぎり湯 大人500円（タオル400円）／第一滝本館 大人2,500円（タオル込み）",
+       "en": "Sagiriyu ¥500 (towel ¥400) / Takimotokan ¥2,500 (towels included)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "第一滝本館の日帰り入浴：2027年4月5日〜15日",
+       "en": "Takimotokan day bathing: 5–15 April 2027"
+      },
+      "until": "2027-04-15",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "夢元さぎり湯・第一滝本館・登別万世閣の公式サイトと、登別国際観光コンベンション協会の日帰り入浴のページで2026年11月26日に確認しました。",
+     "en": "Checked on 26 November 2026 on the websites of Sagiriyu, Takimotokan and Manseikaku and the tourism association’s day-bathing page."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "bath-w1.jpg",
+     "credit": {
+      "author": "Jiashiang",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Dai-ichi_Takimotokan.jpg"
+     }
+    },
+    {
+     "file": "bath-w2.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Spa_Noboribetu%EF%BC%8F%E7%99%BB%E5%88%A5%E7%AC%AC%E4%B8%80%E6%BB%9D%E6%9C%AC%E9%A4%A8_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "nyoru",
+   "name": {
+    "ja": "晩ごはんと帰りのバス",
+    "en": "Dinner & ride back"
+   },
+   "kind": {
+    "ja": "晩ごはん・帰り",
+    "en": "Dinner & ride back"
+   },
+   "blurb": {
+    "ja": "温泉街で食べて、19:10のバスと20:26の特急で札幌21:41着。最後は20:35のバスと21:21の特急。",
+    "en": "Eat in town, then the 19:10 bus and 20:26 train reach Sapporo at 21:41. Last: the 20:35 bus and 21:21 train."
+   },
+   "caution": {
+    "ja": "登別温泉発の最終バスは20:35",
+    "en": "Last bus from the onsen: 20:35"
+   },
+   "lat": 42.49141,
+   "lng": 141.14321,
+   "text": {
+    "ja": "晩ごはんと帰りのバス\n\n晩ごはんの例です（支払い方法は要確認）。\n\n・ラーメン天鳳：夜は18:00〜23:00、不定休。\n・温泉市場：食事は21:00まで、不定休。\n・炭火焼＆ラーメンいせくら：ホルモン焼きやジンギスカン。18:00〜1:00、不定休。\n・adex BAKERY&CAFE：22:00まで、無休。\n\n帰り：登別温泉ターミナル19:10発のバスで登別駅前19:22着。特急北斗19号 登別20:26発 → 札幌21:41着（平日・土日とも）。駅で1時間ほど待つので、温泉街でゆっくりして最終のバス20:35発（登別駅前20:47着）→ 特急北斗21号 21:21発 → 札幌22:41着でも。札幌で晩ごはんにするなら、18:00発のバス（18:15着）→ 特急すずらん11号 18:40発 → 札幌19:58着。\n\n帰りの特急も指定席を先にとっておくと安心です。冬は雪で遅れることがあります。\n\nおすすめ訪問時間：17:45〜20:35（晩ごはん・帰り）",
+    "en": "Dinner & ride back\n\nSome dinner options (payment methods not confirmed):\n\n• Ramen 天鳳: evenings 18:00–23:00, irregular closures.\n• Onsen Ichiba: meals until 21:00, irregular closures.\n• Isekura: charcoal-grilled offal and lamb. 18:00–1:00, irregular closures.\n• adex Bakery & Café: until 22:00, open every day.\n\nBack: the 19:10 bus from Noboribetsu Onsen Terminal reaches Noboribetsu Station at 19:22. The limited express Hokuto 19 leaves at 20:26 and arrives in Sapporo at 21:41 (every day). That leaves an hour at the station, so you could stay in town for the last bus at 20:35 (station 20:47) and the Hokuto 21 at 21:21 (Sapporo 22:41). For dinner in Sapporo instead: the 18:00 bus (18:15), then the Suzuran 11 at 18:40 (Sapporo 19:58).\n\nReserve your seat for the return train early. Snow can cause delays in winter.\n\nRecommended visit time: 17:45–20:35 (dinner and the ride back)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "登別温泉ターミナル（バス）",
+      "en": "Noboribetsu Onsen bus terminal"
+     },
+     "lat": 42.49141,
+     "lng": 141.14321,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89%20%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%20%E9%81%93%E5%8D%97%E3%83%90%E3%82%B9"
+    },
+    {
+     "label": {
+      "ja": "ラーメン天鳳",
+      "en": "Ramen 天鳳"
+     },
+     "lat": 42.493,
+     "lng": 141.1435,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E5%A4%A9%E9%B3%B3%20%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道南バス 登別温泉地区の時刻表（PDF）",
+      "en": "Donan Bus: Noboribetsu Onsen timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/09/2_R8.10.1_noboribetsu.pdf",
+      "en": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/09/2_R8.10.1_noboribetsu.pdf"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道（列車の時刻・運賃）",
+      "en": "JR Hokkaido"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/",
+      "en": "https://www.jrhokkaido.co.jp/global/index.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "炭火焼＆ラーメンいせくら",
+      "en": "Isekura (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0190/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0190/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ラーメン天鳳",
+      "en": "Ramen 天鳳 (Japanese)"
+     },
+     "url": {
+      "ja": "https://noboribetsu-spa.jp/spot/spot0206/",
+      "en": "https://noboribetsu-spa.jp/spot/spot0206/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "登別温泉19:10 → 登別駅前19:22／最終20:35 → 20:47、450円・現金",
+       "en": "Onsen 19:10 → station 19:22 / last 20:35 → 20:47, ¥450 cash"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "登別20:26（北斗19号）→ 札幌21:41／最終の特急21:21（北斗21号）→ 22:41",
+       "en": "Noboribetsu 20:26 (Hokuto 19) → Sapporo 21:41 / last limited express 21:21 (Hokuto 21) → 22:41"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "food",
+      "text": {
+       "ja": "天鳳 18:00〜23:00／温泉市場 〜21:00／いせくら 18:00〜1:00／adex 〜22:00",
+       "en": "天鳳 18:00–23:00 / Onsen Ichiba to 21:00 / Isekura 18:00–1:00 / adex to 22:00"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "バスは道南バスの時刻表（2026年10月1日改正）、列車は乗換案内（2026年12月3日・5日）、お店は登別国際観光コンベンション協会のページで確認しました。",
+     "en": "Buses from Donan Bus’s timetable (revised 1 October 2026), trains from a route planner (3 and 5 December 2026), shops from the tourism association’s pages."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "nyoru-w1.jpg",
+     "credit": {
+      "author": "欅",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Noboribetsu_hot_spring_resort01.JPG"
+     }
+    },
+    {
+     "file": "nyoru-w2.jpg",
+     "credit": {
+      "author": "Psjk2106",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Donan_Bus_Noboribetsu_Onsen_Terminal.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}

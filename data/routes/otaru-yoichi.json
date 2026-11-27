@@ -1,0 +1,1891 @@
+{
+ "id": "otaru",
+ "course": "yoichi",
+ "_note": "小樽（札幌から日帰り。otaru/ のページ専用。形は eizan-line.json と同じ）。「余市蒸溜所＋午後の小樽」。札幌8:41→余市10:00。ニッカ（予約。12〜1月はセミナーのみ）→余市13:43→小樽14:09→銀行街→堺町→浅草橋→晩ごはん→（天狗山は寄り道）→小樽19:27発。写真はすべて Wikimedia Commons（一覧は scripts/otaru_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_otaru_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "area": {
+    "ja": "余市",
+    "en": "Yoichi"
+   },
+   "title": {
+    "ja": "8:41の電車で余市の蒸溜所へ（予約制）",
+    "en": "The 8:41 train to the Yoichi distillery (booking needed)"
+   }
+  },
+  {
+   "first": 4,
+   "last": 7,
+   "area": {
+    "ja": "小樽・午後",
+    "en": "Otaru · afternoon"
+   },
+   "title": {
+    "ja": "13:43の電車で小樽へ、銀行街と堺町",
+    "en": "The 13:43 to Otaru, the bank street and Sakaimachi"
+   }
+  },
+  {
+   "first": 8,
+   "last": 11,
+   "area": {
+    "ja": "小樽・夜",
+    "en": "Otaru · evening"
+   },
+   "title": {
+    "ja": "夕暮れの運河と晩ごはん（天狗山は寄り道）",
+    "en": "Dusk at the canal and dinner (Mt. Tengu optional)"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 11
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。札幌駅・小樽駅・帰りは自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   3,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "defaultPicks": [
+   3,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "4": {
+    "always": true
+   },
+   "11": {
+    "always": true
+   },
+   "2": {
+    "any": [
+     3
+    ]
+   }
+  },
+  "hints": [
+   {
+    "spot": 10,
+    "rule": {
+     "any": [
+      10
+     ]
+    },
+    "text": {
+     "ja": "天狗山を入れると、札幌に着くのは22:03（小樽21:16発）です。",
+     "en": "With Mt. Tengu you reach Sapporo at 22:03 (the 21:16 from Otaru)."
+    }
+   },
+   {
+    "spot": 3,
+    "rule": {
+     "none": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "蒸溜所に行かない日は、「9〜10時に出る」コースに切り替えてください。",
+     "en": "Not going to the distillery? Switch to the 9–10 o’clock course."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/otaru/",
+ "sources": [
+  {
+   "what": "札幌→小樽 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=03&hh=09&m1=1&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "快速エアポート31号 9:33→10:07、普通 9:16→10:01・9:25→10:15、800円（ICカード）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→小樽 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=05&hh=09&m1=1&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ（9:33→10:07、9:16→10:01、9:25→10:15）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→小樽 朝 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=03&hh=06&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "6:52→7:38、7:05→7:51、7:14→8:01",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→小樽 朝 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=05&hh=06&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "すすきの→札幌（地下鉄）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=09&m1=1&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "南北線 すすきの→さっぽろ 5分、210円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=18&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "快速エアポート170号 19:00→19:34、174号 19:27→20:01、19:56→20:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 夕方 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=18&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 夜 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=19&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "20:22→21:11",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 夜 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=19&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "20:22→21:11",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 21時台 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=21&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "21:16→22:03、21:37→22:24、21:59→22:44",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 21時台 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=21&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=23&m1=3&m2=0&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "22:31→23:17、最終23:08→23:53",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→札幌 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=23&m1=3&m2=0&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "22:31→23:17、最終23:08→23:53",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→余市 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E4%BD%99%E5%B8%82&y=2026&m=12&d=03&hh=08&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "8:41→小樽（9:36発に乗り換え）→余市10:00、1,380円。次は10:06→余市11:23",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→余市 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E4%BD%99%E5%B8%82&y=2026&m=12&d=05&hh=08&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "余市→小樽 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=03&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "12:37→13:01、13:43→14:09、470円。高速バス13:06→14:00（560円）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "余市→小樽 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=05&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "余市→小樽 午後 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=03&hh=14&m1=1&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "15:02→15:26。高速バス14:36→15:30・15:06→16:00",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "余市→小樽 午後 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=05&hh=14&m1=1&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→新千歳空港 昼 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF&y=2026&m=12&d=03&hh=11&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "快速エアポート 11:17→12:39・12:17→13:39、特別快速 11:53→13:08・12:53→14:08、2,040円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→新千歳空港 昼 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF&y=2026&m=12&d=05&hh=11&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→新千歳空港 午後 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF&y=2026&m=12&d=03&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:17→14:39、特別快速13:53→15:08、14:17→15:39",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→新千歳空港 午後 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF&y=2026&m=12&d=05&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽→新千歳空港 夕方",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%B0%8F%E6%A8%BD&to=%E6%96%B0%E5%8D%83%E6%AD%B3%E7%A9%BA%E6%B8%AF&y=2026&m=12&d=03&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "15:33→16:52、16:00→17:15（土曜も同じ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "天狗山ロープウエイ 営業時間・料金",
+   "url": "https://tenguyama.ckk.chuo-bus.co.jp/hours-and-fees/",
+   "saw": "冬期2026/11/28〜2027/3/28 上り9:00〜19:48・下り〜20:00、夏期2026/4/25〜11/3 上り〜20:48・下り〜21:00。毎時00・12・24・36・48分発。往復 冬2,000円・夏1,800円。カード・電子マネー可。水族館とのセット券3,000円（現金のみ、7日間有効）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "天狗山 秋季運休",
+   "url": "https://tenguyama.ckk.chuo-bus.co.jp/news/",
+   "saw": "2026年11月4日〜27日は秋季整備運休、11月28日から冬期営業",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "天狗山 アクセス",
+   "url": "https://tenguyama.ckk.chuo-bus.co.jp/access/",
+   "saw": "小樽駅前ターミナル乗り場④、天狗山ロープウエイ線（9）約17分、240円。おたる市内線バス1日乗車券800円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス 天狗山線（2026年4月1日改正）",
+   "url": "https://www.chuo-bus.co.jp/city_route/pdf/otaru_E.pdf",
+   "saw": "小樽駅前発 平日16:10・16:40・18:40・19:10・19:40、土日祝16:10・16:40・18:40・19:10・19:40。天狗山発 平日18:07・18:37・20:07・20:42・21:17、土日祝18:07・18:47・20:07・20:47・21:17",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス 冬ダイヤ（2026年12月11日改正）小樽駅前",
+   "url": "https://www.chuo-bus.co.jp/city_route/timetable/index.20261211.php",
+   "saw": "天狗山行き 平日16:00・16:40・18:40・19:10・19:40、土日祝16:10・16:40・18:40。祝津線（水族館）毎時00分・おたる水族館線40分。直行10（12/12〜2/23）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス 冬ダイヤ 天狗山",
+   "url": "https://www.chuo-bus.co.jp/city_route/timetable/index.20261211.php",
+   "saw": "小樽駅前行き 平日・土日祝とも18:07・18:27・18:47・20:07、平日20:42、土日祝20:47、21:17（12/31〜1/3は夜の便が運休）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス 冬ダイヤ おたる水族館",
+   "url": "https://www.chuo-bus.co.jp/city_route/timetable/index.20261211.php",
+   "saw": "小樽駅前行き 平日・土日祝とも16:32、直行16:10（12/12〜2/23）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バス 冬ダイヤ改正のお知らせ",
+   "url": "https://www.chuo-bus.co.jp/feature/dia-winter2026/",
+   "saw": "12月11日改正。直行9（天狗山）・直行10（水族館）を増便、祝津線は減便",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "おたる水族館 バス時刻表",
+   "url": "https://otaru-aq.jp/guide/bus/",
+   "saw": "小樽駅前発 祝津線（赤岩経由）毎時00分・おたる水族館線（高島経由）40分。帰り祝津線32分。所要 赤岩経由約25分・高島経由約20分、240円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "中央バスのICカード",
+   "url": "https://www.chuo-bus.co.jp/support/sapica/area/",
+   "saw": "小樽市内全線・郊外線・余市郊外線でSAPICAと全国相互利用のICカード",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽駅のコインロッカー",
+   "url": "https://www.jrhokkaido.co.jp/network/locker/locker.pdf",
+   "saw": "小樽：小400円65個、中500円20個、大700円21個・800円14個",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "JR北海道のレールパス",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "Hokkaido Rail Pass：JR北海道の全線（新幹線を除く）。Sapporo-Noboribetsu Area Pass：新千歳空港・札幌・小樽・登別。どちらもJR北海道バス・札幌の地下鉄と市電は不可",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "三角市場 お食事案内",
+   "url": "http://otaru-sankaku.com/eating.html",
+   "saw": "海鮮食堂かわしま6:00〜16:00、味処たけだ7:00〜16:00、滝波食堂8:00〜17:00、さんかく亭8:00〜17:00（店舗案内のページ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日本銀行旧小樽支店金融資料館",
+   "url": "https://www3.boj.or.jp/otaru-m/",
+   "saw": "入館無料、4〜11月9:30〜17:00・12〜3月10:00〜17:00（最終入館16:30）、水曜休館（祝休日は開館）、12/29〜1/5休館、スマートフォンの音声ガイド",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽芸術村",
+   "url": "https://www.nitorihd.co.jp/otaru-art-base/",
+   "saw": "11〜4月10:00〜17:00（最終入館16:30）毎週水曜休館、5〜10月9:30〜17:00 第4水曜休館",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "北一ホール",
+   "url": "https://kitaichiglass.co.jp/kitaichihall/",
+   "saw": "9:00〜17:30、注文9:30〜17:00、ランプ点灯作業の見学9:00〜9:30、食事は木・土・日曜11:00〜14:50",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽オルゴール堂 本館",
+   "url": "https://www.otaru-orgel.co.jp/shop",
+   "saw": "9:00〜18:00（2・3階は17:45まで）、定休日なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽運河クルーズ 料金",
+   "url": "https://otaru.cc/price/",
+   "saw": "デイ1,800円、ナイト2,000円（大人）、約40分",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽運河クルーズ 12月の時刻",
+   "url": "https://otaru.cc/wp-content/uploads/2026/09/2026_1201_1230.pdf",
+   "saw": "中央橋発着。デイ10:00〜15:30、ナイト16:00〜18:00の30分ごと。12/31・1/1は定休日。冬は船にシートヒーターと幌",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽倉庫No.1",
+   "url": "https://otarubeer.com/jp/Ppage_id=357.html",
+   "saw": "11:00〜22:00（料理LO21:00・飲み物LO21:30）、不定休。木・土曜は2時間2,600円のビール飲み放題（予約不要）。醸造設備のセルフ見学無料。TEL 0134-21-2323",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "若鶏時代なると 本店",
+   "url": "http://otaru-naruto.jp/naruto/shop.html",
+   "saw": "11:00〜21:00（LO20:30）、定休日1月1日、小樽駅から徒歩7〜8分。お品書き：若鶏半身揚げ1,190円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽貴賓館（旧青山別邸）",
+   "url": "https://www.otaru-kihinkan.jp/",
+   "saw": "旧青山別邸 4〜10月9:00〜17:00・11〜3月9:00〜16:00（最終受付30分前）、12/29〜31は15:00まで、1/1〜1/7休業。レストランのお食事11:00〜14:30、12/26〜1/7休業。バスは「貴賓館入口」下車徒歩5分",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "旧青山別邸 入館料",
+   "url": "https://www.otaru-kihinkan.jp/aoyama_about/",
+   "saw": "大人1,300円、カード・電子決済不可、見学20〜30分、館内ガイド休止中",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽市鰊御殿",
+   "url": "https://www.city.otaru.lg.jp/docs/2020100900596/",
+   "saw": "令和8年度 4/4〜11/23、9:00〜17:00（10/16から16:00）、一般300円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "おたる水族館 営業期間・時間",
+   "url": "https://otaru-aq.jp/guide/openningtime/",
+   "saw": "通常営業2026/3/14〜11/23、冬期営業2026/12/12〜2027/2/23 10:00〜16:00（最終入館15:30）。休館11/24〜12/11。冬期は海獣公園・遊園地閉鎖",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "おたる水族館 料金（冬期）",
+   "url": "https://otaru-aq.jp/guide/tickets/",
+   "saw": "大人（高校生以上）1,300円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽市総合博物館",
+   "url": "https://www.city.otaru.lg.jp/docs/2023031200049/otarumuseum.html",
+   "saw": "9:30〜17:00（最終入館16:30）、本館は火曜（祝日は翌平日）と12/29〜1/3休館、本館一般400円（冬期300円）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽市総合博物館 お知らせ",
+   "url": "https://www.city.otaru.lg.jp/docs/2025032900126/otarumuseum.html",
+   "saw": "本館は2026/11/5〜2027/4/28が冬期料金。手宮口は冬期閉鎖",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ニッカ 余市蒸溜所 楽しみ方",
+   "url": "https://www.nikka.com/distilleries/yoichi/visit/",
+   "saw": "ガイドツアー無料・予約制。予約なしはミュージアム・ショップ・レストラン（最終入場15:30）。RITA'S KITCHEN 10:00〜15:50（LO15:20）。休業 12/23〜1/7・6/11。全施設16:15まで",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ニッカ 余市蒸溜所 よくある質問",
+   "url": "https://www.nikka.com/distilleries/yoichi/faq/",
+   "saw": "1〜9名、20歳未満だけの参加不可、ツアーは日本語のみ、予約は4週間先まで、食品の持ち込み不可、ロッカー100円（返却式・ツアー予約者のみ）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ニッカ 余市蒸溜所 アクセス",
+   "url": "https://www.nikka.com/distilleries/yoichi/access/",
+   "saw": "余市駅から徒歩約5分。小樽駅から余市駅まで約30分、列車の本数は多くない",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ニッカ 予約サイト 12月以降のお知らせ",
+   "url": "https://reserva.be/nikkayoichi/news",
+   "saw": "2026年12月・2027年1月は設備改修のため無料ガイドツアーなし、キーモルトセミナーのみ（9:30・10:00・10:30・11:30・12:00・12:30・13:30・14:00）。20歳以上・運転しない人。新規予約はWEBのみ、4週間前0:00から。12/5はレストラン休業",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ニッカ 予約サイト 11月のお知らせ",
+   "url": "https://reserva.be/nikkayoichi/news",
+   "saw": "ガイドツアー所要60分（9:30〜14:30の9回）、キーモルトセミナー所要90分・3,000円・現地で現金のみ",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ニッカ 予約サイト 年末年始",
+   "url": "https://reserva.be/nikkayoichi/news",
+   "saw": "12/23〜1/7休業。1/8・1/9午前はガイドツアーなし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）12月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
+   "saw": "12/1 16:01、12/10 16:00、12/20 16:02、12/31 16:09",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）1月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0001.html",
+   "saw": "1/1 16:10、1/20 16:31、1/31 16:45",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）2月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0002.html",
+   "saw": "2/1 16:46、2/28 17:22",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）3月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0003.html",
+   "saw": "3/1 17:23、3/31 17:59",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）6月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0006.html",
+   "saw": "6/1 19:07、6/28 19:18",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "小樽雪あかりの路",
+   "url": "https://yukiakarinomichi.org/",
+   "saw": "2026-11-26 に公式サイトへ接続できず、2027年の日程は確認できなかった（ページには「例年2月」とだけ書く）",
+   "checked": "2026-11-26"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "sapporo",
+   "name": {
+    "ja": "札幌駅（JR）",
+    "en": "Sapporo Station (JR)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "快速エアポートで小樽まで34分、800円。Kitaca・Suicaなどの交通系ICカードが使えます。",
+    "en": "The Rapid Airport train reaches Otaru in 34 minutes for ¥800. Kitaca, Suica and other IC cards work."
+   },
+   "caution": {
+    "ja": "蒸溜所は12月23日〜1月7日休み",
+    "en": "Distillery closed 23 Dec–7 Jan"
+   },
+   "lat": 43.06866,
+   "lng": 141.35079,
+   "text": {
+    "ja": "札幌駅（JR）\n\n札幌8:41発で余市10:00着。予約した回のツアー（12〜1月はセミナー）と蒸溜所のレストランでお昼。13:43の電車で小樽に戻って、銀行街と堺町通り、暗くなるころの運河と晩ごはん。天狗山の夜景を足すと札幌着は22時ごろです。\n\n蒸溜所の見学は予約制です（予約ページは英語あり、4週間前から）。\n\n大通・すすきののホテルからは、地下鉄南北線で「さっぽろ」駅へ（すすきのから5分・210円）。大通からは、地下の歩行空間（チ・カ・ホ）を歩いても行けます。\n\n小樽へは「快速エアポート」（新千歳空港から来て小樽まで行く電車）がいちばん速く、34分。小樽行きの普通でも45〜50分で、運賃は同じ800円です。銭函（ぜにばこ）を過ぎると線路が海ぎわを走ります。海は進行方向の右側です。\n\n外国のパスポートで使えるJR北海道レールパス（全線）と札幌・登別エリアパス（新千歳空港・札幌・小樽を含む）で乗れます。小樽の路線バスとロープウエイは別に払います。\n\n雪の日は遅れや運休が出ることがあります。出る前にJR北海道の運行情報を見てください。\n\nおすすめ出発時間：8:41（札幌駅に8:30ごろ）",
+    "en": "Sapporo Station (JR)\n\nThe 8:41 from Sapporo reaches Yoichi at 10:00. Your booked tour (a seminar in December–January) and lunch at the distillery restaurant, then the 13:43 train back to Otaru for the bank street, Sakaimachi, the canal at dusk and dinner. Add the Mt. Tengu night view and you are back in Sapporo around 22:00.\n\nDistillery tours need a booking (English booking site, opens four weeks ahead).\n\nFrom hotels around Odori or Susukino, take the Namboku subway line to Sapporo (5 minutes from Susukino, ¥210). From Odori you can also walk through the underground passage (Chi-Ka-Ho).\n\nThe fastest train is the Rapid Airport, which runs through from New Chitose Airport to Otaru: 34 minutes. Local trains to Otaru take 45–50 minutes for the same ¥800. After Zenibako the line runs right along the sea, on the right-hand side.\n\nThe JR Hokkaido Rail Pass and the Sapporo-Noboribetsu Area Pass (which includes New Chitose Airport, Sapporo and Otaru) cover this train. Otaru’s buses and the ropeway are paid separately.\n\nSnow can delay or cancel trains. Check JR Hokkaido’s service status before you leave.\n\nRecommended departure time: 8:41 (be at Sapporo Station by about 8:30)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR札幌駅",
+      "en": "JR Sapporo Station"
+     },
+     "lat": 43.06866,
+     "lng": 141.35079,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9C%AD%E5%B9%8C%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "JR北海道のレールパス（英語）",
+      "en": "JR Hokkaido rail passes"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月23日〜1月7日は蒸溜所が休み",
+      "en": "The distillery is closed 23 December–7 January"
+     },
+     "text": {
+      "ja": "ショップ・レストラン・ミュージアムも休みです。1月8日と9日の午前はツアーがありません。休みの日は「9〜10時に出る」コースへ。",
+      "en": "The shop, restaurant and museum close too, and there are no tours on 8 January or the morning of 9 January. On those days, use the 9–10 o’clock course instead."
+     },
+     "from": "2026-12-10",
+     "to": "2027-01-09",
+     "url": "https://reserva.be/nikkayoichi/news"
+    },
+    {
+     "head": {
+      "ja": "12月・1月は無料のガイドツアーがありません",
+      "en": "No free tours in December and January"
+     },
+     "text": {
+      "ja": "試飲の建物の改修のため、2026年12月〜2027年1月は有料の「余市蒸溜所限定キーモルトセミナー」だけです（9:30・10:00・10:30・11:30・12:00・12:30・13:30・14:00）。20歳以上で、その日に車を運転しない人だけ参加できます。料金は予約ページで確かめてください（11月の案内では90分・3,000円・現地で現金払い）。予約なしでも、ミュージアム・ショップ・レストランには入れます。",
+      "en": "Because the tasting hall is being renovated, only the paid Key Malt Seminar runs from December 2026 to January 2027 (9:30, 10:00, 10:30, 11:30, 12:00, 12:30, 13:30, 14:00). You must be 20 or over and not driving that day. Check the fee on the booking page (in November it was 90 minutes, ¥3,000, cash only on the day). Without a booking you can still visit the museum, shop and restaurant."
+     },
+     "from": null,
+     "to": "2027-01-31",
+     "url": "https://reserva.be/nikkayoichi/news"
+    },
+    {
+     "head": {
+      "ja": "冬の小樽を歩くとき",
+      "en": "Walking in Otaru in winter"
+     },
+     "text": {
+      "ja": "歩道は踏み固められた雪や氷になります。底に溝の深い、滑りにくい靴で。坂の多い町なので、駅から運河へ下る中央通りも気をつけて。12月は16時ごろに日が沈み、雪の日は電車が遅れることがあります。",
+      "en": "Pavements turn to packed snow and ice. Wear boots with deep-tread soles. The town is hilly, so take care on the slope from the station down to the canal. In December the sun sets around 16:00, and trains can run late on snowy days."
+     },
+     "from": "2026-11-26",
+     "to": "2027-03-31"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "札幌→小樽 800円（ICカード）",
+       "en": "Sapporo → Otaru ¥800 (IC card)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で2026年12月3日（木）・5日（土）のダイヤを確認しました。春のダイヤ改正のあとは確かめ直してください。パスはJR北海道の英語のページで確認しました。",
+     "en": "Times and fares from a route planner for Thursday 3 and Saturday 5 December 2026; check again after the spring timetable change. Pass details from JR Hokkaido’s English site."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "sapporo-w1.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Station_in_November_2025.jpg"
+     }
+    },
+    {
+     "file": "sapporo-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Sapporo_Sta03n3200.jpg"
+     }
+    },
+    {
+     "file": "sapporo-w3.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Station_at_night.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "yoichi",
+   "name": {
+    "ja": "余市（よいち）駅",
+    "en": "Yoichi Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "小樽から各駅停車で24分。蒸溜所は駅前から歩いて5分。電車の本数が少ないので、帰りの時刻を先に。",
+    "en": "24 minutes from Otaru by local train, and 5 minutes’ walk to the distillery. Trains are few, so note the return times first."
+   },
+   "lat": 43.1869,
+   "lng": 140.79479,
+   "text": {
+    "ja": "余市（よいち）駅\n\n札幌8:41発の小樽行きに乗り、小樽で9:36発の倶知安（くっちゃん）行きに乗り換えて、余市10:00着。札幌から1,380円です。\n\n余市から小樽への電車は、昼は12:37・13:43・15:02発と1時間〜1時間20分おき。乗り遅れたら、駅の近くの「余市駅前十字街」から小樽駅前行きの高速バス（約54分・560円）もあります。\n\n交通系ICカード：小樽〜余市の電車で使えるかは、JR北海道のサイトで確かめられませんでした。きっぷを買えば確実です。JR北海道レールパス（全線）なら乗れます。札幌・登別エリアパスに余市が入るかは要確認です。\n\nおすすめ移動時間：10:00着",
+    "en": "Yoichi Station\n\nTake the 8:41 from Sapporo to Otaru and change there to the 9:36 for Kutchan, arriving at 10:00. ¥1,380 from Sapporo.\n\nTrains back to Otaru are 60–80 minutes apart in the daytime: 12:37, 13:43, 15:02. If you miss one, highway buses run from the Yoichi-ekimae-jujigai stop near the station to Otaru Station (about 54 minutes, ¥560).\n\nIC cards: JR Hokkaido’s site does not make clear whether they work between Otaru and Yoichi, so buying a paper ticket is the safe choice. The JR Hokkaido Rail Pass covers it; check whether the Sapporo-Noboribetsu Area Pass does.\n\nRecommended travel time: arrive 10:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR余市駅",
+      "en": "JR Yoichi Station"
+     },
+     "lat": 43.1869,
+     "lng": 140.79479,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%BD%99%E5%B8%82%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "札幌8:41→小樽（9:36発に乗り換え）→余市10:00（平日・土曜とも）",
+       "en": "Sapporo 8:41 → Otaru (change to the 9:36) → Yoichi 10:00 (weekdays and Saturdays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "余市→小樽：12:37（13:01着）、13:43（14:09着）、15:02（15:26着）",
+       "en": "Yoichi → Otaru: 12:37 (13:01), 13:43 (14:09), 15:02 (15:26)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "札幌→余市1,380円、余市→小樽470円。高速バス余市→小樽560円",
+       "en": "Sapporo → Yoichi ¥1,380, Yoichi → Otaru ¥470. Highway bus to Otaru ¥560"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で2026年12月3日（木）・5日（土）のダイヤを確認しました。",
+     "en": "Times and fares from a route planner for 3 and 5 December 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "yoichi-w1.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yoichi-STA.jpg"
+     }
+    },
+    {
+     "file": "yoichi-w2.jpg",
+     "credit": {
+      "author": "スミス1919",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%99%E5%B8%82%E9%A7%85%E3%81%AB%E5%81%9C%E8%BB%8A%E4%B8%AD%E3%81%AEH100%E5%BD%A2%E3%81%A8%E3%82%AD%E3%83%8F201%E7%B3%BB.jpg"
+     }
+    },
+    {
+     "file": "yoichi-w3.jpg",
+     "credit": {
+      "author": "Olegushka",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kiha201-104_RapSapporo_Yoichi_20090506.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "nikka",
+   "name": {
+    "ja": "ニッカウヰスキー 北海道 余市蒸溜所",
+    "en": "Nikka Whisky Yoichi Distillery"
+   },
+   "kind": {
+    "ja": "蒸溜所（ツアーは予約制）",
+    "en": "Distillery (tours by booking)"
+   },
+   "blurb": {
+    "ja": "竹鶴政孝（たけつるまさたか）がスコットランドに似た土地を求めて選んだ蒸溜所。石造りの棟と赤い屋根が並びます。",
+    "en": "Taketsuru Masataka chose Yoichi for its Scotland-like climate. Stone buildings with red roofs line the grounds."
+   },
+   "caution": {
+    "ja": "ツアーは予約制・日本語のみ。12月23日〜1月7日は休み",
+    "en": "Tours by booking only, in Japanese. Closed 23 Dec–7 Jan"
+   },
+   "lat": 43.18617,
+   "lng": 140.7895,
+   "text": {
+    "ja": "ニッカウヰスキー 北海道 余市蒸溜所\n\n10:05に入って、まず予約なしで入れるミュージアムへ。10:30（12〜1月のセミナー）か11:00ごろのツアーを予約しておくと、12:00すぎにレストランでお昼にできます。13:35に駅へ。\n\n・ガイドツアー（無料・試飲つき）は予約制。予約は公式の予約ページ（英語あり）で、4週間先まで。ツアーの案内は日本語だけです。2026年11月の案内では所要60分で、外の製造の建物を歩くので暖かい服で。\n\n・2026年12月〜2027年1月は、無料のツアーはなく有料のセミナーだけです（お知らせを参照）。2月からのツアーの時刻は予約ページで。\n\n・予約なしでも、ニッカミュージアム（有料のテイスティングバーあり）、ショップ、レストラン「RITA'S KITCHEN」（10:00〜15:50、ラストオーダー15:20）に入れます。入口はショップ側で、最終入場は15:30、すべて16:15に閉まります。2026年12月5日はレストランだけ休み。\n\n・食べ物の持ち込みはできません。100円が戻るロッカーは、ツアーを予約した人だけ使えます。\n\nおすすめ訪問時間：10:05〜13:35（お昼を含む）",
+    "en": "Nikka Whisky Yoichi Distillery\n\nIn at 10:05 and start in the walk-in museum. Book the 10:30 seminar (December–January) or a tour around 11:00, and you can have lunch at the restaurant just after 12:00. Leave for the station at 13:35.\n\n• The guided tour (free, with tasting) needs a booking on the official booking site (English available), up to four weeks ahead. Tours are in Japanese only. In November 2026 they took 60 minutes, partly outdoors, so dress warmly.\n\n• From December 2026 to January 2027 there are no free tours, only a paid seminar (see the notice). Check the booking site for tour times from February.\n\n• Without a booking you can visit the Nikka Museum (with a paid tasting bar), the shop and RITA’S KITCHEN restaurant (10:00–15:50, last order 15:20). Use the shop entrance; last entry 15:30, everything closes at 16:15. The restaurant alone is closed on 5 December 2026.\n\n• No outside food. The coin-return lockers (¥100) are for tour guests only.\n\nRecommended visit time: 10:05–13:35 (including lunch)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ニッカウヰスキー 余市蒸溜所",
+      "en": "Nikka Yoichi Distillery"
+     },
+     "lat": 43.18617,
+     "lng": 140.7895,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%8B%E3%83%83%E3%82%AB%E3%82%A6%E3%83%B0%E3%82%B9%E3%82%AD%E3%83%BC%20%E5%8C%97%E6%B5%B7%E9%81%93%20%E4%BD%99%E5%B8%82%E8%92%B8%E6%BA%9C%E6%89%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ニッカ 余市蒸溜所（楽しみ方）",
+      "en": "Nikka Yoichi Distillery (official)"
+     },
+     "url": {
+      "ja": "https://www.nikka.com/distilleries/yoichi/visit/",
+      "en": "https://www.nikka.com/en/distilleries/yoichi/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "見学予約（日本語・英語）",
+      "en": "Tour booking (Japanese / English)"
+     },
+     "url": {
+      "ja": "https://reserva.be/nikkayoichi/",
+      "en": "https://reserva.be/nikkayoichi/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "予約サイトのお知らせ",
+      "en": "Booking site notices"
+     },
+     "url": {
+      "ja": "https://reserva.be/nikkayoichi/news",
+      "en": "https://reserva.be/nikkayoichi/news"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月・1月は無料のガイドツアーがありません",
+      "en": "No free tours in December and January"
+     },
+     "text": {
+      "ja": "試飲の建物の改修のため、2026年12月〜2027年1月は有料の「余市蒸溜所限定キーモルトセミナー」だけです（9:30・10:00・10:30・11:30・12:00・12:30・13:30・14:00）。20歳以上で、その日に車を運転しない人だけ参加できます。料金は予約ページで確かめてください（11月の案内では90分・3,000円・現地で現金払い）。予約なしでも、ミュージアム・ショップ・レストランには入れます。",
+      "en": "Because the tasting hall is being renovated, only the paid Key Malt Seminar runs from December 2026 to January 2027 (9:30, 10:00, 10:30, 11:30, 12:00, 12:30, 13:30, 14:00). You must be 20 or over and not driving that day. Check the fee on the booking page (in November it was 90 minutes, ¥3,000, cash only on the day). Without a booking you can still visit the museum, shop and restaurant."
+     },
+     "from": null,
+     "to": "2027-01-31",
+     "url": "https://reserva.be/nikkayoichi/news"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "予約なしの施設は最終入場15:30、全施設16:15まで。レストラン10:00〜15:50（LO15:20）",
+       "en": "Walk-in areas: last entry 15:30, all close 16:15. Restaurant 10:00–15:50 (last order 15:20)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月23日〜1月7日、6月11日",
+       "en": "23 Dec–7 Jan, 11 June"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ガイドツアー無料（予約制）。12〜1月はセミナーのみ（料金は予約ページで）",
+       "en": "Guided tour free (booking needed). Dec–Jan: paid seminar only (fee on the booking site)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ニッカウヰスキーの公式サイトと、公式の見学予約サイトのお知らせ（2026年10〜11月）で確認しました。",
+     "en": "Checked on Nikka’s website and the notices on its official booking site (October–November 2026)."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "nikka-w1.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Drying_tower._Kiln_tower._A.jpg"
+     }
+    },
+    {
+     "file": "nikka-w2.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Inside_the_main_gate._B.jpg"
+     }
+    },
+    {
+     "file": "nikka-w3.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Drying_tower._Kiln_tower._C.jpg"
+     }
+    },
+    {
+     "file": "nikka-w4.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Warehouse_No.1._Wooden_barrel._B.jpg"
+     }
+    },
+    {
+     "file": "nikka-w5.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Former_Laboratory._A.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "otarueki",
+   "name": {
+    "ja": "小樽（おたる）駅",
+    "en": "Otaru Station"
+   },
+   "kind": {
+    "ja": "駅・荷物・バス",
+    "en": "Station, lockers, buses"
+   },
+   "blurb": {
+    "ja": "駅舎の中にランプが下がる駅。駅前の中央通りをまっすぐ下ると、10分ほどで運河です。",
+    "en": "An old station with oil lamps inside. Walk straight down Chuo-dori from the front and you reach the canal in about 10 minutes."
+   },
+   "lat": 43.1977,
+   "lng": 140.9944,
+   "text": {
+    "ja": "小樽（おたる）駅\n\n余市13:43発で小樽14:09着。中央通りを下って銀行街へ（歩いて12分ほど）。\n\n・荷物：駅のコインロッカーは小400円（65個）、中500円（20個）、大700円（21個）・800円（14個）。札幌に戻らずに空港へ行く日はここに。\n\n・バス：駅前の「中央バス小樽駅前ターミナル」から。天狗山は4番のりば。運賃は1回240円で、交通系ICカードが使えます（乗るときと降りるときにタッチ）。1日に3回以上乗るなら、ターミナルの窓口で「おたる市内線バス1日乗車券」（800円）を。\n\n・新千歳空港へ：快速エアポートは小樽発の新千歳空港行きで、乗り換えなし（2,040円）。昼は毎時17分発（1時間22分）と、53分発の特別快速（1時間15分）。17:30の飛行機なら14:17発（空港15:39着）か13:53発（15:08着）。午前だけ小樽を歩く日は、12:17発（13:39着）か12:53発（14:08着）です。\n\nおすすめ移動時間：14:09着",
+    "en": "Otaru Station\n\nThe 13:43 from Yoichi arrives at 14:09. Walk down Chuo-dori to the bank street (about 12 minutes).\n\n• Bags: lockers in the station cost ¥400 small (65), ¥500 medium (20), ¥700 large (21) or ¥800 (14). Use them if you go straight on to the airport.\n\n• Buses leave from the Chuo Bus terminal in front of the station; Mt. Tengu is stop 4. Each ride is ¥240 and IC cards work (touch on when you board and again when you get off). If you will ride three times or more, buy the ¥800 Otaru city bus day pass at the terminal counter.\n\n• To New Chitose Airport: the Rapid Airport starts here and runs straight to the airport (¥2,040). In the daytime it leaves at 17 past each hour (1 h 22), plus a Special Rapid at 53 past (1 h 15). For a 17:30 flight, take the 14:17 (airport 15:39) or the 13:53 (15:08). For a morning in Otaru, the 12:17 (13:39) or 12:53 (14:08).\n\nRecommended travel time: arrive 14:09"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR小樽駅",
+      "en": "JR Otaru Station"
+     },
+     "lat": 43.1977,
+     "lng": 140.9944,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%B0%8F%E6%A8%BD%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "中央バス小樽駅前ターミナル",
+      "en": "Chuo Bus Otaru Station terminal"
+     },
+     "lat": 43.19725,
+     "lng": 140.99419,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E5%A4%AE%E3%83%90%E3%82%B9%20%E5%B0%8F%E6%A8%BD%E9%A7%85%E5%89%8D%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "JR北海道 コインロッカー設置駅一覧（PDF）",
+      "en": "JR Hokkaido lockers by station (PDF, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/network/locker/locker.pdf",
+      "en": "https://www.jrhokkaido.co.jp/network/locker/locker.pdf"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "中央バス 小樽の路線と時刻表",
+      "en": "Chuo Bus routes in Otaru (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.chuo-bus.co.jp/city_route/course/otaru/",
+      "en": "https://www.chuo-bus.co.jp/city_route/course/otaru/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "小樽→新千歳空港：快速エアポート 11:17・12:17・13:17・14:17・15:33・16:00発、特別快速 11:53・12:53・13:53発（平日・土曜とも）",
+       "en": "Otaru → New Chitose Airport: Rapid Airport at 11:17, 12:17, 13:17, 14:17, 15:33, 16:00; Special Rapid at 11:53, 12:53, 13:53 (weekdays and Saturdays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "市内のバス1回240円、1日乗車券800円。空港まで2,040円",
+       "en": "City bus ¥240 a ride, day pass ¥800. Airport ¥2,040"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ロッカーはJR北海道の一覧、バスは中央バスと天狗山ロープウエイの公式サイト、空港までの時刻は乗換案内（2026年12月3日・5日）で確認しました。",
+     "en": "Lockers from JR Hokkaido’s list, buses from Chuo Bus and the ropeway’s site, airport trains from a route planner (3 and 5 December 2026)."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "otarueki-w1.jpg",
+     "credit": {
+      "author": "皓月旗",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Station_20220626_P2.jpg"
+     }
+    },
+    {
+     "file": "otarueki-w2.jpg",
+     "credit": {
+      "author": "SElefant",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR-H_Otaru_Station_by_night.jpg"
+     }
+    },
+    {
+     "file": "otarueki-w3.jpg",
+     "credit": {
+      "author": "Hiroyuki Sato",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:3_Chome_Inaho%2C_Otaru-shi%2C_Hokkaid%C5%8D_047-0032%2C_Japan_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "otarueki-w4.jpg",
+     "credit": {
+      "author": "Toomore Chiang",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%A8%BD%E9%A7%85_Otaru_Japan_Kodak_Colorplus_Nikon_Fm2_%28181257275%29.jpeg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "ginko",
+   "name": {
+    "ja": "日本銀行旧小樽支店金融資料館と色内（いろない）の銀行街",
+    "en": "Former Bank of Japan Otaru Branch and the old bank street"
+   },
+   "kind": {
+    "ja": "建物・無料の資料館",
+    "en": "Historic buildings, free museum"
+   },
+   "blurb": {
+    "ja": "1912年に建った日本銀行の支店が、無料の資料館に。まわりにも昔の銀行の建物が残ります。",
+    "en": "The Bank of Japan’s 1912 Otaru branch is now a free museum, with more old bank buildings around it."
+   },
+   "caution": {
+    "ja": "水曜休館（祝日は開館）",
+    "en": "Closed Wednesdays (open on holidays)"
+   },
+   "lat": 43.19665,
+   "lng": 141.00045,
+   "text": {
+    "ja": "日本銀行旧小樽支店金融資料館と色内（いろない）の銀行街\n\n水曜は資料館が休みなので、外から建物だけ。\n\n東京駅の設計で知られる辰野金吾（たつのきんご）らが設計した建物です。中では日本銀行の仕事や、小樽が栄えたころの歴史を紹介しています。スマートフォンで聞ける音声ガイドもあります。見学は30〜40分ほど。\n\n前の色内大通りには、旧三井銀行・旧安田銀行・旧北海道拓殖銀行など、昔の銀行の建物が並びます（写真の5枚目は旧三井銀行小樽支店）。旧北海道拓殖銀行の建物は、ステンドグラスや西洋美術の「小樽芸術村」の一部です（11〜4月は10:00〜17:00・水曜休み、料金は公式サイトで）。\n\nおすすめ訪問時間：14:25〜15:00",
+    "en": "Former Bank of Japan Otaru Branch and the old bank street\n\nClosed on Wednesdays: see the buildings from outside.\n\nDesigned by Tatsuno Kingo, the architect of Tokyo Station, and colleagues. Inside are displays on the Bank of Japan’s work and Otaru’s boom years, with an audio guide you can play on your phone. Allow 30–40 minutes.\n\nAlong Ironai-odori stand more old banks: the former Mitsui, Yasuda and Hokkaido Takushoku branches (photo 5 is the former Mitsui Bank). The Takushoku building is part of the Otaru Art Base museums of stained glass and Western art (Nov–Apr 10:00–17:00, closed Wednesdays; fees on the official site).\n\nRecommended visit time: 14:25–15:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "日本銀行旧小樽支店金融資料館",
+      "en": "Bank of Japan Otaru Museum"
+     },
+     "lat": 43.19665,
+     "lng": 141.00045,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E6%9C%AC%E9%8A%80%E8%A1%8C%E6%97%A7%E5%B0%8F%E6%A8%BD%E6%94%AF%E5%BA%97%E9%87%91%E8%9E%8D%E8%B3%87%E6%96%99%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "小樽芸術村",
+      "en": "Otaru Art Base"
+     },
+     "lat": 43.1974,
+     "lng": 141.00151,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E8%8A%B8%E8%A1%93%E6%9D%91"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "日本銀行旧小樽支店金融資料館",
+      "en": "Bank of Japan Otaru Museum (official)"
+     },
+     "url": {
+      "ja": "https://www3.boj.or.jp/otaru-m/",
+      "en": "https://www3.boj.or.jp/otaru-m/english/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "小樽芸術村",
+      "en": "Otaru Art Base (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.nitorihd.co.jp/otaru-art-base/",
+      "en": "https://www.nitorihd.co.jp/otaru-art-base/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "4〜11月 9:30〜17:00、12〜3月 10:00〜17:00（最終入館16:30）",
+       "en": "Apr–Nov 9:30–17:00, Dec–Mar 10:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "水曜（祝日は開館）、12月29日〜1月5日",
+       "en": "Wednesdays (open on holidays), 29 Dec–5 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "日本銀行旧小樽支店金融資料館と小樽芸術村の公式サイトで確認しました。",
+     "en": "Checked on the websites of the museum and Otaru Art Base."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "ginko-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:130823_Bank_of_Japan_Otaru_Museum02s4.jpg"
+     }
+    },
+    {
+     "file": "ginko-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Bank_of_Japan_Otaru_Museum01s3.jpg"
+     }
+    },
+    {
+     "file": "ginko-w3.jpg",
+     "credit": {
+      "author": "Komatta",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:The_Bank_of_Japan_Otaru_Museum.jpg"
+     }
+    },
+    {
+     "file": "ginko-w4.jpg",
+     "credit": {
+      "author": "Drivephotographer",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Bank_of_Japan%2C_Otaru_Branch.jpg"
+     }
+    },
+    {
+     "file": "ginko-w5.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:220721_Former_Mitsui_Bank_Otaru_Branch_Otaru_Hokkaido_Japan02s3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "kitaichi",
+   "name": {
+    "ja": "堺町通り（さかいまちどおり）と北一硝子（きたいちがらす）",
+    "en": "Sakaimachi Street and Kitaichi Glass"
+   },
+   "kind": {
+    "ja": "通り・ガラスの店・ランプの喫茶",
+    "en": "Shopping street, glass, lamp-lit café"
+   },
+   "blurb": {
+    "ja": "ガラス・オルゴール・菓子の店が続く通り。北一ホールは石油ランプの明かりだけの喫茶。",
+    "en": "A street of glass, music box and sweet shops. Kitaichi Hall is a café lit only by oil lamps."
+   },
+   "lat": 43.19231,
+   "lng": 141.00732,
+   "text": {
+    "ja": "堺町通り（さかいまちどおり）と北一硝子（きたいちがらす）\n\n浅草橋から南へ続く通りに、古い商家や倉庫を使った店が並びます。\n\n北一硝子三号館の奥の「北一ホール」は、木の梁の倉庫の中を石油ランプだけで照らした喫茶です（9:00〜17:30、注文は9:30〜17:00）。毎朝9:00〜9:30は、ランプに火を入れる作業を見られます。食事のメニューは木・土・日曜だけ（11:00〜14:50）。\n\n昼から夕方は通りが混みやすくなります。店を見るなら、開店してすぐの時間が落ち着いています。冬は歩道が凍る日があるので、店の出入りの段差にも気をつけて。\n\nおすすめ訪問時間：15:10〜15:55（北一ホールで休む時間を含む）",
+    "en": "Sakaimachi Street and Kitaichi Glass\n\nSouth from Asakusa Bridge, the street is lined with shops in old merchant houses and warehouses.\n\nAt the back of Kitaichi Glass Building No. 3, Kitaichi Hall is a café in a timbered warehouse lit only by oil lamps (9:00–17:30, orders 9:30–17:00). Every morning from 9:00 to 9:30 you can watch the lamps being lit. Food is served only on Thursdays, Saturdays and Sundays (11:00–14:50).\n\nThe street gets busy from midday into the afternoon; just after opening is calmer. In winter pavements can be icy, so watch the steps at shop doors.\n\nRecommended visit time: 15:10–15:55 (including a break at Kitaichi Hall)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "北一硝子三号館（北一ホール）",
+      "en": "Kitaichi Glass No. 3 (Kitaichi Hall)"
+     },
+     "lat": 43.19231,
+     "lng": 141.00732,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E4%B8%80%E7%A1%9D%E5%AD%90%E4%B8%89%E5%8F%B7%E9%A4%A8%20%E5%8C%97%E4%B8%80%E3%83%9B%E3%83%BC%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "北一ホール（北一硝子）",
+      "en": "Kitaichi Hall (Japanese)"
+     },
+     "url": {
+      "ja": "https://kitaichiglass.co.jp/kitaichihall/",
+      "en": "https://kitaichiglass.co.jp/kitaichihall/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "北一ホール 9:00〜17:30（注文9:30〜17:00）、ランプの点灯作業 9:00〜9:30",
+       "en": "Kitaichi Hall 9:00–17:30 (orders 9:30–17:00); lamp lighting 9:00–9:30"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "北一ホールの時間は北一硝子の公式サイトで確認しました。臨時に時間が変わる日は、同じページに出ます。",
+     "en": "Kitaichi Hall’s hours from Kitaichi Glass’s website, which also posts any one-off changes."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "kitaichi-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Sakaimachi_street_Otaru_Hokkaido07n.jpg"
+     }
+    },
+    {
+     "file": "kitaichi-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Sakaimachi_street_Otaru_Hokkaido06n.jpg"
+     }
+    },
+    {
+     "file": "kitaichi-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Sakaimachi_street_Otaru_Hokkaido16n.jpg"
+     }
+    },
+    {
+     "file": "kitaichi-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Sakaimachi_street_Otaru_Hokkaido03n.jpg"
+     }
+    },
+    {
+     "file": "kitaichi-w5.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Sakaimachi_street_Otaru_Hokkaido12s3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "meruhen",
+   "name": {
+    "ja": "メルヘン交差点と小樽オルゴール堂 本館",
+    "en": "Märchen Crossing and the Otaru Music Box Museum"
+   },
+   "kind": {
+    "ja": "交差点・オルゴールの店",
+    "en": "Crossroads & music box shop"
+   },
+   "blurb": {
+    "ja": "堺町通りの南の端。蒸気時計の前の石造りの建物が、3階までオルゴールが並ぶ本館です。",
+    "en": "The south end of Sakaimachi. The stone building behind the steam clock is the main hall, full of music boxes on three floors."
+   },
+   "lat": 43.19052,
+   "lng": 141.00772,
+   "text": {
+    "ja": "メルヘン交差点と小樽オルゴール堂 本館\n\n16:15に出て、堺町通りを浅草橋へ戻ります。\n\n交差点の角に立つ蒸気時計と、オルゴール堂の本館が目印です。本館は9:00〜18:00（2・3階は17:45まで）、休みはありません。小さなオルゴールから、アンティークの大きなものまで並びます。\n\nすぐ近くには、アンティークのオルゴールの展示と演奏をしている2号館もあります。\n\nおすすめ訪問時間：15:55〜16:15",
+    "en": "Märchen Crossing and the Otaru Music Box Museum\n\nLeave at 16:15 and walk back along Sakaimachi to Asakusa Bridge.\n\nLook for the steam clock on the corner and the main hall of the Music Box Museum. It opens 9:00–18:00 every day (2nd and 3rd floors until 17:45), with everything from tiny music boxes to large antiques.\n\nBuilding No. 2 nearby shows and plays antique music boxes.\n\nRecommended visit time: 15:55–16:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "小樽オルゴール堂 本館",
+      "en": "Otaru Music Box Museum (main hall)"
+     },
+     "lat": 43.19052,
+     "lng": 141.00772,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%82%20%E6%9C%AC%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "小樽オルゴール堂（店舗一覧）",
+      "en": "Otaru Music Box Museum (official)"
+     },
+     "url": {
+      "ja": "https://www.otaru-orgel.co.jp/shop",
+      "en": "https://www.otaru-orgel.co.jp/shop"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "本館 9:00〜18:00（2・3階は17:45まで）。2号館 9:00〜18:00",
+       "en": "Main hall 9:00–18:00 (2F–3F until 17:45). Building No. 2 9:00–18:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "なし",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "オルゴール堂の公式サイトの店舗一覧で確認しました。",
+     "en": "Checked on the Music Box Museum’s shop list."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "meruhen-w1.jpg",
+     "credit": {
+      "author": "Wpcpey",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Music_Box_Museum_2014.jpg"
+     }
+    },
+    {
+     "file": "meruhen-w2.jpg",
+     "credit": {
+      "author": "Wpcpey",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Music_Box_Museum_overview_2014.jpg"
+     }
+    },
+    {
+     "file": "meruhen-w3.jpg",
+     "credit": {
+      "author": "Choi2451",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Interior_of_Otaru_Orgel_Musuem.jpg"
+     }
+    },
+    {
+     "file": "meruhen-w4.jpg",
+     "credit": {
+      "author": "松岡明芳",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru-orgel-do%2CMusical_box_museum%2C%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%826180194.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "asakusa",
+   "name": {
+    "ja": "浅草橋（あさくさばし）から見る運河",
+    "en": "The canal from Asakusa Bridge"
+   },
+   "kind": {
+    "ja": "運河の眺め",
+    "en": "Canal view"
+   },
+   "blurb": {
+    "ja": "倉庫とガス灯が水面に映る、小樽運河のいちばん有名な眺め。空がまだ青いうちに明かりがつく時間が見ごろ。",
+    "en": "Otaru’s best-known view: warehouses and gas lamps reflected in the water. Best when the lamps are on and the sky is still blue."
+   },
+   "lat": 43.19784,
+   "lng": 141.00328,
+   "text": {
+    "ja": "浅草橋（あさくさばし）から見る運河\n\n12月はもう暗くなるころ、1〜2月はちょうど日の入りのころです。\n\n浅草橋の上と、橋のたもとから運河ぞいの散策路に下りたところから、倉庫の並びを見通せます。人が多いのは橋の上なので、散策路に下りて少し北へ歩くと撮りやすくなります。\n\n日の入り（札幌）：12月は16:00〜16:09、1月16:10〜16:45、2月16:46〜17:22、3月17:23〜17:59、6月は19:07〜19:18。日が沈んでから20〜30分が、空の青と明かりがいっしょに見える時間です。\n\n朝の7〜8時台は人が少ない時間です。冬は散策路が凍り、橋の上は海からの風が冷たいので、手袋と帽子を。例年2月には「小樽雪あかりの路」が開かれます（2027年の日程は公式サイトで）。\n\nおすすめ訪問時間：16:30〜16:50",
+    "en": "The canal from Asakusa Bridge\n\nDark already in December; right around sunset in January and February.\n\nFrom the bridge, or from the canal path just below it, you look straight down the line of warehouses. The bridge itself is where the crowds stand; walk a little north along the path for an easier shot.\n\nSunset (Sapporo): 16:00–16:09 in December, 16:10–16:45 in January, 16:46–17:22 in February, 17:23–17:59 in March, 19:07–19:18 in June. The 20–30 minutes after sunset give you blue sky and lamps together.\n\nEarly morning, around 7–8 o’clock, is quiet. In winter the path is icy and the wind off the sea is cold on the bridge, so bring gloves and a hat. The Otaru Snow Light Path festival is usually held in February (check its website for 2027 dates).\n\nRecommended visit time: 16:30–16:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "浅草橋（小樽運河）",
+      "en": "Asakusa Bridge (Otaru Canal)"
+     },
+     "lat": 43.19784,
+     "lng": 141.00328,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%85%E8%8D%89%E6%A9%8B%20%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "小樽雪あかりの路（公式サイト）",
+      "en": "Otaru Snow Light Path (official)"
+     },
+     "url": {
+      "ja": "https://yukiakarinomichi.org/",
+      "en": "https://yukiakarinomichi.org/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "自由に見られます",
+       "en": "Open any time"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "日の入りは国立天文台の札幌の暦です（小樽もほぼ同じ時刻）。",
+     "en": "Sunset times from the National Astronomical Observatory for Sapporo; Otaru is almost the same."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "asakusa-w1.jpg",
+     "credit": {
+      "author": "Tan Wei Liang Byorn",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Canal_HDR1.jpg"
+     }
+    },
+    {
+     "file": "asakusa-w2.jpg",
+     "credit": {
+      "author": "ruiraykwok",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%A8%BD%E9%81%8B%E6%B2%B3_-_panoramio_-_ruiraykwok.jpg"
+     }
+    },
+    {
+     "file": "asakusa-w3.jpg",
+     "credit": {
+      "author": "Sh1019",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru-Unga.jpg"
+     }
+    },
+    {
+     "file": "asakusa-w4.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%A8%BD%E9%9B%AA%E3%81%82%E3%81%8B%E3%82%8A%E3%81%AE%E8%B7%AF2013%EF%BC%88Otaru_Snow_Light_Path_2013%EF%BC%89_-_panoramio_%284%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "id": "yuhan",
+   "name": {
+    "ja": "晩ごはん：小樽倉庫No.1 か 若鶏時代なると本店",
+    "en": "Dinner: Otaru Soko No.1 or Naruto"
+   },
+   "kind": {
+    "ja": "晩ごはん",
+    "en": "Dinner"
+   },
+   "blurb": {
+    "ja": "運河ぞいの倉庫で小樽のビール、か、駅の近くで名物の若鶏の半身揚げ。",
+    "en": "Local beer in a canal-side warehouse, or the famous half fried chicken near the station."
+   },
+   "lat": 43.2003,
+   "lng": 141.00215,
+   "text": {
+    "ja": "晩ごはん：小樽倉庫No.1 か 若鶏時代なると本店\n\n浅草橋から小樽倉庫No.1まで歩いて5分ほど。天狗山へ行く人は18:25に店を出て駅前へ。\n\n・小樽倉庫No.1（そうこナンバーワン）：小樽ビールの醸造所がある、中央橋のそばの倉庫のビアパブ。11:00〜22:00（料理のラストオーダー21:00、飲み物21:30）、不定休。木・土曜は2時間2,600円のビール飲み放題（予約不要）。店内の仕込み釜や発酵タンクは自由に見学できます。席の予約は電話（0134-21-2323）。\n\n・若鶏時代なると本店：小樽駅から歩いて7〜8分。若鶏の半身揚げ（1,190円）が名物の店で、270席。11:00〜21:00（ラストオーダー20:30）、休みは1月1日だけ。天狗山からのバスを駅前で降りて、そのまま行けます。\n\n写真は夜の運河です。\n\nおすすめ訪問時間：17:00〜18:25",
+    "en": "Dinner: Otaru Soko No.1 or Naruto\n\nOtaru Soko No.1 is about 5 minutes from Asakusa Bridge. Heading up Mt. Tengu? Leave at 18:25 for the bus terminal.\n\n• Otaru Soko No.1: a beer pub with its own brewery in a warehouse by Chuo Bridge. 11:00–22:00 (last food order 21:00, drinks 21:30), closed on irregular days. On Thursdays and Saturdays there is a two-hour all-you-can-drink beer deal for ¥2,600, no booking needed. You can look at the brewing kettle and tanks for free. Table bookings by phone (0134-21-2323).\n\n• Wakadori Jidai Naruto (main shop): 7–8 minutes’ walk from Otaru Station, known for its half fried young chicken (¥1,190); 270 seats. 11:00–21:00 (last order 20:30), closed only on 1 January. Handy straight off the bus from Mt. Tengu.\n\nThe photos show the canal at night.\n\nRecommended visit time: 17:00–18:25"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "小樽倉庫No.1",
+      "en": "Otaru Soko No.1"
+     },
+     "lat": 43.2003,
+     "lng": 141.00215,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E5%80%89%E5%BA%ABNo.1"
+    },
+    {
+     "label": {
+      "ja": "若鶏時代なると 本店",
+      "en": "Wakadori Jidai Naruto (main shop)"
+     },
+     "lat": 43.20028,
+     "lng": 140.99511,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%8B%A5%E9%B6%8F%E6%99%82%E4%BB%A3%E3%81%AA%E3%82%8B%E3%81%A8%20%E6%9C%AC%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "小樽ビール 小樽倉庫No.1",
+      "en": "Otaru Beer, Otaru Soko No.1 (Japanese)"
+     },
+     "url": {
+      "ja": "https://otarubeer.com/jp/Ppage_id=357.html",
+      "en": "https://otarubeer.com/jp/Ppage_id=357.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "若鶏時代なると 本店（店舗案内）",
+      "en": "Naruto main shop (Japanese)"
+     },
+     "url": {
+      "ja": "http://otaru-naruto.jp/naruto/shop.html",
+      "en": "http://otaru-naruto.jp/naruto/shop.html"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "小樽倉庫No.1 11:00〜22:00（料理LO21:00）、不定休。なると本店 11:00〜21:00（LO20:30）、1月1日休み",
+       "en": "Otaru Soko No.1 11:00–22:00 (last food order 21:00), irregular closing days. Naruto 11:00–21:00 (last order 20:30), closed 1 Jan"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間は小樽ビールと若鶏時代なるとの公式サイトで確認しました。支払い方法は公式に書かれていません（要確認）。",
+     "en": "Hours from each restaurant’s website. Payment methods are not listed (please check)."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "yuhan-w1.jpg",
+     "credit": {
+      "author": "Haha169",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_Canal_Night.jpg"
+     }
+    },
+    {
+     "file": "yuhan-w2.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E6%A8%BD%E9%9B%AA%E3%81%82%E3%81%8B%E3%82%8A%E3%81%AE%E8%B7%AF2013%EF%BC%88Otaru_Snow_Light_Path_2013%EF%BC%89_-_panoramio_%283%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "id": "tengu",
+   "name": {
+    "ja": "小樽天狗山（てんぐやま）ロープウエイ",
+    "en": "Mt. Tengu Ropeway"
+   },
+   "kind": {
+    "ja": "夜景・展望台",
+    "en": "Night view"
+   },
+   "blurb": {
+    "ja": "小樽駅前からバスで約17分、ロープウエイで山頂へ。港と街の明かりを見下ろします。",
+    "en": "About 17 minutes by bus from Otaru Station, then the ropeway to the top for the lights of the town and harbour."
+   },
+   "caution": {
+    "ja": "冬の営業は11月28日〜3月28日、9:00〜20:00（上りの最終19:48）",
+    "en": "Winter season 28 Nov–28 Mar, 9:00–20:00 (last ride up 19:48)"
+   },
+   "lat": 43.17794,
+   "lng": 140.97516,
+   "text": {
+    "ja": "小樽天狗山（てんぐやま）ロープウエイ\n\n寄り道：小樽駅前18:40のバスで山麓へ（どの日も）、ロープウエイで夜景を見て、20:07のバスで駅前へ（20:25ごろ）。小樽21:16発で札幌22:03着です。\n\nバスは小樽駅前ターミナルの4番のりばから「天狗山ロープウエイ線」（9番）、終点の「天狗山ロープウエイ」まで。240円で、交通系ICカードが使えます。\n\nロープウエイは毎時00・12・24・36・48分に出ます（混むと6分おき）。往復は冬2,000円・夏1,800円で、クレジットカードと電子マネーが使えます。冬の山頂はスキー場で、街よりずっと寒く風が強いので、持っているいちばん暖かい服で。公式サイトのトップに、その日の「夜景になる時刻」が出ます。\n\n季節で時間割を入れ替えます。\n・冬（11月28日〜3月28日）：このマップの時間割どおり、16:40のバスで上がって、18:07のバスで下ります。晩ごはんはそのあと。\n・夏（2026年は4月25日〜11月3日）：日の入りが19時ごろなので、晩ごはんを先に。19:10か19:40のバスで上がります（上りの最終20:48、下りの最終21:00）。帰りのバスは平日20:42・土日祝20:47、どの日も21:17。小樽21:16発で札幌22:03着、21:37発で22:24着です。\n\n春と秋に整備の運休があります（2026年秋は11月4日〜27日）。天気が悪くて止まる日もあります。ロープウエイとおたる水族館のセット券（3,000円・現金のみ・7日間有効）もあります。\n\nおすすめ訪問時間：18:40〜20:25",
+    "en": "Mt. Tengu Ropeway\n\nOptional: the 18:40 bus from Otaru Station (every day), the ropeway up for the night view, and the 20:07 bus back (about 20:25). The 21:16 train reaches Sapporo at 22:03.\n\nTake the Tenguyama Ropeway line (No. 9) from stop 4 at the Otaru Station bus terminal to the last stop. ¥240; IC cards work.\n\nThe ropeway leaves at :00, :12, :24, :36 and :48 past each hour (every 6 minutes when busy). A return ticket is ¥2,000 in winter and ¥1,800 in summer; cards and e-money are accepted. In winter the summit is a ski area and much colder and windier than town, so wear your warmest clothes. The official site’s front page shows the time the night view begins that day.\n\nSwap the order by season.\n• Winter (28 Nov–28 Mar): as in this timetable, up on the 16:40 bus and down on the 18:07, then dinner.\n• Summer (25 Apr–3 Nov in 2026): sunset is around 19:00, so eat first and take the 19:10 or 19:40 bus up (last ride up 20:48, last down 21:00). Buses back: 20:42 on weekdays, 20:47 at weekends and holidays, and 21:17 every day. The 21:16 train from Otaru reaches Sapporo at 22:03, the 21:37 at 22:24.\n\nIt closes for maintenance in spring and autumn (4–27 November in 2026) and can stop in bad weather. A ¥3,000 combined ticket with Otaru Aquarium (cash only, valid 7 days) is also sold.\n\nRecommended visit time: 18:40–20:25"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "天狗山ロープウエイ 山麓駅",
+      "en": "Mt. Tengu Ropeway base station"
+     },
+     "lat": 43.17794,
+     "lng": 140.97516,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E6%A8%BD%E5%A4%A9%E7%8B%97%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A8%E3%82%A4"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "小樽天狗山ロープウエイ（営業時間・料金）",
+      "en": "Mt. Tengu Ropeway (official)"
+     },
+     "url": {
+      "ja": "https://tenguyama.ckk.chuo-bus.co.jp/hours-and-fees/",
+      "en": "https://tenguyama.ckk.chuo-bus.co.jp/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "中央バスの時刻表（小樽駅前など）",
+      "en": "Chuo Bus timetables (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.chuo-bus.co.jp/city_route/timetable/index.20261211.php",
+      "en": "https://www.chuo-bus.co.jp/city_route/timetable/index.20261211.php"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "天狗山ロープウエイは11月27日まで運休",
+      "en": "Mt. Tengu Ropeway is closed until 27 November"
+     },
+     "text": {
+      "ja": "秋の整備で11月4日〜27日は運休です（山頂のカフェと観光道路も）。11月28日から冬の営業（9:00〜20:00）。運休の日は、夕方からナイトクルーズか夜の運河にしてください。",
+      "en": "It is closed for maintenance from 4 to 27 November, with the summit café and road. Winter service (9:00–20:00) starts on 28 November. Until then, take the night canal cruise or walk the canal after dark instead."
+     },
+     "from": null,
+     "to": "2026-11-27",
+     "url": "https://tenguyama.ckk.chuo-bus.co.jp/news/"
+    },
+    {
+     "head": {
+      "ja": "春は天狗山ロープウエイが止まる時期があります",
+      "en": "The ropeway closes for a while in spring"
+     },
+     "text": {
+      "ja": "冬の営業は3月28日まで。夏の営業がいつ始まるかは公式サイトで確かめてください（2026年は4月25日から）。止まっている日は、夕方からナイトクルーズか夜の運河にしてください。",
+      "en": "Winter service ends on 28 March. Check the official site for the start of summer service (it was 25 April in 2026). While it is closed, take the night canal cruise or walk the canal after dark instead."
+     },
+     "from": "2027-03-20",
+     "to": "2027-05-06",
+     "url": "https://tenguyama.ckk.chuo-bus.co.jp/hours-and-fees/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "小樽駅前→天狗山：16:40、18:40、19:10、19:40（平日・土日祝とも、12月11日からの冬ダイヤでも同じ）",
+       "en": "Otaru Station → Mt. Tengu: 16:40, 18:40, 19:10, 19:40 (every day, also on the winter timetable from 11 Dec)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "天狗山→小樽駅前：18:07、20:07、21:17（どの日も）。冬ダイヤは18:27・18:47も",
+       "en": "Mt. Tengu → Otaru Station: 18:07, 20:07, 21:17 every day; also 18:27 and 18:47 on the winter timetable"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "冬 9:00〜20:00（上りの最終19:48）、夏 上りの最終20:48・下りの最終21:00",
+       "en": "Winter 9:00–20:00 (last up 19:48); summer last up 20:48, last down 21:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "往復 冬2,000円・夏1,800円。バスは片道240円",
+       "en": "Return: ¥2,000 winter, ¥1,800 summer. Bus ¥240 each way"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ロープウエイの時間・料金・運休は公式サイト、バスは中央バスの時刻表（2026年4月1日改正と12月11日改正の両方）で確認しました。",
+     "en": "Ropeway times, fares and closures from its website; buses from Chuo Bus timetables (both the April and the 11 December 2026 versions)."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "tengu-w1.jpg",
+     "credit": {
+      "author": "wellincline",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tenguyama%2C_Otaru%2C_Hokkaido_Prefecture_047-0012%2C_Japan_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "tengu-w2.jpg",
+     "credit": {
+      "author": "皓月旗",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru-Tenguyama_20220625_P3.jpg"
+     }
+    },
+    {
+     "file": "tengu-w3.jpg",
+     "credit": {
+      "author": "Fumikas Sagisavas",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_ropeway.jpg"
+     }
+    },
+    {
+     "file": "tengu-w4.jpg",
+     "credit": {
+      "author": "Fumikas Sagisavas",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tengu_ropeway.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "id": "kaeri",
+   "name": {
+    "ja": "小樽駅から札幌へ（空港へも）",
+    "en": "Back to Sapporo (or on to the airport)"
+   },
+   "kind": {
+    "ja": "帰り",
+    "en": "Going back"
+   },
+   "blurb": {
+    "ja": "快速エアポートで札幌まで34分。最終は23:08発。",
+    "en": "34 minutes to Sapporo on the Rapid Airport. The last train leaves at 23:08."
+   },
+   "lat": 43.198,
+   "lng": 140.99395,
+   "text": {
+    "ja": "小樽駅から札幌へ（空港へも）\n\n天狗山に行かない日は、小樽19:00か19:27の快速エアポートで札幌19:34・20:01着。天狗山に行った日は21:16発（22:03着）。\n\n札幌行き（平日・土曜とも）：19:00の快速エアポート（札幌19:34着）、19:27の快速エアポート（20:01着）、19:56（20:41着）、20:22（21:11着）、21:16（22:03着）、21:37（22:24着）、21:59（22:44着）、22:31（23:17着）、最終23:08（23:53着）。\n\n札幌駅から大通・すすきのへは地下鉄南北線で。\n\n快速エアポートは新千歳空港まで乗り換えなしで行きます（小樽から2,040円）。空港へ行く日の時刻は、小樽駅のスポットにまとめてあります。\n\nおすすめ出発時間：19:00か19:27（天狗山に行った日は21:16）",
+    "en": "Back to Sapporo (or on to the airport)\n\nWithout Mt. Tengu, the 19:00 or 19:27 Rapid Airport reaches Sapporo at 19:34 or 20:01. After Mt. Tengu, the 21:16 (22:03).\n\nTo Sapporo (weekdays and Saturdays): Rapid Airport at 19:00 (Sapporo 19:34) and 19:27 (20:01), then 19:56 (20:41), 20:22 (21:11), 21:16 (22:03), 21:37 (22:24), 21:59 (22:44), 22:31 (23:17) and the last at 23:08 (23:53).\n\nFrom Sapporo, the Namboku subway line runs to Odori and Susukino.\n\nThe Rapid Airport carries on to New Chitose Airport without a change (¥2,040 from Otaru). Airport times are listed under Otaru Station.\n\nRecommended departure time: 19:00 or 19:27 (21:16 after Mt. Tengu)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR小樽駅",
+      "en": "JR Otaru Station"
+     },
+     "lat": 43.1977,
+     "lng": 140.9944,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%B0%8F%E6%A8%BD%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "小樽→札幌 最終23:08（札幌23:53着）",
+       "en": "Last train Otaru → Sapporo 23:08 (arrives 23:53)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "小樽→札幌 800円（ICカード）",
+       "en": "Otaru → Sapporo ¥800 (IC card)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻は乗換案内で2026年12月3日（木）・5日（土）のダイヤを確認しました。",
+     "en": "Times from a route planner for 3 and 5 December 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "kaeri-w1.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:JRH_Series733_B3109.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w2.jpg",
+     "credit": {
+      "author": "inunami",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otaru_20221231195146_%2852655860438%29.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w3.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Hakodate-Main-Line_Otaru_Station_Platform_1%E3%83%BB2.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}

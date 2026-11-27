@@ -1,0 +1,1670 @@
+{
+ "id": "sapporo-onsen",
+ "course": "jozankei",
+ "_note": "札幌から日帰り 温泉めぐり（sapporo-onsen/ のページ専用。形は eizan-line.json と同じ）。定山渓。地下鉄と12番のバス（予約制のかっぱライナー号も）→二見の足湯→岩戸観音堂→お昼→定山源泉公園→豊平峡温泉（お風呂と晩ごはん）か夜の温泉街→札幌。写真は今は Wikimedia Commons だけ（一覧は scripts/sapporo_onsen_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_sapporo_onsen_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "area": {
+    "ja": "札幌から",
+    "en": "From Sapporo"
+   },
+   "title": {
+    "ja": "地下鉄とバスで約1時間",
+    "en": "About an hour by subway and bus"
+   }
+  },
+  {
+   "first": 2,
+   "last": 5,
+   "area": {
+    "ja": "定山渓の温泉街",
+    "en": "Jozankei town"
+   },
+   "title": {
+    "ja": "足湯、洞窟のお堂、お昼、温泉卵",
+    "en": "Foot baths, a cave shrine, lunch and onsen eggs"
+   }
+  },
+  {
+   "first": 6,
+   "last": 7,
+   "area": {
+    "ja": "夕方〜夜",
+    "en": "Evening"
+   },
+   "title": {
+    "ja": "豊平峡温泉か、温泉街で晩ごはん",
+    "en": "Hoheikyo Onsen, or dinner in town"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 7
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。札幌からの行き（と登別の帰り）は自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 7,
+    "rule": {
+     "any": [
+      7
+     ],
+     "andAny": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "豊平峡温泉のあと温泉街で食べるなら、豊平峡温泉18:30発のバスで湯の町へ戻ります（18:41着、200円）。帰りは20:53発（土日祝20:45発）の札幌駅行き。",
+     "en": "To eat in town after Hoheikyo, take the 18:30 bus back to Yunomachi (18:41, ¥200), then the 20:53 (20:45 weekends) to Sapporo Station."
+    }
+   },
+   {
+    "spot": 7,
+    "rule": {
+     "any": [
+      7
+     ],
+     "none": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "豊平峡温泉に行かない日は、源泉公園のあとに定山渓神社や、足のふれあい太郎の湯へ。晩ごはんは17:00から開く松尾ジンギスカンなど。",
+     "en": "Skipping Hoheikyo? After the park, visit Jozankei Shrine or the Taro-no-yu foot bath. Matsuo Jingisukan opens at 17:00 for dinner."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/sapporo-onsen/",
+ "sources": [
+  {
+   "what": "地下鉄＋12番バス 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA&y=2026&m=12&d=03&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "さっぽろ9:52→真駒内10:10、真駒内駅10:20発12H→定山渓湯の町11:01、290円＋750円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "地下鉄＋12番バス 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA&y=2026&m=12&d=05&hh=09&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "さっぽろ9:51→真駒内10:09、10:20発12H→定山渓湯の町11:03",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "かっぱライナー号（冬ダイヤ）",
+   "url": "http://www.jotetsu.co.jp/bus/news/ash96e0000003ig7.html",
+   "saw": "2026/10/1〜2027/3/31、11往復。札幌駅9:35→定山渓湯の町10:31。帰りは湯の町17:15→札幌駅18:19（豊平峡温泉17:00発）が最終",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "かっぱライナー号（予約・運賃）",
+   "url": "https://www.jotetsu.co.jp/bus/kappa_liner/index.html",
+   "saw": "全便予約制、1か月前〜前日17:00、空席があれば予約なしでも乗車可。札幌駅〜豊平峡温泉・定山渓車庫前1,700円（ネット割1,460円）。車内は現金（千円札・硬貨）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌駅のじょうてつバス時刻表",
+   "url": "https://www.jotetsu.co.jp/bus/times/260401/sapporoeki-26.pdf",
+   "saw": "札幌駅から定山渓への快速は朝と9:00の1本だけ。「予約制かっぱライナー号または地下鉄南北線真駒内駅より12J・12Hを」",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "12月のダイヤ改正",
+   "url": "http://www.jotetsu.co.jp/bus/news/ash96e0000003lq0.html",
+   "saw": "2026年12月はダイヤ改正の予定なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "交通系ICカード（じょうてつバス）",
+   "url": "https://www.jotetsu.co.jp/bus/guide/qlqoi2000000005z.html",
+   "saw": "Kitaca・Suicaなど10種類が札幌市内全路線で使える（札幌国際スキー場線を除く）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山渓湯の町の時刻表",
+   "url": "https://www.jotetsu.co.jp/bus/times/260401/jyouzankeiyunomati.pdf",
+   "saw": "豊平峡温泉行き 平日14:34・15:32・16:32、土日祝14:33・15:29。札幌駅行き快速8 平日20:53・土日祝20:45（12/31〜1/3運休）。真駒内駅行き12 最終21:50",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉の時刻表",
+   "url": "https://www.jotetsu.co.jp/bus/times/260401/houheikyouonsen.pdf",
+   "saw": "真駒内駅行き12 平日・土日祝とも17:30・18:30・20:00が夕方以降（土日祝の18:30は1/1運休、20:00は12/31〜1/3運休）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→豊平峡温泉",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=14&m1=2&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "14:34→14:50、200円（土曜は14:33発）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 18:30 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=03&hh=18&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "18:30→真駒内→すすきの19:51、850円＋290円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 18:30 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=05&hh=18&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "すすきの19:51",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=03&hh=19&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "20:00→真駒内20:51→すすきの21:12",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→すすきの 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=05&hh=19&m1=5&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "20:00→すすきの21:20",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉→湯の町",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA&y=2026&m=12&d=03&hh=18&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89",
+   "saw": "18:30→18:41、200円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→札幌駅 快速8 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=20&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "20:53→札幌駅（JR駅に22:13）、1,000円。次は21:50の12番（乗り換え1回）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→札幌駅 快速8 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=20&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "20:45→札幌駅22:00（JR駅に22:04）、1,000円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "湯の町→すすきの 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=05&hh=21&m1=4&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA",
+   "saw": "21:50→すすきの22:58、1,040円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "二見の足湯",
+   "url": "https://jozankei.jp/oneday/hutami-footbat/",
+   "saw": "9:00〜21:00、無料、年中無休、無人、定員15名、タオル自販機300円、湯の町バス停から徒歩3分",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "二見公園の工事",
+   "url": "https://jozankei.jp/news/futami-park-notice/",
+   "saw": "2026/9/24〜2027年3月末、二見公園は立入禁止。二見吊橋へは行ける。迂回路は10/1から、冬は閉鎖",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "二見公園（冬）",
+   "url": "https://jozankei.jp/en/spot/1269/",
+   "saw": "冬季は積雪のため二見吊橋まで行けません",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "岩戸観音堂",
+   "url": "https://jozankei.jp/en/spot/179/",
+   "saw": "7:00〜20:00、365日、参拝無料、洞窟は大人300円・子ども100円、約120mに観音像33体、1936年建立",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山源泉公園",
+   "url": "https://jozankei.jp/oneday/jozan-gensen-park/",
+   "saw": "通年 7:00〜21:00、無料、月見橋のたもと",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "おんたまの湯",
+   "url": "https://jozankei.jp/oneday/ontama/",
+   "saw": "約20分で温泉卵。卵は対岸の定山渓物産館で3個＋ネット180円。カラスに注意",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山渓物産館",
+   "url": "https://jozankei.jp/store/bussankan/",
+   "saw": "8:00〜21:00、不定休、湯の町バス停すぐ、温泉卵セット180円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "食堂いち",
+   "url": "https://jozankei.jp/store/ichi/",
+   "saw": "11:00〜15:00、火曜休み（祝日・お盆・GW・正月は除く）、定食7種類、定山渓大橋バス停から徒歩5分",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "生そば紅葉亭",
+   "url": "https://jozankei.jp/store/koyotei/",
+   "saw": "11:00〜17:00（そばがなくなり次第終了）、水・木曜休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ラーメン可楽",
+   "url": "https://jozankei.jp/store/karaku/",
+   "saw": "昼11:00〜15:00、夜18:00〜23:00（火曜は夜なし）、水曜・第2第4火曜休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "喫茶＆軽食フランセ",
+   "url": "https://jozankei.jp/store/france/",
+   "saw": "10:30〜17:00（L.O.16:30）、カツカレー",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "松尾ジンギスカン",
+   "url": "https://jozankei.jp/store/matsuo-jingisukan/",
+   "saw": "17:00〜22:00（L.O.21:30）、昼は土日だけ11:30〜15:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "食堂こんの",
+   "url": "https://jozankei.jp/store/konno/",
+   "saw": "11:30〜14:00、18:00〜0:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "居酒屋北のかっぱ",
+   "url": "https://jozankei.jp/store/kita-no-kappa/",
+   "saw": "18:00〜24:00、水・日曜休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉",
+   "url": "https://hoheikyo.co.jp/",
+   "saw": "入浴10:00〜22:30（最終受付21:45）、インド料理11:00〜21:00（L.O.）、和食11:00〜14:00・17:00〜20:00（L.O.）、年中無休、現金・カード・QR決済",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉（温泉）",
+   "url": "https://hoheikyo.co.jp/onsen/",
+   "saw": "大人1,300円・子ども600円、タオル220円・バスタオル500円（販売）、ボディソープ・リンスインシャンプーあり、家族風呂なし、露天は日替わりで男女入れ替え。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡温泉の料理",
+   "url": "https://jozankei.jp/store/hoheikyo-onsen/",
+   "saw": "チキンカリー1,200円、ラムカリー1,400円など",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "豊平峡ダム",
+   "url": "https://jozankei.jp/en/spot/hoheikyo-dam/",
+   "saw": "期間5/2〜11/3、8:45〜16:00、大人1,000円（電気バス）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "新・雪灯路2027",
+   "url": "https://jozankei.jp/event/yukitouro2027/",
+   "saw": "2027/1/20〜2/28、18:00〜21:30（最終入場21:15）、無料。定山渓神社は宿泊者限定。中止は当日14:00ごろ告知",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ホテルミリオーネ 日帰り入浴",
+   "url": "https://www.milione.jp/spa/daytrip/",
+   "saw": "入れ墨・タトゥー・疑似シール・ペインティングは入場・入浴お断り",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "鹿の湯 日帰り入浴",
+   "url": "https://shikanoyu.co.jp/shikanoyu/spa/day",
+   "saw": "刺青・タトゥーの入浴お断り",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "旅籠屋 定山渓商店",
+   "url": "https://jyozankei-shoten.com/onsen/",
+   "saw": "日帰り13:30〜18:00・1,200円、刺青・タトゥーはご遠慮",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "休日ビルヂング",
+   "url": "https://www.kyuujitsu.com/faq/",
+   "saw": "刺繍やタトゥーは入館お断り（シール・ペイントも含む）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "定山渓ビューホテル",
+   "url": "https://en.jozankeiview.com/faq/",
+   "saw": "tattoos, temporary tattoos or body paint: cannot use baths or pools",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日帰り入浴の一覧（定山渓）",
+   "url": "https://jozankei.jp/oneday/",
+   "saw": "13施設と無料の足湯5か所",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→登別 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BB%E5%88%A5&y=2026&m=12&d=03&hh=09&m1=2&m2=2&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急北斗8号 9:45→10:59、乗車券2,530円＋指定席2,360円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→登別 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BB%E5%88%A5&y=2026&m=12&d=05&hh=09&m1=2&m2=2&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急北斗8号 9:45→10:59",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "札幌→登別温泉 すずらん",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BB%E5%88%A5%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=09&m1=0&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急すずらん4号 9:21→登別10:39、バス10:44→登別温泉11:05、450円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別温泉地区バス時刻表",
+   "url": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/09/2_R8.10.1_noboribetsu.pdf",
+   "saw": "登別駅前→登別温泉 10:44・11:00・11:13（11:32着）・11:45。登別温泉→登別駅前 17:13・18:00（18:15着）・19:10（19:22着）・20:35（20:47着）。前ドアは一律450円先払い、中ドアは整理券・後払い",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "高速おんせん号",
+   "url": "https://www.donanbus.co.jp/cms/wp-content/uploads/2026/10/R8.12_onsen_airport.pdf",
+   "saw": "札幌駅前13:40→登別温泉15:20、登別温泉9:30→札幌駅前11:15の1往復。予約制、12〜3月は3,800円",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=17&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗15号 17:34→18:47",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 18:40 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=18&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "すずらん11号 18:40→19:58",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 18:40 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=18&m1=1&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "すずらん11号 18:40→19:58",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 夜 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=19&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗19号 20:26→21:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 夜 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=19&m1=3&m2=0&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗19号 20:26→21:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 最後 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=20&m1=4&m2=7&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗21号 21:21→22:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別→札幌 最後 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=20&m1=4&m2=7&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E7%99%BB%E5%88%A5",
+   "saw": "北斗21号 21:21→22:41",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "北海道レールパス・エリアパス",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "特急は全席指定。エリアパス（札幌・小樽・登別・新千歳空港、4日間）は10,000円（購入は事前）・11,000円（駅）。他社のバスは対象外",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別の手荷物預かり",
+   "url": "https://noboribetsu-spa.jp/usefulinfo/tenimotsu/",
+   "saw": "9:00〜16:30（窓口17:00まで）、1個500〜700円、日本語・英語・中国語・韓国語",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "地獄谷",
+   "url": "https://noboribetsu-spa.jp/spot/spot0034/",
+   "saw": "無料、直径約450m、1日約1万トン、パークサービスセンターから展望台まで車いす用スロープ（最大8%）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "鉄泉池",
+   "url": "https://noboribetsu-spa.jp/spot/spot0059/",
+   "saw": "地獄谷のほぼ中央の小さな間欠泉、無料",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大湯沼",
+   "url": "https://noboribetsu-spa.jp/modelcourse/120min/%e5%9c%b0%e7%8d%84%e6%ba%80%e5%96%ab%e3%82%b3%e3%83%bc%e3%82%b9/",
+   "saw": "周囲約1kmのひょうたん型の沼、沼底から約130℃の硫黄泉",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大湯沼川天然足湯",
+   "url": "https://noboribetsu-spa.jp/spot/spot0068/",
+   "saw": "無料、大湯沼川探勝歩道、大正地獄のすぐ近く",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "大湯沼川天然足湯（冬）",
+   "url": "https://www.visit-hokkaido.jp/spot/detail_11428.html",
+   "saw": "冬季は遊歩道の通行止めあり",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "泉源公園の間欠泉",
+   "url": "https://noboribetsu-spa.jp/spot/spot0079/",
+   "saw": "約3時間の間隔、無料",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "閻魔堂",
+   "url": "https://noboribetsu-spa.jp/spot/spot0103/",
+   "saw": "からくり山車 10:00・11:00・13:00・15:00・17:00・20:00・21:00、無料、天候により閉めることあり",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "味の大王 登別温泉店",
+   "url": "https://noboribetsu-spa.jp/spot/spot0189/",
+   "saw": "11:30〜15:00、火曜休み、地獄ラーメン",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "ラーメン天鳳",
+   "url": "https://noboribetsu-spa.jp/spot/spot0206/",
+   "saw": "11:30〜14:00／18:00〜23:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "温泉市場",
+   "url": "https://noboribetsu-spa.jp/spot/spot0169/",
+   "saw": "10:30〜21:00（お食事コーナー11:00〜21:00）、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "adex BAKERY&CAFE",
+   "url": "https://noboribetsu-spa.jp/spot/spot0228/",
+   "saw": "8:00〜22:00、定休日なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "炭火焼＆ラーメンいせくら",
+   "url": "https://noboribetsu-spa.jp/spot/spot0190/",
+   "saw": "18:00〜1:00、不定休",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "のぼりべつクマ牧場",
+   "url": "https://bearpark.jp/information/",
+   "saw": "大人3,200円（ロープウェイ往復込み）、10/21〜4/20は9:30〜16:30（最終入園15:50）、4/21〜10/20は9:00〜17:00（16:20）、見学60〜90分、ロッカー300円・200円、カード・交通系IC・QR可、雪の日も入園可",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "クマ牧場の休み",
+   "url": "https://bearpark.jp/",
+   "saw": "2027/4/5〜4/23はロープウェイ点検で休園",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "夢元さぎり湯",
+   "url": "https://sagiriyu-noboribetsu.com/",
+   "saw": "9:00〜21:00（最終受付20:30）、大人500円・子ども180円、1日710円。フェイスタオルなしは入浴不可（2025/12/16）",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "夢元さぎり湯 ご利用案内",
+   "url": "https://sagiriyu-noboribetsu.com/goriyou/",
+   "saw": "タオル・シャンプーは持参が前提。さぎり湯タオル400円、貸しバスタオル200円、シャンプー・ボディソープ各80円。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "夢元さぎり湯（観光協会）",
+   "url": "https://noboribetsu-spa.jp/oneday/oneday020/",
+   "saw": "大人550円・子ども180円、露天風呂・貸切風呂なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "第一滝本館 日帰り入浴",
+   "url": "https://takimotokan.co.jp/ja/day_spa/",
+   "saw": "9:00〜18:00（最終退館21:00）、大人2,500円・子ども1,500円、バスタオル・フェイスタオル込み、温水プール込み、2027/4/5〜15休み",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "第一滝本館 よくある質問",
+   "url": "https://takimotokan.co.jp/ja/faq/",
+   "saw": "予約不要、基本無休、各種カード・PayPayなど可。タトゥーの記載なし",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "登別万世閣 日帰り入浴",
+   "url": "https://www.noboribetsu-manseikaku.jp/spa/daytrip/",
+   "saw": "入れ墨・タトゥー・疑似シール・ペインティングは入場・入浴お断り",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日帰り入浴の一覧（登別）",
+   "url": "https://noboribetsu-spa.jp/oneday/",
+   "saw": "第一滝本館・グランドホテル・石水亭・万世閣・ゆもと登別・はなや・さぎり湯ほか",
+   "checked": "2026-11-26"
+  },
+  {
+   "what": "日の入り（札幌）",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+   "saw": "12月1日15:43、12月21日15:45",
+   "checked": "2026-11-26"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "jstart",
+   "name": {
+    "ja": "札幌から定山渓へ",
+    "en": "Sapporo to Jozankei"
+   },
+   "kind": {
+    "ja": "出発・地下鉄とバス",
+    "en": "Start: subway & bus"
+   },
+   "blurb": {
+    "ja": "予約なしなら地下鉄で真駒内へ出て、12番のバスで定山渓へ。予約していれば、札幌駅から直行のかっぱライナー号。",
+    "en": "No booking: subway to Makomanai, then the No. 12 bus. Booked: the direct Kappa Liner from Sapporo Station."
+   },
+   "caution": {
+    "ja": "かっぱライナー号は予約制（前日17:00まで）",
+    "en": "Kappa Liner: book by 17:00 the day before"
+   },
+   "lat": 43.06866,
+   "lng": 141.35079,
+   "text": {
+    "ja": "札幌から定山渓へ\n\n定山渓（じょうざんけい）温泉は、札幌の中心から南西へ約30km、豊平川（とよひらがわ）の谷にある温泉街です。札幌市の中なので、地下鉄とバスで1時間ほど。\n\n予約なしで行く：地下鉄南北線のさっぽろ駅9:52発（大通9:53、すすきの9:55）で終点の真駒内（まこまない）へ、10:10着。駅前から、じょうてつバス12番「豊平峡温泉」行き10:20発に乗り、定山渓湯の町（ゆのまち）で降ります。11:01着（土日祝は11:03着）。運賃は地下鉄290円とバス750円で、どちらもKitaca・Suicaなどの交通系ICカードが使えます。\n\n予約して行く：じょうてつの「かっぱライナー号」は、札幌駅（仮設27番のりば）9:35発、大通西1・すすきのを通って、定山渓湯の町に10:31着。全便予約制で、予約は乗る日の1か月前から前日17:00まで、スマートフォンの予約サイト（カードやPayPayで先払い）か電話0120-737-109（9:00〜17:00）で。空席があれば予約なしでも乗れますが、満席なら乗れません。札幌駅から終点の豊平峡温泉までは片道1,700円（ネット予約1,460円）。車内で払うときは現金（千円札と硬貨）です。\n\n札幌駅から定山渓へ行く一般のバス（快速7・8番）は、朝の早い時間と9:00の1本だけです。札幌駅の時刻表にも「かっぱライナー号か、地下鉄で真駒内へ出て12番に」と書いてあります。JRのレールパスは、地下鉄にもバスにも使えません。\n\nおすすめ出発時間：9:52（地下鉄 さっぽろ駅）。かっぱライナー号なら9:35（札幌駅）",
+    "en": "Sapporo to Jozankei\n\nJozankei is a hot-spring town in the Toyohira river valley, about 30 km south-west of central Sapporo. It is inside the city, about an hour away by subway and bus.\n\nWithout a booking: take the Namboku subway line from Sapporo Station at 9:52 (Odori 9:53, Susukino 9:55) to the end of the line, Makomanai (10:10). Outside the station, board Jotetsu Bus No. 12 for Hoheikyo Onsen at 10:20 and get off at Jozankei Yunomachi, 11:01 (11:03 at weekends and on holidays). The fares, ¥290 and ¥750, can both be paid with an IC card such as Kitaca or Suica.\n\nWith a booking: the Kappa Liner leaves Sapporo Station (temporary stop 27) at 9:35, calls at Odori Nishi 1 and Susukino, and reaches Jozankei Yunomachi at 10:31. Every trip needs a reservation, from one month ahead until 17:00 the day before, on the booking website by smartphone (pay by card or PayPay when you book) or by phone on 0120-737-109 (9:00–17:00). If seats are left you can board without one; if it is full you cannot. Sapporo Station to the last stop, Hoheikyo Onsen, is ¥1,700 one way (¥1,460 booked online). Paying on board is cash only (¥1,000 notes and coins).\n\nOrdinary buses from Sapporo Station to Jozankei (rapid routes 7 and 8) run only early in the morning and once at 9:00; the station timetable itself tells you to take the Kappa Liner or go via Makomanai. Japan Rail passes are not valid on the subway or these buses.\n\nRecommended departure time: 9:52 subway from Sapporo Station, or the 9:35 Kappa Liner"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "地下鉄南北線 さっぽろ駅",
+      "en": "Sapporo Station (Namboku subway line)"
+     },
+     "lat": 43.06866,
+     "lng": 141.35079,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9C%B0%E4%B8%8B%E9%89%84%20%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E9%A7%85%20%E5%8D%97%E5%8C%97%E7%B7%9A"
+    },
+    {
+     "label": {
+      "ja": "真駒内駅",
+      "en": "Makomanai Station"
+     },
+     "lat": 42.99117,
+     "lng": 141.35843,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%9C%9F%E9%A7%92%E5%86%85%E9%A7%85%20%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "かっぱライナー号（予約・時刻）",
+      "en": "Kappa Liner: booking and times (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jotetsu.co.jp/bus/kappa_liner/index.html",
+      "en": "https://www.jotetsu.co.jp/bus/kappa_liner/index.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "かっぱライナー号 予約サイト",
+      "en": "Kappa Liner booking site"
+     },
+     "url": {
+      "ja": "https://jotetsu.quicktrip.jp/buy",
+      "en": "https://jotetsu.quicktrip.jp/buy"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "じょうてつバス 時刻表",
+      "en": "Jotetsu Bus timetables (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.jotetsu.co.jp/bus/times/260401/busstop.html",
+      "en": "https://www.jotetsu.co.jp/bus/times/260401/busstop.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2026-11-15",
+     "to": "2027-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2027-11-15",
+     "to": "2028-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2028-11-15",
+     "to": "2029-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "地下鉄 さっぽろ9:52 → 真駒内10:10（土曜は9:51 → 10:09）、290円",
+       "en": "Subway Sapporo 9:52 → Makomanai 10:10 (Sat 9:51 → 10:09), ¥290"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "12番 真駒内駅10:20 → 定山渓湯の町11:01（土日祝11:03）、750円。交通系IC可",
+       "en": "No. 12 Makomanai 10:20 → Jozankei Yunomachi 11:01 (11:03 weekends/holidays), ¥750. IC cards OK"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "かっぱライナー号 札幌駅9:35 → 定山渓湯の町10:31（予約制。2026年10月1日〜2027年3月31日の冬ダイヤ）",
+       "en": "Kappa Liner Sapporo Station 9:35 → Jozankei Yunomachi 10:31 (reservation; winter timetable 1 Oct 2026–31 Mar 2027)"
+      },
+      "until": "2027-03-31",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内（2026年12月3日・5日）と、じょうてつバスの公式の時刻表（2026年4月1日改正、かっぱライナー号は10月1日改正）。12月のダイヤ改正はないとの案内です。",
+     "en": "Times and fares from a route planner (3 and 5 December 2026) and Jotetsu Bus’s timetables (revised 1 April 2026; Kappa Liner 1 October 2026). Jotetsu says there is no timetable change in December."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "jstart-w1.jpg",
+     "credit": {
+      "author": "Ch1pabeck",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Toyohira_River_running_through_J%C5%8Dzankei%2C_Sapporo%2C_Hokkaido%2C_Japan_%28January_2024%29.jpg"
+     }
+    },
+    {
+     "file": "jstart-w2.jpg",
+     "credit": {
+      "author": "Selixshiraii",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JozankeiOnsen.jpg"
+     }
+    },
+    {
+     "file": "jstart-w3.jpg",
+     "credit": {
+      "author": "David McKelvey",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jozankei_Onsen_04.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "futami",
+   "name": {
+    "ja": "二見の足湯と二見吊橋",
+    "en": "Futami foot bath & bridge"
+   },
+   "kind": {
+    "ja": "足湯・吊り橋",
+    "en": "Foot bath & bridge"
+   },
+   "blurb": {
+    "ja": "湯の町のバス停から歩いて3分、川を見ながら入る無料の足湯。雪のない季節は、その先の二見吊橋まで。",
+    "en": "A free foot bath over the river, 3 minutes from the bus stop. When there is no snow, walk on to the suspension bridge."
+   },
+   "caution": {
+    "ja": "冬は雪で吊橋まで行けません。二見公園は工事で立入禁止",
+    "en": "No access to the bridge in snow; Futami Park closed for works"
+   },
+   "lat": 42.96469,
+   "lng": 141.16006,
+   "text": {
+    "ja": "二見の足湯と二見吊橋\n\n「四季のせせらぎ 二見の足湯」は、豊平川を見下ろす半屋外の足湯です。9:00〜21:00、無料、年中無休。15人まで入れます。係の人はいない無人の足湯で、入る条件は書かれていないので、タトゥーがあっても気にせず使えます。足をふくタオルは持っていくか、横の自動販売機で買います（1枚300円）。雨や雪の日も屋根の下で入れます。\n\n足湯から上流へ歩くと、岩の間の川に架かる二見吊橋（ふたみつりばし）。紅葉の名所です。2026年9月24日から2027年3月末までは、二見公園が川の工事で立入禁止ですが、吊橋へは迂回路で行けます。ただし迂回路は冬は閉鎖で、冬は雪で吊橋まで行けません。冬は足湯から川と雪の谷を眺めるだけにして、次の岩戸観音堂へ。\n\nおすすめ訪問時間：11:05〜11:45",
+    "en": "Futami foot bath & bridge\n\nThe Futami foot bath is a half-open shelter looking down on the Toyohira river. 9:00–21:00, free, open every day, room for 15. There is no attendant and no conditions are listed for using it, so tattoos are not an issue. Bring a small towel for your feet, or buy one from the vending machine next to it (¥300). There is a roof, so rain or snow is fine.\n\nUpstream from the foot bath is the Futami suspension bridge over a rocky stretch of river, a well-known autumn-leaf spot. From 24 September 2026 to the end of March 2027 Futami Park is closed for river works, but a detour leads to the bridge. The detour closes in winter, and in winter snow blocks the way to the bridge anyway. In winter, enjoy the river and snowy valley from the foot bath and go on to Iwato Kannon-do.\n\nRecommended visit time: 11:05–11:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "二見の足湯",
+      "en": "Futami foot bath"
+     },
+     "lat": 42.965,
+     "lng": 141.1605,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E5%AD%A3%E3%81%AE%E3%81%9B%E3%81%9B%E3%82%89%E3%81%8E%20%E4%BA%8C%E8%A6%8B%E3%81%AE%E8%B6%B3%E6%B9%AF%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    },
+    {
+     "label": {
+      "ja": "二見吊橋",
+      "en": "Futami suspension bridge"
+     },
+     "lat": 42.96383,
+     "lng": 141.15815,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E8%A6%8B%E5%90%8A%E6%A9%8B%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "二見の足湯（定山渓観光協会）",
+      "en": "Futami foot bath (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/oneday/hutami-footbat/",
+      "en": "https://jozankei.jp/oneday/hutami-footbat/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "二見公園の工事のお知らせ",
+      "en": "Futami Park works notice (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/news/futami-park-notice/",
+      "en": "https://jozankei.jp/news/futami-park-notice/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "定山渓観光協会",
+      "en": "Jozankei Tourist Association"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/",
+      "en": "https://jozankei.jp/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "二見公園は工事中",
+      "en": "Futami Park is closed for works"
+     },
+     "text": {
+      "ja": "2026年9月24日〜2027年3月末は、二見公園が立入禁止です。二見吊橋へは迂回路で行けますが、迂回路は冬は閉鎖、冬は雪で吊橋まで行けません。足湯は使えます。",
+      "en": "Futami Park is closed from 24 September 2026 to the end of March 2027. A detour leads to the suspension bridge, but it closes in winter, and in winter snow blocks the way to the bridge anyway. The foot bath stays open."
+     },
+     "from": null,
+     "to": "2027-03-31",
+     "url": "https://jozankei.jp/news/futami-park-notice/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "足湯 9:00〜21:00、年中無休",
+       "en": "Foot bath 9:00–21:00, every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料。タオルは自動販売機で1枚300円",
+       "en": "Free. Towels ¥300 from a vending machine"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "二見公園：2026年9月24日〜2027年3月末は工事で立入禁止（吊橋へは迂回路。冬は閉鎖）",
+       "en": "Futami Park: closed for works 24 Sep 2026–end of Mar 2027 (detour to the bridge, closed in winter)"
+      },
+      "until": "2027-03-31",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "冬は積雪で二見吊橋まで行けません",
+       "en": "In winter snow blocks the way to the bridge"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "定山渓観光協会のページ（足湯・二見公園・工事のお知らせ）で2026年11月26日に確認しました。",
+     "en": "Checked on the Jozankei Tourist Association’s pages (foot bath, Futami Park, works notice) on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "futami-w1.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%AE%9A%E5%B1%B1%E6%B8%93%E4%BA%8C%E8%A6%8B%E5%90%8A%E6%A9%8B_%28Jozankei_Futami_suspension_bridge%29_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "futami-w2.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%95%A3%E7%AD%96%E8%B7%AF%28Jozankei_walkway%29_-_panoramio_%285%29.jpg"
+     }
+    },
+    {
+     "file": "futami-w3.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%95%A3%E7%AD%96%E8%B7%AF_%28Jozankei_walkway%29_-_panoramio_%287%29.jpg"
+     }
+    },
+    {
+     "file": "futami-w4.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%95%A3%E7%AD%96%E8%B7%AF_%28Jozankei_walkway%29_-_panoramio_%285%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "iwato",
+   "name": {
+    "ja": "岩戸観音堂",
+    "en": "Iwato Kannon-do"
+   },
+   "kind": {
+    "ja": "洞窟のお堂",
+    "en": "Cave shrine"
+   },
+   "blurb": {
+    "ja": "お堂の奥の約120mの洞窟に、観音像が33体。外が雪でも雨でも見られます。",
+    "en": "A 120 m cave behind the hall, lined with 33 Kannon statues. Fine in snow or rain."
+   },
+   "lat": 42.96645,
+   "lng": 141.16081,
+   "text": {
+    "ja": "岩戸観音堂\n\n1936年に建てられたお堂です。本堂の奥から全長約120mの洞窟が続き、観音像が33体並んでいます。参拝は無料で、洞窟に入るのは大人300円・子ども100円。7:00〜20:00、1年中開いています。\n\n国道230号の章月グランドホテル前の交差点から入ります。二見の足湯から歩いて10分ほど。ここから次のお昼の店までは、温泉街を10分ほど歩きます。\n\nおすすめ訪問時間：11:50〜12:15",
+    "en": "Iwato Kannon-do\n\nThe hall was built in 1936. A cave about 120 m long runs back from it, lined with 33 statues of Kannon. Visiting the hall is free; the cave costs ¥300 for adults and ¥100 for children. Open 7:00–20:00 every day of the year.\n\nThe entrance is at the junction on Route 230 in front of the Shogetsu Grand Hotel, about 10 minutes’ walk from the Futami foot bath. Lunch is another 10 minutes’ walk through the town.\n\nRecommended visit time: 11:50–12:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "岩戸観音堂",
+      "en": "Iwato Kannon-do"
+     },
+     "lat": 42.96645,
+     "lng": 141.16081,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B2%A9%E6%88%B8%E8%A6%B3%E9%9F%B3%E5%A0%82%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "岩戸観音堂（定山渓観光協会）",
+      "en": "Iwato Kannon-do (Jozankei Tourist Association)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/en/spot/179/",
+      "en": "https://jozankei.jp/en/spot/179/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "定山渓観光協会",
+      "en": "Jozankei Tourist Association"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/",
+      "en": "https://jozankei.jp/en/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "7:00〜20:00、年中無休",
+       "en": "7:00–20:00, every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "参拝は無料。洞窟は大人300円・子ども100円（支払い方法は要確認）",
+       "en": "Hall free; cave ¥300 adults, ¥100 children (payment methods not confirmed)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "定山渓観光協会のページで2026年11月26日に確認しました。歩く時間は地図で測った距離に、ゆとりを足した目安です。",
+     "en": "Checked on the Jozankei Tourist Association’s page on 26 November 2026. Walking times are map estimates with some slack."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "iwato-w1.jpg",
+     "credit": {
+      "author": "禁樹なずな",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Iwato_Kannon_Cave.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "lunch",
+   "name": {
+    "ja": "温泉街でお昼",
+    "en": "Lunch in the town"
+   },
+   "kind": {
+    "ja": "お昼",
+    "en": "Lunch"
+   },
+   "blurb": {
+    "ja": "定食、手打ちのそば、昔ながらのラーメン、喫茶店のカツカレー。お店ごとに休みの曜日が違います。",
+    "en": "Set meals, handmade soba, old-style ramen or a café’s katsu curry. Each place closes on a different day."
+   },
+   "caution": {
+    "ja": "休みの曜日：いち＝火、紅葉亭＝水・木、可楽＝水",
+    "en": "Closed: Ichi Tue, 紅葉亭 Wed–Thu, 可楽 Wed"
+   },
+   "lat": 42.9688,
+   "lng": 141.1656,
+   "text": {
+    "ja": "温泉街でお昼\n\nお昼の例です。どの店も、支払い方法と英語のメニューの有無は要確認。\n\n・食堂いち：焼き鮭や炭焼き鶏など7種類の定食。11:00〜15:00、火曜休み（祝日・お盆・GW・正月は営業）。定山渓大橋のバス停から歩いて5分、風マチビルヂングの2階。\n・生そば紅葉亭：石臼で挽いた粉の手打ちそば。11:00〜17:00（そばがなくなりしだい終わり）、水・木曜休み。\n・ラーメン可楽：昔ながらのラーメンとチャーハン。昼11:00〜15:00・夜18:00〜23:00（火曜は夜なし）。水曜と第2・第4火曜休み。\n・喫茶＆軽食フランセ：サイフォンで淹れるコーヒーと、揚げたてのカツカレー。10:30〜17:00（ラストオーダー16:30）。\n\n食べたら、温泉街を通って定山源泉公園へ（10〜15分）。\n\nおすすめ訪問時間：12:25〜13:20",
+    "en": "Lunch in the town\n\nSome lunch options. For all of them, payment methods and English menus are not confirmed.\n\n• Shokudo Ichi: seven set meals, such as grilled salmon or charcoal-grilled chicken. 11:00–15:00, closed Tuesdays (open on holidays and in the Obon, Golden Week and New Year periods). 5 minutes’ walk from the Jozankei Ohashi bus stop, 2nd floor of the Kazemachi Building.\n• 紅葉亭 (soba): handmade soba from stone-ground flour. 11:00–17:00 (until the soba runs out), closed Wednesdays and Thursdays.\n• Ramen 可楽: old-style ramen and fried rice. 11:00–15:00 and 18:00–23:00 (no evening service on Tuesdays). Closed Wednesdays and the 2nd and 4th Tuesdays.\n• Café France: siphon coffee and freshly fried katsu curry. 10:30–17:00 (last order 16:30).\n\nAfterwards, walk through the town to Jozan Gensen Park (10–15 minutes).\n\nRecommended visit time: 12:25–13:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "食堂いち",
+      "en": "Shokudo Ichi"
+     },
+     "lat": 42.9688,
+     "lng": 141.1656,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%A3%9F%E5%A0%82%E3%81%84%E3%81%A1%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    },
+    {
+     "label": {
+      "ja": "生そば紅葉亭",
+      "en": "紅葉亭 (soba)"
+     },
+     "lat": 42.966,
+     "lng": 141.164,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%94%9F%E3%81%9D%E3%81%B0%E7%B4%85%E8%91%89%E4%BA%AD%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    },
+    {
+     "label": {
+      "ja": "ラーメン可楽",
+      "en": "Ramen 可楽"
+     },
+     "lat": 42.968,
+     "lng": 141.163,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E5%8F%AF%E6%A5%BD%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    },
+    {
+     "label": {
+      "ja": "喫茶＆軽食フランセ",
+      "en": "Café France"
+     },
+     "lat": 42.965,
+     "lng": 141.16,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6%E3%83%95%E3%83%A9%E3%83%B3%E3%82%BB%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "食堂いち",
+      "en": "Shokudo Ichi (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/ichi/",
+      "en": "https://jozankei.jp/store/ichi/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "生そば紅葉亭",
+      "en": "紅葉亭 (soba, Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/koyotei/",
+      "en": "https://jozankei.jp/store/koyotei/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ラーメン可楽",
+      "en": "Ramen 可楽 (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/karaku/",
+      "en": "https://jozankei.jp/store/karaku/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "喫茶＆軽食フランセ",
+      "en": "Café France (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/france/",
+      "en": "https://jozankei.jp/store/france/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "food",
+      "text": {
+       "ja": "いち 11:00〜15:00（火休）／紅葉亭 11:00〜17:00（水・木休）／可楽 11:00〜15:00（水・第2第4火休）／フランセ 10:30〜17:00",
+       "en": "Ichi 11:00–15:00 (closed Tue) / 紅葉亭 11:00–17:00 (closed Wed–Thu) / 可楽 11:00–15:00 (closed Wed, 2nd & 4th Tue) / France 10:30–17:00"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "お店の時間と休みは、定山渓観光協会の店の紹介ページで2026年11月26日に確認しました。臨時の休みは店に確かめてください。",
+     "en": "Hours and closing days from the Jozankei Tourist Association’s shop pages, checked on 26 November 2026. Ask the shop about irregular closures."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "lunch-w1.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jozankei_Onsen%2C_Sapporo%2C_Hokkaido_Prefecture%3B_January_2018_%2811%29.jpg"
+     }
+    },
+    {
+     "file": "lunch-w2.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jozankei_Onsen%2C_Sapporo%2C_Hokkaido_Prefecture%3B_January_2018_%2812%29.jpg"
+     }
+    },
+    {
+     "file": "lunch-w3.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%AE%9A%E5%B1%B1%E6%B8%93%E5%A4%A7%E6%A9%8B%EF%BC%88Jozankei_Ohashi%EF%BC%89_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "gensen",
+   "name": {
+    "ja": "定山源泉公園",
+    "en": "Jozan Gensen Park"
+   },
+   "kind": {
+    "ja": "足湯・温泉卵",
+    "en": "Foot bath & onsen eggs"
+   },
+   "blurb": {
+    "ja": "源泉の足湯と、温泉卵をつくる湯つぼ。卵は向かいの物産館で3個180円、約20分でできあがり。",
+    "en": "A hot-spring foot bath and a spring pot for cooking eggs. Buy 3 eggs for ¥180 opposite; ready in about 20 minutes."
+   },
+   "lat": 42.965,
+   "lng": 141.16324,
+   "text": {
+    "ja": "定山源泉公園\n\n月見橋のたもとにある無料の足湯公園です。7:00〜21:00、1年中開いています。足湯は入る条件が書かれていないので、だれでも入れます。冬は雪の中の足湯になります。足をふくタオルを持っていきましょう。\n\n温泉卵：川の向かいの定山渓物産館（8:00〜21:00、不定休。湯の町のバス停のすぐ前）で「温泉卵セット」（卵3個とネット、180円）を買い、公園の「おんたまの湯」に入れて約20分。物産館で、その日のちょうどいいゆで時間を聞けます。季節によってはカラスが卵をねらうので、目を離さないで。\n\n時間があれば、近くの無料の足湯「足のふれあい太郎の湯」や、かっぱ像に湯を注ぐ「かっぱ家族の願かけ手湯」、歩いて4分ほどの定山渓神社へ。\n\nおすすめ訪問時間：13:35〜14:30（14:34のバスへ）",
+    "en": "Jozan Gensen Park\n\nA free foot-bath park at the end of Tsukimi bridge, open 7:00–21:00 all year. No conditions are listed for the foot bath, so anyone can use it. In winter it is a foot bath in the snow. Bring a small towel.\n\nOnsen eggs: across the river at the Jozankei Bussankan shop (8:00–21:00, irregular closures, right by the Yunomachi bus stop), buy the onsen-egg set (3 eggs and a net, ¥180), then lower it into the park’s egg pot for about 20 minutes. The shop can tell you the right time for the day. Depending on the season, crows go for the eggs, so keep an eye on them.\n\nWith time to spare, try the free Taro-no-yu foot bath nearby, the kappa hand bath where you pour hot water over the kappa statues, or Jozankei Shrine, about 4 minutes away on foot.\n\nRecommended visit time: 13:35–14:30 (for the 14:34 bus)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "定山源泉公園",
+      "en": "Jozan Gensen Park"
+     },
+     "lat": 42.965,
+     "lng": 141.16324,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%AE%9A%E5%B1%B1%E6%BA%90%E6%B3%89%E5%85%AC%E5%9C%92"
+    },
+    {
+     "label": {
+      "ja": "定山渓物産館",
+      "en": "Jozankei Bussankan"
+     },
+     "lat": 42.96537,
+     "lng": 141.16217,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%AE%9A%E5%B1%B1%E6%B8%93%E7%89%A9%E7%94%A3%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "定山源泉公園",
+      "en": "Jozan Gensen Park (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/oneday/jozan-gensen-park/",
+      "en": "https://jozankei.jp/oneday/jozan-gensen-park/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "おんたまの湯（温泉卵）",
+      "en": "Onsen egg pot (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/oneday/ontama/",
+      "en": "https://jozankei.jp/oneday/ontama/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "定山渓物産館",
+      "en": "Jozankei Bussankan (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/bussankan/",
+      "en": "https://jozankei.jp/store/bussankan/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "足湯・おんたまの湯 7:00〜21:00、通年／物産館 8:00〜21:00（不定休）",
+       "en": "Foot bath and egg pot 7:00–21:00 all year / Bussankan 8:00–21:00 (irregular closures)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "足湯は無料。温泉卵セット（卵3個＋ネット）180円",
+       "en": "Foot bath free. Egg set (3 eggs + net) ¥180"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "定山渓観光協会のページ（定山源泉公園・おんたまの湯・定山渓物産館）で2026年11月26日に確認しました。",
+     "en": "Checked on the Jozankei Tourist Association’s pages (park, egg pot, Bussankan) on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "gensen-w1.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jozankei_Onsen%2C_Sapporo%2C_Hokkaido_Prefecture%3B_January_2018_%2813%29.jpg"
+     }
+    },
+    {
+     "file": "gensen-w2.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jozankei_Onsen%2C_Sapporo%2C_Hokkaido_Prefecture%3B_January_2018_%2806%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "hoheikyo",
+   "name": {
+    "ja": "豊平峡温泉",
+    "en": "Hoheikyo Onsen"
+   },
+   "kind": {
+    "ja": "日帰り入浴・インドカレー",
+    "en": "Day bath & Indian curry"
+   },
+   "blurb": {
+    "ja": "大きな露天風呂と、インド料理の食堂がある日帰り専用の温泉。お風呂は21:45まで受付。",
+    "en": "A day-use hot spring with big outdoor baths and an Indian restaurant. Last entry 21:45."
+   },
+   "caution": {
+    "ja": "タトゥー：公式サイトに記載なし（要確認・電話011-598-2410）",
+    "en": "Tattoos: not mentioned on the website (phone 011-598-2410)"
+   },
+   "lat": 42.94964,
+   "lng": 141.15615,
+   "text": {
+    "ja": "豊平峡温泉\n\nタトゥー：公式サイトにタトゥーの決まりは書かれていません。入れるかどうかは、行く前に電話で確かめてください（011-598-2410）。定山渓のほかの日帰り入浴は、公式サイトでタトゥーを断っているところが多いので、だめなときは足湯（二見の足湯・定山源泉公園）を中心にしてください。\n\n温泉街から2.6kmほど奥にある、泊まれない日帰り専用の温泉です。定山渓湯の町14:34発（土日祝は14:33発）の12番「豊平峡温泉」行きで16分、200円。歩くと30分あまりかかり、冬の車道ぞいはすすめません。温泉街でもう少し過ごすなら、次は15:32発（土日祝15:29発）。\n\nお風呂：男女別の内風呂と露天風呂（露天は日によって男女が入れ替わります）。ボディソープとリンスインシャンプーはあります。タオルは売っています（ロゴ入りタオル220円、バスタオル500円）。家族風呂・貸切風呂はありません。10:00〜22:30（最終受付21:45）、大人1,300円・子ども600円、年中無休（臨時休業の日あり）。支払いは現金・クレジットカード・QRコード決済。\n\n食事：インド料理は11:00〜21:00（ラストオーダー）。カレーはチキン1,200円、ラム1,400円など。和食（そば・ジンギスカンなど）は11:00〜14:00と17:00〜20:00（ラストオーダー）。\n\n帰り：豊平峡温泉18:30発の12番で真駒内駅へ、地下鉄に乗り換えてすすきの19:51着。最後は20:00発で、すすきの21:12着（土日祝21:20着）。運賃はバス850円と地下鉄290円。土日祝の18:30発は1月1日、20:00発は12月31日〜1月3日は運休です。札幌駅へ直行のかっぱライナー号（予約制）は17:00発が最後で、札幌駅18:19着。\n\n雪のない季節は、ここから電気バスで豊平峡ダムへ行けます（定山渓観光協会の案内では5月2日〜11月3日、8:45〜16:00、大人1,000円。2027年の期間は要確認）。\n\nおすすめ訪問時間：14:50〜20:00（お風呂と晩ごはん）",
+    "en": "Hoheikyo Onsen\n\nTattoos: the website says nothing about tattoos, so phone before you go to ask whether you can bathe (011-598-2410). Most other day baths in Jozankei refuse tattoos on their websites; if this one does too, make the foot baths (Futami and Jozan Gensen Park) the core of your day.\n\nThis day-use-only hot spring (no rooms) is about 2.6 km up the valley from the town. Take the No. 12 bus for Hoheikyo Onsen from Jozankei Yunomachi at 14:34 (14:33 at weekends and on holidays): 16 minutes, ¥200. Walking takes over 30 minutes along the road, not advised in winter. For more time in town, the next bus is at 15:32 (15:29 at weekends).\n\nBaths: separate indoor and outdoor baths for men and women (the outdoor baths swap sides by date). Body soap and shampoo are provided. Towels are sold (small towel ¥220, bath towel ¥500). No family or private baths. 10:00–22:30 (last entry 21:45), adults ¥1,300, children ¥600, open every day except occasional closures. Cash, credit cards and QR payments.\n\nFood: the Indian restaurant serves 11:00–21:00 (last order), with curries such as chicken ¥1,200 or lamb ¥1,400. The Japanese menu (soba, lamb barbecue and more) is served 11:00–14:00 and 17:00–20:00 (last orders).\n\nBack to town: the No. 12 at 18:30 to Makomanai, then the subway, reaches Susukino at 19:51. The last bus is at 20:00, arriving Susukino 21:12 (21:20 at weekends and on holidays). Fares: bus ¥850, subway ¥290. At weekends and on holidays the 18:30 does not run on 1 January and the 20:00 not on 31 December–3 January. The last direct Kappa Liner (reservation) to Sapporo Station leaves at 17:00 (arrives 18:19).\n\nWhen there is no snow, an electric bus runs from here to Hoheikyo Dam (per the tourist association: 2 May–3 November, 8:45–16:00, adults ¥1,000; check the 2027 dates).\n\nRecommended visit time: 14:50–20:00 (bath and dinner)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "豊平峡温泉",
+      "en": "Hoheikyo Onsen"
+     },
+     "lat": 42.94964,
+     "lng": 141.15615,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E8%B1%8A%E5%B9%B3%E5%B3%A1%E6%B8%A9%E6%B3%89"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "豊平峡温泉 公式サイト",
+      "en": "Hoheikyo Onsen (official, Japanese)"
+     },
+     "url": {
+      "ja": "https://hoheikyo.co.jp/",
+      "en": "https://hoheikyo.co.jp/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "豊平峡温泉 温泉の案内",
+      "en": "Hoheikyo Onsen: baths (Japanese)"
+     },
+     "url": {
+      "ja": "https://hoheikyo.co.jp/onsen/",
+      "en": "https://hoheikyo.co.jp/onsen/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "豊平峡温泉のバス時刻表（PDF）",
+      "en": "Hoheikyo Onsen bus stop timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.jotetsu.co.jp/bus/times/260401/houheikyouonsen.pdf",
+      "en": "https://www.jotetsu.co.jp/bus/times/260401/houheikyouonsen.pdf"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "タトゥーがある人へ",
+      "en": "If you have tattoos"
+     },
+     "text": {
+      "ja": "定山渓では、ホテルミリオーネ・鹿の湯・旅籠屋 定山渓商店・休日ビルヂング・定山渓ビューホテルが、公式サイトでタトゥーの入浴を断っています（タトゥーシールやペイントも断ると書いている施設もあります。カバーシールで隠せば入れるという案内はありません）。豊平峡温泉は公式サイトに記載がないので、行く前に電話で確かめてください（011-598-2410）。足湯は無料で、入る条件の記載はありません。",
+      "en": "In Jozankei, Hotel Milione, Shikanoyu, Hatagoya Jozankei Shoten, Kyujitsu Building and Jozankei View Hotel all refuse bathers with tattoos on their websites (some also refuse tattoo stickers and body paint; none says covering tattoos makes it OK). Hoheikyo Onsen’s website says nothing about tattoos, so phone before you go (011-598-2410). The foot baths are free and list no conditions."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.milione.jp/spa/daytrip/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "tattoo",
+      "text": {
+       "ja": "公式サイトに記載なし（要確認・電話011-598-2410）",
+       "en": "Not mentioned on the website (phone 011-598-2410)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "お風呂 10:00〜22:30（最終受付21:45）、年中無休",
+       "en": "Baths 10:00–22:30 (last entry 21:45), open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,300円・子ども600円。タオル220円・バスタオル500円（販売）",
+       "en": "Adults ¥1,300, children ¥600. Towel ¥220, bath towel ¥500 (for sale)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "food",
+      "text": {
+       "ja": "インド料理 11:00〜21:00（L.O.）／和食 11:00〜14:00・17:00〜20:00（L.O.）",
+       "en": "Indian 11:00–21:00 (last order) / Japanese 11:00–14:00, 17:00–20:00 (last orders)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "行き：湯の町14:34（土日祝14:33）→ 14:50、200円。帰り：18:30・20:00発（真駒内へ）",
+       "en": "There: Yunomachi 14:34 (14:33 weekends) → 14:50, ¥200. Back: 18:30 or 20:00 (to Makomanai)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "豊平峡温泉の公式サイト、定山渓観光協会のページ、じょうてつバスの時刻表、乗換案内（2026年12月3日・5日）で2026年11月26日に確認しました。",
+     "en": "Checked on 26 November 2026 on Hoheikyo Onsen’s website, the Jozankei Tourist Association’s pages, Jotetsu Bus timetables and a route planner (3 and 5 December 2026)."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "hoheikyo-w1.jpg",
+     "credit": {
+      "author": "Soica2001",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Hoheikyo_spa_roten.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "yoru",
+   "name": {
+    "ja": "夜の温泉街で晩ごはん",
+    "en": "Dinner in town"
+   },
+   "kind": {
+    "ja": "晩ごはん・帰り",
+    "en": "Dinner & ride back"
+   },
+   "blurb": {
+    "ja": "温泉街で食べて、20:53（土日祝20:45）の札幌駅行きで帰る。1月20日〜2月28日は雪灯路も。",
+    "en": "Eat in town and ride the 20:53 (20:45 weekends) back to Sapporo Station. Snow lanterns 20 January–28 February."
+   },
+   "lat": 42.96543,
+   "lng": 141.16199,
+   "text": {
+    "ja": "夜の温泉街で晩ごはん\n\n豊平峡温泉に行かない日か、豊平峡温泉18:30発のバスで温泉街へ戻った日（湯の町18:41着、200円）に。晩ごはんの例です（支払い方法は要確認）。\n\n・松尾ジンギスカン：17:00〜22:00（ラストオーダー21:30）、不定休。\n・ラーメン可楽：夜は18:00〜23:00（火曜は夜なし、水曜と第2・第4火曜休み）。\n・食堂こんの：しょうゆ・しお・みそのラーメン。18:00〜0:00、不定休。\n・居酒屋北のかっぱ：18:00〜24:00、水・日曜休み。\n\n雪灯路（ゆきとうろ）：2027年1月20日〜2月28日の18:00〜21:30（最終入場21:15）は、温泉街に雪の灯りが並びます。無料。定山渓神社の会場は、泊まる人だけの招待制です。天気で中止や短縮のときは、当日の14:00ごろに定山渓観光協会のサイトとSNSで案内があります。\n\n帰り：定山渓湯の町20:53発（土日祝は20:45発）の快速8番が札幌駅まで乗り換えなしで、札幌駅のJRの駅まで22:13ごろ（土日祝22:04ごろ）、1,000円。交通系ICカードが使えます。これを逃したら、最後は21:50発の12番で真駒内へ、地下鉄に乗り換えてすすきの22:58着（1,040円）。土日祝の20:45と21:50は、12月31日〜1月3日は運休です。\n\nおすすめ訪問時間：18:00〜20:50（晩ごはん）",
+    "en": "Dinner in town\n\nFor a day without Hoheikyo, or after taking the 18:30 bus back from Hoheikyo Onsen (Yunomachi 18:41, ¥200). Some dinner options (payment methods not confirmed):\n\n• Matsuo Jingisukan (lamb barbecue): 17:00–22:00 (last order 21:30), irregular closures.\n• Ramen 可楽: evenings 18:00–23:00 (none on Tuesdays; closed Wednesdays and the 2nd and 4th Tuesdays).\n• Shokudo Konno: soy, salt or miso ramen. 18:00–0:00, irregular closures.\n• Izakaya Kita no Kappa: 18:00–24:00, closed Wednesdays and Sundays.\n\nYukitouro snow lanterns: 20 January–28 February 2027, 18:00–21:30 (last entry 21:15), lanterns line the town. Free. The Jozankei Shrine venue is by invitation for hotel guests only. If weather cancels or shortens it, the tourist association posts a notice on its website and social media at about 14:00 that day.\n\nBack: the rapid No. 8 from Jozankei Yunomachi at 20:53 (20:45 at weekends and on holidays) goes straight to Sapporo Station; you are at the JR station by about 22:13 (22:04 at weekends). ¥1,000, IC cards OK. Missed it? The last option is the No. 12 at 21:50 to Makomanai, then the subway to Susukino (22:58, ¥1,040). At weekends and on holidays the 20:45 and 21:50 do not run on 31 December–3 January.\n\nRecommended visit time: 18:00–20:50 (dinner)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "定山渓湯の町（バス停）",
+      "en": "Jozankei Yunomachi bus stop"
+     },
+     "lat": 42.96543,
+     "lng": 141.16199,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%AE%9A%E5%B1%B1%E6%B8%93%E6%B9%AF%E3%81%AE%E7%94%BA%20%E3%83%90%E3%82%B9%E5%81%9C"
+    },
+    {
+     "label": {
+      "ja": "松尾ジンギスカン 定山渓店",
+      "en": "Matsuo Jingisukan Jozankei"
+     },
+     "lat": 42.966,
+     "lng": 141.1645,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%B0%BE%E3%82%B8%E3%83%B3%E3%82%AE%E3%82%B9%E3%82%AB%E3%83%B3%20%E5%AE%9A%E5%B1%B1%E6%B8%93"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "松尾ジンギスカン",
+      "en": "Matsuo Jingisukan (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/matsuo-jingisukan/",
+      "en": "https://jozankei.jp/store/matsuo-jingisukan/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "食堂こんの",
+      "en": "Shokudo Konno (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/konno/",
+      "en": "https://jozankei.jp/store/konno/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "居酒屋北のかっぱ",
+      "en": "Kita no Kappa (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/store/kita-no-kappa/",
+      "en": "https://jozankei.jp/store/kita-no-kappa/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "新・雪灯路2027",
+      "en": "Yukitouro 2027 snow lanterns (Japanese)"
+     },
+     "url": {
+      "ja": "https://jozankei.jp/event/yukitouro2027/",
+      "en": "https://jozankei.jp/event/yukitouro2027/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "定山渓湯の町のバス時刻表（PDF）",
+      "en": "Jozankei Yunomachi bus timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.jotetsu.co.jp/bus/times/260401/jyouzankeiyunomati.pdf",
+      "en": "https://www.jotetsu.co.jp/bus/times/260401/jyouzankeiyunomati.pdf"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "雪灯路（1月20日〜2月28日）",
+      "en": "Yukitouro snow lanterns (20 Jan–28 Feb)"
+     },
+     "text": {
+      "ja": "18:00〜21:30（最終入場21:15）、無料。定山渓神社の会場は泊まる人だけ。中止・短縮は当日14:00ごろに定山渓観光協会のサイトで。",
+      "en": "18:00–21:30 (last entry 21:15), free. The shrine venue is for hotel guests only. Cancellations are posted on the tourist association’s website at about 14:00 that day."
+     },
+     "from": "2026-12-01",
+     "to": "2027-02-28",
+     "url": "https://jozankei.jp/event/yukitouro2027/"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2026-11-15",
+     "to": "2027-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2027-11-15",
+     "to": "2028-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    },
+    {
+     "head": {
+      "ja": "冬の道は凍ります",
+      "en": "Icy streets in winter"
+     },
+     "text": {
+      "ja": "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+      "en": "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early."
+     },
+     "from": "2028-11-15",
+     "to": "2029-04-15",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "food",
+      "text": {
+       "ja": "松尾ジンギスカン 17:00〜22:00（L.O.21:30）／可楽 18:00〜23:00／こんの 18:00〜0:00／北のかっぱ 18:00〜24:00（水・日休）",
+       "en": "Matsuo 17:00–22:00 (LO 21:30) / 可楽 18:00–23:00 / Konno 18:00–0:00 / Kita no Kappa 18:00–24:00 (closed Wed, Sun)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "湯の町20:53（土日祝20:45）→ 札幌駅、1,000円。最後は21:50発の12番（すすきの22:58着）",
+       "en": "Yunomachi 20:53 (20:45 weekends) → Sapporo Station, ¥1,000. Last: No. 12 at 21:50 (Susukino 22:58)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "お店の時間は定山渓観光協会の店の紹介ページ、雪灯路は定山渓観光協会、バスはじょうてつバスの時刻表と乗換案内（2026年12月3日・5日）で、2026年11月26日に確認しました。",
+     "en": "Shop hours from the Jozankei Tourist Association’s pages, Yukitouro from the association, buses from Jotetsu’s timetables and a route planner (3 and 5 December 2026), all checked on 26 November 2026."
+    },
+    "checked": "2026-11-26"
+   },
+   "photos": [
+    {
+     "file": "yoru-w1.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Night_of_Jozankei%EF%BC%8F%E5%AE%9A%E5%B1%B1%E6%B8%93%E3%83%BB%E5%A4%9C%E3%81%AE%E6%A9%8B_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "yoru-w2.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Jozankei_Onsen%2C_Sapporo%2C_Hokkaido_Prefecture%3B_January_2018_%2809%29.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
