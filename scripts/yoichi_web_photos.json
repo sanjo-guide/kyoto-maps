@@ -1,0 +1,270 @@
+{
+ "sapporo": [
+  {
+   "file": "sapporo-w1.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "Sapporo Station in November 2025.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "sapporo-w2.jpg",
+   "author": "663highland",
+   "license": "CC BY 2.5",
+   "title": "JR Sapporo Sta03n3200.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "sapporo-w3.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "Sapporo Station at night.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  }
+ ],
+ "eki": [
+  {
+   "file": "eki-w1.jpg",
+   "author": "MaedaAkihiko",
+   "license": "CC0",
+   "title": "Yoichi-STA.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "eki-w2.jpg",
+   "author": "スミス1919",
+   "license": "CC BY 4.0",
+   "title": "余市駅に停車中のH100形とキハ201系.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "eki-w3.jpg",
+   "author": "Olegushka",
+   "license": "CC BY-SA 4.0",
+   "title": "Kiha201-104 RapSapporo Yoichi 20090506.jpg",
+   "size": [
+    1600,
+    1073
+   ]
+  }
+ ],
+ "nikka": [
+  {
+   "file": "nikka-w1.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Nikka Whisky Yoichi Distillery. Drying tower. Kiln tower. A.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "nikka-w2.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Nikka Whisky Yoichi Distillery. Inside the main gate. B.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "nikka-w3.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Nikka Whisky Yoichi Distillery. Drying tower. Kiln tower. C.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "nikka-w4.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Nikka Whisky Yoichi Distillery. Warehouse No.1. Wooden barrel. B.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "nikka-w5.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Nikka Whisky Yoichi Distillery. Former Laboratory. A.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "winery": [
+  {
+   "file": "winery-w1.jpg",
+   "author": "daita saru",
+   "license": "CC BY 2.0",
+   "title": "余市町登地区 (19845294481).jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "fuku": [
+  {
+   "file": "fuku-w1.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Yoichi Fukuhara herring fishing grounds. A.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "fuku-w2.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Yoichi Fukuhara herring fishing grounds. C.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "fuku-w3.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Yoichi Fukuhara herring fishing grounds. D.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "fuku-w4.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Yoichi Fukuhara herring fishing grounds. E.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "unjo": [
+  {
+   "file": "unjo-w1.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Shimoyoichi Unjoya. A.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "unjo-w2.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Shimoyoichi Unjoya. C.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "unjo-w3.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Shimoyoichi Unjoya. E.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "unjo-w4.jpg",
+   "author": "さかおり",
+   "license": "CC BY-SA 4.0",
+   "title": "Former Shimoyoichi Unjoya. B.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "moire": [
+  {
+   "file": "moire-w1.jpg",
+   "author": "Karl Trautman",
+   "license": "CC BY 4.0",
+   "title": "PXL 20221002 064110082.PORTRAIT.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "moire-w2.jpg",
+   "author": "我路・幌内画像倉庫",
+   "license": "CC BY-SA 3.0",
+   "title": "Siripa-misaki7020429.jpg",
+   "size": [
+    1024,
+    768
+   ]
+  }
+ ],
+ "onsen": [
+  {
+   "file": "onsen-w1.jpg",
+   "author": "heriheri",
+   "license": "CC BY 3.0",
+   "title": "余市川 - panoramio.jpg",
+   "size": [
+    1600,
+    1188
+   ]
+  }
+ ],
+ "kaeri": [
+  {
+   "file": "kaeri-w1.jpg",
+   "author": "Opqr",
+   "license": "CC BY-SA 4.0",
+   "title": "Yoichi downtown.JPG",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "kaeri-w2.jpg",
+   "author": "スミス1919",
+   "license": "CC BY-SA 4.0",
+   "title": "余市駅を発車するH100形の小樽行き.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ]
+}

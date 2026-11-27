@@ -1,0 +1,1451 @@
+{
+ "id": "yoichi",
+ "course": "early",
+ "_note": "余市（札幌から日帰り。yoichi/ のページ専用。形は eizan-line.json と同じ）。「冬（12月中旬〜4月上旬）」。札幌8:41→余市10:00。ニッカ（12〜1月はセミナー・予約）→タクシーで余市ワイナリー→タクシーでモイレの浜→宇宙の湯→余市番屋→余市18:35発（札幌19:58着）。写真はすべて Wikimedia Commons（一覧は scripts/yoichi_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_yoichi_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "area": {
+    "ja": "余市・駅前",
+    "en": "Yoichi · station"
+   },
+   "title": {
+    "ja": "8:41の電車で余市へ、蒸溜所のセミナーとお昼（予約制）",
+    "en": "The 8:41 train, a distillery seminar and lunch (booking needed)"
+   }
+  },
+  {
+   "first": 4,
+   "last": 4,
+   "area": {
+    "ja": "余市・黒川町",
+    "en": "Yoichi · Kurokawa"
+   },
+   "title": {
+    "ja": "タクシーでワイナリーへ",
+    "en": "A taxi to the winery"
+   }
+  },
+  {
+   "first": 5,
+   "last": 7,
+   "area": {
+    "ja": "余市・浜と夜",
+    "en": "Yoichi · shore and evening"
+   },
+   "title": {
+    "ja": "雪のシリパ岬、温泉と回転ずし",
+    "en": "Cape Shiripa in snow, a hot spring and sushi"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 7
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。札幌駅・余市駅・晩ごはんと帰りは自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "defaultPicks": [
+   3,
+   4,
+   5,
+   6
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "2": {
+    "always": true
+   },
+   "7": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 5,
+    "rule": {
+     "none": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "ワイナリーに行かない日（火曜、1〜4月は水曜も休み）は、お昼のあと駅前からタクシーで運上家の前まで行き、浜へ。明るいうちに岬が見られて、温泉にも早めに入れます。",
+     "en": "Not going to the winery (closed Tuesdays, and Wednesdays from January to April)? After lunch, take a taxi from the station to the Unjoya and walk to the beach. You’ll see the cape in daylight and reach the hot spring earlier."
+    }
+   },
+   {
+    "spot": 7,
+    "rule": {
+     "none": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "温泉に行かない日は、浜から余市番屋まで歩いて20分ほど。または余市17:42発で小樽へ出て（18:08着）、小樽で晩ごはんに。",
+     "en": "Skipping the hot spring? It is about 20 minutes’ walk from the beach to Yoichi Banya, or take the 17:42 to Otaru (18:08) and have dinner there."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/yoichi/",
+ "sources": [
+  {
+   "what": "札幌→余市 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E4%BD%99%E5%B8%82&y=2026&m=12&d=03&hh=08&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "8:41→小樽（9:36発の倶知安行きに乗り換え）→余市10:00、1,380円。次は10:06→余市11:23",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "札幌→余市 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E4%BD%99%E5%B8%82&y=2026&m=12&d=05&hh=08&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ（8:41→余市10:00、10:06→11:23）",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "すすきの→札幌（地下鉄）",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=08&m1=2&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "南北線 すすきの8:22→さっぽろ8:27、210円",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→札幌 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "17:42→札幌19:07、18:35→19:58",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→札幌 夕方 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→札幌 夜 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=19&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "19:26→（小樽19:56発）→札幌20:41、20:19→21:44、1,380円",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→札幌 夜 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=19&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→札幌 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "21:28→22:44、最終22:26→23:53",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→札幌 最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市→小樽 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BD%99%E5%B8%82&to=%E5%B0%8F%E6%A8%BD&y=2026&m=12&d=03&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "17:42→小樽18:08、18:35→19:02、470円（土曜も同じ）",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "高速バス 札幌→余市（夏ダイヤ）",
+   "url": "https://www.chuo-bus.co.jp/highway/?t=39&ope=list&o=1",
+   "saw": "2026年7月1日更新（夏ダイヤ）。札幌駅前9:05（岩内行き）→小樽駅前10:14→余市駅前十字街10:44。札幌駅前→余市駅前十字街 片道1,290円・往復2,420円。運賃は降車時、ICカード可",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "高速バス 冬ダイヤ（2026年12月11日改正）",
+   "url": "https://www.chuo-bus.co.jp/highway/pocket.20261211/pdf/iwanai.pdf",
+   "saw": "札幌駅前9:05→小樽駅前10:19→余市駅前十字街10:50。札幌⇔余市駅前 片道1,290円・往復2,420円。12/29・30は土日祝ダイヤ、12/31〜1/3は運休便が多数",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "中央バス 余市方面の路線",
+   "url": "https://www.chuo-bus.co.jp/city_route/course/yoichi/",
+   "saw": "積丹線（20）は小樽駅前→余市駅前→美国。余市線（18）は小樽駅前→蘭島→余市梅川車庫前",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市駅のコインロッカー",
+   "url": "https://www.jrhokkaido.co.jp/network/locker/locker.pdf",
+   "saw": "余市：小400円16個、大700円6個",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "JR北海道のレールパス",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "Hokkaido Rail Pass：JR北海道の全線（新幹線を除く）",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "ニッカ 余市蒸溜所 楽しみ方",
+   "url": "https://www.nikka.com/distilleries/yoichi/visit/",
+   "saw": "ガイドツアー無料・予約制。予約なしはミュージアム・ショップ・レストラン（ショップ側入口、最終入場15:30）。RITA'S KITCHEN 10:00〜15:50（LO15:20）。休業 12/23〜1/7・6/11。全施設16:15まで",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "ニッカ 余市蒸溜所 よくある質問",
+   "url": "https://www.nikka.com/distilleries/yoichi/faq/",
+   "saw": "ツアーは日本語のみ、予約は4週間先まで、食品の持ち込み不可、ロッカー100円（返却式・ツアー予約者のみ）",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "ニッカ 予約サイト 12月以降のご予約について（2026-11-19）",
+   "url": "https://reserva.be/nikkayoichi/news?search_osh_no=60883&mode=list_detail",
+   "saw": "12月・1月は設備改修のため無料ツアーなし、キーモルトセミナーのみ（9:30・10:00・10:30・11:30・12:00・12:30・13:30・14:00）。20歳以上・終日運転しない人。新規予約はWEBのみ、4週間前0:00から。12/5はレストランのみ休業",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "ニッカ 予約サイト 11月のご予約について",
+   "url": "https://reserva.be/nikkayoichi/news",
+   "saw": "ガイドツアー所要60分、キーモルトセミナー所要90分・3,000円・現地で現金のみ",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "余市ワイナリー レストラン",
+   "url": "https://nipponseishu.co.jp/yoichiwine/restaurant/",
+   "saw": "11:30〜 ラストオーダー14:30。休業日 1〜4月 火・水曜、5〜12月 火曜。JR余市駅より車で5分。石窯焼きピッツァ、道産牛100％のハンバーグ",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市ワイナリー カフェ",
+   "url": "https://nipponseishu.co.jp/yoichiwine/cafe/",
+   "saw": "10:00〜16:00。休業日はレストランと同じ。余市ワインセット（3杯）、余市ワインソースがけソフト（通年）",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市ワイナリー 10月・11月の営業時間（2026-09-10）",
+   "url": "https://nipponseishu.co.jp/yoichiwine/news/%e4%bd%99%e5%b8%82%e3%83%af%e3%82%a4%e3%83%8a%e3%83%aa%e3%83%bc%e5%96%b6%e6%a5%ad%e6%99%82%e9%96%93%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b%e3%80%9010%e6%9c%88%e3%80%8111%e6%9c%88%e3%80%91-4/",
+   "saw": "レストラン11:30〜（LO14:30）、カフェ10:00〜16:00、ワインショップ・工場見学・ギャラリー10:00〜16:30。12月以降のお知らせは2026-11-27の時点で出ていない",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "OcciGabi Winery アクセス・営業",
+   "url": "https://www.occigabi.net/access",
+   "saw": "余市駅からタクシー約10分（1,400円前後）。ショップ11:00〜17:00。11月〜2月末は月〜木曜定休、12/17〜1/17冬季休業、2/16〜18臨時休業、3月は水・木曜定休、4〜10月は木曜定休。同じページに「12月〜2月は火曜定休、12/29〜1/3休み」とも書かれている",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "OcciGabi 試飲",
+   "url": "https://www.occigabi.net/wine-tasting",
+   "saw": "カウンターで好きなワイン3種類550円",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "旧下ヨイチ運上家",
+   "url": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/yoichiunzyouya.html",
+   "saw": "令和8年度の開館 4/11〜12/13。月曜・祝日の翌日休館。9:00〜16:30（最終入場）。大人300円。見学約30分。1853年建築、現存する唯一の運上家",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "旧余市福原漁場",
+   "url": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/fukuharagyoba.html",
+   "saw": "令和8年度の開館 4/11〜12/13。月曜・祝日の翌日休館。9:00〜16:30（最終入場）。大人300円。見学約40分。番屋・米味噌倉・文書庫・網倉・干場",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "よいち水産博物館と共通券",
+   "url": "https://www.town.yoichi.hokkaido.jp/kurashi/kurashinojouhou/kyouiku-bunka/bunkazai-kaikan.html",
+   "saw": "入舟町21。9:00〜16:30（最終入館）、月曜・祝日の翌日休館、冬期閉館12月中旬〜4月上旬、大人300円、見学約40分。共通券（博物館・運上家・福原漁場・フゴッペ洞窟）大人960円、発売日から2日間有効",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "フゴッペ洞窟",
+   "url": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/fugoppe.html",
+   "saw": "令和8年度の開館 4/11〜12/13、月曜・祝日の翌日休館、9:00〜16:30（最終入場）、大人300円、施設内撮影禁止、中央バス「フゴッペ洞窟前」下車1分",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "シリパ岬",
+   "url": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/bunnkazai-siripa.html",
+   "saw": "余市湾の西側の断崖の岬。アイヌ語で sir＝山、pa＝頭。約630万年前に海底に噴出した溶岩ドーム、柱状節理",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "ローソク岩",
+   "url": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/bunnkazai-rousokuiwa.html",
+   "saw": "沖合約500m、高さ43m。余市駅から車で約15分、ローソク岩展望駐車場（無料）",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市川温泉 宇宙の湯",
+   "url": "https://yoichigawa.com/",
+   "saw": "10:30〜20:00（水曜のみ13:00〜21:00）、定休日なし。入舟町322。余市駅から徒歩約15分。毛利衛さんの両親が営んでいた銭湯「喜久乃湯」の地",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "宇宙の湯 お風呂",
+   "url": "https://yoichigawa.com/free/ohuro",
+   "saw": "大人500円。天然温泉内湯・檜露天風呂・サウナ。無料：リンスインシャンプー・ボディソープ・ドライヤー。フェイスタオル250円、バスタオルは持参。タトゥーの記載なし",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "宇宙の湯 店舗情報",
+   "url": "https://yoichigawa.com/about",
+   "saw": "キャッシュレス決済：JCB・VISA・MasterCard・Diners・銀聯・QRコード決済",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市観光協会 営業時間・定休日変更のお知らせ（2026-11-07）",
+   "url": "https://yoichi-kankoukyoukai.com/2026/11/07/%f0%9f%93%a2%e3%80%90%e5%96%b6%e6%a5%ad%e6%99%82%e9%96%93%e3%83%bb%e5%ae%9a%e4%bc%91%e6%97%a5%e5%a4%89%e6%9b%b4%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b%e3%80%91/",
+   "saw": "2026/11/3〜2027/4中旬：エルラプラザ9:30〜17:30・月曜休み、スペース・アップルよいち売店9:30〜17:30・月曜休み、宇宙記念館内ミュージアムショップは2026/11/30〜2027/4中旬冬期休館",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "余市宇宙記念館",
+   "url": "https://www.spacedome.jp/",
+   "saw": "3Dシアターの上映予定 4月18日〜11月29日。プラネタリウムは2026年11月25日から機材不調で休止",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "回転寿司 余市番屋（余市観光協会）",
+   "url": "https://yoichi-kankoukyoukai.com/spot_food/%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%E3%80%80%E4%BD%99%E5%B8%82%E7%95%AA%E5%B1%8B/",
+   "saw": "大川町4-71-1。11:00〜21:00（LO20:30）、定休日なし",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "みどりや（余市観光協会）",
+   "url": "https://yoichi-kankoukyoukai.com/spot_food/%E3%81%BF%E3%81%A9%E3%82%8A%E3%82%84/",
+   "saw": "黒川町3-54。11:00〜15:00・17:00〜21:00（LO20:00）、木曜休み。寿司・そば・ザンギ",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "柿崎商店 海鮮工房（余市観光協会）",
+   "url": "https://yoichi-kankoukyoukai.com/spot_food/%E6%9F%BF%E5%B4%8E%E5%95%86%E5%BA%97-%E6%B5%B7%E9%AE%AE%E5%B7%A5%E6%88%BF/",
+   "saw": "黒川町7-25、余市駅前のオレンジ色の建物の2階。10:00〜18:00（LO17:30）、木曜休み",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "日の入り（札幌）12月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
+   "saw": "12/1 16:01、12/3 16:00",
+   "checked": "2026-11-27"
+  },
+  {
+   "what": "日の入り（札幌）1月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0001.html",
+   "saw": "1/1 16:10、1/31 16:45",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "日の入り（札幌）2月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0002.html",
+   "saw": "2/1 16:46、2/28 17:22",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "日の入り（札幌）3月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0003.html",
+   "saw": "3/1 17:23、3/31 17:59",
+   "checked": "2026-11-26（小樽のマップの確認）"
+  },
+  {
+   "what": "中央バス 余市案内所（積丹線などの時刻表の表紙）",
+   "url": "https://www.chuo-bus.co.jp/city_route/pdf/otaru_G.pdf",
+   "saw": "余市案内所：JR余市駅隣接エルラプラザ内、9:30〜12:00・13:00〜17:30、月曜定休（祝日なら翌日）",
+   "checked": "2026-11-27"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "sapporo",
+   "name": {
+    "ja": "札幌駅（JR）",
+    "en": "Sapporo Station (JR)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "余市まではJRで小樽乗り換え、1時間20分ほど。乗り換えなしの高速バスもあります。",
+    "en": "About 1 hr 20 min to Yoichi by JR, changing at Otaru. A direct highway bus also runs."
+   },
+   "caution": {
+    "ja": "蒸溜所は12月23日〜1月7日休み",
+    "en": "Distillery closed 23 Dec–7 Jan"
+   },
+   "lat": 43.06866,
+   "lng": 141.35079,
+   "text": {
+    "ja": "札幌駅（JR）\n\n冬は浜の漁場や博物館が閉まるので、ウイスキー・ワイン・温泉・すしの1日です。札幌8:41発で余市10:00着。12〜1月はニッカの有料セミナー（予約制）、蒸溜所でお昼、タクシーでワイナリーへ。明るいうちに雪のシリパ岬を見て、温泉で温まってから回転ずし。18:35の電車で札幌19:58着です。\n\n札幌8:41発の普通・小樽行きに乗り、小樽で9:36発の倶知安（くっちゃん）行きに乗り換えて、余市10:00着。平日も土曜も同じ時刻で、運賃は1,380円です。すすきのからは地下鉄南北線でさっぽろ駅まで5分（210円）。\n\n小樽〜余市の電車は1時間に1本ほど。8:41に乗れないと、次は札幌10:06発（余市11:23着）です。\n\n乗り換えなしで行くなら、札幌駅前9:05発の中央バスの高速バス（岩内行き）で「余市駅前十字街」まで。12月10日までは10:44着、12月11日からの冬ダイヤでは10:50着です。片道1,290円、予約はいらず、運賃は降りるときに払います（交通系ICカード可）。バスで行く日は、蒸溜所の11時台の回を予約してください。\n\nきっぷ：小樽〜余市で交通系ICカードが使えるかは、JR北海道のサイトで確かめられませんでした。札幌の券売機で余市までのきっぷを買えば確実です。JR北海道レールパス（全線）で乗れます。札幌・登別エリアパスに余市が入るかは要確認です。\n\nおすすめ出発時間：8:41（札幌駅に8:30ごろ）",
+    "en": "Sapporo Station (JR)\n\nIn winter the fishery and museums close, so this is a day of whisky, wine, a hot spring and sushi. The 8:41 from Sapporo reaches Yoichi at 10:00. In December–January, a paid Nikka seminar (booking needed), lunch at the distillery, then a taxi to the winery. See Cape Shiripa in the snow while it is light, warm up in the hot spring, then sushi and the 18:35 train (Sapporo 19:58).\n\nTake the 8:41 local train to Otaru and change there to the 9:36 for Kutchan, arriving in Yoichi at 10:00. Times are the same on weekdays and Saturdays, and the fare is ¥1,380. From Susukino, the Namboku subway line takes 5 minutes to Sapporo (¥210).\n\nTrains between Otaru and Yoichi run about once an hour. Miss the 8:41 and the next is the 10:06 from Sapporo (Yoichi 11:23).\n\nFor a ride with no change, take Chuo Bus’s 9:05 highway bus for Iwanai from the Sapporo Station bus stop to Yoichi-ekimae-jujigai: 10:44 until 10 December, 10:50 on the winter timetable from 11 December. ¥1,290 one way, no booking, pay when you get off (IC cards work). If you go by bus, book a distillery slot after 11:00.\n\nTickets: JR Hokkaido’s site does not make clear whether IC cards work between Otaru and Yoichi, so buy a paper ticket to Yoichi from the machine in Sapporo. The JR Hokkaido Rail Pass covers the trip; check whether the Sapporo-Noboribetsu Area Pass does.\n\nRecommended departure time: 8:41 (be at Sapporo Station by about 8:30)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR札幌駅",
+      "en": "JR Sapporo Station"
+     },
+     "lat": 43.06866,
+     "lng": 141.35079,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9C%AD%E5%B9%8C%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "中央バス 高速よいち・いわない号（夏ダイヤ）",
+      "en": "Chuo Bus highway bus to Yoichi (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.chuo-bus.co.jp/highway/?t=39&ope=list&o=1",
+      "en": "https://www.chuo-bus.co.jp/highway/?t=39&ope=list&o=1"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "中央バス 冬ダイヤ（12月11日から）",
+      "en": "Chuo Bus winter timetable from 11 Dec (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.chuo-bus.co.jp/highway/pocket.20261211/",
+      "en": "https://www.chuo-bus.co.jp/highway/pocket.20261211/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "JR北海道レールパス",
+      "en": "JR Hokkaido Rail Pass"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月23日〜1月7日は蒸溜所が休み",
+      "en": "The distillery is closed 23 December–7 January"
+     },
+     "text": {
+      "ja": "ショップ・レストラン・ミュージアムも休みです。この期間は余市より、小樽のマップの1日がおすすめです。",
+      "en": "The shop, restaurant and museum close too. During this time, the Otaru map makes a better day out."
+     },
+     "from": "2026-12-10",
+     "to": "2027-01-07",
+     "url": "https://reserva.be/nikkayoichi/news"
+    },
+    {
+     "head": {
+      "ja": "12月・1月は無料のガイドツアーがありません",
+      "en": "No free tours in December and January"
+     },
+     "text": {
+      "ja": "試飲の建物の改修のため、2026年12月〜2027年1月は有料の「余市蒸溜所限定キーモルトセミナー」だけです（9:30・10:00・10:30・11:30・12:00・12:30・13:30・14:00）。20歳以上で、その日に車を運転しない人だけ参加できます。料金は予約ページで確かめてください（11月の案内では90分・3,000円・現地で現金払い）。予約なしでも、ミュージアム・ショップ・レストランには入れます。",
+      "en": "Because the tasting hall is being renovated, only the paid Key Malt Seminar runs from December 2026 to January 2027 (9:30, 10:00, 10:30, 11:30, 12:00, 12:30, 13:30, 14:00). You must be 20 or over and not driving that day. Check the fee on the booking page (in November it was 90 minutes, ¥3,000, cash only on the day). Without a booking you can still visit the museum, shop and restaurant."
+     },
+     "from": null,
+     "to": "2027-01-31",
+     "url": "https://reserva.be/nikkayoichi/news?search_osh_no=60883&mode=list_detail"
+    },
+    {
+     "head": {
+      "ja": "4月中旬からは「4月〜12月中旬」のコースも",
+      "en": "From mid-April, the full course is back"
+     },
+     "text": {
+      "ja": "福原漁場・運上家・水産博物館が開いたら（2026年は4月11日）、一覧の上のボタンで「4月〜12月中旬」を選ぶと、海辺の史跡も回れます。",
+      "en": "Once the fishery, Unjoya and museum reopen (11 April in 2026), pick “Mid-Apr – mid-Dec” above the list to add the historic sites by the sea."
+     },
+     "from": "2027-04-01",
+     "to": "2027-04-30",
+     "url": "https://www.town.yoichi.hokkaido.jp/kurashi/kurashinojouhou/kyouiku-bunka/bunkazai-kaikan.html"
+    },
+    {
+     "head": {
+      "ja": "冬の余市を歩くとき",
+      "en": "Walking in Yoichi in winter"
+     },
+     "text": {
+      "ja": "歩道は踏み固められた雪や氷になります。底に溝の深い、滑りにくい靴で。12月は16時ごろに日が沈みます。雪の日は電車が遅れることがあるので、帰りは乗る電車を早めに決めておきます。",
+      "en": "Pavements turn to packed snow and ice. Wear boots with deep-tread soles. In December the sun sets around 16:00. Trains can run late on snowy days, so settle on your train home early."
+     },
+     "from": "2026-11-27",
+     "to": "2027-03-31"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "札幌8:41→小樽（9:36発に乗り換え）→余市10:00（平日・土曜とも）。次は札幌10:06→余市11:23",
+       "en": "Sapporo 8:41 → Otaru (change to the 9:36) → Yoichi 10:00, weekdays and Saturdays. Next: Sapporo 10:06 → Yoichi 11:23"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "高速バス 札幌駅前9:05→余市駅前十字街10:44",
+       "en": "Highway bus: Sapporo Station 9:05 → Yoichi-ekimae-jujigai 10:44"
+      },
+      "until": "2026-12-10",
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "高速バス 札幌駅前9:05→余市駅前十字街10:50（冬ダイヤ）",
+       "en": "Highway bus: Sapporo Station 9:05 → Yoichi-ekimae-jujigai 10:50 (winter timetable)"
+      },
+      "until": null,
+      "from": "2026-12-11"
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "JR 札幌→余市1,380円。高速バス 札幌駅前→余市駅前十字街1,290円（往復2,420円）",
+       "en": "JR Sapporo → Yoichi ¥1,380. Highway bus ¥1,290 (return ¥2,420)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "JRは乗換案内で2026年12月3日（木）・5日（土）のダイヤを、高速バスは北海道中央バスの公式時刻表（夏ダイヤと2026年12月11日改正の冬ダイヤ）を確認しました。JR北海道は春にダイヤ改正があります。",
+     "en": "JR times from a route planner for 3 and 5 December 2026; bus times from Chuo Bus’s summer timetable and its winter timetable from 11 December 2026. JR Hokkaido revises its timetable in spring."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "sapporo-w1.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Station_in_November_2025.jpg"
+     }
+    },
+    {
+     "file": "sapporo-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Sapporo_Sta03n3200.jpg"
+     }
+    },
+    {
+     "file": "sapporo-w3.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Station_at_night.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "eki",
+   "name": {
+    "ja": "余市（よいち）駅",
+    "en": "Yoichi Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "駅前の道をまっすぐ行くと蒸溜所の正門。駅の隣に観光物産センター、駅にコインロッカーがあります。",
+    "en": "Walk straight out of the station to the distillery gate. A local produce centre stands next door, and there are coin lockers."
+   },
+   "lat": 43.1869,
+   "lng": 140.79479,
+   "text": {
+    "ja": "余市（よいち）駅\n\n・ニッカの蒸溜所までは歩いて5分ほどです。\n・コインロッカーは小（400円）が16個、大（700円）が6個（JR北海道の一覧）。\n・駅の隣の観光物産センター「エルラプラザ」は9:30〜17:30。2026年11月3日〜2027年4月中旬は月曜休み（祝日なら翌日）。中の中央バスの案内所（9:30〜12:00・13:00〜17:30、月曜休み）で、バスの時刻を聞けます。\n・駅から歩いて10分の道の駅「スペース・アップルよいち」には、余市宇宙記念館があります。宇宙記念館は2026年11月30日から2027年4月中旬まで冬の休館です。\n・小樽寄りの栄町には、壁に刻画の残るフゴッペ洞窟があります（2026年は4月11日〜12月13日、月曜休み、300円、中は撮影禁止）。行くなら中央バスで「フゴッペ洞窟前」下車。\n・余市を出る電車は1時間に1本ほど。帰りの時刻（最後のスポット）を先に見ておくと安心です。\n\nおすすめ移動時間：10:00着",
+    "en": "Yoichi Station\n\n• The Nikka distillery is about 5 minutes on foot.\n• Coin lockers: 16 small (¥400) and 6 large (¥700), according to JR Hokkaido.\n• Elra Plaza, the local produce centre next to the station, is open 9:30–17:30, closed Mondays (or the next day after a holiday) from 3 November 2026 to mid-April 2027. The Chuo Bus desk inside (9:30–12:00, 13:00–17:30, closed Mondays) can help with bus times.\n• Ten minutes’ walk away, the Space Apple Yoichi roadside station has the Yoichi Space Museum. The museum closes for winter from 30 November 2026 to mid-April 2027.\n• Towards Otaru, Fugoppe Cave has carvings on its rock walls (open 11 April–13 December in 2026, closed Mondays, ¥300, no photos inside). Take a Chuo Bus to the Fugoppe-dokutsu-mae stop.\n• Trains leave Yoichi about once an hour, so check the times home (last stop) first.\n\nRecommended travel time: arrive 10:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR余市駅",
+      "en": "JR Yoichi Station"
+     },
+     "lat": 43.1869,
+     "lng": 140.79479,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%BD%99%E5%B8%82%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "道の駅 スペース・アップルよいち",
+      "en": "Space Apple Yoichi roadside station"
+     },
+     "lat": 43.18915,
+     "lng": 140.78876,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%20%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AB%E3%82%88%E3%81%84%E3%81%A1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "余市観光協会（英語のページあり）",
+      "en": "Yoichi Tourism Association (English page)"
+     },
+     "url": {
+      "ja": "https://yoichi-kankoukyoukai.com/",
+      "en": "https://yoichi-kankoukyoukai.com/english-page/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "余市宇宙記念館",
+      "en": "Yoichi Space Museum (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.spacedome.jp/",
+      "en": "https://www.spacedome.jp/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "フゴッペ洞窟（余市町）",
+      "en": "Fugoppe Cave (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/fugoppe.html",
+      "en": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/fugoppe.html"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "エルラプラザ 9:30〜17:30（11月3日〜4月中旬は月曜休み）",
+       "en": "Elra Plaza 9:30–17:30 (closed Mondays, 3 Nov–mid-Apr)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "コインロッカーはJR北海道の一覧、エルラプラザ・道の駅・宇宙記念館は余市観光協会のお知らせ（2026年11月7日）、フゴッペ洞窟は余市町のページで確認しました。",
+     "en": "Lockers from JR Hokkaido’s list; Elra Plaza, the roadside station and the Space Museum from the Yoichi Tourism Association (7 Nov 2026); Fugoppe Cave from the town’s website."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "eki-w2.jpg",
+     "credit": {
+      "author": "スミス1919",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%99%E5%B8%82%E9%A7%85%E3%81%AB%E5%81%9C%E8%BB%8A%E4%B8%AD%E3%81%AEH100%E5%BD%A2%E3%81%A8%E3%82%AD%E3%83%8F201%E7%B3%BB.jpg"
+     }
+    },
+    {
+     "file": "eki-w1.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yoichi-STA.jpg"
+     }
+    },
+    {
+     "file": "eki-w3.jpg",
+     "credit": {
+      "author": "Olegushka",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kiha201-104_RapSapporo_Yoichi_20090506.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "nikka",
+   "name": {
+    "ja": "ニッカウヰスキー 北海道 余市蒸溜所",
+    "en": "Nikka Whisky Yoichi Distillery"
+   },
+   "kind": {
+    "ja": "蒸溜所（見学は予約制）",
+    "en": "Distillery (tours by booking)"
+   },
+   "blurb": {
+    "ja": "竹鶴政孝（たけつるまさたか）がスコットランドに似た土地を求めて選んだ蒸溜所。石造りの棟と赤い屋根が並びます。",
+    "en": "Taketsuru Masataka chose Yoichi for its Scotland-like climate. Stone buildings with red roofs line the grounds."
+   },
+   "caution": {
+    "ja": "見学は予約制・日本語のみ。12月23日〜1月7日は休み",
+    "en": "Tours by booking only, in Japanese. Closed 23 Dec–7 Jan"
+   },
+   "lat": 43.18617,
+   "lng": 140.7895,
+   "text": {
+    "ja": "ニッカウヰスキー 北海道 余市蒸溜所\n\n12月・1月は10:30の回のキーモルトセミナー（約90分）を予約。始まる前にミュージアムを見て、終わったら12:00ごろからレストランでお昼。13:00に出て、駅前のタクシーへ。2月からの回は予約ページで確かめてください。\n\n・ガイドツアー（無料・試飲つき）は予約制。予約は公式の予約ページ（英語あり）で、4週間先まで。案内は日本語だけです。11月の案内では所要60分で、外の製造の建物を歩くので暖かい服で。\n\n・2026年12月〜2027年1月は、無料のツアーはなく有料のセミナーだけです（お知らせを参照）。2月からの回は予約ページで確かめてください。\n\n・予約なしでも、ニッカミュージアム（有料のテイスティングバーあり）、ショップ、レストラン「RITA'S KITCHEN」に入れます。入口はショップ側で、最終入場は15:30、すべて16:15に閉まります。\n\n・お昼はRITA'S KITCHEN（10:00〜15:50、ラストオーダー15:20）。2026年12月5日はレストランだけ休みです。駅前で海鮮を食べるなら、国道5号沿いのオレンジ色の建物の2階「柿崎商店 海鮮工房」（10:00〜18:00、ラストオーダー17:30、木曜休み。余市観光協会の案内）。海鮮丼と定食の店で、行列ができることもあります。\n\n・食べ物の持ち込みはできません。100円が戻るロッカーは、ツアーを予約した人だけ使えます。\n\nおすすめ訪問時間：10:05〜13:00（セミナーとお昼を含む）",
+    "en": "Nikka Whisky Yoichi Distillery\n\nIn December and January, book the 10:30 Key Malt Seminar (about 90 minutes). See the museum first, then lunch at the restaurant from about 12:00. Leave at 13:00 for the taxis at the station. Check the booking site for what runs from February.\n\n• The guided tour (free, with tasting) needs a booking on the official booking site (English available), up to four weeks ahead. Tours are in Japanese only. In November they took 60 minutes, partly outdoors, so dress warmly.\n\n• From December 2026 to January 2027 there are no free tours, only a paid seminar (see the notice). Check the booking site for what runs from February.\n\n• Without a booking you can visit the Nikka Museum (with a paid tasting bar), the shop and RITA’S KITCHEN restaurant. Use the shop entrance; last entry 15:30, everything closes at 16:15.\n\n• Lunch at RITA’S KITCHEN (10:00–15:50, last order 15:20); the restaurant alone is closed on 5 December 2026. For seafood by the station, Kakizaki Shoten Kaisen Kobo is upstairs in the orange building on Route 5 (10:00–18:00, last order 17:30, closed Thursdays, per the Yoichi Tourism Association): rice bowls and set meals, sometimes with a queue.\n\n• No outside food. The coin-return lockers (¥100) are for tour guests only.\n\nRecommended visit time: 10:05–13:00 (including the seminar and lunch)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ニッカウヰスキー 余市蒸溜所",
+      "en": "Nikka Yoichi Distillery"
+     },
+     "lat": 43.18617,
+     "lng": 140.7895,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%8B%E3%83%83%E3%82%AB%E3%82%A6%E3%83%B0%E3%82%B9%E3%82%AD%E3%83%BC%20%E5%8C%97%E6%B5%B7%E9%81%93%20%E4%BD%99%E5%B8%82%E8%92%B8%E6%BA%9C%E6%89%80"
+    },
+    {
+     "label": {
+      "ja": "柿崎商店 海鮮工房",
+      "en": "Kakizaki Shoten Kaisen Kobo"
+     },
+     "lat": 43.18658,
+     "lng": 140.79303,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9F%BF%E5%B4%8E%E5%95%86%E5%BA%97%20%E6%B5%B7%E9%AE%AE%E5%B7%A5%E6%88%BF%20%E4%BD%99%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ニッカ 余市蒸溜所（楽しみ方）",
+      "en": "Nikka Yoichi Distillery (official)"
+     },
+     "url": {
+      "ja": "https://www.nikka.com/distilleries/yoichi/visit/",
+      "en": "https://www.nikka.com/en/distilleries/yoichi/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "見学予約（日本語・英語）",
+      "en": "Tour booking (Japanese / English)"
+     },
+     "url": {
+      "ja": "https://reserva.be/nikkayoichi/",
+      "en": "https://reserva.be/nikkayoichi/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "予約サイトのお知らせ",
+      "en": "Booking site notices"
+     },
+     "url": {
+      "ja": "https://reserva.be/nikkayoichi/news",
+      "en": "https://reserva.be/nikkayoichi/news"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "柿崎商店 海鮮工房（余市観光協会）",
+      "en": "Kakizaki Shoten Kaisen Kobo (Yoichi Tourism Association)"
+     },
+     "url": {
+      "ja": "https://yoichi-kankoukyoukai.com/spot_food/%E6%9F%BF%E5%B4%8E%E5%95%86%E5%BA%97-%E6%B5%B7%E9%AE%AE%E5%B7%A5%E6%88%BF/",
+      "en": "https://yoichi-kankoukyoukai.com/spot_food/%E6%9F%BF%E5%B4%8E%E5%95%86%E5%BA%97-%E6%B5%B7%E9%AE%AE%E5%B7%A5%E6%88%BF/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月・1月は無料のガイドツアーがありません",
+      "en": "No free tours in December and January"
+     },
+     "text": {
+      "ja": "試飲の建物の改修のため、2026年12月〜2027年1月は有料の「余市蒸溜所限定キーモルトセミナー」だけです（9:30・10:00・10:30・11:30・12:00・12:30・13:30・14:00）。20歳以上で、その日に車を運転しない人だけ参加できます。料金は予約ページで確かめてください（11月の案内では90分・3,000円・現地で現金払い）。予約なしでも、ミュージアム・ショップ・レストランには入れます。",
+      "en": "Because the tasting hall is being renovated, only the paid Key Malt Seminar runs from December 2026 to January 2027 (9:30, 10:00, 10:30, 11:30, 12:00, 12:30, 13:30, 14:00). You must be 20 or over and not driving that day. Check the fee on the booking page (in November it was 90 minutes, ¥3,000, cash only on the day). Without a booking you can still visit the museum, shop and restaurant."
+     },
+     "from": null,
+     "to": "2027-01-31",
+     "url": "https://reserva.be/nikkayoichi/news?search_osh_no=60883&mode=list_detail"
+    },
+    {
+     "head": {
+      "ja": "12月23日〜1月7日は蒸溜所が休み",
+      "en": "The distillery is closed 23 December–7 January"
+     },
+     "text": {
+      "ja": "ショップ・レストラン・ミュージアムも休みです。この期間は余市より、小樽のマップの1日がおすすめです。",
+      "en": "The shop, restaurant and museum close too. During this time, the Otaru map makes a better day out."
+     },
+     "from": "2026-12-10",
+     "to": "2027-01-07",
+     "url": "https://reserva.be/nikkayoichi/news"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "予約なしの施設は最終入場15:30、全施設16:15まで。レストラン10:00〜15:50（LO15:20）",
+       "en": "Walk-in areas: last entry 15:30, all close 16:15. Restaurant 10:00–15:50 (last order 15:20)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月23日〜1月7日、6月11日",
+       "en": "23 Dec–7 Jan, 11 June"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ガイドツアー無料（予約制）。12〜1月はセミナーのみ（料金は予約ページで）",
+       "en": "Guided tour free (booking needed). Dec–Jan: paid seminar only (fee on the booking site)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ニッカウヰスキーの公式サイトと公式の見学予約サイトのお知らせ（2026年11月26日に確認）、柿崎商店は余市観光協会の案内で確認しました。",
+     "en": "From Nikka’s website and the notices on its official booking site (checked 26 Nov 2026), and the Yoichi Tourism Association for Kakizaki Shoten."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "nikka-w1.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Drying_tower._Kiln_tower._A.jpg"
+     }
+    },
+    {
+     "file": "nikka-w2.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Inside_the_main_gate._B.jpg"
+     }
+    },
+    {
+     "file": "nikka-w3.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Drying_tower._Kiln_tower._C.jpg"
+     }
+    },
+    {
+     "file": "nikka-w4.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Warehouse_No.1._Wooden_barrel._B.jpg"
+     }
+    },
+    {
+     "file": "nikka-w5.jpg",
+     "credit": {
+      "author": "さかおり",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nikka_Whisky_Yoichi_Distillery._Former_Laboratory._A.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "winery",
+   "name": {
+    "ja": "余市ワイナリー",
+    "en": "Yoichi Winery"
+   },
+   "kind": {
+    "ja": "ワイナリー（試飲・ショップ・レストラン）",
+    "en": "Winery (tasting, shop, restaurant)"
+   },
+   "blurb": {
+    "ja": "札幌の酒蔵・日本清酒（千歳鶴）が営むワイナリー。カフェで余市ワインの3杯セットが飲めます。",
+    "en": "Run by Nippon Seishu, the Sapporo brewer behind Chitosetsuru sake. The café pours a three-glass flight of Yoichi wine."
+   },
+   "caution": {
+    "ja": "火曜休み（1〜4月は火・水曜休み）",
+    "en": "Closed Tuesdays (Tuesdays and Wednesdays, Jan–Apr)"
+   },
+   "lat": 43.16936,
+   "lng": 140.79255,
+   "text": {
+    "ja": "余市ワイナリー\n\n13:00に駅前からタクシーで。1〜4月は火・水曜が休みです。帰りは、運上家の前まで迎えのタクシーを頼んでおきます（14:15ごろ）。休みの日は、お昼のあと駅前からタクシーで浜へ。\n\n・駅前のタクシーで5分ほど（歩くと40分ほど）。帰りの車は、行きのタクシーで迎えの時間を頼んでおくと安心です。\n\n・カフェ（10:00〜16:00）では、定番の赤か白を3杯飲み比べる「余市ワインセット」や、余市ワインのソースをかけたソフトクリーム（運転する人や子どもも食べられる、通年）。ワインショップは10:00〜16:30で、ワイナリーでしか買えないワインもあります。工場見学も10:00〜16:30（2026年10・11月の案内）。\n\n・レストランは11:30から（ラストオーダー14:30）。石窯で焼くピッツァと、道産牛100％のハンバーグ。\n\n・写真は余市町の登（のぼり）地区のぶどう畑で、ワイナリーの建物ではありません。\n\n・もう一軒行くなら、山田町のOcciGabi Winery（オチガビ。駅からタクシーで約10分、1,400円前後）。ショップは11:00〜17:00、カウンターで3種類の試飲550円。11月〜2月は月〜木曜が休み、12月17日〜1月17日は冬の休みです（公式サイト。同じページに別の定休日の書き方もあるので、行く前に電話で確かめてください）。\n\nおすすめ訪問時間：13:10〜14:15",
+    "en": "Yoichi Winery\n\nTaxi from the station at 13:00; closed Tuesdays and Wednesdays from January to April. Arrange a pickup around 14:15 to take you to the Unjoya, by the beach. On closing days, take a taxi from the station to the beach after lunch.\n\n• About 5 minutes by taxi from the station (40 minutes on foot). Ask your driver to come back for you at a set time.\n\n• The café (10:00–16:00) serves the Yoichi Wine Set, a flight of three reds or three whites, and a soft-serve topped with Yoichi wine sauce that drivers and children can eat too (all year). The wine shop is open 10:00–16:30 and has bottles sold only here. The factory visit area is also open 10:00–16:30 (October–November 2026 notice).\n\n• The restaurant opens at 11:30 (last order 14:30): stone-oven pizza and 100% Hokkaido beef hamburg steak.\n\n• The photo shows vineyards in Yoichi’s Nobori district, not the winery building.\n\n• For a second winery, OcciGabi Winery in Yamada-cho is about 10 minutes by taxi from the station (around ¥1,400). Shop 11:00–17:00; a three-wine tasting at the counter is ¥550. It is closed Monday–Thursday from November to February and from 17 December to 17 January (its website also lists a different set of closing days, so phone before you go).\n\nRecommended visit time: 13:10–14:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "余市ワイナリー",
+      "en": "Yoichi Winery"
+     },
+     "lat": 43.16936,
+     "lng": 140.79255,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BD%99%E5%B8%82%E3%83%AF%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%BC"
+    },
+    {
+     "label": {
+      "ja": "OcciGabi Winery",
+      "en": "OcciGabi Winery"
+     },
+     "lat": 43.17606,
+     "lng": 140.77736,
+     "url": "https://www.google.com/maps/search/?api=1&query=OcciGabi%20Winery%20%E4%BD%99%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "余市ワイナリー カフェ",
+      "en": "Yoichi Winery café (Japanese)"
+     },
+     "url": {
+      "ja": "https://nipponseishu.co.jp/yoichiwine/cafe/",
+      "en": "https://nipponseishu.co.jp/yoichiwine/cafe/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "余市ワイナリー レストラン",
+      "en": "Yoichi Winery restaurant (Japanese)"
+     },
+     "url": {
+      "ja": "https://nipponseishu.co.jp/yoichiwine/restaurant/",
+      "en": "https://nipponseishu.co.jp/yoichiwine/restaurant/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "余市ワイナリーのお知らせ（営業時間）",
+      "en": "Yoichi Winery news (hours)"
+     },
+     "url": {
+      "ja": "https://nipponseishu.co.jp/yoichiwine/news/",
+      "en": "https://nipponseishu.co.jp/yoichiwine/news/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "OcciGabi Winery（アクセス・営業日）",
+      "en": "OcciGabi Winery (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.occigabi.net/access",
+      "en": "https://www.occigabi.net/access"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月からの営業時間は未発表",
+      "en": "December hours not yet announced"
+     },
+     "text": {
+      "ja": "余市ワイナリーの12月以降の営業時間と年末年始の休みは、2026年11月27日の時点で公式サイトに出ていません（要確認）。行く前に公式サイトのお知らせを見てください。",
+      "en": "As of 27 November 2026, Yoichi Winery had not posted its hours from December or its New Year closing days. Check the news page on its website before you go."
+     },
+     "from": null,
+     "to": "2027-01-15",
+     "url": "https://nipponseishu.co.jp/yoichiwine/news/"
+    },
+    {
+     "head": {
+      "ja": "年末年始は休む場所があります",
+      "en": "Some places close over New Year"
+     },
+     "text": {
+      "ja": "ニッカの蒸溜所は12月23日〜1月7日、OcciGabiは12月17日〜1月17日が休み。余市ワイナリーの年末年始は2026年11月27日の時点で未発表（要確認）。高速バスは12月29・30日が土日祝ダイヤ、12月31日〜1月3日は運休が多いので、中央バスで確かめてください。宇宙の湯は公式サイトでは「定休日なし」です。",
+      "en": "The Nikka distillery closes 23 December–7 January and OcciGabi 17 December–17 January. Yoichi Winery had not announced its New Year days as of 27 November 2026 (please check). Highway buses run a holiday timetable on 29–30 December and many runs are cancelled 31 December–3 January. Uchu no Yu lists no closing days."
+     },
+     "from": "2026-12-10",
+     "to": "2027-01-07",
+     "url": "https://www.chuo-bus.co.jp/highway/pocket.20261211/pdf/iwanai.pdf"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "カフェ10:00〜16:00、ワインショップ・工場見学10:00〜16:30、レストラン11:30〜（LO14:30）",
+       "en": "Café 10:00–16:00; wine shop and factory 10:00–16:30; restaurant from 11:30 (last order 14:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "5〜12月は火曜、1〜4月は火・水曜。年末年始は要確認",
+       "en": "Tuesdays (May–Dec); Tuesdays and Wednesdays (Jan–Apr). New Year: please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "日本清酒の公式サイト（レストラン・カフェのページと2026年9月10日のお知らせ）、OcciGabiの公式サイトで確認しました。",
+     "en": "From Nippon Seishu’s website (restaurant and café pages, notice of 10 Sep 2026) and OcciGabi’s website."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "winery-w1.jpg",
+     "credit": {
+      "author": "daita saru",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%99%E5%B8%82%E7%94%BA%E7%99%BB%E5%9C%B0%E5%8C%BA_%2819845294481%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "moire",
+   "name": {
+    "ja": "モイレの浜から見るシリパ岬",
+    "en": "Cape Shiripa from Moire beach"
+   },
+   "kind": {
+    "ja": "海辺の眺め",
+    "en": "Coastal view"
+   },
+   "blurb": {
+    "ja": "余市湾の西に突き出た断崖の岬。名前はアイヌ語の「山の頭」から。浜から湾の向こうに見えます。",
+    "en": "The cliff-edged cape on the west of Yoichi Bay; the name comes from the Ainu for “head of the mountain”. You see it across the bay from the beach."
+   },
+   "lat": 43.19868,
+   "lng": 140.78549,
+   "text": {
+    "ja": "モイレの浜から見るシリパ岬\n\nワイナリーからタクシーで運上家の前まで（運上家は冬は閉まっています）。そこから浜へ歩いて5分。12月は16時ごろに日が沈みます。\n\nシリパ岬は、約630万年前に海底に噴き出した溶岩がドームになったものと考えられていて、岩肌には柱のような割れ目（柱状節理）が見られます（余市町のページ）。\n\n浜中・モイレ海水浴場は運上家から歩いて5分。夏以外は海水浴場の設備は使えませんが、浜の入り口から岬が見えます。冬は雪の積もった浜に無理に下りず、入り口から眺めるだけで十分です。風の強い日は短めに。\n\n11月と12月は16時ごろに日が沈み、16時を過ぎると岬は見えにくくなります。この時期は漁場から歩いてきたら先に浜を見て、そのあと運上家へ（最終入場16:30）。\n\n西へ車で15分の豊浜町には、沖に立つ高さ43mのローソク岩があります（展望駐車場あり、無料）。路線バスでは行きにくいので、タクシーで往復できる人向けです。\n\nおすすめ訪問時間：14:30〜14:50",
+    "en": "Cape Shiripa from Moire beach\n\nTaxi from the winery to the Unjoya (closed in winter), then 5 minutes’ walk to the beach. In December the sun sets around 16:00.\n\nCape Shiripa is thought to be a lava dome formed by an undersea eruption about 6.3 million years ago, and its rock shows column-like joints (Town of Yoichi).\n\nHamanaka-Moire beach is 5 minutes’ walk from the Unjoya. Outside summer the beach facilities are closed, but you can see the cape from the beach entrance. In winter, don’t walk out onto the snow; the view from the entrance is enough. Keep it short on windy days.\n\nIn November and December the sun sets around 16:00, and after that the cape is hard to see. At that time of year, walking from the fishery, look at the beach first and then visit the Unjoya (last entry 16:30).\n\nFifteen minutes west by car, at Toyohama, Candle Rock stands 43 m tall offshore (free viewing car park). Buses don’t make it easy, so go only if you can take a taxi there and back.\n\nRecommended visit time: 14:30–14:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "浜中・モイレ海水浴場",
+      "en": "Hamanaka-Moire beach"
+     },
+     "lat": 43.19868,
+     "lng": 140.78549,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%9C%E4%B8%AD%E3%83%A2%E3%82%A4%E3%83%AC%E6%B5%B7%E6%B0%B4%E6%B5%B4%E5%A0%B4%20%E4%BD%99%E5%B8%82"
+    },
+    {
+     "label": {
+      "ja": "ローソク岩 展望駐車場",
+      "en": "Candle Rock viewpoint"
+     },
+     "lat": 43.23357,
+     "lng": 140.70381,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%83%BC%E3%82%BD%E3%82%AF%E5%B2%A9%E5%B1%95%E6%9C%9B%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E4%BD%99%E5%B8%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "シリパ岬（余市町）",
+      "en": "Cape Shiripa (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/bunnkazai-siripa.html",
+      "en": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/bunnkazai-siripa.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ローソク岩（余市町）",
+      "en": "Candle Rock (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/bunnkazai-rousokuiwa.html",
+      "en": "https://www.town.yoichi.hokkaido.jp/machi/syoukai/bunnkazai-rousokuiwa.html"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "日の入り（札幌）：12月1日16:01、1月31日16:45、2月28日17:22、3月31日17:59",
+       "en": "Sunset (Sapporo): 1 Dec 16:01, 31 Jan 16:45, 28 Feb 17:22, 31 Mar 17:59"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "浜は自由に見られます",
+       "en": "Open any time"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "岬と岩の説明は余市町の公式サイトで確認しました。",
+     "en": "Cape and rock details from the Town of Yoichi’s website."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "moire-w1.jpg",
+     "credit": {
+      "author": "Karl Trautman",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:PXL_20221002_064110082.PORTRAIT.jpg"
+     }
+    },
+    {
+     "file": "moire-w2.jpg",
+     "credit": {
+      "author": "我路・幌内画像倉庫",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Siripa-misaki7020429.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "onsen",
+   "name": {
+    "ja": "余市川温泉 宇宙の湯（うちゅうのゆ）",
+    "en": "Yoichigawa Onsen Uchu no Yu"
+   },
+   "kind": {
+    "ja": "日帰り温泉",
+    "en": "Day-use hot spring"
+   },
+   "blurb": {
+    "ja": "宇宙飛行士・毛利衛（もうりまもる）さんの両親が営んでいた銭湯の場所にある天然温泉。檜の露天風呂とサウナ。",
+    "en": "A natural hot spring on the site of the bathhouse once run by astronaut Mohri Mamoru’s parents. Cedar outdoor bath and sauna."
+   },
+   "caution": {
+    "ja": "タトゥーの決まりは公式サイトに書かれていません（受付で確認）",
+    "en": "Tattoo policy not stated on its website: ask at reception"
+   },
+   "lat": 43.19262,
+   "lng": 140.78573,
+   "text": {
+    "ja": "余市川温泉 宇宙の湯（うちゅうのゆ）\n\n浜から歩いて20分ほど（雪の日は25分みておきます）。\n\n・10:30〜20:00（水曜だけ13:00〜21:00）、休みなし。大人500円。\n・リンスインシャンプー・ボディソープ・ドライヤーは無料。フェイスタオルは250円で売っています。バスタオルは持っていきます。\n・クレジットカード（JCB・VISA・Mastercard・Diners・銀聯）とQRコード決済が使えます（公式サイトの店舗情報）。\n・タトゥー：公式サイトに決まりが書かれていません（要確認）。入る前に受付で聞くか、電話（0135-22-4126）で確かめてください。\n・初めての人へ：洗い場で体を洗ってから湯船へ。タオルは湯船に入れません。\n・駅から歩いて約15分。写真は温泉の名前になっている余市川です。\n\nおすすめ訪問時間：15:15〜16:45",
+    "en": "Yoichigawa Onsen Uchu no Yu\n\nAbout 20 minutes’ walk from the beach (allow 25 in snow).\n\n• 10:30–20:00 (Wednesdays 13:00–21:00), open every day. ¥500.\n• Rinse-in shampoo, body soap and hair dryers are free. Face towels are sold for ¥250; bring a bath towel.\n• Credit cards (JCB, VISA, Mastercard, Diners, UnionPay) and QR-code payments are accepted (official site).\n• Tattoos: the website says nothing either way (please check). Ask at reception before you go in, or phone 0135-22-4126.\n• First time? Wash at the showers before getting in, and keep your towel out of the water.\n• About 15 minutes’ walk from the station. The photo shows the Yoichi River, which gives the spring its name.\n\nRecommended visit time: 15:15–16:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "余市川温泉 宇宙の湯",
+      "en": "Yoichigawa Onsen Uchu no Yu"
+     },
+     "lat": 43.19262,
+     "lng": 140.78573,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BD%99%E5%B8%82%E5%B7%9D%E6%B8%A9%E6%B3%89%20%E5%AE%87%E5%AE%99%E3%81%AE%E6%B9%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "余市川温泉（営業時間・料金）",
+      "en": "Yoichigawa Onsen (Japanese)"
+     },
+     "url": {
+      "ja": "https://yoichigawa.com/",
+      "en": "https://yoichigawa.com/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "お風呂と料金",
+      "en": "Baths and fees (Japanese)"
+     },
+     "url": {
+      "ja": "https://yoichigawa.com/free/ohuro",
+      "en": "https://yoichigawa.com/free/ohuro"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10:30〜20:00（水曜は13:00〜21:00）",
+       "en": "10:30–20:00 (Wed 13:00–21:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "なし（公式サイト）",
+       "en": "None (official site)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人500円、フェイスタオル250円",
+       "en": "¥500; face towel ¥250"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・料金・設備・支払い方法は余市川温泉の公式サイトで確認しました。タトゥーの決まりは書かれていませんでした。",
+     "en": "Hours, fees, facilities and payment from the official website, which does not mention tattoos."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "onsen-w1.jpg",
+     "credit": {
+      "author": "heriheri",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%99%E5%B8%82%E5%B7%9D_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "kaeri",
+   "name": {
+    "ja": "晩ごはん（回転寿司 余市番屋）と帰りの電車",
+    "en": "Dinner (Yoichi Banya sushi) and the train back"
+   },
+   "kind": {
+    "ja": "回転ずし・駅",
+    "en": "Conveyor-belt sushi, then the station"
+   },
+   "blurb": {
+    "ja": "毎朝、余市や小樽の沿岸で揚がった魚を仕入れる回転ずし。駅まで歩いて10分ほどです。",
+    "en": "A conveyor-belt sushi shop buying fish landed along the Yoichi and Otaru coast each morning. About 10 minutes’ walk to the station."
+   },
+   "lat": 43.1922,
+   "lng": 140.79482,
+   "text": {
+    "ja": "晩ごはん（回転寿司 余市番屋）と帰りの電車\n\n宇宙の湯から歩いて15分。17:00ごろから晩ごはん、18:20に店を出て、18:35発で札幌19:58着。ゆっくりなら19:26発（20:41着）。\n\n・回転寿司 余市番屋：11:00〜21:00（ラストオーダー20:30）、休みなし（余市観光協会の案内）。支払い方法は要確認。\n・駅の近くの寿し処 みどりや（11:00〜15:00・17:00〜21:00、ラストオーダー20:00、木曜休み）は、握りのほか、そばや北海道の唐揚げ「ザンギ」も。\n・帰りの電車（余市→札幌、平日も土曜も同じ）：18:35発（札幌19:58着）、19:26発（小樽で乗り換え、札幌20:41着）、20:19発（21:44着）、21:28発（22:44着）、最終は22:26発（23:53着）。運賃1,380円。\n・小樽で晩ごはんにするなら、余市17:42発で小樽18:08着（470円）。小樽からの帰りの時刻は小樽のマップに。\n・夜の余市駅は電車の間が1時間ほどあくので、乗る電車を決めてから店を出ます。\n\nおすすめ出発時間：18:35（札幌19:58着）",
+    "en": "Dinner (Yoichi Banya sushi) and the train back\n\nFifteen minutes’ walk from Uchu no Yu. Dinner from about 17:00; leave at 18:20 for the 18:35 (Sapporo 19:58), or take the 19:26 (20:41) for a slower evening.\n\n• Yoichi Banya: 11:00–21:00 (last order 20:30), open every day (Yoichi Tourism Association). Payment methods: please check.\n• Near the station, Midoriya (11:00–15:00 and 17:00–21:00, last order 20:00, closed Thursdays) serves nigiri plus soba and zangi, Hokkaido-style fried chicken.\n• Trains to Sapporo (same on weekdays and Saturdays): 18:35 (Sapporo 19:58), 19:26 (change at Otaru, Sapporo 20:41), 20:19 (21:44), 21:28 (22:44), and the last at 22:26 (23:53). ¥1,380.\n• For dinner in Otaru instead, the 17:42 from Yoichi arrives at 18:08 (¥470); see the Otaru map for trains back from there.\n• Evening trains are about an hour apart, so pick your train before you leave the restaurant.\n\nRecommended departure time: 18:35 (Sapporo 19:58)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "回転寿司 余市番屋",
+      "en": "Yoichi Banya (sushi)"
+     },
+     "lat": 43.1922,
+     "lng": 140.79482,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%20%E4%BD%99%E5%B8%82%E7%95%AA%E5%B1%8B"
+    },
+    {
+     "label": {
+      "ja": "寿し処 みどりや",
+      "en": "Midoriya (sushi)"
+     },
+     "lat": 43.18918,
+     "lng": 140.79253,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E5%87%A6%20%E3%81%BF%E3%81%A9%E3%82%8A%E3%82%84%20%E4%BD%99%E5%B8%82"
+    },
+    {
+     "label": {
+      "ja": "JR余市駅",
+      "en": "JR Yoichi Station"
+     },
+     "lat": 43.1869,
+     "lng": 140.79479,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%BD%99%E5%B8%82%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "回転寿司 余市番屋（余市観光協会）",
+      "en": "Yoichi Banya (Yoichi Tourism Association)"
+     },
+     "url": {
+      "ja": "https://yoichi-kankoukyoukai.com/spot_food/%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%E3%80%80%E4%BD%99%E5%B8%82%E7%95%AA%E5%B1%8B/",
+      "en": "https://yoichi-kankoukyoukai.com/spot_food/%E5%9B%9E%E8%BB%A2%E5%AF%BF%E5%8F%B8%E3%80%80%E4%BD%99%E5%B8%82%E7%95%AA%E5%B1%8B/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "みどりや（余市観光協会）",
+      "en": "Midoriya (Yoichi Tourism Association)"
+     },
+     "url": {
+      "ja": "https://yoichi-kankoukyoukai.com/spot_food/%E3%81%BF%E3%81%A9%E3%82%8A%E3%82%84/",
+      "en": "https://yoichi-kankoukyoukai.com/spot_food/%E3%81%BF%E3%81%A9%E3%82%8A%E3%82%84/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "小樽のマップ",
+      "en": "Otaru map"
+     },
+     "url": {
+      "ja": "../otaru/",
+      "en": "../otaru/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "年末年始は休む場所があります",
+      "en": "Some places close over New Year"
+     },
+     "text": {
+      "ja": "ニッカの蒸溜所は12月23日〜1月7日、OcciGabiは12月17日〜1月17日が休み。余市ワイナリーの年末年始は2026年11月27日の時点で未発表（要確認）。高速バスは12月29・30日が土日祝ダイヤ、12月31日〜1月3日は運休が多いので、中央バスで確かめてください。宇宙の湯は公式サイトでは「定休日なし」です。",
+      "en": "The Nikka distillery closes 23 December–7 January and OcciGabi 17 December–17 January. Yoichi Winery had not announced its New Year days as of 27 November 2026 (please check). Highway buses run a holiday timetable on 29–30 December and many runs are cancelled 31 December–3 January. Uchu no Yu lists no closing days."
+     },
+     "from": "2026-12-10",
+     "to": "2027-01-07",
+     "url": "https://www.chuo-bus.co.jp/highway/pocket.20261211/pdf/iwanai.pdf"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "余市→札幌：18:35（19:58着）、19:26（20:41着）、20:19（21:44着）、21:28（22:44着）、最終22:26（23:53着）",
+       "en": "Yoichi → Sapporo: 18:35 (19:58), 19:26 (20:41), 20:19 (21:44), 21:28 (22:44), last 22:26 (23:53)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "余市17:42→小樽18:08（小樽で晩ごはんにする日）",
+       "en": "Yoichi 17:42 → Otaru 18:08 (for dinner in Otaru)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "余市番屋 11:00〜21:00（LO20:30）、みどりや 11:00〜15:00・17:00〜21:00（LO20:00、木曜休み）",
+       "en": "Yoichi Banya 11:00–21:00 (LO 20:30); Midoriya 11:00–15:00, 17:00–21:00 (LO 20:00, closed Thu)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "お店の時間は余市観光協会の案内、電車は乗換案内で2026年12月3日（木）・5日（土）のダイヤを確認しました。",
+     "en": "Restaurant hours from the Yoichi Tourism Association; trains from a route planner for 3 and 5 December 2026."
+    },
+    "checked": "2026-11-27"
+   },
+   "photos": [
+    {
+     "file": "kaeri-w1.jpg",
+     "credit": {
+      "author": "Opqr",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yoichi_downtown.JPG"
+     }
+    },
+    {
+     "file": "kaeri-w2.jpg",
+     "credit": {
+      "author": "スミス1919",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BD%99%E5%B8%82%E9%A7%85%E3%82%92%E7%99%BA%E8%BB%8A%E3%81%99%E3%82%8BH100%E5%BD%A2%E3%81%AE%E5%B0%8F%E6%A8%BD%E8%A1%8C%E3%81%8D.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
