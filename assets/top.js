@@ -54,7 +54,32 @@
     var sec0 = document.getElementById(cur[0]).closest('.group'), panel0 = document.getElementById('panel-season');
     panel0.insertBefore(sec0, panel0.querySelector('.group'));
   }
-  var start = location.hash === '#season' ? 'season' : null;
+  var target = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  var start = location.hash === '#season' || (target && target.closest('#panel-season')) ? 'season' : (target && target.closest('#panel-year') ? 'year' : null);
   if (!start) { try { start = sessionStorage.getItem(KEY); } catch (e) {} }
   show(start || 'year', false);
+})();
+
+/* 地域（季節）へ飛ぶボタン：マップの数を出す。ボタンが見えなくなったら、右下に「地域を選ぶ ↑」を出す */
+(function () {
+  document.querySelectorAll('.jump a').forEach(function (a) {
+    var el = document.getElementById(a.getAttribute('href').slice(1)), sec = el && el.closest('.group');
+    if (sec) a.setAttribute('data-n', sec.querySelectorAll('.cards > li').length);
+  });
+  var btn = document.getElementById('tojump');
+  function nav() { return document.getElementById(document.getElementById('panel-season').hidden ? 'jump-year' : 'jump-season'); }
+  function label() {
+    var season = !document.getElementById('panel-season').hidden, en = document.documentElement.lang === 'en';
+    var ja = season ? '季節を選ぶ ↑' : '地域を選ぶ ↑', e = season ? 'Choose a season ↑' : 'Choose a region ↑';
+    btn.setAttribute('data-ja', ja); btn.setAttribute('data-en', e); btn.textContent = en ? e : ja;
+  }
+  function update() {
+    var r = nav().getBoundingClientRect();
+    btn.hidden = r.bottom > 0;
+    if (!btn.hidden) label();
+  }
+  btn.addEventListener('click', function () { nav().scrollIntoView(); });
+  window.addEventListener('scroll', update, { passive: true });
+  document.querySelector('.tabs').addEventListener('click', function () { setTimeout(update, 0); });
+  update();
 })();
