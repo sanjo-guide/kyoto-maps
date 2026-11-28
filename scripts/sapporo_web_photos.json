@@ -1,0 +1,774 @@
+{
+ "eki": [
+  {
+   "file": "eki-w1.jpg",
+   "author": "Yo Hibino from Lafayette IN, United States",
+   "license": "CC BY 2.0",
+   "title": "Sapporo station.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "eki-w2.jpg",
+   "author": "663highland",
+   "license": "CC BY 2.5",
+   "title": "JR Sapporo Sta04n3200.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "eki-w3.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Sapporo Station at night 202507.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "eki-w4.jpg",
+   "author": "t-konno",
+   "license": "CC BY-SA 3.0",
+   "title": "札幌駅（Sapporo Station - Hokkaido Railway company） - panoramio.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "jogai": [
+  {
+   "file": "jogai-w1.jpg",
+   "author": "Toshihiro Matsui",
+   "license": "CC BY-SA 3.0",
+   "title": "札幌場外市場 - panoramio.jpg",
+   "size": [
+    1600,
+    803
+   ]
+  }
+ ],
+ "hokudai": [
+  {
+   "file": "hokudai-w1.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "Poplar avenue at Hokkaido University 03.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "hokudai-w2.jpg",
+   "author": "禁樹なずな",
+   "license": "CC BY-SA 4.0",
+   "title": "New Poplar avenue at Hokkaido University 201504.JPG",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "hokudai-w3.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "Ginkgo tree-lined avenue in Hokkaido University 04.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "hokudai-w4.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "Ginkgo tree-lined avenue in Hokkaido University 06.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "hokudai-w5.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "冬の北大農場 02.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "hokudai-w6.jpg",
+   "author": "J o",
+   "license": "CC BY-SA 3.0",
+   "title": "Hokkaido-Univ-Furukawa-Hall-01.jpg",
+   "size": [
+    1600,
+    1064
+   ]
+  }
+ ],
+ "akarenga": [
+  {
+   "file": "akarenga-w1.jpg",
+   "author": "t-konno",
+   "license": "CC BY-SA 3.0",
+   "title": "北海道庁旧本庁舎(Former Hokkaido Government Office Building) - panoramio (1).jpg",
+   "size": [
+    1600,
+    1183
+   ]
+  },
+  {
+   "file": "akarenga-w2.jpg",
+   "author": "663highland",
+   "license": "CC BY 2.5",
+   "title": "Hokkaido Prefectural Office02s5s4272.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "akarenga-w3.jpg",
+   "author": "MiNe",
+   "license": "CC BY 2.0",
+   "title": "Former Hokkaido Government Office Building 20090112-03.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "akarenga-w4.jpg",
+   "author": "Kentaro Ohno",
+   "license": "CC BY 2.0",
+   "title": "Former Hokkaido Government Office Building 20100117-01.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "akarenga-w5.jpg",
+   "author": "Kunitaka NIIDATE",
+   "license": "CC BY-SA 2.0",
+   "title": "Former Hokkaido Government Office Building 20150827-02.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  }
+ ],
+ "tokeidai": [
+  {
+   "file": "tokeidai-w1.jpg",
+   "author": "redlegsfan21",
+   "license": "CC BY-SA 2.0",
+   "title": "Sapporo Clock Tower (16144265946).jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "tokeidai-w2.jpg",
+   "author": "Mukku",
+   "license": "CC BY-SA 3.0",
+   "title": "Sapporo Clock Tower Hokkaido Japan 2.jpg",
+   "size": [
+    1280,
+    960
+   ]
+  },
+  {
+   "file": "tokeidai-w3.jpg",
+   "author": "不明（パブリックドメイン）",
+   "license": "Public domain",
+   "title": "Sapporo clock tower.JPG",
+   "size": [
+    1280,
+    960
+   ]
+  },
+  {
+   "file": "tokeidai-w4.jpg",
+   "author": "inunami",
+   "license": "CC BY 2.0",
+   "title": "Sapporo 20121211165704 (8678507350).jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  }
+ ],
+ "odori": [
+  {
+   "file": "odori-w1.jpg",
+   "author": "Daigaku2051",
+   "license": "CC BY-SA 3.0",
+   "title": "Odori Park Sapporo.JPG",
+   "size": [
+    1280,
+    960
+   ]
+  },
+  {
+   "file": "odori-w2.jpg",
+   "author": "ノボホショコロトソ",
+   "license": "CC BY 4.0",
+   "title": "20240923 Sapporo Odori Park.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "odori-w3.jpg",
+   "author": "Nkns",
+   "license": "CC BY-SA 3.0",
+   "title": "Hokkaido Sapporo Odori Park.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "odori-w4.jpg",
+   "author": "Qiuqizhenghong",
+   "license": "CC BY-SA 3.0",
+   "title": "Sapporo TV Tower and Odori park.JPG",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "odori-w5.jpg",
+   "author": "Materialscientist",
+   "license": "CC BY-SA 3.0",
+   "title": "SapporoFestival8.JPG",
+   "size": [
+    1600,
+    1064
+   ]
+  },
+  {
+   "file": "odori-w6.jpg",
+   "author": "Sorah Fukumori",
+   "license": "CC BY 3.0",
+   "title": "Sapporo White Illumination 2016 (184517189).jpeg",
+   "size": [
+    1600,
+    1200
+   ]
+  }
+ ],
+ "nijo": [
+  {
+   "file": "nijo-w1.jpg",
+   "author": "Wing1990hk",
+   "license": "CC BY 3.0",
+   "title": "Nijo fish Market 2014.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "nijo-w2.jpg",
+   "author": "K. Takeda",
+   "license": "CC BY-SA 3.0",
+   "title": "二条市場2.JPG",
+   "size": [
+    1280,
+    960
+   ]
+  },
+  {
+   "file": "nijo-w3.jpg",
+   "author": "K. Takeda",
+   "license": "CC BY-SA 3.0",
+   "title": "二条市場1.JPG",
+   "size": [
+    1280,
+    960
+   ]
+  }
+ ],
+ "tanukikoji": [
+  {
+   "file": "tanukikoji-w1.jpg",
+   "author": "MIKI Yoshihito",
+   "license": "CC BY 2.0",
+   "title": "Tanukikoji Shopping Arcade - Jul 21, 2023.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "tanukikoji-w2.jpg",
+   "author": "t-konno",
+   "license": "CC BY-SA 3.0",
+   "title": "狸小路商店街（Tanuki Koji Shopping Arcade） - panoramio.jpg",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  {
+   "file": "tanukikoji-w3.jpg",
+   "author": "Mugu-shisai",
+   "license": "CC BY-SA 3.0",
+   "title": "Tanukikoji 01.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "tanukikoji-w4.jpg",
+   "author": "beberl",
+   "license": "CC BY-SA 1.0",
+   "title": "狸小路7丁目.jpg",
+   "size": [
+    1280,
+    853
+   ]
+  }
+ ],
+ "beer": [
+  {
+   "file": "beer-w1.jpg",
+   "author": "MIKI Yoshihito derivative work: MrPanyGoff",
+   "license": "CC BY 2.0",
+   "title": "Sapporo Beer Museum.jpg",
+   "size": [
+    1600,
+    1118
+   ]
+  },
+  {
+   "file": "beer-w2.jpg",
+   "author": "Mark Quinn",
+   "license": "CC BY-SA 2.0",
+   "title": "Sapporo Beer Museum - 2.jpg",
+   "size": [
+    1024,
+    768
+   ]
+  },
+  {
+   "file": "beer-w3.jpg",
+   "author": "Koichi Oda",
+   "license": "CC BY-SA 2.0",
+   "title": "Sapporo Bier Garten - Flickr - odako1.jpg",
+   "size": [
+    1600,
+    1071
+   ]
+  },
+  {
+   "file": "beer-w4.jpg",
+   "author": "Ninosan",
+   "license": "CC0",
+   "title": "Sapporo Beer Museum4.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "beer-w5.jpg",
+   "author": "MIKI Yoshihito",
+   "license": "CC BY 2.0",
+   "title": "Sapporo Beer Museum - 7.jpg",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  {
+   "file": "beer-w6.jpg",
+   "author": "Benford Choi",
+   "license": "CC BY-SA 3.0",
+   "title": "サッポロビール博物館 ^01 - panoramio.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  }
+ ],
+ "susukino": [
+  {
+   "file": "susukino-w1.jpg",
+   "author": "lumoplank",
+   "license": "CC0",
+   "title": "Sapporo - Sapporo7197.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "susukino-w2.jpg",
+   "author": "MIKI Yoshihito",
+   "license": "CC BY 2.0",
+   "title": "Susukino Intersection, Sapporo - Mar 5, 2024.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "susukino-w3.jpg",
+   "author": "Chatama",
+   "license": "Public domain",
+   "title": "Spectaculars of Susukino-Sapporo.jpg",
+   "size": [
+    1600,
+    1202
+   ]
+  },
+  {
+   "file": "susukino-w4.jpg",
+   "author": "アルトクール",
+   "license": "CC BY-SA 4.0",
+   "title": "Sapporo Ramen-Yokocho North exit.JPG",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "susukino-w5.jpg",
+   "author": "Yamaguchi Yoshiaki from Japan",
+   "license": "CC BY-SA 2.0",
+   "title": "味噌ラーメン (2309860931).jpg",
+   "size": [
+    1280,
+    853
+   ]
+  }
+ ],
+ "shiryokan": [
+  {
+   "file": "shiryokan-w1.jpg",
+   "author": "Ninosan",
+   "license": "CC0",
+   "title": "SapporoShiShiryokan201109.JPG",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "shiryokan-w2.jpg",
+   "author": "Kentaro Ohno",
+   "license": "CC BY 2.0",
+   "title": "Former Sapporo Court of Appeals.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "shiryokan-w3.jpg",
+   "author": "o331128",
+   "license": "CC BY-SA 2.0",
+   "title": "Sapporo City Cultural Archives Office - Nov 7, 2013 (1).jpg",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  {
+   "file": "shiryokan-w4.jpg",
+   "author": "o331128",
+   "license": "CC BY-SA 2.0",
+   "title": "Sapporo City Cultural Archives Office - Nov 7, 2013 (3).jpg",
+   "size": [
+    1600,
+    1068
+   ]
+  }
+ ],
+ "moiwa": [
+  {
+   "file": "moiwa-w1.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "City nightscape of Sapporo from Mt. Moiwa 20260703a.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "moiwa-w2.jpg",
+   "author": "Benford Choi",
+   "license": "CC BY-SA 3.0",
+   "title": "藻岩山からの札幌夜景 - panoramio.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "moiwa-w3.jpg",
+   "author": "663highland",
+   "license": "CC BY 2.5",
+   "title": "From Mt Moiwa Sapporo01s3200.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "moiwa-w4.jpg",
+   "author": "Route275 ( talk )",
+   "license": "CC BY-SA 3.0",
+   "title": "Moiwayama Ropeway.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "moiwa-w5.jpg",
+   "author": "Route275",
+   "license": "CC BY-SA 4.0",
+   "title": "Moiwayama Ropeway (4thgen).JPG",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  {
+   "file": "moiwa-w6.jpg",
+   "author": "Ermell",
+   "license": "CC BY-SA 4.0",
+   "title": "Sapporo Mt.Moiwa view-20091012-RM-123338.jpg",
+   "size": [
+    1600,
+    809
+   ]
+  }
+ ],
+ "jingu": [
+  {
+   "file": "jingu-w1.jpg",
+   "author": "lienyuan lee",
+   "license": "CC BY 3.0",
+   "title": "北海道神宮 Hokkaido Shrine - panoramio (2).jpg",
+   "size": [
+    1600,
+    1143
+   ]
+  },
+  {
+   "file": "jingu-w2.jpg",
+   "author": "S5A-0043",
+   "license": "CC BY 4.0",
+   "title": "(JPN-Hokkaido) Hokkaido Shrine 2026-06-06.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "jingu-w3.jpg",
+   "author": "lienyuan lee",
+   "license": "CC BY 3.0",
+   "title": "Hokkaido Shrine 北海道神宮 - panoramio.jpg",
+   "size": [
+    1600,
+    1124
+   ]
+  },
+  {
+   "file": "jingu-w4.jpg",
+   "author": "Hideshi Tsunematsu",
+   "license": "CC BY 3.0",
+   "title": "Hokkaido Shrine (53572128).jpeg",
+   "size": [
+    1600,
+    1068
+   ]
+  },
+  {
+   "file": "jingu-w5.jpg",
+   "author": "t-konno",
+   "license": "CC BY-SA 3.0",
+   "title": "北海道神宮（Hokkaido Shrine） - panoramio (7).jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "zoo": [
+  {
+   "file": "zoo-w1.jpg",
+   "author": "禁樹なずな",
+   "license": "CC BY-SA 4.0",
+   "title": "Entrance of Sapporo Maruyama Zoo.JPG",
+   "size": [
+    1600,
+    1200
+   ]
+  },
+  {
+   "file": "zoo-w2.jpg",
+   "author": "Lasermaster",
+   "license": "CC BY-SA 3.0",
+   "title": "Redpandas4430.JPG",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "zoo-w3.jpg",
+   "author": "Rsa",
+   "license": "CC BY-SA 3.0",
+   "title": "Maruyama Zoo Canis lupus occidentalis 001.jpg",
+   "size": [
+    1600,
+    1071
+   ]
+  },
+  {
+   "file": "zoo-w4.jpg",
+   "author": "Lasermaster",
+   "license": "CC BY-SA 3.0",
+   "title": "Redpandas4570.JPG",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "zoo-w5.jpg",
+   "author": "pelican from Tokyo, Japan",
+   "license": "CC BY-SA 2.0",
+   "title": "Maruyama zoo, Sapporo, Japan (2807209192).jpg",
+   "size": [
+    1600,
+    1064
+   ]
+  }
+ ],
+ "shiroi": [
+  {
+   "file": "shiroi-w1.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Shiroi Koibito Park 20260703g.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "shiroi-w2.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Shiroi Koibito Park 20260703p.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "shiroi-w3.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Shiroi Koibito Park 20260703m.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "shiroi-w4.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Shiroi Koibito Park 20260703o.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "shiroi-w5.jpg",
+   "author": "t-konno",
+   "license": "CC BY-SA 3.0",
+   "title": "石屋製菓チョコレートファクトリー 白い恋人パーク（Ishiya Chocolate Factory SHIROI KOIBITO PARK - panoramio.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  }
+ ],
+ "moerenuma": [
+  {
+   "file": "moerenuma-w1.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Glass pyramid in Moerenuma Park 202607a.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "moerenuma-w2.jpg",
+   "author": "lumoplank",
+   "license": "CC0",
+   "title": "Historical Village of Hokkaido & Moerenuma Park - MoerunumaPark7169.jpg",
+   "size": [
+    1600,
+    1067
+   ]
+  },
+  {
+   "file": "moerenuma-w3.jpg",
+   "author": "掬茶",
+   "license": "CC BY-SA 4.0",
+   "title": "Moere yama 202607b.jpg",
+   "size": [
+    1600,
+    900
+   ]
+  },
+  {
+   "file": "moerenuma-w4.jpg",
+   "author": "Keith Blayney",
+   "license": "CC BY-SA 3.0",
+   "title": "Sapporo-MoerenumaPark Hidamari Pyramid.JPG",
+   "size": [
+    1600,
+    1071
+   ]
+  },
+  {
+   "file": "moerenuma-w5.jpg",
+   "author": "T DMY",
+   "license": "CC BY 3.0",
+   "title": "From Mt.Moere in winter／モエレ山より（冬） - panoramio.jpg",
+   "size": [
+    1600,
+    1200
+   ]
+  }
+ ]
+}

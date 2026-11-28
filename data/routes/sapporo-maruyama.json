@@ -1,0 +1,1880 @@
+{
+ "id": "sapporo",
+ "course": "maruyama",
+ "_note": "札幌市内で1日（sapporo/ のページ専用。形は eizan-line.json と同じ）。もう1日あるなら（9:15にホテルを出る）。北海道神宮・円山公園→円山動物園→白い恋人パーク→大通公園の夜→すすきの。モエレ沼公園は白い恋人パークの代わりに選ぶ場所。写真はすべて Wikimedia Commons（一覧は scripts/sapporo_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容、info.verified=false は公式サイトで確認できなかった情報がある（要確認）。このファイルは scripts/build_sapporo_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 3,
+   "area": {
+    "ja": "円山（午前）",
+    "en": "Maruyama · morning"
+   },
+   "title": {
+    "ja": "森の中の神宮と、雪の動物園",
+    "en": "A shrine in the woods and a zoo in the snow"
+   }
+  },
+  {
+   "first": 4,
+   "last": 5,
+   "area": {
+    "ja": "午後に1つ",
+    "en": "One for the afternoon"
+   },
+   "title": {
+    "ja": "白い恋人パークか、モエレ沼公園",
+    "en": "Shiroi Koibito Park, or Moerenuma Park"
+   }
+  },
+  {
+   "first": 6,
+   "last": 7,
+   "area": {
+    "ja": "夜",
+    "en": "Evening"
+   },
+   "title": {
+    "ja": "大通公園のイルミネーションと、すすきの",
+    "en": "The Odori illumination, and Susukino"
+   }
+  }
+ ],
+ "focus": {
+  "first": 1,
+  "last": 4
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。出発の駅と、晩ごはんのすすきのはいつも入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   6
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "7": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "andAny": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "白い恋人パーク（西）とモエレ沼公園（北東）は街の反対側です。両方に行くと移動だけで2時間以上かかるので、どちらか1つにしてください。",
+     "en": "Shiroi Koibito Park is in the west and Moerenuma Park in the north-east. Doing both means more than two hours of travelling, so choose one."
+    }
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "モエレ沼公園を選んだ日は、動物園を13:00に出て、円山公園→大通→環状通東と地下鉄を乗り継いで、バスで14:20ごろ。ガラスのピラミッドは17:00まで（月曜休館）。帰りも50分かかるので、大通に戻るのは17:30ごろです。",
+     "en": "With Moerenuma Park, leave the zoo at 13:00, ride the subway from Maruyama-koen through Odori to Kanjo-dori-higashi and catch the bus to arrive at about 14:20. The Glass Pyramid closes at 17:00 (shut on Mondays). The way back also takes fifty minutes, so you are at Odori at about 17:30."
+    }
+   },
+   {
+    "spot": 3,
+    "rule": {
+     "none": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "動物園に行かない日は、円山を歩いて登れます（標高225m、片道約40分）。北海道神宮から登山道に入って、昼に下りてきて、午後は白い恋人パークへ。",
+     "en": "Without the zoo you can climb Mt. Maruyama itself (225 m, about 40 minutes each way): take the trail from Hokkaido Jingu, come down around midday and go on to Shiroi Koibito Park in the afternoon."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "none": [
+      4,
+      5
+     ]
+    },
+    "text": {
+     "ja": "午後の行き先を入れない日は、動物園を出たあと円山のカフェや裏参道を歩いて、夕方に大通公園のイルミネーションへ。無理のない1日になります。",
+     "en": "With no afternoon trip, walk the cafés and back streets of Maruyama after the zoo and head for the Odori illumination in the evening. An easy day."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "none": [
+      6
+     ]
+    },
+    "text": {
+     "ja": "大通公園に戻らない日は、円山から地下鉄でそのまますすきのへ（円山公園→大通→すすきの、約10分）。晩ごはんのあとに大通のイルミネーションを見に歩くこともできます。",
+     "en": "If you skip Odori Park, ride straight from Maruyama to Susukino (Maruyama-koen → Odori → Susukino, about 10 minutes). You can always walk up to the Odori lights after dinner."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/sapporo/",
+ "sources": [
+  {
+   "what": "北海道庁旧本庁舎（赤れんが庁舎） 公式サイト",
+   "url": "https://www.hokkaido-redbrick.jp/",
+   "saw": "開館時間 8:45〜21:00（最終入館20:30）。11月15日・12月29日〜1月3日は休館。入館料 一般300円、大学生・高校生200円、中学生以下無料、1階の店舗のみの利用は無料。団体（20名以上）一般270円。オプション：八角塔観覧1,200円（小学生以上）。2025年7月25日にリニューアル再開館。赤れんがイルミネーション 2026年11月20日〜2027年2月28日。八角塔観覧は12月の催行時間変更のお知らせあり",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市時計台 観覧案内",
+   "url": "https://sapporoshi-tokeidai.jp/inspect/guide.php",
+   "saw": "開館時間 8時45分〜17時10分（入館は17時まで）。休館日 1月1日〜1月3日。観覧料 大人350円、大学生150円、小中学生・高校生無料、団体（20人以上）300円。キャッシュレス決済可。冷房設備なし、暖房はあるが真冬は快適な室温にならない。コインロッカーなし（大きな荷物は1階事務室前に置ける）。館内は原則飲食禁止",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市時計台 トップページのお知らせ",
+   "url": "https://sapporoshi-tokeidai.jp/",
+   "saw": "1日1回10:30〜 時計の巻き上げ実演と説明。夜間開館日は8:45〜20:00。毎月16日は札幌市民無料の日。年末臨時開館 12/29・30は8:45〜17:10（入館17時まで）、12/31は8:45〜20:10（入館19時半まで）と23:00〜翌1:00（無料開館）",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "さっぽろテレビ塔 展望台入場料金・営業時間",
+   "url": "https://www.tv-tower.co.jp/pricetime.html",
+   "saw": "営業時間 9:00〜22:00（展望最終入場21:50）。休業日（設備点検日）2027年1月1日 終日休業。展望台入場料金 一般 大人（高校生以上）1,200円、小学生・中学生600円、幼児（小学生未満）無料。団体（15名以上）900円／500円。札幌市民料金 800円／400円",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "さっぽろテレビ塔 トップページ",
+   "url": "https://www.tv-tower.co.jp/",
+   "saw": "本日のライトアップ 16:00〜24:00。2026年12月23日〜25日は営業時間延長のお知らせ。時計台との共通入場券の案内あり（金額はこのページには出ていない）",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "2026 さっぽろホワイトイルミネーション 公式ガイドブック（札幌市の観光サイト）",
+   "url": "https://www.sapporo.travel/cms/wp-content/uploads/2026/10/2026-%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%85%AC%E5%BC%8F%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF.pdf",
+   "saw": "開催期間 2026年11月20日〜2027年3月14日。大通会場は12月25日（金）まで、点灯16:30〜22:00（12月23日〜25日は24時まで）。駅前通会場は2月11日まで、赤れんがエリア会場・札幌北3条広場（アカプラ）会場は3月14日まで。入場無料。ミュンヘン・クリスマス市 in Sapporo は大通公園（大通西2丁目）、2026年11月20日〜12月25日、11:00〜21:00",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "第78回さっぽろ雪まつり 公式サイト",
+   "url": "https://www.snowfes.com/",
+   "saw": "2027年の開催期間は大通会場・つどーむ会場・すすきの会場いずれも2027年2月4日（木）〜2月11日（木・祝）。詳しい情報は順次更新予定",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌二条市場 店舗情報（公式）",
+   "url": "https://nijomarket.com/about",
+   "saw": "営業時間（店舗により異なります）朝7時頃〜夜17時頃、年中無休。所在地 中央区南3条東1〜2丁目。狸小路商店街（1丁目）から徒歩約1分。「125年以上の歴史を持つ、札幌市民の台所」「朝は8時から夕方6時ころまで」という紹介文もある",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌狸小路商店街 商店街の歴史（公式）",
+   "url": "https://www.tanukikoji.or.jp/about/",
+   "saw": "北海道で最古の商店街の一つ。2026年で153年（明治6年〜）。7ブロック総延長約900m・店舗数約200軒の全蓋アーケード。1丁目から6丁目の現在のアーケードは二代目（1982年完成）で、交差する路上も覆うロングアーケード。2014年に商店街区内は許可車両以外24時間車両通行禁止に",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "サッポロビール博物館 利用案内（自由見学・ガイドツアー）",
+   "url": "https://www.sapporobeer.jp/brewery/s_museum/kengaku/",
+   "saw": "自由見学：全営業日 11:00〜18:00（最終入館17:30）。所要15〜30分（音声ガイド利用で15〜40分）。見学後のTasting Hall（有料試飲）の利用は最大30分。料金 大人1,000円、中学生〜20歳未満500円、小学生以下無料（道民割 700円／200円）。予約なしで入れる。音声ガイドは日本語・英語・韓国語・中国語（繁体字／簡体字）。順路は3階→2階→1階の一方通行。試飲付きガイドツアー：所要約55分、月曜休止（月曜が祝日の場合は実施し翌火曜が休止）、初回11:30スタート、WEB予約は当日朝9:30まで、ツアーガイドは日本語のみ。料金 大人2,000円（入館料・試飲2杯付き）、中学生〜20歳未満1,000円、小学生無料、未就学児は参加不可",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "サッポロビール博物館 アクセス",
+   "url": "https://www.sapporobeer.jp/brewery/s_museum/access/",
+   "saw": "JR函館本線「苗穂駅」北口から徒歩約8分。札幌市営地下鉄東豊線「東区役所前駅」4番出口から徒歩約10分。北海道中央バス［188］サッポロビール園・アリオ線＜直行便＞札幌駅北口2番のりば→「サッポロビール園」下車すぐ。北海道中央バス［環88］サッポロビール園・ファクトリー線（札幌駅南口〜大通公園〜サッポロビール園）。併設のサッポロビール園でジンギスカン",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌もいわ山ロープウェイ 営業時間・料金",
+   "url": "https://mt-moiwa.jp/guide/",
+   "saw": "夏期（4月〜11月）ロープウェイ 10:30〜22:00（上り最終21:30）、ミニケーブルカー 10:30〜21:50（上り最終21:40）。冬期（12月〜3月）ロープウェイ 11:00〜22:00（上り最終21:30）、ミニケーブルカー 11:10〜21:50（上り最終21:40）。大晦日（12月31日）と元日（1月1日）は休業。休業日 2027年3月29日（月）〜4月28日（水）年次整備点検。運行間隔15分。セット料金（ロープウェイ＋ミニケーブルカー）往復 大人2,100円・小人1,050円、片道 大人1,050円。ロープウェイのみ往復 大人1,400円。上り最終便は21:30、21:25頃までにチケット購入を。レストラン ザ ジュエルズ 冬期ランチ12:00〜14:30（LO13:30）・ディナー17:00〜21:00（LO19:30）、平日のランチタイムは休み。藻岩山観光自動車道は2026年11月21日〜翌4月下旬頃まで冬期通行止め",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌もいわ山ロープウェイ 冬期間（12〜3月）の営業時間について（2026年11月21日）",
+   "url": "https://mt-moiwa.jp/2026/11/21/%e5%86%ac%e6%9c%9f%e9%96%9312%ef%bd%9e3%e6%9c%88%e3%81%ae%e5%96%b6%e6%a5%ad%e6%99%82%e9%96%93%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+   "saw": "2026年12月から2027年3月まで、ロープウェイの営業時間を11:00〜22:00（上り最終21:30）に変更。2027年3月29日（月）〜4月28日（水）は整備点検のため全館休業。藻岩山観光自動車道は2026年11月20日で今シーズンの営業を終了",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌もいわ山ロープウェイ 地下鉄／バスで",
+   "url": "https://mt-moiwa.jp/access/bus/",
+   "saw": "地下鉄南北線さっぽろ駅→（2分）大通駅→地下鉄東西線（6分）円山公園駅2番出口→JR北海道バス ロープウェイ線［循環円11］乗車15分→バス停「もいわ山ロープウェイ」（ロープウェイ乗り場直結）。運賃 大人240円・小人120円。［循環円10］［循環円12］は「もいわ山ロープウェイ」に止まらない。直通［啓明線50］JR札幌駅 ジェイ・アール北海道仮設バス停13番のりば→乗車37分（1日3本のみ）、240円",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌もいわ山ロープウェイ 市電／無料シャトルバスで",
+   "url": "https://mt-moiwa.jp/access/shuttlebus-tram/",
+   "saw": "市電「ロープウェイ入口」下車 徒歩1分の無料シャトルバス乗り場から〈ロープウェイ山麓駅〉まで15分間隔で無料シャトルバス。運行時間は平日17:17〜、土日祝10:17〜（冬期10:47〜）。シャトルバス乗り場からは徒歩約10分（約0.5km）でも山麓駅に着く",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌もいわ山ロープウェイ トップページ（日没と夜景の時刻）",
+   "url": "https://mt-moiwa.jp/",
+   "saw": "2026年11月29日の営業時間 10:30〜21:30（上り終了時間）。この日の日没16:02、夜景16:22。山頂展望台ライブカメラあり",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "北海道大学総合博物館 公式サイト",
+   "url": "https://www.museum.hokudai.ac.jp/",
+   "saw": "開館時間 10:00〜17:00。休館日 月曜（祝日は開館し、翌平日は休館）。入館料 無料。約300万点の標本・資料を保管し、一部を公開",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市円山動物園 開園時間・休園日",
+   "url": "https://www.city.sapporo.jp/zoo/s077/166519.html",
+   "saw": "夏期（3月1日〜10月31日）9時30分〜16時30分（最終入園16時）。冬期（11月1日〜2月末日）9時30分〜16時（最終入園15時30分）。休園日 毎月第2・第4水曜日（8月のみ第1・第4水曜日。祝日の場合は翌日）、4月は第2水曜日を含むその週の月曜〜金曜、11月は第2水曜日を含むその週の月曜〜金曜、12月29日〜31日",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市円山動物園 入園料について",
+   "url": "https://www.city.sapporo.jp/zoo/s077/76124.html",
+   "saw": "大人800円、高校生400円（半額減免。生徒手帳等の提示が必要）、中学生以下無料、団体（30名以上）720円、年間パスポート（高校生以上）2,000円。2026年3月2日から入園券の電子チケットの取扱いを開始",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "白い恋人パーク イルミネーション期間の営業時間のお知らせ（2026年9月）と公式サイト",
+   "url": "https://www.shiroikoibitopark.jp/illumination/",
+   "saw": "イルミネーション期間 2026年12月1日（火）〜2027年3月31日（水）。白い恋人パーク営業時間 10:00〜19:00、イルミネーション点灯 16:00〜19:00（無料）。チケットセンター10:00〜16:30受付、チョコレートラウンジ・工場など10:00〜17:30、チュダーハウス10:00〜18:30。有料エリア 大人（16歳以上）1,200円、団体（20名以上）900円、3歳以下無料。定休日は年中無休",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "北海道神宮 公式サイトのお知らせ一覧",
+   "url": "http://www.hokkaidojingu.or.jp/",
+   "saw": "お知らせに「閉門時間変更のお知らせ（◯月◯日〜）」「各月一日の開門時間変更のお知らせ」「年末年始開閉門時間のお知らせ」「正月期間閉門時間の変更について」が繰り返し出ていて、決まった開閉門の時刻表は掲載されていない。参拝料の記載もない。https は証明書の期限が切れていて開けず、http で確認した",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市資料館（旧札幌控訴院庁舎） 入館案内・アクセス",
+   "url": "https://www.s-shiryokan.jp/aboutus/",
+   "saw": "開館時間 9:00〜19:00。休館日 月曜日（祝日にあたる場合は翌平日）、年末年始（12月29日〜1月3日）。入館料 無料。おおば比呂司記念室は11月1日〜3月31日が9:00〜18:00（最終入室17:40）",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "モエレ沼公園 各施設の営業時間",
+   "url": "https://moerenumapark.jp/",
+   "saw": "モエレ沼公園 7:00〜22:00 無休（園内各施設は定休日あり）。東口ゲート 7:00〜22:00（入園は21:00まで）、西口ゲート・南口ゲート 7:00〜19:00。ガラスのピラミッド 9:00〜17:00、休館日 毎週月曜日。海の噴水は2026年度の運転は終了。ウィンタースポーツ用品レンタル 2027年1月5日〜3月7日 10:00〜16:00 毎週月曜休。2026年11月4日から冬季営業期間",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "モエレ沼公園 アクセス",
+   "url": "https://moerenumapark.jp/access/",
+   "saw": "札幌市街地からは地下鉄とバスを乗り継ぐ。例）さっぽろ駅→環状通東駅→バス停「モエレ沼公園東口」。地下鉄東豊線「環状通東駅」から中央バス【東69】「あいの里教育大駅」行き、【東69｜東79】「中沼小学校通」行きで「モエレ沼公園東口」下車。【東61｜ビ61】（平日のみ）で「モエレ沼公園西口」下車。期間限定バス【ビ68】「モエレ沼公園」行き（サッポロビール博物館発）は2026年4月25日〜11月3日の土日祝（7月27日〜8月20日は毎日）",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市中央卸売市場 場外市場（札幌市の観光サイト。市場の公式サイトは見つからなかった）",
+   "url": "https://www.sapporo.travel/spot/facility/sapporo_central_wholesale_market/",
+   "saw": "営業時間 6:00〜15:00、大型店舗は6:00〜17:00。無休。鮮魚店・青果店・乾物店など約60店舗。問い合わせは場外市場商店街振興組合 011-621-7044",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市交通局 乗車料金",
+   "url": "https://www.city.sapporo.jp/st/josyaken/ryokin/ryoukin.html",
+   "saw": "地下鉄単独料金 大人 210円・250円・290円・330円・360円・380円（1区〜6区）。市電（路面電車）単独料金 大人230円・小児120円。地下鉄と市電を乗り継ぐ場合 大人360円・400円・440円・480円",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市交通局 ドニチカキップ",
+   "url": "https://www.city.sapporo.jp/st/josyaken/doni-chika/donichika.html",
+   "saw": "土曜・日曜・祝日と年末年始（12月29日〜1月3日）に地下鉄全線が乗り放題。大人520円・こども260円。支払いは現金のみ。販売は地下鉄駅券売機・各地下鉄駅事務室・各定期券発売所。路面電車には乗れず、市電・バスへの乗継割引は適用されない",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌市交通局 乗車券発売所及び取扱券種",
+   "url": "https://www.city.sapporo.jp/st/josyaken/ticket_h.html",
+   "saw": "地下鉄専用1日乗車券・ドニチカキップは地下鉄駅券売機、地下鉄駅事務室、各定期券発売所で購入できる（券売機での地下鉄専用1日乗車券の発売は平日のみ）。大通定期券発売所では市電（路面電車）専用1日乗車券も発売。地下鉄専用1日乗車券は大人830円・こども420円",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "大通 → 札幌もいわ山ロープウェイ 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C%E3%82%82%E3%81%84%E3%82%8F%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4&y=2026&m=12&d=03&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%A4%A7%E9%80%9A",
+   "saw": "ルート1 15:00→15:44（44分、230円）市電 西4丁目→中央図書館前→徒歩9分。ルート2 15:07→15:46（39分、230円）市電 西4丁目→ロープウェイ入口・電車事業所前→徒歩7分。乗換案内は無料シャトルバスを考えに入れていない",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "円山公園駅前 → もいわ山ロープウェイ 平日の夕方",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%82%82%E3%81%84%E3%82%8F%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4&y=2026&m=12&d=03&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%E9%A7%85%E5%89%8D",
+   "saw": "15:10→15:26（16分、240円）、15:35→15:55、15:50→16:08、16:00→16:18。JR北海道バス 循環円11",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "円山公園駅前 → もいわ山ロープウェイ 土曜の夕方",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%82%82%E3%81%84%E3%82%8F%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4&y=2026&m=12&d=05&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%E9%A7%85%E5%89%8D",
+   "saw": "15:00→15:16（16分、240円）、15:40→16:00",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "もいわ山ロープウェイ → すすきの 平日の夜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE&y=2026&m=12&d=03&hh=18&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E3%82%82%E3%81%84%E3%82%8F%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4",
+   "saw": "18:30→19:03（33分、230円）、18:35→19:08",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "大通 → サッポロビール園 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E3%82%B5%E3%83%83%E3%83%9D%E3%83%AD%E3%83%93%E3%83%BC%E3%83%AB%E5%9C%92&y=2026&m=12&d=03&hh=13&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%A4%A7%E9%80%9A",
+   "saw": "13:46→14:08（22分、210円）",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "東区役所前 → 円山公園 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92&y=2026&m=12&d=03&hh=15&m1=2&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9D%B1%E5%8C%BA%E5%BD%B9%E6%89%80%E5%89%8D",
+   "saw": "15:20→15:42（22分、250円）、15:27→15:49",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "大通 → 二十四軒 平日の朝",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E4%BA%8C%E5%8D%81%E5%9B%9B%E8%BB%92&y=2026&m=12&d=03&hh=07&m1=1&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%A4%A7%E9%80%9A",
+   "saw": "7:13→7:22（9分、250円）、7:17→7:26",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "大通 → 円山公園 平日の朝",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92&y=2026&m=12&d=03&hh=09&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%A4%A7%E9%80%9A",
+   "saw": "9:32→9:37（5分、210円）、9:39→9:44",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "円山公園 → 宮の沢 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%AE%AE%E3%81%AE%E6%B2%A2&y=2026&m=12&d=03&hh=14&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92",
+   "saw": "14:04→14:15（11分、250円）、14:11→14:22",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "宮の沢 → 大通 平日の夕方",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E5%A4%A7%E9%80%9A&y=2026&m=12&d=03&hh=16&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%AE%AE%E3%81%AE%E6%B2%A2",
+   "saw": "16:42→16:58（16分、290円）、16:49→17:04",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "宮の沢 → 白い恋人パーク 徒歩",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF&y=2026&m=12&d=03&hh=14&m1=2&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E5%AE%AE%E3%81%AE%E6%B2%A2",
+   "saw": "宮の沢駅 出口1 から徒歩7分（0.5km）",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "すすきの → 札幌 夜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=21&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE",
+   "saw": "21:36→21:47（11分、210円）、21:44→21:55",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "札幌の日の出・日の入り（国立天文台 暦計算室。札幌 北緯43.0667° 東経141.35°）2026年12月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
+   "saw": "日の入り 12月1日16:01、11日16:00、21日16:03、31日16:09ごろ。日の出 12月1日6:46、21日7:02",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "同 2027年1月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0001.html",
+   "saw": "日の入り 1月1日16:10、11日16:20、21日16:32",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "同 2027年2月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0002.html",
+   "saw": "日の入り 2月1日16:46、11日17:00、21日17:13、28日17:22。日の出 2月28日6:13",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "赤れんがイルミネーション2026-2027（公式のお知らせ）",
+   "url": "https://www.hokkaido-redbrick.jp/2026/11/18/788/",
+   "saw": "期間 2026年11月20日（金）〜2027年2月28日（日）。点灯時間 16:30〜22:00（期間中、日没時間等に合わせて点灯時刻を変更する場合あり）。イルミネーションの観覧は無料",
+   "checked": "2026-11-29"
+  },
+  {
+   "what": "北海道庁旧本庁舎 施設案内（公式）",
+   "url": "https://www.hokkaido-redbrick.jp/information/",
+   "saw": "八角塔展望バルコニー 1,200円（小学生以上）。これまで非公開だった八角塔のバルコニーから街を一望できる。煉瓦造・地下1階、地上2階建て、八角塔屋付",
+   "checked": "2026-11-29"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "eki",
+   "name": {
+    "ja": "札幌駅・大通（出発）",
+    "en": "Sapporo Station / Odori (start)"
+   },
+   "kind": {
+    "ja": "駅・地下街",
+    "en": "Station & underground walkway"
+   },
+   "blurb": {
+    "ja": "9:15に出発。まずは歩いて赤れんが庁舎へ。",
+    "en": "Leave at 9:15 and walk to the Red Brick Office."
+   },
+   "caution": {
+    "ja": "地下鉄の始発は5時台。市電とバスはもう少し遅い",
+    "en": "The first subway is just after 05:00; the tram and buses start later"
+   },
+   "lat": 43.06846,
+   "lng": 141.35076,
+   "text": {
+    "ja": "札幌駅・大通（出発）\n\n札幌駅・大通・すすきののどのホテルからでも、このコースは始められます。9:15にホテルを出れば、最初の赤れんが庁舎まで歩いて10〜20分です。\n\n札幌の街は碁盤の目で、「北3条西6丁目」のような住所がそのまま地図になっています。札幌駅から大通までは南へ約1km、大通からすすきのまでは約500m。この区間は地下街（さっぽろ地下街とチカホ）でつながっているので、冬や雨の日は地下を歩けます。\n\n地下鉄・市電・市内のバスは Suica・Kitaca・PASMO・ICOCA などで乗れます。このコースは地下鉄とバスを3〜4回使います。地下鉄だけなら1日乗車券（平日830円／土日祝520円）が得ですが、市電とバスには使えないので、ICカードのままでもかまいません。\n\nおすすめ出発時間：9:15（ホテルを出る時間）",
+    "en": "Sapporo Station / Odori (start)\n\nThis course works from any hotel around Sapporo Station, Odori or Susukino. Leave at 9:15 and the first stop, the Red Brick Office, is a 10–20 minute walk away.\n\nSapporo is laid out on a grid, and addresses like “Kita 3 Nishi 6” are a map in themselves. It is about 1 km south from Sapporo Station to Odori and another 500 m to Susukino, all linked by an underground walkway you can use in snow or rain.\n\nThe subway, tram and city buses all take Suica, Kitaca, PASMO, ICOCA and similar cards. This course uses the subway and a bus three or four times. A subway day pass (¥830 on weekdays, ¥520 at weekends) is good value, but it does not cover the tram or buses, so an IC card is fine too.\n\nRecommended departure time: 9:15 (leave your hotel)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR札幌駅",
+      "en": "JR Sapporo Station"
+     },
+     "lat": 43.06846,
+     "lng": 141.35076,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%9C%AD%E5%B9%8C%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "大通駅",
+      "en": "Odori Station"
+     },
+     "lat": 43.0599,
+     "lng": 141.3527,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E5%96%B6%E5%9C%B0%E4%B8%8B%E9%89%84%20%E5%A4%A7%E9%80%9A%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "札幌市交通局 乗車料金",
+      "en": "Sapporo subway and tram fares (city website)"
+     },
+     "url": {
+      "ja": "https://www.city.sapporo.jp/st/josyaken/ryokin/ryoukin.html",
+      "en": "https://www.city.sapporo.jp/st/s107/77494.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ドニチカキップ・1日乗車券",
+      "en": "Day passes for the subway"
+     },
+     "url": {
+      "ja": "https://www.city.sapporo.jp/st/josyaken/doni-chika/donichika.html",
+      "en": "https://www.city.sapporo.jp/st/s107/77494.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "地下鉄・市電・バスは Suica などのICカードで乗れます",
+      "en": "Suica and other IC cards work on the subway, tram and buses"
+     },
+     "text": {
+      "ja": "札幌市営地下鉄と市電、市内の路線バスは、Kitaca・Suica・PASMO・ICOCA などの全国相互利用のICカードで乗れます。残高が足りないときは改札のそばの機械で足せます。\n\n1日に地下鉄を3回以上乗るなら1日乗車券が得です。土日祝と12月29日〜1月3日は「ドニチカキップ」大人520円（現金のみ）、平日は「地下鉄専用1日乗車券」大人830円。どちらも地下鉄だけで、市電とバスには使えません。",
+      "en": "The Sapporo subway and tram and the city’s buses all take Kitaca, Suica, PASMO, ICOCA and the other nationally interoperable IC cards. Top up at the machines beside the ticket gates.\n\nIf you will use the subway three times or more in a day, a day pass is cheaper: the Donichika Kippu on weekends, holidays and 29 Dec – 3 Jan (¥520, cash only), or the Subway 1-Day Card on weekdays (¥830). Both cover the subway only, not the tram or the buses."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.city.sapporo.jp/st/josyaken/doni-chika/donichika.html"
+    },
+    {
+     "head": {
+      "ja": "冬は、歩道が凍ります",
+      "en": "In winter the pavements turn to ice"
+     },
+     "text": {
+      "ja": "12月から3月の札幌は、雪が踏み固められて歩道がつるつるになります。靴の底に溝のある冬用の靴か、滑り止め（駅やコンビニで買えます）を。歩幅を小さく、靴の裏全体を地面につけて歩くと転びにくいです。横断歩道の前と、建物の出入口のあたりがいちばんすべります。\n\nさっぽろ地下街とチカホ（札幌駅前通地下歩行空間）が札幌駅から大通・すすきのまでつながっているので、寒い日はできるだけ地下を歩くと楽です。",
+      "en": "From December to March the snow on Sapporo’s pavements gets packed down into ice. Wear winter boots with a deep tread, or buy a pair of clip-on grips (sold at stations and convenience stores). Take short steps and put the whole sole down at once. The worst patches are at crossings and in front of building entrances.\n\nAn underground walkway runs from Sapporo Station through Odori to Susukino, so on cold days stay below ground as much as you can."
+     },
+     "from": "2026-11-20",
+     "to": "2027-03-31"
+    },
+    {
+     "head": {
+      "ja": "冬は16時前後に日が暮れます",
+      "en": "In winter the sun sets around 16:00"
+     },
+     "text": {
+      "ja": "札幌の日の入りは、12月が16:00〜16:03、1月11日で16:20、2月11日で17:00、2月28日で17:22（国立天文台）。12月がいちばん早く、そこから少しずつ遅くなります。外を歩く場所は、明るいうちに回る順番にしてあります。\n\n藻岩山の公式サイトのトップには、その日の日没と「夜景」の時刻が出ます（2026年11月29日は日没16:02、夜景16:22）。暗くなってからは、イルミネーションと藻岩山の夜景の時間です。",
+      "en": "Sunset in Sapporo falls between 16:00 and 16:03 through December, reaching 16:20 on 11 January, 17:00 on 11 February and 17:22 on 28 February (National Astronomical Observatory of Japan). December is the earliest, and it draws out from there. The outdoor parts of this route come while it is still light.\n\nThe front page of the Mt. Moiwa site gives the day’s sunset and “night view” times — on 29 November 2026, 16:02 and 16:22. After dark it is time for the illuminations and the night view."
+     },
+     "from": "2026-11-20",
+     "to": "2027-02-20",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html"
+    },
+    {
+     "head": {
+      "ja": "月曜は休みの施設があります",
+      "en": "Some places close on Mondays"
+     },
+     "text": {
+      "ja": "北海道大学総合博物館、札幌市資料館、モエレ沼公園のガラスのピラミッドは月曜が休み（祝日のときは翌平日）。サッポロビール博物館のガイドツアーも月曜は休止です。赤れんが庁舎・時計台・テレビ塔・藻岩山は月曜も開いています。",
+      "en": "The Hokkaido University Museum, the Sapporo City Archive Museum and the Glass Pyramid in Moerenuma Park all close on Mondays (the next weekday if Monday is a holiday), and the guided tour at the Sapporo Beer Museum does not run on Mondays either. The Red Brick Office, the Clock Tower, the TV Tower and Mt. Moiwa are open on Mondays."
+     },
+     "from": null,
+     "to": null
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "札幌駅から赤れんが庁舎まで歩いて約10分、大通からは約10分、すすきのからは約20分",
+       "en": "About 10 minutes’ walk to the Red Brick Office from Sapporo Station or Odori, about 20 from Susukino"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "地下鉄 210〜380円、市電230円、地下鉄と市電の乗り継ぎ360円から",
+       "en": "Subway ¥210–380, tram ¥230, subway-to-tram transfer from ¥360"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "地下鉄専用1日乗車券 大人830円（平日）。ドニチカキップ 大人520円（土日祝と12月29日〜1月3日、現金のみ）",
+       "en": "Subway 1-Day Card ¥830 (weekdays); Donichika Kippu ¥520 (weekends, holidays and 29 Dec – 3 Jan, cash only)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "pay",
+      "text": {
+       "ja": "Kitaca・Suica・PASMO・ICOCA などのICカードが地下鉄・市電・市内のバスで使えます",
+       "en": "Kitaca, Suica, PASMO, ICOCA and other IC cards work on the subway, tram and city buses"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "運賃と1日乗車券は札幌市交通局の公式ページ、地下鉄の時刻は乗換案内（2026年12月3日・5日のダイヤ）で確認しました。",
+     "en": "Fares and day passes from the Sapporo transport bureau’s official pages; subway times checked in a route planner for 3 and 5 December 2026."
+    },
+    "checked": "2026-11-29"
+   },
+   "photos": [
+    {
+     "file": "eki-w1.jpg",
+     "credit": {
+      "author": "Yo Hibino from Lafayette IN, United States",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_station.jpg"
+     }
+    },
+    {
+     "file": "eki-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Sapporo_Sta04n3200.jpg"
+     }
+    },
+    {
+     "file": "eki-w3.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Station_at_night_202507.jpg"
+     }
+    },
+    {
+     "file": "eki-w4.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%9C%AD%E5%B9%8C%E9%A7%85%EF%BC%88Sapporo_Station_-_Hokkaido_Railway_company%EF%BC%89_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "jingu",
+   "name": {
+    "ja": "北海道神宮（ほっかいどうじんぐう）・円山公園",
+    "en": "Hokkaido Jingu shrine & Maruyama Park"
+   },
+   "kind": {
+    "ja": "神社・公園",
+    "en": "Shrine & park"
+   },
+   "blurb": {
+    "ja": "円山のふもとの森の中。春は桜の名所。",
+    "en": "In the woods at the foot of Mt. Maruyama; famous for cherry blossom."
+   },
+   "caution": {
+    "ja": "開門・閉門の時刻は月ごとに変わります（公式サイトのお知らせ）",
+    "en": "The gate times change every month: see the shrine’s notices"
+   },
+   "lat": 43.0543,
+   "lng": 141.30736,
+   "text": {
+    "ja": "北海道神宮（ほっかいどうじんぐう）・円山公園\n\n1869年に開拓の守り神としてまつられた神社で、円山（まるやま）のふもとの森の中にあります。地下鉄東西線「円山公園」駅から、円山公園の木立を抜けて歩いて15分ほど。\n\n鳥居をくぐると参道が森の中をまっすぐ伸びていて、冬は雪をかぶった杉が続きます。境内には約1,400本の桜と梅があり、4月末から5月初めに同時に咲きます（札幌の桜はゴールデンウィークごろ）。\n\n隣の円山公園は、円山原始林に続く森の公園です。円山そのものは標高225mで、登山道を40分ほどで登れます。エゾリスが見られることもあります。\n\n開門と閉門の時刻は月ごとに変わります。公式サイトのお知らせに「閉門時間変更のお知らせ（◯月◯日〜）」が毎月のように出る仕組みで、決まった時刻表はありません。朝から夕方までが基本ですが、行く前にお知らせを見てください。公式サイトに拝観料の記載はなく、境内に入るのに料金はかかりません。\n\nおすすめ訪問時間：9:55〜10:50",
+    "en": "Hokkaido Jingu shrine & Maruyama Park\n\nA shrine founded in 1869 to watch over the settlement of Hokkaido, set in the woods at the foot of Mt. Maruyama. It is about fifteen minutes’ walk from Maruyama-koen subway station (Tozai line), through the trees of Maruyama Park.\n\nPast the torii gate, the approach runs straight through the forest, lined in winter with snow-laden cedars. The grounds hold some 1,400 cherry and plum trees, which bloom together in late April and early May — Sapporo’s cherry blossom comes around the start of May.\n\nMaruyama Park next door is a wooded park running into the old-growth forest of Mt. Maruyama. The hill itself is 225 m high and takes about forty minutes to climb; you may meet Hokkaido squirrels on the way.\n\nThe gates open and close at different times through the year: the shrine posts a “closing time change” notice almost every month and publishes no fixed timetable. Broadly it is morning to late afternoon, but check the notices before you go. The site lists no admission fee; there is no charge to enter the grounds.\n\nRecommended visit time: 9:55–10:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "北海道神宮",
+      "en": "Hokkaido Jingu"
+     },
+     "lat": 43.0543,
+     "lng": 141.30736,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE"
+    },
+    {
+     "label": {
+      "ja": "円山公園",
+      "en": "Maruyama Park"
+     },
+     "lat": 43.05389,
+     "lng": 141.31306,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%20%E6%9C%AD%E5%B9%8C"
+    },
+    {
+     "label": {
+      "ja": "地下鉄 円山公園駅",
+      "en": "Maruyama-koen Station"
+     },
+     "lat": 43.05528,
+     "lng": 141.31861,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E5%96%B6%E5%9C%B0%E4%B8%8B%E9%89%84%20%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "北海道神宮 公式サイト（お知らせに開閉門時間）",
+      "en": "Hokkaido Jingu official site (gate times are in the notices)"
+     },
+     "url": {
+      "ja": "http://www.hokkaidojingu.or.jp/",
+      "en": "http://www.hokkaidojingu.or.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬は、歩道が凍ります",
+      "en": "In winter the pavements turn to ice"
+     },
+     "text": {
+      "ja": "12月から3月の札幌は、雪が踏み固められて歩道がつるつるになります。靴の底に溝のある冬用の靴か、滑り止め（駅やコンビニで買えます）を。歩幅を小さく、靴の裏全体を地面につけて歩くと転びにくいです。横断歩道の前と、建物の出入口のあたりがいちばんすべります。\n\nさっぽろ地下街とチカホ（札幌駅前通地下歩行空間）が札幌駅から大通・すすきのまでつながっているので、寒い日はできるだけ地下を歩くと楽です。",
+      "en": "From December to March the snow on Sapporo’s pavements gets packed down into ice. Wear winter boots with a deep tread, or buy a pair of clip-on grips (sold at stations and convenience stores). Take short steps and put the whole sole down at once. The worst patches are at crossings and in front of building entrances.\n\nAn underground walkway runs from Sapporo Station through Odori to Susukino, so on cold days stay below ground as much as you can."
+     },
+     "from": "2026-11-20",
+     "to": "2027-03-31"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "公式サイトに拝観料の記載はありません（境内に入るのに料金はかかりません）",
+       "en": "The official site lists no admission fee; there is no charge to enter the grounds"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "開門・閉門の時刻は月ごとに変わります。決まった時刻表はなく、公式サイトのお知らせで出ます（要確認）",
+       "en": "The gate times change every month; there is no fixed timetable, only the notices on the shrine’s website (please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "地下鉄東西線「円山公園」駅から徒歩約15分（円山公園を抜けます）",
+       "en": "About 15 minutes’ walk from Maruyama-koen Station, through Maruyama Park"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "桜と梅は4月末〜5月初め",
+       "en": "Cherry and plum blossom: late April to early May"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "公式サイトのお知らせの一覧を見ると、閉門時間は月ごとに変わっていて、決まった時刻表は出ていません（要確認）。行く日の時刻は公式サイトのお知らせで確かめてください。参拝が無料であることと場所は、札幌市の観光サイトで確かめています。",
+     "en": "The notice list on the shrine’s website shows the closing time changing month by month, with no fixed timetable published (so please check). Look up the times for your date in those notices. That it is free to visit, and its location, are confirmed on the city’s tourism site."
+    },
+    "checked": "2026-11-29",
+    "verified": false
+   },
+   "photos": [
+    {
+     "file": "jingu-w1.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE_Hokkaido_Shrine_-_panoramio_%282%29.jpg"
+     }
+    },
+    {
+     "file": "jingu-w2.jpg",
+     "credit": {
+      "author": "S5A-0043",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%28JPN-Hokkaido%29_Hokkaido_Shrine_2026-06-06.jpg"
+     }
+    },
+    {
+     "file": "jingu-w3.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hokkaido_Shrine_%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "jingu-w4.jpg",
+     "credit": {
+      "author": "Hideshi Tsunematsu",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hokkaido_Shrine_%2853572128%29.jpeg"
+     }
+    },
+    {
+     "file": "jingu-w5.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E7%A5%9E%E5%AE%AE%EF%BC%88Hokkaido_Shrine%EF%BC%89_-_panoramio_%287%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "zoo",
+   "name": {
+    "ja": "札幌市円山動物園（まるやまどうぶつえん）",
+    "en": "Sapporo Maruyama Zoo"
+   },
+   "kind": {
+    "ja": "動物園",
+    "en": "Zoo"
+   },
+   "blurb": {
+    "ja": "レッサーパンダもオオカミも、雪の日がいちばん元気。",
+    "en": "Red pandas and wolves are at their liveliest in the snow."
+   },
+   "caution": {
+    "ja": "第2・第4水曜は休園。冬（11〜2月）は16:00閉園",
+    "en": "Closed on the 2nd and 4th Wednesday; winter closing is 16:00"
+   },
+   "lat": 43.05333,
+   "lng": 141.30278,
+   "text": {
+    "ja": "札幌市円山動物園（まるやまどうぶつえん）\n\n1951年に開いた、北海道神宮の隣の森の中の動物園です。ホッキョクグマ館は水中が見えるトンネルがあり、ゾウ舎は屋内のプールでゾウが泳ぐところを見られます。ユキヒョウ、レッサーパンダ、エゾシカやエゾヒグマなど北海道の動物も揃っています。\n\n冬が見どころの動物園です。雪が降るとホッキョクグマもユキヒョウも元気に動きます。ただし冬期（11月1日〜2月末）は9:30〜16:00で、最終入園は15:30。3月からは16:30まで（最終入園16:00）。\n\n休園日に気をつけてください。毎月第2・第4水曜日が休み（祝日のときは翌日）、11月と4月は第2水曜を含むその週の月〜金が休み、12月29日〜31日も休園です。\n\n入園料は大人800円、中学生以下は無料。園内に食堂があるので、お昼はここで。坂のある園内なので、冬は滑りにくい靴で。北海道神宮からは歩いて10分ほどです。\n\nおすすめ訪問時間：11:00〜13:40（園内でお昼）",
+    "en": "Sapporo Maruyama Zoo\n\nA zoo in the woods next to Hokkaido Jingu, opened in 1951. The polar bear house has an underwater tunnel, and the elephant house lets you watch the elephants swim in an indoor pool. Snow leopards, red pandas, and Hokkaido animals such as sika deer and brown bears are all here.\n\nWinter is the season. When snow falls, the polar bears and snow leopards come alive. But from 1 November to the end of February the zoo is open only 9:30–16:00, with last entry at 15:30; from March it closes at 16:30 (last entry 16:00).\n\nWatch the closing days: the second and fourth Wednesday of each month (the next day if that is a holiday), the whole Monday-to-Friday week containing the second Wednesday in November and April, and 29–31 December.\n\nAdmission is ¥800 for adults and free for junior high school students and younger. There are restaurants inside, so have lunch here. The grounds are hilly, so wear shoes that grip in winter. It is about ten minutes’ walk from Hokkaido Jingu.\n\nRecommended visit time: 11:00–13:40 (lunch inside)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "円山動物園 正門",
+      "en": "Maruyama Zoo Main Gate"
+     },
+     "lat": 43.05333,
+     "lng": 141.30278,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E5%86%86%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92%20%E6%AD%A3%E9%96%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "札幌市円山動物園 公式サイト",
+      "en": "Sapporo Maruyama Zoo official site"
+     },
+     "url": {
+      "ja": "https://www.city.sapporo.jp/zoo/",
+      "en": "https://www.city.sapporo.jp/zoo/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "開園時間・休園日",
+      "en": "Hours and closing days"
+     },
+     "url": {
+      "ja": "https://www.city.sapporo.jp/zoo/s077/166519.html",
+      "en": "https://www.city.sapporo.jp/zoo/s077/166519.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "入園料について",
+      "en": "Admission"
+     },
+     "url": {
+      "ja": "https://www.city.sapporo.jp/zoo/s077/76124.html",
+      "en": "https://www.city.sapporo.jp/zoo/s077/76124.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬（11月〜2月）は16:00閉園",
+      "en": "Winter closing time (November – February): 16:00"
+     },
+     "text": {
+      "ja": "冬期（11月1日〜2月末日）は9:30〜16:00で、最終入園は15:30。3月からは16:30まで（最終入園16:00）になります。雪の日はホッキョクグマやユキヒョウが元気に動く季節です。",
+      "en": "From 1 November to the end of February the zoo is open 9:30–16:00, with last entry at 15:30; from March it closes at 16:30 (last entry 16:00). Snowy days are when the polar bears and snow leopards are at their liveliest."
+     },
+     "from": "2026-10-20",
+     "to": "2027-02-28",
+     "url": "https://www.city.sapporo.jp/zoo/s077/166519.html"
+    },
+    {
+     "head": {
+      "ja": "第2・第4水曜日は休園（12月29日〜31日も）",
+      "en": "Closed on the 2nd and 4th Wednesday of the month (and 29–31 December)"
+     },
+     "text": {
+      "ja": "円山動物園は毎月の第2・第4水曜日が休園（祝日の場合は翌日）。11月と4月は、第2水曜を含むその週の月曜から金曜まで休みます。12月29日〜31日も休園です。",
+      "en": "Maruyama Zoo closes on the second and fourth Wednesday of each month (the next day if that is a public holiday). In November and April it closes for the whole week, Monday to Friday, containing the second Wednesday. It also closes 29–31 December."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.city.sapporo.jp/zoo/s077/166519.html"
+    },
+    {
+     "head": {
+      "ja": "冬は、歩道が凍ります",
+      "en": "In winter the pavements turn to ice"
+     },
+     "text": {
+      "ja": "12月から3月の札幌は、雪が踏み固められて歩道がつるつるになります。靴の底に溝のある冬用の靴か、滑り止め（駅やコンビニで買えます）を。歩幅を小さく、靴の裏全体を地面につけて歩くと転びにくいです。横断歩道の前と、建物の出入口のあたりがいちばんすべります。\n\nさっぽろ地下街とチカホ（札幌駅前通地下歩行空間）が札幌駅から大通・すすきのまでつながっているので、寒い日はできるだけ地下を歩くと楽です。",
+      "en": "From December to March the snow on Sapporo’s pavements gets packed down into ice. Wear winter boots with a deep tread, or buy a pair of clip-on grips (sold at stations and convenience stores). Take short steps and put the whole sole down at once. The worst patches are at crossings and in front of building entrances.\n\nAn underground walkway runs from Sapporo Station through Odori to Susukino, so on cold days stay below ground as much as you can."
+     },
+     "from": "2026-11-20",
+     "to": "2027-03-31"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "冬期（11月1日〜2月末日）9:30〜16:00（最終入園15:30）",
+       "en": "Winter (1 Nov – end of Feb): 9:30–16:00 (last entry 15:30)"
+      },
+      "until": "2027-02-28",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夏期（3月1日〜10月31日）9:30〜16:30（最終入園16:00）",
+       "en": "Summer (1 Mar – 31 Oct): 9:30–16:30 (last entry 16:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "毎月第2・第4水曜日（祝日の場合は翌日）、11月と4月は第2水曜を含む週の月〜金、12月29日〜31日",
+       "en": "2nd and 4th Wednesday each month (next day if a holiday); the Mon–Fri week with the 2nd Wednesday in November and April; 29–31 December"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人800円、高校生400円（学生証が必要）、中学生以下無料。年間パスポート2,000円",
+       "en": "Adults ¥800, high school students ¥400 with ID, junior high and younger free; annual pass ¥2,000"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "pay",
+      "text": {
+       "ja": "電子チケットがあります（2026年3月から）",
+       "en": "Electronic tickets are available (since March 2026)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "北海道神宮から徒歩約10分。地下鉄東西線「円山公園」駅から徒歩約15分",
+       "en": "About 10 minutes’ walk from Hokkaido Jingu, 15 from Maruyama-koen Station"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "開園時間・休園日・入園料は札幌市の公式ページで確認しました。動物の展示は入れ替わることがあるので、見たい動物がいる人は公式サイトで確かめてください。",
+     "en": "Hours, closing days and admission are from the city’s official pages. Which animals are on show changes, so check the site if there is one you particularly want to see."
+    },
+    "checked": "2026-11-29"
+   },
+   "photos": [
+    {
+     "file": "zoo-w1.jpg",
+     "credit": {
+      "author": "禁樹なずな",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Entrance_of_Sapporo_Maruyama_Zoo.JPG"
+     }
+    },
+    {
+     "file": "zoo-w2.jpg",
+     "credit": {
+      "author": "Lasermaster",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Redpandas4430.JPG"
+     }
+    },
+    {
+     "file": "zoo-w3.jpg",
+     "credit": {
+      "author": "Rsa",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Maruyama_Zoo_Canis_lupus_occidentalis_001.jpg"
+     }
+    },
+    {
+     "file": "zoo-w4.jpg",
+     "credit": {
+      "author": "Lasermaster",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Redpandas4570.JPG"
+     }
+    },
+    {
+     "file": "zoo-w5.jpg",
+     "credit": {
+      "author": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Maruyama_zoo%2C_Sapporo%2C_Japan_%282807209192%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "shiroi",
+   "name": {
+    "ja": "白い恋人パーク",
+    "en": "Shiroi Koibito Park"
+   },
+   "kind": {
+    "ja": "お菓子の工場・庭",
+    "en": "Chocolate factory & gardens"
+   },
+   "blurb": {
+    "ja": "地下鉄で15分。冬は16:00からイルミネーション。",
+    "en": "Fifteen minutes by subway; lit from 16:00 in winter."
+   },
+   "caution": {
+    "ja": "有料エリアの受付は16:30まで",
+    "en": "The ticket desk for the paid area closes at 16:30"
+   },
+   "lat": 43.08789,
+   "lng": 141.26575,
+   "text": {
+    "ja": "白い恋人パーク\n\n北海道の土産でよく知られたクッキー「白い恋人」を作る石屋製菓が、工場のまわりに作った施設です。地下鉄東西線の終点「宮の沢」駅の出口1から歩いて7分。\n\n外のエリア（中庭のローズガーデン、からくり時計塔）は無料で、有料エリア（大人1,200円）では工場の製造ラインを見学路から見られます。お菓子づくり体験もあります。\n\n2026年12月1日から2027年3月31日は「スイートイルミネーション」の期間で、パークの営業が10:00〜19:00、点灯は16:00〜19:00。イルミネーションは無料のエリアで見られます。英国風の建物とレンガの街並みが雪と光に包まれるのが、この時期の見どころです。\n\n有料エリアは時間が別で、チケットセンターの受付が16:30まで、工場などは17:30まで。14:20ごろに着いて、先に有料エリア、暗くなったら外のイルミネーション、という順番になります。年中無休です。\n\nおすすめ訪問時間：14:22〜16:40（点灯は16:00）",
+    "en": "Shiroi Koibito Park\n\nIshiya, the maker of the Shiroi Koibito cookies that are Hokkaido’s best-known souvenir, built this around its factory. It is a seven-minute walk from Exit 1 of Miyanosawa, the western terminus of the Tozai subway line.\n\nThe outdoor part — the rose garden courtyard and the chiming clock tower — is free; in the paid area (¥1,200 for adults) a walkway looks down on the production lines. There are sweet-making workshops too.\n\nFrom 1 December 2026 to 31 March 2027 the Sweet Illumination is on: the park is open 10:00–19:00 and the lights are on from 16:00 to 19:00, in the free part of the park. The point of the season is the English-style buildings and brick streets under snow and lights.\n\nThe paid area keeps different hours: the ticket desk closes at 16:30 and the factory at 17:30. Arriving at about 14:20, do the paid area first and step out for the lights once it is dark. Open every day of the year.\n\nRecommended visit time: 14:22–16:40 (lights on at 16:00)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "白い恋人パーク",
+      "en": "Shiroi Koibito Park"
+     },
+     "lat": 43.08789,
+     "lng": 141.26575,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF"
+    },
+    {
+     "label": {
+      "ja": "地下鉄 宮の沢駅",
+      "en": "Miyanosawa Station"
+     },
+     "lat": 43.08528,
+     "lng": 141.27167,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%AD%E5%B9%8C%E5%B8%82%E5%96%B6%E5%9C%B0%E4%B8%8B%E9%89%84%20%E5%AE%AE%E3%81%AE%E6%B2%A2%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "白い恋人パーク 公式サイト",
+      "en": "Shiroi Koibito Park official site"
+     },
+     "url": {
+      "ja": "https://www.shiroikoibitopark.jp/",
+      "en": "https://www.shiroikoibitopark.jp/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "スイートイルミネーション",
+      "en": "Sweet Illumination"
+     },
+     "url": {
+      "ja": "https://www.shiroikoibitopark.jp/illumination/",
+      "en": "https://www.shiroikoibitopark.jp/illumination/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "アクセス",
+      "en": "Getting there"
+     },
+     "url": {
+      "ja": "https://www.shiroikoibitopark.jp/park-guide/access.html",
+      "en": "https://www.shiroikoibitopark.jp/park-guide/access.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "イルミネーション期間は19:00まで（点灯は16:00）",
+      "en": "Open until 19:00 during the illumination season (lit from 16:00)"
+     },
+     "text": {
+      "ja": "2026年12月1日〜2027年3月31日は、パークの営業が10:00〜19:00になり、16:00から19:00までイルミネーションが点きます。イルミネーションは無料のエリアで見られます。\n\n有料エリア（工場の見学路・チョコレートラウンジなど）は時間が別で、チケットセンターの受付が16:30まで、工場などは17:30まで。先に有料エリアを見て、暗くなってから外のイルミネーションへ、という順番になります。",
+      "en": "From 1 December 2026 to 31 March 2027 the park is open 10:00–19:00 and the lights are on from 16:00 to 19:00. The illumination is in the free part of the park.\n\nThe paid area (the factory walkway, the chocolate lounge and so on) keeps different hours: the ticket desk closes at 16:30 and the factory at 17:30. So see the paid area first, then step outside for the lights once it is dark."
+     },
+     "from": "2026-12-01",
+     "to": "2027-03-31",
+     "url": "https://www.shiroikoibitopark.jp/illumination/"
+    },
+    {
+     "head": {
+      "ja": "冬は、歩道が凍ります",
+      "en": "In winter the pavements turn to ice"
+     },
+     "text": {
+      "ja": "12月から3月の札幌は、雪が踏み固められて歩道がつるつるになります。靴の底に溝のある冬用の靴か、滑り止め（駅やコンビニで買えます）を。歩幅を小さく、靴の裏全体を地面につけて歩くと転びにくいです。横断歩道の前と、建物の出入口のあたりがいちばんすべります。\n\nさっぽろ地下街とチカホ（札幌駅前通地下歩行空間）が札幌駅から大通・すすきのまでつながっているので、寒い日はできるだけ地下を歩くと楽です。",
+      "en": "From December to March the snow on Sapporo’s pavements gets packed down into ice. Wear winter boots with a deep tread, or buy a pair of clip-on grips (sold at stations and convenience stores). Take short steps and put the whole sole down at once. The worst patches are at crossings and in front of building entrances.\n\nAn underground walkway runs from Sapporo Station through Odori to Susukino, so on cold days stay below ground as much as you can."
+     },
+     "from": "2026-11-20",
+     "to": "2027-03-31"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "イルミネーション期間（2026年12月1日〜2027年3月31日）10:00〜19:00、点灯16:00〜19:00",
+       "en": "Illumination season (1 Dec 2026 – 31 Mar 2027): 10:00–19:00, lit 16:00–19:00"
+      },
+      "until": "2027-03-31",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "有料エリア：チケットセンター受付10:00〜16:30、工場など10:00〜17:30、チュダーハウス10:00〜18:30",
+       "en": "Paid area: ticket desk 10:00–16:30, factory 10:00–17:30, Tudor House 10:00–18:30"
+      },
+      "until": "2027-03-31",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "有料エリア 大人（16歳以上）1,200円、3歳以下無料。イルミネーションと中庭は無料",
+       "en": "Paid area: adults (16+) ¥1,200, under-4s free. The illumination and courtyard are free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年中無休",
+       "en": "Open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "円山公園 14:04 → 宮の沢 14:15（地下鉄東西線、11分・250円）",
+       "en": "Maruyama-koen 14:04 → Miyanosawa 14:15 (Tozai line, 11 min, ¥250)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "宮の沢駅 出口1から徒歩約7分",
+       "en": "About 7 minutes’ walk from Exit 1 of Miyanosawa Station"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰り：宮の沢 16:42 → 大通 16:58（16分・290円）",
+       "en": "Back: Miyanosawa 16:42 → Odori 16:58 (16 min, ¥290)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "イルミネーションの期間と時間、有料エリアの時間と料金は公式サイトで確認しました。地下鉄の時刻は乗換案内（2026年12月3日）です。",
+     "en": "The illumination dates and times and the paid area’s hours and prices are from the official site. Subway times are from a route planner for 3 December 2026."
+    },
+    "checked": "2026-11-29"
+   },
+   "photos": [
+    {
+     "file": "shiroi-w1.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shiroi_Koibito_Park_20260703g.jpg"
+     }
+    },
+    {
+     "file": "shiroi-w2.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shiroi_Koibito_Park_20260703p.jpg"
+     }
+    },
+    {
+     "file": "shiroi-w3.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shiroi_Koibito_Park_20260703m.jpg"
+     }
+    },
+    {
+     "file": "shiroi-w4.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shiroi_Koibito_Park_20260703o.jpg"
+     }
+    },
+    {
+     "file": "shiroi-w5.jpg",
+     "credit": {
+      "author": "t-konno",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E7%9F%B3%E5%B1%8B%E8%A3%BD%E8%8F%93%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%AF%E3%83%88%E3%83%AA%E3%83%BC_%E7%99%BD%E3%81%84%E6%81%8B%E4%BA%BA%E3%83%91%E3%83%BC%E3%82%AF%EF%BC%88Ishiya_Chocolate_Factory_SHIROI_KOIBITO_PARK_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "moerenuma",
+   "name": {
+    "ja": "モエレ沼公園",
+    "en": "Moerenuma Park"
+   },
+   "kind": {
+    "ja": "公園・ガラスのピラミッド",
+    "en": "Park & the Glass Pyramid"
+   },
+   "blurb": {
+    "ja": "イサム・ノグチが設計した公園。冬は一面の雪原。",
+    "en": "A park designed by Isamu Noguchi; a field of snow in winter."
+   },
+   "caution": {
+    "ja": "ガラスのピラミッドは月曜休館。冬は噴水が止まります",
+    "en": "The Glass Pyramid closes on Mondays; the fountain stops in winter"
+   },
+   "lat": 43.1438,
+   "lng": 141.395,
+   "text": {
+    "ja": "モエレ沼公園\n\n彫刻家イサム・ノグチが「公園全体を一つの彫刻作品に」と設計した、札幌の北東にある大きな公園です。ゴミ処理場だった土地を造り替えたもので、ノグチが1988年に亡くなったあと、計画どおりに2005年に完成しました。\n\nガラスのピラミッド「HIDAMARI」（9:00〜17:00、月曜休館）、人工の山「モエレ山」（標高62m）、「海の噴水」、三角形のプレイマウンテンなどが広い敷地に置かれています。\n\n冬は一面の雪原になり、モエレ山をそりやスノーシューで登る人がいます。用品のレンタルは2027年1月5日〜3月7日の10:00〜16:00（月曜休）。「海の噴水」は2026年度の運転を終えていて、冬は動きません。\n\n行き方は、地下鉄東豊線「環状通東」駅から中央バス【東69】「あいの里教育大駅」行き、または【東69・東79】「中沼小学校通」行きで「モエレ沼公園東口」下車。街なかから片道50分ほどかかるので、白い恋人パークとどちらか一方にしてください。\n\nおすすめ訪問時間：14:20〜16:20（白い恋人パークの代わりに）",
+    "en": "Moerenuma Park\n\nA large park in the north-east of Sapporo, designed by the sculptor Isamu Noguchi on the principle that the whole park would be a single sculpture. Built over a former waste site, it was completed in 2005 to his plan, seventeen years after his death in 1988.\n\nSpread across the grounds are the Glass Pyramid “Hidamari” (9:00–17:00, closed Mondays), the man-made hill Moere-yama (62 m), the Sea Fountain and the triangular Play Mountain.\n\nIn winter it becomes a field of snow, and people climb Moere-yama with sledges or snowshoes; equipment rental runs 5 January – 7 March 2027, 10:00–16:00, closed Mondays. The Sea Fountain has finished its season and does not run in winter.\n\nTo get there, take a Chuo Bus from Kanjo-dori-higashi Station on the Toho subway line — route 69 towards Ainosato Kyoikudai, or routes 69 and 79 towards Nakanuma Shogakko-dori — and get off at Moerenuma Park East Gate. It is about fifty minutes each way from the centre, so choose between this and Shiroi Koibito Park rather than doing both.\n\nRecommended visit time: 14:20–16:20 (instead of Shiroi Koibito Park)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ガラスのピラミッド",
+      "en": "Glass Pyramid"
+     },
+     "lat": 43.1438,
+     "lng": 141.395,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A2%E3%82%A8%E3%83%AC%E6%B2%BC%E5%85%AC%E5%9C%92%20%E3%82%AC%E3%83%A9%E3%82%B9%E3%81%AE%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89"
+    },
+    {
+     "label": {
+      "ja": "モエレ山",
+      "en": "Moere-yama"
+     },
+     "lat": 43.14028,
+     "lng": 141.39028,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A2%E3%82%A8%E3%83%AC%E5%B1%B1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "モエレ沼公園 公式サイト",
+      "en": "Moerenuma Park official site"
+     },
+     "url": {
+      "ja": "https://moerenumapark.jp/",
+      "en": "https://moerenumapark.jp/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "アクセス",
+      "en": "Getting there"
+     },
+     "url": {
+      "ja": "https://moerenumapark.jp/access/",
+      "en": "https://moerenumapark.jp/access/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "ガラスのピラミッドは月曜休館。冬は噴水が止まります",
+      "en": "The Glass Pyramid is closed on Mondays, and the fountain stops in winter"
+     },
+     "text": {
+      "ja": "ガラスのピラミッドは9:00〜17:00、毎週月曜日が休館です。「海の噴水」は2026年度の運転を終えていて、冬は動きません。公園そのものは7:00〜22:00（東口ゲートからの入園は21:00まで）。\n\n冬は雪原になり、モエレ山をそり遊びやスノーシューで登る人がいます。用品のレンタルは2027年1月5日〜3月7日の10:00〜16:00（月曜休）。",
+      "en": "The Glass Pyramid is open 9:00–17:00 and closed on Mondays. The Sea Fountain has finished its 2026 season and does not run in winter. The park itself is open 7:00–22:00 (last entry through the East Gate 21:00).\n\nIn winter the park becomes a snowfield and people climb Moere-yama with sledges or snowshoes. Equipment rental runs 5 January – 7 March 2027, 10:00–16:00, closed Mondays."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://moerenumapark.jp/"
+    },
+    {
+     "head": {
+      "ja": "冬は、歩道が凍ります",
+      "en": "In winter the pavements turn to ice"
+     },
+     "text": {
+      "ja": "12月から3月の札幌は、雪が踏み固められて歩道がつるつるになります。靴の底に溝のある冬用の靴か、滑り止め（駅やコンビニで買えます）を。歩幅を小さく、靴の裏全体を地面につけて歩くと転びにくいです。横断歩道の前と、建物の出入口のあたりがいちばんすべります。\n\nさっぽろ地下街とチカホ（札幌駅前通地下歩行空間）が札幌駅から大通・すすきのまでつながっているので、寒い日はできるだけ地下を歩くと楽です。",
+      "en": "From December to March the snow on Sapporo’s pavements gets packed down into ice. Wear winter boots with a deep tread, or buy a pair of clip-on grips (sold at stations and convenience stores). Take short steps and put the whole sole down at once. The worst patches are at crossings and in front of building entrances.\n\nAn underground walkway runs from Sapporo Station through Odori to Susukino, so on cold days stay below ground as much as you can."
+     },
+     "from": "2026-11-20",
+     "to": "2027-03-31"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "公園 7:00〜22:00（東口ゲートからの入園は21:00まで）。ガラスのピラミッド 9:00〜17:00",
+       "en": "Park 7:00–22:00 (last entry through the East Gate 21:00); Glass Pyramid 9:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "ガラスのピラミッドは毎週月曜日休館",
+       "en": "The Glass Pyramid is closed on Mondays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "公式サイトに入園料・入館料の記載はありません（公園もガラスのピラミッドも料金なしで入れます）",
+       "en": "The official site lists no admission charge for either the park or the Glass Pyramid"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "地下鉄東豊線「環状通東」駅から中央バス【東69】【東79】で「モエレ沼公園東口」下車",
+       "en": "From Kanjo-dori-higashi Station (Toho line), Chuo Bus routes 69 or 79 to Moerenuma Park East Gate"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "海の噴水は冬は止まります。そり・スノーシューのレンタルは2027年1月5日〜3月7日",
+       "en": "The Sea Fountain stops in winter; sledge and snowshoe rental runs 5 Jan – 7 Mar 2027"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "公園と各施設の時間・休館日・アクセスは公式サイトで確認しました。街なかからの所要時間は目安です（乗換案内でバス停の時刻が出ませんでした）。",
+     "en": "The park’s and the buildings’ hours, closing days and access are from the official site. The travel time from the centre is an estimate: the route planner did not return times for the bus stop."
+    },
+    "checked": "2026-11-29",
+    "verified": false
+   },
+   "photos": [
+    {
+     "file": "moerenuma-w1.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Glass_pyramid_in_Moerenuma_Park_202607a.jpg"
+     }
+    },
+    {
+     "file": "moerenuma-w2.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Historical_Village_of_Hokkaido_%26_Moerenuma_Park_-_MoerunumaPark7169.jpg"
+     }
+    },
+    {
+     "file": "moerenuma-w3.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Moere_yama_202607b.jpg"
+     }
+    },
+    {
+     "file": "moerenuma-w4.jpg",
+     "credit": {
+      "author": "Keith Blayney",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo-MoerenumaPark_Hidamari_Pyramid.JPG"
+     }
+    },
+    {
+     "file": "moerenuma-w5.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:From_Mt.Moere_in_winter%EF%BC%8F%E3%83%A2%E3%82%A8%E3%83%AC%E5%B1%B1%E3%82%88%E3%82%8A%EF%BC%88%E5%86%AC%EF%BC%89_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "odori",
+   "name": {
+    "ja": "大通公園（おおどおりこうえん）・さっぽろテレビ塔",
+    "en": "Odori Park & the Sapporo TV Tower"
+   },
+   "kind": {
+    "ja": "公園・展望台",
+    "en": "Park & observatory"
+   },
+   "blurb": {
+    "ja": "夜はイルミネーション。テレビ塔は22時まで。",
+    "en": "Illuminated after dark; the TV Tower is open until 22:00."
+   },
+   "caution": {
+    "ja": "テレビ塔は2027年1月1日が終日休業",
+    "en": "The TV Tower closes all day on 1 January 2027"
+   },
+   "lat": 43.061,
+   "lng": 141.3565,
+   "text": {
+    "ja": "大通公園（おおどおりこうえん）・さっぽろテレビ塔\n\n1.5kmの細長い公園が、街を東西に貫いています。東の端に立つのがさっぽろテレビ塔（1957年）。展望台は地上90mで、エレベーターで60秒。9:00から22:00まで開いていて、入場は大人1,200円です。\n\nこのコースでは、宮の沢やモエレ沼から戻ってきた17時すぎに歩きます。冬は11月20日から12月25日まで「さっぽろホワイトイルミネーション」の大通会場（16:30〜22:00）で、西2丁目には「ミュンヘン・クリスマス市 in Sapporo」（11:00〜21:00）のヒュッテが並びます。ホットワインのカップは中身とは別に代金がかかり、返すと戻る仕組みの店が多いです。\n\n大通会場は12月25日で終わりますが、駅前通は2月11日まで、赤れんが庁舎のまわりとアカプラは3月14日まで続きます。2月4日〜11日は雪まつりの雪像が並びます。\n\nテレビ塔の展望台から見下ろすと、光の列がまっすぐ西へ伸びているのが分かります。寒い日は、展望台からガラス越しに見るのが暖かくて確実です。\n\nおすすめ訪問時間：17:05〜18:10（イルミネーションの時間）",
+    "en": "Odori Park & the Sapporo TV Tower\n\nA ribbon of park 1.5 km long cuts the city from east to west, with the Sapporo TV Tower (1957) standing at its eastern end. The observatory is 90 m up, 60 seconds by lift, open 9:00–22:00, ¥1,200 for adults.\n\nOn this course you walk it after 17:00, coming back from Miyanosawa or Moerenuma. In winter the Odori site of the Sapporo White Illumination is lit from 16:30 to 22:00 between 20 November and 25 December, and the huts of the Munich Christmas Market fill Nishi 2-chome from 11:00 to 21:00. Mulled wine usually comes with a deposit on the cup, refunded when you bring it back.\n\nThe Odori site ends on 25 December, but Ekimae-dori stays lit until 11 February and the Red Brick grounds and Akapura square until 14 March. From 4 to 11 February the snow sculptures of the Snow Festival stand here.\n\nFrom the TV Tower observatory you can see the line of lights running straight west. On a cold evening, watching from behind the glass up there is both warmer and more reliable.\n\nRecommended visit time: 17:05–18:10 (illumination time)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "さっぽろテレビ塔",
+      "en": "Sapporo TV Tower"
+     },
+     "lat": 43.061,
+     "lng": 141.3565,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%86%E3%83%AC%E3%83%93%E5%A1%94"
+    },
+    {
+     "label": {
+      "ja": "大通公園 西4丁目",
+      "en": "Odori Park, Nishi 4-chome"
+     },
+     "lat": 43.05949,
+     "lng": 141.35192,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%80%9A%E5%85%AC%E5%9C%92%20%E8%A5%BF4%E4%B8%81%E7%9B%AE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "さっぽろテレビ塔 公式サイト",
+      "en": "Sapporo TV Tower official site"
+     },
+     "url": {
+      "ja": "https://www.tv-tower.co.jp/",
+      "en": "https://www.tv-tower.co.jp/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "展望台の料金・営業時間",
+      "en": "Observatory fees and hours"
+     },
+     "url": {
+      "ja": "https://www.tv-tower.co.jp/pricetime.html",
+      "en": "https://www.tv-tower.co.jp/pricetime.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "さっぽろホワイトイルミネーション",
+      "en": "Sapporo White Illumination"
+     },
+     "url": {
+      "ja": "https://www.sapporo.travel/event/winter/white_illumination/",
+      "en": "https://www.sapporo.travel/event/winter/white_illumination/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "さっぽろ雪まつり",
+      "en": "Sapporo Snow Festival"
+     },
+     "url": {
+      "ja": "https://www.snowfes.com/",
+      "en": "https://www.snowfes.com/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "さっぽろホワイトイルミネーション（11月20日〜3月14日）",
+      "en": "Sapporo White Illumination (20 November – 14 March)"
+     },
+     "text": {
+      "ja": "大通会場は12月25日まで、点灯は16:30〜22:00（12月23日〜25日は24時まで）。そのあとも駅前通が2月11日まで、赤れんが庁舎のまわりと札幌北3条広場（アカプラ）は3月14日まで続きます。どこも無料です。\n\n大通西2丁目では、11月20日から12月25日まで「ミュンヘン・クリスマス市 in Sapporo」（11:00〜21:00）。ホットワインとソーセージの小屋が並びます。",
+      "en": "The Odori Park section runs until 25 December, lit from 16:30 to 22:00 (until midnight on 23–25 December). After that the Ekimae-dori avenue stays lit until 11 February, and the Red Brick Office grounds and Akapura square until 14 March. All free.\n\nAt Odori Nishi 2-chome, the Munich Christmas Market in Sapporo runs from 20 November to 25 December, 11:00–21:00, with huts selling mulled wine and sausages."
+     },
+     "from": null,
+     "to": "2027-03-14",
+     "url": "https://www.sapporo.travel/event/winter/white_illumination/"
+    },
+    {
+     "head": {
+      "ja": "さっぽろ雪まつりは2027年2月4日〜11日",
+      "en": "Sapporo Snow Festival: 4–11 February 2027"
+     },
+     "text": {
+      "ja": "大通会場（雪像）・すすきの会場（氷像）・つどーむ会場は、どれも2027年2月4日（木）から2月11日（木・祝）まで。この週は市内のホテルが早くうまり、大通公園とすすきのはとても混みます。",
+      "en": "The Odori site (snow sculptures), the Susukino site (ice sculptures) and the Tsudome site all run from Thu 4 to Thu 11 February 2027. Hotels in the city fill up early that week, and Odori Park and Susukino get very crowded."
+     },
+     "from": "2026-12-15",
+     "to": "2027-02-11",
+     "url": "https://www.snowfes.com/"
+    },
+    {
+     "head": {
+      "ja": "テレビ塔は2027年1月1日が終日休業",
+      "en": "The TV Tower is closed all day on 1 January 2027"
+     },
+     "text": {
+      "ja": "設備点検のため、1月1日はテレ地下グルメコートも含めて全館休業です。",
+      "en": "The whole building, the basement food court included, closes for maintenance on 1 January."
+     },
+     "from": "2026-12-15",
+     "to": "2027-01-01",
+     "url": "https://www.tv-tower.co.jp/pricetime.html"
+    },
+    {
+     "head": {
+      "ja": "冬は16時前後に日が暮れます",
+      "en": "In winter the sun sets around 16:00"
+     },
+     "text": {
+      "ja": "札幌の日の入りは、12月が16:00〜16:03、1月11日で16:20、2月11日で17:00、2月28日で17:22（国立天文台）。12月がいちばん早く、そこから少しずつ遅くなります。外を歩く場所は、明るいうちに回る順番にしてあります。\n\n藻岩山の公式サイトのトップには、その日の日没と「夜景」の時刻が出ます（2026年11月29日は日没16:02、夜景16:22）。暗くなってからは、イルミネーションと藻岩山の夜景の時間です。",
+      "en": "Sunset in Sapporo falls between 16:00 and 16:03 through December, reaching 16:20 on 11 January, 17:00 on 11 February and 17:22 on 28 February (National Astronomical Observatory of Japan). December is the earliest, and it draws out from there. The outdoor parts of this route come while it is still light.\n\nThe front page of the Mt. Moiwa site gives the day’s sunset and “night view” times — on 29 November 2026, 16:02 and 16:22. After dark it is time for the illuminations and the night view."
+     },
+     "from": "2026-11-20",
+     "to": "2027-02-20",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "テレビ塔 9:00〜22:00（展望最終入場21:50）",
+       "en": "TV Tower 9:00–22:00 (last entry to the observatory 21:50)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "展望台 大人（高校生以上）1,200円、小中学生600円、幼児無料",
+       "en": "Observatory: adults (high school and up) ¥1,200, school students ¥600, pre-school free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "テレビ塔は2027年1月1日 終日休業（設備点検）",
+       "en": "The TV Tower is closed all day on 1 January 2027 for maintenance"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "ホワイトイルミネーション 大通会場は11月20日〜12月25日、16:30〜22:00。入場無料",
+       "en": "White Illumination, Odori site: 20 Nov – 25 Dec, 16:30–22:00, free"
+      },
+      "until": "2026-12-25",
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "ミュンヘン・クリスマス市（大通西2丁目）11月20日〜12月25日 11:00〜21:00",
+       "en": "Munich Christmas Market (Odori Nishi 2-chome): 20 Nov – 25 Dec, 11:00–21:00"
+      },
+      "until": "2026-12-25",
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "さっぽろ雪まつり 2027年2月4日〜11日（大通・すすきの・つどーむ）",
+       "en": "Sapporo Snow Festival: 4–11 February 2027 (Odori, Susukino and Tsudome)"
+      },
+      "until": "2027-02-11",
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "公園そのものはいつでも歩けます（無料）",
+       "en": "The park itself is always open and free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "テレビ塔の時間・料金・休業日は公式サイト、イルミネーションと雪まつりの日程は札幌市の観光サイトの公式ガイドブックと雪まつり公式サイトで確認しました。",
+     "en": "The TV Tower’s hours, prices and closing day are from its official site; the illumination and Snow Festival dates come from the city’s official guidebook and the festival’s own site."
+    },
+    "checked": "2026-11-29"
+   },
+   "photos": [
+    {
+     "file": "odori-w1.jpg",
+     "credit": {
+      "author": "Daigaku2051",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Odori_Park_Sapporo.JPG"
+     }
+    },
+    {
+     "file": "odori-w2.jpg",
+     "credit": {
+      "author": "ノボホショコロトソ",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:20240923_Sapporo_Odori_Park.jpg"
+     }
+    },
+    {
+     "file": "odori-w3.jpg",
+     "credit": {
+      "author": "Nkns",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hokkaido_Sapporo_Odori_Park.jpg"
+     }
+    },
+    {
+     "file": "odori-w4.jpg",
+     "credit": {
+      "author": "Qiuqizhenghong",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_TV_Tower_and_Odori_park.JPG"
+     }
+    },
+    {
+     "file": "odori-w5.jpg",
+     "credit": {
+      "author": "Materialscientist",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:SapporoFestival8.JPG"
+     }
+    },
+    {
+     "file": "odori-w6.jpg",
+     "credit": {
+      "author": "Sorah Fukumori",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_White_Illumination_2016_%28184517189%29.jpeg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "susukino",
+   "name": {
+    "ja": "すすきの（晩ごはん）",
+    "en": "Susukino (dinner)"
+   },
+   "kind": {
+    "ja": "繁華街・晩ごはん",
+    "en": "Nightlife district & dinner"
+   },
+   "blurb": {
+    "ja": "味噌ラーメン、ジンギスカン、海鮮。21時すぎまで。",
+    "en": "Miso ramen, grilled lamb, seafood — well past 21:00."
+   },
+   "caution": {
+    "ja": "現金だけの店があります",
+    "en": "Some places take cash only"
+   },
+   "lat": 43.05533,
+   "lng": 141.35322,
+   "text": {
+    "ja": "すすきの（晩ごはん）\n\n大通の南、南4条から南7条あたりに広がる繁華街です。交差点のニッカウヰスキーの看板が目印で、夜はこの一帯が明るくなります。\n\n札幌の味噌ラーメンは、この近くの「元祖さっぽろラーメン横丁」（南5条西3丁目）に17軒ほどが並んでいます。路地の幅は人がすれ違うくらいで、どの店も数席から十数席。ジンギスカン（羊肉の焼き肉）、スープカレー、海鮮、北海道の日本酒とワインも、この一帯にそろいます。\n\nこのマップでは個別の店名は挙げていません（公式サイトで時間を確かめられた店だけを載せる方針で、横丁の多くの店に公式サイトがないため）。横丁は入口から見て、空いている店に入るのがふつうです。\n\n地下鉄南北線「すすきの」駅から札幌駅までは11分・210円、終電は0時すぎまであります。大通までは歩いて10分ほど。冬は地下街を通って帰れます。\n\n2月4日〜11日の雪まつりのときは、駅前通に氷像が並ぶ「すすきの会場」になり、とても混みます。\n\nおすすめ出発時間：18:30〜21:00",
+    "en": "Susukino (dinner)\n\nThe nightlife district spreads south of Odori, roughly between Minami 4-jo and Minami 7-jo. The Nikka whisky sign at the crossing is the landmark, and the whole area lights up after dark.\n\nSapporo’s miso ramen has its own lane here: Ganso Sapporo Ramen Yokocho at Minami 5-jo Nishi 3-chome, with some seventeen shops. The alley is barely wide enough for two people to pass, and each shop seats a handful. Jingisukan (grilled lamb), soup curry, seafood and Hokkaido sake and wine are all in these blocks.\n\nNo individual restaurants are named on this map: it only names places whose hours could be checked on an official site, and most of the shops in the alley have none. In the alley, people simply look in and take whichever shop has a seat.\n\nFrom Susukino station on the Namboku subway line, Sapporo Station is 11 minutes and ¥210, with the last trains after midnight. Odori is about a ten-minute walk, or underground in winter.\n\nDuring the Snow Festival, 4–11 February, the Ekimae-dori avenue here becomes the Susukino site, lined with ice sculptures, and gets very crowded.\n\nRecommended departure time: 18:30–21:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "すすきの交差点",
+      "en": "Susukino crossing"
+     },
+     "lat": 43.05533,
+     "lng": 141.35322,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%81%99%E3%81%99%E3%81%8D%E3%81%AE%E4%BA%A4%E5%B7%AE%E7%82%B9"
+    },
+    {
+     "label": {
+      "ja": "元祖さっぽろラーメン横丁",
+      "en": "Ganso Sapporo Ramen Yokocho"
+     },
+     "lat": 43.05472,
+     "lng": 141.3525,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%83%E7%A5%96%E3%81%95%E3%81%A3%E3%81%BD%E3%82%8D%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E6%A8%AA%E4%B8%81"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "札幌市交通局 乗車料金",
+      "en": "Sapporo subway and tram fares (city website)"
+     },
+     "url": {
+      "ja": "https://www.city.sapporo.jp/st/josyaken/ryokin/ryoukin.html",
+      "en": "https://www.city.sapporo.jp/st/s107/77494.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "さっぽろ雪まつり すすきの会場",
+      "en": "Snow Festival, Susukino site"
+     },
+     "url": {
+      "ja": "https://www.snowfes.com/",
+      "en": "https://www.snowfes.com/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "さっぽろ雪まつりは2027年2月4日〜11日",
+      "en": "Sapporo Snow Festival: 4–11 February 2027"
+     },
+     "text": {
+      "ja": "大通会場（雪像）・すすきの会場（氷像）・つどーむ会場は、どれも2027年2月4日（木）から2月11日（木・祝）まで。この週は市内のホテルが早くうまり、大通公園とすすきのはとても混みます。",
+      "en": "The Odori site (snow sculptures), the Susukino site (ice sculptures) and the Tsudome site all run from Thu 4 to Thu 11 February 2027. Hotels in the city fill up early that week, and Odori Park and Susukino get very crowded."
+     },
+     "from": "2026-12-15",
+     "to": "2027-02-11",
+     "url": "https://www.snowfes.com/"
+    },
+    {
+     "head": {
+      "ja": "地下鉄・市電・バスは Suica などのICカードで乗れます",
+      "en": "Suica and other IC cards work on the subway, tram and buses"
+     },
+     "text": {
+      "ja": "札幌市営地下鉄と市電、市内の路線バスは、Kitaca・Suica・PASMO・ICOCA などの全国相互利用のICカードで乗れます。残高が足りないときは改札のそばの機械で足せます。\n\n1日に地下鉄を3回以上乗るなら1日乗車券が得です。土日祝と12月29日〜1月3日は「ドニチカキップ」大人520円（現金のみ）、平日は「地下鉄専用1日乗車券」大人830円。どちらも地下鉄だけで、市電とバスには使えません。",
+      "en": "The Sapporo subway and tram and the city’s buses all take Kitaca, Suica, PASMO, ICOCA and the other nationally interoperable IC cards. Top up at the machines beside the ticket gates.\n\nIf you will use the subway three times or more in a day, a day pass is cheaper: the Donichika Kippu on weekends, holidays and 29 Dec – 3 Jan (¥520, cash only), or the Subway 1-Day Card on weekdays (¥830). Both cover the subway only, not the tram or the buses."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.city.sapporo.jp/st/josyaken/doni-chika/donichika.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "すすきの 21:36 → 札幌 21:47（地下鉄南北線、11分・210円）",
+       "en": "Susukino 21:36 → Sapporo 21:47 (Namboku line, 11 min, ¥210)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "大通まで徒歩約10分（冬は地下街が使えます）",
+       "en": "About 10 minutes’ walk to Odori, or underground in winter"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "pay",
+      "text": {
+       "ja": "横丁の小さな店は現金だけのことがあります",
+       "en": "The small shops in the alley may take cash only"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "season",
+      "text": {
+       "ja": "すすきの会場（氷像）2027年2月4日〜11日",
+       "en": "Susukino site (ice sculptures): 4–11 February 2027"
+      },
+      "until": "2027-02-11",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "地下鉄の時刻と運賃は乗換案内（2026年12月3日）、雪まつりの日程は公式サイトで確認しました。店の時間はそれぞれの店で確かめてください。",
+     "en": "Subway times and fares are from a route planner for 3 December 2026 and the Snow Festival dates from its official site. Check individual restaurants’ hours yourself."
+    },
+    "checked": "2026-11-29"
+   },
+   "photos": [
+    {
+     "file": "susukino-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_-_Sapporo7197.jpg"
+     }
+    },
+    {
+     "file": "susukino-w2.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Susukino_Intersection%2C_Sapporo_-_Mar_5%2C_2024.jpg"
+     }
+    },
+    {
+     "file": "susukino-w3.jpg",
+     "credit": {
+      "author": "Chatama",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Spectaculars_of_Susukino-Sapporo.jpg"
+     }
+    },
+    {
+     "file": "susukino-w4.jpg",
+     "credit": {
+      "author": "アルトクール",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sapporo_Ramen-Yokocho_North_exit.JPG"
+     }
+    },
+    {
+     "file": "susukino-w5.jpg",
+     "credit": {
+      "author": "Yamaguchi Yoshiaki from Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%91%B3%E5%99%8C%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3_%282309860931%29.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
