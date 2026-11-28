@@ -1,0 +1,1457 @@
+{
+ "id": "daisetsuzan",
+ "course": "sounkyo",
+ "_note": "大雪山の日帰り：旭岳と層雲峡（daisetsuzan/ のページ専用。形は eizan-line.json と同じ）。層雲峡。旭川駅前9:55の道北バス→温泉街でお昼→黒岳ロープウェイの5合目→（7〜10月はバスで銀河・流星の滝）→ビジターセンター→黒岳の湯→17:00の最終バスで旭川18:55（氷瀑まつりの夜は18:55発のバスとJR）。写真は今は Wikimedia Commons だけ（一覧は scripts/daisetsuzan_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_daisetsuzan_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "area": {
+    "ja": "旭川から",
+    "en": "From Asahikawa"
+   },
+   "title": {
+    "ja": "バスで約2時間",
+    "en": "About 2 hours by bus"
+   }
+  },
+  {
+   "first": 2,
+   "last": 3,
+   "area": {
+    "ja": "温泉街と黒岳",
+    "en": "The town and Kurodake"
+   },
+   "title": {
+    "ja": "お昼、ロープウェイで5合目",
+    "en": "Lunch, then the ropeway to the fifth station"
+   }
+  },
+  {
+   "first": 4,
+   "last": 5,
+   "area": {
+    "ja": "峡谷",
+    "en": "The gorge"
+   },
+   "title": {
+    "ja": "滝と大函。バスは7月〜10月だけ",
+    "en": "Waterfalls and Obako; bus July–October only"
+   }
+  },
+  {
+   "first": 6,
+   "last": 7,
+   "area": {
+    "ja": "お風呂と冬の夜",
+    "en": "Bath and winter evening"
+   },
+   "title": {
+    "ja": "黒岳の湯。1月下旬〜3月上旬は氷瀑まつり",
+    "en": "Kurodake-no-yu; Ice Fall Festival late Jan–early Mar"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 4
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。旭川からのバスは自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   6
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "andAny": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "滝と大函は同じ1本のバスなので、両方には降りられません。どちらか1つに（タクシーなら両方回れます）。",
+     "en": "The falls and Obako are on the same single bus, so you cannot get off at both. Pick one (a taxi can do both)."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "andAny": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "7月〜10月：お昼を12:40までに食べて12:50発のバスで滝へ、14:00に戻って14:20発のロープウェイ。11月〜6月はバスがないので、滝はタクシーで行く人だけ。",
+     "en": "July–October: finish lunch by 12:40, take the 12:50 bus to the falls, return at 14:00 and ride the 14:20 ropeway. November–June there is no bus: the falls are for taxi users only."
+    }
+   },
+   {
+    "spot": 7,
+    "rule": {
+     "any": [
+      7
+     ]
+    },
+    "text": {
+     "ja": "まつりは2027年1月23日〜3月7日。平日は17:00からなので、帰りは18:55発のバスで上川へ出て、JRで旭川へ（21:22着）。",
+     "en": "The festival runs 23 January–7 March 2027. On weekdays it opens at 17:00, so return on the 18:55 bus to Kamikawa and the train to Asahikawa (21:22)."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/daisetsuzan/",
+ "sources": [
+  {
+   "what": "いで湯号（66番）の時刻",
+   "url": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+   "saw": "2025年10月1日改正、4往復、毎日運行。旭川駅（のりば9）7:15・9:15・12:15・14:15→旭岳9:03・11:03・14:03・16:03。旭岳9:55・11:55・14:55・16:55→旭川駅11:33・13:33・16:33・18:33。ひがしかわ道草館は行き8:12・10:12・13:12・15:12、帰り10:34・12:34・15:34・17:34。旭岳温泉入口は旭岳発の2分後、ホテルベアモンテ前は同じ分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "いで湯号の運賃・支払い",
+   "url": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+   "saw": "旭川駅〜旭岳 大人2,300円、旭川空港〜旭岳1,650円、ひがしかわ道草館〜旭岳1,450円（2026年9月1日改定）。使用可能なICカードはAsaca・DoCARD。券売機は旭川電気軌道総合案内所と旭川空港（キャッシュレス券売機もあり）。往復割引なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "いで湯号の運賃表（PDF）",
+   "url": "https://www.asahikawa-denkikidou.jp/manage/wp-content/uploads/2026/07/un66_2026.09.pdf",
+   "saw": "運賃改定日 令和8年9月1日。旭川駅〜ひがしかわ道草館1,110円、旭岳温泉入口〜旭岳250円、旭川駅〜旭岳温泉入口2,300円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ロープウェイの運行日・時間",
+   "url": "https://asahidake.hokkaido.jp/ja/",
+   "saw": "整備運休 2026年11月16日〜12月10日、2027年5月10日〜21日。12月11日〜2月28日 9:00〜15:40（下り最終）、3月1〜15日 9:00〜16:00、3月16日〜5月9日 9:00〜17:00、6月1〜19日 8:00〜17:00、6月20日〜9月30日 6:30（土日祝など6:00）〜17:30、10月1〜20日 8:00〜17:00、10月21日〜11月15日 9:00〜16:00。6/1〜10/20は15分間隔、10/21〜5/31は20分間隔（00・20・40）、上り最終は下り最終の15分／20分前。片道約10分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ロープウェイの料金・注意",
+   "url": "https://asahidake.hokkaido.jp/ja/",
+   "saw": "往復 大人3,000円（11/1〜5/31）・3,500円（6/1〜10/31）、小人1,750円。クレジットカード可。予約乗車制ではない。強風・落雷で運行休止。最終下り便への乗り遅れが山岳事故扱いになった事例。姿見の池散策路は1周約1時間・約1.7km（6月〜10月中旬）、山頂駅でレンタル長靴。運休期間はレストラン・売店も休業",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ビジターセンター",
+   "url": "https://www.asahidake-vc-2291.jp/guide/",
+   "saw": "開館9:00〜17:00、休館日は年末年始。無料Wi-Fi、休憩コーナー",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ビジターセンターのレンタル",
+   "url": "https://www.asahidake-vc-2291.jp/rental_goods/",
+   "saw": "長靴500円、ストック500円、スノーシュー1,000円（ストックつき、積雪期のみ）。顔写真入りの身分証を提示。スノーシューのレンタルは2026年12月11日から、予約不可",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ビジターセンター Q＆A",
+   "url": "https://www.asahidake-vc-2291.jp/q%ef%bc%86a/",
+   "saw": "旭岳近辺にATMなし。コンビニはラビスタ大雪山1階のヤマザキショップ。食堂は旭岳ロープウェイ山麓駅2階、売店は1階。キャッシュレス決済可（交通系電子マネーも）。コインロッカーは旭岳ロープウェイに",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳温泉の日帰り入浴（ひがしかわ観光協会）",
+   "url": "https://www.welcome-higashikawa.jp/onsen",
+   "saw": "ホテルベアモンテ12:30〜19:00（受付〜18:00）1,140円、大雪山白樺荘13:00〜19:00 800円、湯元湧駒荘12:00〜19:00（受付〜18:00）1,200円、ケイズハウス北海道（不定休）15:00〜19:00 900円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ケイズハウス北海道の日帰り温泉",
+   "url": "https://kshouse.jp/hokkaido-j/index.html",
+   "saw": "15:00〜19:00（退館は20:00前）900円。時短営業日、休業日あり。バス停 旭岳温泉入口で下車",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ケイズハウス北海道のタトゥー",
+   "url": "https://kshouse.jp/hokkaido-e/faq.html",
+   "saw": "英語のFAQ：Are people with tattoos allowed in the onsen? → Yes, tattoo friendly",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ホテルベアモンテの日帰り入浴",
+   "url": "https://www.bearmonte.jp/hotspring/",
+   "saw": "12:30〜19:00（最終受付18:00）、大人1,140円・小人570円、フェイスタオル110円・バスタオル220円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "湧駒荘の日帰り入浴",
+   "url": "https://www.yukoman.jp/day_trip",
+   "saw": "別館「神々の湯」、受付12:00〜18:00（19:00までの営業）、大人1,200円・小学生600円。バスタオル貸出300円、フェイスタオル販売200円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道の駅ひがしかわ「道草館」",
+   "url": "https://www.welcome-higashikawa.jp/michikusa/",
+   "saw": "9:00〜18:00（4〜9月）、9:00〜17:00（10〜3月）、休館日は年末年始（12/31〜1/4）、お手洗いは24時間",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "CAFEtune（ひがしかわ観光協会）",
+   "url": "https://www.welcome-higashikawa.jp/members/cafetune/",
+   "saw": "YAMAtune併設、東川町南町2丁目、10:00〜17:00、木曜・不定休あり",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "NATURES Brewing（ひがしかわ観光協会）",
+   "url": "https://www.welcome-higashikawa.jp/members/natures-brewing/",
+   "saw": "東川町東町3丁目6-8、15:00〜21:00、月曜・木曜定休、22席",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス 層雲峡・上川線の時刻・運賃",
+   "url": "https://www.dohokubus.com/files/kamikawa_souun.pdf",
+   "saw": "2026年7月1日改正。旭川駅前（のりば8）6:55→層雲峡8:54、9:55→11:54、10:55→12:54。層雲峡14:40→旭川駅前16:35、17:00→18:55。層雲峡18:55→上川森のテラス バスタッチ19:25（上川止まり）。層雲峡〜旭川2,140円、上川〜層雲峡890円、層雲峡〜滝見台220円。層雲峡12:50→滝見台13:09→大函入口13:15、大函入口13:43→滝見台13:49→層雲峡14:00は7月1日〜10月31日の運行",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バスのタッチ決済",
+   "url": "https://www.dohokubus.com/touch-payment.html",
+   "saw": "対象路線に「その他（白金線、層雲峡線、空港線等の路線バスの一部）」",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "JR 上川→旭川（木曜）",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=19&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E4%B8%8A%E5%B7%9D",
+   "saw": "上川20:24発の普通→旭川21:22着、21:04発の特別快速大雪→21:44着、1,380円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "JR 上川→旭川（土曜）",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=05&hh=19&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E4%B8%8A%E5%B7%9D",
+   "saw": "木曜と同じ（20:24→21:22、21:04→21:44）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳ロープウェイ・リフトの料金と時間",
+   "url": "https://www.rinyu.co.jp/kurodake/about/",
+   "saw": "ロープウェイ往復 大人3,000円・小学生1,500円、片道7分・20分間隔。11月9日〜30日整備運休、12月1日〜6月20日 8:00〜16:00、6月21日〜9月30日 6:00〜18:00、10月1〜15日 7:00〜17:00、上りの最終は営業終了の40分前。リフト往復1,200円（2027年夏：6月1〜20日 8:30〜15:30、6月21日〜9月30日 6:30〜17:30、10月1〜15日 7:30〜16:30）、セット往復3,900円（夏季のみ）。冬季リフトは滑走具を持つ人だけ",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳ロープウェイのお知らせ",
+   "url": "https://www.rinyu.co.jp/kurodake/",
+   "saw": "12:20の便は運休（従業員の昼休憩のため）。2027年6月1日から料金変更。本日の運行状況は7:00更新",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳ロープウェイの駅の施設",
+   "url": "https://www.rinyu.co.jp/kurodake/facility/",
+   "saw": "層雲峡駅：コインロッカー、売店、Black Mountain Coffee 9:00〜15:30（月・火休み）。黒岳駅（5合目）：ともちゃん食堂11:00〜15:30（LO15:00）不定休、売店、屋上の黒岳ネイチャーテラス。お手洗いは5合目の駅が最後",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "くろだけスノーシューハイキング",
+   "url": "https://www.rinyu.co.jp/kurodake/tour_rental/",
+   "saw": "2027年1月5日〜3月10日、前日・当日受付（電話01658-5-3031か現地）。ショートコース 大人7,000円・約2時間・9:30までに山麓窓口に集合。料金にロープウェイ往復・ガイド・スノーシュー・ストック・スノーブーツ・スキーウェア・保険を含む",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "銀河・流星の滝（層雲峡観光協会）",
+   "url": "https://sounkyo.net/view/detail.html?content=7",
+   "saw": "日本の滝百選。滝を背に20分ほど斜面を登ると双瀑台。通年、無料",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "大函（層雲峡観光協会）",
+   "url": "https://sounkyo.net/view/detail.html?content=10",
+   "saw": "層雲峡温泉より北見方面へ約6km。小函遊歩道は落石の危険があるため通行禁止。通年、無料",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "層雲峡ビジターセンター",
+   "url": "https://sounkyovc.net/aboutus",
+   "saw": "9時〜17時。6〜10月無休、11〜5月は月曜休み（祝日の場合は翌日）、年末年始12月31日〜1月5日休み",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳の湯（層雲峡観光協会）",
+   "url": "https://sounkyo.net/stay/detail.html?content=25",
+   "saw": "5月1日〜10月31日 10時〜22時（最終受付21時30分）、11月1日〜4月30日 11時〜21時30分（最終受付21時）、12月31日〜1月3日 11時〜18時。無休（メンテナンス休館あり）。大人800円・子ども400円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "層雲峡の食事（層雲峡観光協会）",
+   "url": "https://sounkyo.net/eat/detail.html?content=34",
+   "saw": "大雪山食堂 11:00〜15:00、17:30〜20:30、不定休。ビアグリル・キャニオン 11:30〜15:00、17:30〜20:00（水曜定休）。登山軒 10〜21時（11〜5月は休業）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "層雲峡温泉氷瀑まつり",
+   "url": "https://sounkyo.net/hyoubaku/",
+   "saw": "第52回 2027年1月23日（土）〜3月7日（日）。平日17:00〜21:30、土日祝11:00〜21:30（最終入場21:15）。協力金1,000円。暖かい服と滑り止めのついた靴で。会場内休憩所で手袋・滑り止めを販売",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "氷瀑まつりの会場への行き方",
+   "url": "https://sounkyo.net/hyoubaku/access/",
+   "saw": "層雲峡温泉で下車後、徒歩5分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "日の入り（札幌、12月）",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+   "saw": "12月の日の入りは16時ごろ",
+   "checked": "2026-11-28"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "sstart",
+   "name": {
+    "ja": "旭川駅から層雲峡へ",
+    "en": "Asahikawa to Sounkyo"
+   },
+   "kind": {
+    "ja": "出発・バス",
+    "en": "Start: bus"
+   },
+   "blurb": {
+    "ja": "旭川駅前9:55発の道北バスで約2時間。旭川へ戻る最後のバスは層雲峡17:00発。",
+    "en": "The 9:55 Dohoku Bus from Asahikawa Station takes about two hours. The last bus back to Asahikawa leaves at 17:00."
+   },
+   "caution": {
+    "ja": "旭川行きの最終バスは層雲峡17:00発。Kitaca・Suicaの案内なし",
+    "en": "Last bus to Asahikawa 17:00. Kitaca/Suica not listed"
+   },
+   "lat": 43.763,
+   "lng": 142.3596,
+   "text": {
+    "ja": "旭川駅から層雲峡へ\n\n層雲峡（そううんきょう）は、石狩川が大雪山のふもとを削った、約24km続く断崖の谷です。その中ほどに温泉街があり、黒岳（くろだけ）の5合目へ上がるロープウェイが出ています。\n\n旭川駅前の8番のりばから、道北バスの「層雲峡・上川線」9:55発に乗り、終点の層雲峡に11:54着。片道2,140円で、予約は要りません。支払いは現金か、スマートフォンで買うモバイルチケット（道北バスの公式サイトから）。クレジットカードのタッチ決済は「層雲峡線の一部」と案内されているので、あてにしないで現金を用意してください。JRのレールパスは使えません。\n\n帰りは、層雲峡17:00発（旭川駅前18:55着）が旭川まで行く最後のバスです。その前は14:40発（16:35着）。\n\nもっと遅くまで残る日（氷瀑まつりの夜など）：層雲峡18:55発のバスは上川（かみかわ）止まりで、JR上川駅の横の「上川森のテラス バスタッチ」に19:25着（890円）。上川20:24発の普通列車（旭川21:22着）か、21:04発の特別快速（旭川21:44着）に乗り継ぎます（1,380円）。上川で1時間ほど待ちます。\n\n朝早く出るなら6:55発（層雲峡8:54着）。黒岳のスノーシューツアー（9:30集合）に出る日や、夏にリフトで7合目まで上がって歩く日はこちらで。\n\nレールパスを使う人は、旭川〜上川をJR石北本線で行き、上川から同じバスに乗れます（上川森のテラス バスタッチ9:30・10:50・11:24発など、層雲峡まで約30分、890円）。列車は本数が少ないので、乗換案内で確かめてください。\n\n旭川に戻ったあとの晩ごはんは、駅前から歩ける買物公園のあたりで。\n\nおすすめ出発時間：9:55（旭川駅前 8番のりば）",
+    "en": "Asahikawa to Sounkyo\n\nSounkyo is a gorge about 24 km long that the Ishikari river has cut along the foot of the Daisetsuzan mountains. A hot-spring town sits in the middle of it, with a ropeway up to the fifth station of Mt Kurodake.\n\nFrom stop 8 outside Asahikawa Station, take the 9:55 Dohoku Bus on the Sounkyo–Kamikawa line to the last stop, Sounkyo, arriving at 11:54. The fare is ¥2,140 one way; no booking. Pay cash, or buy a mobile ticket on your phone through Dohoku Bus’s website. Contactless card payment is listed only for “some buses on the Sounkyo line”, so do not count on it: carry cash. Japan Rail passes are not valid.\n\nThe 17:00 from Sounkyo (Asahikawa Station 18:55) is the last bus that goes all the way to Asahikawa. The one before leaves at 14:40 (arrives 16:35).\n\nStaying later, for example for the Ice Fall Festival at night: the 18:55 bus from Sounkyo goes only as far as Kamikawa, reaching the Kamikawa Mori-no-Terrace bus stop beside JR Kamikawa Station at 19:25 (¥890). From there take the 20:24 local train (Asahikawa 21:22) or the 21:04 rapid (Asahikawa 21:44), ¥1,380. Expect to wait about an hour at Kamikawa.\n\nFor an earlier start take the 6:55 bus (Sounkyo 8:54): you need it for the Kurodake snowshoe tour (meets at 9:30) or for a summer day riding the chairlift to the seventh station and walking.\n\nRail-pass holders can ride the JR Sekihoku line from Asahikawa to Kamikawa and join the same bus there (from Kamikawa Mori-no-Terrace at 9:30, 10:50, 11:24 and so on; about 30 minutes to Sounkyo, ¥890). Trains are few, so check a route planner.\n\nBack in Asahikawa, dinner is a short walk from the station around the Kaimono Koen pedestrian street.\n\nRecommended departure time: 9:55 from stop 8 outside Asahikawa Station"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旭川駅前バスのりば",
+      "en": "Bus stops outside Asahikawa Station"
+     },
+     "lat": 43.763,
+     "lng": 142.3596,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B7%9D%E9%A7%85%E5%89%8D%20%E3%83%90%E3%82%B9%E3%81%AE%E3%82%8A%E3%81%B0%208%E7%95%AA%20%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9"
+    },
+    {
+     "label": {
+      "ja": "層雲峡バスターミナル",
+      "en": "Sounkyo Bus Terminal"
+     },
+     "lat": 43.72614,
+     "lng": 142.94823,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B1%A4%E9%9B%B2%E5%B3%A1%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道北バス 層雲峡・上川線の時刻表（PDF）",
+      "en": "Dohoku Bus: Sounkyo–Kamikawa timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/files/kamikawa_souun.pdf",
+      "en": "https://www.dohokubus.com/files/kamikawa_souun.pdf"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "道北バス（モバイルチケット）",
+      "en": "Dohoku Bus (mobile tickets, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/rosen_bus3.html",
+      "en": "https://www.dohokubus.com/rosen_bus3.html"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "層雲峡へのアクセス（層雲峡観光協会）",
+      "en": "Getting to Sounkyo (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/go/detail.html?content=62",
+      "en": "https://sounkyo.net/go/detail.html?content=62"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "黒岳ロープウェイは11月30日まで運休",
+      "en": "Kurodake Ropeway closed until 30 November"
+     },
+     "text": {
+      "ja": "黒岳ロープウェイは、整備のため2026年11月9日〜30日は運休です。12月1日から動きます。",
+      "en": "The Kurodake Ropeway is closed for maintenance from 9 to 30 November 2026 and reopens on 1 December."
+     },
+     "from": null,
+     "to": "2026-11-30",
+     "url": "https://www.rinyu.co.jp/kurodake/"
+    },
+    {
+     "head": {
+      "ja": "氷瀑まつり：1月23日〜3月7日",
+      "en": "Ice Fall Festival: 23 January–7 March"
+     },
+     "text": {
+      "ja": "第52回 層雲峡温泉氷瀑（ひょうばく）まつりは、2027年1月23日（土）〜3月7日（日）。平日は17:00〜21:30、土日祝は11:00〜21:30。協力金1,000円。平日は、旭川行きの最後のバス（17:00発）のあとに始まります。",
+      "en": "The 52nd Sounkyo Onsen Ice Fall Festival runs from Saturday 23 January to Sunday 7 March 2027: 17:00–21:30 on weekdays, 11:00–21:30 at weekends and on holidays. Entry is a ¥1,000 contribution. On weekdays it opens just as the last bus to Asahikawa (17:00) leaves."
+     },
+     "from": "2026-11-01",
+     "to": "2027-03-07",
+     "url": "https://sounkyo.net/hyoubaku/"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2026-11-01",
+     "to": "2027-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2027-11-01",
+     "to": "2028-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2028-11-01",
+     "to": "2029-04-30"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "旭川駅前（8番のりば）9:55 → 層雲峡11:54（朝は6:55 → 8:54）、2,140円",
+       "en": "Asahikawa Station (stop 8) 9:55 → Sounkyo 11:54 (earlier: 6:55 → 8:54), ¥2,140"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "帰り 層雲峡14:40 → 旭川駅前16:35、17:00 → 18:55（旭川行きの最終）",
+       "en": "Back: Sounkyo 14:40 → Asahikawa Station 16:35; 17:00 → 18:55 (last bus to Asahikawa)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "遅い帰り：層雲峡18:55 → 上川19:25（バス890円）、上川20:24 → 旭川21:22（JR 1,380円。2026年12月のダイヤ）",
+       "en": "Late return: Sounkyo 18:55 → Kamikawa 19:25 (bus ¥890), Kamikawa 20:24 → Asahikawa 21:22 (JR ¥1,380; December 2026 timetable)"
+      },
+      "until": "2027-03-12",
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "バスは道北バスの公式の時刻表（2026年7月1日改正）、JRは乗換案内（2026年12月3日・5日）で、2026年11月28日に確認しました。JRは2027年3月にダイヤ改正の見込みです。",
+     "en": "Buses from Dohoku Bus’s timetable (revised 1 July 2026), trains from a route planner (3 and 5 December 2026); checked on 28 November 2026. JR timetables are expected to change in March 2027."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "sstart-w1.jpg",
+     "credit": {
+      "author": "Toshihiro Matsui",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B1%A4%E9%9B%B2%E5%B3%A1%E6%B8%A9%E6%B3%89_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "sstart-w2.jpg",
+     "credit": {
+      "author": "221.20",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:D%C5%8Dhoku_bus_S%C5%8Dunky%C5%8D01.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "sgai",
+   "name": {
+    "ja": "層雲峡温泉街（お昼とビジターセンター）",
+    "en": "Sounkyo Onsen town: lunch & Visitor Center"
+   },
+   "kind": {
+    "ja": "温泉街・お昼",
+    "en": "Town & lunch"
+   },
+   "blurb": {
+    "ja": "バスを降りると、もう温泉街の中。お昼を食べて、ビジターセンターで山と谷の様子を見ます。",
+    "en": "The bus drops you in the middle of town. Have lunch, then see the day’s conditions at the Visitor Center."
+   },
+   "caution": {
+    "ja": "冬は開いている店が少ない。ビジターセンターは11〜5月の月曜休み",
+    "en": "Few places open in winter. Visitor Center closed Mondays, Nov–May"
+   },
+   "lat": 43.72614,
+   "lng": 142.94823,
+   "text": {
+    "ja": "層雲峡温泉街（お昼とビジターセンター）\n\nバスターミナルを出ると、坂道の両側にホテルと店が並ぶ小さな温泉街です。歩いて5分ほどで端まで行けて、ロープウェイの駅は坂のいちばん上にあります。\n\nお昼は、次のどちらかで。\n・大雪山食堂：ラーメンの店。11:00〜15:00と17:30〜20:30、不定休。バスターミナルから歩いて2〜3分。\n・ビアグリル・キャニオン：洋食とイタリア料理。11:30〜15:00と17:30〜20:00、水曜休み。\nロープウェイで上がった5合目の駅にも「ともちゃん食堂」（11:00〜15:30、不定休）があります。ラーメンの「登山軒」は11月〜5月は休業です。冬は開いている店が少ないので、旭川駅で軽い食べ物を買っておくと安心です。\n\n層雲峡ビジターセンター：ロープウェイの駅の手前。大雪山の地形や動物の展示と、その日の山と遊歩道の情報があります。9:00〜17:00、無料。6〜10月は無休、11〜5月は月曜休み（祝日なら翌日）、12月31日〜1月5日は休み。\n\n荷物：黒岳ロープウェイの層雲峡駅にコインロッカーがあります（大きさと数は要確認）。\n\nおすすめ訪問時間：11:55〜12:35（お昼）。ビジターセンターはロープウェイのあと",
+    "en": "Sounkyo Onsen town: lunch & Visitor Center\n\nOutside the bus terminal is a small hot-spring town: one sloping street lined with hotels and shops. It takes about five minutes to walk from end to end, and the ropeway station is at the top of the slope.\n\nFor lunch, choose one of these.\n• Daisetsuzan Shokudo: ramen. 11:00–15:00 and 17:30–20:30, irregular closing days. Two or three minutes’ walk from the bus terminal.\n• Beer Grill Canyon: Western and Italian dishes. 11:30–15:00 and 17:30–20:00, closed Wednesdays.\nThere is also Tomo-chan Shokudo (11:00–15:30, irregular closing days) in the ropeway’s fifth-station building. The ramen shop Tozanken is closed from November to May. Few places open in winter, so it is wise to bring something light from Asahikawa Station.\n\nSounkyo Visitor Center: just below the ropeway station. Exhibits on the geology and wildlife of Daisetsuzan, and today’s information on the mountain and trails. 9:00–17:00, free. Open daily June–October; closed Mondays November–May (the next day if Monday is a holiday) and 31 December–5 January.\n\nLuggage: there are coin lockers in the ropeway’s Sounkyo Station (sizes and number: please check).\n\nRecommended visit time: 11:55–12:35 for lunch; the Visitor Center after the ropeway"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "層雲峡バスターミナル",
+      "en": "Sounkyo Bus Terminal"
+     },
+     "lat": 43.72614,
+     "lng": 142.94823,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B1%A4%E9%9B%B2%E5%B3%A1%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB"
+    },
+    {
+     "label": {
+      "ja": "大雪山食堂",
+      "en": "Daisetsuzan Shokudo"
+     },
+     "lat": 43.72664,
+     "lng": 142.94671,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%9B%AA%E5%B1%B1%E9%A3%9F%E5%A0%82%20%E5%B1%A4%E9%9B%B2%E5%B3%A1"
+    },
+    {
+     "label": {
+      "ja": "ビアグリル・キャニオン",
+      "en": "Beer Grill Canyon"
+     },
+     "lat": 43.72614,
+     "lng": 142.94823,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%93%E3%82%A2%E3%82%B0%E3%83%AA%E3%83%AB%20%E3%82%AD%E3%83%A3%E3%83%8B%E3%82%AA%E3%83%B3%20%E5%B1%A4%E9%9B%B2%E5%B3%A1"
+    },
+    {
+     "label": {
+      "ja": "層雲峡ビジターセンター",
+      "en": "Sounkyo Visitor Center"
+     },
+     "lat": 43.72477,
+     "lng": 142.94634,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B1%A4%E9%9B%B2%E5%B3%A1%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "層雲峡ビジターセンター",
+      "en": "Sounkyo Visitor Center"
+     },
+     "url": {
+      "ja": "https://sounkyovc.net/aboutus",
+      "en": "https://sounkyovc.net/en"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "大雪山食堂（層雲峡観光協会）",
+      "en": "Daisetsuzan Shokudo (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/eat/detail.html?content=34",
+      "en": "https://sounkyo.net/eat/detail.html?content=34"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ビアグリル・キャニオン（層雲峡観光協会）",
+      "en": "Beer Grill Canyon (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/eat/detail.html?content=32",
+      "en": "https://sounkyo.net/eat/detail.html?content=32"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "層雲峡観光協会",
+      "en": "Sounkyo Tourist Association (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/",
+      "en": "https://sounkyo.net/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "food",
+      "text": {
+       "ja": "大雪山食堂 11:00〜15:00・17:30〜20:30（不定休）／ビアグリル・キャニオン 11:30〜15:00・17:30〜20:00（水曜休み）",
+       "en": "Daisetsuzan Shokudo 11:00–15:00, 17:30–20:30 (irregular days off) / Beer Grill Canyon 11:30–15:00, 17:30–20:00 (closed Wed)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ビジターセンター 9:00〜17:00、無料",
+       "en": "Visitor Center 9:00–17:00, free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "ビジターセンター：11〜5月は月曜（祝日なら翌日）、12月31日〜1月5日。6〜10月は無休",
+       "en": "Visitor Center: Mondays Nov–May (next day if a holiday), 31 Dec–5 Jan. Open daily Jun–Oct"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "店の時間は層雲峡観光協会の各店のページ、ビジターセンターは公式サイトで2026年11月28日に確認しました。店の支払い方法は書かれていないので、現金を用意してください。",
+     "en": "Restaurant hours from the Sounkyo Tourist Association’s pages, the Visitor Center from its own site; checked on 28 November 2026. Payment methods are not stated, so bring cash."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "sgai-w1.jpg",
+     "credit": {
+      "author": "Soica2001",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Sounkyo_Promenade.JPG"
+     }
+    },
+    {
+     "file": "sgai-w2.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sounkyo_Spa_%E5%B1%A4%E9%9B%B2%E5%B3%BD%E6%BA%AB%E6%B3%89_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "sgai-w3.jpg",
+     "credit": {
+      "author": "Yasu",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Sounkyo_Visitor_Center.jpg"
+     }
+    },
+    {
+     "file": "sgai-w4.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B1%A4%E9%9B%B2%E5%B3%BD%E6%BA%AB%E6%B3%89_Sounkyo_Spa_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "kurodake",
+   "name": {
+    "ja": "黒岳ロープウェイ（5合目）",
+    "en": "Kurodake Ropeway (5th station)"
+   },
+   "kind": {
+    "ja": "ロープウェイ・展望台",
+    "en": "Ropeway & lookout"
+   },
+   "blurb": {
+    "ja": "温泉街から標高1,300mの5合目まで7分。屋上の展望台から、黒岳と層雲峡の谷。夏はリフトで7合目へ。",
+    "en": "Seven minutes from town to the fifth station at 1,300 m; a rooftop lookout over Kurodake and the gorge. In summer a chairlift goes on to the seventh station."
+   },
+   "caution": {
+    "ja": "12:20の便は運休。冬は16:00まで（上り最終15:20）。冬のリフトは滑る人だけ",
+    "en": "No 12:20 car. Winter hours to 16:00 (last up 15:20). Winter chairlift for skiers only"
+   },
+   "lat": 43.72405,
+   "lng": 142.94697,
+   "text": {
+    "ja": "黒岳ロープウェイ（5合目）\n\n温泉街（標高670m）の層雲峡駅から、黒岳5合目の黒岳駅（1,300m）まで7分。20分おきに出ますが、12:20の便は運休です（係の人の昼休みのため、と公式サイトにあります）。往復3,000円、小学生1,500円。2027年6月1日から料金が変わります。\n\n冬の時間（12月1日〜6月20日）は8:00〜16:00で、上りの最終は15:20。6月21日〜9月30日は6:00〜18:00、10月1日〜15日は7:00〜17:00。毎年11月に整備で止まります（2026年は11月9日〜30日）。\n\n5合目の駅の屋上が「黒岳ネイチャーテラス」という展望台で、黒岳と、柱のような岩が並ぶ層雲峡の谷を見渡せます。駅の中に、大雪山の資料館、売店、ともちゃん食堂（11:00〜15:30）。お手洗いはこの駅が最後です。\n\n雪のない季節（6月〜10月15日）：駅のまわりに一周約30分の散策路があります。さらにペアリフト（片道15分、往復1,200円。ロープウェイとのセット往復は3,900円）で7合目（1,520m）へ。7合目から片道約15分の「黒岳カムイの森のみち」を歩くと、あまりょうの滝の展望台です。リフトにも乗るなら、ロープウェイと合わせて2時間はみてください。黒岳の山頂（1,984m）は7合目から登山道を約1時間半で、登山の用意が要ります。\n\n冬（12月〜5月上旬）：5合目から上はスキー場になり、冬のリフトはスキーやスノーボードを持った人しか乗れません。滑らない人は、テラスからの雪山と、駅の中で過ごします。雪の上を歩きたい人には、ガイドつきの「くろだけスノーシューハイキング」（2027年1月5日〜3月10日）。5合目を歩くショートコースは約2時間、大人7,000円で、ロープウェイ往復・スノーシュー・ブーツ・スキーウェアの貸し出し込み。9:30までに山麓の窓口に集合なので、旭川6:55発のバスで来ます。前日か当日に、電話（01658-5-3031）か窓口で申し込みます（英語で参加できるかは要確認）。\n\n強風や吹雪で止まることがあります。公式サイトのいちばん上に、その日の運行状況が朝7:00に出ます。\n\nおすすめ訪問時間：12:40発の便で上へ、13:40ごろ下りる（7〜10月に滝へ行く日は14:20発で上へ）",
+    "en": "Kurodake Ropeway (5th station)\n\nFrom Sounkyo Station in the town (670 m) to Kurodake Station at the fifth station (1,300 m) takes 7 minutes. Cars leave every 20 minutes, except that the 12:20 car does not run (the official site says it is the crew’s lunch break). Return ¥3,000, primary-school children ¥1,500. Fares change on 1 June 2027.\n\nWinter hours (1 December–20 June) are 8:00–16:00, with the last car up at 15:20. From 21 June to 30 September it runs 6:00–18:00, and from 1 to 15 October 7:00–17:00. It closes for maintenance every November (9–30 November in 2026).\n\nThe roof of the fifth-station building is a lookout, the Kurodake Nature Terrace, facing Kurodake and the gorge with its walls of rock columns. Inside are a small museum on Daisetsuzan, a shop and Tomo-chan Shokudo (11:00–15:30). These are the last toilets on the mountain.\n\nSnow-free season (June to 15 October): a loop path of about 30 minutes circles the station. A pair chairlift (15 minutes each way, return ¥1,200; ¥3,900 return combined with the ropeway) goes on to the seventh station (1,520 m), where a 15-minute path, the Kamui Forest Trail, leads to a lookout over Amaryo Falls. Allow two hours in all if you ride the lift. The summit of Kurodake (1,984 m) is about 90 minutes’ climb from the seventh station and needs proper hiking gear.\n\nWinter (December to early May): above the fifth station is a ski area, and the winter chairlift takes only people carrying skis or a snowboard. Non-skiers have the terrace view of the snow-covered mountains and the station building. To walk on the snow, join the guided Kurodake Snowshoe Hiking tour (5 January–10 March 2027): the short course around the fifth station takes about two hours and costs ¥7,000 for adults, including the ropeway, snowshoes, boots and ski wear. It meets at the base-station ticket window by 9:30, so take the 6:55 bus from Asahikawa. Book the day before or on the day by phone (01658-5-3031) or at the window (whether you can join in English: please check).\n\nStrong wind or blizzards can stop the ropeway. The day’s status appears at the top of the official site at 7:00.\n\nRecommended visit time: Up on the 12:40 car, down around 13:40 (on a July–October day with the falls: up on the 14:20)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "黒岳ロープウェイ 層雲峡駅",
+      "en": "Kurodake Ropeway, Sounkyo Station"
+     },
+     "lat": 43.72405,
+     "lng": 142.94697,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E5%B2%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E5%B1%A4%E9%9B%B2%E5%B3%A1%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "黒岳駅（5合目）",
+      "en": "Kurodake Station (5th station)"
+     },
+     "lat": 43.71106,
+     "lng": 142.94023,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%BB%92%E5%B2%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E9%BB%92%E5%B2%B3%E9%A7%85%205%E5%90%88%E7%9B%AE"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "黒岳ロープウェイ（運行状況）",
+      "en": "Kurodake Ropeway (today’s status, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.rinyu.co.jp/kurodake/",
+      "en": "https://www.rinyu.co.jp/kurodake/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "料金・営業時間",
+      "en": "Fares and hours (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.rinyu.co.jp/kurodake/about/",
+      "en": "https://www.rinyu.co.jp/kurodake/about/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "スノーシューハイキング",
+      "en": "Snowshoe hiking tour (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.rinyu.co.jp/kurodake/tour_rental/",
+      "en": "https://www.rinyu.co.jp/kurodake/tour_rental/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "黒岳ロープウェイは11月30日まで運休",
+      "en": "Kurodake Ropeway closed until 30 November"
+     },
+     "text": {
+      "ja": "黒岳ロープウェイは、整備のため2026年11月9日〜30日は運休です。12月1日から動きます。",
+      "en": "The Kurodake Ropeway is closed for maintenance from 9 to 30 November 2026 and reopens on 1 December."
+     },
+     "from": null,
+     "to": "2026-11-30",
+     "url": "https://www.rinyu.co.jp/kurodake/"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2026-11-01",
+     "to": "2027-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2027-11-01",
+     "to": "2028-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2028-11-01",
+     "to": "2029-04-30"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "12月1日〜6月20日 8:00〜16:00（上り最終15:20）。20分おき、12:20の便は運休",
+       "en": "1 Dec–20 Jun: 8:00–16:00 (last up 15:20). Every 20 min; no 12:20 car"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "6月21日〜9月30日 6:00〜18:00、10月1日〜15日 7:00〜17:00（上り最終は終了の40分前）",
+       "en": "21 Jun–30 Sep: 6:00–18:00; 1–15 Oct: 7:00–17:00 (last up 40 min before closing)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "往復3,000円、小学生1,500円（2027年5月31日まで。6月1日から変更）",
+       "en": "Return ¥3,000, primary-school children ¥1,500 (until 31 May 2027; changes on 1 June)"
+      },
+      "until": "2027-05-31",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "リフト（夏だけ）往復1,200円、ロープウェイとのセット往復3,900円",
+       "en": "Chairlift (summer only) return ¥1,200; ropeway + lift return ¥3,900"
+      },
+      "until": "2027-05-31",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "整備運休：ロープウェイ11月9日〜30日、リフト10月16日〜11月30日（2026年）",
+       "en": "Closed for maintenance: ropeway 9–30 Nov, chairlift 16 Oct–30 Nov (2026)"
+      },
+      "until": "2026-11-30",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "黒岳ロープウェイの公式サイト（料金・営業時間、駅の施設、ツアー、お知らせ）で2026年11月28日に確認しました。2027年6月からの新しい料金は、公式サイトに画像で出ています。",
+     "en": "Checked on the Kurodake Ropeway website (fares and hours, facilities, tours, news) on 28 November 2026. The new fares from June 2027 are shown as an image on that site."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kurodake-w1.jpg",
+     "credit": {
+      "author": "pakku",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%BB%92%E5%B2%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "kurodake-w2.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurodake%2C_Daisetsuzan_Volcanic_Group_-_Kurodake6052.jpg"
+     }
+    },
+    {
+     "file": "kurodake-w3.jpg",
+     "credit": {
+      "author": "Yasu",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Daisetsuzan_Sounkyo_Kurodake_Ropeway_Kurodake_Station.jpg"
+     }
+    },
+    {
+     "file": "kurodake-w4.jpg",
+     "credit": {
+      "author": "Mukasora",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurodake_Chairlift.jpg"
+     }
+    },
+    {
+     "file": "kurodake-w5.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kurodake%2C_Daisetsuzan_Volcanic_Group_-_Kurodake6063.jpg"
+     }
+    },
+    {
+     "file": "kurodake-w6.jpg",
+     "credit": {
+      "author": "保姆虫と登山",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mt._Kuro_%28Daisetsu%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "taki",
+   "name": {
+    "ja": "銀河の滝・流星の滝",
+    "en": "Ginga & Ryusei Falls"
+   },
+   "kind": {
+    "ja": "滝",
+    "en": "Waterfalls"
+   },
+   "blurb": {
+    "ja": "断崖を落ちる2本の滝。バスは7月〜10月だけ、1日1往復（12:50発、14:00戻り）。",
+    "en": "Two waterfalls down the gorge wall. A bus runs only July–October, once a day (out 12:50, back 14:00)."
+   },
+   "caution": {
+    "ja": "バスは7月1日〜10月31日だけ。ほかの季節はタクシー",
+    "en": "Bus 1 July–31 October only. Taxi in other seasons"
+   },
+   "lat": 43.71885,
+   "lng": 142.97751,
+   "text": {
+    "ja": "銀河の滝・流星の滝\n\n温泉街から国道39号を上流へ約3km。断崖を落ちる2本の滝で、細く分かれて落ちるのが銀河（ぎんが）の滝、太い1本で落ちるのが流星（りゅうせい）の滝。日本の滝百選です。バス停のある駐車場から、どちらも目の前に見えます。滝を背にして斜面の道を20分ほど登ると「双瀑台（そうばくだい）」で、2本を同時に見られます。無料、通年。\n\n7月1日〜10月31日はバスがあります（1日1往復）。層雲峡12:50発 → 滝見台13:09着、帰りは滝見台13:49発 → 層雲峡14:00着。片道220円。滝にいられるのは40分で、帰りのバスはこの1本だけです。双瀑台まで登るなら、着いてすぐに登り始めてください。この日は、お昼を12:40までに済ませ、ロープウェイは滝から戻った14:20発に乗ります。\n\nそれ以外の季節はバスがありません。行くならタクシーで（層雲峡ハイヤー 01658-5-3221。料金は要確認）。冬は滝が凍り、双瀑台への道は雪の中です。\n\nおすすめ訪問時間：13:09〜13:49（7月〜10月のバスで）",
+    "en": "Ginga & Ryusei Falls\n\nAbout 3 km up the gorge from the town along Route 39, two waterfalls drop down the cliff: Ginga (“Milky Way”), which falls in fine threads, and Ryusei (“Shooting Star”), a single heavy column. Both are on the list of Japan’s top 100 waterfalls. You can see them from the car park where the bus stops. With your back to the falls, a path climbs the slope for about 20 minutes to Sobakudai, a lookout from which both are visible at once. Free, all year.\n\nFrom 1 July to 31 October there is a bus, once a day: Sounkyo 12:50 → Takimidai 13:09, and back Takimidai 13:49 → Sounkyo 14:00. ¥220 each way. That gives you 40 minutes at the falls, and it is the only bus back. If you want to climb to Sobakudai, start as soon as you arrive. On this plan, finish lunch by 12:40 and ride the ropeway at 14:20 after you return.\n\nIn other seasons there is no bus: go by taxi (Sounkyo Hire, 01658-5-3221; fare: please check). In winter the falls freeze and the path to Sobakudai is under snow.\n\nRecommended visit time: 13:09–13:49 (by the July–October bus)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "銀河・流星の滝（滝見台）",
+      "en": "Ginga & Ryusei Falls car park"
+     },
+     "lat": 43.71885,
+     "lng": 142.97751,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E6%B2%B3%E3%81%AE%E6%BB%9D%20%E6%B5%81%E6%98%9F%E3%81%AE%E6%BB%9D%20%E9%A7%90%E8%BB%8A%E5%A0%B4"
+    },
+    {
+     "label": {
+      "ja": "双瀑台",
+      "en": "Sobakudai lookout"
+     },
+     "lat": 43.71933,
+     "lng": 142.97877,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8F%8C%E7%80%91%E5%8F%B0%20%E5%B1%A4%E9%9B%B2%E5%B3%A1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "銀河・流星の滝（層雲峡観光協会）",
+      "en": "Ginga & Ryusei Falls (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/view/detail.html?content=7",
+      "en": "https://sounkyo.net/view/detail.html?content=7"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道北バス 層雲峡・上川線の時刻表（PDF）",
+      "en": "Dohoku Bus: Sounkyo–Kamikawa timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/files/kamikawa_souun.pdf",
+      "en": "https://www.dohokubus.com/files/kamikawa_souun.pdf"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "7月1日〜10月31日だけ：層雲峡12:50 → 滝見台13:09、滝見台13:49 → 層雲峡14:00、220円（2026年の時刻表）",
+       "en": "1 Jul–31 Oct only: Sounkyo 12:50 → Takimidai 13:09; Takimidai 13:49 → Sounkyo 14:00; ¥220 (2026 timetable)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "11月〜6月はバスなし（タクシーで）",
+       "en": "No bus November–June (taxi only)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "バスは道北バスの公式の時刻表（2026年7月1日改正）、滝の案内は層雲峡観光協会のページで2026年11月28日に確認しました。2027年のバスの運行期間は未発表です。",
+     "en": "Bus from Dohoku Bus’s timetable (revised 1 July 2026), the falls from the Sounkyo Tourist Association’s page; checked on 28 November 2026. The 2027 bus season has not been announced."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "taki-w1.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E9%8A%80%E6%B2%B3%E7%80%91%E5%B8%83_Gin_Ga_no_Taki_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "taki-w2.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Ry%C5%ABsei_Falls_2003-09-14_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "taki-w3.jpg",
+     "credit": {
+      "author": "AsPJT",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Ryusei-no-taki.jpg"
+     }
+    },
+    {
+     "file": "taki-w4.jpg",
+     "credit": {
+      "author": "RJD",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kamikawa.Taki-mintara01.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "obako",
+   "name": {
+    "ja": "大函（おおばこ）",
+    "en": "Obako"
+   },
+   "kind": {
+    "ja": "峡谷",
+    "en": "Gorge"
+   },
+   "blurb": {
+    "ja": "柱のように割れた岩の壁が、川の両側に屏風のように並ぶ場所。温泉街から約6km。",
+    "en": "Walls of rock columns standing like folding screens on both sides of the river, about 6 km from town."
+   },
+   "caution": {
+    "ja": "バスは7月〜10月だけ。滝と大函の両方には降りられません",
+    "en": "Bus July–October only. You cannot stop at both the falls and Obako"
+   },
+   "lat": 43.69987,
+   "lng": 143.01596,
+   "text": {
+    "ja": "大函（おおばこ）\n\n温泉街から国道39号を北見方面へ約6km、新大函トンネルを過ぎてすぐ左に入口があります。柱状節理（ちゅうじょうせつり）という、柱のように割れた岩の壁が川の両側に並び、層雲峡の谷のでき方がいちばんよく分かる場所です。無料、通年。隣の小函（こばこ）の遊歩道は、落石の危険があるため通行禁止です。\n\n7月1日〜10月31日のバス（1日1往復）：層雲峡12:50発 → 大函入口13:15着、帰りは大函入口13:43発 → 層雲峡14:00着。運賃は公式の時刻表に書かれていないので、乗るときに確かめてください。銀河・流星の滝と同じバスなので、両方には降りられません。見る時間は大函が28分、滝が40分です。\n\nほかの季節はタクシーで（層雲峡ハイヤー 01658-5-3221。料金は要確認）。\n\nおすすめ訪問時間：13:15〜13:43（7月〜10月のバスで。滝の代わりに）",
+    "en": "Obako\n\nAbout 6 km from the town towards Kitami on Route 39; the entrance is on the left just after the Shin-Obako tunnel. Walls of columnar-jointed rock line both sides of the river, and this is the place that shows most clearly how the gorge was formed. Free, all year. The path through neighbouring Kobako is closed because of falling rocks.\n\nBus from 1 July to 31 October (once a day): Sounkyo 12:50 → Obako Iriguchi 13:15, and back Obako Iriguchi 13:43 → Sounkyo 14:00. The fare is not on the official timetable: ask when you board. It is the same bus as for the Ginga and Ryusei falls, so you cannot get off at both. You get 28 minutes at Obako, or 40 at the falls.\n\nIn other seasons go by taxi (Sounkyo Hire, 01658-5-3221; fare: please check).\n\nRecommended visit time: 13:15–13:43 (by the July–October bus, instead of the falls)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大函",
+      "en": "Obako"
+     },
+     "lat": 43.69987,
+     "lng": 143.01596,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E5%87%BD%20%E5%B1%A4%E9%9B%B2%E5%B3%A1"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "大函（層雲峡観光協会）",
+      "en": "Obako (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/view/detail.html?content=10",
+      "en": "https://sounkyo.net/view/detail.html?content=10"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道北バス 層雲峡・上川線の時刻表（PDF）",
+      "en": "Dohoku Bus: Sounkyo–Kamikawa timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/files/kamikawa_souun.pdf",
+      "en": "https://www.dohokubus.com/files/kamikawa_souun.pdf"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "7月1日〜10月31日だけ：層雲峡12:50 → 大函入口13:15、大函入口13:43 → 層雲峡14:00（運賃は要確認）",
+       "en": "1 Jul–31 Oct only: Sounkyo 12:50 → Obako Iriguchi 13:15; Obako Iriguchi 13:43 → Sounkyo 14:00 (fare: please check)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "小函の遊歩道は通行禁止（落石）",
+       "en": "Kobako path closed (rockfall)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "層雲峡観光協会のページと道北バスの公式の時刻表（2026年7月1日改正）で2026年11月28日に確認しました。",
+     "en": "Checked on the Sounkyo Tourist Association’s page and Dohoku Bus’s timetable (revised 1 July 2026) on 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "obako-w1.jpg",
+     "credit": {
+      "author": "pakku",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E7%A7%8B%E5%87%BD%EF%BC%88Autumn_in_valley%EF%BC%89_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "kuroyu",
+   "name": {
+    "ja": "黒岳の湯",
+    "en": "Kurodake-no-yu"
+   },
+   "kind": {
+    "ja": "日帰り温泉",
+    "en": "Day bath"
+   },
+   "blurb": {
+    "ja": "温泉街の真ん中にある、日帰り入浴だけの施設。3階に露天風呂。800円。",
+    "en": "A day-use bath house in the middle of town, with an open-air bath on the top floor. ¥800."
+   },
+   "caution": {
+    "ja": "タトゥーの決まりは要確認（電話 01658-5-3333）",
+    "en": "Tattoo rule not stated: phone 01658-5-3333"
+   },
+   "lat": 43.72605,
+   "lng": 142.94675,
+   "text": {
+    "ja": "黒岳の湯\n\nバスターミナルから歩いて2分の、日帰り入浴だけの施設です。2つの大浴場と3階の露天風呂、サウナ、水風呂。大人800円、子ども400円。\n\n5月〜10月は10:00〜22:00（受付は21:30まで）、11月〜4月は11:00〜21:30（受付は21:00まで）、12月31日〜1月3日は11:00〜18:00（受付は17:30まで）。決まった休みはありませんが、設備の点検で休む日があります。\n\nタトゥー：層雲峡観光協会の案内には、決まりが書かれていません。行く前に電話（01658-5-3333）で確かめてください。\n\nタオルは持っていくと確実です（貸し出しと販売は要確認）。17:00のバスで旭川へ帰るなら、16:40には出ましょう。\n\nおすすめ訪問時間：14:45〜16:40",
+    "en": "Kurodake-no-yu\n\nA day-use bath house two minutes’ walk from the bus terminal: two bath halls, an open-air bath on the third floor, a sauna and a cold bath. Adults ¥800, children ¥400.\n\nMay–October 10:00–22:00 (entry until 21:30); November–April 11:00–21:30 (entry until 21:00); 31 December–3 January 11:00–18:00 (entry until 17:30). No regular closing day, but it shuts for maintenance on some days.\n\nTattoos: the Sounkyo Tourist Association’s page gives no rule. Phone before you go (01658-5-3333, Japanese).\n\nBring a towel to be safe (rental or sale: please check). For the 17:00 bus to Asahikawa, leave by 16:40.\n\nRecommended visit time: 14:45–16:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "黒岳の湯",
+      "en": "Kurodake-no-yu"
+     },
+     "lat": 43.72605,
+     "lng": 142.94675,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B1%A4%E9%9B%B2%E5%B3%A1%20%E9%BB%92%E5%B2%B3%E3%81%AE%E6%B9%AF"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "黒岳の湯（層雲峡観光協会）",
+      "en": "Kurodake-no-yu (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/stay/detail.html?content=25",
+      "en": "https://sounkyo.net/stay/detail.html?content=25"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "層雲峡観光協会",
+      "en": "Sounkyo Tourist Association (Japanese)"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/",
+      "en": "https://sounkyo.net/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "タトゥーがある人へ",
+      "en": "If you have tattoos"
+     },
+     "text": {
+      "ja": "黒岳の湯のタトゥーの決まりは、層雲峡観光協会の案内には書かれていません。行く前に電話（01658-5-3333）で確かめてください。",
+      "en": "The Sounkyo Tourist Association’s page for Kurodake-no-yu says nothing about tattoos. Phone before you go (01658-5-3333, Japanese)."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://sounkyo.net/stay/detail.html?content=25"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "tattoo",
+      "text": {
+       "ja": "記載なし＝要確認（電話 01658-5-3333）",
+       "en": "Not stated: please check (01658-5-3333)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "5〜10月 10:00〜22:00（受付21:30まで）／11〜4月 11:00〜21:30（受付21:00まで）／12月31日〜1月3日 11:00〜18:00",
+       "en": "May–Oct 10:00–22:00 (entry to 21:30) / Nov–Apr 11:00–21:30 (entry to 21:00) / 31 Dec–3 Jan 11:00–18:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人800円、子ども400円",
+       "en": "Adults ¥800, children ¥400"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "無休（設備の点検で休む日あり）",
+       "en": "No regular closing day (some maintenance closures)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "層雲峡観光協会の黒岳の湯のページで2026年11月28日に確認しました。施設の公式サイトは見つからず、タトゥー・タオル・支払い方法は確認できていません。",
+     "en": "Checked on the Sounkyo Tourist Association’s page for Kurodake-no-yu on 28 November 2026. No website of its own was found; the tattoo rule, towels and payment methods could not be confirmed."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kuroyu-w1.jpg",
+     "credit": {
+      "author": "Daigaku2051",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:HPIM2742.JPG"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "hyobaku",
+   "name": {
+    "ja": "層雲峡温泉氷瀑まつり",
+    "en": "Sounkyo Ice Fall Festival"
+   },
+   "kind": {
+    "ja": "冬のまつり",
+    "en": "Winter festival"
+   },
+   "blurb": {
+    "ja": "川原に氷の建物とトンネルが並び、夜は色の光で照らされます。2027年は1月23日〜3月7日。",
+    "en": "Buildings and tunnels of ice by the river, lit in colour at night. 23 January–7 March in 2027."
+   },
+   "caution": {
+    "ja": "2027年1月23日〜3月7日だけ。平日は17:00から",
+    "en": "23 Jan–7 Mar 2027 only. From 17:00 on weekdays"
+   },
+   "lat": 43.728,
+   "lng": 142.95,
+   "text": {
+    "ja": "層雲峡温泉氷瀑まつり\n\n氷瀑（ひょうばく）まつりは、石狩川のそばの会場に、水を凍らせて作った氷の建物やトンネルが並ぶ冬のまつりです。夜は色のついた光で照らされます。第52回は2027年1月23日（土）〜3月7日（日）。平日は17:00〜21:30、土日祝は11:00〜21:30（最終入場21:15）。協力金1,000円。バスターミナルから歩いて5分です。\n\n土日祝：明るいうちから入れます。お風呂のあと16:00ごろに入って、17:00のバスで旭川へ帰れます。\n\n平日と、暗くなってからゆっくり見たい日：17:00のバスには乗らず、18:55発のバスで上川へ（19:25着、890円）。上川20:24発の普通列車で旭川21:22着（1,380円）。晩ごはんは、まつりの前後に温泉街で（大雪山食堂は17:30〜20:30、ビアグリル・キャニオンは17:30〜20:00で水曜休み）。18:55のバスに乗り遅れると、その日のうちに旭川へ戻る方法はタクシーだけになります。\n\n会場はとても寒いので、暖かい服と、滑り止めのついた靴で（公式の案内）。会場の休憩所で、手袋と靴の滑り止めを売っています。\n\nおすすめ訪問時間：土日祝 16:00〜16:50／平日 17:00〜18:45",
+    "en": "Sounkyo Ice Fall Festival\n\nThe Hyobaku (Ice Fall) Festival fills a site beside the Ishikari river with buildings and tunnels made by freezing water, lit in colour after dark. The 52nd festival runs from Saturday 23 January to Sunday 7 March 2027: 17:00–21:30 on weekdays, 11:00–21:30 at weekends and on holidays (last entry 21:15). Entry is a ¥1,000 contribution. Five minutes’ walk from the bus terminal.\n\nWeekends and holidays: it is open in daylight. Go in at about 16:00 after your bath and still catch the 17:00 bus to Asahikawa.\n\nWeekdays, or to see it properly after dark: skip the 17:00 bus and take the 18:55 to Kamikawa (19:25, ¥890), then the 20:24 local train to Asahikawa (21:22, ¥1,380). Eat in the town before or after the festival (Daisetsuzan Shokudo 17:30–20:30; Beer Grill Canyon 17:30–20:00, closed Wednesdays). If you miss the 18:55 bus, a taxi is the only way back to Asahikawa that night.\n\nIt is very cold at the site: the organisers ask for warm clothes and shoes with a good grip. Gloves and slip-on ice grips are sold at the rest hut on site.\n\nRecommended visit time: Weekends/holidays 16:00–16:50 / weekdays 17:00–18:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "氷瀑まつりの会場",
+      "en": "Ice Fall Festival site"
+     },
+     "lat": 43.728,
+     "lng": 142.95,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B1%A4%E9%9B%B2%E5%B3%A1%E6%B8%A9%E6%B3%89%20%E6%B0%B7%E7%80%91%E3%81%BE%E3%81%A4%E3%82%8A%20%E4%BC%9A%E5%A0%B4"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "層雲峡温泉氷瀑まつり",
+      "en": "Sounkyo Ice Fall Festival"
+     },
+     "url": {
+      "ja": "https://sounkyo.net/hyoubaku/",
+      "en": "https://sounkyo.net/hyoubaku/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道北バス 層雲峡・上川線の時刻表（PDF）",
+      "en": "Dohoku Bus: Sounkyo–Kamikawa timetable (PDF)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/files/kamikawa_souun.pdf",
+      "en": "https://www.dohokubus.com/files/kamikawa_souun.pdf"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "氷瀑まつり：1月23日〜3月7日",
+      "en": "Ice Fall Festival: 23 January–7 March"
+     },
+     "text": {
+      "ja": "第52回 層雲峡温泉氷瀑（ひょうばく）まつりは、2027年1月23日（土）〜3月7日（日）。平日は17:00〜21:30、土日祝は11:00〜21:30。協力金1,000円。平日は、旭川行きの最後のバス（17:00発）のあとに始まります。",
+      "en": "The 52nd Sounkyo Onsen Ice Fall Festival runs from Saturday 23 January to Sunday 7 March 2027: 17:00–21:30 on weekdays, 11:00–21:30 at weekends and on holidays. Entry is a ¥1,000 contribution. On weekdays it opens just as the last bus to Asahikawa (17:00) leaves."
+     },
+     "from": "2026-11-01",
+     "to": "2027-03-07",
+     "url": "https://sounkyo.net/hyoubaku/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "2027年1月23日〜3月7日。平日17:00〜21:30、土日祝11:00〜21:30（最終入場21:15）",
+       "en": "23 Jan–7 Mar 2027. Weekdays 17:00–21:30; weekends/holidays 11:00–21:30 (last entry 21:15)"
+      },
+      "until": "2027-03-07",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "協力金1,000円",
+       "en": "¥1,000 contribution"
+      },
+      "until": "2027-03-07",
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "遅い帰り：層雲峡18:55 → 上川19:25（890円）、JR 上川20:24 → 旭川21:22（1,380円）",
+       "en": "Late return: Sounkyo 18:55 → Kamikawa 19:25 (¥890), JR Kamikawa 20:24 → Asahikawa 21:22 (¥1,380)"
+      },
+      "until": "2027-03-07",
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "まつりの期間の外は、会場に何もありません",
+       "en": "Outside the festival dates there is nothing at the site"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "氷瀑まつりの公式サイト（層雲峡観光協会）で2026年11月28日に確認しました。協力金の支払い方法は書かれていません。",
+     "en": "Checked on the festival’s official site (Sounkyo Tourist Association) on 28 November 2026. How to pay the contribution is not stated."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "hyobaku-w1.jpg",
+     "credit": {
+      "author": "Outside147",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Souunkyouhyoubakumatsuri.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}

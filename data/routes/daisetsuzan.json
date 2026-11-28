@@ -1,0 +1,1355 @@
+{
+ "id": "daisetsuzan",
+ "course": "asahidake",
+ "_note": "大雪山の日帰り：旭岳と層雲峡（daisetsuzan/ のページ専用。形は eizan-line.json と同じ）。旭岳。旭川駅9:15のいで湯号→旭岳ビジターセンター→ロープウェイ→姿見の池→お昼→旭岳温泉の日帰り入浴→16:55の最終バスで旭川18:33（東川に寄るなら14:55発で、温泉なし）。写真は今は Wikimedia Commons だけ（一覧は scripts/daisetsuzan_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_daisetsuzan_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 1,
+   "area": {
+    "ja": "旭川から",
+    "en": "From Asahikawa"
+   },
+   "title": {
+    "ja": "バスで1時間48分",
+    "en": "1 hr 48 min by bus"
+   }
+  },
+  {
+   "first": 2,
+   "last": 4,
+   "area": {
+    "ja": "旭岳",
+    "en": "Asahidake"
+   },
+   "title": {
+    "ja": "ビジターセンター、ロープウェイ、姿見の池",
+    "en": "Visitor Center, ropeway and Sugatami Pond"
+   }
+  },
+  {
+   "first": 5,
+   "last": 6,
+   "area": {
+    "ja": "ふもとと帰り道",
+    "en": "Below the mountain"
+   },
+   "title": {
+    "ja": "温泉か、東川の町。旭川に18:33",
+    "en": "A bath, or the town of Higashikawa. Asahikawa by 18:33"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 5
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。旭川からのバスは自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   5
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "andAny": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "9:15発のバスで来た日は、温泉と東川の両方には時間が足りません。両方なら旭川7:15発で来て、お昼のあと12時台から入れるベアモンテか湧駒荘へ、14:55発のバスで東川へ。",
+     "en": "Coming on the 9:15 bus, there is not enough time for both a bath and Higashikawa. To do both, take the 7:15 bus, bathe after lunch at Bear Monte or Yukomanso (open around noon), then take the 14:55 bus to Higashikawa."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "any": [
+      6
+     ],
+     "none": [
+      5
+     ]
+    },
+    "text": {
+     "ja": "ロープウェイは13:20発までに下りて、お昼を食べ、旭岳14:55発のバスで東川へ（道草館15:34着）。",
+     "en": "Come down on the 13:20 car at the latest, have lunch, and take the 14:55 bus from Asahidake to Higashikawa (Michikusa-kan 15:34)."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/daisetsuzan/",
+ "sources": [
+  {
+   "what": "いで湯号（66番）の時刻",
+   "url": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+   "saw": "2025年10月1日改正、4往復、毎日運行。旭川駅（のりば9）7:15・9:15・12:15・14:15→旭岳9:03・11:03・14:03・16:03。旭岳9:55・11:55・14:55・16:55→旭川駅11:33・13:33・16:33・18:33。ひがしかわ道草館は行き8:12・10:12・13:12・15:12、帰り10:34・12:34・15:34・17:34。旭岳温泉入口は旭岳発の2分後、ホテルベアモンテ前は同じ分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "いで湯号の運賃・支払い",
+   "url": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+   "saw": "旭川駅〜旭岳 大人2,300円、旭川空港〜旭岳1,650円、ひがしかわ道草館〜旭岳1,450円（2026年9月1日改定）。使用可能なICカードはAsaca・DoCARD。券売機は旭川電気軌道総合案内所と旭川空港（キャッシュレス券売機もあり）。往復割引なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "いで湯号の運賃表（PDF）",
+   "url": "https://www.asahikawa-denkikidou.jp/manage/wp-content/uploads/2026/07/un66_2026.09.pdf",
+   "saw": "運賃改定日 令和8年9月1日。旭川駅〜ひがしかわ道草館1,110円、旭岳温泉入口〜旭岳250円、旭川駅〜旭岳温泉入口2,300円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ロープウェイの運行日・時間",
+   "url": "https://asahidake.hokkaido.jp/ja/",
+   "saw": "整備運休 2026年11月16日〜12月10日、2027年5月10日〜21日。12月11日〜2月28日 9:00〜15:40（下り最終）、3月1〜15日 9:00〜16:00、3月16日〜5月9日 9:00〜17:00、6月1〜19日 8:00〜17:00、6月20日〜9月30日 6:30（土日祝など6:00）〜17:30、10月1〜20日 8:00〜17:00、10月21日〜11月15日 9:00〜16:00。6/1〜10/20は15分間隔、10/21〜5/31は20分間隔（00・20・40）、上り最終は下り最終の15分／20分前。片道約10分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ロープウェイの料金・注意",
+   "url": "https://asahidake.hokkaido.jp/ja/",
+   "saw": "往復 大人3,000円（11/1〜5/31）・3,500円（6/1〜10/31）、小人1,750円。クレジットカード可。予約乗車制ではない。強風・落雷で運行休止。最終下り便への乗り遅れが山岳事故扱いになった事例。姿見の池散策路は1周約1時間・約1.7km（6月〜10月中旬）、山頂駅でレンタル長靴。運休期間はレストラン・売店も休業",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ビジターセンター",
+   "url": "https://www.asahidake-vc-2291.jp/guide/",
+   "saw": "開館9:00〜17:00、休館日は年末年始。無料Wi-Fi、休憩コーナー",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ビジターセンターのレンタル",
+   "url": "https://www.asahidake-vc-2291.jp/rental_goods/",
+   "saw": "長靴500円、ストック500円、スノーシュー1,000円（ストックつき、積雪期のみ）。顔写真入りの身分証を提示。スノーシューのレンタルは2026年12月11日から、予約不可",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳ビジターセンター Q＆A",
+   "url": "https://www.asahidake-vc-2291.jp/q%ef%bc%86a/",
+   "saw": "旭岳近辺にATMなし。コンビニはラビスタ大雪山1階のヤマザキショップ。食堂は旭岳ロープウェイ山麓駅2階、売店は1階。キャッシュレス決済可（交通系電子マネーも）。コインロッカーは旭岳ロープウェイに",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭岳温泉の日帰り入浴（ひがしかわ観光協会）",
+   "url": "https://www.welcome-higashikawa.jp/onsen",
+   "saw": "ホテルベアモンテ12:30〜19:00（受付〜18:00）1,140円、大雪山白樺荘13:00〜19:00 800円、湯元湧駒荘12:00〜19:00（受付〜18:00）1,200円、ケイズハウス北海道（不定休）15:00〜19:00 900円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ケイズハウス北海道の日帰り温泉",
+   "url": "https://kshouse.jp/hokkaido-j/index.html",
+   "saw": "15:00〜19:00（退館は20:00前）900円。時短営業日、休業日あり。バス停 旭岳温泉入口で下車",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ケイズハウス北海道のタトゥー",
+   "url": "https://kshouse.jp/hokkaido-e/faq.html",
+   "saw": "英語のFAQ：Are people with tattoos allowed in the onsen? → Yes, tattoo friendly",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ホテルベアモンテの日帰り入浴",
+   "url": "https://www.bearmonte.jp/hotspring/",
+   "saw": "12:30〜19:00（最終受付18:00）、大人1,140円・小人570円、フェイスタオル110円・バスタオル220円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "湧駒荘の日帰り入浴",
+   "url": "https://www.yukoman.jp/day_trip",
+   "saw": "別館「神々の湯」、受付12:00〜18:00（19:00までの営業）、大人1,200円・小学生600円。バスタオル貸出300円、フェイスタオル販売200円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道の駅ひがしかわ「道草館」",
+   "url": "https://www.welcome-higashikawa.jp/michikusa/",
+   "saw": "9:00〜18:00（4〜9月）、9:00〜17:00（10〜3月）、休館日は年末年始（12/31〜1/4）、お手洗いは24時間",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "CAFEtune（ひがしかわ観光協会）",
+   "url": "https://www.welcome-higashikawa.jp/members/cafetune/",
+   "saw": "YAMAtune併設、東川町南町2丁目、10:00〜17:00、木曜・不定休あり",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "NATURES Brewing（ひがしかわ観光協会）",
+   "url": "https://www.welcome-higashikawa.jp/members/natures-brewing/",
+   "saw": "東川町東町3丁目6-8、15:00〜21:00、月曜・木曜定休、22席",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス 層雲峡・上川線の時刻・運賃",
+   "url": "https://www.dohokubus.com/files/kamikawa_souun.pdf",
+   "saw": "2026年7月1日改正。旭川駅前（のりば8）6:55→層雲峡8:54、9:55→11:54、10:55→12:54。層雲峡14:40→旭川駅前16:35、17:00→18:55。層雲峡18:55→上川森のテラス バスタッチ19:25（上川止まり）。層雲峡〜旭川2,140円、上川〜層雲峡890円、層雲峡〜滝見台220円。層雲峡12:50→滝見台13:09→大函入口13:15、大函入口13:43→滝見台13:49→層雲峡14:00は7月1日〜10月31日の運行",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バスのタッチ決済",
+   "url": "https://www.dohokubus.com/touch-payment.html",
+   "saw": "対象路線に「その他（白金線、層雲峡線、空港線等の路線バスの一部）」",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "JR 上川→旭川（木曜）",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=19&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E4%B8%8A%E5%B7%9D",
+   "saw": "上川20:24発の普通→旭川21:22着、21:04発の特別快速大雪→21:44着、1,380円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "JR 上川→旭川（土曜）",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=05&hh=19&m1=2&m2=5&type=1&ticket=normal&expkind=1&shin=1&ex=1&hb=1&lb=1&al=1&sr=1&s=0&userpass=1&ws=3&from=%E4%B8%8A%E5%B7%9D",
+   "saw": "木曜と同じ（20:24→21:22、21:04→21:44）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳ロープウェイ・リフトの料金と時間",
+   "url": "https://www.rinyu.co.jp/kurodake/about/",
+   "saw": "ロープウェイ往復 大人3,000円・小学生1,500円、片道7分・20分間隔。11月9日〜30日整備運休、12月1日〜6月20日 8:00〜16:00、6月21日〜9月30日 6:00〜18:00、10月1〜15日 7:00〜17:00、上りの最終は営業終了の40分前。リフト往復1,200円（2027年夏：6月1〜20日 8:30〜15:30、6月21日〜9月30日 6:30〜17:30、10月1〜15日 7:30〜16:30）、セット往復3,900円（夏季のみ）。冬季リフトは滑走具を持つ人だけ",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳ロープウェイのお知らせ",
+   "url": "https://www.rinyu.co.jp/kurodake/",
+   "saw": "12:20の便は運休（従業員の昼休憩のため）。2027年6月1日から料金変更。本日の運行状況は7:00更新",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳ロープウェイの駅の施設",
+   "url": "https://www.rinyu.co.jp/kurodake/facility/",
+   "saw": "層雲峡駅：コインロッカー、売店、Black Mountain Coffee 9:00〜15:30（月・火休み）。黒岳駅（5合目）：ともちゃん食堂11:00〜15:30（LO15:00）不定休、売店、屋上の黒岳ネイチャーテラス。お手洗いは5合目の駅が最後",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "くろだけスノーシューハイキング",
+   "url": "https://www.rinyu.co.jp/kurodake/tour_rental/",
+   "saw": "2027年1月5日〜3月10日、前日・当日受付（電話01658-5-3031か現地）。ショートコース 大人7,000円・約2時間・9:30までに山麓窓口に集合。料金にロープウェイ往復・ガイド・スノーシュー・ストック・スノーブーツ・スキーウェア・保険を含む",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "銀河・流星の滝（層雲峡観光協会）",
+   "url": "https://sounkyo.net/view/detail.html?content=7",
+   "saw": "日本の滝百選。滝を背に20分ほど斜面を登ると双瀑台。通年、無料",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "大函（層雲峡観光協会）",
+   "url": "https://sounkyo.net/view/detail.html?content=10",
+   "saw": "層雲峡温泉より北見方面へ約6km。小函遊歩道は落石の危険があるため通行禁止。通年、無料",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "層雲峡ビジターセンター",
+   "url": "https://sounkyovc.net/aboutus",
+   "saw": "9時〜17時。6〜10月無休、11〜5月は月曜休み（祝日の場合は翌日）、年末年始12月31日〜1月5日休み",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "黒岳の湯（層雲峡観光協会）",
+   "url": "https://sounkyo.net/stay/detail.html?content=25",
+   "saw": "5月1日〜10月31日 10時〜22時（最終受付21時30分）、11月1日〜4月30日 11時〜21時30分（最終受付21時）、12月31日〜1月3日 11時〜18時。無休（メンテナンス休館あり）。大人800円・子ども400円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "層雲峡の食事（層雲峡観光協会）",
+   "url": "https://sounkyo.net/eat/detail.html?content=34",
+   "saw": "大雪山食堂 11:00〜15:00、17:30〜20:30、不定休。ビアグリル・キャニオン 11:30〜15:00、17:30〜20:00（水曜定休）。登山軒 10〜21時（11〜5月は休業）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "層雲峡温泉氷瀑まつり",
+   "url": "https://sounkyo.net/hyoubaku/",
+   "saw": "第52回 2027年1月23日（土）〜3月7日（日）。平日17:00〜21:30、土日祝11:00〜21:30（最終入場21:15）。協力金1,000円。暖かい服と滑り止めのついた靴で。会場内休憩所で手袋・滑り止めを販売",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "氷瀑まつりの会場への行き方",
+   "url": "https://sounkyo.net/hyoubaku/access/",
+   "saw": "層雲峡温泉で下車後、徒歩5分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "日の入り（札幌、12月）",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+   "saw": "12月の日の入りは16時ごろ",
+   "checked": "2026-11-28"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "astart",
+   "name": {
+    "ja": "旭川駅から旭岳へ",
+    "en": "Asahikawa to Asahidake"
+   },
+   "kind": {
+    "ja": "出発・バス",
+    "en": "Start: bus"
+   },
+   "blurb": {
+    "ja": "旭川駅前9:15発のバス「いで湯号」で1時間48分。1日4往復で、帰りの最終は旭岳16:55発。",
+    "en": "The 9:15 Ideyu-go bus from Asahikawa Station takes 1 hr 48 min. Four buses a day; the last one back leaves at 16:55."
+   },
+   "caution": {
+    "ja": "帰りの最終バスは旭岳16:55発。Kitaca・Suicaの案内なし",
+    "en": "Last bus back leaves Asahidake at 16:55. Kitaca/Suica not listed"
+   },
+   "lat": 43.7633,
+   "lng": 142.3587,
+   "text": {
+    "ja": "旭川駅から旭岳へ\n\n旭岳（あさひだけ、2,291m）は北海道でいちばん高い山で、大雪山（たいせつざん）の主峰です。旭川駅から、旭川電気軌道のバス66番「いで湯号」が、旭川空港と東川（ひがしかわ）の町を通って、ロープウェイの山麓駅の前（終点「旭岳」）まで行きます。1日4往復、毎日運行、予約は要りません。\n\n旭川駅前の9番のりばを9:15発、旭岳に11:03着。片道2,300円です。公式サイトに書かれているICカードは、旭川のバスのカード（Asaca・DoCARD）だけ。KitacaやSuicaは書かれていません。現金で払うか（両替は千円札と硬貨のつもりで）、駅前の旭川電気軌道 総合案内所（旭川駅前のツルハビル1階）の券売機で先に乗車券を買います。券売機はカードなども使えます。往復割引はないので、往復なら2枚。JRのレールパスは使えません。\n\n帰りのバスは、旭岳発11:55・14:55・16:55の3本です。16:55発（旭川駅18:33着）が最終で、乗り遅れると旭川へ戻るバスはありません。\n\nロープウェイは強風で止まることがあります。止まった日も、ふもとのビジターセンターと温泉で最終バスまで過ごせますが、朝、ロープウェイの公式サイトで運行状況を見てから出ると無駄がありません。\n\n山の上をゆっくり歩いて、温泉にも東川の町にも寄りたい日は、7:15発（旭岳9:03着）で。旭川に戻ったあとの晩ごはんは、駅前から歩ける買物公園のあたりで。\n\nおすすめ出発時間：9:15（旭川駅前 9番のりば）",
+    "en": "Asahikawa to Asahidake\n\nAsahidake (2,291 m) is the highest mountain in Hokkaido and the main peak of the Daisetsuzan range. Asahikawa Denkikido’s route 66 bus, the Ideyu-go, runs from Asahikawa Station via Asahikawa Airport and the town of Higashikawa to the ropeway base station (the last stop, “Asahidake”). Four round trips a day, every day, no booking.\n\nLeave from stop 9 outside Asahikawa Station at 9:15 and arrive at 11:03. The fare is ¥2,300 one way. The only IC cards listed on the bus company’s page are the local Asaca and DoCARD; Kitaca and Suica are not mentioned. Pay cash on board (carry ¥1,000 notes and coins), or buy a ticket beforehand from the machine in the company’s information office on the ground floor of the Tsuruha building in front of the station; the machine also takes cards. There is no return discount, so buy two tickets for a round trip. Japan Rail passes are not valid.\n\nBuses back leave Asahidake at 11:55, 14:55 and 16:55. The 16:55 (Asahikawa Station 18:33) is the last one: miss it and there is no bus to Asahikawa.\n\nStrong wind can stop the ropeway. You can still spend the day at the Visitor Center and the hot springs, but it is worth checking the ropeway’s status page before you set out.\n\nFor a slower walk at the top plus both a bath and the town of Higashikawa, take the 7:15 bus (arrives 9:03). Back in Asahikawa, dinner is a short walk from the station around the Kaimono Koen pedestrian street.\n\nRecommended departure time: 9:15 from stop 9 outside Asahikawa Station"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旭川駅前バスのりば",
+      "en": "Bus stops outside Asahikawa Station"
+     },
+     "lat": 43.7633,
+     "lng": 142.3587,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B7%9D%E9%A7%85%E5%89%8D%20%E3%83%90%E3%82%B9%E3%81%AE%E3%82%8A%E3%81%B0%209%E7%95%AA"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "いで湯号（66番）時刻・運賃",
+      "en": "Ideyu-go bus (route 66): times and fares"
+     },
+     "url": {
+      "ja": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+      "en": "https://www.asahikawa-denkikidou.jp/asahidaek_line/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "いで湯号の運賃表（PDF）",
+      "en": "Ideyu-go fare table (PDF, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.asahikawa-denkikidou.jp/manage/wp-content/uploads/2026/07/un66_2026.09.pdf",
+      "en": "https://www.asahikawa-denkikidou.jp/manage/wp-content/uploads/2026/07/un66_2026.09.pdf"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旭岳ロープウェイ（運行状況・今の気温）",
+      "en": "Asahidake Ropeway (status, live temperature)"
+     },
+     "url": {
+      "ja": "https://asahidake.hokkaido.jp/ja/",
+      "en": "https://asahidake.hokkaido.jp/en/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "ロープウェイは12月10日まで運休",
+      "en": "Ropeway closed until 10 December"
+     },
+     "text": {
+      "ja": "旭岳ロープウェイは、整備のため2026年11月16日〜12月10日は運休です。山麓駅の食堂と売店も休み。12月11日から動きます。この期間は、ビジターセンターのまわりの森と温泉だけになります。",
+      "en": "The Asahidake Ropeway is closed for maintenance from 16 November to 10 December 2026, along with the restaurant and shop in the base station. It reopens on 11 December. Until then, a visit means the forest around the Visitor Center and the hot springs only."
+     },
+     "from": null,
+     "to": "2026-12-10",
+     "url": "https://asahidake.hokkaido.jp/ja/"
+    },
+    {
+     "head": {
+      "ja": "ロープウェイは5月10日〜21日に運休",
+      "en": "Ropeway closed 10–21 May"
+     },
+     "text": {
+      "ja": "旭岳ロープウェイは、整備のため2027年5月10日〜21日は運休です。山麓駅の食堂と売店も休み。",
+      "en": "The Asahidake Ropeway is closed for maintenance from 10 to 21 May 2027, along with the restaurant and shop in the base station."
+     },
+     "from": "2027-04-20",
+     "to": "2027-05-21",
+     "url": "https://asahidake.hokkaido.jp/ja/"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2026-11-01",
+     "to": "2027-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2027-11-01",
+     "to": "2028-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2028-11-01",
+     "to": "2029-04-30"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "いで湯号 旭川駅（9番のりば）9:15 → 旭岳11:03（朝は7:15 → 9:03）",
+       "en": "Ideyu-go: Asahikawa Station (stop 9) 9:15 → Asahidake 11:03 (earlier: 7:15 → 9:03)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "帰り 旭岳11:55・14:55・16:55発 → 旭川駅13:33・16:33・18:33着。16:55が最終",
+       "en": "Back: Asahidake 11:55, 14:55, 16:55 → Asahikawa Station 13:33, 16:33, 18:33. The 16:55 is the last bus"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "片道2,300円（2026年9月1日改定）。現金、Asaca・DoCARD、または総合案内所の券売機。往復割引なし",
+       "en": "¥2,300 one way (from 1 Sep 2026). Cash, Asaca/DoCARD, or a ticket from the machine at the bus office. No return discount"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "時刻と運賃は、旭川電気軌道の公式ページ（2025年10月1日改正の時刻表、2026年9月1日改定の運賃表）で2026年11月28日に確認しました。",
+     "en": "Times and fares checked on Asahikawa Denkikido’s pages (timetable revised 1 October 2025, fares revised 1 September 2026) on 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "astart-w1.jpg",
+     "credit": {
+      "author": "姒姓賢寧",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Station_in_August_2025.jpg"
+     }
+    },
+    {
+     "file": "astart-w2.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_-_Asahikawa6012.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "avc",
+   "name": {
+    "ja": "旭岳ビジターセンター",
+    "en": "Asahidake Visitor Center"
+   },
+   "kind": {
+    "ja": "案内・レンタル",
+    "en": "Information & rental"
+   },
+   "blurb": {
+    "ja": "バスを降りたら最初にここへ。今日の山の様子を聞いて、冬はスノーシューを借ります。入館無料。",
+    "en": "Come here first when you get off the bus: today’s conditions, and snowshoe rental in winter. Free."
+   },
+   "lat": 43.65202,
+   "lng": 142.79959,
+   "text": {
+    "ja": "旭岳ビジターセンター\n\nバスの終点から歩いて2分。国立公園の案内施設で、入館は無料、9:00〜17:00（年末年始は休み）。入って左のパネルに、ロープウェイの運行状況と道の様子が出ています。姿見の池を歩けるか、何が要るかを、窓口で聞いてから上がってください。\n\n借りられるもの（1日）：長靴500円、ストック500円、スノーシュー1,000円（ストックつき。雪のある季節だけで、この冬は2026年12月11日から。予約はできません）。借りるときに顔写真つきの身分証（パスポートなど）を見せます。支払いはクレジットカードやKitaca・Suicaなども使えます。17:00の閉館までに返します。\n\n無料のWi-Fi、休憩用のテーブル、お手洗いがあり、最終バスまでの待ち時間もここで過ごせます。旭岳温泉にATMはありません。コンビニは、ラビスタ大雪山（坂を下って約800m）の1階のヤマザキショップだけです。\n\nロープウェイが止まった日や、上が吹雪の日は、ビジターセンターのまわりの森を歩けます（冬はスノーシューとクロスカントリースキーのコース、夏は自然探勝路。地図は窓口と公式サイトに）。係の人と歩く「旭岳温泉ネイチャーウォーク」（13:30〜15:00、2,000円、スノーシューつき、開催日は公式サイトのカレンダーに）は、日本語で話せる人だけの受け付けです。\n\nおすすめ訪問時間：11:05〜11:30",
+    "en": "Asahidake Visitor Center\n\nTwo minutes’ walk from the last bus stop. This is the national park’s information centre: free, open 9:00–17:00 (closed over New Year). A panel to the left of the entrance shows the ropeway’s status and trail conditions. Ask at the desk whether the Sugatami Pond walk is possible today and what you need before you go up.\n\nRental (per day): rubber boots ¥500, poles ¥500, snowshoes ¥1,000 (with poles; snow season only, from 11 December 2026 this winter; no reservations). You must show photo ID such as a passport. Cards and IC cards such as Kitaca and Suica are accepted. Return everything before the 17:00 closing time.\n\nThere is free Wi-Fi, tables to rest at and toilets, so it is also a place to wait for the last bus. There is no ATM at Asahidake Onsen. The only convenience shop is the Yamazaki Shop on the ground floor of La Vista Daisetsuzan, about 800 m down the road.\n\nIf the ropeway is stopped or the top is in a blizzard, you can walk in the forest around the Visitor Center instead (snowshoe and cross-country ski courses in winter, nature trails in summer; maps at the desk and on the website). The guided Asahidake Onsen Nature Walk (13:30–15:00, ¥2,000 with snowshoes, dates on the website calendar) is only for people who can communicate in Japanese.\n\nRecommended visit time: 11:05–11:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旭岳ビジターセンター",
+      "en": "Asahidake Visitor Center"
+     },
+     "lat": 43.65202,
+     "lng": 142.79959,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B2%B3%E3%83%93%E3%82%B8%E3%82%BF%E3%83%BC%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "旭岳ビジターセンター",
+      "en": "Asahidake Visitor Center"
+     },
+     "url": {
+      "ja": "https://www.asahidake-vc-2291.jp/",
+      "en": "https://www.asahidake-vc-2291.jp/foreign"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "レンタルの料金",
+      "en": "Rental prices (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.asahidake-vc-2291.jp/rental_goods/",
+      "en": "https://www.asahidake-vc-2291.jp/rental_goods/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "周辺コースの地図",
+      "en": "Maps of the walking courses (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.asahidake-vc-2291.jp/course/",
+      "en": "https://www.asahidake-vc-2291.jp/course/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00",
+       "en": "9:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年末年始",
+       "en": "Closed over New Year"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "入館無料。スノーシュー1,000円（積雪期、2026年は12月11日から）、長靴500円、ストック500円。顔写真つきの身分証が要ります",
+       "en": "Free. Snowshoes ¥1,000 (snow season; from 11 Dec in 2026), boots ¥500, poles ¥500. Photo ID required"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "旭岳ビジターセンターの公式サイト（館内のご案内・レンタル・Q＆A・お知らせ）で2026年11月28日に確認しました。年末年始の休みの日付は書かれていません。",
+     "en": "Checked on the Asahidake Visitor Center’s website (guide, rental, Q&A and news pages) on 28 November 2026. The exact New Year closing dates are not given."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "avc-w1.jpg",
+     "credit": {
+      "author": "Choi2451",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:The_way_to_Asahidake_Ropeway_on_June_14th%2C_2019.jpg"
+     }
+    },
+    {
+     "file": "avc-w2.jpg",
+     "credit": {
+      "author": "Tzu-hsun, Hsu",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Remote_views_of_Mount_Asahi_from_Asahidake_Onsen.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "arope",
+   "name": {
+    "ja": "旭岳ロープウェイ",
+    "en": "Asahidake Ropeway"
+   },
+   "kind": {
+    "ja": "ロープウェイ",
+    "en": "Ropeway"
+   },
+   "blurb": {
+    "ja": "山麓駅から標高1,600mの姿見駅まで約10分。冬は20分おき、下りの最終は15:40。",
+    "en": "About 10 minutes from the base to Sugatami Station at 1,600 m. Every 20 minutes in winter; last car down at 15:40."
+   },
+   "caution": {
+    "ja": "冬の下り最終は15:40（12月11日〜2月28日）。強風で運休あり",
+    "en": "Winter last car down 15:40 (11 Dec–28 Feb). Stops in strong wind"
+   },
+   "lat": 43.6531,
+   "lng": 142.7988,
+   "text": {
+    "ja": "旭岳ロープウェイ\n\nバスの終点の目の前が山麓駅です。標高1,600mの姿見（すがたみ）駅まで約10分。予約はなく、来た順に乗ります。往復は、11月1日〜5月31日が3,000円、6月1日〜10月31日が3,500円（小人はどちらも1,750円）。クレジットカードが使えます。\n\n冬（12月11日〜2月28日）は9:00〜15:40で、毎時00・20・40分の20分おき。15:40は下りの最終で、上りの最終は15:20です。3月1日〜15日は16:00まで、3月16日〜5月9日は17:00まで。6月1日〜10月20日は15分おきになり、6月20日〜9月30日は6:30（土日祝などは6:00）〜17:30。\n\n毎年、整備で止まる期間があります。この冬は2026年11月16日〜12月10日、春は2027年5月10日〜21日。その間は食堂と売店も休みです。\n\n強風や雷で止まります。上にいて風が強くなってきたら、早めに下りてください。下りの最終に乗り遅れて、遭難の扱いになった例があると、公式サイトに書かれています。\n\n山麓駅の2階に食堂（カレー、ラーメン）、1階に売店とコインロッカー。姿見駅にも売店（コロッケ、コーヒー）とお手洗いがあります。食堂の営業時間は公式サイトに書かれていないので、お昼をここに決めている日は電話（0166-68-9111）で確かめるか、旭川駅で軽い食べ物を買っておくと安心です。\n\nおすすめ訪問時間：11:40発の便で上へ（夏は11:45発）。下りは13:20発",
+    "en": "Asahidake Ropeway\n\nThe base station is right in front of the last bus stop. The ride up to Sugatami Station at 1,600 m takes about 10 minutes. No reservations: you board in order of arrival. A return ticket is ¥3,000 from 1 November to 31 May and ¥3,500 from 1 June to 31 October (children ¥1,750 all year). Credit cards are accepted.\n\nIn winter (11 December–28 February) it runs 9:00–15:40, every 20 minutes at :00, :20 and :40. 15:40 is the last car down; the last car up is 15:20. From 1 to 15 March it runs until 16:00, and from 16 March to 9 May until 17:00. From 1 June to 20 October cars run every 15 minutes, and from 20 June to 30 September the hours are 6:30 (6:00 at weekends and on holidays) to 17:30.\n\nIt closes for maintenance every year: this winter from 16 November to 10 December 2026, and in spring from 10 to 21 May 2027. The restaurant and shop close too.\n\nIt stops in strong wind or lightning. If the wind picks up while you are at the top, come down early. The official site notes that people who missed the last car down have been treated as mountain-rescue cases.\n\nThe base station has a restaurant upstairs (curry, ramen), a shop and coin lockers downstairs. Sugatami Station has a shop (croquettes, coffee) and toilets. The restaurant’s hours are not on the website: if you are counting on it for lunch, phone 0166-68-9111, or bring something light from Asahikawa Station.\n\nRecommended visit time: Up on the 11:40 car (11:45 in summer); down on the 13:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旭岳ロープウェイ 山麓駅",
+      "en": "Asahidake Ropeway base station"
+     },
+     "lat": 43.6531,
+     "lng": 142.7988,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%97%AD%E5%B2%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E5%B1%B1%E9%BA%93%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旭岳ロープウェイ（運行状況・今の気温）",
+      "en": "Asahidake Ropeway (status, live temperature)"
+     },
+     "url": {
+      "ja": "https://asahidake.hokkaido.jp/ja/",
+      "en": "https://asahidake.hokkaido.jp/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "いで湯号（66番）時刻・運賃",
+      "en": "Ideyu-go bus (route 66): times and fares"
+     },
+     "url": {
+      "ja": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+      "en": "https://www.asahikawa-denkikidou.jp/asahidaek_line/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "ロープウェイは12月10日まで運休",
+      "en": "Ropeway closed until 10 December"
+     },
+     "text": {
+      "ja": "旭岳ロープウェイは、整備のため2026年11月16日〜12月10日は運休です。山麓駅の食堂と売店も休み。12月11日から動きます。この期間は、ビジターセンターのまわりの森と温泉だけになります。",
+      "en": "The Asahidake Ropeway is closed for maintenance from 16 November to 10 December 2026, along with the restaurant and shop in the base station. It reopens on 11 December. Until then, a visit means the forest around the Visitor Center and the hot springs only."
+     },
+     "from": null,
+     "to": "2026-12-10",
+     "url": "https://asahidake.hokkaido.jp/ja/"
+    },
+    {
+     "head": {
+      "ja": "ロープウェイは5月10日〜21日に運休",
+      "en": "Ropeway closed 10–21 May"
+     },
+     "text": {
+      "ja": "旭岳ロープウェイは、整備のため2027年5月10日〜21日は運休です。山麓駅の食堂と売店も休み。",
+      "en": "The Asahidake Ropeway is closed for maintenance from 10 to 21 May 2027, along with the restaurant and shop in the base station."
+     },
+     "from": "2027-04-20",
+     "to": "2027-05-21",
+     "url": "https://asahidake.hokkaido.jp/ja/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "12月11日〜2月28日 9:00〜15:40（下り最終。上り最終15:20）、20分おき",
+       "en": "11 Dec–28 Feb: 9:00–15:40 (last down; last up 15:20), every 20 min"
+      },
+      "until": "2027-02-28",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "3月1日〜15日 9:00〜16:00、3月16日〜5月9日 9:00〜17:00（20分おき）",
+       "en": "1–15 Mar: 9:00–16:00; 16 Mar–9 May: 9:00–17:00 (every 20 min)"
+      },
+      "until": "2027-05-09",
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "6月1日〜19日 8:00〜17:00、6月20日〜9月30日 6:30（土日祝など6:00）〜17:30、10月1日〜20日 8:00〜17:00（15分おき）、10月21日〜11月15日 9:00〜16:00（2026年の予定表）",
+       "en": "1–19 Jun: 8:00–17:00; 20 Jun–30 Sep: 6:30 (6:00 weekends/holidays)–17:30; 1–20 Oct: 8:00–17:00 (every 15 min); 21 Oct–15 Nov: 9:00–16:00 (2026 calendar)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "往復3,000円（11月1日〜5月31日）、3,500円（6月1日〜10月31日）、小人1,750円。カード可",
+       "en": "Return ¥3,000 (1 Nov–31 May), ¥3,500 (1 Jun–31 Oct); children ¥1,750. Cards accepted"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "整備運休：2026年11月16日〜12月10日、2027年5月10日〜21日",
+       "en": "Closed for maintenance: 16 Nov–10 Dec 2026 and 10–21 May 2027"
+      },
+      "until": "2027-05-21",
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "旭岳ロープウェイの公式サイト（運行予定表・運賃・ご注意）で2026年11月28日に確認しました。運行予定表は2027年5月までの分です。",
+     "en": "Checked on the Asahidake Ropeway website (operating calendar, fares and notes) on 28 November 2026. The calendar runs to May 2027."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "arope-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140724_Asahidake_Ropeway_Hokkaido_Japan02s5.jpg"
+     }
+    },
+    {
+     "file": "arope-w2.jpg",
+     "credit": {
+      "author": "Calistemon",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahidake_Ropeway%2C_Hokkaido%2C_April_2023_03.jpg"
+     }
+    },
+    {
+     "file": "arope-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140724_Asahidake_Ropeway_Hokkaido_Japan05s3.jpg"
+     }
+    },
+    {
+     "file": "arope-w4.jpg",
+     "credit": {
+      "author": "Calistemon",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Upper_station_of_Asahidake_Ropeway%2C_Hokkaido%2C_April_2023_03.jpg"
+     }
+    },
+    {
+     "file": "arope-w5.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140724_Asahidake_Ropeway_Hokkaido_Japan04s3.jpg"
+     }
+    },
+    {
+     "file": "arope-w6.jpg",
+     "credit": {
+      "author": "Mamusi Taka",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%97%AD%E5%B2%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%E9%A7%85%E5%89%8D%E9%A7%90%E8%BB%8A%E5%A0%B4_-_panoramio.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "sugatami",
+   "name": {
+    "ja": "姿見の池",
+    "en": "Sugatami Pond"
+   },
+   "kind": {
+    "ja": "山の上の散策",
+    "en": "Walk at the top"
+   },
+   "blurb": {
+    "ja": "姿見駅を出ると、目の前に噴気を上げる旭岳。夏は一周約1時間の散策路、冬は晴れた日にスノーシューで。",
+    "en": "Step out of Sugatami Station to steaming Asahidake. A one-hour loop in summer; snowshoes on clear days in winter."
+   },
+   "caution": {
+    "ja": "冬は道が雪の下。見通しのない日は駅から離れないで",
+    "en": "In winter the path is under snow. In poor visibility stay by the station"
+   },
+   "lat": 43.66139,
+   "lng": 142.83334,
+   "text": {
+    "ja": "姿見の池\n\n姿見駅を出ると、正面が旭岳です。山腹から白い噴気が上がり、晴れて風のない日は、その姿が姿見（すがたみ）の池に映ります。\n\n雪のない季節（6月〜10月中旬）：駅から、展望台と夫婦池（めおといけ）、姿見の池、噴気孔の近くを回って駅に戻る、一周約1.7km・約1時間の散策路があります。石の多い山道なので、底の厚い靴で。6月はまだ雪が残っていて、姿見駅で長靴を借りられます。雨と風をよける長そでの上着も要ります。高山植物は6月上旬〜8月中旬、紅葉は例年9月中旬〜下旬で、9月中旬の土日祝はロープウェイがとても混みます。\n\n冬（12月〜5月）：一面の雪で、道は見えません。晴れて見通しのよい日に、スノーシュー（ふもとのビジターセンターで借りる）で駅のまわりから第1展望台のあたりまで歩くのが、初めての人の範囲です。姿見の池まで行くかどうかは、ビジターセンターか駅の係の人に、その日の様子を聞いてから決めてください。雲や吹雪で先が見えない日は、駅舎から離れないこと。入るときに晴れていても急に見えなくなることがよくある、と公式サイトが注意しています。\n\n冬の服装：スキーウェアかそれに近い上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴。標高1,600mで、旭川の街よりずっと寒く、風が強い場所です。今の気温と風速は、ロープウェイの公式サイトのいちばん上に出ています。スマートフォンは寒さで電池が切れやすいので、内ポケットに入れておきます。\n\nここから先（旭岳の山頂や裾合平）は登山で、このマップの範囲の外です。\n\nおすすめ訪問時間：11:50〜13:15",
+    "en": "Sugatami Pond\n\nAsahidake is straight ahead as you leave Sugatami Station, with white steam rising from vents on its flank. On a clear, still day the mountain is reflected in Sugatami Pond.\n\nSnow-free season (June to mid-October): a loop of about 1.7 km and one hour leads from the station past viewpoints and the Meoto ponds to Sugatami Pond and the steam vents, then back. It is a stony mountain path, so wear thick-soled shoes. Snow still lies on it in June, and you can borrow rubber boots at Sugatami Station. Bring a long-sleeved jacket for rain and wind. Alpine flowers bloom from early June to mid-August; autumn colour usually peaks in mid to late September, when the ropeway is very crowded at weekends.\n\nWinter (December to May): everything is under snow and the path cannot be seen. On a clear day with good visibility, a first-timer’s range is the area from the station to around the first viewpoint, on snowshoes rented at the Visitor Center below. Ask at the Visitor Center or the station about the day’s conditions before deciding whether to go as far as the pond. If cloud or blowing snow hides the way ahead, stay by the station building. The official site warns that visibility often collapses suddenly even when it was clear at the start.\n\nWinter clothing: ski wear or something close to it, a hat, thick gloves, a neck and face cover, sunglasses or goggles, and winter boots that keep snow out. At 1,600 m it is far colder and windier than in Asahikawa. The ropeway’s website shows the current temperature and wind speed at the top of its home page. Phone batteries die fast in the cold: keep yours in an inside pocket.\n\nBeyond here (the summit of Asahidake, Susoaidaira) is mountaineering and outside this map.\n\nRecommended visit time: 11:50–13:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "姿見の池",
+      "en": "Sugatami Pond"
+     },
+     "lat": 43.66139,
+     "lng": 142.83334,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%A7%BF%E8%A6%8B%E3%81%AE%E6%B1%A0%20%E6%97%AD%E5%B2%B3"
+    },
+    {
+     "label": {
+      "ja": "旭岳ロープウェイ 姿見駅",
+      "en": "Sugatami Station"
+     },
+     "lat": 43.6619,
+     "lng": 142.82499,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B2%B3%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E5%A7%BF%E8%A6%8B%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旭岳ロープウェイ（運行状況・今の気温）",
+      "en": "Asahidake Ropeway (status, live temperature)"
+     },
+     "url": {
+      "ja": "https://asahidake.hokkaido.jp/ja/",
+      "en": "https://asahidake.hokkaido.jp/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "姿見の池 周辺散策路の地図（ビジターセンター）",
+      "en": "Map of the Sugatami Pond trails (Visitor Center, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.asahidake-vc-2291.jp/course/",
+      "en": "https://www.asahidake-vc-2291.jp/course/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "旭岳ビジターセンター",
+      "en": "Asahidake Visitor Center"
+     },
+     "url": {
+      "ja": "https://www.asahidake-vc-2291.jp/",
+      "en": "https://www.asahidake-vc-2291.jp/foreign"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2026-11-01",
+     "to": "2027-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2027-11-01",
+     "to": "2028-04-30"
+    },
+    {
+     "head": {
+      "ja": "冬の山の上の服装",
+      "en": "What to wear up the mountain in winter"
+     },
+     "text": {
+      "ja": "11月から4月は、山の上は雪と氷点下の世界で、風が強い日があります。スキーウェアか、それに近い風を通さない上下、帽子、厚い手袋、首と顔をおおうもの、サングラスかゴーグル、雪が入らない冬の靴で。12月の日の入りは16時ごろです。強風でロープウェイが止まることがあるので、朝、公式サイトの運行状況を見てから出てください。",
+      "en": "From November to April it is snow, sub-zero temperatures and often strong wind at the top. Wear ski clothing or something close to it (windproof jacket and trousers), a hat, thick gloves, something to cover your neck and face, sunglasses or goggles, and winter boots that keep snow out. In December the sun sets at about 16:00. Strong wind can stop the ropeway, so check the status on the official site before you leave in the morning."
+     },
+     "from": "2028-11-01",
+     "to": "2029-04-30"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ロープウェイの時間の中で。冬は下り最終15:40（12月11日〜2月28日）",
+       "en": "Within ropeway hours. In winter the last car down is 15:40 (11 Dec–28 Feb)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "散策は無料（ロープウェイ往復3,000〜3,500円）",
+       "en": "The walk is free (ropeway return ¥3,000–3,500)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "散策路を歩けるのは6月〜10月中旬。冬は雪の上をスノーシューで（道しるべは雪の下）",
+       "en": "The path is walkable June to mid-October. In winter it is snowshoes over deep snow (the path is buried)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "散策路の距離と時間、装備、冬の注意は旭岳ロープウェイの公式サイト、見ごろとレンタルは旭岳ビジターセンターの公式サイトで2026年11月28日に確認しました。",
+     "en": "Trail length, time, gear and winter warnings from the Asahidake Ropeway website; seasons and rental from the Asahidake Visitor Center website. Checked on 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "sugatami-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahidake%2C_Daisetsuzan_Volcanic_Group_-_Asahidake6036.jpg"
+     }
+    },
+    {
+     "file": "sugatami-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140724_Asahi-dake_and_Sugatami-no-ike_Hokkaido_Japan01bs3.jpg"
+     }
+    },
+    {
+     "file": "sugatami-w3.jpg",
+     "credit": {
+      "author": "Calistemon",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mount_Asahi_%28Daisetsuzan%29_under_snow%2C_April_2023_04.jpg"
+     }
+    },
+    {
+     "file": "sugatami-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140724_Asahi-dake_Hokkaido_Japan03s3.jpg"
+     }
+    },
+    {
+     "file": "sugatami-w5.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140724_Asahi-dake_Hokkaido_Japan02s3.jpg"
+     }
+    },
+    {
+     "file": "sugatami-w6.jpg",
+     "credit": {
+      "author": "Calistemon",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mount_Asahi_%28Daisetsuzan%29_under_snow%2C_April_2023_02.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "aonsen",
+   "name": {
+    "ja": "旭岳温泉の日帰り入浴",
+    "en": "Day baths at Asahidake Onsen"
+   },
+   "kind": {
+    "ja": "温泉",
+    "en": "Hot spring"
+   },
+   "blurb": {
+    "ja": "森の中の宿で日帰り入浴。タトゥーがあっても入れると公式に書いているのは、ケイズハウス北海道（15:00から）。",
+    "en": "Day-use baths at lodges in the forest. K’s House Hokkaido (from 15:00) says officially that tattoos are fine."
+   },
+   "caution": {
+    "ja": "最終バスは16:55。お風呂は16:30までに上がる",
+    "en": "Last bus 16:55: be out of the bath by 16:30"
+   },
+   "lat": 43.65071,
+   "lng": 142.79902,
+   "text": {
+    "ja": "旭岳温泉の日帰り入浴\n\n旭岳温泉には温泉街がなく、森の中の道沿いに宿が点々とあります。日帰りで入れる宿は次のとおりです。\n\n・ケイズハウス北海道：15:00〜19:00、900円。公式サイトの英語のよくある質問に、タトゥーがあっても温泉に入れると書いてあります。内湯と露天風呂。休みの日と短い営業の日があるので、公式サイトのカレンダーで確かめてください。バス停「旭岳温泉入口」の目の前です。\n\n・ホテルベアモンテ：12:30〜19:00（受付18:00まで）、1,140円。フェイスタオル110円、バスタオル220円。大浴場にサウナつき。ロープウェイの駅から坂を下って歩いて5分で、バス停「ホテルベアモンテ前」があります。タトゥーの記載なし（要確認）。\n\n・湯元 湧駒荘（ゆこまんそう）の別館「神々の湯」：受付12:00〜18:00（19:00まで）、1,200円。バスタオルの貸し出し300円、フェイスタオル200円。バス停「旭岳温泉入口」のそば。タトゥーの記載なし（要確認）。\n\n・大雪山白樺荘：13:00〜19:00、800円（ひがしかわ観光協会の案内）。宿の公式サイトには日帰り入浴のことが書かれておらず、宿が休みの期間もあるので、行く前に電話で確認を。\n\n時間割：ロープウェイを下りてお昼のあと、ベアモンテなら歩いてすぐ。ケイズハウスと湧駒荘は、ロープウェイの駅から道を約1km下ったところで、歩いて15〜20分（冬は雪道）。14:55発のバスなら2分、250円です。\n\n帰りの最終バスは、ホテルベアモンテ前16:55発、旭岳温泉入口16:57発。お風呂は16:30までに上がって、バス停で待ちましょう。\n\nおすすめ訪問時間：14:20〜16:30（ケイズハウスは15:00から）",
+    "en": "Day baths at Asahidake Onsen\n\nAsahidake Onsen has no town centre: the lodges are spread along the road through the forest. These take day visitors.\n\n• K’s House Hokkaido (a backpackers’ lodge): 15:00–19:00, ¥900. Its English FAQ says guests with tattoos are welcome in the hot spring. Indoor and outdoor baths. It closes on some days and shortens hours on others, so check the calendar on its website. Right in front of the Asahidake Onsen Iriguchi bus stop.\n\n• Hotel Bear Monte: 12:30–19:00 (last entry 18:00), ¥1,140. Face towel ¥110, bath towel ¥220. Saunas in the bath hall. Five minutes’ walk down the hill from the ropeway station, with its own bus stop (Hotel Bear Monte-mae). Nothing on tattoos (please check).\n\n• Yumoto Yukomanso, annexe bath “Kamigami-no-yu”: entry 12:00–18:00 (open until 19:00), ¥1,200. Bath towel rental ¥300, face towel ¥200. Near the Asahidake Onsen Iriguchi stop. Nothing on tattoos (please check).\n\n• Daisetsuzan Shirakabaso: 13:00–19:00, ¥800 according to the Higashikawa Tourism Association. The lodge’s own website does not mention day bathing and the lodge closes for some periods, so phone first.\n\nTiming: after the ropeway and lunch, Bear Monte is a short walk. K’s House and Yukomanso are about 1 km down the road from the ropeway station, 15–20 minutes on foot (on snow in winter), or 2 minutes and ¥250 on the 14:55 bus.\n\nThe last bus back stops at Hotel Bear Monte-mae at 16:55 and Asahidake Onsen Iriguchi at 16:57. Be out of the bath by 16:30 and wait at the stop.\n\nRecommended visit time: 14:20–16:30 (K’s House from 15:00)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ケイズハウス北海道",
+      "en": "K’s House Hokkaido"
+     },
+     "lat": 43.64774,
+     "lng": 142.78756,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B1%E3%82%A4%E3%82%BA%E3%83%8F%E3%82%A6%E3%82%B9%E5%8C%97%E6%B5%B7%E9%81%93%20%E6%97%AD%E5%B2%B3%E6%B8%A9%E6%B3%89"
+    },
+    {
+     "label": {
+      "ja": "ホテルベアモンテ",
+      "en": "Hotel Bear Monte"
+     },
+     "lat": 43.65071,
+     "lng": 142.79902,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B2%B3%E6%B8%A9%E6%B3%89%20%E3%83%9B%E3%83%86%E3%83%AB%E3%83%99%E3%82%A2%E3%83%A2%E3%83%B3%E3%83%86"
+    },
+    {
+     "label": {
+      "ja": "湯元 湧駒荘",
+      "en": "Yumoto Yukomanso"
+     },
+     "lat": 43.64784,
+     "lng": 142.78992,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B9%AF%E5%85%83%20%E6%B9%A7%E9%A7%92%E8%8D%98"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ケイズハウス北海道（休みのカレンダー）",
+      "en": "K’s House Hokkaido (closing-day calendar)"
+     },
+     "url": {
+      "ja": "https://kshouse.jp/hokkaido-j/index.html",
+      "en": "https://kshouse.jp/hokkaido-e/index.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ホテルベアモンテ 日帰り入浴",
+      "en": "Hotel Bear Monte day bath (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.bearmonte.jp/hotspring/",
+      "en": "https://www.bearmonte.jp/hotspring/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "湯元 湧駒荘 日帰り利用",
+      "en": "Yukomanso day use (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.yukoman.jp/day_trip",
+      "en": "https://www.yukoman.jp/day_trip"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "旭岳温泉の日帰り入浴（ひがしかわ観光協会）",
+      "en": "Day baths at Asahidake Onsen (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.welcome-higashikawa.jp/onsen",
+      "en": "https://www.welcome-higashikawa.jp/onsen"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "タトゥーがある人へ",
+      "en": "If you have tattoos"
+     },
+     "text": {
+      "ja": "旭岳温泉で、公式サイトに「タトゥーがあっても入れます」と書いているのはケイズハウス北海道です（15:00〜19:00、900円、休みの日あり）。ホテルベアモンテと湧駒荘の公式サイトには、タトゥーについての記載がありません。入る前に受付か電話で確かめてください。",
+      "en": "At Asahidake Onsen, K’s House Hokkaido says on its website that guests with tattoos are welcome in its hot spring (15:00–19:00, ¥900, closed on some days). The websites of Hotel Bear Monte and Yukomanso say nothing about tattoos: ask at the desk or by phone before you go in."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://kshouse.jp/hokkaido-e/faq.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "tattoo",
+      "text": {
+       "ja": "ケイズハウス北海道は可（公式サイト）。ベアモンテ・湧駒荘・白樺荘は記載なし＝要確認",
+       "en": "OK at K’s House Hokkaido (official site). Bear Monte, Yukomanso, Shirakabaso: not stated, please check"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ケイズハウス15:00〜19:00（休みの日あり）／ベアモンテ12:30〜19:00（受付18:00まで）／湧駒荘 受付12:00〜18:00",
+       "en": "K’s House 15:00–19:00 (some closed days) / Bear Monte 12:30–19:00 (entry to 18:00) / Yukomanso entry 12:00–18:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "ケイズハウス900円／ベアモンテ1,140円／湧駒荘1,200円／白樺荘800円",
+       "en": "K’s House ¥900 / Bear Monte ¥1,140 / Yukomanso ¥1,200 / Shirakabaso ¥800"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "最終 ホテルベアモンテ前16:55発、旭岳温泉入口16:57発 → 旭川駅18:33着",
+       "en": "Last bus: Hotel Bear Monte-mae 16:55, Asahidake Onsen Iriguchi 16:57 → Asahikawa Station 18:33"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "各宿の公式サイトと、ひがしかわ観光協会の「旭岳温泉日帰り入浴」の表で2026年11月28日に確認しました。支払い方法は書かれていないので、現金を用意してください。",
+     "en": "Checked on each lodge’s website and the Higashikawa Tourism Association’s day-bath table on 28 November 2026. Payment methods are not stated, so bring cash."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "aonsen-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahidake%2C_Daisetsuzan_Volcanic_Group_-_Asahidake6029.jpg"
+     }
+    },
+    {
+     "file": "aonsen-w2.jpg",
+     "credit": {
+      "author": "Soica2001",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahidake_spa_Yukomaso.JPG"
+     }
+    },
+    {
+     "file": "aonsen-w3.jpg",
+     "credit": {
+      "author": "ほくなん",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahidake_spa_Higashikawa_Hokkaido_Japan.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "higashikawa",
+   "name": {
+    "ja": "東川町",
+    "en": "Higashikawa"
+   },
+   "kind": {
+    "ja": "帰り道の町",
+    "en": "Town on the way back"
+   },
+   "blurb": {
+    "ja": "旭岳14:55発のバスで途中下車。道の駅とカフェ、ブルワリーを歩いて、17:34発で旭川へ。",
+    "en": "Get off the 14:55 bus here: a roadside market, a café and a brewery on foot, then the 17:34 on to Asahikawa."
+   },
+   "caution": {
+    "ja": "旭川へのいで湯号は道草館17:34発が最後",
+    "en": "Last Ideyu-go to Asahikawa leaves Michikusa-kan at 17:34"
+   },
+   "lat": 43.69724,
+   "lng": 142.50879,
+   "text": {
+    "ja": "東川町\n\n東川（ひがしかわ）は旭岳のふもとの町で、「写真の町」として知られています。いで湯号が町の真ん中の道の駅「ひがしかわ道草館（みちくさかん）」に止まるので、帰りに途中下車できます。\n\n旭岳14:55発 → 道草館15:34着（1,450円）。町を歩いて、道草館17:34発 → 旭川駅18:33着（1,110円）。17:34発が、旭川へ戻る最後のいで湯号です。\n\n・道の駅ひがしかわ「道草館」：9:00〜17:00（4〜9月は18:00まで）。12月31日〜1月4日は休み。町の店のパンや菓子、米、酒が並び、町の地図（グルメマップ）がもらえます。おにぎりやパンは昼すぎには売り切れることがあります。お手洗いは24時間。\n・CAFEtune：道草館から歩いて5分、YAMAtune 大雪山店に併設のカフェ。10:00〜17:00、木曜と不定休。コーヒーとホットドッグ。\n・NATURES Brewing：クラフトビールの醸造所とタップルーム（東町3丁目）。15:00〜21:00、月・木曜休み。\n\nお昼だけ開けている店（うどん、おむすびなど）は、この時間にはもう閉まっています。\n\n9:15発のバスで来た日は、東川に寄ると温泉に入る時間がありません。温泉も東川も、という日は旭川7:15発で出て、姿見の池→お昼→温泉（12時台から入れるベアモンテか湧駒荘）→14:55発のバスで東川へ。\n\nおすすめ訪問時間：15:34〜17:34",
+    "en": "Higashikawa\n\nHigashikawa is the town at the foot of Asahidake, known in Japan as the “town of photography”. The Ideyu-go stops at the roadside market Higashikawa Michikusa-kan in the middle of town, so you can break the ride back here.\n\nAsahidake 14:55 → Michikusa-kan 15:34 (¥1,450). Walk around town, then Michikusa-kan 17:34 → Asahikawa Station 18:33 (¥1,110). The 17:34 is the last Ideyu-go to Asahikawa.\n\n• Michi-no-Eki Higashikawa “Michikusa-kan”: 9:00–17:00 (to 18:00 April–September), closed 31 December–4 January. Bread and sweets from shops in town, local rice and sake, and a free food map of the town. Rice balls and bread can sell out soon after noon. Toilets open 24 hours.\n• CAFEtune: five minutes’ walk from Michikusa-kan, inside the YAMAtune Daisetsuzan shop. 10:00–17:00, closed Thursdays and some other days. Coffee and hot dogs.\n• NATURES Brewing: a craft brewery with a taproom (Higashimachi 3-chome). 15:00–21:00, closed Mondays and Thursdays.\n\nLunch-only places (udon, rice balls) have already closed by this time of day.\n\nIf you came on the 9:15 bus, stopping in Higashikawa leaves no time for a bath. To do both, leave Asahikawa at 7:15: Sugatami Pond, lunch, a bath (Bear Monte and Yukomanso open around noon), then the 14:55 bus to Higashikawa.\n\nRecommended visit time: 15:34–17:34"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "道の駅ひがしかわ「道草館」",
+      "en": "Higashikawa Michikusa-kan"
+     },
+     "lat": 43.69724,
+     "lng": 142.50879,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%B2%E3%81%8C%E3%81%97%E3%81%8B%E3%82%8F%20%E9%81%93%E8%8D%89%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "CAFEtune（YAMAtune 大雪山店）",
+      "en": "CAFEtune (YAMAtune)"
+     },
+     "lat": 43.69517,
+     "lng": 142.51168,
+     "url": "https://www.google.com/maps/search/?api=1&query=YAMAtune%20%E5%A4%A7%E9%9B%AA%E5%B1%B1%E5%BA%97%20CAFEtune"
+    },
+    {
+     "label": {
+      "ja": "NATURES Brewing",
+      "en": "NATURES Brewing"
+     },
+     "lat": 43.69724,
+     "lng": 142.50879,
+     "url": "https://www.google.com/maps/search/?api=1&query=NATURES%20Brewing%20%E6%9D%B1%E5%B7%9D%E7%94%BA%E6%9D%B1%E7%94%BA3%E4%B8%81%E7%9B%AE6-8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "道の駅ひがしかわ「道草館」",
+      "en": "Michikusa-kan (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.welcome-higashikawa.jp/michikusa/",
+      "en": "https://www.welcome-higashikawa.jp/michikusa/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "東川のグルメ情報（ひがしかわ観光協会）",
+      "en": "Places to eat in Higashikawa (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.welcome-higashikawa.jp/gurmet",
+      "en": "https://www.welcome-higashikawa.jp/gurmet"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "いで湯号（66番）時刻・運賃",
+      "en": "Ideyu-go bus (route 66): times and fares"
+     },
+     "url": {
+      "ja": "https://www.asahikawa-denkikidou.jp/asahidaek_line/",
+      "en": "https://www.asahikawa-denkikidou.jp/asahidaek_line/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "旭岳14:55 → 道草館15:34、1,450円。道草館17:34 → 旭川駅18:33、1,110円（最終）",
+       "en": "Asahidake 14:55 → Michikusa-kan 15:34, ¥1,450. Michikusa-kan 17:34 → Asahikawa Station 18:33, ¥1,110 (last bus)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "道草館 9:00〜17:00（4〜9月は18:00まで）／CAFEtune 10:00〜17:00／NATURES Brewing 15:00〜21:00",
+       "en": "Michikusa-kan 9:00–17:00 (to 18:00 Apr–Sep) / CAFEtune 10:00–17:00 / NATURES Brewing 15:00–21:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "道草館 12月31日〜1月4日／CAFEtune 木曜・不定休／NATURES Brewing 月・木曜",
+       "en": "Michikusa-kan 31 Dec–4 Jan / CAFEtune Thursdays and irregular days / NATURES Brewing Mondays and Thursdays"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ひがしかわ観光協会のページ（道草館・グルメ情報の各店）と、いで湯号の時刻表・運賃表で2026年11月28日に確認しました。",
+     "en": "Checked on the Higashikawa Tourism Association’s pages (Michikusa-kan and each shop) and the Ideyu-go timetable and fare table on 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "higashikawa-w1.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Michinoeki_Higashikawa_%E3%80%8CMichikusakan%E3%80%8D_Appearance.jpg"
+     }
+    },
+    {
+     "file": "higashikawa-w2.jpg",
+     "credit": {
+      "author": "Ozizo",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Higashikawa_Museum.jpg"
+     }
+    },
+    {
+     "file": "higashikawa-w3.jpg",
+     "credit": {
+      "author": "Him56",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Michinoeki_Higashikawa_Michikusakan.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
