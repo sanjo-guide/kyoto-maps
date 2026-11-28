@@ -60,26 +60,66 @@
   show(start || 'year', false);
 })();
 
-/* 地域（季節）へ飛ぶボタン：マップの数を出す。ボタンが見えなくなったら、右下に「地域を選ぶ ↑」を出す */
+/* 地域（季節）のボタン：押すと、その地域のマップだけを出す（上下に行き来しなくてよいように）。
+   下へスクロールすると上に細いバー（いまの地域と「地域を変える」）が残り、その場で地域を変えられる */
 (function () {
-  document.querySelectorAll('.jump a').forEach(function (a) {
-    var el = document.getElementById(a.getAttribute('href').slice(1)), sec = el && el.closest('.group');
-    if (sec) a.setAttribute('data-n', sec.querySelectorAll('.cards > li').length);
+  var KEY = 'kyoto-maps-top-region';
+  var saved = {}; try { saved = JSON.parse(sessionStorage.getItem(KEY) || '{}') || {}; } catch (e) {}
+  var bar = document.getElementById('regbar'), lbl = document.getElementById('reglbl'), chg = document.getElementById('regchg');
+  var sheet = document.getElementById('sheet'), list = document.getElementById('sheet-list'), sh = document.getElementById('sheet-h');
+  function en() { return document.documentElement.lang === 'en'; }
+  function setText(el, ja, e) { el.setAttribute('data-ja', ja); el.setAttribute('data-en', e); el.innerHTML = en() ? e : ja; }
+  function curNav() { return document.getElementById(document.getElementById('panel-season').hidden ? 'jump-year' : 'jump-season'); }
+  function secOf(a) { var el = document.getElementById(a.getAttribute('href').slice(1)); return el && el.closest('.group'); }
+  function choose(nav, r, save) {
+    var panel = nav.closest('.panel'), cur = null;
+    nav.querySelectorAll('a').forEach(function (a) { var on = (a.dataset.r || a.getAttribute('href').slice(1)) === r; a.setAttribute('aria-current', String(on)); if (on) cur = a; });
+    if (!cur) { r = 'all'; cur = nav.querySelector('[data-r="all"]'); cur.setAttribute('aria-current', 'true'); }
+    var target = r === 'all' ? null : secOf(cur);
+    panel.querySelectorAll('.group').forEach(function (g) { g.hidden = !!target && g !== target; });
+    nav.dataset.cur = r;
+    if (save) { saved[nav.id] = r; try { sessionStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+    update();
+  }
+  document.querySelectorAll('.jump').forEach(function (nav) {
+    var total = 0;
+    nav.querySelectorAll('a:not([data-r])').forEach(function (a) { var sec = secOf(a); if (sec) { var n = sec.querySelectorAll('.cards > li').length; a.setAttribute('data-n', n); total += n; } });
+    nav.querySelector('[data-r="all"]').setAttribute('data-n', total);
+    nav.addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return;
+      e.preventDefault(); choose(nav, a.dataset.r || a.getAttribute('href').slice(1), true);
+    });
+    var h = location.hash.slice(1), fromHash = h && nav.querySelector('a[href="#' + h + '"]');
+    choose(nav, fromHash ? h : (saved[nav.id] || 'all'), false);
   });
-  var btn = document.getElementById('tojump');
-  function nav() { return document.getElementById(document.getElementById('panel-season').hidden ? 'jump-year' : 'jump-season'); }
-  function label() {
-    var season = !document.getElementById('panel-season').hidden, en = document.documentElement.lang === 'en';
-    var ja = season ? '季節を選ぶ ↑' : '地域を選ぶ ↑', e = season ? 'Choose a season ↑' : 'Choose a region ↑';
-    btn.setAttribute('data-ja', ja); btn.setAttribute('data-en', e); btn.textContent = en ? e : ja;
-  }
+  // 上に残る細いバー
   function update() {
-    var r = nav().getBoundingClientRect();
-    btn.hidden = r.bottom > 0;
-    if (!btn.hidden) label();
+    var nav = curNav(), r = nav.getBoundingClientRect();
+    bar.hidden = r.bottom > document.querySelector('.bar').getBoundingClientRect().bottom + 4;
+    var a = nav.querySelector('[aria-current="true"]');
+    if (a) setText(lbl, (nav.id === 'jump-year' ? '地域：' : '季節：') + a.getAttribute('data-ja'), (nav.id === 'jump-year' ? 'Region: ' : 'Season: ') + a.getAttribute('data-en'));
+    setText(chg, nav.id === 'jump-year' ? '地域を変える ▾' : '季節を変える ▾', nav.id === 'jump-year' ? 'Change ▾' : 'Change ▾');
   }
-  btn.addEventListener('click', function () { nav().scrollIntoView(); });
   window.addEventListener('scroll', update, { passive: true });
   document.querySelector('.tabs').addEventListener('click', function () { setTimeout(update, 0); });
+  // 選ぶ画面
+  function close() { sheet.hidden = true; list.innerHTML = ''; document.getElementById('regopen').focus(); }
+  document.getElementById('regopen').addEventListener('click', function () {
+    var nav = curNav(), c = nav.cloneNode(true);
+    c.removeAttribute('id'); list.innerHTML = ''; list.appendChild(c);
+    setText(sh, nav.id === 'jump-year' ? '地域を選ぶ' : '季節を選ぶ', nav.id === 'jump-year' ? 'Choose a region' : 'Choose a season');
+    c.addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return;
+      e.preventDefault(); choose(nav, a.dataset.r || a.getAttribute('href').slice(1), true); close();
+      // 地域のボタンがちょうど上に隠れる位置へ（選んだ地域の見出しが、上のバーのすぐ下に来る）
+      var y = nav.getBoundingClientRect().bottom + window.pageYOffset - document.querySelector('.bar').offsetHeight + 2;
+      window.scrollTo({ top: y, behavior: 'instant' });
+      update();
+    });
+    sheet.hidden = false; (c.querySelector('[aria-current="true"]') || c.querySelector('a')).focus();
+  });
+  document.getElementById('sheet-close').addEventListener('click', close);
+  sheet.addEventListener('click', function (e) { if (e.target === sheet) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) close(); });
   update();
 })();
