@@ -1,0 +1,2151 @@
+{
+ "id": "hakodate",
+ "course": "late",
+ "_note": "函館で1日（hakodate/ のページ専用。形は eizan-line.json と同じ）。「9〜10時に出る」。9:30朝市→市電10:32→五稜郭タワー→公園・奉行所→お昼→市電13:58→八幡坂→（公会堂は寄り道）→教会→函館山15:30の便→夜の赤レンガ倉庫→晩ごはん（湯の川は寄り道）。写真はすべて Wikimedia Commons（一覧は scripts/hakodate_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_hakodate_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "area": {
+    "ja": "函館駅",
+    "en": "Hakodate Station"
+   },
+   "title": {
+    "ja": "9:30に出て、朝市で朝ごはん",
+    "en": "Out at 9:30, breakfast at the market"
+   }
+  },
+  {
+   "first": 3,
+   "last": 5,
+   "area": {
+    "ja": "五稜郭",
+    "en": "Goryokaku"
+   },
+   "title": {
+    "ja": "市電で五稜郭へ。タワー、公園、お昼",
+    "en": "Tram to Goryokaku: tower, park, lunch"
+   }
+  },
+  {
+   "first": 6,
+   "last": 9,
+   "area": {
+    "ja": "元町・函館山",
+    "en": "Motomachi · Mt. Hakodate"
+   },
+   "title": {
+    "ja": "坂と教会を歩いて、日の入り前に函館山へ",
+    "en": "Slopes and churches, then up the mountain before sunset"
+   }
+  },
+  {
+   "first": 10,
+   "last": 12,
+   "area": {
+    "ja": "ベイエリア・夜",
+    "en": "Bay area · evening"
+   },
+   "title": {
+    "ja": "明かりのついた赤レンガ倉庫と晩ごはん",
+    "en": "The floodlit warehouses and dinner"
+   }
+  }
+ ],
+ "focus": {
+  "first": 1,
+  "last": 12
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。駅（と札幌駅・帰り）は自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   12
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 9,
+    "rule": {
+     "none": [
+      9
+     ]
+    },
+    "text": {
+     "ja": "函館山に上がらない日（雲・強い風）は、元町をゆっくり歩いて、16:30ごろ八幡坂の明かりか、赤レンガ倉庫の夕暮れを。五稜郭を午後にして、タワーから夕暮れの堀の明かり（12〜2月）を見る回り方もあります。",
+     "en": "No Mt. Hakodate today (cloud or wind)? Take Motomachi slowly and see the lights on Hachiman-zaka or dusk at the warehouses around 16:30. Or move Goryokaku to the afternoon and watch the moat light up from the tower (December–February)."
+    }
+   },
+   {
+    "spot": 7,
+    "rule": {
+     "any": [
+      7
+     ]
+    },
+    "text": {
+     "ja": "公会堂に入ると30分かかります。12〜1月は、五稜郭のお昼を13:25までにして、1本前の市電（13:50発→十字街14:13着）に乗ってください。",
+     "en": "The Public Hall adds 30 minutes. In December and January, finish lunch by 13:25 and take the earlier tram (13:50 → Jujigai 14:13)."
+    }
+   },
+   {
+    "spot": 11,
+    "rule": {
+     "any": [
+      11
+     ]
+    },
+    "text": {
+     "ja": "湯の川を入れると、晩ごはんは20:50すぎに駅の近くで。大門横丁か、22:00まで開いているラッキーピエロ函館駅前店へ。",
+     "en": "With Yunokawa, dinner is after 20:50 near the station: Daimon Yokocho, or Lucky Pierrot Hakodate-ekimae, open until 22:00."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/hakodate/",
+ "sources": [
+  {
+   "what": "札幌→函館 朝 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%87%BD%E9%A4%A8&y=2026&m=12&d=03&hh=08&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "特急北斗6号 8:43→12:33、9,770円（乗車券6,600円＋指定席3,170円）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "札幌→函館 朝 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%87%BD%E9%A4%A8&y=2026&m=12&d=05&hh=08&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ（北斗6号 8:43→12:33）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "札幌→函館 早朝・その次 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E5%87%BD%E9%A4%A8&y=2026&m=12&d=03&hh=06&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "北斗2号 6:00→9:29。9:30で検索すると北斗8号 9:45→13:35",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館→札幌 午後 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "北斗15号 15:01→18:47、9,770円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館→札幌 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=17&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "北斗19号 17:55→21:41、北斗21号 18:43→22:41",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館→札幌 夕方 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=05&hh=17&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ（17:55→21:41、18:43→22:41）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館→札幌 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8&to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=23&m1=0&m2=0&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "最終は北斗21号 18:43→22:41",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "JR北海道の特急は全車指定席・レールパス",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "All seats are reserved on all JR Hokkaido’s limited express trains. There are no non-reserved seats／パスで普通車指定席に乗れる",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 函館駅前→五稜郭公園前 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&to=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&y=2026&m=12&d=03&hh=10&m1=2&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "10:32→10:51、10:40→10:59、270円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 函館駅前→五稜郭公園前 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&to=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&y=2026&m=12&d=05&hh=10&m1=2&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "10:32→10:51",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 函館駅前→五稜郭公園前 朝",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&to=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&y=2026&m=12&d=03&hh=08&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日8:41→8:58・8:47→9:04、土曜8:42→8:59・8:48→9:07",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 五稜郭公園前→十字街 13時台",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&to=%E5%8D%81%E5%AD%97%E8%A1%97&y=2026&m=12&d=03&hh=13&m1=4&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:50→14:13、13:58→14:21、14:06→14:29、290円（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 五稜郭公園前→十字街 14時台",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&to=%E5%8D%81%E5%AD%97%E8%A1%97&y=2026&m=12&d=03&hh=14&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "14:46→15:09、14:54→15:17、15:02→15:25（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 十字街→五稜郭公園前",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%8D%81%E5%AD%97%E8%A1%97&to=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&y=2026&m=12&d=03&hh=11&m1=2&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "11:22→11:47、11:30→11:55、11:38→12:03、290円（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 函館駅前→十字街",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&to=%E5%8D%81%E5%AD%97%E8%A1%97&y=2026&m=12&d=03&hh=13&m1=4&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:43→13:49、13:51→13:57、250円（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 五稜郭公園前→湯の川温泉",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D&to=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=12&m1=0&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "12:11→12:23、12:19→12:31、270円（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 十字街→湯の川温泉 夕方",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%8D%81%E5%AD%97%E8%A1%97&to=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=17&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日17:32→18:07・17:39→18:14、土曜17:30→18:07・17:38→18:14、300円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 十字街→湯の川温泉 18時台",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%8D%81%E5%AD%97%E8%A1%97&to=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=18&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日18:35→19:10・18:42→19:17、土曜18:34→19:11・18:42→19:19",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 湯の川温泉→函館駅前 午後",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&to=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&y=2026&m=12&d=03&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "15:04→15:35、15:12→15:43、15:20→15:51、290円（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 湯の川温泉→函館駅前 19時台",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&to=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&y=2026&m=12&d=03&hh=19&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "19:37→20:07、19:52→20:22、20:06→20:36（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 湯の川温泉→函館駅前 20時台",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&to=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&y=2026&m=12&d=03&hh=20&m1=2&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "20:21→20:51、20:41→21:11、21:01→21:31（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 湯の川温泉→函館駅前 最終",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89&to=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&y=2026&m=12&d=03&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "最終21:46→22:16、その前21:26・21:01（土曜も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 十字街→函館駅前 夜・最終",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E5%8D%81%E5%AD%97%E8%A1%97&to=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D&y=2026&m=12&d=03&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "最終22:40→22:46、その前22:20・21:55（土曜も同じ）。19時台は平日19:03・19:09、土曜19:06・19:17",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 運賃",
+   "url": "https://www.city.hakodate.hokkaido.jp/docs/2014012100946/",
+   "saw": "令和7年12月1日改定。2kmまで250円・4kmまで270円・7kmまで290円・7km超え300円。函館駅前から：十字街250円、五稜郭公園前270円、湯の川温泉290円。五稜郭公園前から：十字街290円、湯の川温泉270円。十字街から湯の川温泉300円。料金は降りるときに払う",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 1日乗車券",
+   "url": "https://www.city.hakodate.hokkaido.jp/tram/value-ticket/",
+   "saw": "市電1日乗車券 大人800円（紙・スマートフォン）、24時間乗車券1,130円（スマートフォンのみ）、市電・函館バス1日乗車券1,600円（スマートフォンのみ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 1日乗車券の販売場所",
+   "url": "https://www.city.hakodate.hokkaido.jp/docs/2014012100991/",
+   "saw": "市電1日乗車券は車内でも販売（停車中に乗務員へ）。函館市観光案内所（JR函館駅内）、駅前のホテルなど",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "市電 ICカード",
+   "url": "https://www.city.hakodate.hokkaido.jp/docs/2020111700024/",
+   "saw": "乗るときと降りるときにタッチ。Kitaca・Suica・PASMO・manaca・PiTaPa・TOICA・ICOCA・はやかけん・SUGOCA も使える",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館山ロープウェイ 営業時間・運賃",
+   "url": "https://334.co.jp/ropeway/price/",
+   "saw": "4/20〜9/30 始発10:00・上り最終21:30・下り最終22:00、10/1〜4/19 始発10:00・上り最終20:30・下り最終21:00。15分おき（混雑時5〜10分おき）、約3分。往復 大人1,800円・片道1,200円。クレジットカード・電子マネー・コード決済可",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館山ロープウェイ 混雑",
+   "url": "https://334.co.jp/",
+   "saw": "日没・夜景になる時間から1〜2時間は山頂展望台が大変混み合うことが予想されます",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館山ロープウェイ 年末年始",
+   "url": "https://334.co.jp/news/2026/1123-22350/",
+   "saw": "2026年12月31日〜2027年1月3日：始発10:00、上り最終17:30、下り最終19:00。山頂展望台10:00〜19:00",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館山ロープウェイ 秋の点検",
+   "url": "https://334.co.jp/news/2026/1031-21931/",
+   "saw": "2026年10月20日〜11月8日は法定整備点検のため運休",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館山登山道 冬季通行止め",
+   "url": "https://www.hakobura.jp/news/1062",
+   "saw": "2026年11月9日11:00〜2027年4月12日11:00。期間中は車・タクシー・バスで山頂へ行けない。山頂へはロープウェイで",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館山ロープウェイ アクセス",
+   "url": "https://334.co.jp/access/",
+   "saw": "函館山登山バス 片道 大人700円（函館バス）。元町・ベイエリア周遊号 250円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "五稜郭タワー",
+   "url": "https://www.goryokaku-tower.co.jp/price/",
+   "saw": "9:00〜18:00（展望チケット販売終了17:50）、年中無休。大人1,200円・中高生900円・小学生600円。コインロッカー小300円・大500円（営業時間内）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "箱館奉行所",
+   "url": "https://hakodate-bugyosho.jp/information/",
+   "saw": "一般500円。4〜10月9:00〜18:00（17:45受付終了）、11〜3月9:00〜17:00（16:45受付終了）。休館は12月31日〜1月3日と臨時休館",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "箱館奉行所 見学の注意",
+   "url": "https://hakodate-bugyosho.jp/guide/",
+   "saw": "履き物を脱いで入館、大きな荷物の持ち込み禁止、館内は飲食禁止",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館朝市",
+   "url": "https://www.hakodate-asaichi.com/",
+   "saw": "年中無休（店ごとに異なる）。1〜4月6:00〜14:00過ぎ、5〜12月5:00〜14:00過ぎ",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "金森赤レンガ倉庫",
+   "url": "https://hakodate-kanemori.com/",
+   "saw": "物販店9:30〜19:00、函館ビヤホール 平日11:30〜21:30・土日祝11:00〜21:30（21:00L.O.）、年中無休",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旧函館区公会堂",
+   "url": "https://hakodate-kokaido.jp/",
+   "saw": "4〜10月9:00〜18:00（土〜月は19:00まで）、11〜3月9:00〜17:00。入館は終了の30分前まで。一般300円。年末年始休館 令和8年12月31日〜令和9年1月3日、臨時休館 令和9年1月26日",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館ハリストス正教会",
+   "url": "https://www.orthodox-hakodate.jp/services",
+   "saw": "拝観 月〜金10:00〜17:00（11・12・3月は16:00まで）、土10:00〜16:00、日13:00〜16:00。冬期（12月25日〜2月末）はお祈り以外の拝観休止。拝観献金 大人200円・中学生100円。聖堂内部の撮影は不可",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "はこだてクリスマスファンタジー",
+   "url": "http://www.hakodatexmas.com/",
+   "saw": "2026年12月1日（火）〜12月25日（金）。ツリー点灯16:30〜17:45・18:00〜22:00（12/1は18:00から）。花火は毎日18時。スープバー16:30〜20:00",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "Hakodate Winter Lights",
+   "url": "https://www.hakobura.jp/features/434",
+   "saw": "八幡坂・開港通り・駅前のイルミネーション 2026年12月1日〜2027年2月28日、日没〜22:00（予定）。五稜星の夢 同じ期間、日没〜19:00（予定）。冬花火：1月8日〜30日の金・土18:00湯の川温泉、2月5日〜27日の金・土18:00金森赤レンガ倉庫周辺",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "湯の川温泉 日帰り入浴",
+   "url": "https://hakodate-yunokawa.jp/dayspa/",
+   "saw": "ホテル雨宮館 800円・6:00〜22:00、KKRはこだて 1,000円・11:00〜21:00、ホテルテトラ湯の川温泉 550円・13:00〜22:00、湯元啄木亭 1,200円・13:00〜21:00（タオル300円）、笑函館屋 平日1,200円・土日祝1,500円・15:00〜21:00。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "湯の川温泉 足湯",
+   "url": "https://hakodate-yunokawa.jp/spots/",
+   "saw": "湯の川温泉足湯 湯巡り舞台（毎日9:00〜21:00）、湯川町1-16-5",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館市熱帯植物園",
+   "url": "https://hako-eco.com/about",
+   "saw": "4〜10月9:30〜18:00、11〜3月9:30〜16:30。休園12月29日〜1月1日。一般300円。12月から5月のゴールデンウィークまで、サル山で温泉に入るサル",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "熱帯植物園 サルの温泉の時期",
+   "url": "https://hako-eco.com/qa",
+   "saw": "12月1日から翌年の5月GW前後まで（赤ちゃんが生まれた時点でそのシーズンは終了）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "トラピスチヌ修道院",
+   "url": "https://www.hakobura.jp/spots/504",
+   "saw": "（3・4・10・11月）8:30〜16:30、（5〜9月）8:30〜17:00、（12〜2月）9:00〜16:00。年末年始12月29日〜1月2日休み。無料。「トラピスチヌ入口」バス停から徒歩10分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "立待岬",
+   "url": "https://www.hakobura.jp/spots/587",
+   "saw": "冬期は車両通行止め、徒歩のみ通行可能。市電「谷地頭」電停から徒歩20分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ラッキーピエロ",
+   "url": "https://luckypierrot.jp/shop/goryokaku/",
+   "saw": "五稜郭公園前店 9:30〜22:00（ラストオーダー21:30）。ベイエリア本店10:00〜21:00（同20:30）、函館駅前店8:00〜22:00（同21:30）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館麺厨房あじさい",
+   "url": "https://www.ajisai.tv/shop/",
+   "saw": "本店（五稜郭町29-22）11:00〜20:25（LO）、第四水曜休み。紅店（豊川町12-7 函館ベイ美食倶楽部）11:00〜21:30（LO）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "函館ひかりの屋台 大門横丁",
+   "url": "https://www.hakodate-yatai.com/faq",
+   "saw": "26店。営業時間・定休日は店ごとに違う。基本は現金払い。予約は各店へ",
+   "checked": "2026-11-28"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "eki",
+   "name": {
+    "ja": "函館（はこだて）駅と市電",
+    "en": "Hakodate Station and the tram"
+   },
+   "kind": {
+    "ja": "駅・市電",
+    "en": "Station, tram"
+   },
+   "blurb": {
+    "ja": "朝市は駅のすぐ横。五稜郭・元町・湯の川へは、駅前から市電で行きます。",
+    "en": "The morning market is next to the station. Trams from the front of the station go to Goryokaku, Motomachi and Yunokawa."
+   },
+   "lat": 41.773798,
+   "lng": 140.726378,
+   "text": {
+    "ja": "函館（はこだて）駅と市電\n\n9:30にホテルを出て、まず駅の横の朝市で朝ごはん。市電で五稜郭へ行ってタワーと公園、お昼を食べてから市電で元町へ。坂と教会を歩いて、日の入りの30分前にロープウェイで函館山へ上がります。下りてから、明かりのついた赤レンガ倉庫と晩ごはん。\n\n冬（12〜1月）の日の入りに合わせた時間割です。日の長い季節は、元町をゆっくり歩いて晩ごはんを先にします（函館山のスポットに目安）。市電に3回乗るので、最初に1日乗車券（800円）を買うと楽です。\n\n・市電（路面電車）：乗り場「函館駅前」は、駅を出て広場の先の大通りにあります。昼間はおよそ8分おき。2系統と5系統のどちらに乗っても、五稜郭公園前・十字街・湯の川温泉に行けます。\n\n・運賃：乗った距離で250〜300円（函館駅前から十字街250円、五稜郭公園前270円、湯の川温泉290円）。降りるときに払います。Suica・Kitaca・ICOCAなどの交通系ICカードが使え、乗るときと降りるときにタッチします。\n\n・1日乗車券：800円。3回乗ればほぼ元が取れます。市電の車内（止まっているときに運転士さんへ）、駅の中の観光案内所、駅前のホテルなどで買えます。スマートフォン版と24時間券（1,130円）もあります。\n\n・最終：湯の川温泉発は21:46（函館駅前22:16着）、十字街発は22:40（函館駅前22:46着）。夜は20分おきくらいになります。\n\n・荷物：泊まる日はホテルに預けるのが楽です。五稜郭タワーにもコインロッカーがあります（小300円・大500円、営業時間内）。\n\nおすすめ出発時間：9:30",
+    "en": "Hakodate Station and the tram\n\nLeave your hotel at 9:30 and start with breakfast at the market beside the station. Take the tram to Goryokaku for the tower and the park, eat lunch, then ride to Motomachi. Walk the slopes and churches and take the ropeway up Mt. Hakodate 30 minutes before sunset. After coming down: the floodlit warehouses and dinner.\n\nThis timetable follows December–January sunsets. In the long days of summer, take Motomachi slowly and eat dinner first (see the Mt. Hakodate stop). You ride the tram three times, so a day pass (¥800) at the start makes things simple.\n\n· Tram: the Hakodate-ekimae stop is on the main road beyond the station plaza. Trams come about every 8 minutes in the daytime. Both routes, 2 and 5, go to Goryokaku-Koen-mae, Jujigai and Yunokawa-Onsen.\n\n· Fares: ¥250–300 by distance (from Hakodate-ekimae: Jujigai ¥250, Goryokaku-Koen-mae ¥270, Yunokawa-Onsen ¥290). You pay when you get off. Suica, Kitaca, ICOCA and other IC cards work: tap when you board and when you leave.\n\n· Day pass: ¥800, which roughly pays for itself after three rides. Buy it on the tram (ask the driver while it is stopped), at the tourist information centre inside the station, or at hotels near the station. There are also a smartphone version and a 24-hour pass (¥1,130).\n\n· Last trams: 21:46 from Yunokawa-Onsen (Hakodate-ekimae 22:16) and 22:40 from Jujigai (22:46). In the evening they run about every 20 minutes.\n\n· Luggage: leaving it at your hotel is easiest. Goryokaku Tower also has coin lockers (¥300 small, ¥500 large, during opening hours).\n\nRecommended departure time: 9:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR函館駅",
+      "en": "JR Hakodate Station"
+     },
+     "lat": 41.773798,
+     "lng": 140.726378,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E5%87%BD%E9%A4%A8%E9%A7%85"
+    },
+    {
+     "label": {
+      "ja": "市電 函館駅前",
+      "en": "Hakodate-ekimae tram stop"
+     },
+     "lat": 41.772355,
+     "lng": 140.727866,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E9%A7%85%E5%89%8D%20%E9%9B%BB%E5%81%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "函館市電（時刻表・乗車券）",
+      "en": "Hakodate City Tram (timetables, passes)"
+     },
+     "url": {
+      "ja": "https://www.city.hakodate.hokkaido.jp/bunya/hakodateshiden/",
+      "en": "https://www.city.hakodate.hokkaido.jp/bunya/hakodateshiden/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "市電のお得な乗車券",
+      "en": "Tram passes"
+     },
+     "url": {
+      "ja": "https://www.city.hakodate.hokkaido.jp/tram/value-ticket/",
+      "en": "https://www.city.hakodate.hokkaido.jp/tram/value-ticket/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "冬は坂と歩道が凍ります",
+      "en": "Slopes and pavements freeze in winter"
+     },
+     "text": {
+      "ja": "12〜3月は雪と氷の道です。元町の坂は急で、下りがいちばん滑ります。底に溝の深い、滑りにくい靴で、歩く時間を多めに見てください。雪の日は市電も遅れます。",
+      "en": "From December to March the streets are snow and ice. The Motomachi slopes are steep and going down is the slippery part. Wear shoes with deep tread and allow extra walking time. Trams also run late in snow."
+     },
+     "from": "2026-11-20",
+     "to": "2027-03-31"
+    },
+    {
+     "head": {
+      "ja": "年末年始は時間が変わります",
+      "en": "Shorter hours over New Year"
+     },
+     "text": {
+      "ja": "函館山ロープウェイは12月31日〜1月3日、上りの最終17:30・下りの最終19:00。箱館奉行所と旧函館区公会堂は12月31日〜1月3日、熱帯植物園は12月29日〜1月1日が休み。市電も年末年始のダイヤになります。朝市は店ごとに違います。",
+      "en": "The ropeway’s last ride up is 17:30 and last ride down 19:00 from 31 December to 3 January. The Magistrate’s Office and the Old Public Hall close 31 December–3 January; the tropical garden closes 29 December–1 January. Trams run a holiday timetable. Market stalls each keep their own days."
+     },
+     "from": null,
+     "to": "2027-01-03",
+     "url": "https://334.co.jp/news/2026/1123-22350/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "市電 1回250〜300円、1日乗車券800円",
+       "en": "Tram ¥250–300 a ride, day pass ¥800"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市電は昼間およそ8分おき。最終は湯の川温泉21:46発、十字街22:40発",
+       "en": "Trams about every 8 minutes in the daytime. Last: 21:46 from Yunokawa-Onsen, 22:40 from Jujigai"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "市電の運賃・乗車券・ICカードは函館市（市電）の公式ページ、時刻は乗換案内の2026年12月3日（木）・5日（土）のダイヤで確認しました。年末年始は特別なダイヤです。",
+     "en": "Tram fares, passes and IC cards from the City of Hakodate’s tram pages; times from a route planner for 3 and 5 December 2026. A holiday timetable runs over New Year."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "eki-w1.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%87%BD%E9%A4%A8%E9%A7%85%E9%A7%85%E8%88%8E20231201-IMG_8678.jpg"
+     }
+    },
+    {
+     "file": "eki-w2.jpg",
+     "credit": {
+      "author": "Rsa",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Transportation_Bureau_type_9600_20110826.jpg"
+     }
+    },
+    {
+     "file": "eki-w3.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JRH_Hakodate-STA_Entrance.jpg"
+     }
+    },
+    {
+     "file": "eki-w4.jpg",
+     "credit": {
+      "author": "Kuroc622",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_city_car_39_in_Komaba-syako_mae.jpg"
+     }
+    },
+    {
+     "file": "eki-w5.jpg",
+     "credit": {
+      "author": "sodai gomi",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_City_Tram_8005.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "asaichi",
+   "name": {
+    "ja": "函館朝市（はこだてあさいち）",
+    "en": "Hakodate Morning Market"
+   },
+   "kind": {
+    "ja": "市場・朝ごはん",
+    "en": "Market, breakfast"
+   },
+   "blurb": {
+    "ja": "駅のすぐ横の市場。海鮮丼の食堂が集まる「どんぶり横丁市場」と、イカ・カニ・干物の店が並びます。",
+    "en": "A market beside the station: seafood-bowl restaurants in the Donburi Yokocho hall, and stalls of squid, crab and dried fish."
+   },
+   "caution": {
+    "ja": "14時すぎには閉まります。昼をすぎると片付けを始める店があります",
+    "en": "It closes soon after 14:00; some stalls start packing up after noon"
+   },
+   "lat": 41.772239,
+   "lng": 140.724817,
+   "text": {
+    "ja": "函館朝市（はこだてあさいち）\n\n9:35から朝ごはん。団体の人が多い時間なので、どんぶり横丁市場で空いている店を選んでください。10:20に市場を出て、市電の乗り場へ。\n\n市場が開くのは、1〜4月は6:00、5〜12月は5:00。閉まるのは14:00すぎです。店ごとに休みと時間が違います。\n\n食堂は駅に近い「どんぶり横丁市場」に集まっています。店の前に写真つきのメニューと値段が出ているので、何軒か見てから決められます。イクラ・ウニ・ホタテなど、のせるものを選べる店が多く、焼き魚の定食もあります。\n\n声をかけてくる店もありますが、断って大丈夫です。カニやメロンは値段を聞いてから。現金のほうが確実です。\n\n8〜10時は団体の人で混みます。7時前か、10時半すぎが歩きやすい時間です。\n\nおすすめ訪問時間：9:35〜10:20",
+    "en": "Hakodate Morning Market\n\nBreakfast from 9:35. Tour groups are around at this hour, so pick a restaurant with space in Donburi Yokocho. Leave at 10:20 for the tram stop.\n\nThe market opens at 6:00 from January to April and 5:00 from May to December, and closes soon after 14:00. Each stall keeps its own days and hours.\n\nThe restaurants are gathered in the Donburi Yokocho hall on the station side. Menus with photos and prices are posted outside, so look at a few before choosing. Many let you pick the toppings (salmon roe, sea urchin, scallops), and there are grilled-fish set meals too.\n\nSome stallholders call out to you; it is fine to say no. Ask the price before buying crab or melon. Cash is the safe choice.\n\nTour groups fill the market from 8 to 10. Before 7:00 or after 10:30 is easier.\n\nRecommended visit time: 9:35–10:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "函館朝市",
+      "en": "Hakodate Morning Market"
+     },
+     "lat": 41.772239,
+     "lng": 140.724817,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E6%9C%9D%E5%B8%82"
+    },
+    {
+     "label": {
+      "ja": "どんぶり横丁市場",
+      "en": "Donburi Yokocho"
+     },
+     "lat": 41.77285,
+     "lng": 140.72575,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E6%9C%9D%E5%B8%82%20%E3%81%A9%E3%82%93%E3%81%B6%E3%82%8A%E6%A8%AA%E4%B8%81%E5%B8%82%E5%A0%B4"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館朝市（公式）",
+      "en": "Hakodate Morning Market (official)"
+     },
+     "url": {
+      "ja": "https://www.hakodate-asaichi.com/",
+      "en": "https://www.hakodate-asaichi.com/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "1〜4月 6:00〜14:00すぎ、5〜12月 5:00〜14:00すぎ（店ごとに違う）",
+       "en": "Jan–Apr 6:00–about 14:00, May–Dec 5:00–about 14:00 (varies by stall)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間は函館朝市の公式サイトで確認しました。食堂ごとの時間と支払い方法は確認していません（要確認）。混む時間は一般的な目安です。",
+     "en": "Hours from the market’s official site. Individual restaurants’ hours and payment methods were not checked (please check). Busy times are a general guide."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "asaichi-w1.jpg",
+     "credit": {
+      "author": "bryan...",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Morning_Market%2C_Hakodate_Asaichi%2C_Hakodate%2C_2014.jpg"
+     }
+    },
+    {
+     "file": "asaichi-w2.jpg",
+     "credit": {
+      "author": "Suikotei",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Asaichi_201808.jpg"
+     }
+    },
+    {
+     "file": "asaichi-w3.jpg",
+     "credit": {
+      "author": "Abasaa",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Asaichi_Hiroba_interior_02.JPG"
+     }
+    },
+    {
+     "file": "asaichi-w4.jpg",
+     "credit": {
+      "author": "lienyuan lee",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Morning_Market_%E5%87%BD%E9%A4%A8%E6%9C%9D%E5%B8%82_-_panoramio_%281%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "tower",
+   "name": {
+    "ja": "五稜郭（ごりょうかく）タワー",
+    "en": "Goryokaku Tower"
+   },
+   "kind": {
+    "ja": "展望台",
+    "en": "Observation tower"
+   },
+   "blurb": {
+    "ja": "星の形は、上から見ないと分かりません。先にタワーに上ってから、公園を歩きます。",
+    "en": "You only see the star from above. Go up the tower first, then walk the park."
+   },
+   "lat": 41.794591,
+   "lng": 140.753958,
+   "text": {
+    "ja": "五稜郭（ごりょうかく）タワー\n\n市電は函館駅前10:32発→五稜郭公園前10:51着（その次は10:40発）。電停から歩いて15分でタワーです。\n\n市電「五稜郭公園前」から歩いて15分ほど。電停から大きな通りを北へまっすぐです。\n\n展望台から、堀に囲まれた星の形の城の跡がそのまま見えます。冬は雪で白い星、5月のはじめは桜で堀のふちがピンクになります。函館山と海も反対側に見えます。\n\n9:00〜18:00、休みなし。チケットは17:50まで。1階にコインロッカーがあります（小300円・大500円）。\n\n12月1日〜2月28日は、日の入りから19:00（予定）まで堀に明かりがつく「五稜星の夢（ほしのゆめ）」。函館山が雲で見えない日は、夕方にここへ来る手もあります。\n\nおすすめ訪問時間：11:10〜11:55",
+    "en": "Goryokaku Tower\n\nTram: Hakodate-ekimae 10:32 → Goryokaku-Koen-mae 10:51 (the next is 10:40). The tower is 15 minutes’ walk from the stop.\n\nAbout 15 minutes on foot from the Goryokaku-Koen-mae tram stop: straight north along the main road.\n\nFrom the deck you see the whole star-shaped fort and its moat. In winter it is a white star in the snow; in early May cherry blossom turns the edge of the moat pink. Mt. Hakodate and the sea are on the other side.\n\nOpen 9:00–18:00 every day; tickets until 17:50. There are coin lockers on the ground floor (¥300 small, ¥500 large).\n\nFrom 1 December to 28 February the moat is outlined in lights from sunset until 19:00 (planned). On a day when Mt. Hakodate is in cloud, coming here at dusk is a good alternative.\n\nRecommended visit time: 11:10–11:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "五稜郭タワー",
+      "en": "Goryokaku Tower"
+     },
+     "lat": 41.794591,
+     "lng": 140.753958,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%94%E7%A8%9C%E9%83%AD%E3%82%BF%E3%83%AF%E3%83%BC"
+    },
+    {
+     "label": {
+      "ja": "市電 五稜郭公園前",
+      "en": "Goryokaku-Koen-mae tram stop"
+     },
+     "lat": 41.789161,
+     "lng": 140.752887,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D%20%E9%9B%BB%E5%81%9C"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "五稜郭タワー（料金・営業時間）",
+      "en": "Goryokaku Tower (official)"
+     },
+     "url": {
+      "ja": "https://www.goryokaku-tower.co.jp/price/",
+      "en": "https://www.goryokaku-tower.co.jp/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "函館市電（時刻表・乗車券）",
+      "en": "Hakodate City Tram (timetables, passes)"
+     },
+     "url": {
+      "ja": "https://www.city.hakodate.hokkaido.jp/bunya/hakodateshiden/",
+      "en": "https://www.city.hakodate.hokkaido.jp/bunya/hakodateshiden/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市電 函館駅前10:32→五稜郭公園前10:51、270円",
+       "en": "Tram Hakodate-ekimae 10:32 → Goryokaku-Koen-mae 10:51, ¥270"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜18:00（チケットは17:50まで）、休みなし",
+       "en": "9:00–18:00 (tickets until 17:50), open every day"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,200円、中高生900円、小学生600円",
+       "en": "Adults ¥1,200, ages 12–18 ¥900, ages 6–12 ¥600"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・料金は五稜郭タワーの公式サイト、明かりの期間は函館市の公式観光サイトで確認しました。",
+     "en": "Hours and prices from the tower’s official site; the light-up dates from the city’s official tourism site."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "tower-w1.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BA%94%E7%A8%9C%E9%83%AD%E3%82%BF%E3%83%AF%E3%83%BC%E3%81%8B%E3%82%89%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92_20240629-P1043975.jpg"
+     }
+    },
+    {
+     "file": "tower-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Goryokaku_Tower_Hakodate_Hokkaido_Japan11n.jpg"
+     }
+    },
+    {
+     "file": "tower-w3.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Goryokaku_Tower_in_winter_20231223a.jpg"
+     }
+    },
+    {
+     "file": "tower-w4.jpg",
+     "credit": {
+      "author": "Goryokaku-Tower",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hokkaido-Cherry_blossoms_are_fully_bloomed_in_Goryokaku_park-xl.jpg"
+     }
+    },
+    {
+     "file": "tower-w5.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Night_view_of_Goryokaku_Tower.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "goryokaku",
+   "name": {
+    "ja": "五稜郭公園と箱館奉行所（はこだてぶぎょうしょ）",
+    "en": "Goryokaku Park and the Magistrate’s Office"
+   },
+   "kind": {
+    "ja": "城の跡・公園",
+    "en": "Fort, park"
+   },
+   "blurb": {
+    "ja": "堀を渡って星の中へ。まん中に、江戸時代の役所を木で建て直した箱館奉行所があります。",
+    "en": "Cross the moat into the star. In the middle stands the Magistrate’s Office, rebuilt in timber as it was in the Edo period."
+   },
+   "caution": {
+    "ja": "奉行所は靴を脱いで入ります。11〜3月は受付16:45まで",
+    "en": "Shoes off inside the Magistrate’s Office. Last entry 16:45 from November to March"
+   },
+   "lat": 41.796933,
+   "lng": 140.756725,
+   "text": {
+    "ja": "五稜郭公園と箱館奉行所（はこだてぶぎょうしょ）\n\nタワーの前の橋から堀を渡ります。公園は無料で、いつでも歩けます。土手の上に上がると、堀と石垣の角ばった形がよく分かります。\n\n箱館奉行所は、靴を脱いで入る木の建物です。冬は床が冷たいので、厚い靴下で。大きな荷物は持ち込めません。中は30〜40分で見られます。\n\n冬は堀が凍り、土手の道は踏み固めた雪になります。滑るので、土手の上は無理をしないでください。\n\nおすすめ訪問時間：12:00〜12:55",
+    "en": "Goryokaku Park and the Magistrate’s Office\n\nCross the moat by the bridge in front of the tower. The park is free and always open. From the top of the earthworks you can see the angles of the moat and stone walls.\n\nThe Magistrate’s Office is a timber building you enter without shoes. The floors are cold in winter, so wear thick socks. Large bags are not allowed in. Allow 30–40 minutes inside.\n\nIn winter the moat freezes and the paths on the earthworks are packed snow. They are slippery; skip the top if it looks icy.\n\nRecommended visit time: 12:00–12:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "箱館奉行所",
+      "en": "Hakodate Magistrate’s Office"
+     },
+     "lat": 41.796933,
+     "lng": 140.756725,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%AE%B1%E9%A4%A8%E5%A5%89%E8%A1%8C%E6%89%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "箱館奉行所（時間・料金・休館日）",
+      "en": "Hakodate Magistrate’s Office (official)"
+     },
+     "url": {
+      "ja": "https://hakodate-bugyosho.jp/information/",
+      "en": "https://hakodate-bugyosho.jp/information/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "奉行所 4〜10月 9:00〜18:00（受付17:45まで）、11〜3月 9:00〜17:00（受付16:45まで）",
+       "en": "Magistrate’s Office: Apr–Oct 9:00–18:00 (entry until 17:45), Nov–Mar 9:00–17:00 (entry until 16:45)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "奉行所 一般500円。公園は無料",
+       "en": "Magistrate’s Office ¥500. The park is free"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "奉行所は12月31日〜1月3日休み（ほかに臨時休館あり）",
+       "en": "Magistrate’s Office closed 31 Dec–3 Jan (and occasional extra days)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "箱館奉行所の公式サイトで確認しました。支払い方法は確認していません（要確認）。",
+     "en": "From the Magistrate’s Office official site. Payment methods were not checked (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "goryokaku-w1.jpg",
+     "credit": {
+      "author": "Alexander Klink",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Magistrates_Office_Building_May_2016_2.jpg"
+     }
+    },
+    {
+     "file": "goryokaku-w2.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Rebuilt_Hakodate_Magistrate%27s_Office_in_snowy_day.jpg"
+     }
+    },
+    {
+     "file": "goryokaku-w3.jpg",
+     "credit": {
+      "author": "Feri88",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Goryokaku_Park_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "goryokaku-w4.jpg",
+     "credit": {
+      "author": "Iso10970",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E4%BA%94%E7%A8%9C%E9%83%AD%E3%81%AE%E5%A0%80%E3%81%A8%E6%A1%9C.jpg"
+     }
+    },
+    {
+     "file": "goryokaku-w5.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Magistrates_Office_Hakodate_Hokkaido_Japan08bs3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "hiru",
+   "name": {
+    "ja": "五稜郭でお昼",
+    "en": "Lunch at Goryokaku"
+   },
+   "kind": {
+    "ja": "お昼",
+    "en": "Lunch"
+   },
+   "blurb": {
+    "ja": "タワーのすぐ近くに、函館の塩ラーメンと、函館だけのハンバーガーの店があります。",
+    "en": "Right by the tower: Hakodate’s salt-broth ramen, and a burger chain found only around Hakodate."
+   },
+   "caution": {
+    "ja": "あじさい本店は第4水曜休み",
+    "en": "Ajisai’s main shop closes on the fourth Wednesday"
+   },
+   "lat": 41.794342,
+   "lng": 140.753182,
+   "text": {
+    "ja": "五稜郭でお昼\n\n13時すぎは、12時台より入りやすい時間です。13:40には店を出て、歩いて15分の電停へ。\n\n・函館麺厨房あじさい 本店：澄んだスープの塩ラーメン。11:00〜20:25（ラストオーダー）、第4水曜休み（祝日なら次の平日）。タワーの向かいです。\n\n・ラッキーピエロ 五稜郭公園前店：函館のあたりにしかないハンバーガーの店。甘辛い鶏のから揚げをはさんだバーガーが看板です。9:30〜22:00（ラストオーダー21:30）。注文してから作るので、混む時間は20分ほど待ちます。\n\nどちらも12時台は並びます。少し早めか、13時すぎが入りやすい時間です。写真はラッキーピエロの別の店舗です。\n\nおすすめ訪問時間：13:00〜13:40",
+    "en": "Lunch at Goryokaku\n\nJust after 13:00 is easier than noon. Leave by 13:40 for the tram stop, 15 minutes’ walk away.\n\n· Hakodate Menchubo Ajisai, main shop: shio (salt) ramen in a clear broth. 11:00–20:25 (last order), closed on the fourth Wednesday (the next weekday if that is a holiday). Opposite the tower.\n\n· Lucky Pierrot, Goryokaku-Koen-mae branch: a burger chain that exists only around Hakodate. The signature burger has sweet-and-salty fried chicken. 9:30–22:00 (last order 21:30). Food is made to order, so expect about 20 minutes at busy times.\n\nBoth have queues around noon. Slightly early, or after 13:00, is easier. The photo shows a different Lucky Pierrot branch.\n\nRecommended visit time: 13:00–13:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "あじさい 本店",
+      "en": "Ajisai main shop"
+     },
+     "lat": 41.79455,
+     "lng": 140.75345,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E9%BA%BA%E5%8E%A8%E6%88%BF%E3%81%82%E3%81%98%E3%81%95%E3%81%84%20%E6%9C%AC%E5%BA%97"
+    },
+    {
+     "label": {
+      "ja": "ラッキーピエロ 五稜郭公園前店",
+      "en": "Lucky Pierrot Goryokaku-Koen-mae"
+     },
+     "lat": 41.794342,
+     "lng": 140.753182,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%83%94%E3%82%A8%E3%83%AD%20%E4%BA%94%E7%A8%9C%E9%83%AD%E5%85%AC%E5%9C%92%E5%89%8D%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館麺厨房あじさい（店舗）",
+      "en": "Ajisai (shops)"
+     },
+     "url": {
+      "ja": "https://www.ajisai.tv/shop/",
+      "en": "https://www.ajisai.tv/shop/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ラッキーピエロ 五稜郭公園前店",
+      "en": "Lucky Pierrot Goryokaku-Koen-mae"
+     },
+     "url": {
+      "ja": "https://luckypierrot.jp/shop/goryokaku/",
+      "en": "https://luckypierrot.jp/shop/goryokaku/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "あじさい本店 11:00〜20:25（ラストオーダー）",
+       "en": "Ajisai main shop 11:00–20:25 (last order)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ラッキーピエロ 五稜郭公園前店 9:30〜22:00（ラストオーダー21:30）",
+       "en": "Lucky Pierrot 9:30–22:00 (last order 21:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "あじさい本店 第4水曜（祝日なら次の平日）",
+       "en": "Ajisai main shop: fourth Wednesday (next weekday if a holiday)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と休みは、それぞれの店の公式サイトで確認しました。値段・支払い方法・英語のメニューがあるかは確認していません（要確認）。混む時間は一般的な目安です。",
+     "en": "Hours and closing days from each shop’s official site. Prices, payment methods and English menus were not checked (please check). Busy times are a general guide."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "hiru-w1.jpg",
+     "credit": {
+      "author": "Prosperosity",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Lucky_pierrot_hakodate.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "hachiman",
+   "name": {
+    "ja": "八幡坂（はちまんざか）と元町の坂",
+    "en": "Hachiman-zaka and the Motomachi slopes"
+   },
+   "kind": {
+    "ja": "坂道・町歩き",
+    "en": "Slopes, old town"
+   },
+   "blurb": {
+    "ja": "石だたみの坂が、まっすぐ港へ下りていきます。坂の上から海と船を見下ろせます。",
+    "en": "A stone-paved slope running straight down to the harbour. From the top you look down on the sea and the ships."
+   },
+   "lat": 41.764723,
+   "lng": 140.712741,
+   "text": {
+    "ja": "八幡坂（はちまんざか）と元町の坂\n\n市電は五稜郭公園前13:58発→十字街14:21着（その次は14:06発→14:29着）。十字街から坂を上って10分で、八幡坂の上です。\n\n市電「十字街」か「末広町」から、坂を歩いて上って10分ほど。坂のいちばん上が、写真でよく見る場所です。\n\n車が通る道です。道のまん中に立って写真を撮る人がいますが、車が来ます。歩道から撮ってください。\n\nとなりの大三坂（だいさんざか）は、石だたみと並木の静かな坂で、上ると教会の前に出ます。八幡坂を上り、坂の上の道を歩いて、大三坂や基坂（もといざか）を下りると、同じ道を戻らずに回れます。\n\n冬は石だたみが凍ります。坂の端の、砂をまいてあるところを歩いてください。12月1日〜2月28日は並木に明かりがつきます（日の入り〜22:00の予定）。\n\nおすすめ訪問時間：14:35〜14:50",
+    "en": "Hachiman-zaka and the Motomachi slopes\n\nTram: Goryokaku-Koen-mae 13:58 → Jujigai 14:21 (the next is 14:06 → 14:29). From Jujigai it is 10 minutes uphill to the top of Hachiman-zaka.\n\nAbout 10 minutes uphill from the Jujigai or Suehirocho tram stops. The very top of the slope is the view you have seen in photos.\n\nIt is a road with traffic. People stand in the middle for photos, but cars do come: shoot from the pavement.\n\nDaisan-zaka, the next slope, is quieter, with stone paving and trees, and leads up to the churches. Go up Hachiman-zaka, walk along the top and come down Daisan-zaka or Motoi-zaka, and you never retrace your steps.\n\nThe paving freezes in winter. Walk at the edge where grit has been spread. From 1 December to 28 February the trees are lit (sunset to 22:00, planned).\n\nRecommended visit time: 14:35–14:50"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "八幡坂",
+      "en": "Hachiman-zaka"
+     },
+     "lat": 41.764723,
+     "lng": 140.712741,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%B9%A1%E5%9D%82%20%E5%87%BD%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "市電 十字街",
+      "en": "Jujigai tram stop"
+     },
+     "lat": 41.764344,
+     "lng": 140.719281,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%81%E5%AD%97%E8%A1%97%20%E9%9B%BB%E5%81%9C%20%E5%87%BD%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "冬のイルミネーション（函館市公式観光サイト）",
+      "en": "Winter lights (city tourism site)"
+     },
+     "url": {
+      "ja": "https://www.hakobura.jp/features/434",
+      "en": "https://www.hakobura.jp/features/434"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "函館市電（時刻表・乗車券）",
+      "en": "Hakodate City Tram (timetables, passes)"
+     },
+     "url": {
+      "ja": "https://www.city.hakodate.hokkaido.jp/bunya/hakodateshiden/",
+      "en": "https://www.city.hakodate.hokkaido.jp/bunya/hakodateshiden/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月1日〜2月28日 坂のイルミネーション",
+      "en": "Lights on the slopes, 1 December–28 February"
+     },
+     "text": {
+      "ja": "八幡坂と開港通りの並木に明かりがつきます（日の入り〜22:00の予定）。2月5日〜27日の金曜・土曜は、18:00から赤レンガ倉庫のあたりで冬花火（約10分の予定）。",
+      "en": "The trees on Hachiman-zaka and Kaiko-dori are lit from sunset to 22:00 (planned). On Fridays and Saturdays from 5 to 27 February there are winter fireworks near the warehouses at 18:00 (about 10 minutes, planned)."
+     },
+     "from": "2026-11-20",
+     "to": "2027-02-28",
+     "url": "https://www.hakobura.jp/features/434"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市電 五稜郭公園前13:58→十字街14:21、290円",
+       "en": "Tram Goryokaku-Koen-mae 13:58 → Jujigai 14:21, ¥290"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "無料",
+       "en": "Free"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "イルミネーションの期間は函館市の公式観光サイトで確認しました。歩く時間は地図からの目安です。",
+     "en": "Light-up dates from the city’s official tourism site. Walking times are estimates from the map."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "hachiman-w1.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%85%AB%E5%B9%A1%E5%9D%82%E3%81%8B%E3%82%89%E3%81%AE%E9%A2%A8%E6%99%AF20210723-IMG_5054.jpg"
+     }
+    },
+    {
+     "file": "hachiman-w2.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Hachiman-zaka_2024.jpg"
+     }
+    },
+    {
+     "file": "hachiman-w3.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%85%AB%E5%B9%A1%E5%9D%82%E3%81%8B%E3%82%89%E3%81%AE%E9%A2%A8%E6%99%AF20191102-IMG_6621.jpg"
+     }
+    },
+    {
+     "file": "hachiman-w4.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Hachimanzaka_at_night_20231223c.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "kokaido",
+   "name": {
+    "ja": "旧函館区公会堂（きゅうはこだてくこうかいどう）",
+    "en": "Old Public Hall of Hakodate Ward"
+   },
+   "kind": {
+    "ja": "洋館",
+    "en": "Western-style hall"
+   },
+   "blurb": {
+    "ja": "坂の上に建つ、水色と黄色の木造の洋館。2階のバルコニーから港が見えます。",
+    "en": "A blue-grey and yellow wooden hall at the top of the hill, built in 1910. The upstairs balcony looks over the harbour."
+   },
+   "caution": {
+    "ja": "11〜3月は17:00まで（入館は16:30まで）",
+    "en": "November–March: until 17:00 (last entry 16:30)"
+   },
+   "lat": 41.765037,
+   "lng": 140.70892,
+   "text": {
+    "ja": "旧函館区公会堂（きゅうはこだてくこうかいどう）\n\n12〜1月は日の入りが早いので、最初は選ばれていません。中に入るなら30分。そのぶん、お昼を短くするか、五稜郭を10分早く出てください。2月からは日が長くなり、入りやすくなります。\n\n1910年にできた、町の集会所です。大広間と、当時の家具を置いた部屋を見られます。2階のバルコニーに出ると、元町の屋根の向こうに港が見えます。\n\n八幡坂の上から、坂の上の道を西へ歩いて5分ほど。下の元町公園からも、建物の正面がよく見えます。中に入らない日も、公園から見上げてください。\n\n中は30分ほどで見られます。\n\nおすすめ訪問時間：14:55〜15:25（入る場合）",
+    "en": "Old Public Hall of Hakodate Ward\n\nNot selected at first, because the sun sets so early in December and January. Going inside takes 30 minutes: shorten lunch or leave Goryokaku a little earlier. From February the longer days make it easy to fit in.\n\nBuilt in 1910 as the town’s assembly hall. You can see the ballroom and rooms with furniture of the time. From the upstairs balcony the harbour shows beyond the roofs of Motomachi.\n\nAbout 5 minutes west along the top road from Hachiman-zaka. The front of the building is also well seen from Motomachi Park below, even on a day you do not go in.\n\nAllow about 30 minutes inside.\n\nRecommended visit time: 14:55–15:25 (if you go in)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旧函館区公会堂",
+      "en": "Old Public Hall of Hakodate Ward"
+     },
+     "lat": 41.765037,
+     "lng": 140.70892,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%A7%E5%87%BD%E9%A4%A8%E5%8C%BA%E5%85%AC%E4%BC%9A%E5%A0%82"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旧函館区公会堂（公式）",
+      "en": "Old Public Hall (official)"
+     },
+     "url": {
+      "ja": "https://hakodate-kokaido.jp/",
+      "en": "https://hakodate-kokaido.jp/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "4〜10月 9:00〜18:00（土〜月は19:00まで）、11〜3月 9:00〜17:00。入館は終わる30分前まで",
+       "en": "Apr–Oct 9:00–18:00 (Sat–Mon until 19:00), Nov–Mar 9:00–17:00. Last entry 30 minutes before closing"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "一般300円",
+       "en": "Adults ¥300"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月31日〜1月3日、2027年1月26日（点検）",
+       "en": "31 Dec–3 Jan; 26 Jan 2027 (maintenance)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "旧函館区公会堂の公式サイトで確認しました。支払い方法は確認していません（要確認）。",
+     "en": "From the hall’s official site. Payment methods were not checked (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kokaido-w1.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Old_public_hall_of_Hakodate_Ward_20240505.jpg"
+     }
+    },
+    {
+     "file": "kokaido-w2.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Old_public_hall_of_Hakodate_Ward_20231223.jpg"
+     }
+    },
+    {
+     "file": "kokaido-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Old_Public_Hall_of_Hakodate_Ward_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "kokaido-w4.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%97%A7%E5%87%BD%E9%A4%A8%E5%8C%BA%E5%85%AC%E4%BC%9A%E5%A0%8220231201-IMG_8621.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "haris",
+   "name": {
+    "ja": "函館ハリストス正教会と元町の教会",
+    "en": "Hakodate Orthodox Church and the Motomachi churches"
+   },
+   "kind": {
+    "ja": "教会",
+    "en": "Churches"
+   },
+   "blurb": {
+    "ja": "白い壁に緑の屋根の、ロシア正教の教会。まわりにカトリックと聖公会の教会が並びます。",
+    "en": "A white Russian Orthodox church with green roofs. A Catholic and an Anglican church stand close by."
+   },
+   "caution": {
+    "ja": "聖堂の中は撮影できません。日曜は13:00から。12月25日〜2月末は中に入れません",
+    "en": "No photos inside. Sundays from 13:00. No visits inside from 25 December to the end of February"
+   },
+   "lat": 41.762844,
+   "lng": 140.712212,
+   "text": {
+    "ja": "函館ハリストス正教会と元町の教会\n\n八幡坂の上から、坂の上の道を東へ5分。教会を外から見て、中に入る日は献金を払って静かに。15:20に出て山麓駅へ。\n\n1860年に、日本で最初の正教会の聖堂が建てられた場所です。今も毎週お祈りが行われている教会なので、中では静かに。聖堂の中の撮影はできません。拝観のときに献金（大人200円）をお願いされます。\n\n外から見るだけでも来る価値があります。大三坂を上ると、カトリック元町教会のとがった塔、その先にハリストス正教会、すぐ近くに聖ヨハネ教会があります。チャチャ登りという細い坂を少し上ると、3つの教会の屋根と港がいっしょに見えます。\n\nロープウェイの山麓駅まで、ここから歩いて5分です。\n\nおすすめ訪問時間：14:55〜15:20",
+    "en": "Hakodate Orthodox Church and the Motomachi churches\n\nFive minutes east along the top road from Hachiman-zaka. See the churches from outside; if you go in, make the donation and be quiet. Leave at 15:20 for the ropeway.\n\nThis is where Japan’s first Orthodox church was built, in 1860. Services are still held here every week, so be quiet inside. Photography inside is not allowed. Visitors are asked for a donation (¥200 for adults).\n\nIt is worth coming just for the outside. Climbing Daisan-zaka you pass the pointed tower of the Motomachi Catholic Church, then the Orthodox church, with St. John’s Church close by. A little way up the narrow lane called Chacha-nobori you see the roofs of all three with the harbour beyond.\n\nThe ropeway’s lower station is 5 minutes on foot from here.\n\nRecommended visit time: 14:55–15:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "函館ハリストス正教会",
+      "en": "Hakodate Orthodox Church"
+     },
+     "lat": 41.762844,
+     "lng": 140.712212,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E3%83%8F%E3%83%AA%E3%82%B9%E3%83%88%E3%82%B9%E6%AD%A3%E6%95%99%E4%BC%9A"
+    },
+    {
+     "label": {
+      "ja": "カトリック元町教会",
+      "en": "Motomachi Catholic Church"
+     },
+     "lat": 41.763257,
+     "lng": 140.71316,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%AB%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E5%85%83%E7%94%BA%E6%95%99%E4%BC%9A%20%E5%87%BD%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館ハリストス正教会（拝観の案内）",
+      "en": "Hakodate Orthodox Church (visiting)"
+     },
+     "url": {
+      "ja": "https://www.orthodox-hakodate.jp/services",
+      "en": "https://www.orthodox-hakodate.jp/services"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月25日〜2月末は聖堂の中に入れません",
+      "en": "No visits inside from 25 December to the end of February"
+     },
+     "text": {
+      "ja": "冬のあいだは、お祈りのとき以外の拝観をお休みしています。外からは見られます。",
+      "en": "In winter the church is closed to visitors except during services. You can still see it from outside."
+     },
+     "from": "2026-12-15",
+     "to": "2027-02-28",
+     "url": "https://www.orthodox-hakodate.jp/services"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "拝観 月〜金 10:00〜17:00（11・12・3月は16:00まで）、土 10:00〜16:00、日 13:00〜16:00",
+       "en": "Visits: Mon–Fri 10:00–17:00 (until 16:00 in Nov, Dec, Mar), Sat 10:00–16:00, Sun 13:00–16:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "拝観献金 大人200円、中学生100円",
+       "en": "Donation: adults ¥200, ages 12–15 ¥100"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月25日〜2月末は拝観休止。行事やお葬式のときも入れません",
+       "en": "No visits 25 Dec–end of Feb, nor during church events and funerals"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "函館ハリストス正教会の公式サイトで確認しました。ほかの2つの教会の中の見学は確認していません（要確認）。",
+     "en": "From the church’s official site. Whether the other two churches can be visited inside was not checked (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "haris-w1.jpg",
+     "credit": {
+      "author": "Alexander Klink",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Orthodox_Church_May_2016_4.jpg"
+     }
+    },
+    {
+     "file": "haris-w2.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Orthodox_Church_in_snow_20231224a.jpg"
+     }
+    },
+    {
+     "file": "haris-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Cityscapes_of_Hakodate_Hokkaido_pref_Japan02n.jpg"
+     }
+    },
+    {
+     "file": "haris-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Orthodox_Church_Japan07s3.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "id": "ropeway",
+   "name": {
+    "ja": "函館山（はこだてやま）ロープウェイと夜景",
+    "en": "Mt. Hakodate Ropeway and the night view"
+   },
+   "kind": {
+    "ja": "夜景・ロープウェイ",
+    "en": "Night view, ropeway"
+   },
+   "blurb": {
+    "ja": "両側を海にはさまれた町の明かり。日の入りの30分前に上がって、暗くなるまで待ちます。",
+    "en": "The lights of a town pinched between two seas. Go up 30 minutes before sunset and wait for dark."
+   },
+   "caution": {
+    "ja": "日の入りの30〜40分前の便で上へ。強い風の日は止まります",
+    "en": "Ride up 30–40 minutes before sunset. It stops in strong wind"
+   },
+   "lat": 41.76092,
+   "lng": 140.714177,
+   "text": {
+    "ja": "函館山（はこだてやま）ロープウェイと夜景\n\n15:30の便で上がります（12月の日の入りは16:07ごろ）。明かりがそろうのは16:30〜16:50ごろ。17:00ごろに下りの列に並びます。\n\n山麓駅は、市電「十字街」から坂を上って10分。ロープウェイは15分おき（混むと5〜10分おき）で、山頂まで3分です。往復1,800円。カード・電子マネーが使えます。\n\nいちばんきれいなのは、日の入りの20〜30分あと。空に青みが残って、町の明かりがそろう時間です。ただ、その時間に上ろうとすると、山麓駅で長く並びます。日の入りの30〜40分前に上がって、展望台の手すりの前で待つのが確実です。待つあいだは風が冷たいので、冬は手袋と帽子を。中にも窓ぎわの席があります。\n\nいつ上がるかの目安（日の入りは函館の位置から計算した時刻）：\n・12月：日の入り16:05〜16:15 → 15:30ごろの便で上へ\n・1月：16:15〜16:50 → 15:45〜16:15ごろ\n・2月：16:50〜17:25 → 16:15〜16:45ごろ\n・3〜4月：17:25〜18:35 → 17:00〜18:00ごろ\n・5〜8月：18:20〜19:15 → 18:00〜18:30ごろ（晩ごはんを先に）\n・9〜11月：18:15〜16:10 → 月のはじめと終わりで1時間違います\n\n下りも、暗くなって30分ほどたつと行列になります。十分に見たら、早めに下りの列へ。\n\n山に雲がかかると、何も見えません。上がる前に、公式サイトの「運行状況と函館山」のライブカメラを見てください。強い風の日は止まります。\n\n冬（11月9日〜4月12日）は山頂への道路が通行止めで、バスとタクシーは使えません。ロープウェイだけです。\n\nおすすめ訪問時間：15:30〜17:10",
+    "en": "Mt. Hakodate Ropeway and the night view\n\nTake the 15:30 car up (sunset in December is about 16:07). The town is fully lit around 16:30–16:50. Join the queue down at about 17:00.\n\nThe lower station is 10 minutes uphill from the Jujigai tram stop. Cars leave every 15 minutes (every 5–10 when busy) and take 3 minutes. Return ¥1,800; cards and e-money accepted.\n\nThe best moment is 20–30 minutes after sunset, with some blue left in the sky and the town fully lit. But if you try to ride up then, you queue for a long time at the bottom. Going up 30–40 minutes before sunset and waiting at the railing is the sure way. The wind is cold while you wait: bring gloves and a hat in winter. There are window seats indoors too.\n\nWhen to ride up (sunset times calculated for Hakodate):\n· December: sunset 16:05–16:15 → ride up around 15:30\n· January: 16:15–16:50 → around 15:45–16:15\n· February: 16:50–17:25 → around 16:15–16:45\n· March–April: 17:25–18:35 → around 17:00–18:00\n· May–August: 18:20–19:15 → around 18:00–18:30 (eat dinner first)\n· September–November: 18:15 down to 16:10; it moves an hour within a month\n\nThe queue to come down builds about 30 minutes after dark. Once you have seen enough, join it early.\n\nIf cloud sits on the mountain you see nothing. Check the live camera on the official site before going up. The ropeway stops in strong wind.\n\nIn winter (9 November–12 April) the summit road is closed, so there are no buses or taxis to the top: the ropeway is the only way.\n\nRecommended visit time: 15:30–17:10"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "函館山ロープウェイ 山麓駅",
+      "en": "Ropeway lower station"
+     },
+     "lat": 41.76092,
+     "lng": 140.714177,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4%20%E5%B1%B1%E9%BA%93%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館山ロープウェイ（運行状況・料金）",
+      "en": "Mt. Hakodate Ropeway (status, fares)"
+     },
+     "url": {
+      "ja": "https://334.co.jp/",
+      "en": "https://334.co.jp/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "山頂の混み具合（函館市）",
+      "en": "How busy the summit is (city live map)"
+     },
+     "url": {
+      "ja": "https://vacan.com/map/41.7606471,140.7089998,15?areaName=hakodate-city",
+      "en": "https://vacan.com/map/41.7606471,140.7089998,15?areaName=hakodate-city"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "年末年始は時間が変わります",
+      "en": "Shorter hours over New Year"
+     },
+     "text": {
+      "ja": "函館山ロープウェイは12月31日〜1月3日、上りの最終17:30・下りの最終19:00。箱館奉行所と旧函館区公会堂は12月31日〜1月3日、熱帯植物園は12月29日〜1月1日が休み。市電も年末年始のダイヤになります。朝市は店ごとに違います。",
+      "en": "The ropeway’s last ride up is 17:30 and last ride down 19:00 from 31 December to 3 January. The Magistrate’s Office and the Old Public Hall close 31 December–3 January; the tropical garden closes 29 December–1 January. Trams run a holiday timetable. Market stalls each keep their own days."
+     },
+     "from": null,
+     "to": "2027-01-03",
+     "url": "https://334.co.jp/news/2026/1123-22350/"
+    },
+    {
+     "head": {
+      "ja": "秋にロープウェイが止まる時期があります",
+      "en": "The ropeway closes for inspection in autumn"
+     },
+     "text": {
+      "ja": "2026年は10月20日〜11月8日が点検で運休でした。2027年の日程は公式サイトで確かめてください。運休のあいだは登山バスやタクシーで山頂へ（道路が雪で通行止めの日は行けません）。",
+      "en": "In 2026 it was closed for inspection from 20 October to 8 November. Check the official site for 2027. While it is closed, the summit is reached by bus or taxi (not on days the road is shut by snow)."
+     },
+     "from": "2027-09-15",
+     "to": "2027-11-15",
+     "url": "https://334.co.jp/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "10/1〜4/19 10:00〜（上りの最終20:30、下りの最終21:00）。4/20〜9/30 上りの最終21:30、下りの最終22:00",
+       "en": "1 Oct–19 Apr: from 10:00, last up 20:30, last down 21:00. 20 Apr–30 Sep: last up 21:30, last down 22:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "往復 大人1,800円、子ども900円（片道1,200円）",
+       "en": "Return: adults ¥1,800, children ¥900 (one way ¥1,200)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・料金・運休は函館山ロープウェイの公式サイト、道路の通行止めは函館市の公式観光サイトで確認しました。日の入りは函館の緯度・経度から計算した時刻で、数分のずれがあります。並ぶ時間は日によって違います。",
+     "en": "Hours, fares and closures from the ropeway’s official site; the road closure from the city’s tourism site. Sunset times are calculated from Hakodate’s position and may be a few minutes off. Queues vary by day."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "ropeway-w1.jpg",
+     "credit": {
+      "author": "Perry Li",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2017-04-28_View_from_Mount_Hakodate_at_night.jpg"
+     }
+    },
+    {
+     "file": "ropeway-w2.jpg",
+     "credit": {
+      "author": "洞内定晴",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hokkaido_Hakodate_night_view_xl.jpg"
+     }
+    },
+    {
+     "file": "ropeway-w3.jpg",
+     "credit": {
+      "author": "User:Satellizer",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Evening_view_of_Hakodate_city_from_Mount_Hakodate.jpg"
+     }
+    },
+    {
+     "file": "ropeway-w4.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mount-Hakodate_Night-view.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "id": "kanemori",
+   "name": {
+    "ja": "金森（かねもり）赤レンガ倉庫とベイエリア",
+    "en": "Kanemori Red Brick Warehouses and the bay"
+   },
+   "kind": {
+    "ja": "倉庫・買い物",
+    "en": "Warehouses, shops"
+   },
+   "blurb": {
+    "ja": "港に並ぶ赤いレンガの倉庫。中は店とビヤホールで、夜は壁に明かりが当たります。",
+    "en": "Red-brick warehouses along the harbour, now shops and a beer hall, floodlit after dark."
+   },
+   "lat": 41.766306,
+   "lng": 140.716843,
+   "text": {
+    "ja": "金森（かねもり）赤レンガ倉庫とベイエリア\n\n山麓駅から坂を下って15分。暗くなって明かりのついた倉庫を歩きます。店は19:00まで。12月は18:00にツリーの点灯式と花火があります。\n\n市電「十字街」から歩いて5分。倉庫のあいだの運河と、海ぞいの道を歩けます。店は9:30〜19:00。ガラス、オルゴール、お菓子などの店が入っています。\n\n写真は、七財橋（しちざいばし）のあたりから運河ごしに倉庫を見るのと、海側から函館山を背景に見るのがきれいです。暗くなると倉庫に明かりが当たり、雪の日は特に静かです。\n\n倉庫の中の函館ビヤホールは、平日11:30から、土日祝11:00から21:30まで（ラストオーダー21:00）。寒い日の休憩にも使えます。\n\n函館駅までは、海ぞいを歩いて15〜20分。市電なら十字街から6分です。\n\nおすすめ訪問時間：17:30〜18:20",
+    "en": "Kanemori Red Brick Warehouses and the bay\n\nFifteen minutes downhill from the ropeway. Walk the floodlit warehouses after dark; shops stay open until 19:00. In December the tree is relit with fireworks at 18:00.\n\nFive minutes on foot from the Jujigai tram stop. You can walk the canal between the warehouses and the path along the water. Shops open 9:30–19:00: glass, music boxes, sweets.\n\nFor photos, look across the canal from around Shichizai Bridge, or from the water side with Mt. Hakodate behind. After dark the walls are floodlit; on a snowy night it is very quiet.\n\nHakodate Beer Hall, inside one of the warehouses, opens from 11:30 on weekdays and 11:00 at weekends until 21:30 (last order 21:00). It is also a place to warm up.\n\nHakodate Station is 15–20 minutes on foot along the water, or 6 minutes by tram from Jujigai.\n\nRecommended visit time: 17:30–18:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "金森赤レンガ倉庫",
+      "en": "Kanemori Red Brick Warehouses"
+     },
+     "lat": 41.766306,
+     "lng": 140.716843,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%A3%AE%E8%B5%A4%E3%83%AC%E3%83%B3%E3%82%AC%E5%80%89%E5%BA%AB"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "金森赤レンガ倉庫（公式）",
+      "en": "Kanemori Red Brick Warehouses (official)"
+     },
+     "url": {
+      "ja": "https://hakodate-kanemori.com/",
+      "en": "https://hakodate-kanemori.com/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "はこだてクリスマスファンタジー",
+      "en": "Hakodate Christmas Fantasy"
+     },
+     "url": {
+      "ja": "http://www.hakodatexmas.com/",
+      "en": "http://www.hakodatexmas.com/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "12月1日〜25日 はこだてクリスマスファンタジー",
+      "en": "Hakodate Christmas Fantasy, 1–25 December"
+     },
+     "text": {
+      "ja": "赤レンガ倉庫の前の海に大きなツリーが浮かびます。点灯は16:30〜17:45と18:00〜22:00（12月1日は18:00から）。毎日18:00に点灯式と花火（風の強い日は中止）。温かいスープの屋台は16:30〜20:00。",
+      "en": "A large tree floats on the water in front of the warehouses. Lights are on 16:30–17:45 and 18:00–22:00 (from 18:00 on 1 December), with a relighting and fireworks every day at 18:00 (cancelled in strong wind). Soup stalls open 16:30–20:00."
+     },
+     "from": "2026-11-20",
+     "to": "2026-12-25",
+     "url": "http://www.hakodatexmas.com/"
+    },
+    {
+     "head": {
+      "ja": "12月1日〜2月28日 坂のイルミネーション",
+      "en": "Lights on the slopes, 1 December–28 February"
+     },
+     "text": {
+      "ja": "八幡坂と開港通りの並木に明かりがつきます（日の入り〜22:00の予定）。2月5日〜27日の金曜・土曜は、18:00から赤レンガ倉庫のあたりで冬花火（約10分の予定）。",
+      "en": "The trees on Hachiman-zaka and Kaiko-dori are lit from sunset to 22:00 (planned). On Fridays and Saturdays from 5 to 27 February there are winter fireworks near the warehouses at 18:00 (about 10 minutes, planned)."
+     },
+     "from": "2026-11-20",
+     "to": "2027-02-28",
+     "url": "https://www.hakobura.jp/features/434"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "店 9:30〜19:00、休みなし。函館ビヤホール 平日11:30〜・土日祝11:00〜21:30（ラストオーダー21:00）",
+       "en": "Shops 9:30–19:00, every day. Beer hall from 11:30 (weekends 11:00) to 21:30 (last order 21:00)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "入るのは無料",
+       "en": "Free to enter"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間は金森赤レンガ倉庫の公式サイト、クリスマスの日程は公式サイトで確認しました。",
+     "en": "Hours from the warehouses’ official site; Christmas dates from the event’s official site."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kanemori-w1.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Kanemori_Red_Brick_Warehouse_20231223a.jpg"
+     }
+    },
+    {
+     "file": "kanemori-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kanemori_Red_Brick_Warehouse_Hakodate_Hokkaido_pref_Japan05s3.jpg"
+     }
+    },
+    {
+     "file": "kanemori-w3.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tree_of_Hakodate_Christmas_Fantasy_in_sunset_time.jpg"
+     }
+    },
+    {
+     "file": "kanemori-w4.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Kanemori_Red_Brick_Warehouse_20231223b.jpg"
+     }
+    },
+    {
+     "file": "kanemori-w5.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Kanemori_Red_Brick_Warehouse_Hakodate_Hokkaido_pref_Japan01n.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "id": "yunokawa",
+   "name": {
+    "ja": "湯の川（ゆのかわ）温泉",
+    "en": "Yunokawa Onsen"
+   },
+   "kind": {
+    "ja": "温泉・足湯",
+    "en": "Hot spring, foot bath"
+   },
+   "blurb": {
+    "ja": "市電の終点の近くにある温泉街。電停の前に無料の足湯、ホテルに日帰りのお風呂があります。",
+    "en": "A hot-spring district near the end of the tram line: a free foot bath by the stop, and day-visit baths at the hotels."
+   },
+   "caution": {
+    "ja": "日帰り入浴のタトゥーの決まりは、公式サイトに書かれていません（要確認）。足湯はだれでも入れます",
+    "en": "Tattoo rules for the day baths are not on the official sites (please check). The foot bath is open to everyone"
+   },
+   "lat": 41.779614,
+   "lng": 140.78568,
+   "text": {
+    "ja": "湯の川（ゆのかわ）温泉\n\n最初は選ばれていません。入れるなら、赤レンガ倉庫のあと十字街18:35発の市電で湯の川温泉19:10着（土曜は18:34発→19:11着）。足湯かお風呂に入って、20:21発（函館駅前20:51着）か20:41発で戻り、駅の近くで遅い晩ごはんにします。最終は21:46発です。\n\n・足湯「湯巡り舞台（ゆめぐりぶたい）」：市電「湯の川温泉」を降りてすぐ。無料で、毎日9:00〜21:00。足だけなので、タトゥーがあっても関係ありません。足をふくタオルを持っていってください。\n\n・日帰りのお風呂（湯の川温泉旅館協同組合の一覧から）：ホテル雨宮館（あめみやかん）800円・6:00〜22:00、KKRはこだて 1,000円・11:00〜21:00、ホテルテトラ湯の川温泉 550円・13:00〜22:00、湯元 啄木亭（たくぼくてい）1,200円・13:00〜21:00（タオル貸し出し300円）。休む日や時間が変わる日があります。\n\n・タトゥー：どの施設の公式サイトにも、タトゥーの決まりは書かれていませんでした。タトゥーのある人は、行く前に電話で聞くか、入口で確かめてください。\n\n・お風呂の入り方：服は脱衣所で全部脱ぎます。体を洗ってから湯ぶねへ。タオルは湯に入れません。水着は使いません。\n\n・函館市熱帯植物園：電停から海のほうへ歩いて15分。12月から5月の連休ごろまで、サル山のサルが温泉に入ります。一般300円、11〜3月は9:30〜16:30。昼間に湯の川へ来る日に。\n\n・トラピスチヌ修道院：湯の川からさらにバスで山のほうへ。前庭と資料室を見られます（無料、12〜2月は9:00〜16:00）。「トラピスチヌ入口」バス停から歩いて10分。バスの時刻は確かめていません（要確認）。\n\nおすすめ訪問時間：19:10〜20:20（入れる場合）",
+    "en": "Yunokawa Onsen\n\nNot selected at first. To add it, take the 18:35 tram from Jujigai after the warehouses (Yunokawa-Onsen 19:10; on Saturdays 18:34 → 19:11). Use the foot bath or a day bath, then return on the 20:21 (Hakodate-ekimae 20:51) or the 20:41 and eat a late dinner near the station. The last tram is 21:46.\n\n· Foot bath “Yumeguri Butai”: right by the Yunokawa-Onsen tram stop. Free, every day 9:00–21:00. Only your feet go in, so tattoos do not matter. Bring a small towel to dry your feet.\n\n· Day baths (from the Yunokawa ryokan association’s list): Hotel Amemiyakan ¥800, 6:00–22:00; KKR Hakodate ¥1,000, 11:00–21:00; Hotel Tetora Yunokawa Onsen ¥550, 13:00–22:00; Yumoto Takubokutei ¥1,200, 13:00–21:00 (towel rental ¥300). Days and hours can change.\n\n· Tattoos: none of these places states a tattoo rule on its official site. If you have tattoos, phone ahead or ask at the entrance before paying.\n\n· How to bathe: undress completely in the changing room, wash before getting into the bath, and keep your towel out of the water. No swimwear.\n\n· Hakodate Tropical Botanical Garden: 15 minutes on foot towards the sea. From December until around early May the monkeys sit in their own hot spring. Adults ¥300; November–March 9:30–16:30. For a day when you come to Yunokawa in daylight.\n\n· Trappistine Convent: further inland by bus. The front garden and a small exhibition room are open (free; December–February 9:00–16:00), 10 minutes on foot from the Trappistine-iriguchi bus stop. Bus times were not checked (please check).\n\nRecommended visit time: 19:10–20:20 (if you add it)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "足湯 湯巡り舞台",
+      "en": "Yumeguri Butai foot bath"
+     },
+     "lat": 41.779614,
+     "lng": 140.78568,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89%E8%B6%B3%E6%B9%AF%20%E6%B9%AF%E5%B7%A1%E3%82%8A%E8%88%9E%E5%8F%B0"
+    },
+    {
+     "label": {
+      "ja": "函館市熱帯植物園",
+      "en": "Tropical Botanical Garden"
+     },
+     "lat": 41.774149,
+     "lng": 140.789321,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E5%B8%82%E7%86%B1%E5%B8%AF%E6%A4%8D%E7%89%A9%E5%9C%92"
+    },
+    {
+     "label": {
+      "ja": "ホテル雨宮館",
+      "en": "Hotel Amemiyakan"
+     },
+     "lat": 41.780819,
+     "lng": 140.783906,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B9%AF%E3%81%AE%E5%B7%9D%E6%B8%A9%E6%B3%89%20%E3%83%9B%E3%83%86%E3%83%AB%E9%9B%A8%E5%AE%AE%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "湯の川温泉 日帰り温泉の一覧",
+      "en": "Yunokawa day baths (association list)"
+     },
+     "url": {
+      "ja": "https://hakodate-yunokawa.jp/dayspa/",
+      "en": "https://hakodate-yunokawa.jp/lan/en.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館市熱帯植物園",
+      "en": "Hakodate Tropical Botanical Garden"
+     },
+     "url": {
+      "ja": "https://www.hako-eco.com/",
+      "en": "https://www.hako-eco.com/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "トラピスチヌ修道院（函館市公式観光サイト）",
+      "en": "Trappistine Convent (city tourism site)"
+     },
+     "url": {
+      "ja": "https://www.hakobura.jp/spots/504",
+      "en": "https://www.hakobura.jp/spots/504"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "1月の金曜・土曜は湯の川で冬花火",
+      "en": "Winter fireworks at Yunokawa on January Fridays and Saturdays"
+     },
+     "text": {
+      "ja": "2027年1月8日〜30日の金曜・土曜、18:00から海岸で約10分（予定）。",
+      "en": "Fridays and Saturdays from 8 to 30 January 2027, at 18:00 from the shore, for about 10 minutes (planned)."
+     },
+     "from": "2026-12-26",
+     "to": "2027-01-30",
+     "url": "https://www.hakobura.jp/features/434"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市電 十字街18:35→湯の川温泉19:10、300円。帰り 湯の川温泉20:21→函館駅前20:51",
+       "en": "Tram Jujigai 18:35 → Yunokawa-Onsen 19:10, ¥300. Back: Yunokawa-Onsen 20:21 → Hakodate-ekimae 20:51"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "足湯 9:00〜21:00（無料）",
+       "en": "Foot bath 9:00–21:00 (free)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "日帰り入浴 550〜1,200円（施設による）",
+       "en": "Day baths ¥550–1,200 depending on the place"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "市電 湯の川温泉→函館駅前 約30分・290円。最終21:46発",
+       "en": "Tram Yunokawa-Onsen → Hakodate-ekimae about 30 min, ¥290. Last tram 21:46"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "日帰り入浴の料金と時間は湯の川温泉旅館協同組合の公式サイト、熱帯植物園は公式サイト、トラピスチヌ修道院は函館市の公式観光サイトで確認しました。タトゥーの決まりと、タオルを借りられるか（啄木亭以外）は確認できていません（要確認）。",
+     "en": "Bath prices and hours from the Yunokawa ryokan association’s site; the garden from its own site; the convent from the city’s tourism site. Tattoo rules and towel rental (other than Takubokutei) could not be confirmed (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "yunokawa-w1.jpg",
+     "credit": {
+      "author": "OraMAAG",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Yunokawa_Onsen_Footbath.jpg"
+     }
+    },
+    {
+     "file": "yunokawa-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Yunokawa_Onsen_Hakodate_Hokkaido_Japan17n.jpg"
+     }
+    },
+    {
+     "file": "yunokawa-w3.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Yunokawa_Onsen_Hakodate_Hokkaido_Japan11bs5.jpg"
+     }
+    },
+    {
+     "file": "yunokawa-w4.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Yunokawa_Onsen_Hakodate_Hokkaido_Japan02n.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "id": "yuhan",
+   "name": {
+    "ja": "晩ごはん：ベイエリアと大門横丁（だいもんよこちょう）",
+    "en": "Dinner: the bay area and Daimon Yokocho"
+   },
+   "kind": {
+    "ja": "晩ごはん",
+    "en": "Dinner"
+   },
+   "blurb": {
+    "ja": "赤レンガ倉庫のまわりか、函館駅から歩いて5分の屋台の横丁で。",
+    "en": "Around the warehouses, or in the lane of small food stalls 5 minutes’ walk from the station."
+   },
+   "caution": {
+    "ja": "大門横丁は基本は現金です",
+    "en": "Daimon Yokocho is mostly cash only"
+   },
+   "lat": 41.772393,
+   "lng": 140.730001,
+   "text": {
+    "ja": "晩ごはん：ベイエリアと大門横丁（だいもんよこちょう）\n\n赤レンガ倉庫のまわりで食べるなら18:20から。駅の近くで食べるなら、十字街から市電で6分（19時台は平日19:03・19:09、土曜19:06・19:17など）。\n\n【ベイエリア（赤レンガ倉庫のまわり）】\n・函館ビヤホール（金森赤レンガ倉庫の中）：21:30まで（ラストオーダー21:00）。\n・函館麺厨房あじさい 紅（くれない）店：塩ラーメン。11:00〜21:30（ラストオーダー）。\n・ラッキーピエロ ベイエリア本店：10:00〜21:00（ラストオーダー20:30）。\n\n【函館駅の近く】\n・函館ひかりの屋台 大門横丁：小さな店が26軒並ぶ屋台の横丁。カウンターだけの店が多く、1〜2人で入りやすい場所です。海鮮、ラーメン、焼き鳥、ジンギスカンなど。時間と休みは店ごとに違い、支払いは基本は現金です。公式サイトに店ごとの案内があります。\n・ラッキーピエロ 函館駅前店：8:00〜22:00（ラストオーダー21:30）。遅くなった日に。\n\nイカは函館の名物ですが、とれない日・時期があります。店で聞いてください。\n\nベイエリアから駅へは、市電「十字街」から6分（最終22:40発）。歩くと15〜20分です。\n\nおすすめ訪問時間：18:20〜20:30ごろ",
+    "en": "Dinner: the bay area and Daimon Yokocho\n\nEat around the warehouses from 18:20, or take the tram 6 minutes from Jujigai to eat near the station (around 19:00: 19:03 and 19:09 on weekdays, 19:06 and 19:17 on Saturdays).\n\n[Bay area, around the warehouses]\n· Hakodate Beer Hall (inside the Kanemori warehouses): until 21:30 (last order 21:00).\n· Hakodate Menchubo Ajisai, Kurenai branch: shio ramen. 11:00–21:30 (last order).\n· Lucky Pierrot Bay Area main shop: 10:00–21:00 (last order 20:30).\n\n[Near Hakodate Station]\n· Hakodate Hikari no Yatai Daimon Yokocho: a lane of 26 tiny food stalls. Most are counter-only, so easy for one or two people. Seafood, ramen, grilled chicken, grilled lamb and more. Hours and days off differ by stall and payment is mostly cash. The official site lists each stall.\n· Lucky Pierrot Hakodate-ekimae: 8:00–22:00 (last order 21:30). Useful on a late night.\n\nSquid is Hakodate’s speciality, but there are days and seasons with no catch. Ask at the restaurant.\n\nFrom the bay to the station: 6 minutes by tram from Jujigai (last tram 22:40), or 15–20 minutes on foot.\n\nRecommended visit time: 18:20–about 20:30"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "大門横丁",
+      "en": "Daimon Yokocho"
+     },
+     "lat": 41.772393,
+     "lng": 140.730001,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E3%81%B2%E3%81%8B%E3%82%8A%E3%81%AE%E5%B1%8B%E5%8F%B0%20%E5%A4%A7%E9%96%80%E6%A8%AA%E4%B8%81"
+    },
+    {
+     "label": {
+      "ja": "金森赤レンガ倉庫（函館ビヤホール）",
+      "en": "Kanemori warehouses (Beer Hall)"
+     },
+     "lat": 41.766306,
+     "lng": 140.716843,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%87%BD%E9%A4%A8%E3%83%93%E3%83%A4%E3%83%9B%E3%83%BC%E3%83%AB"
+    },
+    {
+     "label": {
+      "ja": "ラッキーピエロ ベイエリア本店",
+      "en": "Lucky Pierrot Bay Area"
+     },
+     "lat": 41.765794,
+     "lng": 140.714894,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%83%94%E3%82%A8%E3%83%AD%20%E3%83%99%E3%82%A4%E3%82%A8%E3%83%AA%E3%82%A2%E6%9C%AC%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館ひかりの屋台 大門横丁",
+      "en": "Daimon Yokocho (official)"
+     },
+     "url": {
+      "ja": "https://www.hakodate-yatai.com/",
+      "en": "https://www.hakodate-yatai.com/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "函館麺厨房あじさい（店舗）",
+      "en": "Ajisai (shops)"
+     },
+     "url": {
+      "ja": "https://www.ajisai.tv/shop/",
+      "en": "https://www.ajisai.tv/shop/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ラッキーピエロ ベイエリア本店",
+      "en": "Lucky Pierrot Bay Area"
+     },
+     "url": {
+      "ja": "https://luckypierrot.jp/shop/bayarea/",
+      "en": "https://luckypierrot.jp/shop/bayarea/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "函館ビヤホール 21:30まで（ラストオーダー21:00）。あじさい紅店 21:30ラストオーダー。大門横丁は店ごと",
+       "en": "Beer Hall until 21:30 (last order 21:00). Ajisai Kurenai last order 21:30. Daimon Yokocho varies by stall"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": true,
+    "tip": {
+     "ja": "時間は、それぞれの公式サイトで確認しました。値段・英語のメニュー・カードが使えるかは確認していません（要確認）。",
+     "en": "Hours from each official site. Prices, English menus and card payment were not checked (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "yuhan-w1.jpg",
+     "credit": {
+      "author": "掬茶",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hakodate_Daimon_Yokocho.jpg"
+     }
+    },
+    {
+     "file": "yuhan-w2.jpg",
+     "credit": {
+      "author": "禁樹なずな",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Lucky_Pierrot_Bay_Area_Main_Store.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
