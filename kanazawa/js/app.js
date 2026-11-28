@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "Quiet lanes behind the teahouse districts, seafood that is affordable and genuinely good, Kenrokuen and the 21st Century Museum. Two days in the city, plus day trips to Gokayama, Himi and more.", ja: "茶屋街の裏の静かな路地、手頃でおいしい海鮮、兼六園と21世紀美術館。市内を2日で歩いて、五箇山や氷見へも日帰りで。" },
+    subtitle: { en: "Quiet lanes behind the teahouse districts, seafood that is affordable and genuinely good, and Kaga’s hot springs for a rainy day. Two days in the city, plus day trips to Gokayama, Himi and more.", ja: "茶屋街の裏の静かな路地、手頃でおいしい海鮮、雨の日は加賀の温泉へ。市内を2日で歩いて、五箇山や氷見へも日帰りで。" },
     nav_city: { en: "City", ja: "金沢市内" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "places to eat", ja: "ぜひ食べてほしいお店" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },
