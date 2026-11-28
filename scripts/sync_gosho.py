@@ -13,7 +13,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='gosho', i18n='GOSHO_I18N', count=10, data_v=5, bump=104,
+    id='gosho', i18n='GOSHO_I18N', count=10, data_v=5, bump=105,
     head='京都の中心：二条城と京都御所',
     title='京都の中心 二条城と京都御所 Nijo Castle &amp; Imperial Palace MAP',
     desc='三条のあたりから歩きと地下鉄で回る、二条城と京都御所の1日ルートマップ。開城の8:45に二条城へ行くコースと、9〜10時に出て二条城を午後に回すコースを選べます。予約なしで入れる京都御所、梅・桜・紅葉の京都御苑、夕方は錦市場、夜は先斗町・木屋町へ。Central Kyoto in a day: Nijo Castle at its 8:45 opening or in the later afternoon, the Imperial Palace and its park, Nishiki Market, then Pontocho by night.',

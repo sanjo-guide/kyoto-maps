@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "The white beach and sea cliffs of Shirahama, Nachi Falls, Katsuura tuna and the hot springs of Kumano.", ja: "白浜の白い砂浜と海の断崖、那智の滝、勝浦のまぐろ、そして熊野の温泉。" },
+    subtitle: { en: "Sunset at Engetsu Island, the Sandanbeki cliffs, the cedar-lined Daimonzaka steps and Nachi Falls, fresh tuna in Katsuura, and Tsuboyu by the river.", ja: "円月島の夕日、三段壁の断崖、大門坂の杉並木と那智の滝、勝浦の生まぐろ、川辺のつぼ湯。" },
     nav_city: { en: "Shirahama", ja: "白浜" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Kumano", ja: "那智・熊野" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in Shirahama", ja: "白浜のおすすめ" }, jump_food: { en: "places I've eaten", ja: "実際に行ったお店" }, jump_trips: { en: "areas further east", ja: "那智・勝浦・熊野・串本のエリア" },
     group: { en: "AREA", ja: "エリア" },

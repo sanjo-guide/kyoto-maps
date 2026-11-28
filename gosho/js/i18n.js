@@ -76,7 +76,7 @@ window.GOSHO_I18N = {
     intro: {
       "kicker": "三条のあたりから、歩きと地下鉄で回る1日",
       "h1": "将軍の城から、天皇の御所へ。",
-      "lead": "9〜10時に出る日は、寺町通を歩いて京都御苑へ。梨木神社の名水、人の少ない御苑の北側、予約なしで入れる京都御所を見て、御苑の中の休憩所でお昼。団体の多い昼を外して14時すぎに二条城へ行き、夕方は街なかへ戻って錦市場、夜は先斗町・木屋町で。8時すぎに出られる人は、一覧の上のボタンで「開城に合わせる」に切り替えてください。開城の8:45に二条城へ入る時間割になります。",
+      "lead": "明治まで天皇が暮らした京都御所に、予約なしで入れます。梨木神社の名水、人の少ない御苑の北側も歩いて、お昼は御苑の中の休憩所で。団体の多い昼を外して、14時すぎに二条城へ。夕方は錦市場で少しずつ食べて、夜は先斗町・木屋町の路地へ。三条のあたりを9〜10時に出て、寺町通を歩いて始めます。8時すぎに出られる人は、一覧の上のボタンで「開城に合わせる」に切り替えてください。開城の8:45に二条城へ入る時間割になります。",
       "favLabel": "いちばんの見どころ",
       "favName": "京都御所の紫宸殿",
       "favText": "即位の礼が行われた正殿。朱色の承明門の柱のあいだから、正面に見えます。無料・予約なし。月曜休み。",
@@ -211,7 +211,7 @@ window.GOSHO_I18N = {
     // 「開城に合わせる」（early）のときに intro を上書きする項目（scripts/sync_gosho.py の差分）
     introFor: {
       early: {
-        "lead": "8時すぎに三条のあたりを出て、地下鉄で4分。開城の8:45に二条城へ入り、団体が増える前に二の丸御殿を見ます。神泉苑に寄って地下鉄で京都御苑へ。梅林と蛤御門、京都御所を見て、御苑の中の休憩所でお昼。午後は人の少ない御苑の北側と梨木神社へ回り、寺町通を歩いて街なかへ。夕方の錦市場、夜は先斗町・木屋町で。",
+        "lead": "開城の8:45、団体が増える前の二条城へ。金のふすま絵と、うぐいす張りの廊下の二の丸御殿を先に見ます。神泉苑に寄って地下鉄で京都御苑へ。梅林と蛤御門、京都御所を見て、御苑の中の休憩所でお昼。午後は人の少ない御苑の北側と梨木神社へ回り、寺町通を歩いて街なかへ。夕方の錦市場、夜は先斗町・木屋町で。三条のあたりを8時すぎに出て、地下鉄で4分です。",
         "dayHead": "1日の流れ（開城に合わせる）",
         "day": [
           {
@@ -351,7 +351,7 @@ window.GOSHO_I18N = {
     intro: {
       "kicker": "A day on foot and by subway from the Sanjo area",
       "h1": "From the shogun’s castle to the emperor’s palace.",
-      "lead": "Leaving at 9–10, walk up Teramachi-dori to the Imperial Palace Park. Taste the spring water at Nashinoki Shrine, see the quiet north side of the park and the Palace (free, no booking), and have lunch at the rest house inside the park. Go to Nijo Castle after 14:00, once the midday tour groups have thinned, then come back into town for Nishiki Market and an evening in Pontocho and Kiyamachi. Can you leave soon after 8:00? Switch to “Castle at opening” with the buttons above the list: the timetable then starts at Nijo Castle when it opens at 8:45.",
+      "lead": "The emperors lived in the Kyoto Imperial Palace until the Meiji era, and you can walk in with no booking. Taste the spring water at Nashinoki Shrine, see the quiet north side of the park and have lunch at its rest house. Then Nijo Castle after 14:00, once the midday tour groups have thinned. Nishiki Market in the late afternoon, then the lanes of Pontocho and Kiyamachi at night. Leave the Sanjo area at 9–10 and start by walking up Teramachi-dori. Can you leave soon after 8:00? Switch to “Castle at opening” with the buttons above the list: the timetable then starts at Nijo Castle when it opens at 8:45.",
       "favLabel": "Highlight",
       "favName": "The Shishinden, Kyoto Imperial Palace",
       "favText": "The hall of enthronements, seen head-on between the vermilion pillars of the Jomeimon gate. Free, no booking. Closed Mondays.",
@@ -485,7 +485,7 @@ window.GOSHO_I18N = {
     },
     introFor: {
       early: {
-        "lead": "Leave the Sanjo area soon after 8:00; the subway takes 4 minutes. Go into Nijo Castle as it opens at 8:45 and see the Ninomaru Palace before the tour groups build up. Stop at Shinsen-en, then take the subway to the Imperial Palace Park: the plum grove and Hamaguri gate, the Palace, and lunch at the rest house inside the park. In the afternoon, the quiet north side of the park and Nashinoki Shrine, then a walk back into town down Teramachi-dori. Nishiki Market in the late afternoon, Pontocho and Kiyamachi at night.",
+        "lead": "Be at Nijo Castle when it opens at 8:45, before the tour groups, and see the Ninomaru Palace first: gold-leaf screens and floors that chirp underfoot. Stop at Shinsen-en, then take the subway to the Imperial Palace Park: the plum grove and Hamaguri gate, the Palace, and lunch at the rest house inside the park. In the afternoon, the quiet north side of the park and Nashinoki Shrine, then a walk back into town down Teramachi-dori. Nishiki Market in the late afternoon, Pontocho and Kiyamachi at night. You leave the Sanjo area soon after 8:00; the subway takes 4 minutes.",
         "dayHead": "One day, roughly like this (castle at opening)",
         "day": [
           {

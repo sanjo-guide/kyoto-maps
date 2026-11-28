@@ -2,18 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "島根県の松江（まつえ）と、安来（やすぎ）の足立美術館、そして出雲大社（いずもおおやしろ）をまとめました。",
-   "松江は京都から新幹線で岡山へ行き、特急やくもに乗りかえて約4時間。町の真ん中に、江戸時代の天守が残る国宝の松江城があり、お城のまわりのお堀を小さな船でめぐれます。",
-   "松江から電車で約25分の安来には、日本庭園のランキングで20年以上日本一に選ばれ続けている足立美術館があります。",
-   "松江から西へ電車で約1時間の出雲には、縁結びの神様で知られる出雲大社があります。足立美術館とは反対の方向なので、両方行くなら松江に2泊がおすすめです。",
-   "松江だけなら日帰りもできますが、1泊すると、宍道湖（しんじこ）の夕日や温泉もゆっくり楽しめます。いちばん大事なのは、予定を詰め込みすぎないことです。"
+   "松江の1日は、宍道湖（しんじこ）の夕日で終わります。日の入りの1時間ほど前に湖岸の芝生へ行くと、まだ人が少なく、湖に光の道ができていくのをゆっくり見られます。",
+   "島根県の松江（まつえ）は、京都から新幹線で岡山へ行き、特急やくもに乗りかえて約4時間。町の真ん中に、江戸時代の天守が残る国宝の松江城があり、お城のまわりのお堀を小さな船でめぐれます。橋の下をくぐるときは、船の屋根が低く下がります。",
+   "松江から電車で約25分の安来（やすぎ）には、日本庭園のランキングで20年以上日本一に選ばれ続けている足立美術館があります。白い砂と松の向こうに、本物の山が庭の一部のように重なります。窓の枠を額に見立てて、建物の中から眺める庭です。",
+   "松江から西へ電車で約1時間の出雲には、縁結びの神様で知られる出雲大社（いずもおおやしろ）があります。足立美術館とは反対の方向なので、両方行くなら松江に2泊がおすすめです。",
+   "松江だけなら日帰りもできますが、1泊すると、宍道湖の夕日や温泉もゆっくり楽しめます。"
   ],
   "en": [
-   "Here are my picks for Matsue in Shimane, with the Adachi Museum of Art in Yasugi and the Izumo Taisha shrine.",
-   "Matsue is about 4 hours from Kyoto: shinkansen to Okayama, then the Yakumo limited express. In the middle of town stands Matsue Castle, a National Treasure whose keep survives from the Edo period, and you can tour its moats by small boat.",
-   "About 25 minutes from Matsue by train, in Yasugi, is the Adachi Museum of Art, whose garden has been ranked Japan’s best for more than 20 years in a row.",
+   "In Matsue, the day ends with sunset over Lake Shinji. Get to the lakeside lawn about an hour before sunset: it is still quiet, and you can watch a path of light slowly form across the water.",
+   "Matsue, in Shimane, is about 4 hours from Kyoto: shinkansen to Okayama, then the Yakumo limited express. In the middle of town stands Matsue Castle, a National Treasure whose keep survives from the Edo period, and you can tour its moats by small boat. When it passes under a bridge, the boat’s roof is lowered.",
+   "About 25 minutes from Matsue by train, in Yasugi, is the Adachi Museum of Art, whose garden has been ranked Japan’s best for more than 20 years in a row. Beyond the white sand and pines, real mountains look like part of the garden. You view it from inside the building, with the window frames as picture frames.",
    "About an hour west of Matsue by train is Izumo Taisha, the shrine known for its god of good matches. It is in the opposite direction from the Adachi Museum, so stay two nights in Matsue if you want both.",
-   "Matsue alone works as a day trip, but with a night there you can also enjoy the sunset over Lake Shinji and the hot springs. Above all, don’t overpack your schedule."
+   "Matsue alone works as a day trip, but with a night there you can also enjoy the sunset over Lake Shinji and the hot springs."
   ]
  },
  "outro": {

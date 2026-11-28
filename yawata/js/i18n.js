@@ -85,7 +85,7 @@ window.YAWATA_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都の春のルート",
       "h1": "3月は淀の河津桜。山の上の国宝に寄って、夜は伏見の酒蔵の町。",
-      "lead": "京都の南、京阪沿線の春のマップです。淀の河津桜（例年3月上旬〜中旬）と背割堤の桜（例年3月末〜4月上旬）は咲く時期が違うので、コースを分けました。このコースは3月用です。9:30ごろ三条を出て淀水路を歩き、八幡で鯖寿司のお昼、石清水八幡宮、3つの川の展望塔へ。4月に行く人は一覧の上のボタンで切り替えてください。",
+      "lead": "細い水路に沿って、約1.3kmに約300本の河津桜。京都でひと足早いお花見を、淀で。そのあとは1駅となりの八幡で100年以上続く朝日屋の鯖寿司、ケーブルで山の上の国宝・石清水八幡宮、3つの川が見渡せる展望塔へ。夜は伏見の酒蔵の町で晩ごはん。淀の河津桜（例年3月上旬〜中旬）と背割堤の桜（例年3月末〜4月上旬）は咲く時期が違うので、コースを分けました。このコースは3月用で、9:30ごろ三条を出ます。4月に行く人は一覧の上のボタンで切り替えてください。",
       "favLabel": "いちばんの見どころ",
       "favName": "淀水路の河津桜",
       "favText": "細い水路に約1.3km、約300本。京都でひと足早いお花見です。",
@@ -216,7 +216,7 @@ window.YAWATA_I18N = {
     introFor: {
       "sakura": {
         "h1": "午前は山の上の国宝、午後は1.4kmの桜のトンネル。夜は祇園の夜桜へ。",
-        "lead": "京都の南、京阪沿線の春のマップです。このコースは背割堤が見ごろになる3月末〜4月上旬用。9:30ごろ三条を出て先に石清水八幡宮へ、駅前でお昼にしてから展望塔と背割堤へ。夕方は祇園四条に戻って夜桜と晩ごはんです。人の少ないうちに歩きたい人は開園9:00のコースへ、3月の河津桜の人は3月のコースへ切り替えてください。",
+        "lead": "木津川と宇治川にはさまれた堤防に、約220本のソメイヨシノが1.4kmのトンネルになります。人の多い堤防はあとに回して、先にケーブルで山の上の石清水八幡宮へ。駅前でお昼、展望塔から並木を見下ろしてから、桜の下を歩きます。夕方は祇園四条に戻って夜桜と晩ごはん。背割堤が見ごろになる3月末〜4月上旬用のコースで、9:30ごろ三条を出ます。人の少ないうちに歩きたい人は開園9:00のコースへ、3月の河津桜の人は3月のコースへ切り替えてください。",
         "favName": "背割堤の桜並木",
         "favText": "木津川と宇治川の間に、約220本のソメイヨシノのトンネル。",
         "favPhoto": [
@@ -317,7 +317,7 @@ window.YAWATA_I18N = {
       },
       "early": {
         "h1": "開園の9:00に桜のトンネルへ。午後は伏見の酒蔵、夜は祇園の夜桜。",
-        "lead": "京都の南、京阪沿線の春のマップです。このコースは3月末〜4月上旬に、昼に混む背割堤を先に見る回り方。8:10ごろ三条を出て9:00に展望塔へ。並木のあと走井餅でひと休みして、石清水八幡宮、遅めのお昼、伏見の月桂冠大倉記念館、祇園の夜桜へ。朝ゆっくりしたい人は9:30ごろ発のコースに切り替えてください。",
+        "lead": "昼に混み合う前の、朝の桜のトンネルへ。開館の9:00に展望塔に上がって並木を見下ろし、背割堤を歩いたら、門前の走井餅でひと休み。そのあと石清水八幡宮、遅めのお昼、伏見の月桂冠大倉記念館、夜は祇園の夜桜へ。3月末〜4月上旬用のコースで、8:10ごろ三条を出ます。朝ゆっくりしたい人は9:30ごろ発のコースに切り替えてください。",
         "favName": "背割堤の桜並木",
         "favText": "昼に人が増える前に、約1.4kmの桜のトンネルへ。",
         "favPhoto": [
@@ -512,7 +512,7 @@ window.YAWATA_I18N = {
     intro: {
       "kicker": "A spring route south of Kyoto, hand-walked by Toshi",
       "h1": "Kawazu cherries in March, a shrine on a hill, dinner among sake breweries.",
-      "lead": "A spring map along the Keihan line south of Kyoto. Yodo’s Kawazu cherries (usually early to mid March) and Sewaritei (usually late March to early April) bloom at different times, so they have separate courses. This one is for March: leave Sanjo about 9:30, walk the Yodo canal, have mackerel sushi in Yawata, then see Iwashimizu Hachimangu and the tower over three rivers. Coming in April? Switch with the buttons above the list.",
+      "lead": "About 300 Kawazu cherry trees along 1.3 km of narrow canal at Yodo: an early taste of spring in Kyoto. Then mackerel sushi in Yawata, one stop on, from Asahiya, open for over 100 years; a cable car up to Iwashimizu Hachimangu, a national treasure on the hill; the tower over three rivers; and dinner in Fushimi’s sake district. Yodo’s Kawazu cherries (usually early to mid March) and Sewaritei (usually late March to early April) bloom at different times, so they have separate courses. This one is for March and leaves Sanjo about 9:30. Coming in April? Switch with the buttons above the list.",
       "favLabel": "Highlight",
       "favName": "Kawazu cherries at Yodo",
       "favText": "About 300 trees along 1.3 km of narrow canal, ahead of the main season.",
@@ -643,7 +643,7 @@ window.YAWATA_I18N = {
     introFor: {
       "sakura": {
         "h1": "A hilltop shrine, 1.4 km of blossom overhead, then Gion after dark.",
-        "lead": "A spring map along the Keihan line south of Kyoto. This course is for Sewaritei’s season, late March to early April: leave Sanjo about 9:30 for Iwashimizu Hachimangu first, lunch by the station, then the tower and levee, and back to Gion-Shijo for lamplit cherries and dinner. For fewer people switch to the 9:00-opening course; for Kawazu cherries, to the March course.",
+        "lead": "Between the Kizu and Uji rivers, about 220 Somei-yoshino cherries make a 1.4 km tunnel along the levee. Save the crowded levee for later and ride the cable car up to Iwashimizu Hachimangu first. Lunch by the station, then look down on the avenue from the tower before walking under the blossom. In the evening, back to Gion-Shijo for lamplit cherries and dinner. This course is for Sewaritei’s season, late March to early April, leaving Sanjo about 9:30. For fewer people switch to the 9:00-opening course; for Kawazu cherries, to the March course.",
         "favName": "Sewaritei cherry avenue",
         "favText": "About 220 trees form a tunnel between two rivers.",
         "favPhoto": [
@@ -744,7 +744,7 @@ window.YAWATA_I18N = {
       },
       "early": {
         "h1": "The tunnel of blossom at 9:00, sake after lunch, Gion after dark.",
-        "lead": "A spring map along the Keihan line south of Kyoto. This course is for late March to early April and gets to Sewaritei before the midday crowds: leave Sanjo about 8:10 for the tower at 9:00, walk the avenue, rest at Hashiriimochi, then the shrine, a late lunch, Gekkeikan’s sake museum in Fushimi and cherries by night in Gion. For a slower morning switch to the 9:30 course.",
+        "lead": "The tunnel of blossom in the morning, before the midday crowds. Go up the tower when it opens at 9:00 to look down on the avenue, walk the levee, then rest at Hashiriimochi. After that: the hilltop shrine, a late lunch, Gekkeikan’s sake museum in Fushimi and cherries by night in Gion. This course is for late March to early April and leaves Sanjo about 8:10. For a slower morning switch to the 9:30 course.",
         "favName": "Sewaritei cherry avenue",
         "favText": "1.4 km of blossom overhead, before the midday crowds.",
         "favPhoto": [

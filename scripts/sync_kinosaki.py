@@ -14,7 +14,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='kinosaki', i18n='KINOSAKI_I18N', count=12, data_v=6, bump=104,
+    id='kinosaki', i18n='KINOSAKI_I18N', count=12, data_v=6, bump=105,
     head='京都から日帰り 城崎温泉（＋竹田城跡）',
     title='京都から日帰り 城崎温泉・竹田城跡 Kinosaki Onsen MAP',
     desc='京都7:32の特急で城崎温泉へ。外湯4つとロープウェイを回る「城崎温泉だけ」と、天空の城・竹田城跡に寄ってから外湯を3つ回るコースを選べる1日ルートマップ。外湯の休みの曜日、乗り遅れたときの次の電車、晩ごはんまで。A day trip from Kyoto to Kinosaki Onsen on the 7:32 express: a Kinosaki-only course with four baths and the ropeway, or a course via Takeda Castle, the “castle in the sky”, with closed days, fallback trains and dinner.',

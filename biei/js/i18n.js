@@ -113,7 +113,7 @@ window.BIEI_I18N = {
     "introFor": {
       "late": {
         "kicker": "旭川から日帰り（雪のない季節：4月下旬〜10月）",
-        "h1": "午前は自転車で丘、午後はバスで青い池と滝。温泉に入って帰る。",
+        "h1": "自転車で丘の木を回り、午後は青い池と、同じ青い色の川に落ちる滝。",
         "lead": "車がなくても回れる美瑛の1日です。旭川9:38の電車で美瑛へ。駅前で電動自転車を借りて、パッチワークの路の丘と木を回ります。石の倉庫の道の駅でお昼を食べ、13:45のバスで白金青い池へ。同じ青い色の川に落ちる白ひげの滝を見て、白金温泉に入り、美瑛の町で晩ごはん。18:40の電車で旭川19:13着です。",
         "favName": "白金 青い池",
         "favText": "立ち枯れのカラマツと青い水。（写真：MaedaAkihiko / CC BY-SA 4.0）",
@@ -236,7 +236,7 @@ window.BIEI_I18N = {
       "early": {
         "kicker": "旭川から日帰り（冬：11月〜4月中旬）",
         "h1": "雪の丘の1本の木、青い川に落ちる滝、温泉。日が沈んだら、青い池のライトアップ。",
-        "lead": "冬の美瑛を、車なしで回る1日です。旭川9:38の電車で美瑛へ。予約しておいた小さなバスでクリスマスツリーの木を見て、町でお昼。13:45のバスで白金へ行き、青い川と白ひげの滝を明るいうちに見て、温泉で温まります。日が沈んだら16:32のバスで青い池へ。雪の池と枯れ木が光に浮かぶのを見て、18:05の最終バスで美瑛に戻り、18:40の電車で旭川19:13着です。金・土曜は、予約制のライトアップのバスを使う回り方も紹介しています。",
+        "lead": "日が沈むと、雪の積もった青い池と枯れ木が光に浮かびます。冬の美瑛を車なしで回って、最後にそれを見る1日です。旭川9:38の電車で美瑛へ。予約しておいた小さなバスでクリスマスツリーの木を見て、町でお昼。13:45のバスで白金へ行き、青い川と白ひげの滝を明るいうちに見て、温泉で温まります。日が沈んだら16:32のバスで青い池へ。ライトアップを見て、18:05の最終バスで美瑛に戻り、18:40の電車で旭川19:13着です。金・土曜は、予約制のライトアップのバスを使う回り方も紹介しています。",
         "favName": "青い池のライトアップ",
         "favText": "2027年4月21日まで毎晩。12月は16:30に点灯します。（写真：Calistemon / CC BY-SA 4.0）",
         "favPhoto": [
@@ -364,7 +364,7 @@ window.BIEI_I18N = {
       },
       "furano": {
         "kicker": "旭川から日帰り（花の季節：5月〜10月はじめ）",
-        "h1": "富良野線で花畑を2つ。中富良野のファーム富田と、美馬牛の四季彩の丘。",
+        "h1": "斜面に並ぶ花の帯を、電車と歩きで2か所。中富良野のファーム富田と、美馬牛の四季彩の丘。",
         "lead": "電車と歩きで花畑を回る1日です。旭川9:38の電車で中富良野10:46着、歩いて25分のファーム富田で花畑を見て、園内でお昼。13:27の電車で美馬牛（びばうし）へ戻り、歩いて30分の四季彩の丘へ。16:18の電車で美瑛に出て、石の倉庫の道の駅と町を歩き、晩ごはんのあと18:40の電車で旭川19:13着です。このコースに青い池は入っていません。",
         "favName": "ファーム富田の花畑",
         "favText": "斜面に並ぶ花の帯。（写真：663highland / CC BY 2.5）",
@@ -582,7 +582,7 @@ window.BIEI_I18N = {
     "introFor": {
       "late": {
         "kicker": "A day trip from Asahikawa (snow-free season: late April–October)",
-        "h1": "Hills by bike in the morning, the Blue Pond and a waterfall by bus in the afternoon, then a hot spring.",
+        "h1": "Hill trees by e-bike, then the Blue Pond and a waterfall dropping into a river of the same blue.",
         "lead": "A day in Biei without a car. Take the 9:38 train from Asahikawa, rent an e-bike by the station and ride to the trees and lookouts of Patchwork Road. Lunch at the stone-warehouse roadside station, then the 13:45 bus to the Shirogane Blue Pond. See Shirahige Falls dropping into a river of the same blue, soak at Shirogane Onsen and have dinner in Biei before the 18:40 train (Asahikawa 19:13).",
         "favName": "Shirogane Blue Pond",
         "favText": "Dead larch trunks standing in blue water. (Photo: MaedaAkihiko / CC BY-SA 4.0)",
@@ -705,7 +705,7 @@ window.BIEI_I18N = {
       "early": {
         "kicker": "A day trip from Asahikawa (winter: November–mid-April)",
         "h1": "A lone tree on a snowy hill, a waterfall into a blue river, a hot spring, and after dark the Blue Pond lit up.",
-        "lead": "A car-free winter day in Biei. Take the 9:38 train from Asahikawa, ride a small pre-booked bus to the Christmas Tree and have lunch in town. The 13:45 bus takes you to Shirogane for the blue river and Shirahige Falls in daylight, then a hot spring to warm up. After sunset, the 16:32 bus drops you at the Blue Pond, where lights pick out the snow-covered pond and its dead trees. The last bus at 18:05 returns you to Biei for the 18:40 train (Asahikawa 19:13). For Fridays and Saturdays we also describe a version using the bookable light-up tour bus.",
+        "lead": "After sunset, lights pick out the snow-covered Blue Pond and its dead trees. This is a car-free winter day in Biei that ends there. Take the 9:38 train from Asahikawa, ride a small pre-booked bus to the Christmas Tree and have lunch in town. The 13:45 bus takes you to Shirogane for the blue river and Shirahige Falls in daylight, then a hot spring to warm up. After sunset, the 16:32 bus drops you at the Blue Pond for the light-up. The last bus at 18:05 returns you to Biei for the 18:40 train (Asahikawa 19:13). For Fridays and Saturdays, this map also describes a version using the bookable light-up tour bus.",
         "favName": "The Blue Pond light-up",
         "favText": "Nightly until 21 April 2027; from 16:30 in December. (Photo: Calistemon / CC BY-SA 4.0)",
         "favPhoto": [
@@ -833,7 +833,7 @@ window.BIEI_I18N = {
       },
       "furano": {
         "kicker": "A day trip from Asahikawa (flower season: May–early October)",
-        "h1": "Two flower gardens along the Furano Line: Farm Tomita in Nakafurano and Shikisai-no-oka at Bibaushi.",
+        "h1": "Bands of flowers across the slopes, two gardens by train and on foot: Farm Tomita in Nakafurano and Shikisai-no-oka at Bibaushi.",
         "lead": "A day of flower fields by train and on foot. The 9:38 from Asahikawa reaches Nakafurano at 10:46; walk 25 minutes to Farm Tomita, see the fields and have lunch there. Take the 13:27 back to Bibaushi and walk 30 minutes to Shikisai-no-oka. The 16:18 brings you to Biei for the stone-warehouse roadside station, a stroll and dinner before the 18:40 train (Asahikawa 19:13). The Blue Pond is not part of this course.",
         "favName": "The fields of Farm Tomita",
         "favText": "Bands of flowers across the slope. (Photo: 663highland / CC BY 2.5)",

@@ -14,7 +14,7 @@
 import os, runpy
 
 CFG = dict(
-    id='takao', i18n='TAKAO_I18N', count=4, data_v=4, bump=102,
+    id='takao', i18n='TAKAO_I18N', count=4, data_v=4, bump=103,
     head='京都 高雄の紅葉（神護寺・西明寺・高山寺）',
     title='京都 高雄の紅葉｜神護寺・西明寺・高山寺 Takao MAP',
     desc='三条から地下鉄とJRバスで高雄へ。神護寺の開門に合わせるコースと、栂ノ尾の高山寺から谷を下る9〜10時発コースを選べる、京都の北西の紅葉ルートマップ。お昼の茶屋、帰りのバス、仁和寺・北野天満宮への寄り道と街なかの夜も。Autumn leaves at Takao, north-west Kyoto: a course timed for Jingoji’s opening, or a 9–10 o’clock course from Kosanji down the valley, with lunch, buses back, stops on the way home and the evening in town.',

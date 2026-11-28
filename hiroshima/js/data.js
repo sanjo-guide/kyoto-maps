@@ -2,18 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "広島と、宮島・尾道のおすすめをまとめました。",
+   "満潮の宮島では、朱色の大鳥居と社殿が海に浮かんで見えます。潮が引けば、砂浜を歩いて鳥居の真下まで行けます。同じ日でも、時間で景色ががらっと変わります。",
    "広島は京都から新幹線で約1時間40分。駅から路面電車に乗れば、原爆ドームや平和記念公園、本通の商店街まで、市内の見どころをかんたんに回れます。",
-   "広島を拠点にすれば、宮島（厳島神社と弥山）や坂の町・尾道、酒蔵の町・西条、港町・呉、錦帯橋の岩国へも、電車で日帰りで行けます。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。広島に来たら、やっぱりお好み焼きです。弥山と錦帯橋は、私はまだ行っていませんが、外せない場所なので公式の情報をもとに紹介しています（写真はクレジットつき）。",
-   "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
+   "「食べる」は、私が実際に行ったお好み焼き屋さんだけです。広島駅のすぐ近くの「駅前ひろば」、夜遅くに入った袋町の路地の小さな店、カープのポスターが貼られた中町の店。広島に来たら、やっぱりお好み焼きです。",
+   "広島を拠点にすれば、宮島（厳島神社と弥山）や坂の町・尾道、酒蔵の町・西条、港町・呉、錦帯橋の岩国へも、電車で日帰りで行けます。尾道では、千光寺公園から見る夕暮れの尾道水道と、背脂の浮いた尾道ラーメンを。弥山と錦帯橋は、私はまだ行っていませんが、外せない場所なので公式の情報をもとに紹介しています（写真はクレジットつき）。",
+   "宮島へ行く日は、先に潮の時間を確かめてください。海に浮かぶ鳥居を見たいか、鳥居の足もとまで歩きたいかで、着く時間が決まります。"
   ],
   "en": [
-   "Here are my recommendations for Hiroshima, Miyajima and Onomichi.",
+   "At high tide on Miyajima, the vermilion torii and the shrine seem to float on the sea. When the tide goes out, you can walk across the sand right up to the foot of the torii. The view changes completely over a single day.",
    "Hiroshima is about 1 h 40 min from Kyoto by shinkansen. From the station, the streetcar takes you to the Atomic Bomb Dome, the Peace Memorial Park and the Hondori shopping arcade with no trouble.",
-   "With Hiroshima as your base, you can also take day trips by train to Miyajima (Itsukushima Shrine and Mt. Misen), the hillside town of Onomichi, the sake town of Saijo, the port town of Kure and Iwakuni with its Kintaikyo Bridge.",
-   "In the food section I only list places I have actually been to myself. In Hiroshima, eat okonomiyaki. I haven’t yet been up Mt. Misen or to Kintaikyo, but they shouldn’t be missed, so I’ve described them from official information (photos are credited).",
-   "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
+   "The food section only lists okonomiyaki places I have actually been to: one in the Ekimae Hiroba building right by Hiroshima Station, a tiny place down a Fukuromachi lane that I went into late at night, and one in Nakamachi with Carp baseball posters on the walls. In Hiroshima, eat okonomiyaki.",
+   "With Hiroshima as your base, you can also take day trips by train to Miyajima (Itsukushima Shrine and Mt. Misen), the hillside town of Onomichi, the sake town of Saijo, the port town of Kure and Iwakuni with its Kintaikyo Bridge. In Onomichi, watch dusk fall over the channel from Senkoji Park, then have a bowl of Onomichi ramen with its specks of pork fat. I haven’t yet been up Mt. Misen or to Kintaikyo, but they shouldn’t be missed, so I’ve described them from official information (photos are credited).",
+   "On your Miyajima day, check the tide times first. Whether you want the torii floating on the sea or want to walk out to its feet decides when you should arrive."
   ]
  },
  "outro": {

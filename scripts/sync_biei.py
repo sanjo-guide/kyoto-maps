@@ -23,7 +23,7 @@ import os, re, runpy
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINTER_FROM, WINTER_TO = 1101, 420   # 月×100＋日
 CFG = dict(
-    id='biei', i18n='BIEI_I18N', count=10, data_v=1, bump=100,
+    id='biei', i18n='BIEI_I18N', count=10, data_v=1, bump=101,
     head='美瑛・青い池と富良野（旭川から日帰り）',
     title='美瑛・青い池と富良野｜旭川から日帰り 丘・白金温泉・冬のライトアップ Biei MAP',
     desc='旭川から日帰りの美瑛。車なしで、JR富良野線と道北バスで回ります。雪のない季節は電動自転車でパッチワークの路の丘、午後はバスで白金青い池・白ひげの滝・白金温泉。冬はクリスマスツリーの木と、青い池のライトアップ（最終バスは18:05）。花の季節にはファーム富田と四季彩の丘のコースも。バスと電車の時刻、タトゥーや寒さの注意つき。A car-free day trip from Asahikawa to Biei by the JR Furano Line and Dohoku Bus: the Patchwork Road hills by e-bike, the Shirogane Blue Pond, Shirahige Falls and a hot spring; in winter the Christmas Tree and the Blue Pond light-up (last bus 18:05); and a flower-season course to Farm Tomita and Shikisai-no-oka, with bus and train times and notes on tattoos and the cold.',

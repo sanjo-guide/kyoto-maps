@@ -76,7 +76,7 @@ window.TOMOGASHIMA_I18N = {
       "kicker": "大阪・梅田〜難波のホテルから日帰り",
       "favLabel": "いちばんの見どころ",
       "favName": "第3砲台跡",
-      "favText": "苔とつたに包まれた、レンガのアーチと暗い通路。",
+      "favText": "苔とつたに包まれた、レンガのアーチと暗い通路。中はスマホのライトで。",
       "favPhoto": [
         "dai3",
         2
@@ -148,7 +148,7 @@ window.TOMOGASHIMA_I18N = {
     introFor: {
       "late": {
         "h1": "船で渡る無人島。森の中の、レンガの砲台跡へ。",
-        "lead": "なんばを8:14に出る特急で、和歌山の港町・加太へ。港で整理券をもらって淡嶋神社にお参りし、11:00の船で友ヶ島に渡ります。島では5時間。苔むしたレンガの第3砲台跡、海を見渡す展望台でお昼、白い灯台、崩れたままの第2砲台跡をゆっくり歩いて、16:30の最終便で戻ります。晩ごはんは、なんばに戻って法善寺横丁か道頓堀で。もっと早く出られる人は、一覧の上のボタンで「9:00の船」を選んでください。午後に加太でお昼と温泉の時間ができます。9〜10時にホテルを出る人は13:00の船になります（加太港のスポットに書いてあります）。",
+        "lead": "苔むしたレンガの第3砲台跡、海を見渡す展望台でのお昼、白い灯台、海に崩れたままの第2砲台跡。和歌山の港町・加太から船で約20分の島を、5時間かけてゆっくり歩きます。なんばを8:14の特急で出て、加太港で整理券をもらい、淡嶋神社にお参りしてから11:00の船へ。16:30の最終便で戻り、晩ごはんはなんばの法善寺横丁か道頓堀で。もっと早く出られる人は、一覧の上のボタンで「9:00の船」を選んでください。午後に加太でお昼と温泉の時間ができます。9〜10時にホテルを出る人は13:00の船になります（加太港のスポットに書いてあります）。",
         "day": [
           {
             "time": "8:14",
@@ -206,7 +206,7 @@ window.TOMOGASHIMA_I18N = {
       },
       "early": {
         "h1": "朝いちばんの船で無人島へ。午後は加太でお昼と温泉。",
-        "lead": "なんばを6:38に出る急行で加太へ向かい、9:00の最初の船で友ヶ島に渡ります。人の少ないうちに第3砲台跡を見て、展望台、海岸、灯台、第2砲台跡を4時間かけて歩き、13:30の船で加太へ。遅めのお昼に加太の魚を食べ、淡嶋神社にお参りして、時間があれば温泉。なんばには18時ごろ戻って、夜は法善寺横丁か道頓堀で。あとに16:30の便が残っているので、風で予定が変わる日もいちばん安心な船です。朝はもう少しゆっくりしたい人は、一覧の上のボタンで「11:00の船」を選んでください。",
+        "lead": "9:00の最初の船で島に渡り、人の少ないうちに第3砲台跡へ。展望台、海岸、灯台、第2砲台跡を4時間かけて歩いて、13:30の船で加太へ戻ります。遅めのお昼に加太の魚を食べ、淡嶋神社にお参りして、時間があれば温泉。なんばを6:38の急行で出て、18時ごろには戻れるので、夜は法善寺横丁か道頓堀で。あとに16:30の便が残っているので、風で予定が変わる日もいちばん安心な船です。朝はもう少しゆっくりしたい人は、一覧の上のボタンで「11:00の船」を選んでください。",
         "day": [
           {
             "time": "6:38",
@@ -336,7 +336,7 @@ window.TOMOGASHIMA_I18N = {
       "kicker": "A day trip from a hotel in Osaka (Umeda–Namba)",
       "favLabel": "Don’t miss",
       "favName": "No. 3 Battery ruins",
-      "favText": "Brick arches and dark passages wrapped in moss and ivy.",
+      "favText": "Brick arches and dark passages wrapped in moss and ivy. Use your phone light inside.",
       "favPhoto": [
         "dai3",
         2
@@ -408,7 +408,7 @@ window.TOMOGASHIMA_I18N = {
     introFor: {
       "late": {
         "h1": "An uninhabited island by boat, and brick gun batteries in the woods.",
-        "lead": "Leave Namba on the 8:14 limited express for the little port of Kada in Wakayama. Get your numbered ticket at the port, visit Awashima Shrine, and cross to Tomogashima on the 11:00 boat. You have five hours on the island: the moss-covered brick No. 3 Battery, lunch at a lookout over the sea, a white lighthouse and the collapsed No. 2 Battery, all at an easy pace, then the last boat back at 16:30. Dinner is back in Namba, at Hozenji Yokocho or Dotonbori. If you can start earlier, choose the 9:00 boat with the buttons above the list: it leaves you an afternoon in Kada for lunch and a hot spring. If you leave your hotel at 9–10, your boat is the 13:00 (see the Kada Port stop).",
+        "lead": "The moss-covered brick No. 3 Battery, lunch at a lookout over the sea, a white lighthouse and the No. 2 Battery collapsing into the sea: five unhurried hours on an island about 20 minutes by boat from Kada, a little port in Wakayama. Leave Namba on the 8:14 limited express, get your numbered ticket at Kada Port, visit Awashima Shrine and take the 11:00 boat. Come back on the last boat at 16:30 and have dinner in Namba, at Hozenji Yokocho or Dotonbori. If you can start earlier, choose the 9:00 boat with the buttons above the list: it leaves you an afternoon in Kada for lunch and a hot spring. If you leave your hotel at 9–10, your boat is the 13:00 (see the Kada Port stop).",
         "day": [
           {
             "time": "8:14",
@@ -466,7 +466,7 @@ window.TOMOGASHIMA_I18N = {
       },
       "early": {
         "h1": "The first boat to an uninhabited island, then lunch and a hot spring in Kada.",
-        "lead": "Take the 6:38 express from Namba to Kada and cross to Tomogashima on the first boat at 9:00. See the No. 3 Battery before most people arrive, then the lookout, the beach, the lighthouse and the No. 2 Battery over four hours, and come back on the 13:30. A late lunch of Kada fish, Awashima Shrine, a hot spring if there is time, and you are back in Namba around 18:00 for the evening. With the 16:30 still running after you, it is also the safest boat on a day when wind changes the schedule. For a slower morning, choose the 11:00 boat with the buttons above the list.",
+        "lead": "Cross on the first boat at 9:00 and see the No. 3 Battery before most people arrive. Then the lookout, the beach, the lighthouse and the No. 2 Battery over four hours, and back to Kada on the 13:30. A late lunch of Kada fish, Awashima Shrine, a hot spring if there is time. You leave Namba on the 6:38 express and are back around 18:00 for the evening at Hozenji Yokocho or Dotonbori. With the 16:30 still running after you, it is also the safest boat on a day when wind changes the schedule. For a slower morning, choose the 11:00 boat with the buttons above the list.",
         "day": [
           {
             "time": "6:38",

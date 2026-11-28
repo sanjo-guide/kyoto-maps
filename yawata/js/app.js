@@ -402,12 +402,6 @@
         '<div class="in-top-r"><a class="in-home" href="../">' + esc(t.allMaps) + '</a>' + lsw +
         '<button type="button" class="iconbtn in-x" data-act="close" aria-label="' + esc(t.close) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div></div>' +
       '<div class="in-scroll">' +
-        // how to use the map comes first
-        '<section class="in-sec"><h2 class="in-h2">' + esc(x.howHead) + '</h2><ol class="in-how">' +
-          x.how.map(function (h, i) {
-            return '<li><span class="in-num">' + (i + 1) + '</span><div><b>' + esc(h.title) + '</b><p>' + esc(h.text) + '</p></div></li>';
-          }).join('') +
-        '</ol></section>' +
         '<section class="in-hero">' +
           '<div class="in-hero-txt">' +
             '<p class="in-kicker">' + esc(x.kicker) + '</p>' +
@@ -421,6 +415,12 @@
             '<span class="in-fav-text">' + esc(x.favText) + '</span></figcaption>' +
           '</figure>' +
         '</section>' +
+        // how to use the map: after the introduction (what makes the day worth it comes first)
+        '<section class="in-sec"><h2 class="in-h2">' + esc(x.howHead) + '</h2><ol class="in-how">' +
+          x.how.map(function (h, i) {
+            return '<li><span class="in-num">' + (i + 1) + '</span><div><b>' + esc(h.title) + '</b><p>' + esc(h.text) + '</p></div></li>';
+          }).join('') +
+        '</ol></section>' +
         '<section class="in-sec"><h2 class="in-h2">' + esc(x.whoHead) + '</h2><ul class="in-who">' +
           x.who.map(function (w) { return '<li><span class="in-ck">' + CHECK + '</span><span>' + esc(w) + '</span></li>'; }).join('') +
         '</ul></section>' +
@@ -888,7 +888,7 @@
     window.addEventListener('hashchange', route);
     if (WIDE.addEventListener) WIDE.addEventListener('change', function () { map.invalidateSize(); route(); });
 
-    // Opening the map with no spot in the address: always show how to use it first
+    // Opening the map with no spot in the address: always show the introduction (with how to use it) first
     if (!location.hash) history.replaceState(null, '', location.pathname + location.search + '#about');
     route();
   }

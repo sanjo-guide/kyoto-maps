@@ -183,7 +183,7 @@ h = h.replace(_m.group(0),
   '    <p class="sw-label" data-t="swMode">回り方</p>\n' + _m.group(0))
 # CSS / JS の ?v= は、テンプレートの数字に 100 を足す（このマップだけ更新したときに上げやすいように別の番号）
 # このマップだけ更新したときは EXTRA の数字を上げる（2026-11-20：i18n.js とデータを直したので i18n・app を +1。2026-11-22：コースの切り替えで全部 +1。2026-11-24：要確認の調べ直しでデータを直したので app を +1）
-EXTRA = {'css/style.css': 1, 'js/i18n.js': 2, 'js/app.js': 3}
+EXTRA = {'css/style.css': 2, 'js/i18n.js': 3, 'js/app.js': 4}
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + 100 + EXTRA[m.group(1)]}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """

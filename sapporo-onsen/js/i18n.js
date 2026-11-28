@@ -110,7 +110,7 @@ window.SAPPORO_ONSEN_I18N = {
       "jozankei": {
         "kicker": "札幌から日帰り・一年中",
         "h1": "札幌から1時間。足湯と温泉卵と、谷の露天風呂。",
-        "lead": "地下鉄とバスで1時間。川を見下ろす足湯、洞窟のお堂、温泉卵をつくる湯つぼを歩いて回り、午後は豊平峡温泉の露天風呂とインドカレー。夜は温泉街で食べてから、札幌駅行きのバスで帰ることもできます。",
+        "lead": "定山渓（じょうざんけい）は、札幌市の中の豊平川の谷にある温泉街。地下鉄とバスで1時間です。川を見下ろす足湯、洞窟のお堂、温泉卵をつくる湯つぼを歩いて回り、午後は豊平峡温泉の露天風呂とインドカレー。夜は温泉街で食べてから、札幌駅行きのバスで帰ることもできます。日帰り入浴のタトゥーの決まりは、お風呂ごとに先に書いてあります。",
         "favName": "豊平川の谷の温泉街",
         "favText": "札幌市の中にある温泉街です。足湯はどこも無料。（写真：t-konno / CC BY-SA 3.0）",
         "favPhoto": [
@@ -223,7 +223,7 @@ window.SAPPORO_ONSEN_I18N = {
       "noboribetsu": {
         "kicker": "札幌から日帰り・一年中",
         "h1": "地獄谷の湯けむりと、川の天然足湯。",
-        "lead": "特急で1時間14分。極楽通りでお昼を食べて、閻魔堂のからくり、湯気の上がる地獄谷、大湯沼へ。下りの途中の天然足湯で足を温め、夕方は日帰り入浴。晩ごはんを食べて、札幌に21:41に帰ります。",
+        "lead": "湯気の上がる谷を木道で歩き、下りの途中で温泉の川に足を入れる。札幌から特急で1時間14分の登別温泉です。極楽通りでお昼を食べて、閻魔堂のからくり、地獄谷、大湯沼、無料の天然足湯へ。夕方は日帰り入浴、晩ごはんを食べて、札幌に21:41に帰ります。全席指定の特急、現金で払うバス、16:30までの荷物預かりのことも先に書いてあります。",
         "favName": "地獄谷",
         "favText": "直径約450mの火口のあとから、1日に約1万トンの湯が湧いています。（写真：Kentaro Ohno / CC BY 2.0）",
         "favPhoto": [
@@ -450,7 +450,7 @@ window.SAPPORO_ONSEN_I18N = {
       "jozankei": {
         "kicker": "Day trip from Sapporo · all year",
         "h1": "Foot baths, onsen eggs and an outdoor bath, an hour from Sapporo.",
-        "lead": "An hour by subway and bus. Walk between a foot bath above the river, a cave shrine and a spring pot for cooking eggs, then spend the afternoon in the outdoor baths at Hoheikyo Onsen with an Indian curry. You can also eat in town and ride a bus straight back to Sapporo Station.",
+        "lead": "Jozankei is a hot-spring town in the Toyohira river valley, still inside Sapporo city and an hour away by subway and bus. Walk between a foot bath above the river, a cave shrine and a spring pot for cooking eggs, then spend the afternoon in the outdoor baths at Hoheikyo Onsen with an Indian curry. You can also eat in town and ride a bus straight back to Sapporo Station. The tattoo rules for each day bath are listed up front.",
         "favName": "A hot-spring town in a river valley",
         "favText": "Jozankei is inside Sapporo city. All the foot baths are free. (Photo: t-konno / CC BY-SA 3.0)",
         "favPhoto": [
@@ -563,7 +563,7 @@ window.SAPPORO_ONSEN_I18N = {
       "noboribetsu": {
         "kicker": "Day trip from Sapporo · all year",
         "h1": "Steam over Hell Valley, and a foot bath in a hot river.",
-        "lead": "74 minutes by limited express. Lunch on Gokuraku-dori, the mechanical King of Hell at Enma-do, the steaming Jigokudani valley and Oyunuma pond. Warm your feet in the natural foot bath on the way down, bathe in the late afternoon, have dinner and be back in Sapporo at 21:41.",
+        "lead": "Walk a boardwalk through a steaming valley, then put your feet in a hot river on the way down. That is Noboribetsu Onsen, 74 minutes from Sapporo by limited express. Lunch on Gokuraku-dori, the mechanical King of Hell at Enma-do, Jigokudani and Oyunuma pond, then the free natural foot bath. A day bath in the late afternoon, dinner, and back in Sapporo at 21:41. Reserved-seat expresses, the cash bus fare and the 16:30 luggage cut-off are covered up front.",
         "favName": "Jigokudani (Hell Valley)",
         "favText": "An old crater about 450 m across, where some 10,000 tonnes of hot water rise every day. (Photo: Kentaro Ohno / CC BY 2.0)",
         "favPhoto": [

@@ -71,10 +71,10 @@ window.KOBE_I18N = {
     intro: {
       "kicker": "大阪の梅田〜難波のホテルから1日",
       "h1": "午前は坂の上の異人館、午後は駅の裏の滝、夜は港のあかり。",
-      "lead": "大阪梅田から阪急の特急で27分。北野坂を上って異人館を歩き、三宮のかつ丼でお昼。午後は新幹線の駅のすぐ裏にある布引の滝へ。南京町でつまんでから、メリケンパークで日の入りを迎え、明かりの入ったポートタワーを対岸から眺めて晩ごはんまで。",
+      "lead": "朝は北野坂を上って、坂の上の異人館へ。北野天満神社の境内からは、町と海が見下ろせます。お昼は三宮の高架下のかつ丼。午後は新幹線の新神戸駅のすぐ裏から山道に入り、4つの滝を上って布引の滝の雄滝へ。南京町でつまんでから海へ出て、メリケンパークで日の入りを迎え、明かりの入ったポートタワーを対岸から眺めて晩ごはんまで。大阪梅田から阪急の特急で27分、梅田を9:30に出る時間割です。",
       "favLabel": "いちばんの見どころ",
       "favName": "布引の滝（雄滝）",
-      "favText": "新神戸駅から歩いて15分の、落差43mの滝。入場料はいりません。",
+      "favText": "新幹線の新神戸駅から歩いて15分で、落差43mの滝の前に立てます。入場料はいりません。",
       "favPhoto": [
         5,
         0
@@ -279,10 +279,10 @@ window.KOBE_I18N = {
     intro: {
       "kicker": "One day from a hotel in Osaka (Umeda–Namba)",
       "h1": "Hillside houses in the morning, a waterfall behind the station after lunch, harbour lights at night.",
-      "lead": "27 minutes from Osaka-Umeda by Hankyu limited express. Walk up Kitano-zaka to the old foreign residences, have katsudon in Sannomiya, then head for Nunobiki Falls, right behind the bullet-train station. Snack through Chinatown, watch the sun set at Meriken Park, and see the lit-up Port Tower from across the water before dinner.",
+      "lead": "In the morning, walk up Kitano-zaka to the old foreign residences on the hill; from Kitano Tenman Shrine you look down over the town and the sea. Lunch is katsudon under the tracks in Sannomiya. After lunch, a trail starts right behind Shin-Kobe bullet-train station and climbs past four falls to Ontaki, the biggest of the Nunobiki Falls. Snack through Chinatown, watch the sun set at Meriken Park, and see the lit-up Port Tower from across the water before dinner. Osaka-Umeda is 27 minutes away by Hankyu limited express; the timetable starts from Umeda at 9:30.",
       "favLabel": "Highlight",
       "favName": "Nunobiki Falls (Ontaki)",
-      "favText": "A 43 m waterfall 15 minutes’ walk from Shin-Kobe Station. Free.",
+      "favText": "Fifteen minutes’ walk from Shin-Kobe bullet-train station, you stand in front of a 43 m waterfall. No admission charge.",
       "favPhoto": [
         5,
         0

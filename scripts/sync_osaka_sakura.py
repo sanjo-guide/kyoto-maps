@@ -23,7 +23,7 @@ import os, re, runpy
 SEASON_FROM, SEASON_TO = '04-01', '04-20'
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='osaka-sakura', i18n='OSAKA_SAKURA_I18N', count=4, data_v=2, bump=102,
+    id='osaka-sakura', i18n='OSAKA_SAKURA_I18N', count=4, data_v=2, bump=103,
     head='大阪 造幣局の桜の通り抜け（大阪城 西の丸庭園・毛馬桜之宮公園）',
     title='大阪 造幣局の桜の通り抜け｜春のマップ Osaka Sakura MAP',
     desc='春のマップ。4月中旬の約1週間だけ開く造幣局の桜の通り抜け（事前申込制）を、申し込んだ時間帯に合わせて。大阪城 西の丸庭園と玉造口の八重桜、大川沿いの毛馬桜之宮公園、夜は天満か道頓堀まで。梅田〜難波のホテルから。A spring map for the week in mid-April when the Japan Mint opens its cherry walk (booking required), built around your entry slot, with Osaka Castle, the Okawa riverside and an evening in Tenma or Dotonbori, starting from a hotel between Umeda and Namba.',

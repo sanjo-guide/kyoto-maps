@@ -104,7 +104,7 @@ window.OMI_I18N = {
     introFor: {
       day: {
         h1: '京都駅から35分。堀と蔵の町を歩いて、近江牛を食べる1日。',
-        lead: '京都駅を10:00の新快速で出て、八幡堀、ロープウェーで上る八幡山、近江牛のお昼、蔵のクラフトビール、夕方のラ コリーナまで。近江牛を食べに行くのも、この日の目的の1つです。夜は京都に戻って晩ごはんにするか、近江八幡で食べて帰るかを選べます。行きたい場所は、一覧で入れ替えられます。',
+        lead: '白壁の蔵と石垣のあいだを舟が進む八幡堀。ロープウェーで八幡山に上がれば、琵琶湖が見下ろせます。お昼は近江牛のすき焼きか焼肉丼。午後は蔵のビアハウスで1杯、夕方は草屋根のラ コリーナで焼きたてのバームクーヘン。京都駅10:00の新快速から帰りの電車まで、バスの時刻とお店の休みの曜日を入れた時間割です。夜は京都に戻るか、近江八幡で食べて帰るかを選べます。',
         who: [
           '京都から日帰りで、古い町並みと琵琶湖の景色を楽しみたい人に',
           '近江牛を食べに行きたい人に。お昼はすき焼きか焼肉丼の2軒から1つ、夜は駅前のティファニーも',
@@ -131,7 +131,7 @@ window.OMI_I18N = {
       },
       hikone: {
         h1: '堀と蔵の町を歩いて、午後は国宝の彦根城へ。',
-        lead: '午前は近江八幡で八幡堀と八幡山、お昼は近江牛。近江牛を食べるのも、この日の目的の1つです。14:34の新快速で14分の彦根へ行き、彦根城と玄宮園を閉まる17:00まで歩きます。彦根城の入場は16:30までなので、近江八幡では場所をしぼってあります。ラ コリーナは、八幡山のかわりになら行けます。',
+        lead: '午前は八幡堀の石畳を歩き、ロープウェーで八幡山へ上がって琵琶湖を見下ろします。お昼に近江牛を食べたら、14:34の新快速で14分の彦根へ。国宝の天守に上がり、そのあと玄宮園へ。閉まる17:00まで歩きます。彦根城の入場は16:30までなので、近江八幡では場所をしぼってあります。ラ コリーナは、八幡山のかわりになら行けます。',
         who: [
           '近江八幡と彦根城を、1日で両方見たい人に',
           '京都駅から新快速で乗り換えなし35分（680円）。三条のあたりからは、地下鉄で京都駅まで約15分',
@@ -257,7 +257,7 @@ window.OMI_I18N = {
     introFor: {
       day: {
         h1: '35 minutes from Kyoto Station: a canal town, and Omi beef.',
-        lead: 'Take the 10:00 Special Rapid from Kyoto Station for the Hachimanbori canal, the ropeway up Mt. Hachiman, an Omi-beef lunch, craft beer in an old storehouse and La Collina in the late afternoon. Eating Omi beef is one of the main reasons to come. For the evening, go back to Kyoto for dinner or eat here first. You can swap stops in the list.',
+        lead: 'Boats glide between white storehouses and stone walls on the Hachimanbori canal, and the ropeway takes you up Mt. Hachiman to look down on Lake Biwa. Lunch is Omi beef, as sukiyaki or a grilled-beef bowl. In the afternoon, a craft beer in an old storehouse, then fresh baumkuchen under the grass roofs of La Collina. The timetable runs from the 10:00 Special Rapid out of Kyoto Station to the train home, with bus times and the days the shops close. For dinner, go back to Kyoto or eat here first.',
         who: [
           'A day out of Kyoto: an old merchant town and views of Lake Biwa',
           'For Omi beef: sukiyaki or a beef rice bowl for lunch (pick one of two places), and Tiffany by the station for dinner',
@@ -284,7 +284,7 @@ window.OMI_I18N = {
       },
       hikone: {
         h1: 'A canal town in the morning, a National Treasure castle in the afternoon.',
-        lead: 'Spend the morning in Omihachiman on the canal and Mt. Hachiman, with Omi beef for lunch, one of the main reasons to come. Then take the 14:34 Special Rapid, 14 minutes to Hikone, for the castle and Genkyuen Garden until they close at 17:00. Last entry at the castle is 16:30, so the Omihachiman half is kept short. La Collina only fits in place of Mt. Hachiman.',
+        lead: 'Walk the stone paths along the Hachimanbori canal in the morning and ride the ropeway up Mt. Hachiman for the view over Lake Biwa. After an Omi-beef lunch, the 14:34 Special Rapid takes 14 minutes to Hikone: climb the National Treasure keep, then walk Genkyuen Garden until both close at 17:00. Last entry at the castle is 16:30, so the Omihachiman half is kept short. La Collina only fits in place of Mt. Hachiman.',
         who: [
           'For seeing both Omihachiman and Hikone Castle in one day',
           '35 minutes direct from Kyoto Station by JR Special Rapid (¥680). From around Sanjo, the subway to Kyoto Station takes about 15 minutes',

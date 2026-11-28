@@ -77,7 +77,7 @@ window.NISHIYAMA_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
       "h1": "午前は竹と苔のお寺、午後は鈴虫の説法。夕方は、となり町の嵐山へ。",
-      "lead": "嵐山の南の山すそを歩く1日です。9〜10時に三条のあたりを出て、上桂から浄住寺（12月13日まで）と地蔵院へ。苔寺の門前で早めのお昼にして、鈴虫寺は13:10の説法に入ります。お寺の混雑予想には、混む日も午後は空く場合があると書かれています。松尾大社のあとは電車で1駅の嵐山、夜は三条・先斗町へ。朝早く出られる人は、一覧の上のボタンで最初の説法に入るコースに切り替えてください。",
+      "lead": "一年中鈴虫が鳴く部屋で、お茶とお菓子をいただきながら説法を聞く鈴虫寺。奉納された酒樽が壁のように積まれた松尾大社。嵐山の南の山すそを歩く1日です。9〜10時に三条のあたりを出て、上桂から浄住寺（12月13日まで）と地蔵院へ。苔寺の門前で早めのお昼にして、鈴虫寺は13:10の説法に入ります（お寺の混雑予想には、混む日も午後は空く場合があると書かれています）。松尾大社のあとは電車で1駅の嵐山、夜は三条・先斗町へ。朝早く出られる人は、一覧の上のボタンで最初の説法に入るコースに切り替えてください。",
       "favLabel": "いちばんの見どころ",
       "favName": "地蔵院（竹の寺）",
       "favText": "竹林の参道と苔の庭。写真のハートの窓が見られるのは12月14日から。",
@@ -303,7 +303,7 @@ window.NISHIYAMA_I18N = {
         ]
       },
       "lateOff": {
-        "lead": "嵐山の南の山すそを歩く1日です。浄住寺の秋の公開は終わったので、4か所を回ります。10時ごろ京都河原町を出て地蔵院へ、苔寺の門前で早めのお昼にして、鈴虫寺は13:10の説法に入ります。松尾大社のあとは電車で1駅の嵐山、夜は三条・先斗町へ。地蔵院は休みの日が多い時期なので、行く前に拝観カレンダーを見てください。",
+        "lead": "一年中鈴虫が鳴く部屋で、お茶とお菓子をいただきながら説法を聞く鈴虫寺。奉納された酒樽が壁のように積まれた松尾大社。嵐山の南の山すそを歩く1日です。浄住寺の秋の公開は終わったので、4か所を回ります。10時ごろ京都河原町を出て地蔵院へ、苔寺の門前で早めのお昼にして、鈴虫寺は13:10の説法に入ります。松尾大社のあとは電車で1駅の嵐山、夜は三条・先斗町へ。地蔵院は休みの日が多い時期なので、行く前に拝観カレンダーを見てください。",
         "favText": "竹林の参道と苔の庭、ハートの形の窓（春と秋の寺宝特別拝観の間は見られません）。",
         "who": [
           "京都河原町から阪急で20分ほど（桂で乗り換え。上桂200円、松尾大社240円）",
@@ -593,7 +593,7 @@ window.NISHIYAMA_I18N = {
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
       "h1": "Bamboo and moss in the morning, a talk among crickets after lunch, Arashiyama by dusk.",
-      "lead": "A day along the hills south of Arashiyama. Leave the Sanjo area at 9–10 for Jojuji (until 13 December) and Jizoin from Kami-Katsura, have an early lunch by the Moss Temple and join Suzumushi-dera’s 13:10 talk: the temple’s forecast says even busy days can be quieter after noon. After Matsunoo Taisha, Arashiyama is one train stop away; spend the evening back in Pontocho. If you can start early, switch to the first-talk course with the buttons above the list.",
+      "lead": "Suzumushi-dera, where you hear a talk over tea and a sweet in a room of crickets that sing all year. Matsunoo Taisha, with offered sake barrels stacked like a wall. A day along the hills south of Arashiyama. Leave the Sanjo area at 9–10 for Jojuji (until 13 December) and Jizoin from Kami-Katsura, have an early lunch by the Moss Temple and join Suzumushi-dera’s 13:10 talk (the temple’s forecast says even busy days can be quieter after noon). After Matsunoo Taisha, Arashiyama is one train stop away; spend the evening back in Pontocho. If you can start early, switch to the first-talk course with the buttons above the list.",
       "favLabel": "Highlight",
       "favName": "Jizoin (the Bamboo Temple)",
       "favText": "A bamboo approach and a moss garden. The heart window in the photo can be seen from 14 December.",
@@ -819,7 +819,7 @@ window.NISHIYAMA_I18N = {
         ]
       },
       "lateOff": {
-        "lead": "A day along the hills south of Arashiyama, with four stops now that Jojuji’s autumn opening is over. Leave Kyoto-Kawaramachi about 10:00 for Jizoin, have an early lunch by the Moss Temple and join Suzumushi-dera’s 13:10 talk. After Matsunoo Taisha, Arashiyama is one stop away; spend the evening back in Pontocho. Jizoin often closes in this season, so check its calendar first.",
+        "lead": "Suzumushi-dera, where you hear a talk over tea and a sweet in a room of crickets that sing all year. Matsunoo Taisha, with offered sake barrels stacked like a wall. A day along the hills south of Arashiyama, with four stops now that Jojuji’s autumn opening is over. Leave Kyoto-Kawaramachi about 10:00 for Jizoin, have an early lunch by the Moss Temple and join Suzumushi-dera’s 13:10 talk. After Matsunoo Taisha, Arashiyama is one stop away; spend the evening back in Pontocho. Jizoin often closes in this season, so check its calendar first.",
         "favText": "A bamboo approach, a moss garden and a heart-shaped window (hidden during the spring and autumn treasure displays).",
         "who": [
           "About 20 min by Hankyu from Kyoto-Kawaramachi, changing at Katsura (¥200 to Kami-Katsura, ¥240 to Matsuo-taisha)",

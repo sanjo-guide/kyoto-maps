@@ -144,7 +144,7 @@ window.OSAKA_I18N = {
     introFor: {
       "late": {
         "h1": "市場、串カツ、15時の大阪城、そして夜の道頓堀。大阪を1日で。",
-        "lead": "ホテルを9時45分ごろに出て、まず黒門市場へ。新世界で串カツを食べ、四天王寺でひと休みしてから、昼の混む時間を外して15時ごろに大阪城の天守閣へ上ります。日が暮れたら法善寺横丁と道頓堀へ。たこ焼きと晩ごはんのあと、帰り道の淀屋橋で無料の夜景を見て、21時半ごろホテルに戻ります。天守閣に開館と同時に入りたい人、夕日を展望台で見たい人は、一覧の上のボタンで「朝早く出発」を選んでください。",
+        "lead": "黒門市場で焼きたての貝や串をつまみ、通天閣の下で串カツのお昼。四天王寺の静かな境内でひと休みしてから、昼の切符の列を外して15時ごろに大阪城の天守閣へ上ります。日が暮れたら、提灯の法善寺横丁を抜けて、看板に明かりの入った道頓堀へ。たこ焼きと晩ごはんのあとは、帰り道に淀屋橋の駅の真上のビルの30階へ。無料のテラスから夜景を見ます。ホテルを出るのは9時45分ごろ、戻るのは21時半ごろ。天守閣に開館と同時に入りたい人、夕日を展望台で見たい人は、一覧の上のボタンで「朝早く出発」を選んでください。",
         "day": [
           {
             "time": "10:10",
@@ -213,7 +213,7 @@ window.OSAKA_I18N = {
       },
       "early": {
         "h1": "9:00の天守閣から、串カツ、屋上の夕日、夜の道頓堀まで。",
-        "lead": "ホテルを8時10分ごろに出て、9:00の開館に合わせて大阪城の天守閣へ。切符の列が伸びる前に上ったら、黒門市場でつまみ、新世界で串カツ。四天王寺を歩いて梅田へ戻り、うめきた公園の芝生で休んでから、スカイビルの屋上で夕日を見ます。暗くなったら夜の道頓堀へ。長い1日なので、スカイビルで終わりにしてもかまいません。朝はゆっくりしたい人は、一覧の上のボタンで「9〜10時に出発」を選んでください。",
+        "lead": "朝9:00、切符の列が伸びる前に大阪城の天守閣へ。黒門市場でつまみ、通天閣の下で串カツ、四天王寺の五重塔を見て梅田へ戻ります。うめきた公園の芝生で足を休めたら、スカイビルの屋上で夕日。暗くなったら夜の道頓堀へ。ホテルを出るのは8時10分ごろ。長い1日なので、スカイビルで終わりにしてもかまいません。朝はゆっくりしたい人は、一覧の上のボタンで「9〜10時に出発」を選んでください。",
         "day": [
           {
             "time": "9:00",
@@ -419,7 +419,7 @@ window.OSAKA_I18N = {
     introFor: {
       "late": {
         "h1": "A market, kushikatsu, the castle at three, then Dotonbori at night: Osaka in one day.",
-        "lead": "Leave your hotel about 9:45 and start at Kuromon Market. Eat kushikatsu in Shinsekai, rest at Shitennoji, then go up the castle tower at about 15:00, after the midday crush. Once it is dark, Hozenji Yokocho and Dotonbori: takoyaki and dinner, then a free night view at Yodoyabashi on the way back, and you are at your hotel around 21:30. To be at the tower when it opens, or to watch the sunset from an observation deck, choose “Early start” with the buttons above the list.",
+        "lead": "Grilled shellfish and skewers at Kuromon Market, kushikatsu under Tsutenkaku for lunch, a rest in the quiet grounds of Shitennoji, then up the castle tower at about 15:00, after the midday ticket queue. Once it is dark, walk the lantern-lit lane of Hozenji Yokocho into Dotonbori as the signs light up. After takoyaki and dinner, go up to the free 30th-floor terrace of the tower above Yodoyabashi Station for the night view on the way back. You leave your hotel about 9:45 and are back around 21:30. To be at the tower when it opens, or to watch the sunset from an observation deck, choose “Early start” with the buttons above the list.",
         "day": [
           {
             "time": "10:10",
@@ -488,7 +488,7 @@ window.OSAKA_I18N = {
       },
       "early": {
         "h1": "The castle tower at 9:00, kushikatsu, a rooftop sunset and Dotonbori at night.",
-        "lead": "Leave your hotel about 8:10 and be at the castle tower for its 9:00 opening, before the ticket queue builds. Then bites at Kuromon Market and kushikatsu in Shinsekai. Walk through Shitennoji, go back up to Umeda, rest on the lawn of Umekita Park and watch the sunset from the roof of the Sky Building. After dark, Dotonbori. It is a long day, so it is fine to finish at the Sky Building. For a slower morning, choose “Leave at 9–10” with the buttons above the list.",
+        "lead": "Be at the castle tower at 9:00, before the ticket queue builds. Then bites at Kuromon Market, kushikatsu under Tsutenkaku and the pagoda at Shitennoji, and back up to Umeda. Rest your legs on the lawn of Umekita Park, watch the sunset from the roof of the Sky Building, and after dark, Dotonbori. You leave your hotel about 8:10. It is a long day, so it is fine to finish at the Sky Building. For a slower morning, choose “Leave at 9–10” with the buttons above the list.",
         "day": [
           {
             "time": "9:00",

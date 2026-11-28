@@ -75,8 +75,8 @@ window.TAKAO_I18N = {
     hintHead: 'あなたのルートでは',
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
-      "h1": "清滝川の谷の、3つの山寺へ。お昼は茶屋で、夜は街なかで。",
-      "lead": "高雄（たかお）・槇尾（まきのお）・栂尾（とがのお）は、京都の北西の清滝川の谷にある「三尾（さんび）」です。三条から地下鉄で二条へ出て、JRバスで約40分。9〜10時に出る日は、バスの終点の栂ノ尾まで乗って高山寺から歩き始め、門前の茶屋で早めのお昼。川沿いに西明寺、高雄橋を渡って、午後に神護寺の石段を上ります。15時台のバスで戻り、12月6日までは北野天満宮のもみじ苑に寄り道も。朝早く出られる人は、上のボタンで「神護寺の開門に合わせる」コースに切り替えてください。写真は2024年11月19日に撮ったものです（高山寺は Wikimedia Commons）。",
+      "h1": "もみじの長い石段を上って、神護寺へ。清滝川の谷に並ぶ、3つの山寺を歩く1日。",
+      "lead": "朱の橋を渡る西明寺、縁側に座る高山寺の石水院、長い石段の上の神護寺。高雄（たかお）・槇尾（まきのお）・栂尾（とがのお）の「三尾（さんび）」は、京都の北西の山あいにあります。三条から地下鉄で二条へ出て、JRバスで約40分。9〜10時に出る日は、バスの終点の栂ノ尾まで乗って高山寺から歩き始め、門前の茶屋で早めのお昼。川沿いに西明寺、高雄橋を渡って、午後に神護寺の石段を上ります。15時台のバスで戻り、12月6日までは北野天満宮のもみじ苑に寄り道も。朝早く出られる人は、上のボタンで「神護寺の開門に合わせる」コースに切り替えてください。写真は2024年11月19日に撮ったものです（高山寺は Wikimedia Commons）。",
       "favLabel": "いちばんの見どころ",
       "favName": "神護寺",
       "favText": "もみじに囲まれた長い石段と、楼門の先の広い境内。16時に閉まるので、このコースでは14時すぎに。",
@@ -194,7 +194,7 @@ window.TAKAO_I18N = {
     },
     introFor: {
       early: {
-        "lead": "朝7:36に二条駅前を出るJRバスで高雄へ。茶屋が開く前の高雄橋を渡って、9時の開門と同時に神護寺へ入ります。石段の茶屋でもみじ餅とお抹茶のひと休み。川沿いに西明寺へ歩いて、槇ノ尾で12時前にお昼。午後は高山寺の石水院に座って、14:34のバスで戻ります。帰りに仁和寺や北野天満宮へ寄っても、夜は街なかでゆっくりできます。写真は2024年11月19日に撮ったものです（高山寺は Wikimedia Commons）。",
+        "lead": "茶屋が開く前の高雄橋を渡って、9時の開門と同時に神護寺へ。人が増える前に、金堂の石段の上から境内を見下ろします。石段の茶屋でもみじ餅とお抹茶のひと休み。川沿いに西明寺へ歩いて、槇ノ尾で12時前にお昼。午後は高山寺の石水院に座って、14:34のバスで戻ります。帰りに仁和寺や北野天満宮へ寄っても、夜は街なかでゆっくりできます。行きは朝7:36に二条駅前を出るJRバスです。写真は2024年11月19日に撮ったものです（高山寺は Wikimedia Commons）。",
         "favText": "9:00の開門に合わせて行くと、人が増える前に金堂の石段の上から境内を見下ろせます。",
         "dayHead": "1日の流れ（神護寺の開門に合わせる）",
         "day": [
@@ -313,8 +313,8 @@ window.TAKAO_I18N = {
     hintHead: 'On your route',
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
-      "h1": "Three mountain temples in the Kiyotaki valley. Lunch at a teahouse, evening in town.",
-      "lead": "Takao, Makinoo and Toganoo, the “three o’s” of north-west Kyoto, line the Kiyotaki valley. From Sanjo, take the subway to Nijo and then the JR Bus, about 40 minutes. Leaving at 9–10, ride to Toganoo at the end of the line, start at Kosanji and have an early lunch at a teahouse by its gate. Follow the river to Saimyoji, cross the Takao bridge and climb to Jingoji in the afternoon. Head back on a bus in the 15:00 hour; until 6 December you can stop at Kitano Tenmangu’s maple garden. If you can start early, switch to the “Jingoji at opening” course with the buttons above. My photos were taken on 19 November 2024 (Kosanji’s are from Wikimedia Commons).",
+      "h1": "Up the long maple-lined stairway to Jingoji: a day walking three mountain temples in the Kiyotaki valley.",
+      "lead": "Saimyoji over a vermilion bridge, Kosanji’s Sekisuiin where you sit on the veranda, and Jingoji at the top of its long stairway. Takao, Makinoo and Toganoo, the “three o’s” of north-west Kyoto, are about 40 minutes from Sanjo: the subway to Nijo, then the JR Bus. Leaving at 9–10, ride to Toganoo at the end of the line, start at Kosanji and have an early lunch at a teahouse by its gate. Follow the river to Saimyoji, cross the Takao bridge and climb to Jingoji in the afternoon. Head back on a bus in the 15:00 hour; until 6 December you can stop at Kitano Tenmangu’s maple garden. If you can start early, switch to the “Jingoji at opening” course with the buttons above. My photos were taken on 19 November 2024 (Kosanji’s are from Wikimedia Commons).",
       "favLabel": "Highlight",
       "favName": "Jingoji",
       "favText": "The long maple-lined stairway and the wide precinct beyond the gate. It closes at 16:00; on this course you arrive just after 14:00.",
@@ -432,7 +432,7 @@ window.TAKAO_I18N = {
     },
     introFor: {
       early: {
-        "lead": "Take the 7:36 JR Bus from Nijo-eki-mae to Takao. Cross the Takao bridge before the teahouses open and walk into Jingoji as it opens at 9:00. Rest with momiji-mochi and matcha at a teahouse on the steps, walk along the river to Saimyoji and have lunch at Makinoo before noon. In the afternoon sit at Kosanji’s Sekisuiin, then take the 14:34 bus back. Stop at Ninna-ji or Kitano Tenmangu on the way and still have an easy evening in town. My photos were taken on 19 November 2024 (Kosanji’s are from Wikimedia Commons).",
+        "lead": "Cross the Takao bridge before the teahouses open and walk into Jingoji as it opens at 9:00, then look down over the precinct from the top of the main hall’s steps before it fills up. Rest with momiji-mochi and matcha at a teahouse on the steps, walk along the river to Saimyoji and have lunch at Makinoo before noon. In the afternoon sit at Kosanji’s Sekisuiin, then take the 14:34 bus back. Stop at Ninna-ji or Kitano Tenmangu on the way and still have an easy evening in town. The bus out is the 7:36 JR Bus from Nijo-eki-mae. My photos were taken on 19 November 2024 (Kosanji’s are from Wikimedia Commons).",
         "favText": "Arrive for the 9:00 opening and you can look down over the precinct from the top of the main hall’s steps before it fills up.",
         "dayHead": "One day, roughly like this (Jingoji at opening)",
         "day": [

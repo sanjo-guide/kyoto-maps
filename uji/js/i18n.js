@@ -134,7 +134,7 @@ window.UJI_I18N = {
     introFor: {
       "late": {
         "h1": "平等院と抹茶のあと、酒蔵の町できき酒。夜は蔵元の店と地ビール。",
-        "lead": "三条から京阪電車で宇治へ行き、帰り道にある伏見の酒蔵の町で夜まで過ごす1日です。宇治では平等院、表参道でお昼と抹茶、宇治川を渡って世界遺産の宇治上神社へ。午後は伏見で月桂冠大倉記念館のきき酒、柳の川の十石舟、夜は酒蔵を使った店で焼き鳥と地ビール。平等院の鳳凰堂の中に入る券は先着順なので、中を見たい人は、一覧の上のボタンで「開門に合わせる」を選んでください。",
+        "lead": "池の向こうに建つ平等院の鳳凰堂、表参道の抹茶、朱色の朝霧橋を渡った先の世界遺産・宇治上神社。帰り道の伏見では、月桂冠大倉記念館のきき酒、柳の川の十石舟、夜は酒蔵を使った店で焼き鳥と地ビール。三条から京阪電車で宇治へ行き、帰りに酒蔵の町で夜まで過ごす1日です。平等院の鳳凰堂の中に入る券は先着順なので、中を見たい人は、一覧の上のボタンで「開門に合わせる」を選んでください。",
         "who": [
           "三条を9:26の電車で出て、20:30ごろに戻る1日",
           "平等院の鳳凰堂の中に入る券（300円）は先着順。この時間だと遠い回か、もうないことも。中を見たい人は「開門に合わせる」へ",
@@ -390,7 +390,7 @@ window.UJI_I18N = {
     introFor: {
       "late": {
         "h1": "Byodoin and matcha, then sake tasting in the brewery town, with dinner and craft beer to finish.",
-        "lead": "Take the Keihan train from Sanjo to Uji, then spend the rest of the day and the evening in Fushimi’s sake district on the way back. In Uji: Byodoin, lunch and matcha on the approach street, and across the river to World Heritage Ujigami Shrine. In Fushimi: a tasting at the Gekkeikan museum, a boat on the willow-lined canal, then yakitori in a converted storehouse and a craft beer. Tickets to go inside Byodoin’s Phoenix Hall are first come, first served, so if you want to see the interior choose “At opening time” with the buttons above the list.",
+        "lead": "Byodoin’s Phoenix Hall across its pond, matcha on the approach street, and over a vermilion bridge to World Heritage Ujigami Shrine. On the way back, Fushimi: a sake tasting at the Gekkeikan museum, a boat on the willow-lined canal, then yakitori in a converted storehouse and a craft beer. A day in Uji and, on the way home, the brewery town until evening, all by Keihan train from Sanjo. Tickets to go inside Byodoin’s Phoenix Hall are first come, first served, so if you want to see the interior choose “At opening time” with the buttons above the list.",
         "who": [
           "A day that leaves Sanjo on the 9:26 train and is back at about 20:30",
           "Phoenix Hall interior tickets (¥300) are first come, first served. At this hour you may get a late slot or none; for the interior, use “At opening time”",

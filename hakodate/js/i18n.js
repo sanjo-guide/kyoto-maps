@@ -109,7 +109,7 @@ window.HAKODATE_I18N = {
       "late": {
         "kicker": "函館で1日（9〜10時に出る）",
         "h1": "朝市で朝ごはん、星の形の城。日が沈む前に山へ上がって、町の明かりを待つ。",
-        "lead": "函館駅のまわりのホテルを9:30に出て、朝市で朝ごはん。市電で五稜郭へ行ってタワーと公園を歩き、お昼を食べてから元町へ。坂と教会を歩いて、日の入りの30分前にロープウェイで函館山へ。下りたら、明かりのついた赤レンガ倉庫と晩ごはんです。",
+        "lead": "函館山の夜景は、空に青みが残る日の入りの20〜30分あとがいちばんきれいです。この時間割は、そのころ山の上にいられるように組んであります。函館駅のまわりのホテルを9:30に出て、朝市で朝ごはん。市電で五稜郭へ行ってタワーと公園を歩き、お昼のあと元町の坂と教会へ。日の入りの30分前にロープウェイで上がり、下りたら明かりのついた赤レンガ倉庫と晩ごはんです。",
         "favName": "函館山の夜景",
         "favText": "空に青みが残る、日の入りの20〜30分あとがいちばんきれいです。（写真：Perry Li / CC BY-SA 2.0）",
         "favPhoto": [
@@ -239,7 +239,7 @@ window.HAKODATE_I18N = {
       "early": {
         "kicker": "函館で1日（6時台に出る）",
         "h1": "団体の人が来る前の朝市。人も車もいない八幡坂。最後は温泉であたたまる。",
-        "lead": "6:30にホテルを出て、空いている朝市で朝ごはん。海ぞいを歩いて、8時の八幡坂と元町へ。開いたばかりの公会堂と教会を見て、赤レンガ倉庫でひと休み。昼は五稜郭、夕方は函館山の夜景、最後に市電で湯の川温泉へ行ってから晩ごはんです。",
+        "lead": "昼は人と車でいっぱいの八幡坂も、朝8時は静かです。6:30にホテルを出て、空いている朝市で朝ごはん。海ぞいを歩いて、8時の八幡坂と元町へ。開いたばかりの公会堂と教会を見て、赤レンガ倉庫でひと休み。昼は五稜郭、夕方は函館山の夜景、最後に市電で湯の川温泉へ行ってから晩ごはんです。",
         "favName": "朝8時の八幡坂",
         "favText": "昼は人と車でいっぱいの坂が、この時間は静かです。（写真：くろふね / CC BY 4.0）",
         "favPhoto": [
@@ -379,8 +379,8 @@ window.HAKODATE_I18N = {
       },
       "sapporo": {
         "kicker": "札幌から1泊2日",
-        "h1": "特急で3時間50分。着いた日の夕方は函館山、次の日は五稜郭と温泉。",
-        "lead": "札幌8:43の特急北斗で函館へ（12:33着）。朝市でお昼を食べて、赤レンガ倉庫、八幡坂と教会、夕暮れの函館山へ。2日目は開いたばかりの五稜郭タワーと公園、湯の川温泉を回って、17:55の特急で札幌に21:41に戻ります。",
+        "h1": "着いた日の夕方は、函館山の夜景。次の日は五稜郭と温泉。",
+        "lead": "札幌から特急で3時間50分。1泊すると、着いた日の夕方に函館山、次の日に開いたばかりの五稜郭と湯の川温泉まで回れます。札幌8:43の特急北斗で函館へ（12:33着）。朝市でお昼を食べて、赤レンガ倉庫、八幡坂と教会、夕暮れの函館山へ。2日目は開いたばかりの五稜郭タワーと公園、湯の川温泉を回って、17:55の特急で札幌に21:41に戻ります。",
         "favName": "函館山の夜景",
         "favText": "1日目に雲で見えなくても、2日目の夕方にもう一度上がれます（帰りは18:43の最終）。（写真：Perry Li / CC BY-SA 2.0）",
         "favPhoto": [
@@ -621,7 +621,7 @@ window.HAKODATE_I18N = {
       "late": {
         "kicker": "One day in Hakodate (leave 9–10 am)",
         "h1": "Breakfast at the market, a star-shaped fort, then up the mountain before sunset to wait for the lights.",
-        "lead": "Leave a hotel near Hakodate Station at 9:30 and eat breakfast at the morning market. Take the tram to Goryokaku for the tower and the park, have lunch, and ride on to Motomachi. Walk the slopes and churches, then take the ropeway up Mt. Hakodate 30 minutes before sunset. Afterwards: the floodlit red-brick warehouses and dinner.",
+        "lead": "The night view from Mt. Hakodate is best 20–30 minutes after sunset, while some blue is left in the sky, and this timetable puts you on top at that moment. Leave a hotel near Hakodate Station at 9:30 and eat breakfast at the morning market. Take the tram to Goryokaku for the tower and the park, have lunch, then walk the slopes and churches of Motomachi. Ride the ropeway up 30 minutes before sunset; afterwards, the floodlit red-brick warehouses and dinner.",
         "favName": "The night view from Mt. Hakodate",
         "favText": "Best 20–30 minutes after sunset, while some blue is left in the sky. (Photo: Perry Li / CC BY-SA 2.0)",
         "favPhoto": [
@@ -751,7 +751,7 @@ window.HAKODATE_I18N = {
       "early": {
         "kicker": "One day in Hakodate (leave about 6:30)",
         "h1": "The market before the tour groups, Hachiman-zaka with nobody on it, and a hot spring to end the day.",
-        "lead": "Leave your hotel at 6:30 for breakfast at a quiet market. Walk along the water to Hachiman-zaka and Motomachi at 8:00, see the Public Hall and the churches as they open, and rest at the warehouses. Goryokaku at midday, the night view from Mt. Hakodate at dusk, then the tram to Yunokawa Onsen before dinner.",
+        "lead": "Hachiman-zaka is full of people and cars by day; at 8 am it is quiet. Leave your hotel at 6:30 for breakfast at a quiet market. Walk along the water to Hachiman-zaka and Motomachi at 8:00, see the Public Hall and the churches as they open, and rest at the warehouses. Goryokaku at midday, the night view from Mt. Hakodate at dusk, then the tram to Yunokawa Onsen before dinner.",
         "favName": "Hachiman-zaka at 8 am",
         "favText": "The slope is full of people and cars by day. At this hour it is quiet. (Photo: くろふね / CC BY 4.0)",
         "favPhoto": [
@@ -891,8 +891,8 @@ window.HAKODATE_I18N = {
       },
       "sapporo": {
         "kicker": "Two days from Sapporo",
-        "h1": "Three hours fifty by express. Mt. Hakodate on the evening you arrive; Goryokaku and a hot spring the next day.",
-        "lead": "Take the 8:43 Hokuto limited express from Sapporo (Hakodate 12:33). Lunch at the morning market, then the warehouses, Hachiman-zaka and the churches, and Mt. Hakodate at dusk. On day 2, Goryokaku Tower as it opens, the park and Yunokawa Onsen, then the 17:55 back, reaching Sapporo at 21:41.",
+        "h1": "The night view from Mt. Hakodate on the evening you arrive; Goryokaku and a hot spring the next day.",
+        "lead": "Hakodate is three hours fifty from Sapporo by express. Stay one night and you get the night view on the evening you arrive, and Goryokaku as it opens and Yunokawa Onsen the next day. Take the 8:43 Hokuto limited express from Sapporo (Hakodate 12:33). Lunch at the morning market, then the warehouses, Hachiman-zaka and the churches, and Mt. Hakodate at dusk. On day 2, Goryokaku Tower as it opens, the park and Yunokawa Onsen, then the 17:55 back, reaching Sapporo at 21:41.",
         "favName": "The night view from Mt. Hakodate",
         "favText": "If cloud hides it on day 1, you can go up again on day 2 (and take the last train at 18:43). (Photo: Perry Li / CC BY-SA 2.0)",
         "favPhoto": [

@@ -120,7 +120,7 @@ window.ASAHIKAWA_I18N = {
       "early": {
         "kicker": "旭川駅から1日（冬：11月11日〜4月7日）",
         "h1": "雪の上をペンギンが歩く動物園。暗くなったら、酒蔵とラーメンと焼き鳥の小路。",
-        "lead": "冬の旭山動物園（あさひやまどうぶつえん）は10:30から15:30まで。旭川駅前9:40のバスで行くと、11:00のペンギンの散歩に間に合います。14:10のバスで町に戻ったら、歩いて行ける髙砂酒造へ。16時には暗くなるので、あとは買物公園で旭川ラーメン、夜は焼き鳥の煙が流れる「5・7小路ふらりーと」で新子焼き。旭川に泊まる人も、札幌から特急で日帰りする人も使える時間割です。",
+        "lead": "キングペンギンが、目の前の雪道を歩いていきます。冬の旭山動物園（あさひやまどうぶつえん）は10:30から15:30までなので、旭川駅前9:40のバスで、11:00のペンギンの散歩に合わせて行きます。14:10のバスで町に戻ったら、歩いて行ける髙砂酒造へ。16時には暗くなるので、あとは買物公園で旭川ラーメン、夜は焼き鳥の煙が流れる「5・7小路ふらりーと」で新子焼き。旭川に泊まる人も、札幌から特急で日帰りする人も使える時間割です。",
         "favName": "ペンギンの散歩",
         "favText": "雪が積もってから3月中旬ごろまで、11:00と14:30。キングペンギンが、目の前の雪道を歩いていきます。（写真：欅 (Keyaki) / CC BY-SA 3.0）",
         "favPhoto": [
@@ -253,7 +253,7 @@ window.ASAHIKAWA_I18N = {
       "late": {
         "kicker": "旭川駅から1日（雪のない季節：4月29日〜11月3日）",
         "h1": "朝いちばんに動物園、午後は酒蔵。夕方の旭橋を見て、焼き鳥の小路へ。",
-        "lead": "雪のない季節の旭山動物園（あさひやまどうぶつえん）は9:30に開きます。旭川駅前9:10のバスで行って、混む前にペンギン・アザラシ・ホッキョクグマを。昼すぎに町へ戻って、バスで酒蔵の男山へ。買物公園で旭川ラーメンを食べたら、常磐公園を抜けて、石狩川にかかる旭橋を夕方の光で見ます。夜は「5・7小路ふらりーと」で新子焼き。",
+        "lead": "動物園は混む前の朝に、1932年の鉄の橋は夕方の光で見る1日です。雪のない季節の旭山動物園（あさひやまどうぶつえん）は9:30に開きます。旭川駅前9:10のバスで行って、混む前にペンギン・アザラシ・ホッキョクグマを。昼すぎに町へ戻って、バスで酒蔵の男山へ。買物公園で旭川ラーメンを食べたら、常磐公園を抜けて、石狩川にかかる旭橋を夕方の光で見ます。夜は「5・7小路ふらりーと」で新子焼き。",
         "favName": "夕方の旭橋",
         "favText": "1932年にできた鉄のアーチ橋。常磐公園の北の土手に上がると、石狩川の向こうに見えます。（写真：MIKI Yoshihito / CC BY 4.0）",
         "favPhoto": [
@@ -497,7 +497,7 @@ window.ASAHIKAWA_I18N = {
       "early": {
         "kicker": "A day from Asahikawa Station (winter: 11 November – 7 April)",
         "h1": "Penguins walking on snow at the zoo; after dark, a sake brewery, ramen and an alley of yakitori.",
-        "lead": "In winter Asahiyama Zoo is open only from 10:30 to 15:30. The 9:40 bus from Asahikawa Station gets you there in time for the 11:00 penguin walk. Back in town on the 14:10 bus, walk to the Takasago sake brewery. It is dark by 16:00, so the rest is indoors: Asahikawa ramen on the pedestrian mall, then shinko-yaki grilled chicken in the smoky Furarito alley. The timetable works whether you are staying in Asahikawa or coming from Sapporo for the day.",
+        "lead": "King penguins waddle along the snow path right in front of you. In winter Asahiyama Zoo is open only from 10:30 to 15:30, so the day is timed around the 11:00 penguin walk: take the 9:40 bus from Asahikawa Station. Back in town on the 14:10 bus, walk to the Takasago sake brewery. It is dark by 16:00, so the rest is indoors: Asahikawa ramen on the pedestrian mall, then shinko-yaki grilled chicken in the smoky Furarito alley. The timetable works whether you are staying in Asahikawa or coming from Sapporo for the day.",
         "favName": "The penguin walk",
         "favText": "From when the snow settles until about mid-March, at 11:00 and 14:30: king penguins waddle along the snow path right in front of you. (Photo: 欅 (Keyaki) / CC BY-SA 3.0)",
         "favPhoto": [
@@ -630,7 +630,7 @@ window.ASAHIKAWA_I18N = {
       "late": {
         "kicker": "A day from Asahikawa Station (snow-free season: 29 April – 3 November)",
         "h1": "The zoo first thing, a sake brewery after lunch, the bridge at dusk, then the yakitori alley.",
-        "lead": "Outside winter, Asahiyama Zoo opens at 9:30. Take the 9:10 bus from Asahikawa Station and see the penguins, seals and polar bears before the crowds. Head back to town after lunch and ride a city bus to the Otokoyama sake brewery. After Asahikawa ramen on the pedestrian mall, cross Tokiwa Park to see Asahibashi Bridge over the Ishikari River in evening light, and end with shinko-yaki grilled chicken in Furarito alley.",
+        "lead": "The zoo in the morning before the crowds, a 1932 steel bridge in the evening light. Outside winter, Asahiyama Zoo opens at 9:30. Take the 9:10 bus from Asahikawa Station and see the penguins, seals and polar bears before the crowds. Head back to town after lunch and ride a city bus to the Otokoyama sake brewery. After Asahikawa ramen on the pedestrian mall, cross Tokiwa Park to see Asahibashi Bridge over the Ishikari River in evening light, and end with shinko-yaki grilled chicken in Furarito alley.",
         "favName": "Asahibashi Bridge at dusk",
         "favText": "A steel arch bridge of 1932. Climb the embankment north of Tokiwa Park and it is there across the Ishikari River. (Photo: MIKI Yoshihito / CC BY 4.0)",
         "favPhoto": [

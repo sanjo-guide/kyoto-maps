@@ -108,7 +108,7 @@ window.YOICHI_I18N = {
       "late": {
         "kicker": "札幌から日帰り（4月中旬〜12月中旬）",
         "h1": "朝はウイスキーの蒸溜所、午後はワインとニシン漁の浜。最後は温泉とすし。",
-        "lead": "札幌8:41の電車で余市へ。予約しておいたニッカの蒸溜所のツアーに参加して、蒸溜所のレストランでお昼。タクシーでワイナリーへ行き、ニシン漁で栄えた浜の漁場と運上家、シリパ岬の見える浜を歩きます。駅の近くの温泉と回転ずしで1日を終えて、19:26の電車で札幌20:41着。",
+        "lead": "余市（よいち）は、ニッカの石造りの蒸溜所と、ニシン漁で栄えた浜の町。札幌8:41の電車で出て、予約しておいた蒸溜所のツアーに参加し、敷地の中のレストランでお昼。タクシーでワイナリーへ行って飲み比べ、ニシン漁で栄えた浜の漁場と運上家、シリパ岬の見える浜を歩きます。駅の近くの温泉と回転ずしで1日を終えて、19:26の電車で札幌20:41着。ツアーの予約、休みの曜日、きっぷの買い方も先に書いてあります。",
         "favName": "ニッカの石造りの蒸溜所",
         "favText": "とんがり屋根のキルン塔と、石の棟が並ぶ敷地。（写真：さかおり / CC BY-SA 4.0）",
         "favPhoto": [
@@ -235,7 +235,7 @@ window.YOICHI_I18N = {
       "early": {
         "kicker": "札幌から日帰り（冬：12月中旬〜4月上旬）",
         "h1": "雪の蒸溜所でウイスキー、ワイナリーで飲み比べ。白い岬を見て、温泉とすし。",
-        "lead": "冬は浜の漁場や博物館が閉まるので、ウイスキー・ワイン・温泉・すしの1日です。札幌8:41の電車で余市へ。12〜1月はニッカの蒸溜所の有料セミナー（予約制）、蒸溜所でお昼。タクシーでワイナリーへ行き、明るいうちに雪のシリパ岬を浜から見て、温泉で温まってから回転ずし。18:35の電車で札幌19:58着です。",
+        "lead": "雪の積もった蒸溜所、ワインの飲み比べ、浜から見る白いシリパ岬。冬は浜の漁場や博物館が閉まるので、開いている場所をつないだ1日です。札幌8:41の電車で余市へ。12〜1月はニッカの蒸溜所の有料セミナー（予約制）、蒸溜所でお昼。タクシーでワイナリーへ行き、明るいうちに雪のシリパ岬を浜から見て、温泉で温まってから回転ずし。18:35の電車で札幌19:58着です。",
         "favName": "ニッカの石造りの蒸溜所",
         "favText": "とんがり屋根のキルン塔と、石の棟が並ぶ敷地。（写真：さかおり / CC BY-SA 4.0）",
         "favPhoto": [
@@ -448,7 +448,7 @@ window.YOICHI_I18N = {
       "late": {
         "kicker": "A day trip from Sapporo (mid-April to mid-December)",
         "h1": "Whisky in the morning, then wine and the old herring shore. A hot spring and sushi to end.",
-        "lead": "Take the 8:41 train to Yoichi for a booked tour of the Nikka distillery and lunch in its restaurant. A taxi to the winery, then the herring fishery, the Unjoya trading post and the beach facing Cape Shiripa. Finish with a hot spring and conveyor-belt sushi near the station, and the 19:26 train back (Sapporo 20:41).",
+        "lead": "Yoichi is a seaside town with Nikka’s stone whisky distillery and an old herring-fishing shore. Take the 8:41 train for a booked distillery tour and lunch in the restaurant on the grounds. A taxi to the winery for a tasting flight, then the herring fishery, the Unjoya trading post and the beach facing Cape Shiripa. Finish with a hot spring and conveyor-belt sushi near the station, and the 19:26 train back (Sapporo 20:41). Tour booking, closing days and which ticket to buy are covered up front.",
         "favName": "Nikka’s stone distillery",
         "favText": "Pagoda-roofed kiln towers and stone buildings. (Photo: さかおり / CC BY-SA 4.0)",
         "favPhoto": [
@@ -575,7 +575,7 @@ window.YOICHI_I18N = {
       "early": {
         "kicker": "A day trip from Sapporo (winter: mid-December to early April)",
         "h1": "Whisky at a snowy distillery, a wine flight, a white cape, then a hot spring and sushi.",
-        "lead": "In winter the fishery and museums close, so this is a day of whisky, wine, a hot spring and sushi. Take the 8:41 train to Yoichi; in December–January the Nikka distillery runs a paid seminar (booking needed), then lunch on site. A taxi to the winery, Cape Shiripa in the snow from the beach while it is light, a hot soak and conveyor-belt sushi before the 18:35 train (Sapporo 19:58).",
+        "lead": "A distillery under snow, a wine flight, and Cape Shiripa white across the bay. In winter the fishery and museums close, so this day links the places that stay open. Take the 8:41 train to Yoichi; in December–January the Nikka distillery runs a paid seminar (booking needed), then lunch on site. A taxi to the winery, Cape Shiripa in the snow from the beach while it is light, a hot soak and conveyor-belt sushi before the 18:35 train (Sapporo 19:58).",
         "favName": "Nikka’s stone distillery",
         "favText": "Pagoda-roofed kiln towers and stone buildings. (Photo: さかおり / CC BY-SA 4.0)",
         "favPhoto": [

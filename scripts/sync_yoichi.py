@@ -22,7 +22,7 @@ import os, runpy
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINTER_FROM, WINTER_TO = 1214, 410   # 月×100＋日
 CFG = dict(
-    id='yoichi', i18n='YOICHI_I18N', count=9, data_v=1, bump=100,
+    id='yoichi', i18n='YOICHI_I18N', count=9, data_v=1, bump=101,
     head='余市（札幌から日帰り）',
     title='余市｜札幌から日帰り ニッカの蒸溜所・ワイナリー・ニシン漁の浜 Yoichi MAP',
     desc='札幌から日帰りの余市。8:41の電車で余市へ、ニッカウヰスキー余市蒸溜所のツアー（予約制）とお昼、余市ワイナリー、ニシン漁の時代の旧余市福原漁場と旧下ヨイチ運上家、シリパ岬の見える浜、温泉と回転ずしまでの1日。冬（12月中旬〜4月上旬）のコースと、電車・高速バスの時刻、タトゥーや支払いの注意つき。A day trip from Sapporo to Yoichi: a booked tour of the Nikka Yoichi distillery and lunch, Yoichi Winery, the herring-era Fukuhara fishery and Unjoya, the beach facing Cape Shiripa, a hot spring and sushi, with a winter course, train and bus times, and notes on tattoos and payment.',

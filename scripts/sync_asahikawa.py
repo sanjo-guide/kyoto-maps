@@ -23,7 +23,7 @@ import os, runpy
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINTER_FROM, WINTER_TO = 1104, 428   # 月×100＋日
 CFG = dict(
-    id='asahikawa', i18n='ASAHIKAWA_I18N', count=9, data_v=1, bump=100,
+    id='asahikawa', i18n='ASAHIKAWA_I18N', count=9, data_v=1, bump=101,
     head='旭山動物園と旭川の町',
     title='旭山動物園と旭川の町｜旭川駅から1日 Asahiyama Zoo & Asahikawa MAP',
     desc='旭川駅のまわりのホテルから1日。朝のバスで旭山動物園へ（冬は11:00のペンギンの散歩）、午後は酒蔵（男山・髙砂酒造）か三浦綾子記念文学館と見本林、夕方は買物公園で旭川ラーメン、常磐公園と旭橋、夜は5・7小路ふらりーとで新子焼き。冬と雪のない季節の2つの時間割、バスと特急の時刻、支払いと寒さの注意つき。A day in Asahikawa from a hotel near the station: the morning bus to Asahiyama Zoo (penguin walk at 11:00 in winter), a sake brewery or the Miura Ayako museum and its forest, Asahikawa ramen on the pedestrian mall, Tokiwa Park and Asahibashi Bridge, and grilled chicken in Furarito alley, with winter and snow-free timetables, bus and train times, and notes on payment and the cold.',

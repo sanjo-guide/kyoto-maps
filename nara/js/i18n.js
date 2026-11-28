@@ -77,10 +77,10 @@ window.NARA_I18N = {
     intro: {
       "kicker": "京都・大阪から近鉄で。歩いて回る1日",
       "h1": "昼の大仏殿は避ける。朝いちばんか、夕方に。",
-      "lead": "9〜10時に出る日は、先にならまちへ。早めのお昼と酒蔵「春鹿」のきき酒のあと、春日大社を通って、昼の団体が減る15時半すぎに大仏殿へ。二月堂の舞台で夕暮れを見て、奈良で晩ごはんを食べて帰ります。朝6時台の電車に乗れる人は、一覧の上のボタンで「早朝に出発」に切り替えてください。大仏殿の開門に合わせた時間割になります。",
+      "lead": "興福寺の国宝館で阿修羅像を見て、町家の残るならまちでお昼。酒蔵「春鹿」でのきき酒のあと、鹿のいる飛火野の芝生と石灯籠の参道を通って春日大社へ。大仏殿には昼の団体が減る15時半すぎに入り、最後は二月堂の舞台から、暮れていく奈良の町を見下ろします。奈良で晩ごはんを食べて帰る、9〜10時に出る日の時間割です。朝6時台の電車に乗れる人は、一覧の上のボタンで「早朝に出発」に切り替えてください。大仏殿の開門に合わせた時間割になります。",
       "favLabel": "いちばんの見どころ",
       "favName": "東大寺 大仏殿",
-      "favText": "昼を外して、15時半すぎに。11〜3月は17:00に閉まるので、16:00までに入ります。",
+      "favText": "南大門の仁王像を見上げてから大仏殿へ。昼を外して、15時半すぎに。11〜3月は17:00に閉まるので、16:00までに入ります。",
       "favPhoto": [
         "todaiji",
         0
@@ -319,10 +319,10 @@ window.NARA_I18N = {
     intro: {
       "kicker": "From Kyoto or Osaka by Kintetsu: a day on foot",
       "h1": "Skip the Great Buddha at midday. Go first thing, or late.",
-      "lead": "Leaving at 9–10, go to Naramachi first. After an early lunch and a sake tasting at the Harushika brewery, walk through Kasuga Taisha and reach the Great Buddha Hall after 15:30, when the midday tour groups have thinned out. Watch dusk from the balcony of Nigatsudo, have dinner in Nara, then go home. If you can catch a train soon after 6:00, switch to “Early start” with the buttons above the list: that timetable is built around the opening of the Great Buddha Hall.",
+      "lead": "See the Ashura statue in Kofukuji’s National Treasure Hall, have lunch among the old townhouses of Naramachi and taste sake at the Harushika brewery. Then walk past the deer on the Tobihino lawn and up the lantern-lined approach to Kasuga Taisha. Reach the Great Buddha Hall after 15:30, when the midday tour groups have thinned out, and end on the balcony of Nigatsudo, looking down over Nara as dusk falls. Dinner in Nara, then home: this is the timetable for leaving at 9–10. If you can catch a train soon after 6:00, switch to “Early start” with the buttons above the list: that timetable is built around the opening of the Great Buddha Hall.",
       "favLabel": "Highlight",
       "favName": "Todaiji: Great Buddha Hall",
-      "favText": "Avoid midday and go after 15:30. From November to March it closes at 17:00, so be inside by 16:00.",
+      "favText": "Look up at the guardians in the Great South Gate, then go in. Avoid midday and go after 15:30. From November to March it closes at 17:00, so be inside by 16:00.",
       "favPhoto": [
         "todaiji",
         0

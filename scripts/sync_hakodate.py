@@ -20,7 +20,7 @@ import os, re, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='hakodate', i18n='HAKODATE_I18N', count=12, data_v=1, bump=100,
+    id='hakodate', i18n='HAKODATE_I18N', count=12, data_v=1, bump=101,
     head='函館で1日',
     title='函館で1日｜朝市・五稜郭・元町・函館山の夜景・湯の川温泉 Hakodate MAP',
     desc='函館駅のまわりのホテルから回る函館の1日。朝市の朝ごはん、五稜郭タワーと五稜郭公園、八幡坂と元町の教会、日の入りに合わせた函館山ロープウェイの夜景、夜の金森赤レンガ倉庫、湯の川温泉。朝6時台に出るコースと、札幌から特急北斗で行く1泊2日のコースも。市電の乗り方、冬の坂道、タトゥーと温泉のことつき。One day in Hakodate from a hotel near the station: breakfast at the morning market, Goryokaku Tower and park, Hachiman-zaka and the Motomachi churches, the Mt. Hakodate night view timed to sunset, the red-brick warehouses after dark and Yunokawa Onsen, with an early course, a two-day trip from Sapporo by the Hokuto limited express, tram tips and winter advice.',

@@ -13,7 +13,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='osaka', i18n='OSAKA_I18N', count=13, data_v=3, bump=102, keyv='-b',
+    id='osaka', i18n='OSAKA_I18N', count=13, data_v=3, bump=103, keyv='-b',
     head='大阪 1日ルート（大阪城・黒門市場・新世界・夜の道頓堀）',
     title='大阪 1日ルート｜大阪城・新世界・夜の道頓堀 Osaka MAP',
     desc='梅田〜難波のホテルから1日で回る大阪。黒門市場、新世界の串カツ、四天王寺、大阪城、夜の道頓堀まで。天守閣の9:00の開館に合わせるコースと、9〜10時に出るコースを選べるルートマップ。Osaka in one day from a hotel between Umeda and Namba: Kuromon Market, kushikatsu in Shinsekai, Shitennoji, the castle and Dotonbori at night, with an early-start and a 9–10 o’clock course.',

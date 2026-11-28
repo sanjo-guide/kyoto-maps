@@ -13,7 +13,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='ohara', i18n='OHARA_I18N', count=9, data_v=3, bump=102,
+    id='ohara', i18n='OHARA_I18N', count=9, data_v=3, bump=103,
     head='京都 大原（三千院・宝泉院・寂光院）',
     title='京都 大原｜三千院・宝泉院・寂光院 Ohara MAP',
     desc='三条から京都バスで約45分の山里、大原。三千院の開門に合わせるコースと、先に寂光院へ行って三千院を午後に回す9〜10時発コースを選べる1日ルートマップ。お昼の時間、帰りのバス、街なかに戻ってからの夜も。Ohara, north of Kyoto, by bus from Sanjo: a course timed for Sanzen-in’s opening, or a 9–10 o’clock course that saves Sanzen-in for the afternoon, with lunch timing, buses back and the evening in town.',

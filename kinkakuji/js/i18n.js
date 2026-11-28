@@ -227,7 +227,7 @@ window.KINKAKUJI_I18N = {
     late: {
       listNote: '9〜10時に出発するコース：北野天満宮 → 早めのお昼 → 平野神社 → 仁和寺 → 龍安寺 → 夕方の金閣寺。河原町三条を9:31に出るバスで始まります。大徳寺は入りません。点線は順番を示す線で、実際の道ではありません。',
       intro: {
-        lead: '三条のあたりを9時半ごろに出て、北野天満宮から始めます。早めのお昼のあと、平野神社、嵐電で仁和寺、歩いて龍安寺、最後に夕方の金閣寺へ。金閣寺がいちばん混むと言われる昼前後を外した順番です。金閣寺と龍安寺に開門と同時に入りたい人は、一覧の上のボタンで「早朝コース」に切り替えてください。',
+        lead: '金閣寺は、昼前後がいちばん混むと言われます。だからこのコースは逆回り。朝は北野天満宮にお参りして、門前の茶屋で豆腐の丼の早めのお昼。平野神社から嵐電で仁和寺の五重塔へ、きぬかけの路を歩いて龍安寺の石庭の前に座り、最後に夕方の金閣寺へ。三条のあたりを9時半ごろに出る、朝ゆっくりの1日です。金閣寺と龍安寺に開門と同時に入りたい人は、一覧の上のボタンで「早朝コース」に切り替えてください。',
         who: [
           '朝はゆっくり、9時半ごろに出たい人に',
           '河原町三条 9:31発の市バス10系統で北野天満宮へ（京都市役所前は9:33）',
@@ -300,7 +300,7 @@ window.KINKAKUJI_I18N = {
     late: {
       listNote: 'Starting at 9–10: Kitano Tenmangu → an early lunch → Hirano Shrine → Ninna-ji → Ryoan-ji → Kinkaku-ji in the late afternoon. It starts with the 9:31 bus from Kawaramachi-Sanjo. Daitoku-ji is not on this course. The dotted line shows the order, not the actual path.',
       intro: {
-        lead: 'Leave the Sanjo area at about 9:30 and start at Kitano Tenmangu. After an early lunch, go on to Hirano Shrine, ride the Randen tram to Ninna-ji, walk to Ryoan-ji, and finish at Kinkaku-ji in the late afternoon. The order keeps you away from Kinkaku-ji around midday, which is said to be its busiest time. Want to be at Kinkaku-ji and Ryoan-ji the moment they open? Switch to “Early course” with the buttons at the top of the list.',
+        lead: 'Kinkaku-ji is said to be busiest around midday, so this course runs the other way round. Start at Kitano Tenmangu, with an early lunch of tofu on rice at a teahouse by the shrine. From Hirano Shrine ride the Randen tram to Ninna-ji’s five-storey pagoda, walk the Kinukake-no-michi road to sit in front of Ryoan-ji’s rock garden, and finish at Kinkaku-ji in the late afternoon. You leave the Sanjo area at about 9:30, so the morning is unhurried. Want to be at Kinkaku-ji and Ryoan-ji the moment they open? Switch to “Early course” with the buttons at the top of the list.',
         who: [
           'For a slow morning, leaving at about 9:30',
           'Starts with city bus 10 from Kawaramachi-Sanjo at 9:31 (Kyoto Shiyakusho-mae at 9:33)',

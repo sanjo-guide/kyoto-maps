@@ -80,7 +80,7 @@ window.KINOSAKI_I18N = {
       favName: '外湯めぐり',
       favText: '柳並木の川沿いに外湯が並びます。1か所800円、1日券は1,500円。どこもタトゥーOK。',
       favPhoto: ['river', 0],
-      whoHead: 'こんな人におすすめ',
+      whoHead: '出かける前に',
       dayHead: '1日の流れ（目安）',
       from: '',
       timeSuffix: '〜',
@@ -108,7 +108,7 @@ window.KINOSAKI_I18N = {
     introFor: {
       "late": {
         "h1": "柳並木の温泉街で、外湯を4つとロープウェイ。京都から日帰りで城崎温泉。",
-        "lead": "三条のあたりを6:45ごろに出て、京都7:32の特急に乗ると、乗り換えなしで9:52に城崎温泉に着きます。午前に地蔵湯と一の湯、お昼のあと御所の湯、午後はいちばん奥のロープウェイと鴻の湯。15時に開く柳湯・まんだら湯か早めの晩ごはんのあと、18:53の特急で帰ります。16:31の特急で早めに帰って、京都で晩ごはんにもできます。",
+        "lead": "太鼓橋のかかる大谿川に柳が並び、その川沿いに外湯が点在する温泉街。1日券「ゆめぱ」を持って、洞窟風呂の一の湯、露天風呂のある御所の湯、ロープウェイで大師山に上ったあとの鴻の湯と、湯から湯へ歩きます。夕方は灯りのつく川沿いで早めの晩ごはん。京都7:32の特急に乗れば乗り換えなしで9:52に着き、帰りは18:53の最後の特急です（16:31の特急で早めに帰って、京都で晩ごはんにもできます）。外湯はどこもタトゥーOKです。",
         "who": [
           "三条のあたりを6:45ごろに出て、21:40ごろに戻る1日（16:31発で帰れば19:30ごろ）",
           "外湯はどこもタトゥーOK。隠す必要もなし（公式観光サイト Visit Kinosaki の案内）",
@@ -177,7 +177,7 @@ window.KINOSAKI_I18N = {
       },
       "early": {
         "h1": "天空の城から、柳並木の温泉街へ。竹田城跡と城崎温泉を1日で。",
-        "lead": "京都7:32の特急を和田山で乗り換えて、竹田に9:36着。10:05の天空バスで竹田城跡へ上がり、石垣の上を歩いて12:30に駅へ戻ります。お昼のあと13:34の電車で城崎温泉へ（14:35着）。外湯を3つ回って早めの晩ごはん、18:53の特急で京都に21:20に着きます。電車とバスの本数が少ないので、時刻どおりに動く1日です。",
+        "lead": "山の上に石垣だけが残る「天空の城」竹田城跡。石垣の上からは、但馬の山と町が360度見渡せます。午後は電車で城崎温泉へ行き、柳並木の川沿いで外湯を3つ。洞窟風呂の一の湯、露天風呂のある御所の湯に入り、早めの晩ごはんのあと18:53の特急で京都へ（21:20着）。京都7:32の特急を和田山で乗り換えて竹田9:36着、10:05の天空バスで城跡へ上がり、12:30に駅へ戻ってお昼、13:34の電車で城崎温泉へ（14:35着）。電車とバスの本数が少ないので、時刻どおりに動く1日です。",
         "who": [
           "三条のあたりを6:45ごろに出て、21:40ごろに戻る長い1日",
           "天空バスは現金のみ（1日券500円）。歩いて登る駅裏の道は閉鎖中",
@@ -320,7 +320,7 @@ window.KINOSAKI_I18N = {
       favName: 'Bathhouse hopping',
       favText: 'Public baths along a willow-lined river: ¥800 each or ¥1,500 for a day pass. Tattoos are fine at all of them.',
       favPhoto: ['river', 0],
-      whoHead: 'Who it’s for',
+      whoHead: 'Before you go',
       dayHead: 'One day, roughly like this',
       from: 'From',
       timeSuffix: '',
@@ -348,7 +348,7 @@ window.KINOSAKI_I18N = {
     introFor: {
       "late": {
         "h1": "Four baths and a ropeway in a willow-lined onsen town: Kinosaki, a day trip from Kyoto.",
-        "lead": "Leave the Sanjo area around 6:45 and take the 7:32 express from Kyoto: it runs direct to Kinosaki Onsen, arriving at 9:52. Jizo-yu and Ichi-no-yu in the morning, Gosho-no-yu after lunch, then the ropeway and Kou-no-yu at the far end of town. After Yanagi-yu or Mandara-yu (open from 15:00) or an early dinner, go back on the 18:53 express. You can also leave on the 16:31 and have dinner in Kyoto.",
+        "lead": "Willows and arched stone bridges line the Otani River, with the public baths spread along the water. With the Yumepa day pass, walk from bath to bath: the cave bath at Ichi-no-yu, the open-air bath at Gosho-no-yu, and Kou-no-yu after the ropeway up Mt. Daishi. In the evening, an early dinner by the lamp-lit river. The 7:32 express from Kyoto runs direct, arriving at 9:52, and the 18:53 is the last express home (or take the 16:31 and have dinner in Kyoto). Tattoos are fine at every public bath.",
         "who": [
           "Leave the Sanjo area around 6:45, back about 21:40 (about 19:30 if you take the 16:31)",
           "Tattoos are fine at every bathhouse, no need to cover them (per Visit Kinosaki, the official tourism site)",
@@ -417,7 +417,7 @@ window.KINOSAKI_I18N = {
       },
       "early": {
         "h1": "From the castle in the sky to a willow-lined onsen town: Takeda Castle and Kinosaki in one day.",
-        "lead": "Take the 7:32 express from Kyoto and change at Wadayama, reaching Takeda at 9:36. The 10:05 Tenku Bus takes you up to the castle ruins; walk the stone walls and be back at the station at 12:30. After lunch, the 13:34 train gets you to Kinosaki Onsen at 14:35. Three baths, an early dinner, and the 18:53 express back, arriving in Kyoto at 21:20. Trains and buses are few, so this day runs to the clock.",
+        "lead": "Takeda Castle, the “castle in the sky”, is only stone walls on a mountaintop, with the hills and towns of Tajima all around you. In the afternoon, three public baths along the willow-lined river in Kinosaki Onsen, including the cave bath at Ichi-no-yu and the open-air bath at Gosho-no-yu, then an early dinner and the 18:53 express back to Kyoto (21:20). Take the 7:32 express from Kyoto, change at Wadayama for Takeda (9:36) and ride the 10:05 Tenku Bus up to the ruins; back at the station at 12:30 for lunch, then the 13:34 train to Kinosaki Onsen (14:35). Trains and buses are few, so this day runs to the clock.",
         "who": [
           "A long day: leave the Sanjo area around 6:45, back about 21:40",
           "The Tenku Bus is cash only (day pass ¥500). The walking trails from the station are closed",

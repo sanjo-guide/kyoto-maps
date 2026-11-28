@@ -2,18 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "福岡と唐津のおすすめをまとめました。",
+   "夕方、那珂川（なかがわ）沿いに屋台が並びはじめ、川面に中洲のネオンが映ります。小さな屋台でほかのお客さんと肩を並べて、ラーメンやおでんをつまむ。福岡の夜は、ここからです。",
    "福岡は、空港から博多・天神の中心部まで地下鉄ですぐ。街がコンパクトで歩きやすく、ごはんがとにかくおいしい街です。",
-   "「食べる」のお店は、私が実際に行ったところだけを載せています。",
-   "福岡を拠点にすれば、唐津・呼子、糸島、太宰府、柳川、門司港、熊本などへも日帰りで行けます。",
-   "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
+   "「食べる」のお店は、私が実際に行ったところだけ。博多駅から歩いて行ける豚骨ラーメン、揚げたてを1品ずつ出してくれる天ぷら定食、空港の「ラーメン滑走路」まで載せています。",
+   "福岡を拠点にすれば、日帰りの行き先にも困りません。天神・博多から地下鉄がそのままJR筑肥線に乗り入れていて、乗り換えなしで海と城の町・唐津へ。呼子のイカの活き造り、糸島の海、太宰府、柳川の川下り、門司港と関門海峡の夕日、熊本城まで紹介しています。",
+   "屋台が開くのは18時ごろから。雨の日や定休日は休むこともあります。1軒で長居せず、軽く食べて次へ行くのが屋台の楽しみ方です。"
   ],
   "en": [
-   "Here are my recommendations for Fukuoka and Karatsu.",
+   "In the evening, yatai food stalls set up along the Naka River and Nakasu’s neon lights shine on the water. You squeeze in shoulder to shoulder with other customers for ramen or oden. This is where a Fukuoka night starts.",
    "Fukuoka is easy: the subway takes you from the airport to Hakata and Tenjin in minutes, the city is compact and walkable, and the food is simply delicious.",
-   "In the food section I only list places I have actually been to myself.",
-   "With Fukuoka as your base, you can also take day trips to Karatsu and Yobuko, Itoshima, Dazaifu, Yanagawa, Mojiko, Kumamoto and more.",
-   "The most important thing is not to overpack your schedule. Take your time and enjoy the places that really interest you."
+   "The food section only lists places I have actually been to: tonkotsu ramen within walking distance of Hakata Station, a tempura set meal served one piece at a time straight from the fryer, and even the “Ramen Runway” at the airport.",
+   "With Fukuoka as your base, there is no shortage of day trips. From Tenjin and Hakata the subway runs straight onto the JR Chikuhi Line, so you can reach Karatsu, a castle town by the sea, without changing trains. I also cover the live squid of Yobuko, the Itoshima coast, Dazaifu, the Yanagawa canal boats, sunset over the Kanmon Strait at Mojiko, and Kumamoto Castle.",
+   "The yatai open around 6 pm, and some close in rain or on their days off. Don’t settle in at one stall: eat a little and move on."
   ]
  },
  "outro": {

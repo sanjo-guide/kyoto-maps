@@ -109,8 +109,8 @@ window.DAISETSUZAN_I18N = {
     introFor: {
       "asahidake": {
         "kicker": "旭川から日帰り・一年中（ロープウェイの整備運休を除く）",
-        "h1": "北海道でいちばん高い山の、標高1,600mへ。",
-        "lead": "旭川駅からバスで1時間48分、ロープウェイで10分。噴気を上げる旭岳の正面に立ち、夏は姿見の池を一周、冬は晴れた日にスノーシューで歩きます。下りたら森の中の温泉へ。帰りのバスは16:55発が最後です。",
+        "h1": "噴気を上げる、北海道でいちばん高い山の正面へ。",
+        "lead": "標高1,600mの姿見駅を出ると、目の前に噴気を上げる旭岳（あさひだけ）。夏は姿見の池を一周、冬は晴れた日にスノーシューで歩きます。下りたら森の中の温泉へ。旭川駅からバスで1時間48分、ロープウェイで10分。帰りのバスは11:55・14:55・16:55発の3本だけなので、それに合わせた時間割です。",
         "favName": "姿見の池と旭岳",
         "favText": "ロープウェイの姿見駅から、夏は歩いて約20分。（写真：lumoplank / CC0）",
         "favPhoto": [
@@ -227,7 +227,7 @@ window.DAISETSUZAN_I18N = {
       "sounkyo": {
         "kicker": "旭川から日帰り・一年中（冬は氷瀑まつり）",
         "h1": "断崖の谷の温泉街から、黒岳の5合目へ。",
-        "lead": "旭川駅からバスで約2時間。温泉街でお昼を食べ、ロープウェイで7分の5合目から、黒岳と谷を眺めます。7月〜10月はバスで銀河・流星の滝へ。お風呂に入って、17:00発の最後のバスで旭川へ。1月下旬〜3月上旬の夜は氷瀑まつりです。",
+        "lead": "層雲峡（そううんきょう）は、断崖の谷にある温泉街。旭川駅からバスで約2時間です。お昼を食べたら、ロープウェイで7分の5合目へ上がって、黒岳と谷を眺めます。7月〜10月はバスで、断崖を落ちる銀河・流星の滝へ。お風呂に入って、17:00発の最後のバスで旭川へ。1月下旬〜3月上旬の夜は、川原に氷の建物が並ぶ氷瀑まつりです。",
         "favName": "銀河の滝・流星の滝",
         "favText": "断崖を落ちる2本の滝。バスは7月〜10月だけです。（写真：lienyuan lee / CC BY 3.0）",
         "favPhoto": [
@@ -452,8 +452,8 @@ window.DAISETSUZAN_I18N = {
     introFor: {
       "asahidake": {
         "kicker": "Day trip from Asahikawa · all year (except ropeway maintenance)",
-        "h1": "Up to 1,600 m on Hokkaido’s highest mountain.",
-        "lead": "1 hr 48 min by bus from Asahikawa Station, then 10 minutes by ropeway. Stand in front of steaming Asahidake; walk the loop around Sugatami Pond in summer, or go out on snowshoes on a clear winter day. Then a hot spring in the forest below. The last bus back leaves at 16:55.",
+        "h1": "Face to face with Hokkaido’s highest mountain as it steams.",
+        "lead": "Step out of Sugatami Station at 1,600 m and steaming Asahidake is right in front of you. Walk the loop around Sugatami Pond in summer, or go out on snowshoes on a clear winter day, then soak in a hot spring in the forest below. It is 1 hr 48 min by bus from Asahikawa Station and 10 minutes by ropeway. Buses back leave only at 11:55, 14:55 and 16:55, and the timetable is built around them.",
         "favName": "Sugatami Pond and Asahidake",
         "favText": "About 20 minutes on foot from the ropeway’s Sugatami Station in summer. (Photo: lumoplank / CC0)",
         "favPhoto": [
@@ -570,7 +570,7 @@ window.DAISETSUZAN_I18N = {
       "sounkyo": {
         "kicker": "Day trip from Asahikawa · all year (Ice Fall Festival in winter)",
         "h1": "From a hot-spring town in a gorge to the fifth station of Kurodake.",
-        "lead": "About two hours by bus from Asahikawa Station. Lunch in the hot-spring town, then seven minutes by ropeway to the fifth station for the view of Kurodake and the gorge. From July to October a bus runs to the Ginga and Ryusei falls. A bath, then the last bus to Asahikawa at 17:00. From late January to early March the Ice Fall Festival lights up the evenings.",
+        "lead": "Sounkyo is a hot-spring town in a gorge of sheer cliffs, about two hours by bus from Asahikawa Station. After lunch, ride the ropeway seven minutes up to the fifth station for Kurodake and the gorge. From July to October a bus runs to the Ginga and Ryusei falls, two falls down the cliff wall. A bath, then the last bus to Asahikawa at 17:00. From late January to early March, ice buildings fill the riverbank for the Ice Fall Festival.",
         "favName": "Ginga and Ryusei Falls",
         "favText": "Two falls down the gorge wall. The bus runs July–October only. (Photo: lienyuan lee / CC BY 3.0)",
         "favPhoto": [

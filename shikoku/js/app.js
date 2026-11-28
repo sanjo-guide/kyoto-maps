@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "Matsuyama Castle and Dogo Onsen, the food I’ve enjoyed, and further afield to Kochi and Takamatsu.", ja: "松山城と道後温泉、実際に行ったお店、そして高知・高松へ。" },
+    subtitle: { en: "Dogo Onsen Honkan, a wooden bathhouse from the Meiji era; bonito seared over burning straw; Sanuki udon by the station. Matsuyama first, then Kochi and Takamatsu.", ja: "明治の木造の湯・道後温泉本館、藁で焼く鰹のたたき、駅前のさぬきうどん。松山を中心に、高知と高松へ。" },
     nav_city: { en: "Matsuyama", ja: "松山" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Kochi", ja: "高知・高松" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in Matsuyama", ja: "松山・道後のおすすめ" }, jump_food: { en: "places I've eaten", ja: "実際に行ったお店" }, jump_trips: { en: "other areas", ja: "高知・仁淀ブルー・高松ほか" },
     group: { en: "AREA", ja: "エリア" },

@@ -75,8 +75,8 @@ window.OHARA_I18N = {
     hintHead: 'あなたのルートでは',
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
-      "h1": "三条からバスで45分。苔の庭と山里のお寺を歩いて、夜は街なかへ。",
-      "lead": "大原は、京都の町の北、山に囲まれた里です。三条京阪前から京都バス1本で行けます。9〜10時に出る日は、人の集まる三千院を午後に回して、先に谷の反対側の寂光院へ。11時半に早めのお昼を食べ、宝泉院でお抹茶、14時すぎに三千院。夕方のバスで三条へ戻って、晩ごはんは先斗町・木屋町で。朝早く出られる人は、上のボタンで「三千院の開門に合わせる」コースに切り替えてください。私の写真は2024年11月、雨の日の夕方に撮ったものです。",
+      "h1": "杉木立の下の苔の庭と、額縁の庭でいただくお抹茶。三条からバス1本の山里、大原へ。",
+      "lead": "京都の町の北、山に囲まれた大原の里まで、三条京阪前から京都バス1本です。9〜10時に出る日は、人の集まる三千院を14時すぎに回して、先に田んぼの中の道を歩き、谷の反対側の寂光院へ。お昼は11時半に早めに入り、宝泉院でお抹茶、団体が帰りはじめるころに三千院の苔の庭へ。夕方のバスで三条へ戻って、晩ごはんは先斗町・木屋町で。朝早く出られる人は、上のボタンで「三千院の開門に合わせる」コースに切り替えてください。私の写真は2024年11月、雨の日の夕方に撮ったものです。",
       "favLabel": "いちばんの見どころ",
       "favName": "三千院",
       "favText": "杉木立の下の苔と、もみじ。団体の多い10時〜昼すぎを外して、開門すぐか14時すぎに。雨の日と雨上がりがいちばんきれいです。",
@@ -200,7 +200,7 @@ window.OHARA_I18N = {
     },
     introFor: {
       early: {
-        "lead": "朝7:57に三条京阪前を出るバスで大原へ。団体が来る前の三千院に、開いてすぐ入ります。宝泉院のお抹茶でひと休みして、11時半に早めのお昼。午後は田んぼの中の道を寂光院へ歩き、14:27のバスで戻ります。15時すぎに三条。宿で休んで、夜は先斗町・木屋町へ。私の写真は2024年11月、雨の日の夕方に撮ったものです。",
+        "lead": "団体が来る前の三千院に、開いてすぐ入る朝のコースです。苔の庭を歩いたら、宝泉院でお抹茶のひと休み。11時半に早めのお昼を食べ、午後は田んぼの中の道を寂光院へ歩いて、14:27のバスで戻ります。15時すぎに三条。宿で休んで、夜は先斗町・木屋町へ。行きは朝7:57に三条京阪前を出るバスです。私の写真は2024年11月、雨の日の夕方に撮ったものです。",
         "favText": "11月は8:45、ほかの月は9:00に開きます。開門に合わせて行くと、団体が増える前に縁側に座れます。雨の日と雨上がりがいちばんきれいです。",
         "dayHead": "1日の流れ（三千院の開門に合わせる）",
         "day": [
@@ -319,8 +319,8 @@ window.OHARA_I18N = {
     hintHead: 'On your route',
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
-      "h1": "45 minutes by bus from Sanjo: moss gardens and valley temples, then an evening back in town.",
-      "lead": "Ohara is a farming valley in the hills north of Kyoto, one bus ride from Sanjo-Keihan-mae. Leaving at 9–10, you save busy Sanzen-in for the afternoon and walk first to Jakko-in across the valley. Early lunch at 11:30, matcha at Hosen-in, Sanzen-in after 14:00, then a late-afternoon bus back to Sanjo and dinner around Pontocho and Kiyamachi. If you can start early, switch to the “Sanzen-in at opening” course with the button above the list. My photos are from a rainy late afternoon in November 2024.",
+      "h1": "Moss under the cedars and matcha before a framed garden: Ohara, one bus ride from Sanjo.",
+      "lead": "Ohara is a valley in the hills north of Kyoto, one Kyoto Bus ride from Sanjo-Keihan-mae. Leaving at 9–10, you save busy Sanzen-in for after 14:00 and first walk a lane through the fields to Jakko-in, across the valley. Sit down for an early lunch at 11:30, have matcha at Hosen-in, and reach Sanzen-in’s moss garden as the tour groups start to leave. A late-afternoon bus takes you back to Sanjo for dinner around Pontocho and Kiyamachi. If you can start early, switch to the “Sanzen-in at opening” course with the button above the list. My photos are from a rainy late afternoon in November 2024.",
       "favLabel": "Highlight",
       "favName": "Sanzen-in",
       "favText": "Moss under tall cedars, and maples. Avoid 10:00 to early afternoon, when the tour groups are there: come right at opening or after 14:00. Best in rain or just after.",
@@ -444,7 +444,7 @@ window.OHARA_I18N = {
     },
     introFor: {
       early: {
-        "lead": "Take the 7:57 bus from Sanjo-Keihan-mae and walk into Sanzen-in just after it opens, before the tour groups. Rest over matcha at Hosen-in, have an early lunch at 11:30, walk between the fields to Jakko-in in the afternoon and take the 14:27 bus back. You are at Sanjo soon after 15:00: rest at your hotel, then head for Pontocho and Kiyamachi in the evening. My photos are from a rainy late afternoon in November 2024.",
+        "lead": "Walk into Sanzen-in just after it opens, before the tour groups. After the moss garden, rest over matcha at Hosen-in. Have an early lunch at 11:30, walk between the fields to Jakko-in in the afternoon and take the 14:27 bus back. You are at Sanjo soon after 15:00: rest at your hotel, then head for Pontocho and Kiyamachi in the evening. The bus out leaves Sanjo-Keihan-mae at 7:57. My photos are from a rainy late afternoon in November 2024.",
         "favText": "Opens at 8:45 in November and 9:00 in other months. Arrive for opening and you can sit on the veranda before the tour groups build up. Best in rain or just after.",
         "dayHead": "One day, roughly like this (Sanzen-in at opening)",
         "day": [

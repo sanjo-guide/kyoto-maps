@@ -109,7 +109,7 @@ window.OTARU_I18N = {
       "late": {
         "kicker": "札幌から日帰り（9〜10時に出る）",
         "h1": "線路の跡から、静かな運河の北の端へ。暗くなったら、山の上から港の明かり。",
-        "lead": "札幌9:33の快速エアポートで小樽へ。市場で早めのお昼を食べて、旧手宮線の跡から北運河、浅草橋まで運河を歩き、銀行街と堺町通りへ。明かりがつくころ浅草橋に戻り、天狗山ロープウエイで夜景を見てから晩ごはん。札幌には21時ごろ戻ります。",
+        "lead": "いちばんの見どころは、ガス灯がつく夕方の運河です。この時間割は、冬の日の入りに合わせて浅草橋に戻ってくるように組んであります。日中は、市場の海鮮丼、人の少ない旧手宮線の跡と北運河、銀行街と堺町通り。明かりがついたら天狗山ロープウエイで港の夜景を見て、晩ごはん。札幌9:33の快速エアポートで出て、21時ごろ札幌に戻ります。",
         "favName": "浅草橋の夕暮れ",
         "favText": "12〜1月は16時すぎ、倉庫とガス灯が水面に映ります。（写真：Tan Wei Liang Byorn / CC BY-SA 4.0）",
         "favPhoto": [
@@ -252,7 +252,7 @@ window.OTARU_I18N = {
       "early": {
         "kicker": "札幌から日帰り（7時台に出る）",
         "h1": "市場で朝ごはん、ランプの火入れ、開いたばかりの堺町。午後は祝津の屋敷と水族館。",
-        "lead": "札幌7:14の電車で小樽へ。三角市場で朝ごはんを食べて、人の少ない朝の浅草橋へ。北一ホールで石油ランプに火を入れるところを見て、店が開いたばかりの堺町通りを歩きます。昼からはバスで祝津へ行き、小樽貴賓館でお昼と見学、おたる水族館。夜の運河を見て晩ごはん、札幌には20時ごろ戻ります。",
+        "lead": "観光の人が増える前の小樽を歩くコースです。札幌7:14の電車で出て、三角市場で朝ごはん。人の少ない朝の浅草橋を見て、9時に北一ホールで石油ランプに火が入るところを見たら、店が開いたばかりの堺町通りへ。昼からはバスで祝津へ行き、小樽貴賓館でお昼と見学、おたる水族館。夜の運河を見て晩ごはん、札幌には20時ごろ戻ります。",
         "favName": "人の少ない朝の運河",
         "favText": "観光の人が増える前の時間です。（写真：bryan... / CC BY-SA 2.0）",
         "favPhoto": [
@@ -395,7 +395,7 @@ window.OTARU_I18N = {
       "yoichi": {
         "kicker": "札幌から日帰り（余市の蒸溜所と小樽）",
         "h1": "午前は余市の蒸溜所、午後は小樽の銀行街と堺町。暗くなったら運河。",
-        "lead": "札幌8:41の電車で余市へ。予約しておいたニッカの蒸溜所のツアー（12〜1月はセミナー）に参加して、蒸溜所のレストランでお昼。13:43の電車で小樽に戻り、銀行街と堺町通りを歩いて、暗くなるころの浅草橋へ。晩ごはんのあとに天狗山の夜景を足すこともできます。",
+        "lead": "ウイスキーの蒸溜所と小樽の町を、1日でつなぐコースです。余市と小樽の間の電車は1時間〜1時間20分おきなので、乗る電車を先に決めてあります。札幌8:41の電車で余市へ。予約しておいたニッカの蒸溜所のツアー（12〜1月はセミナー）に参加して、蒸溜所のレストランでお昼。13:43の電車で小樽に戻り、銀行街と堺町通りを歩いて、暗くなるころの浅草橋へ。晩ごはんのあとに天狗山の夜景を足すこともできます。",
         "favName": "石造りの蒸溜所",
         "favText": "とんがり屋根のキルン塔と、石の棟が並ぶ敷地。（写真：さかおり / CC BY-SA 4.0）",
         "favPhoto": [
@@ -631,7 +631,7 @@ window.OTARU_I18N = {
       "late": {
         "kicker": "A day trip from Sapporo (leave at 9–10 am)",
         "h1": "From the old railway to the quiet end of the canal, then the harbour lights from the mountain.",
-        "lead": "Take the 9:33 Rapid Airport to Otaru. Have an early seafood lunch at the market, follow the old Temiya line to the North Canal and walk the canal down to Asakusa Bridge, then the old bank street and Sakaimachi. Be back at Asakusa Bridge as the lamps come on, ride the Mt. Tengu Ropeway for the night view, and have dinner. You are back in Sapporo around 21:00.",
+        "lead": "The best moment in Otaru is the canal at dusk, when the gas lamps come on, and this timetable follows winter sunsets to have you back at Asakusa Bridge for it. Before that: an early seafood bowl at the market, the old Temiya line and the quiet North Canal, the old bank street and Sakaimachi. Once the lamps are lit, ride the Mt. Tengu Ropeway for the harbour lights, then have dinner. Leave Sapporo on the 9:33 Rapid Airport; you are back around 21:00.",
         "favName": "Asakusa Bridge at dusk",
         "favText": "In December and January, just after 16:00, the warehouses and gas lamps reflect in the water. (Photo: Tan Wei Liang Byorn / CC BY-SA 4.0)",
         "favPhoto": [
@@ -774,7 +774,7 @@ window.OTARU_I18N = {
       "early": {
         "kicker": "A day trip from Sapporo (leave around 7 am)",
         "h1": "Breakfast at the market, the lamps being lit, Sakaimachi as it opens. Then a villa and an aquarium by the sea.",
-        "lead": "Take the 7:14 train to Otaru. Eat breakfast at Sankaku Market, see Asakusa Bridge before the crowds, watch the oil lamps being lit at Kitaichi Hall, and walk Sakaimachi as the shops open. After noon, take the bus to Shukutsu for lunch and a look round Otaru Kihinkan, then Otaru Aquarium. See the canal at night, have dinner, and be back in Sapporo around 20:00.",
+        "lead": "Otaru before the day visitors arrive. Take the 7:14 train, eat breakfast at Sankaku Market, see Asakusa Bridge while it is quiet, watch the oil lamps being lit at Kitaichi Hall at 9:00, and walk Sakaimachi as the shops open. After noon, take the bus to Shukutsu for lunch and a look round Otaru Kihinkan, then Otaru Aquarium. See the canal at night, have dinner, and be back in Sapporo around 20:00.",
         "favName": "The canal in the early morning",
         "favText": "Before the day visitors arrive. (Photo: bryan... / CC BY-SA 2.0)",
         "favPhoto": [
@@ -917,7 +917,7 @@ window.OTARU_I18N = {
       "yoichi": {
         "kicker": "A day trip from Sapporo (Yoichi distillery and Otaru)",
         "h1": "The Yoichi whisky distillery in the morning; Otaru’s bank street and Sakaimachi in the afternoon; the canal after dark.",
-        "lead": "Take the 8:41 train to Yoichi. Join the Nikka distillery tour you booked (a seminar in December–January) and have lunch at the distillery restaurant. The 13:43 train takes you back to Otaru for the old bank street and Sakaimachi, then Asakusa Bridge as it gets dark. You can add the Mt. Tengu night view after dinner.",
+        "lead": "A whisky distillery and the streets of Otaru in one day. Trains between Yoichi and Otaru run only every 60–80 minutes, so the timetable fixes which trains to catch. Take the 8:41 train to Yoichi. Join the Nikka distillery tour you booked (a seminar in December–January) and have lunch at the distillery restaurant. The 13:43 train takes you back to Otaru for the old bank street and Sakaimachi, then Asakusa Bridge as it gets dark. You can add the Mt. Tengu night view after dinner.",
         "favName": "The stone distillery",
         "favText": "Pagoda-roofed kiln towers and stone buildings across the grounds. (Photo: さかおり / CC BY-SA 4.0)",
         "favPhoto": [

@@ -207,7 +207,7 @@ h = h.replace(_m.group(0),
   '      <button type="button" data-course="late" data-t="courseLate">9〜10時に出発</button>\n'
   '    </div>\n' + _m.group(0))
 # CSS / JS の ?v= は、テンプレートの数字に BUMP を足す（嵐山だけ更新したときは BUMP を1つ上げる。2026-11-22 に 100→101→102→103、2026-11-23 に 104→105）
-BUMP = 105
+BUMP = 106
 h = re.sub(r'(css/style\.css|js/i18n\.js|js/app\.js)\?v=(\d+)', lambda m: f'{m.group(1)}?v={int(m.group(2)) + BUMP}', h)
 
 css = open(f'{R}/eizan-line/css/style.css', encoding='utf-8').read() + """

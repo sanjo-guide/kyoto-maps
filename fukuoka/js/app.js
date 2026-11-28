@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "Places to see in the city, restaurants I’ve actually eaten at, and day trips to Karatsu and beyond.", ja: "福岡市内の見どころ、実際に行ったお店、そして唐津などへの日帰り旅。" },
+    subtitle: { en: "Yatai stalls by the river at night, tonkotsu ramen and tempura straight from the fryer, and day trips to Karatsu’s castle by the sea and the live squid of Yobuko.", ja: "夜は中洲の屋台、昼は豚骨ラーメンと揚げたての天ぷら。足をのばして、海と城の唐津、イカの呼子へ。" },
     nav_city: { en: "City", ja: "福岡市内" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "places I've eaten", ja: "実際に行ったお店" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },

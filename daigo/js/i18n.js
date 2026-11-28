@@ -69,7 +69,7 @@ window.DAIGO_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った京都のルート",
       "h1": "照らされた五重塔と、池に映るもみじ。",
-      "lead": "秋の夜だけの拝観です。2026年は11月20日〜12月6日の18:00〜20:50（受付は20:10まで）。三条から地下鉄で乗り換えなしの醍醐へ。ライトアップされた仁王門をくぐり、京都でいちばん古い木造建築の五重塔、池に映る朱の弁天堂へ。帰りは三条で晩ごはん。",
+      "lead": "ライトアップされた仁王門をくぐると、京都でいちばん古い木造建築の五重塔。その先の池のほとりに、朱の弁天堂。秋の夜だけの拝観で、2026年は11月20日〜12月6日の18:00〜20:50（受付は20:10まで）。三条から地下鉄で乗り換えなしの醍醐へ行き、帰りは三条で晩ごはん。",
       "favLabel": "いちばんの見どころ",
       "favName": "弁天堂と弁天池",
       "favText": "朱の橋とお堂ともみじが、池に鏡のように映ります。",
@@ -268,7 +268,7 @@ window.DAIGO_I18N = {
     intro: {
       "kicker": "A Kyoto route, hand-walked by Toshi",
       "h1": "A lit pagoda and maples mirrored in a pond.",
-      "lead": "An autumn-evenings-only visit: in 2026, from 20 November to 6 December, 18:00–20:50 (last entry 20:10). One subway ride from Sanjo to Daigo, then through the lit Nio gate to the five-storey pagoda, Kyoto’s oldest wooden building, and on to the vermilion Benten hall reflected in its pond. Dinner back in Sanjo.",
+      "lead": "Through the lit Nio gate to the five-storey pagoda, Kyoto’s oldest wooden building, and on to the vermilion Benten hall at the edge of its pond. It’s an autumn-evenings-only visit: in 2026, from 20 November to 6 December, 18:00–20:50 (last entry 20:10). One subway ride from Sanjo to Daigo, and dinner back in Sanjo afterwards.",
       "favLabel": "Highlight",
       "favName": "Bentendo and its pond",
       "favText": "The red bridge, hall and maples mirrored in the water.",

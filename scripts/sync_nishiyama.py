@@ -22,7 +22,7 @@ import os, runpy
 OFF_FROM = '2026-12-14'
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='nishiyama', i18n='NISHIYAMA_I18N', count=5, data_v=4, bump=102,
+    id='nishiyama', i18n='NISHIYAMA_I18N', count=5, data_v=4, bump=103,
     head='京都 西山（松尾大社・鈴虫寺・地蔵院・浄住寺）',
     title='京都 西山｜鈴虫寺・地蔵院（竹の寺）・松尾大社 Nishiyama MAP',
     desc='三条から阪急で京都の西山へ。鈴虫寺の説法の回に合わせて、地蔵院（竹の寺）、浄住寺の特別公開、苔寺の門前のお昼、松尾大社を歩く1日ルートマップ。最初の説法に入るコースと9〜10時発のコース。午後の嵐山・桂離宮、夜と帰りの電車も。A one-day route in Nishiyama, west Kyoto, timed around Suzumushi-dera’s talks: Jizoin, Jojuji, lunch by the Moss Temple and Matsunoo Taisha, with a first-talk or 9–10 o’clock start, then Arashiyama and the evening in town.',

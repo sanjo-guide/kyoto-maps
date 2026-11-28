@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "Happo Pond, the Iwatake summit terrace and Tsugaike Nature Park, and walks around Hakuba Station. Stay a night or two.", ja: "八方池と岩岳の山頂テラス、栂池自然園、白馬駅のまわりの散歩。1泊か2泊で。" },
+    subtitle: { en: "Happo Pond with snowy peaks in the water, the Iwatake terrace facing the Hakuba Sanzan, and paddy-field walks below the Alps. Stay a night or two.", ja: "雪山が映る八方池、白馬三山を正面に見る岩岳のテラス、北アルプスを望む田んぼの道。1泊か2泊で。" },
     nav_city: { en: "Town", ja: "白馬の町" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Mountains", ja: "山の上" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "around Hakuba Station", ja: "白馬駅のまわり" }, jump_food: { en: "place to stay", ja: "拠点の宿" }, jump_trips: { en: "mountain areas", ja: "八方・岩岳・栂池" },
     group: { en: "AREA", ja: "エリア" },

@@ -97,7 +97,7 @@ window.HIGASHIOMI_I18N = {
     introFor: {
       eigenji: {
         h1: '742段の石段の先の紅葉から、竹林のライトアップまで。',
-        lead: '京都駅を10:00の新快速で出て、近江鉄道で太郎坊宮へ。とがった山の中腹の神社から近江の平野を見下ろしたら、バスで愛知川の渓谷の永源寺へ。遅めのお昼のあと夕方までもみじの中で過ごし、最後は春と秋だけ公開される教林坊の夜の庭へ。京都駅に戻るのは20:12です。',
+        lead: 'とがった山の中腹、742段の石段の先にある太郎坊宮から、近江の平野を見下ろします。バスで愛知川の渓谷へ入り、遅めのお昼のあとは、山門と法堂を包むもみじの永源寺で夕方まで。最後は、春と秋だけ公開される教林坊の竹林と夜の庭へ。京都駅を10:00の新快速で出て、20:12に戻ります。',
         favName: '永源寺',
         favText: '山門と法堂を包む一面のもみじ。',
         favPhoto: ['eigenji', 2],
@@ -134,7 +134,7 @@ window.HIGASHIOMI_I18N = {
       },
       sanzan: {
         h1: '国宝の本堂を2つと、苔むした参道を、シャトルバスで。',
-        lead: '湖東三山の西明寺・百済寺・金剛輪寺は、鈴鹿の山すそに離れて建っています。紅葉の時期（2026年は11月19日〜29日）だけ、彦根駅から3つのお寺を結ぶシャトルバスが出ます。京都駅を平日8:37・土日祝8:30の新快速で出て10:00のバスに乗り、西明寺の門前で近江牛のお昼、午後は百済寺、夕方は金剛輪寺。京都駅には18:42に戻ります。',
+        lead: '杉木立に国宝の本堂と三重塔が並ぶ西明寺、苔むした参道の百済寺、千体地蔵の参道の先の金剛輪寺。鈴鹿の山すそに離れて建つ湖東三山を、紅葉の時期（2026年は11月19日〜29日）だけ彦根駅から出るシャトルバスで、1日に3つとも回ります。お昼は西明寺の門前で近江牛。京都駅を平日8:37・土日祝8:30の新快速で出て10:00のバスに乗り、18:42に京都駅へ戻ります。',
         favName: '西明寺',
         favText: '杉木立に並ぶ、国宝の本堂と三重塔。',
         favPhoto: ['saimyoji', 0],
@@ -171,7 +171,7 @@ window.HIGASHIOMI_I18N = {
       },
       eigenjiWinter: {
         h1: '742段の石段の上の神社から、渓谷の禅寺へ。',
-        lead: '京都駅を10:00の新快速で出て、近江鉄道で太郎坊宮へ。とがった山の中腹の神社から近江の平野を見下ろしたら、バスで愛知川の渓谷の永源寺へ。持ってきたお昼を食べて、拝観は閉まる16:00まで。京都駅に18:12に戻って、夜は街なかで。',
+        lead: 'とがった山の中腹、742段の石段の先にある太郎坊宮から、近江の平野を見下ろします。バスで愛知川の渓谷へ入り、大きな山門と法堂の禅寺・永源寺へ。持ってきたお昼を食べて、拝観は閉まる16:00まで。京都駅10:00の新快速で出て、18:12に戻ったら夜は街なかで。',
         favText: '渓谷に建つ禅寺の、大きな山門と法堂。',
         favPhoto: ['eigenji', 3],
         who: [
@@ -206,7 +206,7 @@ window.HIGASHIOMI_I18N = {
       },
       sanzanTaxi: {
         h1: '国宝の本堂を2つ、乗合タクシーで。',
-        lead: '2026年の紅葉シャトルバスは11月29日で終わりました。11月30日からは、予約制の乗合タクシーで湖東三山のうち西明寺と金剛輪寺を回ります。京都駅を平日9:34・土日祝9:37に出て、西明寺の門前でお昼、午後は金剛輪寺。京都駅には17:06に戻ります。',
+        lead: '杉木立に国宝の本堂と三重塔が並ぶ西明寺と、千体地蔵の参道の先に国宝の本堂が建つ金剛輪寺。湖東三山のうちこの2つを、予約制の乗合タクシーで回ります。お昼は西明寺の門前で。京都駅を平日9:34・土日祝9:37に出て、17:06に戻ります。2026年の紅葉シャトルバスは11月29日で終わりました。',
         dayHead: '1日の流れ（京都駅 9:34発、土日祝9:37発）',
         who: [
           '京都駅を平日9:34・土日祝9:37の普通電車で出て、河瀬へ（乗り換えなし・990円）。三条のあたりからは、地下鉄で京都駅まで約15分',
@@ -338,7 +338,7 @@ window.HIGASHIOMI_I18N = {
     introFor: {
       eigenji: {
         h1: 'From maples above 742 stone steps to a lantern-lit bamboo grove.',
-        lead: 'Leave Kyoto Station on the 10:00 Special Rapid and change to the Ohmi Railway for Taroubou-gu, a shrine halfway up a pointed peak with the Omi plain below. Then a bus into the Echigawa valley to Eigenji for a late lunch and the maples until late afternoon, and finally the night garden of Kyorinbo, open only in spring and autumn. Back at Kyoto Station at 20:12.',
+        lead: 'Climb 742 stone steps to Taroubou-gu, a shrine halfway up a pointed peak, and look out over the Omi plain. A bus takes you into the Echigawa valley to Eigenji: a late lunch, then maples around the great gate and lecture hall until late afternoon. Last, the lit bamboo and night garden of Kyorinbo, open only in spring and autumn. Leave Kyoto Station on the 10:00 Special Rapid; back at 20:12.',
         favName: 'Eigenji',
         favText: 'The great gate and lecture hall wrapped in maples.',
         favPhoto: ['eigenji', 2],
@@ -375,7 +375,7 @@ window.HIGASHIOMI_I18N = {
       },
       sanzan: {
         h1: 'Two National Treasure halls and a mossy approach, by shuttle bus.',
-        lead: 'The three Koto Sanzan temples, Saimyoji, Hyakusaiji and Kongorinji, stand far apart at the foot of the Suzuka hills. Only in the leaf season (19–29 Nov in 2026) does a shuttle bus link them from Hikone Station. Take the Special Rapid from Kyoto Station at 8:37 (8:30 at weekends and holidays) for the 10:00 bus, have Omi beef for lunch by Saimyoji’s gate, spend the afternoon at Hyakusaiji and late afternoon at Kongorinji. Back at Kyoto Station at 18:42.',
+        lead: 'Saimyoji, with its National Treasure hall and pagoda among tall cedars; Hyakusaiji, up a mossy approach; Kongorinji, past a thousand Jizo. The three Koto Sanzan temples stand far apart at the foot of the Suzuka hills, and only in the leaf season (19–29 Nov in 2026) does a shuttle bus from Hikone Station link all three. Omi beef for lunch by Saimyoji’s gate. Take the Special Rapid from Kyoto Station at 8:37 (8:30 at weekends and holidays) for the 10:00 bus; back at Kyoto Station at 18:42.',
         favName: 'Saimyoji',
         favText: 'A National Treasure hall and pagoda among tall cedars.',
         favPhoto: ['saimyoji', 0],
@@ -412,7 +412,7 @@ window.HIGASHIOMI_I18N = {
       },
       eigenjiWinter: {
         h1: 'From a shrine above 742 stone steps to a Zen temple in the valley.',
-        lead: 'Leave Kyoto Station on the 10:00 Special Rapid and change to the Ohmi Railway for Taroubou-gu, a shrine halfway up a pointed peak with the Omi plain below. Then a bus into the Echigawa valley to Eigenji: eat the lunch you brought and visit until it closes at 16:00. Back at Kyoto Station at 18:12 for an evening in town.',
+        lead: 'Climb 742 stone steps to Taroubou-gu, a shrine halfway up a pointed peak, and look out over the Omi plain. A bus takes you into the Echigawa valley to Eigenji, a Zen temple with a great gate and lecture hall: eat the lunch you brought and stay until it closes at 16:00. Leave Kyoto Station on the 10:00 Special Rapid; back at 18:12 for an evening in town.',
         favText: 'A great gate and lecture hall in a river valley.',
         favPhoto: ['eigenji', 3],
         who: [
@@ -447,7 +447,7 @@ window.HIGASHIOMI_I18N = {
       },
       sanzanTaxi: {
         h1: 'Two National Treasure halls, by shared taxi.',
-        lead: 'The 2026 autumn shuttle ended on 29 November. From 30 November, a bookable shared taxi takes you to two of the Koto Sanzan temples, Saimyoji and Kongorinji. Leave Kyoto Station at 9:34 (9:37 at weekends and holidays), have lunch by Saimyoji’s gate and spend the afternoon at Kongorinji. Back at Kyoto Station at 17:06.',
+        lead: 'Saimyoji, with its National Treasure hall and pagoda among tall cedars, and Kongorinji, where a path lined with a thousand Jizo leads up to another National Treasure hall. A bookable shared taxi takes you to these two of the Koto Sanzan temples, with lunch by Saimyoji’s gate. Leave Kyoto Station at 9:34 (9:37 at weekends and holidays); back at 17:06. The 2026 autumn shuttle ended on 29 November.',
         dayHead: 'The day, leaving Kyoto Station at 9:34 (weekends 9:37)',
         who: [
           'Take the direct local from Kyoto Station to Kawase at 9:34 (9:37 at weekends and holidays; ¥990). From around Sanjo, the subway to Kyoto Station takes about 15 minutes',

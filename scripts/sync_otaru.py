@@ -19,7 +19,7 @@ import os, re, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='otaru', i18n='OTARU_I18N', count=13, data_v=1, bump=100,
+    id='otaru', i18n='OTARU_I18N', count=13, data_v=1, bump=101,
     head='小樽（札幌から日帰り）',
     title='小樽｜札幌から日帰り 運河・堺町・天狗山の夜景・余市 Otaru MAP',
     desc='札幌から日帰りの小樽。三角市場、旧手宮線の跡と北運河、運河と銀行街、堺町通り、夕暮れの浅草橋、天狗山ロープウエイの夜景と晩ごはん。朝7時台に出て祝津へ行くコースと、余市のニッカの蒸溜所に寄るコースも。冬の歩き方、バスの時刻、新千歳空港への電車つき。A day trip from Sapporo to Otaru: the market, the old Temiya railway and the North Canal, the canal and old bank street, Sakaimachi, dusk at Asakusa Bridge and the Mt. Tengu night view, with an early course to Shukutsu and one via the Nikka Yoichi distillery, winter tips, bus times and trains to New Chitose Airport.',

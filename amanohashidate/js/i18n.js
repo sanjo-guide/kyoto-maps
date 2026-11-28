@@ -73,7 +73,7 @@ window.AMANOHASHIDATE_I18N = {
     intro: {
       kicker: 'Toshiが歩いて作った1日ルート',
       h1: '天に架かる橋を船で渡って、海に浮かぶ舟屋の町へ。',
-      lead: '三条のあたりを8時ごろに出て、京都駅8:38の特急で乗り換えなしの約2時間。フリーパスを買って観光船で天橋立を渡り、山の上から「昇龍観」を眺め、バスで伊根へ。舟屋の並ぶ湾を遊覧船でめぐり、18:09の特急で帰ります。バスと船は本数が少ないので、乗る便と、乗り遅れたときの次の便を各スポットに書いています。',
+      lead: '松並木の天橋立を観光船で渡り、ケーブルカーで傘松公園へ。山の上から見る天橋立は、天に昇る龍のような「昇龍観」。股のぞきで逆さまにも見られます。午後はバスで伊根へ行き、1階が船のガレージになった舟屋の並ぶ湾を、遊覧船で一周。京都駅8:38の特急で乗り換えなしの約2時間、帰りは18:09の特急です。現地の船・ケーブルカー・バス・遊覧船は、フリーパス1枚で乗れます。バスと船は本数が少ないので、乗る便と、乗り遅れたときの次の便を各スポットに書いています。',
       favLabel: 'いちばんの見どころ',
       favName: '伊根の舟屋',
       favText: '1階が船のガレージ。海の上に約230軒が並ぶ漁師町。',
@@ -189,7 +189,7 @@ window.AMANOHASHIDATE_I18N = {
     intro: {
       kicker: 'A day trip, hand-walked by Toshi',
       h1: 'Cross the “bridge to heaven” by boat, then visit a village of boathouses on the sea.',
-      lead: 'Leave the Sanjo area around 8:00 for the 8:38 limited express from Kyoto Station: about two hours, no change. Buy a day pass, cross Amanohashidate by boat, take in the “rising dragon” view from the hill, then ride the bus to Ine for a cruise past its boathouses, and come back on the 18:09 express. Buses and boats are few, so each stop tells you which one to take and what comes next if you miss it.',
+      lead: 'Cross the pine-lined Amanohashidate by boat and ride the cable car up to Kasamatsu Park. From the top it looks like a dragon rising to the sky, the “rising dragon” view; bend over and look through your legs to see it upside down. In the afternoon, a bus to Ine and a cruise around a bay lined with boathouses, each with a boat garage downstairs. The 8:38 limited express from Kyoto Station takes about two hours with no change, and the 18:09 brings you back. One day pass covers the boats, cable car, buses and the Ine cruise. Buses and boats are few, so each stop tells you which one to take and what comes next if you miss it.',
       favLabel: 'Don’t miss',
       favName: 'Ine’s funaya',
       favText: 'About 230 boathouses on the water, each with a boat garage downstairs.',

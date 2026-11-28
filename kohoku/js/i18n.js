@@ -128,7 +128,7 @@ window.KOHOKU_I18N = {
     introFor: {
       late: {
         h1: '昼は湖の桜、夕方は長浜。',
-        lead: '京都駅9:45発でマキノへ。持ってきたお昼を浜で食べ、海津大崎の桜並木を大崎寺まで往復します。夕方は長浜へ渡って、豊公園の桜と晩ごはんまで。',
+        lead: '湖岸に約4km、約800本の桜が湖へ枝をのばす海津大崎。浜で持ってきたお昼を食べてから、桜並木を大崎寺まで歩いて往復します。夕方は電車で長浜へ渡り、黒壁の町と豊公園の桜、晩ごはんまで。京都駅9:45発でマキノへ。',
         who: [
           'はじめての海津大崎に。歩くのは桜の区間で約9km',
           '店が少ないので、お昼は京都駅で買って行く',
@@ -147,7 +147,7 @@ window.KOHOKU_I18N = {
       },
       through: {
         h1: '岬を回って、永原まで歩き通す。',
-        lead: '京都駅9:45発でマキノへ。桜並木を抜け、4つのトンネルをくぐって大浦、永原駅まで約11.5km。夕方は電車で長浜へ回ります。',
+        lead: '桜並木を抜けたら、岬を回る湖岸の道へ。4つのトンネルをくぐって入り江の集落・大浦、永原駅まで約11.5kmを歩き通します。夕方は電車で長浜へ。京都駅9:45発でマキノへ。',
         who: [
           '長く歩ける人に。約11.5km、途中にバスはありません',
           '大崎寺を13:45までに出られなければ引き返す',
@@ -166,7 +166,7 @@ window.KOHOKU_I18N = {
       },
       early: {
         h1: '朝の桜と、午後の城下町。',
-        lead: '京都駅7:00発で、人と車が増える前の海津大崎へ。お昼に長浜へ渡り、黒壁、鉄道スクエア、慶雲館、長浜城と豊公園。晩ごはんは京都に戻ってから。',
+        lead: '人と車が増える前の、朝の桜並木を歩きます。お昼には長浜へ渡り、黒壁の町、鉄道スクエアの駅舎、慶雲館の庭、長浜城と豊公園の桜を夕方まで。晩ごはんは京都に戻ってから。京都駅7:00発。',
         who: [
           '混む前に桜を見て、長浜の施設にも入りたい人に',
           '朝ごはんは買って行き、海津の浜で食べる',
@@ -185,7 +185,7 @@ window.KOHOKU_I18N = {
       },
       island: {
         h1: '朝の桜から、船で竹生島へ。',
-        lead: '京都駅7:00発で海津大崎の桜を歩き、今津港13:10の船で竹生島へ。長浜港に着いたら、お城と豊公園、晩ごはんまで。長浜の町歩きは短めです。',
+        lead: '朝の桜並木を歩いてから、今津港13:10の船で琵琶湖の竹生島へ。島で95分過ごし、船で長浜港へ渡って、お城と豊公園、晩ごはんまで。長浜の町歩きは短めです。京都駅7:00発。',
         who: [
           '桜と竹生島を1日で見たい人に。船は前日までに予約を',
           'マキノ11:47発を逃すと船に間に合わない',
@@ -325,7 +325,7 @@ window.KOHOKU_I18N = {
     introFor: {
       late: {
         h1: 'Lakeside blossom by day, Nagahama at dusk.',
-        lead: 'Take the 9:45 from Kyoto Station to Makino, eat your packed lunch on the beach and walk the Kaizu-Osaki avenue to Osakiji and back. Cross to Nagahama for the park’s blossom and dinner.',
+        lead: 'At Kaizu-Osaki, about 800 cherry trees reach out over the lake along some 4 km of shore. Eat your packed lunch on the beach, then walk the avenue to Osakiji and back. Cross to Nagahama for Kurokabe, the blossom in Hoko Park and dinner. Take the 9:45 from Kyoto Station to Makino.',
         who: [
           'For a first visit: about 9 km on foot around the blossom',
           'Few shops, so buy lunch at Kyoto Station',
@@ -344,7 +344,7 @@ window.KOHOKU_I18N = {
       },
       through: {
         h1: 'Around the headland to Nagahara on foot.',
-        lead: 'Take the 9:45 from Kyoto Station to Makino and walk about 11.5 km through the avenue and four tunnels to Oura and Nagahara Station. Finish in Nagahama by train.',
+        lead: 'Past the cherry avenue, follow the lakeshore road around the headland and through four tunnels to the cove village of Oura and on to Nagahara Station: about 11.5 km on foot. Finish in Nagahama by train. Take the 9:45 from Kyoto Station to Makino.',
         who: [
           'For strong walkers: about 11.5 km, with no bus on the way',
           'Turn back if you can’t leave Osakiji by 13:45',
@@ -363,7 +363,7 @@ window.KOHOKU_I18N = {
       },
       early: {
         h1: 'Morning blossom, afternoon castle town.',
-        lead: 'Take the 7:00 from Kyoto Station to see the avenue before it fills up. Cross to Nagahama for lunch, Kurokabe, the Railway Square, Keiunkan, the castle and Hoko Park, and have dinner back in Kyoto.',
+        lead: 'Walk the cherry avenue in the morning, before the people and cars arrive. Cross to Nagahama for lunch, then Kurokabe, the station building at the Railway Square, the garden at Keiunkan, the castle and the blossom in Hoko Park until evening. Dinner back in Kyoto. Take the 7:00 from Kyoto Station.',
         who: [
           'For blossom before the crowds and time inside Nagahama’s sights',
           'Bring breakfast to eat by the lake in Kaizu',
@@ -382,7 +382,7 @@ window.KOHOKU_I18N = {
       },
       island: {
         h1: 'Morning blossom, then a boat to the island.',
-        lead: 'Take the 7:00 from Kyoto Station, walk the avenue and catch the 13:10 boat from Imazu to Chikubushima. Land in Nagahama for the castle, park and dinner, with a shorter look at the town.',
+        lead: 'Walk the cherry avenue in the morning, then take the 13:10 boat from Imazu across Lake Biwa to Chikubushima for 95 minutes on the island. The boat lands you in Nagahama for the castle, Hoko Park and dinner, with a shorter look at the town. Take the 7:00 from Kyoto Station.',
         who: [
           'For blossom and Chikubushima in one day; book the boat a day ahead',
           'Miss the 11:47 from Makino and you miss the boat',

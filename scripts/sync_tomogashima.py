@@ -14,7 +14,7 @@
 import os, runpy
 
 CFG = (dict(
-    id='tomogashima', i18n='TOMOGASHIMA_I18N', count=10, data_v=6, bump=103, keyv='-b',
+    id='tomogashima', i18n='TOMOGASHIMA_I18N', count=10, data_v=6, bump=104, keyv='-b',
     head='友ヶ島・加太（大阪から日帰り）',
     title='友ヶ島・加太｜大阪から日帰り Tomogashima MAP',
     desc='大阪・なんばから南海電車で加太へ、船で無人島の友ヶ島へ。レンガの砲台跡と灯台を歩き、淡嶋神社と加太の温泉まで。9:00の船と11:00の船、行きの船ごとの時間割を選べる日帰りルートマップ。A day trip from Osaka (Namba) to Kada and the uninhabited island of Tomogashima: brick gun batteries, a lighthouse, Awashima Shrine, with a timetable for the 9:00 boat and one for the 11:00.',

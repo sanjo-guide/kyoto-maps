@@ -25,7 +25,7 @@ SEASON_FROM, SEASON_TO = '03-01', '04-15'
 SAKURA_FROM, SAKURA_TO = '03-25', '04-30'
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='yawata', i18n='YAWATA_I18N', count=3, data_v=3, bump=102,
+    id='yawata', i18n='YAWATA_I18N', count=3, data_v=3, bump=103,
     head='京都 淀・八幡の桜（淀水路の河津桜・石清水八幡宮・背割堤）',
     title='京都 淀・八幡の桜｜3月の河津桜・4月の背割堤 Yawata MAP',
     desc='春のマップ。3月は淀水路の河津桜、3月末〜4月上旬は背割堤の桜のトンネル。三条から京阪で、石清水八幡宮とケーブル、門前のお昼、伏見の酒蔵、夜桜まで。時期と出発時間で選べる3コース。A spring map south of Kyoto by Keihan: Kawazu cherries at Yodo in March or the Sewaritei cherry avenue in late March and early April, with Iwashimizu Hachimangu, lunch, Fushimi and an evening in town.',

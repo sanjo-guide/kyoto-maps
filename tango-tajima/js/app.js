@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "A day trip to Amanohashidate and Ine, or a few nights based in Toyooka.", ja: "京都から日帰りで天橋立・伊根へ。泊まるなら、豊岡を拠点に城崎温泉・竹野・舞鶴・竹田城跡へ。" },
+    subtitle: { en: "Ine’s boathouses that seem to float, the pine sandbar of Amanohashidate across the sea, Kinosaki’s bathhouses in a yukata. A day trip to Amanohashidate and Ine, or a few nights based in Toyooka.", ja: "海に浮かぶような伊根の舟屋、海をわたる天橋立の松並木、浴衣でめぐる城崎の外湯。日帰りなら天橋立・伊根へ、泊まるなら豊岡を拠点に。" },
     nav_city: { en: "Toyooka", ja: "豊岡" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "丹後・竹田" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "Toyooka, Kinosaki, Izushi & Takeno", ja: "豊岡・城崎・出石・竹野" }, jump_food: { en: "place to stay", ja: "拠点の宿" }, jump_trips: { en: "areas further afield", ja: "天橋立・伊根・舞鶴・竹田のエリア" },
     group: { en: "AREA", ja: "エリア" },

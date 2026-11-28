@@ -30,7 +30,7 @@ TAXI_FROM = '2026-11-30'     # シャトルバスが終わった次の日
 WINTER_FROM = '2026-12-07'   # 教林坊のライトアップが終わった次の日（両方のコース）
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = (dict(
-    id='higashiomi', i18n='HIGASHIOMI_I18N', count=5, data_v=8, bump=107,
+    id='higashiomi', i18n='HIGASHIOMI_I18N', count=5, data_v=8, bump=108,
     head='湖東の紅葉（太郎坊宮・永源寺・湖東三山・教林坊）',
     title='京都から日帰り 湖東の紅葉｜太郎坊宮・永源寺・湖東三山・教林坊 Higashiomi MAP',
     desc='京都駅から日帰りで湖東の紅葉へ。太郎坊宮と永源寺を回って教林坊の夜のライトアップ（2026年12月6日まで）で締めるコースと、彦根からの紅葉シャトルバス（2026年11月29日まで。その後は乗合タクシーで西明寺と金剛輪寺）で湖東三山を回るコースを選べる、時刻つきの1日マップ。A timed day trip from Kyoto Station to the autumn leaves east of Lake Biwa: Taroubou-gu, Eigenji and the Kyorinbo illumination (until 6 Dec 2026), or the Koto Sanzan temples by shuttle bus from Hikone (until 29 Nov 2026; shared taxi to two of them afterwards).',

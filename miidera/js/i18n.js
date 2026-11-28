@@ -78,7 +78,7 @@ window.MIIDERA_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った春の夜のルート",
       "h1": "照らされた国宝の金堂と、帰り道の疏水の桜。",
-      "lead": "三条から電車で30分の大津。三井寺（園城寺）と琵琶湖疏水の桜は、春の約3週間だけ夜に照らされます（2026年は3月25日〜4月12日。来春は要確認）。18:00に大門をくぐり、金堂、三重塔、高台の観音堂へ。疏水は暗くなってから帰りに見て、21時すぎに三条へ戻ります。",
+      "lead": "春の約3週間だけ、三井寺（園城寺）の境内と琵琶湖疏水の桜が夜に照らされます。18:00に大門をくぐって、国宝の金堂で暗くなるのを待ち、桜がピンクや紫に変わったら三重塔、高台の観音堂の夜景へ。帰りは、両岸の桜が照らされた疏水に沿って駅へ。三条から電車で30分、21時すぎには三条に戻れます（2026年は3月25日〜4月12日。来春は要確認）。",
       "favLabel": "いちばんの見どころ",
       "favName": "琵琶湖疏水の夜桜",
       "favText": "暗くなった水路の両岸に、照らされた桜が続きます。",
@@ -285,7 +285,7 @@ window.MIIDERA_I18N = {
     intro: {
       "kicker": "A spring evening route, hand-walked by Toshi",
       "h1": "A lit National Treasure hall, and canal cherries on the way back.",
-      "lead": "Otsu is 30 minutes by train from Sanjo. The cherries at Miidera (Onjoji) and along the Lake Biwa Canal are lit for only about three weeks each spring (25 March – 12 April in 2026; please check for next spring). Enter at 18:00 for the main hall, the pagoda and the Kannon hall on the hill, see the canal after dark on the way back, and be in Sanjo just after 21:00.",
+      "lead": "For only about three weeks each spring, the cherries at Miidera (Onjoji) and along the Lake Biwa Canal are lit at night. Enter by the great gate at 18:00 and wait at the National Treasure main hall for dark, when the blossom turns pink and violet under the lights, then go on to the pagoda and the night view from the Kannon hall on the hill. On the way back, walk the canal with lit cherries on both banks. Otsu is 30 minutes by train from Sanjo, and you are back just after 21:00 (25 March – 12 April in 2026; please check for next spring).",
       "favLabel": "Highlight",
       "favName": "The canal cherries at night",
       "favText": "Lit cherries along both banks of the dark waterway.",

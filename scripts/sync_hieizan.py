@@ -21,7 +21,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINTER_FROM, WINTER_TO = 1207, 319   # 月×100＋日
 
 CFG = dict(
-    id='hieizan', i18n='HIEIZAN_I18N', count=11, data_v=3, bump=102,
+    id='hieizan', i18n='HIEIZAN_I18N', count=11, data_v=3, bump=103,
     head='京都から日帰り 比叡山延暦寺と坂本',
     title='京都から日帰り 比叡山延暦寺と坂本 Mt. Hiei MAP',
     desc='三条京阪9:01の電車で坂本へ。日吉大社から日本一長いケーブルカーで延暦寺の東塔へ上がり、峰道でお昼、横川・西塔を山の上のバスで回って、ロープウェイで京都側の八瀬へ下りる1日ルートマップ。冬は坂本から往復するコースも。乗り遅れたときの次の便、最後のバス、夜の過ごし方まで。A day trip from Kyoto over Mt. Hiei: Sakamoto and Hiyoshi Taisha, the Sakamoto Cable up to Enryaku-ji, lunch at Minemichi, Yokawa and Saito by the mountain bus, and down to Yase by ropeway, with a winter course up and back from Sakamoto, fallback times and the last buses.',

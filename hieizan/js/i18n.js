@@ -81,7 +81,7 @@ window.HIEIZAN_I18N = {
       favName: '延暦寺 東塔',
       favText: '最澄が寺を開いた場所。大講堂の鐘楼ともみじ（2016年11月13日）。',
       favPhoto: ['toto', 0],
-      whoHead: 'こんな人におすすめ',
+      whoHead: '出かける前に',
       dayHead: '1日の流れ（目安）',
       from: '',
       timeSuffix: '〜',
@@ -107,8 +107,8 @@ window.HIEIZAN_I18N = {
     },
     introFor: {
       late: {
-        h1: '滋賀側からケーブルカーで上がり、延暦寺を回って、京都側へ下りる。',
-        lead: '比叡山延暦寺は、山の上に3つのエリアが離れてある大きなお寺です。三条京阪を9:01に出て坂本へ。石垣の町と日吉大社を歩き、日本一長いケーブルカーで東塔へ。山の上のバスで峰道へ行ってお昼、いちばん奥の横川、杉木立の西塔を回り、ロープウェイとケーブルカーで京都側の八瀬へ下ります。17時半ごろ三条に戻って、夜は先斗町で。山の上のバスが走る3月20日〜12月6日（2026年）だけのコースです。根本中堂は大改修中で、今は中に入れません。',
+        h1: '琵琶湖側から上って、京都側へ下りる。比叡山を越える1日。',
+        lead: '坂本の石垣の町と日吉大社を歩いてから、日本一長いケーブルカーで延暦寺の東塔へ。山の上のバスで峰道へ行き、琵琶湖を見下ろす大きな窓の前でお昼。いちばん奥の横川、杉木立の西塔と、山の上に離れてある3つのエリアを回ります。帰りはロープウェイと、高低差日本一の叡山ケーブルで京都側の八瀬へ。下りは先頭に立つと、線路が落ちていくように見えます。17時半ごろ三条に戻って、夜は先斗町で。山の上のバスが走る3月20日〜12月6日（2026年）だけのコースです。根本中堂は大改修中で、今は中に入れません。',
         who: [
           '三条京阪 9:01発 → 坂本比叡山口 9:42着。帰りは三条に17:26ごろ',
           '日吉大社も延暦寺も16:00まで（延暦寺の巡拝受付は15:45まで）',
@@ -131,8 +131,8 @@ window.HIEIZAN_I18N = {
         dealsLead: 'このコースの乗りものは、京阪620円＋坂本ケーブル960円＋山の上のバス1日券1,200円＋ロープウェイとケーブル1,000円＋叡山電車280円＋京阪240円＝4,300円。坂本でフリーパス（3,500円）を買うと4,360円で、60円高くなりますが切符を買う手間がなくなります。別に延暦寺1,000円、日吉大社500円、お昼代。'
       },
       early: {
-        h1: '冬の比叡山は、坂本から上って坂本へ下りる。',
-        lead: '12月7日から春までは、山の上のシャトルバスが走りません。三条京阪を9:01に出て坂本へ。旧竹林院の庭と日吉大社を見て、延暦寺に代々そばを納めてきた鶴屋喜八でお昼。12:30の坂本ケーブルで東塔へ上がり、杉の中の道を歩いて西塔へ。16:30のケーブルで下りて、夕暮れの石垣の町を駅まで歩き、18時ごろ三条に戻ります。山の上は町よりずっと寒く、雪の日があります。根本中堂は大改修中で、今は中に入れません。',
+        h1: '冬の比叡山へ、石垣の町・坂本から。そばでお昼、杉木立を歩いて西塔へ。',
+        lead: '穴太衆積みの石垣が続く坂本の町から、冬の延暦寺へ。旧竹林院の庭と日吉大社を見て、延暦寺に代々そばを納めてきた鶴屋喜八でお昼。12:30の坂本ケーブルで東塔へ上がり、杉の中の道を歩いて西塔へ。16:30のケーブルで下りて、夕暮れの石垣の町を駅まで歩き、18時ごろ三条に戻ります。12月7日から春までは山の上のシャトルバスが走らないので、坂本から上って坂本へ下ります。山の上は町よりずっと寒く、雪の日があります。根本中堂は大改修中で、今は中に入れません。',
         who: [
           '三条京阪 9:01発 → 坂本比叡山口 9:42着。帰りは三条に17:55ごろ',
           '日吉大社と延暦寺は16:00まで（延暦寺の巡拝受付は15:45まで。西塔は12〜2月 9:30から）',
@@ -228,7 +228,7 @@ window.HIEIZAN_I18N = {
       favName: 'Enryaku-ji: Todo',
       favText: 'Where Saicho founded the temple. The bell tower by the Great Lecture Hall, with maples (13 November 2016).',
       favPhoto: ['toto', 0],
-      whoHead: 'Who it’s for',
+      whoHead: 'Before you go',
       dayHead: 'One day, roughly like this',
       from: 'From',
       timeSuffix: '',
@@ -254,8 +254,8 @@ window.HIEIZAN_I18N = {
     },
     introFor: {
       late: {
-        h1: 'Up by cable car from the Shiga side, round Enryaku-ji, and down to Kyoto.',
-        lead: 'Enryaku-ji on Mt. Hiei is a big temple in three areas spread over the mountain. Leave Sanjo-Keihan at 9:01 for Sakamoto, walk the stone-wall town and Hiyoshi Taisha, and ride Japan’s longest cable car up to Todo. The mountain bus takes you to Minemichi for lunch, to Yokawa at the far end and to Saito among the cedars, and a ropeway and cable car bring you down to Yase on the Kyoto side. Back in Sanjo around 17:30, with the evening in Pontocho. This course only works while the mountain bus runs: 20 March to 6 December in 2026. The Konpon Chudo is under major repair and closed inside for now.',
+        h1: 'Up from Lake Biwa, down to Kyoto: a day across Mt. Hiei.',
+        lead: 'Walk the stone-walled town of Sakamoto and Hiyoshi Taisha, then ride Japan’s longest cable car up to Todo, the heart of Enryaku-ji. The mountain bus takes you to Minemichi for lunch at a big window over Lake Biwa, then to Yokawa at the far end and Saito among the cedars: three areas spread over the mountain. Come down to Yase on the Kyoto side by ropeway and the Eizan Cable, which has the biggest drop of any cable car in Japan (561 m); stand at the front on the way down and the track seems to fall away. Back in Sanjo around 17:30, with the evening in Pontocho. This course only works while the mountain bus runs: 20 March to 6 December in 2026. The Konpon Chudo is under major repair and closed inside for now.',
         who: [
           'Sanjo-Keihan 9:01 → Sakamoto-hieizanguchi 9:42; back in Sanjo around 17:26',
           'Hiyoshi Taisha and Enryaku-ji close at 16:00 (Enryaku-ji’s last entry 15:45)',
@@ -278,8 +278,8 @@ window.HIEIZAN_I18N = {
         dealsLead: 'Rides on this course: Keihan ¥620 + Sakamoto Cable ¥960 + mountain bus day ticket ¥1,200 + ropeway and cable car ¥1,000 + Eizan railway ¥280 + Keihan ¥240 = ¥4,300. With the Free Pass (¥3,500) from Sakamoto it is ¥4,360: ¥60 more, but no tickets to buy. Enryaku-ji (¥1,000), Hiyoshi Taisha (¥500) and lunch are extra.'
       },
       early: {
-        h1: 'In winter, go up Mt. Hiei from Sakamoto and come back the same way.',
-        lead: 'From 7 December until spring the shuttle bus on the mountain does not run. Leave Sanjo-Keihan at 9:01 for Sakamoto, see the garden of Kyu Chikurin-in and Hiyoshi Taisha, and have soba for lunch at Tsuruya Kihachi, which has supplied Enryaku-ji for generations. The 12:30 Sakamoto Cable takes you up to Todo; walk on through the cedars to Saito. Down on the 16:30, walk the stone-walled town to the station at dusk, and be back in Sanjo around 18:00. It is much colder than in town and there is snow on some days. The Konpon Chudo is under major repair and closed inside for now.',
+        h1: 'Mt. Hiei in winter, from the stone-walled town of Sakamoto: soba for lunch, then a walk through the cedars to Saito.',
+        lead: 'Winter Enryaku-ji, from Sakamoto and its old stone walls. See the garden of Kyu Chikurin-in and Hiyoshi Taisha, and have soba for lunch at Tsuruya Kihachi, which has supplied Enryaku-ji for generations. The 12:30 Sakamoto Cable takes you up to Todo; walk on through the cedars to Saito. Down on the 16:30, walk the stone-walled town to the station at dusk, and be back in Sanjo around 18:00. From 7 December until spring the shuttle bus on the mountain does not run, so you go up and come down from Sakamoto. It is much colder than in town and there is snow on some days. The Konpon Chudo is under major repair and closed inside for now.',
         who: [
           'Sanjo-Keihan 9:01 → Sakamoto-hieizanguchi 9:42; back in Sanjo around 17:55',
           'Hiyoshi Taisha and Enryaku-ji close at 16:00 (last entry 15:45; Saito opens 9:30 from Dec to Feb)',

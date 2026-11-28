@@ -2,16 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "北アルプスのふもと、長野県の白馬村（はくばむら）のおすすめをまとめました。",
-   "京都からは電車を乗り継いで約4時間半〜5時間。日帰りは難しいので、1泊か2泊して、山の上の景色と高原の空気をゆっくり楽しむのがおすすめです。",
+   "八方尾根のゴンドラとリフトを乗り継いで、尾根の道を歩くこと1時間〜1時間半。晴れた日は、八方池の水に白馬三山（しろうまさんざん）の雪山が映ります。",
+   "北アルプスのふもと、長野県の白馬村（はくばむら）は、京都から電車を乗り継いで約4時間半〜5時間。日帰りは難しいので、1泊か2泊して、山の上の景色と高原の空気をゆっくり楽しむのがおすすめです。",
+   "山を歩かない日は、岩岳へ。ゴンドラで山頂に上がると、白馬三山を正面に見る大きなテラスがあり、パンとコーヒーを手にのんびりできます。",
    "私の写真は2026年6月、まだ雪が残る初夏の白馬です。夏のゴンドラやリフトは、毎年だいたい5月〜6月から11月の初めまで動きます（年によってちがいます）。",
-   "山の天気は変わりやすいので、晴れた日に山の上へ。いちばん大事なのは、予定を詰め込みすぎないことです。"
+   "山の天気は変わりやすいので、晴れた日に山の上へ。2日あるなら、天気のいいほうの日を八方池に。"
   ],
   "en": [
-   "Here are my picks for Hakuba, a village at the foot of the Northern Alps in Nagano.",
-   "From Kyoto it takes about 4½ to 5 hours by train, so a day trip is hard. Stay one or two nights and take your time with the mountain views and the highland air.",
+   "Take the Happo-one gondola and lifts, then walk the ridge for an hour to an hour and a half. On a clear day, the snowy Hakuba Sanzan peaks are reflected in Happo Pond.",
+   "Hakuba, a village at the foot of the Northern Alps in Nagano, is about 4½ to 5 hours from Kyoto by train, so a day trip is hard. Stay one or two nights and take your time with the mountain views and the highland air.",
+   "On a day without hiking, go to Iwatake. The gondola takes you to the summit, where a big terrace faces the Hakuba Sanzan and you can sit with bread and coffee.",
    "My own photos are from June 2026, early summer with snow still on the peaks. The summer gondolas and lifts usually run from May or June until early November (dates change every year).",
-   "Mountain weather changes fast, so save a clear day for going up high. Above all, don’t overpack your schedule."
+   "Mountain weather changes fast, so save a clear day for going up high. If you have two days, give the better one to Happo Pond."
   ]
  },
  "outro": {

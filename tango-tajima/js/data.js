@@ -2,18 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "京都府の北の丹後（天橋立・伊根・舞鶴）と、兵庫県の北の但馬（豊岡・城崎温泉・竹野・竹田城跡）のおすすめをまとめました。",
-   "京都から日帰りなら、天橋立と伊根がおすすめです。特急で乗り換えなしで行けて、海の上の松並木と、舟屋の町を1日で回れます。",
-   "1泊以上できるなら、豊岡のゲストハウス「Hostel Act」を拠点にするのがおすすめです。豊岡からは城崎温泉まで電車で約12分、天橋立まで京都丹後鉄道で約1時間15〜25分。天橋立・伊根、舞鶴、城崎温泉、竹野の海、竹田城跡まで、毎日ちがう場所へ出かけられます。",
+   "伊根では、1階が船のガレージになった舟屋が、湾をぐるりと囲んでいます。遊覧船から見ると、家々が海に浮かんでいるようです。",
+   "京都府の北の丹後（天橋立・伊根・舞鶴）と、兵庫県の北の但馬（豊岡・城崎温泉・竹野・竹田城跡）のおすすめをまとめました。京都から日帰りなら、天橋立と伊根へ。特急で乗り換えなしで行けて、観光船でカモメと一緒に天橋立をわたり、舟屋の町まで1日で回れます。",
+   "1泊以上できるなら、豊岡のゲストハウス「Hostel Act」を拠点にするのがおすすめです。のれんと提灯が並ぶ、昭和のはじめにできた木造アーケードの市場の中にあります。豊岡からは城崎温泉まで電車で約12分、天橋立まで京都丹後鉄道で約1時間15〜25分。天橋立・伊根、舞鶴、城崎温泉、竹野の海、竹田城跡まで、毎日ちがう場所へ出かけられます。",
    "下の「モデルプラン」に、日帰り・1泊・2泊・3泊の回り方の例を書きました。出石と玄武洞は、私はまだ行っていませんが、豊岡に泊まるなら外せない場所なので、公式の情報をもとに紹介しています（写真はクレジットつき）。",
-   "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
+   "電車やバスは本数が少ないので、時刻を先に確かめてから出かけてください。"
   ],
   "en": [
-   "Here are my recommendations for Tango in northern Kyoto (Amanohashidate, Ine, Maizuru) and Tajima in northern Hyogo (Toyooka, Kinosaki Onsen, Takeno, Takeda Castle).",
-   "For a day trip from Kyoto, go to Amanohashidate and Ine. A direct limited express takes you there, and in one day you can see the pine-covered sandbar across the sea and the town of boathouses.",
-   "If you can stay a night or more, base yourself at Hostel Act, a guesthouse in Toyooka. Kinosaki Onsen is about 12 minutes away by train and Amanohashidate about 1 h 15–25 min on the Kyoto Tango Railway, so each day you can head somewhere different: Amanohashidate and Ine, Maizuru, Kinosaki, the sea at Takeno, or Takeda Castle.",
+   "In Ine, boathouses with a garage for a boat on the ground floor line the whole bay. From the sightseeing boat, the houses seem to float on the water.",
+   "These are my picks for Tango in northern Kyoto (Amanohashidate, Ine, Maizuru) and Tajima in northern Hyogo (Toyooka, Kinosaki Onsen, Takeno, Takeda Castle). For a day trip from Kyoto, go to Amanohashidate and Ine: a direct limited express takes you there, and in one day you can cross Amanohashidate by boat with the gulls and reach the town of boathouses.",
+   "If you can stay a night or more, base yourself at Hostel Act, a guesthouse in Toyooka, inside a wooden market arcade from the early Showa era hung with noren curtains and lanterns. Kinosaki Onsen is about 12 minutes away by train and Amanohashidate about 1 h 15–25 min on the Kyoto Tango Railway, so each day you can head somewhere different: Amanohashidate and Ine, Maizuru, Kinosaki, the sea at Takeno, or Takeda Castle.",
    "The model plans below show ways to do it as a day trip, or with one, two or three nights. I haven’t yet been to Izushi or Genbudo, but if you stay in Toyooka they shouldn’t be missed, so I’ve described them from official information (photos are credited).",
-   "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
+   "Trains and buses are infrequent, so check the times before you set out."
   ]
  },
  "outro": {

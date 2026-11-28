@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "The Peace Park and streetcars in the city, okonomiyaki I’ve eaten, and day trips to Miyajima and Onomichi.", ja: "市内の平和記念公園と路面電車、実際に食べたお好み焼き、そして宮島・尾道への日帰り旅。" },
+    subtitle: { en: "The Atomic Bomb Dome and the Peace Park, okonomiyaki hot off the griddle, Miyajima’s great torii standing in the sea, and dusk over the Onomichi channel.", ja: "原爆ドームと平和記念公園、鉄板で焼きたてのお好み焼き、海に立つ宮島の大鳥居、夕暮れの尾道水道。" },
     nav_city: { en: "City", ja: "広島市内" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "日帰り" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in the city", ja: "市内のおすすめ" }, jump_food: { en: "places I've eaten", ja: "実際に行ったお店" }, jump_trips: { en: "day-trip areas", ja: "日帰りで行けるエリア" },
     group: { en: "AREA", ja: "エリア" },

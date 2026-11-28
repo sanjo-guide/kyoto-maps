@@ -11,7 +11,7 @@
     howto_2: { en: "Swipe or tap the arrows to see more photos. The numbers match the numbers on the map.", ja: "写真は左右に送って見られます。番号は、地図の番号と同じです。" },
     howto_3: { en: "Tap a place’s “Google Maps” button to open it in Google Maps. “← All maps” at the top takes you back to the list.", ja: "各スポットの「Googleマップ」ボタンで、Googleマップに場所を開けます。一覧に戻るときは、いちばん上の「← マップ一覧」を。" },
     home_full: { en: "Back to all maps", ja: "マップ一覧へ戻る" },
-    subtitle: { en: "The castle town of Matsue, the garden of the Adachi Museum of Art, and Izumo Taisha.", ja: "城下町・松江と、足立美術館の庭園、出雲大社。" },
+    subtitle: { en: "Matsue Castle’s black keep, small boats around the moats and sunset over Lake Shinji, plus the Adachi Museum garden and Izumo Taisha.", ja: "黒い天守の松江城、お堀をめぐる小さな船、宍道湖の夕日。足立美術館の庭と、出雲大社へも。" },
     nav_city: { en: "Matsue", ja: "松江" }, nav_food: { en: "Food", ja: "食べる" }, nav_trips: { en: "Day trips", ja: "安来・出雲" }, nav_map: { en: "Map", ja: "地図" },
     jump_city: { en: "places in Matsue", ja: "松江のおすすめ" }, jump_food: { en: "place to stay", ja: "拠点の宿" }, jump_trips: { en: "areas nearby", ja: "安来・出雲" },
     group: { en: "AREA", ja: "エリア" },

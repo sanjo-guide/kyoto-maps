@@ -41,12 +41,18 @@
   <div class="hero-in">
     <p class="kicker"><span>広島</span> HIROSHIMA, MIYAJIMA &amp; ONOMICHI</p>
     <h1 id="h1" data-t="title">My Hiroshima Picks</h1>
-    <p class="hero-sub" data-t="subtitle">The Peace Park and streetcars in the city, okonomiyaki I’ve eaten, and day trips to Miyajima and Onomichi.</p>
+    <p class="hero-sub" data-t="subtitle">The Atomic Bomb Dome and the Peace Park, okonomiyaki hot off the griddle, Miyajima’s great torii standing in the sea, and dusk over the Onomichi channel.</p>
   </div>
 </section>
 
 <main class="wrap" data-view="city">
   <section class="intro" aria-label="Introduction">
+    <div class="intro-text" id="intro"></div>
+    <ul class="jump">
+      <li><a href="#city" data-view-tab="city"><b id="n-city">0</b><span data-t="jump_city">places in the city</span></a></li>
+      <li><a href="#food" data-view-tab="city"><b id="n-food">0</b><span data-t="jump_food">places I've eaten</span></a></li>
+      <li><a href="#trips" data-view-tab="trips"><b id="n-trips">0</b><span data-t="jump_trips">day-trip areas</span></a></li>
+    </ul>
     <div class="howto-box">
       <p class="howto-h" data-t="howto_h">このページの使い方</p>
       <ol>
@@ -55,12 +61,6 @@
         <li data-t="howto_3"></li>
       </ol>
     </div>
-    <div class="intro-text" id="intro"></div>
-    <ul class="jump">
-      <li><a href="#city" data-view-tab="city"><b id="n-city">0</b><span data-t="jump_city">places in the city</span></a></li>
-      <li><a href="#food" data-view-tab="city"><b id="n-food">0</b><span data-t="jump_food">places I've eaten</span></a></li>
-      <li><a href="#trips" data-view-tab="trips"><b id="n-trips">0</b><span data-t="jump_trips">day-trip areas</span></a></li>
-    </ul>
   </section>
 
   <section class="mapbox" id="map" aria-labelledby="map-h">
@@ -129,7 +129,7 @@
 <script src="../vendor/maplibre/maplibre-gl-csp.js"></script>
 <script src="../vendor/maplibre/leaflet-maplibre-gl.js"></script>
 <script src="../assets/basemap.js?v=3"></script>
-<script src="js/data.js?v=7"></script>
-<script src="js/app.js?v=5"></script>
+<script src="js/data.js?v=8"></script>
+<script src="js/app.js?v=6"></script>
 </body>
 </html>

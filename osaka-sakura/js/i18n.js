@@ -84,7 +84,7 @@ window.OSAKA_SAKURA_I18N = {
     intro: {
       "kicker": "Toshiが歩いて作った大阪の春のルート",
       "h1": "年に1週間だけ開く、造幣局の八重桜の道。午前は大阪城、夜は天満で。",
-      "lead": "造幣局の「桜の通り抜け」が開く4月中旬の約1週間のためのマップです（2026年は4月9日〜15日）。入るには事前の申し込みが要り、申し込んだ時間帯にしか入れないので、その時間に合わせてコースを2つ作りました。このコースは午後（15時ごろ）の枠の人用。9:30ごろ梅田・なんばを出て、大阪城の西の丸庭園と玉造口の八重桜、JO-TERRACE でお昼、造幣局、大川沿いの桜並木、夜は天満で晩ごはん。朝の枠の人は一覧の上のボタンで切り替えてください。",
+      "lead": "造幣局の「桜の通り抜け」は、4月中旬の約1週間だけ（2026年は4月9日〜15日）。事前に申し込んだ時間帯にしか入れないので、枠に合わせてコースを2つ作りました。このコースは午後（15時ごろ）の枠の人用です。午前は大阪城の西の丸庭園で桜ごしに天守閣を見上げ、玉造口の遅咲きの八重桜へ。JO-TERRACE でお昼を食べて造幣局へ。通り抜けのあとは大川沿いの桜並木を歩いて、夜は天満で晩ごはん。梅田・なんばを出るのは9:30ごろ。朝の枠の人は一覧の上のボタンで切り替えてください。",
       "favLabel": "いちばんの見どころ",
       "favName": "造幣局 桜の通り抜け",
       "favText": "約560mの道に、140品種331本の八重桜（2026年）。品種ごとの名札を見ながら歩きます。",
@@ -210,7 +210,7 @@ window.OSAKA_SAKURA_I18N = {
     introFor: {
       "early": {
         "h1": "朝いちばんの枠で八重桜の道へ。川沿いを歩いて大阪城、夜は道頓堀。",
-        "lead": "造幣局の「桜の通り抜け」が開く4月中旬の約1週間のためのマップです（2026年は4月9日〜15日）。このコースは、その日の最初の枠（2026年は平日10:00・土日9:00）に申し込めた人用。造幣局のあと大川沿いを歩いて大阪城へ、JO-TERRACE でお昼、玉造口の八重桜と天守閣、西の丸庭園。夕方は中之島を歩いて、夜は道頓堀へ。午後の枠の人は一覧の上のボタンで切り替えてください。",
+        "lead": "その日の最初の枠（2026年は平日10:00・土日9:00）で、八重桜の道へ。造幣局の「桜の通り抜け」は4月中旬の約1週間だけ（2026年は4月9日〜15日）、申し込んだ時間帯にしか入れません。通り抜けのあとは大川沿いの桜並木を歩いて大阪城へ。JO-TERRACE でお昼、玉造口の遅咲きの八重桜と天守閣、西の丸庭園。夕方は中之島を歩いて、夜は道頓堀へ。午後の枠の人は一覧の上のボタンで切り替えてください。",
         "dayHead": "1日の流れ（造幣局は朝いちばんの枠）",
         "day": [
           {
@@ -336,7 +336,7 @@ window.OSAKA_SAKURA_I18N = {
     intro: {
       "kicker": "A spring route in Osaka, hand-walked by Toshi",
       "h1": "The Mint’s avenue of double cherries, open one week a year. The castle first, dinner in Tenma.",
-      "lead": "This map is for the week or so in mid-April when the Japan Mint opens its cherry-blossom walk (9–15 April in 2026). You must book ahead and can enter only in your booked time slot, so there are two courses built around the slot. This one is for an afternoon slot (about 15:00): leave Umeda or Namba about 9:30 for Osaka Castle’s Nishinomaru Garden and the late cherries at Tamatsukuri-guchi, lunch at JO-TERRACE, then the Mint, the Okawa riverside and dinner in Tenma. With a morning slot, switch with the buttons above the list.",
+      "lead": "The Japan Mint opens its cherry walk for only about a week in mid-April (9–15 April in 2026), and you can enter only in the time slot you booked ahead, so there are two courses built around the slot. This one is for an afternoon slot (about 15:00). In the morning, look up at the castle tower through the blossoms in Nishinomaru Garden and see the late cherries at Tamatsukuri-guchi, then lunch at JO-TERRACE and on to the Mint. Afterwards, walk the Okawa riverside under the cherries and have dinner in Tenma. Leave Umeda or Namba about 9:30. With a morning slot, switch with the buttons above the list.",
       "favLabel": "The highlight",
       "favName": "The Japan Mint cherry walk",
       "favText": "331 trees of 140 varieties along 560 m (2026), each with its name board.",
@@ -462,7 +462,7 @@ window.OSAKA_SAKURA_I18N = {
     introFor: {
       "early": {
         "h1": "The first slot of the day at the Mint, the river to the castle, Dotonbori at night.",
-        "lead": "This map is for the week or so in mid-April when the Japan Mint opens its cherry-blossom walk (9–15 April in 2026). This course is for the first slot of the day (10:00 on weekdays and 9:00 at weekends in 2026): after the Mint, walk the Okawa riverside to Osaka Castle, lunch at JO-TERRACE, see the late cherries at Tamatsukuri-guchi, the tower and Nishinomaru Garden, stroll Nakanoshima in the late afternoon and spend the evening in Dotonbori. With an afternoon slot, switch with the buttons above the list.",
+        "lead": "The first slot of the day (10:00 on weekdays and 9:00 at weekends in 2026) on the Mint’s cherry walk. It opens for only about a week in mid-April (9–15 April in 2026), and you can enter only in the slot you booked. After the Mint, walk the Okawa riverside under the cherries to Osaka Castle: lunch at JO-TERRACE, the late cherries at Tamatsukuri-guchi, the tower and Nishinomaru Garden. Stroll Nakanoshima in the late afternoon and spend the evening in Dotonbori. With an afternoon slot, switch with the buttons above the list.",
         "dayHead": "One day, roughly like this (first slot)",
         "day": [
           {

@@ -2,18 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "四国の松山・道後を中心に、高知と高松のおすすめをまとめました。",
-   "松山は京都から新幹線で岡山へ行き、特急しおかぜに乗りかえて約4時間。街の真ん中の山の上に松山城があり、路面電車で20分ほどの道後温泉では、改修を終えた道後温泉本館に入れます。",
-   "松山から足をのばして、高知のひろめ市場や鰹のたたき、港町・久礼の市場、和紙の町・いの、青い水の仁淀ブルーも紹介します。高松は、栗林公園、駅前の無料の展望スペースとさぬきうどん、玉藻公園、屋島、アートの島・直島。四国の中の移動は時間がかかるので、泊まりながら回るのがおすすめです。",
+   "夜、明かりのともった道後温泉本館。明治時代に建てられた木造3階建ての共同浴場で、5年半の保存修理を終えて、2024年7月から全館で入れるようになりました。",
+   "松山は京都から新幹線で岡山へ行き、特急しおかぜに乗りかえて約4時間。街の真ん中の山の上に松山城があり、路面電車で20分ほどで道後温泉へ。湯上がりは、夜遅くまで明るい道後ハイカラ通りを歩けます。",
+   "足をのばすなら高知へ。ひろめ市場には、鰹のたたきを目の前で藁で焼いてくれるお店があり、夕方はいつもにぎやかです。鰹の港町・久礼の市場、和紙の町・いの、青い水の仁淀ブルーも紹介します。高松は、栗林公園、駅前の無料の展望スペースとさぬきうどん、玉藻公園、屋島、アートの島・直島。",
    "「食べる」のお店と高松駅前のうどんは、私が実際に行ったところだけを載せています。高知城・仁淀ブルー・玉藻公園・屋島・直島は、ほかの方の写真をお借りして紹介しています。",
-   "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
+   "四国の中の移動は時間がかかります。町ごとに泊まりながら、ゆっくり回ってください。"
   ],
   "en": [
-   "Here are my recommendations for Shikoku, centred on Matsuyama and Dogo Onsen, with Kochi and Takamatsu too.",
-   "Matsuyama is about 4 hours from Kyoto: shinkansen to Okayama, then the Shiokaze limited express. Matsuyama Castle stands on a hill in the middle of town, and about 20 minutes away by streetcar you can bathe at Dogo Onsen Honkan, newly restored.",
-   "Further afield, I also cover Hirome Market and seared bonito in Kochi, the market in the port town of Kure, the paper-making town of Ino and the blue water of the Niyodo River. In Takamatsu: Ritsurin Garden, a free observation floor and Sanuki udon by the station, Tamamo Park, Yashima and the art island of Naoshima. Getting around Shikoku takes time, so stay a few nights as you go.",
+   "Dogo Onsen Honkan at night, its lights on. This three-storey wooden public bathhouse was built in the Meiji era; after five and a half years of restoration, the whole building reopened in July 2024.",
+   "Matsuyama is about 4 hours from Kyoto: shinkansen to Okayama, then the Shiokaze limited express. Matsuyama Castle stands on a hill in the middle of town, and Dogo Onsen is about 20 minutes away by streetcar. After your bath, stroll Dogo Haikara-dori, which stays lit until late.",
+   "If you go further, go to Kochi. At Hirome Market some stalls sear bonito over burning straw right in front of you, and the place is always busy in the evening. I also cover the market in the bonito port of Kure, the paper-making town of Ino and the blue water of the Niyodo River. In Takamatsu: Ritsurin Garden, a free observation floor and Sanuki udon by the station, Tamamo Park, Yashima and the art island of Naoshima.",
    "The places in the food section and the udon shop by Takamatsu Station are all places I have actually been to myself. Kochi Castle, the Niyodo Blue spots, Tamamo Park, Yashima and Naoshima are shown with photos by other photographers, credited on each photo.",
-   "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
+   "Getting around Shikoku takes time. Stay a night in each town and go slowly."
   ]
  },
  "outro": {

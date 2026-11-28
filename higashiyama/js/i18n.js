@@ -110,7 +110,7 @@ window.HIGASHIYAMA_I18N = {
         }
       ],
       "h1": "清水の舞台から、南禅寺の水路閣、哲学の道、銀閣寺へ。東山を北へ歩く1日。",
-      "lead": "三条を9時すぎに出て、清水寺から坂道を下り、高台寺、八坂神社、南禅寺、哲学の道を歩いて銀閣寺まで。18時ごろに街なかへ戻ります。清水寺と坂道は昼間とても混むので、人の少ない時間に歩きたい人は、一覧の上のボタンで「早朝に出発」を選んでください。",
+      "lead": "清水寺のあとは、石畳の産寧坂・二年坂を下って八坂の塔へ。お昼のあとは高台寺と八坂神社、南禅寺のレンガの水路閣を見て、哲学の道を歩いて銀閣寺まで。三条を9時すぎに出て、18時ごろには街なかに戻る時間割です。清水寺と坂道は昼間とても混むので、人の少ない時間に歩きたい人は、一覧の上のボタンで「早朝に出発」を選んでください。",
       "who": [
         "三条のあたりを9時すぎに出て、18時ごろに戻る1日",
         "清水寺と産寧坂・二年坂は、昼間とても混みます。静かに歩きたい人は「早朝に出発」へ",
@@ -194,7 +194,7 @@ window.HIGASHIYAMA_I18N = {
     introFor: {
       late: {
         "h1": "清水の舞台から、南禅寺の水路閣、哲学の道、銀閣寺へ。東山を北へ歩く1日。",
-        "lead": "三条を9時すぎに出て、清水寺から坂道を下り、高台寺、八坂神社、南禅寺、哲学の道を歩いて銀閣寺まで。18時ごろに街なかへ戻ります。清水寺と坂道は昼間とても混むので、人の少ない時間に歩きたい人は、一覧の上のボタンで「早朝に出発」を選んでください。",
+        "lead": "清水寺のあとは、石畳の産寧坂・二年坂を下って八坂の塔へ。お昼のあとは高台寺と八坂神社、南禅寺のレンガの水路閣を見て、哲学の道を歩いて銀閣寺まで。三条を9時すぎに出て、18時ごろには街なかに戻る時間割です。清水寺と坂道は昼間とても混むので、人の少ない時間に歩きたい人は、一覧の上のボタンで「早朝に出発」を選んでください。",
         "who": [
           "三条のあたりを9時すぎに出て、18時ごろに戻る1日",
           "清水寺と産寧坂・二年坂は、昼間とても混みます。静かに歩きたい人は「早朝に出発」へ",
@@ -476,7 +476,7 @@ window.HIGASHIYAMA_I18N = {
         }
       ],
       "h1": "From the Kiyomizu stage to Nanzen-ji’s aqueduct, the Philosopher’s Path and Ginkaku-ji: a day walking north through Higashiyama.",
-      "lead": "Leave Sanjo a little after 9:00, walk down the lanes from Kiyomizu-dera, then on to Kodai-ji, Yasaka Shrine, Nanzen-ji and along the Philosopher’s Path to Ginkaku-ji, getting back downtown at about 18:00. Kiyomizu-dera and its lanes are very crowded in the daytime: to walk them with fewer people, choose “Early start” with the buttons above the list.",
+      "lead": "From Kiyomizu-dera, walk down the stone-paved lanes of Sannenzaka and Ninenzaka to Yasaka Pagoda. After lunch come Kodai-ji, Yasaka Shrine and Nanzen-ji’s brick aqueduct, then the Philosopher’s Path to Ginkaku-ji. You leave Sanjo a little after 9:00 and are back downtown at about 18:00. Kiyomizu-dera and its lanes are very crowded in the daytime: to walk them with fewer people, choose “Early start” with the buttons above the list.",
       "who": [
         "A day that leaves the Sanjo area after 9:00 and is back at about 18:00",
         "Kiyomizu-dera, Sannenzaka and Ninenzaka are very crowded by day. For a quieter walk, use “Early start”",
@@ -560,7 +560,7 @@ window.HIGASHIYAMA_I18N = {
     introFor: {
       late: {
         "h1": "From the Kiyomizu stage to Nanzen-ji’s aqueduct, the Philosopher’s Path and Ginkaku-ji: a day walking north through Higashiyama.",
-        "lead": "Leave Sanjo a little after 9:00, walk down the lanes from Kiyomizu-dera, then on to Kodai-ji, Yasaka Shrine, Nanzen-ji and along the Philosopher’s Path to Ginkaku-ji, getting back downtown at about 18:00. Kiyomizu-dera and its lanes are very crowded in the daytime: to walk them with fewer people, choose “Early start” with the buttons above the list.",
+        "lead": "From Kiyomizu-dera, walk down the stone-paved lanes of Sannenzaka and Ninenzaka to Yasaka Pagoda. After lunch come Kodai-ji, Yasaka Shrine and Nanzen-ji’s brick aqueduct, then the Philosopher’s Path to Ginkaku-ji. You leave Sanjo a little after 9:00 and are back downtown at about 18:00. Kiyomizu-dera and its lanes are very crowded in the daytime: to walk them with fewer people, choose “Early start” with the buttons above the list.",
         "who": [
           "A day that leaves the Sanjo area after 9:00 and is back at about 18:00",
           "Kiyomizu-dera, Sannenzaka and Ninenzaka are very crowded by day. For a quieter walk, use “Early start”",

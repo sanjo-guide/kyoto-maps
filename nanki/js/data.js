@@ -2,18 +2,18 @@
 window.GUIDE = {
  "intro": {
   "ja": [
-   "和歌山県の南、紀伊半島の南の海沿い「南紀（なんき）」のおすすめをまとめました。",
+   "白浜の夕方は、円月島（えんげつとう）へ。日が沈むころ、まん中に丸い穴のあいた島のシルエットと、赤く染まる空が重なります。",
    "白浜は京都から約3時間15分（新大阪で特急くろしおに乗り換え）。白い砂浜の白良浜、夕日の円月島、千畳敷や三段壁の海の景色が、駅からバスで回れる範囲に集まっています。",
-   "さらに東へ進むと、那智の滝と熊野那智大社のある那智山、まぐろの港町・勝浦、熊野本宮大社と世界遺産の温泉・湯の峰のつぼ湯、本州最南端の潮岬があります。電車とバスの本数が少ないので、泊まりがけでゆっくり回るのがおすすめです。",
+   "さらに東へ進むと、熊野の山です。杉並木の中、苔むした大門坂の石段を上って熊野那智大社へ。となりの青岸渡寺では、朱色の三重塔の奥に那智の滝が落ちる、南紀でいちばん有名な眺めが見られます。夜は、まぐろの港町・勝浦で生まぐろを。熊野本宮大社、川のほとりの小屋で30分ずつ交代で入る世界遺産の温泉・湯の峰のつぼ湯、本州最南端の潮岬もあります。",
    "お店は、私が実際に行ったところだけを載せています。崎の湯・アドベンチャーワールド・熊野本宮大社・大斎原は、私はまだ行っていませんが、南紀に来たら外せない場所なので、公式の情報をもとに紹介しています（写真はクレジットつき）。",
-   "いちばん大事なのは、予定を詰め込みすぎないこと。気になる場所を、ゆっくり楽しんでください。"
+   "電車もバスも本数が少ないので、帰りの時刻を先に決めてから回るのが安心です。泊まりがけで、ゆっくりどうぞ。"
   ],
   "en": [
-   "Here are my recommendations for Nanki, the southern coast of the Kii Peninsula in Wakayama.",
+   "In Shirahama, spend the evening at Engetsu Island. As the sun goes down, the silhouette of the island, with a round hole through its middle, sits against a reddening sky.",
    "Shirahama is about 3 h 15 min from Kyoto (changing to the Kuroshio limited express at Shin-Osaka). The white sand of Shirarahama beach, sunset at Engetsu Island, and the sea views at Senjojiki and Sandanbeki are all within a bus ride of the station.",
-   "Further east are Mt. Nachi with Nachi Falls and Kumano Nachi Taisha, the tuna port of Katsuura, Kumano Hongu Taisha and Tsuboyu at Yunomine, a World Heritage hot spring, and Shionomisaki, the southern tip of Honshu. Trains and buses are infrequent, so stay a night or two and take your time.",
+   "Further east are the mountains of Kumano. Climb the mossy stone steps of Daimonzaka through the cedars to Kumano Nachi Taisha. At Seigantoji next door, the vermilion three-storey pagoda stands in front of Nachi Falls: the most famous view in Nanki. In the evening, eat fresh tuna in the port town of Katsuura. There is also Kumano Hongu Taisha; Tsuboyu at Yunomine, a World Heritage hot spring in a small hut by the river that you use in turns, 30 minutes at a time; and Shionomisaki, the southern tip of Honshu.",
    "I only list restaurants I have actually been to myself. I haven’t yet been to Saki-no-yu, Adventure World, Kumano Hongu Taisha or Oyunohara, but they are places you shouldn’t miss in Nanki, so I’ve described them from official information (photos are credited).",
-   "The most important thing is not to overpack your schedule. Just take your time and enjoy the places that really interest you."
+   "Trains and buses are infrequent, so decide on your return time before you set out. Stay a night or two and take it slowly."
   ]
  },
  "outro": {

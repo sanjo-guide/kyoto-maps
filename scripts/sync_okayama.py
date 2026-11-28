@@ -17,7 +17,7 @@ import os, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = (dict(
-    id='okayama', i18n='OKAYAMA_I18N', count=15, data_v=3, bump=104, keyv='-b',
+    id='okayama', i18n='OKAYAMA_I18N', count=15, data_v=3, bump=105, keyv='-b',
     head='岡山と倉敷（1泊2日・京都や大阪から広島への途中に立ち寄る）',
     title='岡山と倉敷｜1泊2日・広島への途中に Okayama &amp; Kurashiki MAP',
     desc='岡山城と後楽園、夜と朝の倉敷美観地区、吉備津神社を回る1泊2日と、京都・大阪から広島へ行く途中に立ち寄るコースを選べる、時刻つきのルートマップ。荷物の預け方と途中下車のきっぷの買い方も。Okayama and Kurashiki: a timed overnight route with the canal town by night and morning, or a stopover on the way from Kyoto or Osaka to Hiroshima, with luggage and ticket tips.',

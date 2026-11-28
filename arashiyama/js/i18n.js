@@ -70,7 +70,7 @@ window.ARASHIYAMA_I18N = {
     intro: {
       kicker: 'Toshiが歩いて作った1日ルート',
       h1: '山の上のお寺から、竹林と渡月橋へ。坂道を下る嵐山の1日。',
-      lead: 'バスで奥嵯峨の山の上にある愛宕念仏寺へ。そこからは昔ながらの町並みを、坂道に沿って歩いて下るだけ。苔のお寺、竹林、天龍寺の庭、渡月橋まで、行きたい場所を選びながら嵐山の中心へ向かいます。',
+      lead: '嵐山の駅から歩き出すと、奥嵯峨まではずっと上り坂。このルートは逆に、先にバスで山の上の愛宕念仏寺まで上がります。1200体の羅漢さんを見たら、あとは茅葺き屋根の茶屋が残る鳥居本の町並みを、坂道に沿って下るだけ。苔のお寺、竹林、天龍寺の庭を選びながら、夕方の渡月橋へ向かいます。',
       favLabel: 'いちばんの見どころ',
       favName: '愛宕念仏寺',
       favText: '1200体の、表情ゆたかな石の羅漢さん。',
@@ -183,7 +183,7 @@ window.ARASHIYAMA_I18N = {
     intro: {
       kicker: 'A day trip, hand-walked by Toshi',
       h1: 'From a mountain temple down to the bamboo grove and Togetsukyo: Arashiyama, all downhill.',
-      lead: 'Take the bus up to Otagi Nenbutsu-ji, a temple in the hills of Sagano. From there you simply walk downhill along an old street. Moss temples, the bamboo grove, Tenryu-ji’s garden, Togetsukyo Bridge: pick the places you like on your way down to central Arashiyama.',
+      lead: 'Walk from Arashiyama Station and it is uphill all the way to Oku-Saga. This route does it the other way round: a bus takes you up to Otagi Nenbutsu-ji first. After its 1,200 stone rakan, you simply walk downhill through Toriimoto, an old street of thatched teahouses. Pick moss temples, the bamboo grove and Tenryu-ji’s garden on the way, and reach Togetsukyo Bridge in the late afternoon.',
       favLabel: 'Don’t miss',
       favName: 'Otagi Nenbutsu-ji',
       favText: '1,200 stone rakan, each with its own face.',

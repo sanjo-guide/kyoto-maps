@@ -107,8 +107,8 @@ window.OKAYAMA_I18N = {
       "stay": {
         "kicker": "京都・大阪から1泊2日",
         "h1": "昼は黒いお城と大名の庭。夜と朝は、白壁の倉敷。",
-        "lead": "1日目は岡山城と後楽園を歩いて、夕方に倉敷へ。明かりのつく川ぞいで晩ごはんを食べて、そのまま泊まります。2日目は店が開く前の町を歩き、9時に大原美術館へ。午後に吉備津神社へ寄って、京都・大阪へ帰るか、広島へ進みます。",
-        "favName": "泊まった人の倉敷川",
+        "lead": "黒い板張りの天守の岡山城から、月見橋を渡って大名の庭・後楽園へ。夕方に倉敷へ移り、明かりのつく川ぞいで晩ごはんを食べて、そのまま泊まります。2日目は店が開く前の静かな白壁の町を歩き、9時の開館と同時に大原美術館へ。午後は吉備津神社の長い廻廊を歩いて、京都・大阪へ帰るか、広島へ進みます。",
+        "favName": "夜と朝の倉敷川",
         "favText": "夜は21時（4〜9月は22時）まで明かりがつき、朝は店が開く前の静かな時間です。（写真：Suicasmo / CC BY-SA 4.0）",
         "favPhoto": [
           "bikan",
@@ -240,7 +240,7 @@ window.OKAYAMA_I18N = {
       "stop": {
         "kicker": "京都・大阪から広島への途中に",
         "h1": "広島へ行く途中、岡山で4時間40分。",
-        "lead": "京都9:25発ののぞみを岡山で降りて、荷物を預け、岡山城と後楽園とお昼。15:06ののぞみで広島に15:42着です。倉敷に寄りたいときは、お城と庭のかわりに。両方は立ち寄りの時間には入らないので、1泊2日のコースをすすめます。",
+        "lead": "新幹線を岡山で降りて、荷物を駅に預け、路面電車で城下へ。黒い天守の岡山城から月見橋を渡って後楽園を歩き、お昼を食べたら、15:06ののぞみで広島へ（15:42着）。京都9:25発ののぞみで来れば、岡山にいられるのは4時間40分です。倉敷に寄りたいときは、お城と庭のかわりに。両方は立ち寄りの時間には入らないので、1泊2日のコースをすすめます。",
         "favName": "月見橋から見る岡山城",
         "favText": "川の上に黒い天守。お城から後楽園へ渡る橋の上からの眺めです（2021年3月、改修の前）。",
         "favPhoto": [
@@ -454,8 +454,8 @@ window.OKAYAMA_I18N = {
       "stay": {
         "kicker": "Two days and a night from Kyoto or Osaka",
         "h1": "A black castle and a lord’s garden by day; white-walled Kurashiki by night and morning.",
-        "lead": "Day 1 is Okayama Castle and Korakuen, then Kurashiki late in the afternoon: dinner by the lamp-lit canal and a night there. On day 2 walk the town before the shops open, enter the Ohara Museum at 9:00, stop at Kibitsu Shrine in the afternoon, and go home to Kyoto or Osaka or on to Hiroshima.",
-        "favName": "The canal, for those who stay",
+        "lead": "Cross Tsukimi bridge from Okayama Castle and its black-boarded keep to Korakuen, a feudal lord’s garden. Move to Kurashiki late in the afternoon for dinner by the lamp-lit canal, and stay the night. On day 2 walk the quiet white-walled town before the shops open and enter the Ohara Museum as it opens at 9:00. In the afternoon, walk the long corridor at Kibitsu Shrine, then go home to Kyoto or Osaka, or on to Hiroshima.",
+        "favName": "The canal at night and in the morning",
         "favText": "Lit until 21:00 (22:00 April–September), and quiet in the morning before the shops open. (Photo: Suicasmo / CC BY-SA 4.0)",
         "favPhoto": [
           "bikan",
@@ -587,7 +587,7 @@ window.OKAYAMA_I18N = {
       "stop": {
         "kicker": "On the way from Kyoto or Osaka to Hiroshima",
         "h1": "4 hours 40 in Okayama, on the way to Hiroshima.",
-        "lead": "Get off the 9:25 Nozomi from Kyoto at Okayama, leave your bags, and see the castle and Korakuen with time for lunch. The 15:06 reaches Hiroshima at 15:42. Kurashiki can replace the castle and garden. Both don’t fit in a stopover; for both, take the overnight course.",
+        "lead": "Step off the Shinkansen at Okayama, leave your bags at the station and take the tram to Shiroshita. Cross Tsukimi bridge from the black keep of Okayama Castle to Korakuen, have lunch, and catch the 15:06 Nozomi to Hiroshima (15:42). Coming from Kyoto on the 9:25 Nozomi, that gives you 4 hours 40 in Okayama. Kurashiki can replace the castle and garden. Both don’t fit in a stopover; for both, take the overnight course.",
         "favName": "Okayama Castle from Tsukimi bridge",
         "favText": "The black keep above the river, from the bridge to Korakuen (March 2021, before the renovation).",
         "favPhoto": [

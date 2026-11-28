@@ -145,7 +145,7 @@ window.HIMEJI_I18N = {
     introFor: {
       "late": {
         "h1": "海の見える山の上から、明石焼、午後の白鷺城、明かりの入った天守まで。",
-        "lead": "ホテルを9時15分ごろに出て、まず須磨浦のロープウェーで海を見下ろす山の上へ。明石の魚の棚で明石焼のお昼を食べ、人の多い昼を外して14時半ごろに姫路城へ入ります。好古園を歩いて外へ出るころ、天守に明かりが入ります。駅前で晩ごはんを食べて、新快速で大阪へ約1時間。21時半ごろにはホテルに戻れます。",
+        "lead": "朝は須磨浦のロープウェーとカーレーターで、海を見下ろす山の上へ。床がゆっくり回る喫茶店から、須磨の海と明石海峡大橋を眺めてコーヒーを。お昼は明石の魚の棚で、だしにつけて食べる明石焼。姫路城には人の多い昼を外して14時半ごろに入り、木の階段で大天守の最上階へ。好古園を歩いて外へ出るころ、天守に明かりが入ります。ホテルを出るのは9時15分ごろ。駅前で晩ごはんを食べて、新快速で大阪へ約1時間、21時半ごろにはホテルに戻れます。",
         "day": [
           {
             "time": "10:30",
@@ -203,7 +203,7 @@ window.HIMEJI_I18N = {
       },
       "early": {
         "h1": "9:00の開城に合わせて白鷺城へ。そのあとは明石焼と、橋に沈む夕日。",
-        "lead": "ホテルを7時半ごろに出て、新快速で姫路へ。開いたばかりの姫路城で大天守に上り、好古園のレストランでひと休み。明石の魚の棚で遅めのお昼に明石焼を食べ、須磨浦のロープウェーで山の上へ。最後は舞子で、明石海峡大橋に沈む夕日を見ます。朝が早いので、明石で終わりにしても十分な1日です。",
+        "lead": "9:00の開城に合わせて姫路城へ。人が集まる前の大天守を、最上階まで上ります。好古園のレストランで庭を見ながらひと休みして、明石の魚の棚で遅めのお昼に明石焼。須磨浦のロープウェーで山の上へ上り、最後は舞子で、明石海峡大橋に沈む夕日を見ます。ホテルを出るのは7時半ごろ。朝が早いので、明石で終わりにしても十分な1日です。",
         "day": [
           {
             "time": "9:10",
@@ -399,7 +399,7 @@ window.HIMEJI_I18N = {
     introFor: {
       "late": {
         "h1": "A hilltop over the sea, akashiyaki, the White Heron Castle in the afternoon, and the keep lit up at dusk.",
-        "lead": "Leave your hotel around 9:15 and start with the Sumaura ropeway, up to a hilltop over the sea. Lunch is akashiyaki in Akashi’s fish arcade, and you enter Himeji Castle around 14:30, after the midday crowd. By the time you walk out of Kokoen garden, the keep is lit. Have dinner by the station, then it is about an hour to Osaka by Special Rapid; you are back at your hotel around 21:30.",
+        "lead": "Start on the Sumaura ropeway and Car-rator, up to a hilltop over the sea, and have coffee in a café whose floor slowly turns, looking out over the Suma coast and the Akashi Kaikyo Bridge. Lunch is akashiyaki, dipped in dashi, in Akashi’s fish arcade. Enter Himeji Castle around 14:30, after the midday crowd, and climb the wooden stairs to the top of the great keep. By the time you walk out of Kokoen garden, the keep is lit. You leave your hotel around 9:15; after dinner by the station it is about an hour to Osaka by Special Rapid, and you are back around 21:30.",
         "day": [
           {
             "time": "10:30",
@@ -457,7 +457,7 @@ window.HIMEJI_I18N = {
       },
       "early": {
         "h1": "The White Heron Castle at its 9:00 opening, then akashiyaki and sunset at the bridge.",
-        "lead": "Leave your hotel around 7:30 and take the Special Rapid to Himeji. Climb the great keep just after the castle opens, then rest at the restaurant in Kokoen garden. Have akashiyaki for a late lunch in Akashi’s fish arcade, ride the Sumaura ropeway up the hill, and end at Maiko with the sun going down by the Akashi Kaikyo Bridge. It is an early start, so stopping after Akashi still makes a full day.",
+        "lead": "Be at Himeji Castle for its 9:00 opening and climb the great keep to the top floor before the crowds gather. Rest at the restaurant in Kokoen garden, have akashiyaki for a late lunch in Akashi’s fish arcade, ride the Sumaura ropeway up the hill, and end at Maiko with the sun going down by the Akashi Kaikyo Bridge. You leave your hotel around 7:30. It is an early start, so stopping after Akashi still makes a full day.",
         "day": [
           {
             "time": "9:10",
