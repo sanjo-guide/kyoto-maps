@@ -31,7 +31,7 @@ s = s.replace(s.split('(function () {')[0], """/* 銭函と朝里（札幌から
 """, 1)
 assert "window.EIZAN_I18N" in s and "'kyoto-maps-eizan-" in s
 s = s.replace("window.EIZAN_I18N", "window.ZENIBAKO_I18N").replace("'kyoto-maps-eizan-", "'kyoto-maps-zenibako-")
-DATA_V = 1
+DATA_V = 2
 s = re.sub(r"t = spots\.length \|\| \d+;", "t = spots.length || 8;", s)
 m = re.search(r"fetch\('\.\./data/routes/eizan-line\.json\?v=\d+'\)", s); assert m
 s = s.replace(m.group(0), f"fetch('../data/routes/zenibako.json?v={DATA_V}')")

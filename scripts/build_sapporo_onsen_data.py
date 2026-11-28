@@ -126,7 +126,7 @@ U = dict(
     sagiri_nb="https://noboribetsu-spa.jp/oneday/oneday020/",
     taki="https://takimotokan.co.jp/ja/day_spa/", taki_faq="https://takimotokan.co.jp/ja/faq/",
     mansei="https://www.noboribetsu-manseikaku.jp/spa/daytrip/",
-    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
 )
 
 # 出典。what＝何を確かめたか、saw＝そのページで見た内容
@@ -209,7 +209,7 @@ SOURCES = [dict(what=a, url=b, saw=c, checked=CHECKED) for a, b, c in [
     ("第一滝本館 よくある質問", U["taki_faq"], "予約不要、基本無休、各種カード・PayPayなど可。タトゥーの記載なし"),
     ("登別万世閣 日帰り入浴", U["mansei"], "入れ墨・タトゥー・疑似シール・ペインティングは入場・入浴お断り"),
     ("日帰り入浴の一覧（登別）", U["nb_oneday"], "第一滝本館・グランドホテル・石水亭・万世閣・ゆもと登別・はなや・さぎり湯ほか"),
-    ("日の入り（札幌）", U["sun"], "12月1日15:43、12月21日15:45"),
+    ("日の入り（札幌）", U["sun"], "12月1日16:01、12月15日16:00、12月21日16:03、12月31日16:09"),
 ]]
 
 JT = link("timetable", "じょうてつバス 時刻表", "Jotetsu Bus timetables (Japanese)", "https://www.jotetsu.co.jp/bus/times/260401/busstop.html")
@@ -223,8 +223,8 @@ PASS = link("info", "北海道レールパス・札幌−登別エリアパス",
 # 何か所かに出すお知らせ
 N_ICE = winters(
     "冬の道は凍ります", "Icy streets in winter",
-    "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは15時45分ごろで、16時には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
-    "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 15:45 and it is dark by 16:00. Snow can delay buses and trains, so plan to head back one service early.",
+    "11月の中ごろから4月の中ごろまでは、雪や凍った道を歩く日があります。滑りにくい靴をはいてください。札幌の12月の日の入りは16時ちょうどごろで、16時半には暗くなります。雪でバスや列車が遅れることもあるので、帰りは1本早めのつもりで。",
+    "From mid-November to mid-April expect snow and icy pavements: wear shoes with a good grip. In December the sun sets in Sapporo at about 16:00 and it is dark by 16:30. Snow can delay buses and trains, so plan to head back one service early.",
     U["sun"])
 N_TATTOO_J = notice(
     "タトゥーがある人へ", "If you have tattoos",

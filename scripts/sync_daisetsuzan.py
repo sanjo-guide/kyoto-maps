@@ -16,7 +16,7 @@ import os, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='daisetsuzan', i18n='DAISETSUZAN_I18N', count=6, data_v=1, bump=101,
+    id='daisetsuzan', i18n='DAISETSUZAN_I18N', count=6, data_v=2, bump=101,
     head='大雪山の日帰り：旭岳と層雲峡（旭川から）',
     title='大雪山の日帰り｜旭岳と層雲峡（旭川から） Daisetsuzan day trips from Asahikawa MAP',
     desc='旭川駅からバスで行く大雪山の1日。旭岳はロープウェイで標高1,600mの姿見の池へ、帰りに旭岳温泉か東川の町。層雲峡は黒岳ロープウェイ、銀河・流星の滝、黒岳の湯、冬は氷瀑まつり。バスの時刻と最終便、冬の服装、ロープウェイの運休、タトゥーの決まりまで。Day trips by bus from Asahikawa into the Daisetsuzan mountains: the Asahidake Ropeway and Sugatami Pond with a hot spring or the town of Higashikawa, or Sounkyo gorge with the Kurodake Ropeway, waterfalls, a public bath and the winter Ice Fall Festival. Bus times and last buses, winter clothing, ropeway closures and tattoo rules.',

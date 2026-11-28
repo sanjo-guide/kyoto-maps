@@ -884,7 +884,7 @@
     route();
   }
 
-  fetch('../data/routes/' + course.file + '?v=1')
+  fetch('../data/routes/' + course.file + '?v=2')
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(init)
     .catch(function () {

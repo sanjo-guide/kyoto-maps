@@ -99,7 +99,7 @@ U = dict(
     railpass="https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
     unkou="https://www3.jrhokkaido.co.jp/webunkou/",
     jma="https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=12&block_no=47407&year=&month=&day=&view=",
-    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
 )
 
 # 出典。what＝何を確かめたか、saw＝そのページで見た内容

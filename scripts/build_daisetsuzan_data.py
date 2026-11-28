@@ -105,7 +105,7 @@ U = dict(
     sk_canyon="https://sounkyo.net/eat/detail.html?content=32", sk_shokudo="https://sounkyo.net/eat/detail.html?content=34",
     sk_tozanken="https://sounkyo.net/eat/detail.html?content=75",
     hyobaku="https://sounkyo.net/hyoubaku/", hyobaku_access="https://sounkyo.net/hyoubaku/access/",
-    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
 )
 
 # 出典。what＝何を確かめたか、saw＝そのページで見た内容

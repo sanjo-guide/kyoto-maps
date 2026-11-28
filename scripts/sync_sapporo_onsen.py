@@ -16,7 +16,7 @@ import os, runpy
 
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFG = dict(
-    id='sapporo-onsen', i18n='SAPPORO_ONSEN_I18N', count=7, data_v=1, bump=101,
+    id='sapporo-onsen', i18n='SAPPORO_ONSEN_I18N', count=7, data_v=2, bump=101,
     head='札幌から日帰り 温泉めぐり（定山渓・登別）',
     title='札幌から日帰り 温泉めぐり｜定山渓・登別 Hot-spring day trips from Sapporo MAP',
     desc='札幌駅・大通・すすきのから9〜10時に出て、定山渓温泉か登別温泉で1日。足湯、温泉卵、地獄谷と天然の足湯、日帰り入浴、お昼と晩ごはん、帰りの最終のバス・特急まで時刻つき。タトゥーの決まりはお風呂ごとに公式で確かめました。Hot-spring day trips from Sapporo to Jozankei or Noboribetsu: foot baths, onsen eggs, Hell Valley and a natural foot bath in a hot river, day baths with each one’s official tattoo rule, lunch, dinner and the last buses and trains back.',

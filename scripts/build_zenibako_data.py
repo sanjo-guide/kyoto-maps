@@ -92,7 +92,7 @@ U = dict(
     railpass="https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
     jr_regular="https://www.jrhokkaido.co.jp/global/english/ticket/regular/index.html",
     unkou="https://www3.jrhokkaido.co.jp/webunkou/",
-    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html", sun6="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0106.html",
+    sun="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html", sun6="https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0006.html",
     hoshioki="https://www.city.sapporo.jp/teine/midokoro/midokoro1.html", wine="https://www.hokkaidowine.com/tours/",
 )
 
@@ -140,8 +140,8 @@ SOURCES = [dict(what=a, url=b, saw=c, checked=CHECKED) for a, b, c in [
     ("小樽市 海水浴場 令和8年度", U["beach"], "銭函海水浴場7/4〜8/24（JR銭函駅から徒歩10分）、おたるドリームビーチ6/26〜8/31。朝里は今年度の5か所に入っていない"),
     ("朝里川温泉ホテル", U["hotel"], "日帰り入浴11:00〜20:00（最終受付19:30）、大人850円、土日祝・年末年始1,000円。フェイスタオル販売200円・バスタオルレンタル200円。家族風呂（貸切・要予約）60分3,000円、日帰りは11:00〜20:00（最終受付19:00）、3名から追加料金。サウナは日帰り20:00まで。中央バス13番で小樽築港駅から15分、温泉南から徒歩2分、大人410円。タトゥーの記載なし"),
     ("朝里川温泉ホテル（英語）", U["hotel_en"], "Day trip bathing 11:00-20:00 (last entry 19:30)、Family Bath need reservation、タトゥーの記載なし"),
-    ("日の入り（札幌）12月", U["sun"], "12/1 15:43、12/15 15:43、12/31 15:51"),
-    ("日の入り（札幌）6月", U["sun6"], "6/15 19:00、6/21 19:02"),
+    ("日の入り（札幌）12月", U["sun"], "12/1 16:01、12/15 16:00、12/21 16:03、12/31 16:09"),
+    ("日の入り（札幌）6月", U["sun6"], "6/15 19:16、6/21 19:18、6/30 19:18"),
     ("星置の滝（札幌市手稲区）", U["hoshioki"], "崩落の恐れがあるため、当面の間通行止め（ページの更新日2023年1月18日）→ 入れていない"),
     ("北海道ワイン おたるワインギャラリー", U["wine"], "9:00〜17:00 年中無休（年末年始を除く）。バスの直行便・経由便はなく、徒歩での来場は安全上すすめない。南小樽駅からタクシー約3,750円 → 入れていない"),
     ("JR北海道 運行情報", U["unkou"], "運行情報のページ"),
@@ -160,8 +160,8 @@ N_SNOW_JR = notice(
     U["unkou"])
 N_SNOW_WALK = notice(
     "冬（12〜3月）：凍った道と早い日の入り", "Winter (Dec–Mar): icy paths, early sunset",
-    "歩道は雪が踏み固められて凍ります。底がすべりにくい靴で。12月の日の入りは15:45ごろ（札幌）なので、外を歩くところは午前と、お昼すぎの朝里までにしてあります。",
-    "Pavements turn to packed ice. Wear shoes with grippy soles. In December the sun sets at about 15:45 (Sapporo), so the outdoor parts of this day are in the morning and early afternoon.",
+    "歩道は雪が踏み固められて凍ります。底がすべりにくい靴で。12月の日の入りは16:00ごろ（札幌）なので、外を歩くところは午前と、お昼すぎの朝里までにしてあります。",
+    "Pavements turn to packed ice. Wear shoes with grippy soles. In December the sun sets at about 16:00 (Sapporo), so the outdoor parts of this day are in the morning and early afternoon.",
     U["sun"])
 N_SEA_WINTER = notice(
     "冬の浜は、波打ち際に近づかない", "On the winter beach, keep back from the waves",
