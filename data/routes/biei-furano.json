@@ -1,0 +1,1316 @@
+{
+ "id": "biei",
+ "course": "furano",
+ "_note": "美瑛・青い池と富良野（旭川から日帰り。biei/ のページ専用。形は eizan-line.json と同じ）。「花畑（5月〜10月はじめ）」。旭川9:38→中富良野10:46。歩いてファーム富田（お昼）→中富良野13:27→美馬牛13:45→歩いて四季彩の丘→美馬牛16:18→美瑛16:25→丘のくら・四季の塔・晩ごはん→美瑛18:40発（旭川19:13着）。写真はすべて Wikimedia Commons（一覧は scripts/biei_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_biei_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "area": {
+    "ja": "旭川→中富良野",
+    "en": "Asahikawa → Nakafurano"
+   },
+   "title": {
+    "ja": "9:38の電車でファーム富田へ、園内でお昼",
+    "en": "The 9:38 train to Farm Tomita, lunch on site"
+   }
+  },
+  {
+   "first": 3,
+   "last": 4,
+   "area": {
+    "ja": "美瑛・美馬牛",
+    "en": "Biei · Bibaushi"
+   },
+   "title": {
+    "ja": "13:27の電車で戻って、四季彩の丘",
+    "en": "Back on the 13:27 for Shikisai-no-oka"
+   }
+  },
+  {
+   "first": 5,
+   "last": 6,
+   "area": {
+    "ja": "美瑛・駅前",
+    "en": "Biei · station"
+   },
+   "title": {
+    "ja": "町を歩いて晩ごはん、18:40の電車",
+    "en": "The town, dinner and the 18:40 train"
+   }
+  }
+ ],
+ "focus": {
+  "first": 2,
+  "last": 6
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。旭川駅・美瑛駅（花畑のコースは美馬牛駅）・帰りは自動で入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   4,
+   5
+  ],
+  "defaultPicks": [
+   2,
+   4,
+   5
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "3": {
+    "any": [
+     4
+    ]
+   },
+   "6": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 5,
+    "rule": {
+     "none": [
+      4
+     ]
+    },
+    "text": {
+     "ja": "四季彩の丘に寄らない日は、中富良野13:27発の電車でそのまま美瑛へ（13:53着）。美瑛駅前14:45発のバスで青い池（15:07着）にも行けます。帰りは青い池入口16:35発か、最終18:05発のバスで。",
+     "en": "Leaving out Shikisai-no-oka? Stay on the 13:27 from Nakafurano to Biei (13:53). You could then take the 14:45 bus to the Blue Pond (15:07) and come back on the 16:35 or the last bus at 18:05."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "none": [
+      2
+     ]
+    },
+    "text": {
+     "ja": "ファーム富田に寄らない日は、旭川9:38発で美馬牛10:22着（800円）。午前に四季彩の丘を見て、美馬牛から美瑛へ戻れば、午後は「雪のない季節」のコースの青い池と白金温泉に回れます。",
+     "en": "Leaving out Farm Tomita? The 9:38 from Asahikawa reaches Bibaushi at 10:22 (¥800). See Shikisai-no-oka in the morning, return to Biei and you can spend the afternoon at the Blue Pond and Shirogane Onsen as in the snow-free course."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/biei/",
+ "sources": [
+  {
+   "what": "旭川→美瑛 朝 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%97%AD%E5%B7%9D&to=%E7%BE%8E%E7%91%9B&y=2026&m=12&d=03&hh=07&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "7:39→8:18、8:44→9:17、9:38→10:12、680円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川→美瑛 9時台 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%97%AD%E5%B7%9D&to=%E7%BE%8E%E7%91%9B&y=2026&m=12&d=03&hh=09&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "JR 9:38→10:12（680円）。道北バス白金線 旭川駅前9番のりば9:40→美瑛駅前10:34（580円）。ふらのバス ラベンダー号 9:55→美瑛駅10:52（1,000円）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川→美瑛 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%97%AD%E5%B7%9D&to=%E7%BE%8E%E7%91%9B&y=2026&m=12&d=05&hh=09&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ（9:38→10:12、次は10:39→11:13、11:33→12:07）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美瑛→旭川 夕方 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E7%91%9B&to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=16&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "17:39→18:19、18:05→18:37、680円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美瑛→旭川 夜 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E7%91%9B&to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=18&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "18:40→19:13、19:54→20:27、21:19→21:47",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美瑛→旭川 最終 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E7%91%9B&to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "最終は21:19→21:47",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美瑛→旭川 夜・最終 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E7%91%9B&to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=05&hh=18&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "平日と同じ（18:40、19:54、21:19）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "札幌→旭川 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%9C%AD%E5%B9%8C&to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=07&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "8:00 特急ライラック5号→旭川9:25、5,440円。7:30 特急宗谷→8:58",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "バス 美瑛駅前→白金青い池入口の運賃",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E7%91%9B%E9%A7%85%E5%89%8D%2F%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9&to=%E7%99%BD%E9%87%91%E9%9D%92%E3%81%84%E6%B1%A0%E5%85%A5%E5%8F%A3&y=2026&m=12&d=03&hh=13&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:45→14:07、14:45→15:07、15:34→15:56、800円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "バス 美瑛駅前→白金温泉の運賃",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E7%91%9B%E9%A7%85%E5%89%8D%2F%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9&to=%E7%99%BD%E9%87%91%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=13&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:45→14:11、900円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "バス 白金青い池入口→白金温泉の運賃",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%99%BD%E9%87%91%E9%9D%92%E3%81%84%E6%B1%A0%E5%85%A5%E5%8F%A3&to=%E7%99%BD%E9%87%91%E6%B8%A9%E6%B3%89&y=2026&m=12&d=03&hh=15&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "15:07→15:11、220円。歩くと38分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス 神楽岡・美瑛方面の時刻表（平日）",
+   "url": "https://www.dohokubus.com/files/houmen/kaguraoka_biei_heijitu.pdf",
+   "saw": "2026年10月1日改正。39番 旭川駅前(9)9:40→美瑛駅前10:34→白金青い池10:56→青少年の家・白金温泉11:06。42番 美瑛駅前13:45→14:07→14:17、14:45→15:07→15:17、17:15→17:37→17:47。帰り 16:30→16:35→美瑛駅前17:00、18:00→18:05→18:30が最終。年末年始は特別ダイヤ（12月に公表）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス 同じ時刻表（土日祝）",
+   "url": "https://www.dohokubus.com/files/houmen/kaguraoka_biei_kyuujitu.pdf",
+   "saw": "39番・42番の時刻は平日と同じ",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス 美瑛・白金線の通過時刻（行き）",
+   "url": "https://www.dohokubus.com/passing/11.pdf",
+   "saw": "全日。美瑛駅前から白金青い池入口まで22分、白金温泉まで26分、終点の青少年の家まで32分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス 美瑛・白金線の通過時刻（帰り）",
+   "url": "https://www.dohokubus.com/passing/12.pdf",
+   "saw": "全日。青少年の家16:30→白金温泉16:32→白金青い池入口16:35→道の駅白金16:37→美瑛駅前17:00。18:00→18:02→18:05→18:07→18:30。39番の9:02着・11:27着・13:27着・16:07着は旭川駅前まで行く",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バスの支払い",
+   "url": "https://www.dohokubus.com/touch-payment.html",
+   "saw": "タッチ決済の対象路線に「白金線、層雲峡線、空港線等の路線バスの一部」。交通系ICカードの記載はなし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美瑛・白金エリア1日フリーパス",
+   "url": "https://dohokubus.tourbooking-japan.com/A/ja-JP/product-detail/1358",
+   "saw": "道北バスの公式販売サイト。美瑛駅前〜青い池・白金温泉が当日乗り放題。値段は販売ページで（文字では確かめられなかった）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "青い池・白ひげの滝・ビルケの森のライトアップ",
+   "url": "https://www.biei-hokkaido.jp/ja/27188",
+   "saw": "青い池とビルケの森：2026年10月22日〜2027年4月21日。10・11月17:00、12月16:30、1月17:00、2月17:30、3月18:00、4月18:30から21:00まで。白ひげの滝：通年、日没〜21:00",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ライトアップ（美瑛町）",
+   "url": "https://town.biei.hokkaido.jp/culture/event/illuminate.html",
+   "saw": "同じ期間と時間。悪天候のときは中止することがある",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "白金青い池（観光協会）",
+   "url": "https://www.biei-hokkaido.jp/ja/shirogane-blue-pond",
+   "saw": "冬は雪で青い水面は見えない。12月31日〜1月3日は点灯を翌2時まで延長。晴れた日の13〜15時がいちばん混む。雪どけや大雨のあとは青く見えないことがある。駐車場は有料",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "青い池売店",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/aoiike",
+   "saw": "4〜11月 9:00〜17:00、12〜3月 11:00〜16:00。休み：12月31日、1月1日、3月1日〜20日の平日",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道の駅びえい「白金ビルケ」",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/shirogane-biruke",
+   "saw": "6〜8月 9:00〜18:00、3〜5月・9〜11月 9:00〜17:00、12〜2月 10:00〜17:00。12月31日〜1月3日休み",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "冬の定期観光バス（2026-27年）",
+   "url": "https://www.biei-hokkaido.jp/ja/202627ws",
+   "saw": "美遊バス ライトアップコース：2026年11月20日〜2027年2月13日の金・土曜（1月1・2日運休）、四季の情報館16:35発・18:30着（2月は19:00着）、大人4,000円から。クリスマスツリーライナー：12月1日〜2月28日（12月31日〜1月5日運休）、10:45・13:20・14:50発の約1時間、大人2,000円から。予約は2日前まで、支払いはクレジットカード・Google Pay・PayPay。空きがあれば前日から四季の情報館で当日券",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ライトアップコースの案内",
+   "url": "https://www.biei-hokkaido.jp/ja/27888",
+   "saw": "JRの時刻に合わせて運行。今年は白金温泉に寄らない",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "白ひげの滝",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/shirahige-waterfalls",
+   "saw": "白金温泉のバス停から歩いて約3分。トイレは白金観光センターの公共トイレ（24時間）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "白金温泉の日帰り入浴",
+   "url": "https://www.biei-hokkaido.jp/ja/hot-spring",
+   "saw": "森の雫 RIN 11:00〜21:00・1,200円、碧の美 ゆゆ 11:00〜20:00（受付19:30まで）・1,200円、ホテルパークヒルズ 11:00〜21:00・1,530円、森の旅亭びえい 11:00〜14:00・月曜休み、杖忘れの湯 11:00〜17:00・800円・火水休み。国民保養センターは休館中",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ホテルパークヒルズ 日帰り",
+   "url": "https://www.biei-hotelparkhills.com/daytrip/",
+   "saw": "日帰り入浴11:00〜21:00、大人1,530円。お食事・入浴セット1,970円（昼食11:30〜LO13:40）。フェイスタオル220円、バスタオル貸出330円。タトゥーの記載なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "国民保養センター",
+   "url": "https://town.biei.hokkaido.jp/facility/hoyou.html",
+   "saw": "休館を続ける（令和8年度中に今後を決める）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道の駅びえい「丘のくら」",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/okanokura",
+   "saw": "6〜8月 9:00〜18:00、3〜5月・9〜11月 9:00〜17:00、12〜2月 10:00〜17:00。香麦食堂11:00〜14:30(LO)。休み：12月31日・1月1日・1月7日、12月30日は10:00〜12:00",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ナマステ 美瑛店",
+   "url": "https://namaste-hokkaido.com/biei/",
+   "saw": "通し営業 11:00–21:30、L.O. 21:00、定休日なし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "和牛焼肉・火鍋 GIO（観光協会）",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/gio",
+   "saw": "12:00〜15:30、16:30〜20:00、月曜休み。美瑛駅から歩いて約2分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美瑛のめぐり方（観光協会）",
+   "url": "https://www.biei-hokkaido.jp/ja/cruise",
+   "saw": "駅前の貸自転車：松浦商店・寺島商会・スギモト・びえいのガイド・BIEI HILLS。電動自転車は1kmあたり4〜5分。タクシーは美瑛ハイヤー 0166-92-1181（貸切時間制）。町内にレンタカー店はない",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "よくある質問（観光協会）",
+   "url": "https://www.biei-hokkaido.jp/ja/faq",
+   "saw": "12〜3月は最低気温が−15℃を下回る。手荷物は四季の情報館（コインロッカー、大きな荷物1個1,000円）とホテルラヴニール",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "北西の丘展望公園",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/hokusei-no-oka",
+   "saw": "美瑛駅から2.5km。展望台は雪の時期は閉鎖。案内所は5〜9月。無料",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ケンとメリーの木",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/ken-merry-tree",
+   "saw": "畑に入らない、路肩に長く止まらない。近くにトイレ・駐車場が少ない",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "セブンスターの木",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/seven-stars-tree",
+   "saw": "一帯が「パッチワークの路」。鉄道・バスなし",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "四季彩の丘 ご利用案内",
+   "url": "http://www.shikisainooka.jp/about/guide/",
+   "saw": "1月8:40〜16:30、2〜4月9:10〜17:00、5・10月8:40〜17:00、6〜9月8:40〜17:30（7〜9月の最終入園17:15）、11〜12月9:10〜16:30。入場料は7〜9月だけ、高校生以上800円（窓口は現金のみ）。レストランLO15時・水曜休み。12月31日・1月1日休み",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "四季彩の丘（観光協会）",
+   "url": "https://www.biei-hokkaido.jp/ja/facility/shikisai-no-oka-flower-park",
+   "saw": "美馬牛駅から歩いて30分、美瑛駅から車で12分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ファーム富田 営業時間",
+   "url": "https://www.farm-tomita.co.jp/cafe/",
+   "saw": "5月〜6月中旬8:30〜17:00、6月下旬〜8月中旬8:30〜17:30、8月下旬〜9月9:00〜17:00、10〜11月9:30〜16:30、12月〜4月上旬10:00〜16:00。カフェ ルネは11月〜4月中旬クローズ",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ファーム富田 アクセス",
+   "url": "https://www.farm-tomita.co.jp/access/",
+   "saw": "中富良野駅から歩いて約25分。ラベンダー畑駅（ノロッコ号の季節だけ）から約7分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川→中富良野 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%97%AD%E5%B7%9D&to=%E4%B8%AD%E5%AF%8C%E8%89%AF%E9%87%8E&y=2026&m=12&d=03&hh=09&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "9:38→10:46、1,380円。次は11:33→12:34",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "中富良野→美馬牛 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%AD%E5%AF%8C%E8%89%AF%E9%87%8E&to=%E7%BE%8E%E9%A6%AC%E7%89%9B&y=2026&m=12&d=03&hh=12&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:27→13:45、470円。次は15:55→16:14",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "中富良野→美瑛 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E4%B8%AD%E5%AF%8C%E8%89%AF%E9%87%8E&to=%E7%BE%8E%E7%91%9B&y=2026&m=12&d=03&hh=13&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "13:27→13:53、680円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川→美馬牛 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E6%97%AD%E5%B7%9D&to=%E7%BE%8E%E9%A6%AC%E7%89%9B&y=2026&m=12&d=03&hh=09&m1=0&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "9:38→10:22、800円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "美馬牛→美瑛 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?from=%E7%BE%8E%E9%A6%AC%E7%89%9B&to=%E7%BE%8E%E7%91%9B&y=2026&m=12&d=03&hh=15&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=1&hb=1&sr=0&s=0&userpass=0&ws=3",
+   "saw": "16:18→16:25、320円。次は17:31→17:38、18:32→18:39",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "ふらのバス ラベンダー号",
+   "url": "https://www.furanobus.jp/lavender/index.html",
+   "saw": "2026年4月1日改正。旭川駅9:55→美瑛駅10:52→中富良野11:21→富良野駅前11:38→新富良野プリンスホテル11:55。旭川行きの最終は新富良野プリンスホテル15:55発（旭川駅前17:55）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "日の入り（国立天文台・札幌）12月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0012.html",
+   "saw": "札幌の日の入り：12月1日16:01（旭川の値は載っていない）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "日の入り（国立天文台・札幌）1月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0001.html",
+   "saw": "1月31日16:45",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "日の入り（国立天文台・札幌）2月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2027/s0002.html",
+   "saw": "2月28日17:22",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "歩く距離（OpenStreetMap の道のデータ）",
+   "url": "https://routing.openstreetmap.de/",
+   "saw": "青い池の駐車場の入口→池 約420m、美瑛駅→丘のくら 約260m、美瑛駅→四季の塔 約620m、美瑛駅→北西の丘 3.3km→ケンとメリーの木 1.0km→セブンスターの木 3.9km→美瑛駅 7.4km",
+   "checked": "2026-11-28"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "asahikawa",
+   "name": {
+    "ja": "旭川駅（JR）",
+    "en": "Asahikawa Station (JR)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "美瑛まではJR富良野線で34分。1時間に1本ほどなので、乗る列車を決めてから出ます。",
+    "en": "Biei is 34 minutes away on the JR Furano Line. Trains run about once an hour, so pick yours before you leave the hotel."
+   },
+   "caution": {
+    "ja": "片道25〜30分の歩きが2回",
+    "en": "Two 25–30 minute walks each way"
+   },
+   "lat": 43.76275,
+   "lng": 142.35793,
+   "text": {
+    "ja": "旭川駅（JR）\n\n花の季節（5月〜10月はじめ）の1日です。旭川9:38発の富良野線で、美瑛を通って中富良野10:46着。ファーム富田を歩いてお昼を食べ、13:27の電車で美馬牛（びばうし）へ戻って四季彩の丘。16:18の電車で美瑛に出て、町で晩ごはんを食べて18:40発で旭川19:13着。駅から花畑まで、片道25〜30分の歩きが2回あります。\n\n旭川（あさひかわ）9:38発の富良野線に乗ると、美瑛（びえい）10:12着。平日も土曜も同じ時刻で、運賃は680円です。乗り遅れると次は10:39発（11:13着）、その次は11:33発です。\n\nきっぷ：富良野線で交通系ICカード（Kitaca・Suica）が使えるかは、JR北海道のサイトの文字では確かめられませんでした。券売機で行き先までのきっぷを買えば確実です。JR北海道レールパス（全線）で乗れます。札幌から来る人向けに「札幌・富良野エリアパス」もあります（使える範囲と値段はJR北海道の英語ページで確認を）。\n\n札幌から日帰りで来るなら、札幌8:00発の特急ライラック5号で旭川9:25着、13分の乗り換えで9:38発に間に合います（乗換案内で5,440円）。雪の日は特急が遅れることがあるので、1本早い7:30発（8:58着）だと安心です。\n\nバスで行く方法：旭川駅前の9番のりばから、道北（どうほく）バス39番「白金線」が美瑛駅前を通って白金青い池入口・白金温泉まで行きます（9:40発→美瑛駅前10:34→青い池入口10:56→白金温泉11:00）。乗り換えなしで青い池まで行きたい日はこちらを。\n\nおすすめ出発時間：9:38（旭川駅に9:25ごろ）",
+    "en": "Asahikawa Station (JR)\n\nA day for the flower season (May to early October). The 9:38 Furano Line train from Asahikawa passes Biei and reaches Nakafurano at 10:46. Walk around Farm Tomita and have lunch, take the 13:27 back to Bibaushi for Shikisai-no-oka, then the 16:18 to Biei for dinner and the 18:40 (Asahikawa 19:13). Expect two walks of 25–30 minutes each way between station and garden.\n\nTake the 9:38 Furano Line train from Asahikawa and you reach Biei at 10:12. Times are the same on weekdays and Saturdays, and the fare is ¥680. Miss it and the next trains leave at 10:39 (Biei 11:13) and 11:33.\n\nTickets: JR Hokkaido’s site does not say in plain text whether IC cards (Kitaca, Suica) work on the Furano Line, so buy a paper ticket to your destination from the machine. The JR Hokkaido Rail Pass covers the line. There is also a Sapporo-Furano Area Pass for visitors coming from Sapporo; check its coverage and price on JR Hokkaido’s English page.\n\nComing from Sapporo for the day? The 8:00 Lilac 5 limited express reaches Asahikawa at 9:25, leaving 13 minutes to change to the 9:38 (¥5,440 in the route planner). Expresses can run late in snow, so the 7:30 (Asahikawa 8:58) is the safer choice.\n\nBy bus: Dohoku Bus route 39 (Shirogane Line) leaves from stop 9 in front of Asahikawa Station and runs via Biei Station to the Blue Pond and Shirogane Onsen (9:40 → Biei Station 10:34 → Blue Pond 10:56 → Shirogane Onsen 11:00). Use it on days when you want to reach the pond without changing.\n\nRecommended departure time: 9:38 (be at Asahikawa Station by about 9:25)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR旭川駅",
+      "en": "JR Asahikawa Station"
+     },
+     "lat": 43.76275,
+     "lng": 142.35793,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%97%AD%E5%B7%9D%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道北バス 時刻表（美瑛・白金）",
+      "en": "Dohoku Bus timetable (Japanese PDF)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/files/houmen/kaguraoka_biei_heijitu.pdf",
+      "en": "https://www.dohokubus.com/files/houmen/kaguraoka_biei_heijitu.pdf"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "JR北海道のレールパス",
+      "en": "JR Hokkaido rail passes"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "花畑は5月〜10月はじめ",
+      "en": "The flower fields run from May to early October"
+     },
+     "text": {
+      "ja": "このコースは花の季節用です。ファーム富田のカフェ ルネは11月〜4月中旬は閉まり、畑は雪の下になります。四季彩の丘は冬は雪遊びの「スノーランド」になります。冬は一覧の上のボタンで「冬」を選んでください。",
+      "en": "This course is for the flower season. Farm Tomita’s Café René closes from November to mid-April and the fields lie under snow; Shikisai-no-oka turns into a snow-play park. In winter, pick “Winter” above the list."
+     },
+     "from": "2026-10-15",
+     "to": "2027-04-30",
+     "url": "https://www.farm-tomita.co.jp/cafe/"
+    },
+    {
+     "head": {
+      "ja": "夏は臨時列車とラベンダー畑駅",
+      "en": "Extra summer trains and Lavender-Batake Station"
+     },
+     "text": {
+      "ja": "ラベンダーの季節には、観光列車「富良野・美瑛ノロッコ号」と、ファーム富田まで歩いて約7分の臨時駅「ラベンダー畑」があります。2027年の運転日はまだ発表されていません（JR北海道のサイトで要確認）。",
+      "en": "In lavender season the Furano-Biei Norokko sightseeing train runs and stops at the temporary Lavender-Batake Station, about 7 minutes’ walk from Farm Tomita. Dates for 2027 have not been announced; check JR Hokkaido’s site."
+     },
+     "from": "2027-04-21",
+     "to": "2027-09-30",
+     "url": "https://www.farm-tomita.co.jp/access/station.asp"
+    },
+    {
+     "head": {
+      "ja": "時刻は2026年12月のダイヤです",
+      "en": "Times are from the December 2026 timetable"
+     },
+     "text": {
+      "ja": "JR北海道は春にダイヤを改正します。2027年3月よりあとに使うときは、乗換案内で列車の時刻を確かめてください。道北バスの時刻は2026年10月1日改正のものです。",
+      "en": "JR Hokkaido revises its timetable every spring. If you use this after March 2027, check the train times in a route planner. Bus times are from the 1 October 2026 timetable."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://transit.yahoo.co.jp/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "旭川9:38→美瑛10:12（平日・土曜とも）。前後は8:44→9:17、10:39→11:13、11:33→12:07",
+       "en": "Asahikawa 9:38 → Biei 10:12, weekdays and Saturdays. Also 8:44→9:17, 10:39→11:13, 11:33→12:07"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "札幌8:00（特急ライラック5号）→旭川9:25",
+       "en": "Sapporo 8:00 (Lilac 5 limited express) → Asahikawa 9:25"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "道北バス39番 旭川駅前（9番のりば）9:40→美瑛駅前10:34→白金青い池入口10:56→白金温泉11:00。11:00発もあります（青い池入口12:16）",
+       "en": "Dohoku Bus 39: Asahikawa Station (stop 9) 9:40 → Biei Station 10:34 → Blue Pond 10:56 → Shirogane Onsen 11:00. Also at 11:00 (Blue Pond 12:16)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "JR 旭川→美瑛680円。道北バス 旭川駅前→美瑛駅前580円",
+       "en": "JR Asahikawa → Biei ¥680. Dohoku Bus Asahikawa Station → Biei Station ¥580"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "JRは乗換案内で2026年12月3日（木）・5日（土）のダイヤを、道北バスは公式時刻表（2026年10月1日改正）を確認しました（2026年11月28日）。",
+     "en": "Train times are from a route planner for 3 and 5 December 2026; bus times from Dohoku Bus’s official timetable (revised 1 October 2026). Checked 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "asahikawa-w1.jpg",
+     "credit": {
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Station_-_2022_Aug_11_various_10_05_48_524000.jpeg"
+     }
+    },
+    {
+     "file": "asahikawa-w2.jpg",
+     "credit": {
+      "author": "姒姓賢寧",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Station_in_August_2025.jpg"
+     }
+    },
+    {
+     "file": "asahikawa-w3.jpg",
+     "credit": {
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa-STA_Concourse.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "tomita",
+   "name": {
+    "ja": "ファーム富田（中富良野）",
+    "en": "Farm Tomita (Nakafurano)"
+   },
+   "kind": {
+    "ja": "花畑",
+    "en": "Flower farm"
+   },
+   "blurb": {
+    "ja": "富良野のラベンダーを広めた農園。斜面いっぱいの花畑と、ラベンダーの製品の店やカフェがあります。",
+    "en": "The farm that made Furano’s lavender famous: hillside flower fields, lavender shops and cafés."
+   },
+   "lat": 43.417298,
+   "lng": 142.425476,
+   "text": {
+    "ja": "ファーム富田（中富良野）\n\n中富良野10:46着、歩いて25分で11:15ごろ着きます。花畑を回って、園内のカフェでお昼。13:27の電車に乗るので、12:55には駅へ歩き始めます（次の電車は15:55までありません）。\n\n中富良野（なかふらの）駅から歩いて約25分。斜面に花畑が広がり、花の時期が違う畑がいくつもあります。ラベンダーの見ごろは年によって違うので、行く前に公式サイトの花の情報を見てください。\n\n園内にはカフェや軽食の店があり、ガラス張りの「カフェ ルネ」ではカレーなどの軽食が食べられます（5月〜6月上旬9:30〜16:30、6月中旬〜8月9:00〜16:30、9月9:30〜16:30、10月10:00〜16:30。11月〜4月中旬は休み）。園の営業時間は5月〜6月中旬が8:30〜17:00、6月下旬〜8月中旬が8:30〜17:30、8月下旬〜9月が9:00〜17:00、10〜11月が9:30〜16:30。営業時間の外は入れません。\n\nラベンダーの季節には、園から歩いて約7分の臨時の駅「ラベンダー畑」に観光列車のノロッコ号が止まります。その時期は道も駅も混みます。入園料は公式サイトで確かめられませんでした（要確認）。\n\nおすすめ訪問時間：11:15〜12:55",
+    "en": "Farm Tomita (Nakafurano)\n\nArrive at Nakafurano at 10:46 and walk 25 minutes, getting there about 11:15. See the fields and have lunch at one of the cafés. For the 13:27 train, start walking back by 12:55; the next train is not until 15:55.\n\nAbout 25 minutes on foot from Nakafurano Station. The flower fields spread over a slope, with several fields that bloom at different times. Peak lavender varies by year, so check the flower updates on the official site before you go.\n\nThere are cafés and snack stands on site; the glass-walled Café René serves curry and other light meals (9:30–16:30 from May to early June, 9:00–16:30 from mid-June to August, 9:30–16:30 in September, 10:00–16:30 in October; closed November to mid-April). The farm opens 8:30–17:00 from May to mid-June, 8:30–17:30 from late June to mid-August, 9:00–17:00 from late August to September and 9:30–16:30 in October and November. You cannot enter outside opening hours.\n\nIn lavender season the Norokko sightseeing train stops at the temporary Lavender-Batake Station, about 7 minutes’ walk away; roads and stations get crowded then. The admission charge, if any, could not be confirmed on the official site (please check).\n\nRecommended visit time: 11:15–12:55"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "ファーム富田",
+      "en": "Farm Tomita"
+     },
+     "lat": 43.417298,
+     "lng": 142.425476,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E5%AF%8C%E7%94%B0"
+    },
+    {
+     "label": {
+      "ja": "JR中富良野駅",
+      "en": "JR Nakafurano Station"
+     },
+     "lat": 43.40585,
+     "lng": 142.421038,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E4%B8%AD%E5%AF%8C%E8%89%AF%E9%87%8E%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ファーム富田",
+      "en": "Farm Tomita"
+     },
+     "url": {
+      "ja": "https://www.farm-tomita.co.jp/",
+      "en": "https://www.farm-tomita.co.jp/en/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "カフェと営業時間",
+      "en": "Cafés and hours (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.farm-tomita.co.jp/cafe/",
+      "en": "https://www.farm-tomita.co.jp/cafe/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "ラベンダー畑駅",
+      "en": "Lavender-Batake Station (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.farm-tomita.co.jp/access/station.asp",
+      "en": "https://www.farm-tomita.co.jp/access/station.asp"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "花畑は5月〜10月はじめ",
+      "en": "The flower fields run from May to early October"
+     },
+     "text": {
+      "ja": "このコースは花の季節用です。ファーム富田のカフェ ルネは11月〜4月中旬は閉まり、畑は雪の下になります。四季彩の丘は冬は雪遊びの「スノーランド」になります。冬は一覧の上のボタンで「冬」を選んでください。",
+      "en": "This course is for the flower season. Farm Tomita’s Café René closes from November to mid-April and the fields lie under snow; Shikisai-no-oka turns into a snow-play park. In winter, pick “Winter” above the list."
+     },
+     "from": "2026-10-15",
+     "to": "2027-04-30",
+     "url": "https://www.farm-tomita.co.jp/cafe/"
+    },
+    {
+     "head": {
+      "ja": "夏は臨時列車とラベンダー畑駅",
+      "en": "Extra summer trains and Lavender-Batake Station"
+     },
+     "text": {
+      "ja": "ラベンダーの季節には、観光列車「富良野・美瑛ノロッコ号」と、ファーム富田まで歩いて約7分の臨時駅「ラベンダー畑」があります。2027年の運転日はまだ発表されていません（JR北海道のサイトで要確認）。",
+      "en": "In lavender season the Furano-Biei Norokko sightseeing train runs and stops at the temporary Lavender-Batake Station, about 7 minutes’ walk from Farm Tomita. Dates for 2027 have not been announced; check JR Hokkaido’s site."
+     },
+     "from": "2027-04-21",
+     "to": "2027-09-30",
+     "url": "https://www.farm-tomita.co.jp/access/station.asp"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "旭川9:38→中富良野10:46（美瑛10:12を通ります）",
+       "en": "Asahikawa 9:38 → Nakafurano 10:46 (via Biei at 10:12)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "中富良野13:27→美馬牛13:45。次は15:55発",
+       "en": "Nakafurano 13:27 → Bibaushi 13:45. The next is at 15:55"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "5月〜6月中旬8:30〜17:00、6月下旬〜8月中旬8:30〜17:30、8月下旬〜9月9:00〜17:00、10〜11月9:30〜16:30",
+       "en": "May–mid-Jun 8:30–17:00, late Jun–mid-Aug 8:30–17:30, late Aug–Sep 9:00–17:00, Oct–Nov 9:30–16:30"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "JR 旭川→中富良野1,380円、中富良野→美馬牛470円。入園料は要確認",
+       "en": "JR Asahikawa → Nakafurano ¥1,380, Nakafurano → Bibaushi ¥470. Admission: please check"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "ファーム富田の公式サイト（カフェ・アクセスのページ）と乗換案内（2026年12月3日・5日のダイヤ）で確認しました（2026年11月28日）。",
+     "en": "Checked on Farm Tomita’s official site (café and access pages) and in a route planner for 3 and 5 December 2026, on 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "tomita-w1.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:140726_Farm_Tomita_Nakafurano_Hokkaido_Japan01s3.jpg"
+     }
+    },
+    {
+     "file": "tomita-w2.jpg",
+     "credit": {
+      "author": "Maga-chan",
+      "license": "CC BY-SA 2.1 jp",
+      "page": "https://commons.wikimedia.org/wiki/File:Nakafurano_02.jpg"
+     }
+    },
+    {
+     "file": "tomita-w3.jpg",
+     "credit": {
+      "author": "Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Farm_Tomita_20140812-1.jpg"
+     }
+    },
+    {
+     "file": "tomita-w4.jpg",
+     "credit": {
+      "author": "Choi2451",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Lavenders_at_Farm_Tomita.jpg"
+     }
+    },
+    {
+     "file": "tomita-w5.jpg",
+     "credit": {
+      "author": "LR0725",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Amaranthaceae_of_Farm_Tomita.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "bibaushi",
+   "name": {
+    "ja": "美馬牛駅",
+    "en": "Bibaushi Station"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "赤い屋根の小さな駅。四季彩の丘へはここから歩いて30分です。",
+    "en": "A small station with a red roof. Shikisai-no-oka is a 30-minute walk from here."
+   },
+   "lat": 43.537649,
+   "lng": 142.447376,
+   "text": {
+    "ja": "美馬牛駅\n\n中富良野13:27発で13:45着（470円）。ここから四季彩の丘へ歩きます。\n\n美馬牛（びばうし）は美瑛のひとつ富良野寄りの駅です。四季彩の丘までは歩いて30分ほど（観光協会の案内）。飲み物は先に用意しておくと安心です。\n\n駅の近くに貸自転車の店「ガイドの山小屋」があります（観光協会の一覧。料金と営業日は要確認）。電車は1時間に1本ほどなので、帰りに乗る電車を決めてから歩き始めてください。\n\nおすすめ移動時間：13:45着",
+    "en": "Bibaushi Station\n\nThe 13:27 from Nakafurano arrives at 13:45 (¥470). Walk on to Shikisai-no-oka from here.\n\nBibaushi is the next station after Biei towards Furano. Shikisai-no-oka is about 30 minutes on foot (tourism association’s figure). Bring a drink with you.\n\nA bike rental shop, Guide no Yamagoya, is near the station (on the tourism association’s list; check prices and opening days). Trains come about once an hour, so decide which one you are taking back before you set off.\n\nRecommended travel time: arrive 13:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR美馬牛駅",
+      "en": "JR Bibaushi Station"
+     },
+     "lat": 43.537649,
+     "lng": 142.447376,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E7%BE%8E%E9%A6%AC%E7%89%9B%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "美瑛のめぐり方（貸自転車の一覧）",
+      "en": "Getting around Biei (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biei-hokkaido.jp/ja/cruise",
+      "en": "https://www.biei-hokkaido.jp/ja/cruise"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "美馬牛→美瑛 16:18→16:25、17:31→17:38、18:32→18:39",
+       "en": "Bibaushi → Biei 16:18→16:25, 17:31→17:38, 18:32→18:39"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "JR 美馬牛→美瑛320円",
+       "en": "JR Bibaushi → Biei ¥320"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "JRは乗換案内で2026年12月3日（木）・5日（土）のダイヤを確認しました（2026年11月28日）。春のダイヤ改正のあとは確かめ直してください。",
+     "en": "Train times checked in a route planner for 3 December (Thu) and 5 December (Sat) 2026, on 28 November 2026. Re-check after the spring timetable revision."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "bibaushi-w1.jpg",
+     "credit": {
+      "author": "Alberth2",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Bibaushi_Station.jpg"
+     }
+    },
+    {
+     "file": "bibaushi-w2.jpg",
+     "credit": {
+      "author": "Takeshi Aida",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_%E3%82%AD%E3%83%8F150_%E5%AF%8C%E8%89%AF%E9%87%8E%E7%B7%9A_%E7%BE%8E%E9%A6%AC%E7%89%9B%E9%A7%85_%2820190529a%29.jpg"
+     }
+    },
+    {
+     "file": "bibaushi-w3.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E7%BE%8E%E9%A6%AC%E7%89%9B%E9%A7%85_-_panoramio_%282%29.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "shikisai",
+   "name": {
+    "ja": "四季彩の丘",
+    "en": "Shikisai-no-oka"
+   },
+   "kind": {
+    "ja": "花畑",
+    "en": "Flower garden"
+   },
+   "blurb": {
+    "ja": "丘の斜面に花の帯が何本も並ぶ展望花畑。奥に十勝岳の山並みが見えます。",
+    "en": "Stripes of flowers running across a hillside, with the Tokachi range behind."
+   },
+   "lat": 43.528087,
+   "lng": 142.466049,
+   "text": {
+    "ja": "四季彩の丘\n\n14:15ごろ着。16:18の電車に乗るので、15:40には駅へ歩き始めます。\n\n丘の斜面に、色の違う花が帯のように植えられた花畑です。グリーンシーズンは4月下旬〜10月下旬。広いので、園内の乗りもの（有料）もあります。アルパカ牧場（有料）は閉園の30分前まで。\n\n入場料がかかるのは7〜9月だけで、高校生以上800円、小・中学生500円（券売機。窓口は現金のみ）。それ以外の月の入場は、公式の案内に料金がありません。営業時間は5月・10月が8:40〜17:00、6〜9月が8:40〜17:30（7〜9月の最終入園は17:15）。レストランは15:00ラストオーダーで水曜休み、売店にはじゃがいものコロッケがあります。\n\n冬は花畑が雪に埋もれて「スノーランド」になり、スノーモービルやスノーラフトに乗れます（有料。雪が十分に積もってから始まります）。\n\nおすすめ訪問時間：14:15〜15:40",
+    "en": "Shikisai-no-oka\n\nArrive about 14:15. For the 16:18 train, start walking back to the station by 15:40.\n\nA hillside planted with bands of flowers in different colours. The green season runs from late April to late October. The grounds are large, and there are paid rides to get around. The alpaca farm (extra charge) closes 30 minutes before the garden.\n\nAdmission is charged only from July to September: ¥800 for high-school age and above, ¥500 for younger schoolchildren (ticket machine; the counter takes cash only). The official guide lists no charge for other months. Hours are 8:40–17:00 in May and October and 8:40–17:30 from June to September (last entry 17:15 in July–September). The restaurant takes last orders at 15:00 and is closed on Wednesdays; the shop sells potato croquettes.\n\nIn winter the fields disappear under snow and the garden becomes “Snow Land”, with snowmobiles and snow rafting (paid; starting once enough snow has fallen).\n\nRecommended visit time: 14:15–15:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "四季彩の丘",
+      "en": "Shikisai-no-oka"
+     },
+     "lat": 43.528087,
+     "lng": 142.466049,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E5%AD%A3%E5%BD%A9%E3%81%AE%E4%B8%98"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "四季彩の丘 ご利用案内",
+      "en": "Shikisai-no-oka"
+     },
+     "url": {
+      "ja": "http://www.shikisainooka.jp/about/guide/",
+      "en": "http://www.shikisainooka.jp/en/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "5月・10月8:40〜17:00、6〜9月8:40〜17:30（7〜9月の最終入園17:15）。レストランは15:00ラストオーダー",
+       "en": "May and Oct 8:40–17:00, Jun–Sep 8:40–17:30 (last entry 17:15 in Jul–Sep). Restaurant last orders 15:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "7〜9月だけ入場料：高校生以上800円、小・中学生500円（窓口は現金のみ）",
+       "en": "Admission July–September only: ¥800 (high-school age and up), ¥500 (younger schoolchildren); cash only at the counter"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月31日・1月1日。レストランは水曜休み",
+       "en": "31 December and 1 January. Restaurant closed Wednesdays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "帰りは美馬牛16:18発（美瑛16:25着）。逃すと次は17:31発",
+       "en": "Back from Bibaushi at 16:18 (Biei 16:25); the next is 17:31"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "四季彩の丘の公式サイト（ご利用案内・ウィンターシーズン）と美瑛町観光協会のページで確認しました（2026年11月28日）。",
+     "en": "Checked on Shikisai-no-oka’s official site (visitor guide, winter season) and the Biei Tourism Association’s page on 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "shikisai-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shikisai-no-oka_2.jpg"
+     }
+    },
+    {
+     "file": "shikisai-w2.jpg",
+     "credit": {
+      "author": "Dokudami",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Biei20220907_1.jpg"
+     }
+    },
+    {
+     "file": "shikisai-w3.jpg",
+     "credit": {
+      "author": "T-konno",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B1%95%E6%9C%9B%E8%8A%B1%E7%95%91_%E5%9B%9B%E5%AD%A3%E5%BD%A9%E3%81%AE%E4%B8%98.jpg"
+     }
+    },
+    {
+     "file": "shikisai-w4.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Shikisai-no-oka.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "machi",
+   "name": {
+    "ja": "美瑛の町：丘のくらと四季の塔",
+    "en": "Biei town: Okanokura and the tower"
+   },
+   "kind": {
+    "ja": "町歩き・みやげ",
+    "en": "Town · Shop"
+   },
+   "blurb": {
+    "ja": "駅から歩いて3分、大正時代の石の倉庫を使った道の駅。食堂は14:30ラストオーダーです。",
+    "en": "Three minutes from the station, a roadside station in a stone warehouse from the 1910s. The canteen takes last orders at 14:30."
+   },
+   "lat": 43.59228,
+   "lng": 142.46397,
+   "text": {
+    "ja": "美瑛の町：丘のくらと四季の塔\n\n美馬牛16:18発で美瑛16:25着（320円）。道の駅「丘のくら」は6〜8月は18:00まで、5月・9〜10月は17:00までなので、先にみやげを見てから、四季の塔か晩ごはんへ。\n\n1917年に建った美瑛軟石の豆の倉庫を、道の駅にした建物です。中の「香麦（こうばく）食堂」が11:00から14:30ラストオーダー。売店には美瑛だけのみやげが並びます。\n\nほかに駅の近くで昼に開いている店は、インド・ネパールカレーの「ナマステ 美瑛店」（歩いて5分、11:00〜21:30の通し営業）、「和牛焼肉・火鍋 GIO」（歩いて2分、12:00〜15:30、月曜休み）。観光協会の「飲食」のページに一覧があります。\n\n時間が余ったら、役場の横の「四季の塔」へ（駅から歩いて8分）。高さ32.4mの塔で、いちばん上から美瑛の町と丘を見渡せます。開いている時間は公式のページに書かれていないので、役場（0166-92-1111）か案内所で確かめてください。\n\nおすすめ訪問時間：16:30〜17:15",
+    "en": "Biei town: Okanokura and the tower\n\nThe 16:18 from Bibaushi reaches Biei at 16:25 (¥320). Okanokura closes at 18:00 from June to August and 17:00 in May, September and October, so shop there first, then go on to the tower or dinner.\n\nA 1917 bean warehouse of Biei soft stone, now a roadside station. Its canteen, Kobaku Shokudo, is open from 11:00 with last orders at 14:30. The shop stocks Biei-only souvenirs.\n\nOther places near the station open at lunchtime: Namaste Biei for Indian and Nepalese curry (5 minutes’ walk, open straight through 11:00–21:30) and GIO for wagyu barbecue and hotpot (2 minutes, 12:00–15:30, closed Mondays). The tourism association’s “eat” page lists more.\n\nWith time to spare, walk 8 minutes to Shiki-no-To, the 32.4-metre tower beside the town hall, for a view over the town and the hills from the top. Its opening hours are not on the official page, so ask the town hall (0166-92-1111) or the tourist office.\n\nRecommended visit time: 16:30–17:15"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "道の駅びえい「丘のくら」",
+      "en": "Okanokura roadside station"
+     },
+     "lat": 43.59228,
+     "lng": 142.46397,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%B3%E3%81%88%E3%81%84%20%E4%B8%98%E3%81%AE%E3%81%8F%E3%82%89"
+    },
+    {
+     "label": {
+      "ja": "四季の塔",
+      "en": "Shiki-no-To tower"
+     },
+     "lat": 43.58821,
+     "lng": 142.46694,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%9B%9B%E5%AD%A3%E3%81%AE%E5%A1%94%20%E7%BE%8E%E7%91%9B%E7%94%BA%E5%BD%B9%E5%A0%B4"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "丘のくら（観光協会）",
+      "en": "Okanokura (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biei-hokkaido.jp/ja/facility/okanokura",
+      "en": "https://www.biei-hokkaido.jp/ja/facility/okanokura"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ナマステ 美瑛店",
+      "en": "Namaste Biei"
+     },
+     "url": {
+      "ja": "https://namaste-hokkaido.com/biei/",
+      "en": "https://namaste-hokkaido.com/biei/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "美瑛の飲食店（観光協会）",
+      "en": "Places to eat in Biei (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biei-hokkaido.jp/ja/meal",
+      "en": "https://www.biei-hokkaido.jp/ja/meal"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "丘のくら 6〜8月9:00〜18:00、3〜5月・9〜11月9:00〜17:00、12〜2月10:00〜17:00。香麦食堂11:00〜14:30（ラストオーダー）",
+       "en": "Okanokura: Jun–Aug 9:00–18:00, Mar–May and Sep–Nov 9:00–17:00, Dec–Feb 10:00–17:00. Kobaku Shokudo 11:00–14:30 (last orders)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月31日・1月1日・1月7日。12月30日は10:00〜12:00",
+       "en": "31 December, 1 January, 7 January. 30 December 10:00–12:00 only"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "四季の塔の開いている時間は要確認",
+       "en": "Shiki-no-To tower hours: not confirmed (please check)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "美瑛町観光協会の施設のページとナマステの公式サイトで確認しました（2026年11月28日）。四季の塔の時間は公式で確かめられませんでした。",
+     "en": "Checked on the Biei Tourism Association’s facility pages and Namaste’s official site on 28 November 2026. The tower’s hours could not be confirmed."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "machi-w1.jpg",
+     "credit": {
+      "author": "Route275",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Michinoeki_Biei_Okanokura.JPG"
+     }
+    },
+    {
+     "file": "machi-w2.jpg",
+     "credit": {
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "page": "https://commons.wikimedia.org/wiki/File:Michinoeki_Biei_Okanokura_Biei_Hokkaido_Japan03bs5.jpg"
+     }
+    },
+    {
+     "file": "machi-w3.jpg",
+     "credit": {
+      "author": "Yasu",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Town_Hall_of_Biei%2C_Hokkaido%2C_Japan.jpg"
+     }
+    },
+    {
+     "file": "machi-w4.jpg",
+     "credit": {
+      "author": "Calistemon",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Maruyama_Street%2C_Biei%2C_Hokkaido%2C_April_2023_04.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "kaeri",
+   "name": {
+    "ja": "美瑛駅：晩ごはんと帰りの電車",
+    "en": "Biei Station: dinner and the train back"
+   },
+   "kind": {
+    "ja": "晩ごはん・駅",
+    "en": "Dinner · Station"
+   },
+   "blurb": {
+    "ja": "旭川行きは18:40、19:54、最終21:19。駅の近くで食べてから帰れます。",
+    "en": "Trains to Asahikawa leave at 18:40, 19:54 and, last, 21:19, leaving time to eat near the station first."
+   },
+   "lat": 43.59096,
+   "lng": 142.461225,
+   "text": {
+    "ja": "美瑛駅：晩ごはんと帰りの電車\n\n17:15ごろから晩ごはん。18:40発で旭川19:13着。まっすぐ帰るなら17:39発（旭川18:19着）。\n\n美瑛から旭川への電車は、夕方からは17:39、18:05、18:40、19:54、最終が21:19発です（平日・土曜とも。旭川まで30〜40分、680円）。\n\n駅の近くで夜に開いている店：インド・ネパールカレーの「ナマステ 美瑛店」（歩いて5分、11:00〜21:30、ラストオーダー21:00、定休日なし）、「和牛焼肉・火鍋 GIO」（歩いて2分、16:30〜20:00、月曜休み）。夜の時間を公式に確かめられた店は多くないので、遅くなる日は旭川に戻ってから食べるほうが店を選べます。\n\n札幌へ帰る人は、旭川からの特急の時刻を先に乗換案内で確かめておいてください。\n\nおすすめ出発時間：18:40（旭川19:13着）",
+    "en": "Biei Station: dinner and the train back\n\nDinner from about 17:15, then the 18:40 (Asahikawa 19:13). To go straight back, take the 17:39 (Asahikawa 18:19).\n\nEvening trains from Biei to Asahikawa leave at 17:39, 18:05, 18:40, 19:54 and, last, 21:19 (weekdays and Saturdays; 30–40 minutes, ¥680).\n\nOpen in the evening near the station: Namaste Biei for Indian and Nepalese curry (5 minutes’ walk, 11:00–21:30, last orders 21:00, no closing day) and GIO for wagyu barbecue and hotpot (2 minutes, 16:30–20:00, closed Mondays). Few other places could be confirmed as open in the evening, so on a late day you will have more choice back in Asahikawa.\n\nHeading back to Sapporo? Check the limited-express times from Asahikawa in a route planner beforehand.\n\nRecommended departure time: 18:40 (Asahikawa 19:13)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR美瑛駅",
+      "en": "JR Biei Station"
+     },
+     "lat": 43.59096,
+     "lng": 142.461225,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E7%BE%8E%E7%91%9B%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "ナマステ 美瑛店",
+      "en": "Namaste Biei"
+     },
+     "url": {
+      "ja": "https://namaste-hokkaido.com/biei/",
+      "en": "https://namaste-hokkaido.com/biei/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "和牛焼肉・火鍋 GIO（観光協会）",
+      "en": "GIO (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.biei-hokkaido.jp/ja/facility/gio",
+      "en": "https://www.biei-hokkaido.jp/ja/facility/gio"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "美瑛→旭川 17:39→18:19、18:05→18:37、18:40→19:13、19:54→20:27、最終21:19→21:47（平日・土曜とも）",
+       "en": "Biei → Asahikawa 17:39→18:19, 18:05→18:37, 18:40→19:13, 19:54→20:27, last 21:19→21:47 (weekdays and Saturdays)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "JR 美瑛→旭川680円",
+       "en": "JR Biei → Asahikawa ¥680"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "JRは乗換案内で2026年12月3日（木）・5日（土）のダイヤを、店の時間はナマステの公式サイトと美瑛町観光協会のページで確認しました（2026年11月28日）。",
+     "en": "Train times are from a route planner for 3 and 5 December 2026; shop hours from Namaste’s official site and the Biei Tourism Association, checked 28 November 2026."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kaeri-w1.jpg",
+     "credit": {
+      "author": "欅",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR-H_Kiha150-2.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w2.jpg",
+     "credit": {
+      "author": "くろふね",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E7%BE%8E%E7%91%9B%E9%A7%85_-_panoramio_%282%29.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w3.jpg",
+     "credit": {
+      "author": "T DMY",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Biei_Station%EF%BC%8F%E7%BE%8E%E7%91%9B%E9%A7%85_-_panoramio.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
