@@ -1,0 +1,1881 @@
+{
+ "id": "asahikawa",
+ "course": "late",
+ "_note": "旭山動物園と旭川の町（asahikawa/ のページ専用。形は eizan-line.json と同じ）。雪のない季節（動物園の夏期開園 4/29〜11/3）。旭川駅9:10のバス→旭山動物園9:49〜13:40→男山→買物公園・ラーメン→常磐公園と旭橋→5・7小路ふらりーと。髙砂酒造・文学館は選んだ日だけ。写真はすべて Wikimedia Commons（一覧は scripts/asahikawa_web_photos.json）。info.checked と sources.checked は確認した日、sources.saw はそのページで見た内容。このファイルは scripts/build_asahikawa_data.py で作る（直接直さない）。",
+ "sections": [
+  {
+   "first": 1,
+   "last": 2,
+   "area": {
+    "ja": "旭山動物園",
+    "en": "Asahiyama Zoo"
+   },
+   "title": {
+    "ja": "朝のバスで動物園へ。混む前に人気の館を",
+    "en": "The morning bus to the zoo, before the crowds"
+   }
+  },
+  {
+   "first": 3,
+   "last": 5,
+   "area": {
+    "ja": "午後に1つ",
+    "en": "One for the afternoon"
+   },
+   "title": {
+    "ja": "酒蔵か、森の中の文学館",
+    "en": "A sake brewery, or the museum in the forest"
+   }
+  },
+  {
+   "first": 6,
+   "last": 9,
+   "area": {
+    "ja": "旭川の町・夕方と夜",
+    "en": "Town · evening"
+   },
+   "title": {
+    "ja": "買物公園でラーメン、夕方の旭橋、焼き鳥の小路",
+    "en": "Ramen on the mall, the bridge at dusk, the yakitori alley"
+   }
+  }
+ ],
+ "focus": {
+  "first": 6,
+  "last": 9
+ },
+ "plan": {
+  "_note": "defaultPicks は時間割どおりの組み合わせ。旭川駅（出発・帰り）はいつも入る。",
+  "defaultMode": "pick",
+  "picks": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "defaultPicks": [
+   2,
+   3,
+   6,
+   7,
+   8
+  ],
+  "auto": {
+   "1": {
+    "always": true
+   },
+   "9": {
+    "always": true
+   }
+  },
+  "hints": [
+   {
+    "spot": 3,
+    "rule": {
+     "any": [
+      3
+     ],
+     "andAny": [
+      4,
+      5
+     ]
+    },
+    "text": {
+     "ja": "動物園のあとの午後は、男山・髙砂酒造・文学館のうち1つ（多くて近くの2つ：髙砂酒造と文学館はどちらも駅から歩けます）にしてください。男山はバスで往復1時間かかります。",
+     "en": "After the zoo, choose one of Otokoyama, Takasago and the literature museum (or at most the two near the station: Takasago and the museum are both walkable). Otokoyama takes an hour on the bus there and back."
+    }
+   },
+   {
+    "spot": 4,
+    "rule": {
+     "any": [
+      4
+     ],
+     "none": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "髙砂酒造を選んだ日は、14:23に駅に着いたら宮下通を東へ歩いて15分。16:00ごろ買物公園に戻れば、あとは時間割どおりです。",
+     "en": "With Takasago: from the station (14:23) walk 15 minutes east along Miyashita-dori. Be back on the mall by about 16:00 and the rest of the timetable holds."
+    }
+   },
+   {
+    "spot": 5,
+    "rule": {
+     "any": [
+      5
+     ],
+     "none": [
+      3
+     ]
+    },
+    "text": {
+     "ja": "文学館を選んだ日は、14:23に駅に着いたら東口から歩いて約20分。16:30ごろ出て、買物公園へ戻ります。月曜は休み（7・8月は開館）。",
+     "en": "With the literature museum: from the station (14:23) walk about 20 minutes from the east exit. Leave at about 16:30 and head back to the mall. Closed Mondays (open daily in July and August)."
+    }
+   },
+   {
+    "spot": 2,
+    "rule": {
+     "any": [
+      2
+     ],
+     "none": [
+      3,
+      4,
+      5
+     ]
+    },
+    "text": {
+     "ja": "午後に酒蔵も文学館も入れない日は、動物園に16時ごろまでいられます。帰りのバスは15:40発（16:28着）や16:10発（16:55着）。",
+     "en": "With no brewery or museum in the afternoon you can stay at the zoo until about 16:00. Return buses include the 15:40 (arriving 16:28) and the 16:10 (arriving 16:55)."
+    }
+   },
+   {
+    "spot": 6,
+    "rule": {
+     "none": [
+      2
+     ]
+    },
+    "text": {
+     "ja": "動物園に行かない日は、午前に文学館と見本林、お昼に買物公園でラーメン、午後に男山、夕方に常磐公園と旭橋、という回り方ができます。",
+     "en": "Without the zoo: the literature museum and forest in the morning, ramen on the mall for lunch, Otokoyama in the afternoon, then Tokiwa Park and the bridge towards evening."
+    }
+   }
+  ]
+ },
+ "photoBase": "../images/asahikawa/",
+ "sources": [
+  {
+   "what": "旭山動物園 開園日カレンダー",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/event/event.html",
+   "saw": "2026年：11/11〜12/29 10:30〜15:30（最終入園15:00）、11/4〜11/10休園。2027年：1/2〜4/7 10:30〜15:30（15:00）、4/29〜10/15 9:30〜17:15（16:00）、10/16〜11/3 9:30〜16:30（16:00）、11/11〜12/29 10:30〜15:30（15:00）。特別開園 2027年2/5〜2/7 10:30〜20:30（20:00）、8/10〜8/16 9:30〜21:00（20:00）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 令和8年度冬期開園について（2026年11月6日更新）",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/news-blog/osirase/d082799.html",
+   "saw": "冬期開園 2026年11月11日〜2027年4月7日、10:30〜15:30（最終入園15:00）。12月30日〜1月1日休園。ペンギンの散歩は12月下旬頃から3月中旬頃までの積雪期、11:00と14:30（3月は11:00のみの予定）、開始はSNSで知らせる、天候や積雪で休止・コース変更あり。園内は坂が多く、滑り止めのついた靴を",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 開園期間・入園料・チケット（2026年10月1日更新）",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/d052849.html",
+   "saw": "大人1,000円、中学生以下無料。Webチケット・コンビニチケットあり（Webチケットは旭山三浦庭園連絡ゲートからは入れない）。券売窓口・券売機はキャッシュレス対応（ブランドは画像）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 入園料の改定について（2026年7月1日）",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/news-blog/osirase/d084291.html",
+   "saw": "2027年4月29日の夏期開園から 大人1,400円（現在1,000円）。中学生以下は無料のまま",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 アクセス（2026年8月14日更新）",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/d053767.html",
+   "saw": "旭川駅〜動物園 路線バス 約30分間隔・約40分・大人670円。旭川電気軌道 41・47番、のりばは旭川駅前の6番。タクシー約30分・約4,800円。札幌〜旭川 JR約1時間30分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 利用案内・おやくそく（2026年11月16日更新）",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/d053773.html",
+   "saw": "再入園はできません。フラッシュ撮影禁止。ペンギンの散歩やもぐもぐタイムなど混雑エリアで三脚禁止。園内サービスにコインロッカー・フリーWiFi・多言語情報発信サービス。その日のガイドの時間は各門とビジターインフォメーションの看板に掲示",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 売店・飲食店",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/p008636.html",
+   "saw": "飲食店：Museum Cafe ASAHIYAMA（正門付近）、FOOD BASE CAFE TOTORI（ととりの村向かい）、旭山動物園中央食堂（あざらし館2階）、FarmZoo（西門付近）、カムイチカプ（東門2階）ほか。営業時間の記載はない",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭山動物園 ホッキョクグマ「ピリカ」の展示中止（2026年11月24日）",
+   "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/news-blog/osirase/d085126.html",
+   "saw": "ピリカは寝室のみで過ごす。ホッキョクグマのもぐもぐタイムはしばらく中止",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川電気軌道 旭川駅〜旭山動物園線 冬の時刻表（2026年11月11日〜2027年4月7日）",
+   "url": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/",
+   "saw": "旭川駅のりば6発→動物園着：41番8:40→9:27、47番9:10→9:49、42番9:35→10:10、41番9:40→10:22、47番9:55→10:34、47番10:10→10:49、41番10:40→11:22 … 41番14:40→15:10。動物園発→旭川駅着：47番13:10→13:54、41番13:40→14:27、47番14:10→14:54、41番14:40→15:27、42番15:00→15:45、47番15:10→15:54、41番15:25→16:12、41番15:40→16:32、47番15:55→16:44、47番16:10→16:59（最終）。運賃 片道 大人670円（2026年9月1日改定）。ICカードはAsaca・DoCARDのみ。バス総合案内所に乗車券の券売機（入園券も買える、クレジット対応の券売機あり）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川電気軌道 同じページの夏の時刻表（2026年4月29日〜11月3日。Internet Archive の2026年7月15日の保存）",
+   "url": "http://web.archive.org/web/20260715212918/https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/",
+   "saw": "旭川駅のりば6発→動物園着：41番7:40→8:27、47番8:10→8:54、41番8:40→9:27、47番9:10→9:49、41番9:40→10:22 …。動物園発→旭川駅着：47番13:10→13:50、41番13:40→14:23、47番14:10→14:50 … 47番17:10→17:55、41番17:40→18:28（最終）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "札幌→旭川 朝 平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=07&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急宗谷 7:30→8:58、特急ライラック5号 8:00→9:25。5,440円（乗車券3,080円＋指定席2,360円）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "札幌→旭川 朝 土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=05&hh=07&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急宗谷 7:30→8:58、特急ライラック5号 8:00→9:25",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "札幌→旭川 9時台 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%97%AD%E5%B7%9D&y=2026&m=12&d=03&hh=08&m1=3&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%9C%AD%E5%B9%8C",
+   "saw": "特急カムイ7号 9:00→10:25（12/5も同じ）。高速あさひかわ号 札幌駅前9:00→旭川駅前11:10、2,500円",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川→札幌 夜 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=19&m1=5&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%97%AD%E5%B7%9D",
+   "saw": "特急カムイ42号 20:00→21:25、特急ライラック44号 21:00→22:25（12/5も同じ）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川→札幌 最終 平日・土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%9C%AD%E5%B9%8C&y=2026&m=12&d=03&hh=23&m1=5&m2=9&type=2&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%97%AD%E5%B7%9D",
+   "saw": "特急ライラック46号 22:00→23:25（最終。12/5も同じ）。その前は特急宗谷 21:30→22:56",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "JR北海道 北海道レールパス（英語）",
+   "url": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+   "saw": "All seats are reserved on all JR Hokkaido’s limited express trains. There are no non-reserved seats. 乗る前に指定席券を受け取る。Sapporo-Furano Area Pass 11,000円・4日間（旭川を含む）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "1条8丁目→永山2条6丁目（道北バス）平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%B0%B8%E5%B1%B1%EF%BC%92%E6%9D%A1%EF%BC%96%E4%B8%81%E7%9B%AE&y=2026&m=12&d=03&hh=14&m1=3&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%EF%BC%91%E6%9D%A1%EF%BC%98%E4%B8%81%E7%9B%AE%E3%83%BB%EF%BC%91%E6%9D%A1%EF%BC%97%E4%B8%81%E7%9B%AE%2F%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9",
+   "saw": "14:35→15:03（260円）、14:40→15:09（260円）、15:00→15:25（310円）。15:30→15:55、15:40→16:10 もある",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "1条8丁目→永山2条6丁目（道北バス）土曜・日曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%E6%B0%B8%E5%B1%B1%EF%BC%92%E6%9D%A1%EF%BC%96%E4%B8%81%E7%9B%AE&y=2026&m=12&d=05&hh=14&m1=3&m2=5&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%EF%BC%91%E6%9D%A1%EF%BC%98%E4%B8%81%E7%9B%AE%E3%83%BB%EF%BC%91%E6%9D%A1%EF%BC%97%E4%B8%81%E7%9B%AE%2F%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9",
+   "saw": "14:40→15:10（260円）、14:45→15:15（350円）、15:30→15:54（12/6の日曜も14:40→15:10、14:45→15:15）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "永山2条6丁目→1条8丁目（道北バス）平日",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%EF%BC%91%E6%9D%A1%EF%BC%98%E4%B8%81%E7%9B%AE%E3%83%BB%EF%BC%91%E6%9D%A1%EF%BC%97%E4%B8%81%E7%9B%AE%2F%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9&y=2026&m=12&d=03&hh=16&m1=1&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%B0%B8%E5%B1%B1%EF%BC%92%E6%9D%A1%EF%BC%96%E4%B8%81%E7%9B%AE",
+   "saw": "永山2条4丁目16:29→16:54（310円。停留所まで歩く時間を入れて16:24発）、次は17:13→17:40、17:29→17:54",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "永山2条6丁目→1条8丁目（道北バス）土曜",
+   "url": "https://transit.yahoo.co.jp/search/result?to=%EF%BC%91%E6%9D%A1%EF%BC%98%E4%B8%81%E7%9B%AE%E3%83%BB%EF%BC%91%E6%9D%A1%EF%BC%97%E4%B8%81%E7%9B%AE%2F%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9&y=2026&m=12&d=05&hh=16&m1=1&m2=0&type=1&ticket=ic&expkind=1&shin=1&ex=1&lb=1&al=0&hb=1&sr=0&s=0&userpass=0&ws=3&from=%E6%B0%B8%E5%B1%B1%EF%BC%92%E6%9D%A1%EF%BC%96%E4%B8%81%E7%9B%AE",
+   "saw": "永山2条4丁目16:29→16:53（310円）、永山2条2丁目16:38→17:00（260円）、17:13→17:40（12/6の日曜も16:29→16:53）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス タッチ決済",
+   "url": "https://www.dohokubus.com/touch-payment.html",
+   "saw": "クレジットカードのタッチ決済は対象路線だけ（都市間バスと、白金線・層雲峡線・空港線などの路線バスの一部）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "道北バス バスカード",
+   "url": "https://www.dohokubus.com/buscard.html",
+   "saw": "ICカードは Doカード と Asaca（全国の交通系ICカードの記載はない）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "男山 酒造り資料舘",
+   "url": "https://www.otokoyama.com/museum/",
+   "saw": "9時〜17時、休舘日 年末年始（12/31、1/1〜3）、入舘料無料。道北バス「永山2条6丁目」下車 徒歩2分。旭山動物園から車で15分。3階のビデオは5か国語（日本語・英語・中国語・韓国語・タイ語）。仕込水「延命長寿の水」",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "OTOKOYAMA SAKE PARK",
+   "url": "https://sake-park.otokoyama.com/",
+   "saw": "2024年9月13日オープン。新館1階の売店で日本酒の有料試飲（試飲は16:30まで）、カフェスタンド。資料舘（旧館2・3階）は無料のまま",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "髙砂酒造 直売店・工場見学",
+   "url": "https://takasagoshuzo.com/meiji-sakagura/",
+   "saw": "明治酒蔵（直売店）：営業時間9:00〜17:00、定休日 年末年始。1909年に建てられた酒蔵、2000年から資料館・直売店。試飲コーナー、酒造り解説動画（約15分）。工場見学は無料・事前予約制（各回先着10名、WEBか電話、見学日の前日正午まで）",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "髙砂酒造 お問合せ・アクセス",
+   "url": "https://takasagoshuzo.com/contact/",
+   "saw": "JR旭川駅から徒歩15分、タクシーで5分。旭川市宮下通17丁目右1号",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "三浦綾子記念文学館 ご利用案内",
+   "url": "https://www.hyouten.com/info",
+   "saw": "9:00〜17:00（最終入館16:30）。7/1〜8/31は毎日開館、9/1〜翌6/30は月曜休館（祝日でも休館）、12/28〜1/5は年末年始休館。大人700円・学生300円・小中高生無料。現金・クレジットカード・交通系電子マネーほか。分館・氷点ラウンジ10:00〜16:00",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "三浦綾子記念文学館 アクセス",
+   "url": "https://www.hyouten.com/access",
+   "saw": "JR旭川駅東口より氷点橋を渡り、突当たりが文学館のある見本林。徒歩約20分。タクシーで約3分",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "外国樹種見本林（旭川観光コンベンション協会）",
+   "url": "https://www.atca.jp/kankouspoy/%e5%a4%96%e5%9b%bd%e6%a8%b9%e7%a8%ae%e8%a6%8b%e6%9c%ac%e6%9e%97/",
+   "saw": "1898年（明治31年）に植栽。ストローブマツ・ヨーロッパカラマツなど約30種。三浦綾子『氷点』の舞台",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川平和通買物公園（商店街振興組合）",
+   "url": "https://www.kaimonokouen.com/about",
+   "saw": "1972年6月1日に開設された全国初の恒久的な歩行者専用道路。旭川駅前から8条通まで約1km。2月の冬まつりのときに氷彫刻世界大会の会場",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "梅光軒 店舗一覧",
+   "url": "https://baikohken.com/shop",
+   "saw": "旭川本店：旭川市2条8丁目 買物公園ピアザビルB1F、11:00〜15:30（L.O.15:00）、17:00〜21:00（L.O.20:30）、不定休",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "らーめん山頭火 国内店舗",
+   "url": "https://www.santouka.co.jp/shop-jp",
+   "saw": "旭川本店：11:00〜22:00（ラストオーダー21:30）、スープがなくなり次第終了、定休日 木曜（祝日は営業）、旭川市1条通8丁目348番地6",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "常磐公園（旭川観光コンベンション協会）",
+   "url": "https://www.atca.jp/kankouspoy/%e5%b8%b8%e7%a3%90%e5%85%ac%e5%9c%92/",
+   "saw": "1910年（明治43年）開設の旭川で最初の公園。16ヘクタール、白鳥・千鳥の2つの池、手漕ぎボート。日本の都市公園100選",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭橋（旭川観光コンベンション協会）",
+   "url": "https://www.atca.jp/kankouspoy/%e6%97%ad%e6%a9%8b/",
+   "saw": "1932年（昭和7年）11月完成。橋長225.4m、幅18.3m のアーチ橋。昭和31年までは市内電車が橋の上を走った。北海道遺産（平成16年）。夕日の残照、冬の川霧",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "北海道立旭川美術館 開館時間・休館日・観覧料",
+   "url": "https://artmuseum.pref.hokkaido.lg.jp/abj/guide/about/",
+   "saw": "9:30〜17:00（展示室への入場は16:30まで）。月曜休館（祝日は開館して翌火曜休館）、年末年始12/29〜1/3、展示替期間。観覧料は展覧会ごと",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "旭川冬まつり 公式サイト",
+   "url": "https://asahikawa-winterfes.jp/",
+   "saw": "第68回旭川冬まつり2027：2027年2月6日（土）〜11日（木・祝）の6日間。会場は常磐公園と石狩川旭橋河畔会場ほか",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "5・7小路ふらりーと（旭川観光コンベンション協会）",
+   "url": "https://www.atca.jp/kankouspoy/%ef%bc%95%ef%bc%8e%ef%bc%97%e5%b0%8f%e8%b7%af%e3%81%b5%e3%82%89%e3%82%8a%e3%83%bc%e3%81%a8/",
+   "saw": "5条通7丁目の小路、正式名称は中央市場。戦前は魚菜市場、のちに「焼き鳥横丁」。約3mの通路をはさんで焼き鳥・ラーメン・居酒屋など18店舗ほど。冬は店の前にアイスキャンドル",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "焼鳥専門ぎんねこ",
+   "url": "https://www.ginneko.co.jp/",
+   "saw": "昭和25年創業。旭川市5条通7丁目右6（5・7小路ふらりーと）。営業時間13:00〜22:00、月曜定休。席の予約は受けていない。新子焼きは生後4〜5週の若鶏。英語などのページあり。休業日のお知らせが毎月出る",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "気象庁 旭川の平年値（1991〜2020年）",
+   "url": "https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=12&block_no=47407&year=&month=&day=&view=",
+   "saw": "1月：日最高−3.3℃、日最低−11.7℃。2月：−1.7℃、−11.8℃。12月：−0.8℃、−8.0℃。7月：26.2℃、16.4℃",
+   "checked": "2026-11-28"
+  },
+  {
+   "what": "国立天文台 札幌の日の出入り 2026年12月",
+   "url": "https://eco.mtk.nao.ac.jp/koyomi/dni/2026/s0112.html",
+   "saw": "札幌の12月の日の入りは16時ごろ。旭川（北緯43.77度・東経142.36度）は計算で12月上旬〜下旬15:54ごろ、6月下旬19:15、8月末18:10、9月末17:15、10月末16:24",
+   "checked": "2026-11-28"
+  }
+ ],
+ "spots": [
+  {
+   "no": 1,
+   "id": "eki",
+   "name": {
+    "ja": "旭川駅（出発）",
+    "en": "Asahikawa Station (start)"
+   },
+   "kind": {
+    "ja": "駅・バスのりば",
+    "en": "Station & bus stop"
+   },
+   "blurb": {
+    "ja": "駅前の6番のりばから、9:10のバスで動物園へ。運賃は現金で。",
+    "en": "Bus stop 6 in front of the station: the 9:10 to the zoo. Pay in cash."
+   },
+   "caution": {
+    "ja": "バスはSuicaなどのICカードが使えません（現金670円）",
+    "en": "No Suica or other IC cards on the bus (¥670 in cash)"
+   },
+   "lat": 43.76275,
+   "lng": 142.35793,
+   "text": {
+    "ja": "旭川駅（出発）\n\n動物園行きのバス（旭川電気軌道の41番・47番）は、旭川駅の北口を出た駅前の6番のりばから出ます。雪のない季節の動物園は9:30に開きます。9:10発（9:49着）なら、駅のまわりのホテルを8:55ごろに出れば間に合います。開園と同時に入りたい日は8:40発（9:27着）で。約40分、片道670円です。\n\n夏休みや連休の昼前はバスも園内も混みます。朝のうちに着くほど、人気の館をゆっくり見られます。\n\n札幌から日帰りの人：札幌8:00発の特急ライラック5号が旭川9:25着で、9:40のバス（10:22着）に乗れます。特急は全部の席が指定席で、片道5,440円。北海道レールパスの人も、乗る前に指定席券を受け取ってください。\n\nおすすめ出発時間：9:10発（ホテルは8:55ごろ出る）",
+    "en": "Asahikawa Station (start)\n\nBuses to the zoo (Asahikawa Denki Kido routes 41 and 47) leave from stop 6, right outside the station’s north exit. Outside winter the zoo opens at 9:30. For the 9:10 bus (arriving 9:49), leave a hotel near the station at about 8:55; to walk in at opening time, take the 8:40 (arriving 9:27). The ride takes about 40 minutes and costs ¥670 each way.\n\nIn the summer holidays and on long weekends both the buses and the zoo fill up before noon. The earlier you arrive, the easier the popular houses are.\n\nDay trip from Sapporo: the Lilac 5 limited express leaves Sapporo at 8:00 and reaches Asahikawa at 9:25, in time for the 9:40 bus (arriving 10:22). All seats on the limited expresses are reserved: ¥5,440 each way. Hokkaido Rail Pass holders also need to pick up a seat reservation before boarding.\n\nRecommended departure time: 9:10 (leave your hotel at about 8:55)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旭川駅前 バスのりば（6番）",
+      "en": "Bus stops in front of Asahikawa Station (stop 6)"
+     },
+     "lat": 43.76365,
+     "lng": 142.3585,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B7%9D%E9%A7%85%E5%89%8D%20%E3%83%90%E3%82%B9%E3%82%BF%E3%83%83%E3%83%81"
+    },
+    {
+     "label": {
+      "ja": "JR旭川駅",
+      "en": "JR Asahikawa Station"
+     },
+     "lat": 43.76275,
+     "lng": 142.35793,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%97%AD%E5%B7%9D%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "旭川駅〜旭山動物園のバス時刻表（旭川電気軌道）",
+      "en": "Bus timetable, Asahikawa Station – Asahiyama Zoo (Asahikawa Denki Kido)"
+     },
+     "url": {
+      "ja": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/",
+      "en": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "旭川駅周辺のバスのりば案内（旭川市）",
+      "en": "Bus stops around Asahikawa Station (city website, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.asahikawa.hokkaido.jp/kurashi/452/453/456/d064214.html",
+      "en": "https://www.city.asahikawa.hokkaido.jp/kurashi/452/453/456/d064214.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "北海道レールパス（JR北海道）",
+      "en": "Hokkaido Rail Pass (JR Hokkaido)"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "バスでは Suica などのICカードが使えません",
+      "en": "Suica and other IC cards do not work on the buses"
+     },
+     "text": {
+      "ja": "旭川のバスで使えるICカードは、地元の Asaca と DoCARD だけです。動物園までは片道670円。現金（千円札と小銭）を用意するか、駅前のバス総合案内所の券売機で先にきっぷを買ってください（往復なら2枚）。券売機では動物園の入園券も買えます。",
+      "en": "The only IC cards accepted on Asahikawa buses are the local Asaca and DoCARD. The zoo is ¥670 each way: carry cash (¥1,000 notes and coins), or buy tickets first from the machine at the bus information centre by the station (two tickets for a return). The machine also sells zoo admission tickets."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/"
+    },
+    {
+     "head": {
+      "ja": "夏のバスの時刻は2026年のものです",
+      "en": "Summer bus times are from 2026"
+     },
+     "text": {
+      "ja": "2027年の夏期開園（4月29日〜）のバスの時刻表は、まだ発表されていません。このコースの動物園のバスの時刻は、2026年の夏の時刻表です。行く前に、旭川電気軌道のページで確かめてください。",
+      "en": "The bus timetable for the 2027 summer season (from 29 April) has not been published yet. The zoo bus times in this course are from the 2026 summer timetable: check the bus company’s page before you go."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "旭川駅6番のりば 9:10 → 旭山動物園 9:49（47番）。前は8:40 → 9:27（41番）、次は9:40 → 10:22。2026年夏の時刻",
+       "en": "Asahikawa Station stop 6 9:10 → Asahiyama Zoo 9:49 (route 47). Before: 8:40 → 9:27 (route 41); next: 9:40 → 10:22. 2026 summer times"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "バス 片道670円（2026年9月1日から）。現金か、バス総合案内所の券売機のきっぷ",
+       "en": "Bus ¥670 each way (since 1 Sept 2026): cash, or a ticket from the machine at the bus information centre"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "札幌8:00 → 旭川9:25（特急ライラック5号）。札幌9:00 → 旭川10:25（特急カムイ7号）。平日・土曜とも",
+       "en": "Sapporo 8:00 → Asahikawa 9:25 (Lilac 5). Sapporo 9:00 → Asahikawa 10:25 (Kamui 7). Weekdays and Saturdays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "札幌〜旭川 片道5,440円（乗車券3,080円＋指定席2,360円）。全席指定",
+       "en": "Sapporo – Asahikawa ¥5,440 each way (fare ¥3,080 + reserved seat ¥2,360). All seats reserved"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "バスは旭川電気軌道の公式の時刻表、JRは乗換案内の2026年12月3日（木）・5日（土）で確認しました。JR北海道は2027年3月にダイヤ改正の予定なので、春からは時刻が変わることがあります。",
+     "en": "Buses from the operator’s official timetable; trains checked in a route planner for Thu 3 and Sat 5 December 2026. JR Hokkaido usually revises its timetable in March, so times may change from spring 2027."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "eki-w1.jpg",
+     "credit": {
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Station_-_2022_Aug_9_various_16_57_32_382000.jpeg"
+     }
+    },
+    {
+     "file": "eki-w2.jpg",
+     "credit": {
+      "author": "Nagono",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Asahikawa_Station_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "eki-w3.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:JR_Hokkaido_Asahikawa_Station_East_Gate_20230102.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "zoo",
+   "name": {
+    "ja": "旭山動物園（あさひやまどうぶつえん）",
+    "en": "Asahiyama Zoo"
+   },
+   "kind": {
+    "ja": "動物園",
+    "en": "Zoo"
+   },
+   "blurb": {
+    "ja": "9:30開園。水の中のペンギン、アザラシ、ホッキョクグマを間近に。",
+    "en": "Opens 9:30. Penguins, seals and polar bears seen from under the water."
+   },
+   "caution": {
+    "ja": "再入園はできません。4月8日〜28日と11月4日〜10日は休園",
+    "en": "No re-entry. Closed 8–28 Apr and 4–10 Nov"
+   },
+   "lat": 43.76859,
+   "lng": 142.47592,
+   "text": {
+    "ja": "旭山動物園（あさひやまどうぶつえん）\n\n日本でいちばん北にある動物園。動物が泳ぐ、飛び込む、歩くところを、すぐ近くから見られるように造った展示で知られています。ぺんぎん館は水の中のトンネルから、あざらし館は筒の形の水槽を上り下りするアザラシを、ほっきょくぐま館は水に飛び込むクマをガラス越しに見ます。\n\n9:49に着いたら、正門から入って、人気のぺんぎん館・あざらし館・ほっきょくぐま館を先に。昼前から混んでくる館なので、朝のうちがゆっくり見られます。えさの時間に飼育員が話す「もぐもぐタイム」の時刻は、門のそばの看板と公式サイトの「本日のスケジュール」に出ます。\n\n園は山の斜面にあって坂が多いので、歩きやすい靴で。お昼は園内の食堂で（あざらし館2階の中央食堂、正門のそばの Museum Cafe、東門2階のカムイチカプなど）。再入園はできません。\n\n帰りは13:40のバス（旭川駅14:23着）。もっと見ていたい日は、男山をやめて16時台まで残る手もあります（10月16日からは16:30閉園）。雪の上のペンギンの散歩は冬だけです。\n\nおすすめ訪問時間：9:49〜13:40",
+    "en": "Asahiyama Zoo\n\nJapan’s northernmost zoo, known for enclosures built so that you see the animals swim, dive and walk from very close. You watch penguins from a tunnel under their pool, seals rising and sinking through a vertical glass tube, and polar bears plunging into the water on the other side of the glass.\n\nArriving at 9:49, enter by the Main Gate and go to the popular Penguin, Seal and Polar Bear houses first: they get crowded from late morning. Times for the keepers’ feeding talks (“mogu-mogu time”) are on the board by the gates and on the “today’s schedule” page of the website.\n\nThe zoo sits on a hillside with many slopes, so wear comfortable shoes. Have lunch at one of the zoo’s restaurants (the Central Restaurant upstairs in the Seal House, Museum Cafe by the Main Gate, Kamuy Cikap upstairs at the East Gate and others). There is no re-entry.\n\nTake the 13:40 bus back (Asahikawa Station 14:23). If you would rather stay, skip Otokoyama and remain until after 16:00 (the zoo closes at 16:30 from 16 October). The penguin walk on snow is winter only.\n\nRecommended visit time: 9:49–13:40"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "旭山動物園 正門",
+      "en": "Asahiyama Zoo Main Gate"
+     },
+     "lat": 43.76859,
+     "lng": 142.47592,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92%20%E6%AD%A3%E9%96%80"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旭山動物園",
+      "en": "Asahiyama Zoo (machine-translated English)"
+     },
+     "url": {
+      "ja": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/",
+      "en": "https://honyaku.j-server.com/LUCAKC/ns/tl_ex.cgi?SURL=https://honyaku.j-server.com/LUCAKC/ns/warning_mess.cgi%3furl=https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/index.html%26target=_top&SLANG=ja&TLANG=en&XMODE=0"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旭山動物園 開園日カレンダー・その日のスケジュール",
+      "en": "Asahiyama Zoo calendar and daily schedule (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/event/event.html",
+      "en": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/event/event.html"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "入園料・チケット（Webチケット）",
+      "en": "Admission and web tickets (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/d052849.html",
+      "en": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/generalinformation/d052849.html"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "旭川駅〜旭山動物園のバス時刻表（旭川電気軌道）",
+      "en": "Bus timetable, Asahikawa Station – Asahiyama Zoo (Asahikawa Denki Kido)"
+     },
+     "url": {
+      "ja": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/",
+      "en": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "2027年4月29日から入園料は1,400円",
+      "en": "Admission rises to ¥1,400 from 29 April 2027"
+     },
+     "text": {
+      "ja": "大人1,000円の入園料は、2027年4月29日の夏期開園から1,400円になります。中学生以下は無料のままです。",
+      "en": "Adult admission (now ¥1,000) becomes ¥1,400 from the summer opening on 29 April 2027. Junior high school students and younger stay free."
+     },
+     "from": null,
+     "to": "2027-04-28",
+     "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/news-blog/osirase/d084291.html"
+    },
+    {
+     "head": {
+      "ja": "11月4日〜10日は休園",
+      "en": "Closed 4–10 November"
+     },
+     "text": {
+      "ja": "夏期開園は2027年11月3日まで。11月4日から10日は休園で、11月11日から冬期開園（10:30〜15:30）です。",
+      "en": "The summer season ends on 3 November 2027. The zoo is closed from 4 to 10 November and reopens for winter on 11 November (10:30–15:30)."
+     },
+     "from": "2027-10-20",
+     "to": "2027-11-10",
+     "url": "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/event/event.html"
+    },
+    {
+     "head": {
+      "ja": "夏のバスの時刻は2026年のものです",
+      "en": "Summer bus times are from 2026"
+     },
+     "text": {
+      "ja": "2027年の夏期開園（4月29日〜）のバスの時刻表は、まだ発表されていません。このコースの動物園のバスの時刻は、2026年の夏の時刻表です。行く前に、旭川電気軌道のページで確かめてください。",
+      "en": "The bus timetable for the 2027 summer season (from 29 April) has not been published yet. The zoo bus times in this course are from the 2026 summer timetable: check the bus company’s page before you go."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.asahikawa-denkikidou.jp/schedule/zoo-airport-timetable/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "夏期開園 9:30〜17:15（最終入園16:00）。2027年4月29日〜10月15日。10月16日〜11月3日は16:30まで",
+       "en": "Summer season 9:30–17:15 (last entry 16:00), 29 Apr – 15 Oct 2027; until 16:30 from 16 Oct to 3 Nov"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "4月8日〜28日、11月4日〜10日",
+       "en": "8–28 Apr and 4–10 Nov"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,000円、中学生以下は無料",
+       "en": "Adults ¥1,000; junior high school students and younger free"
+      },
+      "until": "2027-04-28",
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人1,400円、中学生以下は無料（2027年4月29日から）",
+       "en": "Adults ¥1,400; junior high school students and younger free (from 29 Apr 2027)"
+      },
+      "until": null,
+      "from": "2027-04-29"
+     },
+     {
+      "kind": "pay",
+      "text": {
+       "ja": "券売窓口と券売機はキャッシュレス対応。Webチケットなら券売所に並ばずに入れます",
+       "en": "Ticket windows and machines take cashless payment. A web ticket lets you skip the ticket queue"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "帰り：動物園13:40 → 旭川駅14:23（41番）。14:10 → 14:50、最終17:40 → 18:28。2026年夏の時刻",
+       "en": "Back: Zoo 13:40 → Asahikawa Station 14:23 (route 41). Then 14:10 → 14:50; last bus 17:40 → 18:28. 2026 summer times"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "開園日・時間・料金・ペンギンの散歩は旭山動物園の公式サイト、バスは旭川電気軌道の時刻表で確認しました。園内の食堂の営業時間は公式サイトに書かれていません。荷物は園内のコインロッカーへ。",
+     "en": "Opening days, hours, fees and the penguin walk are from the zoo’s official website; buses from the operator’s timetable. The website gives no hours for the zoo restaurants. There are coin lockers inside the zoo."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "zoo-w1.jpg",
+     "credit": {
+      "author": "欅 (Keyaki)",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahiyama_zoo_Penguin.jpg"
+     }
+    },
+    {
+     "file": "zoo-w2.jpg",
+     "credit": {
+      "author": "なよろ",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%97%AD%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92%E3%81%AE%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3.jpg"
+     }
+    },
+    {
+     "file": "zoo-w3.jpg",
+     "credit": {
+      "author": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahiyama_zoo%2C_Asahikawa%2C_Japan_%28142824964%29.jpg"
+     }
+    },
+    {
+     "file": "zoo-w4.jpg",
+     "credit": {
+      "author": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahiyama_zoo%2C_Asahikawa%2C_Japan_%28142824966%29.jpg"
+     }
+    },
+    {
+     "file": "zoo-w5.jpg",
+     "credit": {
+      "author": "pelican from Tokyo, Japan",
+      "license": "CC BY-SA 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahiyama_zoo%2C_Asahikawa%2C_Japan_%28141844445%29.jpg"
+     }
+    },
+    {
+     "file": "zoo-w6.jpg",
+     "credit": {
+      "author": "欅 (Keyaki)",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahiyama_zoo_entrance.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "otoko",
+   "name": {
+    "ja": "男山 酒造り資料舘（おとこやま）",
+    "en": "Otokoyama Sake Brewery Museum"
+   },
+   "kind": {
+    "ja": "酒蔵・資料館",
+    "en": "Sake brewery & museum"
+   },
+   "blurb": {
+    "ja": "無料の資料館と、売店での試飲（有料・16:30まで）。バスで約30分。",
+    "en": "A free museum and paid tastings at the shop (until 16:30). About 30 minutes by bus."
+   },
+   "caution": {
+    "ja": "試飲は16:30まで。12月31日〜1月3日は休み",
+    "en": "Tastings until 16:30. Closed 31 Dec – 3 Jan"
+   },
+   "lat": 43.79604,
+   "lng": 142.40937,
+   "text": {
+    "ja": "男山 酒造り資料舘（おとこやま）\n\n「男山」は江戸時代から名前の知られた酒で、旭川の蔵がその名を受け継いでいます。資料舘（無料）の2階には、男山が描かれた歌麿や国芳の浮世絵、3階には昔の酒造りの桶や道具。3階のビデオは英語・中国語・韓国語・タイ語でも見られます。仕込みの時期は、酒造りの様子も一部見られます。\n\nとなりの新しい売店には有料の試飲があり、蔵でしか買えない酒も並びます。試飲は16:30まで。仕込みに使う大雪山の伏流水「延命長寿の水」は、だれでも飲めます。\n\n動物園から13:40のバスで旭川駅に戻り（14:23）、1条通の「1条8丁目」のバス停へ歩いて5分。14:40発の道北バスで「永山2条6丁目」15:09、そこから歩いて2分です。1時間ほど見て、16:29発のバスで1条8丁目16:54着。\n\nバスは行き先に「永山」と出る系統がいくつもあり、乗る系統で運賃が少し違います（260〜350円）。運転手さんに「永山2条6丁目」と見せて確かめると安心です。\n\nおすすめ訪問時間：15:10〜16:20",
+    "en": "Otokoyama Sake Brewery Museum\n\nOtokoyama is a sake name famous since the Edo period, carried on today by this Asahikawa brewery. The free museum shows ukiyo-e prints by Utamaro and Kuniyoshi that feature Otokoyama (2nd floor) and old wooden vats and brewing tools (3rd floor), with a video available in English, Chinese, Korean and Thai. In the brewing season you can also see part of the brewery at work.\n\nThe new shop next door has paid tastings and bottles sold only at the brewery; tastings end at 16:30. The brewing water, an underground flow from the Daisetsuzan mountains, runs from a tap for anyone to drink.\n\nTake the 13:40 bus from the zoo back to Asahikawa Station (14:23) and walk five minutes to the “1-jo 8-chome” stop on Ichijo-dori. The 14:40 Dohoku Bus reaches “Nagayama 2-jo 6-chome” at 15:09, two minutes’ walk from the brewery. Allow about an hour, then take the 16:29 bus back, arriving 1-jo 8-chome at 16:54.\n\nSeveral bus routes with “Nagayama” (永山) on the front go this way, and the fare differs a little by route (¥260–350). Show the driver “永山2条6丁目” to be sure.\n\nRecommended visit time: 15:10–16:20"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "男山 酒造り資料舘",
+      "en": "Otokoyama Sake Brewery Museum"
+     },
+     "lat": 43.79604,
+     "lng": 142.40937,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%94%B7%E5%B1%B1%E9%85%92%E9%80%A0%E3%82%8A%E8%B3%87%E6%96%99%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "道北バス 1条8丁目のりば",
+      "en": "Dohoku Bus stop, 1-jo 8-chome"
+     },
+     "lat": 43.7647,
+     "lng": 142.3596,
+     "url": "https://www.google.com/maps/search/?api=1&query=1%E6%9D%A18%E4%B8%81%E7%9B%AE%20%E3%83%90%E3%82%B9%E5%81%9C%20%E6%97%AD%E5%B7%9D%20%E9%81%93%E5%8C%97%E3%83%90%E3%82%B9"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "男山 酒造り資料舘",
+      "en": "Otokoyama (English)"
+     },
+     "url": {
+      "ja": "https://www.otokoyama.com/museum/",
+      "en": "https://www.otokoyama.com/en/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "OTOKOYAMA SAKE PARK（売店・試飲）",
+      "en": "Otokoyama Sake Park: shop and tastings (Japanese)"
+     },
+     "url": {
+      "ja": "https://sake-park.otokoyama.com/",
+      "en": "https://sake-park.otokoyama.com/"
+     }
+    },
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "道北バス",
+      "en": "Dohoku Bus (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.dohokubus.com/",
+      "en": "https://www.dohokubus.com/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "バスは現金で",
+      "en": "Pay the bus in cash"
+     },
+     "text": {
+      "ja": "道北バスの市内の路線は、SuicaなどのICカードが使えません。クレジットカードのタッチ決済も一部の路線だけです。小銭と千円札を用意してください。",
+      "en": "Dohoku Bus city routes do not take Suica or other national IC cards, and contactless credit cards work on only a few routes. Carry coins and ¥1,000 notes."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.dohokubus.com/touch-payment.html"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（試飲は16:30まで）",
+       "en": "9:00–17:00 (tastings until 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "12月31日〜1月3日",
+       "en": "31 Dec – 3 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "資料舘は無料。試飲は有料",
+       "en": "Museum free; tastings are paid"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "行き：1条8丁目14:40 → 永山2条6丁目15:09（土日は15:10）。次は15:30 → 15:55。12月の時刻",
+       "en": "Out: 1-jo 8-chome 14:40 → Nagayama 2-jo 6-chome 15:09 (15:10 at weekends). Next 15:30 → 15:55. December times"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "bus",
+      "text": {
+       "ja": "帰り：永山2条4丁目16:29 → 1条8丁目16:54（土日は16:53）。次は17:13 → 17:40。260〜350円",
+       "en": "Back: Nagayama 2-jo 4-chome 16:29 → 1-jo 8-chome 16:54 (16:53 at weekends). Next 17:13 → 17:40. ¥260–350"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・休みは男山の公式サイト。バスは乗換案内の2026年12月3日（木）・5日（土）・6日（日）の時刻で、季節で変わることがあります。帰りのバス停は、乗換案内では来た道を少し戻った「永山2条4丁目」でした（歩いて5分ほど）。試飲の値段は公式サイトに書かれていません。",
+     "en": "Hours and closing days from Otokoyama’s website. Bus times are from a route planner for Thu 3, Sat 5 and Sun 6 December 2026 and may differ in other seasons. For the return, the planner used the “Nagayama 2-jo 4-chome” stop, about five minutes’ walk back the way the bus came. Tasting prices are not on the website."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "otoko-w1.jpg",
+     "credit": {
+      "author": "pakku",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E6%9C%AC%E9%85%92_%E7%94%B7%E5%B1%B1.jpg"
+     }
+    },
+    {
+     "file": "otoko-w2.jpg",
+     "credit": {
+      "author": "K. Takeda",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Otokoyama%2C_Asahikawa.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "takasago",
+   "name": {
+    "ja": "髙砂酒造 明治酒蔵（たかさごしゅぞう）",
+    "en": "Takasago Sake Brewery: Meiji Sakagura"
+   },
+   "kind": {
+    "ja": "酒蔵・直売店",
+    "en": "Sake brewery shop"
+   },
+   "blurb": {
+    "ja": "1909年の酒蔵が直売店と資料館に。駅から歩いて15分。",
+    "en": "A 1909 brewery building, now the shop and a small museum. 15 minutes on foot from the station."
+   },
+   "caution": {
+    "ja": "17:00まで。年末年始は休み",
+    "en": "Open until 17:00. Closed over New Year"
+   },
+   "lat": 43.7603,
+   "lng": 142.37245,
+   "text": {
+    "ja": "髙砂酒造 明治酒蔵（たかさごしゅぞう）\n\n「国士無双（こくしむそう）」の蔵。1909年（明治42年）に建てられた酒蔵が、いまは直売店と資料館になっています。試飲のコーナーがあり、酒造りを説明する動画（約15分）も流れています。ここでしか買えない酒もあります。\n\n駅から宮下通を東へ歩いて15分。男山（3番）のかわりに選ぶなら、動物園から戻って15:00ごろに着きます。男山と両方に行くには時間が足りません。\n\n蔵の中の見学は無料ですが、予約制です（各回10人まで。公式サイトか電話で、前日の正午まで）。予約なしでも、直売店と資料館には入れます。\n\nおすすめ訪問時間：15:00〜15:45（選んだ日）",
+    "en": "Takasago Sake Brewery: Meiji Sakagura\n\nThe home of Kokushi Muso sake. The brewery building of 1909 is now the shop and a small museum, with a tasting counter and a 15-minute video on how sake is made. Some bottles are sold only here.\n\nIt is 15 minutes’ walk east from the station along Miyashita-dori. If you choose it instead of Otokoyama (no. 3), you will get here at about 15:00 after the zoo. There is not time for both breweries.\n\nTours inside the working brewery are free but must be booked (up to 10 people per slot; on the website or by phone, by noon the day before). The shop and museum need no booking.\n\nRecommended visit time: 15:00–15:45 (if chosen)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "髙砂酒造 明治酒蔵",
+      "en": "Takasago Shuzo Meiji Sakagura"
+     },
+     "lat": 43.7603,
+     "lng": 142.37245,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E7%A0%82%E9%85%92%E9%80%A0%20%E6%98%8E%E6%B2%BB%E9%85%92%E8%94%B5"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "髙砂酒造 直売店・工場見学",
+      "en": "Takasago Shuzo shop and tours (Japanese)"
+     },
+     "url": {
+      "ja": "https://takasagoshuzo.com/meiji-sakagura/",
+      "en": "https://takasagoshuzo.com/meiji-sakagura/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "髙砂酒造 アクセス",
+      "en": "Takasago Shuzo access (Japanese)"
+     },
+     "url": {
+      "ja": "https://takasagoshuzo.com/contact/",
+      "en": "https://takasagoshuzo.com/contact/"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "直売店 9:00〜17:00",
+       "en": "Shop 9:00–17:00"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "年末年始",
+       "en": "New Year period"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "旭川駅から歩いて15分。タクシーで5分",
+       "en": "15 min on foot from Asahikawa Station; 5 min by taxi"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "reserve",
+      "text": {
+       "ja": "蔵の見学は予約制・無料（前日の正午まで）。直売店は予約なしで",
+       "en": "Brewery tours: free, by booking (by noon the day before). No booking for the shop"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間と見学の予約は髙砂酒造の公式サイトで確認しました。年末年始の休みの日付と、試飲が有料かどうかは公式サイトに書かれていません（要確認）。",
+     "en": "Hours and tour bookings from Takasago Shuzo’s website. The exact New Year closing dates and whether tastings are charged are not stated there (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "takasago-w1.jpg",
+     "credit": {
+      "author": "Jennifer Feuchter",
+      "license": "CC BY 2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Takasago_Sake_Brewery%2C_Asahikawa_-_Feb_5%2C_2010.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "id": "miura",
+   "name": {
+    "ja": "三浦綾子記念文学館と外国樹種見本林（みうらあやこ・みほんりん）",
+    "en": "Miura Ayako Literature Museum & the Arboretum"
+   },
+   "kind": {
+    "ja": "文学館・森",
+    "en": "Museum & forest"
+   },
+   "blurb": {
+    "ja": "駅の南、川を渡った先のまっすぐな森。小説『氷点』の舞台。",
+    "en": "A straight-trunked forest across the river south of the station, the setting of the novel Hyoten."
+   },
+   "caution": {
+    "ja": "月曜休館（7・8月は毎日開館）。入館は16:30まで",
+    "en": "Closed Mondays (open daily in Jul–Aug). Last entry 16:30"
+   },
+   "lat": 43.75361,
+   "lng": 142.34797,
+   "text": {
+    "ja": "三浦綾子記念文学館と外国樹種見本林（みうらあやこ・みほんりん）\n\n旭川で生まれ育った作家・三浦綾子（1922〜1999）の文学館。代表作『氷点（ひょうてん）』の舞台になった見本林の入口に建っています。\n\n見本林は、外国の木が北海道で育つかを確かめるために1898年（明治31年）に植えられた森で、ストローブマツやヨーロッパカラマツなど約30種がまっすぐ空へ伸びています。森の中の道は、文学館に入らなくても歩けます。冬は雪の森になります。\n\n旭川駅の東口から、氷点橋で忠別川を渡って突き当たりまで、歩いて約20分。タクシーなら約3分です。動物園のあとに行くなら、14:23に駅に戻ってそのまま歩き、15:00ごろに着きます。男山のかわりに選ぶ場所です。森は夏でも涼しく、秋は木の葉が色づきます。\n\nおすすめ訪問時間：15:00〜16:30（選んだ日）",
+    "en": "Miura Ayako Literature Museum & the Arboretum\n\nA museum for Miura Ayako (1922–1999), the novelist born and raised in Asahikawa. It stands at the entrance to the forest where her best-known novel, Hyoten (Freezing Point), is set.\n\nThe forest was planted in 1898 to test whether foreign trees would grow in Hokkaido: about 30 species, including white pine and European larch, rising dead straight. You can walk the forest paths without entering the museum. In winter it is a forest in snow.\n\nFrom the east exit of Asahikawa Station, cross the Chubetsu River by Hyoten Bridge and keep on to the end of the road: about 20 minutes on foot, or about three by taxi. After the zoo, walk straight here from the station (back at 14:23) to arrive at about 15:00. Choose it instead of Otokoyama. The forest stays cool in summer and turns colour in autumn.\n\nRecommended visit time: 15:00–16:30 (if chosen)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "三浦綾子記念文学館",
+      "en": "Miura Ayako Literature Museum"
+     },
+     "lat": 43.75361,
+     "lng": 142.34797,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E6%B5%A6%E7%B6%BE%E5%AD%90%E8%A8%98%E5%BF%B5%E6%96%87%E5%AD%A6%E9%A4%A8"
+    },
+    {
+     "label": {
+      "ja": "氷点橋",
+      "en": "Hyoten Bridge"
+     },
+     "lat": 43.76049,
+     "lng": 142.35841,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B7%E7%82%B9%E6%A9%8B%20%E6%97%AD%E5%B7%9D"
+    }
+   ],
+   "links": [
+    {
+     "kind": "official",
+     "label": {
+      "ja": "三浦綾子記念文学館 ご利用案内",
+      "en": "Miura Ayako Literature Museum: visitor information (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.hyouten.com/info",
+      "en": "https://www.hyouten.com/info"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "外国樹種見本林（旭川観光コンベンション協会）",
+      "en": "The arboretum (Asahikawa tourism association, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.atca.jp/kankouspoy/%e5%a4%96%e5%9b%bd%e6%a8%b9%e7%a8%ae%e8%a6%8b%e6%9c%ac%e6%9e%97/",
+      "en": "https://www.atca.jp/kankouspoy/%e5%a4%96%e5%9b%bd%e6%a8%b9%e7%a8%ae%e8%a6%8b%e6%9c%ac%e6%9e%97/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "月曜は休館（7・8月は毎日開館）",
+      "en": "Closed on Mondays (open daily in July and August)"
+     },
+     "text": {
+      "ja": "9月1日〜6月30日は、祝日でも月曜は休みです。12月28日〜1月5日も年末年始の休館。最終入館は16:30。",
+      "en": "From 1 September to 30 June the museum is closed every Monday, holidays included, and from 28 December to 5 January. Last entry is 16:30."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.hyouten.com/info"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "9:00〜17:00（最終入館16:30）",
+       "en": "9:00–17:00 (last entry 16:30)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "closed",
+      "text": {
+       "ja": "9月1日〜6月30日の月曜（祝日でも）、12月28日〜1月5日",
+       "en": "Mondays from 1 Sept to 30 June (even on holidays); 28 Dec – 5 Jan"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "大人700円、学生300円、小中高生は無料。カード・交通系ICも使えます",
+       "en": "Adults ¥700, students ¥300, school pupils free. Cards and transport IC cards accepted"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "旭川駅東口から歩いて約20分。タクシー約3分",
+       "en": "About 20 min on foot from the station’s east exit; about 3 min by taxi"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時間・休み・料金・道順は三浦綾子記念文学館の公式サイト、見本林の説明は旭川観光コンベンション協会のページで確認しました。館内の英語の案内がどのくらいあるかは確かめられていません。",
+     "en": "Hours, closing days, fees and directions from the museum’s website; the forest from the Asahikawa tourism association. How much English there is inside the museum could not be confirmed."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "miura-w1.jpg",
+     "credit": {
+      "author": "pakku",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%B0%B7%E7%82%B9%E3%81%AE%E6%A3%AE%EF%BC%88Freezing_Point_%EF%BC%89_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "miura-w2.jpg",
+     "credit": {
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Hyotenbashi_-_Asahikawa_Hokkaido_2022_Aug_9_04-35PM.jpeg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "id": "kaimono",
+   "name": {
+    "ja": "平和通買物公園と旭川ラーメン（へいわどおりかいものこうえん）",
+    "en": "Heiwa-dori Kaimono Koen mall & Asahikawa ramen"
+   },
+   "kind": {
+    "ja": "歩行者の通り・ラーメン",
+    "en": "Pedestrian street & ramen"
+   },
+   "blurb": {
+    "ja": "駅前から約1km続く、車の入らない通り。しょうゆのラーメンを1杯。",
+    "en": "A car-free street running about 1 km from the station. Stop for a bowl of soy-sauce ramen."
+   },
+   "lat": 43.7668,
+   "lng": 142.3594,
+   "text": {
+    "ja": "平和通買物公園と旭川ラーメン（へいわどおりかいものこうえん）\n\n旭川駅の正面から8条通まで約1km、まっすぐ北へ続く歩行者だけの通りです。1972年にできた、日本で最初の恒久的な歩行者専用道路。店や喫茶店が両側に並んでいます。\n\n旭川ラーメンは、しょうゆ味が基本。スープの表面をラードの膜がおおっていて、寒い日でも冷めにくいのが特徴です。この通りと、すぐ横の通りに本店が2つあります。\n・梅光軒（ばいこうけん）旭川本店：2条8丁目、買物公園に面したピアザビルの地下1階。11:00〜15:30と17:00〜21:00、不定休。\n・らーめん山頭火（さんとうか）旭川本店：1条通8丁目。11:00〜22:00（ラストオーダー21:30）、木曜休み。午後も通しで開いています。\n\n男山からのバスを1条8丁目で降りると16:54。山頭火はバス停のすぐ近く、梅光軒は1本北の2条です（夜の営業は17:00から）。早めの晩ごはんにラーメンを食べて、通りを北へ歩いて常磐公園へ向かいます。日の長い季節は、先に公園へ行って、ラーメンを夜のしめにしてもかまいません。\n\nおすすめ訪問時間：16:54〜17:45",
+    "en": "Heiwa-dori Kaimono Koen mall & Asahikawa ramen\n\nA pedestrian-only street running dead straight for about 1 km, from the front of Asahikawa Station north to Hachijo-dori. Opened in 1972, it was Japan’s first permanent pedestrian street. Shops and cafés line both sides.\n\nAsahikawa ramen is soy-sauce based, with a film of lard on top that keeps the soup hot on cold days. Two well-known shops have their main branches on or just off this street:\n• Baikohken, main shop: 2-jo 8-chome, basement of the Piazza Building facing the mall. 11:00–15:30 and 17:00–21:00, irregular closing days.\n• Ramen Santouka, main shop: 1-jo-dori 8-chome. 11:00–22:00 (last order 21:30), closed Thursdays. Open straight through the afternoon.\n\nThe bus from Otokoyama drops you at 1-jo 8-chome at 16:54. Santouka is right by the stop; Baikohken is one block north at 2-jo (evening opening from 17:00). Have ramen as an early dinner, then walk north up the mall to Tokiwa Park. In the long days of summer you can go to the park first and leave the ramen for the end of the night.\n\nRecommended visit time: 16:54–17:45"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "平和通買物公園",
+      "en": "Heiwa-dori Kaimono Koen"
+     },
+     "lat": 43.7668,
+     "lng": 142.3594,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B9%B3%E5%92%8C%E9%80%9A%E8%B2%B7%E7%89%A9%E5%85%AC%E5%9C%92%20%E6%97%AD%E5%B7%9D"
+    },
+    {
+     "label": {
+      "ja": "梅光軒 旭川本店",
+      "en": "Baikohken main shop"
+     },
+     "lat": 43.7656,
+     "lng": 142.35905,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%A2%85%E5%85%89%E8%BB%92%20%E6%97%AD%E5%B7%9D%E6%9C%AC%E5%BA%97"
+    },
+    {
+     "label": {
+      "ja": "らーめん山頭火 旭川本店",
+      "en": "Ramen Santouka main shop"
+     },
+     "lat": 43.76455,
+     "lng": 142.35985,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%E5%B1%B1%E9%A0%AD%E7%81%AB%20%E6%97%AD%E5%B7%9D%E6%9C%AC%E5%BA%97"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "旭川平和通買物公園",
+      "en": "Kaimono Koen mall (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.kaimonokouen.com/about",
+      "en": "https://www.kaimonokouen.com/about"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "梅光軒 店舗一覧",
+      "en": "Baikohken shops (Japanese)"
+     },
+     "url": {
+      "ja": "https://baikohken.com/shop",
+      "en": "https://baikohken.com/en"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "らーめん山頭火 店舗案内",
+      "en": "Ramen Santouka shops (Japanese)"
+     },
+     "url": {
+      "ja": "https://www.santouka.co.jp/shop-jp",
+      "en": "https://www.santouka.co.jp/shop-jp"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "梅光軒 旭川本店：11:00〜15:30（L.O.15:00）、17:00〜21:00（L.O.20:30）、不定休",
+       "en": "Baikohken main shop: 11:00–15:30 (last order 15:00), 17:00–21:00 (last order 20:30), irregular closing days"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "らーめん山頭火 旭川本店：11:00〜22:00（L.O.21:30）、木曜休み（祝日は営業）。スープがなくなると早く閉まります",
+       "en": "Ramen Santouka main shop: 11:00–22:00 (last order 21:30), closed Thursdays (open if a holiday). Closes early if the soup runs out"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "通りの歴史は旭川平和通商店街振興組合のページ、店の時間はそれぞれの公式サイトで確認しました。支払い方法と英語のメニューがあるかは、公式サイトに書かれていません（要確認）。現金を持っていくと安心です。",
+     "en": "The street’s history is from the shopping street association’s page; shop hours from each official website. Payment methods and English menus are not stated on the websites (please check): carrying cash is safest."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kaimono-w1.jpg",
+     "credit": {
+      "author": "lumoplank",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_-_Asahikawa6012.jpg"
+     }
+    },
+    {
+     "file": "kaimono-w2.jpg",
+     "credit": {
+      "author": "Miss 501",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Kaimono_Koen_20250801.jpg"
+     }
+    },
+    {
+     "file": "kaimono-w3.jpg",
+     "credit": {
+      "author": "Koji1970327",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%89%8B.JPG"
+     }
+    },
+    {
+     "file": "kaimono-w4.jpg",
+     "credit": {
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_ramen_2022_Aug_10_03-26PM.jpeg"
+     }
+    },
+    {
+     "file": "kaimono-w5.jpg",
+     "credit": {
+      "author": "Totti",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Santoka_Honten.jpg"
+     }
+    },
+    {
+     "file": "kaimono-w6.jpg",
+     "credit": {
+      "author": "Totti",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Santoka_ramen.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "id": "tokiwa",
+   "name": {
+    "ja": "常磐公園と旭橋（ときわこうえん・あさひばし）",
+    "en": "Tokiwa Park & Asahibashi Bridge"
+   },
+   "kind": {
+    "ja": "公園・橋",
+    "en": "Park & bridge"
+   },
+   "blurb": {
+    "ja": "買物公園の先の池のある公園と、石狩川にかかる1932年のアーチ橋。",
+    "en": "A park with ponds beyond the mall, and a 1932 arch bridge over the Ishikari River."
+   },
+   "lat": 43.7753,
+   "lng": 142.35786,
+   "text": {
+    "ja": "常磐公園と旭橋（ときわこうえん・あさひばし）\n\n常磐公園は1910年（明治43年）にできた、旭川で最初の公園です。買物公園の北の端から歩いて5分ほど。池が2つあり、まわりをニレやポプラの大きな木が囲んでいます。雪のない季節は手こぎのボートが出ます。公園の中に北海道立旭川美術館があります（9:30〜17:00、月曜休み）。\n\n公園の北の土手を上がると石狩川。右手に見えるアーチが旭橋です。1932年（昭和7年）に完成した長さ225mの鉄の橋で、1956年までは路面電車が橋の上を走っていました。旭川のしるしになっている橋で、北海道遺産に選ばれています。\n\nラーメンのあと、買物公園を北へ歩いて18:00ごろ着きます。池のまわりを歩いて、土手から夕方の光の旭橋を見るのがこのコースの順番です。日の入りは6〜7月が19時ごろ、8月の終わりは18時すぎ、9月の終わりは17時15分ごろ、10月の終わりは16時半前。9月からはラーメンをあとにして、男山から戻ったらまっすぐここへ来てください。\n\nおすすめ訪問時間：18:00〜19:00",
+    "en": "Tokiwa Park & Asahibashi Bridge\n\nTokiwa Park, opened in 1910, was Asahikawa’s first park. It is about five minutes’ walk from the north end of the Kaimono Koen mall, with two ponds ringed by big elms and poplars, and rowing boats outside the snow season. The Hokkaido Asahikawa Museum of Art stands inside the park (9:30–17:00, closed Mondays).\n\nClimb the embankment on the park’s north side and you are at the Ishikari River. The arches to your right are Asahibashi, a 225-metre steel bridge completed in 1932; trams crossed it until 1956. It is the symbol of the city and a designated Hokkaido Heritage site.\n\nAfter ramen, walk north up the mall to arrive at about 18:00. Stroll round the ponds, then see the bridge in evening light from the embankment. Sunset is around 19:00 in June and July, just after 18:00 at the end of August, about 17:15 at the end of September and just before 16:30 at the end of October: from September, come straight here after Otokoyama and eat afterwards.\n\nRecommended visit time: 18:00–19:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "常磐公園",
+      "en": "Tokiwa Park"
+     },
+     "lat": 43.7753,
+     "lng": 142.35786,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E7%A3%90%E5%85%AC%E5%9C%92%20%E6%97%AD%E5%B7%9D"
+    },
+    {
+     "label": {
+      "ja": "旭橋",
+      "en": "Asahibashi Bridge"
+     },
+     "lat": 43.77846,
+     "lng": 142.36017,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E6%A9%8B%20%E6%97%AD%E5%B7%9D"
+    },
+    {
+     "label": {
+      "ja": "北海道立旭川美術館",
+      "en": "Hokkaido Asahikawa Museum of Art"
+     },
+     "lat": 43.77413,
+     "lng": 142.35542,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E6%97%AD%E5%B7%9D%E7%BE%8E%E8%A1%93%E9%A4%A8"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "常磐公園（旭川観光コンベンション協会）",
+      "en": "Tokiwa Park (Asahikawa tourism association, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.atca.jp/kankouspoy/%e5%b8%b8%e7%a3%90%e5%85%ac%e5%9c%92/",
+      "en": "https://www.atca.jp/kankouspoy/%e5%b8%b8%e7%a3%90%e5%85%ac%e5%9c%92/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "旭橋（旭川観光コンベンション協会）",
+      "en": "Asahibashi Bridge (Asahikawa tourism association, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.atca.jp/kankouspoy/%e6%97%ad%e6%a9%8b/",
+      "en": "https://www.atca.jp/kankouspoy/%e6%97%ad%e6%a9%8b/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "北海道立旭川美術館 開館時間・観覧料",
+      "en": "Hokkaido Asahikawa Museum of Art (English page)"
+     },
+     "url": {
+      "ja": "https://artmuseum.pref.hokkaido.lg.jp/abj/guide/about/",
+      "en": "https://artmuseum.pref.hokkaido.lg.jp/abj/english"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "旭川冬まつり",
+      "en": "Asahikawa Winter Festival (Japanese)"
+     },
+     "url": {
+      "ja": "https://asahikawa-winterfes.jp/",
+      "en": "https://asahikawa-winterfes.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "2月6日〜11日は旭川冬まつり",
+      "en": "Asahikawa Winter Festival: 6–11 February"
+     },
+     "text": {
+      "ja": "第68回旭川冬まつりは2027年2月6日（土）〜11日（木・祝）。会場は常磐公園と、旭橋のそばの石狩川の河畔です。買物公園には氷の彫刻が並びます。このときは、暗くなってからも公園まで歩く人が多くいます。",
+      "en": "The 68th Asahikawa Winter Festival runs from Sat 6 to Thu 11 February 2027, in Tokiwa Park and on the Ishikari riverbank beside Asahibashi Bridge, with ice sculptures along the Kaimono Koen mall. During the festival plenty of people walk up to the park after dark."
+     },
+     "from": "2027-01-10",
+     "to": "2027-02-11",
+     "url": "https://asahikawa-winterfes.jp/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "公園はいつでも入れます",
+       "en": "The park is always open"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "北海道立旭川美術館：9:30〜17:00（入場は16:30まで）、月曜休み（祝日は開いて翌火曜休み）、12月29日〜1月3日休み。観覧料は展覧会ごと",
+       "en": "Museum of Art: 9:30–17:00 (last entry 16:30), closed Mondays (open on holiday Mondays, closed the next day) and 29 Dec – 3 Jan. Fees vary by exhibition"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "旭川駅から買物公園を通って歩いて約20分。5・7小路ふらりーとまで約10分",
+       "en": "About 20 min on foot from the station via the mall; about 10 min on to Furarito alley"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "公園と橋の説明は旭川観光コンベンション協会、美術館は公式サイト、冬まつりは公式サイトで確認しました。ボートの期間と料金は確かめられていません（要確認）。",
+     "en": "The park and bridge are described from the Asahikawa tourism association’s pages; the museum and the Winter Festival from their official websites. The boat season and price could not be confirmed (please check)."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "tokiwa-w1.jpg",
+     "credit": {
+      "author": "MIKI Yoshihito",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahi_Bridge%2C_Asahikawa_-_Jul_20%2C_2025.jpg"
+     }
+    },
+    {
+     "file": "tokiwa-w2.jpg",
+     "credit": {
+      "author": "pakku",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B8%B8%E7%9B%A4%E3%81%AE%E6%B1%A0%EF%BC%88Autumn_of_Asahikawa%EF%BC%89_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "tokiwa-w3.jpg",
+     "credit": {
+      "author": "pakku",
+      "license": "CC BY 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E5%B8%B8%E7%9B%A4%E3%81%AE%E4%B8%AD%E5%B3%B6_-_panoramio.jpg"
+     }
+    },
+    {
+     "file": "tokiwa-w4.jpg",
+     "credit": {
+      "author": "京浜にけ",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Ishikari_River_Asahi_Bridge_1.JPG"
+     }
+    },
+    {
+     "file": "tokiwa-w5.jpg",
+     "credit": {
+      "author": "Nagono",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tokiwakoen%2C_Asahikawa%2C_Hokkaido_Prefecture_070-0044%2C_Japan_-_panoramio_%281%29.jpg"
+     }
+    },
+    {
+     "file": "tokiwa-w6.jpg",
+     "credit": {
+      "author": "京浜にけ at Japanese Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Winter_Festival_Snow_Statue_1.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "id": "furari",
+   "name": {
+    "ja": "5・7小路ふらりーと（ごーななこうじ）",
+    "en": "Furarito alley (5-jo 7-chome)"
+   },
+   "kind": {
+    "ja": "飲み屋の小路・晩ごはん",
+    "en": "Food alley & dinner"
+   },
+   "blurb": {
+    "ja": "焼き鳥の煙が流れる細い小路。旭川の名物「新子焼き」をここで。",
+    "en": "A narrow alley of yakitori smoke. Try Asahikawa’s shinko-yaki grilled young chicken here."
+   },
+   "caution": {
+    "ja": "ぎんねこは月曜休み・予約不可",
+    "en": "Ginneko: closed Mondays, no bookings"
+   },
+   "lat": 43.76987,
+   "lng": 142.36085,
+   "text": {
+    "ja": "5・7小路ふらりーと（ごーななこうじ）\n\n5条通7丁目にある、幅3mほどの小路です。戦前は魚と野菜の市場で、そのあと焼き鳥の店が増えて「焼き鳥横丁」と呼ばれてきました。いまも焼き鳥、ラーメン、居酒屋など18軒ほどが並んでいます。冬は、店の前に氷のキャンドルが灯ります。\n\n旭川の名物「新子焼き（しんこやき）」は、若鶏の半身を炭火で焼いたもの。たれか塩を選びます。小路の中の焼鳥専門ぎんねこは1950年（昭和25年）創業で、13:00から22:00まで通しで開いています（月曜休み）。席の予約はできないので、混んでいたら小路のほかの店をのぞいて、あとで戻るのがよいでしょう。公式サイトに英語のページがあります。\n\n常磐公園から歩いて約10分。19:10ごろに入って、21時ごろまで。ホテルが駅のまわりなら、歩いて10〜15分で帰れます。\n\nおすすめ訪問時間：19:10〜21:00",
+    "en": "Furarito alley (5-jo 7-chome)\n\nAn alley about three metres wide at 5-jo-dori 7-chome. Before the war it was a fish and vegetable market; yakitori shops moved in afterwards and it became known as “Yakitori Alley”. Around 18 places still line it: yakitori, ramen, izakaya. In winter, ice candles are lit outside the shops.\n\nAsahikawa’s local dish is shinko-yaki: half a young chicken grilled over charcoal, with sauce or salt. Ginneko, a yakitori shop in the alley since 1950, is open straight through from 13:00 to 22:00 (closed Mondays). It does not take table bookings, so if it is full, look into the other places and come back. Its website has an English page.\n\nAbout ten minutes’ walk from Tokiwa Park. Go in at about 19:10 and stay until 21:00 or so. Hotels around the station are 10–15 minutes’ walk away.\n\nRecommended visit time: 19:10–21:00"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "5・7小路ふらりーと",
+      "en": "Furarito alley"
+     },
+     "lat": 43.76987,
+     "lng": 142.36085,
+     "url": "https://www.google.com/maps/search/?api=1&query=5%E3%83%BB7%E5%B0%8F%E8%B7%AF%E3%81%B5%E3%82%89%E3%82%8A%E3%83%BC%E3%81%A8"
+    },
+    {
+     "label": {
+      "ja": "焼鳥専門ぎんねこ",
+      "en": "Yakitori Ginneko"
+     },
+     "lat": 43.7699,
+     "lng": 142.36075,
+     "url": "https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E9%B3%A5%E5%B0%82%E9%96%80%E3%81%8E%E3%82%93%E3%81%AD%E3%81%93%20%E6%97%AD%E5%B7%9D"
+    }
+   ],
+   "links": [
+    {
+     "kind": "info",
+     "label": {
+      "ja": "5・7小路ふらりーと（旭川観光コンベンション協会）",
+      "en": "Furarito alley (Asahikawa tourism association, Japanese)"
+     },
+     "url": {
+      "ja": "https://www.atca.jp/kankouspoy/%ef%bc%95%ef%bc%8e%ef%bc%97%e5%b0%8f%e8%b7%af%e3%81%b5%e3%82%89%e3%82%8a%e3%83%bc%e3%81%a8/",
+      "en": "https://www.atca.jp/kankouspoy/%ef%bc%95%ef%bc%8e%ef%bc%97%e5%b0%8f%e8%b7%af%e3%81%b5%e3%82%89%e3%82%8a%e3%83%bc%e3%81%a8/"
+     }
+    },
+    {
+     "kind": "official",
+     "label": {
+      "ja": "焼鳥専門ぎんねこ",
+      "en": "Yakitori Ginneko (has an English page)"
+     },
+     "url": {
+      "ja": "https://www.ginneko.co.jp/",
+      "en": "https://www.ginneko.co.jp/"
+     }
+    }
+   ],
+   "notices": [
+    {
+     "head": {
+      "ja": "ぎんねこは月曜休み、席の予約はできません",
+      "en": "Ginneko: closed Mondays, no table bookings"
+     },
+     "text": {
+      "ja": "13:00〜22:00。ほかに臨時の休みが毎月あり、公式サイトのお知らせに出ます。小さな店なので、混む時間は待つことがあります。",
+      "en": "Open 13:00–22:00. Extra closing days are posted each month on the official website. It is a small place, so expect a wait at busy times."
+     },
+     "from": null,
+     "to": null,
+     "url": "https://www.ginneko.co.jp/"
+    }
+   ],
+   "info": {
+    "rows": [
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "焼鳥専門ぎんねこ：13:00〜22:00、月曜休み（ほかに臨時の休みあり）。席の予約は不可",
+       "en": "Yakitori Ginneko: 13:00–22:00, closed Mondays (plus occasional extra days). No table bookings"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "hours",
+      "text": {
+       "ja": "ほかの店の時間と休みは店ごとに違います",
+       "en": "Hours and closing days of the other shops vary"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "walk",
+      "text": {
+       "ja": "旭川駅から買物公園を通って歩いて約12分",
+       "en": "About 12 min on foot from Asahikawa Station via the mall"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "小路の説明は旭川観光コンベンション協会、ぎんねこの時間は公式サイトで確認しました。値段と支払い方法は公式サイトに書かれていません（要確認）。小さな店が多いので、現金を持っていってください。",
+     "en": "The alley is described from the Asahikawa tourism association’s page; Ginneko’s hours from its website. Prices and payment methods are not stated there (please check). Most places are small: bring cash."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "furari-w1.jpg",
+     "credit": {
+      "author": "久保竜弥",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%AD%90%E7%84%BC%E3%81%8D.jpg"
+     }
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "id": "kaeri",
+   "name": {
+    "ja": "旭川駅（帰り）",
+    "en": "Asahikawa Station (return)"
+   },
+   "kind": {
+    "ja": "駅",
+    "en": "Station"
+   },
+   "blurb": {
+    "ja": "札幌へ帰る人は21:00発で22:25着。最終は22:00発。",
+    "en": "For Sapporo: the 21:00 arrives 22:25. The last train leaves at 22:00."
+   },
+   "lat": 43.76275,
+   "lng": 142.35793,
+   "text": {
+    "ja": "旭川駅（帰り）\n\n旭川に泊まる人は、ふらりーとから歩いてホテルへ。札幌へ帰る人は、ふらりーとから駅まで歩いて12分ほどです。\n\n札幌行きの特急は、20:00発（カムイ42号、21:25着）、21:00発（ライラック44号、22:25着）、最終が22:00発（ライラック46号、23:25着）。全部の席が指定席なので、朝のうちに帰りの指定席券も取っておくと安心です。\n\nおすすめ出発時間：札幌へは21:00発（最終は22:00発）",
+    "en": "Asahikawa Station (return)\n\nStaying in Asahikawa? Walk back to your hotel from Furarito. Heading to Sapporo? The station is about 12 minutes’ walk from the alley.\n\nLimited expresses to Sapporo leave at 20:00 (Kamui 42, arriving 21:25), 21:00 (Lilac 44, arriving 22:25) and, last of the day, 22:00 (Lilac 46, arriving 23:25). All seats are reserved, so it is safest to get your return seat in the morning.\n\nRecommended departure time: For Sapporo: the 21:00 (last train 22:00)"
+   },
+   "gmaps": [
+    {
+     "label": {
+      "ja": "JR旭川駅",
+      "en": "JR Asahikawa Station"
+     },
+     "lat": 43.76275,
+     "lng": 142.35793,
+     "url": "https://www.google.com/maps/search/?api=1&query=JR%E6%97%AD%E5%B7%9D%E9%A7%85"
+    }
+   ],
+   "links": [
+    {
+     "kind": "timetable",
+     "label": {
+      "ja": "JR北海道 運行情報",
+      "en": "JR Hokkaido service status"
+     },
+     "url": {
+      "ja": "https://www3.jrhokkaido.co.jp/webunkou/",
+      "en": "https://www3.jrhokkaido.co.jp/webunkou/en/"
+     }
+    },
+    {
+     "kind": "info",
+     "label": {
+      "ja": "北海道レールパス（JR北海道）",
+      "en": "Hokkaido Rail Pass (JR Hokkaido)"
+     },
+     "url": {
+      "ja": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html",
+      "en": "https://www.jrhokkaido.co.jp/global/english/ticket/railpass/index.html"
+     }
+    }
+   ],
+   "notices": [],
+   "info": {
+    "rows": [
+     {
+      "kind": "train",
+      "text": {
+       "ja": "旭川20:00 → 札幌21:25（特急カムイ42号）、21:00 → 22:25（特急ライラック44号）。平日・土曜とも",
+       "en": "Asahikawa 20:00 → Sapporo 21:25 (Kamui 42); 21:00 → 22:25 (Lilac 44). Weekdays and Saturdays"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "train",
+      "text": {
+       "ja": "最終：旭川22:00 → 札幌23:25（特急ライラック46号）",
+       "en": "Last train: Asahikawa 22:00 → Sapporo 23:25 (Lilac 46)"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "fee",
+      "text": {
+       "ja": "片道5,440円（乗車券3,080円＋指定席2,360円）。全席指定",
+       "en": "¥5,440 each way (fare ¥3,080 + reserved seat ¥2,360). All seats reserved"
+      },
+      "until": null,
+      "from": null
+     },
+     {
+      "kind": "pay",
+      "text": {
+       "ja": "北海道レールパスで乗れます（指定席券を先に受け取る）",
+       "en": "Covered by the Hokkaido Rail Pass (collect a seat reservation first)"
+      },
+      "until": null,
+      "from": null
+     }
+    ],
+    "cash": false,
+    "tip": {
+     "ja": "時刻と運賃は乗換案内で2026年12月3日（木）・5日（土）を確認しました。JR北海道は2027年3月にダイヤ改正の予定なので、春からは時刻が変わることがあります。",
+     "en": "Times and fares checked in a route planner for Thu 3 and Sat 5 December 2026. JR Hokkaido usually revises its timetable in March, so times may change from spring 2027."
+    },
+    "checked": "2026-11-28"
+   },
+   "photos": [
+    {
+     "file": "kaeri-w1.jpg",
+     "credit": {
+      "author": "Shoyuramen",
+      "license": "CC BY-SA 3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Asahikawa_Station_in_Hokkaido_Japan.jpg"
+     }
+    },
+    {
+     "file": "kaeri-w2.jpg",
+     "credit": {
+      "author": "Mister0124",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Limited_express_Lilac_and_Kamui_%28Asahikawa_Station%29.jpg"
+     }
+    }
+   ]
+  }
+ ]
+}
